@@ -1,0 +1,8 @@
+{
+  "presets": ["stage-2", "react", "es2015"],
+  "passPerPreset": true,
+  "plugins" : [
+    "syntax-flow",
+    "transform-flow-strip-types"
+  ]
+}
