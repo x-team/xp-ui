@@ -17,9 +17,9 @@ export default wrap({
 
   offwhite: '#f3f2f7',
 
-  black:  [
+  black: [
     '#130e2e',
-    '#272334',
+    '#272334'
   ],
 
   brand: '#f63a55',
@@ -29,40 +29,20 @@ export default wrap({
     '#e5e5e5',
     '#5a5665',
     '#efefef',
-    '#8e8e8e',
+    '#8e8e8e'
   ],
 
-   red: [
-     '#ff5965',
-     '#f63a55',
-   ]
+  red: [
+    '#ff5965',
+    '#f63a55'
+  ]
 
 })
 
 export const breakpoints = {
-	xs: '480px',
-	sm: '768px',
-	md: '1024px',
-	lg: '1280px',
-	xl: '1440px'
+  xs: '480px',
+  sm: '768px',
+  md: '1024px',
+  lg: '1280px',
+  xl: '1440px'
 }
-
-// module.exports = {
-//   fern: '#5CB85C',
-//   haiti: '#130e2e',
-//   manatee: '#938E9F',
-// }
-
-// app-background: #fff;
-// brand-color: #f63a55;
-// page-background: #fcfcfc;
-// footer-background: #fcfcfc;
-
-// success-color: #5cb85c;
-
-// disabled-background: #eee;
-// text-color: #333;
-// inverted-text-color: #fff;
-
-// title: $black;
-// sub-title: $gray-1;

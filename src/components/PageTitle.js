@@ -14,7 +14,7 @@ type Props = {
  headingClassName: string
 }
 
-const styles ={
+const styles = {
   root: cmz(`
     & {
       white-space: pre-line;

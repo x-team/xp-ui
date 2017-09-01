@@ -11,16 +11,16 @@ type Props = {
 
 const styles = {
   root: cmz(`
-    color: ${theme.brand.darken(.2)}
-    border: 2px solid ${theme.brand.darken(.1)}
+    color: ${theme.brand.darken(0.2)}
+    border: 2px solid ${theme.brand.darken(0.1)}
     border-radius: .175em
-    background: ${theme.brand.lighten(.3)}
+    background: ${theme.brand.lighten(0.3)}
     font-style: italic
     margin: 10px
   `),
 
   list: cmz(`
-		list-style-type: none;
+    list-style-type: none;
     padding: 3px;
     text-align: center;
   `)
@@ -40,8 +40,8 @@ class ErrorBox extends PureComponent {
   render () {
     const { errors } = this.props
 
-    return Object.keys(errors).length ?
-      (<div className={styles.root}>
+    return Object.keys(errors).length
+      ? (<div className={styles.root}>
         <ul className={styles.list}>
           {this.renderErrorItem(errors)}
         </ul>
