@@ -3,6 +3,7 @@
   "passPerPreset": true,
   "plugins" : [
     "syntax-flow",
-    "transform-flow-strip-types"
+    "transform-flow-strip-types",
+    "cmz-names"
   ]
 }
