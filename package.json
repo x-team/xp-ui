@@ -8,12 +8,18 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "keywords": [],
   "author": "joshwnj",
   "license": "MIT",
   "devDependencies": {
-    "standard": "^10.0.3"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-styleguidist": "^6.0.21",
+    "standard": "^10.0.3",
+    "webpack": "^3.5.5"
   }
 }
