@@ -66,13 +66,11 @@ const styles = {
  `)
 }
 
-class PageTitle extends PureComponent {
+class PageTitle extends PureComponent<Props> {
   static defaultProps = {
     hasDivider: false,
     headingClassName: ''
   }
-
-  props: Props
 
   render () {
     const { heading, subheading, description, hasDivider, headingClassName } = this.props

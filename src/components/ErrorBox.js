@@ -26,9 +26,7 @@ const styles = {
   `)
 }
 
-class ErrorBox extends PureComponent {
-  props: Props
-
+class ErrorBox extends PureComponent<Props> {
   renderErrorItem (errors: Err) {
     return Object.keys(errors).map((err) => (
       <li key={err}>

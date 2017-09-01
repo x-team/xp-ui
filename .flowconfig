@@ -1,8 +1,10 @@
 [ignore]
+<PROJECT_ROOT>/node_modules/*
 
 [include]
 
 [libs]
+interfaces/
 
 [lints]
 

@@ -8,8 +8,8 @@
   },
   "scripts": {
     "flow": "flow check src/",
-    "lint": "standard",
-    "test": "npm run lint",
+    "lint": "standard src/**/*.js",
+    "test": "npm run lint && npm run flow",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
   },
