@@ -1,0 +1,19 @@
+{
+  "name": "auto-ui",
+  "version": "1.0.0",
+  "description": "_UI component library for the Auto platform._",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint"
+  },
+  "keywords": [],
+  "author": "joshwnj",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
