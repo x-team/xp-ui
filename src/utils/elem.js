@@ -10,17 +10,21 @@ function baseElem (tag, className, defaultProps = {}) {
     className = [ className ]
   }
 
+  className = className.join(' ')
+
   return (props={}, ...children) => {
     if (isPlainObj(props)) {
-      if (props.className) {
-        className.push(props.className)
-      }
+      const c = (props.className)
+        ? `${className} ${props.className}`
+        : className
 
-      className = className.join(' ')
-      return createElement(tag, { ...defaultProps, ...props, className }, ...children)
+      return createElement(
+        tag,
+        { ...defaultProps, ...props, className: c },
+        ...children
+      )
     }
 
-    className = className.join(' ')
     return createElement(tag, { ...defaultProps, className }, props, ...children)
   }
 }
