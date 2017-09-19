@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import cmz from 'cmz'
 import theme, { breakpoints } from '../styles/theme'
 import elem from '../utils/elem'
@@ -98,4 +98,3 @@ class PageTitle extends PureComponent<Props> {
 }
 
 export default PageTitle
-

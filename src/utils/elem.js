@@ -2,7 +2,7 @@ import { createElement, DOM } from 'react'
 
 // source: https://stackoverflow.com/questions/5876332/how-can-i-differentiate-between-an-object-literal-other-javascript-objects
 function isPlainObj (o) {
-  return typeof o == 'object' && o.constructor == Object && !o.$$typeof
+  return typeof o === 'object' && o.constructor === Object && !o.$$typeof
 }
 
 function baseElem (tag, className, defaultProps = {}) {
@@ -12,7 +12,7 @@ function baseElem (tag, className, defaultProps = {}) {
 
   className = className.join(' ')
 
-  return (props={}, ...children) => {
+  return (props = {}, ...children) => {
     if (isPlainObj(props)) {
       const c = (props.className)
         ? `${className} ${props.className}`

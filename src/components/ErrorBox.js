@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import cmz from 'cmz'
 import theme from '../styles/theme'
 import elem from '../utils/elem'
@@ -28,13 +28,16 @@ const List = elem.ul(cmz(`
 const Item = elem.li()
 
 class ErrorBox extends PureComponent<Props> {
-  constructor (props) {
+  renderErrorItem: Function
+
+  constructor (props: Props) {
     super(props)
 
-    this.renderErrorItem = this.renderErrorItem.bind(this, props.errors)
+    this.renderErrorItem = this.renderErrorItem.bind(this)
   }
 
-  renderErrorItem (errors: Err, err: string, index) {
+  renderErrorItem (err: string) {
+    const { errors } = this.props
     return Item({ key: err }, errors[err])
   }
 
