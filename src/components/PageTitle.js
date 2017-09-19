@@ -3,6 +3,7 @@
 import React, { PureComponent } from 'react'
 import cmz from 'cmz'
 import theme, { breakpoints } from '../styles/theme'
+import elem from '../utils/elem'
 
 import type { Element } from 'react'
 
@@ -14,57 +15,57 @@ type Props = {
  headingClassName: string
 }
 
-const styles = {
-  root: cmz(`
-    & {
-      white-space: pre-line;
-      margin: 0 0 35px 0;
-      text-align: center;
-    }
-    @media screen and (max-width: ${breakpoints.sm}) {
-      & {
-        margin: 0 0 35px 0;
-      }
-    }
-  `),
-
-  subheading: cmz(`
+const Root = elem.div(cmz(`
+  & {
+    white-space: pre-line;
     margin: 0 0 35px 0;
-    font-weight: 700;
-  `),
-
-  description: cmz(`
+    text-align: center;
+  }
+  @media screen and (max-width: ${breakpoints.sm}) {
     & {
-      margin-top: 35px;
+      margin: 0 0 35px 0;
     }
-    &, & * {
-      font-size: 24px;
-      line-height: 1.3em;
-    }
-  `),
+  }
+`))
 
-  withDivider: cmz(`
+const Heading = elem.h1('heading')
+
+const Subheading = elem.h2(cmz(`
+  margin: 0 0 35px 0;
+  font-weight: 700;
+`))
+
+const Description = elem.div(cmz(`
+  & {
+    margin-top: 35px;
+  }
+  &, & * {
+    font-size: 24px;
+    line-height: 1.3em;
+  }
+`))
+
+const divider = cmz(`
+  & {
+    margin-bottom: 60px;
+    position: relative;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 3.5rem;
+    height: 4px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: ${theme.red[0]};
+  }
+  @media screen and (max-width: ${breakpoints.sm}) {
     & {
       margin-bottom: 60px;
-      position: relative;
     }
-    &:after {
-      content: '';
-      position: absolute;
-      width: 3.5rem;
-      height: 4px;
-      bottom: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: ${theme.red[0]};
-    }
-    @media screen and (max-width: ${breakpoints.sm}) {
-      & {
-        margin-bottom: 60px;
-      }
-    }
- `)
-}
+  }
+`)
 
 class PageTitle extends PureComponent<Props> {
   static defaultProps = {
@@ -73,17 +74,28 @@ class PageTitle extends PureComponent<Props> {
   }
 
   render () {
-    const { heading, subheading, description, hasDivider, headingClassName } = this.props
-    const dividerStyle = hasDivider && styles.withDivider
+    const {
+      heading,
+      subheading,
+      description,
+      hasDivider,
+      headingClassName
+    } = this.props
 
-    return (
-      <div className={[ styles.root, dividerStyle ].join(' ')}>
-        <h1 className={`heading ${headingClassName}`}>{heading}</h1>
-        {subheading ? <h2 className={styles.subheading}>{subheading}</h2> : null }
-        {description ? <div className={styles.description}>{description}</div> : null }
-      </div>
+    return Root(
+      { className: hasDivider && divider },
+
+      Heading(
+        { className: headingClassName },
+        heading
+      ),
+
+      subheading && Subheading(subheading),
+
+      description && Description(description)
     )
   }
 }
 
 export default PageTitle
+
