@@ -1,12 +1,13 @@
 {
   "name": "auto-ui",
   "version": "1.0.0",
-  "description": "_UI component library for the Auto platform._",
-  "main": "index.js",
+  "description": "UI component library for the Auto platform.",
+  "main": "lib/auto-ui.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "build": "NODE_ENV=production webpack --config webpack.standalone.js",
     "flow": "flow check src/",
     "lint": "standard src/**/*.js",
     "test": "npm run lint && npm run flow",
