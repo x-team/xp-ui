@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "cmz": "^3.5.2",
-    "color": "^2.0.0"
+    "color": "^2.0.0",
+    "webfontloader": "^1.6.28"
   }
 }

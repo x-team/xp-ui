@@ -3,6 +3,7 @@
 import { PureComponent } from 'react'
 import cmz from 'cmz'
 import theme from '../styles/theme'
+import * as typo from '../styles/typo'
 import elem from '../utils/elem'
 
 type Err = {[key: string|number]: string}
@@ -10,14 +11,16 @@ type Props = {
   errors: Err
 }
 
-const Root = elem.div(cmz(`
+const Root = elem.div(cmz([
+  typo.family.base,
+  `
   color: ${theme.brand.darken(0.2)}
   border: 2px solid ${theme.brand.darken(0.1)}
   border-radius: .175em
   background: ${theme.brand.lighten(0.3)}
   font-style: italic
   margin: 10px
-`))
+`]))
 
 const List = elem.ul(cmz(`
   list-style-type: none;

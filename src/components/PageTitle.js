@@ -3,6 +3,7 @@
 import { PureComponent } from 'react'
 import cmz from 'cmz'
 import theme, { breakpoints } from '../styles/theme'
+import * as typo from '../styles/typo'
 import elem from '../utils/elem'
 
 import type { Element } from 'react'
@@ -28,14 +29,24 @@ const Root = elem.div(cmz(`
   }
 `))
 
-const Heading = elem.h1('heading')
+const Heading = elem.h1(cmz([
+  typo.family.heading, `
+  font-size: 54px
+  margin: 0
+  text-transform: uppercase
+  color: #272334
+  letter-spacing: -3px
+  line-height: .95em
+`]))
 
 const Subheading = elem.h2(cmz(`
   margin: 0 0 35px 0;
   font-weight: 700;
 `))
 
-const Description = elem.div(cmz(`
+const Description = elem.div(cmz([
+  typo.family.base,
+  `
   & {
     margin-top: 35px;
   }
@@ -43,7 +54,7 @@ const Description = elem.div(cmz(`
     font-size: 24px;
     line-height: 1.3em;
   }
-`))
+`]))
 
 const divider = cmz(`
   & {
