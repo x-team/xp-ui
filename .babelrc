@@ -4,6 +4,11 @@
   "plugins" : [
     "syntax-flow",
     "transform-flow-strip-types",
-    "cmz-names"
+    ["cmz-names", {
+      replace: [
+        ["src_components", "AutoUI"],
+        ["src_styles", "AutoUI"]
+      ]
+    }]
   ]
 }
