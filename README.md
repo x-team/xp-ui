@@ -4,12 +4,17 @@
 
 _UI component library for the Auto platform._
 
+## Requirements
+
+You need to install:
+
+- [`nvm`](https://github.com/creationix/nvm)
+
 ## Get started
 
-```
-npm install
-npm run styleguide
-```
+- `nvm use v8.4.0`
+- `npm install`
+- `npm run styleguide`
 
 ## Docs
 
