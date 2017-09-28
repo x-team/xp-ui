@@ -1,0 +1,9 @@
+exports[`PageTitle-1 1`] = `
+<div
+  className="AutoUI_PageTitle-19 AutoUI_PageTitle-59">
+  <h1
+    className="AutoUI_PageTitle-32 AutoUI_typo-24 AutoUI_typo-13">
+    Page Title With a Divider.
+  </h1>
+</div>
+`;
