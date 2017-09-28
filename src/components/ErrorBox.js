@@ -1,6 +1,6 @@
 // @flow
 
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import cmz from 'cmz'
 import theme from '../styles/theme'
 import * as typo from '../styles/typo'
@@ -48,7 +48,7 @@ class ErrorBox extends PureComponent<Props> {
     const { errors } = this.props
 
     const keys = Object.keys(errors)
-    if (!keys.length) { return null }
+    if (!keys.length) { return <div /> }
 
     return Root(
       List(
