@@ -14,7 +14,7 @@ You need to install:
 
 - `nvm use v8.4.0`
 - `npm install`
-- `npm run styleguide`
+- `npm start`
 
 ## Docs
 
