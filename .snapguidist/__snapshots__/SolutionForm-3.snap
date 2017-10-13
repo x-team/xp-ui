@@ -1,0 +1,28 @@
+exports[`SolutionForm-3 1`] = `
+<div
+  className="AutoUI_SolutionForm_index-23 AutoUI_SolutionForm_index-30">
+  <div
+    className="AutoUI_SolutionForm_Title-16">
+    <h1
+      className="AutoUI_typo-25 AutoUI_typo-14">
+      Oops!
+    </h1>
+    <h2
+      className="AutoUI_SolutionForm_Title-23">
+      You haven’t submitted the right solution. Please try again.
+    </h2>
+  </div>
+  <form
+    className="AutoUI_SolutionForm_index-23 AutoUI_SolutionForm_index-39">
+    <textarea
+      className="AutoUI_SolutionForm_index-24 AutoUI_SolutionForm_index-47"
+      name="solution"
+      placeholder="Solution" />
+    <button
+      className="AutoUI_SolutionForm_index-24 AutoUI_SolutionForm_index-25 AutoUI_SolutionForm_index-63"
+      disabled={false}>
+      Submit (2 of 3 attempts)
+    </button>
+  </form>
+</div>
+`;

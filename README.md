@@ -16,6 +16,6 @@ You need to install:
 - `npm install`
 - `npm start`
 
-## Docs
+## Contributing
 
-- [design principles](./docs/design-principles.md)
+Read [design principles](./design-principles.md) to get an understanding of the principles we're aiming for.

@@ -29,7 +29,8 @@ export default wrap({
     '#e5e5e5',
     '#5a5665',
     '#efefef',
-    '#8e8e8e'
+    '#8e8e8e',
+    '#938e9f'
   ],
 
   red: [
