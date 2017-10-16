@@ -35,3 +35,7 @@ export const breakpoints = {
   lg: '1280px',
   xl: '1440px'
 }
+
+export const grid = {
+  twoColumns: '40%'
+}

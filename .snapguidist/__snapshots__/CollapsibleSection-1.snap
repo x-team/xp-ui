@@ -1,0 +1,13 @@
+exports[`CollapsibleSection-1 1`] = `
+<section
+  className="AutoUI_CollapsibleSection-17">
+  <h1
+    className="AutoUI_CollapsibleSection-22">
+    Panel title
+  </h1>
+  <div
+    className="AutoUI_CollapsibleSection-27">
+    Something
+  </div>
+</section>
+`;
