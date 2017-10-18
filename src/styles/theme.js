@@ -1,5 +1,7 @@
 import color from 'color'
 
+// wrap all theme colors in the `color` function,
+// so we can call `.darken()`, `.lighten()`, etc.
 function wrap (theme) {
   Object.keys(theme).forEach(k => {
     if (Array.isArray(theme[k])) {
@@ -17,27 +19,13 @@ export default wrap({
 
   offwhite: '#f3f2f7',
 
-  black: [
-    '#130e2e',
-    '#272334'
-  ],
+  black: '#130e2e',
+  blackHighlight: '#272334',
 
-  brand: '#f63a55',
+  grayBorder: '#938e9f',
 
-  gray: [
-    '#e0e0e0',
-    '#e5e5e5',
-    '#5a5665',
-    '#efefef',
-    '#8e8e8e',
-    '#938e9f'
-  ],
-
-  red: [
-    '#ff5965',
-    '#f63a55'
-  ]
-
+  red: '#ff5965',
+  redHighlight: '#f63a55'
 })
 
 export const breakpoints = {

@@ -61,7 +61,7 @@ const divider = cmz(`
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: ${theme.red[0]};
+    background-color: ${theme.red};
   }
   @media screen and (max-width: ${breakpoints.sm}) {
     & {

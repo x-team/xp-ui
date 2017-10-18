@@ -28,7 +28,7 @@ export const family = {
     text-transform: uppercase
     font-size: 54px
     margin: 0px
-    color: ${theme.black[1]}
+    color: ${theme.blackHighlight}
     letter-spacing: -3px
     line-height: .95em
   `])
