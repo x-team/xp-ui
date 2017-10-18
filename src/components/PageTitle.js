@@ -29,15 +29,7 @@ const Root = elem.div(cmz(`
   }
 `))
 
-const Heading = elem.h1(cmz([
-  typo.family.heading, `
-  font-size: 54px
-  margin: 0
-  text-transform: uppercase
-  color: #272334
-  letter-spacing: -3px
-  line-height: .95em
-`]))
+const Heading = elem.h1(typo.family.heading)
 
 const Subheading = elem.h2(cmz(`
   margin: 0 0 35px 0;
@@ -69,7 +61,7 @@ const divider = cmz(`
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: ${theme.red[0]};
+    background-color: ${theme.red};
   }
   @media screen and (max-width: ${breakpoints.sm}) {
     & {

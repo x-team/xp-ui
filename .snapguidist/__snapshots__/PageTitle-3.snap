@@ -1,12 +1,12 @@
 exports[`PageTitle-3 1`] = `
 <div
-  className="AutoUI_PageTitle-19 AutoUI_PageTitle-59">
+  className="AutoUI_PageTitle-19 AutoUI_PageTitle-51">
   <h1
-    className="AutoUI_PageTitle-32 AutoUI_typo-24 AutoUI_typo-13">
+    className="AutoUI_typo-25 AutoUI_typo-14">
     With a Description.
   </h1>
   <div
-    className="AutoUI_PageTitle-47 AutoUI_typo-19 AutoUI_typo-13">
+    className="AutoUI_PageTitle-39 AutoUI_typo-20 AutoUI_typo-14">
     Welcome! Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
 </div>
