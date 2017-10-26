@@ -3,8 +3,7 @@ exports[`ErrorBox-3 1`] = `
   className="AutoUI_ErrorBox-14 AutoUI_typo-20 AutoUI_typo-14">
   <ul
     className="AutoUI_ErrorBox-25">
-    <li
-      className="">
+    <li>
       Something went wrong
     </li>
   </ul>
