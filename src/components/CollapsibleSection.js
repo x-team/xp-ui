@@ -20,11 +20,11 @@ type Props = {
 
 const cx = {
   twoColSection: cmz('display: flex'),
-  collapsed: cmz('cursor: pointer'),
-  section: cmz(``)
+  clickable: cmz('cursor: pointer'),
+  collapsed: cmz('')
 }
 
-const Root = elem.section(cmz([ cx.section, typo.family.base, `
+const Root = elem.section(cmz([ typo.family.base, `
   margin: 0;
   padding: 1rem;
   font-size: 1rem;
@@ -32,9 +32,10 @@ const Root = elem.section(cmz([ cx.section, typo.family.base, `
   position: relative;
 `]))
 
-const Header = elem.h1(cmz([ typo.family.smallHeading, `
+const Header = elem.h1(cmz([
+  typo.family.smallHeading,
+  cx.clickable, `
   & {
-    cursor: pointer;
     padding-left: 10px;
   }
 
@@ -67,7 +68,7 @@ const Header = elem.h1(cmz([ typo.family.smallHeading, `
     top: 20px;
   }
 
-  .${cx.collapsed}.${cx.section}:hover &::before {
+  .${cx.collapsed}:hover &::before {
     top: 24px;
   }
 `]))
@@ -98,13 +99,15 @@ class CollapsibleSection extends PureComponent<Props> {
       children
     } = this.props
 
-    return Root({
-      onClick: () => isCollapsed && toggleCollapse(false),
-      className: [
-        isTwoColumns && cx.twoColSection,
-        isCollapsed && cx.collapsed
-      ]
-    },
+    return Root(
+      {
+        onClick: () => isCollapsed && toggleCollapse(false),
+        className: [
+          isTwoColumns && cx.twoColSection,
+          isCollapsed && cx.clickable,
+          isCollapsed && cx.collapsed
+        ]
+      },
       Header({ onClick: () => toggleCollapse(!isCollapsed) }, title),
       Content(visible, !isCollapsed && children)
     )
