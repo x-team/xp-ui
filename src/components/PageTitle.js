@@ -1,10 +1,11 @@
 // @flow
 
 import { PureComponent } from 'react'
-import cmz from 'cmz'
 import theme, { breakpoints } from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
+
+const cmz = require('cmz')
 
 import type { Element } from 'react'
 
@@ -36,7 +37,7 @@ const Subheading = elem.h2(cmz(`
   font-weight: 700;
 `))
 
-const Description = elem.div(cmz([
+const Description = elem.div(cmz(
   typo.family.base,
   `
   & {
@@ -46,7 +47,7 @@ const Description = elem.div(cmz([
     font-size: 24px;
     line-height: 1.3em;
   }
-`]))
+`))
 
 const divider = cmz(`
   & {

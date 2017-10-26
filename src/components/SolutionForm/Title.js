@@ -1,10 +1,11 @@
 // @flow
 
 import { PureComponent } from 'react'
-import cmz from 'cmz'
 import theme, { breakpoints } from '../../styles/theme'
 import * as typo from '../../styles/typo'
 import elem from '../../utils/elem'
+
+const cmz = require('cmz')
 
 import type { Element } from 'react'
 

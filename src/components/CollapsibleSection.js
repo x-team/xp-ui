@@ -2,10 +2,11 @@
 
 import { PureComponent } from 'react'
 import { compose, withState, onlyUpdateForKeys } from 'recompose'
-import cmz from 'cmz'
 import theme from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
+
+const cmz = require('cmz')
 
 import type { Element } from 'react'
 
@@ -50,15 +51,16 @@ const cx = {
   `)
 }
 
-const Root = elem.section(cmz([ typo.family.base, `
+const Root = elem.section(cmz(
+  typo.family.base, `
   margin: 0;
   padding: 1rem;
   font-size: 1rem;
   border-top: 1px solid ${theme.grayBorder};
   position: relative;
-`]))
+`))
 
-const Header = elem.h1(cmz([
+const Header = elem.h1(cmz(
   typo.family.smallHeading,
   cx.arrow,
   cx.clickable, `
@@ -81,7 +83,7 @@ const Header = elem.h1(cmz([
   .${cx.clickable}:hover &::before {
     top: 24px;
   }
-`]))
+`))
 
 const Content = elem.div(cmz(`
   & > :first-child {
