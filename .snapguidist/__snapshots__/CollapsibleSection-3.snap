@@ -1,6 +1,6 @@
-exports[`CollapsibleSection-1 1`] = `
+exports[`CollapsibleSection-3 1`] = `
 <section
-  className="AutoUI_CollapsibleSection-25 AutoUI_typo-20 AutoUI_typo-14 collapsed">
+  className="AutoUI_CollapsibleSection-25 AutoUI_typo-20 AutoUI_typo-14 twoColSection collapsed">
   <h1
     className="AutoUI_CollapsibleSection-39 AutoUI_typo-36 AutoUI_typo-14">
     Panel title

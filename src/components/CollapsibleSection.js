@@ -1,9 +1,10 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+import { compose, withState, onlyUpdateForKeys } from 'recompose'
 import cmz from 'cmz'
-// import theme, { breakpoints } from '../../styles/theme'
-// import * as typo from '../../styles/typo'
+import theme, { breakpoints } from '../styles/theme'
+import * as typo from '../styles/typo'
 import elem from '../utils/elem'
 
 import type { Element } from 'react'
@@ -11,39 +12,100 @@ import type { Element } from 'react'
 type Props = {
   title?: string,
   isTwoColumns?: boolean,
+  isCollapsed?: boolean,
+  toggleCollapse?: Function,
+  visible?: Element<*>|string,
   children?: Element<*>|string,
 }
 
-const Section = elem.section(cmz(`
-  margin: 0
-  padding: 1rem
-`))
+/**
+ * CSS Classes
+ */
+const cx = {
+  section: cmz([ typo.family.base, `
+    & {
+      margin: 0;
+      padding: 1rem;
+      font-size: 1rem;
+      border-top: 1px solid ${theme.grayBorder};
+      position: relative;
+    }
 
-const Header = elem.h1(cmz(`
-  margin: 0
-  padding: 0.5rem
-`))
+    &.twoColSection {
+      display: flex;
+    }
+  `]),
 
-const Content = elem.div(cmz(`
-  border: 1px solid red
-`))
+  header: cmz([ typo.family.smallHeading, `
+    & {
+      cursor: pointer;
+      padding-left: 10px;
+    }
 
-const Section2 = cmz(`
-  display: flex
-`)
+    .twoColSection & {
+      width: 500px;
+    }
 
-const Header2 = cmz(`
-  border: 1px solid blue
-`)
+    &:hover {
+      color: ${theme.blackHighlight};
+    }
 
-const Content2 = cmz(`
-  border: 1px solid orange
-`)
+    &:before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 22px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent silver transparent;
+    }
 
-export default class CollapsibleSection extends PureComponent<Props> {
+    .collapsed &::before {
+      border-width: 5px 5px 0 5px;
+      border-color: silver transparent transparent transparent;
+    }
+  `]),
+
+  content: cmz(`
+    & {
+    }
+
+    .twoColSection & {
+    }
+
+    & > :first-child {
+      margin-top: 0;
+    }
+  `),
+
+  collapsibles: cmz(`
+    & {
+      display: block;
+    }
+
+    .collapsed & {
+      display: none;
+    }
+  `)
+}
+
+/**
+ * Elements
+ */
+const Root = elem.section(cx.section)
+const Header = elem.h1(cx.header)
+const Content = elem.div(cx.content)
+const Collapsibles = elem.div(cx.collapsibles)
+
+class CollapsibleSection extends PureComponent<Props> {
   static defaultProps = {
     title: '',
     isTwoColumns: false,
+    isCollapsed: true,
+    toggleCollapse: () => {},
+    visible: null,
     children: null,
   }
 
@@ -51,12 +113,25 @@ export default class CollapsibleSection extends PureComponent<Props> {
     const {
       title,
       isTwoColumns,
+      isCollapsed,
+      toggleCollapse,
+      visible,
       children,
     } = this.props
 
-    return Section({ className: isTwoColumns && Section2 },
-      Header({ className: isTwoColumns && Header2 }, title),
-      Content({ className: isTwoColumns && Content2 }, children)
+    return Root({
+      className: [
+        isTwoColumns && 'twoColSection',
+        isCollapsed && 'collapsed',
+      ].filter(x => x !== false).join(' ')
+    },
+      Header({ onClick: () => toggleCollapse(!isCollapsed) }, title),
+      Content([visible, Collapsibles(children)])
     )
   }
 }
+
+export default compose(
+  withState('isCollapsed', 'toggleCollapse', true),
+  onlyUpdateForKeys(['isCollapsed', 'visible', 'children']),
+)(CollapsibleSection);
