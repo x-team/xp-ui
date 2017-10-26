@@ -69,12 +69,6 @@ const cx = {
   `]),
 
   content: cmz(`
-    & {
-    }
-
-    .twoColSection & {
-    }
-
     & > :first-child {
       margin-top: 0;
     }
