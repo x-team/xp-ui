@@ -63,30 +63,30 @@ const Button = elem.button([
   utilStyles.noTextDecoration,
   cmz(`
     & {
-      text-transform: uppercase;
-      background: ${theme.red};
-      border: transparent solid 2px;
-      border-radius: 3px;
-      color: ${theme.white};
-      cursor: pointer;
-      font-size: 1rem;
-      margin: 0.25em;
-      min-width: 290px;
-      padding: .75em 2.4em;
-      transition: all .3s ease-out;
-      font-weight: 700;
+      text-transform: uppercase
+      background: ${theme.red}
+      border: transparent solid 2px
+      border-radius: 3px
+      color: ${theme.white}
+      cursor: pointer
+      font-size: 1rem
+      margin: 0.25em
+      min-width: 290px
+      padding: .75em 2.4em
+      transition: all .3s ease-out
+      font-weight: 700
     }
     &:hover {
-      background: ${theme.redHighlight};
-      border-color: transparent;
+      background: ${theme.redHighlight}
+      border-color: transparent
     }
     &:active {
-      background: ${theme.redHighlight};
-      transition: none;
+      background: ${theme.redHighlight}
+      transition: none
     }
     &[disabled] {
-      background-color: ${theme.grayBorder};
-      pointer-events: none;
+      background-color: ${theme.grayBorder}
+      pointer-events: none
     }
   `)
 ])
