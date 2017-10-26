@@ -26,38 +26,38 @@ const cx = {
 
   arrow: cmz(`
     &::before {
-      content: '';
-      position: absolute;
-      left: 10px;
-      top: 22px;
-      width: 0;
-      height: 0;
-      border-style: solid;
+      content: ''
+      position: absolute
+      left: 10px
+      top: 22px
+      width: 0
+      height: 0
+      border-style: solid
     }
   `),
 
   arrowDown: cmz(`
     &::before {
-      border-width: 0 5px 5px 5px;
-      border-color: transparent transparent silver transparent;
+      border-width: 0 5px 5px 5px
+      border-color: transparent transparent silver transparent
     }
   `),
 
   arrowUp: cmz(`
     &::before {
-      border-width: 5px 5px 0 5px;
-      border-color: silver transparent transparent transparent;
+      border-width: 5px 5px 0 5px
+      border-color: silver transparent transparent transparent
     }
   `)
 }
 
 const Root = elem.section(cmz(
   typo.family.base, `
-  margin: 0;
-  padding: 1rem;
-  font-size: 1rem;
-  border-top: 1px solid ${theme.grayBorder};
-  position: relative;
+  margin: 0
+  padding: 1rem
+  font-size: 1rem
+  border-top: 1px solid ${theme.grayBorder}
+  position: relative
 `))
 
 const Header = elem.h1(cmz(
@@ -65,29 +65,29 @@ const Header = elem.h1(cmz(
   cx.arrow,
   cx.clickable, `
   & {
-    padding-left: 10px;
+    padding-left: 10px
   }
 
   .${cx.twoColSection} & {
-    width: 500px;
+    width: 500px
   }
 
   &:hover {
-    color: ${theme.blackHighlight};
+    color: ${theme.blackHighlight}
   }
 
   &:hover::before {
-    top: 20px;
+    top: 20px
   }
 
   .${cx.clickable}:hover &::before {
-    top: 24px;
+    top: 24px
   }
 `))
 
 const Content = elem.div(cmz(`
   & > :first-child {
-    margin-top: 0;
+    margin-top: 0
   }
 `))
 

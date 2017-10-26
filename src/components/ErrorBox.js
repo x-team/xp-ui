@@ -24,9 +24,9 @@ const Root = elem.div(cmz(
 `))
 
 const List = elem.ul(cmz(`
-  list-style-type: none;
-  padding: 3px;
-  text-align: center;
+  list-style-type: none
+  padding: 3px
+  text-align: center
 `))
 
 const Item = elem.li()
