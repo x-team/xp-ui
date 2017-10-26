@@ -13,7 +13,7 @@ type Props = {
   title?: string,
   isTwoColumns?: boolean,
   isCollapsed?: boolean,
-  toggleCollapse?: Function,
+  toggleCollapse: Function,
   visible?: Element<*>|string,
   children?: Element<*>|string,
 }
