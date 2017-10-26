@@ -50,7 +50,7 @@ const cx = {
       color: ${theme.blackHighlight};
     }
 
-    &:before {
+    &::before {
       content: '';
       position: absolute;
       left: 10px;
