@@ -8,7 +8,7 @@ function isPlainObj (o) {
 function normalizeClassNames (c) {
   return typeof c === 'string'
     ? c
-    : c && c.filter(Boolean).join(' ')
+    : c && c.filter(Boolean).map(normalizeClassNames).join(' ')
 }
 
 function baseElem (tag, className, defaultProps = {}) {
