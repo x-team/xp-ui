@@ -6,9 +6,9 @@ import theme from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
 
-const cmz = require('cmz')
-
 import type { Element } from 'react'
+
+const cmz = require('cmz')
 
 type Props = {
   title?: string,
