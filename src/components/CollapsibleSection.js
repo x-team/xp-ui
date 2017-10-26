@@ -106,7 +106,7 @@ class CollapsibleSection extends PureComponent<Props> {
       className: [
         isTwoColumns && 'twoColSection',
         isCollapsed && 'collapsed'
-      ].filter(x => x !== false).join(' ')
+      ]
     },
       Header({ onClick: () => toggleCollapse(!isCollapsed) }, title),
       Content(visible, !isCollapsed && children)

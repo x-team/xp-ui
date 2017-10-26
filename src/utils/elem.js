@@ -5,17 +5,19 @@ function isPlainObj (o) {
   return typeof o === 'object' && o.constructor === Object && !o.$$typeof
 }
 
-function baseElem (tag, className, defaultProps = {}) {
-  if (!Array.isArray(className)) {
-    className = [ className ]
-  }
+function normalizeClassNames (c) {
+  return typeof c === 'string'
+    ? c
+    : c && c.filter(Boolean).join(' ')
+}
 
-  className = className.join(' ')
+function baseElem (tag, className, defaultProps = {}) {
+  className = normalizeClassNames(className)
 
   return (props = {}, ...children) => {
     if (isPlainObj(props)) {
       const c = (props.className)
-        ? `${className} ${props.className}`
+        ? `${className} ${normalizeClassNames(props.className)}`
         : className
 
       return createElement(
