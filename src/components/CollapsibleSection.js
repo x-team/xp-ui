@@ -78,16 +78,6 @@ const cx = {
     & > :first-child {
       margin-top: 0;
     }
-  `),
-
-  collapsibles: cmz(`
-    & {
-      display: block;
-    }
-
-    .collapsed & {
-      display: none;
-    }
   `)
 }
 
@@ -97,7 +87,6 @@ const cx = {
 const Root = elem.section(cx.section)
 const Header = elem.h1(cx.header)
 const Content = elem.div(cx.content)
-const Collapsibles = elem.div(cx.collapsibles)
 
 class CollapsibleSection extends PureComponent<Props> {
   static defaultProps = {
@@ -126,7 +115,7 @@ class CollapsibleSection extends PureComponent<Props> {
       ].filter(x => x !== false).join(' ')
     },
       Header({ onClick: () => toggleCollapse(!isCollapsed) }, title),
-      Content([visible, Collapsibles(children)])
+      Content(visible, !isCollapsed && children)
     )
   }
 }
