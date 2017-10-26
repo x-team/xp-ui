@@ -50,6 +50,7 @@
   "dependencies": {
     "cmz": "^3.7.0",
     "color": "^2.0.0",
+    "recompose": "^0.26.0",
     "webfontloader": "^1.6.28"
   }
 }

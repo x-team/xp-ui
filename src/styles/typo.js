@@ -31,5 +31,14 @@ export const family = {
     color: ${theme.blackHighlight}
     letter-spacing: -3px
     line-height: .95em
+  `]),
+
+  smallHeading: cmz([ textRendering, `
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 800
+    font-size: 18px
+    margin: 0 0 10px
+    color: ${theme.black}
+    line-height: 1em
   `])
 }
