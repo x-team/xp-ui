@@ -1,17 +1,18 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import cmz from 'cmz'
 import theme from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
+
+const cmz = require('cmz')
 
 type Err = {[key: string|number]: string}
 type Props = {
   errors: Err
 }
 
-const Root = elem.div(cmz([
+const Root = elem.div(cmz(
   typo.family.base,
   `
   color: ${theme.red.darken(0.3)}
@@ -20,7 +21,7 @@ const Root = elem.div(cmz([
   background: ${theme.red.lighten(0.3)}
   font-style: italic
   margin: 10px
-`]))
+`))
 
 const List = elem.ul(cmz(`
   list-style-type: none;
