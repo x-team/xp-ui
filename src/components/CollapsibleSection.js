@@ -1,9 +1,9 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import { compose, withState, onlyUpdateForKeys } from 'recompose'
 import cmz from 'cmz'
-import theme, { breakpoints } from '../styles/theme'
+import theme from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
 
