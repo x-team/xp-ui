@@ -1,5 +1,4 @@
-import { createElement } from 'react'
-import DOM from 'react-dom'
+import { createElement, DOM } from 'react'
 
 // source: https://stackoverflow.com/questions/5876332/how-can-i-differentiate-between-an-object-literal-other-javascript-objects
 function isPlainObj (o) {
