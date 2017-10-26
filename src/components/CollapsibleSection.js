@@ -18,69 +18,57 @@ type Props = {
   children?: Element<*>|string,
 }
 
-/**
- * CSS Classes
- */
-const cx = {
-  section: cmz([ typo.family.base, `
-    & {
-      margin: 0;
-      padding: 1rem;
-      font-size: 1rem;
-      border-top: 1px solid ${theme.grayBorder};
-      position: relative;
-    }
+const Root = elem.section(cmz([ typo.family.base, `
+  & {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    border-top: 1px solid ${theme.grayBorder};
+    position: relative;
+  }
 
-    &.twoColSection {
-      display: flex;
-    }
-  `]),
+  &.twoColSection {
+    display: flex;
+  }
+`]))
 
-  header: cmz([ typo.family.smallHeading, `
-    & {
-      cursor: pointer;
-      padding-left: 10px;
-    }
+const Header = elem.h1(cmz([ typo.family.smallHeading, `
+  & {
+    cursor: pointer;
+    padding-left: 10px;
+  }
 
-    .twoColSection & {
-      width: 500px;
-    }
+  .twoColSection & {
+    width: 500px;
+  }
 
-    &:hover {
-      color: ${theme.blackHighlight};
-    }
+  &:hover {
+    color: ${theme.blackHighlight};
+  }
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: 10px;
-      top: 22px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 5px 5px 5px;
-      border-color: transparent transparent silver transparent;
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 22px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent silver transparent;
+  }
 
-    .collapsed &::before {
-      border-width: 5px 5px 0 5px;
-      border-color: silver transparent transparent transparent;
-    }
-  `]),
+  .collapsed &::before {
+    border-width: 5px 5px 0 5px;
+    border-color: silver transparent transparent transparent;
+  }
+`]))
 
-  content: cmz(`
-    & > :first-child {
-      margin-top: 0;
-    }
-  `)
-}
-
-/**
- * Elements
- */
-const Root = elem.section(cx.section)
-const Header = elem.h1(cx.header)
-const Content = elem.div(cx.content)
+const Content = elem.div(cmz(`
+  & > :first-child {
+    margin-top: 0;
+  }
+`))
 
 class CollapsibleSection extends PureComponent<Props> {
   static defaultProps = {
