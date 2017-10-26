@@ -106,7 +106,7 @@ class CollapsibleSection extends PureComponent<Props> {
     isCollapsed: true,
     toggleCollapse: () => {},
     visible: null,
-    children: null,
+    children: null
   }
 
   render () {
@@ -116,13 +116,13 @@ class CollapsibleSection extends PureComponent<Props> {
       isCollapsed,
       toggleCollapse,
       visible,
-      children,
+      children
     } = this.props
 
     return Root({
       className: [
         isTwoColumns && 'twoColSection',
-        isCollapsed && 'collapsed',
+        isCollapsed && 'collapsed'
       ].filter(x => x !== false).join(' ')
     },
       Header({ onClick: () => toggleCollapse(!isCollapsed) }, title),
@@ -133,5 +133,5 @@ class CollapsibleSection extends PureComponent<Props> {
 
 export default compose(
   withState('isCollapsed', 'toggleCollapse', true),
-  onlyUpdateForKeys(['isCollapsed', 'visible', 'children']),
-)(CollapsibleSection);
+  onlyUpdateForKeys(['isCollapsed', 'visible', 'children'])
+)(CollapsibleSection)

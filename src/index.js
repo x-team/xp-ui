@@ -3,10 +3,9 @@ import PageTitle from './components/PageTitle'
 import XIcon from './components/XIcon'
 import CollapsibleSection from './components/CollapsibleSection'
 
-export { 
+export {
   ErrorBox,
   PageTitle,
   XIcon,
-  CollapsibleSection,
+  CollapsibleSection
 }
-
