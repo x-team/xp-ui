@@ -20,8 +20,34 @@ type Props = {
 
 const cx = {
   twoColSection: cmz('display: flex'),
+
   clickable: cmz('cursor: pointer'),
-  collapsed: cmz('')
+
+  arrow: cmz(`
+    &::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 22px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+  `),
+
+  arrowDown: cmz(`
+    &::before {
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent silver transparent;
+    }
+  `),
+
+  arrowUp: cmz(`
+    &::before {
+      border-width: 5px 5px 0 5px;
+      border-color: silver transparent transparent transparent;
+    }
+  `)
 }
 
 const Root = elem.section(cmz([ typo.family.base, `
@@ -34,6 +60,7 @@ const Root = elem.section(cmz([ typo.family.base, `
 
 const Header = elem.h1(cmz([
   typo.family.smallHeading,
+  cx.arrow,
   cx.clickable, `
   & {
     padding-left: 10px;
@@ -47,28 +74,11 @@ const Header = elem.h1(cmz([
     color: ${theme.blackHighlight};
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 10px;
-    top: 22px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 5px 5px 5px;
-    border-color: transparent transparent silver transparent;
-  }
-
-  .${cx.collapsed} &::before {
-    border-width: 5px 5px 0 5px;
-    border-color: silver transparent transparent transparent;
-  }
-
-  :not(.${cx.collapsed}) &:hover::before {
+  &:hover::before {
     top: 20px;
   }
 
-  .${cx.collapsed}:hover &::before {
+  .${cx.clickable}:hover &::before {
     top: 24px;
   }
 `]))
@@ -104,10 +114,16 @@ class CollapsibleSection extends PureComponent<Props> {
         onClick: () => isCollapsed && toggleCollapse(false),
         className: [
           isTwoColumns && cx.twoColSection,
-          isCollapsed && [cx.clickable, cx.collapsed]
+          isCollapsed && cx.clickable
         ]
       },
-      Header({ onClick: () => toggleCollapse(!isCollapsed) }, title),
+      Header(
+        {
+          onClick: () => toggleCollapse(!isCollapsed),
+          className: isCollapsed ? cx.arrowUp : cx.arrowDown
+        },
+        title
+      ),
       Content(visible, !isCollapsed && children)
     )
   }
