@@ -2,7 +2,7 @@ import { createElement, DOM } from 'react'
 
 // source: https://stackoverflow.com/questions/5876332/how-can-i-differentiate-between-an-object-literal-other-javascript-objects
 function isPlainObj (o) {
-  return typeof o === 'object' && o.constructor === Object && !o.$$typeof
+  return o && typeof o === 'object' && o.constructor === Object && !o.$$typeof
 }
 
 function normalizeClassNames (c) {

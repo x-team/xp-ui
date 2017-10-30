@@ -28,7 +28,7 @@ const cx = {
     &::before {
       content: ''
       position: absolute
-      left: 10px
+      right: 1rem
       top: 22px
       width: 0
       height: 0
@@ -65,11 +65,12 @@ const Header = elem.h1(cmz(
   cx.arrow,
   cx.clickable, `
   & {
-    padding-left: 10px
+    letter-spacing: normal
+    text-transform: initial
   }
 
   .${cx.twoColSection} & {
-    width: 500px
+    width: 200px
   }
 
   &:hover {
@@ -77,15 +78,19 @@ const Header = elem.h1(cmz(
   }
 
   &:hover::before {
-    top: 20px
+    top: 21px
   }
 
   .${cx.clickable}:hover &::before {
-    top: 24px
+    top: 23px
   }
 `))
 
 const Content = elem.div(cmz(`
+  & {
+    width: calc(100% - 200px)
+  }
+
   & > :first-child {
     margin-top: 0
   }
