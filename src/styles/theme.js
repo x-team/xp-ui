@@ -23,6 +23,7 @@ export default wrap({
   blackHighlight: '#272334',
 
   grayBorder: '#938e9f',
+  lightGrayBorder: '#e0e0e0',
 
   red: '#ff5965',
   redHighlight: '#f63a55'

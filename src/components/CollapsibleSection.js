@@ -13,8 +13,9 @@ const cmz = require('cmz')
 type Props = {
   title?: string,
   isTwoColumns?: boolean,
+  toggleVisible?: boolean,
   isCollapsed?: boolean,
-  toggleCollapse: Function,
+  handleToggleCollapse: Function,
   visible?: Element<*>|string,
   children?: Element<*>|string,
 }
@@ -29,7 +30,7 @@ const cx = {
       content: ''
       position: absolute
       right: 1rem
-      top: 22px
+      top: 2rem
       width: 0
       height: 0
       border-style: solid
@@ -54,9 +55,9 @@ const cx = {
 const Root = elem.section(cmz(
   typo.family.base, `
   margin: 0
-  padding: 1rem
+  padding: 2rem 1rem
   font-size: 1rem
-  border-top: 1px solid ${theme.grayBorder}
+  border-top: 1px solid ${theme.lightGrayBorder}
   position: relative
 `))
 
@@ -78,16 +79,16 @@ const Header = elem.h1(cmz(
   }
 
   &:hover::before {
-    top: 21px
+    transform: translateY(-1px)
   }
 
   .${cx.clickable}:hover &::before {
-    top: 23px
+    transform: translateY(1px)
   }
 `))
 
 const Content = elem.div(cmz(`
-  & {
+  .${cx.twoColSection} & {
     width: calc(100% - 200px)
   }
 
@@ -100,8 +101,9 @@ class CollapsibleSection extends PureComponent<Props> {
   static defaultProps = {
     title: '',
     isTwoColumns: false,
+    toggleVisible: false,
     isCollapsed: true,
-    toggleCollapse: () => {},
+    handleToggleCollapse: () => {},
     visible: null,
     children: null
   }
@@ -110,15 +112,16 @@ class CollapsibleSection extends PureComponent<Props> {
     const {
       title,
       isTwoColumns,
+      toggleVisible,
       isCollapsed,
-      toggleCollapse,
+      handleToggleCollapse,
       visible,
       children
     } = this.props
 
     return Root(
       {
-        onClick: () => isCollapsed && toggleCollapse(false),
+        onClick: () => isCollapsed && handleToggleCollapse(false),
         className: [
           isTwoColumns && cx.twoColSection,
           isCollapsed && cx.clickable
@@ -126,17 +129,20 @@ class CollapsibleSection extends PureComponent<Props> {
       },
       Header(
         {
-          onClick: () => toggleCollapse(!isCollapsed),
+          onClick: () => handleToggleCollapse(!isCollapsed),
           className: isCollapsed ? cx.arrowUp : cx.arrowDown
         },
         title
       ),
-      Content(visible, !isCollapsed && children)
+      Content(
+        (isCollapsed || (!isCollapsed && !toggleVisible)) && visible,
+        !isCollapsed && children
+      )
     )
   }
 }
 
 export default compose(
-  withState('isCollapsed', 'toggleCollapse', true),
+  withState('isCollapsed', 'handleToggleCollapse', true),
   onlyUpdateForKeys(['isCollapsed', 'visible', 'children'])
 )(CollapsibleSection)
