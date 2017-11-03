@@ -2,6 +2,12 @@
 # a more exhaustive description is at
 # https://zappr.readthedocs.io/en/latest/setup
 
+autobranch:
+  # How the branch name is generated
+  pattern: '{number}-{title}'
+  # Maximum length of the branch name
+  length: 55
+
 # uncomment this if you want to change anything
 # approvals:
 #   by default, an approval is the thumbs up emoji only: ^:\\+1:$
