@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import md5 from 'crypto-js/md5'
-import elem from '../utils/elem'
 
 const cmz = require('cmz')
 
@@ -29,7 +28,7 @@ const tagItem = {
   `)
 }
 
-const applicantsStyles = cmz(`
+const containerStyles = cmz(`
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
   display: inline-block;
   vertical-align: middle;
@@ -73,7 +72,7 @@ class ResultListItem extends PureComponent<Props> {
   render () {
     const { applicant } = this.props
 
-    if (!applicant) return <div> No applicant! </div>
+    if (!applicant) { return <div className={containerStyles}> No applicants! </div> }
 
     const { firstName, lastName, email } = applicant
 
@@ -81,7 +80,7 @@ class ResultListItem extends PureComponent<Props> {
     const tagitemStyles = tagItem
 
     return (
-      <div className={applicantsStyles}>
+      <div className={containerStyles}>
         <img
           alt={`${firstName} ${lastName}'s avatar`}
           src={`https://www.gravatar.com/avatar/${md5(email)}?s=64`}
@@ -89,12 +88,15 @@ class ResultListItem extends PureComponent<Props> {
 
         <div>{`${firstName} ${lastName}`}</div>
 
-        <div className={applicantsStyles}>
-          {applicant.baseId &&
-            <a href={`https://app.futuresimple.com/leads/${applicant.baseId}`} target='_blank'>
+        <div className={containerStyles}>
+          {applicant.baseId && (
+            <a
+              href={`https://app.futuresimple.com/leads/${applicant.baseId}`}
+              target='_blank'
+            >
               &rarr; View in Base
             </a>
-          }
+          )}
         </div>
 
         {tags && (
