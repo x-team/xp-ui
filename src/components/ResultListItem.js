@@ -1,39 +1,40 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import md5 from 'crypto-js/md5'
+import elem from '../utils/elem'
 
-const progressItem = cmz('progress-item', {
-  root: ['text-align: left', 'border-left: 3px solid #CCC', 'padding: 0 .5rem', 'margin: -.5rem 0 1.7rem 0'],
-  heading: ['font-size: .7em', 'line-height: 1rem', 'text-transform: uppercase', `color: #777`]
-})
+const cmz = require('cmz')
 
-const tagItem = cmz('tag-item', {
-  root: [progressItem.root],
-  subheading: [progressItem.heading],
-  heading: [
-    `
-      & {
-          font-size: 1em;
-          text-align: left;
-          margin-bottom: 1em;
-      }
-    `,
-    progressItem.heading
-  ],
-  body: `
-    & {
-      margin-bottom: 1rem;
-      margin-top: 1rem;
-    }
-  `
-})
+const tagItem = {
+  root: cmz(`
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 300
+    text-align: left
+    border-left: 3px solid #CCC
+    padding: 0 .5rem
+    margin: -.5rem 0 1.7rem 0
+  `),
+  heading: cmz(`
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 800
+    line-height: 1rem
+    text-transform: uppercase
+    color: #777
+    font-size: 1em;
+    text-align: left;
+    margin-bottom: 1em;
+  `),
+  body: cmz(`
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  `)
+}
 
-const applicantsStyles = cmz('applicant', {
-  section: `
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 .5em;
-  `
-})
+const applicantsStyles = cmz(`
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+  display: inline-block;
+  vertical-align: middle;
+  margin: .5em;
+`)
 
 export type Portfolio = {
   id: ?number,
@@ -70,9 +71,9 @@ class ResultListItem extends PureComponent<Props> {
   }
 
   render () {
-    const { applicant } = props
+    const { applicant } = this.props
 
-    if (!applicant) return null
+    if (!applicant) return <div> No applicant! </div>
 
     const { firstName, lastName, email } = applicant
 
@@ -80,7 +81,7 @@ class ResultListItem extends PureComponent<Props> {
     const tagitemStyles = tagItem
 
     return (
-      <div>
+      <div className={applicantsStyles}>
         <img
           alt={`${firstName} ${lastName}'s avatar`}
           src={`https://www.gravatar.com/avatar/${md5(email)}?s=64`}
@@ -88,7 +89,7 @@ class ResultListItem extends PureComponent<Props> {
 
         <div>{`${firstName} ${lastName}`}</div>
 
-        <div className={`${applicantsStyles.section}`}>
+        <div className={applicantsStyles}>
           {applicant.baseId &&
             <a href={`https://app.futuresimple.com/leads/${applicant.baseId}`} target='_blank'>
               &rarr; View in Base
@@ -101,11 +102,11 @@ class ResultListItem extends PureComponent<Props> {
             <div className={tagitemStyles.heading}>Tags</div>
             {tags.map((tag, key) => (
               <div key={key} className={tagitemStyles.root}>
-                <div className={tagitemStyles.subheading}>{tag.name}</div>
+                <div className={tagitemStyles.heading}>{tag.name}</div>
                 {tag.portfolios &&
                   tag.portfolios.map(portfolio => (
                     <div key={portfolio.id} className={tagitemStyles.body}>
-                      {cropBody(portfolio.body)}
+                      {this.cropBody(portfolio.body)}
                     </div>
                   ))}
               </div>

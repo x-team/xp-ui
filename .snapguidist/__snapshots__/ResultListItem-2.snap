@@ -1,0 +1,36 @@
+exports[`ResultListItem-2 1`] = `
+<div>
+  <img
+    alt="Applicant X-Team\'s avatar"
+    src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=64" />
+  <div>
+    Applicant X-Team
+  </div>
+  <div
+    className="undefined">
+    <a
+      href="https://app.futuresimple.com/leads/e303e627d9c3f8c47e3bff5"
+      target="_blank">
+      → View in Base
+    </a>
+  </div>
+  <div>
+    <div>
+      Tags
+    </div>
+    <div>
+      <div>
+        react
+      </div>
+      <div>
+        2 years of experience
+      </div>
+    </div>
+    <div>
+      <div>
+        node.js
+      </div>
+    </div>
+  </div>
+</div>
+`;

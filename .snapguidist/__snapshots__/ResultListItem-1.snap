@@ -1,0 +1,12 @@
+exports[`ResultListItem-1 1`] = `
+<div>
+  <img
+    alt="undefined undefined\'s avatar"
+    src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=64" />
+  <div>
+    undefined undefined
+  </div>
+  <div
+    className="undefined" />
+</div>
+`;
