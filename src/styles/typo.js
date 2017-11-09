@@ -1,6 +1,6 @@
 import cmz from 'cmz'
 import WebFont from 'webfontloader'
-import theme from './theme'
+import theme, { breakpoints } from './theme'
 
 WebFont.load({
   google: {
@@ -31,5 +31,26 @@ export const family = {
     color: ${theme.blackHighlight}
     letter-spacing: -3px
     line-height: .95em
-  `])
+  `]),
+
+  divider: cmz(`
+    & {
+      margin-bottom: 60px;
+      position: relative;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 3.5rem;
+      height: 4px;
+      bottom: -30px;
+      transform: translateX(-50%);
+      background-color: ${theme.red};
+    }
+    @media screen and (max-width: ${breakpoints.sm}) {
+      & {
+        margin-bottom: 60px;
+      }
+    }`
+  )
 }

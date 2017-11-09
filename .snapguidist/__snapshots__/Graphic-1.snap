@@ -1,0 +1,6 @@
+exports[`Graphic-1 1`] = `
+<img
+  alt="X-Team Roadmap"
+  className="AutoUI_Graphic-16"
+  src="../assets/x-roadmap.png" />
+`;
