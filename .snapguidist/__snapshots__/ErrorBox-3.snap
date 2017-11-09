@@ -1,10 +1,9 @@
 exports[`ErrorBox-3 1`] = `
 <div
-  className="AutoUI_ErrorBox-14 AutoUI_typo-20 AutoUI_typo-14">
+  className="AutoUI_ErrorBox-15 AutoUI_typo-21 AutoUI_typo-15">
   <ul
-    className="AutoUI_ErrorBox-25">
-    <li
-      className="">
+    className="AutoUI_ErrorBox-26">
+    <li>
       Something went wrong
     </li>
   </ul>

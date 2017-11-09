@@ -1,6 +1,7 @@
-import cmz from 'cmz'
 import WebFont from 'webfontloader'
 import theme, { breakpoints } from './theme'
+
+const cmz = require('cmz')
 
 WebFont.load({
   google: {
@@ -17,12 +18,14 @@ export const textRendering = cmz(`
 `)
 
 export const family = {
-  base: cmz([ textRendering, `
+  base: cmz(
+    textRendering, `
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
     font-weight: 300
-  `]),
+  `),
 
-  heading: cmz([ textRendering, `
+  heading: cmz(
+    textRendering, `
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
     font-weight: 800
     text-transform: uppercase
@@ -31,7 +34,17 @@ export const family = {
     color: ${theme.blackHighlight}
     letter-spacing: -3px
     line-height: .95em
-  `]),
+  `),
+
+  smallHeading: cmz(
+    textRendering, `
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 800
+    font-size: 18px
+    margin: 0 0 10px
+    color: ${theme.black}
+    line-height: 1em
+  `),
 
   divider: cmz(`
     & {
@@ -53,4 +66,5 @@ export const family = {
       }
     }`
   )
+
 }

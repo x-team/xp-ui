@@ -1,8 +1,9 @@
 // @flow
 
 import { PureComponent } from 'react'
-import cmz from 'cmz'
 import elem from '../utils/elem'
+
+const cmz = require('cmz')
 
 type Props = {}
 
