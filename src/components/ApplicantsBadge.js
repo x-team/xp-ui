@@ -27,12 +27,21 @@ type Props = {
 }
 
 class ApplicantsBadge extends PureComponent<Props> {
+  getApplicantsFieldsValues: Function
+
+  getApplicantsFieldsValues (applicant: Applicant) {
+    const firstName = applicant.firstName || 'No first name provided.'
+    const lastName = applicant.lastName || 'No last name provided.'
+    const email = applicant.email || 'No e-mail provided.'
+    return { firstName, lastName, email }
+  }
+
   render () {
     const { applicant } = this.props
 
     if (!applicant) { return null }
 
-    const { firstName, lastName, email } = applicant
+    const { firstName, lastName, email } = this.getApplicantsFieldsValues(applicant)
 
     return (
       <div className={containerStyles}>
