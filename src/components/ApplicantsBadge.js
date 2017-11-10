@@ -16,32 +16,15 @@ const applicantsContainer = cmz(`
   margin: 0 1em
 `)
 
-export type Applicant = {
+type Props = {
   firstName: ?string,
   lastName: ?string,
   email: ?string
 }
 
-type Props = {
-  applicant: Applicant
-}
-
 class ApplicantsBadge extends PureComponent<Props> {
-  getApplicantsFieldsValues: Function
-
-  getApplicantsFieldsValues (applicant: Applicant) {
-    const firstName = applicant.firstName || 'No first name provided.'
-    const lastName = applicant.lastName || 'No last name provided.'
-    const email = applicant.email || 'No e-mail provided.'
-    return { firstName, lastName, email }
-  }
-
   render () {
-    const { applicant } = this.props
-
-    if (!applicant) { return null }
-
-    const { firstName, lastName, email } = this.getApplicantsFieldsValues(applicant)
+    const { firstName, lastName, email } = this.props
 
     return (
       <div className={containerStyles}>
