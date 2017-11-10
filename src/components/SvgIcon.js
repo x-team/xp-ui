@@ -3,15 +3,13 @@
 import React, { PureComponent } from 'react'
 import theme from '../styles/theme'
 
-const cmz = require('cmz')
-
 type Props = {
-  icon: [ 'head', 'webcam', 'message', 'terminal', 'diamond', 'talking', 'trophy' ],
-  color: [ 'default', 'inverted', 'monochrome' ],
+  icon: 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy',
+  color: 'default' | 'inverted' | 'monochrome',
 }
 
 const getIcon = ({ icon, color }) => {
-  const colors = {
+  const colors: { [string]: string } = {
     default: theme.defaultStroke,
     inverted: theme.invertedStroke,
     monochrome: theme.monochromeStroke
@@ -178,12 +176,11 @@ const getIcon = ({ icon, color }) => {
 class SvgIcon extends PureComponent<Props> {
   static defaultProps = {
     icon: '',
-    isInverted: false,
-    isMonochrome: false
+    colors: 'default'
   }
 
   render () {
-    const { icon, color = 'default' } = this.props
+    const { icon, color } = this.props
     const svgIcon = getIcon({ icon, color })
 
     if (!svgIcon) {
