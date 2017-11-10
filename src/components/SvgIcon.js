@@ -5,13 +5,16 @@ import theme from '../styles/theme'
 
 const cmz = require('cmz')
 
-type Props = {}
+type Props = {
+  icon: [ 'head', 'webcam', 'message', 'terminal', 'diamond', 'talking', 'trophy' ],
+  color: [ 'default', 'inverted', 'monochrome' ],
+}
 
-const getIcon = ({ icon, isInverted, isMonochrome }) => {
+const getIcon = ({ icon, color }) => {
   const colors = {
-    default: '#F63954',
-    inverted: '#FFF',
-    monochrome: '#231F20',
+    default: theme.defaultStroke,
+    inverted: theme.invertedStroke,
+    monochrome: theme.monochromeStroke,
   }
 
   const icons = [
@@ -20,7 +23,7 @@ const getIcon = ({ icon, isInverted, isMonochrome }) => {
       svg: (
         <svg width="37px" height="43px" viewBox="0 0 37 43">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
-            <g transform="translate(-269.000000, -1104.000000)" stroke="#F63954" strokeWidth="2">
+            <g transform="translate(-269.000000, -1104.000000)" stroke={colors[color]} strokeWidth="2">
               <g transform="translate(0.000000, 823.000000)">
                 <g transform="translate(230.000000, 242.000000)">
                   <g transform="translate(40.000000, 40.000000)">
@@ -39,7 +42,7 @@ const getIcon = ({ icon, isInverted, isMonochrome }) => {
       svg: (
         <svg width="30px" height="43px" viewBox="0 0 30 43">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
-            <g transform="translate(-929.000000, -1363.000000)" stroke="#F73954" strokeWidth="2">
+            <g transform="translate(-929.000000, -1363.000000)" stroke={colors[color]} strokeWidth="2">
               <g transform="translate(0.000000, 823.000000)">
                 <g transform="translate(890.000000, 502.000000)">
                   <g transform="translate(40.000000, 39.000000)">
@@ -59,7 +62,7 @@ const getIcon = ({ icon, isInverted, isMonochrome }) => {
       svg: (
         <svg width="37px" height="36px" viewBox="0 0 37 36">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
-            <g transform="translate(-269.000000, -1671.000000)" stroke="#F73954" strokeWidth="2">
+            <g transform="translate(-269.000000, -1671.000000)" stroke={colors[color]} strokeWidth="2">
               <g transform="translate(0.000000, 823.000000)">
                 <g transform="translate(230.000000, 805.000000)">
                   <g transform="translate(40.000000, 44.000000)">
@@ -79,7 +82,7 @@ const getIcon = ({ icon, isInverted, isMonochrome }) => {
       svg: (
         <svg width="42px" height="37px" viewBox="0 0 42 37">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
-            <g transform="translate(-929.000000, -1925.000000)" stroke="#F63954" strokeWidth="2">
+            <g transform="translate(-929.000000, -1925.000000)" stroke={colors[color]} strokeWidth="2">
               <g transform="translate(0.000000, 823.000000)">
                 <g transform="translate(890.000000, 1063.000000)">
                   <g transform="translate(40.000000, 40.000000)">
@@ -104,7 +107,7 @@ const getIcon = ({ icon, isInverted, isMonochrome }) => {
       svg: (
         <svg width="42px" height="39px" viewBox="0 0 42 39">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
-            <g transform="translate(-270.000000, -2228.000000)" stroke="#F63954" strokeWidth="2">
+            <g transform="translate(-270.000000, -2228.000000)" stroke={colors[color]} strokeWidth="2">
               <g transform="translate(0.000000, 823.000000)">
                 <g transform="translate(230.000000, 1367.000000)">
                   <g transform="translate(41.000000, 39.000000)">
@@ -127,7 +130,7 @@ const getIcon = ({ icon, isInverted, isMonochrome }) => {
       svg: (
         <svg width="42px" height="42px" viewBox="0 0 42 42">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
-            <g transform="translate(-929.000000, -2519.000000)" stroke="#F63954" strokeWidth="2">
+            <g transform="translate(-929.000000, -2519.000000)" stroke={colors[color]} strokeWidth="2">
               <g transform="translate(0.000000, 823.000000)">
                 <g transform="translate(890.000000, 1657.000000)">
                   <g transform="translate(40.000000, 40.000000)">
@@ -148,7 +151,7 @@ const getIcon = ({ icon, isInverted, isMonochrome }) => {
       svg: (
         <svg width="42px" height="44px" viewBox="0 0 42 44">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
-            <g transform="translate(-779.000000, -3206.000000)" stroke="#F63954" strokeWidth="2">
+            <g transform="translate(-779.000000, -3206.000000)" stroke={colors[color]} strokeWidth="2">
               <g transform="translate(0.000000, 823.000000)">
                 <g transform="translate(0.000000, 2294.000000)">
                   <g transform="translate(780.000000, 90.000000)">
@@ -180,8 +183,8 @@ class SvgIcon extends PureComponent<Props> {
   }
 
   render () {
-    const { icon, isInverted, isMonochrome } = this.props
-    const svgIcon = getIcon({ icon, isInverted, isMonochrome })
+    const { icon, color = 'default' } = this.props
+    const svgIcon = getIcon({ icon, color })
 
     if (!svgIcon) {
       return null

@@ -15,14 +15,14 @@ Basic colors:
 Inverted colors:
 
 ```
-<div>
-  <SvgIcon icon="head" isInverted />
-  <SvgIcon icon="webcam" isInverted />
-  <SvgIcon icon="message" isInverted />
-  <SvgIcon icon="terminal" isInverted />
-  <SvgIcon icon="diamond" isInverted />
-  <SvgIcon icon="talking" isInverted />
-  <SvgIcon icon="trophy" isInverted />
+<div style={{ background: '#F63A55' }}>
+  <SvgIcon icon="head" color="inverted" />
+  <SvgIcon icon="webcam" color="inverted" />
+  <SvgIcon icon="message" color="inverted" />
+  <SvgIcon icon="terminal" color="inverted" />
+  <SvgIcon icon="diamond" color="inverted" />
+  <SvgIcon icon="talking" color="inverted" />
+  <SvgIcon icon="trophy" color="inverted" />
 </div>
 ```
 
@@ -30,13 +30,13 @@ Monochrome colors:
 
 ```
 <div>
-  <SvgIcon icon="head" isMonochrome />
-  <SvgIcon icon="webcam" isMonochrome />
-  <SvgIcon icon="message" isMonochrome />
-  <SvgIcon icon="terminal" isMonochrome />
-  <SvgIcon icon="diamond" isMonochrome />
-  <SvgIcon icon="talking" isMonochrome />
-  <SvgIcon icon="trophy" isMonochrome />
+  <SvgIcon icon="head" color="monochrome" />
+  <SvgIcon icon="webcam" color="monochrome" />
+  <SvgIcon icon="message" color="monochrome" />
+  <SvgIcon icon="terminal" color="monochrome" />
+  <SvgIcon icon="diamond" color="monochrome" />
+  <SvgIcon icon="talking" color="monochrome" />
+  <SvgIcon icon="trophy" color="monochrome" />
 </div>
 ```
 

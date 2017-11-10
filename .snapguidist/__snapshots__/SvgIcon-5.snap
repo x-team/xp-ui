@@ -12,7 +12,17 @@ exports[`SvgIcon-5 1`] = `
       strokeLinejoin="round"
       strokeWidth="1">
       <g
-        stroke="#F63954"
+        stroke={
+          Object {
+            "color": Array [
+              35,
+              31,
+              32,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
         strokeWidth="2"
         transform="translate(-269.000000, -1104.000000)">
         <g
@@ -43,7 +53,17 @@ exports[`SvgIcon-5 1`] = `
       strokeLinejoin="round"
       strokeWidth="1">
       <g
-        stroke="#F73954"
+        stroke={
+          Object {
+            "color": Array [
+              35,
+              31,
+              32,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
         strokeWidth="2"
         transform="translate(-929.000000, -1363.000000)">
         <g
@@ -76,7 +96,17 @@ exports[`SvgIcon-5 1`] = `
       strokeLinejoin="round"
       strokeWidth="1">
       <g
-        stroke="#F73954"
+        stroke={
+          Object {
+            "color": Array [
+              35,
+              31,
+              32,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
         strokeWidth="2"
         transform="translate(-269.000000, -1671.000000)">
         <g
@@ -109,7 +139,17 @@ exports[`SvgIcon-5 1`] = `
       strokeLinejoin="round"
       strokeWidth="1">
       <g
-        stroke="#F63954"
+        stroke={
+          Object {
+            "color": Array [
+              35,
+              31,
+              32,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
         strokeWidth="2"
         transform="translate(-929.000000, -1925.000000)">
         <g
@@ -152,7 +192,17 @@ exports[`SvgIcon-5 1`] = `
       strokeLinejoin="round"
       strokeWidth="1">
       <g
-        stroke="#F63954"
+        stroke={
+          Object {
+            "color": Array [
+              35,
+              31,
+              32,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
         strokeWidth="2"
         transform="translate(-270.000000, -2228.000000)">
         <g
@@ -191,7 +241,17 @@ exports[`SvgIcon-5 1`] = `
       strokeLinejoin="round"
       strokeWidth="1">
       <g
-        stroke="#F63954"
+        stroke={
+          Object {
+            "color": Array [
+              35,
+              31,
+              32,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
         strokeWidth="2"
         transform="translate(-929.000000, -2519.000000)">
         <g
@@ -226,7 +286,17 @@ exports[`SvgIcon-5 1`] = `
       strokeLinejoin="round"
       strokeWidth="1">
       <g
-        stroke="#F63954"
+        stroke={
+          Object {
+            "color": Array [
+              35,
+              31,
+              32,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
         strokeWidth="2"
         transform="translate(-779.000000, -3206.000000)">
         <g
