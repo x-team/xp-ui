@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import theme, { breakpoints } from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
@@ -94,7 +94,6 @@ const contentDividerCenter = cmz(typo.family.divider, `
 `)
 
 class Text extends PureComponent<Props> {
-
   render () {
     const {
       heading,
