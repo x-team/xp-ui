@@ -9,5 +9,6 @@ export {
   PageTitle,
   XIcon,
   CollapsibleSection,
-  SvgIcon
+  SvgIcon,
+  Text
 }

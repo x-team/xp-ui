@@ -176,7 +176,7 @@ const getIcon = ({ icon, color }) => {
 class SvgIcon extends PureComponent<Props> {
   static defaultProps = {
     icon: '',
-    colors: 'default'
+    color: 'default'
   }
 
   render () {
