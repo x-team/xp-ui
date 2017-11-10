@@ -26,7 +26,11 @@ export default wrap({
   lightGrayBorder: '#e0e0e0',
 
   red: '#ff5965',
-  redHighlight: '#f63a55'
+  redHighlight: '#f63a55',
+
+  defaultStroke: '#F63954',
+  invertedStroke: '#FFF',
+  monochromeStroke: '#231F20'
 })
 
 export const breakpoints = {
