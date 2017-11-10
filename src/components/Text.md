@@ -18,7 +18,7 @@ Text example (Heading with Center Align):
 <Text
   heading="Your roadmap to X-Team"
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
-  hasCenter={true}
+  isCentered={true}
 />
 ```
 
@@ -37,7 +37,7 @@ Text example (Sub Heading with Center Align):
 <Text
   subHeading="Your roadmap to X-Team"
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
-  hasCenter={true}
+  isCentered={true}
 />
 ```
 
@@ -58,7 +58,7 @@ Text example (Sub Heading with Level and Center Align):
   subHeading="Your roadmap to X-Team"
   level="Level 7"
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
-  hasCenter={true}
+  isCentered={true}
 />
 ```
 
@@ -71,12 +71,12 @@ Text example (Without Heading and Sub Heading with divider):
 />
 ```
 
-Text example (Without Heading and Sub Heading with hasCenter align):
+Text example (Without Heading and Sub Heading with isCentered align):
 
 ```js
 <Text
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
-  hasCenter={true}
+  isCentered={true}
   hasDivider={true}
 />
 ```

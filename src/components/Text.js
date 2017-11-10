@@ -14,7 +14,7 @@ type Props = {
   subHeading?: Element<*>|string,
   level?: Element<*>|string,
   content: Element<*>|string,
-  hasCenter?: Boolean,
+  isCentered?: Boolean,
   hasDivider?: Boolean
 }
 
@@ -100,19 +100,19 @@ class Text extends PureComponent<Props> {
       subHeading,
       level,
       content,
-      hasCenter,
+      isCentered,
       hasDivider
     } = this.props
 
-    return Root(hasCenter ? {className: centerAlign} : {},
+    return Root(isCentered ? {className: centerAlign} : {},
 
-      heading && Heading({ className: hasCenter ? dividerCenter : dividerLeft }, heading),
+      heading && Heading({ className: isCentered ? dividerCenter : dividerLeft }, heading),
 
       subHeading && SubHeading(subHeading),
 
       level && Level(level),
 
-      Content(hasDivider ? { className: (hasCenter ? contentDividerCenter : contentDividerLeft) } : {}, content)
+      Content(hasDivider ? { className: (isCentered ? contentDividerCenter : contentDividerLeft) } : {}, content)
     )
   }
 }
