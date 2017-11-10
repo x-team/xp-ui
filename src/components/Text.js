@@ -42,7 +42,7 @@ const SubHeading = elem.h2(cmz(`
   text-transform: uppercase;
 `))
 
-const Level = elem.h2(cmz(`
+const Level = elem.p(cmz(`
   color: ${theme.red};
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
