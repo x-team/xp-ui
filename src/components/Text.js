@@ -18,7 +18,7 @@ type Props = {
   hasDivider?: Boolean
 }
 
-const Root = elem.div(cmz(`
+const Root = elem.section(cmz(`
   & {
     white-space: pre-line;
     margin: 0 0 35px 0;
@@ -32,7 +32,7 @@ const Root = elem.div(cmz(`
   }
 `))
 
-const Heading = elem.div(cmz(typo.family.heading))
+const Heading = elem.h1(cmz(typo.family.heading))
 
 const SubHeading = elem.h2(cmz(`
   font-weight: 600;

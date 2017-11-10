@@ -1,3 +1,8 @@
+Empty Text example :
+```js
+<Text />
+```
+
 Text example (Heading):
 
 ```js
