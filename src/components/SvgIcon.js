@@ -4,16 +4,17 @@ import React, { PureComponent } from 'react'
 import theme from '../styles/theme'
 
 type Props = {
-  icon: 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy',
-  color: 'default' | 'inverted' | 'monochrome',
+  icon?: string,
+  color?: string,
 }
 
-const getIcon = ({ icon, color }) => {
+const getIcon = ({ icon, color = 'default' }) => {
   const colors: { [string]: string } = {
-    default: theme.defaultStroke,
-    inverted: theme.invertedStroke,
-    monochrome: theme.monochromeStroke
+    default: theme.defaultBorder,
+    inverted: theme.invertedBorder,
+    monochrome: theme.monochromeBorder
   }
+  console.log(color)
 
   const icons = [
     {
