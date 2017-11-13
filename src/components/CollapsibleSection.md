@@ -79,3 +79,9 @@ Basic with many items:
   </CollapsibleSection>
 </div>
 ```
+
+Missing props (does component explodes?):
+
+```
+<CollapsibleSection />
+```

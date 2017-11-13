@@ -164,7 +164,7 @@ class CollapsibleSection extends PureComponent<Props> {
       !isCollapsed && Children(children)
     )
 
-    return Root(
+    return (title !== '' && children) ? Root(
       {
         onClick: () => isCollapsed && handleToggleCollapse(false),
         className: [
@@ -180,7 +180,7 @@ class CollapsibleSection extends PureComponent<Props> {
         title
       ),
       ContentBlock
-    )
+    ) : null
   }
 }
 
