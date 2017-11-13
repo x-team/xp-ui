@@ -31,16 +31,22 @@ class ApplicantListFilter extends PureComponent<Props> {
       <div>
         <form className={optionContainer}>
           <div className={option}>
-            <input type='checkbox' name='pending' onChange={handleCheck} />
-            <label> Pending ({pending}) </label>
+            <label>
+              <input type='checkbox' name='pending' onChange={handleCheck} />
+              <span>Pending ({pending})</span>
+            </label>
           </div>
           <div className={option}>
-            <input type='checkbox' name='accepted' onChange={handleCheck} />
-            <label> Accepted ({accepted}) </label>
+            <label>
+              <input type='checkbox' name='accepted' onChange={handleCheck} />
+              <span>Accepted ({accepted})</span>
+            </label>
           </div>
           <div className={option}>
-            <input type='checkbox' name='excluded' onChange={handleCheck} />
-            <label> Excluded ({excluded}) </label>
+            <label>
+              <input type='checkbox' name='excluded' onChange={handleCheck} />
+              <span>Excluded ({excluded})</span>
+            </label>
           </div>
         </form>
       </div>
