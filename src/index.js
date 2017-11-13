@@ -1,14 +1,17 @@
+import ApplicantBadge from './components/ApplicantBadge'
+import CollapsibleSection from './components/CollapsibleSection'
 import ErrorBox from './components/ErrorBox'
 import PageTitle from './components/PageTitle'
-import XIcon from './components/XIcon'
-import CollapsibleSection from './components/CollapsibleSection'
 import SvgIcon from './components/SvgIcon'
+import XIcon from './components/XIcon'
+import Text from './components/Text'
 
 export {
+  ApplicantBadge,
+  CollapsibleSection,
   ErrorBox,
   PageTitle,
-  XIcon,
-  CollapsibleSection,
   SvgIcon,
+  XIcon,
   Text
 }
