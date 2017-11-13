@@ -6,7 +6,7 @@ const cmz = require('cmz')
 WebFont.load({
   google: {
     families: [
-      'Open Sans:800',
+      'Open Sans:800,400',
       'Source Sans Pro:300,700'
     ]
   }
@@ -39,7 +39,7 @@ export const family = {
   smallHeading: cmz(
     textRendering, `
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
-    font-weight: 800
+    font-weight: 400
     font-size: 18px
     margin: 0 0 10px
     color: ${theme.black}

@@ -1,15 +1,11 @@
 exports[`CollapsibleSection-3 1`] = `
 <section
-  className="AutoUI_CollapsibleSection-55 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-24 AutoUI_CollapsibleSection-26">
+  className="AutoUI_CollapsibleSection-57 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-26">
   <h1
-    className="AutoUI_CollapsibleSection-64 AutoUI_typo-39 AutoUI_typo-15 AutoUI_CollapsibleSection-28 AutoUI_CollapsibleSection-26 AutoUI_CollapsibleSection-47">
-    Panel title
+    className="AutoUI_CollapsibleSection-72 AutoUI_typo-39 AutoUI_typo-15 AutoUI_CollapsibleSection-28 AutoUI_CollapsibleSection-26">
+    Consectetur suscipit alias velit magni tenetur veritatis sed fuga
   </h1>
   <div
-    className="AutoUI_CollapsibleSection-90">
-    <p>
-      This paragraph is always visible.
-    </p>
-  </div>
+    className="AutoUI_CollapsibleSection-92" />
 </section>
 `;
