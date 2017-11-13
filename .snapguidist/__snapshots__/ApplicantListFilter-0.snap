@@ -1,0 +1,37 @@
+exports[`ApplicantListFilter-0 1`] = `
+<div>
+  <form
+    className="AutoUI_ApplicantListFilter-12">
+    <div
+      className="AutoUI_ApplicantListFilter-6">
+      <input
+        type="checkbox" />
+      <label>
+         Pending (
+        0
+        ) 
+      </label>
+    </div>
+    <div
+      className="AutoUI_ApplicantListFilter-6">
+      <input
+        type="checkbox" />
+      <label>
+         Accepted (
+        10
+        ) 
+      </label>
+    </div>
+    <div
+      className="AutoUI_ApplicantListFilter-6">
+      <input
+        type="checkbox" />
+      <label>
+         Excluded (
+        40
+        ) 
+      </label>
+    </div>
+  </form>
+</div>
+`;
