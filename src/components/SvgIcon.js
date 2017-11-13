@@ -4,8 +4,8 @@ import React, { PureComponent } from 'react'
 import theme from '../styles/theme'
 
 type Props = {
-  icon?: string,
-  color?: string,
+  icon: 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy',
+  color: 'default' | 'inverted' | 'monochrome',
 }
 
 const getIcon = ({ icon, color }) => {
