@@ -15,10 +15,8 @@ const getIcon = ({ icon, color }) => {
     monochrome: theme.monochromeStroke
   }
 
-  const icons = [
-    {
-      name: 'head',
-      svg: (
+  const icons = {
+    head: (
         <svg width='37px' height='43px' viewBox='0 0 37 43'>
           <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
             <g transform='translate(-269.000000, -1104.000000)' stroke={colors[color]} strokeWidth='2'>
@@ -33,11 +31,9 @@ const getIcon = ({ icon, color }) => {
             </g>
           </g>
         </svg>
-      )
-    },
-    {
-      name: 'webcam',
-      svg: (
+    ),
+
+    webcam: (
         <svg width='30px' height='43px' viewBox='0 0 30 43'>
           <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
             <g transform='translate(-929.000000, -1363.000000)' stroke={colors[color]} strokeWidth='2'>
@@ -53,11 +49,9 @@ const getIcon = ({ icon, color }) => {
             </g>
           </g>
         </svg>
-      )
-    },
-    {
-      name: 'message',
-      svg: (
+    ),
+
+    message: (
         <svg width='37px' height='36px' viewBox='0 0 37 36'>
           <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
             <g transform='translate(-269.000000, -1671.000000)' stroke={colors[color]} strokeWidth='2'>
@@ -73,11 +67,9 @@ const getIcon = ({ icon, color }) => {
             </g>
           </g>
         </svg>
-      )
-    },
-    {
-      name: 'terminal',
-      svg: (
+    ),
+
+    terminal: (
         <svg width='42px' height='37px' viewBox='0 0 42 37'>
           <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
             <g transform='translate(-929.000000, -1925.000000)' stroke={colors[color]} strokeWidth='2'>
@@ -98,11 +90,9 @@ const getIcon = ({ icon, color }) => {
             </g>
           </g>
         </svg>
-      )
-    },
-    {
-      name: 'diamond',
-      svg: (
+    ),
+
+    diamond: (
         <svg width='42px' height='39px' viewBox='0 0 42 39'>
           <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
             <g transform='translate(-270.000000, -2228.000000)' stroke={colors[color]} strokeWidth='2'>
@@ -121,11 +111,9 @@ const getIcon = ({ icon, color }) => {
             </g>
           </g>
         </svg>
-      )
-    },
-    {
-      name: 'talking',
-      svg: (
+    ),
+
+    talking: (
         <svg width='42px' height='42px' viewBox='0 0 42 42'>
           <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
             <g transform='translate(-929.000000, -2519.000000)' stroke={colors[color]} strokeWidth='2'>
@@ -142,11 +130,9 @@ const getIcon = ({ icon, color }) => {
             </g>
           </g>
         </svg>
-      )
-    },
-    {
-      name: 'trophy',
-      svg: (
+    ),
+
+    trophy: (
         <svg width='42px' height='44px' viewBox='0 0 42 44'>
           <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
             <g transform='translate(-779.000000, -3206.000000)' stroke={colors[color]} strokeWidth='2'>
@@ -166,11 +152,10 @@ const getIcon = ({ icon, color }) => {
             </g>
           </g>
         </svg>
-      )
-    }
-  ]
+    )
+  }
 
-  return icons.find(i => i.name === icon)
+  return icons[icon]
 }
 
 class SvgIcon extends PureComponent<Props> {
@@ -181,13 +166,7 @@ class SvgIcon extends PureComponent<Props> {
 
   render () {
     const { icon, color } = this.props
-    const svgIcon = getIcon({ icon, color })
-
-    if (!svgIcon) {
-      return null
-    }
-
-    return (svgIcon.svg)
+    return getIcon({ icon, color }) || null
   }
 }
 
