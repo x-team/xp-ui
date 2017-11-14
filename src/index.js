@@ -5,6 +5,7 @@ import ErrorBox from './components/ErrorBox'
 import PageTitle from './components/PageTitle'
 import SvgIcon from './components/SvgIcon'
 import XIcon from './components/XIcon'
+import Text from './components/Text'
 
 export {
   ApplicantBadge,
@@ -13,5 +14,6 @@ export {
   ErrorBox,
   PageTitle,
   SvgIcon,
-  XIcon
+  XIcon,
+  Text
 }
