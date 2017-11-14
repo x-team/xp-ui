@@ -10,6 +10,7 @@ import HorizontalRuler from './components/HorizontalRuler'
 import Text from './components/Text'
 import RoadmapHero from './components/RoadmapHero'
 import RoadmapLevel from './components/RoadmapLevel'
+import Milestones from './components/Milestones'
 
 export {
   ApplicantBadge,
@@ -23,5 +24,6 @@ export {
   HorizontalRuler,
   Text,
   RoadmapHero,
-  RoadmapLevel
+  RoadmapLevel,
+  Milestones
 }
