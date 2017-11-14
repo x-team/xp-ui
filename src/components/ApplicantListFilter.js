@@ -17,6 +17,10 @@ const optionContainer = cmz(
   text-align: right
 `)
 
+const label = cmz(`
+  text-transform: capitalize
+`)
+
 type Props = {
   handleCheck(): void,
   pending: number,
@@ -26,27 +30,23 @@ type Props = {
 
 class ApplicantListFilter extends PureComponent<Props> {
   render () {
-    const { handleCheck, pending, accepted, excluded } = this.props
+    const { handleCheck } = this.props
+    const types = [
+      'pending',
+      'accepted',
+      'excluded'
+    ]
+
     return (
       <form className={optionContainer}>
-        <div className={option}>
-          <label>
-            <input type='checkbox' name='pending' onChange={handleCheck} />
-            <span>Pending ({pending})</span>
-          </label>
-        </div>
-        <div className={option}>
-          <label>
-            <input type='checkbox' name='accepted' onChange={handleCheck} />
-            <span>Accepted ({accepted})</span>
-          </label>
-        </div>
-        <div className={option}>
-          <label>
-            <input type='checkbox' name='excluded' onChange={handleCheck} />
-            <span>Excluded ({excluded})</span>
-          </label>
-        </div>
+        { types.map(name => (
+          <div key={name} className={option}>
+            <label>
+              <input type='checkbox' name={name} onChange={handleCheck} />
+              <span className={label}>{name} ({this.props[name]})</span>
+            </label>
+          </div>
+        ))}
       </form>
     )
   }
