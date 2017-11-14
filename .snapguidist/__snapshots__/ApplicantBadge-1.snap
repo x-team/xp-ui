@@ -1,0 +1,35 @@
+exports[`ApplicantBadge-1 1`] = `
+<div
+  className="AutoUI_ApplicantBadge-6">
+  <img
+    alt="Applicant X-Team\'s avatar"
+    src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=64" />
+  <div
+    className="AutoUI_ApplicantBadge-12">
+    <div>
+      Applicant X-Team
+    </div>
+    <div>
+      applicant@x-team.com
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ApplicantsBadge-1 1`] = `
+<div
+  className="AutoUI_ApplicantsBadge-6">
+  <img
+    alt="Applicant X-Team's avatar"
+    src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=64" />
+  <div
+    className="AutoUI_ApplicantsBadge-13">
+    <div>
+      Applicant X-Team
+    </div>
+    <div>
+      applicant@x-team.com
+    </div>
+  </div>
+</div>
+`;

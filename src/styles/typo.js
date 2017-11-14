@@ -1,5 +1,5 @@
 import WebFont from 'webfontloader'
-import theme, { breakpoints } from './theme'
+import theme, { breakpoints } from '../styles/theme'
 
 const cmz = require('cmz')
 
@@ -66,5 +66,4 @@ export const family = {
       }
     }`
   )
-
 }

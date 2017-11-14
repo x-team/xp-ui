@@ -1,11 +1,10 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import theme, { breakpoints } from '../styles/theme'
+import { breakpoints } from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
-import Copy from './Copy'
-import Graphic from './Graphic'
+import Text from './Text'
 
 import type { Element } from 'react'
 const cmz = require('cmz')
@@ -13,8 +12,6 @@ const cmz = require('cmz')
 type Props = {
  heading: Element<*>|string,
  content?: Element<*>|string,
- imgUrl: Element<*>|string,
- altText: string
 }
 
 const Root = elem.div(cmz(`
@@ -41,27 +38,25 @@ const LeftBlock = elem.div(cmz(
   `
 ))
 
-const RightBlock = elem.div(cmz(
-  `
+const HeroImage = elem.img(cmz(`
   & {
     float: right;
   }
-  `
-))
+`), {
+  src: require('../assets/x-roadmap.png'),
+  alt: 'X-Team Roadmap'
+})
 
 class RoadmapHero extends PureComponent<Props> {
-
   render () {
     const {
       heading,
-      content,
-      imgUrl,
-      altText
+      content
     } = this.props
 
     return Root(
-      LeftBlock(<Copy {... { heading, content }} />),
-      RightBlock(<Graphic {... { imgUrl, altText }} />)
+      LeftBlock(<Text {... { heading, content }} />),
+      HeroImage()
     )
   }
 }

@@ -1,13 +1,21 @@
+import ApplicantBadge from './components/ApplicantBadge'
+import ApplicantListFilter from './components/ApplicantListFilter'
+import CollapsibleSection from './components/CollapsibleSection'
 import ErrorBox from './components/ErrorBox'
 import PageTitle from './components/PageTitle'
+import SvgIcon from './components/SvgIcon'
 import XIcon from './components/XIcon'
+import Text from './components/Text'
 import RoadmapHero from './components/RoadmapHero'
-import CollapsibleSection from './components/CollapsibleSection'
 
 export {
+  ApplicantBadge,
+  ApplicantListFilter,
+  CollapsibleSection,
   ErrorBox,
   PageTitle,
+  SvgIcon,
   XIcon,
+  Text,
   RoadmapHero
-  CollapsibleSection
 }

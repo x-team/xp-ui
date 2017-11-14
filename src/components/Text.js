@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import theme, { breakpoints } from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
@@ -14,11 +14,11 @@ type Props = {
   subHeading?: Element<*>|string,
   level?: Element<*>|string,
   content: Element<*>|string,
-  hasCenter?: Boolean,
+  isCentered?: Boolean,
   hasDivider?: Boolean
 }
 
-const Root = elem.div(cmz(`
+const Root = elem.section(cmz(`
   & {
     white-space: pre-line;
     margin: 0 0 35px 0;
@@ -32,9 +32,7 @@ const Root = elem.div(cmz(`
   }
 `))
 
-const Heading = elem.div(cmz([
-  typo.family.heading
-]))
+const Heading = elem.h1(cmz(typo.family.heading))
 
 const SubHeading = elem.h2(cmz(`
   font-weight: 600;
@@ -44,14 +42,14 @@ const SubHeading = elem.h2(cmz(`
   text-transform: uppercase;
 `))
 
-const Level = elem.h2(cmz(`
+const Level = elem.p(cmz(`
   color: ${theme.red};
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: 500;
 `))
 
-const Content = elem.div(cmz([
+const Content = elem.div(cmz(
   typo.family.base,
   `
   & {
@@ -61,19 +59,19 @@ const Content = elem.div(cmz([
     font-size: 24px;
     line-height: 1.3em;
   }
-`]))
+`))
 
-const dividerLeft = cmz([typo.family.divider, `
+const dividerLeft = cmz(typo.family.divider, `
   &:after {
     left: 3%;
   }
-`])
+`)
 
-const dividerCenter = cmz([typo.family.divider, `
+const dividerCenter = cmz(typo.family.divider, `
   &:after {
     left: 50%;
   }
-`])
+`)
 
 const centerAlign = cmz(`
   & {
@@ -81,43 +79,42 @@ const centerAlign = cmz(`
   }
 `)
 
-const contentDividerLeft = cmz([typo.family.divider, `
+const contentDividerLeft = cmz(typo.family.divider, `
   &:after {
     left: 3%;
     top: -30px;
   }
-`])
+`)
 
-const contentDividerCenter = cmz([typo.family.divider, `
+const contentDividerCenter = cmz(typo.family.divider, `
   &:after {
     left: 50%;
     top: -30px;
   }
-`])
+`)
 
-class Copy extends PureComponent<Props> {
-
+class Text extends PureComponent<Props> {
   render () {
     const {
       heading,
       subHeading,
       level,
       content,
-      hasCenter,
+      isCentered,
       hasDivider
     } = this.props
 
-    return Root(hasCenter ? {className: centerAlign} : {},
+    return Root(isCentered ? {className: centerAlign} : {},
 
-      heading && Heading({ className: hasCenter ? dividerCenter : dividerLeft }, heading),
+      heading && Heading({ className: isCentered ? dividerCenter : dividerLeft }, heading),
 
       subHeading && SubHeading(subHeading),
 
       level && Level(level),
 
-      Content(hasDivider ? { className: (hasCenter ? contentDividerCenter : contentDividerLeft) } : {}, content)
+      Content(hasDivider ? { className: (isCentered ? contentDividerCenter : contentDividerLeft) } : {}, content)
     )
   }
 }
 
-export default Copy
+export default Text
