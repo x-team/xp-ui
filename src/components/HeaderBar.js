@@ -14,9 +14,7 @@ const cx = {
     height: 58px;
     padding-top: 28px;
     width: 100%;
-`),
-  logoContainer: cmz(`
-  `)
+`)
 }
 
 function svgLogo (width, height) {
@@ -47,16 +45,14 @@ function svgLogo (width, height) {
   )
 }
 
-class HeaderBar extends PureComponent<Props> {
+export default class HeaderBar extends PureComponent<Props> {
   static defaultProps = {}
 
   render () {
     return (
       <div className={cx.logoWrapper}>
-        <div className={cx.logoContainer}>{svgLogo(84, 30)}</div>
+        {svgLogo(84, 30)}
       </div>
     )
   }
 }
-
-export default HeaderBar
