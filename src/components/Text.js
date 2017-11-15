@@ -89,6 +89,15 @@ const contentDividerCenter = cmz(typo.family.divider, `
 `)
 
 class Text extends PureComponent<Props> {
+  static defaultProps = {
+    heading: '',
+    subHeading: '',
+    level: '',
+    content: '',
+    isCentered: false,
+    hasDivider: false,
+  }
+
   render () {
     const {
       heading,

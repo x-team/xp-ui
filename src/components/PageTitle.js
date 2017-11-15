@@ -1,104 +1,53 @@
 // @flow
 
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import theme, { breakpoints } from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
+import Text from './Text'
 
 import type { Element } from 'react'
-
 const cmz = require('cmz')
 
 type Props = {
  heading: Element<*>|string,
- description?: Element<*>|string,
- subheading?: Element<*>|string,
- hasDivider: boolean,
- headingClassName: string
+ subHeading?: Element<*>|string,
+ content?: Element<*>|string,
+ hasDivider: boolean
 }
 
 const Root = elem.div(cmz(`
   & {
-    white-space: pre-line
-    margin: 0 0 35px 0
-    text-align: center
+    white-space: pre-line;
+    margin: 0 0 35px 0;
+    clear: both;
+    overflow: hidden;
   }
   @media screen and (max-width: ${breakpoints.sm}) {
     & {
-      margin: 0 0 35px 0
+      margin: 0 0 35px 0;
     }
   }
 `))
-
-const Heading = elem.h1(typo.family.heading)
-
-const Subheading = elem.h2(cmz(`
-  margin: 0 0 35px 0
-  font-weight: 700
-`))
-
-const Description = elem.div(cmz(
-  typo.family.base,
-  `
-  & {
-    margin-top: 35px
-  }
-  &, & * {
-    font-size: 24px
-    line-height: 1.3em
-  }
-`))
-
-const divider = cmz(`
-  & {
-    margin-bottom: 60px
-    position: relative
-  }
-  &:after {
-    content: ''
-    position: absolute
-    width: 3.5rem
-    height: 4px
-    bottom: -30px
-    left: 50%
-    transform: translateX(-50%)
-    background-color: ${theme.red}
-  }
-  @media screen and (max-width: ${breakpoints.sm}) {
-    & {
-      margin-bottom: 60px
-    }
-  }
-`)
 
 class PageTitle extends PureComponent<Props> {
   static defaultProps = {
     hasDivider: false,
-    headingClassName: ''
   }
 
   render () {
     const {
       heading,
-      subheading,
-      description,
-      hasDivider,
-      headingClassName
+      subHeading,
+      content,
+      hasDivider
     } = this.props
 
     return Root(
-      { className: hasDivider && divider },
-
-      Heading(
-        { className: headingClassName },
-        heading
-      ),
-
-      subheading && Subheading(subheading),
-
-      description && Description(description)
+      <Text {... { heading, subHeading, content, hasDivider }} />
     )
   }
+
 }
 
 export default PageTitle
