@@ -7,11 +7,13 @@ import SvgIcon from './SvgIcon'
 import theme from '../styles/theme'
 import * as typo from '../styles/typo'
 
+import type { Icon } from './SvgIcon'
+
 const cmz = require('cmz')
 
 type Level = {
   label: string,
-  icon: string,
+  icon: ?Icon,
   handleClick(): void
 }
 
