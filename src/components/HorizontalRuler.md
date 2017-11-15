@@ -1,0 +1,4 @@
+Basic:
+```js
+<HorizontalRuler />
+```
