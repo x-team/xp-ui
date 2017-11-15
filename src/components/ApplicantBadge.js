@@ -5,7 +5,6 @@ const cmz = require('cmz')
 
 const containerStyles = cmz(`
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
-  display: inline-block;
   vertical-align: middle;
   margin: .5em;
 `)
