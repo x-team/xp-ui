@@ -116,24 +116,22 @@ const styles = {
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
-      width: 36%;
-      height: auto;
+      width: 35%;
+      height: 35%;
     }
   `),
 
   label: cmz(
     typo.family.base, `
-    & {
-      display: block;
-      text-transform: uppercase;
-      font-size: .8em;
-      font-weight: 400;
-      color: ${theme.black};
-      position: absolute;
-      padding-top: .2em;
-      width: 100%;
-      transition: all .25s ease-out;
-    }
+    display: block;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: 400;
+    color: ${theme.black};
+    position: absolute;
+    padding-top: .2em;
+    width: 100%;
+    transition: all .25s ease-out;
   `)
 }
 
@@ -200,7 +198,7 @@ class Milestones extends PureComponent<Props, State> {
 
     return (
       <ul className={styles.milestones}>
-        {levels.map((level, index) => this.renderMilestone(level, ++index))}
+        {levels.map((level, index) => this.renderMilestone(level, index + 1))}
       </ul>
     )
   }
