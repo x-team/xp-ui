@@ -1,12 +1,12 @@
 import WebFont from 'webfontloader'
-import theme from './theme'
+import theme, { breakpoints } from '../styles/theme'
 
 const cmz = require('cmz')
 
 WebFont.load({
   google: {
     families: [
-      'Open Sans:800',
+      'Open Sans:800,400',
       'Source Sans Pro:300,700'
     ]
   }
@@ -39,10 +39,31 @@ export const family = {
   smallHeading: cmz(
     textRendering, `
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
-    font-weight: 800
+    font-weight: 400
     font-size: 18px
     margin: 0 0 10px
     color: ${theme.black}
     line-height: 1em
-  `)
+  `),
+
+  divider: cmz(`
+    & {
+      margin-bottom: 60px;
+      position: relative;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 3.5rem;
+      height: 4px;
+      bottom: -30px;
+      transform: translateX(-50%);
+      background-color: ${theme.red};
+    }
+    @media screen and (max-width: ${breakpoints.sm}) {
+      & {
+        margin-bottom: 60px;
+      }
+    }`
+  )
 }

@@ -1,0 +1,49 @@
+exports[`CollapsibleSection-9 1`] = `
+<div>
+  <section
+    className="AutoUI_CollapsibleSection-57 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-26">
+    <h1
+      className="AutoUI_CollapsibleSection-72 AutoUI_typo-39 AutoUI_typo-15 AutoUI_CollapsibleSection-28 AutoUI_CollapsibleSection-26">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+    </h1>
+    <div
+      className="AutoUI_CollapsibleSection-92" />
+  </section>
+  <section
+    className="AutoUI_CollapsibleSection-57 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-26">
+    <h1
+      className="AutoUI_CollapsibleSection-72 AutoUI_typo-39 AutoUI_typo-15 AutoUI_CollapsibleSection-28 AutoUI_CollapsibleSection-26">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+    </h1>
+    <div
+      className="AutoUI_CollapsibleSection-92" />
+  </section>
+  <section
+    className="AutoUI_CollapsibleSection-57 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-26">
+    <h1
+      className="AutoUI_CollapsibleSection-72 AutoUI_typo-39 AutoUI_typo-15 AutoUI_CollapsibleSection-28 AutoUI_CollapsibleSection-26">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+    </h1>
+    <div
+      className="AutoUI_CollapsibleSection-92" />
+  </section>
+  <section
+    className="AutoUI_CollapsibleSection-57 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-26">
+    <h1
+      className="AutoUI_CollapsibleSection-72 AutoUI_typo-39 AutoUI_typo-15 AutoUI_CollapsibleSection-28 AutoUI_CollapsibleSection-26">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+    </h1>
+    <div
+      className="AutoUI_CollapsibleSection-92" />
+  </section>
+  <section
+    className="AutoUI_CollapsibleSection-57 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-26">
+    <h1
+      className="AutoUI_CollapsibleSection-72 AutoUI_typo-39 AutoUI_typo-15 AutoUI_CollapsibleSection-28 AutoUI_CollapsibleSection-26">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+    </h1>
+    <div
+      className="AutoUI_CollapsibleSection-92" />
+  </section>
+</div>
+`;
