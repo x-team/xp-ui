@@ -1,7 +1,7 @@
 // @flow
 
 import { PureComponent } from 'react'
-import theme, { breakpoints } from '../styles/theme'
+import theme from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
 
@@ -13,7 +13,7 @@ type Props = {
   heading?: Element<*>|string,
   subHeading?: Element<*>|string,
   level?: Element<*>|string,
-  content: Element<*>|string,
+  content?: Element<*>|string,
   isCentered?: Boolean,
   hasDivider?: Boolean
 }
@@ -21,14 +21,9 @@ type Props = {
 const Root = elem.section(cmz(`
   & {
     white-space: pre-line;
-    margin: 0 0 35px 0;
+    margin: 0;
     clear: both;
     overflow: hidden;
-  }
-  @media screen and (max-width: ${breakpoints.sm}) {
-    & {
-      margin: 0 0 20px 0;
-    }
   }
 `))
 

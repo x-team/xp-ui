@@ -3,16 +3,20 @@
 import React, { PureComponent } from 'react'
 import theme from '../styles/theme'
 
+export type Icon = 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy'
+export type Color = 'default' | 'inverted' | 'monochrome'
 type Props = {
-  icon: 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy',
-  color: 'default' | 'inverted' | 'monochrome',
+  icon: ?Icon,
+  color: Color,
 }
 
 const getIcon = ({ icon, color }) => {
+  if (!icon) { return null }
+
   const colors: { [string]: string } = {
-    default: theme.defaultStroke,
-    inverted: theme.invertedStroke,
-    monochrome: theme.monochromeStroke
+    default: theme.defaultBorder,
+    inverted: theme.invertedBorder,
+    monochrome: theme.monochromeBorder
   }
 
   const icons = {
@@ -160,7 +164,6 @@ const getIcon = ({ icon, color }) => {
 
 class SvgIcon extends PureComponent<Props> {
   static defaultProps = {
-    icon: '',
     color: 'default'
   }
 
