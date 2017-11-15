@@ -25,49 +25,59 @@ const cx = {
 
   clickable: cmz('cursor: pointer'),
 
-  arrow: cmz(`
+  icon: cmz(`
     &::before {
       content: ''
       position: absolute
       right: 1rem
-      top: 2rem
-      width: 0
+      top: 2.7rem
+      width: 10px
       height: 0
-      border-style: solid
+      border: 1px solid ${theme.red}
+    }
+
+    &::after {
+      content: ''
+      position: absolute
+      right: calc(1rem + 5px)
+      top: calc(2.7rem - 5px)
+      width: 0
+      height: 10px
+      border: 1px solid ${theme.red}
     }
   `),
 
-  arrowDown: cmz(`
-    &::before {
-      border-width: 0 5px 5px 5px
-      border-color: transparent transparent silver transparent
-    }
-  `),
-
-  arrowUp: cmz(`
-    &::before {
-      border-width: 5px 5px 0 5px
-      border-color: silver transparent transparent transparent
+  iconLess: cmz(`
+    &::after {
+      content: none
     }
   `)
 }
 
 const Root = elem.section(cmz(
   typo.family.base, `
-  margin: 0
-  padding: 2rem 1rem
-  font-size: 1rem
-  border-top: 1px solid ${theme.lightGrayBorder}
-  position: relative
+  & {
+    margin: 0
+    padding: 2rem 1rem
+    font-size: 1rem
+    border-top: 1px solid ${theme.lightGrayBorder}
+    position: relative
+  }
+
+  &:first-child {
+    border: none
+  }
 `))
 
 const Header = elem.h1(cmz(
   typo.family.smallHeading,
-  cx.arrow,
+  cx.icon,
   cx.clickable, `
   & {
     letter-spacing: normal
     text-transform: initial
+    margin: 0
+    line-height: 1.4
   }
 
   .${cx.twoColSection} & {
@@ -77,19 +87,49 @@ const Header = elem.h1(cmz(
   &:hover {
     color: ${theme.blackHighlight}
   }
-
-  &:hover::before {
-    transform: translateY(-1px)
-  }
-
-  .${cx.clickable}:hover &::before {
-    transform: translateY(1px)
-  }
 `))
 
 const Content = elem.div(cmz(`
   .${cx.twoColSection} & {
     width: calc(100% - 200px)
+  }
+
+  & > :only-child,
+  & > :nth-child(2) {
+    margin-top: 1em
+  }
+
+  .${cx.twoColSection} & > :only-child,
+  .${cx.clickable} & > :only-child {
+    margin-top: 0
+  }
+`))
+
+const Visible = elem.div(cmz(`
+  & {
+    padding-top: 0.5em
+  }
+
+  .${cx.twoColSection} & {
+    padding: 0 5em 0 0
+  }
+
+  & > :first-child {
+    margin-top: 0
+  }
+
+  & > :last-child {
+    margin-bottom: 0
+  }
+`))
+
+const Children = elem.div(cmz(`
+  & {
+    padding: 0 5em 0 2em
+  }
+
+  .${cx.twoColSection} & {
+    padding: 0 5em 0 0
   }
 
   & > :first-child {
@@ -119,7 +159,12 @@ class CollapsibleSection extends PureComponent<Props> {
       children
     } = this.props
 
-    return Root(
+    const ContentBlock = (visible || children) && Content(
+      (visible && (isCollapsed || (!isCollapsed && !toggleVisible))) && Visible(visible),
+      !isCollapsed && Children(children)
+    )
+
+    return (title !== '' && children) ? Root(
       {
         onClick: () => isCollapsed && handleToggleCollapse(false),
         className: [
@@ -130,15 +175,12 @@ class CollapsibleSection extends PureComponent<Props> {
       Header(
         {
           onClick: () => handleToggleCollapse(!isCollapsed),
-          className: isCollapsed ? cx.arrowUp : cx.arrowDown
+          className: !isCollapsed && cx.iconLess
         },
         title
       ),
-      Content(
-        (isCollapsed || (!isCollapsed && !toggleVisible)) && visible,
-        !isCollapsed && children
-      )
-    )
+      ContentBlock
+    ) : null
   }
 }
 
