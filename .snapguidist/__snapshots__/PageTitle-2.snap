@@ -11,11 +11,8 @@ exports[`PageTitle-2 1`] = `
       className="AutoUI_Text-32">
       Here is the subheading.
     </h2>
-    
     <div
-      className="AutoUI_Text-47 AutoUI_typo-21 AutoUI_typo-15">
-      
-    </div>
+      className="AutoUI_Text-47 AutoUI_typo-21 AutoUI_typo-15" />
   </section>
 </div>
 `;
