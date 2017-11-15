@@ -5,6 +5,7 @@ import ErrorBox from './components/ErrorBox'
 import PageTitle from './components/PageTitle'
 import SvgIcon from './components/SvgIcon'
 import XIcon from './components/XIcon'
+import HeaderBar from './components/HeaderBar'
 import HorizontalRuler from './components/HorizontalRuler'
 import Text from './components/Text'
 import RoadmapHero from './components/RoadmapHero'
@@ -17,6 +18,7 @@ export {
   PageTitle,
   SvgIcon,
   XIcon,
+  HeaderBar,
   HorizontalRuler,
   Text,
   RoadmapHero
