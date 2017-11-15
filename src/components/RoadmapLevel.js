@@ -4,15 +4,16 @@ import React, { PureComponent } from 'react'
 import elem from '../utils/elem'
 import theme from '../styles/theme'
 
-import type { Element } from 'react'
-
 import SvgIcon from './SvgIcon'
 import Text from './Text'
+
+import type { Element } from 'react'
+import type { Icon } from './SvgIcon'
 
 const cmz = require('cmz')
 
 type Props = {
-  icon?: string,
+  icon: ?Icon,
   heading?: Element<*>|string,
   level?: number,
   body?: Element<*>|string,
@@ -52,7 +53,6 @@ const Button = elem.button(cmz(`
 
 class RoadmapLevel extends PureComponent<Props> {
   static defaultProps = {
-    icon: '',
     heading: '',
     level: 0,
     body: '',
