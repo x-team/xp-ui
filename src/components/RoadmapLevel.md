@@ -37,7 +37,7 @@ Centered state:
 />
 ```
 
-Missing props (does component explodes?):
+Missing props (does component explode?):
 
 ```
 <RoadmapLevel />
