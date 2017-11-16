@@ -1,0 +1,8 @@
+exports[`Button-5 1`] = `
+<button
+  className=" AutoUI_Button-79 AutoUI_Button-28 AutoUI_Button-112 ">
+  <span>
+    Small size
+  </span>
+</button>
+`;

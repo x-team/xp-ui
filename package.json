@@ -17,6 +17,13 @@
   "keywords": [],
   "author": "joshwnj",
   "license": "MIT",
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype",
+      "react"
+    ]
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.2",
@@ -42,14 +49,8 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1"
   },
-  "standard": {
-    "parser": "babel-eslint",
-    "plugins": [
-      "flowtype",
-      "react"
-    ]
-  },
   "dependencies": {
+    "classnames": "^2.2.5",
     "cmz": "^3.8.0",
     "color": "^2.0.1",
     "recompose": "^0.26.0",

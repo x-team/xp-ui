@@ -1,0 +1,8 @@
+exports[`Button-13 1`] = `
+<button
+  className=" AutoUI_Button-79 AutoUI_Button-28 AutoUI_Button-101 AutoUI_Button-129">
+  <span>
+    Disabled state
+  </span>
+</button>
+`;

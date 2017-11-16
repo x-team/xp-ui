@@ -36,6 +36,10 @@ export const family = {
     line-height: .95em
   `),
 
+  action: cmz(`
+    font-family: Raleway, sans-serif;
+  `),
+
   smallHeading: cmz(
     textRendering, `
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
