@@ -11,6 +11,7 @@ import Text from './components/Text'
 import RoadmapHero from './components/RoadmapHero'
 import RoadmapLevel from './components/RoadmapLevel'
 import Milestones from './components/Milestones'
+import VideoPlayer from './components/VideoPlayer'
 
 export {
   ApplicantBadge,
@@ -25,5 +26,6 @@ export {
   Text,
   RoadmapHero,
   RoadmapLevel,
-  Milestones
+  Milestones,
+  VideoPlayer
 }
