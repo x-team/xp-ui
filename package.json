@@ -29,18 +29,18 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "crypto-js": "^3.1.9-1",
-    "eslint-plugin-flowtype": "^2.35.0",
-    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-react": "^7.4.0",
     "file-loader": "^1.1.5",
     "flow-bin": "^0.53.1",
     "jest": "^20.0.4",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-styleguidist": "^6.0.21",
-    "snapguidist": "^2.0.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-styleguidist": "^6.0.33",
+    "snapguidist": "^2.1.1",
     "standard": "^10.0.3",
     "url-loader": "^0.5.9",
-    "webpack": "^3.5.5"
+    "webpack": "^3.8.1"
   },
   "standard": {
     "parser": "babel-eslint",
@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "cmz": "^3.8.0",
-    "color": "^2.0.0",
+    "color": "^2.0.1",
     "recompose": "^0.26.0",
     "webfontloader": "^1.6.28"
   }
