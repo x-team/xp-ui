@@ -52,34 +52,10 @@ outlined default
 <Button outlined>Outlined default state</Button>
 ```
 
-outlined rounded default
-
-```js
-<Button outlined rounded>Outlined default rounded state</Button>
-```
-
 outlined monochrome
 
 ```js
 <Button outlined color={'monochrome'}>Outlined monochrome state</Button>
-```
-
-outlined rounded monochrome
-
-```js
-<Button outlined rounded color={'monochrome'}>Outlined monochrome rounded state</Button>
-```
-
-rounded default
-
-```js
-<Button rounded>Rounded default state</Button>
-```
-
-rounded monochrome
-
-```js
-<Button rounded color={'monochrome'}>Rounded monochome state</Button>
 ```
 
 button generated with custom element (&lt;a&gt;)

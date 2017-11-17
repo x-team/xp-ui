@@ -1,7 +1,6 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import cx from 'classnames'
 
 import type { CmzAtom } from 'cmz'
 import type { Element } from 'react'
@@ -17,7 +16,6 @@ type Props = {
   className: string | CmzAtom,
   size: Size,
   color: Color,
-  rounded: ?boolean,
   outlined: ?boolean,
   disabled: ?boolean,
   component: string,
@@ -122,10 +120,6 @@ const sizeStyles = {
 
 // Button variations
 const extraStyles = {
-  rounded: cmz(`
-    border-radius: 4px;
-  `),
-
   disabled: cmz(`
     &, &:hover {
       background: ${theme.lightGray};
@@ -156,7 +150,6 @@ class Button extends PureComponent<Props> {
     component: 'button',
     color: 'normal',
     size: 'normal',
-    rounded: false,
     outlined: false,
     disabled: false
   }
@@ -168,7 +161,6 @@ class Button extends PureComponent<Props> {
       color,
       outlined,
       disabled,
-      rounded,
       component: CustomComponent,
       children,
       ...rest
@@ -176,12 +168,11 @@ class Button extends PureComponent<Props> {
 
     const colorClassName = colorStyles[color] || ''
     const sizeClassName = sizeStyles[size] || ''
-    const extraClassName = cx({
-      [extraStyles.rounded]: rounded,
-      [extraStyles.outlined]: outlined,
-      'outlined': outlined,
-      [extraStyles.disabled]: disabled
-    })
+    const extraClassName = [
+      outlined && extraStyles.outlined,
+      outlined && 'outlined',
+      disabled && extraStyles.disabled
+    ].filter(Boolean).join(' ')
     const buttonClassName = `${colorClassName} ${sizeClassName} ${extraClassName}`
 
     return (

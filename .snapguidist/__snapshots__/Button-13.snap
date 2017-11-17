@@ -1,6 +1,6 @@
 exports[`Button-13 1`] = `
 <button
-  className=" AutoUI_Button-79 AutoUI_Button-28 AutoUI_Button-101 AutoUI_Button-129">
+  className=" AutoUI_Button-77 AutoUI_Button-26 AutoUI_Button-99 AutoUI_Button-123">
   <span>
     Disabled state
   </span>
