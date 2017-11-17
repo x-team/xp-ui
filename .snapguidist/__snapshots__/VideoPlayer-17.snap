@@ -1,0 +1,9 @@
+exports[`VideoPlayer-17 1`] = `
+<video
+  className="AutoUI_VideoPlayer-20"
+  controls={true}
+  poster="">
+  <source />
+  Video cannot be played in this browser.
+</video>
+`;

@@ -1,0 +1,9 @@
+exports[`VideoPlayer-8 1`] = `
+<video
+  className="video small"
+  controls={false}
+  poster="">
+  <source />
+  Video cannot be played in this browser.
+</video>
+`;
