@@ -16,16 +16,16 @@ function wrap (theme) {
 
 export default wrap({
   white: '#FFF',
-
   offwhite: '#f3f2f7',
 
   black: '#130e2e',
   blackHighlight: '#272334',
-
+  fern: '#5CB85C',
+  manatee: '#938E9F',
+  lightGray: '#e0e0e0',
   grayBorder: '#938e9f',
   lightGrayBorder: '#e0e0e0',
-
-  red: '#ff5965',
+  red: '#ff5964',
   redHighlight: '#f63a55',
 
   defaultBorder: '#f63954',

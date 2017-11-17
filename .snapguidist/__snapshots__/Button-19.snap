@@ -1,0 +1,8 @@
+exports[`Button-19 1`] = `
+<a
+  className=" AutoUI_Button-58 AutoUI_Button-26 AutoUI_Button-99 ">
+  <span>
+    custom default button state
+  </span>
+</a>
+`;

@@ -132,7 +132,7 @@ Last step is in progress:
 />
 ```
 
-Missing props (does component explodes?):
+Missing props (does component explode?):
 
 ```js
 <Milestones />

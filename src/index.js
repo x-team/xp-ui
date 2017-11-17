@@ -12,6 +12,7 @@ import RoadmapHero from './components/RoadmapHero'
 import RoadmapLevel from './components/RoadmapLevel'
 import Milestones from './components/Milestones'
 import VideoPlayer from './components/VideoPlayer'
+import Button from './components/Button'
 
 export {
   ApplicantBadge,
@@ -27,5 +28,6 @@ export {
   RoadmapHero,
   RoadmapLevel,
   Milestones,
-  VideoPlayer
+  VideoPlayer,
+  Button
 }

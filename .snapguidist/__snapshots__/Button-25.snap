@@ -1,0 +1,8 @@
+exports[`Button-25 1`] = `
+<button
+  className=" AutoUI_Button-60 AutoUI_Button-28 AutoUI_Button-101 AutoUI_Button-125">
+  <span>
+    Rounded monochome state
+  </span>
+</button>
+`;
