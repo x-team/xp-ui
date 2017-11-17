@@ -1,5 +1,32 @@
 exports[`FooterBrands-1 1`] = `
 <div>
-  Footer Brands
+  <h4
+    className="AutoUI_Footer_FooterBrands-40 AutoUI_typo-21 AutoUI_typo-15">
+    Placeholder text
+  </h4>
+  <div
+    className="AutoUI_Footer_FooterBrands-37">
+    <ul
+      className="AutoUI_Footer_FooterBrands-19">
+      <li
+        className="AutoUI_Footer_FooterBrands-25">
+        <a
+          href="https://example.com">
+          <img
+            alt="Foo Corp"
+            src="http://satyr.io/120x30?text=Foo+Corp" />
+        </a>
+      </li>
+      <li
+        className="AutoUI_Footer_FooterBrands-25">
+        <a
+          href="https://example.com">
+          <img
+            alt="Bar Corp"
+            src="http://satyr.io/120x30?text=Bar+Corp" />
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 `;

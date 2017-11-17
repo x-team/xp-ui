@@ -2,6 +2,7 @@ Footer Example
 
 ```js
 <Footer
+  copyright="Copyright Foo Corp"
   lists={[
     <FooterList title="Foo Links" items={[
       {

@@ -5,6 +5,8 @@ import type FooterList from './FooterList'
 import { xTeamLogo } from '../../styles/logo'
 import type FooterBrands from './FooterBrands'
 const cmz = require('cmz')
+import theme from '../../styles/theme'
+import * as typo from '../../styles/typo'
 
 type Props = {
   lists: Array<FooterList>,
@@ -12,27 +14,45 @@ type Props = {
 }
 
 const cx = {
+  footer: cmz(`
+    padding: 6.5rem 0;
+  `),
   columnContainer: cmz(`
     display: flex;
+  `),
+  logoColumn: cmz(`
+    width: 20%;
   `),
   column: cmz(`
     flex-grow: 1;
     max-width: 28%;
   `),
-  fullWidth: cmz(`
+  colophon: cmz(`
     flex-grow: 1;
-  `)
+    margin-top: 3.125rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(0,0,0,.1)
+  `),
+  copyright: cmz(
+    `
+    font-size: 0.75rem;
+    opacity: 0.5;
+    line-height: 0;
+    color: ${theme.black}
+  `,
+    typo.family.base
+  )
 }
 
 export default class Footer extends PureComponent<Props> {
   static defaultProps = {}
 
   render () {
-    const { lists, brands } = this.props
+    const { lists, brands, copyright } = this.props
     return (
-      <div>
+      <div className={cx.footer}>
         <div className={cx.columnContainer}>
-          <div className={cx.column}>{xTeamLogo(94, 32, '#b3b3b3')}</div>
+          <div className={cx.logoColumn}>{xTeamLogo(94, 32, '#b3b3b3')}</div>
           {lists.map((item, id) => {
             return (
               <div key={id} className={cx.column}>
@@ -42,8 +62,11 @@ export default class Footer extends PureComponent<Props> {
           })}
         </div>
         <div className={cx.columnContainer}>
-          <div className={cx.column} />
-          <div className={cx.fullWidth}>{brands}</div>
+          <div className={cx.logoColumn} />
+          <div className={cx.colophon}>
+            <div>{brands}</div>
+            <div className={cx.copyright}>{copyright}</div>
+          </div>
         </div>
       </div>
     )

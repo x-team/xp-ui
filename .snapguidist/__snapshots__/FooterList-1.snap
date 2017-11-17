@@ -1,17 +1,27 @@
 exports[`FooterList-1 1`] = `
 <div>
-  <h3>
+  <h4
+    className="AutoUI_Footer_FooterList-32">
     List Example
-  </h3>
-  <div
-    className="AutoUI_Footer_FooterList-16">
-    <a
-      href="/foo1" />
-  </div>
-  <div
-    className="AutoUI_Footer_FooterList-16">
-    <a
-      href="/foo2" />
-  </div>
+  </h4>
+  <ul
+    className="AutoUI_Footer_FooterList-27">
+    <li
+      className="AutoUI_Footer_FooterList-24">
+      <a
+        className="AutoUI_Footer_FooterList-18"
+        href="/foo1">
+        Foo 1
+      </a>
+    </li>
+    <li
+      className="AutoUI_Footer_FooterList-24">
+      <a
+        className="AutoUI_Footer_FooterList-18"
+        href="/foo2">
+        Foo 2
+      </a>
+    </li>
+  </ul>
 </div>
 `;
