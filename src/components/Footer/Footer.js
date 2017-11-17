@@ -10,7 +10,8 @@ import * as typo from '../../styles/typo'
 
 type Props = {
   lists: Array<FooterList>,
-  brands: FooterBrands
+  brands: FooterBrands,
+  copyright: string
 }
 
 const cx = {

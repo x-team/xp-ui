@@ -24,7 +24,7 @@ export default class HeaderBar extends PureComponent<Props> {
   render () {
     return (
       <div className={cx.logoWrapper}>
-        {xTeamLogo(84, 30, "#231f20")}
+        {xTeamLogo(84, 30, '#231f20')}
       </div>
     )
   }
