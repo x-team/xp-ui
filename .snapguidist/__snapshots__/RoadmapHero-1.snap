@@ -1,8 +1,8 @@
 exports[`RoadmapHero-1 1`] = `
 <div
-  className="AutoUI_RoadmapHero-17">
+  className="AutoUI_RoadmapHero-18">
   <div
-    className="AutoUI_RoadmapHero-31">
+    className="AutoUI_RoadmapHero-33">
     <section
       className="AutoUI_Text-21">
       <h1
@@ -17,7 +17,6 @@ exports[`RoadmapHero-1 1`] = `
   </div>
   <img
     alt="X-Team Roadmap"
-    className="AutoUI_RoadmapHero-41"
     src="e3bafbf75deef2b697c50a1c4616a476.png" />
 </div>
 `;
