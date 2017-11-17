@@ -1,6 +1,6 @@
 exports[`RoadmapLevel-1 1`] = `
 <section
-  className="AutoUI_RoadmapLevel-28 ">
+  className="AutoUI_RoadmapLevel-30 ">
   <svg
     height="43px"
     viewBox="0 0 37 43"
@@ -57,5 +57,6 @@ exports[`RoadmapLevel-1 1`] = `
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!
     </div>
   </section>
+  
 </section>
 `;

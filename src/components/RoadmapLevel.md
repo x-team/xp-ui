@@ -21,7 +21,7 @@ Active state:
 />
 ```
 
-Centered state:
+Centered state with CTA button:
 
 ```
 <RoadmapLevel
@@ -31,7 +31,7 @@ Centered state:
   body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
   isCentered
   cta={{
-    label: 'Let\'s do this.',
+    label: `Let's do this.`,
     handle: () => alert('CTA clicked!')
   }}
 />
