@@ -1,0 +1,17 @@
+exports[`FooterList-1 1`] = `
+<div>
+  <h3>
+    List Example
+  </h3>
+  <div
+    className="AutoUI_Footer_FooterList-16">
+    <a
+      href="/foo1" />
+  </div>
+  <div
+    className="AutoUI_Footer_FooterList-16">
+    <a
+      href="/foo2" />
+  </div>
+</div>
+`;

@@ -13,6 +13,9 @@ import RoadmapLevel from './components/RoadmapLevel'
 import Milestones from './components/Milestones'
 import VideoPlayer from './components/VideoPlayer'
 import Button from './components/Button'
+import Footer from './components/Footer/Footer'
+import FooterBrands from './components/Footer/FooterBrands'
+import FooterList from './components/Footer/FooterList'
 
 export {
   ApplicantBadge,
@@ -29,5 +32,8 @@ export {
   RoadmapLevel,
   Milestones,
   VideoPlayer,
-  Button
+  Button,
+  FooterBrands,
+  Footer,
+  FooterList
 }
