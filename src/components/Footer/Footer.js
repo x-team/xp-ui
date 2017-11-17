@@ -3,14 +3,15 @@
 import React, { PureComponent } from 'react'
 import type FooterList from './FooterList'
 import { xTeamLogo } from '../../styles/logo'
-import type FooterBrands from './FooterBrands'
 const cmz = require('cmz')
 import theme from '../../styles/theme'
 import * as typo from '../../styles/typo'
+import type { Element } from 'react'
+
 
 type Props = {
-  lists: Array<FooterList>,
-  brands: FooterBrands,
+  lists: Array<Element<*>>,
+  brands: Element<*>,
   copyright: string
 }
 
