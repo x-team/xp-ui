@@ -19,8 +19,6 @@ const cx = {
 }
 
 export default class HeaderBar extends PureComponent<Props> {
-  static defaultProps = {}
-
   render () {
     return (
       <div className={cx.logoWrapper}>

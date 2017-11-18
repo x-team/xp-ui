@@ -47,8 +47,6 @@ const cx = {
 }
 
 export default class Footer extends PureComponent<Props> {
-  static defaultProps = {}
-
   render () {
     const { lists, brands, copyright } = this.props
     return (

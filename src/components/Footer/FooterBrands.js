@@ -50,8 +50,6 @@ const cx = {
 }
 
 export default class FooterBrands extends PureComponent<Props> {
-  static defaultProps = {}
-
   render () {
     const { message, brands } = this.props
     return (
