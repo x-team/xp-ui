@@ -12,4 +12,18 @@ Active state:
 />
 ```
 
-Missing props (Watch basic state):
+Composition:
+
+```
+<div>
+    <div>
+        <RoadmapTimelineElement
+            isDone
+        />
+    </div>
+    <div>
+        <RoadmapTimelineElement
+        />
+    </div>
+</div>
+```
