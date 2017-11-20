@@ -80,7 +80,7 @@ Basic with many items:
 </div>
 ```
 
-Missing props (does component explodes?):
+Missing props (does component explode?):
 
 ```
 <CollapsibleSection />

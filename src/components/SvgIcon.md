@@ -40,7 +40,7 @@ Monochrome colors:
 </div>
 ```
 
-Missing props (does component explodes?):
+Missing props (does component explode?):
 
 ```
 <SvgIcon />

@@ -1,0 +1,8 @@
+exports[`Button-15 1`] = `
+<button
+  className=" AutoUI_Button-77 AutoUI_Button-26 AutoUI_Button-99 AutoUI_Button-132 outlined">
+  <span>
+    Outlined default state
+  </span>
+</button>
+`;
