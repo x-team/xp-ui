@@ -12,6 +12,8 @@ const cmz = require('cmz')
 type Props = {
  heading: Element<*>|string,
  content?: Element<*>|string,
+ isCentered?: Boolean,
+ hasDivider?: Boolean,
 }
 
 const Root = elem.div(cmz(`
@@ -51,11 +53,13 @@ class RoadmapHero extends PureComponent<Props> {
   render () {
     const {
       heading,
-      content
+      content,
+      isCentered,
+      hasDivider
     } = this.props
 
     return Root(
-      LeftBlock(<Text {... { heading, content }} />),
+      LeftBlock(<Text {... { heading, content, isCentered, hasDivider }} />),
       HeroImage()
     )
   }
