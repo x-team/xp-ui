@@ -1,11 +1,13 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import elem from '../utils/elem'
-import theme from '../styles/theme'
 
 import SvgIcon from './SvgIcon'
 import Text from './Text'
+import Button from './Button'
+
+import elem from '../utils/elem'
+import theme from '../styles/theme'
 
 import type { Element } from 'react'
 import type { Icon } from './SvgIcon'
@@ -19,7 +21,7 @@ type Props = {
   body?: Element<*>|string,
   isActive?: Boolean,
   isCentered?: Boolean,
-  cta?: {
+  cta: {
     label?: Element<*>|string,
     handle?: Function,
   }
@@ -45,11 +47,7 @@ const centered = cmz(`
   text-align: center;
   border: none;
 `)
-
-// To Do: rewrite the button bellow to use Button component when ready to use it
-const Button = elem.button(cmz(`
-  margin-top: 1rem;
-`))
+const ctaButtonStyles = cmz(`margin-top: 3rem`)
 
 class RoadmapLevel extends PureComponent<Props> {
   static defaultProps = {
@@ -71,8 +69,7 @@ class RoadmapLevel extends PureComponent<Props> {
       return null
     }
 
-    const ButtonCTA = (cta && cta.label !== '') && Button({ onClick: cta.handle }, cta.label)
-
+    const buttonCTA = cta.label && <Button className={ctaButtonStyles} size='block' onClick={cta.handle}>{cta.label}</Button>
     const levelLabel = level ? `Level ${level}` : ''
 
     return Root(
@@ -91,7 +88,7 @@ class RoadmapLevel extends PureComponent<Props> {
         content={body}
         isCentered={isCentered}
       />,
-      ButtonCTA
+      buttonCTA
     )
   }
 }
