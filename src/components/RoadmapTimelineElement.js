@@ -12,33 +12,41 @@ type Props = {
 
 const styles = {
   timeline: cmz(`
-      position: relative;
-      display: inline-block;
-      width: .25em;
-      height: .24em;
-      border: 2px solid ${theme.offwhite};
-      background-color: ${theme.white};
-      border-radius: 50%;
-      padding: .05em;
-      max-width: 100%;
+    position: relative;
+    display: inline-block;
+    width: .25em;
+    height: .25em;
+    border: 2px solid ${theme.offwhite};
+    background-color: ${theme.white};
+    border-radius: 50%;
+    padding: .2em;
+    max-width: 100%;
   `),
-  checkmark: cmz(`   
+  checkmark: cmz(`
+    &:after {
       content: '';
-      margin: -1px 0 0 0;
       display: block;
       width: 0.1em;
-      height: 0.2em;
-      border: solid ${theme.white};
-      border-width: 0 1px 1px 0;
+      height: 0.3em;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
       transform: rotate(45deg);
+    }
+
+    & {
+      display: block;
+      transform: translateY(-50%);
+      position: relative;
+      top: 50%;
+    }
   `),
   verticalLine: cmz(`
     width: 2px;
-    margin: 0.4em 0 0 1px;
+    margin: .4em 0 0 1px;
     height: 3em;
     background-color: ${theme.offwhite}
     border: 0;
-`)
+  `)
 }
 
 styles.active = cmz(
@@ -52,7 +60,7 @@ styles.active = cmz(
 styles.veritcalLineActivated = cmz(
   styles.verticalLine,
   `
-    margin: 0.2em 0 0 1px;
+    margin: .1em 0 0 1px;
     background-color: ${theme.red}
     border-color: ${theme.red}
   `
@@ -68,7 +76,6 @@ class RoadmapTimelineElement extends PureComponent<Props> {
 
     const wrapperClassName = isDone ? styles.active : styles.timeline
     const verticalLineClassName = isDone ? styles.veritcalLineActivated : styles.verticalLine
-
     const checkmarkClassName = isDone && styles.checkmark
 
     return (

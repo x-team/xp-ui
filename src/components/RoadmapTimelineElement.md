@@ -16,14 +16,7 @@ Composition:
 
 ```
 <div>
-    <div>
-        <RoadmapTimelineElement
-            isDone
-        />
-    </div>
-    <div>
-        <RoadmapTimelineElement
-        />
-    </div>
+    <RoadmapTimelineElement isDone />
+    <RoadmapTimelineElement />
 </div>
 ```
