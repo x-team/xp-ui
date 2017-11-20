@@ -1,0 +1,14 @@
+exports[`Footer-1 1`] = `
+<div>
+  <div>
+    <h3>
+      Foo Links
+    </h3>
+  </div>
+  <div>
+    <h3>
+      Bar Links
+    </h3>
+  </div>
+</div>
+`;
