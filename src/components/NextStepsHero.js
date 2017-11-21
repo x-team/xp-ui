@@ -10,7 +10,7 @@ type Props = {
  content?: Element<*>|string
 }
 
-class NextSteps extends PureComponent<Props> {
+class NextStepsHero extends PureComponent<Props> {
   render () {
     const { heading, content } = this.props
 
@@ -22,4 +22,4 @@ class NextSteps extends PureComponent<Props> {
   }
 }
 
-export default NextSteps
+export default NextStepsHero
