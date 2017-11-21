@@ -9,6 +9,7 @@ import HorizontalRuler from './components/HorizontalRuler'
 import Text from './components/Text'
 import RoadmapHero from './components/RoadmapHero'
 import RoadmapLevel from './components/RoadmapLevel'
+import NextStepsHero from './components/NextStepsHero'
 import Milestones from './components/Milestones'
 import VideoPlayer from './components/VideoPlayer'
 import Button from './components/Button'
@@ -28,6 +29,7 @@ export {
   Text,
   RoadmapHero,
   RoadmapLevel,
+  NextStepsHero,
   Milestones,
   VideoPlayer,
   Button,
