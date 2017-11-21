@@ -1,18 +1,46 @@
 exports[`RoadmapTimelineElement-5 1`] = `
 <div>
   <div
-    className="AutoUI_RoadmapTimelineElement-53 AutoUI_RoadmapTimelineElement-13">
+    className="AutoUI_RoadmapTimelineElement-13 AutoUI_RoadmapTimelineElement-38">
     <div
-      className="AutoUI_RoadmapTimelineElement-24" />
-    <hr
-      className="AutoUI_RoadmapTimelineElement-61 AutoUI_RoadmapTimelineElement-42" />
+      className="AutoUI_RoadmapTimelineElement-51">
+      <svg
+        className="AutoUI_RoadmapTimelineElement-77"
+        viewBox="0 0 52 52"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle
+          className="AutoUI_RoadmapTimelineElement-57 AutoUI_RoadmapTimelineElement-64"
+          cx="26"
+          cy="26"
+          fill="none"
+          r="25" />
+        <path
+          className="AutoUI_RoadmapTimelineElement-95"
+          d="M14.1 27.2l7.1 7.2 16.7-16.8"
+          fill="none" />
+      </svg>
+    </div>
   </div>
   <div
-    className="AutoUI_RoadmapTimelineElement-13">
+    className="AutoUI_RoadmapTimelineElement-13 false">
     <div
-      className={false} />
-    <hr
-      className="AutoUI_RoadmapTimelineElement-42" />
+      className="AutoUI_RoadmapTimelineElement-51">
+      <svg
+        className={false}
+        viewBox="0 0 52 52"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle
+          className="AutoUI_RoadmapTimelineElement-57 "
+          cx="26"
+          cy="26"
+          fill="none"
+          r="25" />
+        <path
+          className={false}
+          d="M14.1 27.2l7.1 7.2 16.7-16.8"
+          fill="none" />
+      </svg>
+    </div>
   </div>
 </div>
 `;

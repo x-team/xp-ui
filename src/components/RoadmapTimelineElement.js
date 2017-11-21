@@ -9,63 +9,96 @@ type Props = {
   isDone?: boolean
 }
 
-const styles = {
+const animatedStyles = {
   timeline: cmz(`
-    position: relative;
-    display: inline-block;
-    width: .25em;
-    height: .25em;
-    border: 2px solid ${theme.offwhite};
-    background-color: ${theme.white};
-    border-radius: 50%;
-    padding: .2em;
-    max-width: 100%;
+    & {
+      position: relative;
+      height: 10em;
+    }
+    
+    &:before {
+      /* this is the vertical line */
+      content: '';
+      position: absolute;
+      top: 17px;
+      left: 7px;
+      overflow: hidden;
+      width: 2px;
+      height: 0;
+      background: ${theme.offwhite};
+      animation: process 2s linear forwards;
+    }
+    
+    @keyframes process {
+      100% {
+        height: 90%;
+      }
+    }
+  `),
+  timelineActive: cmz(`
+    &:before {
+      height: 0;
+      background: ${theme.red};
+      animation: process 2s linear forwards;
+    }
+    
+    @keyframes processActive {
+      100% {
+        height: 90%;
+      }
+    }
+  `),
+  checkmarkBox: cmz(`
+    width: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  `),
+  checkmarkCircle: cmz(`
+    stroke-dasharray: 166;
+    stroke-dashoffset: 0;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke: ${theme.offwhite};
+  `),
+  checkmarkCircleActive: cmz(`
+    & {
+      stroke: ${theme.red};
+      fill: none;
+      animation: stroke 6s cubic-bezier(0.650, 0.000, 0.450, 1.000) forwards;
+    }
+    
+    @keyframes stroke {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
   `),
   checkmark: cmz(`
-    &:after {
-      content: '';
-      display: block;
-      width: 0.1em;
-      height: 0.3em;
-      border: solid #fff;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-    }
-
     & {
+      border-radius: 50%;
       display: block;
-      transform: translateY(-50%);
-      position: relative;
-      top: 50%;
+      stroke-width: 2; 
+      stroke: #fff;
+      stroke-miterlimit: 10;
+      margin: 10% auto;
+      box-shadow: inset 0px 0px 0px ${theme.red};
+      animation: fill 2s ease-in-out 1s forwards, scale 1s ease-in-out 3s both;
+    }
+    
+    @keyframes fill {
+      100% {
+        box-shadow: inset 0px 0px 0px 30px ${theme.red};
+      }
     }
   `),
-  verticalLine: cmz(`
-    width: 2px;
-    margin: .4em 0 0 1px;
-    height: 3em;
-    background-color: ${theme.offwhite}
-    border: 0;
-  `),
-  active: '',
-  verticalLineActivated: ''
+  checkmarkCheck: cmz(`
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) 2s forwards;
+  `)
 }
-
-styles.active = cmz(
-  styles.timeline,
-  `
-    background-color: ${theme.redHighlight};
-    border-color: ${theme.redHighlight};
-  `
-)
-
-styles.verticalLineActivated = cmz(
-  styles.verticalLine,
-  `
-    margin: .1em 0 0 1px;
-    background-color: ${theme.red}
-    border-color: ${theme.red}
-  `
-)
 
 class RoadmapTimelineElement extends PureComponent<Props> {
   static defaultProps = {
@@ -75,14 +108,18 @@ class RoadmapTimelineElement extends PureComponent<Props> {
   render () {
     const { isDone } = this.props
 
-    const wrapperClassName = isDone ? styles.active : styles.timeline
-    const verticalLineClassName = isDone ? styles.verticalLineActivated : styles.verticalLine
-    const checkmarkClassName = isDone && styles.checkmark
+    const circleClassName = `${animatedStyles.checkmarkCircle} ${isDone ? animatedStyles.checkmarkCircleActive : ''}`
 
     return (
-      <div className={wrapperClassName}>
-        <div className={checkmarkClassName} />
-        <hr className={verticalLineClassName} />
+      <div className={`${animatedStyles.timeline} ${isDone && animatedStyles.timelineActive}`}>
+        <div className={animatedStyles.checkmarkBox}>
+          <svg className={isDone && animatedStyles.checkmark}
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 52 52'>
+            <circle className={circleClassName} cx='26' cy='26' r='25' fill='none' />
+            <path className={isDone && animatedStyles.checkmarkCheck} fill='none' d='M14.1 27.2l7.1 7.2 16.7-16.8' />
+          </svg>
+        </div>
       </div>
     )
   }
