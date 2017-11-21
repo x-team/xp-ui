@@ -37,15 +37,7 @@ const animatedStyles = {
   `),
   timelineActive: cmz(`
     &:before {
-      height: 0;
       background: ${theme.red};
-      animation: process 2s linear forwards;
-    }
-    
-    @keyframes processActive {
-      100% {
-        height: 90%;
-      }
     }
   `),
   checkmarkBox: cmz(`
@@ -108,16 +100,22 @@ class RoadmapTimelineElement extends PureComponent<Props> {
   render () {
     const { isDone } = this.props
 
+    const activeTimelineClassName = isDone
+      ? `${animatedStyles.timeline} ${animatedStyles.timelineActive}`
+      : animatedStyles.timeline
+    const checkmarkBoxClassName = animatedStyles.checkmarkBox
+    const checkmarkClassName = isDone ? animatedStyles.checkmark : ''
     const circleClassName = `${animatedStyles.checkmarkCircle} ${isDone ? animatedStyles.checkmarkCircleActive : ''}`
+    const checkmarkCheckClassName = isDone ? animatedStyles.checkmarkCheck : ''
 
     return (
-      <div className={`${animatedStyles.timeline} ${isDone && animatedStyles.timelineActive}`}>
-        <div className={animatedStyles.checkmarkBox}>
-          <svg className={isDone && animatedStyles.checkmark}
+      <div className={activeTimelineClassName}>
+        <div className={checkmarkBoxClassName}>
+          <svg className={checkmarkClassName}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 52 52'>
             <circle className={circleClassName} cx='26' cy='26' r='25' fill='none' />
-            <path className={isDone && animatedStyles.checkmarkCheck} fill='none' d='M14.1 27.2l7.1 7.2 16.7-16.8' />
+            <path className={checkmarkCheckClassName} fill='none' d='M14.1 27.2l7.1 7.2 16.7-16.8' />
           </svg>
         </div>
       </div>
