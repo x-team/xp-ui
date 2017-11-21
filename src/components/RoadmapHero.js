@@ -13,7 +13,8 @@ const cmz = require('cmz')
 type Props = {
  heading: Element<*>|string,
  content?: Element<*>|string,
- imgUrl?: Element<*>|string
+ imgUrl?: Element<*>|string,
+ hasDivider?: boolean
 }
 
 const Root = elem.div(cmz(`
@@ -36,13 +37,14 @@ const HeroImage = elem.img()
 
 class RoadmapHero extends PureComponent<Props> {
   static defaultProps = {
-    imgUrl: require('../assets/x-roadmap.png')
+    imgUrl: require('../assets/x-roadmap.png'),
+    hasDivider: true
   }
   render () {
-    const { heading, content, imgUrl } = this.props
+    const { heading, content, imgUrl, hasDivider } = this.props
 
     return Root(
-      HeroHeading(<Text {... { heading, content }} />),
+      HeroHeading(<Text {... { heading, content, hasDivider }} />),
       HeroImage({
         src: imgUrl,
         alt: 'X-Team Roadmap'
