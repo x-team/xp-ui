@@ -1,9 +1,0 @@
-exports[`RoadmapHero-3 1`] = `
-<div
-  className="AutoUI_PageTitle-19">
-  <h1
-    className="AutoUI_typo-25 AutoUI_typo-14">
-    With a Description.
-  </h1>
-</div>
-`;

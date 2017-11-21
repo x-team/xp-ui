@@ -1,9 +1,0 @@
-exports[`PageTitle-1 1`] = `
-<div
-  className="AutoUI_PageTitle-20 AutoUI_PageTitle-52">
-  <h1
-    className="AutoUI_typo-27 AutoUI_typo-15">
-    Page Title With a Divider.
-  </h1>
-</div>
-`;

@@ -12,7 +12,7 @@ const cmz = require('cmz')
 
 type Props = {
  heading: Element<*>|string,
- content?: Element<*>|string,
+ content?: Element<*>|string
 }
 
 const Root = elem.div(cmz(`

@@ -20,7 +20,7 @@ type Props = {
   level?: number,
   body?: Element<*>|string,
   isActive?: Boolean,
-  isCentered?: Boolean,
+  isCentered: ?boolean,
   cta: {
     label?: Element<*>|string,
     handle?: Function,

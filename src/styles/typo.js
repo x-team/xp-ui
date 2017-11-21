@@ -59,7 +59,7 @@ export const family = {
       content: '';
       position: absolute;
       width: 3.5rem;
-      height: 4px;
+      height: 2px;
       bottom: -30px;
       transform: translateX(-50%);
       background-color: ${theme.red};
