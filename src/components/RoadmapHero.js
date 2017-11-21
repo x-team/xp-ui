@@ -12,7 +12,8 @@ const cmz = require('cmz')
 
 type Props = {
  heading: Element<*>|string,
- content?: Element<*>|string
+ content?: Element<*>|string,
+ imgUrl?: Element<*>|string
 }
 
 const Root = elem.div(cmz(`
@@ -34,13 +35,16 @@ const HeroHeading = elem.div(cmz('width: 60%'))
 const HeroImage = elem.img()
 
 class RoadmapHero extends PureComponent<Props> {
+  static defaultProps = {
+    imgUrl: require('../assets/x-roadmap.png')
+  }
   render () {
-    const { heading, content } = this.props
+    const { heading, content, imgUrl } = this.props
 
     return Root(
       HeroHeading(<Text {... { heading, content }} />),
       HeroImage({
-        src: require('../assets/x-roadmap.png'),
+        src: imgUrl,
         alt: 'X-Team Roadmap'
       })
     )
