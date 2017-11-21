@@ -12,6 +12,25 @@ Text example (Heading):
 />
 ```
 
+Text example (Heading with divider):
+
+```js
+<Text
+  heading="Your roadmap to X-Team"
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+/>
+```
+
+Text example (Heading with divider and no content):
+
+```js
+<Text
+  heading="Your roadmap to X-Team"
+  hasDivider={true}
+/>
+```
+
 Text example (Heading with Center Align):
 
 ```js
@@ -19,6 +38,17 @@ Text example (Heading with Center Align):
   heading="Your roadmap to X-Team"
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   isCentered={true}
+/>
+```
+
+Text example (Heading with Center Align and divider):
+
+```js
+<Text
+  heading="Your roadmap to X-Team"
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  isCentered={true}
+  hasDivider={true}
 />
 ```
 
@@ -38,6 +68,16 @@ Text example (Sub Heading with Center Align):
   subHeading="Your roadmap to X-Team"
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   isCentered={true}
+/>
+```
+
+Text example (Sub Heading with divider):
+
+```js
+<Text
+  subHeading="Your roadmap to X-Team"
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
 />
 ```
 

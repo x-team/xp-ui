@@ -1,8 +1,12 @@
 exports[`Text-17 1`] = `
 <section
-  className="AutoUI_Text-21 AutoUI_Text-71">
+  className="AutoUI_Text-21">
+  <h2
+    className="AutoUI_Text-39">
+    Your roadmap to X-Team
+  </h2>
   <div
-    className="AutoUI_Text-47 AutoUI_typo-21 AutoUI_typo-15 AutoUI_Text-84 AutoUI_typo-53">
+    className="AutoUI_Text-54 AutoUI_typo-21 AutoUI_typo-15 AutoUI_Text-84 AutoUI_typo-53">
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
 </section>

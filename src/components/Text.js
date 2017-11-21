@@ -14,8 +14,8 @@ type Props = {
   subHeading?: Element<*>|string,
   level?: Element<*>|string,
   content?: Element<*>|string,
-  isCentered?: Boolean,
-  hasDivider?: Boolean
+  isCentered: ?boolean,
+  hasDivider: ?boolean
 }
 
 const Root = elem.section(cmz(`
@@ -27,7 +27,14 @@ const Root = elem.section(cmz(`
   }
 `))
 
-const Heading = elem.h1(cmz(typo.family.heading))
+const Heading = elem.h1(cmz(
+  typo.family.heading,
+  `
+  & {
+    padding-bottom: 20px;
+  }
+  `
+))
 
 const SubHeading = elem.h2(cmz(`
   font-weight: 600;
@@ -55,18 +62,6 @@ const Content = elem.div(cmz(
     line-height: 1.3em;
   }
 `))
-
-const dividerLeft = cmz(typo.family.divider, `
-  &:after {
-    left: 3%;
-  }
-`)
-
-const dividerCenter = cmz(typo.family.divider, `
-  &:after {
-    left: 50%;
-  }
-`)
 
 const centerAlign = cmz(`
   & {
@@ -106,7 +101,7 @@ class Text extends PureComponent<Props> {
 
     return Root(isCentered ? {className: centerAlign} : {},
 
-      heading && Heading({ className: isCentered ? dividerCenter : dividerLeft }, heading),
+      heading && Heading(heading),
 
       subHeading && SubHeading(subHeading),
 
