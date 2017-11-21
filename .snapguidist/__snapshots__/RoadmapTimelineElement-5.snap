@@ -1,18 +1,18 @@
 exports[`RoadmapTimelineElement-5 1`] = `
 <div>
   <div
-    className="AutoUI_RoadmapTimelineElement-66 AutoUI_RoadmapTimelineElement-14">
+    className="AutoUI_RoadmapTimelineElement-53 AutoUI_RoadmapTimelineElement-13">
     <div
-      className="AutoUI_RoadmapTimelineElement-39" />
+      className="AutoUI_RoadmapTimelineElement-24" />
     <hr
-      className="AutoUI_RoadmapTimelineElement-74 AutoUI_RoadmapTimelineElement-57" />
+      className="AutoUI_RoadmapTimelineElement-61 AutoUI_RoadmapTimelineElement-42" />
   </div>
   <div
-    className="AutoUI_RoadmapTimelineElement-14">
+    className="AutoUI_RoadmapTimelineElement-13">
     <div
       className={false} />
     <hr
-      className="AutoUI_RoadmapTimelineElement-57" />
+      className="AutoUI_RoadmapTimelineElement-42" />
   </div>
 </div>
 `;

@@ -1,6 +1,5 @@
 // @flow
 
-import type { Element } from 'react'
 import React, { PureComponent } from 'react'
 import theme from '../styles/theme'
 
@@ -46,7 +45,9 @@ const styles = {
     height: 3em;
     background-color: ${theme.offwhite}
     border: 0;
-  `)
+  `),
+  active: '',
+  verticalLineActivated: ''
 }
 
 styles.active = cmz(
@@ -57,7 +58,7 @@ styles.active = cmz(
   `
 )
 
-styles.veritcalLineActivated = cmz(
+styles.verticalLineActivated = cmz(
   styles.verticalLine,
   `
     margin: .1em 0 0 1px;
@@ -75,13 +76,13 @@ class RoadmapTimelineElement extends PureComponent<Props> {
     const { isDone } = this.props
 
     const wrapperClassName = isDone ? styles.active : styles.timeline
-    const verticalLineClassName = isDone ? styles.veritcalLineActivated : styles.verticalLine
+    const verticalLineClassName = isDone ? styles.verticalLineActivated : styles.verticalLine
     const checkmarkClassName = isDone && styles.checkmark
 
     return (
       <div className={wrapperClassName}>
-        <div className={checkmarkClassName}/>
-        <hr className={verticalLineClassName}/>
+        <div className={checkmarkClassName} />
+        <hr className={verticalLineClassName} />
       </div>
     )
   }
