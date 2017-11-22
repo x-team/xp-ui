@@ -100,20 +100,22 @@ class RoadmapTimelineElement extends PureComponent<Props> {
   render () {
     const { isDone } = this.props
 
-    const activeTimelineClassName = isDone ? animatedStyles.timelineActive : ''
-    const checkmarkBoxClassName = animatedStyles.checkmarkBox
-    const checkmarkClassName = isDone ? animatedStyles.checkmark : ''
-    const circleClassName = `${animatedStyles.checkmarkCircle} ${isDone ? animatedStyles.checkmarkCircleActive : ''}`
-    const checkmarkCheckClassName = isDone ? animatedStyles.checkmarkCheck : ''
+    const cx = {
+      active: isDone ? animatedStyles.timelineActive : '',
+      box: animatedStyles.checkmarkBox,
+      checkmark: isDone ? animatedStyles.checkmark : '',
+      checkmarkCheck: isDone ? animatedStyles.checkmarkCheck : '',
+      circle: `${animatedStyles.checkmarkCircle} ${isDone ? animatedStyles.checkmarkCircleActive : ''}`
+    }
 
     return (
-      <div className={`${animatedStyles.timeline} ${activeTimelineClassName}`}>
-        <div className={checkmarkBoxClassName}>
-          <svg className={checkmarkClassName}
+      <div className={`${animatedStyles.timeline} ${cx.active}`}>
+        <div className={cx.box}>
+          <svg className={cx.checkmark}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 52 52'>
-            <circle className={circleClassName} cx='26' cy='26' r='25' fill='none' />
-            <path className={checkmarkCheckClassName} fill='none' d='M14.1 27.2l7.1 7.2 16.7-16.8' />
+            <circle className={cx.circle} cx='26' cy='26' r='25' fill='none' />
+            <path className={cx.checkmarkCheck} fill='none' d='M14.1 27.2l7.1 7.2 16.7-16.8' />
           </svg>
         </div>
       </div>
