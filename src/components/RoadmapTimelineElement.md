@@ -7,14 +7,12 @@ Basic:
 Active state:
 
 ```js
-<RoadmapTimelineElement
-    isDone
-/>
+<RoadmapTimelineElement isDone />
 ```
 
 Composition:
 
-```
+```js
 <div>
     <RoadmapTimelineElement isDone />
     <RoadmapTimelineElement />
