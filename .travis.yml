@@ -1,5 +1,14 @@
 sudo: false
 language: node_js
 node_js:
-  - 6
-  - 8
+- 6
+- 8
+before_deploy:
+  - npm run styleguide:build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  on:
+    branch: master
+  local_dir: styleguide

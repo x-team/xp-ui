@@ -4,14 +4,13 @@ import md5 from 'crypto-js/md5'
 const cmz = require('cmz')
 
 const containerStyles = cmz(`
+  display: flex
+  flex-direction: row
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
-  vertical-align: middle;
-  margin: .5em;
+  margin: .5em
 `)
 
 const applicantsContainer = cmz(`
-  display: inline-block
-  vertical-align: top
   margin: 0 1em
 `)
 
@@ -23,7 +22,12 @@ type Props = {
 
 export default class ApplicantBadge extends PureComponent<Props> {
   render () {
-    const { firstName, lastName, email } = this.props
+    const {
+      children,
+      email,
+      firstName,
+      lastName
+    } = this.props
 
     return (
       <div className={containerStyles}>
@@ -34,6 +38,7 @@ export default class ApplicantBadge extends PureComponent<Props> {
         <div className={applicantsContainer}>
           <div>{`${firstName} ${lastName}`}</div>
           <div>{`${email}`}</div>
+          {children}
         </div>
       </div>
     )
