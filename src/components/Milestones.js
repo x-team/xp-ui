@@ -175,8 +175,8 @@ class Milestones extends PureComponent<Props, State> {
   }
 
   handleChangeMilestone = (level: Level, newLevel: number) => () => {
-    this.setState({ currentLevel: newLevel })
     if (typeof level.handleClick === 'function') level.handleClick()
+    else this.setState({ currentLevel: newLevel })
   }
 
   renderMilestone = (level: Level, index: number) => {
