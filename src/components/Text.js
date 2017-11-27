@@ -55,7 +55,7 @@ const Content = elem.div(cmz(
   typo.family.base,
   `
   & {
-    margin-top: 35px;
+    margin: 35px 0;
   }
   &, & * {
     font-size: 24px;
