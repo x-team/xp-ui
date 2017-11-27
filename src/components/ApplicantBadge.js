@@ -36,11 +36,12 @@ export default class ApplicantBadge extends PureComponent<Props> {
 
     const shouldRenderName = firstName || lastName
     const fullName = `${firstName} ${lastName}`
+    const avatarCaption = shouldRenderName ? `${fullName}'s avatar`: 'avatar'
 
     return (
       <div className={containerStyles}>
         <img
-          alt={`${firstName} ${lastName}'s avatar`}
+          alt={avatarCaption}
           src={`https://www.gravatar.com/avatar/${md5(email)}?s=64`}
         />
         <div className={applicantsContainer}>
