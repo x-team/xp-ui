@@ -1,5 +1,4 @@
-
-ApplicantBadge example:
+Basic usage:
 
 ```js
 <ApplicantBadge
@@ -9,7 +8,7 @@ ApplicantBadge example:
 />
 ```
 
-ApplicantBadge with children:
+With children:
 
 ```js
 <ApplicantBadge
@@ -19,4 +18,28 @@ ApplicantBadge with children:
 >
   <button>Hire</button>
 </ApplicantBadge>
+```
+
+No first name provided:
+
+```js
+<ApplicantBadge
+  lastName={'Lastname'}
+  email={'applicant@x-team.com'}
+/>
+```
+
+No last name provided:
+
+```js
+<ApplicantBadge
+  firstName={'Firstname'}
+  email={'applicant@x-team.com'}
+/>
+```
+
+No first name / last name provided:
+
+```js
+<ApplicantBadge email={'sionlyngle-email@x-team.com'} />
 ```

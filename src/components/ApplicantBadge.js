@@ -21,6 +21,11 @@ type Props = {
 }
 
 export default class ApplicantBadge extends PureComponent<Props> {
+  static defaultProps = {
+    firstName: '',
+    lastName: ''
+  }
+
   render () {
     const {
       children,
@@ -29,6 +34,9 @@ export default class ApplicantBadge extends PureComponent<Props> {
       lastName
     } = this.props
 
+    const shouldRenderName = firstName || lastName
+    const fullName = `${firstName} ${lastName}`
+
     return (
       <div className={containerStyles}>
         <img
@@ -36,8 +44,8 @@ export default class ApplicantBadge extends PureComponent<Props> {
           src={`https://www.gravatar.com/avatar/${md5(email)}?s=64`}
         />
         <div className={applicantsContainer}>
-          <div>{`${firstName} ${lastName}`}</div>
-          <div>{`${email}`}</div>
+          {shouldRenderName && <div>{fullName}</div>}
+          <div>{email}</div>
           {children}
         </div>
       </div>
