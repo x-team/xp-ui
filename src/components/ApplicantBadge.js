@@ -37,7 +37,7 @@ export default class ApplicantBadge extends PureComponent<Props> {
         />
         <div className={applicantsContainer}>
           {
-            (firstName || lastName) && 
+            (firstName || lastName) &&
             <div>{`${firstName || ''} ${lastName || ''}`}</div>
           }
           <div>{`${email}`}</div>
