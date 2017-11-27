@@ -29,6 +29,9 @@ export default class ApplicantBadge extends PureComponent<Props> {
       lastName
     } = this.props
 
+    console.log(this.props);
+    console.log( this.props.lastName || '');
+
     return (
       <div className={containerStyles}>
         <img
@@ -36,7 +39,10 @@ export default class ApplicantBadge extends PureComponent<Props> {
           src={`https://www.gravatar.com/avatar/${md5(email)}?s=64`}
         />
         <div className={applicantsContainer}>
-          <div>{`${firstName} ${lastName}`}</div>
+          {
+            (firstName || lastName) && 
+            <div>{`${firstName || ''} ${lastName || ''}`}</div>
+          }
           <div>{`${email}`}</div>
           {children}
         </div>
