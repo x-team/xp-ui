@@ -29,9 +29,6 @@ export default class ApplicantBadge extends PureComponent<Props> {
       lastName
     } = this.props
 
-    console.log(this.props);
-    console.log( this.props.lastName || '');
-
     return (
       <div className={containerStyles}>
         <img
