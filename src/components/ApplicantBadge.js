@@ -36,7 +36,7 @@ export default class ApplicantBadge extends PureComponent<Props> {
 
     const shouldRenderName = firstName || lastName
     const fullName = `${firstName} ${lastName}`
-    const avatarCaption = shouldRenderName ? `${fullName}'s avatar`: 'avatar'
+    const avatarCaption = shouldRenderName ? `${fullName}'s avatar` : 'avatar'
 
     return (
       <div className={containerStyles}>
