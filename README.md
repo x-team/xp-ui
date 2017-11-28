@@ -16,6 +16,10 @@ You need to install:
 - `npm install`
 - `npm start`
 
+## Live preview
+
+The latest Styleguidist spec page build out of `master` branch is available for preview [here](https://x-team.github.io/auto-ui/).
+
 ## Contributing
 
 Read [design principles](./design-principles.md) to get an understanding of the principles we're aiming for.
