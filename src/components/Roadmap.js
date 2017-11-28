@@ -3,6 +3,8 @@
 import React, { PureComponent, Children } from 'react'
 import { findDOMNode } from 'react-dom'
 
+import { throttle, isScrolledIntoView } from '../utils/helpers'
+
 import RoadmapTimelineElement from './RoadmapTimelineElement'
 
 import type { Element } from 'react'
@@ -13,12 +15,16 @@ type Props = {
   children?: Element<*>|string,
 }
 
+type State = {
+  activeVisible: number
+}
+
 const wrapperClassName = cmz(`
   & {
     overflow: hidden
     position: relative
     // display: flex
-    // flex-flow: row wrap
+    // flex-flow: column wrap
     // justify-content: space-between
     // align-items: flex-start
   }
@@ -38,19 +44,33 @@ const timelineElementClassName = cmz(`
 const roadmapLevelClassName = cmz(`
   & {
     position: relative
-    // margin-top: 2rem
     width: 45%
     // display: flex
 
     display: block
     margin-bottom: 6rem
+
+    // position: relative
+    // width: 100%
+    // margin-top: -100px
+    // display: flex
+    // flex-direction: column
   }
 
+  // &:first-child {
+  //   margin-top: 0
+  // }
+
   &:last-child {
+    // display: block
     width: auto
     padding-left: 6rem
     padding-right: 6rem
   }
+
+  // &:nth-child(even) {
+  //   align-items: flex-end
+  // }
 
   &:nth-child(2) {
     margin-top: 16rem
@@ -64,6 +84,19 @@ const roadmapLevelClassName = cmz(`
   &:nth-child(odd) {
     float: left
   }
+
+  // level element inside the wrapper
+  // & > section:nth-of-type(1) {
+  //   z-index: 2
+  //   width: 45%
+  //   min-height: 30px
+  //   margin: 10px
+  //   box-sizing: border-box
+  // }
+
+  // &:last-child > section:nth-of-type(1) {
+  //   width: auto
+  // }
 
   & > .${timelineElementClassName} {
     position: absolute
@@ -81,23 +114,54 @@ const roadmapLevelClassName = cmz(`
   }
 `)
 
-class Roadmap extends PureComponent<Props> {
+class Roadmap extends PureComponent<Props, State> {
   static defaultProps = {
     children: null
   }
 
+  state = {
+    activeVisible: 0
+  }
+
   timelineEl = []
   levelEl = []
+  lastScrollPos = 0
+  throttledScrollHandler = () => {}
+
+  componentWillMount () {
+    this.lastScrollPos = window.scrollY
+    this.throttledScrollHandler = throttle(this.handleDocumentScroll, 350)
+    window.addEventListener('scroll', this.throttledScrollHandler)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.throttledScrollHandler)
+  }
 
   componentDidMount() {
-    for (let i = 0; i < this.timelineEl.length; i++) {
-      this.setTimelineElementHeight(this.timelineEl[i], i)
-    }
+    this.timelineEl.forEach(this.setTimelineElementHeight)
+  }
+
+  detectScrollDirection = () => {
+    // -1 — scroll up; 1 — scroll down
+    return this.lastScrollPos > window.scrollY ? -1 : 1
+  }
+
+  handleDocumentScroll = () => {
+    this.levelEl.forEach((element, index) => {
+      const elNode = findDOMNode(element)
+      if (isScrolledIntoView(elNode, this.detectScrollDirection())) {
+        this.setState({ activeVisible: index })
+      }
+    })
+    this.lastScrollPos = window.scrollY
   }
 
   setTimelineElementHeight = (timelineEl: any, index: number) => {
     const timelineElementsLength = this.timelineEl.length
+
     if (!timelineEl) return
+
     if (index !== timelineElementsLength - 1) {
       const currentTimelineDOMNode = findDOMNode(timelineEl)
       const nextTimelineDOMNode = findDOMNode(this.timelineEl[index + 1])
@@ -110,23 +174,29 @@ class Roadmap extends PureComponent<Props> {
   }
 
   renderRoadmap = () => {
-    const children = this.props.children
+    const { children } = this.props
+    const { activeVisible } = this.state
 
     return Children.map(children, (child, index) => {
       const isLastChild = index === Children.count(children) - 1
+      const isActiveRoadmapLevel = index === activeVisible
+      const isActiveTimelineElement = index <= activeVisible
+
       const timelineElement = !isLastChild && (
         <span className={timelineElementClassName}>
-          <RoadmapTimelineElement ref={node => { this.timelineEl[index] = node }} />
+          <RoadmapTimelineElement
+            isDone={isActiveTimelineElement}
+            ref={node => { this.timelineEl[index] = node }}
+          />
         </span>
       )
 
       return (
         <section className={roadmapLevelClassName} ref={node => { this.levelEl[index] = node }}>
-          {child}
+          {React.cloneElement(child, { isActive: isActiveRoadmapLevel })}
           {timelineElement}
         </section>
       )
-      // return React.cloneElement(child, { prop: 'custom value' })
     })
   }
 
