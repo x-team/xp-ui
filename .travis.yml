@@ -4,6 +4,7 @@ node_js:
 - 6
 - 8
 before_deploy:
+  - npm run build
   - npm run styleguide:build
 deploy:
   provider: pages
