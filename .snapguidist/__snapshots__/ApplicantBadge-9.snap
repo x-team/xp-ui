@@ -1,0 +1,15 @@
+exports[`ApplicantBadge-9 1`] = `
+<div
+  className="AutoUI_ApplicantBadge-6">
+  <img
+    alt="avatar"
+    src="https://www.gravatar.com/avatar/61a58e425da620d1f4839c6af03ce70f?s=64" />
+  <div
+    className="AutoUI_ApplicantBadge-13">
+    
+    <div>
+      sionlyngle-email@x-team.com
+    </div>
+  </div>
+</div>
+`;
