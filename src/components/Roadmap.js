@@ -20,14 +20,10 @@ type State = {
 }
 
 const wrapperClassName = cmz(`
-  & {
-    overflow: hidden
-    position: relative
-    // display: flex
-    // flex-flow: column wrap
-    // justify-content: space-between
-    // align-items: flex-start
-  }
+  // overflow: hidden
+  // position: relative
+  display: flex
+  flex-direction: column
 `)
 
 const timelineElementClassName = cmz(`
@@ -35,31 +31,24 @@ const timelineElementClassName = cmz(`
     position: relative
     top: 0
   }
-
-  & > * {
-    height: 150px
-  }
 `)
 
 const roadmapLevelClassName = cmz(`
   & {
     position: relative
-    width: 45%
-    // display: flex
+    // width: 45%
+    // display: block
+    // margin-bottom: 6rem
 
-    display: block
-    margin-bottom: 6rem
-
-    // position: relative
-    // width: 100%
-    // margin-top: -100px
-    // display: flex
-    // flex-direction: column
+    width: 100%
+    margin-top: -200px
+    display: flex
+    flex-direction: column
   }
 
-  // &:first-child {
-  //   margin-top: 0
-  // }
+  &:first-child {
+    margin-top: 0
+  }
 
   &:last-child {
     // display: block
@@ -68,50 +57,49 @@ const roadmapLevelClassName = cmz(`
     padding-right: 6rem
   }
 
-  // &:nth-child(even) {
-  //   align-items: flex-end
+  &:nth-child(even) {
+    align-items: flex-end
+  }
+
+  // &:nth-child(2) {
+  //   margin-top: 16rem
   // }
 
-  &:nth-child(2) {
-    margin-top: 16rem
-  }
+  // &:nth-child(even) {
+  //   float: right
+  // }
 
-  &:nth-child(even) {
-    // flex-direction: row-reverse
-    float: right
-  }
-
-  &:nth-child(odd) {
-    float: left
-  }
+  // &:nth-child(odd) {
+  //   float: left
+  // }
 
   // level element inside the wrapper
-  // & > section:nth-of-type(1) {
-  //   z-index: 2
-  //   width: 45%
-  //   min-height: 30px
-  //   margin: 10px
-  //   box-sizing: border-box
-  // }
+  & > section:nth-of-type(1) {
+    z-index: 2
+    width: 45%
+    min-height: 30px
+    margin: 10px
+    box-sizing: border-box
+  }
 
-  // &:last-child > section:nth-of-type(1) {
-  //   width: auto
-  // }
+  &:last-child > section:nth-of-type(1) {
+    width: auto
+  }
 
   & > .${timelineElementClassName} {
     position: absolute
     top: 0
   }
 
-  &:nth-child(even) .${timelineElementClassName} {
-    left: -13%
-    right: auto
-  }
+  // &:nth-child(even) .${timelineElementClassName} {
+  //   left: -13%
+  //   right: auto
+  // }
 
-  &:nth-child(odd) .${timelineElementClassName} {
-    right: -9%
-    left: auto
-  }
+  // &:nth-child(odd) .${timelineElementClassName} {
+  //   right: -9%
+  //   left: auto
+  // }
 `)
 
 class Roadmap extends PureComponent<Props, State> {
@@ -139,7 +127,7 @@ class Roadmap extends PureComponent<Props, State> {
   }
 
   componentDidMount() {
-    this.timelineEl.forEach(this.setTimelineElementHeight)
+    // this.timelineEl.forEach(this.setTimelineElementHeight)
   }
 
   detectScrollDirection = () => {
