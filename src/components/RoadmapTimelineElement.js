@@ -13,7 +13,8 @@ const animatedStyles = {
   timeline: cmz(`
     & {
       position: relative
-      height: 10em
+      height: 100%
+      min-height: 20px
     }
 
     &:before {
@@ -24,15 +25,9 @@ const animatedStyles = {
       left: 7px
       overflow: hidden
       width: 2px
-      height: 0
+      height: 100%
       background: ${theme.offwhite}
       animation: process .6s linear forwards
-    }
-
-    @keyframes process {
-      100% {
-        height: 90%
-      }
     }
   `),
   timelineActive: cmz(`
