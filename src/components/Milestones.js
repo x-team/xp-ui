@@ -17,10 +17,6 @@ type Level = {
   handleClick(): void
 }
 
-type State = {
-  currentLevel: number
-}
-
 type Props = {
   /** Currently active milestone */
   level: number,
@@ -137,17 +133,13 @@ const styles = {
   `)
 }
 
-class Milestones extends PureComponent<Props, State> {
+class Milestones extends PureComponent<Props> {
   static defaultProps = {
     level: 1
   }
 
-  state = {
-    currentLevel: this.props.level
-  }
-
   getCurrentState = (levelIndex: number) => {
-    const { currentLevel } = this.state
+    const { level } = this.props
     let state = 'normal'
 
     const stateMap = {
@@ -165,9 +157,9 @@ class Milestones extends PureComponent<Props, State> {
       }
     }
 
-    if (levelIndex === currentLevel) {
+    if (levelIndex === level) {
       state = 'current'
-    } else if (levelIndex < currentLevel) {
+    } else if (levelIndex < level) {
       state = 'completed'
     }
 

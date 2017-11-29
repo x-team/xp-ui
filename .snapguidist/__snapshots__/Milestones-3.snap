@@ -1,10 +1,10 @@
 exports[`Milestones-3 1`] = `
 <ul
-  className="AutoUI_Milestones-31">
+  className="AutoUI_Milestones-27">
   <li
-    className="AutoUI_Milestones-40 isCurrent">
+    className="AutoUI_Milestones-36 isCurrent">
     <div
-      className="AutoUI_Milestones-90">
+      className="AutoUI_Milestones-86">
       <svg
         height="43px"
         viewBox="0 0 30 43"
@@ -50,14 +50,14 @@ exports[`Milestones-3 1`] = `
       </svg>
     </div>
     <span
-      className="AutoUI_Milestones-126 AutoUI_typo-21 AutoUI_typo-15">
+      className="AutoUI_Milestones-122 AutoUI_typo-21 AutoUI_typo-15">
       Webcam
     </span>
   </li>
   <li
-    className="AutoUI_Milestones-40 ">
+    className="AutoUI_Milestones-36 ">
     <div
-      className="AutoUI_Milestones-90">
+      className="AutoUI_Milestones-86">
       <svg
         height="36px"
         viewBox="0 0 37 36"
@@ -103,14 +103,14 @@ exports[`Milestones-3 1`] = `
       </svg>
     </div>
     <span
-      className="AutoUI_Milestones-126 AutoUI_typo-21 AutoUI_typo-15">
+      className="AutoUI_Milestones-122 AutoUI_typo-21 AutoUI_typo-15">
       Message
     </span>
   </li>
   <li
-    className="AutoUI_Milestones-40 ">
+    className="AutoUI_Milestones-36 ">
     <div
-      className="AutoUI_Milestones-90">
+      className="AutoUI_Milestones-86">
       <svg
         height="43px"
         viewBox="0 0 37 43"
@@ -154,14 +154,14 @@ exports[`Milestones-3 1`] = `
       </svg>
     </div>
     <span
-      className="AutoUI_Milestones-126 AutoUI_typo-21 AutoUI_typo-15">
+      className="AutoUI_Milestones-122 AutoUI_typo-21 AutoUI_typo-15">
       Head
     </span>
   </li>
   <li
-    className="AutoUI_Milestones-40 ">
+    className="AutoUI_Milestones-36 ">
     <div
-      className="AutoUI_Milestones-90">
+      className="AutoUI_Milestones-86">
       <svg
         height="39px"
         viewBox="0 0 42 39"
@@ -213,7 +213,7 @@ exports[`Milestones-3 1`] = `
       </svg>
     </div>
     <span
-      className="AutoUI_Milestones-126 AutoUI_typo-21 AutoUI_typo-15">
+      className="AutoUI_Milestones-122 AutoUI_typo-21 AutoUI_typo-15">
       Diamond
     </span>
   </li>
