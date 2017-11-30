@@ -13,7 +13,8 @@ const animatedStyles = {
   timeline: cmz(`
     & {
       position: relative
-      height: 10em
+      height: 100%
+      min-height: 20px
     }
 
     &:before {
@@ -24,15 +25,9 @@ const animatedStyles = {
       left: 7px
       overflow: hidden
       width: 2px
-      height: 0
+      height: 100%
       background: ${theme.offwhite}
       animation: process .6s linear forwards
-    }
-
-    @keyframes process {
-      100% {
-        height: 90%
-      }
     }
   `),
   timelineActive: cmz(`
@@ -57,7 +52,7 @@ const animatedStyles = {
     & {
       stroke: ${theme.red}
       fill: none
-      animation: stroke 1s cubic-bezier(.65, 0, .45, 1) forwards
+      animation: stroke .6s cubic-bezier(.65, 0, .45, 1) forwards
     }
 
     @keyframes stroke {
@@ -75,7 +70,7 @@ const animatedStyles = {
       stroke-miterlimit: 10
       margin: 10% auto
       box-shadow: inset 0 0 0 ${theme.red}
-      animation: fill 1s ease-in-out 1s forwards, scale 1s ease-in-out 1s both
+      animation: fill .4s ease-in-out .4s forwards, scale .4s ease-in-out .4s both
     }
 
     @keyframes fill {
@@ -88,7 +83,7 @@ const animatedStyles = {
     transform-origin: 50% 50%
     stroke-dasharray: 48
     stroke-dashoffset: 48
-    animation: stroke .2s cubic-bezier(.65, 0, .45, 1) .6s forwards
+    animation: stroke .2s cubic-bezier(.65, 0, .45, 1) .4s forwards
   `)
 }
 
