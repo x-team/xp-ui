@@ -21,5 +21,5 @@ export function isScrolledIntoView (element, direction) {
   const elemTop = scrollPosition + top
   const elemBottom = scrollPosition + bottom
 
-  return direction < 0 ? elemTop <= docViewBottom : elemBottom <= docViewBottom
+  return direction < 0 ? elemTop < docViewBottom : elemBottom <= docViewBottom
 }

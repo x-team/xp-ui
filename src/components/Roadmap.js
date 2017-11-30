@@ -3,6 +3,7 @@
 import React, { PureComponent, Children } from 'react'
 import { findDOMNode } from 'react-dom'
 
+import elem from '../utils/elem'
 import { throttle, isScrolledIntoView } from '../utils/helpers'
 
 import RoadmapTimelineElement from './RoadmapTimelineElement'
@@ -12,95 +13,109 @@ import type { Element } from 'react'
 const cmz = require('cmz')
 
 type Props = {
-  children?: Element<*>|string,
+  children?: Element<*> | string,
 }
 
 type State = {
   activeVisible: number
 }
 
-const wrapperClassName = cmz(`
-  // overflow: hidden
-  // position: relative
+const overlap = 300
+
+const columnClassName = cmz(`
   display: flex
   flex-direction: column
 `)
 
-const timelineElementClassName = cmz(`
+const breakpoints = {
+  small: '@media screen and (max-width: 600px)'
+}
+
+const Root = elem.div(cmz(
+  columnClassName
+))
+
+const Level = elem.div(cmz(
+  columnClassName,
+  `
+    & {
+      position: relative
+      width: 100%
+      margin-top: -${overlap}px
+      min-height: ${overlap * 2}px
+      padding: 10px 0
+    }
+
+    &:first-child {
+      margin-top: 0
+    }
+
+    &:last-child {
+      align-items: center
+      margin-top: 0
+      padding-top: 80px
+    }
+
+    &:nth-child(even) {
+      align-items: flex-end
+    }
+
+    ${breakpoints.small} {
+      &,
+      &:first-child {
+        margin: 40px 0 0 0
+      }
+
+      &,
+      &:nth-child(even) {
+        align-items: center
+      }
+    }
+  `
+))
+
+const Box = elem.div(cmz(`
   & {
-    position: relative
-    top: 0
-  }
-`)
-
-const roadmapLevelClassName = cmz(`
-  & {
-    position: relative
-    // width: 45%
-    // display: block
-    // margin-bottom: 6rem
-
-    width: 100%
-    margin-top: -200px
-    display: flex
-    flex-direction: column
+    width: 45%
+    min-height: 2rem
+    z-index: 2
   }
 
-  &:first-child {
-    margin-top: 0
-  }
-
-  &:last-child {
-    // display: block
+  .isFinal & {
     width: auto
     padding-left: 6rem
     padding-right: 6rem
   }
+`))
 
-  &:nth-child(even) {
-    align-items: flex-end
-  }
-
-  // &:nth-child(2) {
-  //   margin-top: 16rem
-  // }
-
-  // &:nth-child(even) {
-  //   float: right
-  // }
-
-  // &:nth-child(odd) {
-  //   float: left
-  // }
-
-  // level element inside the wrapper
-  & > section:nth-of-type(1) {
-    z-index: 2
-    width: 45%
-    min-height: 30px
-    margin: 10px
-    box-sizing: border-box
-  }
-
-  &:last-child > section:nth-of-type(1) {
-    width: auto
-  }
-
-  & > .${timelineElementClassName} {
+const Line = elem.div(cmz(`
+  & {
+    width: 1px
+    height: auto
     position: absolute
-    top: 0
+    top: 10px
+    bottom: ${overlap + 7}px
+    left: 50%
+    margin-left: -8px
+    z-index: 1
   }
 
-  // &:nth-child(even) .${timelineElementClassName} {
-  //   left: -13%
-  //   right: auto
-  // }
+  .isSecondLast & {
+    bottom: 0
+  }
 
-  // &:nth-child(odd) .${timelineElementClassName} {
-  //   right: -9%
-  //   left: auto
-  // }
-`)
+  .isFinal & {
+    top: 17px
+    height: 20px
+  }
+
+  ${breakpoints.small} {
+    & {
+      top: -15px
+      height: calc(100% + 40px)
+    }
+  }
+`))
 
 class Roadmap extends PureComponent<Props, State> {
   static defaultProps = {
@@ -111,7 +126,6 @@ class Roadmap extends PureComponent<Props, State> {
     activeVisible: 0
   }
 
-  timelineEl = []
   levelEl = []
   lastScrollPos = 0
   throttledScrollHandler = () => {}
@@ -126,12 +140,8 @@ class Roadmap extends PureComponent<Props, State> {
     window.removeEventListener('scroll', this.throttledScrollHandler)
   }
 
-  componentDidMount() {
-    // this.timelineEl.forEach(this.setTimelineElementHeight)
-  }
-
   detectScrollDirection = () => {
-    // -1 — scroll up; 1 — scroll down
+    // 1 — scroll down; -1 — scroll up
     return this.lastScrollPos > window.scrollY ? -1 : 1
   }
 
@@ -145,55 +155,42 @@ class Roadmap extends PureComponent<Props, State> {
     this.lastScrollPos = window.scrollY
   }
 
-  setTimelineElementHeight = (timelineEl: any, index: number) => {
-    const timelineElementsLength = this.timelineEl.length
-
-    if (!timelineEl) return
-
-    if (index !== timelineElementsLength - 1) {
-      const currentTimelineDOMNode = findDOMNode(timelineEl)
-      const nextTimelineDOMNode = findDOMNode(this.timelineEl[index + 1])
-      currentTimelineDOMNode.style.height = `${nextTimelineDOMNode.getBoundingClientRect().top - currentTimelineDOMNode.getBoundingClientRect().top}px`
-    } else {
-      const lastTimelineDOMNode = findDOMNode(timelineEl)
-      const lastLevelDOMNode = findDOMNode(this.levelEl[timelineElementsLength])
-      lastTimelineDOMNode.style.height = `${lastLevelDOMNode.getBoundingClientRect().top - lastTimelineDOMNode.getBoundingClientRect().top}px`
-    }
-  }
-
   renderRoadmap = () => {
-    const { children } = this.props
     const { activeVisible } = this.state
+    const { children } = this.props
+    const childrenCount = Children.count(children)
 
     return Children.map(children, (child, index) => {
-      const isLastChild = index === Children.count(children) - 1
+      const isLastChild = index === childrenCount - 1
+      const isSecondLastChild = index === childrenCount - 2
+
       const isActiveRoadmapLevel = index === activeVisible
       const isActiveTimelineElement = index <= activeVisible
 
-      const timelineElement = !isLastChild && (
-        <span className={timelineElementClassName}>
-          <RoadmapTimelineElement
-            isDone={isActiveTimelineElement}
-            ref={node => { this.timelineEl[index] = node }}
-          />
-        </span>
+      const timelineElement = Line(
+        <RoadmapTimelineElement isDone={isActiveTimelineElement} />
       )
 
-      return (
-        <section className={roadmapLevelClassName} ref={node => { this.levelEl[index] = node }}>
-          {React.cloneElement(child, { isActive: isActiveRoadmapLevel })}
-          {timelineElement}
-        </section>
+      return Level(
+        {
+          className: [
+            isSecondLastChild && 'isSecondLast',
+            isLastChild && 'isFinal'
+          ]
+        },
+        Box(
+          {
+            ref: node => { this.levelEl[index] = node }
+          },
+          React.cloneElement(child, { isActive: isActiveRoadmapLevel })
+        ),
+        timelineElement
       )
     })
   }
 
   render () {
-    return (
-      <div className={wrapperClassName}>
-        {this.renderRoadmap()}
-      </div>
-    )
+    return Root(this.renderRoadmap())
   }
 }
 
