@@ -52,7 +52,7 @@ const animatedStyles = {
     & {
       stroke: ${theme.red}
       fill: none
-      animation: stroke 1s cubic-bezier(.65, 0, .45, 1) forwards
+      animation: stroke .6s cubic-bezier(.65, 0, .45, 1) forwards
     }
 
     @keyframes stroke {
@@ -70,7 +70,7 @@ const animatedStyles = {
       stroke-miterlimit: 10
       margin: 10% auto
       box-shadow: inset 0 0 0 ${theme.red}
-      animation: fill 1s ease-in-out 1s forwards, scale 1s ease-in-out 1s both
+      animation: fill .4s ease-in-out .4s forwards, scale .4s ease-in-out .4s both
     }
 
     @keyframes fill {
@@ -83,7 +83,7 @@ const animatedStyles = {
     transform-origin: 50% 50%
     stroke-dasharray: 48
     stroke-dashoffset: 48
-    animation: stroke .2s cubic-bezier(.65, 0, .45, 1) .6s forwards
+    animation: stroke .2s cubic-bezier(.65, 0, .45, 1) .4s forwards
   `)
 }
 
