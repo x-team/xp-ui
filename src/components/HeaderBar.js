@@ -11,7 +11,7 @@ const cx = {
   logoWrapper: cmz(`
     display: flex;
     justify-content: center;
-    box-shadow: 0 5px 5px -5px rgba(0,0,0,0.25);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.25);
     height: 58px;
     padding-top: 28px;
     width: 100%;
