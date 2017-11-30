@@ -1,29 +1,30 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+
 import { xTeamLogo } from '../styles/logo'
 
 const cmz = require('cmz')
 
 type Props = {}
 
-const cx = {
-  logoWrapper: cmz(`
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.25);
-    height: 58px;
-    padding-top: 28px;
-    width: 100%;
+const logoWrapper = cmz(`
+  display: flex
+  justify-content: center
+  box-shadow: 0 0 2px rgba(0, 0, 0, .25)
+  height: 58px
+  padding-top: 28px
+  width: 100%
 `)
-}
 
-export default class HeaderBar extends PureComponent<Props> {
+class HeaderBar extends PureComponent<Props> {
   render () {
     return (
-      <div className={cx.logoWrapper}>
+      <div className={logoWrapper}>
         {xTeamLogo(84, 30, '#231f20')}
       </div>
     )
   }
 }
+
+export default HeaderBar
