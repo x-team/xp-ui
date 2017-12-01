@@ -1,29 +1,37 @@
 import React, { PureComponent } from 'react'
 import md5 from 'crypto-js/md5'
 
+import theme from '../styles/theme'
+
 const cmz = require('cmz')
 
 const containerStyles = cmz(`
   display: flex
   flex-direction: row
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
-  margin: .5em
+  margin: .5em .5em .5em 0
 `)
 
 const applicantsContainer = cmz(`
   margin: 0 1em
+  padding-top: .5em
+  padding-right: .5em
 `)
+
+const activeApplicantClassName = cmz(`background-color: ${theme.lightGray}`)
 
 type Props = {
   firstName: ?string,
   lastName: ?string,
-  email: ?string
+  email: ?string,
+  active: ?boolean
 }
 
 export default class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
     firstName: '',
-    lastName: ''
+    lastName: '',
+    active: false
   }
 
   render () {
@@ -31,7 +39,8 @@ export default class ApplicantBadge extends PureComponent<Props> {
       children,
       email,
       firstName,
-      lastName
+      lastName,
+      active
     } = this.props
 
     const shouldRenderName = firstName || lastName
@@ -39,12 +48,12 @@ export default class ApplicantBadge extends PureComponent<Props> {
     const avatarCaption = shouldRenderName ? `${fullName}'s avatar` : 'avatar'
 
     return (
-      <div className={containerStyles}>
+      <div className={`${containerStyles} ${active && activeApplicantClassName}`}>
         <img
           alt={avatarCaption}
           src={`https://www.gravatar.com/avatar/${md5(email)}?s=64`}
         />
-        <div className={applicantsContainer}>
+        <div className={`${applicantsContainer} ${active && activeApplicantClassName}`}>
           {shouldRenderName && <div>{fullName}</div>}
           <div>{email}</div>
           {children}
