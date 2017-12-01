@@ -2,13 +2,13 @@ exports[`RoadmapTimelineElement-1 1`] = `
 <div
   className="AutoUI_RoadmapTimelineElement-13 ">
   <div
-    className="AutoUI_RoadmapTimelineElement-43">
+    className="AutoUI_RoadmapTimelineElement-38">
     <svg
       className=""
       viewBox="0 0 52 52"
       xmlns="http://www.w3.org/2000/svg">
       <circle
-        className="AutoUI_RoadmapTimelineElement-49 "
+        className="AutoUI_RoadmapTimelineElement-44 "
         cx="26"
         cy="26"
         fill="none"

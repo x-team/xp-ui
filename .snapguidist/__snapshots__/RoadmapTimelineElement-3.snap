@@ -1,20 +1,20 @@
 exports[`RoadmapTimelineElement-3 1`] = `
 <div
-  className="AutoUI_RoadmapTimelineElement-13 AutoUI_RoadmapTimelineElement-38">
+  className="AutoUI_RoadmapTimelineElement-13 AutoUI_RoadmapTimelineElement-33">
   <div
-    className="AutoUI_RoadmapTimelineElement-43">
+    className="AutoUI_RoadmapTimelineElement-38">
     <svg
-      className="AutoUI_RoadmapTimelineElement-69"
+      className="AutoUI_RoadmapTimelineElement-64"
       viewBox="0 0 52 52"
       xmlns="http://www.w3.org/2000/svg">
       <circle
-        className="AutoUI_RoadmapTimelineElement-49 AutoUI_RoadmapTimelineElement-56"
+        className="AutoUI_RoadmapTimelineElement-44 AutoUI_RoadmapTimelineElement-51"
         cx="26"
         cy="26"
         fill="none"
         r="25" />
       <path
-        className="AutoUI_RoadmapTimelineElement-87"
+        className="AutoUI_RoadmapTimelineElement-82"
         d="M14.1 27.2l7.1 7.2 16.7-16.8"
         fill="none" />
     </svg>
