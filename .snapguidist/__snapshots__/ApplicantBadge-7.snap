@@ -5,7 +5,7 @@ exports[`ApplicantBadge-7 1`] = `
     alt=" Lastname\'s avatar"
     src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=64" />
   <div
-    className="AutoUI_ApplicantBadge-18">
+    className="AutoUI_ApplicantBadge-18 ">
     <div>
        Lastname
     </div>

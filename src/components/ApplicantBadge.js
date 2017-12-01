@@ -7,19 +7,19 @@ const cmz = require('cmz')
 
 const cx = {
   container: cmz(`
-  display: flex
-  flex-direction: row
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
-  margin: .5em .5em .5em 0
-`),
+    display: flex
+    flex-direction: row
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+    margin: .5em .5em .5em 0
+  `),
 
   isActive: cmz(`background-color: ${theme.lightGray}`),
 
   applicant: cmz(`
-  margin: 0 1em
-  padding-top: .5em
-  padding-right: .5em
-`)
+    margin: 0 1em
+    padding-top: .5em
+    padding-right: .5em
+  `)
 }
 
 type Props = {
@@ -48,14 +48,15 @@ export default class ApplicantBadge extends PureComponent<Props> {
     const shouldRenderName = firstName || lastName
     const fullName = `${firstName} ${lastName}`
     const avatarCaption = shouldRenderName ? `${fullName}'s avatar` : 'avatar'
+    const activeClassName = active ? cx.isActive : ''
 
     return (
-      <div className={`${cx.container} ${active ? cx.isActive : ''}`}>
+      <div className={`${cx.container} ${activeClassName}`}>
         <img
           alt={avatarCaption}
           src={`https://www.gravatar.com/avatar/${md5(email)}?s=64`}
         />
-        <div className={cx.applicant}>
+        <div className={`${cx.applicant} ${activeClassName}`}>
           {shouldRenderName && <div>{fullName}</div>}
           <div>{email}</div>
           {children}
