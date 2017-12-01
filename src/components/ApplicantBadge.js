@@ -5,20 +5,22 @@ import theme from '../styles/theme'
 
 const cmz = require('cmz')
 
-const containerStyles = cmz(`
+const cx = {
+  container: cmz(`
   display: flex
   flex-direction: row
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
   margin: .5em .5em .5em 0
-`)
+`),
 
-const applicantsContainer = cmz(`
+  isActive: cmz(`background-color: ${theme.lightGray}`),
+
+  applicant: cmz(`
   margin: 0 1em
   padding-top: .5em
   padding-right: .5em
 `)
-
-const activeApplicantClassName = cmz(`background-color: ${theme.lightGray}`)
+}
 
 type Props = {
   firstName: ?string,
@@ -48,12 +50,12 @@ export default class ApplicantBadge extends PureComponent<Props> {
     const avatarCaption = shouldRenderName ? `${fullName}'s avatar` : 'avatar'
 
     return (
-      <div className={`${containerStyles} ${active && activeApplicantClassName}`}>
+      <div className={`${cx.container} ${active ? cx.isActive : ''}`}>
         <img
           alt={avatarCaption}
           src={`https://www.gravatar.com/avatar/${md5(email)}?s=64`}
         />
-        <div className={`${applicantsContainer} ${active && activeApplicantClassName}`}>
+        <div className={cx.applicant}>
           {shouldRenderName && <div>{fullName}</div>}
           <div>{email}</div>
           {children}
