@@ -21,7 +21,6 @@ const cx = {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
   `),
   brand: cmz(`
     line-height: 3rem;
