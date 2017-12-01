@@ -8,6 +8,17 @@ Basic usage:
 />
 ```
 
+Active applicant:
+
+```js
+<ApplicantBadge
+  firstName={'Active'}
+  lastName={'Applicant'}
+  email={'applicant@x-team.com'}
+  active
+/>
+```
+
 With children:
 
 ```js
