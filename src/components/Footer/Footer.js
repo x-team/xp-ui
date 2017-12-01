@@ -21,6 +21,8 @@ const cx = {
   `),
   columnContainer: cmz(`
     display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
   `),
   logoColumn: cmz(`
     width: 20%;
@@ -31,6 +33,7 @@ const cx = {
   `),
   colophon: cmz(`
     flex-grow: 1;
+    max-width: 72%;
     margin-top: 3.125rem;
     padding-top: 2.5rem;
     border-top: 1px solid rgba(0,0,0,.1)
