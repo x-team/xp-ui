@@ -24,6 +24,7 @@ const cx = {
   `),
   brand: cmz(`
     line-height: 3rem;
+    margin-right: 1rem;
     display: inline-block;
     vertical-align: middle;
   `,
