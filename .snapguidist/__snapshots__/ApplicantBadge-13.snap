@@ -1,9 +1,15 @@
-exports[`ApplicantBadge-5 1`] = `
+exports[`ApplicantBadge-13 1`] = `
 <div
   className="AutoUI_ApplicantBadge-23">
-  <img
-    avatarCaption="Applicant X-Team\'s avatar"
-    src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=64" />
+  <div
+    style={
+      Object {
+        "background": "orange",
+        "borderRadius": "50%",
+        "height": 64,
+        "width": 64,
+      }
+    } />
   <div
     className="AutoUI_ApplicantBadge-32">
     <div
@@ -14,12 +20,6 @@ exports[`ApplicantBadge-5 1`] = `
       className="AutoUI_ApplicantBadge-47">
       applicant@x-team.com
     </div>
-    <button>
-      Hello
-    </button>
-    <button>
-      World
-    </button>
   </div>
 </div>
 `;
