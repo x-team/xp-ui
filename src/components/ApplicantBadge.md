@@ -27,7 +27,8 @@ With children:
   lastName={'X-Team'}
   email={'applicant@x-team.com'}
 >
-  <button>Hire</button>
+  <button>Hello</button>
+  <button>World</button>
 </ApplicantBadge>
 ```
 
@@ -53,4 +54,15 @@ No first name / last name provided:
 
 ```js
 <ApplicantBadge email={'sionlyngle-email@x-team.com'} />
+```
+
+With a custom avatar:
+
+```js
+<ApplicantBadge
+  firstName={'Applicant'}
+  lastName={'X-Team'}
+  email={'applicant@x-team.com'}
+  avatar=<div style={{width: 64, height: 64, borderRadius: '50%', background: 'orange' }} />
+/>
 ```
