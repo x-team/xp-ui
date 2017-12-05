@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import theme from '../../styles/theme'
+import theme, { breakpoints }  from '../../styles/theme'
 import * as typo from '../../styles/typo'
 
 const cmz = require('cmz')
@@ -23,8 +23,16 @@ const cx = {
     display: flex;
   `),
   brand: cmz(`
+    line-height: 3rem;
+    margin-right: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+  `,
+  `&:last-child { margin-right: 0; }
+  @media screen and (min-width: ${breakpoints.md}) { & {
     line-height: 4rem;
     margin-right: 3rem;
+  } }
   `),
   image: cmz(`
     max-height: 4rem;
@@ -61,7 +69,7 @@ export default class FooterBrands extends PureComponent<Props> {
               return (
                 <li className={cx.brand} key={id}>
                   <a href={item.url}>
-                    <img src={item.image} alt={item.title} />
+                    <img className={cx.image} src={item.image} alt={item.title} />
                   </a>
                 </li>
               )
