@@ -59,7 +59,7 @@ export default class ApplicantBadge extends PureComponent<Props> {
     const {
       active,
       avatar,
-      children = [],
+      children,
       email,
       firstName,
       lastName
@@ -80,7 +80,7 @@ export default class ApplicantBadge extends PureComponent<Props> {
         { className: activeClassName },
         shouldRenderName && Name(fullName),
         Email(email),
-        ...children
+        children
       )
     )
   }

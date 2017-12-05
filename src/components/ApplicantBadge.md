@@ -27,7 +27,8 @@ With children:
   lastName={'X-Team'}
   email={'applicant@x-team.com'}
 >
-  <button>Hire</button>
+  <button>Hello</button>
+  <button>World</button>
 </ApplicantBadge>
 ```
 
