@@ -23,6 +23,7 @@ const cx = {
     display: flex;
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 20px;
   `),
   logoColumn: cmz(`
     width: 20%;
