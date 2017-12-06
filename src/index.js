@@ -7,6 +7,7 @@ import XIcon from './components/XIcon'
 import HeaderBar from './components/HeaderBar'
 import HorizontalRuler from './components/HorizontalRuler'
 import Text from './components/Text'
+import Roadmap from './components/Roadmap'
 import RoadmapHero from './components/RoadmapHero'
 import RoadmapLevel from './components/RoadmapLevel'
 import RoadmapTimelineElement from './components/RoadmapTimelineElement'
@@ -27,6 +28,7 @@ export {
   HeaderBar,
   HorizontalRuler,
   Text,
+  Roadmap,
   RoadmapHero,
   RoadmapLevel,
   RoadmapTimelineElement,
