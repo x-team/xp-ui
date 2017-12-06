@@ -73,7 +73,7 @@ export default class ApplicantBadge extends PureComponent<Props> {
     return Root(
       { className: activeClassName },
       avatar || Avatar({
-        avatarCaption,
+        alt: avatarCaption,
         src: `https://www.gravatar.com/avatar/${md5(email)}?s=64`
       }),
       Info(
