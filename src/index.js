@@ -1,3 +1,4 @@
+import ColorPalette from './components/ColorPalette'
 import ApplicantBadge from './components/ApplicantBadge'
 import ApplicantListFilter from './components/ApplicantListFilter'
 import Button from './components/Button'
@@ -20,6 +21,7 @@ import FooterList from './components/Footer/FooterList'
 import SolutionForm from './components/SolutionForm'
 
 export {
+  ColorPalette,
   ApplicantBadge,
   ApplicantListFilter,
   Button,

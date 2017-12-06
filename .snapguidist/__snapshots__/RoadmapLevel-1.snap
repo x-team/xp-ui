@@ -17,7 +17,7 @@ exports[`RoadmapLevel-1 1`] = `
           Object {
             "color": Array [
               246,
-              57,
+              58,
               84,
             ],
             "model": "rgb",

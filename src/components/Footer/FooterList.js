@@ -18,7 +18,7 @@ const cx = {
   link: cmz(`
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    color: ${theme.black};
+    color: ${theme.baseDarker};
     text-decoration: none;
   `),
   item: cmz(`
@@ -33,7 +33,7 @@ const cx = {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.25rem;
     text-transform: uppercase;
-    color: ${theme.black}
+    color: ${theme.baseDarker}
     margin: 0 0 2em;
   `)
 }

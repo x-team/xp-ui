@@ -15,10 +15,10 @@ type Props = {
 const Root = elem.div(cmz(
   typo.family.base,
   `
-  color: ${theme.red.darken(0.3)}
-  border: 2px solid ${theme.red}
+  color: ${theme.baseRed.darken(0.3)}
+  border: 2px solid ${theme.baseRed}
   border-radius: .175em
-  background: ${theme.red.lighten(0.3)}
+  background: ${theme.baseRed.lighten(0.3)}
   font-style: italic
   margin: 10px
 `))

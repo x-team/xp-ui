@@ -44,7 +44,7 @@ const cx = {
     font-size: 0.75rem;
     opacity: 0.5;
     line-height: 0;
-    color: ${theme.black}
+    color: ${theme.baseDarker}
   `,
     typo.family.base
   )

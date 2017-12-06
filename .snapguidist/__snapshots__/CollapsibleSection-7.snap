@@ -1,14 +1,50 @@
 exports[`CollapsibleSection-7 1`] = `
 <section
-  className="AutoUI_CollapsibleSection-57 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-24 AutoUI_CollapsibleSection-26">
+  className="AutoUI_CollapsibleSection-31 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-27 AutoUI_CollapsibleSection-28">
   <h1
-    className="AutoUI_CollapsibleSection-72 AutoUI_typo-43 AutoUI_typo-15 AutoUI_CollapsibleSection-28 AutoUI_CollapsibleSection-26">
+    className="AutoUI_CollapsibleSection-45 AutoUI_typo-44 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
     Consectetur suscipit alias velit magni tenetur veritatis sed fuga
   </h1>
   <div
-    className="AutoUI_CollapsibleSection-92">
+    className="AutoUI_CollapsibleSection-64">
+    <svg
+      height="20px"
+      viewBox="0 0 20 20"
+      width="20px">
+      <g
+        fill="none"
+        fillRule="evenodd"
+        stroke="none"
+        strokeWidth="1">
+        <g
+          fill={
+            Object {
+              "color": Array [
+                246,
+                58,
+                84,
+              ],
+              "model": "rgb",
+              "valpha": 1,
+            }
+          }
+          transform="translate(-1191.000000, -1411.000000)">
+          <g
+            transform="translate(387.000000, 933.000000)">
+            <g
+              transform="translate(0.000000, 470.000000)">
+              <path
+                d="M813,17 L804,17 L804,19 L813,19 L813,28 L815,28 L815,19 L824,19 L824,17 L815,17 L815,8 L813,8 L813,17 Z" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div
+    className="AutoUI_CollapsibleSection-77">
     <div
-      className="AutoUI_CollapsibleSection-108">
+      className="AutoUI_CollapsibleSection-93">
       <p>
         This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.
       </p>

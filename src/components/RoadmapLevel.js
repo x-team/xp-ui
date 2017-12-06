@@ -29,7 +29,7 @@ type Props = {
 
 const Root = elem.section(cmz(`
   & {
-    border: 1px solid ${theme.lightBorder};
+    border: 1px solid ${theme.lineSilver1};
     padding: 2rem;
   }
 
@@ -42,7 +42,7 @@ const Root = elem.section(cmz(`
   }
 `))
 
-const active = cmz(`border: 1px solid ${theme.defaultBorder}`)
+const active = cmz(`border: 1px solid ${theme.lineRed}`)
 const centered = cmz(`
   text-align: center;
   border: none;

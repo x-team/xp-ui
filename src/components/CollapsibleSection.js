@@ -1,12 +1,15 @@
 // @flow
 
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import { compose, withState, onlyUpdateForKeys } from 'recompose'
 import theme from '../styles/theme'
 import * as typo from '../styles/typo'
 import elem from '../utils/elem'
 
+import SvgIcon from './SvgIcon'
+
 import type { Element } from 'react'
+import type { Icon } from './SvgIcon'
 
 const cmz = require('cmz')
 
@@ -22,56 +25,25 @@ type Props = {
 
 const cx = {
   twoColSection: cmz('display: flex'),
-
-  clickable: cmz('cursor: pointer'),
-
-  icon: cmz(`
-    &::before {
-      content: ''
-      position: absolute
-      right: 1rem
-      top: 2.7rem
-      width: 10px
-      height: 0
-      border: 1px solid ${theme.red}
-    }
-
-    &::after {
-      content: ''
-      position: absolute
-      right: calc(1rem + 5px)
-      top: calc(2.7rem - 5px)
-      width: 0
-      height: 10px
-      border: 1px solid ${theme.red}
-    }
-  `),
-
-  iconLess: cmz(`
-    &::after {
-      content: none
-    }
-  `)
+  clickable: cmz('cursor: pointer')
 }
 
 const Root = elem.section(cmz(
   typo.family.base, `
   & {
     margin: 0
-    padding: 2rem 1rem
-    font-size: 1rem
-    border-top: 1px solid ${theme.lightGrayBorder}
+    padding: 32px 16px
+    border-top: 1px solid ${theme.lineSilver4}
     position: relative
   }
 
   &:first-child {
-    border: none
+    border-top: 1px solid transparent
   }
 `))
 
 const Header = elem.h1(cmz(
   typo.family.smallHeading,
-  cx.icon,
   cx.clickable, `
   & {
     letter-spacing: normal
@@ -85,7 +57,20 @@ const Header = elem.h1(cmz(
   }
 
   &:hover {
-    color: ${theme.blackHighlight}
+    color: ${theme.baseDarker}
+  }
+`))
+
+const IconWrapper = elem.div(cmz(`
+  & {
+    position: absolute
+    top: 34px
+    right: 10px
+  }
+
+  & > svg {
+    width: 12px
+    height: 12px
   }
 `))
 
@@ -96,7 +81,7 @@ const Content = elem.div(cmz(`
 
   & > :only-child,
   & > :nth-child(2) {
-    margin-top: 1em
+    margin-top: 16px
   }
 
   .${cx.twoColSection} & > :only-child,
@@ -107,11 +92,11 @@ const Content = elem.div(cmz(`
 
 const Visible = elem.div(cmz(`
   & {
-    padding-top: 0.5em
+    padding-top: 8px
   }
 
   .${cx.twoColSection} & {
-    padding: 0 5em 0 0
+    padding: 0 80px 0 0
   }
 
   & > :first-child {
@@ -125,11 +110,11 @@ const Visible = elem.div(cmz(`
 
 const Children = elem.div(cmz(`
   & {
-    padding: 0 5em 0 2em
+    padding: 0 80px 0 32px
   }
 
   .${cx.twoColSection} & {
-    padding: 0 5em 0 0
+    padding: 0 80px 0 0
   }
 
   & > :first-child {
@@ -164,6 +149,8 @@ class CollapsibleSection extends PureComponent<Props> {
       !isCollapsed && Children(children)
     )
 
+    const iconName: Icon = isCollapsed ? 'plus' : 'minus'
+
     return (title !== '' && children) ? Root(
       {
         onClick: () => isCollapsed && handleToggleCollapse(false),
@@ -174,11 +161,11 @@ class CollapsibleSection extends PureComponent<Props> {
       },
       Header(
         {
-          onClick: () => handleToggleCollapse(!isCollapsed),
-          className: !isCollapsed && cx.iconLess
+          onClick: () => handleToggleCollapse(!isCollapsed)
         },
         title
       ),
+      IconWrapper(<SvgIcon icon={iconName} />),
       ContentBlock
     ) : null
   }

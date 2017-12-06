@@ -45,7 +45,7 @@ const SubHeading = elem.h2(cmz(`
 `))
 
 const Level = elem.p(cmz(`
-  color: ${theme.red};
+  color: ${theme.typoSubheading};
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: 500;

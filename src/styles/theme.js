@@ -14,24 +14,56 @@ function wrap (theme) {
   return theme
 }
 
+/**
+ * Using named colors from http://chir.ag/projects/name-that-color/
+ * Treat color hex values as constants and use theme colors with purpose
+ */
+const palette = {
+  white: '#fff',
+  haiti: '#130e2e',
+  fern: '#5cb85c',
+  radicalRed: '#f63a54',
+  alto: '#D8D8D8',
+  tuna: '#34323B',
+  scarpaFlow: '#5A5665',
+  manatee: '#918CA0',
+  athensCray: '#F0F1F4',
+  athensCrayAlt: '#E6E6ED',
+  mercury: '#E4E4E4',
+  porcelain: '#E9EDEE'
+}
+
 export default wrap({
-  white: '#FFF',
-  offwhite: '#f3f2f7',
+  baseBrighter: palette.white,
+  baseDarker: palette.haiti,
+  baseRed: palette.radicalRed,
+  baseGreen: palette.fern,
+  baseSilver: palette.alto,
 
-  black: '#130e2e',
-  blackHighlight: '#272334',
-  fern: '#5CB85C',
-  manatee: '#938E9F',
-  lightGray: '#e0e0e0',
-  grayBorder: '#938e9f',
-  lightGrayBorder: '#e0e0e0',
-  red: '#ff5964',
-  redHighlight: '#f63a55',
+  typoHeading: palette.tuna,
+  typoSubheading: palette.radicalRed,
+  typoParagraph: palette.scarpaFlow,
+  typeHighlight: palette.haiti,
 
-  defaultBorder: '#f63954',
-  lightBorder: '#eee',
-  invertedBorder: '#fff',
-  monochromeBorder: '#231f20'
+  formPlaceholder: palette.alto,
+  formText: palette.manatee,
+  formBorder: palette.athensCrayAlt,
+
+  lineRed: palette.radicalRed,
+  // roadmap timeline circle
+  // rodamap level border
+  lineSilver1: palette.mercury,
+  // milestones circle and line
+  // horizontal ruler
+  lineSilver2: palette.porcelain,
+  // roadmap timeline line
+  lineSilver3: palette.athensCray,
+  // collapsible section divisors
+  lineSilver4: palette.athensCrayAlt,
+
+  iconRed: palette.radicalRed,
+  iconBright: palette.white,
+  iconDark: palette.tuna
 })
 
 export const breakpoints = {
