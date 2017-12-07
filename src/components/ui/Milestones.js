@@ -12,9 +12,9 @@ import type { Icon } from './SvgIcon'
 const cmz = require('cmz')
 
 type Level = {
-  label: string,
+  label?: string,
   icon: ?Icon,
-  handleClick(): void
+  handleClick?: void
 }
 
 type Props = {
@@ -25,7 +25,7 @@ type Props = {
 
 const styles = {
   milestones: cmz(`
-    margin: 0 auto;
+    margin: 0;
     padding: 2em 0 3em;
     list-style: none;
     position: relative;
