@@ -11,7 +11,7 @@ type Props = {
   brands: Array<{
     title: string,
     image: string,
-    url: string
+    url?: string
   }>
 }
 
@@ -68,9 +68,13 @@ export default class FooterBrands extends PureComponent<Props> {
             {brands.map((item, id) => {
               return (
                 <li className={cx.brand} key={id}>
-                  <a href={item.url}>
+                  {item.url && item.url !== '' ? (
+                    <a href={item.url}>
+                      <img className={cx.image} src={item.image} alt={item.title} />
+                    </a>
+                  ) : (
                     <img className={cx.image} src={item.image} alt={item.title} />
-                  </a>
+                  )}
                 </li>
               )
             })}
