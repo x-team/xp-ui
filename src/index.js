@@ -1,43 +1,43 @@
 import ApplicantBadge from './components/ApplicantBadge'
 import ApplicantListFilter from './components/ApplicantListFilter'
+import Button from './components/Button'
 import CollapsibleSection from './components/CollapsibleSection'
-import SolutionForm from './components/SolutionForm'
 import ErrorBox from './components/ErrorBox'
-import SvgIcon from './components/SvgIcon'
-import XIcon from './components/XIcon'
 import HeaderBar from './components/HeaderBar'
 import HorizontalRuler from './components/HorizontalRuler'
-import Text from './components/Text'
+import Milestones from './components/Milestones'
 import Roadmap from './components/Roadmap'
 import RoadmapHero from './components/RoadmapHero'
 import RoadmapLevel from './components/RoadmapLevel'
 import RoadmapTimelineElement from './components/RoadmapTimelineElement'
-import Milestones from './components/Milestones'
+import SvgIcon from './components/SvgIcon'
+import Text from './components/Text'
 import VideoPlayer from './components/VideoPlayer'
-import Button from './components/Button'
+import XIcon from './components/XIcon'
 import Footer from './components/Footer/Footer'
 import FooterBrands from './components/Footer/FooterBrands'
 import FooterList from './components/Footer/FooterList'
+import SolutionForm from './components/SolutionForm'
 
 export {
   ApplicantBadge,
   ApplicantListFilter,
+  Button,
   CollapsibleSection,
   ErrorBox,
-  SvgIcon,
-  XIcon,
   HeaderBar,
   HorizontalRuler,
-  Text,
+  Milestones,
   Roadmap,
   RoadmapHero,
   RoadmapLevel,
   RoadmapTimelineElement,
-  Milestones,
+  SvgIcon,
+  Text,
   VideoPlayer,
-  Button,
-  FooterBrands,
+  XIcon,
   Footer,
+  FooterBrands,
   FooterList,
   SolutionForm
 }
