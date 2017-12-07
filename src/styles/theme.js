@@ -19,10 +19,10 @@ function wrap (theme) {
  * Treat color hex values as constants and use theme colors with purpose
  */
 const palette = {
-  white: '#fff',
-  haiti: '#130e2e',
-  fern: '#5cb85c',
-  radicalRed: '#f63a54',
+  white: '#FFF',
+  haiti: '#130E2E',
+  fern: '#5CB85C',
+  radicalRed: '#F63A54',
   alto: '#D8D8D8',
   tuna: '#34323B',
   scarpaFlow: '#5A5665',

@@ -45,11 +45,6 @@ const baseStyles = {
     & span {
       font-family: 'Open Sans', sans-serif;
     }
-
-    &:hover {
-      background-color: ${theme.baseBrighter};
-      color: ${theme.baseRed};
-    }
   `)
 }
 
@@ -68,8 +63,8 @@ const colorStyles = {
     }
 
     &:hover {
-      background-color: ${theme.baseDarker};
-      border-color: ${theme.baseDarker};
+      background-color: ${theme.baseDarker.lighten(0.5)};
+      border-color: ${theme.baseDarker.lighten(0.5)};
       color: ${theme.baseBrighter};
     }
   `),
@@ -87,8 +82,8 @@ const colorStyles = {
     }
 
     &:hover {
-      background-color: ${theme.baseRed};
-      border-color: ${theme.baseRed};
+      background-color: ${theme.baseRed.darken(0.2)};
+      border-color: ${theme.baseRed.darken(0.2)};
       color: ${theme.baseBrighter};
     }
   `)

@@ -1,6 +1,6 @@
 exports[`Button-3 1`] = `
 <button
-  className=" AutoUI_Button-58 AutoUI_Button-26 AutoUI_Button-99 ">
+  className=" AutoUI_Button-53 AutoUI_Button-26 AutoUI_Button-94 ">
   <span>
     Normal state with monochrome color
   </span>
