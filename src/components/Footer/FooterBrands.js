@@ -68,7 +68,7 @@ export default class FooterBrands extends PureComponent<Props> {
             {brands.map((item, id) => {
               return (
                 <li className={cx.brand} key={id}>
-                  {url ? (
+                  {item.url && item.url !== '' ? (
                     <a href={item.url}>
                       <img className={cx.image} src={item.image} alt={item.title} />
                     </a>
