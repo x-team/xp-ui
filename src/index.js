@@ -1,6 +1,7 @@
 import ApplicantBadge from './components/ApplicantBadge'
 import ApplicantListFilter from './components/ApplicantListFilter'
 import CollapsibleSection from './components/CollapsibleSection'
+import SolutionForm from './components/SolutionForm'
 import ErrorBox from './components/ErrorBox'
 import SvgIcon from './components/SvgIcon'
 import XIcon from './components/XIcon'
@@ -37,5 +38,6 @@ export {
   Button,
   FooterBrands,
   Footer,
-  FooterList
+  FooterList,
+  SolutionForm
 }
