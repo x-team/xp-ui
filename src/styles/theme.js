@@ -43,7 +43,7 @@ export default wrap({
   typoHeading: palette.tuna,
   typoSubheading: palette.radicalRed,
   typoParagraph: palette.scarpaFlow,
-  typeHighlight: palette.haiti,
+  typoHighlight: palette.haiti,
 
   formPlaceholder: palette.alto,
   formText: palette.manatee,

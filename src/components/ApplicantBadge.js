@@ -33,7 +33,7 @@ const Info = elem.div(cmz(`
   margin: 0 1em
   padding-top: .5em
   padding-right: .5em
-  color: ${theme.typeHighlight}
+  color: ${theme.typoHighlight}
 `))
 
 const Name = elem.div(cmz(

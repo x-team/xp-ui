@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import elem from '../utils/elem'
 import theme from '../styles/theme'
 import * as typo from '../styles/typo'
