@@ -43,7 +43,7 @@ exports[`CollapsibleSection-9 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_CollapsibleSection-77" />
+      className="AutoUI_CollapsibleSection-78" />
   </section>
   <section
     className="AutoUI_CollapsibleSection-31 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
@@ -88,7 +88,7 @@ exports[`CollapsibleSection-9 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_CollapsibleSection-77" />
+      className="AutoUI_CollapsibleSection-78" />
   </section>
   <section
     className="AutoUI_CollapsibleSection-31 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
@@ -133,7 +133,7 @@ exports[`CollapsibleSection-9 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_CollapsibleSection-77" />
+      className="AutoUI_CollapsibleSection-78" />
   </section>
   <section
     className="AutoUI_CollapsibleSection-31 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
@@ -178,7 +178,7 @@ exports[`CollapsibleSection-9 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_CollapsibleSection-77" />
+      className="AutoUI_CollapsibleSection-78" />
   </section>
   <section
     className="AutoUI_CollapsibleSection-31 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
@@ -223,7 +223,7 @@ exports[`CollapsibleSection-9 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_CollapsibleSection-77" />
+      className="AutoUI_CollapsibleSection-78" />
   </section>
 </div>
 `;

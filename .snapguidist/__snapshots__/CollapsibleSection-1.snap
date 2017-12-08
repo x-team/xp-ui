@@ -42,9 +42,9 @@ exports[`CollapsibleSection-1 1`] = `
     </svg>
   </div>
   <div
-    className="AutoUI_CollapsibleSection-77">
+    className="AutoUI_CollapsibleSection-78">
     <div
-      className="AutoUI_CollapsibleSection-93">
+      className="AutoUI_CollapsibleSection-94">
       <p>
         This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.
       </p>
