@@ -2,6 +2,7 @@ import ApplicantBadge from './components/ApplicantBadge'
 import ApplicantListFilter from './components/ApplicantListFilter'
 import Button from './components/Button'
 import CollapsibleSection from './components/CollapsibleSection'
+import ColorPalette from './components/ColorPalette'
 import ErrorBox from './components/ErrorBox'
 import HeaderBar from './components/HeaderBar'
 import HorizontalRuler from './components/HorizontalRuler'
@@ -24,6 +25,7 @@ export {
   ApplicantListFilter,
   Button,
   CollapsibleSection,
+  ColorPalette,
   ErrorBox,
   HeaderBar,
   HorizontalRuler,

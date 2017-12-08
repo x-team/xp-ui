@@ -50,7 +50,7 @@ const Textarea = elem.textarea([
     width: 100%
     height: 156px
     resize: none
-    border: ${theme.grayBorder} solid 3px
+    border: ${theme.baseSilver} solid 3px
     border-radius: 4px
     font-size: 28px
     padding: 10px 20px
@@ -64,10 +64,10 @@ const Button = elem.button([
   cmz(`
     & {
       text-transform: uppercase
-      background: ${theme.red}
+      background: ${theme.baseRed}
       border: transparent solid 2px
       border-radius: 3px
-      color: ${theme.white}
+      color: ${theme.baseBrighter}
       cursor: pointer
       font-size: 1rem
       margin: 0.25em
@@ -77,15 +77,15 @@ const Button = elem.button([
       font-weight: 700
     }
     &:hover {
-      background: ${theme.redHighlight}
+      background: ${theme.baseRed}
       border-color: transparent
     }
     &:active {
-      background: ${theme.redHighlight}
+      background: ${theme.baseRed}
       transition: none
     }
     &[disabled] {
-      background-color: ${theme.grayBorder}
+      background-color: ${theme.baseSilver}
       pointer-events: none
     }
   `)

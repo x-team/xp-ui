@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
+import theme from '../styles/theme'
 import { xTeamLogo } from '../styles/logo'
 
 const cmz = require('cmz')
@@ -21,7 +22,7 @@ class HeaderBar extends PureComponent<Props> {
   render () {
     return (
       <div className={logoWrapper}>
-        {xTeamLogo(84, 30, '#231f20')}
+        {xTeamLogo(84, 30, theme.typoHeading)}
       </div>
     )
   }

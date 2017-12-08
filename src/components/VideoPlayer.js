@@ -18,7 +18,6 @@ const iframeStyles = cmz(`
 `)
 
 const videoStyles = cmz(`
-  outline: 22px solid #f0f0f0;
   text-align: center;
   margin: 0 auto 20px;
 `)

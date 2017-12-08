@@ -21,7 +21,7 @@ exports[`Milestones-7 1`] = `
               Object {
                 "color": Array [
                   246,
-                  57,
+                  58,
                   84,
                 ],
                 "model": "rgb",
@@ -126,9 +126,9 @@ exports[`Milestones-7 1`] = `
             stroke={
               Object {
                 "color": Array [
-                  35,
-                  31,
-                  32,
+                  52,
+                  50,
+                  59,
                 ],
                 "model": "rgb",
                 "valpha": 1,
@@ -177,9 +177,9 @@ exports[`Milestones-7 1`] = `
             stroke={
               Object {
                 "color": Array [
-                  35,
-                  31,
-                  32,
+                  52,
+                  50,
+                  59,
                 ],
                 "model": "rgb",
                 "valpha": 1,

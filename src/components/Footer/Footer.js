@@ -37,14 +37,14 @@ const cx = {
     max-width: 72%;
     margin-top: 3.125rem;
     padding-top: 2.5rem;
-    border-top: 1px solid rgba(0,0,0,.1)
+    border-top: 1px solid ${theme.lineSilver2}
   `),
   copyright: cmz(
     `
     font-size: 0.75rem;
     opacity: 0.5;
     line-height: 0;
-    color: ${theme.black}
+    color: ${theme.baseDarker}
   `,
     typo.family.base
   )
@@ -56,7 +56,7 @@ export default class Footer extends PureComponent<Props> {
     return (
       <div className={cx.footer}>
         <div className={cx.columnContainer}>
-          <div className={cx.logoColumn}>{xTeamLogo(94, 32, '#b3b3b3')}</div>
+          <div className={cx.logoColumn}>{xTeamLogo(94, 32, theme.baseSilver)}</div>
           {lists.map((item, id) => {
             return (
               <div key={id} className={cx.column}>

@@ -22,6 +22,7 @@ export const family = {
     textRendering, `
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
     font-weight: 300
+    color: ${theme.typoParagraph}
   `),
 
   heading: cmz(
@@ -31,7 +32,7 @@ export const family = {
     text-transform: uppercase
     font-size: 54px
     margin: 0px
-    color: ${theme.blackHighlight}
+    color: ${theme.typoHeading}
     letter-spacing: -3px
     line-height: .95em
   `),
@@ -46,7 +47,7 @@ export const family = {
     font-weight: 400
     font-size: 18px
     margin: 0 0 10px
-    color: ${theme.black}
+    color: ${theme.typoHeading}
     line-height: 1em
   `),
 
@@ -62,7 +63,7 @@ export const family = {
       height: 2px;
       bottom: -30px;
       transform: translateX(-50%);
-      background-color: ${theme.red};
+      background-color: ${theme.lineRed};
     }
     @media screen and (max-width: ${breakpoints.sm}) {
       & {

@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import theme from '../styles/theme'
 
-export type Icon = 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy'
+export type Icon = 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus'
 export type Color = 'default' | 'inverted' | 'monochrome'
 type Props = {
   icon: ?Icon,
@@ -14,9 +14,9 @@ const getIcon = ({ icon, color }) => {
   if (!icon) { return null }
 
   const colors: { [string]: string } = {
-    default: theme.defaultBorder,
-    inverted: theme.invertedBorder,
-    monochrome: theme.monochromeBorder
+    default: theme.iconRed,
+    inverted: theme.iconBright,
+    monochrome: theme.iconDark
   }
 
   const icons = {
@@ -151,6 +151,34 @@ const getIcon = ({ icon, color }) => {
                   <path d='M19,38 L19,32' />
                   <path d='M22,38 L22,32' />
                 </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    ),
+
+    plus: (
+      <svg width='20px' height='20px' viewBox='0 0 20 20'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <g transform='translate(-1191.000000, -1411.000000)' fill={colors[color]}>
+            <g transform='translate(387.000000, 933.000000)'>
+              <g transform='translate(0.000000, 470.000000)'>
+                <path d='M813,17 L804,17 L804,19 L813,19 L813,28 L815,28 L815,19 L824,19 L824,17 L815,17 L815,8 L813,8 L813,17 Z' />
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    ),
+
+    minus: (
+      <svg width='20px' height='2px' viewBox='0 0 20 2'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <g transform='translate(-1161.000000, -1106.000000)' fill={colors[color]}>
+            <g transform='translate(357.000000, 933.000000)'>
+              <g transform='translate(0.000000, 157.000000)'>
+                <rect x='804' y='16' width='20' height='2' />
               </g>
             </g>
           </g>

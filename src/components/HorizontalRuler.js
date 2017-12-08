@@ -10,7 +10,7 @@ type Props = {}
 
 const Hr = elem.hr(cmz(`
   height: 1px
-  background-color: ${theme.lightGrayBorder}
+  background-color: ${theme.lineSilver4}
   border: 0
 `))
 

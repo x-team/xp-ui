@@ -28,7 +28,7 @@ const baseStyles = {
       background: transparent;
       border-radius: 0;
       border: 2px solid transparent;
-      color: ${theme.white};
+      color: ${theme.baseBrighter};
       cursor: pointer;
       display: inline-block;
       font-weight: 400;
@@ -45,11 +45,6 @@ const baseStyles = {
     & span {
       font-family: 'Open Sans', sans-serif;
     }
-
-    &:hover {
-      background-color: ${theme.white};
-      color: ${theme.redHighlight};
-    }
   `)
 }
 
@@ -58,38 +53,38 @@ const colorStyles = {
   monochrome: cmz(
     baseStyles.root, `
     & {
-      background-color: ${theme.black};
-      border-color: ${theme.black};
-      color: ${theme.white};
+      background-color: ${theme.baseDarker};
+      border-color: ${theme.baseDarker};
+      color: ${theme.baseBrighter};
     }
 
     &.outlined {
-      color: ${theme.black}
+      color: ${theme.baseDarker}
     }
 
     &:hover {
-      background-color: ${theme.blackHighlight};
-      border-color: ${theme.blackHighlight};
-      color: ${theme.white};
+      background-color: ${theme.baseDarker.lighten(0.5)};
+      border-color: ${theme.baseDarker.lighten(0.5)};
+      color: ${theme.baseBrighter};
     }
   `),
 
   normal: cmz(
     baseStyles.root, `
     & {
-      background-color: ${theme.redHighlight};
-      border-color: ${theme.redHighlight};
-      color: ${theme.white};
+      background-color: ${theme.baseRed};
+      border-color: ${theme.baseRed};
+      color: ${theme.baseBrighter};
     }
 
     &.outlined {
-      color: ${theme.redHighlight}
+      color: ${theme.baseRed}
     }
 
     &:hover {
-      background-color: ${theme.red};
-      border-color: ${theme.red};
-      color: ${theme.white};
+      background-color: ${theme.baseRed.darken(0.2)};
+      border-color: ${theme.baseRed.darken(0.2)};
+      color: ${theme.baseBrighter};
     }
   `)
 }
@@ -122,9 +117,9 @@ const sizeStyles = {
 const extraStyles = {
   disabled: cmz(`
     &, &:hover {
-      background: ${theme.lightGray};
+      background: ${theme.baseHighlight};
       border-color: transparent;
-      color: ${theme.white};
+      color: ${theme.baseBrighter};
       pointer-events: none;
     }
   `),
@@ -135,11 +130,11 @@ const extraStyles = {
     }
 
     &.${colorStyles.normal} {
-      color: ${theme.redHighlight};
+      color: ${theme.baseRed};
     }
 
     &.${colorStyles.monochrome} {
-      color: ${theme.black};
+      color: ${theme.baseDarker};
     }
   `)
 }

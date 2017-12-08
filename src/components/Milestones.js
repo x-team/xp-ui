@@ -43,7 +43,7 @@ const styles = {
     &:before {
       content: '';
       height: .1em;
-      background-color: ${theme.offwhite};
+      background-color: ${theme.lineSilver2};
       position: absolute;
       z-index: 1;
       width: 100%;
@@ -56,7 +56,7 @@ const styles = {
     &:after {
       content: '';
       height: .1em;
-      background-color: ${theme.red};
+      background-color: ${theme.baseRed};
       position: absolute;
       z-index: 1;
       width: 0;
@@ -89,8 +89,8 @@ const styles = {
       display: inline-block;
       width: 1.2em;
       height: 1.2em;
-      background-color: ${theme.white};
-      border: 2px solid ${theme.offwhite};
+      background-color: ${theme.baseBrighter};
+      border: 2px solid ${theme.lineSilver2};
       border-radius: 50%;
       padding: .5em;
       max-width: 100%;
@@ -100,13 +100,13 @@ const styles = {
     }
 
     .isCurrent & {
-      background-color: ${theme.red};
+      background-color: ${theme.baseRed};
       border-color: transparent;
     }
 
     .isComplete & {
-      background-color: ${theme.white};
-      border: 2px solid ${theme.red};
+      background-color: ${theme.baseBrighter};
+      border: 2px solid ${theme.baseRed};
     }
 
     & > svg {
@@ -125,7 +125,7 @@ const styles = {
     text-transform: uppercase;
     font-size: .8em;
     font-weight: 400;
-    color: ${theme.black};
+    color: ${theme.baseDarker};
     position: absolute;
     padding-top: .2em;
     width: 100%;

@@ -26,13 +26,13 @@ const animatedStyles = {
       overflow: hidden
       width: 2px
       height: 100%
-      background: ${theme.offwhite}
+      background: ${theme.lineSilver3}
       animation: process .6s linear forwards
     }
   `),
   timelineActive: cmz(`
     &:before {
-      background: ${theme.red}
+      background: ${theme.baseRed}
     }
   `),
   checkmarkBox: cmz(`
@@ -46,11 +46,11 @@ const animatedStyles = {
     stroke-dashoffset: 0
     stroke-width: 3
     stroke-miterlimit: 10
-    stroke: ${theme.offwhite}
+    stroke: ${theme.lineSilver1}
   `),
   checkmarkCircleActive: cmz(`
     & {
-      stroke: ${theme.red}
+      stroke: ${theme.baseRed}
       fill: none
       animation: stroke .6s cubic-bezier(.65, 0, .45, 1) forwards
     }
@@ -66,16 +66,16 @@ const animatedStyles = {
       border-radius: 50%
       display: block
       stroke-width: 2
-      stroke: ${theme.white}
+      stroke: ${theme.baseBrighter}
       stroke-miterlimit: 10
       margin: 10% auto
-      box-shadow: inset 0 0 0 ${theme.red}
+      box-shadow: inset 0 0 0 ${theme.baseRed}
       animation: fill .4s ease-in-out .4s forwards, scale .4s ease-in-out .4s both
     }
 
     @keyframes fill {
       100% {
-        box-shadow: inset 0 0 0 30px ${theme.red}
+        box-shadow: inset 0 0 0 30px ${theme.baseRed}
       }
     }
   `),
