@@ -39,6 +39,7 @@ export default wrap({
   baseRed: palette.radicalRed,
   baseGreen: palette.fern,
   baseSilver: palette.alto,
+  baseHighlight: palette.mercury,
 
   typoHeading: palette.tuna,
   typoSubheading: palette.radicalRed,
@@ -58,7 +59,7 @@ export default wrap({
   // roadmap timeline line
   lineSilver3: palette.athensCray,
   // horizontal ruler
-  // collapsible section divisors
+  // collapsible section dividers
   lineSilver4: palette.athensCrayAlt,
 
   iconRed: palette.radicalRed,

@@ -117,7 +117,7 @@ const sizeStyles = {
 const extraStyles = {
   disabled: cmz(`
     &, &:hover {
-      background: ${theme.baseSilver};
+      background: ${theme.baseHighlight};
       border-color: transparent;
       color: ${theme.baseBrighter};
       pointer-events: none;

@@ -17,7 +17,7 @@ type Props = {
 const cmz = require('cmz')
 
 const cx = {
-  isActive: cmz(`background-color: ${theme.baseSilver}`)
+  isActive: cmz(`background-color: ${theme.baseHighlight}`)
 }
 
 const Root = elem.div(cmz(`
