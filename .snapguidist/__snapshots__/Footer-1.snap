@@ -4,7 +4,7 @@ exports[`Footer-1 1`] = `
   <div
     className="AutoUI_Footer_Footer-22">
     <div
-      className="AutoUI_Footer_Footer-27">
+      className="AutoUI_Footer_Footer-28">
       <svg
         height={32}
         viewBox="0 0 960 328"
@@ -65,7 +65,7 @@ exports[`Footer-1 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_Footer_Footer-30">
+      className="AutoUI_Footer_Footer-31">
       <div>
         <h4
           className="AutoUI_Footer_FooterList-32">
@@ -93,7 +93,7 @@ exports[`Footer-1 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_Footer_Footer-30">
+      className="AutoUI_Footer_Footer-31">
       <div>
         <h4
           className="AutoUI_Footer_FooterList-32">
@@ -124,9 +124,9 @@ exports[`Footer-1 1`] = `
   <div
     className="AutoUI_Footer_Footer-22">
     <div
-      className="AutoUI_Footer_Footer-27" />
+      className="AutoUI_Footer_Footer-28" />
     <div
-      className="AutoUI_Footer_Footer-34">
+      className="AutoUI_Footer_Footer-35">
       <div>
         <div>
           <h4
@@ -162,7 +162,7 @@ exports[`Footer-1 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_Footer_Footer-41 AutoUI_typo-21 AutoUI_typo-15">
+        className="AutoUI_Footer_Footer-42 AutoUI_typo-21 AutoUI_typo-15">
         Copyright Foo Corp
       </div>
     </div>
