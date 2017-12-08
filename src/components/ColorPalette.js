@@ -1,6 +1,7 @@
 // @flow
 
 import { PureComponent } from 'react'
+
 import elem from '../utils/elem'
 import theme from '../styles/theme'
 import * as typo from '../styles/typo'
@@ -16,16 +17,18 @@ const Root = elem.section(cmz(`
 `))
 
 const Color = elem.div(cmz(
-  typo.family.base, `
-  display: flex
-  flex-direction: column
-  justify-content: flex-end
-  width: 170px
-  height: 90px
-  margin: 10px
-  border-radius: 6px
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.3)
-`))
+  typo.family.base,
+  `
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    width: 170px
+    height: 90px
+    margin: 10px
+    border-radius: 6px
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .3)
+  `
+))
 
 const ColorName = elem.div(cmz(`
   background-color: ${theme.baseBrighter}
@@ -37,6 +40,7 @@ const ColorName = elem.div(cmz(`
 class ColorPalette extends PureComponent<Props> {
   render () {
     const colorBlocks = []
+
     Object.keys(theme).forEach((key, i) => {
       colorBlocks.push(
         Color({
@@ -45,9 +49,8 @@ class ColorPalette extends PureComponent<Props> {
         }, ColorName(key))
       )
     })
-    return (
-      Root(colorBlocks)
-    )
+
+    return Root(colorBlocks)
   }
 }
 
