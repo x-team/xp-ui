@@ -66,6 +66,7 @@ const IconWrapper = elem.div(cmz(`
     position: absolute
     top: 34px
     right: 10px
+    cursor: pointer
   }
 
   & > svg {
@@ -165,7 +166,12 @@ class CollapsibleSection extends PureComponent<Props> {
         },
         title
       ),
-      IconWrapper(<SvgIcon icon={iconName} />),
+      IconWrapper(
+        {
+          onClick: () => handleToggleCollapse(!isCollapsed)
+        },
+        <SvgIcon icon={iconName} />
+      ),
       ContentBlock
     ) : null
   }
