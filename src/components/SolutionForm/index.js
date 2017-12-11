@@ -17,7 +17,8 @@ type Props = {
   maxAttempts: number,
   onValueChange: Function,
   solutionValue: string,
-  takenAttempts: number
+  takenAttempts: number,
+  onSubmit (): void
 }
 
 const utilStyles = {
