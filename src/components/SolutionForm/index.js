@@ -17,7 +17,8 @@ type Props = {
   maxAttempts: number,
   onValueChange: Function,
   solutionValue: string,
-  takenAttempts: number
+  takenAttempts: number,
+  onSubmit (): void
 }
 
 const utilStyles = {
@@ -106,12 +107,14 @@ export default class SolutionForm extends PureComponent<Props> {
       hasAttempted,
       isSubmitting,
       maxAttempts,
-      takenAttempts
+      takenAttempts,
+      onSubmit
     } = this.props
 
     return Root(
       <Title {... { hasAttempted, maxAttempts }} />,
       Form(
+        {onSubmit},
         Textarea({
           onChange: this.props.onValueChange,
           placeholder: 'Solution',
