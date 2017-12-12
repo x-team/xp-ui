@@ -1,7 +1,7 @@
 exports[`Text-1 1`] = `
 <section
-  className="AutoUI_Text-21">
+  className="AutoUI_Text-26">
   <div
-    className="AutoUI_Text-54 AutoUI_typo-21 AutoUI_typo-15" />
+    className="AutoUI_Text-41 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40" />
 </section>
 `;

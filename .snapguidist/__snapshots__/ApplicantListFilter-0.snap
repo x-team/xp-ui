@@ -1,14 +1,14 @@
 exports[`ApplicantListFilter-0 1`] = `
 <form
-  className="AutoUI_ApplicantListFilter-14 AutoUI_typo-21 AutoUI_typo-15">
+  className="AutoUI_ApplicantListFilter-15 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
   <div
-    className="AutoUI_ApplicantListFilter-8">
+    className="AutoUI_ApplicantListFilter-9">
     <label>
       <input
         name="pending"
         type="checkbox" />
       <span
-        className="AutoUI_ApplicantListFilter-20">
+        className="AutoUI_ApplicantListFilter-21">
         pending
          (
         0
@@ -17,13 +17,13 @@ exports[`ApplicantListFilter-0 1`] = `
     </label>
   </div>
   <div
-    className="AutoUI_ApplicantListFilter-8">
+    className="AutoUI_ApplicantListFilter-9">
     <label>
       <input
         name="accepted"
         type="checkbox" />
       <span
-        className="AutoUI_ApplicantListFilter-20">
+        className="AutoUI_ApplicantListFilter-21">
         accepted
          (
         10
@@ -32,13 +32,13 @@ exports[`ApplicantListFilter-0 1`] = `
     </label>
   </div>
   <div
-    className="AutoUI_ApplicantListFilter-8">
+    className="AutoUI_ApplicantListFilter-9">
     <label>
       <input
         name="excluded"
         type="checkbox" />
       <span
-        className="AutoUI_ApplicantListFilter-20">
+        className="AutoUI_ApplicantListFilter-21">
         excluded
          (
         40

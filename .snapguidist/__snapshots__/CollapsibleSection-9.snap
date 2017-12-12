@@ -1,9 +1,9 @@
 exports[`CollapsibleSection-9 1`] = `
 <div>
   <section
-    className="AutoUI_CollapsibleSection-31 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
+    className="AutoUI_CollapsibleSection-33 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40 AutoUI_CollapsibleSection-30">
     <h1
-      className="AutoUI_CollapsibleSection-45 AutoUI_typo-44 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
+      className="AutoUI_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_CollapsibleSection-30">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
     </h1>
     <div
@@ -22,7 +22,7 @@ exports[`CollapsibleSection-9 1`] = `
               Object {
                 "color": Array [
                   246,
-                  58,
+                  57,
                   84,
                 ],
                 "model": "rgb",
@@ -46,9 +46,9 @@ exports[`CollapsibleSection-9 1`] = `
       className="AutoUI_CollapsibleSection-78" />
   </section>
   <section
-    className="AutoUI_CollapsibleSection-31 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
+    className="AutoUI_CollapsibleSection-33 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40 AutoUI_CollapsibleSection-30">
     <h1
-      className="AutoUI_CollapsibleSection-45 AutoUI_typo-44 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
+      className="AutoUI_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_CollapsibleSection-30">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
     </h1>
     <div
@@ -67,7 +67,7 @@ exports[`CollapsibleSection-9 1`] = `
               Object {
                 "color": Array [
                   246,
-                  58,
+                  57,
                   84,
                 ],
                 "model": "rgb",
@@ -91,9 +91,9 @@ exports[`CollapsibleSection-9 1`] = `
       className="AutoUI_CollapsibleSection-78" />
   </section>
   <section
-    className="AutoUI_CollapsibleSection-31 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
+    className="AutoUI_CollapsibleSection-33 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40 AutoUI_CollapsibleSection-30">
     <h1
-      className="AutoUI_CollapsibleSection-45 AutoUI_typo-44 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
+      className="AutoUI_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_CollapsibleSection-30">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
     </h1>
     <div
@@ -112,7 +112,7 @@ exports[`CollapsibleSection-9 1`] = `
               Object {
                 "color": Array [
                   246,
-                  58,
+                  57,
                   84,
                 ],
                 "model": "rgb",
@@ -136,9 +136,9 @@ exports[`CollapsibleSection-9 1`] = `
       className="AutoUI_CollapsibleSection-78" />
   </section>
   <section
-    className="AutoUI_CollapsibleSection-31 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
+    className="AutoUI_CollapsibleSection-33 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40 AutoUI_CollapsibleSection-30">
     <h1
-      className="AutoUI_CollapsibleSection-45 AutoUI_typo-44 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
+      className="AutoUI_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_CollapsibleSection-30">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
     </h1>
     <div
@@ -157,7 +157,7 @@ exports[`CollapsibleSection-9 1`] = `
               Object {
                 "color": Array [
                   246,
-                  58,
+                  57,
                   84,
                 ],
                 "model": "rgb",
@@ -181,9 +181,9 @@ exports[`CollapsibleSection-9 1`] = `
       className="AutoUI_CollapsibleSection-78" />
   </section>
   <section
-    className="AutoUI_CollapsibleSection-31 AutoUI_typo-21 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
+    className="AutoUI_CollapsibleSection-33 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40 AutoUI_CollapsibleSection-30">
     <h1
-      className="AutoUI_CollapsibleSection-45 AutoUI_typo-44 AutoUI_typo-15 AutoUI_CollapsibleSection-28">
+      className="AutoUI_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_CollapsibleSection-30">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
     </h1>
     <div
@@ -202,7 +202,7 @@ exports[`CollapsibleSection-9 1`] = `
               Object {
                 "color": Array [
                   246,
-                  58,
+                  57,
                   84,
                 ],
                 "model": "rgb",

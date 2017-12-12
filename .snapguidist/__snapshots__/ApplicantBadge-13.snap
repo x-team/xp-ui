@@ -1,6 +1,6 @@
 exports[`ApplicantBadge-13 1`] = `
 <div
-  className="AutoUI_ApplicantBadge-23">
+  className="AutoUI_ApplicantBadge-25">
   <div
     style={
       Object {
@@ -11,13 +11,13 @@ exports[`ApplicantBadge-13 1`] = `
       }
     } />
   <div
-    className="AutoUI_ApplicantBadge-32">
+    className="AutoUI_ApplicantBadge-34">
     <div
-      className="AutoUI_ApplicantBadge-39 AutoUI_typo-44 AutoUI_typo-15">
+      className="AutoUI_ApplicantBadge-41 AutoUI_typo-102 AutoUI_typo-53 AutoUI_typo-22">
       Applicant X-Team
     </div>
     <div
-      className="AutoUI_ApplicantBadge-47">
+      className="AutoUI_ApplicantBadge-51">
       applicant@x-team.com
     </div>
   </div>

@@ -1,7 +1,8 @@
 exports[`Button-9 1`] = `
 <button
-  className=" AutoUI_Button-72 AutoUI_Button-26 AutoUI_Button-98 AutoUI_typo-40 ">
-  <span>
+  className=" AutoUI_Button-68 AutoUI_Button-26 AutoUI_Button-94 ">
+  <span
+    className="AutoUI_Button-44 AutoUI_typo-129 AutoUI_typo-53 AutoUI_typo-46">
     Large size
   </span>
 </button>
