@@ -30,7 +30,9 @@ const palette = {
   athensCray: '#F0F1F4',
   athensCrayAlt: '#E6E6ED',
   mercury: '#E4E4E4',
-  porcelain: '#E9EDEE'
+  porcelain: '#E9EDEE',
+  errorRed: '#D32F3B',
+  shadowRed: '#F7D9DC'
 }
 
 export default wrap({
@@ -49,6 +51,8 @@ export default wrap({
   formPlaceholder: palette.alto,
   formText: palette.manatee,
   formBorder: palette.athensCrayAlt,
+  formError: palette.errorRed,
+  formErrorShadow: palette.shadowRed,
 
   lineRed: palette.radicalRed,
   // roadmap timeline circle
