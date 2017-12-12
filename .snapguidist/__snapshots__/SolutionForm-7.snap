@@ -19,7 +19,7 @@ exports[`SolutionForm-7 1`] = `
       name="solution"
       placeholder="Solution" />
     <button
-      className="AutoUI_SolutionForm_index-26 AutoUI_SolutionForm_index-27 AutoUI_SolutionForm_index-65"
+      className="AutoUI_SolutionForm_index-26 AutoUI_SolutionForm_index-27 AutoUI_SolutionForm_index-75"
       disabled={true}>
       Checking...
     </button>

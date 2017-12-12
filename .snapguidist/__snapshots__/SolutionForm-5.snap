@@ -15,11 +15,11 @@ exports[`SolutionForm-5 1`] = `
   <form
     className="AutoUI_SolutionForm_index-25 AutoUI_SolutionForm_index-41">
     <textarea
-      className="AutoUI_SolutionForm_index-26 AutoUI_SolutionForm_index-49"
+      className="AutoUI_SolutionForm_index-49 AutoUI_SolutionForm_index-62"
       name="solution"
       placeholder="Solution" />
     <button
-      className="AutoUI_SolutionForm_index-26 AutoUI_SolutionForm_index-27 AutoUI_SolutionForm_index-65"
+      className="AutoUI_SolutionForm_index-26 AutoUI_SolutionForm_index-27 AutoUI_SolutionForm_index-75"
       disabled={false}>
       Submit (2 of 3 attempts)
     </button>
