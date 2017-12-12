@@ -44,7 +44,7 @@ const Form = elem.form([
   `)
 ])
 
-const textAreaStyles = [
+const textareaStyles = [
   utilStyles.noOutline,
   cmz(`
     display: block
@@ -65,8 +65,8 @@ const errorTextarea = cmz(`
   color: ${theme.formError}
 `)
 
-const Textarea = elem.textarea(textAreaStyles)
-const textAreaError = textAreaStyles[1] + ` ${errorTextarea}`
+const Textarea = elem.textarea(textareaStyles)
+const textAreaError = textareaStyles[1] + ` ${errorTextarea}`
 const ErrorTextarea = elem.textarea(textAreaError)
 
 const Button = elem.button([
@@ -118,17 +118,18 @@ export default class SolutionForm extends PureComponent<Props> {
       isSubmitting,
       maxAttempts,
       takenAttempts,
-      onSubmit
+      onSubmit,
+      onValueChange
     } = this.props
 
-    const TextareaToRender = hasAttempted ? ErrorTextarea : Textarea
+    const TextareaComponent = hasAttempted ? ErrorTextarea : Textarea
 
     return Root(
       <Title {... { hasAttempted, maxAttempts }} />,
       Form(
         {onSubmit},
-        TextareaToRender({
-          onChange: this.props.onValueChange,
+        TextareaComponent({
+          onChange: onValueChange,
           placeholder: 'Solution',
           name: 'solution'
         }),
