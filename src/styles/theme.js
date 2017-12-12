@@ -27,10 +27,12 @@ const palette = {
   tuna: '#34323B',
   scarpaFlow: '#5A5665',
   manatee: '#918CA0',
-  athensCray: '#F0F1F4',
-  athensCrayAlt: '#E6E6ED',
+  athensGray: '#F0F1F4',
+  athensGrayAlt: '#E6E6ED',
   mercury: '#E4E4E4',
-  porcelain: '#E9EDEE'
+  porcelain: '#E9EDEE',
+  brickRed: '#D32F3B',
+  wePeep: '#F7D9DC'
 }
 
 export default wrap({
@@ -48,7 +50,9 @@ export default wrap({
 
   formPlaceholder: palette.alto,
   formText: palette.manatee,
-  formBorder: palette.athensCrayAlt,
+  formBorder: palette.athensGrayAlt,
+  formError: palette.brickRed,
+  formErrorShadow: palette.wePeep,
 
   lineRed: palette.radicalRed,
   // roadmap timeline circle
@@ -57,10 +61,10 @@ export default wrap({
   // milestones circle and line
   lineSilver2: palette.porcelain,
   // roadmap timeline line
-  lineSilver3: palette.athensCray,
+  lineSilver3: palette.athensGray,
   // horizontal ruler
   // collapsible section dividers
-  lineSilver4: palette.athensCrayAlt,
+  lineSilver4: palette.athensGrayAlt,
 
   iconRed: palette.radicalRed,
   iconBright: palette.white,
