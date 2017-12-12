@@ -87,8 +87,8 @@ const styles = {
     & {
       position: relative;
       display: inline-block;
-      width: 1.2em;
-      height: 1.2em;
+      width: 1.9em;
+      height: 1.9em;
       background-color: ${theme.baseBrighter};
       border: 2px solid ${theme.lineSilver2};
       border-radius: 50%;
@@ -114,8 +114,8 @@ const styles = {
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
-      width: 35%;
-      height: 35%;
+      width: 52%;
+      height: 52%;
     }
   `),
 
