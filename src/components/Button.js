@@ -6,7 +6,7 @@ import type { CmzAtom } from 'cmz'
 import type { Element } from 'react'
 
 import theme from '../styles/theme'
-import * as typo from '../styles/typo'
+import typo from '../styles/typo'
 
 const cmz = require('cmz')
 
@@ -24,28 +24,24 @@ type Props = {
 
 const baseStyles = {
   root: cmz(`
-    & {
-      background: transparent;
-      border-radius: 0;
-      border: 2px solid transparent;
-      color: ${theme.baseBrighter};
-      cursor: pointer;
-      display: inline-block;
-      font-weight: 400;
-      line-height: 1.5;
-      outline: none;
-      margin: .15em auto;
-      padding: 1.25em 3.5em;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: all .3s ease-out;
-      white-space: nowrap;
-    }
+    background: transparent;
+    border-radius: 0;
+    border: 2px solid transparent;
+    color: ${theme.baseBrighter};
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    outline: none;
+    margin: .15em auto;
+    padding: 1.25em 3.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s ease-out;
+    white-space: nowrap;
+  `),
 
-    & span {
-      font-family: 'Open Sans', sans-serif;
-    }
-  `)
+  content: cmz(typo.tinyHeading)
 }
 
 // Color options
@@ -95,12 +91,7 @@ const sizeStyles = {
     font-size: .75em;
   `),
 
-  large: cmz(
-    typo.family.action,
-    `
-      font-size: 1em;
-    `
-  ),
+  large: cmz(`font-size: 1em`),
 
   small: cmz(`
     font-size: .65em;
@@ -172,7 +163,7 @@ class Button extends PureComponent<Props> {
 
     return (
       <CustomComponent {...rest} className={`${String(customClassName)} ${buttonClassName}`}>
-        <span>{children}</span>
+        <span className={baseStyles.content}>{children}</span>
       </CustomComponent>
     )
   }

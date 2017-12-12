@@ -1,13 +1,14 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import type FooterList from './FooterList'
+
 import { xTeamLogo } from '../../styles/logo'
-const cmz = require('cmz')
 import theme from '../../styles/theme'
-import * as typo from '../../styles/typo'
+import typo from '../../styles/typo'
+
 import type { Element } from 'react'
 
+const cmz = require('cmz')
 
 type Props = {
   lists: Array<Element<*>>,
@@ -46,7 +47,7 @@ const cx = {
     line-height: 0;
     color: ${theme.baseDarker}
   `,
-    typo.family.base
+    typo.base
   )
 }
 

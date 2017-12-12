@@ -1,9 +1,11 @@
 // @flow
 
 import { PureComponent } from 'react'
-import theme, { breakpoints } from '../../styles/theme'
-import * as typo from '../../styles/typo'
+
 import elem from '../../utils/elem'
+
+import theme, { breakpoints } from '../../styles/theme'
+import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 
@@ -15,16 +17,18 @@ type Props = {
 }
 
 const Root = elem.div(cmz(`
-  margin: 0px 0px 35px 0px
-  text-align: center
-`))
-
-const Heading = elem.h1(typo.family.heading)
-
-const Subheading = elem.h2(cmz(`
   margin: 0 0 35px 0
-  font-size: 24px
+  text-align: left
 `))
+
+const Heading = elem.h1(typo.mediumHeading)
+
+const Subheading = elem.h2(cmz(
+  typo.base,
+  `
+    margin: 0 0 35px 0
+  `
+))
 
 export default class SolutionFormTitle extends PureComponent<Props> {
   static defaultProps = {
@@ -33,10 +37,7 @@ export default class SolutionFormTitle extends PureComponent<Props> {
   }
 
   render () {
-    const {
-      hasAttempted,
-      maxAttempts
-    } = this.props
+    const { hasAttempted, maxAttempts } = this.props
 
     return Root(
       Heading(

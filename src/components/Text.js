@@ -1,13 +1,16 @@
 // @flow
 
 import { PureComponent } from 'react'
-import theme from '../styles/theme'
-import * as typo from '../styles/typo'
+
 import elem from '../utils/elem'
+
+import typo from '../styles/typo'
 
 import type { Element } from 'react'
 
 const cmz = require('cmz')
+
+type Size = 'main' | 'medium' | 'moderate' | 'small' | 'tiny'
 
 type Props = {
   heading?: Element<*>|string,
@@ -15,53 +18,32 @@ type Props = {
   level?: Element<*>|string,
   content?: Element<*>|string,
   isCentered: ?boolean,
-  hasDivider: ?boolean
+  hasDivider: ?boolean,
+  headingSize?: Size,
+  subHeadingSize?: Size
 }
 
 const Root = elem.section(cmz(`
-  & {
-    white-space: pre-line;
-    margin: 0;
-    clear: both;
-    overflow: hidden;
-  }
+  white-space: pre-line
+  margin: 0
+  clear: both
+  overflow: hidden
 `))
 
-const Heading = elem.h1(cmz(
-  typo.family.heading,
-  `
-  & {
-    padding-bottom: 20px;
-  }
-  `
-))
-
-const SubHeading = elem.h2(cmz(`
-  font-weight: 600;
-  font-size: 28px;
-  letter-spacing: 1px;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+const Heading = elem.h1(cmz(`
+  padding-bottom: 20px
 `))
 
-const Level = elem.p(cmz(`
-  color: ${theme.typoSubheading};
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 22px;
-  font-weight: 500;
-`))
+const SubHeading = elem.h2()
+
+const Level = elem.p()
 
 const Content = elem.div(cmz(
-  typo.family.base,
+  typo.base,
   `
-  & {
-    margin: 35px 0;
-  }
-  &, & * {
-    font-size: 24px;
-    line-height: 1.3em;
-  }
-`))
+    margin: 30px 0
+  `
+))
 
 const centerAlign = cmz(`
   & {
@@ -69,14 +51,14 @@ const centerAlign = cmz(`
   }
 `)
 
-const contentDividerLeft = cmz(typo.family.divider, `
+const contentDividerLeft = cmz(typo.divider, `
   &:after {
     left: 3%;
     top: -30px;
   }
 `)
 
-const contentDividerCenter = cmz(typo.family.divider, `
+const contentDividerCenter = cmz(typo.divider, `
   &:after {
     left: 50%;
     top: -30px;
@@ -93,6 +75,8 @@ class Text extends PureComponent<Props> {
     const {
       heading,
       subHeading,
+      headingSize = 'medium',
+      subHeadingSize = 'small',
       level,
       content,
       isCentered,
@@ -101,11 +85,11 @@ class Text extends PureComponent<Props> {
 
     return Root(isCentered ? {className: centerAlign} : {},
 
-      heading && Heading(heading),
+      heading && Heading({ className: typo[`${headingSize}Heading`] }, heading),
 
-      subHeading && SubHeading(subHeading),
+      subHeading && SubHeading({ className: typo[`${subHeadingSize}Heading`] }, subHeading),
 
-      level && Level(level),
+      level && Level({ className: typo[`${subHeadingSize}Subheading`] }, level),
 
       Content(hasDivider ? { className: (isCentered ? contentDividerCenter : contentDividerLeft) } : {}, content)
     )
