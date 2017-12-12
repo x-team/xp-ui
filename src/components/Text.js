@@ -11,6 +11,7 @@ const cmz = require('cmz')
 
 type Props = {
   heading?: Element<*>|string,
+  sectionHeading?: Element<*>|string,
   subHeading?: Element<*>|string,
   level?: Element<*>|string,
   content?: Element<*>|string,
@@ -36,7 +37,16 @@ const Heading = elem.h1(cmz(
   `
 ))
 
-const SubHeading = elem.h2(cmz(`
+const SectionHeading = elem.h2(cmz(`
+  font-weight: 800;
+  font-size: 36px;
+  padding-top: 64px 0 0 0;
+  letter-spacing: -.025em;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+`))
+
+const SubHeading = elem.h3(cmz(`
   font-weight: 600;
   font-size: 28px;
   letter-spacing: 1px;
@@ -55,10 +65,10 @@ const Content = elem.div(cmz(
   typo.family.base,
   `
   & {
-    margin: 35px 0;
+    margin: 22px 0 50px;
   }
   &, & * {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.3em;
   }
 `))
@@ -92,6 +102,7 @@ class Text extends PureComponent<Props> {
   render () {
     const {
       heading,
+      sectionHeading,
       subHeading,
       level,
       content,
@@ -102,6 +113,8 @@ class Text extends PureComponent<Props> {
     return Root(isCentered ? {className: centerAlign} : {},
 
       heading && Heading(heading),
+
+      sectionHeading && SectionHeading(sectionHeading),
 
       subHeading && SubHeading(subHeading),
 

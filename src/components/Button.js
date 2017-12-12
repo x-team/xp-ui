@@ -93,6 +93,7 @@ const colorStyles = {
 const sizeStyles = {
   normal: cmz(`
     font-size: .75em;
+    padding: .7em 2.3em;
   `),
 
   large: cmz(
