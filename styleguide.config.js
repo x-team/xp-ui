@@ -8,5 +8,6 @@ module.exports = snapguidist({
   webpackConfig: {
     devtool: 'source-map',
     module: config.module
-  }
+  },
+  ignore: ['**/components/SolutionForm/Title.js']
 })
