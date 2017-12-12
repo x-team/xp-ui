@@ -1,5 +1,6 @@
 const snapguidist = require('snapguidist')
 const path = require('path')
+
 const config = require('./webpack.config.js')
 
 module.exports = snapguidist({
