@@ -31,13 +31,13 @@ const styles = {
     position: relative;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
   `),
 
   milestone: cmz(`
     & {
       text-align: center;
       position: relative;
-      width: 100%;
     }
 
     &:before {
@@ -46,8 +46,8 @@ const styles = {
       background-color: ${theme.lineSilver2};
       position: absolute;
       z-index: 1;
-      width: 100%;
-      left: -50%;
+      width: 2000px;
+      right: 50%;
       top: 50%;
       transform: translateY(-50%);
       transition: all .25s ease-out;
@@ -60,10 +60,11 @@ const styles = {
       position: absolute;
       z-index: 1;
       width: 0;
-      left: -50%;
+      right: 50%;
       top: 50%;
       transform: translateY(-50%);
       transition: all .25s ease-out;
+      z-index: 2;
     }
 
     &:first-child:before {
@@ -75,11 +76,11 @@ const styles = {
     }
 
     &.isComplete + &.isCurrent:after {
-      width: 100%;
+      width: 2000px;
     }
 
     &.isComplete + &.isComplete:after {
-      width: 100%;
+      width: 2000px;
     }
   `),
 
