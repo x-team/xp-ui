@@ -1,23 +1,32 @@
-SolutionForm example:
-
+SolutionForm with disabled button:
 
 ```js
-<SolutionForm 
-  disableButton />
+<SolutionForm disableButton />
 ```
 
-```js
-<SolutionForm 
-  maxAttempts={5} />
-```
+Max of 5 attempts allowed:
 
 ```js
-<SolutionForm 
+<SolutionForm maxAttempts={5} />
+```
+
+2 attempts are taken:
+
+```js
+<SolutionForm
   hasAttempted
-  takenAttempts={2}/>
+  takenAttempts={2}
+/>
 ```
 
+Submitting is in progress:
+
 ```js
-<SolutionForm 
-  isSubmitting />
+<SolutionForm isSubmitting />
+```
+
+Custom submit callback is passed:
+
+```js
+<SolutionForm onSubmit={() => alert('Submitted!')} />
 ```

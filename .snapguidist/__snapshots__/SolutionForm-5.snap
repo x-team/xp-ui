@@ -1,15 +1,15 @@
-exports[`SolutionForm-3 1`] = `
+exports[`SolutionForm-5 1`] = `
 <div
   className="AutoUI_SolutionForm_index-25 AutoUI_SolutionForm_index-32">
   <div
     className="AutoUI_SolutionForm_Title-17">
     <h1
       className="AutoUI_typo-28 AutoUI_typo-15">
-      Got it?
+      Oops!
     </h1>
     <h2
       className="AutoUI_SolutionForm_Title-24">
-      Paste the solution below. You get 5 chances.
+      You haven’t submitted the right solution. Please try again.
     </h2>
   </div>
   <form
@@ -21,7 +21,7 @@ exports[`SolutionForm-3 1`] = `
     <button
       className="AutoUI_SolutionForm_index-26 AutoUI_SolutionForm_index-27 AutoUI_SolutionForm_index-65"
       disabled={false}>
-      Submit (0 of 5 attempts)
+      Submit (2 of 3 attempts)
     </button>
   </form>
 </div>
