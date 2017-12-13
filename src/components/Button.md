@@ -35,7 +35,7 @@ large size
 block button
 
 ```js
-<Button size={'block'}>Block size</Button>
+<Button block>Block size</Button>
 ```
 
 ### Extra States

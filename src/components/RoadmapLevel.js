@@ -70,7 +70,7 @@ class RoadmapLevel extends PureComponent<Props> {
       return null
     }
 
-    const buttonCTA = cta.label && <Button className={ctaButtonStyles} size='block' onClick={cta.handle}>{cta.label}</Button>
+    const buttonCTA = cta.label && <Button className={ctaButtonStyles} block onClick={cta.handle}>{cta.label}</Button>
     const levelLabel = level ? `Level ${level}` : ''
 
     return Root(

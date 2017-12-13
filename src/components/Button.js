@@ -10,38 +10,36 @@ import typo from '../styles/typo'
 
 const cmz = require('cmz')
 
-export type Size = 'normal' | 'large' | 'small' | 'block'
+export type Size = 'normal' | 'large' | 'small'
 export type Color = 'normal' | 'monochrome'
+
 type Props = {
   className: string | CmzAtom,
   size: Size,
   color: Color,
   outlined: ?boolean,
   disabled: ?boolean,
+  block: ?boolean,
   component: string,
   children?: Element<*> | string
 }
 
 const baseStyles = {
   root: cmz(`
-    background: transparent;
-    border-radius: 0;
-    border: 2px solid transparent;
-    color: ${theme.baseBrighter};
-    cursor: pointer;
     display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
+    border: 2px solid transparent;
+    background: transparent;
+    color: ${theme.baseBrighter};
     outline: none;
     margin: .15em auto;
     padding: 1.25em 3.5em;
     text-decoration: none;
-    text-transform: uppercase;
-    transition: all .3s ease-out;
+    cursor: pointer;
     white-space: nowrap;
+    transition: all .3s ease-out;
   `),
 
-  content: cmz(typo.tinyHeading)
+  content: cmz(typo.tinyHeading, 'font-size: inherit')
 }
 
 // Color options
@@ -87,21 +85,11 @@ const colorStyles = {
 
 // Size options
 const sizeStyles = {
-  normal: cmz(`
-    font-size: .75em;
-  `),
+  small: cmz(`font-size: 10px !important`),
 
-  large: cmz(`font-size: 1em`),
+  normal: cmz(`font-size: 12px !important`),
 
-  small: cmz(`
-    font-size: .65em;
-  `),
-
-  block: cmz(`
-    display: block;
-    margin: 10px auto;
-    width: 200px;
-  `)
+  large: cmz(`font-size: 16px !important`)
 }
 
 // Button variations
@@ -127,6 +115,12 @@ const extraStyles = {
     &.${colorStyles.monochrome} {
       color: ${theme.baseDarker};
     }
+  `),
+
+  block: cmz(`
+    display: block
+    margin: 10px auto
+    width: 200px
   `)
 }
 
@@ -147,6 +141,7 @@ class Button extends PureComponent<Props> {
       color,
       outlined,
       disabled,
+      block,
       component: CustomComponent,
       children,
       ...rest
@@ -157,6 +152,7 @@ class Button extends PureComponent<Props> {
     const extraClassName = [
       outlined && extraStyles.outlined,
       outlined && 'outlined',
+      block && extraStyles.block,
       disabled && extraStyles.disabled
     ].filter(Boolean).join(' ')
     const buttonClassName = `${colorClassName} ${sizeClassName} ${extraClassName}`
