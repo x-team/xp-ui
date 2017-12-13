@@ -130,7 +130,8 @@ class Button extends PureComponent<Props> {
     color: 'normal',
     size: 'normal',
     outlined: false,
-    disabled: false
+    disabled: false,
+    block: false
   }
 
   render () {
