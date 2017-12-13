@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react'
 import SvgIcon from './SvgIcon'
 
 import theme from '../styles/theme'
-import * as typo from '../styles/typo'
+import typo from '../styles/typo'
 
 import type { Icon } from './SvgIcon'
 
@@ -120,17 +120,16 @@ const styles = {
   `),
 
   label: cmz(
-    typo.family.base, `
-    display: block;
-    text-transform: uppercase;
-    font-size: .8em;
-    font-weight: 400;
-    color: ${theme.baseDarker};
-    position: absolute;
-    padding-top: .2em;
-    width: 100%;
-    transition: all .25s ease-out;
-  `)
+    typo.labelText,
+    `
+      display: block
+      color: ${theme.typoHeading}
+      position: absolute
+      padding-top: .2em
+      width: 100%
+      transition: all .25s ease-out
+    `
+  )
 }
 
 class Milestones extends PureComponent<Props> {

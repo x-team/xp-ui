@@ -1,10 +1,10 @@
 exports[`Footer-1 1`] = `
 <div
-  className="AutoUI_Footer_Footer-19">
+  className="AutoUI_Footer_Footer-20">
   <div
-    className="AutoUI_Footer_Footer-22">
+    className="AutoUI_Footer_Footer-23">
     <div
-      className="AutoUI_Footer_Footer-28">
+      className="AutoUI_Footer_Footer-29">
       <svg
         height={32}
         viewBox="0 0 960 328"
@@ -65,7 +65,7 @@ exports[`Footer-1 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_Footer_Footer-31">
+      className="AutoUI_Footer_Footer-32">
       <div>
         <h4
           className="AutoUI_Footer_FooterList-32">
@@ -93,7 +93,7 @@ exports[`Footer-1 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_Footer_Footer-31">
+      className="AutoUI_Footer_Footer-32">
       <div>
         <h4
           className="AutoUI_Footer_FooterList-32">
@@ -122,38 +122,38 @@ exports[`Footer-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_Footer_Footer-22">
+    className="AutoUI_Footer_Footer-23">
     <div
-      className="AutoUI_Footer_Footer-28" />
+      className="AutoUI_Footer_Footer-29" />
     <div
-      className="AutoUI_Footer_Footer-35">
+      className="AutoUI_Footer_Footer-36">
       <div>
         <div>
           <h4
-            className="AutoUI_Footer_FooterBrands-48 AutoUI_typo-21 AutoUI_typo-15">
+            className="AutoUI_Footer_FooterBrands-49 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
             Placeholder text
           </h4>
           <div
-            className="AutoUI_Footer_FooterBrands-45">
+            className="AutoUI_Footer_FooterBrands-46">
             <ul
-              className="AutoUI_Footer_FooterBrands-19">
+              className="AutoUI_Footer_FooterBrands-20">
               <li
-                className="AutoUI_Footer_FooterBrands-25">
+                className="AutoUI_Footer_FooterBrands-26">
                 <a
                   href="https://example.com">
                   <img
                     alt="Foo Corp"
-                    className="AutoUI_Footer_FooterBrands-37"
+                    className="AutoUI_Footer_FooterBrands-38"
                     src="http://satyr.io/120x30?text=Foo+Corp" />
                 </a>
               </li>
               <li
-                className="AutoUI_Footer_FooterBrands-25">
+                className="AutoUI_Footer_FooterBrands-26">
                 <a
                   href="https://example.com">
                   <img
                     alt="Bar Corp"
-                    className="AutoUI_Footer_FooterBrands-37"
+                    className="AutoUI_Footer_FooterBrands-38"
                     src="http://satyr.io/120x30?text=Bar+Corp" />
                 </a>
               </li>
@@ -162,7 +162,7 @@ exports[`Footer-1 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_Footer_Footer-42 AutoUI_typo-21 AutoUI_typo-15">
+        className="AutoUI_Footer_Footer-43 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
         Copyright Foo Corp
       </div>
     </div>

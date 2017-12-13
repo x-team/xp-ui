@@ -3,8 +3,9 @@
 import { PureComponent } from 'react'
 
 import elem from '../utils/elem'
+
 import theme from '../styles/theme'
-import * as typo from '../styles/typo'
+import typo from '../styles/typo'
 
 const cmz = require('cmz')
 
@@ -17,7 +18,7 @@ const Root = elem.section(cmz(`
 `))
 
 const Color = elem.div(cmz(
-  typo.family.base,
+  typo.baseText,
   `
     display: flex
     flex-direction: column

@@ -1,8 +1,9 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+
 import theme, { breakpoints }  from '../../styles/theme'
-import * as typo from '../../styles/typo'
+import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 
@@ -53,7 +54,7 @@ const cx = {
     opacity: .5;
     margin: 0;
   `,
-    typo.family.base
+    typo.baseText
   )
 }
 

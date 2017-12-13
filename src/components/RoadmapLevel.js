@@ -7,6 +7,7 @@ import Text from './Text'
 import Button from './Button'
 
 import elem from '../utils/elem'
+
 import theme from '../styles/theme'
 
 import type { Element } from 'react'
@@ -30,7 +31,7 @@ type Props = {
 const Root = elem.section(cmz(`
   & {
     border: 1px solid ${theme.lineSilver1};
-    padding: 2rem;
+    padding: 2.5rem;
   }
 
   &:first-child {
@@ -69,7 +70,7 @@ class RoadmapLevel extends PureComponent<Props> {
       return null
     }
 
-    const buttonCTA = cta.label && <Button className={ctaButtonStyles} size='block' onClick={cta.handle}>{cta.label}</Button>
+    const buttonCTA = cta.label && <Button className={ctaButtonStyles} block onClick={cta.handle}>{cta.label}</Button>
     const levelLabel = level ? `Level ${level}` : ''
 
     return Root(
@@ -87,6 +88,7 @@ class RoadmapLevel extends PureComponent<Props> {
         level={levelLabel}
         content={body}
         isCentered={isCentered}
+        subHeadingType='heading'
       />,
       buttonCTA
     )

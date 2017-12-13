@@ -1,4 +1,4 @@
-Color variables for development reference
+Color variables for development reference:
 
 ```js
 <ColorPalette />

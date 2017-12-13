@@ -1,8 +1,10 @@
 import { PureComponent } from 'react'
 import md5 from 'crypto-js/md5'
+
 import elem from '../utils/elem'
+
 import theme from '../styles/theme'
-import { family } from '../styles/typo'
+import typo from '../styles/typo'
 
 import type { Element } from 'react'
 
@@ -37,12 +39,11 @@ const Info = elem.div(cmz(`
 `))
 
 const Name = elem.div(cmz(
-  family.smallHeading, `
-  letter-spacing: -.025em
-  font-size: 1.2em
-  font-weight: normal
-  margin-bottom: .2em
-`))
+  typo.badgeHeading,
+  `
+    margin-bottom: .2em
+  `
+))
 
 const Email = elem.div(cmz(`
   font-size: .9em

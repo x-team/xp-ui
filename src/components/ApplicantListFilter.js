@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import * as typo from '../styles/typo'
+
+import typo from '../styles/typo'
 
 const cmz = require('cmz')
 
@@ -12,7 +13,7 @@ const option = cmz(`
 `)
 
 const optionContainer = cmz(
-  typo.family.base,
+  typo.baseText,
   `
   text-align: right
 `)

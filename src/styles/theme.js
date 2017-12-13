@@ -22,7 +22,7 @@ const palette = {
   white: '#FFF',
   haiti: '#130E2E',
   fern: '#5CB85C',
-  radicalRed: '#F63A54',
+  radicalRed: '#F63954',
   alto: '#D8D8D8',
   tuna: '#34323B',
   scarpaFlow: '#5A5665',

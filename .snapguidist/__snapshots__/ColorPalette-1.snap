@@ -1,255 +1,279 @@
 exports[`ColorPalette-1 1`] = `
 <section
-  className="AutoUI_ColorPalette-13">
+  className="AutoUI_ColorPalette-14">
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(255, 255, 255)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       baseBrighter
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(19, 14, 46)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       baseDarker
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
-        "backgroundColor": "rgb(246, 58, 84)",
+        "backgroundColor": "rgb(246, 57, 84)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       baseRed
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(92, 184, 92)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       baseGreen
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(216, 216, 216)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       baseSilver
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(228, 228, 228)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       baseHighlight
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(52, 50, 59)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       typoHeading
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
-        "backgroundColor": "rgb(246, 58, 84)",
+        "backgroundColor": "rgb(246, 57, 84)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       typoSubheading
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(90, 86, 101)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       typoParagraph
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(19, 14, 46)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       typoHighlight
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(216, 216, 216)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       formPlaceholder
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(145, 140, 160)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       formText
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(230, 230, 237)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       formBorder
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
-        "backgroundColor": "rgb(246, 58, 84)",
+        "backgroundColor": "rgb(211, 47, 59)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
+      formError
+    </div>
+  </div>
+  <div
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(247, 217, 220)",
+      }
+    }>
+    <div
+      className="AutoUI_ColorPalette-34">
+      formErrorShadow
+    </div>
+  </div>
+  <div
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(246, 57, 84)",
+      }
+    }>
+    <div
+      className="AutoUI_ColorPalette-34">
       lineRed
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(228, 228, 228)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       lineSilver1
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(233, 237, 238)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       lineSilver2
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(240, 241, 244)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       lineSilver3
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(230, 230, 237)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       lineSilver4
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
-        "backgroundColor": "rgb(246, 58, 84)",
+        "backgroundColor": "rgb(246, 57, 84)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       iconRed
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(255, 255, 255)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       iconBright
     </div>
   </div>
   <div
-    className="AutoUI_ColorPalette-19 AutoUI_typo-21 AutoUI_typo-15"
+    className="AutoUI_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(52, 50, 59)",
       }
     }>
     <div
-      className="AutoUI_ColorPalette-33">
+      className="AutoUI_ColorPalette-34">
       iconDark
     </div>
   </div>

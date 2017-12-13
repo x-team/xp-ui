@@ -6,46 +6,39 @@ import type { CmzAtom } from 'cmz'
 import type { Element } from 'react'
 
 import theme from '../styles/theme'
-import * as typo from '../styles/typo'
+import typo from '../styles/typo'
 
 const cmz = require('cmz')
 
-export type Size = 'normal' | 'large' | 'small' | 'block'
+export type Size = 'normal' | 'large' | 'small'
 export type Color = 'normal' | 'monochrome'
+
 type Props = {
   className: string | CmzAtom,
   size: Size,
   color: Color,
   outlined: ?boolean,
   disabled: ?boolean,
+  block: ?boolean,
   component: string,
   children?: Element<*> | string
 }
 
 const baseStyles = {
   root: cmz(`
-    & {
-      background: transparent;
-      border-radius: 0;
-      border: 2px solid transparent;
-      color: ${theme.baseBrighter};
-      cursor: pointer;
-      display: inline-block;
-      font-weight: 400;
-      line-height: 1.5;
-      outline: none;
-      margin: .15em auto;
-      padding: 1.25em 3.5em;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: all .3s ease-out;
-      white-space: nowrap;
-    }
+    display: inline-block;
+    border: 2px solid transparent;
+    background: transparent;
+    outline: none;
+    margin: .15em auto;
+    padding: 1.25em 3.5em;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .3s ease-out;
+  `),
 
-    & span {
-      font-family: 'Open Sans', sans-serif;
-    }
-  `)
+  content: cmz(typo.labelText, 'font-size: inherit')
 }
 
 // Color options
@@ -91,26 +84,11 @@ const colorStyles = {
 
 // Size options
 const sizeStyles = {
-  normal: cmz(`
-    font-size: .75em;
-  `),
+  small: cmz(`font-size: 10px !important`),
 
-  large: cmz(
-    typo.family.action,
-    `
-      font-size: 1em;
-    `
-  ),
+  normal: cmz(`font-size: 12px !important`),
 
-  small: cmz(`
-    font-size: .65em;
-  `),
-
-  block: cmz(`
-    display: block;
-    margin: 10px auto;
-    width: 200px;
-  `)
+  large: cmz(`font-size: 16px !important`)
 }
 
 // Button variations
@@ -136,6 +114,12 @@ const extraStyles = {
     &.${colorStyles.monochrome} {
       color: ${theme.baseDarker};
     }
+  `),
+
+  block: cmz(`
+    display: block
+    margin: 10px auto
+    width: 200px
   `)
 }
 
@@ -146,7 +130,8 @@ class Button extends PureComponent<Props> {
     color: 'normal',
     size: 'normal',
     outlined: false,
-    disabled: false
+    disabled: false,
+    block: false
   }
 
   render () {
@@ -156,6 +141,7 @@ class Button extends PureComponent<Props> {
       color,
       outlined,
       disabled,
+      block,
       component: CustomComponent,
       children,
       ...rest
@@ -166,13 +152,14 @@ class Button extends PureComponent<Props> {
     const extraClassName = [
       outlined && extraStyles.outlined,
       outlined && 'outlined',
+      block && extraStyles.block,
       disabled && extraStyles.disabled
     ].filter(Boolean).join(' ')
     const buttonClassName = `${colorClassName} ${sizeClassName} ${extraClassName}`
 
     return (
       <CustomComponent {...rest} className={`${String(customClassName)} ${buttonClassName}`}>
-        <span>{children}</span>
+        <span className={baseStyles.content}>{children}</span>
       </CustomComponent>
     )
   }

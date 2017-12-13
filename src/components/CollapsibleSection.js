@@ -2,9 +2,11 @@
 
 import React, { PureComponent } from 'react'
 import { compose, withState, onlyUpdateForKeys } from 'recompose'
-import theme from '../styles/theme'
-import * as typo from '../styles/typo'
+
 import elem from '../utils/elem'
+
+import theme from '../styles/theme'
+import typo from '../styles/typo'
 
 import SvgIcon from './SvgIcon'
 
@@ -29,7 +31,7 @@ const cx = {
 }
 
 const Root = elem.section(cmz(
-  typo.family.base, `
+  typo.baseText, `
   & {
     margin: 0
     padding: 32px 16px
@@ -43,13 +45,11 @@ const Root = elem.section(cmz(
 `))
 
 const Header = elem.h1(cmz(
-  typo.family.smallHeading,
+  typo.sectionHeading,
   cx.clickable, `
   & {
-    letter-spacing: normal
-    text-transform: initial
     margin: 0
-    line-height: 1.4
+    padding-right: 24px
   }
 
   .${cx.twoColSection} & {
@@ -78,6 +78,10 @@ const IconWrapper = elem.div(cmz(`
 const Content = elem.div(cmz(`
   .${cx.twoColSection} & {
     width: calc(100% - 200px)
+  }
+
+  & p {
+    line-height: 36px
   }
 
   & > :only-child,

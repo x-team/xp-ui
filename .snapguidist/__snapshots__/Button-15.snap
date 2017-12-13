@@ -1,7 +1,8 @@
 exports[`Button-15 1`] = `
 <button
-  className=" AutoUI_Button-72 AutoUI_Button-26 AutoUI_Button-94 AutoUI_Button-127 outlined">
-  <span>
+  className=" AutoUI_Button-65 AutoUI_Button-28 AutoUI_Button-89 AutoUI_Button-105 outlined">
+  <span
+    className="AutoUI_Button-41 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
     Outlined default state
   </span>
 </button>

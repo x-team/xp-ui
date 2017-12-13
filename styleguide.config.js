@@ -1,5 +1,6 @@
 const snapguidist = require('snapguidist')
 const path = require('path')
+
 const config = require('./webpack.config.js')
 
 module.exports = snapguidist({
@@ -8,5 +9,6 @@ module.exports = snapguidist({
   webpackConfig: {
     devtool: 'source-map',
     module: config.module
-  }
+  },
+  ignore: ['**/components/SolutionForm/Title.js']
 })

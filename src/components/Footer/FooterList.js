@@ -1,8 +1,8 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+
 import theme from '../../styles/theme'
-import * as typo from '../../styles/typo'
 
 const cmz = require('cmz')
 

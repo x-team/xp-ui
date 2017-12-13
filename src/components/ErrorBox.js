@@ -1,9 +1,11 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import theme from '../styles/theme'
-import * as typo from '../styles/typo'
+
 import elem from '../utils/elem'
+
+import theme from '../styles/theme'
+import typo from '../styles/typo'
 
 const cmz = require('cmz')
 
@@ -13,7 +15,7 @@ type Props = {
 }
 
 const Root = elem.div(cmz(
-  typo.family.base,
+  typo.baseText,
   `
   color: ${theme.baseRed.darken(0.3)}
   border: 2px solid ${theme.baseRed}

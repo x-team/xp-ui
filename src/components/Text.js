@@ -1,13 +1,16 @@
 // @flow
 
 import { PureComponent } from 'react'
-import theme from '../styles/theme'
-import * as typo from '../styles/typo'
+
 import elem from '../utils/elem'
+
+import typo from '../styles/typo'
 
 import type { Element } from 'react'
 
 const cmz = require('cmz')
+
+type Type = 'mainHeading' | 'headline' | 'heading' | 'subheading'
 
 type Props = {
   heading?: Element<*>|string,
@@ -15,68 +18,43 @@ type Props = {
   level?: Element<*>|string,
   content?: Element<*>|string,
   isCentered: ?boolean,
-  hasDivider: ?boolean
+  hasDivider: ?boolean,
+  headingType?: Type,
+  subHeadingType?: Type
 }
 
 const Root = elem.section(cmz(`
-  & {
-    white-space: pre-line;
-    margin: 0;
-    clear: both;
-    overflow: hidden;
-  }
+  white-space: pre-line
+  margin: 0
+  clear: both
+  overflow: hidden
 `))
 
-const Heading = elem.h1(cmz(
-  typo.family.heading,
+const Heading = elem.h1(cmz(`
+  padding-bottom: 20px
+`))
+
+const SubHeading = elem.h2()
+
+const Level = elem.p()
+
+const Content = elem.div(cmz(
+  typo.baseText,
   `
-  & {
-    padding-bottom: 20px;
-  }
+    margin: 30px 0
   `
 ))
 
-const SubHeading = elem.h2(cmz(`
-  font-weight: 600;
-  font-size: 28px;
-  letter-spacing: 1px;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-`))
+const centerAlign = cmz(`text-align: center`)
 
-const Level = elem.p(cmz(`
-  color: ${theme.typoSubheading};
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 22px;
-  font-weight: 500;
-`))
-
-const Content = elem.div(cmz(
-  typo.family.base,
-  `
-  & {
-    margin: 35px 0;
-  }
-  &, & * {
-    font-size: 24px;
-    line-height: 1.3em;
-  }
-`))
-
-const centerAlign = cmz(`
-  & {
-    text-align: center;
-  }
-`)
-
-const contentDividerLeft = cmz(typo.family.divider, `
+const contentDividerLeft = cmz(typo.divider, `
   &:after {
     left: 3%;
     top: -30px;
   }
 `)
 
-const contentDividerCenter = cmz(typo.family.divider, `
+const contentDividerCenter = cmz(typo.divider, `
   &:after {
     left: 50%;
     top: -30px;
@@ -93,6 +71,8 @@ class Text extends PureComponent<Props> {
     const {
       heading,
       subHeading,
+      headingType = 'headline',
+      subHeadingType = 'heading',
       level,
       content,
       isCentered,
@@ -101,11 +81,11 @@ class Text extends PureComponent<Props> {
 
     return Root(isCentered ? {className: centerAlign} : {},
 
-      heading && Heading(heading),
+      heading && Heading({ className: typo[headingType] }, heading),
 
-      subHeading && SubHeading(subHeading),
+      subHeading && SubHeading({ className: typo[subHeadingType] }, subHeading),
 
-      level && Level(level),
+      level && Level({ className: typo.subheading }, level),
 
       Content(hasDivider ? { className: (isCentered ? contentDividerCenter : contentDividerLeft) } : {}, content)
     )

@@ -1,6 +1,6 @@
 exports[`RoadmapLevel-1 1`] = `
 <section
-  className="AutoUI_RoadmapLevel-30 ">
+  className="AutoUI_RoadmapLevel-31 ">
   <svg
     height="43px"
     viewBox="0 0 37 43"
@@ -17,7 +17,7 @@ exports[`RoadmapLevel-1 1`] = `
           Object {
             "color": Array [
               246,
-              58,
+              57,
               84,
             ],
             "model": "rgb",
@@ -43,17 +43,17 @@ exports[`RoadmapLevel-1 1`] = `
     </g>
   </svg>
   <section
-    className="AutoUI_Text-21">
+    className="AutoUI_Text-26">
     <h2
-      className="AutoUI_Text-39">
+      className="undefined AutoUI_typo-114 AutoUI_typo-53 AutoUI_typo-22">
       lorem ipsum 1
     </h2>
     <p
-      className="AutoUI_Text-47">
+      className="undefined AutoUI_typo-128 AutoUI_typo-53 AutoUI_typo-28">
       Level 1
     </p>
     <div
-      className="AutoUI_Text-54 AutoUI_typo-21 AutoUI_typo-15">
+      className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!
     </div>
   </section>
