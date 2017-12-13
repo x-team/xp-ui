@@ -75,7 +75,18 @@ exports[`Typography-1 1`] = `
     </span>
     <div
       className="AutoUI_Typography-41">
-      base
+      baseText
+    </div>
+  </div>
+  <div
+    className="AutoUI_Typography-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+    <span
+      className="AutoUI_Typography-35 AutoUI_typo-149 AutoUI_typo-53 AutoUI_typo-40">
+      The quick brown fox jumps over the lazy dog
+    </span>
+    <div
+      className="AutoUI_Typography-41">
+      formText
     </div>
   </div>
 </section>

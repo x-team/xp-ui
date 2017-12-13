@@ -6,7 +6,7 @@ exports[`CollapsibleSection-7 1`] = `
     Consectetur suscipit alias velit magni tenetur veritatis sed fuga
   </h1>
   <div
-    className="AutoUI_CollapsibleSection-64">
+    className="AutoUI_CollapsibleSection-65">
     <svg
       height="20px"
       viewBox="0 0 20 20"
@@ -42,9 +42,9 @@ exports[`CollapsibleSection-7 1`] = `
     </svg>
   </div>
   <div
-    className="AutoUI_CollapsibleSection-78">
+    className="AutoUI_CollapsibleSection-79">
     <div
-      className="AutoUI_CollapsibleSection-98">
+      className="AutoUI_CollapsibleSection-99">
       <p>
         This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.
       </p>

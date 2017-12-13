@@ -15,7 +15,7 @@ exports[`SolutionForm-9 1`] = `
   <form
     className="AutoUI_SolutionForm_index-29 AutoUI_SolutionForm_index-45">
     <textarea
-      className="AutoUI_SolutionForm_index-30 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40 AutoUI_SolutionForm_index-54"
+      className="AutoUI_SolutionForm_index-30 AutoUI_typo-149 AutoUI_typo-53 AutoUI_typo-40 AutoUI_SolutionForm_index-54"
       name="solution"
       placeholder="Solution" />
     <button

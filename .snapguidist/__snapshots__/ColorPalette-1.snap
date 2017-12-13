@@ -161,6 +161,30 @@ exports[`ColorPalette-1 1`] = `
     className="AutoUI_ColorPalette-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
+        "backgroundColor": "rgb(211, 47, 59)",
+      }
+    }>
+    <div
+      className="AutoUI_ColorPalette-34">
+      formError
+    </div>
+  </div>
+  <div
+    className="AutoUI_ColorPalette-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(247, 217, 220)",
+      }
+    }>
+    <div
+      className="AutoUI_ColorPalette-34">
+      formErrorShadow
+    </div>
+  </div>
+  <div
+    className="AutoUI_ColorPalette-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
         "backgroundColor": "rgb(246, 57, 84)",
       }
     }>
