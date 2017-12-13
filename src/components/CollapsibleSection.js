@@ -31,7 +31,7 @@ const cx = {
 }
 
 const Root = elem.section(cmz(
-  typo.base, `
+  typo.baseText, `
   & {
     margin: 0
     padding: 32px 16px

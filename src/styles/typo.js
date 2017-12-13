@@ -135,12 +135,23 @@ export default {
   ),
 
   // regular text
-  base: cmz(
+  baseText: cmz(
     textRendering,
     typeface.text,
     `
       font-size: 20px
       color: ${theme.typoParagraph}
+      line-height: 30px
+    `
+  ),
+
+  // form input values
+  formText: cmz(
+    textRendering,
+    typeface.text,
+    `
+      font-size: 18px
+      color: ${theme.formText}
       line-height: 30px
     `
   ),

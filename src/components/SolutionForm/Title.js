@@ -24,7 +24,7 @@ const Root = elem.div(cmz(`
 const Heading = elem.h1(typo.mediumHeading)
 
 const Subheading = elem.h2(cmz(
-  typo.base,
+  typo.baseText,
   `
     margin: 0 0 35px 0
   `

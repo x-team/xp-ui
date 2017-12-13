@@ -18,7 +18,7 @@ const Root = elem.section(cmz(`
 `))
 
 const Color = elem.div(cmz(
-  typo.base,
+  typo.baseText,
   `
     display: flex
     flex-direction: column

@@ -39,7 +39,7 @@ const SubHeading = elem.h2()
 const Level = elem.p()
 
 const Content = elem.div(cmz(
-  typo.base,
+  typo.baseText,
   `
     margin: 30px 0
   `

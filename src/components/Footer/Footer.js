@@ -47,7 +47,7 @@ const cx = {
     line-height: 0;
     color: ${theme.baseDarker}
   `,
-    typo.base
+    typo.baseText
   )
 }
 

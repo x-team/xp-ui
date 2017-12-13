@@ -13,7 +13,7 @@ const option = cmz(`
 `)
 
 const optionContainer = cmz(
-  typo.base,
+  typo.baseText,
   `
   text-align: right
 `)

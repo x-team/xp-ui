@@ -50,19 +50,17 @@ const Form = elem.form([
 
 const textareaStyles = [
   utilStyles.noOutline,
-  typo.base,
+  typo.formText,
   cmz(`
     & {
       display: block
       width: 100%
       height: 156px
-      resize: none
-      color: ${theme.formText}
-      border: 1px solid ${theme.lineSilver3}
-      border-radius: 4px
-      font-size: 18px
       padding: 10px 20px
       margin-bottom: 100px
+      resize: none
+      border: 1px solid ${theme.lineSilver3}
+      border-radius: 4px
       box-sizing: border-box
     }
 

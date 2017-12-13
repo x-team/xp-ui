@@ -18,7 +18,7 @@ const Root = elem.section(cmz(`
 `))
 
 const Item = elem.div(cmz(
-  typo.base,
+  typo.baseText,
   `
     display: flex
     flex-direction: column

@@ -54,7 +54,7 @@ const cx = {
     opacity: .5;
     margin: 0;
   `,
-    typo.base
+    typo.baseText
   )
 }
 

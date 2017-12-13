@@ -15,7 +15,7 @@ type Props = {
 }
 
 const Root = elem.div(cmz(
-  typo.base,
+  typo.baseText,
   `
   color: ${theme.baseRed.darken(0.3)}
   border: 2px solid ${theme.baseRed}
