@@ -49,6 +49,7 @@ const Header = elem.h1(cmz(
   cx.clickable, `
   & {
     margin: 0
+    padding-right: 24px
     line-height: 1.4
   }
 
