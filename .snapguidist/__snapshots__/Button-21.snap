@@ -1,8 +1,8 @@
 exports[`Button-21 1`] = `
 <button
-  className=" AutoUI_Button-68 AutoUI_Button-26 AutoUI_Button-90 ">
+  className=" AutoUI_Button-65 AutoUI_Button-28 AutoUI_Button-89 ">
   <span
-    className="AutoUI_Button-44 AutoUI_typo-129 AutoUI_typo-53 AutoUI_typo-46">
+    className="AutoUI_Button-41 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
     Regular button with no props
   </span>
 </button>

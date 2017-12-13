@@ -130,7 +130,7 @@ exports[`Footer-1 1`] = `
       <div>
         <div>
           <h4
-            className="AutoUI_Footer_FooterBrands-49 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_Footer_FooterBrands-49 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
             Placeholder text
           </h4>
           <div
@@ -162,7 +162,7 @@ exports[`Footer-1 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_Footer_Footer-43 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_Footer_Footer-43 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
         Copyright Foo Corp
       </div>
     </div>

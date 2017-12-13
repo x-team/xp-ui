@@ -8,20 +8,20 @@ exports[`SolutionForm-9 1`] = `
       Got it?
     </h1>
     <h2
-      className="AutoUI_SolutionForm_Title-26 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_SolutionForm_Title-26 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
       Paste the solution below. You get 3 chances.
     </h2>
   </div>
   <form
     className="AutoUI_SolutionForm_index-29 AutoUI_SolutionForm_index-45">
     <textarea
-      className="AutoUI_SolutionForm_index-30 AutoUI_typo-149 AutoUI_typo-53 AutoUI_typo-40 AutoUI_SolutionForm_index-54"
+      className="AutoUI_SolutionForm_index-30 AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40 AutoUI_SolutionForm_index-54"
       name="solution"
       placeholder="Solution" />
     <button
-      className=" AutoUI_Button-68 AutoUI_Button-26 AutoUI_Button-90 ">
+      className=" AutoUI_Button-65 AutoUI_Button-28 AutoUI_Button-89 ">
       <span
-        className="AutoUI_Button-44 AutoUI_typo-129 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_Button-41 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
         Submit (0 of 3 attempts)
       </span>
     </button>

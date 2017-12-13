@@ -10,7 +10,7 @@ exports[`RoadmapHero-3 1`] = `
         Next Steps
       </h1>
       <div
-        className="AutoUI_Text-41 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40 AutoUI_Text-54 AutoUI_typo-159">
+        className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_Text-50 AutoUI_typo-173">
         Thanks for completing the challenge and telling us a bit about yourself. Next, you will soon receive an e-mail from an X-Team Ambassador who will help us determine if you are a good fit for X-Team.
       </div>
     </section>

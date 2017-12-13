@@ -2,7 +2,7 @@ exports[`Typography-1 1`] = `
 <section
   className="AutoUI_Typography-14">
   <div
-    className="AutoUI_Typography-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_Typography-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
     <span
       className="AutoUI_Typography-35 AutoUI_typo-61 AutoUI_typo-53 AutoUI_typo-22">
       The quick brown fox jumps over the lazy dog
@@ -13,64 +13,75 @@ exports[`Typography-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_Typography-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_Typography-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
     <span
       className="AutoUI_Typography-35 AutoUI_typo-75 AutoUI_typo-53 AutoUI_typo-22">
       The quick brown fox jumps over the lazy dog
     </span>
     <div
       className="AutoUI_Typography-41">
-      mediumHeading
+      headline
     </div>
   </div>
   <div
-    className="AutoUI_Typography-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_Typography-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
     <span
       className="AutoUI_Typography-35 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34">
       The quick brown fox jumps over the lazy dog
     </span>
     <div
       className="AutoUI_Typography-41">
-      moderateHeading
+      sectionHeading
     </div>
   </div>
   <div
-    className="AutoUI_Typography-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_Typography-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
     <span
-      className="AutoUI_Typography-35 AutoUI_typo-102 AutoUI_typo-53 AutoUI_typo-22">
+      className="AutoUI_Typography-35 AutoUI_typo-102 AutoUI_typo-53 AutoUI_typo-34">
       The quick brown fox jumps over the lazy dog
     </span>
     <div
       className="AutoUI_Typography-41">
-      smallHeading
+      badgeHeading
     </div>
   </div>
   <div
-    className="AutoUI_Typography-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_Typography-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
     <span
-      className="AutoUI_Typography-35 AutoUI_typo-116 AutoUI_typo-53 AutoUI_typo-28">
+      className="AutoUI_Typography-35 AutoUI_typo-114 AutoUI_typo-53 AutoUI_typo-22">
       The quick brown fox jumps over the lazy dog
     </span>
     <div
       className="AutoUI_Typography-41">
-      smallSubheading
+      heading
     </div>
   </div>
   <div
-    className="AutoUI_Typography-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_Typography-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
     <span
-      className="AutoUI_Typography-35 AutoUI_typo-129 AutoUI_typo-53 AutoUI_typo-46">
+      className="AutoUI_Typography-35 AutoUI_typo-128 AutoUI_typo-53 AutoUI_typo-28">
       The quick brown fox jumps over the lazy dog
     </span>
     <div
       className="AutoUI_Typography-41">
-      tinyHeading
+      subheading
     </div>
   </div>
   <div
-    className="AutoUI_Typography-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_Typography-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
     <span
-      className="AutoUI_Typography-35 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_Typography-35 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+      The quick brown fox jumps over the lazy dog
+    </span>
+    <div
+      className="AutoUI_Typography-41">
+      labelText
+    </div>
+  </div>
+  <div
+    className="AutoUI_Typography-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+    <span
+      className="AutoUI_Typography-35 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
       The quick brown fox jumps over the lazy dog
     </span>
     <div
@@ -79,9 +90,9 @@ exports[`Typography-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_Typography-20 AutoUI_typo-138 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_Typography-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
     <span
-      className="AutoUI_Typography-35 AutoUI_typo-149 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_Typography-35 AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40">
       The quick brown fox jumps over the lazy dog
     </span>
     <div
