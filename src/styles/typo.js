@@ -130,6 +130,8 @@ export default {
     textRendering,
     typeface.extra,
     `
+      font-size: 12px
+      text-transform: uppercase
       line-height: 18px
     `
   ),

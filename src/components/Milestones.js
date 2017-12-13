@@ -123,8 +123,6 @@ const styles = {
     typo.tinyHeading,
     `
       display: block
-      text-transform: uppercase
-      font-size: 12px
       color: ${theme.typoHeading}
       position: absolute
       padding-top: .2em

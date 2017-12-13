@@ -29,7 +29,6 @@ const baseStyles = {
     display: inline-block;
     border: 2px solid transparent;
     background: transparent;
-    color: ${theme.baseBrighter};
     outline: none;
     margin: .15em auto;
     padding: 1.25em 3.5em;
