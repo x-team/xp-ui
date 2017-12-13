@@ -29,6 +29,7 @@ const baseStyles = {
     display: inline-block;
     border: 2px solid transparent;
     background: transparent;
+    text-align: center;
     outline: none;
     margin: .15em auto;
     padding: 1.25em 3.5em;

@@ -30,35 +30,24 @@ const Root = elem.section(cmz(`
   overflow: hidden
 `))
 
-const Heading = elem.h1(cmz(`
-  padding-bottom: 20px
-`))
+const Heading = elem.h1()
 
 const SubHeading = elem.h2()
 
 const Level = elem.p()
 
+const Divider = elem.span(cmz(typo.divider))
+
 const Content = elem.div(cmz(
   typo.baseText,
-  `
-    margin: 30px 0
-  `
+  'margin: 15px 0'
 ))
 
 const centerAlign = cmz(`text-align: center`)
 
-const contentDividerLeft = cmz(typo.divider, `
-  &:after {
-    left: 3%;
-    top: -30px;
-  }
-`)
-
-const contentDividerCenter = cmz(typo.divider, `
-  &:after {
-    left: 50%;
-    top: -30px;
-  }
+const contentDividerCenter = cmz(`
+  margin-left: auto
+  margin-right: auto
 `)
 
 class Text extends PureComponent<Props> {
@@ -80,14 +69,11 @@ class Text extends PureComponent<Props> {
     } = this.props
 
     return Root(isCentered ? {className: centerAlign} : {},
-
       heading && Heading({ className: typo[headingType] }, heading),
-
       subHeading && SubHeading({ className: typo[subHeadingType] }, subHeading),
-
       level && Level({ className: typo.subheading }, level),
-
-      Content(hasDivider ? { className: (isCentered ? contentDividerCenter : contentDividerLeft) } : {}, content)
+      hasDivider && Divider({ className: (isCentered ? contentDividerCenter : '') }),
+      Content(content)
     )
   }
 }
