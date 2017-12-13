@@ -2,10 +2,12 @@ exports[`Text-7 1`] = `
 <section
   className="AutoUI_Text-26">
   <h1
-    className="AutoUI_Text-33 AutoUI_typo-75 AutoUI_typo-53 AutoUI_typo-22">
+    className="undefined AutoUI_typo-75 AutoUI_typo-53 AutoUI_typo-22">
     Your roadmap to X-Team
   </h1>
+  <span
+    className="AutoUI_Text-39 AutoUI_typo-174" />
   <div
-    className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_Text-50 AutoUI_typo-173" />
+    className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40" />
 </section>
 `;
