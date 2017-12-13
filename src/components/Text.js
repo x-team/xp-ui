@@ -45,11 +45,7 @@ const Content = elem.div(cmz(
   `
 ))
 
-const centerAlign = cmz(`
-  & {
-    text-align: center;
-  }
-`)
+const centerAlign = cmz(`text-align: center`)
 
 const contentDividerLeft = cmz(typo.divider, `
   &:after {
@@ -85,7 +81,7 @@ class Text extends PureComponent<Props> {
 
     return Root(isCentered ? {className: centerAlign} : {},
 
-      heading && Heading({ className: typo[`${headingType}`] }, heading),
+      heading && Heading({ className: typo[headingType] }, heading),
 
       subHeading && SubHeading({ className: typo[subHeadingType] }, subHeading),
 
