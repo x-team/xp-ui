@@ -88,7 +88,7 @@ class RoadmapLevel extends PureComponent<Props> {
         level={levelLabel}
         content={body}
         isCentered={isCentered}
-        subHeadingSize='small'
+        subHeadingType='heading'
       />,
       buttonCTA
     )

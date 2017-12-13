@@ -120,7 +120,7 @@ const styles = {
   `),
 
   label: cmz(
-    typo.tinyHeading,
+    typo.labelText,
     `
       display: block
       color: ${theme.typoHeading}

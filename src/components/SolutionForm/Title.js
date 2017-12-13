@@ -21,7 +21,7 @@ const Root = elem.div(cmz(`
   text-align: left
 `))
 
-const Heading = elem.h1(typo.mediumHeading)
+const Heading = elem.h1(typo.headline)
 
 const Subheading = elem.h2(cmz(
   typo.baseText,

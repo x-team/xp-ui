@@ -10,7 +10,7 @@ import type { Element } from 'react'
 
 const cmz = require('cmz')
 
-type Size = 'main' | 'medium' | 'moderate' | 'small' | 'tiny'
+type Type = 'mainHeading' | 'headline' | 'heading' | 'subheading'
 
 type Props = {
   heading?: Element<*>|string,
@@ -19,8 +19,8 @@ type Props = {
   content?: Element<*>|string,
   isCentered: ?boolean,
   hasDivider: ?boolean,
-  headingSize?: Size,
-  subHeadingSize?: Size
+  headingType?: Type,
+  subHeadingType?: Type
 }
 
 const Root = elem.section(cmz(`
@@ -75,8 +75,8 @@ class Text extends PureComponent<Props> {
     const {
       heading,
       subHeading,
-      headingSize = 'medium',
-      subHeadingSize = 'small',
+      headingType = 'headline',
+      subHeadingType = 'heading',
       level,
       content,
       isCentered,
@@ -85,11 +85,11 @@ class Text extends PureComponent<Props> {
 
     return Root(isCentered ? {className: centerAlign} : {},
 
-      heading && Heading({ className: typo[`${headingSize}Heading`] }, heading),
+      heading && Heading({ className: typo[`${headingType}`] }, heading),
 
-      subHeading && SubHeading({ className: typo[`${subHeadingSize}Heading`] }, subHeading),
+      subHeading && SubHeading({ className: typo[subHeadingType] }, subHeading),
 
-      level && Level({ className: typo[`${subHeadingSize}Subheading`] }, level),
+      level && Level({ className: typo.subheading }, level),
 
       Content(hasDivider ? { className: (isCentered ? contentDividerCenter : contentDividerLeft) } : {}, content)
     )

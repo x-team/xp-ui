@@ -45,12 +45,11 @@ const Root = elem.section(cmz(
 `))
 
 const Header = elem.h1(cmz(
-  typo.moderateHeading,
+  typo.sectionHeading,
   cx.clickable, `
   & {
     margin: 0
     padding-right: 24px
-    line-height: 1.4
   }
 
   .${cx.twoColSection} & {

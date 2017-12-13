@@ -39,14 +39,11 @@ const Info = elem.div(cmz(`
 `))
 
 const Name = elem.div(cmz(
-  typo.smallHeading, `
-  letter-spacing: -.025em
-  font-size: 1.2em
-  font-weight: normal
-  margin-bottom: .2em
-  text-transform: none
-  line-height: 19px
-`))
+  typo.badgeHeading,
+  `
+    margin-bottom: .2em
+  `
+))
 
 const Email = elem.div(cmz(`
   font-size: .9em

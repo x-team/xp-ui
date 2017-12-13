@@ -72,7 +72,7 @@ export default {
   ),
 
   // in-page top-level headers
-  mediumHeading: cmz(
+  headline: cmz(
     textRendering,
     typeface.extraHeading,
     `
@@ -86,7 +86,7 @@ export default {
   ),
 
   // CollapsibleSection title
-  moderateHeading: cmz(
+  sectionHeading: cmz(
     textRendering,
     typeface.semiHeading,
     `
@@ -98,8 +98,20 @@ export default {
     `
   ),
 
+  // ApplicantBadge title
+  badgeHeading: cmz(
+    textRendering,
+    typeface.semiHeading,
+    `
+      font-size: 19px
+      color: ${theme.typoHeading}
+      letter-spacing: -.3px
+      line-height: 19px
+    `
+  ),
+
   // RoadmapLevel's heading
-  smallHeading: cmz(
+  heading: cmz(
     textRendering,
     typeface.extraHeading,
     `
@@ -112,8 +124,8 @@ export default {
     `
   ),
 
-  // RoadmapLevel's level text
-  smallSubheading: cmz(
+  // RoadmapLevel's level text, applicant's badge name
+  subheading: cmz(
     textRendering,
     typeface.strongHeading,
     `
@@ -126,7 +138,7 @@ export default {
   ),
 
   // milestone levelN text, button value
-  tinyHeading: cmz(
+  labelText: cmz(
     textRendering,
     typeface.extra,
     `

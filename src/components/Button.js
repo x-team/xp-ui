@@ -38,7 +38,7 @@ const baseStyles = {
     transition: all .3s ease-out;
   `),
 
-  content: cmz(typo.tinyHeading, 'font-size: inherit')
+  content: cmz(typo.labelText, 'font-size: inherit')
 }
 
 // Color options

@@ -44,7 +44,7 @@ class RoadmapHero extends PureComponent<Props> {
     const { heading, content, imgUrl, hasDivider } = this.props
 
     return Root(
-      HeroHeading(<Text {... { heading, content, hasDivider, headingSize: 'main' }} />),
+      HeroHeading(<Text {... { heading, content, hasDivider, headingType: 'mainHeading' }} />),
       HeroImage({
         src: imgUrl,
         alt: 'X-Team Roadmap'
