@@ -170,26 +170,21 @@ export default {
     `
   ),
 
+  // text divider
   divider: cmz(`
     & {
-      margin-bottom: 60px;
-      position: relative;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      width: 3.5rem;
-      height: 2px;
-      bottom: -30px;
-      transform: translateX(-50%);
-      background-color: ${theme.lineRed};
+      display: block
+      position: relative
+      width: 3.5rem
+      height: 2px
+      margin: 40px 0 35px
+      background-color: ${theme.lineRed}
     }
 
     @media screen and (max-width: ${breakpoints.sm}) {
       & {
-        margin-bottom: 60px;
+        width: 2rem
       }
-    }`
-  )
+    }
+  `)
 }
