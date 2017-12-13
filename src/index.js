@@ -13,6 +13,7 @@ import RoadmapLevel from './components/RoadmapLevel'
 import RoadmapTimelineElement from './components/RoadmapTimelineElement'
 import SvgIcon from './components/SvgIcon'
 import Text from './components/Text'
+import Typography from './components/Typography'
 import VideoPlayer from './components/VideoPlayer'
 import XIcon from './components/XIcon'
 import Footer from './components/Footer/Footer'
@@ -36,6 +37,7 @@ export {
   RoadmapTimelineElement,
   SvgIcon,
   Text,
+  Typography,
   VideoPlayer,
   XIcon,
   Footer,
