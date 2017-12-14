@@ -31,6 +31,7 @@ const styles = {
     position: relative;
     display: flex;
     justify-content: space-between;
+    max-width: 1158px;
   `),
 
   milestone: cmz(`
@@ -64,6 +65,7 @@ const styles = {
       top: 50%;
       transform: translateY(-50%);
       transition: all .25s ease-out;
+      z-index: 2;
     }
 
     &:first-child:before {
@@ -87,8 +89,8 @@ const styles = {
     & {
       position: relative;
       display: inline-block;
-      width: 1.2em;
-      height: 1.2em;
+      width: 1.9em;
+      height: 1.9em;
       background-color: ${theme.baseBrighter};
       border: 2px solid ${theme.lineSilver2};
       border-radius: 50%;
@@ -114,8 +116,8 @@ const styles = {
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
-      width: 35%;
-      height: 35%;
+      width: 52%;
+      height: 52%;
     }
   `),
 
@@ -125,7 +127,7 @@ const styles = {
       display: block
       color: ${theme.typoHeading}
       position: absolute
-      padding-top: .2em
+      padding-top: 0.5em
       width: 100%
       transition: all .25s ease-out
     `
