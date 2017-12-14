@@ -31,13 +31,14 @@ const styles = {
     position: relative;
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    max-width: 1158px;
   `),
 
   milestone: cmz(`
     & {
       text-align: center;
       position: relative;
+      width: 100%;
     }
 
     &:before {
@@ -46,8 +47,8 @@ const styles = {
       background-color: ${theme.lineSilver2};
       position: absolute;
       z-index: 1;
-      width: 2000px;
-      right: 50%;
+      width: 100%;
+      left: -50%;
       top: 50%;
       transform: translateY(-50%);
       transition: all .25s ease-out;
@@ -60,7 +61,7 @@ const styles = {
       position: absolute;
       z-index: 1;
       width: 0;
-      right: 50%;
+      left: -50%;
       top: 50%;
       transform: translateY(-50%);
       transition: all .25s ease-out;
@@ -76,11 +77,11 @@ const styles = {
     }
 
     &.isComplete + &.isCurrent:after {
-      width: 2000px;
+      width: 100%;
     }
 
     &.isComplete + &.isComplete:after {
-      width: 2000px;
+      width: 100%;
     }
   `),
 
@@ -126,7 +127,7 @@ const styles = {
       display: block
       color: ${theme.typoHeading}
       position: absolute
-      padding-top: .2em
+      padding-top: 0.5em
       width: 100%
       transition: all .25s ease-out
     `
