@@ -126,7 +126,7 @@ const styles = {
       display: block
       color: ${theme.typoHeading}
       position: absolute
-      padding-top: .5em
+      padding-top: 0.5em
       width: 100%
       transition: all .25s ease-out
     `
