@@ -19,7 +19,7 @@ exports[`SolutionForm-5 1`] = `
       name="solution"
       placeholder="Solution" />
     <button
-      className=" AutoUI_Button-66 AutoUI_Button-28 AutoUI_Button-90 ">
+      className=" AutoUI_Button-66 AutoUI_Button-28 AutoUI_Button-93 ">
       <span
         className="AutoUI_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
         Submit (2 of 3 attempts)

@@ -31,8 +31,8 @@ const baseStyles = {
     background: transparent;
     text-align: center;
     outline: none;
-    margin: .15em auto;
-    padding: 1.25em 3.5em;
+    margin: 2px auto;
+    padding: 10px 19px;
     text-decoration: none;
     cursor: pointer;
     white-space: nowrap;
@@ -85,11 +85,17 @@ const colorStyles = {
 
 // Size options
 const sizeStyles = {
-  small: cmz(`font-size: 10px !important`),
+  small: cmz(`
+    font-size: 10px !important
+    padding: 8px 16px
+  `),
 
   normal: cmz(`font-size: 12px !important`),
 
-  large: cmz(`font-size: 16px !important`)
+  large: cmz(`
+    font-size: 16px !important
+    padding: 14px 24px
+  `)
 }
 
 // Button variations

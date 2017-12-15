@@ -1,6 +1,6 @@
 exports[`Button-19 1`] = `
 <a
-  className=" AutoUI_Button-47 AutoUI_Button-28 AutoUI_Button-90 ">
+  className=" AutoUI_Button-47 AutoUI_Button-28 AutoUI_Button-93 ">
   <span
     className="AutoUI_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
     custom default button state
