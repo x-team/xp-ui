@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent, Children } from 'react'
-import elem from '../utils/elem'
+import themes from '../../styles/theme'
+import elem from '../../utils/elem'
 import Milestones from './Milestones'
 
 import type { Element } from 'react'
@@ -26,7 +27,7 @@ const Block = elem.div(cmz(`
   max-width: 920px
   margin: 0 auto
   padding: 65px 60px 130px
-  border-top: 1px solid #e0e0e0
+  border-top: 1px solid ${themes.gray}
 `))
 
 const Cta = elem.div(cmz(`
@@ -62,11 +63,9 @@ class MilestonesScreen extends PureComponent<Props> {
       />
     )
 
-    const childrens = Children.map(children, (child, index) => {
-      return Block({ key: index }, child)
-    })
+    const childrenBlock = Children.map(children, (child, index) => Block({ key: index }, child))
 
-    return Root(milestones, Content(childrens), Cta(cta))
+    return Root(milestones, Content(childrenBlock), Cta(cta))
   }
 }
 

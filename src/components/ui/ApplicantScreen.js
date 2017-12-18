@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import elem from '../utils/elem'
+import elem from '../../utils/elem'
 import HeaderBar from './HeaderBar'
 
 import type { Element } from 'react'
