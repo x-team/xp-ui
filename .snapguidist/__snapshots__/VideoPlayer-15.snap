@@ -1,6 +1,6 @@
 exports[`VideoPlayer-15 1`] = `
 <iframe
-  className="AutoUI_VideoPlayer-16"
+  className="AutoUI_ui_VideoPlayer-16"
   height={315}
   src="https://www.youtube.com/embed/R6NUFRNEai4?controls=0&showinfo=0"
   width={560} />

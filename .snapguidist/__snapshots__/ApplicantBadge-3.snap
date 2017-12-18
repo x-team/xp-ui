@@ -1,17 +1,17 @@
 exports[`ApplicantBadge-3 1`] = `
 <div
-  className="AutoUI_ApplicantBadge-25 AutoUI_ApplicantBadge-22">
+  className="AutoUI_ui_ApplicantBadge-25 AutoUI_ui_ApplicantBadge-22">
   <img
     alt="Active Applicant\'s avatar"
     src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=64" />
   <div
-    className="AutoUI_ApplicantBadge-34 AutoUI_ApplicantBadge-22">
+    className="AutoUI_ui_ApplicantBadge-34 AutoUI_ui_ApplicantBadge-22">
     <div
-      className="AutoUI_ApplicantBadge-41 AutoUI_typo-102 AutoUI_typo-53 AutoUI_typo-34">
+      className="AutoUI_ui_ApplicantBadge-41 AutoUI_typo-102 AutoUI_typo-53 AutoUI_typo-34">
       Active Applicant
     </div>
     <div
-      className="AutoUI_ApplicantBadge-48">
+      className="AutoUI_ui_ApplicantBadge-48">
       applicant@x-team.com
     </div>
   </div>

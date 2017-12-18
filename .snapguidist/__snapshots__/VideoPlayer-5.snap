@@ -1,6 +1,6 @@
 exports[`VideoPlayer-5 1`] = `
 <video
-  className="AutoUI_VideoPlayer-20"
+  className="AutoUI_ui_VideoPlayer-20"
   controls={false}
   height={320}
   poster=""

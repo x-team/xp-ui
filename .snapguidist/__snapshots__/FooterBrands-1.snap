@@ -1,30 +1,30 @@
 exports[`FooterBrands-1 1`] = `
 <div>
   <h4
-    className="AutoUI_Footer_FooterBrands-49 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_ui_Footer_FooterBrands-49 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
     Placeholder text
   </h4>
   <div
-    className="AutoUI_Footer_FooterBrands-46">
+    className="AutoUI_ui_Footer_FooterBrands-46">
     <ul
-      className="AutoUI_Footer_FooterBrands-20">
+      className="AutoUI_ui_Footer_FooterBrands-20">
       <li
-        className="AutoUI_Footer_FooterBrands-26">
+        className="AutoUI_ui_Footer_FooterBrands-26">
         <a
           href="https://example.com">
           <img
             alt="Foo Corp"
-            className="AutoUI_Footer_FooterBrands-38"
+            className="AutoUI_ui_Footer_FooterBrands-38"
             src="http://satyr.io/120x30?text=Foo+Corp" />
         </a>
       </li>
       <li
-        className="AutoUI_Footer_FooterBrands-26">
+        className="AutoUI_ui_Footer_FooterBrands-26">
         <a
           href="https://example.com">
           <img
             alt="Bar Corp"
-            className="AutoUI_Footer_FooterBrands-38"
+            className="AutoUI_ui_Footer_FooterBrands-38"
             src="http://satyr.io/120x30?text=Bar+Corp" />
         </a>
       </li>
