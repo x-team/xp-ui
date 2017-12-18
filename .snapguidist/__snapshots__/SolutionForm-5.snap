@@ -1,27 +1,27 @@
 exports[`SolutionForm-5 1`] = `
 <div
-  className="AutoUI_SolutionForm_index-29 AutoUI_SolutionForm_index-36">
+  className="AutoUI_forms_SolutionForm_index-29 AutoUI_forms_SolutionForm_index-36">
   <div
-    className="AutoUI_SolutionForm_Title-19">
+    className="AutoUI_forms_SolutionForm_Title-19">
     <h1
       className="AutoUI_typo-75 AutoUI_typo-53 AutoUI_typo-22">
       Oops!
     </h1>
     <h2
-      className="AutoUI_SolutionForm_Title-26 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_forms_SolutionForm_Title-26 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
       You haven’t submitted the right solution. Please try again.
     </h2>
   </div>
   <form
-    className="AutoUI_SolutionForm_index-29 AutoUI_SolutionForm_index-45">
+    className="AutoUI_forms_SolutionForm_index-29 AutoUI_forms_SolutionForm_index-45">
     <textarea
-      className="AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40 AutoUI_SolutionForm_index-54 AutoUI_SolutionForm_index-77"
+      className="AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-54 AutoUI_forms_SolutionForm_index-77"
       name="solution"
       placeholder="Solution" />
     <button
-      className=" AutoUI_Button-66 AutoUI_Button-28 AutoUI_Button-93 ">
+      className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 ">
       <span
-        className="AutoUI_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
         Submit (2 of 3 attempts)
       </span>
     </button>

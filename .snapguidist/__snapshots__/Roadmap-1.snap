@@ -1,12 +1,12 @@
 exports[`Roadmap-1 1`] = `
 <div
-  className="AutoUI_Roadmap-34 AutoUI_Roadmap-25">
+  className="AutoUI_ui_Roadmap-34 AutoUI_ui_Roadmap-25">
   <div
-    className="AutoUI_Roadmap-38 AutoUI_Roadmap-25 ">
+    className="AutoUI_ui_Roadmap-38 AutoUI_ui_Roadmap-25 ">
     <div
-      className="AutoUI_Roadmap-77">
+      className="AutoUI_ui_Roadmap-77">
       <section
-        className="AutoUI_RoadmapLevel-31 AutoUI_RoadmapLevel-46">
+        className="AutoUI_ui_RoadmapLevel-31 AutoUI_ui_RoadmapLevel-46">
         <svg
           height="43px"
           viewBox="0 0 37 43"
@@ -49,7 +49,7 @@ exports[`Roadmap-1 1`] = `
           </g>
         </svg>
         <section
-          className="AutoUI_Text-26">
+          className="AutoUI_ui_Text-26">
           <h2
             className="undefined AutoUI_typo-114 AutoUI_typo-53 AutoUI_typo-22">
             The challenge
@@ -59,7 +59,7 @@ exports[`Roadmap-1 1`] = `
             Level 1
           </p>
           <div
-            className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!
           </div>
         </section>
@@ -67,23 +67,23 @@ exports[`Roadmap-1 1`] = `
       </section>
     </div>
     <div
-      className="AutoUI_Roadmap-91">
+      className="AutoUI_ui_Roadmap-91">
       <div
-        className="AutoUI_RoadmapTimelineElement-13 AutoUI_RoadmapTimelineElement-33">
+        className="AutoUI_ui_RoadmapTimelineElement-14 AutoUI_ui_RoadmapTimelineElement-34">
         <div
-          className="AutoUI_RoadmapTimelineElement-38">
+          className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
-            className="AutoUI_RoadmapTimelineElement-64"
+            className="AutoUI_ui_RoadmapTimelineElement-65"
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
-              className="AutoUI_RoadmapTimelineElement-44 AutoUI_RoadmapTimelineElement-51"
+              className="AutoUI_ui_RoadmapTimelineElement-45 AutoUI_ui_RoadmapTimelineElement-52"
               cx="26"
               cy="26"
               fill="none"
               r="25" />
             <path
-              className="AutoUI_RoadmapTimelineElement-82"
+              className="AutoUI_ui_RoadmapTimelineElement-83"
               d="M14.1 27.2l7.1 7.2 16.7-16.8"
               fill="none" />
           </svg>
@@ -92,11 +92,11 @@ exports[`Roadmap-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_Roadmap-38 AutoUI_Roadmap-25 ">
+    className="AutoUI_ui_Roadmap-38 AutoUI_ui_Roadmap-25 ">
     <div
-      className="AutoUI_Roadmap-77">
+      className="AutoUI_ui_Roadmap-77">
       <section
-        className="AutoUI_RoadmapLevel-31 ">
+        className="AutoUI_ui_RoadmapLevel-31 ">
         <svg
           height="43px"
           viewBox="0 0 30 43"
@@ -141,7 +141,7 @@ exports[`Roadmap-1 1`] = `
           </g>
         </svg>
         <section
-          className="AutoUI_Text-26">
+          className="AutoUI_ui_Text-26">
           <h2
             className="undefined AutoUI_typo-114 AutoUI_typo-53 AutoUI_typo-22">
             Take the stage
@@ -151,7 +151,7 @@ exports[`Roadmap-1 1`] = `
             Level 2
           </p>
           <div
-            className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!
           </div>
         </section>
@@ -159,17 +159,17 @@ exports[`Roadmap-1 1`] = `
       </section>
     </div>
     <div
-      className="AutoUI_Roadmap-91">
+      className="AutoUI_ui_Roadmap-91">
       <div
-        className="AutoUI_RoadmapTimelineElement-13 ">
+        className="AutoUI_ui_RoadmapTimelineElement-14 ">
         <div
-          className="AutoUI_RoadmapTimelineElement-38">
+          className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
             className=""
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
-              className="AutoUI_RoadmapTimelineElement-44 "
+              className="AutoUI_ui_RoadmapTimelineElement-45 "
               cx="26"
               cy="26"
               fill="none"
@@ -184,11 +184,11 @@ exports[`Roadmap-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_Roadmap-38 AutoUI_Roadmap-25 ">
+    className="AutoUI_ui_Roadmap-38 AutoUI_ui_Roadmap-25 ">
     <div
-      className="AutoUI_Roadmap-77">
+      className="AutoUI_ui_Roadmap-77">
       <section
-        className="AutoUI_RoadmapLevel-31 ">
+        className="AutoUI_ui_RoadmapLevel-31 ">
         <svg
           height="36px"
           viewBox="0 0 37 36"
@@ -233,7 +233,7 @@ exports[`Roadmap-1 1`] = `
           </g>
         </svg>
         <section
-          className="AutoUI_Text-26">
+          className="AutoUI_ui_Text-26">
           <h2
             className="undefined AutoUI_typo-114 AutoUI_typo-53 AutoUI_typo-22">
             Time to show off
@@ -243,7 +243,7 @@ exports[`Roadmap-1 1`] = `
             Level 3
           </p>
           <div
-            className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!
           </div>
         </section>
@@ -251,17 +251,17 @@ exports[`Roadmap-1 1`] = `
       </section>
     </div>
     <div
-      className="AutoUI_Roadmap-91">
+      className="AutoUI_ui_Roadmap-91">
       <div
-        className="AutoUI_RoadmapTimelineElement-13 ">
+        className="AutoUI_ui_RoadmapTimelineElement-14 ">
         <div
-          className="AutoUI_RoadmapTimelineElement-38">
+          className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
             className=""
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
-              className="AutoUI_RoadmapTimelineElement-44 "
+              className="AutoUI_ui_RoadmapTimelineElement-45 "
               cx="26"
               cy="26"
               fill="none"
@@ -276,11 +276,11 @@ exports[`Roadmap-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_Roadmap-38 AutoUI_Roadmap-25 ">
+    className="AutoUI_ui_Roadmap-38 AutoUI_ui_Roadmap-25 ">
     <div
-      className="AutoUI_Roadmap-77">
+      className="AutoUI_ui_Roadmap-77">
       <section
-        className="AutoUI_RoadmapLevel-31 ">
+        className="AutoUI_ui_RoadmapLevel-31 ">
         <svg
           height="37px"
           viewBox="0 0 42 37"
@@ -335,7 +335,7 @@ exports[`Roadmap-1 1`] = `
           </g>
         </svg>
         <section
-          className="AutoUI_Text-26">
+          className="AutoUI_ui_Text-26">
           <h2
             className="undefined AutoUI_typo-114 AutoUI_typo-53 AutoUI_typo-22">
             Show us the code!
@@ -345,7 +345,7 @@ exports[`Roadmap-1 1`] = `
             Level 4
           </p>
           <div
-            className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!
           </div>
         </section>
@@ -353,17 +353,17 @@ exports[`Roadmap-1 1`] = `
       </section>
     </div>
     <div
-      className="AutoUI_Roadmap-91">
+      className="AutoUI_ui_Roadmap-91">
       <div
-        className="AutoUI_RoadmapTimelineElement-13 ">
+        className="AutoUI_ui_RoadmapTimelineElement-14 ">
         <div
-          className="AutoUI_RoadmapTimelineElement-38">
+          className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
             className=""
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
-              className="AutoUI_RoadmapTimelineElement-44 "
+              className="AutoUI_ui_RoadmapTimelineElement-45 "
               cx="26"
               cy="26"
               fill="none"
@@ -378,11 +378,11 @@ exports[`Roadmap-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_Roadmap-38 AutoUI_Roadmap-25 ">
+    className="AutoUI_ui_Roadmap-38 AutoUI_ui_Roadmap-25 ">
     <div
-      className="AutoUI_Roadmap-77">
+      className="AutoUI_ui_Roadmap-77">
       <section
-        className="AutoUI_RoadmapLevel-31 ">
+        className="AutoUI_ui_RoadmapLevel-31 ">
         <svg
           height="39px"
           viewBox="0 0 42 39"
@@ -433,7 +433,7 @@ exports[`Roadmap-1 1`] = `
           </g>
         </svg>
         <section
-          className="AutoUI_Text-26">
+          className="AutoUI_ui_Text-26">
           <h2
             className="undefined AutoUI_typo-114 AutoUI_typo-53 AutoUI_typo-22">
             Being shortlisted
@@ -443,7 +443,7 @@ exports[`Roadmap-1 1`] = `
             Level 5
           </p>
           <div
-            className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!
           </div>
         </section>
@@ -451,17 +451,17 @@ exports[`Roadmap-1 1`] = `
       </section>
     </div>
     <div
-      className="AutoUI_Roadmap-91">
+      className="AutoUI_ui_Roadmap-91">
       <div
-        className="AutoUI_RoadmapTimelineElement-13 ">
+        className="AutoUI_ui_RoadmapTimelineElement-14 ">
         <div
-          className="AutoUI_RoadmapTimelineElement-38">
+          className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
             className=""
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
-              className="AutoUI_RoadmapTimelineElement-44 "
+              className="AutoUI_ui_RoadmapTimelineElement-45 "
               cx="26"
               cy="26"
               fill="none"
@@ -476,11 +476,11 @@ exports[`Roadmap-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_Roadmap-38 AutoUI_Roadmap-25 isSecondLast">
+    className="AutoUI_ui_Roadmap-38 AutoUI_ui_Roadmap-25 isSecondLast">
     <div
-      className="AutoUI_Roadmap-77">
+      className="AutoUI_ui_Roadmap-77">
       <section
-        className="AutoUI_RoadmapLevel-31 ">
+        className="AutoUI_ui_RoadmapLevel-31 ">
         <svg
           height="42px"
           viewBox="0 0 42 42"
@@ -527,7 +527,7 @@ exports[`Roadmap-1 1`] = `
           </g>
         </svg>
         <section
-          className="AutoUI_Text-26">
+          className="AutoUI_ui_Text-26">
           <h2
             className="undefined AutoUI_typo-114 AutoUI_typo-53 AutoUI_typo-22">
             Partner match-up and interviews
@@ -537,7 +537,7 @@ exports[`Roadmap-1 1`] = `
             Level 6
           </p>
           <div
-            className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!
           </div>
         </section>
@@ -545,17 +545,17 @@ exports[`Roadmap-1 1`] = `
       </section>
     </div>
     <div
-      className="AutoUI_Roadmap-91">
+      className="AutoUI_ui_Roadmap-91">
       <div
-        className="AutoUI_RoadmapTimelineElement-13 ">
+        className="AutoUI_ui_RoadmapTimelineElement-14 ">
         <div
-          className="AutoUI_RoadmapTimelineElement-38">
+          className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
             className=""
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
-              className="AutoUI_RoadmapTimelineElement-44 "
+              className="AutoUI_ui_RoadmapTimelineElement-45 "
               cx="26"
               cy="26"
               fill="none"
@@ -570,11 +570,11 @@ exports[`Roadmap-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_Roadmap-38 AutoUI_Roadmap-25 isFinal">
+    className="AutoUI_ui_Roadmap-38 AutoUI_ui_Roadmap-25 isFinal">
     <div
-      className="AutoUI_Roadmap-77">
+      className="AutoUI_ui_Roadmap-77">
       <section
-        className="AutoUI_RoadmapLevel-31 AutoUI_RoadmapLevel-47">
+        className="AutoUI_ui_RoadmapLevel-31 AutoUI_ui_RoadmapLevel-47">
         <svg
           height="44px"
           viewBox="0 0 42 44"
@@ -627,7 +627,7 @@ exports[`Roadmap-1 1`] = `
           </g>
         </svg>
         <section
-          className="AutoUI_Text-26 AutoUI_Text-46">
+          className="AutoUI_ui_Text-26 AutoUI_ui_Text-46">
           <h2
             className="undefined AutoUI_typo-114 AutoUI_typo-53 AutoUI_typo-22">
             Final level: you\'re in.
@@ -637,31 +637,31 @@ exports[`Roadmap-1 1`] = `
             Level 7
           </p>
           <div
-            className="AutoUI_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!
           </div>
         </section>
         <button
-          className="AutoUI_RoadmapLevel-51 AutoUI_Button-66 AutoUI_Button-28 AutoUI_Button-93 AutoUI_Button-126">
+          className="AutoUI_ui_RoadmapLevel-51 AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 AutoUI_ui_Button-126">
           <span
-            className="AutoUI_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+            className="AutoUI_ui_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
             Let\'s do this.
           </span>
         </button>
       </section>
     </div>
     <div
-      className="AutoUI_Roadmap-91">
+      className="AutoUI_ui_Roadmap-91">
       <div
-        className="AutoUI_RoadmapTimelineElement-13 ">
+        className="AutoUI_ui_RoadmapTimelineElement-14 ">
         <div
-          className="AutoUI_RoadmapTimelineElement-38">
+          className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
             className=""
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
-              className="AutoUI_RoadmapTimelineElement-44 "
+              className="AutoUI_ui_RoadmapTimelineElement-45 "
               cx="26"
               cy="26"
               fill="none"

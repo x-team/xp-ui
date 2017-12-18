@@ -2,8 +2,8 @@
 
 import React, { PureComponent } from 'react'
 
-import theme, { breakpoints }  from '../../styles/theme'
-import typo from '../../styles/typo'
+import theme, { breakpoints }  from '../../../styles/theme'
+import typo from '../../../styles/typo'
 
 const cmz = require('cmz')
 

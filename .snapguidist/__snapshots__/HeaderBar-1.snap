@@ -1,6 +1,6 @@
 exports[`HeaderBar-1 1`] = `
 <div
-  className="AutoUI_HeaderBar-12">
+  className="AutoUI_ui_HeaderBar-12">
   <svg
     height={30}
     viewBox="0 0 960 328"

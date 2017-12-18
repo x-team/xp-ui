@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
-import theme from '../../styles/theme'
+import theme from '../../../styles/theme'
 
 const cmz = require('cmz')
 

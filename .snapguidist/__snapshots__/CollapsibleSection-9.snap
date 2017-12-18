@@ -1,13 +1,13 @@
 exports[`CollapsibleSection-9 1`] = `
 <div>
   <section
-    className="AutoUI_CollapsibleSection-33 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_CollapsibleSection-30">
+    className="AutoUI_ui_CollapsibleSection-33 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
     <h1
-      className="AutoUI_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_CollapsibleSection-30">
+      className="AutoUI_ui_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_ui_CollapsibleSection-30">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
     </h1>
     <div
-      className="AutoUI_CollapsibleSection-64">
+      className="AutoUI_ui_CollapsibleSection-64">
       <svg
         height="20px"
         viewBox="0 0 20 20"
@@ -43,16 +43,16 @@ exports[`CollapsibleSection-9 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_CollapsibleSection-78" />
+      className="AutoUI_ui_CollapsibleSection-78" />
   </section>
   <section
-    className="AutoUI_CollapsibleSection-33 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_CollapsibleSection-30">
+    className="AutoUI_ui_CollapsibleSection-33 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
     <h1
-      className="AutoUI_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_CollapsibleSection-30">
+      className="AutoUI_ui_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_ui_CollapsibleSection-30">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
     </h1>
     <div
-      className="AutoUI_CollapsibleSection-64">
+      className="AutoUI_ui_CollapsibleSection-64">
       <svg
         height="20px"
         viewBox="0 0 20 20"
@@ -88,16 +88,16 @@ exports[`CollapsibleSection-9 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_CollapsibleSection-78" />
+      className="AutoUI_ui_CollapsibleSection-78" />
   </section>
   <section
-    className="AutoUI_CollapsibleSection-33 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_CollapsibleSection-30">
+    className="AutoUI_ui_CollapsibleSection-33 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
     <h1
-      className="AutoUI_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_CollapsibleSection-30">
+      className="AutoUI_ui_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_ui_CollapsibleSection-30">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
     </h1>
     <div
-      className="AutoUI_CollapsibleSection-64">
+      className="AutoUI_ui_CollapsibleSection-64">
       <svg
         height="20px"
         viewBox="0 0 20 20"
@@ -133,16 +133,16 @@ exports[`CollapsibleSection-9 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_CollapsibleSection-78" />
+      className="AutoUI_ui_CollapsibleSection-78" />
   </section>
   <section
-    className="AutoUI_CollapsibleSection-33 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_CollapsibleSection-30">
+    className="AutoUI_ui_CollapsibleSection-33 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
     <h1
-      className="AutoUI_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_CollapsibleSection-30">
+      className="AutoUI_ui_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_ui_CollapsibleSection-30">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
     </h1>
     <div
-      className="AutoUI_CollapsibleSection-64">
+      className="AutoUI_ui_CollapsibleSection-64">
       <svg
         height="20px"
         viewBox="0 0 20 20"
@@ -178,16 +178,16 @@ exports[`CollapsibleSection-9 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_CollapsibleSection-78" />
+      className="AutoUI_ui_CollapsibleSection-78" />
   </section>
   <section
-    className="AutoUI_CollapsibleSection-33 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_CollapsibleSection-30">
+    className="AutoUI_ui_CollapsibleSection-33 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
     <h1
-      className="AutoUI_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_CollapsibleSection-30">
+      className="AutoUI_ui_CollapsibleSection-47 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34 AutoUI_ui_CollapsibleSection-30">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
     </h1>
     <div
-      className="AutoUI_CollapsibleSection-64">
+      className="AutoUI_ui_CollapsibleSection-64">
       <svg
         height="20px"
         viewBox="0 0 20 20"
@@ -223,7 +223,7 @@ exports[`CollapsibleSection-9 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_CollapsibleSection-78" />
+      className="AutoUI_ui_CollapsibleSection-78" />
   </section>
 </div>
 `;

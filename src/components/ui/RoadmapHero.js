@@ -1,12 +1,13 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import type { Element } from 'react'
-
-import { breakpoints } from '../styles/theme'
-import elem from '../utils/elem'
 
 import Text from './Text'
+
+import { breakpoints } from '../../styles/theme'
+import elem from '../../utils/elem'
+
+import type { Element } from 'react'
 
 const cmz = require('cmz')
 
@@ -37,7 +38,7 @@ const HeroImage = elem.img()
 
 class RoadmapHero extends PureComponent<Props> {
   static defaultProps = {
-    imgUrl: require('../assets/x-roadmap.png'),
+    imgUrl: require('../../assets/x-roadmap.png'),
     hasDivider: true
   }
   render () {

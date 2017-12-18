@@ -1,10 +1,10 @@
 exports[`Milestones-7 1`] = `
 <ul
-  className="AutoUI_Milestones-27">
+  className="AutoUI_ui_Milestones-27">
   <li
-    className="AutoUI_Milestones-36 isComplete">
+    className="AutoUI_ui_Milestones-36 isComplete">
     <div
-      className="AutoUI_Milestones-86">
+      className="AutoUI_ui_Milestones-86">
       <svg
         height="43px"
         viewBox="0 0 30 43"
@@ -50,14 +50,14 @@ exports[`Milestones-7 1`] = `
       </svg>
     </div>
     <span
-      className="AutoUI_Milestones-122 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+      className="AutoUI_ui_Milestones-122 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
       Level 1
     </span>
   </li>
   <li
-    className="AutoUI_Milestones-36 isCurrent">
+    className="AutoUI_ui_Milestones-36 isCurrent">
     <div
-      className="AutoUI_Milestones-86">
+      className="AutoUI_ui_Milestones-86">
       <svg
         height="36px"
         viewBox="0 0 37 36"
@@ -103,14 +103,14 @@ exports[`Milestones-7 1`] = `
       </svg>
     </div>
     <span
-      className="AutoUI_Milestones-122 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+      className="AutoUI_ui_Milestones-122 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
       Level 2
     </span>
   </li>
   <li
-    className="AutoUI_Milestones-36 ">
+    className="AutoUI_ui_Milestones-36 ">
     <div
-      className="AutoUI_Milestones-86">
+      className="AutoUI_ui_Milestones-86">
       <svg
         height="43px"
         viewBox="0 0 37 43"
@@ -154,14 +154,14 @@ exports[`Milestones-7 1`] = `
       </svg>
     </div>
     <span
-      className="AutoUI_Milestones-122 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+      className="AutoUI_ui_Milestones-122 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
       Level 3
     </span>
   </li>
   <li
-    className="AutoUI_Milestones-36 ">
+    className="AutoUI_ui_Milestones-36 ">
     <div
-      className="AutoUI_Milestones-86">
+      className="AutoUI_ui_Milestones-86">
       <svg
         height="39px"
         viewBox="0 0 42 39"
@@ -213,7 +213,7 @@ exports[`Milestones-7 1`] = `
       </svg>
     </div>
     <span
-      className="AutoUI_Milestones-122 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+      className="AutoUI_ui_Milestones-122 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
       Level 4
     </span>
   </li>

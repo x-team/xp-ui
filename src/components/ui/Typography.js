@@ -2,10 +2,10 @@
 
 import { PureComponent } from 'react'
 
-import elem from '../utils/elem'
+import elem from '../../utils/elem'
 
-import theme from '../styles/theme'
-import typo from '../styles/typo'
+import theme from '../../styles/theme'
+import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 

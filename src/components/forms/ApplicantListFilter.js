@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
-import typo from '../styles/typo'
+import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 

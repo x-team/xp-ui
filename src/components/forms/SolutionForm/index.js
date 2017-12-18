@@ -3,12 +3,12 @@
 import React, { PureComponent } from 'react'
 
 import Title from './Title'
-import Button from '../Button'
+import Button from '../../ui/Button'
 
-import elem from '../../utils/elem'
+import elem from '../../../utils/elem'
 
-import theme, { breakpoints } from '../../styles/theme'
-import typo from '../../styles/typo'
+import theme, { breakpoints } from '../../../styles/theme'
+import typo from '../../../styles/typo'
 
 const cmz = require('cmz')
 

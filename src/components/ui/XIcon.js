@@ -1,7 +1,8 @@
 // @flow
 
 import { PureComponent } from 'react'
-import elem from '../utils/elem'
+
+import elem from '../../utils/elem'
 
 const cmz = require('cmz')
 
@@ -11,7 +12,7 @@ const Img = elem.img(cmz(`
   width: 55px
   margin: 0 0 56px 0
 `), {
-  src: require('../assets/x-black.png'),
+  src: require('../../assets/x-black.png'),
   alt: 'X-Team Logo'
 })
 

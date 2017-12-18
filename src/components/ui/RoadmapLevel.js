@@ -6,9 +6,9 @@ import SvgIcon from './SvgIcon'
 import Text from './Text'
 import Button from './Button'
 
-import elem from '../utils/elem'
+import elem from '../../utils/elem'
 
-import theme from '../styles/theme'
+import theme from '../../styles/theme'
 
 import type { Element } from 'react'
 import type { Icon } from './SvgIcon'

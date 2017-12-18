@@ -3,10 +3,10 @@
 import React, { PureComponent, Children } from 'react'
 import { findDOMNode } from 'react-dom'
 
-import elem from '../utils/elem'
-import { throttle, isScrolledIntoView } from '../utils/helpers'
-
 import RoadmapTimelineElement from './RoadmapTimelineElement'
+
+import elem from '../../utils/elem'
+import { throttle, isScrolledIntoView } from '../../utils/helpers'
 
 import type { Element } from 'react'
 

@@ -4,8 +4,8 @@ import React, { PureComponent } from 'react'
 
 import SvgIcon from './SvgIcon'
 
-import theme from '../styles/theme'
-import typo from '../styles/typo'
+import theme from '../../styles/theme'
+import typo from '../../styles/typo'
 
 import type { Icon } from './SvgIcon'
 

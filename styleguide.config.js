@@ -4,11 +4,21 @@ const path = require('path')
 const config = require('./webpack.config.js')
 
 module.exports = snapguidist({
-  title: 'X-Team: Auto UI',
+  title: 'Auto Components Library',
   components: 'src/components/**/*.js',
+  sections: [
+    {
+      name: 'UI Components',
+      components: 'src/components/ui/**/*.js',
+    },
+    {
+      name: 'Forms',
+      components: 'src/components/forms/**/*.js'
+    }
+  ],
   webpackConfig: {
     devtool: 'source-map',
     module: config.module
   },
-  ignore: ['**/components/SolutionForm/Title.js']
+  ignore: ['**/components/forms/SolutionForm/Title.js']
 })

@@ -2,9 +2,9 @@
 
 import { PureComponent } from 'react'
 
-import elem from '../utils/elem'
+import elem from '../../utils/elem'
 
-import typo from '../styles/typo'
+import typo from '../../styles/typo'
 
 import type { Element } from 'react'
 
