@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import theme from '../styles/theme'
+
+import theme from '../../styles/theme'
 
 export type Icon = 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus'
 export type Color = 'default' | 'inverted' | 'monochrome'

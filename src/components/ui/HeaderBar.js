@@ -2,8 +2,8 @@
 
 import React, { PureComponent } from 'react'
 
-import theme from '../styles/theme'
-import { xTeamLogo } from '../styles/logo'
+import theme from '../../styles/theme'
+import { xTeamLogo } from '../../styles/logo'
 
 const cmz = require('cmz')
 

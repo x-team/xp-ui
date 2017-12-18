@@ -1,10 +1,10 @@
 import { PureComponent } from 'react'
 import md5 from 'crypto-js/md5'
 
-import elem from '../utils/elem'
+import elem from '../../utils/elem'
 
-import theme from '../styles/theme'
-import typo from '../styles/typo'
+import theme from '../../styles/theme'
+import typo from '../../styles/typo'
 
 import type { Element } from 'react'
 

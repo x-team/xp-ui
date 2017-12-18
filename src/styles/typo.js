@@ -1,6 +1,6 @@
 import WebFont from 'webfontloader'
 
-import theme, { breakpoints } from '../styles/theme'
+import theme, { breakpoints } from './theme'
 
 const cmz = require('cmz')
 

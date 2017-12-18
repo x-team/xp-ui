@@ -3,10 +3,10 @@
 import React, { PureComponent } from 'react'
 import { compose, withState, onlyUpdateForKeys } from 'recompose'
 
-import elem from '../utils/elem'
+import elem from '../../utils/elem'
 
-import theme from '../styles/theme'
-import typo from '../styles/typo'
+import theme from '../../styles/theme'
+import typo from '../../styles/typo'
 
 import SvgIcon from './SvgIcon'
 

@@ -5,8 +5,8 @@ import React, { PureComponent } from 'react'
 import type { CmzAtom } from 'cmz'
 import type { Element } from 'react'
 
-import theme from '../styles/theme'
-import typo from '../styles/typo'
+import theme from '../../styles/theme'
+import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 

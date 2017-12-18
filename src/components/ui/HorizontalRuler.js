@@ -1,8 +1,9 @@
 // @flow
 
 import { PureComponent } from 'react'
-import elem from '../utils/elem'
-import theme from '../styles/theme'
+
+import elem from '../../utils/elem'
+import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 

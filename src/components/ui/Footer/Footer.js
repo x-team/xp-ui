@@ -2,9 +2,9 @@
 
 import React, { PureComponent } from 'react'
 
-import { xTeamLogo } from '../../styles/logo'
-import theme from '../../styles/theme'
-import typo from '../../styles/typo'
+import { xTeamLogo } from '../../../styles/logo'
+import theme from '../../../styles/theme'
+import typo from '../../../styles/typo'
 
 import type { Element } from 'react'
 
