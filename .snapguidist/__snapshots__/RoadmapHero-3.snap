@@ -4,15 +4,15 @@ exports[`RoadmapHero-3 1`] = `
   <div
     className="AutoUI_ui_RoadmapHero-36">
     <section
-      className="AutoUI_ui_Text-26">
+      className="AutoUI_ui_Text-27">
       <h1
         className="undefined AutoUI_typo-61 AutoUI_typo-53 AutoUI_typo-22">
         Next Steps
       </h1>
       <span
-        className="AutoUI_ui_Text-39 AutoUI_typo-174" />
+        className="AutoUI_ui_Text-40 AutoUI_typo-174" />
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-42 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
         Thanks for completing the challenge and telling us a bit about yourself. Next, you will soon receive an e-mail from an X-Team Ambassador who will help us determine if you are a good fit for X-Team.
       </div>
     </section>

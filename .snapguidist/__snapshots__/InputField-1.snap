@@ -1,0 +1,22 @@
+exports[`InputField-1 1`] = `
+<div>
+  <label
+    id="label-name">
+    <section
+      className="AutoUI_ui_Text-27">
+      <div
+        className="AutoUI_ui_Text-42 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+        First Name
+      </div>
+    </section>
+    <input
+      aria-labelledby="label-name"
+      className="AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80"
+      defaultValue="Simon"
+      id="name"
+      name="name"
+      placeholder="First name.."
+      type="text" />
+  </label>
+</div>
+`;
