@@ -7,6 +7,7 @@ import ErrorBox from './components/ui/ErrorBox'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
+import InputGroup from './components/forms/InputGroup'
 import Milestones from './components/ui/Milestones'
 import Roadmap from './components/ui/Roadmap'
 import RoadmapHero from './components/ui/RoadmapHero'
@@ -32,6 +33,7 @@ export {
   HeaderBar,
   HorizontalRuler,
   InputField,
+  InputGroup,
   Milestones,
   Roadmap,
   RoadmapHero,
