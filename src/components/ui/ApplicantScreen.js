@@ -1,8 +1,11 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+
 import elem from '../../utils/elem'
+
 import HeaderBar from './HeaderBar'
+import Text from './Text'
 
 import type { Element } from 'react'
 
@@ -11,8 +14,8 @@ const cmz = require('cmz')
 const Root = elem.div()
 
 const Content = elem.div(cmz(`
-  max-width: 1180px
-  margin: 93px auto
+  max-width: 1280px
+  margin: 93px auto 0
 `))
 
 type Props = {
@@ -21,8 +24,7 @@ type Props = {
 
 class ApplicantScreen extends PureComponent<Props> {
   render () {
-    const { children } = this.props
-    return Root(<HeaderBar />, Content(children))
+    return Root(<HeaderBar />, Content(this.props.children))
   }
 }
 
