@@ -120,3 +120,9 @@ Text example (Without Heading and Sub Heading with isCentered align):
   hasDivider={true}
 />
 ```
+
+Text example (Pure content with no wrappers around):
+
+```js
+<Text content="Just a sample text" isPureContent />
+```

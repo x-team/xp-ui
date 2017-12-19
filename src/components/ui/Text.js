@@ -19,6 +19,7 @@ type Props = {
   content?: Element<*>|string,
   isCentered: ?boolean,
   hasDivider: ?boolean,
+  isPureContent: ?boolean,
   headingType?: Type,
   subHeadingType?: Type
 }
@@ -43,6 +44,8 @@ const Content = elem.div(cmz(
   'margin: 15px 0'
 ))
 
+const PureContent = elem.span(cmz(typo.baseText))
+
 const centerAlign = cmz(`text-align: center`)
 
 const contentDividerCenter = cmz(`
@@ -53,7 +56,8 @@ const contentDividerCenter = cmz(`
 class Text extends PureComponent<Props> {
   static defaultProps = {
     isCentered: false,
-    hasDivider: false
+    hasDivider: false,
+    isPureContent: false
   }
 
   render () {
@@ -65,8 +69,13 @@ class Text extends PureComponent<Props> {
       level,
       content,
       isCentered,
-      hasDivider
+      hasDivider,
+      isPureContent
     } = this.props
+
+    if (isPureContent) {
+      return PureContent(content)
+    }
 
     return Root(isCentered ? {className: centerAlign} : {},
       heading && Heading({ className: typo[headingType] }, heading),
