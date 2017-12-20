@@ -228,31 +228,33 @@ exports[`ApplicantScreen-3 1`] = `
         </ul>
       </div>
       <div
-        className="AutoUI_ui_MilestonesScreen-22">
+        className="AutoUI_ui_MilestonesScreen-19">
         <div
-          className="AutoUI_ui_MilestonesScreen-34 AutoUI_ui_MilestonesScreen-15">
-          <section
-            className="AutoUI_ui_Text-27">
-            <h1
-              className="undefined AutoUI_typo-75 AutoUI_typo-53 AutoUI_typo-22">
-              So it begins.
-            </h1>
-            <div
-              className="AutoUI_ui_Text-42 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
-              Let’s kick things off with a warmup. To proceed, click the button below to download a short programming challenge. You can bookmark this page for later access.
-            </div>
-          </section>
+          className="AutoUI_ui_MilestonesScreen-26">
+          <div
+            className="AutoUI_ui_MilestonesScreen-38">
+            <section
+              className="AutoUI_ui_Text-27">
+              <h1
+                className="undefined AutoUI_typo-75 AutoUI_typo-53 AutoUI_typo-22">
+                So it begins.
+              </h1>
+              <div
+                className="AutoUI_ui_Text-42 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+                Let’s kick things off with a warmup. To proceed, click the button below to download a short programming challenge. You can bookmark this page for later access.
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
-      <div
-        className="AutoUI_ui_MilestonesScreen-42 AutoUI_ui_MilestonesScreen-15">
-        <button
-          className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 ">
-          <span
-            className="AutoUI_ui_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
-            Click here to go to next step
-          </span>
-        </button>
+        <div>
+          <button
+            className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 ">
+            <span
+              className="AutoUI_ui_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+              Click here to go to next step
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
