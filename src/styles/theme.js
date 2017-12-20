@@ -28,7 +28,6 @@ const palette = {
   scarpaFlow: '#5A5665',
   manatee: '#918CA0',
   athensGray: '#F0F1F4',
-  gray: '#E0E0E0',
   athensGrayAlt: '#E6E6ED',
   mercury: '#E4E4E4',
   porcelain: '#E9EDEE',
@@ -56,11 +55,11 @@ export default wrap({
   formErrorShadow: palette.wePeep,
 
   lineRed: palette.radicalRed,
-  gray: palette.gray,
   // roadmap timeline circle
   // rodamap level border
   lineSilver1: palette.mercury,
   // milestones circle and line
+  // screen sections dividers
   lineSilver2: palette.porcelain,
   // roadmap timeline line
   lineSilver3: palette.athensGray,

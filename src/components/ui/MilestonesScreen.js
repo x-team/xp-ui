@@ -1,15 +1,27 @@
 // @flow
 
 import React, { PureComponent, Children } from 'react'
-import themes from '../../styles/theme'
+
 import elem from '../../utils/elem'
+
 import Milestones from './Milestones'
+
+import theme from '../../styles/theme'
 
 import type { Element } from 'react'
 
 const cmz = require('cmz')
 
 const Root = elem.div()
+
+const CTA = elem.div()
+
+const Wrapper = elem.div(cmz(`
+  max-width: 840px
+  margin: 0 auto
+  padding-left: 60px
+  padding-right: 60px
+`))
 
 const Content = elem.div(cmz(`
   & > *:only-child,
@@ -19,21 +31,13 @@ const Content = elem.div(cmz(`
 
   & > *:only-child,
   & > *:last-child {
-    padding-bottom: 65px
+    padding-bottom: 27px
   }
 `))
 
 const Block = elem.div(cmz(`
-  max-width: 920px
-  margin: 0 auto
-  padding: 65px 60px 130px
-  border-top: 1px solid ${themes.gray}
-`))
-
-const Cta = elem.div(cmz(`
-  max-width: 920px
-  margin: 0 auto
-  padding: 0 60px
+  padding: 80px 0 84px
+  border-top: 1px solid ${theme.lineSilver2}
 `))
 
 type Props = {
@@ -62,10 +66,15 @@ class MilestonesScreen extends PureComponent<Props> {
         ]}
       />
     )
+    const childBlocks = Children.map(children, (child, index) => Block({ key: index }, child))
 
-    const childrenBlock = Children.map(children, (child, index) => Block({ key: index }, child))
-
-    return Root(milestones, Content(childrenBlock), Cta(cta))
+    return Root(
+      milestones,
+      Wrapper(
+        Content(childBlocks),
+        CTA(cta)
+      )
+    )
   }
 }
 
