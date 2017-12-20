@@ -12,9 +12,9 @@ import type { Icon } from './SvgIcon'
 const cmz = require('cmz')
 
 type Level = {
-  label: string,
+  label?: string,
   icon: ?Icon,
-  handleClick(): void
+  handleClick?: void
 }
 
 type Props = {
@@ -24,99 +24,104 @@ type Props = {
 }
 
 const styles = {
+  root: cmz(`
+    margin: 0 auto
+    padding: 0 0 25px
+    max-width: 1158px
+  `),
+
   milestones: cmz(`
-    margin: 0 auto;
-    padding: 2em 0 3em;
-    list-style: none;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1158px;
+    margin: 0
+    padding-left: 0
+    list-style: none
+    position: relative
+    display: flex
+    justify-content: space-between
   `),
 
   milestone: cmz(`
     & {
-      text-align: center;
-      position: relative;
-      width: 100%;
+      text-align: center
+      position: relative
+      width: 100%
     }
 
     &:before {
-      content: '';
-      position: absolute;
-      height: .1em;
-      background-color: ${theme.lineSilver2};
-      width: 100%;
-      left: -50%;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: all .25s ease-out;
-      z-index: 1;
+      content: ''
+      position: absolute
+      height: .1em
+      background-color: ${theme.lineSilver2}
+      width: 100%
+      left: -50%
+      top: 50%
+      transform: translateY(-50%)
+      transition: all .25s ease-out
+      z-index: 1
     }
 
     &:after {
-      content: '';
-      position: absolute;
-      height: .1em;
-      background-color: ${theme.baseRed};
-      width: 0;
-      left: -50%;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: all .25s ease-out;
-      z-index: 2;
+      content: ''
+      position: absolute
+      height: .1em
+      background-color: ${theme.baseRed}
+      width: 0
+      left: -50%
+      top: 50%
+      transform: translateY(-50%)
+      transition: all .25s ease-out
+      z-index: 2
     }
 
     &:first-child:before {
-      display: none;
+      display: none
     }
 
     &:first-child:after {
-      display: none;
+      display: none
     }
 
     &.isComplete + &.isCurrent:after {
-      width: 100%;
+      width: 100%
     }
 
     &.isComplete + &.isComplete:after {
-      width: 100%;
+      width: 100%
     }
   `),
 
   icon: cmz(`
     & {
-      position: relative;
-      display: inline-block;
-      width: 1.9em;
-      height: 1.9em;
-      background-color: ${theme.baseBrighter};
-      border: 2px solid ${theme.lineSilver2};
-      border-radius: 50%;
-      padding: .5em;
-      max-width: 100%;
-      transition: all .25s ease-out;
-      z-index: 10;
-      cursor: pointer;
+      position: relative
+      display: inline-block
+      width: 1.9em
+      height: 1.9em
+      background-color: ${theme.baseBrighter}
+      border: 2px solid ${theme.lineSilver2}
+      border-radius: 50%
+      padding: .5em
+      max-width: 100%
+      transition: all .25s ease-out
+      z-index: 10
+      cursor: pointer
     }
 
     .isCurrent & {
-      background-color: ${theme.baseRed};
-      border-color: transparent;
+      background-color: ${theme.baseRed}
+      border-color: transparent
     }
 
     .isComplete & {
-      background-color: ${theme.baseBrighter};
-      border: 2px solid ${theme.baseRed};
+      background-color: ${theme.baseBrighter}
+      border: 2px solid ${theme.baseRed}
     }
 
     & > svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      width: 47%;
-      height: 47%;
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      width: 47%
+      height: 47%
     }
   `),
 
@@ -190,9 +195,11 @@ class Milestones extends PureComponent<Props> {
     if (!levels || !levels.length) return null
 
     return (
-      <ul className={styles.milestones}>
-        {levels.map((level, index) => this.renderMilestone(level, index + 1))}
-      </ul>
+      <div className={styles.root}>
+        <ul className={styles.milestones}>
+          {levels.map((level, index) => this.renderMilestone(level, index + 1))}
+        </ul>
+      </div>
     )
   }
 }

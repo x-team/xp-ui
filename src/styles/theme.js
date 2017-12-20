@@ -59,6 +59,7 @@ export default wrap({
   // rodamap level border
   lineSilver1: palette.mercury,
   // milestones circle and line
+  // screen sections dividers
   lineSilver2: palette.porcelain,
   // roadmap timeline line
   lineSilver3: palette.athensGray,
