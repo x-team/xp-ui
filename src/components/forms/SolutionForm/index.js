@@ -26,7 +26,7 @@ type Props = {
 }
 
 const utilStyles = {
-  maxWidth: cmz('max-width: 740px'),
+  maxWidth: cmz('max-width: 840px'),
   noOutline: cmz('outline: none'),
   noTextDecoration: cmz('text-decoration: none')
 }
@@ -58,9 +58,8 @@ const textareaStyles = [
       height: 156px
       padding: 10px 20px
       margin-bottom: 100px
-      resize: none
+      resize: vertical
       border: 1px solid ${theme.lineSilver3}
-      border-radius: 4px
       box-sizing: border-box
     }
 
@@ -110,12 +109,12 @@ class SolutionForm extends PureComponent<Props> {
       Form(
         {onSubmit},
         TextareaComponent({
+          name: 'solution',
           onChange: onValueChange,
-          placeholder: 'Solution',
-          name: 'solution'
+          placeholder: 'Paste your solution here.'
         }),
         <Button disabled={isSubmitting || disableButton}>
-          {isSubmitting ? 'Checking...' : `Submit (${takenAttempts} of ${maxAttempts} attempts)`}
+          {isSubmitting ? 'Checking...' : `Submit (${takenAttempts} of ${maxAttempts})`}
         </Button>
       )
     )
