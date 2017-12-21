@@ -6,6 +6,7 @@ import elem from '../../../utils/elem'
 
 import theme, { breakpoints } from '../../../styles/theme'
 import typo from '../../../styles/typo'
+import Text from '../../ui/Text'
 
 const cmz = require('cmz')
 
@@ -21,16 +22,7 @@ const Root = elem.div(cmz(`
   text-align: left
 `))
 
-const Heading = elem.h1(typo.headline)
-
-const Subheading = elem.h2(cmz(
-  typo.baseText,
-  `
-    margin: 0 0 35px 0
-  `
-))
-
-export default class SolutionFormTitle extends PureComponent<Props> {
+class SolutionFormTitle extends PureComponent<Props> {
   static defaultProps = {
     hasAttempted: false,
     maxAttempts: 3
@@ -40,16 +32,14 @@ export default class SolutionFormTitle extends PureComponent<Props> {
     const { hasAttempted, maxAttempts } = this.props
 
     return Root(
-      Heading(
-        hasAttempted
-          ? 'Oops!'
-          : 'Got it?'
-      ),
-      Subheading(
-        hasAttempted
+      <Text
+        heading={hasAttempted ? 'Oops!' : 'Got it?'}
+        content={hasAttempted
           ? `You haven’t submitted the right solution. Please try again.`
-          : `Paste the solution below. You get ${maxAttempts} chances.`
-      )
+          : `Paste the solution below. You get ${maxAttempts} chances.`}
+      />
     )
   }
 }
+
+export default SolutionFormTitle
