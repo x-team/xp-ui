@@ -32,7 +32,7 @@ class SolutionFormTitle extends PureComponent<Props> {
         heading={hasAttempted ? 'Oops!' : 'Got it?'}
         content={hasAttempted
           ? `You haven’t submitted the right solution. Please try again.`
-          : `Paste the solution below. You get ${maxAttempts} chances.`}
+          : `Paste the solution below. You get ${maxAttempts} chances, use them wisely.`}
       />
     )
   }

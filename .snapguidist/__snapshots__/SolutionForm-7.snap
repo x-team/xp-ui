@@ -11,7 +11,7 @@ exports[`SolutionForm-7 1`] = `
       </h1>
       <div
         className="AutoUI_ui_Text-42 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
-        Paste the solution below. You get 3 chances.
+        Paste the solution below. You get 3 chances, use them wisely.
       </div>
     </section>
   </div>
