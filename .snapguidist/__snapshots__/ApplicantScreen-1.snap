@@ -62,7 +62,7 @@ exports[`ApplicantScreen-1 1`] = `
     </svg>
   </div>
   <div
-    className="AutoUI_ui_ApplicantScreen-16">
+    className="AutoUI_ui_ApplicantScreen-15">
     <span
       className="AutoUI_ui_Text-47 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
       We’d love to start to get to know more about you. Please fill out these quick questions so we can introduce you to an Ambassador who will work with you 1-on-1 to get qualified to become an X-Teamer.
