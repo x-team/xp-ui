@@ -1,16 +1,12 @@
 // @flow
 
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 
 import elem from '../../../utils/elem'
 
-import theme, { breakpoints } from '../../../styles/theme'
-import typo from '../../../styles/typo'
 import Text from '../../ui/Text'
 
 const cmz = require('cmz')
-
-import type { Element } from 'react'
 
 type Props = {
   hasAttempted: boolean,
