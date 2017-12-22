@@ -26,7 +26,7 @@ const Wrapper = elem.div(cmz(`
 const Content = elem.div(cmz(`
   & > *:only-child,
   & > *:first-child {
-    border-top: none
+    border-top: none !important
   }
 
   & > *:only-child,
@@ -36,8 +36,10 @@ const Content = elem.div(cmz(`
 `))
 
 const Block = elem.div(cmz(`
-  padding: 80px 0 84px
-  border-top: 1px solid ${theme.lineSilver2}
+  &:not(:empty) {
+    padding: 80px 0 84px
+    border-top: 1px solid ${theme.lineSilver2}
+  }
 `))
 
 type Props = {
