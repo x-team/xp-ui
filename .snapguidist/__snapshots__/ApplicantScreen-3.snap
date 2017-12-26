@@ -240,20 +240,20 @@ exports[`ApplicantScreen-3 1`] = `
                 So it begins.
               </h1>
               <div
-                className="AutoUI_ui_Text-42 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+                className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
                 Let’s kick things off with a warmup. To proceed, click the button below to download a short programming challenge. You can bookmark this page for later access.
               </div>
             </section>
+            <div>
+              <button
+                className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 ">
+                <span
+                  className="AutoUI_ui_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+                  Click here to go to next step
+                </span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div>
-          <button
-            className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 ">
-            <span
-              className="AutoUI_ui_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
-              Click here to go to next step
-            </span>
-          </button>
         </div>
       </div>
     </div>
