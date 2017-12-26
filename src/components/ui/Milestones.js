@@ -23,7 +23,7 @@ type Props = {
   levels: Array<Level>
 }
 
-const styles = {
+const cx = {
   root: cmz(`
     margin: 0 auto
     padding: 0 0 25px
@@ -102,7 +102,6 @@ const styles = {
       max-width: 100%
       transition: all .25s ease-out
       z-index: 10
-      cursor: pointer
     }
 
     .isCurrent & {
@@ -135,7 +134,9 @@ const styles = {
       width: 100%
       transition: all .25s ease-out
     `
-  )
+  ),
+
+  pointer: cmz('cursor: pointer')
 }
 
 class Milestones extends PureComponent<Props> {
@@ -178,13 +179,17 @@ class Milestones extends PureComponent<Props> {
   renderMilestone = (level: Level, index: number) => {
     const currentState = this.getCurrentState(index)
     const label = level.label || `Level ${index}`
+    const pointerClassName = typeof level.handleClick === 'function' ? cx.pointer : ''
 
     return (
-      <li key={index} className={`${styles.milestone} ${currentState.statusClassName}`}>
-        <div className={styles.icon} onClick={this.handleChangeMilestone(level, index)}>
+      <li key={index} className={`${cx.milestone} ${currentState.statusClassName}`}>
+        <div
+          className={`${cx.icon} ${pointerClassName}`}
+          onClick={this.handleChangeMilestone(level, index)}
+        >
           <SvgIcon icon={level.icon} color={currentState.iconColor} />
         </div>
-        <span className={styles.label}>{label}</span>
+        <span className={cx.label}>{label}</span>
       </li>
     )
   }
@@ -195,8 +200,8 @@ class Milestones extends PureComponent<Props> {
     if (!levels || !levels.length) return null
 
     return (
-      <div className={styles.root}>
-        <ul className={styles.milestones}>
+      <div className={cx.root}>
+        <ul className={cx.milestones}>
           {levels.map((level, index) => this.renderMilestone(level, index + 1))}
         </ul>
       </div>
