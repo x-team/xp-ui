@@ -68,14 +68,15 @@ class MilestonesScreen extends PureComponent<Props> {
         ]}
       />
     )
-    const childBlocks = Children.map(children, (child, index) => Block({ key: index }, child))
+    const childBlocks = Children.map(children, (child, index) => Block(
+      { key: index },
+      child,
+      CTA(cta)
+    ))
 
     return Root(
       milestones,
-      Wrapper(
-        Content(childBlocks),
-        CTA(cta)
-      )
+      Wrapper(Content(childBlocks))
     )
   }
 }
