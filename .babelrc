@@ -1,11 +1,11 @@
 {
-  "presets": ["stage-2", "react", "es2015"],
+  "presets": ["stage-2", "react", "env"],
   "passPerPreset": true,
   "plugins" : [
     "syntax-flow",
     "transform-flow-strip-types",
     ["cmz-names", {
-      replace: [
+      "replace": [
         ["src_components", "AutoUI"],
         ["src_styles", "AutoUI"]
       ]
