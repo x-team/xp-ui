@@ -12,8 +12,6 @@ import typo from '../../../styles/typo'
 
 const cmz = require('cmz')
 
-import type { Element } from 'react'
-
 type Props = {
   disableButton: boolean,
   hasAttempted: boolean,
