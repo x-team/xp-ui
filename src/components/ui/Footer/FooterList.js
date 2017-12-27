@@ -23,6 +23,11 @@ const cx = {
   `),
   item: cmz(`
     margin-bottom: .5em;
+  `,
+  `
+  @media screen and (max-width: 1024px) { & {
+    margin: 1em 0;
+  } }
   `),
   list: cmz(`
     list-style: none;
@@ -35,7 +40,12 @@ const cx = {
     text-transform: uppercase;
     color: ${theme.baseDarker}
     margin: 0 0 2em;
-  `)
+  `,
+  `
+  @media screen and (max-width: 1024px) { &:not(:nth-child(2)) {
+    display: none
+  } }
+  `),
 }
 
 export default class FooterList extends PureComponent<Props> {
