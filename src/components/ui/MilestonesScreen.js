@@ -6,21 +6,43 @@ import elem from '../../utils/elem'
 
 import Milestones from './Milestones'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 
 import type { Element } from 'react'
 
 const cmz = require('cmz')
+
+type Props = {
+  level: number,
+  children?: Element<*>,
+  cta?: Element<*>
+}
 
 const Root = elem.div()
 
 const CTA = elem.div()
 
 const Wrapper = elem.div(cmz(`
-  max-width: 840px
-  margin: 0 auto
-  padding-left: 60px
-  padding-right: 60px
+  & {
+    max-width: 840px
+    margin: 0 auto
+    padding-left: 60px
+    padding-right: 60px
+  }
+
+  @media screen and (max-width: ${breakpoints.sm}) {
+    & {
+      padding-left: 30px
+      padding-right: 30px
+    }
+  }
+
+  @media screen and (max-width: ${breakpoints.xs}) {
+    & {
+      padding-left: 15px
+      padding-right: 15px
+    }
+  }
 `))
 
 const Content = elem.div(cmz(`
@@ -41,12 +63,6 @@ const Block = elem.div(cmz(`
     border-top: 1px solid ${theme.lineSilver2}
   }
 `))
-
-type Props = {
-  level: number,
-  children?: Element<*>,
-  cta?: Element<*>
-}
 
 class MilestonesScreen extends PureComponent<Props> {
   static defaultProps = {
