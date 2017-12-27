@@ -6,6 +6,11 @@ Footer Example
   lists={[
     <FooterList title="Foo Links" items={[
       {
+        'label': 'Im hidden',
+        'url': '/imHidden',
+        'mobileOnly': true
+      },
+      {
         'label': 'Foo 1',
         'url': '/foo1'
       },

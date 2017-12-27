@@ -46,6 +46,11 @@ const cx = {
     display: none
   } }
   `),
+  mobile: cmz(`
+    @media screen and (min-width: 1024px) { & {
+      display: none
+    } }
+  `)
 }
 
 export default class FooterList extends PureComponent<Props> {
@@ -56,8 +61,9 @@ export default class FooterList extends PureComponent<Props> {
         <h4 className={cx.title}>{title}</h4>
         <ul className={cx.list}>
           {items.map((item, id) => {
+            const mobile = item.mobileOnly ? cx.mobile : ''
             return (
-              <li key={id} className={cx.item}>
+              <li key={id} className={`${cx.item} ${mobile}`}>
                 <a href={item.url} className={cx.link}>
                   {item.label}
                 </a>
