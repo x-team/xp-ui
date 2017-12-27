@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
-import theme from '../../../styles/theme'
+import theme, { breakpoints } from '../../../styles/theme'
 
 const cmz = require('cmz')
 
@@ -25,7 +25,7 @@ const cx = {
     margin-bottom: 1em;
   `,
   `
-  @media screen and (max-width: 1024px) { & {
+  @media screen and (max-width: ${breakpoints.md}) { & {
     margin: 1em 0;
   } }
   `),
@@ -42,12 +42,12 @@ const cx = {
     margin: 0 0 2em;
   `,
   `
-  @media screen and (max-width: 1024px) { &:not(:nth-child(2)) {
+  @media screen and (max-width: ${breakpoints.md}) { &:not(:nth-child(2)) {
     display: none
   } }
   `),
   mobile: cmz(`
-    @media screen and (min-width: 1024px) { & {
+    @media screen and (min-width: ${breakpoints.md}) { & {
       display: none
     } }
   `)
