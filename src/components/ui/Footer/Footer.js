@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 
 import { xTeamLogo } from '../../../styles/logo'
-import theme from '../../../styles/theme'
+import theme, { breakpoints } from '../../../styles/theme'
 import typo from '../../../styles/typo'
 
 import type { Element } from 'react'
@@ -21,7 +21,7 @@ const cx = {
     padding: 6.5rem 0;
   `,
   `
-  @media screen and (max-width: 1024px) { & {
+  @media screen and (max-width: ${breakpoints.md}) { & {
     border-top: 1px solid ${theme.lineSilver2}
     padding: 1.5rem 0;
   } }
@@ -33,7 +33,7 @@ const cx = {
     padding: 0 20px;
   `,
   `
-  @media screen and (max-width: 1024px) { & {
+  @media screen and (max-width: ${breakpoints.md}) { & {
     justify-content: center;
   } }
   `),
@@ -41,7 +41,7 @@ const cx = {
     width: 20%;
   `,
   `
-  @media screen and (max-width: 1024px) { & {
+  @media screen and (max-width: ${breakpoints.md}) { & {
     display: none;
   } }
   `),
@@ -50,7 +50,7 @@ const cx = {
     max-width: 28%;
   `,
   `
-  @media screen and (max-width: 1024px) { &:not(:nth-child(2)) {
+  @media screen and (max-width: ${breakpoints.md}) { &:not(:nth-child(2)) {
     display: none
   }
   & {
