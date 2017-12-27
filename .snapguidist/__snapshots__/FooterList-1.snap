@@ -1,13 +1,21 @@
 exports[`FooterList-1 1`] = `
 <div>
   <h4
-    className="AutoUI_ui_Footer_FooterList-32">
+    className="AutoUI_ui_Footer_FooterList-37">
     List Example
   </h4>
   <ul
-    className="AutoUI_ui_Footer_FooterList-27">
+    className="AutoUI_ui_Footer_FooterList-32">
     <li
-      className="AutoUI_ui_Footer_FooterList-24">
+      className="AutoUI_ui_Footer_FooterList-24 AutoUI_ui_Footer_FooterList-49">
+      <a
+        className="AutoUI_ui_Footer_FooterList-18"
+        href="/imHidden">
+        Im hidden
+      </a>
+    </li>
+    <li
+      className="AutoUI_ui_Footer_FooterList-24 ">
       <a
         className="AutoUI_ui_Footer_FooterList-18"
         href="/foo1">
@@ -15,7 +23,7 @@ exports[`FooterList-1 1`] = `
       </a>
     </li>
     <li
-      className="AutoUI_ui_Footer_FooterList-24">
+      className="AutoUI_ui_Footer_FooterList-24 ">
       <a
         className="AutoUI_ui_Footer_FooterList-18"
         href="/foo2">
