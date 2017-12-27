@@ -35,7 +35,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
-    "crypto-js": "^3.1.9-1",
     "eslint-plugin-flowtype": "^2.40.1",
     "eslint-plugin-react": "^7.5.1",
     "file-loader": "^1.1.6",
@@ -53,6 +52,7 @@
   "dependencies": {
     "cmz": "^3.9.0",
     "color": "^2.0.1",
+    "crypto-js": "^3.1.9-1",
     "recompose": "^0.26.0",
     "webfontloader": "^1.6.28"
   }
