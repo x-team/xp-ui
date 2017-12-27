@@ -19,19 +19,45 @@ type Props = {
 const cx = {
   footer: cmz(`
     padding: 6.5rem 0;
+  `,
+  `
+  @media screen and (max-width: 1024px) { & {
+    border-top: 1px solid ${theme.lineSilver2}
+    padding: 1.5rem 0;
+  } }
   `),
   columnContainer: cmz(`
     display: flex;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
+  `,
+  `
+  @media screen and (max-width: 1024px) { & {
+    justify-content: center;
+  } }
   `),
   logoColumn: cmz(`
     width: 20%;
+  `,
+  `
+  @media screen and (max-width: 1024px) { & {
+    display: none;
+  } }
   `),
   column: cmz(`
     flex-grow: 1;
     max-width: 28%;
+  `,
+  `
+  @media screen and (max-width: 1024px) { &:not(:nth-child(2)) {
+    display: none
+  }
+  & {
+    text-align: center
+    line-height: 1.75rem;
+  }
+  }
   `),
   colophon: cmz(`
     flex-grow: 1;
