@@ -22,7 +22,7 @@ const cx = {
     text-decoration: none;
   `),
   item: cmz(`
-    margin-bottom: .5em;
+    margin-bottom: 1em;
   `,
   `
   @media screen and (max-width: 1024px) { & {
