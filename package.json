@@ -51,7 +51,7 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
-    "cmz": "3.8.0",
+    "cmz": "^3.9.0",
     "color": "^2.0.1",
     "recompose": "^0.26.0",
     "webfontloader": "^1.6.28"
