@@ -5,7 +5,7 @@ exports[`InputField-1 1`] = `
     <section
       className="AutoUI_ui_Text-27">
       <div
-        className="AutoUI_ui_Text-42 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
         First Name
       </div>
     </section>

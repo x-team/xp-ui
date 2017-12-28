@@ -125,7 +125,7 @@ exports[`ColorPalette-1 1`] = `
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
-        "backgroundColor": "rgb(216, 216, 216)",
+        "backgroundColor": "rgb(145, 140, 160)",
       }
     }>
     <div
@@ -137,7 +137,7 @@ exports[`ColorPalette-1 1`] = `
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
-        "backgroundColor": "rgb(145, 140, 160)",
+        "backgroundColor": "rgb(90, 86, 101)",
       }
     }>
     <div

@@ -3,11 +3,11 @@ Standard use:
 ```js
 <InputGroup
   maxLength={20}
-  name="ghAccount"
-  className="social-gh"
-  addonText="github.com/"
-  placeholder="github account.."
-  defaultValue="test_account"
+  name="soAccount"
+  className="social-so"
+  addonText="stackoverflow.com/users/"
+  placeholder="stackoverflow account.."
+  defaultValue="so_account"
 />
 ```
 

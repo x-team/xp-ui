@@ -1,6 +1,6 @@
 exports[`SolutionForm-5 1`] = `
 <div
-  className="AutoUI_forms_SolutionForm_index-29 AutoUI_forms_SolutionForm_index-36">
+  className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-34">
   <div
     className="AutoUI_forms_SolutionForm_Title-16">
     <section
@@ -10,15 +10,15 @@ exports[`SolutionForm-5 1`] = `
         Oops!
       </h1>
       <div
-        className="AutoUI_ui_Text-42 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
         You haven’t submitted the right solution. Please try again.
       </div>
     </section>
   </div>
   <form
-    className="AutoUI_forms_SolutionForm_index-29 AutoUI_forms_SolutionForm_index-45">
+    className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-43">
     <textarea
-      className="AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-54 AutoUI_forms_SolutionForm_index-76"
+      className="AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-52 AutoUI_forms_SolutionForm_index-74"
       name="solution"
       placeholder="Paste your solution here." />
     <button

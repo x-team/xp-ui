@@ -92,11 +92,11 @@ const inputStyles = [
     }
 
     &::-webkit-input-placeholder {
-      color: ${theme.formText}
+      color: ${theme.formPlaceholder}
     }
 
     &::-moz-placeholder {
-      color: ${theme.formText}
+      color: ${theme.formPlaceholder}
     }
   `)
 ]

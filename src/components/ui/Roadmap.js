@@ -8,6 +8,8 @@ import RoadmapTimelineElement from './RoadmapTimelineElement'
 import elem from '../../utils/elem'
 import { throttle, isScrolledIntoView } from '../../utils/helpers'
 
+import { breakpoints as brk } from '../../styles/theme'
+
 import type { Element } from 'react'
 
 const cmz = require('cmz')
@@ -28,7 +30,7 @@ const columnClassName = cmz(`
 `)
 
 const breakpoints = {
-  small: '@media screen and (max-width: 600px)'
+  small: `@media screen and (max-width: ${brk.sm})`
 }
 
 const Root = elem.div(cmz(
@@ -61,6 +63,10 @@ const Level = elem.div(cmz(
     }
 
     ${breakpoints.small} {
+      & {
+        min-height: auto
+      }
+
       &,
       &:first-child {
         margin: 40px 0 0 0
@@ -85,6 +91,18 @@ const Box = elem.div(cmz(`
     width: auto
     padding-left: 6rem
     padding-right: 6rem
+  }
+
+  ${breakpoints.small} {
+    & {
+      width: 90%
+    }
+
+    .isFinal & {
+      width: 90%
+      padding-left: 0
+      padding-right: 0
+    }
   }
 `))
 
@@ -111,8 +129,7 @@ const Line = elem.div(cmz(`
 
   ${breakpoints.small} {
     & {
-      top: -15px
-      height: calc(100% + 40px)
+      display: none
     }
   }
 `))
