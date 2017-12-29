@@ -1,31 +1,31 @@
 exports[`FooterList-1 1`] = `
 <div>
   <h4
-    className="AutoUI_ui_Footer_FooterList-55 AutoUI_typo-40">
+    className="AutoUI_ui_Footer_FooterList-50 AutoUI_typo-40">
     List Example
   </h4>
   <ul
-    className="AutoUI_ui_Footer_FooterList-49">
+    className="AutoUI_ui_Footer_FooterList-44">
     <li
-      className="AutoUI_ui_Footer_FooterList-37 AutoUI_ui_Footer_FooterList-74">
+      className="AutoUI_ui_Footer_FooterList-32 AutoUI_ui_Footer_FooterList-69">
       <a
-        className="AutoUI_ui_Footer_FooterList-27 AutoUI_typo-40"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
         href="/imHidden">
         I\'m hidden on desktop (> 1024px)
       </a>
     </li>
     <li
-      className="AutoUI_ui_Footer_FooterList-37 ">
+      className="AutoUI_ui_Footer_FooterList-32 ">
       <a
-        className="AutoUI_ui_Footer_FooterList-27 AutoUI_typo-40"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
         href="/foo1">
         Foo 1
       </a>
     </li>
     <li
-      className="AutoUI_ui_Footer_FooterList-37 ">
+      className="AutoUI_ui_Footer_FooterList-32 ">
       <a
-        className="AutoUI_ui_Footer_FooterList-27 AutoUI_typo-40"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
         href="/foo2">
         Foo 2
       </a>
