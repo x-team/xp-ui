@@ -50,6 +50,12 @@ const cx = {
     list-style: none
     margin: 0
     padding: 0
+    `,
+    `
+    ${breakpoints.medium} {
+      display: flex
+      justify-content: center
+    }
   `),
 
   title: cmz(

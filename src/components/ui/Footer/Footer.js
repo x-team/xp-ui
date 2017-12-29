@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 
 import { xTeamLogo } from '../../../styles/logo'
-import theme, { breakpoints } from '../../../styles/theme'
+import theme, { breakpoints as brk } from '../../../styles/theme'
 import typo from '../../../styles/typo'
 
 import type { Element } from 'react'
@@ -16,15 +16,22 @@ type Props = {
   copyright: string
 }
 
+const breakpoints = {
+  medium: `@media screen and (max-width: ${brk.md})`,
+  desktop: `@media screen and (min-width: ${brk.md})`
+}
+
 const cx = {
   footer: cmz(`
     padding: 6.5rem 0;
   `,
   `
-  @media screen and (max-width: ${breakpoints.md}) { & {
-    border-top: 1px solid ${theme.lineSilver2}
-    padding: 1.5rem 0;
-  } }
+  ${breakpoints.medium} {
+    & {
+      border-top: 1px solid ${theme.lineSilver2}
+      padding: 1.5rem 0;
+    }
+  }
   `),
   columnContainer: cmz(`
     display: flex;
@@ -33,30 +40,36 @@ const cx = {
     padding: 0 20px;
   `,
   `
-  @media screen and (max-width: ${breakpoints.md}) { & {
-    justify-content: center;
-  } }
+  ${breakpoints.medium} {
+    & {
+      justify-content: center;
+    }
+  }
   `),
   logoColumn: cmz(`
     width: 20%;
   `,
   `
-  @media screen and (max-width: ${breakpoints.md}) { & {
-    display: none;
-  } }
+  ${breakpoints.medium} {
+    & {
+      display: none;
+    }
+  }
   `),
   column: cmz(`
     flex-grow: 1;
     max-width: 28%;
   `,
   `
-  @media screen and (max-width: ${breakpoints.md}) { &:not(:nth-child(2)) {
-    display: none
-  }
-  & {
-    text-align: center
-    line-height: 1.75rem;
-  }
+  ${breakpoints.medium} {
+    &:not(:nth-child(2)) {
+      display: none
+    }
+
+    & {
+      text-align: center
+      line-height: 1.75rem;
+    }
   }
   `),
   colophon: cmz(`
@@ -65,19 +78,36 @@ const cx = {
     margin-top: 3.125rem;
     padding-top: 2.5rem;
     border-top: 1px solid ${theme.lineSilver2}
+  `,
+  `
+  ${breakpoints.medium} {
+    & {
+      text-align: center;
+    }
+  }
   `),
   copyright: cmz(
     `
-    font-size: 0.75rem;
+    font-size: 14px;
     opacity: 0.5;
     line-height: 0;
     color: ${theme.baseDarker}
   `,
     typo.baseText
-  )
+  ),
+  mobileLogo: cmz(
+    `
+    ${breakpoints.desktop} {
+      & {
+        display: none
+        text-align: center
+        margin-top: 30px
+      }
+    }
+  `)
 }
 
-export default class Footer extends PureComponent<Props> {
+class Footer extends PureComponent<Props> {
   render () {
     const { lists, brands, copyright } = this.props
     return (
@@ -99,7 +129,10 @@ export default class Footer extends PureComponent<Props> {
             <div className={cx.copyright}>{copyright}</div>
           </div>
         </div>
+        <div className={cx.mobileLogo}>{xTeamLogo(94, 32, theme.baseSilver)}</div>
       </div>
     )
   }
 }
+
+export default Footer
