@@ -97,11 +97,14 @@ const cx = {
   ),
   mobileLogo: cmz(
     `
+    & {
+      text-align: center
+      margin-top: 50px
+    }
+
     ${breakpoints.desktop} {
       & {
         display: none
-        text-align: center
-        margin-top: 30px
       }
     }
   `)
