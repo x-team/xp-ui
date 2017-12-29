@@ -6,7 +6,7 @@ exports[`Milestones-3 1`] = `
     <li
       className="AutoUI_ui_Milestones-42 isCurrent">
       <div
-        className="AutoUI_ui_Milestones-92">
+        className="AutoUI_ui_Milestones-92 AutoUI_ui_Milestones-139">
         <svg
           height="43px"
           viewBox="0 0 30 43"
@@ -52,14 +52,14 @@ exports[`Milestones-3 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-128 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
         Webcam
       </span>
     </li>
     <li
       className="AutoUI_ui_Milestones-42 ">
       <div
-        className="AutoUI_ui_Milestones-92">
+        className="AutoUI_ui_Milestones-92 AutoUI_ui_Milestones-139">
         <svg
           height="36px"
           viewBox="0 0 37 36"
@@ -105,14 +105,14 @@ exports[`Milestones-3 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-128 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
         Message
       </span>
     </li>
     <li
       className="AutoUI_ui_Milestones-42 ">
       <div
-        className="AutoUI_ui_Milestones-92">
+        className="AutoUI_ui_Milestones-92 AutoUI_ui_Milestones-139">
         <svg
           height="43px"
           viewBox="0 0 37 43"
@@ -156,14 +156,14 @@ exports[`Milestones-3 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-128 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
         Head
       </span>
     </li>
     <li
       className="AutoUI_ui_Milestones-42 ">
       <div
-        className="AutoUI_ui_Milestones-92">
+        className="AutoUI_ui_Milestones-92 AutoUI_ui_Milestones-139">
         <svg
           height="39px"
           viewBox="0 0 42 39"
@@ -215,7 +215,7 @@ exports[`Milestones-3 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-128 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
         Diamond
       </span>
     </li>

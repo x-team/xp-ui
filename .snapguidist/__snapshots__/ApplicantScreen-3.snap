@@ -71,7 +71,7 @@ exports[`ApplicantScreen-3 1`] = `
           <li
             className="AutoUI_ui_Milestones-42 isCurrent">
             <div
-              className="AutoUI_ui_Milestones-92">
+              className="AutoUI_ui_Milestones-92 ">
               <svg
                 height="43px"
                 viewBox="0 0 37 43"
@@ -115,14 +115,14 @@ exports[`ApplicantScreen-3 1`] = `
               </svg>
             </div>
             <span
-              className="AutoUI_ui_Milestones-128 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+              className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
               Level 1
             </span>
           </li>
           <li
             className="AutoUI_ui_Milestones-42 ">
             <div
-              className="AutoUI_ui_Milestones-92">
+              className="AutoUI_ui_Milestones-92 ">
               <svg
                 height="43px"
                 viewBox="0 0 30 43"
@@ -168,14 +168,14 @@ exports[`ApplicantScreen-3 1`] = `
               </svg>
             </div>
             <span
-              className="AutoUI_ui_Milestones-128 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+              className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
               Level 2
             </span>
           </li>
           <li
             className="AutoUI_ui_Milestones-42 ">
             <div
-              className="AutoUI_ui_Milestones-92">
+              className="AutoUI_ui_Milestones-92 ">
               <svg
                 height="36px"
                 viewBox="0 0 37 36"
@@ -221,18 +221,18 @@ exports[`ApplicantScreen-3 1`] = `
               </svg>
             </div>
             <span
-              className="AutoUI_ui_Milestones-128 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+              className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
               Level 3
             </span>
           </li>
         </ul>
       </div>
       <div
-        className="AutoUI_ui_MilestonesScreen-19">
+        className="AutoUI_ui_MilestonesScreen-25">
         <div
-          className="AutoUI_ui_MilestonesScreen-26">
+          className="AutoUI_ui_MilestonesScreen-48">
           <div
-            className="AutoUI_ui_MilestonesScreen-38">
+            className="AutoUI_ui_MilestonesScreen-60">
             <section
               className="AutoUI_ui_Text-27">
               <h1
@@ -240,20 +240,20 @@ exports[`ApplicantScreen-3 1`] = `
                 So it begins.
               </h1>
               <div
-                className="AutoUI_ui_Text-42 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+                className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
                 Let’s kick things off with a warmup. To proceed, click the button below to download a short programming challenge. You can bookmark this page for later access.
               </div>
             </section>
+            <div>
+              <button
+                className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 ">
+                <span
+                  className="AutoUI_ui_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+                  Click here to go to next step
+                </span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div>
-          <button
-            className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 ">
-            <span
-              className="AutoUI_ui_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
-              Click here to go to next step
-            </span>
-          </button>
         </div>
       </div>
     </div>

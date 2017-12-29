@@ -12,7 +12,7 @@ You need to install:
 
 ## Get started
 
-- `nvm use v8.4.0`
+- `nvm use v9.3.0`
 - `npm install`
 - `npm start`
 

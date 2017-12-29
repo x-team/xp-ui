@@ -28,7 +28,6 @@ const Root = elem.section(cmz(`
   white-space: pre-line
   margin: 0
   clear: both
-  overflow: hidden
 `))
 
 const Heading = elem.h1()

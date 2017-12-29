@@ -1,6 +1,6 @@
 exports[`Text-21 1`] = `
 <section
-  className="AutoUI_ui_Text-27 AutoUI_ui_Text-49">
+  className="AutoUI_ui_Text-27 AutoUI_ui_Text-48">
   <h2
     className="undefined AutoUI_typo-114 AutoUI_typo-53 AutoUI_typo-22">
     Your roadmap to X-Team
@@ -10,7 +10,7 @@ exports[`Text-21 1`] = `
     Level 7
   </p>
   <div
-    className="AutoUI_ui_Text-42 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
 </section>

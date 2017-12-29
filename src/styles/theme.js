@@ -48,8 +48,8 @@ export default wrap({
   typoParagraph: palette.scarpaFlow,
   typoHighlight: palette.haiti,
 
-  formPlaceholder: palette.alto,
-  formText: palette.manatee,
+  formPlaceholder: palette.manatee,
+  formText: palette.scarpaFlow,
   formBorder: palette.athensGrayAlt,
   formError: palette.brickRed,
   formErrorShadow: palette.wePeep,

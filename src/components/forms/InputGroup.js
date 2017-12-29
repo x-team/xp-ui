@@ -6,6 +6,7 @@ import InputField from './InputField'
 
 import elem from '../../utils/elem'
 
+import { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 const cmz = require('cmz')
@@ -41,6 +42,15 @@ const AddonText = elem.span([
 
     &:first-child {
       border-right: 0
+    }
+
+    @media screen and (max-width: ${breakpoints.xs}) {
+      & {
+        display: block
+        width: 100%
+        padding-left: 0
+        padding-right: 0
+      }
     }
   `)
 ])

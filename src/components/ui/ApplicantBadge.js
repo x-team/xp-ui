@@ -13,7 +13,8 @@ type Props = {
   firstName: ?string,
   lastName: ?string,
   email: ?string,
-  active: ?boolean
+  active: ?boolean,
+  children?: Element<*> | string
 }
 
 const cmz = require('cmz')
@@ -45,11 +46,9 @@ const Name = elem.div(cmz(
   `
 ))
 
-const Email = elem.div(cmz(`
-  font-size: .9em
-`))
+const Email = elem.div(cmz('font-size: .9em'))
 
-export default class ApplicantBadge extends PureComponent<Props> {
+class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
     firstName: '',
     lastName: '',
@@ -86,3 +85,5 @@ export default class ApplicantBadge extends PureComponent<Props> {
     )
   }
 }
+
+export default ApplicantBadge
