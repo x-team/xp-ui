@@ -2,58 +2,85 @@
 
 import React, { PureComponent } from 'react'
 
-import theme, { breakpoints } from '../../../styles/theme'
+import { typeface } from '../../../styles/typo'
+import theme, { breakpoints as brk } from '../../../styles/theme'
 
 const cmz = require('cmz')
 
+type MenuItem = {
+  label: string,
+  url: string,
+  mobileOnly: ?boolean
+}
+
 type Props = {
   title: string,
-  items: Array<{
-    label: string,
-    url: string
-  }>
+  items: Array<MenuItem>
+}
+
+const breakpoints = {
+  medium: `@media screen and (max-width: ${brk.md})`,
+  desktop: `@media screen and (min-width: ${brk.md})`
 }
 
 const cx = {
-  link: cmz(`
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    color: ${theme.baseDarker};
-    text-decoration: none;
-  `),
+  link: cmz(
+    typeface.text,
+    `
+      font-size: 1rem
+      font-weight: 400
+      color: ${theme.baseDarker}
+      text-decoration: none
+    `
+  ),
+
   item: cmz(`
-    margin-bottom: 1em;
-  `,
-  `
-  @media screen and (max-width: ${breakpoints.md}) { & {
-    margin: 1em 0;
-  } }
+    & {
+      margin-bottom: 1em
+    }
+
+    ${breakpoints.medium} {
+      & {
+        margin: 1em 0
+      }
+    }
   `),
+
   list: cmz(`
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style: none
+    margin: 0
+    padding: 0
   `),
-  title: cmz(`
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    color: ${theme.baseDarker}
-    margin: 0 0 2em;
-  `,
-  `
-  @media screen and (max-width: ${breakpoints.md}) { &:not(:nth-child(2)) {
-    display: none
-  } }
-  `),
+
+  title: cmz(
+    typeface.text,
+    `
+      & {
+        font-size: 1.25rem
+        font-weight: 400
+        text-transform: uppercase
+        color: ${theme.baseDarker}
+        margin: 0 0 2em
+      }
+
+      ${breakpoints.medium} {
+        &:not(:nth-child(2)) {
+          display: none
+        }
+      }
+    `
+  ),
+
   mobile: cmz(`
-    @media screen and (min-width: ${breakpoints.md}) { & {
-      display: none
-    } }
+    ${breakpoints.desktop} {
+      & {
+        display: none
+      }
+    }
   `)
 }
 
-export default class FooterList extends PureComponent<Props> {
+class FooterList extends PureComponent<Props> {
   render () {
     const { items, title } = this.props
     return (
@@ -75,3 +102,5 @@ export default class FooterList extends PureComponent<Props> {
     )
   }
 }
+
+export default FooterList

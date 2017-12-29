@@ -17,7 +17,7 @@ WebFont.load({
 /**
  * Using named typefaces according to their meaning
  */
-const typeface = {
+export const typeface = {
   // headers, subheaders
   extraHeading: cmz(`
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif

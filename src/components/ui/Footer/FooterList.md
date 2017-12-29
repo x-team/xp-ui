@@ -1,9 +1,9 @@
-Footer List Example
+Standard use:
 
 ```js
 <FooterList title="List Example" items={[
   {
-    'label': 'Im hidden',
+    'label': `I'm hidden on desktop (> 1024px)`,
     'url': '/imHidden',
     'mobileOnly': true
   },
