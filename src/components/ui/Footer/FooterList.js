@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 
 import { typeface } from '../../../styles/typo'
-import theme, { breakpoints as brk } from '../../../styles/theme'
+import theme, { mediaQueries } from '../../../styles/theme'
 
 const cmz = require('cmz')
 
@@ -16,11 +16,6 @@ type MenuItem = {
 type Props = {
   title: string,
   items: Array<MenuItem>
-}
-
-const breakpoints = {
-  medium: `@media screen and (max-width: ${brk.md})`,
-  desktop: `@media screen and (min-width: ${brk.md})`
 }
 
 const cx = {
@@ -39,7 +34,7 @@ const cx = {
       margin-bottom: 1em
     }
 
-    ${breakpoints.medium} {
+    ${mediaQueries.medium} {
       & {
         margin: 1em 0
       }
@@ -63,7 +58,7 @@ const cx = {
         margin: 0 0 2em
       }
 
-      ${breakpoints.medium} {
+      ${mediaQueries.medium} {
         &:not(:nth-child(2)) {
           display: none
         }
@@ -72,7 +67,7 @@ const cx = {
   ),
 
   mobile: cmz(`
-    ${breakpoints.desktop} {
+    ${mediaQueries.desktop} {
       & {
         display: none
       }

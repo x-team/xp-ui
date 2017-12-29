@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 
 import { xTeamLogo } from '../../../styles/logo'
-import theme, { breakpoints as brk } from '../../../styles/theme'
+import theme, { mediaQueries } from '../../../styles/theme'
 import typo from '../../../styles/typo'
 
 import type { Element } from 'react'
@@ -16,17 +16,12 @@ type Props = {
   copyright: string
 }
 
-const breakpoints = {
-  medium: `@media screen and (max-width: ${brk.md})`,
-  desktop: `@media screen and (min-width: ${brk.md})`
-}
-
 const cx = {
   footer: cmz(`
     padding: 6.5rem 0;
   `,
   `
-  ${breakpoints.medium} {
+  ${mediaQueries.medium} {
     & {
       border-top: 1px solid ${theme.lineSilver2}
       padding: 1.5rem 0;
@@ -40,7 +35,7 @@ const cx = {
     padding: 0 20px;
   `,
   `
-  ${breakpoints.medium} {
+  ${mediaQueries.medium} {
     & {
       justify-content: center;
     }
@@ -50,7 +45,7 @@ const cx = {
     width: 20%;
   `,
   `
-  ${breakpoints.medium} {
+  ${mediaQueries.medium} {
     & {
       display: none;
     }
@@ -61,7 +56,7 @@ const cx = {
     max-width: 28%;
   `,
   `
-  ${breakpoints.medium} {
+  ${mediaQueries.medium} {
     &:not(:nth-child(2)) {
       display: none
     }
@@ -80,7 +75,7 @@ const cx = {
     border-top: 1px solid ${theme.lineSilver2}
   `,
   `
-  ${breakpoints.medium} {
+  ${mediaQueries.medium} {
     & {
       text-align: center;
     }
@@ -102,7 +97,7 @@ const cx = {
       margin-top: 50px
     }
 
-    ${breakpoints.desktop} {
+    ${mediaQueries.desktop} {
       & {
         display: none
       }

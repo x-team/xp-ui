@@ -79,3 +79,8 @@ export const breakpoints = {
   lg: '1280px',
   xl: '1440px'
 }
+
+export const mediaQueries = {
+  medium: `@media screen and (max-width: ${breakpoints.md})`,
+  desktop: `@media screen and (min-width: ${breakpoints.md})`
+}

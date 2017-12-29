@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
-import { breakpoints as brk } from '../../../styles/theme'
+import { mediaQueries } from '../../../styles/theme'
 import typo from '../../../styles/typo'
 
 const cmz = require('cmz')
@@ -16,11 +16,6 @@ type Props = {
   }>
 }
 
-const breakpoints = {
-  medium: `@media screen and (max-width: ${brk.md})`,
-  desktop: `@media screen and (min-width: ${brk.md})`
-}
-
 const cx = {
   logos: cmz(`
     list-style: none;
@@ -29,9 +24,11 @@ const cx = {
     display: flex;
   `,
   `
-  @media screen and (max-width: ${breakpoints.md}) { & {
-    display: block
-  } }
+  ${mediaQueries.medium} {
+    & {
+      display: block
+    }
+  }
   `),
   brand: cmz(`
     line-height: 3rem;
@@ -39,11 +36,16 @@ const cx = {
     display: inline-block;
     vertical-align: middle;
   `,
-  `&:last-child { margin-right: 0; }
-  @media screen and (min-width: ${breakpoints.md}) { & {
-    line-height: 4rem;
-    margin-right: 3rem;
-  } }
+  `
+  &:last-child {
+    margin-right: 0;
+  }
+  ${mediaQueries.desktop} {
+    & {
+      line-height: 4rem;
+      margin-right: 3rem;
+    }
+  }
   `),
   image: cmz(`
     max-height: 4rem;
