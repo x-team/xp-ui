@@ -1,31 +1,51 @@
 exports[`FooterBrands-1 1`] = `
 <div>
   <h4
-    className="AutoUI_ui_Footer_FooterBrands-61 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
-    Placeholder text
+    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-34">
+    Trusted by the world\'s leading brands since 2006
   </h4>
   <div
-    className="AutoUI_ui_Footer_FooterBrands-58">
+    className="AutoUI_ui_Footer_FooterBrands-64">
     <ul
       className="AutoUI_ui_Footer_FooterBrands-20">
       <li
-        className="AutoUI_ui_Footer_FooterBrands-33">
+        className="AutoUI_ui_Footer_FooterBrands-35">
         <a
           href="https://example.com">
           <img
             alt="Foo Corp"
-            className="AutoUI_ui_Footer_FooterBrands-50"
+            className="AutoUI_ui_Footer_FooterBrands-55"
             src="http://satyr.io/120x30?text=Foo+Corp" />
         </a>
       </li>
       <li
-        className="AutoUI_ui_Footer_FooterBrands-33">
+        className="AutoUI_ui_Footer_FooterBrands-35">
         <a
           href="https://example.com">
           <img
             alt="Bar Corp"
-            className="AutoUI_ui_Footer_FooterBrands-50"
+            className="AutoUI_ui_Footer_FooterBrands-55"
             src="http://satyr.io/120x30?text=Bar+Corp" />
+        </a>
+      </li>
+      <li
+        className="AutoUI_ui_Footer_FooterBrands-35">
+        <a
+          href="https://example.com">
+          <img
+            alt="Baz Corp"
+            className="AutoUI_ui_Footer_FooterBrands-55"
+            src="http://satyr.io/120x30?text=Baz+Corp" />
+        </a>
+      </li>
+      <li
+        className="AutoUI_ui_Footer_FooterBrands-35">
+        <a
+          href="https://example.com">
+          <img
+            alt="Quux Corp"
+            className="AutoUI_ui_Footer_FooterBrands-55"
+            src="http://satyr.io/120x30?text=Quux+Corp" />
         </a>
       </li>
     </ul>

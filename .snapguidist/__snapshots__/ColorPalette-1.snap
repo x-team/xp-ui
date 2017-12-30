@@ -277,5 +277,17 @@ exports[`ColorPalette-1 1`] = `
       iconDark
     </div>
   </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(179, 179, 179)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      logoGray
+    </div>
+  </div>
 </section>
 `;
