@@ -7,7 +7,7 @@ const cmz = require('cmz')
 WebFont.load({
   google: {
     families: [
-      'Open Sans:600,700,800',
+      'Open Sans:400,600,700,800',
       'Source Sans Pro:300,700',
       'Montserrat:400'
     ]
@@ -17,7 +17,7 @@ WebFont.load({
 /**
  * Using named typefaces according to their meaning
  */
-const typeface = {
+export const typeface = {
   // headers, subheaders
   extraHeading: cmz(`
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif

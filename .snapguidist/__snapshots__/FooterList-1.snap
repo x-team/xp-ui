@@ -1,25 +1,57 @@
 exports[`FooterList-1 1`] = `
 <div>
   <h4
-    className="AutoUI_ui_Footer_FooterList-32">
+    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34">
     List Example
   </h4>
   <ul
-    className="AutoUI_ui_Footer_FooterList-27">
+    className="AutoUI_ui_Footer_FooterList-50">
     <li
-      className="AutoUI_ui_Footer_FooterList-24">
+      className="AutoUI_ui_Footer_FooterList-38 AutoUI_ui_Footer_FooterList-74">
       <a
-        className="AutoUI_ui_Footer_FooterList-18"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
         href="/foo1">
-        Foo 1
+        Item 1 (hidden on desktop (> 1024px))
       </a>
     </li>
     <li
-      className="AutoUI_ui_Footer_FooterList-24">
+      className="AutoUI_ui_Footer_FooterList-38 AutoUI_ui_Footer_FooterList-74">
       <a
-        className="AutoUI_ui_Footer_FooterList-18"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
         href="/foo2">
-        Foo 2
+        Item 2 (hidden on desktop (> 1024px))
+      </a>
+    </li>
+    <li
+      className="AutoUI_ui_Footer_FooterList-38 ">
+      <a
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
+        href="/foo3">
+        Item 3
+      </a>
+    </li>
+    <li
+      className="AutoUI_ui_Footer_FooterList-38 ">
+      <a
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
+        href="/foo4">
+        Item 4
+      </a>
+    </li>
+    <li
+      className="AutoUI_ui_Footer_FooterList-38 ">
+      <a
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
+        href="/foo5">
+        Item 5
+      </a>
+    </li>
+    <li
+      className="AutoUI_ui_Footer_FooterList-38 ">
+      <a
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
+        href="/foo6">
+        Item 6
       </a>
     </li>
   </ul>

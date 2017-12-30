@@ -1,41 +1,101 @@
-Footer Example
+Standard use:
 
 ```js
 <Footer
-  copyright="Copyright Foo Corp"
+  copyright="2017 © All rights reserved. X-Company Pty Ltd."
   lists={[
-    <FooterList title="Foo Links" items={[
+    <FooterList title="Company" items={[
       {
-        'label': 'Foo 1',
-        'url': '/foo1'
+        label: 'Home',
+        url: '/',
+        mobileOnly: true
       },
       {
-        'label': 'Foo 2',
-        'url': '/foo2'
-      }
-    ]}/>,
-    <FooterList title="Bar Links" items={[
-      {
-        'label': 'Bar 1',
-        'url': '/bar1'
+        label: 'Blog',
+        url: '/blog',
+        mobileOnly: true
       },
       {
-        'label': 'Bar 2',
-        'url': '/bar2'
+        label: 'About Us',
+        url: '/about'
+      },
+      {
+        label: 'Our Work',
+        url: '/portfolio'
+      },
+      {
+        label: 'Unleash',
+        url: '/unleash'
+      },
+      {
+        label: 'X-Outpost',
+        url: '/xo'
+      },
+      {
+        label: 'Our Developers',
+        url: '/our-developers'
       }
-    ]}/>
+    ]} />,
+    <FooterList title="Resources" items={[
+      {
+        label: 'Resource 1',
+        url: '/res1'
+      },
+      {
+        label: 'Resource 2',
+        url: '/res2'
+      }
+    ]} />,
+    <FooterList title="Hire Developers" items={[
+      {
+        label: 'Developer 1',
+        url: '/dev1'
+      },
+      {
+        label: 'Developer 2',
+        url: '/dev2'
+      }
+    ]} />,
+    <FooterList title="Connect" items={[
+      {
+        label: 'Blog',
+        url: '/blog'
+      },
+      {
+        label: 'Twitter',
+        url: '/twitter'
+      },
+      {
+        label: 'Facebook',
+        url: '/facebook'
+      },
+      {
+        label: 'Linked',
+        url: '/linkedin'
+      }
+    ]} />
   ]}
-  brands={<FooterBrands message="Placeholder text" brands={[
-    {
-      title: "Foo Corp",
-      image: "http://satyr.io/120x30?text=Foo+Corp",
-      url: "https://example.com"
-    },
-    {
-      title: "Bar Corp",
-      image: "http://satyr.io/120x30?text=Bar+Corp",
-      url: "https://example.com"
-    },
-  ]} />}
+  brands={
+    <FooterBrands
+      message="Trusted by the world's leading brands since 2006"
+      brands={[
+        {
+          title: "Foo Corp",
+          image: "http://satyr.io/120x30?text=Foo+Corp",
+          url: "https://example.com"
+        },
+        {
+          title: "Bar Corp",
+          image: "http://satyr.io/120x30?text=Bar+Corp",
+          url: "https://example.com"
+        },
+        {
+          title: "Baz Corp",
+          image: "http://satyr.io/120x30?text=Baz+Corp",
+          url: "https://example.com"
+        }
+      ]}
+    />
+  }
 />
 ```
