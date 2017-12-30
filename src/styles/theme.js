@@ -24,6 +24,7 @@ const palette = {
   fern: '#5CB85C',
   radicalRed: '#F63954',
   alto: '#D8D8D8',
+  nobel: '#B3B3B3',
   tuna: '#34323B',
   scarpaFlow: '#5A5665',
   manatee: '#918CA0',
@@ -69,7 +70,9 @@ export default wrap({
 
   iconRed: palette.radicalRed,
   iconBright: palette.white,
-  iconDark: palette.tuna
+  iconDark: palette.tuna,
+
+  logoGray: palette.nobel
 })
 
 export const breakpoints = {
