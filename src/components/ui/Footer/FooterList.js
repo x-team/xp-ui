@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
-import { typeface } from '../../../styles/typo'
+import typo, { typeface } from '../../../styles/typo'
 import theme, { mediaQueries } from '../../../styles/theme'
 
 const cmz = require('cmz')
@@ -22,21 +22,27 @@ const cx = {
   link: cmz(
     typeface.text,
     `
-      font-size: 1rem
-      font-weight: 400
-      color: ${theme.baseDarker}
-      text-decoration: none
+      & {
+        font-size: 16px
+        color: ${theme.baseDarker}
+        opacity: .7
+        text-decoration: none
+      }
+
+      &:hover {
+        opacity: 1
+      }
     `
   ),
 
   item: cmz(`
     & {
-      margin-bottom: 1em
+      margin-bottom: 11px
     }
 
     ${mediaQueries.medium} {
       & {
-        margin: 1em 0
+        margin-top: 11px
       }
     }
   `),
@@ -48,14 +54,13 @@ const cx = {
   `),
 
   title: cmz(
-    typeface.text,
+    typo.sectionHeading,
     `
       & {
-        font-size: 1.25rem
-        font-weight: 400
+        font-size: 19px
         text-transform: uppercase
-        color: ${theme.baseDarker}
-        margin: 0 0 2em
+        letter-spacing: normal
+        margin: 0 0 30px
       }
 
       ${mediaQueries.medium} {
@@ -78,6 +83,7 @@ const cx = {
 class FooterList extends PureComponent<Props> {
   render () {
     const { items, title } = this.props
+
     return (
       <div>
         <h4 className={cx.title}>{title}</h4>
