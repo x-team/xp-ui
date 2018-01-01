@@ -32,15 +32,15 @@ const Wrapper = elem.div(cmz(`
 
   @media screen and (max-width: ${breakpoints.sm}) {
     & {
-      padding-left: 30px
-      padding-right: 30px
+      padding-left: 40px
+      padding-right: 40px
     }
   }
 
   @media screen and (max-width: ${breakpoints.xs}) {
     & {
-      padding-left: 15px
-      padding-right: 15px
+      padding-left: 20px
+      padding-right: 20px
     }
   }
 `))
