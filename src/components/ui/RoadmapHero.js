@@ -18,6 +18,10 @@ type Props = {
  hasDivider?: boolean
 }
 
+type State = {
+  isCentered: boolean
+}
+
 const Root = elem.div(cmz(`
   & {
     display: flex
@@ -36,16 +40,35 @@ const Root = elem.div(cmz(`
 const HeroHeading = elem.div(cmz('width: 60%'))
 const HeroImage = elem.img()
 
-class RoadmapHero extends PureComponent<Props> {
+class RoadmapHero extends PureComponent<Props, State> {
   static defaultProps = {
     imgUrl: require('../../assets/x-roadmap.png'),
     hasDivider: true
   }
+
+  state: State = {
+    isCentered: false
+  }
+
+  componentDidMount () {
+    window.addEventListener('resize', this.updateAlignment)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.updateAlignment)
+  }
+
+  updateAlignment = () => {
+    const mq = window.matchMedia(`(max-width: ${breakpoints.xs})`)
+    this.setState({ isCentered: !!mq.matches })
+  }
+
   render () {
+    const { isCentered } = this.state
     const { heading, content, imgUrl, hasDivider } = this.props
 
     return Root(
-      HeroHeading(<Text {... { heading, content, hasDivider, headingType: 'mainHeading' }} />),
+      HeroHeading(<Text {... { heading, content, hasDivider, headingType: 'mainHeading', isCentered }} />),
       HeroImage({
         src: imgUrl,
         alt: 'X-Team Roadmap'
