@@ -62,12 +62,28 @@ export default {
     textRendering,
     typeface.extraHeading,
     `
-      font-size: 55px
-      text-transform: uppercase
-      margin: 0
-      color: ${theme.typoHeading}
-      letter-spacing: -1px
-      line-height: 51px
+      & {
+        font-size: 55px
+        text-transform: uppercase
+        margin: 0
+        color: ${theme.typoHeading}
+        letter-spacing: -1px
+        line-height: 51px
+        
+        -ms-word-break: keep-all;
+        word-break: keep-all;
+        
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        hyphens: none;
+      }
+      
+      @media screen and (max-width: ${breakpoints.sm}) {
+        & {
+          font-size: 35px
+          line-height: 32px
+        }
+      }
     `
   ),
 

@@ -27,7 +27,6 @@ const Root = elem.div(cmz(`
     display: flex
     flex-wrap: wrap
     justify-content: space-around
-    align-items: center
   }
 
   @media screen and (max-width: ${breakpoints.sm}) {
@@ -37,7 +36,18 @@ const Root = elem.div(cmz(`
   }
 `))
 
-const HeroHeading = elem.div(cmz('width: 60%'))
+const HeroHeading = elem.div(cmz(`
+    & {
+      width: 60%
+    }
+    
+    @media screen and (max-width: ${breakpoints.sm}) {
+      & {
+        margin: 35px 0 
+        width: 85%
+      }
+    }
+`))
 const HeroImage = elem.img()
 
 class RoadmapHero extends PureComponent<Props, State> {
@@ -52,6 +62,7 @@ class RoadmapHero extends PureComponent<Props, State> {
 
   componentDidMount () {
     window.addEventListener('resize', this.updateAlignment)
+    this.updateAlignment()
   }
 
   componentWillUnmount () {
