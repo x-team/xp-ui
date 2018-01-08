@@ -2,17 +2,17 @@ exports[`RoadmapHero-1 1`] = `
 <div
   className="AutoUI_ui_RoadmapHero-25">
   <div
-    className="AutoUI_ui_RoadmapHero-40">
+    className="AutoUI_ui_RoadmapHero-39">
     <section
       className="AutoUI_ui_Text-27">
       <h1
         className="undefined AutoUI_typo-61 AutoUI_typo-53 AutoUI_typo-22">
-        Your roadmap to X-Team
+        Your roadmap to X‑Team
       </h1>
       <span
-        className="AutoUI_ui_Text-39 AutoUI_typo-174" />
+        className="AutoUI_ui_Text-39 AutoUI_typo-190" />
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
       </div>
     </section>

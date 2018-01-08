@@ -2,11 +2,11 @@ exports[`InputGroup-3 1`] = `
 <div
   className="AutoUI_forms_InputGroup-22">
   <span
-    className="AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputGroup-31" />
+    className="AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputGroup-31" />
   <div>
     <input
       aria-labelledby=""
-      className="AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80"
+      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80"
       type="text" />
   </div>
 </div>

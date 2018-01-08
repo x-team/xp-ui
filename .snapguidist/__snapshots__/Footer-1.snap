@@ -68,7 +68,7 @@ exports[`Footer-1 1`] = `
       className="AutoUI_ui_Footer_Footer-57">
       <div>
         <h4
-          className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34">
+          className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
           Company
         </h4>
         <ul
@@ -136,7 +136,7 @@ exports[`Footer-1 1`] = `
       className="AutoUI_ui_Footer_Footer-57">
       <div>
         <h4
-          className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34">
+          className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
           Resources
         </h4>
         <ul
@@ -164,7 +164,7 @@ exports[`Footer-1 1`] = `
       className="AutoUI_ui_Footer_Footer-57">
       <div>
         <h4
-          className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34">
+          className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
           Hire Developers
         </h4>
         <ul
@@ -192,7 +192,7 @@ exports[`Footer-1 1`] = `
       className="AutoUI_ui_Footer_Footer-57">
       <div>
         <h4
-          className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34">
+          className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
           Connect
         </h4>
         <ul
