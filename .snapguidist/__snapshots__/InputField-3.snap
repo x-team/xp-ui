@@ -5,13 +5,13 @@ exports[`InputField-3 1`] = `
     <section
       className="AutoUI_ui_Text-27">
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         What’s your availability like right now? If you’re employed and would need to give a notice, how long would that take?
       </div>
     </section>
     <textarea
       aria-labelledby="label-availability"
-      className="AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80"
+      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80"
       id="availability"
       name="availability"
       placeholder="I am currrently…"

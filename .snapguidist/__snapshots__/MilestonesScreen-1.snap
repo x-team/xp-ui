@@ -51,7 +51,7 @@ exports[`MilestonesScreen-1 1`] = `
           </svg>
         </div>
         <span
-          className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+          className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
           Level 1
         </span>
       </li>
@@ -104,7 +104,7 @@ exports[`MilestonesScreen-1 1`] = `
           </svg>
         </div>
         <span
-          className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+          className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
           Level 2
         </span>
       </li>
@@ -157,7 +157,7 @@ exports[`MilestonesScreen-1 1`] = `
           </svg>
         </div>
         <span
-          className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+          className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
           Level 3
         </span>
       </li>
@@ -172,11 +172,11 @@ exports[`MilestonesScreen-1 1`] = `
         <section
           className="AutoUI_ui_Text-27">
           <h1
-            className="undefined AutoUI_typo-75 AutoUI_typo-53 AutoUI_typo-22">
+            className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
             First step
           </h1>
           <div
-            className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo error hic, nemo nostrum iusto recusandae repudiandae eum doloremque necessitatibus doloribus? Provident perferendis illo totam ipsum ut sapiente, assumenda quasi!
           </div>
         </section>
@@ -184,7 +184,7 @@ exports[`MilestonesScreen-1 1`] = `
           <button
             className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 ">
             <span
-              className="AutoUI_ui_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+              className="AutoUI_ui_Button-42 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
               Go to the step 2
             </span>
           </button>

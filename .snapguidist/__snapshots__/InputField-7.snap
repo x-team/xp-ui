@@ -5,13 +5,13 @@ exports[`InputField-7 1`] = `
     <section
       className="AutoUI_ui_Text-27">
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         Invalid Field
       </div>
     </section>
     <input
       aria-labelledby="label-invalid"
-      className="AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80 AutoUI_forms_InputField-104"
+      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80 AutoUI_forms_InputField-104"
       id="invalid"
       name="invalid"
       placeholder="Error Placeholder.."

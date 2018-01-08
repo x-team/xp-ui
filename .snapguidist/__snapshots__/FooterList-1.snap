@@ -1,7 +1,7 @@
 exports[`FooterList-1 1`] = `
 <div>
   <h4
-    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-89 AutoUI_typo-53 AutoUI_typo-34">
+    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
     List Example
   </h4>
   <ul

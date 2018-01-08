@@ -6,11 +6,11 @@ exports[`SolutionForm-7 1`] = `
     <section
       className="AutoUI_ui_Text-27">
       <h1
-        className="undefined AutoUI_typo-75 AutoUI_typo-53 AutoUI_typo-22">
+        className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
         Got it?
       </h1>
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-152 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         Paste the solution below. You get 3 chances, use them wisely.
       </div>
     </section>
@@ -18,13 +18,13 @@ exports[`SolutionForm-7 1`] = `
   <form
     className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-43">
     <textarea
-      className="AutoUI_forms_SolutionForm_index-28 AutoUI_typo-163 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-52"
+      className="AutoUI_forms_SolutionForm_index-28 AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-52"
       name="solution"
       placeholder="Paste your solution here." />
     <button
       className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 AutoUI_ui_Button-103">
       <span
-        className="AutoUI_ui_Button-42 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Button-42 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
         Checking...
       </span>
     </button>

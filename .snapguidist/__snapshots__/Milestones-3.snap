@@ -52,7 +52,7 @@ exports[`Milestones-3 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
         Webcam
       </span>
     </li>
@@ -105,7 +105,7 @@ exports[`Milestones-3 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
         Message
       </span>
     </li>
@@ -156,7 +156,7 @@ exports[`Milestones-3 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
         Head
       </span>
     </li>
@@ -215,7 +215,7 @@ exports[`Milestones-3 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-141 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
         Diamond
       </span>
     </li>
