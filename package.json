@@ -50,7 +50,7 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
-    "cmz": "^3.10.0",
+    "cmz": "^3.11.0",
     "color": "^2.0.1",
     "crypto-js": "^3.1.9-1",
     "recompose": "^0.26.0",
