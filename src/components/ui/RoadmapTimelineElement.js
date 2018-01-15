@@ -71,20 +71,21 @@ const animatedStyles = {
       stroke-miterlimit: 10
       margin: 10% auto
       box-shadow: inset 0 0 0 ${theme.baseRed}
-      animation: fill .4s ease-in-out .4s forwards, scale .4s ease-in-out .4s both
+      transition: box-shadow ease-in-out .2s
     }
-
-    @keyframes fill {
-      100% {
-        box-shadow: inset 0 0 0 30px ${theme.baseRed}
-      }
+  `),
+  checkmarkActive: cmz(`
+    & {
+      box-shadow: inset 0 0 0 8px ${theme.baseRed}
     }
   `),
   checkmarkCheck: cmz(`
     transform-origin: 50% 50%
-    stroke-dasharray: 48
-    stroke-dashoffset: 48
-    animation: stroke .2s cubic-bezier(.65, 0, .45, 1) .4s forwards
+    opacity: 0
+    transition: opacity .2s
+  `),
+  checkmarkCheckActive: cmz(`
+    opacity: 1
   `)
 }
 
@@ -99,8 +100,8 @@ class RoadmapTimelineElement extends PureComponent<Props> {
     const cx = {
       active: isDone ? animatedStyles.timelineActive : '',
       box: animatedStyles.checkmarkBox,
-      checkmark: isDone ? animatedStyles.checkmark : '',
-      checkmarkCheck: isDone ? animatedStyles.checkmarkCheck : '',
+      checkmark: `${animatedStyles.checkmark} ${isDone ? animatedStyles.checkmarkActive : ''}`,
+      checkmarkCheck: `${animatedStyles.checkmarkCheck} ${isDone ? animatedStyles.checkmarkCheckActive : ''}`,
       circle: `${animatedStyles.checkmarkCircle} ${isDone ? animatedStyles.checkmarkCircleActive : ''}`
     }
 

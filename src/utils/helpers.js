@@ -11,15 +11,14 @@ export function throttle (callback, timeout) {
 export function isScrolledIntoView (element, direction) {
   if (!element) return false
   // Element's position relative to the viewport
-  const { top, bottom } = element.getBoundingClientRect()
+  const { bottom } = element.getBoundingClientRect()
 
   // Viewport offset
   const scrollPosition = window.scrollY
   const docViewBottom = scrollPosition + window.innerHeight
 
   // Element's position relative to the document
-  const elemTop = scrollPosition + top
   const elemBottom = scrollPosition + bottom
 
-  return direction < 0 ? elemTop < docViewBottom : elemBottom <= docViewBottom
+  return elemBottom <= docViewBottom
 }
