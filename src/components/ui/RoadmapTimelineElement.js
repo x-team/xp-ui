@@ -63,21 +63,17 @@ const animatedStyles = {
     }
   `),
   checkmark: cmz(`
-    & {
-      border-radius: 50%
-      display: block
-      stroke-width: 2
-      stroke: ${theme.baseBrighter}
-      stroke-miterlimit: 10
-      margin: 10% auto
-      box-shadow: inset 0 0 0 ${theme.baseRed}
-      transition: box-shadow ease-in-out .2s
-    }
+    border-radius: 50%
+    display: block
+    stroke-width: 2
+    stroke: ${theme.baseBrighter}
+    stroke-miterlimit: 10
+    margin: 10% auto
+    box-shadow: inset 0 0 0 ${theme.baseRed}
+    transition: box-shadow ease-in-out .2s
   `),
   checkmarkActive: cmz(`
-    & {
-      box-shadow: inset 0 0 0 8px ${theme.baseRed}
-    }
+    box-shadow: inset 0 0 0 8px ${theme.baseRed}
   `),
   checkmarkCheck: cmz(`
     transform-origin: 50% 50%

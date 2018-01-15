@@ -8,7 +8,7 @@ export function throttle (callback, timeout) {
   }
 }
 
-export function isScrolledIntoView (element, direction) {
+export function isScrolledIntoView (element) {
   if (!element) return false
   // Element's position relative to the viewport
   const { bottom } = element.getBoundingClientRect()

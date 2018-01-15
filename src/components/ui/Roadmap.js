@@ -157,15 +157,10 @@ class Roadmap extends PureComponent<Props, State> {
     window.removeEventListener('scroll', this.throttledScrollHandler)
   }
 
-  detectScrollDirection = () => {
-    // 1 — scroll down; -1 — scroll up
-    return this.lastScrollPos > window.scrollY ? -1 : 1
-  }
-
   handleDocumentScroll = () => {
     this.levelEl.forEach((element, index) => {
       const elNode = findDOMNode(element)
-      if (isScrolledIntoView(elNode, this.detectScrollDirection())) {
+      if (isScrolledIntoView(elNode)) {
         this.setState({ activeVisible: index })
       }
     })
