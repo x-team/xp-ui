@@ -73,7 +73,7 @@ exports[`Roadmap-1 1`] = `
         <div
           className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
-            className="AutoUI_ui_RoadmapTimelineElement-65"
+            className="AutoUI_ui_RoadmapTimelineElement-65 AutoUI_ui_RoadmapTimelineElement-75"
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
@@ -83,7 +83,7 @@ exports[`Roadmap-1 1`] = `
               fill="none"
               r="25" />
             <path
-              className="AutoUI_ui_RoadmapTimelineElement-83"
+              className="AutoUI_ui_RoadmapTimelineElement-78 AutoUI_ui_RoadmapTimelineElement-83"
               d="M14.1 27.2l7.1 7.2 16.7-16.8"
               fill="none" />
           </svg>
@@ -165,7 +165,7 @@ exports[`Roadmap-1 1`] = `
         <div
           className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
-            className=""
+            className="AutoUI_ui_RoadmapTimelineElement-65 "
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
@@ -175,7 +175,7 @@ exports[`Roadmap-1 1`] = `
               fill="none"
               r="25" />
             <path
-              className=""
+              className="AutoUI_ui_RoadmapTimelineElement-78 "
               d="M14.1 27.2l7.1 7.2 16.7-16.8"
               fill="none" />
           </svg>
@@ -257,7 +257,7 @@ exports[`Roadmap-1 1`] = `
         <div
           className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
-            className=""
+            className="AutoUI_ui_RoadmapTimelineElement-65 "
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
@@ -267,7 +267,7 @@ exports[`Roadmap-1 1`] = `
               fill="none"
               r="25" />
             <path
-              className=""
+              className="AutoUI_ui_RoadmapTimelineElement-78 "
               d="M14.1 27.2l7.1 7.2 16.7-16.8"
               fill="none" />
           </svg>
@@ -359,7 +359,7 @@ exports[`Roadmap-1 1`] = `
         <div
           className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
-            className=""
+            className="AutoUI_ui_RoadmapTimelineElement-65 "
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
@@ -369,7 +369,7 @@ exports[`Roadmap-1 1`] = `
               fill="none"
               r="25" />
             <path
-              className=""
+              className="AutoUI_ui_RoadmapTimelineElement-78 "
               d="M14.1 27.2l7.1 7.2 16.7-16.8"
               fill="none" />
           </svg>
@@ -457,7 +457,7 @@ exports[`Roadmap-1 1`] = `
         <div
           className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
-            className=""
+            className="AutoUI_ui_RoadmapTimelineElement-65 "
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
@@ -467,7 +467,7 @@ exports[`Roadmap-1 1`] = `
               fill="none"
               r="25" />
             <path
-              className=""
+              className="AutoUI_ui_RoadmapTimelineElement-78 "
               d="M14.1 27.2l7.1 7.2 16.7-16.8"
               fill="none" />
           </svg>
@@ -551,7 +551,7 @@ exports[`Roadmap-1 1`] = `
         <div
           className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
-            className=""
+            className="AutoUI_ui_RoadmapTimelineElement-65 "
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
@@ -561,7 +561,7 @@ exports[`Roadmap-1 1`] = `
               fill="none"
               r="25" />
             <path
-              className=""
+              className="AutoUI_ui_RoadmapTimelineElement-78 "
               d="M14.1 27.2l7.1 7.2 16.7-16.8"
               fill="none" />
           </svg>
@@ -657,7 +657,7 @@ exports[`Roadmap-1 1`] = `
         <div
           className="AutoUI_ui_RoadmapTimelineElement-39">
           <svg
-            className=""
+            className="AutoUI_ui_RoadmapTimelineElement-65 "
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg">
             <circle
@@ -667,7 +667,7 @@ exports[`Roadmap-1 1`] = `
               fill="none"
               r="25" />
             <path
-              className=""
+              className="AutoUI_ui_RoadmapTimelineElement-78 "
               d="M14.1 27.2l7.1 7.2 16.7-16.8"
               fill="none" />
           </svg>

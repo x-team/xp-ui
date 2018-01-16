@@ -144,11 +144,9 @@ class Roadmap extends PureComponent<Props, State> {
   }
 
   levelEl = []
-  lastScrollPos = 0
   throttledScrollHandler = () => {}
 
   componentWillMount () {
-    this.lastScrollPos = window.scrollY
     this.throttledScrollHandler = throttle(this.handleDocumentScroll, 350)
     window.addEventListener('scroll', this.throttledScrollHandler)
   }
@@ -164,7 +162,6 @@ class Roadmap extends PureComponent<Props, State> {
         this.setState({ activeVisible: index })
       }
     })
-    this.lastScrollPos = window.scrollY
   }
 
   renderRoadmap = () => {
