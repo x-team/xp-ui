@@ -4,7 +4,7 @@ exports[`Footer-1 1`] = `
   <div
     className="AutoUI_ui_Footer_Footer-40">
     <div
-      className="AutoUI_ui_Footer_Footer-57">
+      className="AutoUI_ui_Footer_Footer-55">
       <svg
         height={32}
         viewBox="0 0 960 328"
@@ -65,7 +65,7 @@ exports[`Footer-1 1`] = `
       </svg>
     </div>
     <div
-      className="AutoUI_ui_Footer_Footer-57">
+      className="AutoUI_ui_Footer_Footer-55">
       <div>
         <h4
           className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
@@ -133,7 +133,7 @@ exports[`Footer-1 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_Footer_Footer-57">
+      className="AutoUI_ui_Footer_Footer-55">
       <div>
         <h4
           className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
@@ -161,7 +161,7 @@ exports[`Footer-1 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_Footer_Footer-57">
+      className="AutoUI_ui_Footer_Footer-55">
       <div>
         <h4
           className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
@@ -189,7 +189,7 @@ exports[`Footer-1 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_Footer_Footer-57">
+      className="AutoUI_ui_Footer_Footer-55">
       <div>
         <h4
           className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
@@ -234,7 +234,7 @@ exports[`Footer-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Footer_Footer-85">
+    className="AutoUI_ui_Footer_Footer-79">
     <div>
       <div>
         <h4
@@ -280,11 +280,11 @@ exports[`Footer-1 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_Footer_Footer-114 AutoUI_typo-34">
+      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-34">
       2017 © All rights reserved. X-Company Pty Ltd.
     </div>
     <div
-      className="AutoUI_ui_Footer_Footer-132">
+      className="AutoUI_ui_Footer_Footer-126">
       <svg
         height={32}
         viewBox="0 0 960 328"
