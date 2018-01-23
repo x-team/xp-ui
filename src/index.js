@@ -25,6 +25,7 @@ import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
 import SolutionForm from './components/forms/SolutionForm'
+import MarkdownTextarea from './components/ui/MarkdownTextarea'
 
 export {
   ApplicantBadge,
@@ -48,6 +49,7 @@ export {
   SvgIcon,
   Text,
   Typography,
+  MarkdownTextarea,
   VideoPlayer,
   XIcon,
   Footer,
