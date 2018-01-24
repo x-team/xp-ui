@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react'
 const cmz = require('cmz')
+import Markdown from 'react-remarkable'
 
-import elem from './../../utils/elem'
-import typo from '../../styles/typo'
-import theme from '../../styles/theme'
+import elem from '../../../utils/elem'
+import typo from '../../../styles/typo'
+import theme from '../../../styles/theme'
 
 type Props = {
   placeholder: string,
@@ -62,22 +63,34 @@ const textareaStyles = [
 const Textarea = elem.textarea(textareaStyles)
 
 class MarkdownTextarea extends PureComponent<Props> {
+  state = {
+    text: ''
+  }
+
+  onChange = ({ target }) => {
+    this.setState({
+      text: target.value
+    })
+    // this.props.onChange(target)
+  }
 
   render () {
     const {
       placeholder = 'Enter your response here.',
       charLimit = 1,
-      onChange,
       onFocus,
+      onUnfocus
     } = this.props
+
+    const onChange = this.onChange
 
     return Root(
       Form(
         {onChange},
-        Textarea({
+         Textarea({
           name: 'something',
           onChange,
-          placeholder
+          placeholder,
         })
       )
     )
