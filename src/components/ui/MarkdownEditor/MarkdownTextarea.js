@@ -10,7 +10,8 @@ type Props = {
   placeholder: string,
   charLimit: number,
   onChange(): void,
-  onFocus(): void
+  onFocus(): void,
+  onUnfocus(): void
 }
 
 const utilStyles = {
@@ -27,14 +28,6 @@ const Root = elem.div([
   `)
 ])
 
-const Form = elem.form([
-  utilStyles.maxWidth,
-  cmz(`
-    margin: 30px auto
-    position: relative
-  `)
-])
-
 const textareaStyles = [
   utilStyles.noOutline,
   typo.formText,
@@ -44,7 +37,7 @@ const textareaStyles = [
       width: 100%
       height: 156px
       padding: 10px 20px
-      margin-bottom: 100px
+      margin-bottom: 20px
       resize: vertical
       border: 1px solid ${theme.lineSilver3}
       box-sizing: border-box
@@ -71,13 +64,15 @@ class MarkdownTextarea extends PureComponent<Props> {
     this.setState({
       text: target.value
     })
-    // this.props.onChange(target)
+    if (this.props.onChange) {
+      this.props.onChange()
+    }
   }
 
   render () {
     const {
       placeholder = 'Enter your response here.',
-      charLimit = 1,
+      charLimit = 1000,
       onFocus,
       onUnfocus
     } = this.props
@@ -85,14 +80,13 @@ class MarkdownTextarea extends PureComponent<Props> {
     const onChange = this.onChange
 
     return Root(
-      Form(
-        {onChange},
-         Textarea({
-          name: 'something',
-          onChange,
-          placeholder,
-        })
-      )
+      Textarea({
+        maxLength: charLimit,
+        onChange,
+        onFocus,
+        onBlur: onUnfocus,
+        placeholder
+      })
     )
   }
 }
