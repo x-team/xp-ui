@@ -205,16 +205,16 @@ const getIcon = ({ icon, color }) => {
     ),
 
     trashcan: (
-      <svg width="15px" height="18px" viewBox="0 0 15 18">
-        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <g transform="translate(-1272.000000, -1013.000000)" fill={colors[color]}>
-            <g transform="translate(1272.000000, 1013.000000)">
-              <rect x="0" y="3" width="15" height="2" />
-              <rect x="2" y="16" width="11" height="2" />
-              <rect x="2" y="5" width="2" height="12" />
-              <rect x="11" y="5" width="2" height="12" />
-              <rect x="4" y="0" width="7" height="2" />
-              <path d="M8.8890873,10.4748737 L9.94974747,11.5355339 L8.53553391,12.9497475 L7.47487373,11.8890873 L6.41421356,12.9497475 L5,11.5355339 L6.06066017,10.4748737 L5,9.41421356 L6.41421356,8 L7.47487373,9.06066017 L8.53553391,8 L9.94974747,9.41421356 L8.8890873,10.4748737 Z" />
+      <svg width='15px' height='18px' viewBox='0 0 15 18'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <g transform='translate(-1272.000000, -1013.000000)' fill={colors[color]}>
+            <g transform='translate(1272.000000, 1013.000000)'>
+              <rect x='0' y='3' width='15' height='2' />
+              <rect x='2' y='16' width='11' height='2' />
+              <rect x='2' y='5' width='2' height='12' />
+              <rect x='11' y='5' width='2' height='12' />
+              <rect x='4' y='0' width='7' height='2' />
+              <path d='M8.8890873,10.4748737 L9.94974747,11.5355339 L8.53553391,12.9497475 L7.47487373,11.8890873 L6.41421356,12.9497475 L5,11.5355339 L6.06066017,10.4748737 L5,9.41421356 L6.41421356,8 L7.47487373,9.06066017 L8.53553391,8 L9.94974747,9.41421356 L8.8890873,10.4748737 Z' />
             </g>
           </g>
         </g>

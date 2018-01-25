@@ -9,9 +9,6 @@ import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 import elem from '../../utils/elem'
 
-import type { Element } from 'react'
-import type { Icon } from './SvgIcon'
-
 const cmz = require('cmz')
 
 type File = {
@@ -20,11 +17,13 @@ type File = {
   progress?: number
 }
 
+type Files = Array<?File>
+
 type Props = {
-  files?: Array<?File>,
-  onUpload: void,
-  onCancel: void,
-  onDelete: void
+  files?: Files,
+  onUpload?: void,
+  onCancel?: void,
+  onDelete?: void
 }
 
 const Root = elem.div()
@@ -81,13 +80,13 @@ class AttachFiles extends PureComponent<Props> {
     const { files, onUpload, onCancel, onDelete } = this.props
 
     const renderButton = (file: File) => {
-      if (!file.progress || file.progress == 100) {
+      if (!file.progress || file.progress === 100) {
         return (
           FileAction(
             {
               onClick: () => onDelete(`${file.path}/${file.filename}`)
             },
-            <SvgIcon icon="trashcan" color="grayscale" />
+            <SvgIcon icon='trashcan' color='grayscale' />
           )
         )
       } else {
@@ -96,14 +95,14 @@ class AttachFiles extends PureComponent<Props> {
             {
               onClick: () => onCancel(`${file.path}/${file.filename}`)
             },
-            <SvgIcon icon="x" color="grayscale" />
+            <SvgIcon icon='x' color='grayscale' />
           )
         )
       }
     }
 
     const renderProgress = (progress: number = 0) => {
-      if (progress != 100) {
+      if (progress !== 100) {
         return FileProgress({
           style: {
             width: `${progress}%`
@@ -112,7 +111,7 @@ class AttachFiles extends PureComponent<Props> {
       }
     }
 
-    const renderFiles = (files) => {
+    const renderFiles = (files: Files) => {
       return files && files.length > 0 && (
         FilesList(
           files.map(file => {
