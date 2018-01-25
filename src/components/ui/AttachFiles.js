@@ -15,13 +15,13 @@ import type { Icon } from './SvgIcon'
 const cmz = require('cmz')
 
 type File = {
-  filename: string,
+  filename?: string,
   path?: string,
   progress?: number
 }
 
 type Props = {
-  files?: Array<File>,
+  files?: Array<?File>,
   onUpload: void,
   onCancel: void,
   onDelete: void
@@ -80,7 +80,7 @@ class AttachFiles extends PureComponent<Props> {
   render () {
     const { files, onUpload, onCancel, onDelete } = this.props
 
-    const renderButton = (file:File) => {
+    const renderButton = (file: File) => {
       if (!file.progress || file.progress == 100) {
         return (
           FileAction(
@@ -102,7 +102,7 @@ class AttachFiles extends PureComponent<Props> {
       }
     }
 
-    const renderProgress = (progress = 0) => {
+    const renderProgress = (progress: number = 0) => {
       if (progress != 100) {
         return FileProgress({
           style: {
@@ -113,7 +113,7 @@ class AttachFiles extends PureComponent<Props> {
     }
 
     const renderFiles = (files) => {
-      return files.length > 0 && (
+      return files && files.length > 0 && (
         FilesList(
           files.map(file => {
             return (
