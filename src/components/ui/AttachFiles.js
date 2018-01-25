@@ -12,18 +12,18 @@ import elem from '../../utils/elem'
 const cmz = require('cmz')
 
 type File = {
-  filename?: string,
-  path?: string,
-  progress?: number
+  filename: string,
+  path: string,
+  progress: number
 }
 
-type Files = Array<?File>
+type Files = Array<File>
 
 type Props = {
-  files?: Files,
-  onUpload?: void,
-  onCancel?: void,
-  onDelete?: void
+  files: Files,
+  onUpload: Function,
+  onCancel: Function,
+  onDelete: Function
 }
 
 const Root = elem.div()
