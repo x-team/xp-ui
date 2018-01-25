@@ -57,7 +57,8 @@ const Textarea = elem.textarea(textareaStyles)
 
 class MarkdownTextarea extends PureComponent<Props> {
   state = {
-    text: ''
+    text: '',
+    showTextarea: true
   }
 
   onChange = ({ target }) => {
@@ -69,6 +70,13 @@ class MarkdownTextarea extends PureComponent<Props> {
     }
   }
 
+  handleTabChange = () => {
+    const { showTextarea } = this.state
+    this.setState({
+      showTextarea: !showTextarea
+    })
+  }
+
   render () {
     const {
       placeholder = 'Enter your response here.',
@@ -76,17 +84,29 @@ class MarkdownTextarea extends PureComponent<Props> {
       onFocus,
       onUnfocus
     } = this.props
+    const { text } = this.state
 
     const onChange = this.onChange
 
-    return Root(
-      Textarea({
-        maxLength: charLimit,
-        onChange,
-        onFocus,
-        onBlur: onUnfocus,
-        placeholder
-      })
+    return (
+      <div>
+        <nav>
+          <button onClick={this.handleTabChange}>Write</button>
+          <button onClick={this.handleTabChange}>Preview</button>
+        </nav>
+        {this.state.showTextarea ?
+          Root(Textarea({
+            maxLength: charLimit,
+            onChange,
+            onFocus,
+            onBlur: onUnfocus,
+            value: text,
+            placeholder
+          }))
+        :
+          Root(<Markdown source={text} />)
+        }
+      </div>
     )
   }
 }
