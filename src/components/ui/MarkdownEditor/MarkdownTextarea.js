@@ -87,12 +87,15 @@ const navButtonStyles = cmz(`
 `)
 
 class MarkdownTextarea extends PureComponent<Props> {
+  WRITE_BUTTON_TEXT = 'Write'
+  PREVIEW_BUTTON_TEXT = 'Preview'
+
   state = {
     text: '',
-    showTextarea: true
+    currentButton: 'Write'
   }
 
-  onChange = ({ target }) => {
+  onChange = ({ target: Object }) => {
     this.setState({
       text: target.value
     })
@@ -102,11 +105,13 @@ class MarkdownTextarea extends PureComponent<Props> {
     }
   }
 
-  handleTabChange = () => {
-    const { showTextarea } = this.state
-    this.setState({
-      showTextarea: !showTextarea
-    })
+  handleTabChange = ({ target: { name } }) => {
+    const { currentButton } = this.state
+    if (currentButton !== name) {
+      this.setState({
+        currentButton: name
+      })
+    }
   }
 
   render () {
@@ -116,10 +121,10 @@ class MarkdownTextarea extends PureComponent<Props> {
       onFocus,
       onUnfocus
     } = this.props
-    const { text, showTextarea } = this.state
+    const { text, currentButton } = this.state
 
     const onChange = this.onChange
-    const showingComponent = showTextarea ?
+    const showingComponent = currentButton === this.WRITE_BUTTON_TEXT ?
       Textarea({
         maxLength: charLimit,
         onChange,
@@ -133,14 +138,16 @@ class MarkdownTextarea extends PureComponent<Props> {
       <div>
         <nav className={navStyles}>
           <button
-            className={`${showTextarea ? active : ''} ${navButtonStyles}`}
+            name='Write'
+            className={`${currentButton === this.WRITE_BUTTON_TEXT ? active : ''} ${navButtonStyles}`}
             onClick={this.handleTabChange}>
-              Write
+              {this.WRITE_BUTTON_TEXT}
           </button>
           <button
-            className={`${!showTextarea ? active : ''} ${navButtonStyles}`}
+            name='Preview'
+            className={`${currentButton === this.PREVIEW_BUTTON_TEXT ? active : ''} ${navButtonStyles}`}
             onClick={this.handleTabChange}>
-              Preview
+              {this.PREVIEW_BUTTON_TEXT}
           </button>
         </nav>
       </div>,
