@@ -19,6 +19,11 @@ type BaseProps = {
   children?: Element<*> | string
 }
 
+type State = {
+  text: string,
+  currentButton: string
+}
+
 const utilStyles = {
   maxWidth: cmz('max-width: 840px'),
   noOutline: cmz('outline: none'),
@@ -62,11 +67,26 @@ const Textarea = elem.textarea(textareaStyles)
 
 const MarkdownContainer = (props: BaseProps) => {
   return (
-    <div className={textareaStyles}>
+    <div className={`${textareaStyles} ${mdContainerStyles}`}>
       {props.children}
     </div>
   )
 }
+
+const mdContainerStyles = cmz(`
+  & {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 300
+    font-size: 18px
+    min-height: 154px
+    border: 1px solid ${theme.lineSilver3}
+  }
+
+  & p {
+    padding: 10px 20px
+    margin: 0
+  }
+`)
 
 const active = cmz(`
   border-bottom: none
@@ -95,7 +115,7 @@ class MarkdownTextarea extends PureComponent<Props> {
     currentButton: 'Write'
   }
 
-  onChange = ({ target: Object }) => {
+  onChange = ({ target }: Object) => {
     this.setState({
       text: target.value
     })
@@ -105,7 +125,7 @@ class MarkdownTextarea extends PureComponent<Props> {
     }
   }
 
-  handleTabChange = ({ target: { name } }) => {
+  handleTabChange = ({ target: { name } }: Object) => {
     const { currentButton } = this.state
     if (currentButton !== name) {
       this.setState({
@@ -132,7 +152,7 @@ class MarkdownTextarea extends PureComponent<Props> {
         onBlur: onUnfocus,
         value: text,
         placeholder
-      }) : <Markdown source={text} container={MarkdownContainer}/>
+      }) : <Markdown source={text || 'No preview available.'} container={MarkdownContainer}/>
 
     return Root(
       <div>
