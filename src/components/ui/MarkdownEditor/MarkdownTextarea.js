@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 const cmz = require('cmz')
 import Markdown from 'react-remarkable'
+import type { Element } from 'react'
 
 import elem from '../../../utils/elem'
 import typo from '../../../styles/typo'
@@ -12,6 +13,10 @@ type Props = {
   onChange(): void,
   onFocus(): void,
   onUnfocus(): void
+}
+
+type BaseProps = {
+  children?: Element<*> | string
 }
 
 const utilStyles = {
@@ -55,13 +60,31 @@ const textareaStyles = [
 
 const Textarea = elem.textarea(textareaStyles)
 
-const MarkdownContainer = (props) => {
+const MarkdownContainer = (props: BaseProps) => {
   return (
     <div className={textareaStyles}>
       {props.children}
     </div>
   )
 }
+
+const active = cmz(`
+  border-bottom: none
+`)
+
+const navStyles = cmz(`
+  margin-bottom: 10px
+  border-bottom: 1px solid ${theme.lineSilver3}
+`)
+
+const navButtonStyles = cmz(`
+  background-color: transparent
+  font-size: 14px;
+  border-radius: 3px 3px 0 0
+  border: 1px solid ${theme.lineSilver3}
+  padding: 8px 12px
+  cursor: pointer
+`)
 
 class MarkdownTextarea extends PureComponent<Props> {
   state = {
@@ -73,8 +96,9 @@ class MarkdownTextarea extends PureComponent<Props> {
     this.setState({
       text: target.value
     })
-    if (this.props.onChange) {
-      this.props.onChange()
+    const { onChange } = this.props
+    if (onChange) {
+      onChange(target)
     }
   }
 
@@ -92,10 +116,10 @@ class MarkdownTextarea extends PureComponent<Props> {
       onFocus,
       onUnfocus
     } = this.props
-    const { text } = this.state
+    const { text, showTextarea } = this.state
 
     const onChange = this.onChange
-    const showingComponent = this.state.showTextarea ?
+    const showingComponent = showTextarea ?
       Textarea({
         maxLength: charLimit,
         onChange,
@@ -105,14 +129,22 @@ class MarkdownTextarea extends PureComponent<Props> {
         placeholder
       }) : <Markdown source={text} container={MarkdownContainer}/>
 
-    return (
+    return Root(
       <div>
-        <nav>
-          <button onClick={this.handleTabChange}>Write</button>
-          <button onClick={this.handleTabChange}>Preview</button>
+        <nav className={navStyles}>
+          <button
+            className={`${showTextarea ? active : ''} ${navButtonStyles}`}
+            onClick={this.handleTabChange}>
+              Write
+          </button>
+          <button
+            className={`${!showTextarea ? active : ''} ${navButtonStyles}`}
+            onClick={this.handleTabChange}>
+              Preview
+          </button>
         </nav>
-        {Root(showingComponent)}
-      </div>
+      </div>,
+        showingComponent
     )
   }
 }
