@@ -1,29 +1,29 @@
 exports[`AttachFiles-1 1`] = `
 <div>
   <div
-    className="AutoUI_ui_AttachFiles-32">
+    className="AutoUI_ui_AttachFiles-31">
     <div
-      className="AutoUI_ui_AttachFiles-36"
+      className="AutoUI_ui_AttachFiles-35"
       style={
         Object {
           "borderBottomColor": "transparent",
         }
       }>
       <div
-        className="AutoUI_ui_AttachFiles-45 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_AttachFiles-44 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         filename-01.zip
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-54">
+        className="AutoUI_ui_AttachFiles-53">
         <svg
           height="18px"
           viewBox="0 0 15 18"
           width="15px">
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             stroke="none"
-            stroke-width="1">
+            strokeWidth="1">
             <g
               fill={
                 Object {
@@ -73,27 +73,27 @@ exports[`AttachFiles-1 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_AttachFiles-36"
+      className="AutoUI_ui_AttachFiles-35"
       style={
         Object {
           "borderBottomColor": "transparent",
         }
       }>
       <div
-        className="AutoUI_ui_AttachFiles-45 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_AttachFiles-44 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         filename-02.zip
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-54">
+        className="AutoUI_ui_AttachFiles-53">
         <svg
           height="18px"
           viewBox="0 0 15 18"
           width="15px">
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             stroke="none"
-            stroke-width="1">
+            strokeWidth="1">
             <g
               fill={
                 Object {
@@ -143,7 +143,7 @@ exports[`AttachFiles-1 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_AttachFiles-36"
+      className="AutoUI_ui_AttachFiles-35"
       style={
         Object {
           "borderBottomColor": Object {
@@ -158,21 +158,21 @@ exports[`AttachFiles-1 1`] = `
         }
       }>
       <div
-        className="AutoUI_ui_AttachFiles-45 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_AttachFiles-44 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         filename-03.zip
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-54">
+        className="AutoUI_ui_AttachFiles-53">
         <svg
           height="14px"
           viewBox="0 0 14 14"
           width="14px">
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             stroke="none"
-            stroke-linecap="square"
-            stroke-width="1">
+            strokeLinecap="square"
+            strokeWidth="1">
             <g
               stroke={
                 Object {
@@ -185,7 +185,7 @@ exports[`AttachFiles-1 1`] = `
                   "valpha": 1,
                 }
               }
-              stroke-width="2"
+              strokeWidth="2"
               transform="translate(-1294.000000, -1073.000000)">
               <g
                 transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
@@ -199,7 +199,7 @@ exports[`AttachFiles-1 1`] = `
         </svg>
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-58"
+        className="AutoUI_ui_AttachFiles-57"
         style={
           Object {
             "width": "30%",
@@ -207,7 +207,7 @@ exports[`AttachFiles-1 1`] = `
         } />
     </div>
     <div
-      className="AutoUI_ui_AttachFiles-36"
+      className="AutoUI_ui_AttachFiles-35"
       style={
         Object {
           "borderBottomColor": Object {
@@ -222,21 +222,21 @@ exports[`AttachFiles-1 1`] = `
         }
       }>
       <div
-        className="AutoUI_ui_AttachFiles-45 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_AttachFiles-44 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         filename-04.zip
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-54">
+        className="AutoUI_ui_AttachFiles-53">
         <svg
           height="14px"
           viewBox="0 0 14 14"
           width="14px">
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             stroke="none"
-            stroke-linecap="square"
-            stroke-width="1">
+            strokeLinecap="square"
+            strokeWidth="1">
             <g
               stroke={
                 Object {
@@ -249,7 +249,7 @@ exports[`AttachFiles-1 1`] = `
                   "valpha": 1,
                 }
               }
-              stroke-width="2"
+              strokeWidth="2"
               transform="translate(-1294.000000, -1073.000000)">
               <g
                 transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
@@ -263,7 +263,7 @@ exports[`AttachFiles-1 1`] = `
         </svg>
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-58"
+        className="AutoUI_ui_AttachFiles-57"
         style={
           Object {
             "width": "90%",
@@ -276,7 +276,7 @@ exports[`AttachFiles-1 1`] = `
     <span
       className="AutoUI_ui_Button-42 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
       <span
-        className="AutoUI_ui_AttachFiles-68">
+        className="AutoUI_ui_AttachFiles-67">
         Attach a file
       </span>
     </span>
