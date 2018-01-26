@@ -14,7 +14,7 @@ exports[`InputField-5 1`] = `
         <span
           className="AutoUI_forms_InputField-75 AutoUI_forms_InputField-37" />
         <label
-          className="AutoUI_forms_InputField-76 AutoUI_forms_InputField-62 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_forms_InputField-76 AutoUI_forms_InputField-63 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
           Value 1
         </label>
       </div>
@@ -34,7 +34,7 @@ exports[`InputField-5 1`] = `
         <span
           className="AutoUI_forms_InputField-75 AutoUI_forms_InputField-37" />
         <label
-          className="AutoUI_forms_InputField-76 AutoUI_forms_InputField-62 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_forms_InputField-76 AutoUI_forms_InputField-63 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
           Value 2
         </label>
       </div>

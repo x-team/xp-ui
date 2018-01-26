@@ -58,14 +58,14 @@ const radioInputStyles = {
   option: cmz(`
     margin-left: 50px
   `),
-
-  label: cmz(
-    typo.baseText,
-    `
-      margin-left: 30px
-    `
-  )
 }
+
+const label = cmz(
+  typo.baseText,
+  `
+    margin-left: 30px
+  `
+)
 
 const ComponentRoot = elem.div()
 const FieldRoot = elem.div(cmz(`
@@ -73,7 +73,7 @@ const FieldRoot = elem.div(cmz(`
   position: relative
 `))
 const RadioCircle = elem.span(cmz(radioInputStyles.circle))
-const RadioLabel = elem.label(cmz(radioInputStyles.label))
+const RadioLabel = elem.label(cmz(label))
 
 const inputStyles = [
   typo.formText,
@@ -107,6 +107,51 @@ const errorInput = cmz(`
   color: ${theme.formError}
 `)
 
+const checkboxInputStyles = {
+  input: cmz(`
+    & {
+      display: none !important
+    }
+
+    &:checked ~ span {
+      background-color: ${theme.baseRed}
+    }
+    &:checked ~ span:after {
+      opacity: 1
+    }
+  `),
+  tick: cmz(`
+    & {
+      cursor: pointer
+      position: absolute
+      width: 18px
+      height: 18px
+      top: 6px
+      left: 0
+      border: 1px solid ${theme.formBorder}
+      border-radius: 4px
+    }
+
+    &:after {
+      opacity: 0
+      content: ' '
+      position: absolute
+      width: 8px
+      height: 4px
+      top: 5px
+      left: 5px
+      border: 2px solid ${theme.baseBrighter}
+      border-top: none
+      border-right: none
+      transform: rotate(-45deg)
+      transition: all 0.25s ease
+    }
+  `)
+}
+
+const CheckboxTick = elem.span(checkboxInputStyles.tick)
+const Checkboxlabel = elem.label(cmz(label))
+
 const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 
 const inputFactory = type => elem[getTagName(type)](inputStyles)
@@ -133,12 +178,24 @@ class InputField extends PureComponent<Props> {
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
     const errorClassName = isInvalid ? errorInput : ''
+    const elements = {
+      radio: {
+        className: radioInputStyles.input,
+        box: RadioCircle,
+        label: RadioLabel
+      },
+      checkbox: {
+        className: checkboxInputStyles.input,
+        box: CheckboxTick,
+        label: Checkboxlabel
+      }
+    }
 
-    if (type === 'radio') {
+    if (elements.hasOwnProperty(type)) {
       return (
         FieldRoot(
           Tag({
-            className: radioInputStyles.input,
+            className: elements[type].className,
             type,
             name,
             id: inputId,
@@ -147,8 +204,8 @@ class InputField extends PureComponent<Props> {
             'aria-labelledby': labelId,
             ...rest
           }),
-          RadioCircle(),
-          RadioLabel(label)
+          elements[type].box(),
+          elements[type].label(label)
         )
       )
     }
@@ -170,15 +227,15 @@ class InputField extends PureComponent<Props> {
 
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
-    const isRadio = type === 'radio'
-    const RootComponent = isRadio ? FieldRoot : ComponentRoot
+    const isRadioOrCheckbox = (type === 'radio' || type === 'checkbox')
+    const RootComponent = isRadioOrCheckbox ? FieldRoot : ComponentRoot
 
     return (
       RootComponent(
         label
           ? (
             <label id={labelId}>
-              {!isRadio && <Text content={label} />}
+              {!isRadioOrCheckbox && <Text content={label} />}
               {this.renderField()}
             </label>
           )
