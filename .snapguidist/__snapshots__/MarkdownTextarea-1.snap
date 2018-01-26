@@ -1,0 +1,28 @@
+exports[`MarkdownTextarea-1 1`] = `
+<div
+  className="AutoUI_ui_MarkdownTextarea-74 AutoUI_ui_MarkdownTextarea-105">
+  <div
+    className="AutoUI_ui_MarkdownTextarea-58">
+    <nav
+      className="AutoUI_ui_MarkdownTextarea-53">
+      <button
+        className="AutoUI_ui_MarkdownTextarea-63 AutoUI_ui_MarkdownTextarea-47"
+        name="Write">
+        Write
+      </button>
+      <button
+        className="AutoUI_ui_MarkdownTextarea-63 "
+        name="Preview">
+        Preview
+      </button>
+    </nav>
+  </div>
+  <div>
+    <textarea
+      className="AutoUI_ui_MarkdownTextarea-75 AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_MarkdownTextarea-81"
+      maxLength={1000}
+      placeholder="Enter your response here."
+      value="" />
+  </div>
+</div>
+`;

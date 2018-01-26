@@ -177,6 +177,7 @@ class MarkdownTextarea extends PureComponent<Props> {
       charLimit = 1000,
       onUnfocus
     } = this.props
+
     const {
       text,
       currentButton,
