@@ -11,9 +11,9 @@ const cmz = require('cmz')
 type Props = {
   placeholder: string,
   charLimit: number,
-  onChange(): void,
-  onFocus(): void,
-  onUnfocus(): void
+  onChange(target?: Object): void,
+  onFocus(target?: Object): void,
+  onUnfocus(target?: Object): void
 }
 
 type BaseProps = {
@@ -156,9 +156,9 @@ class MarkdownTextarea extends PureComponent<Props> {
     this.setState({
       shouldShowTextLength: false
     })
-    const { onFocus } = this.props
-    if (onFocus) {
-      onFocus(target)
+    const { onUnfocus } = this.props
+    if (onUnfocus) {
+      onUnfocus(target)
     }
   }
 
@@ -174,8 +174,7 @@ class MarkdownTextarea extends PureComponent<Props> {
   render () {
     const {
       placeholder = 'Enter your response here.',
-      charLimit = 1000,
-      onUnfocus
+      charLimit = 1000
     } = this.props
 
     const {
@@ -213,12 +212,11 @@ class MarkdownTextarea extends PureComponent<Props> {
       </div>,
       <div>
         {showingComponent}
-        {shouldShowTextLength ?
-          <p className={textCountStyles}>
+        {shouldShowTextLength
+          ? <p className={textCountStyles}>
             {text.length}/{charLimit}
           </p>
-        :
-          null
+          : null
         }
       </div>
     )
