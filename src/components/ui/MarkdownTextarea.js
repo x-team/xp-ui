@@ -22,14 +22,12 @@ type BaseProps = {
 
 type State = {
   text: string,
-  currentButton: string
+  currentButton: string,
+  shouldShowTextLength: boolean
 }
 
 const mdContainerStyles = cmz(`
   & {
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
-    font-weight: 300
-    font-size: 18px
     min-height: 154px
     border: 1px solid ${theme.lineSilver3}
     padding: 0 20px
@@ -39,6 +37,11 @@ const mdContainerStyles = cmz(`
     padding: 10px 0px
     margin: 0
   }
+`)
+
+const textCountStyles = cmz(`
+  text-align: right
+  color: ${theme.lineRed}
 `)
 
 const active = cmz(`
@@ -100,6 +103,9 @@ const textareaStyles = [
 const Root = elem.div([
   utilStyles.maxWidth,
   cmz(`
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 300
+    font-size: 18px
     text-align: left
     min-width: 320px
     margin: 0 auto
@@ -122,7 +128,8 @@ class MarkdownTextarea extends PureComponent<Props> {
 
   state: State = {
     text: '',
-    currentButton: 'Write'
+    currentButton: 'Write',
+    shouldShowTextLength: false
   }
 
   onChange = ({ target }: Object) => {
@@ -132,6 +139,26 @@ class MarkdownTextarea extends PureComponent<Props> {
     const { onChange } = this.props
     if (onChange) {
       onChange(target)
+    }
+  }
+
+  onFocus = ({ target }: Object) => {
+    this.setState({
+      shouldShowTextLength: true
+    })
+    const { onFocus } = this.props
+    if (onFocus) {
+      onFocus(target)
+    }
+  }
+
+  onBlur = ({ target }: Object) => {
+    this.setState({
+      shouldShowTextLength: false
+    })
+    const { onFocus } = this.props
+    if (onFocus) {
+      onFocus(target)
     }
   }
 
@@ -148,18 +175,20 @@ class MarkdownTextarea extends PureComponent<Props> {
     const {
       placeholder = 'Enter your response here.',
       charLimit = 1000,
-      onFocus,
       onUnfocus
     } = this.props
-    const { text, currentButton } = this.state
+    const {
+      text,
+      currentButton,
+      shouldShowTextLength
+    } = this.state
 
-    const onChange = this.onChange
     const showingComponent = currentButton === this.WRITE_BUTTON_TEXT
       ? Textarea({
         maxLength: charLimit,
-        onChange,
-        onFocus,
-        onBlur: onUnfocus,
+        onChange: this.onChange,
+        onFocus: this.onFocus,
+        onBlur: this.onBlur,
         value: text,
         placeholder
       }) : <Markdown source={text || 'No preview available.'} container={MarkdownContainer} />
@@ -181,7 +210,16 @@ class MarkdownTextarea extends PureComponent<Props> {
           </button>
         </nav>
       </div>,
-      showingComponent
+      <div>
+        {showingComponent}
+        {shouldShowTextLength ?
+          <p className={textCountStyles}>
+            {text.length}/{charLimit}
+          </p>
+        :
+          null
+        }
+      </div>
     )
   }
 }

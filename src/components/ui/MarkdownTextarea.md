@@ -1,10 +1,5 @@
-Empty Text example :
+Text example :
+
 ```js
 <MarkdownTextarea />
-```
-
-Text example (Heading):
-
-```js
-<MarkdownTextarea/>
 ```
