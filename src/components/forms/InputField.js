@@ -60,7 +60,7 @@ const radioInputStyles = {
   `)
 }
 
-const label = cmz(
+const labelStyles = cmz(
   typo.baseText,
   `
     margin-left: 30px
@@ -73,7 +73,7 @@ const FieldRoot = elem.div(cmz(`
   position: relative
 `))
 const RadioCircle = elem.span(cmz(radioInputStyles.circle))
-const RadioLabel = elem.label(cmz(label))
+const RadioLabel = elem.label(labelStyles)
 
 const inputStyles = [
   typo.formText,
@@ -150,7 +150,7 @@ const checkboxInputStyles = {
 }
 
 const CheckboxTick = elem.span(checkboxInputStyles.tick)
-const Checkboxlabel = elem.label(cmz(label))
+const Checkboxlabel = elem.label(labelStyles)
 
 const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 

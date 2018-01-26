@@ -14,7 +14,7 @@ exports[`InputField-11 1`] = `
         <span
           className="AutoUI_forms_InputField-123" />
         <label
-          className="AutoUI_forms_InputField-153 AutoUI_forms_InputField-63 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_forms_InputField-63 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
           Checkbox
         </label>
       </div>
