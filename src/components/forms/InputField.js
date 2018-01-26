@@ -57,7 +57,7 @@ const radioInputStyles = {
 
   option: cmz(`
     margin-left: 50px
-  `),
+  `)
 }
 
 const label = cmz(
@@ -191,7 +191,7 @@ class InputField extends PureComponent<Props> {
       }
     }
 
-    if (elements.hasOwnProperty(type)) {
+    if (type === 'radio' || type === 'checkbox') {
       return (
         FieldRoot(
           Tag({
