@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react'
-const cmz = require('cmz')
 import Markdown from 'react-remarkable'
 import type { Element } from 'react'
 
-import elem from '../../../utils/elem'
-import typo from '../../../styles/typo'
-import theme from '../../../styles/theme'
+import elem from '../../utils/elem'
+import typo from '../../styles/typo'
+import theme from '../../styles/theme'
+
+const cmz = require('cmz')
 
 type Props = {
   placeholder: string,
@@ -24,55 +25,6 @@ type State = {
   currentButton: string
 }
 
-const utilStyles = {
-  maxWidth: cmz('max-width: 840px'),
-  noOutline: cmz('outline: none'),
-}
-
-const Root = elem.div([
-  utilStyles.maxWidth,
-  cmz(`
-    text-align: left
-    min-width: 320px
-    margin: 0 auto
-  `)
-])
-
-const textareaStyles = [
-  utilStyles.noOutline,
-  typo.formText,
-  cmz(`
-    & {
-      display: block
-      width: 100%
-      height: 156px
-      padding: 10px 20px
-      margin-bottom: 20px
-      resize: vertical
-      border: 1px solid ${theme.lineSilver3}
-      box-sizing: border-box
-    }
-
-    &::-webkit-input-placeholder {
-      color: ${theme.formPlaceholder}
-    }
-
-    &::-moz-placeholder {
-      color: ${theme.formPlaceholder}
-    }
-  `)
-]
-
-const Textarea = elem.textarea(textareaStyles)
-
-const MarkdownContainer = (props: BaseProps) => {
-  return (
-    <div className={`${textareaStyles} ${mdContainerStyles}`}>
-      {props.children}
-    </div>
-  )
-}
-
 const mdContainerStyles = cmz(`
   & {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -80,10 +32,11 @@ const mdContainerStyles = cmz(`
     font-size: 18px
     min-height: 154px
     border: 1px solid ${theme.lineSilver3}
+    padding: 0 20px
   }
 
   & p {
-    padding: 10px 20px
+    padding: 10px 0px
     margin: 0
   }
 `)
@@ -114,11 +67,60 @@ const navButtonStyles = cmz(`
   cursor: pointer
 `)
 
+const utilStyles = {
+  maxWidth: cmz('max-width: 840px'),
+  noOutline: cmz('outline: none')
+}
+
+const textareaStyles = [
+  utilStyles.noOutline,
+  typo.formText,
+  cmz(`
+    & {
+      display: block
+      width: 100%
+      height: 156px
+      padding: 10px 20px
+      margin-bottom: 20px
+      resize: vertical
+      border: 1px solid ${theme.lineSilver3}
+      box-sizing: border-box
+    }
+
+    &::-webkit-input-placeholder {
+      color: ${theme.formPlaceholder}
+    }
+
+    &::-moz-placeholder {
+      color: ${theme.formPlaceholder}
+    }
+  `)
+]
+
+const Root = elem.div([
+  utilStyles.maxWidth,
+  cmz(`
+    text-align: left
+    min-width: 320px
+    margin: 0 auto
+  `)
+])
+
+const Textarea = elem.textarea(textareaStyles)
+
+const MarkdownContainer = (props: BaseProps) => {
+  return (
+    <div className={`${textareaStyles} ${mdContainerStyles}`}>
+      {props.children}
+    </div>
+  )
+}
+
 class MarkdownTextarea extends PureComponent<Props> {
   WRITE_BUTTON_TEXT = 'Write'
   PREVIEW_BUTTON_TEXT = 'Preview'
 
-  state = {
+  state: State = {
     text: '',
     currentButton: 'Write'
   }
@@ -152,15 +154,15 @@ class MarkdownTextarea extends PureComponent<Props> {
     const { text, currentButton } = this.state
 
     const onChange = this.onChange
-    const showingComponent = currentButton === this.WRITE_BUTTON_TEXT ?
-      Textarea({
+    const showingComponent = currentButton === this.WRITE_BUTTON_TEXT
+      ? Textarea({
         maxLength: charLimit,
         onChange,
         onFocus,
         onBlur: onUnfocus,
         value: text,
         placeholder
-      }) : <Markdown source={text || 'No preview available.'} container={MarkdownContainer}/>
+      }) : <Markdown source={text || 'No preview available.'} container={MarkdownContainer} />
 
     return Root(
       <div className={navContainerStyles}>
@@ -169,13 +171,13 @@ class MarkdownTextarea extends PureComponent<Props> {
             name='Write'
             className={`${navButtonStyles} ${currentButton === this.WRITE_BUTTON_TEXT ? active : ''}`}
             onClick={this.handleTabChange}>
-              {this.WRITE_BUTTON_TEXT}
+            {this.WRITE_BUTTON_TEXT}
           </button>
           <button
             name='Preview'
             className={`${navButtonStyles} ${currentButton === this.PREVIEW_BUTTON_TEXT ? active : ''}`}
             onClick={this.handleTabChange}>
-              {this.PREVIEW_BUTTON_TEXT}
+            {this.PREVIEW_BUTTON_TEXT}
           </button>
         </nav>
       </div>,
