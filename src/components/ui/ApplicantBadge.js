@@ -30,11 +30,10 @@ const Root = elem.div(cmz(`
   margin: .5em .5em .5em 0
 `))
 
-const Avatar = elem.img()
+const Avatar = elem.img(cmz('height: 64px'))
 
 const Info = elem.div(cmz(`
   margin: 0 1em
-  padding-top: .5em
   padding-right: .5em
   color: ${theme.typoHighlight}
 `))
