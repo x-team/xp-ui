@@ -89,10 +89,17 @@ const mdContainerStyles = cmz(`
 `)
 
 const active = cmz(`
-  border-bottom: none
+  border: 1px solid ${theme.lineSilver3} !important
+  border-bottom: 0 !important
+  background-color: ${theme.baseBrighter} !important
 `)
 
 const navStyles = cmz(`
+  margin-bottom: -1px
+  padding: 0 10px
+`)
+
+const navContainerStyles = cmz(`
   margin-bottom: 10px
   border-bottom: 1px solid ${theme.lineSilver3}
 `)
@@ -101,8 +108,9 @@ const navButtonStyles = cmz(`
   background-color: transparent
   font-size: 14px;
   border-radius: 3px 3px 0 0
-  border: 1px solid ${theme.lineSilver3}
+  border: 0
   padding: 8px 12px
+  outline: none
   cursor: pointer
 `)
 
@@ -155,23 +163,23 @@ class MarkdownTextarea extends PureComponent<Props> {
       }) : <Markdown source={text || 'No preview available.'} container={MarkdownContainer}/>
 
     return Root(
-      <div>
+      <div className={navContainerStyles}>
         <nav className={navStyles}>
           <button
             name='Write'
-            className={`${currentButton === this.WRITE_BUTTON_TEXT ? active : ''} ${navButtonStyles}`}
+            className={`${navButtonStyles} ${currentButton === this.WRITE_BUTTON_TEXT ? active : ''}`}
             onClick={this.handleTabChange}>
               {this.WRITE_BUTTON_TEXT}
           </button>
           <button
             name='Preview'
-            className={`${currentButton === this.PREVIEW_BUTTON_TEXT ? active : ''} ${navButtonStyles}`}
+            className={`${navButtonStyles} ${currentButton === this.PREVIEW_BUTTON_TEXT ? active : ''}`}
             onClick={this.handleTabChange}>
               {this.PREVIEW_BUTTON_TEXT}
           </button>
         </nav>
       </div>,
-        showingComponent
+      showingComponent
     )
   }
 }
