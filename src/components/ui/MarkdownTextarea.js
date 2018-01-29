@@ -30,6 +30,7 @@ type State = {
 const textCountStyles = cmz(`
   text-align: right
   color: ${theme.lineRed}
+  height: 40px
 `)
 
 const utilStyles = {
@@ -102,11 +103,47 @@ class MarkdownTextarea extends PureComponent<Props> {
     shouldShowTextLength: false
   }
 
-  onChange = (editorState) => {
+  _handleBeforeInput = () => {
+    const { editorState } = this.state
+    const currentContentLength = editorState.getCurrentContent().getPlainText('').length
+    const MAX_LENGTH = this.props.charLimit || 1000
+
+    if (currentContentLength > MAX_LENGTH - 1) {
+      return 'handled'
+    }
+  }
+
+  _onChange = editorState => {
+    const text = editorState.getCurrentContent().getPlainText('')
+
     this.setState({
-      editorState,
-    });
-  };
+      editorState
+    })
+    const { onChange } = this.props
+    if (onChange) {
+      onChange(text)
+    }
+  }
+
+  _onFocus = ({ target }) => {
+    this.setState({
+      shouldShowTextLength: true
+    })
+    const { onFocus } = this.props
+    if (onFocus) {
+      onFocus(target)
+    }
+  }
+
+  _onBlur = ({ target }) => {
+    this.setState({
+      shouldShowTextLength: false
+    })
+    const { onBlur } = this.props
+    if (onBlur) {
+      onBlur(target)
+    }
+  }
 
   render () {
     const {
@@ -115,9 +152,11 @@ class MarkdownTextarea extends PureComponent<Props> {
     } = this.props
 
     const {
-      text,
+      editorState,
       shouldShowTextLength
     } = this.state
+
+    const textLength = editorState.getCurrentContent().getPlainText('').length
 
     return Root(
       <div className={navContainerStyles}>
@@ -129,17 +168,24 @@ class MarkdownTextarea extends PureComponent<Props> {
           </button>
         </nav>
       </div>,
-      <div className={editorContainerStyles}>
-        <Editor
-          editorState={this.state.editorState}
-          onChange={this.onChange}
-          plugins={plugins} />
-        {shouldShowTextLength
-          ? <p className={textCountStyles}>
-            {text.length}/{charLimit}
-          </p>
-          : null
-        }
+      <div>
+        <div className={editorContainerStyles}>
+          <Editor
+            editorState={this.state.editorState}
+            onChange={this._onChange}
+            onFocus={this._onFocus}
+            onBlur={this._onBlur}
+            handleBeforeInput={this._handleBeforeInput}
+            plugins={plugins} />
+        </div>
+        <div className={textCountStyles}>
+          {shouldShowTextLength
+            ? <p>
+              {textLength}/{charLimit}
+            </p>
+            : null
+          }
+        </div>
       </div>
     )
   }
