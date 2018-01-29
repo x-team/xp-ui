@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
-import Markdown from 'react-remarkable'
 import type { Element } from 'react'
+import Editor from 'draft-js-plugins-editor';
+import createMarkdownShortcutsPlugin from 'draft-js-markdown-shortcuts-plugin';
+import { EditorState } from 'draft-js';
 
 import elem from '../../utils/elem'
 import typo from '../../styles/typo'
@@ -22,33 +24,18 @@ type BaseProps = {
 
 type State = {
   text: string,
-  currentButton: string,
   shouldShowTextLength: boolean
 }
-
-const mdContainerStyles = cmz(`
-  & {
-    min-height: 154px
-    border: 1px solid ${theme.lineSilver3}
-    padding: 0 20px
-  }
-
-  & p {
-    padding: 10px 0px
-    margin: 0
-  }
-`)
 
 const textCountStyles = cmz(`
   text-align: right
   color: ${theme.lineRed}
 `)
 
-const active = cmz(`
-  border: 1px solid ${theme.lineSilver3} !important
-  border-bottom: 0 !important
-  background-color: ${theme.baseBrighter} !important
-`)
+const utilStyles = {
+  maxWidth: cmz('max-width: 840px'),
+  noOutline: cmz('outline: none')
+}
 
 const navStyles = cmz(`
   margin-bottom: -1px
@@ -62,6 +49,9 @@ const navContainerStyles = cmz(`
 
 const navButtonStyles = cmz(`
   background-color: transparent
+  border: 1px solid ${theme.lineSilver3} !important
+  border-bottom: 0 !important
+  background-color: ${theme.baseBrighter} !important
   font-size: 14px;
   border-radius: 3px 3px 0 0
   border: 0
@@ -70,35 +60,16 @@ const navButtonStyles = cmz(`
   cursor: pointer
 `)
 
-const utilStyles = {
-  maxWidth: cmz('max-width: 840px'),
-  noOutline: cmz('outline: none')
-}
-
-const textareaStyles = [
-  utilStyles.noOutline,
-  typo.formText,
-  cmz(`
-    & {
-      display: block
-      width: 100%
-      height: 156px
-      padding: 10px 20px
-      margin-bottom: 20px
-      resize: vertical
-      border: 1px solid ${theme.lineSilver3}
-      box-sizing: border-box
-    }
-
-    &::-webkit-input-placeholder {
-      color: ${theme.formPlaceholder}
-    }
-
-    &::-moz-placeholder {
-      color: ${theme.formPlaceholder}
-    }
-  `)
-]
+const editorContainerStyles = cmz(`
+  display: block
+  width: 100%
+  height: 156px
+  padding: 10px 20px
+  margin-bottom: 20px
+  resize: vertical
+  border: 1px solid ${theme.lineSilver3}
+  box-sizing: border-box
+`)
 
 const Root = elem.div([
   utilStyles.maxWidth,
@@ -107,69 +78,35 @@ const Root = elem.div([
     font-weight: 300
     font-size: 18px
     text-align: left
+    display: block
+    width: 100%
+    padding: 10px 20px
+    margin-bottom: 20px
+    resize: vertical
+    border: 1px solid ${theme.lineSilver3}
+    box-sizing: border-box
     min-width: 320px
     margin: 0 auto
   `)
 ])
 
-const Textarea = elem.textarea(textareaStyles)
-
-const MarkdownContainer = (props: BaseProps) => {
-  return (
-    <div className={`${textareaStyles} ${mdContainerStyles}`}>
-      {props.children}
-    </div>
-  )
-}
+const plugins = [
+  createMarkdownShortcutsPlugin()
+];
 
 class MarkdownTextarea extends PureComponent<Props> {
-  WRITE_BUTTON_TEXT = 'Write'
-  PREVIEW_BUTTON_TEXT = 'Preview'
 
   state: State = {
     text: '',
-    currentButton: 'Write',
+    editorState: EditorState.createEmpty(),
     shouldShowTextLength: false
   }
 
-  onChange = ({ target }: Object) => {
+  onChange = (editorState) => {
     this.setState({
-      text: target.value
-    })
-    const { onChange } = this.props
-    if (onChange) {
-      onChange(target)
-    }
-  }
-
-  onFocus = ({ target }: Object) => {
-    this.setState({
-      shouldShowTextLength: true
-    })
-    const { onFocus } = this.props
-    if (onFocus) {
-      onFocus(target)
-    }
-  }
-
-  onBlur = ({ target }: Object) => {
-    this.setState({
-      shouldShowTextLength: false
-    })
-    const { onUnfocus } = this.props
-    if (onUnfocus) {
-      onUnfocus(target)
-    }
-  }
-
-  handleTabChange = ({ target: { name } }: Object) => {
-    const { currentButton } = this.state
-    if (currentButton !== name) {
-      this.setState({
-        currentButton: name
-      })
-    }
-  }
+      editorState,
+    });
+  };
 
   render () {
     const {
@@ -179,39 +116,24 @@ class MarkdownTextarea extends PureComponent<Props> {
 
     const {
       text,
-      currentButton,
       shouldShowTextLength
     } = this.state
-
-    const showingComponent = currentButton === this.WRITE_BUTTON_TEXT
-      ? Textarea({
-        maxLength: charLimit,
-        onChange: this.onChange,
-        onFocus: this.onFocus,
-        onBlur: this.onBlur,
-        value: text,
-        placeholder
-      }) : <Markdown source={text || 'No preview available.'} container={MarkdownContainer} />
 
     return Root(
       <div className={navContainerStyles}>
         <nav className={navStyles}>
           <button
             name='Write'
-            className={`${navButtonStyles} ${currentButton === this.WRITE_BUTTON_TEXT ? active : ''}`}
-            onClick={this.handleTabChange}>
-            {this.WRITE_BUTTON_TEXT}
-          </button>
-          <button
-            name='Preview'
-            className={`${navButtonStyles} ${currentButton === this.PREVIEW_BUTTON_TEXT ? active : ''}`}
-            onClick={this.handleTabChange}>
-            {this.PREVIEW_BUTTON_TEXT}
+            className={navButtonStyles}>
+            Write
           </button>
         </nav>
       </div>,
-      <div>
-        {showingComponent}
+      <div className={editorContainerStyles}>
+        <Editor
+          editorState={this.state.editorState}
+          onChange={this.onChange}
+          plugins={plugins} />
         {shouldShowTextLength
           ? <p className={textCountStyles}>
             {text.length}/{charLimit}
