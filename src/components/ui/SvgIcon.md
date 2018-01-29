@@ -9,6 +9,7 @@ Basic colors:
   <SvgIcon icon="diamond" />
   <SvgIcon icon="talking" />
   <SvgIcon icon="trophy" />
+  <SvgIcon icon="calendar" />
 </div>
 ```
 
@@ -23,6 +24,7 @@ Inverted colors:
   <SvgIcon icon="diamond" color="inverted" />
   <SvgIcon icon="talking" color="inverted" />
   <SvgIcon icon="trophy" color="inverted" />
+  <SvgIcon icon="calendar" color="inverted" />
 </div>
 ```
 
@@ -37,6 +39,7 @@ Monochrome colors:
   <SvgIcon icon="diamond" color="monochrome" />
   <SvgIcon icon="talking" color="monochrome" />
   <SvgIcon icon="trophy" color="monochrome" />
+  <SvgIcon icon="calendar" color="monochrome" />
 </div>
 ```
 
