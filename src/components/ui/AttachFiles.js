@@ -112,7 +112,7 @@ class AttachFiles extends PureComponent<Props> {
     }
 
     const renderFiles = (files: Files) => {
-      return files && files.length > 0 && (
+      return files.length > 0 && (
         FilesList(
           files.map(file => {
             return (
