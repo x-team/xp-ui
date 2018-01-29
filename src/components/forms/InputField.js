@@ -139,7 +139,7 @@ const checkboxInputStyles = {
       width: 8px
       height: 4px
       top: 5px
-      left: 5px
+      left: 4px
       border: 2px solid ${theme.baseBrighter}
       border-top: none
       border-right: none
@@ -155,6 +155,8 @@ const Checkboxlabel = elem.label(labelStyles)
 const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 
 const inputFactory = type => elem[getTagName(type)](inputStyles)
+
+const isRadioOrCheckbox = type => type === 'radio' || type === 'checkbox'
 
 class InputField extends PureComponent<Props> {
   static defaultProps = {
@@ -191,7 +193,7 @@ class InputField extends PureComponent<Props> {
       }
     }
 
-    if (type === 'radio' || type === 'checkbox') {
+    if (isRadioOrCheckbox(type)) {
       return (
         FieldRoot(
           Tag({
@@ -227,15 +229,15 @@ class InputField extends PureComponent<Props> {
 
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
-    const isRadioOrCheckbox = (type === 'radio' || type === 'checkbox')
-    const RootComponent = isRadioOrCheckbox ? FieldRoot : ComponentRoot
+
+    const RootComponent = isRadioOrCheckbox(type) ? FieldRoot : ComponentRoot
 
     return (
       RootComponent(
         label
           ? (
             <label id={labelId}>
-              {!isRadioOrCheckbox && <Text content={label} />}
+              {!isRadioOrCheckbox(type) && <Text content={label} />}
               {this.renderField()}
             </label>
           )
