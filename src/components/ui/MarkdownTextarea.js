@@ -62,14 +62,20 @@ const navButtonStyles = cmz(`
 `)
 
 const editorContainerStyles = cmz(`
-  display: block
-  width: 100%
-  height: 156px
-  padding: 10px 20px
-  margin-bottom: 20px
-  resize: vertical
-  border: 1px solid ${theme.lineSilver3}
-  box-sizing: border-box
+  & {
+    display: block
+    width: 100%
+    height: 156px
+    padding: 10px 20px
+    margin-bottom: 20px
+    resize: vertical
+    border: 1px solid ${theme.lineSilver3}
+    box-sizing: border-box
+  }
+
+  & .public-DraftEditor-content {
+    height: 130px
+  }
 `)
 
 const Root = elem.div([
@@ -171,6 +177,7 @@ class MarkdownTextarea extends PureComponent<Props> {
       <div>
         <div className={editorContainerStyles}>
           <Editor
+            placeholder={placeholder}
             editorState={this.state.editorState}
             onChange={this._onChange}
             onFocus={this._onFocus}
