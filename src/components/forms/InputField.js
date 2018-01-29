@@ -156,7 +156,20 @@ const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 
 const inputFactory = type => elem[getTagName(type)](inputStyles)
 
-const isRadioOrCheckbox = type => type === 'radio' || type === 'checkbox'
+const specialTypesDefinitions : Object = {
+  radio: {
+    className: radioInputStyles.input,
+    box: RadioCircle,
+    label: RadioLabel
+  },
+  checkbox: {
+    className: checkboxInputStyles.input,
+    box: CheckboxTick,
+    label: Checkboxlabel
+  }
+}
+
+const isSpecialType = type => Boolean(specialTypesDefinitions[type])
 
 class InputField extends PureComponent<Props> {
   static defaultProps = {
@@ -180,24 +193,12 @@ class InputField extends PureComponent<Props> {
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
     const errorClassName = isInvalid ? errorInput : ''
-    const elements = {
-      radio: {
-        className: radioInputStyles.input,
-        box: RadioCircle,
-        label: RadioLabel
-      },
-      checkbox: {
-        className: checkboxInputStyles.input,
-        box: CheckboxTick,
-        label: Checkboxlabel
-      }
-    }
 
-    if (isRadioOrCheckbox(type)) {
+    if (isSpecialType(type)) {
       return (
         FieldRoot(
           Tag({
-            className: elements[type].className,
+            className: specialTypesDefinitions[type].className,
             type,
             name,
             id: inputId,
@@ -206,8 +207,8 @@ class InputField extends PureComponent<Props> {
             'aria-labelledby': labelId,
             ...rest
           }),
-          elements[type].box(),
-          elements[type].label(label)
+          specialTypesDefinitions[type].box(),
+          specialTypesDefinitions[type].label(label)
         )
       )
     }
@@ -230,14 +231,14 @@ class InputField extends PureComponent<Props> {
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
 
-    const RootComponent = isRadioOrCheckbox(type) ? FieldRoot : ComponentRoot
+    const RootComponent = isSpecialType(type) ? FieldRoot : ComponentRoot
 
     return (
       RootComponent(
         label
           ? (
             <label id={labelId}>
-              {!isRadioOrCheckbox(type) && <Text content={label} />}
+              {!isSpecialType(type) && <Text content={label} />}
               {this.renderField()}
             </label>
           )
