@@ -23,6 +23,7 @@ type Props = {
   handleToggleCollapse: Function,
   visible?: Element<*>|string,
   children?: Element<*>|string,
+  index: number
 }
 
 const cx = {
@@ -42,7 +43,7 @@ const Root = elem.section(cmz(
   &:first-child {
     border-top: 1px solid transparent
   }
-`))
+`), {'data-test': `portfolioItem${index}`})
 
 const Header = elem.h1(cmz(
   typo.sectionHeading,
@@ -135,7 +136,8 @@ class CollapsibleSection extends PureComponent<Props> {
     isCollapsed: true,
     handleToggleCollapse: () => {},
     visible: null,
-    children: null
+    children: null,
+    index: 0
   }
 
   render () {
@@ -146,7 +148,8 @@ class CollapsibleSection extends PureComponent<Props> {
       isCollapsed,
       handleToggleCollapse,
       visible,
-      children
+      children,
+      index
     } = this.props
 
     const ContentBlock = (visible || children) && Content(
