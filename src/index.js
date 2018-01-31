@@ -5,6 +5,7 @@ import Button from './components/ui/Button'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
 import ErrorBox from './components/ui/ErrorBox'
+import FilterBar from './components/ui/FilterBar'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
@@ -33,6 +34,7 @@ export {
   CollapsibleSection,
   ColorPalette,
   ErrorBox,
+  FilterBar,
   HeaderBar,
   HorizontalRuler,
   InputField,
