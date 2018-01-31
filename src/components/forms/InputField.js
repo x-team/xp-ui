@@ -72,8 +72,8 @@ const FieldRoot = elem.div(cmz(`
   display: inline-block
   position: relative
 `))
-const RadioCircle = elem.span(cmz(radioInputStyles.circle))
-const RadioLabel = elem.label(labelStyles)
+const RadioCircle = elem.span(radioInputStyles.circle)
+const Label = elem.label(labelStyles)
 
 const inputStyles = [
   typo.formText,
@@ -150,7 +150,6 @@ const checkboxInputStyles = {
 }
 
 const CheckboxTick = elem.span(checkboxInputStyles.tick)
-const Checkboxlabel = elem.label(labelStyles)
 
 const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 
@@ -159,13 +158,13 @@ const inputFactory = type => elem[getTagName(type)](inputStyles)
 const specialTypesDefinitions : Object = {
   radio: {
     className: radioInputStyles.input,
-    box: RadioCircle,
-    label: RadioLabel
+    ElemBox: RadioCircle,
+    ElemLabel: Label
   },
   checkbox: {
     className: checkboxInputStyles.input,
-    box: CheckboxTick,
-    label: Checkboxlabel
+    ElemBox: CheckboxTick,
+    ElemLabel: Label
   }
 }
 
@@ -195,10 +194,11 @@ class InputField extends PureComponent<Props> {
     const errorClassName = isInvalid ? errorInput : ''
 
     if (isSpecialType(type)) {
+      const { ElemBox, ElemLabel, className } = specialTypesDefinitions[type]
       return (
         FieldRoot(
           Tag({
-            className: specialTypesDefinitions[type].className,
+            className,
             type,
             name,
             id: inputId,
@@ -207,8 +207,8 @@ class InputField extends PureComponent<Props> {
             'aria-labelledby': labelId,
             ...rest
           }),
-          specialTypesDefinitions[type].box(),
-          specialTypesDefinitions[type].label(label)
+          ElemBox(),
+          ElemLabel(label)
         )
       )
     }

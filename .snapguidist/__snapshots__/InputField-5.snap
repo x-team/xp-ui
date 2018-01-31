@@ -12,7 +12,7 @@ exports[`InputField-5 1`] = `
           className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80 AutoUI_forms_InputField-44"
           type="radio" />
         <span
-          className="AutoUI_forms_InputField-75 AutoUI_forms_InputField-37" />
+          className="AutoUI_forms_InputField-37" />
         <label
           className="AutoUI_forms_InputField-63 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
           Value 1
@@ -32,7 +32,7 @@ exports[`InputField-5 1`] = `
           className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80 AutoUI_forms_InputField-44"
           type="radio" />
         <span
-          className="AutoUI_forms_InputField-75 AutoUI_forms_InputField-37" />
+          className="AutoUI_forms_InputField-37" />
         <label
           className="AutoUI_forms_InputField-63 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
           Value 2
