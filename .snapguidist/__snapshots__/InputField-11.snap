@@ -1,24 +1,8 @@
 exports[`InputField-11 1`] = `
-<section>
-  <div
-    className="AutoUI_forms_InputField-71">
-    <label
-      id="">
-      <div
-        className="AutoUI_forms_InputField-71">
-        <input
-          aria-labelledby=""
-          checked={true}
-          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80 AutoUI_forms_InputField-111"
-          type="checkbox" />
-        <span
-          className="AutoUI_forms_InputField-123" />
-        <label
-          className="AutoUI_forms_InputField-63 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-          Checkbox
-        </label>
-      </div>
-    </label>
-  </div>
-</section>
+<div>
+  <input
+    aria-labelledby=""
+    className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80"
+    type="text" />
+</div>
 `;
