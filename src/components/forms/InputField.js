@@ -39,6 +39,7 @@ const radioInputStyles = {
     top: 6px
     border: 1px solid ${theme.formBorder}
     box-sizing: border-box
+    left: 0
   `),
 
   input: cmz(`
@@ -122,7 +123,6 @@ const checkboxInputStyles = {
   `),
   tick: cmz(`
     & {
-      cursor: pointer
       position: absolute
       width: 18px
       height: 18px
@@ -197,18 +197,20 @@ class InputField extends PureComponent<Props> {
       const { ElemBox, ElemLabel, className } = specialTypesDefinitions[type]
       return (
         FieldRoot(
-          Tag({
-            className,
-            type,
-            name,
-            id: inputId,
-            value,
-            onChange,
-            'aria-labelledby': labelId,
-            ...rest
-          }),
-          ElemBox(),
-          ElemLabel(label)
+          ElemLabel(
+            Tag({
+              className,
+              type,
+              name,
+              id: inputId,
+              value,
+              onChange,
+              'aria-labelledby': labelId,
+              ...rest
+            }),
+            ElemBox(),
+            label
+          )
         )
       )
     }
