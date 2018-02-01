@@ -1,13 +1,9 @@
-import Editor from 'react-medium-editor'
-import 'medium-editor/dist/css/medium-editor.css'
-import 'medium-editor/dist/css/themes/default.css'
-
 import React, { PureComponent } from 'react'
 import type { Element } from 'react'
 
-import elem from '../../utils/elem'
-import typo from '../../styles/typo'
-import theme from '../../styles/theme'
+import elem from '../../../utils/elem'
+import typo from '../../../styles/typo'
+import theme from '../../../styles/theme'
 
 const cmz = require('cmz')
 
@@ -98,7 +94,7 @@ const Root = elem.div([
   `)
 ])
 
-class MarkdownTextarea extends PureComponent<Props> {
+class TextareaEditor extends PureComponent<Props> {
   state: State = {
     text: '',
     shouldShowTextLength: false
@@ -145,37 +141,8 @@ class MarkdownTextarea extends PureComponent<Props> {
       shouldShowTextLength
     } = this.state
 
-    return Root(
-      <div className={navContainerStyles}>
-        <nav className={navStyles}>
-          <button
-            name='Write'
-            className={navButtonStyles}>
-            Write
-          </button>
-        </nav>
-      </div>,
-      <div>
-        <div className={editorContainerStyles}>
-          <Editor
-            text={text}
-            onChange={this._onChange}
-            onFocus={this._onFocus}
-            onBlur={this._onBlur}
-            options={{placeholder: {text: placeholder}}}
-          />
-        </div>
-        <div className={textCountStyles}>
-          {shouldShowTextLength
-            ? <p>
-              {text.length}/{charLimit}
-            </p>
-            : null
-          }
-        </div>
-      </div>
-    )
+    return <MediumEditorWrapper />
   }
 }
 
-export default MarkdownTextarea
+export default TextareaEditor
