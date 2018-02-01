@@ -100,17 +100,14 @@ class TextareaEditor extends PureComponent<Props> {
     shouldShowTextLength: false
   }
 
-  _onChange = (text, medium) => {
-    this.setState({
-      text
-    })
+  _onChange = text => {
     const { onChange } = this.props
     if (onChange) {
       onChange(text)
     }
   }
 
-  _onFocus = ({ target }) => {
+  _onFocus = target => {
     this.setState({
       shouldShowTextLength: true
     })
@@ -120,7 +117,8 @@ class TextareaEditor extends PureComponent<Props> {
     }
   }
 
-  _onBlur = ({ target }) => {
+  _onBlur = target => {
+    debugger
     this.setState({
       shouldShowTextLength: false
     })
@@ -129,7 +127,6 @@ class TextareaEditor extends PureComponent<Props> {
       onBlur(target)
     }
   }
-
   render () {
     const {
       placeholder = 'Enter your response here.',
@@ -141,7 +138,40 @@ class TextareaEditor extends PureComponent<Props> {
       shouldShowTextLength
     } = this.state
 
-    return <MediumEditorWrapper />
+    const options = {
+      placeholder: {
+        text: placeholder
+      }
+    }
+
+    return Root(
+      <div className={navContainerStyles}>
+        <nav className={navStyles}>
+          <button
+            name='Write'
+            className={navButtonStyles}>
+            Write
+          </button>
+        </nav>
+      </div>,
+      <div>
+        <div className={editorContainerStyles}>
+          <MediumEditorWrapper
+            options={options}
+            onFocus={this._onFocus}
+            onBlur={this._onBlur}
+            onChange={this._onChange} />
+        </div>
+        <div className={textCountStyles}>
+          {shouldShowTextLength
+            ? <p>
+              {text.length}/{charLimit}
+            </p>
+            : null
+          }
+        </div>
+     </div>
+    )
   }
 }
 
