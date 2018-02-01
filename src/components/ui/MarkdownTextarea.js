@@ -1,8 +1,9 @@
+import Editor from 'react-medium-editor'
+import 'medium-editor/dist/css/medium-editor.css'
+import 'medium-editor/dist/css/themes/default.css'
+
 import React, { PureComponent } from 'react'
 import type { Element } from 'react'
-import Editor from 'draft-js-plugins-editor';
-import createMarkdownShortcutsPlugin from 'draft-js-markdown-shortcuts-plugin';
-import { EditorState } from 'draft-js';
 
 import elem from '../../utils/elem'
 import typo from '../../styles/typo'
@@ -73,8 +74,8 @@ const editorContainerStyles = cmz(`
     box-sizing: border-box
   }
 
-  & .public-DraftEditor-content {
-    height: 130px
+  & p {
+    margin: 0
   }
 `)
 
@@ -97,33 +98,15 @@ const Root = elem.div([
   `)
 ])
 
-const plugins = [
-  createMarkdownShortcutsPlugin()
-];
-
 class MarkdownTextarea extends PureComponent<Props> {
-
   state: State = {
     text: '',
-    editorState: EditorState.createEmpty(),
     shouldShowTextLength: false
   }
 
-  _handleBeforeInput = () => {
-    const { editorState } = this.state
-    const currentContentLength = editorState.getCurrentContent().getPlainText('').length
-    const MAX_LENGTH = this.props.charLimit || 1000
-
-    if (currentContentLength > MAX_LENGTH - 1) {
-      return 'handled'
-    }
-  }
-
-  _onChange = editorState => {
-    const text = editorState.getCurrentContent().getPlainText('')
-
+  _onChange = (text, medium) => {
     this.setState({
-      editorState
+      text
     })
     const { onChange } = this.props
     if (onChange) {
@@ -158,11 +141,9 @@ class MarkdownTextarea extends PureComponent<Props> {
     } = this.props
 
     const {
-      editorState,
+      text,
       shouldShowTextLength
     } = this.state
-
-    const textLength = editorState.getCurrentContent().getPlainText('').length
 
     return Root(
       <div className={navContainerStyles}>
@@ -177,18 +158,17 @@ class MarkdownTextarea extends PureComponent<Props> {
       <div>
         <div className={editorContainerStyles}>
           <Editor
-            placeholder={placeholder}
-            editorState={this.state.editorState}
+            text={text}
             onChange={this._onChange}
             onFocus={this._onFocus}
             onBlur={this._onBlur}
-            handleBeforeInput={this._handleBeforeInput}
-            plugins={plugins} />
+            options={{placeholder: {text: placeholder}}}
+          />
         </div>
         <div className={textCountStyles}>
           {shouldShowTextLength
             ? <p>
-              {textLength}/{charLimit}
+              {text.length}/{charLimit}
             </p>
             : null
           }
