@@ -158,6 +158,8 @@ class TextareaEditor extends PureComponent<Props> {
       <div>
         <div className={editorContainerStyles}>
           <MediumEditorWrapper
+            text={text}
+            charLimit={charLimit}
             options={options}
             onFocus={this._onFocus}
             onBlur={this._onBlur}

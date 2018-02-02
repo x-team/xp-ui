@@ -23,8 +23,12 @@ class MediumEditorWrapper extends PureComponent {
 
     this.medium = new _MediumEditor('.editable', this.props.options);
     this.medium.subscribe('editableInput', e => {
-      const { textContent } = this.input
+      const { text, charLimit } = this.props
+      if (this.input.textContent.length > charLimit) {
+        this.input.textContent = text
+      }
 
+      let { textContent } = this.input
       const { onChange } = this.props
       if (onChange) {
         onChange(textContent)
