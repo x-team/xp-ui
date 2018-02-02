@@ -63,11 +63,17 @@ const editorContainerStyles = cmz(`
     display: block
     width: 100%
     height: 156px
-    padding: 10px 20px
+    padding: 15px
     margin-bottom: 20px
     resize: vertical
     border: 1px solid ${theme.lineSilver3}
+    overflow: scroll
     box-sizing: border-box
+  }
+
+  & .editable {
+    height: 100%
+    outline: none
   }
 
   & p {
@@ -87,7 +93,6 @@ const Root = elem.div([
     padding: 10px 20px
     margin-bottom: 20px
     resize: vertical
-    border: 1px solid ${theme.lineSilver3}
     box-sizing: border-box
     min-width: 320px
     margin: 0 auto
@@ -101,6 +106,7 @@ class TextareaEditor extends PureComponent<Props> {
   }
 
   _onChange = text => {
+    this.setState(() => ({ text }))
     const { onChange } = this.props
     if (onChange) {
       onChange(text)
@@ -108,9 +114,7 @@ class TextareaEditor extends PureComponent<Props> {
   }
 
   _onFocus = target => {
-    this.setState({
-      shouldShowTextLength: true
-    })
+    this.setState(() => ({ shouldShowTextLength: true }))
     const { onFocus } = this.props
     if (onFocus) {
       onFocus(target)
@@ -118,10 +122,7 @@ class TextareaEditor extends PureComponent<Props> {
   }
 
   _onBlur = target => {
-    debugger
-    this.setState({
-      shouldShowTextLength: false
-    })
+    this.setState(() => ({ shouldShowTextLength: false }))
     const { onBlur } = this.props
     if (onBlur) {
       onBlur(target)

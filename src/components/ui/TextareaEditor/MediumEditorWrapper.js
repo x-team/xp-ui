@@ -15,40 +15,35 @@ class MediumEditorWrapper extends PureComponent {
   }
 
   componentDidMount = () => {
+    const subscribeFunction = fun => event => {
+      if (fun) {
+        fun(this.input)
+      }
+    }
+
     this.medium = new _MediumEditor('.editable', this.props.options);
     this.medium.subscribe('editableInput', e => {
-      this._updated = true;
-      const { innerHTML } = this.input
+      const { textContent } = this.input
+
       const { onChange } = this.props
-
       if (onChange) {
-        onChange(innerHTML)
+        onChange(textContent)
       }
     })
 
-    this.medium.subscribe('focus', e => {
-      const { onFocus } = this.props
-      if (onFocus) {
-        onFocus(this.input)
-      }
-    })
-
-    this.medium.subscribe('blur', e => {
-      const { onBlur } = this.props
-      if (onBlur) {
-        onBlur(this.input)
-      }
-    })
+    this.medium.subscribe('focus', subscribeFunction(this.props.onFocus))
+    this.medium.subscribe('blur', subscribeFunction(this.props.onBlur))
   }
 
   render () {
     const tag = 'div'
+
     const childProps = {
       ref: node => this.input = node,
       className: 'editable'
-    };
+    }
     if (this.medium) {
-      this.medium.saveSelection();
+      this.medium.saveSelection()
     }
     return React.createElement(tag, childProps)
   }
