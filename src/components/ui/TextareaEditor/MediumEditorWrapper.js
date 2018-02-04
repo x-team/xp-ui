@@ -21,7 +21,7 @@ class MediumEditorWrapper extends PureComponent {
       }
     }
 
-    this.medium = new _MediumEditor('.editable', this.props.options);
+    this.medium = new _MediumEditor('.editable', this.props.options)
     this.medium.subscribe('editableInput', e => {
       const { text, charLimit } = this.props
       if (this.input.textContent.length > charLimit) {
@@ -43,7 +43,7 @@ class MediumEditorWrapper extends PureComponent {
     const tag = 'div'
 
     const childProps = {
-      ref: node => this.input = node,
+      ref: node => { this.input = node },
       className: 'editable'
     }
     if (this.medium) {

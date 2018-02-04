@@ -1,8 +1,8 @@
+/* global HTMLTextAreaElement */
 import React, { PureComponent } from 'react'
-import type { Element } from 'react'
 
+import MediumEditorWrapper from './MediumEditorWrapper'
 import elem from '../../../utils/elem'
-import typo from '../../../styles/typo'
 import theme from '../../../styles/theme'
 
 const cmz = require('cmz')
@@ -10,13 +10,9 @@ const cmz = require('cmz')
 type Props = {
   placeholder: string,
   charLimit: number,
-  onChange(target?: Object): void,
-  onFocus(target?: Object): void,
-  onUnfocus(target?: Object): void
-}
-
-type BaseProps = {
-  children?: Element<*> | string
+  onChange(text: string): ?void,
+  onFocus(target: Object): ?void,
+  onUnfocus(target: Object): ?void
 }
 
 type State = {
@@ -105,7 +101,7 @@ class TextareaEditor extends PureComponent<Props> {
     shouldShowTextLength: false
   }
 
-  _onChange = text => {
+  _onChange = (text: string) => {
     this.setState(() => ({ text }))
     const { onChange } = this.props
     if (onChange) {
@@ -113,7 +109,7 @@ class TextareaEditor extends PureComponent<Props> {
     }
   }
 
-  _onFocus = target => {
+  _onFocus = (target: HTMLTextAreaElement) => {
     this.setState(() => ({ shouldShowTextLength: true }))
     const { onFocus } = this.props
     if (onFocus) {
@@ -121,13 +117,14 @@ class TextareaEditor extends PureComponent<Props> {
     }
   }
 
-  _onBlur = target => {
+  _onBlur = (target: HTMLTextAreaElement) => {
     this.setState(() => ({ shouldShowTextLength: false }))
     const { onBlur } = this.props
     if (onBlur) {
       onBlur(target)
     }
   }
+
   render () {
     const {
       placeholder = 'Enter your response here.',
@@ -166,14 +163,12 @@ class TextareaEditor extends PureComponent<Props> {
             onChange={this._onChange} />
         </div>
         <div className={textCountStyles}>
-          {shouldShowTextLength
-            ? <p>
+          {shouldShowTextLength && <p>
               {text.length}/{charLimit}
             </p>
-            : null
           }
         </div>
-     </div>
+      </div>
     )
   }
 }
