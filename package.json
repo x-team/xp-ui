@@ -54,10 +54,7 @@
     "color": "^2.0.1",
     "crypto-js": "^3.1.9-1",
     "css-loader": "^0.28.9",
-    "draft-js": "^0.10.5",
-    "draft-js-markdown-shortcuts-plugin": "^0.3.0",
-    "draft-js-plugins-editor": "^2.0.4",
-    "react-medium-editor": "^1.8.1",
+    "medium-editor": "^5.23.3",
     "recompose": "^0.26.0",
     "webfontloader": "^1.6.28"
   }
