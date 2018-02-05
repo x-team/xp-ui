@@ -80,6 +80,27 @@ Basic with many items:
 </div>
 ```
 
+Small display with content:
+```js
+<CollapsibleSection
+  title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
+  visible=<p>This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.</p>
+  small
+>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.</p>
+</CollapsibleSection>
+```
+
+Small display without content:
+```js
+<CollapsibleSection
+  title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
+  visible=<p>This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.</p>
+  small
+/>
+```
+
 Missing props (does component explode?):
 
 ```
