@@ -9,7 +9,7 @@ exports[`InputField-7 1`] = `
         className="AutoUI_forms_InputField-64 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         <input
           aria-labelledby=""
-          checked={false}
+          checked={true}
           className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-81 AutoUI_forms_InputField-112"
           type="checkbox" />
         <span
