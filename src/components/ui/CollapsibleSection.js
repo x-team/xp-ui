@@ -11,7 +11,6 @@ import typo from '../../styles/typo'
 import SvgIcon from './SvgIcon'
 
 import type { Element } from 'react'
-import type { Icon } from './SvgIcon'
 
 const cmz = require('cmz')
 
