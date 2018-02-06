@@ -61,10 +61,6 @@ const Header = elem.h1(cmz(`
     width: 200px
   }
 
-  .${cx.small} & {
-
-  }
-
   &:hover {
     color: ${theme.baseDarker}
   }
@@ -176,14 +172,14 @@ class CollapsibleSection extends PureComponent<Props> {
 
     const IconBlock = children && IconWrapper(
       {
-        onClick: () => children ? handleToggleCollapse(!isCollapsed) : null
+        onClick: () => handleToggleCollapse(!isCollapsed)
       },
       <SvgIcon icon={isCollapsed ? 'plus' : 'minus'} />
     )
 
-    return title !== '' ? Root(
+    return title !== '' && Root(
       {
-        onClick: () => (children && isCollapsed) ? handleToggleCollapse(false) : null,
+        onClick: () => (children && isCollapsed) && handleToggleCollapse(false),
         className: [
           isTwoColumns && cx.twoColSection,
           small && cx.small,
@@ -192,7 +188,7 @@ class CollapsibleSection extends PureComponent<Props> {
       },
       Header(
         {
-          onClick: () => children ? handleToggleCollapse(!isCollapsed) : null,
+          onClick: () => children && handleToggleCollapse(!isCollapsed),
           className: [
             children && cx.clickable,
             small ? typo.badgeHeading : typo.sectionHeading
@@ -202,7 +198,7 @@ class CollapsibleSection extends PureComponent<Props> {
       ),
       IconBlock,
       ContentBlock
-    ) : null
+    )
   }
 }
 
