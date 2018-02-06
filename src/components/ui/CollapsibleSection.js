@@ -11,7 +11,6 @@ import typo from '../../styles/typo'
 import SvgIcon from './SvgIcon'
 
 import type { Element } from 'react'
-import type { Icon } from './SvgIcon'
 
 const cmz = require('cmz')
 
@@ -22,12 +21,14 @@ type Props = {
   isCollapsed?: boolean,
   handleToggleCollapse: Function,
   visible?: Element<*>|string,
+  small?: boolean,
   children?: Element<*>|string,
 }
 
 const cx = {
   twoColSection: cmz('display: flex'),
-  clickable: cmz('cursor: pointer')
+  clickable: cmz('cursor: pointer'),
+  small: cmz('display: inline-block')
 }
 
 const Root = elem.section(cmz(
@@ -39,14 +40,18 @@ const Root = elem.section(cmz(
     position: relative
   }
 
+  &.${cx.small} {
+    padding: 0
+    border: none
+    flex: 1
+  }
+
   &:first-child {
     border-top: 1px solid transparent
   }
 `))
 
-const Header = elem.h1(cmz(
-  typo.sectionHeading,
-  cx.clickable, `
+const Header = elem.h1(cmz(`
   & {
     margin: 0
     padding-right: 24px
@@ -67,11 +72,19 @@ const IconWrapper = elem.div(cmz(`
     top: 34px
     right: 10px
     cursor: pointer
+    width: 12px
+    height: 12px
+    display: block
+  }
+
+  .${cx.small} & {
+    top: 0
   }
 
   & > svg {
     width: 12px
     height: 12px
+    display: block
   }
 `))
 
@@ -90,6 +103,7 @@ const Content = elem.div(cmz(`
   }
 
   .${cx.twoColSection} & > :only-child,
+  .${cx.small} & > :only-child,
   .${cx.clickable} & > :only-child {
     margin-top: 0
   }
@@ -135,6 +149,7 @@ class CollapsibleSection extends PureComponent<Props> {
     isCollapsed: true,
     handleToggleCollapse: () => {},
     visible: null,
+    small: false,
     children: null
   }
 
@@ -146,6 +161,7 @@ class CollapsibleSection extends PureComponent<Props> {
       isCollapsed,
       handleToggleCollapse,
       visible,
+      small,
       children
     } = this.props
 
@@ -154,30 +170,35 @@ class CollapsibleSection extends PureComponent<Props> {
       !isCollapsed && Children(children)
     )
 
-    const iconName: Icon = isCollapsed ? 'plus' : 'minus'
-
-    return (title !== '' && children) ? Root(
+    const IconBlock = children && IconWrapper(
       {
-        onClick: () => isCollapsed && handleToggleCollapse(false),
+        onClick: () => handleToggleCollapse(!isCollapsed)
+      },
+      <SvgIcon icon={isCollapsed ? 'plus' : 'minus'} />
+    )
+
+    return title !== '' && Root(
+      {
+        onClick: () => (children && isCollapsed) && handleToggleCollapse(false),
         className: [
           isTwoColumns && cx.twoColSection,
-          isCollapsed && cx.clickable
+          small && cx.small,
+          isCollapsed && children && cx.clickable
         ]
       },
       Header(
         {
-          onClick: () => handleToggleCollapse(!isCollapsed)
+          onClick: () => children && handleToggleCollapse(!isCollapsed),
+          className: [
+            children && cx.clickable,
+            small ? typo.badgeHeading : typo.sectionHeading
+          ]
         },
         title
       ),
-      IconWrapper(
-        {
-          onClick: () => handleToggleCollapse(!isCollapsed)
-        },
-        <SvgIcon icon={iconName} />
-      ),
+      IconBlock,
       ContentBlock
-    ) : null
+    )
   }
 }
 
