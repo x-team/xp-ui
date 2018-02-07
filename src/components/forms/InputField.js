@@ -39,6 +39,7 @@ const radioInputStyles = {
     top: 6px
     border: 1px solid ${theme.formBorder}
     box-sizing: border-box
+    left: 0
   `),
 
   input: cmz(`
@@ -57,23 +58,23 @@ const radioInputStyles = {
 
   option: cmz(`
     margin-left: 50px
-  `),
-
-  label: cmz(
-    typo.baseText,
-    `
-      margin-left: 30px
-    `
-  )
+  `)
 }
+
+const labelStyles = cmz(
+  typo.baseText,
+  `
+    margin-left: 30px
+  `
+)
 
 const ComponentRoot = elem.div()
 const FieldRoot = elem.div(cmz(`
   display: inline-block
   position: relative
 `))
-const RadioCircle = elem.span(cmz(radioInputStyles.circle))
-const RadioLabel = elem.label(cmz(radioInputStyles.label))
+const RadioCircle = elem.span(radioInputStyles.circle)
+const Label = elem.label(labelStyles)
 
 const inputStyles = [
   typo.formText,
@@ -107,9 +108,67 @@ const errorInput = cmz(`
   color: ${theme.formError}
 `)
 
+const checkboxInputStyles = {
+  input: cmz(`
+    & {
+      display: none !important
+    }
+
+    &:checked ~ span {
+      background-color: ${theme.baseRed}
+    }
+    &:checked ~ span:after {
+      opacity: 1
+    }
+  `),
+  tick: cmz(`
+    & {
+      position: absolute
+      width: 18px
+      height: 18px
+      top: 6px
+      left: 0
+      border: 1px solid ${theme.formBorder}
+      border-radius: 4px
+    }
+
+    &:after {
+      opacity: 0
+      content: ' '
+      position: absolute
+      width: 8px
+      height: 4px
+      top: 5px
+      left: 4px
+      border: 2px solid ${theme.baseBrighter}
+      border-top: none
+      border-right: none
+      transform: rotate(-45deg)
+      transition: all 0.25s ease
+    }
+  `)
+}
+
+const CheckboxTick = elem.span(checkboxInputStyles.tick)
+
 const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 
 const inputFactory = type => elem[getTagName(type)](inputStyles)
+
+const specialTypesDefinitions : Object = {
+  radio: {
+    className: radioInputStyles.input,
+    ElemBox: RadioCircle,
+    ElemLabel: Label
+  },
+  checkbox: {
+    className: checkboxInputStyles.input,
+    ElemBox: CheckboxTick,
+    ElemLabel: Label
+  }
+}
+
+const isSpecialType = type => Boolean(specialTypesDefinitions[type])
 
 class InputField extends PureComponent<Props> {
   static defaultProps = {
@@ -134,21 +193,24 @@ class InputField extends PureComponent<Props> {
     const labelId = inputId ? `label-${inputId}` : ''
     const errorClassName = isInvalid ? errorInput : ''
 
-    if (type === 'radio') {
+    if (isSpecialType(type)) {
+      const { ElemBox, ElemLabel, className } = specialTypesDefinitions[type]
       return (
         FieldRoot(
-          Tag({
-            className: radioInputStyles.input,
-            type,
-            name,
-            id: inputId,
-            value,
-            onChange,
-            'aria-labelledby': labelId,
-            ...rest
-          }),
-          RadioCircle(),
-          RadioLabel(label)
+          ElemLabel(
+            Tag({
+              className,
+              type,
+              name,
+              id: inputId,
+              value,
+              onChange,
+              'aria-labelledby': labelId,
+              ...rest
+            }),
+            ElemBox(),
+            label
+          )
         )
       )
     }
@@ -170,15 +232,15 @@ class InputField extends PureComponent<Props> {
 
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
-    const isRadio = type === 'radio'
-    const RootComponent = isRadio ? FieldRoot : ComponentRoot
+
+    const RootComponent = isSpecialType(type) ? FieldRoot : ComponentRoot
 
     return (
       RootComponent(
         label
           ? (
             <label id={labelId}>
-              {!isRadio && <Text content={label} />}
+              {!isSpecialType(type) && <Text content={label} />}
               {this.renderField()}
             </label>
           )

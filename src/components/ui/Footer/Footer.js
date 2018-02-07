@@ -40,9 +40,7 @@ const cx = {
   links: cmz(`
     ${mediaQueries.medium} {
       & {
-        text-align: center
-        padding: 1.5rem 0
-        border-top: 1px solid ${theme.lineSilver2}
+        display: none
       }
     }
 
@@ -72,10 +70,6 @@ const cx = {
     }
 
     ${mediaQueries.medium} {
-      &:nth-child(2) {
-        display: block
-      }
-
       & {
         display: none
       }

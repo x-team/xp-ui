@@ -1,40 +1,40 @@
 exports[`InputField-5 1`] = `
 <section>
   <div
-    className="AutoUI_forms_InputField-71">
+    className="AutoUI_forms_InputField-72">
     <label
       id="">
       <div
-        className="AutoUI_forms_InputField-71">
-        <input
-          aria-labelledby=""
-          checked={false}
-          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80 AutoUI_forms_InputField-44"
-          type="radio" />
-        <span
-          className="AutoUI_forms_InputField-75 AutoUI_forms_InputField-37" />
+        className="AutoUI_forms_InputField-72">
         <label
-          className="AutoUI_forms_InputField-76 AutoUI_forms_InputField-62 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_forms_InputField-64 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          <input
+            aria-labelledby=""
+            checked={false}
+            className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-81 AutoUI_forms_InputField-45"
+            type="radio" />
+          <span
+            className="AutoUI_forms_InputField-37" />
           Value 1
         </label>
       </div>
     </label>
   </div>
   <div
-    className="AutoUI_forms_InputField-71">
+    className="AutoUI_forms_InputField-72">
     <label
       id="">
       <div
-        className="AutoUI_forms_InputField-71">
-        <input
-          aria-labelledby=""
-          checked={false}
-          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-80 AutoUI_forms_InputField-44"
-          type="radio" />
-        <span
-          className="AutoUI_forms_InputField-75 AutoUI_forms_InputField-37" />
+        className="AutoUI_forms_InputField-72">
         <label
-          className="AutoUI_forms_InputField-76 AutoUI_forms_InputField-62 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_forms_InputField-64 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          <input
+            aria-labelledby=""
+            checked={true}
+            className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-81 AutoUI_forms_InputField-45"
+            type="radio" />
+          <span
+            className="AutoUI_forms_InputField-37" />
           Value 2
         </label>
       </div>

@@ -43,6 +43,20 @@ makeValueChangeHandler = option => () => setState({ ln: option });
 </section>
 ```
 
+Checkbox element:
+
+```js
+initialState = { cb: true };
+makeValueChangeHandler = option => () => setState(prev => ({ cb: !prev.cb }));
+
+<InputField
+  type="checkbox"
+  label="Checkbox"
+  checked={state.cb}
+  onChange={makeValueChangeHandler(state.cb)}
+/>
+```
+
 Invalid element:
 
 ```js
