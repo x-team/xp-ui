@@ -22,7 +22,7 @@ type Props = {
   handleToggleCollapse: Function,
   visible?: Element<*>|string,
   small?: boolean,
-  children?: Element<*>|string,
+  children?: Element<*>|string
 }
 
 const cx = {
@@ -49,7 +49,7 @@ const Root = elem.section(cmz(
   &:first-child {
     border-top: 1px solid transparent
   }
-`))
+`), {'data-test': `portfolioItem`})
 
 const Header = elem.h1(cmz(`
   & {
