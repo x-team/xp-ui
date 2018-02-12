@@ -1,9 +1,3 @@
-Normal textarea example :
-
-```js
-<TextareaEditor />
-```
-
 Textarea with props
 
 ```js
@@ -14,4 +8,9 @@ Textarea with props
   onFocus={target => console.log('Fired when textarea is focused: ' + target)}
   onBlur={target => console.log('Fired when textarea is blured: ' + target)}
 />
+```
+Normal textarea example :
+
+```js
+<TextareaEditor />
 ```

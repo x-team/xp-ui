@@ -4,6 +4,7 @@ import React, { PureComponent } from 'react'
 import MediumEditorWrapper from './MediumEditorWrapper'
 import elem from '../../../utils/elem'
 import theme from '../../../styles/theme'
+import { typeface } from '../../../styles/typo'
 
 const cmz = require('cmz')
 
@@ -27,38 +28,14 @@ const textCountStyles = cmz(`
 `)
 
 const utilStyles = {
-  maxWidth: cmz('max-width: 840px'),
-  noOutline: cmz('outline: none')
+  maxWidth: cmz('max-width: 840px')
 }
-
-const navStyles = cmz(`
-  margin-bottom: -1px
-  padding: 0 10px
-`)
-
-const navContainerStyles = cmz(`
-  margin-bottom: 10px
-  border-bottom: 1px solid ${theme.lineSilver3}
-`)
-
-const navButtonStyles = cmz(`
-  background-color: transparent
-  border: 1px solid ${theme.lineSilver3} !important
-  border-bottom: 0 !important
-  background-color: ${theme.baseBrighter} !important
-  font-size: 14px;
-  border-radius: 3px 3px 0 0
-  border: 0
-  padding: 8px 12px
-  outline: none
-  cursor: pointer
-`)
 
 const editorContainerStyles = cmz(`
   & {
     display: block
     width: 100%
-    height: 156px
+    min-height: 156px
     padding: 15px
     margin-bottom: 20px
     resize: vertical
@@ -72,15 +49,19 @@ const editorContainerStyles = cmz(`
     outline: none
   }
 
-  & p {
-    margin: 0
+  & :first-child {
+    margin-top: 0
+  }
+
+  & :last-child {
+    margin-top: 0
   }
 `)
 
 const Root = elem.div([
   utilStyles.maxWidth,
+  typeface.text,
   cmz(`
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
     font-weight: 300
     font-size: 18px
     text-align: left
@@ -101,7 +82,7 @@ class TextareaEditor extends PureComponent<Props> {
     shouldShowTextLength: false
   }
 
-  _onChange = (text: string) => {
+  handleChange = (text: string) => {
     this.setState(() => ({ text }))
     const { onChange } = this.props
     if (onChange) {
@@ -109,7 +90,7 @@ class TextareaEditor extends PureComponent<Props> {
     }
   }
 
-  _onFocus = (target: HTMLTextAreaElement) => {
+  handleFocus = (target: HTMLTextAreaElement) => {
     this.setState(() => ({ shouldShowTextLength: true }))
     const { onFocus } = this.props
     if (onFocus) {
@@ -117,8 +98,7 @@ class TextareaEditor extends PureComponent<Props> {
     }
   }
 
-  _onBlur = (target: HTMLTextAreaElement) => {
-    this.setState(() => ({ shouldShowTextLength: false }))
+  handleBlur = (target: HTMLTextAreaElement) => {
     const { onBlur } = this.props
     if (onBlur) {
       onBlur(target)
@@ -127,8 +107,8 @@ class TextareaEditor extends PureComponent<Props> {
 
   render () {
     const {
-      placeholder = 'Enter your response here.',
-      charLimit = 1000
+      charLimit = 1000,
+      placeholder
     } = this.props
 
     const {
@@ -143,24 +123,15 @@ class TextareaEditor extends PureComponent<Props> {
     }
 
     return Root(
-      <div className={navContainerStyles}>
-        <nav className={navStyles}>
-          <button
-            name='Write'
-            className={navButtonStyles}>
-            Write
-          </button>
-        </nav>
-      </div>,
       <div>
         <div className={editorContainerStyles}>
           <MediumEditorWrapper
             text={text}
             charLimit={charLimit}
             options={options}
-            onFocus={this._onFocus}
-            onBlur={this._onBlur}
-            onChange={this._onChange} />
+            onChange={this.handleChange}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur} />
         </div>
         <div className={textCountStyles}>
           {shouldShowTextLength && <p>
