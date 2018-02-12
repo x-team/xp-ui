@@ -1,11 +1,27 @@
 import React, { PureComponent } from 'react'
+import elem from '../../../utils/elem'
 
 import 'medium-editor/dist/css/medium-editor.css'
 import 'medium-editor/dist/css/themes/default.css'
 
-const _MediumEditor = require('medium-editor')
+const MediumEditor = require('medium-editor')
+
+type State = {
+  medium: Object
+}
+
+type Props = {
+  text: string,
+  charLimit: number,
+  onChange: void,
+  onFocus: void,
+  onBlur: void
+}
 
 class MediumEditorWrapper extends PureComponent {
+  state: State
+  props: Props
+
   componentDidUpdate = () => {
     this.medium.restoreSelection()
   }
@@ -15,41 +31,31 @@ class MediumEditorWrapper extends PureComponent {
   }
 
   componentDidMount = () => {
-    const subscribeFunction = fun => event => {
-      if (fun) {
-        fun(this.input)
-      }
-    }
+    const subscribeFunction = fun => event => fun(this.input)
 
-    this.medium = new _MediumEditor('.editable', this.props.options)
+    this.medium = new MediumEditor('.editable', this.props.options)
     this.medium.subscribe('editableInput', e => {
       const { text, charLimit } = this.props
       if (this.input.textContent.length > charLimit) {
         this.input.textContent = text
       }
 
-      let { textContent } = this.input
-      const { onChange } = this.props
-      if (onChange) {
-        onChange(textContent)
-      }
+      const { textContent } = this.input
+      this.props.onChange(textContent)
     })
 
-    this.medium.subscribe('focus', subscribeFunction(this.props.onFocus))
-    this.medium.subscribe('blur', subscribeFunction(this.props.onBlur))
+    const { onFocus, onBlur } = this.props
+    this.medium.subscribe('focus', subscribeFunction(onFocus))
+    this.medium.subscribe('blur', subscribeFunction(onBlur))
   }
 
   render () {
     const tag = 'div'
 
-    const childProps = {
-      ref: node => { this.input = node },
-      className: 'editable'
-    }
     if (this.medium) {
       this.medium.saveSelection()
     }
-    return React.createElement(tag, childProps)
+    return elem('editable', {ref: node => { this.input = node }})()
   }
 }
 

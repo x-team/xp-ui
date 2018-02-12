@@ -35,7 +35,7 @@ const editorContainerStyles = cmz(`
   & {
     display: block
     width: 100%
-    min-height: 156px
+    height: 156px
     padding: 15px
     margin-bottom: 20px
     resize: vertical
@@ -54,7 +54,7 @@ const editorContainerStyles = cmz(`
   }
 
   & :last-child {
-    margin-top: 0
+    margin-bottom: 0
   }
 `)
 
