@@ -1,6 +1,7 @@
 exports[`CollapsibleSection-1 1`] = `
 <section
-  className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
+  className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30"
+  data-test="portfolioItem">
   <h1
     className="AutoUI_ui_CollapsibleSection-54 AutoUI_ui_CollapsibleSection-30 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
     Consectetur suscipit alias velit magni tenetur veritatis sed fuga
