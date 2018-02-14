@@ -20,9 +20,8 @@ const Root = elem.div(cmz(
   color: ${theme.baseRed.darken(0.3)}
   border: 2px solid ${theme.baseRed}
   border-radius: .175em
-  background: ${theme.baseRed.lighten(0.3)}
-  font-style: italic
-  margin: 10px
+  background: ${theme.baseRed.lighten(0.65)}
+  margin: 10px 0
 `))
 
 const List = elem.ul(cmz(`
