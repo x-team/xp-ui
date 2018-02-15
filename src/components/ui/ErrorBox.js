@@ -17,12 +17,18 @@ type Props = {
 const Root = elem.div(cmz(
   typo.baseText,
   `
-  color: ${theme.baseRed.darken(0.3)}
-  border: 2px solid ${theme.baseRed}
-  border-radius: .175em
-  background: ${theme.baseRed.lighten(0.3)}
-  font-style: italic
-  margin: 10px
+  & {
+    color: ${theme.baseRed.darken(0.3)}
+    border: 2px solid ${theme.baseRed}
+    border-radius: .175em
+    background: ${theme.baseRed.lighten(0.3)}
+    font-style: italic
+    margin: 10px
+  }
+
+  & a {
+    color: ${theme.baseRed.darken(0.3)}
+  }
 `))
 
 const List = elem.ul(cmz(`
