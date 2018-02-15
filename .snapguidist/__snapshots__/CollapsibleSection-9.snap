@@ -1,7 +1,8 @@
 exports[`CollapsibleSection-9 1`] = `
 <div>
   <section
-    className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
+    className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30"
+    data-test="portfolioItem">
     <h1
       className="AutoUI_ui_CollapsibleSection-54 AutoUI_ui_CollapsibleSection-30 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
@@ -46,7 +47,8 @@ exports[`CollapsibleSection-9 1`] = `
       className="AutoUI_ui_CollapsibleSection-91" />
   </section>
   <section
-    className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
+    className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30"
+    data-test="portfolioItem">
     <h1
       className="AutoUI_ui_CollapsibleSection-54 AutoUI_ui_CollapsibleSection-30 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
@@ -91,7 +93,8 @@ exports[`CollapsibleSection-9 1`] = `
       className="AutoUI_ui_CollapsibleSection-91" />
   </section>
   <section
-    className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
+    className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30"
+    data-test="portfolioItem">
     <h1
       className="AutoUI_ui_CollapsibleSection-54 AutoUI_ui_CollapsibleSection-30 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
@@ -136,7 +139,8 @@ exports[`CollapsibleSection-9 1`] = `
       className="AutoUI_ui_CollapsibleSection-91" />
   </section>
   <section
-    className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
+    className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30"
+    data-test="portfolioItem">
     <h1
       className="AutoUI_ui_CollapsibleSection-54 AutoUI_ui_CollapsibleSection-30 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
@@ -181,7 +185,8 @@ exports[`CollapsibleSection-9 1`] = `
       className="AutoUI_ui_CollapsibleSection-91" />
   </section>
   <section
-    className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30">
+    className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-30"
+    data-test="portfolioItem">
     <h1
       className="AutoUI_ui_CollapsibleSection-54 AutoUI_ui_CollapsibleSection-30 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit?
