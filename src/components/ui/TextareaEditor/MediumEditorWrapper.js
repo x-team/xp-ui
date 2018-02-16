@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import elem from '../../../utils/elem'
 
 import 'medium-editor/dist/css/medium-editor.css'
@@ -50,8 +50,6 @@ class MediumEditorWrapper extends PureComponent {
   }
 
   render () {
-    const tag = 'div'
-
     if (this.medium) {
       this.medium.saveSelection()
     }
