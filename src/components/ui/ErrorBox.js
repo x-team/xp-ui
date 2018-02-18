@@ -39,15 +39,11 @@ const List = elem.ul(cmz(`
 const Item = elem.li()
 
 class ErrorBox extends PureComponent<Props> {
-  renderErrorItem: Function
-
-  constructor (props: Props) {
-    super(props)
-
-    this.renderErrorItem = this.renderErrorItem.bind(this)
+  static defaultProps = {
+    errors: {}
   }
 
-  renderErrorItem (err: string) {
+  renderErrorItem = (err: string) => {
     const { errors } = this.props
     return Item({ key: err }, errors[err])
   }
