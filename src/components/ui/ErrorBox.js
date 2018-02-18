@@ -17,11 +17,17 @@ type Props = {
 const Root = elem.div(cmz(
   typo.baseText,
   `
-  color: ${theme.baseRed.darken(0.3)}
-  border: 2px solid ${theme.baseRed}
-  border-radius: .175em
-  background: ${theme.baseRed.lighten(0.65)}
-  margin: 10px 0
+  & {
+    color: ${theme.baseRed.darken(0.3)}
+    border: 2px solid ${theme.baseRed}
+    border-radius: .175em
+    background: ${theme.baseRed.lighten(0.65)}
+    margin: 10px 0
+  }
+
+  & a {
+    color: ${theme.baseRed.darken(0.3)}
+  }
 `))
 
 const List = elem.ul(cmz(`
@@ -33,15 +39,11 @@ const List = elem.ul(cmz(`
 const Item = elem.li()
 
 class ErrorBox extends PureComponent<Props> {
-  renderErrorItem: Function
-
-  constructor (props: Props) {
-    super(props)
-
-    this.renderErrorItem = this.renderErrorItem.bind(this)
+  static defaultProps = {
+    errors: {}
   }
 
-  renderErrorItem (err: string) {
+  renderErrorItem = (err: string) => {
     const { errors } = this.props
     return Item({ key: err }, errors[err])
   }
