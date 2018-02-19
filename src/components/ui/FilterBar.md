@@ -1,14 +1,14 @@
-Basic search bar
+Basic search bar:
 
-```
+```js
 <FilterBar onSubmit={() => console.log('onSubmit')}>
   <InputField placeholder="Search..." />
 </FilterBar>
 ```
 
-More elements on search bar
+More elements on search bar:
 
-```
+```js
 <FilterBar onSubmit={() => console.log('onSubmit')}>
   <InputField placeholder="Search..." />
   <InputField placeholder="This could be a select box..." />
@@ -18,6 +18,6 @@ More elements on search bar
 
 Missing props (does component explode?):
 
-```
+```js
 <FilterBar />
 ```
