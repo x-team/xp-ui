@@ -1,0 +1,18 @@
+exports[`FilterBar-1 1`] = `
+<div
+  className="AutoUI_ui_FilterBar-17">
+  <form
+    className="AutoUI_ui_FilterBar-22">
+    <div
+      className="AutoUI_ui_FilterBar-29">
+      <div>
+        <input
+          aria-labelledby=""
+          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-81"
+          placeholder="Search..."
+          type="text" />
+      </div>
+    </div>
+  </form>
+</div>
+`;

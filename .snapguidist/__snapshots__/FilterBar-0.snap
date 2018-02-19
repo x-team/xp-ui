@@ -1,0 +1,10 @@
+exports[`FilterBar-0 1`] = `
+<div
+  className="AutoUI_ui_FilterBar-17">
+  <form
+    className="AutoUI_ui_FilterBar-24">
+    <div
+      className="AutoUI_ui_FilterBar-30" />
+  </form>
+</div>
+`;
