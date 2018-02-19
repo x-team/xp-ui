@@ -112,7 +112,7 @@ class SolutionForm extends PureComponent<Props> {
           placeholder: 'Paste your solution here.'
         }),
         <Button disabled={isSubmitting || disableButton} data-test='solutionSubmit'>
-          {isSubmitting ? 'Checking...' : `Submit (${takenAttempts} of ${maxAttempts})`}
+          {isSubmitting ? 'Checking...' : `Submit (${takenAttempts + 1} of ${maxAttempts})`}
         </Button>
       )
     )
