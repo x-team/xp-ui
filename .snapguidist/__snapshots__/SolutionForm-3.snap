@@ -26,7 +26,7 @@ exports[`SolutionForm-3 1`] = `
       data-test="solutionSubmit">
       <span
         className="AutoUI_ui_Button-42 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
-        Submit (0 of 5)
+        Submit (1 of 5)
       </span>
     </button>
   </form>
