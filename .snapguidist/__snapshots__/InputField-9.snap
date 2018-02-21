@@ -11,7 +11,7 @@ exports[`InputField-9 1`] = `
     </section>
     <input
       aria-labelledby="label-invalid"
-      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-81 AutoUI_forms_InputField-105"
+      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-82 AutoUI_forms_InputField-106"
       id="invalid"
       name="invalid"
       placeholder="Error Placeholder.."
