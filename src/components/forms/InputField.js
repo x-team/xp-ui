@@ -65,6 +65,7 @@ const labelStyles = cmz(
   typo.baseText,
   `
     margin-left: 30px
+    display: inherit
   `
 )
 
