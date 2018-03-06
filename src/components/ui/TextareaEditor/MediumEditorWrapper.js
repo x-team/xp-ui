@@ -1,8 +1,14 @@
+// @flow
+
 import { PureComponent } from 'react'
 import elem from '../../../utils/elem'
 
+// $FlowFixMe
 import 'medium-editor/dist/css/medium-editor.css'
+// $FlowFixMe
 import 'medium-editor/dist/css/themes/default.css'
+
+import type { Element } from 'react'
 
 const MediumEditor = require('medium-editor')
 
@@ -10,17 +16,24 @@ type State = {
   medium: Object
 }
 
+type Input = Element<*> & {
+  textContent: string
+}
+
 type Props = {
   text: string,
   charLimit: number,
-  onChange: void,
-  onFocus: void,
-  onBlur: void
+  onChange: (string) => void,
+  onFocus: (*) => void,
+  onBlur: (*) => void,
+  options?: Object
 }
 
-class MediumEditorWrapper extends PureComponent {
+class MediumEditorWrapper extends PureComponent<Props, State> {
   state: State
   props: Props
+  medium: MediumEditor
+  input: Input
 
   componentDidUpdate = () => {
     this.medium.restoreSelection()
@@ -31,7 +44,9 @@ class MediumEditorWrapper extends PureComponent {
   }
 
   componentDidMount = () => {
-    const subscribeFunction = fun => event => fun(this.input)
+    if (!this.input) return
+
+    const subscribeFunction:((input: *) => * => void) = fun => event => fun(this.input)
 
     this.medium = new MediumEditor('.editable', this.props.options)
     this.medium.subscribe('editableInput', e => {
