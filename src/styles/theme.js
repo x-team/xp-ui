@@ -33,7 +33,8 @@ const palette = {
   mercury: '#E4E4E4',
   porcelain: '#E9EDEE',
   brickRed: '#D32F3B',
-  wePeep: '#F7D9DC'
+  wePeep: '#F7D9DC',
+  bombay: '#B2B6BC'
 }
 
 export default wrap({
@@ -71,6 +72,7 @@ export default wrap({
   iconRed: palette.radicalRed,
   iconBright: palette.white,
   iconDark: palette.tuna,
+  iconGray: palette.bombay,
 
   logoGray: palette.nobel
 })
