@@ -1,3 +1,4 @@
+/* global HTMLElement */
 // @flow
 
 import { PureComponent } from 'react'
@@ -12,10 +13,6 @@ import type { Element } from 'react'
 
 const MediumEditor = require('medium-editor')
 
-type State = {
-  medium: Object
-}
-
 type Input = Element<*> & {
   textContent: string
 }
@@ -29,8 +26,77 @@ type Props = {
   options?: Object
 }
 
-class MediumEditorWrapper extends PureComponent<Props, State> {
-  state: State
+const getCropText = (text: string, charLimit: number, currentCount: number): string => (
+  text.substring(0, Math.min(charLimit, text.length, charLimit - currentCount))
+)
+
+const getDelimitedHTML = (initialHTML: HTMLElement, charLimit: number, initialTextLength: number = 0): HTMLElement => {
+  const getClone = (parent, node) => {
+    if (!node || !parent || textCount > charLimit) return
+    const nodeCopy = node.cloneNode(false)
+    parent.appendChild(nodeCopy)
+    if (node.childNodes.length === 0) {
+      let content = node.textContent
+      nodeCopy.textContent = getCropText(content, charLimit, textCount)
+      textCount += content.length
+      return
+    }
+
+    Array.prototype.forEach.call(node.childNodes, it => getClone(nodeCopy, it))
+  }
+
+  let textCount = initialTextLength
+
+  const tmpContainer = document.createElement('div')
+  getClone(tmpContainer, initialHTML)
+  return tmpContainer
+}
+
+const pasteWithCharLimitExtension = (charLimit: number) => {
+  return MediumEditor.extensions.paste.extend({
+    cleanPastedHTML: true,
+    doPaste: function (pastedHTML, pastedPlain, editable) {
+      // handle case when clean Paste
+      const selectionCount = MediumEditor.selection.getSelectionRange(this.document).toString().length
+      pastedPlain = getCropText(pastedPlain, charLimit + selectionCount, editable.textContent.length)
+      MediumEditor.extensions.paste.prototype.doPaste.call(this, pastedHTML, pastedPlain, editable)
+    },
+    pasteHTML: function (html, options) {
+      options = MediumEditor.util.defaults({}, options, {
+        cleanAttrs: this.cleanAttrs,
+        cleanTags: this.cleanTags,
+        unwrapTags: this.unwrapTags
+      })
+
+      let elList, workEl, i, fragmentBody, pasteBlock = this.document.createDocumentFragment() // eslint-disable-line one-var
+      const currentText = this.base.elements[0].textContent
+      pasteBlock.appendChild(this.document.createElement('body'))
+
+      fragmentBody = pasteBlock.querySelector('body')
+      fragmentBody.innerHTML = html
+
+      this.cleanupSpans(fragmentBody)
+
+      elList = fragmentBody.querySelectorAll('*')
+      for (i = 0; i < elList.length; i += 1) {
+        workEl = elList[i]
+        if (workEl.nodeName.toLowerCase() && this.getEditorOption('targetBlank') === 'a') {
+          MediumEditor.util.setTargetBlank(workEl)
+        }
+
+        MediumEditor.util.cleanupAttrs(workEl, options.cleanAttrs)
+        MediumEditor.util.cleanupTags(workEl, options.cleanTags)
+        MediumEditor.util.unwrapTags(workEl, options.unwrapTags)
+      }
+      const selectionCount = MediumEditor.selection.getSelectionRange(this.document).toString().length
+      const cropFragment = getDelimitedHTML(fragmentBody, charLimit + selectionCount, currentText.length)
+
+      MediumEditor.util.insertHTMLCommand(this.document, cropFragment.innerHTML.replace(/&nbsp;/g, ' '))
+    }
+  })
+}
+
+class MediumEditorWrapper extends PureComponent<Props> {
   props: Props
   medium: MediumEditor
   input: Input
@@ -47,14 +113,24 @@ class MediumEditorWrapper extends PureComponent<Props, State> {
     if (!this.input) return
 
     const subscribeFunction:((input: *) => * => void) = fun => event => fun(this.input)
-
-    this.medium = new MediumEditor('.editable', this.props.options)
-    this.medium.subscribe('editableInput', e => {
-      const { text, charLimit } = this.props
-      if (this.input.textContent.length > charLimit) {
-        this.input.textContent = text
+    const { charLimit } = this.props
+    const defaultOptions = {}
+    if (charLimit) {
+      const PasteWithCharLimitExtension = pasteWithCharLimitExtension(this.props.charLimit)
+      defaultOptions.extensions = {
+        paste: new PasteWithCharLimitExtension()
       }
+    }
+    console.log(defaultOptions)
+    this.medium = new MediumEditor('.editable', { ...defaultOptions, ...this.props.options })
+    this.medium.on(this.input, 'keypress', (event) => {
+      if (this.input.textContent.length >= charLimit) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+    })
 
+    this.medium.subscribe('editableInput', e => {
       const { textContent } = this.input
       this.props.onChange(textContent)
     })
