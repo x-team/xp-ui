@@ -116,21 +116,22 @@ class MediumEditorWrapper extends PureComponent<Props> {
     const { charLimit } = this.props
     const defaultOptions = {}
     if (charLimit) {
-      const PasteWithCharLimitExtension = pasteWithCharLimitExtension(this.props.charLimit)
+      const PasteWithCharLimitExtension = pasteWithCharLimitExtension(charLimit)
       defaultOptions.extensions = {
         paste: new PasteWithCharLimitExtension()
       }
     }
-    console.log(defaultOptions)
     this.medium = new MediumEditor('.editable', { ...defaultOptions, ...this.props.options })
+
     this.medium.on(this.input, 'keypress', (event) => {
-      if (this.input.textContent.length >= charLimit) {
+      const selectionCount = MediumEditor.selection.getSelectionRange(document).toString().length
+      if (this.input.textContent.length >= charLimit + selectionCount) {
         event.preventDefault()
         event.stopPropagation()
       }
     })
 
-    this.medium.subscribe('editableInput', e => {
+    this.medium.subscribe('editableInput', event => {
       const { textContent } = this.input
       this.props.onChange(textContent)
     })
