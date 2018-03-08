@@ -1,4 +1,6 @@
 /* global HTMLTextAreaElement */
+// @flow
+
 import React, { PureComponent } from 'react'
 
 import MediumEditorWrapper from './MediumEditorWrapper'
@@ -11,13 +13,14 @@ const cmz = require('cmz')
 type Props = {
   placeholder: string,
   charLimit: number,
-  onChange(text: string): ?void,
+  onChange(text: string, text: string): ?void,
   onFocus(target: Object): ?void,
-  onUnfocus(target: Object): ?void
+  onBlur(target: Object): ?void
 }
 
 type State = {
   text: string,
+  html: string,
   shouldShowTextLength: boolean
 }
 
@@ -76,17 +79,18 @@ const Root = elem.div([
   `)
 ])
 
-class TextareaEditor extends PureComponent<Props> {
-  state: State = {
+class TextareaEditor extends PureComponent<Props, State> {
+  state = {
     text: '',
+    html: '',
     shouldShowTextLength: false
   }
 
-  handleChange = (text: string) => {
+  handleChange = (text: string, html: string) => {
     this.setState(() => ({ text }))
     const { onChange } = this.props
     if (onChange) {
-      onChange(text)
+      onChange(text, html)
     }
   }
 
@@ -113,6 +117,7 @@ class TextareaEditor extends PureComponent<Props> {
 
     const {
       text,
+      html,
       shouldShowTextLength
     } = this.state
 
@@ -127,6 +132,7 @@ class TextareaEditor extends PureComponent<Props> {
         <div className={editorContainerStyles}>
           <MediumEditorWrapper
             text={text}
+            html={html}
             charLimit={charLimit}
             options={options}
             onChange={this.handleChange}

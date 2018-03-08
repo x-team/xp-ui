@@ -9,20 +9,15 @@ import 'medium-editor/dist/css/medium-editor.css'
 // $FlowFixMe
 import 'medium-editor/dist/css/themes/default.css'
 
-import type { Element } from 'react'
-
 const MediumEditor = require('medium-editor')
-
-type Input = Element<*> & {
-  textContent: string
-}
 
 type Props = {
   text: string,
+  html: string,
   charLimit: number,
-  onChange: (string) => void,
-  onFocus: (*) => void,
-  onBlur: (*) => void,
+  onChange: (string, string) => void,
+  onFocus: (target: Object) => void,
+  onBlur: (target: Object) => void,
   options?: Object
 }
 
@@ -99,7 +94,7 @@ const pasteWithCharLimitExtension = (charLimit: number) => {
 class MediumEditorWrapper extends PureComponent<Props> {
   props: Props
   medium: MediumEditor
-  input: Input
+  input: HTMLElement
 
   componentDidUpdate = () => {
     this.medium.restoreSelection()
@@ -113,7 +108,7 @@ class MediumEditorWrapper extends PureComponent<Props> {
     if (!this.input) return
 
     const subscribeFunction:((input: *) => * => void) = fun => event => fun(this.input)
-    const { charLimit } = this.props
+    const { charLimit, options, html, text, onChange, onFocus, onBlur } = this.props
     const defaultOptions = {}
     if (charLimit) {
       const PasteWithCharLimitExtension = pasteWithCharLimitExtension(charLimit)
@@ -121,8 +116,8 @@ class MediumEditorWrapper extends PureComponent<Props> {
         paste: new PasteWithCharLimitExtension()
       }
     }
-    this.medium = new MediumEditor('.editable', { ...defaultOptions, ...this.props.options })
-
+    this.medium = new MediumEditor('.editable', { ...defaultOptions, ...options })
+    this.medium.setContent(html || text)
     this.medium.on(this.input, 'keypress', (event) => {
       const selectionCount = MediumEditor.selection.getSelectionRange(document).toString().length
       if (this.input.textContent.length >= charLimit + selectionCount) {
@@ -132,11 +127,10 @@ class MediumEditorWrapper extends PureComponent<Props> {
     })
 
     this.medium.subscribe('editableInput', event => {
-      const { textContent } = this.input
-      this.props.onChange(textContent)
+      const { textContent, innerHTML } = this.input
+      onChange(textContent, innerHTML)
     })
 
-    const { onFocus, onBlur } = this.props
     this.medium.subscribe('focus', subscribeFunction(onFocus))
     this.medium.subscribe('blur', subscribeFunction(onBlur))
   }
