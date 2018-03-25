@@ -1,4 +1,4 @@
-Textarea with props
+Basic:
 
 ```js
 <TextareaEditor
@@ -9,7 +9,8 @@ Textarea with props
   onBlur={target => console.log('Fired when textarea is blured: ' + target)}
 />
 ```
-Normal textarea example :
+
+Missing props (does component explode?):
 
 ```js
 <TextareaEditor />
