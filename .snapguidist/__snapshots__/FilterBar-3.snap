@@ -8,14 +8,14 @@ exports[`FilterBar-3 1`] = `
       <div>
         <input
           aria-labelledby=""
-          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-81"
+          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-82"
           placeholder="Search..."
           type="text" />
       </div>
       <div>
         <input
           aria-labelledby=""
-          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-81"
+          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-82"
           placeholder="This could be a select box..."
           type="text" />
       </div>
