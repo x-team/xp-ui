@@ -10,17 +10,17 @@ Basic:
 />
 ```
 
-Hide Text Length on Blur:
+Hide text length on blur:
 
 ```js
 <TextareaEditor
   charLimit={30}
-  placeholder='Text is hide on blur.'
+  placeholder='Counter is hidden on blur.'
   hideTextLengthOnBlur={true}
 />
 ```
 
-Two Editors Side by Side:
+Two editors side by side:
 
 ```js
 <div>

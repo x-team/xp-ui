@@ -1,5 +1,5 @@
-/* global HTMLElement SyntheticInputEvent */
 // @flow
+/* global HTMLElement SyntheticInputEvent */
 
 import { PureComponent } from 'react'
 
