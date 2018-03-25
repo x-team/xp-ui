@@ -16,6 +16,7 @@ type Props = {
   text: string,
   html: string,
   charLimit: number,
+  id: string | number,
   onChange: (string, string) => void,
   onFocus: (target: Object) => void,
   onBlur: (target: Object) => void,
@@ -105,9 +106,8 @@ class MediumEditorWrapper extends PureComponent<Props> {
 
   componentDidMount = () => {
     if (!this.input) return
-
     const subscribeFunction:((input: *) => * => void) = fun => event => fun(this.input)
-    const { charLimit, options, html, text, onChange, onFocus, onBlur } = this.props
+    const { charLimit, options, html, text, id, onChange, onFocus, onBlur } = this.props
     const defaultOptions = {}
     if (charLimit != null) {
       const PasteWithCharLimitExtension = pasteWithCharLimitExtension(charLimit)
@@ -115,7 +115,7 @@ class MediumEditorWrapper extends PureComponent<Props> {
         paste: new PasteWithCharLimitExtension()
       }
     }
-    this.medium = new MediumEditor('.editable', { ...defaultOptions, ...options })
+    this.medium = new MediumEditor(`.editable-${id}`, { ...defaultOptions, ...options })
     this.medium.setContent(html || text)
 
     if (charLimit != null) {
@@ -127,7 +127,6 @@ class MediumEditorWrapper extends PureComponent<Props> {
         }
       })
     }
-
     this.medium.subscribe('editableInput', event => {
       const { textContent, innerHTML } = this.input
       onChange(textContent, innerHTML)
@@ -141,7 +140,7 @@ class MediumEditorWrapper extends PureComponent<Props> {
     if (this.medium) {
       this.medium.saveSelection()
     }
-    return elem('editable', {ref: node => { this.input = node }})()
+    return elem(`editable-${this.props.id} editable`, {ref: node => { this.input = node }})()
   }
 }
 

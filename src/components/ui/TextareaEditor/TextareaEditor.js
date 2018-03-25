@@ -12,6 +12,9 @@ const cmz = require('cmz')
 
 type Props = {
   placeholder: string,
+  text: string,
+  html: string,
+  id: string,
   charLimit: number,
   hideTextLengthOnBlur: boolean,
   onChange(text: string, text: string): ?void,
@@ -86,8 +89,8 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   state = {
-    text: '',
-    html: '',
+    text: this.props.text || '',
+    html: this.props.html || '',
     shouldShowTextLength: false
   }
 
@@ -124,7 +127,8 @@ class TextareaEditor extends PureComponent<Props, State> {
   render () {
     const {
       charLimit,
-      placeholder
+      placeholder,
+      id
     } = this.props
 
     const {
@@ -144,6 +148,7 @@ class TextareaEditor extends PureComponent<Props, State> {
           <MediumEditorWrapper
             text={text}
             html={html}
+            id={id || Date.now()}
             charLimit={charLimit}
             options={options}
             onChange={this.handleChange}
