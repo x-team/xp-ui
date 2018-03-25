@@ -80,6 +80,11 @@ const Root = elem.div([
 ])
 
 class TextareaEditor extends PureComponent<Props, State> {
+
+  static defaultProps = {
+    charLimit: 1000
+  }
+
   state = {
     text: '',
     html: '',
@@ -111,7 +116,7 @@ class TextareaEditor extends PureComponent<Props, State> {
 
   render () {
     const {
-      charLimit = 1000,
+      charLimit,
       placeholder
     } = this.props
 
