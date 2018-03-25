@@ -71,7 +71,6 @@ const Root = elem.div([
     text-align: left
     display: block
     width: 100%
-    padding: 10px 20px
     margin-bottom: 20px
     resize: vertical
     box-sizing: border-box
