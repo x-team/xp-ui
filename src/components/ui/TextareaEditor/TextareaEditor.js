@@ -95,7 +95,7 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   changeShouldShowTextLength = (val: boolean) => {
-    setTimeout(() => this.setState(() => ({ shouldShowTextLength: val })))
+    setTimeout(() => this.setState(() => ({ shouldShowTextLength: val })), 0)
   }
   handleChange = (text: string, html: string) => {
     this.setState(() => ({ text, html }))
