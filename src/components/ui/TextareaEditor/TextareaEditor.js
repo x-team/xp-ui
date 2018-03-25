@@ -94,7 +94,7 @@ class TextareaEditor extends PureComponent<Props, State> {
   handleChange = (text: string, html: string) => {
     this.setState(() => ({ text }))
     const { onChange } = this.props
-    if (onChange) {
+    if (typeof onChange === 'function') {
       onChange(text, html)
     }
   }
@@ -102,14 +102,14 @@ class TextareaEditor extends PureComponent<Props, State> {
   handleFocus = (target: HTMLTextAreaElement) => {
     this.setState(() => ({ shouldShowTextLength: true }))
     const { onFocus } = this.props
-    if (onFocus) {
+    if (typeof onFocus === 'function') {
       onFocus(target)
     }
   }
 
   handleBlur = (target: HTMLTextAreaElement) => {
     const { onBlur } = this.props
-    if (onBlur) {
+    if (typeof onBlur === 'function') {
       onBlur(target)
     }
   }
