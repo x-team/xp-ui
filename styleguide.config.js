@@ -20,5 +20,8 @@ module.exports = snapguidist({
     devtool: 'source-map',
     module: config.module
   },
-  ignore: ['**/components/forms/SolutionForm/Title.js']
+  ignore: [
+    '**/components/forms/SolutionForm/Title.js',
+    '**/components/ui/TextareaEditor/MediumEditorWrapper.js'
+  ]
 })
