@@ -10,6 +10,16 @@ Basic:
 />
 ```
 
+Hide Text Length on Blur:
+
+```js
+<TextareaEditor
+  charLimit={30}
+  placeholder='Text is hide on blur.'
+  hideTextLengthOnBlur={true}
+/>
+```
+
 Missing props (does component explode?):
 
 ```js
