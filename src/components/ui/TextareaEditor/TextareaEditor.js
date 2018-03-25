@@ -80,7 +80,6 @@ const Root = elem.div([
 ])
 
 class TextareaEditor extends PureComponent<Props, State> {
-
   static defaultProps = {
     charLimit: 1000
   }

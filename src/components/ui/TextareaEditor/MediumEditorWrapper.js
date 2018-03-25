@@ -36,8 +36,7 @@ const getDelimitedHTML = (initialHTML: HTMLElement, charLimit: number, initialTe
       textCount += content.length
       return
     }
-
-    Array.prototype.forEach.call(node.childNodes, it => getClone(nodeCopy, it))
+    node.childNodes.forEach(it => getClone(nodeCopy, it))
   }
 
   let textCount = initialTextLength
