@@ -134,7 +134,7 @@ class MediumEditorWrapper extends PureComponent<Props> {
     })
 
     this.medium.subscribe('focus', subscribeFunction(onFocus))
-    this.medium.subscribe('blur', subscribeFunction((target) => { console.log('I WAS FIRED'); onBlur(target) }))
+    this.medium.subscribe('blur', subscribeFunction(target => onBlur(target)))
   }
 
   render () {
