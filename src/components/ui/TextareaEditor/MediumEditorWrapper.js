@@ -92,7 +92,6 @@ const pasteWithCharLimitExtension = (charLimit: number) => {
 }
 
 class MediumEditorWrapper extends PureComponent<Props> {
-  props: Props
   medium: MediumEditor
   input: HTMLElement
 
