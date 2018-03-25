@@ -13,6 +13,7 @@ const cmz = require('cmz')
 type Props = {
   placeholder: string,
   charLimit: number,
+  hideTextLengthOnBlur: boolean,
   onChange(text: string, text: string): ?void,
   onFocus(target: Object): ?void,
   onBlur(target: Object): ?void
@@ -81,7 +82,8 @@ const Root = elem.div([
 
 class TextareaEditor extends PureComponent<Props, State> {
   static defaultProps = {
-    charLimit: 1000
+    charLimit: 1000,
+    hideTextLengthOnBlur: true
   }
 
   state = {
@@ -90,8 +92,11 @@ class TextareaEditor extends PureComponent<Props, State> {
     shouldShowTextLength: false
   }
 
+  changeShouldShowTextLength = (val: boolean) => {
+    setTimeout(() => this.setState(() => ({ shouldShowTextLength: val })))
+  }
   handleChange = (text: string, html: string) => {
-    this.setState(() => ({ text }))
+    this.setState(() => ({ text, html }))
     const { onChange } = this.props
     if (typeof onChange === 'function') {
       onChange(text, html)
@@ -99,7 +104,7 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   handleFocus = (target: HTMLTextAreaElement) => {
-    this.setState(() => ({ shouldShowTextLength: true }))
+    this.changeShouldShowTextLength(true)
     const { onFocus } = this.props
     if (typeof onFocus === 'function') {
       onFocus(target)
@@ -107,7 +112,11 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   handleBlur = (target: HTMLTextAreaElement) => {
-    const { onBlur } = this.props
+    const { onBlur, hideTextLengthOnBlur } = this.props
+    if (hideTextLengthOnBlur) {
+      this.changeShouldShowTextLength(false)
+    }
+
     if (typeof onBlur === 'function') {
       onBlur(target)
     }
@@ -130,7 +139,6 @@ class TextareaEditor extends PureComponent<Props, State> {
         text: placeholder
       }
     }
-
     return Root(
       <div>
         <div className={editorContainerStyles}>
