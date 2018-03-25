@@ -1,7 +1,8 @@
-/* global HTMLElement */
+/* global HTMLElement SyntheticInputEvent */
 // @flow
 
 import { PureComponent } from 'react'
+
 import elem from '../../../utils/elem'
 
 // $FlowFixMe
@@ -118,7 +119,7 @@ class MediumEditorWrapper extends PureComponent<Props> {
     this.medium.setContent(html || text)
 
     if (charLimit != null) {
-      this.medium.on(this.input, 'keypress', (event) => {
+      this.medium.on(this.input, 'keypress', (event: SyntheticInputEvent<>) => {
         const selectionCount = MediumEditor.selection.getSelectionRange(document).toString().length
         if (this.input.textContent.length >= charLimit + selectionCount) {
           event.preventDefault()
