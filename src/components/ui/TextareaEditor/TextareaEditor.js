@@ -17,9 +17,9 @@ type Props = {
   id: string,
   charLimit: number,
   hideTextLengthOnBlur: boolean,
-  onChange(text: string, text: string): ?void,
-  onFocus(target: Object): ?void,
-  onBlur(target: Object): ?void
+  onChange(text: string, html: string): ?void,
+  onFocus(target: Object, text: string, html: string): ?void,
+  onBlur(target: Object, text: string, html: string): ?void
 }
 
 type State = {
@@ -108,19 +108,21 @@ class TextareaEditor extends PureComponent<Props, State> {
   handleFocus = (target: HTMLTextAreaElement) => {
     this.changeShouldShowTextLength(true)
     const { onFocus } = this.props
+    const { text, html } = this.state
     if (typeof onFocus === 'function') {
-      onFocus(target)
+      onFocus(target, text, html)
     }
   }
 
   handleBlur = (target: HTMLTextAreaElement) => {
     const { onBlur, hideTextLengthOnBlur } = this.props
+    const { text, html } = this.state
     if (hideTextLengthOnBlur) {
       this.changeShouldShowTextLength(false)
     }
 
     if (typeof onBlur === 'function') {
-      onBlur(target)
+      onBlur(target, text, html)
     }
   }
 
