@@ -10,24 +10,6 @@ import { typeface } from '../../../styles/typo'
 
 const cmz = require('cmz')
 
-type Props = {
-  placeholder: string,
-  text: string,
-  html: string,
-  id: string,
-  charLimit: number,
-  hideTextLengthOnBlur: boolean,
-  onChange(text: string, html: string): ?void,
-  onFocus(target: Object, text: string, html: string): ?void,
-  onBlur(target: Object, text: string, html: string): ?void
-}
-
-type State = {
-  text: string,
-  html: string,
-  shouldShowTextLength: boolean
-}
-
 const textCountStyles = cmz(`
   text-align: right
   color: ${theme.lineRed}
@@ -82,6 +64,24 @@ const Root = elem.div([
   `)
 ])
 
+type Props = {
+  placeholder: string,
+  text: string,
+  html: string,
+  id: string,
+  charLimit: number,
+  hideTextLengthOnBlur: boolean,
+  onChange(text: string, html: string): ?void,
+  onFocus(target: Object, text: string, html: string): ?void,
+  onBlur(target: Object, text: string, html: string): ?void
+}
+
+type State = {
+  text: string,
+  html: string,
+  shouldShowTextLength: boolean
+}
+
 class TextareaEditor extends PureComponent<Props, State> {
   static defaultProps = {
     charLimit: 1000,
@@ -97,6 +97,7 @@ class TextareaEditor extends PureComponent<Props, State> {
   changeShouldShowTextLength = (val: boolean) => {
     setTimeout(() => this.setState(() => ({ shouldShowTextLength: val })), 0)
   }
+
   handleChange = (text: string, html: string) => {
     this.setState(() => ({ text, html }))
     const { onChange } = this.props
