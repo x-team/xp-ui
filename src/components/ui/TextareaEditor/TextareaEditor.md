@@ -25,7 +25,8 @@ Two editors side by side:
 ```js
 <div>
   <TextareaEditor
-    charLimit={30}
+    charLimit={50}
+    id={1}
     placeholder='Placeholder 1'
     text="Text Area #1 With Formatted Text"
     html="<div>Text Area #1 <b>With Formatted Text</b></div>"
@@ -35,6 +36,7 @@ Two editors side by side:
   />
   <TextareaEditor
     charLimit={500}
+    id={2}
     placeholder='Placeholder 2'
     onChange={text => console.log('Fired when textarea 2 value changes ' + text)}
     onFocus={target => console.log('Fired when textarea 2 is focused: ' + target)}

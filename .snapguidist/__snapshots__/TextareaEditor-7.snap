@@ -5,7 +5,7 @@ exports[`TextareaEditor-7 1`] = `
     <div
       className="AutoUI_ui_TextareaEditor_TextareaEditor-41">
       <div
-        className="editable-1522016755312 editable" />
+        className="editable-default editable" />
     </div>
     <div
       className="AutoUI_ui_TextareaEditor_TextareaEditor-31" />

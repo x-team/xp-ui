@@ -148,7 +148,7 @@ class TextareaEditor extends PureComponent<Props, State> {
           <MediumEditorWrapper
             text={text}
             html={html}
-            id={id || Date.now()}
+            id={id || 'default'}
             charLimit={charLimit}
             options={options}
             onChange={this.handleChange}

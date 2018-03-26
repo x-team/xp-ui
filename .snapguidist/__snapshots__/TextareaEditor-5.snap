@@ -6,7 +6,7 @@ exports[`TextareaEditor-5 1`] = `
       <div
         className="AutoUI_ui_TextareaEditor_TextareaEditor-41">
         <div
-          className="editable-1522016752319 editable" />
+          className="editable-1 editable" />
       </div>
       <div
         className="AutoUI_ui_TextareaEditor_TextareaEditor-31" />
@@ -18,7 +18,7 @@ exports[`TextareaEditor-5 1`] = `
       <div
         className="AutoUI_ui_TextareaEditor_TextareaEditor-41">
         <div
-          className="editable-1522016752319 editable" />
+          className="editable-2 editable" />
       </div>
       <div
         className="AutoUI_ui_TextareaEditor_TextareaEditor-31" />
