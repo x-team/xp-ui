@@ -11,9 +11,15 @@ import { typeface } from '../../../styles/typo'
 const cmz = require('cmz')
 
 const textCountStyles = cmz(`
-  text-align: right
-  color: ${theme.lineRed}
-  height: 40px
+  & {
+    text-align: right
+    color: ${theme.lineRed}
+    height: 40px
+  }
+
+  & > .hidden {
+    visibility: hidden
+  }
 `)
 
 const utilStyles = {
@@ -70,7 +76,6 @@ type Props = {
   html: string,
   id: string,
   charLimit: number,
-  hideTextLengthOnBlur: boolean,
   onChange(text: string, html: string): ?void,
   onFocus(target: Object, text: string, html: string): ?void,
   onBlur(target: Object, text: string, html: string): ?void
@@ -84,8 +89,7 @@ type State = {
 
 class TextareaEditor extends PureComponent<Props, State> {
   static defaultProps = {
-    charLimit: 1000,
-    hideTextLengthOnBlur: false
+    charLimit: 1000
   }
 
   state = {
@@ -107,20 +111,21 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   handleFocus = (target: HTMLTextAreaElement) => {
-    this.changeShouldShowTextLength(true)
-    const { onFocus } = this.props
     const { text, html } = this.state
+    const { onFocus } = this.props
+
+    this.changeShouldShowTextLength(true)
+
     if (typeof onFocus === 'function') {
       onFocus(target, text, html)
     }
   }
 
   handleBlur = (target: HTMLTextAreaElement) => {
-    const { onBlur, hideTextLengthOnBlur } = this.props
     const { text, html } = this.state
-    if (hideTextLengthOnBlur) {
-      this.changeShouldShowTextLength(false)
-    }
+    const { onBlur } = this.props
+
+    this.changeShouldShowTextLength(false)
 
     if (typeof onBlur === 'function') {
       onBlur(target, text, html)
@@ -128,23 +133,17 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   render () {
-    const {
-      charLimit,
-      placeholder,
-      id
-    } = this.props
-
-    const {
-      text,
-      html,
-      shouldShowTextLength
-    } = this.state
+    const { charLimit, placeholder, id } = this.props
+    const { text, html, shouldShowTextLength } = this.state
 
     const options = {
       placeholder: {
         text: placeholder
       }
     }
+
+    const counterVisibilityClassName = shouldShowTextLength ? '' : 'hidden'
+
     return Root(
       <div>
         <div className={editorContainerStyles}>
@@ -159,10 +158,7 @@ class TextareaEditor extends PureComponent<Props, State> {
             onBlur={this.handleBlur} />
         </div>
         <div className={textCountStyles}>
-          {shouldShowTextLength && <p>
-              {text.length}/{charLimit}
-            </p>
-          }
+          <p className={counterVisibilityClassName}>{text.length}/{charLimit}</p>
         </div>
       </div>
     )

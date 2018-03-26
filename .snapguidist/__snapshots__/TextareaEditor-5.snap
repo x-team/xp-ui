@@ -1,27 +1,20 @@
 exports[`TextareaEditor-5 1`] = `
-<div>
-  <div
-    className="AutoUI_ui_TextareaEditor_TextareaEditor-20 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-53">
-    <div>
+<div
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-59">
+  <div>
+    <div
+      className="AutoUI_ui_TextareaEditor_TextareaEditor-29">
       <div
-        className="AutoUI_ui_TextareaEditor_TextareaEditor-23">
-        <div
-          className="editable-1 editable" />
-      </div>
-      <div
-        className="AutoUI_ui_TextareaEditor_TextareaEditor-13" />
+        className="editable-default editable" />
     </div>
-  </div>
-  <div
-    className="AutoUI_ui_TextareaEditor_TextareaEditor-20 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-53">
-    <div>
-      <div
-        className="AutoUI_ui_TextareaEditor_TextareaEditor-23">
-        <div
-          className="editable-2 editable" />
-      </div>
-      <div
-        className="AutoUI_ui_TextareaEditor_TextareaEditor-13" />
+    <div
+      className="AutoUI_ui_TextareaEditor_TextareaEditor-13">
+      <p
+        className="hidden">
+        0
+        /
+        1000
+      </p>
     </div>
   </div>
 </div>
