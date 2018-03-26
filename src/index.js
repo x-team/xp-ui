@@ -26,6 +26,7 @@ import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
 import SolutionForm from './components/forms/SolutionForm'
+import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 
 export {
   ApplicantBadge,
@@ -50,6 +51,7 @@ export {
   SvgIcon,
   Text,
   Typography,
+  TextareaEditor,
   VideoPlayer,
   XIcon,
   Footer,

@@ -1,0 +1,172 @@
+/* global HTMLTextAreaElement */
+// @flow
+
+import React, { PureComponent } from 'react'
+
+import MediumEditorWrapper from './MediumEditorWrapper'
+import elem from '../../../utils/elem'
+import theme from '../../../styles/theme'
+import { typeface } from '../../../styles/typo'
+
+const cmz = require('cmz')
+
+const textCountStyles = cmz(`
+  text-align: right
+  color: ${theme.lineRed}
+  height: 40px
+`)
+
+const utilStyles = {
+  maxWidth: cmz('max-width: 840px')
+}
+
+const editorContainerStyles = cmz(`
+  & {
+    display: block
+    width: 100%
+    height: 156px
+    padding: 15px
+    margin-bottom: 20px
+    resize: vertical
+    border: 1px solid ${theme.lineSilver3}
+    overflow: scroll
+    box-sizing: border-box
+  }
+
+  & .editable {
+    height: 100%
+    outline: none
+  }
+
+  & :first-child {
+    margin-top: 0
+  }
+
+  & :last-child {
+    margin-bottom: 0
+  }
+`)
+
+const Root = elem.div([
+  utilStyles.maxWidth,
+  typeface.text,
+  cmz(`
+    font-weight: 300
+    font-size: 18px
+    text-align: left
+    display: block
+    width: 100%
+    margin-bottom: 20px
+    resize: vertical
+    box-sizing: border-box
+    min-width: 320px
+    margin: 0 auto
+  `)
+])
+
+type Props = {
+  placeholder: string,
+  text: string,
+  html: string,
+  id: string,
+  charLimit: number,
+  hideTextLengthOnBlur: boolean,
+  onChange(text: string, html: string): ?void,
+  onFocus(target: Object, text: string, html: string): ?void,
+  onBlur(target: Object, text: string, html: string): ?void
+}
+
+type State = {
+  text: string,
+  html: string,
+  shouldShowTextLength: boolean
+}
+
+class TextareaEditor extends PureComponent<Props, State> {
+  static defaultProps = {
+    charLimit: 1000,
+    hideTextLengthOnBlur: false
+  }
+
+  state = {
+    text: this.props.text || '',
+    html: this.props.html || '',
+    shouldShowTextLength: false
+  }
+
+  changeShouldShowTextLength = (val: boolean) => {
+    setTimeout(() => this.setState(() => ({ shouldShowTextLength: val })), 0)
+  }
+
+  handleChange = (text: string, html: string) => {
+    this.setState(() => ({ text, html }))
+    const { onChange } = this.props
+    if (typeof onChange === 'function') {
+      onChange(text, html)
+    }
+  }
+
+  handleFocus = (target: HTMLTextAreaElement) => {
+    this.changeShouldShowTextLength(true)
+    const { onFocus } = this.props
+    const { text, html } = this.state
+    if (typeof onFocus === 'function') {
+      onFocus(target, text, html)
+    }
+  }
+
+  handleBlur = (target: HTMLTextAreaElement) => {
+    const { onBlur, hideTextLengthOnBlur } = this.props
+    const { text, html } = this.state
+    if (hideTextLengthOnBlur) {
+      this.changeShouldShowTextLength(false)
+    }
+
+    if (typeof onBlur === 'function') {
+      onBlur(target, text, html)
+    }
+  }
+
+  render () {
+    const {
+      charLimit,
+      placeholder,
+      id
+    } = this.props
+
+    const {
+      text,
+      html,
+      shouldShowTextLength
+    } = this.state
+
+    const options = {
+      placeholder: {
+        text: placeholder
+      }
+    }
+    return Root(
+      <div>
+        <div className={editorContainerStyles}>
+          <MediumEditorWrapper
+            text={text}
+            html={html}
+            id={id || 'default'}
+            charLimit={charLimit}
+            options={options}
+            onChange={this.handleChange}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur} />
+        </div>
+        <div className={textCountStyles}>
+          {shouldShowTextLength && <p>
+              {text.length}/{charLimit}
+            </p>
+          }
+        </div>
+      </div>
+    )
+  }
+}
+
+export default TextareaEditor

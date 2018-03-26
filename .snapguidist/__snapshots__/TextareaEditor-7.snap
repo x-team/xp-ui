@@ -1,0 +1,14 @@
+exports[`TextareaEditor-7 1`] = `
+<div
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-20 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-53">
+  <div>
+    <div
+      className="AutoUI_ui_TextareaEditor_TextareaEditor-23">
+      <div
+        className="editable-default editable" />
+    </div>
+    <div
+      className="AutoUI_ui_TextareaEditor_TextareaEditor-13" />
+  </div>
+</div>
+`;
