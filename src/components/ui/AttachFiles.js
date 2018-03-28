@@ -14,7 +14,8 @@ const cmz = require('cmz')
 type File = {
   filename: string,
   path: string,
-  progress: number
+  progress: number,
+  id?: number | string,
 }
 
 type Files = Array<File>
@@ -84,7 +85,7 @@ class AttachFiles extends PureComponent<Props> {
         return (
           FileAction(
             {
-              onClick: () => onDelete(`${file.path}/${file.filename}`)
+              onClick: () => onDelete(file.id || file.filename)
             },
             <SvgIcon icon='trashcan' color='grayscale' />
           )
@@ -93,7 +94,7 @@ class AttachFiles extends PureComponent<Props> {
         return (
           FileAction(
             {
-              onClick: () => onCancel(`${file.path}/${file.filename}`)
+              onClick: () => onCancel(file.id || file.filename)
             },
             <SvgIcon icon='x' color='grayscale' />
           )
@@ -118,7 +119,7 @@ class AttachFiles extends PureComponent<Props> {
             return (
               FileItem(
                 {
-                  key: `${file.path}/${file.filename}`,
+                  key: file.id || file.filename,
                   style: {
                     borderBottomColor: file.progress !== 100 ? theme.baseSilver : 'transparent'
                   }
