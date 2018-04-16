@@ -84,7 +84,12 @@ type Props = {
 type State = {
   text: string,
   html: string,
-  shouldShowTextLength: boolean
+  shouldShowTextLength: boolean,
+  options: {
+    placeholder: {
+      text: string
+    }
+  }
 }
 
 class TextareaEditor extends PureComponent<Props, State> {
@@ -95,11 +100,16 @@ class TextareaEditor extends PureComponent<Props, State> {
   state = {
     text: this.props.text || '',
     html: this.props.html || '',
-    shouldShowTextLength: false
+    shouldShowTextLength: false,
+    options: {
+      placeholder: {
+        text: this.props.placeholder
+      }
+    }
   }
 
   changeShouldShowTextLength = (val: boolean) => {
-    setTimeout(() => this.setState(() => ({ shouldShowTextLength: val })), 0)
+    this.setState(() => ({ shouldShowTextLength: val }))
   }
 
   handleChange = (text: string, html: string) => {
@@ -133,14 +143,8 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   render () {
-    const { charLimit, placeholder, id } = this.props
-    const { text, html, shouldShowTextLength } = this.state
-
-    const options = {
-      placeholder: {
-        text: placeholder
-      }
-    }
+    const { charLimit, id } = this.props
+    const { text, html, shouldShowTextLength, options } = this.state
 
     const counterVisibilityClassName = shouldShowTextLength ? '' : 'hidden'
 
