@@ -51,7 +51,7 @@ const Root = elem.section(cmz(
   }
 `), {'data-test': `portfolioItem`})
 
-const Header = elem.h1(cmz(`
+const Header = elem.h3(cmz(`
   & {
     margin: 0
     padding-right: 24px
