@@ -1,11 +1,14 @@
 exports[`AttachFiles-3 1`] = `
 <div>
+  <input
+    className="AutoUI_ui_AttachFiles-74"
+    type="file" />
   <button
     className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 AutoUI_ui_Button-112 outlined">
     <span
       className="AutoUI_ui_Button-42 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
       <span
-        className="AutoUI_ui_AttachFiles-68">
+        className="AutoUI_ui_AttachFiles-70">
         Attach a file
       </span>
     </span>
