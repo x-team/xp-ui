@@ -1,4 +1,5 @@
 // @flow
+/* global HTMLInputElement */
 
 import React, { PureComponent } from 'react'
 
@@ -22,9 +23,9 @@ type Files = Array<File>
 
 type Props = {
   files: Files,
-  onUpload: Function,
   onCancel: Function,
-  onDelete: Function
+  onDelete: Function,
+  onFileUpload: Function
 }
 
 const Root = elem.div()
@@ -69,16 +70,40 @@ const ButtonLabel = elem.span(cmz(`
   padding: 0 20px
 `))
 
+const HiddenInput = elem.input(cmz(`
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  zIndex: -1
+`))
+
 class AttachFiles extends PureComponent<Props> {
+  fileInput: HTMLInputElement
+
   static defaultProps = {
     files: [],
-    onUpload: () => {},
     onCancel: () => {},
-    onDelete: () => {}
+    onDelete: () => {},
+    onFileUpload: () => {}
+  }
+
+  triggerFileSelection = () => {
+    this.fileInput.click()
   }
 
   render () {
-    const { files, onUpload, onCancel, onDelete } = this.props
+    const { files, onCancel, onDelete, onFileUpload } = this.props
+    const ACCEPTED_FILE_TYPES = [
+      'application/pdf',
+      'application/zip',
+      'application/x-rar-compressed',
+      'image/gif',
+      'image/jpeg',
+      'image/png',
+      'video/*'
+    ].join(',')
 
     const renderButton = (file: File) => {
       if (!file.progress || file.progress === 100) {
@@ -136,7 +161,15 @@ class AttachFiles extends PureComponent<Props> {
 
     return Root(
       renderFiles(files),
-      <Button outlined onClick={onUpload}>{ButtonLabel('Attach a file')}</Button>
+      HiddenInput({
+        type: 'file',
+        accept: ACCEPTED_FILE_TYPES,
+        onChange: onFileUpload,
+        ref: node => { this.fileInput = node }
+      }),
+      <Button outlined onClick={this.triggerFileSelection}>
+        {ButtonLabel('Attach a file')}
+      </Button>
     )
   }
 }
