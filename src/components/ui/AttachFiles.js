@@ -23,6 +23,7 @@ type Files = Array<File>
 
 type Props = {
   files: Files,
+  acceptedTypes: string,
   onCancel: Function,
   onDelete: Function,
   onFileUpload: Function
@@ -94,16 +95,13 @@ class AttachFiles extends PureComponent<Props> {
   }
 
   render () {
-    const { files, onCancel, onDelete, onFileUpload } = this.props
-    const ACCEPTED_FILE_TYPES = [
-      'application/pdf',
-      'application/zip',
-      'application/x-rar-compressed',
-      'image/gif',
-      'image/jpeg',
-      'image/png',
-      'video/*'
-    ].join(',')
+    const {
+      files,
+      acceptedTypes,
+      onCancel,
+      onDelete,
+      onFileUpload
+    } = this.props
 
     const renderButton = (file: File) => {
       if (!file.progress || file.progress === 100) {
@@ -163,7 +161,7 @@ class AttachFiles extends PureComponent<Props> {
       renderFiles(files),
       HiddenInput({
         type: 'file',
-        accept: ACCEPTED_FILE_TYPES,
+        accept: acceptedTypes,
         onChange: onFileUpload,
         ref: node => { this.fileInput = node }
       }),
