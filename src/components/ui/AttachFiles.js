@@ -108,7 +108,8 @@ class AttachFiles extends PureComponent<Props> {
         return (
           FileAction(
             {
-              onClick: () => onDelete(file.id || file.filename)
+              onClick: () => onDelete(file.id || file.filename),
+              title: `Delete ${file.filename} file`
             },
             <SvgIcon icon='trashcan' color='grayscale' />
           )
@@ -117,7 +118,8 @@ class AttachFiles extends PureComponent<Props> {
         return (
           FileAction(
             {
-              onClick: () => onCancel(file.id || file.filename)
+              onClick: () => onCancel(file.id || file.filename),
+              title: `Cancel ${file.filename} upload`
             },
             <SvgIcon icon='x' color='grayscale' />
           )

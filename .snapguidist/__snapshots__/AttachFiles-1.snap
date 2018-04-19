@@ -14,7 +14,8 @@ exports[`AttachFiles-1 1`] = `
         filename-01.zip
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-56">
+        className="AutoUI_ui_AttachFiles-56"
+        title="Delete filename-01.zip file">
         <svg
           height="18px"
           viewBox="0 0 15 18"
@@ -84,7 +85,8 @@ exports[`AttachFiles-1 1`] = `
         filename-02.zip
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-56">
+        className="AutoUI_ui_AttachFiles-56"
+        title="Delete filename-02.zip file">
         <svg
           height="18px"
           viewBox="0 0 15 18"
@@ -162,7 +164,8 @@ exports[`AttachFiles-1 1`] = `
         filename-03.zip
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-56">
+        className="AutoUI_ui_AttachFiles-56"
+        title="Cancel filename-03.zip upload">
         <svg
           height="14px"
           viewBox="0 0 14 14"
@@ -226,7 +229,8 @@ exports[`AttachFiles-1 1`] = `
         filename-04.zip
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-56">
+        className="AutoUI_ui_AttachFiles-56"
+        title="Cancel filename-04.zip upload">
         <svg
           height="14px"
           viewBox="0 0 14 14"
