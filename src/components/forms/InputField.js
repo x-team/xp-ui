@@ -152,9 +152,72 @@ const checkboxInputStyles = {
 
 const CheckboxTick = elem.span(checkboxInputStyles.tick)
 
+const slidingCheckboxInputStyles = {
+  input: cmz(`
+    & {
+      display: none !important
+      width: 46px
+    }
+
+    &:checked ~ span:before {
+      background-color: ${theme.baseLightRed}
+    }
+
+    &:checked ~ span:after {
+      background-color: ${theme.baseRed}
+      transform: translate(100%, -50%)
+    }
+  `),
+  tick: cmz(`
+    & {
+      margin-left: 26px
+    }
+
+    &:before {
+      content: ''
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      position: absolute
+      height: 12px
+      width: 46px
+      background-color: ${theme.sliderBackground}
+      border-radius: 12px
+      transition: background-color 200ms ease-in-out
+    }
+
+    &:after {
+      content: ''
+      background-color: ${theme.sliderToggle}
+      position: absolute
+      height: 24px
+      width: 24px
+      border-radius: 100%
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      transition: transform 300ms ease-in-out, background-color 200ms ease-in-out
+    }
+  `)
+}
+
+const SlidingCheckboxTick = elem.span(slidingCheckboxInputStyles.tick)
+
 const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 
-const inputFactory = type => elem[getTagName(type)](inputStyles)
+const customTypesDefinitions : Object = {
+  'sliding-checkbox': 'checkbox'
+}
+
+const getFinalType = type => {
+  const customType = customTypesDefinitions[type]
+  return customType || type
+}
+
+const inputFactory = type => {
+  const finalType = getFinalType(type)
+  return elem[getTagName(finalType)](inputStyles)
+}
 
 const specialTypesDefinitions : Object = {
   radio: {
@@ -165,6 +228,11 @@ const specialTypesDefinitions : Object = {
   checkbox: {
     className: checkboxInputStyles.input,
     ElemBox: CheckboxTick,
+    ElemLabel: Label
+  },
+  'sliding-checkbox': {
+    className: slidingCheckboxInputStyles.input,
+    ElemBox: SlidingCheckboxTick,
     ElemLabel: Label
   }
 }
@@ -193,19 +261,21 @@ class InputField extends PureComponent<Props> {
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
     const errorClassName = isInvalid ? errorInput : ''
+    const finalType = getFinalType(type)
 
     if (isSpecialType(type)) {
       const { ElemBox, ElemLabel, className } = specialTypesDefinitions[type]
+
       return (
         FieldRoot(
           ElemLabel(
             Tag({
               className,
-              type,
               name,
               id: inputId,
               value,
               onChange,
+              type: finalType,
               'aria-labelledby': labelId,
               ...rest
             }),

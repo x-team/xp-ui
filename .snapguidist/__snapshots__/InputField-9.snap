@@ -1,21 +1,22 @@
 exports[`InputField-9 1`] = `
-<div>
+<div
+  className="AutoUI_forms_InputField-73">
   <label
-    id="label-invalid">
-    <section
-      className="AutoUI_ui_Text-27">
-      <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-        Invalid Field
-      </div>
-    </section>
-    <input
-      aria-labelledby="label-invalid"
-      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-82 AutoUI_forms_InputField-106"
-      id="invalid"
-      name="invalid"
-      placeholder="Error Placeholder.."
-      type="text" />
+    id="">
+    <div
+      className="AutoUI_forms_InputField-73">
+      <label
+        className="AutoUI_forms_InputField-64 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        <input
+          aria-labelledby=""
+          checked={true}
+          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-82 AutoUI_forms_InputField-156"
+          type="checkbox" />
+        <span
+          className="AutoUI_forms_InputField-171" />
+        Sliding Checkbox
+      </label>
+    </div>
   </label>
 </div>
 `;
