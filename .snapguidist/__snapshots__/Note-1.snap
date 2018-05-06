@@ -1,0 +1,33 @@
+exports[`Note-1 1`] = `
+<div
+  className="AutoUI_ui_Note-23">
+  <div
+    className="AutoUI_ui_Note-27">
+    <img
+      alt="Samwise Gamgee"
+      src="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
+      style={
+        Object {
+          "borderRadius": "50%",
+          "height": "100%",
+          "width": "100%",
+        }
+      } />
+  </div>
+  <div
+    className="AutoUI_ui_Note-42">
+    <span
+      className="AutoUI_ui_Note-47 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      Samwise Gamgee
+    </span>
+    <span
+      className="AutoUI_ui_Note-57 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      just now
+    </span>
+    <p
+      className="AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      One tiny Hobbit against all the evil the world could muster. A sane being would have given up, but Samwise burned with a magnificent madness, a glowing obsession to surmount every obstacle, to find Frodo, destroy the Ring, and cleanse Middle Earth of its festering malignancy. He knew he would try again. Fail, perhaps. And try once more. A thousand, thousand times if need be, but he would not give up the quest.
+    </p>
+  </div>
+</div>
+`;
