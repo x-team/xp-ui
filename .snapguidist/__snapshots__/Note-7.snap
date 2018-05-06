@@ -1,0 +1,33 @@
+exports[`Note-7 1`] = `
+<div
+  className="AutoUI_ui_Note-23">
+  <div
+    className="AutoUI_ui_Note-27">
+    <img
+      alt="Samwise Gamgee"
+      src="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
+      style={
+        Object {
+          "borderRadius": "50%",
+          "height": "100%",
+          "width": "100%",
+        }
+      } />
+  </div>
+  <div
+    className="AutoUI_ui_Note-42">
+    <span
+      className="AutoUI_ui_Note-47 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      Samwise Gamgee
+    </span>
+    <span
+      className="AutoUI_ui_Note-57 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      4 Apr 18
+    </span>
+    <p
+      className="AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      There, peeping among the cloud-wrack above a dark tor high up in the mountains, Sam saw a white star twinkle for a while. The beauty of it smote his heart, as he looked up out of the forsaken land, and hope returned to him. For like a shaft, clear and cold, the thought pierced him that in the end the Shadow was only a small and passing thing: there was light and high beauty for ever beyond its reach.
+    </p>
+  </div>
+</div>
+`;

@@ -1,0 +1,25 @@
+exports[`Note-5 1`] = `
+<div
+  className="AutoUI_ui_Note-23">
+  <div
+    className="AutoUI_ui_Note-27">
+    <div
+      className="AutoUI_ui_Note-35" />
+  </div>
+  <div
+    className="AutoUI_ui_Note-42">
+    <span
+      className="AutoUI_ui_Note-47 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      Samwise Gamgee
+    </span>
+    <span
+      className="AutoUI_ui_Note-57 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      2 h ago
+    </span>
+    <p
+      className="AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      Do you remember the Shire, Mr. Frodo? It\'ll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they\'ll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?
+    </p>
+  </div>
+</div>
+`;
