@@ -11,8 +11,6 @@ import formatDate from 'date-fns/format'
 import type { Element } from 'react'
 const cmz = require('cmz')
 
-const UPDATE_INTERVAL_TIME = 60 * 1000 // 1 minute
-
 type Props = {
   avatar?: Element<*>,
   date?: Date,
@@ -82,18 +80,30 @@ const timeFromNow = date => {
 }
 
 class Note extends PureComponent<Props> {
-  interval: number
+  interval:? number
 
   static defaultProps = {
     avatar: PlaceholderAvatar()
   }
 
   componentDidMount () {
-    this.interval = setInterval(() => this.forceUpdate(), UPDATE_INTERVAL_TIME)
+    const { date } = this.props
+
+    if (date) {
+      const now = new Date()
+      const hoursDelta = differenceInHours(now, date)
+      if (hoursDelta < 1) {
+        this.interval = setInterval(() => this.forceUpdate(), 60 * 1000) // 1 minute
+      } else if (hoursDelta < 24) {
+        this.interval = setInterval(() => this.forceUpdate(), 20 * 60 * 1000) // 20 minutes
+      }
+    }
   }
 
   componentWillUnmount () {
-    clearInterval(this.interval)
+    if (this.interval) {
+      clearInterval(this.interval)
+    }
   }
 
   render () {
