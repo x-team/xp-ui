@@ -1,8 +1,8 @@
 exports[`Note-7 1`] = `
 <div
-  className="AutoUI_ui_Note-23">
+  className="AutoUI_ui_Note-21">
   <div
-    className="AutoUI_ui_Note-27">
+    className="AutoUI_ui_Note-25">
     <img
       alt="Samwise Gamgee"
       src="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
@@ -15,13 +15,13 @@ exports[`Note-7 1`] = `
       } />
   </div>
   <div
-    className="AutoUI_ui_Note-42">
+    className="AutoUI_ui_Note-40">
     <span
-      className="AutoUI_ui_Note-47 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      className="AutoUI_ui_Note-45 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
       Samwise Gamgee
     </span>
     <span
-      className="AutoUI_ui_Note-57 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Note-55 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
       4 Apr 18
     </span>
     <p
