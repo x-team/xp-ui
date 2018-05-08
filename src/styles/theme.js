@@ -41,6 +41,7 @@ export default wrap({
   baseBrighter: palette.white,
   baseDarker: palette.haiti,
   baseRed: palette.radicalRed,
+  baseLightRed: palette.wePeep,
   baseGreen: palette.fern,
   baseSilver: palette.alto,
   baseHighlight: palette.mercury,
@@ -49,6 +50,9 @@ export default wrap({
   typoSubheading: palette.radicalRed,
   typoParagraph: palette.scarpaFlow,
   typoHighlight: palette.haiti,
+
+  sliderToggle: palette.bombay,
+  sliderBackground: palette.athensGray,
 
   formPlaceholder: palette.manatee,
   formText: palette.scarpaFlow,

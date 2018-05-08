@@ -57,6 +57,20 @@ makeValueChangeHandler = option => () => setState(prev => ({ cb: !prev.cb }));
 />
 ```
 
+Sliding Checkbox element:
+
+```js
+initialState = { cb: true };
+makeValueChangeHandler = option => () => setState(prev => ({ cb: !prev.cb }));
+
+<InputField
+  type="sliding-checkbox"
+  label="Sliding Checkbox"
+  checked={state.cb}
+  onChange={console.log(state.cb) || makeValueChangeHandler(state.cb)}
+/>
+```
+
 Invalid element:
 
 ```js
