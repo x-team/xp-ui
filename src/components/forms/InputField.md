@@ -67,7 +67,7 @@ makeValueChangeHandler = option => () => setState(prev => ({ cb: !prev.cb }));
   type="sliding-checkbox"
   label="Sliding Checkbox"
   checked={state.cb}
-  onChange={makeValueChangeHandler(state.cb)}
+  onChange={console.log(state.cb) || makeValueChangeHandler(state.cb)}
 />
 ```
 
