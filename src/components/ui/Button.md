@@ -58,6 +58,27 @@ outlined monochrome
 <Button outlined color={'monochrome'}>Outlined monochrome state</Button>
 ```
 
+silver
+
+```js
+<Button color={'silver'}>Outlined silver state</Button>
+```
+
+
+outline silver
+
+```js
+<Button outlined color={'silver'}>Outlined silver state</Button>
+```
+
+outlined rounded raised silver
+
+```js
+<Button outlined rounded raised color={'silver'}>Outlined silver state</Button>
+```
+
+
+
 button generated with custom element (&lt;a&gt;)
 
 ```js

@@ -18,6 +18,8 @@ type Props = {
   size: Size,
   color: Color,
   outlined: ?boolean,
+  rounded: ?boolean,
+  raised: ?boolean,
   disabled: ?boolean,
   block: ?boolean,
   component: string,
@@ -56,7 +58,7 @@ const colorStyles = {
       color: ${theme.baseDarker}
     }
 
-    &:hover {
+    &:not(.raised):hover {
       background-color: ${theme.baseDarker.lighten(0.5)};
       border-color: ${theme.baseDarker.lighten(0.5)};
       color: ${theme.baseBrighter};
@@ -75,9 +77,27 @@ const colorStyles = {
       color: ${theme.baseRed}
     }
 
-    &:hover {
+    &:not(.raised):hover {
       background-color: ${theme.baseRed.darken(0.2)};
       border-color: ${theme.baseRed.darken(0.2)};
+      color: ${theme.baseBrighter};
+    }
+  `),
+  silver: cmz(
+    baseStyles.root, `
+    & {
+      background-color: ${theme.lineSilver2};
+      border-color: ${theme.lineSilver2};
+      color: ${theme.iconGray};
+    }
+
+    &.outlined {
+      color: ${theme.iconGray}
+    }
+
+    &:not(.raised):hover {
+      background-color: ${theme.lineSilver2.darken(0.2)};
+      border-color: ${theme.lineSilver2.darken(0.2)};
       color: ${theme.baseBrighter};
     }
   `)
@@ -127,7 +147,17 @@ const extraStyles = {
     display: block
     margin: 10px auto
     width: 200px
-  `)
+  `),
+
+  rounded: cmz(`
+    border-radius: 4px
+  `),
+
+  raised: cmz(`
+    &:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+`)
 }
 
 class Button extends PureComponent<Props> {
@@ -138,6 +168,8 @@ class Button extends PureComponent<Props> {
     size: 'normal',
     outlined: false,
     disabled: false,
+    rounded: false,
+    raised: false,
     block: false
   }
 
@@ -148,6 +180,8 @@ class Button extends PureComponent<Props> {
       color,
       outlined,
       disabled,
+      rounded,
+      raised,
       block,
       component: CustomComponent,
       children,
@@ -159,6 +193,10 @@ class Button extends PureComponent<Props> {
     const extraClassName = [
       outlined && extraStyles.outlined,
       outlined && 'outlined',
+      rounded && extraStyles.rounded,
+      rounded && 'rounded',
+      raised && extraStyles.raised,
+      raised && 'raised',
       block && extraStyles.block,
       disabled && extraStyles.disabled
     ].filter(Boolean).join(' ')
