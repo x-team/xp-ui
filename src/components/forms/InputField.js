@@ -122,6 +122,7 @@ const checkboxInputStyles = {
       opacity: 1
     }
   `),
+
   tick: cmz(`
     & {
       position: absolute
@@ -156,7 +157,6 @@ const slidingCheckboxInputStyles = {
   input: cmz(`
     & {
       display: none !important
-      width: 46px
     }
 
     &:checked ~ span:before {
@@ -168,33 +168,35 @@ const slidingCheckboxInputStyles = {
       transform: translate(100%, -50%)
     }
   `),
+
   tick: cmz(`
     & {
       margin-left: 26px
+      cursor: pointer
     }
 
     &:before {
       content: ''
+      position: absolute
       top: 50%
       left: 0
-      transform: translateY(-50%)
-      position: absolute
-      height: 12px
       width: 46px
-      background-color: ${theme.sliderBackground}
+      height: 12px
       border-radius: 12px
+      background-color: ${theme.sliderBackground}
+      transform: translateY(-50%)
       transition: background-color 200ms ease-in-out
     }
 
     &:after {
       content: ''
-      background-color: ${theme.sliderToggle}
       position: absolute
-      height: 24px
-      width: 24px
-      border-radius: 100%
-      left: 0
       top: 50%
+      left: 0
+      width: 24px
+      height: 24px
+      border-radius: 50%
+      background-color: ${theme.sliderToggle}
       transform: translateY(-50%)
       transition: transform 300ms ease-in-out, background-color 200ms ease-in-out
     }
@@ -205,21 +207,18 @@ const SlidingCheckboxTick = elem.span(slidingCheckboxInputStyles.tick)
 
 const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 
-const customTypesDefinitions : Object = {
+const customTypesDefinitions: Object = {
   'sliding-checkbox': 'checkbox'
 }
 
-const getFinalType = type => {
-  const customType = customTypesDefinitions[type]
-  return customType || type
-}
+const getFinalType = type => customTypesDefinitions[type] || type
 
 const inputFactory = type => {
   const finalType = getFinalType(type)
   return elem[getTagName(finalType)](inputStyles)
 }
 
-const specialTypesDefinitions : Object = {
+const specialTypesDefinitions: Object = {
   radio: {
     className: radioInputStyles.input,
     ElemBox: RadioCircle,
