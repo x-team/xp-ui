@@ -22,10 +22,10 @@ exports[`SolutionForm-1 1`] = `
       name="solution"
       placeholder="Paste your solution here." />
     <button
-      className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 AutoUI_ui_Button-103"
+      className=" AutoUI_ui_Button-68 AutoUI_ui_Button-30 AutoUI_ui_Button-113 AutoUI_ui_Button-123"
       data-test="solutionSubmit">
       <span
-        className="AutoUI_ui_Button-42 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Button-44 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
         Submit (1 of 3)
       </span>
     </button>

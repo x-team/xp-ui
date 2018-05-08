@@ -41,6 +41,18 @@ exports[`ColorPalette-1 1`] = `
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
+        "backgroundColor": "rgb(247, 217, 220)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      baseLightRed
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
         "backgroundColor": "rgb(92, 184, 92)",
       }
     }>
@@ -119,6 +131,30 @@ exports[`ColorPalette-1 1`] = `
     <div
       className="AutoUI_ui_ColorPalette-34">
       typoHighlight
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(178, 182, 188)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      sliderToggle
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(240, 241, 244)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      sliderBackground
     </div>
   </div>
   <div
