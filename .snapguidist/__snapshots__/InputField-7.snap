@@ -13,7 +13,7 @@ exports[`InputField-7 1`] = `
           className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-82 AutoUI_forms_InputField-113"
           type="checkbox" />
         <span
-          className="AutoUI_forms_InputField-125" />
+          className="AutoUI_forms_InputField-126" />
         Checkbox
       </label>
     </div>
