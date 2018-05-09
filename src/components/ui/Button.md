@@ -6,6 +6,12 @@ default red state
 <Button>Normal state with default color</Button>
 ```
 
+silver state
+
+```js
+<Button color={'silver'}>Normal state with silver color</Button>
+```
+
 monochrome state
 
 ```js
@@ -46,6 +52,18 @@ disabled
 <Button disabled>Disabled state</Button>
 ```
 
+rounded default
+
+```js
+<Button rounded>Rounded default state</Button>
+```
+
+raised default
+
+```js
+<Button raised>Raised default state</Button>
+```
+
 outlined default
 
 ```js
@@ -58,31 +76,30 @@ outlined monochrome
 <Button outlined color={'monochrome'}>Outlined monochrome state</Button>
 ```
 
-silver
-
-```js
-<Button color={'silver'}>Outlined silver state</Button>
-```
-
-
-outline silver
+outlined silver
 
 ```js
 <Button outlined color={'silver'}>Outlined silver state</Button>
 ```
 
-outlined rounded raised silver
-
-```js
-<Button outlined rounded raised color={'silver'}>Outlined silver state</Button>
-```
-
-
-
 button generated with custom element (&lt;a&gt;)
 
 ```js
 <Button component='a' color={'monochrome'}>custom default button state</Button>
+```
+
+### Use Cases
+
+skill tag
+
+```js
+<Button outlined rounded raised color={'silver'}>Androind</Button>
+```
+
+selected skill tag
+
+```js
+<Button selected outlined rounded raised color={'silver'}>Android</Button>
 ```
 
 Missing props (does component explode?):

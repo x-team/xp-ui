@@ -20,6 +20,7 @@ type Props = {
   outlined: ?boolean,
   rounded: ?boolean,
   raised: ?boolean,
+  selected: ?boolean,
   disabled: ?boolean,
   block: ?boolean,
   component: string,
@@ -28,17 +29,17 @@ type Props = {
 
 const baseStyles = {
   root: cmz(`
-    display: inline-block;
-    border: 2px solid transparent;
-    background: transparent;
-    text-align: center;
-    outline: none;
-    margin: 2px auto;
-    padding: 10px 19px;
-    text-decoration: none;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all .3s ease-out;
+    display: inline-block
+    border: 2px solid transparent
+    background: transparent
+    text-align: center
+    outline: none
+    margin: 2px auto
+    padding: 10px 19px
+    text-decoration: none
+    cursor: pointer
+    white-space: nowrap
+    transition: all .3s ease-out
   `),
 
   content: cmz(typo.labelText, 'font-size: inherit')
@@ -49,56 +50,62 @@ const colorStyles = {
   monochrome: cmz(
     baseStyles.root, `
     & {
-      background-color: ${theme.baseDarker};
-      border-color: ${theme.baseDarker};
-      color: ${theme.baseBrighter};
+      background-color: ${theme.baseDarker}
+      border-color: ${theme.baseDarker}
+      color: ${theme.baseBrighter}
     }
 
     &.outlined {
       color: ${theme.baseDarker}
     }
 
-    &:not(.raised):hover {
-      background-color: ${theme.baseDarker.lighten(0.5)};
-      border-color: ${theme.baseDarker.lighten(0.5)};
-      color: ${theme.baseBrighter};
+    &:hover {
+      background-color: ${theme.baseDarker.lighten(0.5)}
+      border-color: ${theme.baseDarker.lighten(0.5)}
+      color: ${theme.baseBrighter}
     }
   `),
 
   normal: cmz(
     baseStyles.root, `
     & {
-      background-color: ${theme.baseRed};
-      border-color: ${theme.baseRed};
-      color: ${theme.baseBrighter};
+      background-color: ${theme.baseRed}
+      border-color: ${theme.baseRed}
+      color: ${theme.baseBrighter}
     }
 
     &.outlined {
       color: ${theme.baseRed}
     }
 
-    &:not(.raised):hover {
-      background-color: ${theme.baseRed.darken(0.2)};
-      border-color: ${theme.baseRed.darken(0.2)};
-      color: ${theme.baseBrighter};
+    &:hover {
+      background-color: ${theme.baseRed.darken(0.2)}
+      border-color: ${theme.baseRed.darken(0.2)}
+      color: ${theme.baseBrighter}
     }
   `),
+
   silver: cmz(
     baseStyles.root, `
     & {
-      background-color: ${theme.lineSilver2};
-      border-color: ${theme.lineSilver2};
-      color: ${theme.iconGray};
+      background-color: ${theme.lineSilver2}
+      border-color: ${theme.lineSilver2}
+      color: ${theme.baseDark}
     }
 
     &.outlined {
-      color: ${theme.iconGray}
+      color: ${theme.baseDark}
     }
 
-    &:not(.raised):hover {
-      background-color: ${theme.lineSilver2.darken(0.2)};
-      border-color: ${theme.lineSilver2.darken(0.2)};
-      color: ${theme.baseBrighter};
+    &.outlined.raised:hover {
+      background-color: transparent
+      border-color: transparent
+    }
+
+    &:hover {
+      background-color: ${theme.lineSilver2.darken(0.025)}
+      border-color: ${theme.lineSilver2.darken(0.025)}
+      color: ${theme.baseDark}
     }
   `)
 }
@@ -122,24 +129,24 @@ const sizeStyles = {
 const extraStyles = {
   disabled: cmz(`
     &, &:hover {
-      background: ${theme.baseHighlight};
-      border-color: transparent;
-      color: ${theme.baseBrighter};
-      pointer-events: none;
+      background: ${theme.baseHighlight}
+      border-color: transparent
+      color: ${theme.baseBrighter}
+      pointer-events: none
     }
   `),
 
   outlined: cmz(`
     & {
-      background-color: transparent;
+      background-color: transparent
     }
 
     &.${colorStyles.normal} {
-      color: ${theme.baseRed};
+      color: ${theme.baseRed}
     }
 
     &.${colorStyles.monochrome} {
-      color: ${theme.baseDarker};
+      color: ${theme.baseDarker}
     }
   `),
 
@@ -155,9 +162,20 @@ const extraStyles = {
 
   raised: cmz(`
     &:hover {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: 0 2px 10px 1px rgba(0, 0, 0, .08)
     }
-`)
+  `),
+
+  selected: cmz(`
+    & {
+      border-color: ${theme.baseRed}
+    }
+
+    &.outlined.raised:hover {
+      box-shadow: none
+      border-color: ${theme.baseRed}
+    }
+  `)
 }
 
 class Button extends PureComponent<Props> {
@@ -170,6 +188,7 @@ class Button extends PureComponent<Props> {
     disabled: false,
     rounded: false,
     raised: false,
+    selected: false,
     block: false
   }
 
@@ -182,6 +201,7 @@ class Button extends PureComponent<Props> {
       disabled,
       rounded,
       raised,
+      selected,
       block,
       component: CustomComponent,
       children,
@@ -197,6 +217,8 @@ class Button extends PureComponent<Props> {
       rounded && 'rounded',
       raised && extraStyles.raised,
       raised && 'raised',
+      selected && extraStyles.selected,
+      selected && 'selected',
       block && extraStyles.block,
       disabled && extraStyles.disabled
     ].filter(Boolean).join(' ')
