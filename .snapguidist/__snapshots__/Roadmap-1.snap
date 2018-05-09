@@ -642,10 +642,10 @@ exports[`Roadmap-1 1`] = `
           </div>
         </section>
         <button
-          className="AutoUI_ui_RoadmapLevel-51 AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 AutoUI_ui_Button-126"
+          className="AutoUI_ui_RoadmapLevel-51 AutoUI_ui_Button-69 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-153"
           data-test="roadmapStart">
           <span
-            className="AutoUI_ui_Button-42 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+            className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
             Let\'s do this.
           </span>
         </button>

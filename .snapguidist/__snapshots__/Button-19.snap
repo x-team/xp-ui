@@ -1,9 +1,9 @@
 exports[`Button-19 1`] = `
-<a
-  className=" AutoUI_ui_Button-47 AutoUI_ui_Button-28 AutoUI_ui_Button-93 ">
+<button
+  className=" AutoUI_ui_Button-69 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-163 raised">
   <span
-    className="AutoUI_ui_Button-42 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
-    custom default button state
+    className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+    Raised default state
   </span>
-</a>
+</button>
 `;

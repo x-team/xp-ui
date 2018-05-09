@@ -20,6 +20,7 @@ function wrap (theme) {
  */
 const palette = {
   white: '#FFF',
+  black: '#000',
   haiti: '#130E2E',
   fern: '#5CB85C',
   radicalRed: '#F63954',
@@ -40,6 +41,7 @@ const palette = {
 export default wrap({
   baseBrighter: palette.white,
   baseDarker: palette.haiti,
+  baseDark: palette.black,
   baseRed: palette.radicalRed,
   baseLightRed: palette.wePeep,
   baseGreen: palette.fern,

@@ -182,9 +182,9 @@ exports[`MilestonesScreen-1 1`] = `
         </section>
         <div>
           <button
-            className=" AutoUI_ui_Button-66 AutoUI_ui_Button-28 AutoUI_ui_Button-93 ">
+            className=" AutoUI_ui_Button-69 AutoUI_ui_Button-31 AutoUI_ui_Button-120 ">
             <span
-              className="AutoUI_ui_Button-42 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+              className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
               Go to the step 2
             </span>
           </button>
