@@ -1,8 +1,8 @@
-exports[`Avatar-1 1`] = `
+exports[`Avatar-5 1`] = `
 <div
-  className="AutoUI_ui_Avatar-24 AutoUI_ui_Avatar-18">
+  className="AutoUI_ui_Avatar-24 AutoUI_ui_Avatar-14">
   <img
-    alt=""
+    alt="I am Batman!"
     className="AutoUI_ui_Avatar-30"
     src="https://www.gravatar.com/avatar/61a58e425da620d1f4839c6af03ce70f" />
 </div>

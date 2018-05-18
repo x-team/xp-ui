@@ -9,12 +9,22 @@ type Props = {
 
 const cmz = require('cmz')
 
+// Size options
+const sizeStyles = {
+  small: cmz(`
+    width: 32px
+    height: 32px
+  `),
+  normal: cmz(`
+    width: 64px
+    height: 64px
+  `)
+}
+
 const Root = elem.div(cmz(`
   border-radius: 50%
   display: inline-block
   overflow: hidden
-  width: 64px
-  height: 64px
 `))
 
 const Image = elem.img(cmz(`
@@ -24,13 +34,21 @@ const Image = elem.img(cmz(`
 
 class Avatar extends PureComponent<Props> {
   static defaultProps = {
+    size: 'normal',
     alt: ''
   }
 
   render () {
-    const { alt, src } = this.props
+    const {
+      alt,
+      src,
+      size
+    } = this.props
+
+    const sizeClassName = sizeStyles[size] || ''
 
     return Root(
+      { className: sizeClassName },
       Image({
         alt,
         src
