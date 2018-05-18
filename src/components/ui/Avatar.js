@@ -1,16 +1,12 @@
 import { PureComponent } from 'react'
-import md5 from 'crypto-js/md5'
 
 import elem from '../../utils/elem'
-
-import theme from '../../styles/theme'
-import typo from '../../styles/typo'
 
 import type { Element } from 'react'
 
 type Props = {
-  src: ?string,
-  alt: ?stringZ
+  src: string,
+  alt: ?string
 }
 
 const cmz = require('cmz')
@@ -30,11 +26,11 @@ const Image = elem.img(cmz(`
 
 class Avatar extends PureComponent<Props> {
   static defaultProps = {
-    src: 'https://www.gravatar.com/avatar/61a58e425da620d1f4839c6af03ce70f',
+    alt: ''
   }
 
   render () {
-    const { src, alt } = this.props
+    const { alt, src } = this.props
 
     return Root(
       Image({

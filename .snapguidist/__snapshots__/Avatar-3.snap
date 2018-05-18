@@ -3,7 +3,7 @@ exports[`Avatar-3 1`] = `
   className="AutoUI_ui_Avatar-18">
   <img
     alt="I am Batman!"
-    className="AutoUI_ui_Avatar-23"
+    className="AutoUI_ui_Avatar-26"
     src="https://www.gravatar.com/avatar/61a58e425da620d1f4839c6af03ce70f" />
 </div>
 `;
