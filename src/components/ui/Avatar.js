@@ -17,7 +17,6 @@ const Root = elem.div(cmz(`
   height: 64px
 `))
 
-
 const Image = elem.img(cmz(`
   width: 100%
   height: 100%
