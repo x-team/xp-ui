@@ -1,0 +1,40 @@
+exports[`Tabs-3 1`] = `
+<section
+  className="AutoUI_ui_Tabs_Tabs-13">
+  <nav
+    className="AutoUI_ui_Tabs_Tabs-20">
+    <ul
+      className="AutoUI_ui_Tabs_Tabs-27"
+      role="tablist">
+      <li
+        className="AutoUI_ui_Tabs_Tabs-49 active"
+        role="presentation">
+        <a
+          aria-controls="tabs-pane-0"
+          aria-selected={true}
+          href=""
+          role="tab"
+          tabIndex={0}>
+          Tab 1
+        </a>
+        <div
+          className="AutoUI_ui_Tabs_Tabs-35 active" />
+      </li>
+    </ul>
+  </nav>
+  <div
+    className="AutoUI_ui_Tabs_Tabs-105">
+    <div
+      aria-hidden="false"
+      aria-labelledby="tabs-tab-0"
+      className="AutoUI_ui_Tabs_Tabs-109"
+      role="tabpanel">
+      <div>
+        <div>
+          Tab 1 Content
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

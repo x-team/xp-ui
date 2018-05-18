@@ -1,0 +1,19 @@
+exports[`Tabs-7 1`] = `
+<section
+  className="AutoUI_ui_Tabs_Tabs-13">
+  <nav
+    className="AutoUI_ui_Tabs_Tabs-20">
+    <ul
+      className="AutoUI_ui_Tabs_Tabs-27"
+      role="tablist" />
+  </nav>
+  <div
+    className="AutoUI_ui_Tabs_Tabs-105">
+    <div
+      aria-hidden="false"
+      aria-labelledby="tabs-tab-0"
+      className="AutoUI_ui_Tabs_Tabs-109"
+      role="tabpanel" />
+  </div>
+</section>
+`;
