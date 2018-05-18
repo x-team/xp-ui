@@ -1,7 +1,8 @@
 exports[`Avatar-1 1`] = `
 <div
-  className="AutoUI_ui_Avatar-18">
+  className="AutoUI_ui_Avatar-14">
   <img
+    alt=""
     className="AutoUI_ui_Avatar-23"
     src="https://www.gravatar.com/avatar/61a58e425da620d1f4839c6af03ce70f" />
 </div>
