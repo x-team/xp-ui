@@ -2,8 +2,6 @@ import { PureComponent } from 'react'
 
 import elem from '../../utils/elem'
 
-import type { Element } from 'react'
-
 type Props = {
   src: string,
   alt: ?string
