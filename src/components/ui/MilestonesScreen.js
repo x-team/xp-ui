@@ -78,7 +78,7 @@ class MilestonesScreen extends PureComponent<Props> {
       <Milestones
         level={level}
         levels={[
-          { icon: 'head' },
+          { icon: 'cog' },
           { icon: 'webcam' },
           { icon: 'message' }
         ]}

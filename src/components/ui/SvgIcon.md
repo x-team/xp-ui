@@ -2,6 +2,7 @@ Basic colors:
 
 ```
 <div>
+  <SvgIcon icon="cog" />
   <SvgIcon icon="head" />
   <SvgIcon icon="webcam" />
   <SvgIcon icon="message" />
@@ -21,6 +22,7 @@ Inverted colors:
 
 ```
 <div style={{ background: '#F63A55' }}>
+  <SvgIcon icon="cog" color="inverted" />
   <SvgIcon icon="head" color="inverted" />
   <SvgIcon icon="webcam" color="inverted" />
   <SvgIcon icon="message" color="inverted" />
@@ -40,6 +42,7 @@ Monochrome colors:
 
 ```
 <div>
+  <SvgIcon icon="cog" color="monochrome" />
   <SvgIcon icon="head" color="monochrome" />
   <SvgIcon icon="webcam" color="monochrome" />
   <SvgIcon icon="message" color="monochrome" />
@@ -59,6 +62,7 @@ Grayscale colors:
 
 ```
 <div>
+  <SvgIcon icon="cog" color="grayscale" />
   <SvgIcon icon="head" color="grayscale" />
   <SvgIcon icon="webcam" color="grayscale" />
   <SvgIcon icon="message" color="grayscale" />
