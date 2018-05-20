@@ -9,6 +9,19 @@ Standard use (text input element):
 />
 ```
 
+Standard use (with 'postText' defined)
+
+```js
+<InputField
+  label="How many years of experience do you have?"
+  name="experience"
+  placeholder="Years of experience.."
+  defaultValue="1"
+  style={{ width: '10%' }}
+  postText="years"
+/>
+```
+
 Textarea element:
 
 ```js

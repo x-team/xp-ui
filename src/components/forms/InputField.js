@@ -22,6 +22,7 @@ type Props = {
   defaultValue?: string,
   onChange?: () => mixed,
   type?: Type,
+  postText?: string,
   placeholder?: string | number
 }
 
@@ -83,7 +84,7 @@ const inputStyles = [
     & {
       position: relative
       display: table-cell
-      margin: 0 !important
+      margin: 0
       outline: none
       width: 100%
       height: 70px
@@ -102,6 +103,10 @@ const inputStyles = [
     }
   `)
 ]
+
+const inputWithPostText = cmz(`
+  margin-right: 10px
+`)
 
 const errorInput = cmz(`
   background: ${theme.formErrorShadow}
@@ -253,6 +258,7 @@ class InputField extends PureComponent<Props> {
       value,
       onChange,
       isInvalid,
+      postText,
       ...rest
     } = this.props
 
@@ -260,6 +266,7 @@ class InputField extends PureComponent<Props> {
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
     const errorClassName = isInvalid ? errorInput : ''
+    const spacingClassName = postText ? inputWithPostText : ''
     const finalType = getFinalType(type)
 
     if (isSpecialType(type)) {
@@ -269,7 +276,7 @@ class InputField extends PureComponent<Props> {
         FieldRoot(
           ElemLabel(
             Tag({
-              className,
+              className: `${className} ${spacingClassName}`,
               name,
               id: inputId,
               value,
@@ -286,7 +293,7 @@ class InputField extends PureComponent<Props> {
     }
 
     return Tag({
-      className: errorClassName,
+      className: `${errorClassName} ${spacingClassName}`,
       type,
       name,
       id: inputId,
@@ -298,12 +305,13 @@ class InputField extends PureComponent<Props> {
   }
 
   render () {
-    const { label, type, id, name } = this.props
+    const { label, type, id, name, postText } = this.props
 
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
 
     const RootComponent = isSpecialType(type) ? FieldRoot : ComponentRoot
+    const postLabel = postText && <Text content={postText} isPureContent />
 
     return (
       RootComponent(
@@ -312,6 +320,7 @@ class InputField extends PureComponent<Props> {
             <label id={labelId}>
               {!isSpecialType(type) && <Text content={label} />}
               {this.renderField()}
+              {postLabel}
             </label>
           )
           : this.renderField()
