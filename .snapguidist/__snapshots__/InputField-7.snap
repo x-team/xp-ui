@@ -1,22 +1,44 @@
 exports[`InputField-7 1`] = `
-<div
-  className="AutoUI_forms_InputField-73">
-  <label
-    id="">
-    <div
-      className="AutoUI_forms_InputField-73">
-      <label
-        className="AutoUI_forms_InputField-64 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-        <input
-          aria-labelledby=""
-          checked={true}
-          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-82 AutoUI_forms_InputField-113"
-          type="checkbox" />
-        <span
-          className="AutoUI_forms_InputField-126" />
-        Checkbox
-      </label>
-    </div>
-  </label>
-</div>
+<section>
+  <div
+    className="AutoUI_forms_InputField-74">
+    <label
+      id="">
+      <div
+        className="AutoUI_forms_InputField-74">
+        <label
+          className="AutoUI_forms_InputField-65 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          <input
+            aria-labelledby=""
+            checked={false}
+            className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_forms_InputField-46 "
+            type="radio" />
+          <span
+            className="AutoUI_forms_InputField-38" />
+          Value 1
+        </label>
+      </div>
+    </label>
+  </div>
+  <div
+    className="AutoUI_forms_InputField-74">
+    <label
+      id="">
+      <div
+        className="AutoUI_forms_InputField-74">
+        <label
+          className="AutoUI_forms_InputField-65 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          <input
+            aria-labelledby=""
+            checked={false}
+            className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_forms_InputField-46 "
+            type="radio" />
+          <span
+            className="AutoUI_forms_InputField-38" />
+          Value 2
+        </label>
+      </div>
+    </label>
+  </div>
+</section>
 `;

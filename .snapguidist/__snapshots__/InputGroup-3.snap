@@ -6,7 +6,7 @@ exports[`InputGroup-3 1`] = `
   <div>
     <input
       aria-labelledby=""
-      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-82"
+      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83  "
       type="text" />
   </div>
 </div>

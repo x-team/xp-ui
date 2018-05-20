@@ -1,20 +1,20 @@
 exports[`InputField-9 1`] = `
 <div
-  className="AutoUI_forms_InputField-73">
+  className="AutoUI_forms_InputField-74">
   <label
     id="">
     <div
-      className="AutoUI_forms_InputField-73">
+      className="AutoUI_forms_InputField-74">
       <label
-        className="AutoUI_forms_InputField-64 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_forms_InputField-65 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         <input
           aria-labelledby=""
           checked={true}
-          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-82 AutoUI_forms_InputField-157"
+          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_forms_InputField-118 "
           type="checkbox" />
         <span
-          className="AutoUI_forms_InputField-172" />
-        Sliding Checkbox
+          className="AutoUI_forms_InputField-131" />
+        Checkbox
       </label>
     </div>
   </label>
