@@ -1,4 +1,4 @@
-exports[`Tabs-1 1`] = `
+exports[`Tabs-2 1`] = `
 <section
   className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40">
   <nav
@@ -58,7 +58,9 @@ exports[`Tabs-1 1`] = `
       className="AutoUI_ui_Tabs_Tabs-111"
       role="tabpanel">
       <div>
-        Tab 1 Content
+        <div>
+          Tab 1 Content
+        </div>
       </div>
     </div>
   </div>

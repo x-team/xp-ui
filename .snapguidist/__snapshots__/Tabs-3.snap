@@ -30,9 +30,7 @@ exports[`Tabs-3 1`] = `
       className="AutoUI_ui_Tabs_Tabs-111"
       role="tabpanel">
       <div>
-        <div>
-          Tab 1 Content
-        </div>
+        Tab 1 Content
       </div>
     </div>
   </div>
