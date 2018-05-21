@@ -4,12 +4,12 @@ const path = require('path')
 const config = require('./webpack.config.js')
 
 module.exports = snapguidist({
-  title: 'Auto Components Library',
+  title: 'XP Components Library',
   components: 'src/components/**/*.js',
   sections: [
     {
       name: 'UI Components',
-      components: 'src/components/ui/**/*.js',
+      components: 'src/components/ui/**/*.js'
     },
     {
       name: 'Forms',
@@ -22,6 +22,7 @@ module.exports = snapguidist({
   },
   ignore: [
     '**/components/forms/SolutionForm/Title.js',
-    '**/components/ui/TextareaEditor/MediumEditorWrapper.js'
+    '**/components/ui/TextareaEditor/MediumEditorWrapper.js',
+    '**/components/ui/Tabs/Tab.js'
   ]
 })

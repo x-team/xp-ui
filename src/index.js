@@ -8,6 +8,9 @@ import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
 import ErrorBox from './components/ui/ErrorBox'
 import FilterBar from './components/ui/FilterBar'
+import Footer from './components/ui/Footer/Footer'
+import FooterBrands from './components/ui/Footer/FooterBrands'
+import FooterList from './components/ui/Footer/FooterList'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
@@ -18,16 +21,15 @@ import Roadmap from './components/ui/Roadmap'
 import RoadmapHero from './components/ui/RoadmapHero'
 import RoadmapLevel from './components/ui/RoadmapLevel'
 import RoadmapTimelineElement from './components/ui/RoadmapTimelineElement'
+import SolutionForm from './components/forms/SolutionForm'
 import SvgIcon from './components/ui/SvgIcon'
+import Tab from './components/ui/Tabs/Tab'
+import Tabs from './components/ui/Tabs/Tabs'
 import Text from './components/ui/Text'
+import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 import Typography from './components/ui/Typography'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
-import Footer from './components/ui/Footer/Footer'
-import FooterBrands from './components/ui/Footer/FooterBrands'
-import FooterList from './components/ui/Footer/FooterList'
-import SolutionForm from './components/forms/SolutionForm'
-import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 
 export {
   ApplicantBadge,
@@ -40,6 +42,9 @@ export {
   ColorPalette,
   ErrorBox,
   FilterBar,
+  Footer,
+  FooterBrands,
+  FooterList,
   HeaderBar,
   HorizontalRuler,
   InputField,
@@ -50,14 +55,13 @@ export {
   RoadmapHero,
   RoadmapLevel,
   RoadmapTimelineElement,
+  SolutionForm,
   SvgIcon,
+  Tab,
+  Tabs,
   Text,
-  Typography,
   TextareaEditor,
+  Typography,
   VideoPlayer,
-  XIcon,
-  Footer,
-  FooterBrands,
-  FooterList,
-  SolutionForm
+  XIcon
 }
