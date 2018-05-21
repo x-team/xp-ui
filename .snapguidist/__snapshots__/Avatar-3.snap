@@ -1,0 +1,11 @@
+exports[`Avatar-3 1`] = `
+<div
+  className="AutoUI_ui_Avatar-15">
+  <img
+    alt="I am Batman!"
+    className="AutoUI_ui_Avatar-21"
+    height={32}
+    src="https://www.gravatar.com/avatar/61a58e425da620d1f4839c6af03ce70f"
+    width={32} />
+</div>
+`;

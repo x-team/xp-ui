@@ -2,6 +2,7 @@ import ApplicantBadge from './components/ui/ApplicantBadge'
 import ApplicantListFilter from './components/forms/ApplicantListFilter'
 import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
+import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
@@ -33,6 +34,7 @@ export {
   ApplicantListFilter,
   ApplicantScreen,
   AttachFiles,
+  Avatar,
   Button,
   CollapsibleSection,
   ColorPalette,
