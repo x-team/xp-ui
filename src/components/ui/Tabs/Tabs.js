@@ -22,7 +22,7 @@ const tabsStyles: Object = {
   tabnav: cmz(`
     padding: .5em .625em 0;
     background: ${theme.baseBrighter};
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     position: relative;
   `),
 
