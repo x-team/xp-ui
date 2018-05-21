@@ -1,6 +1,7 @@
 // @flow
 
 import type { Element } from 'react'
+
 import elem from '../../../utils/elem'
 
 type Props = {

@@ -1,12 +1,11 @@
-
-Basic:
+Basic usage:
 
 ```js
- const Tab = require('./Tab.js').default;
- <Tabs>
-  <Tab title='Tab 1'><div>Tab 1 Content</div></Tab>
-  <Tab title='Tab 2'><div>Tab 2 Content</div></Tab>
-  <Tab title='Tab 3'><div>Tab 3 Content</div></Tab>
+const Tab = require('./Tab.js').default;
+<Tabs>
+  <Tab title='Tab 1'>Tab 1 Content</Tab>
+  <Tab title='Tab 2'>Tab 2 Content</Tab>
+  <Tab title='Tab 3'>Tab 3 Content</Tab>
 </Tabs>
 ```
 
@@ -15,24 +14,23 @@ One tab:
 ```js
 const Tab = require('./Tab.js').default;
 <Tabs>
-  <Tab title='Tab 1'><div>Tab 1 Content</div></Tab>
+  <Tab title='Tab 1'>Tab 1 Content</Tab>
 </Tabs>
 ```
 
-Default Active Tab:
+Default active last tab:
 
 ```js
 const Tab = require('./Tab.js').default;
 <Tabs defaultActiveTabKey={2}>
-  <Tab title='Tab 1'><div>Tab 1 Content</div></Tab>
-  <Tab title='Tab 2'><div>Tab 2 Content</div></Tab>
-  <Tab title='Tab 3'><div>Tab 3 Content</div></Tab>
+  <Tab title='Tab 1'>Tab 1 Content</Tab>
+  <Tab title='Tab 2'>Tab 2 Content</Tab>
+  <Tab title='Tab 3'>Tab 3 Content</Tab>
 </Tabs>
 ```
 
 Missing props (does component explode?):
 
 ```js
-<Tabs></Tabs>
+<Tabs />
 ```
-

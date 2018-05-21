@@ -22,7 +22,7 @@ const tabsStyles: Object = {
   tabnav: cmz(`
     padding: .5em .625em 0;
     background: ${theme.baseBrighter};
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     position: relative;
   `),
 
@@ -30,20 +30,20 @@ const tabsStyles: Object = {
     list-style: none;
     margin: 0 0 -1px;
     padding-left: 0;
-    border: 0px solid ${theme.baseSilver};
+    border: 0 solid ${theme.baseSilver};
     border-bottom-width: 1px;
   `),
 
   line: cmz(`
     & {
-      border: 0px solid ${theme.baseRed}
+      border: 0 solid ${theme.baseRed}
       width: 100%;
       position: absolute;
       bottom: -1px;
     }
 
     &.active {
-      border-bottom-width: 1px;
+      border-bottom-width: 2px;
       width: 100%;
     }
   `),
@@ -56,7 +56,8 @@ const tabsStyles: Object = {
       border-style: solid;
       user-select: none;
       border-width: 0;
-      border-bottom-width: 0px;
+      padding: 0 0 .6rem 0;
+      margin-right: 1rem;
     }
 
     & > a {
@@ -66,7 +67,6 @@ const tabsStyles: Object = {
       outline: none;
       font-weight: 600;
       text-decoration: none;
-      margin: .6rem 1rem;
     }
 
     & > a:hover,
@@ -133,11 +133,9 @@ class Tabs extends Component<Props, State> {
     activeTabKey: this.props.defaultActiveTabKey || 0
   }
 
-  handleTabClick = (index: number) => {
-    return (event: Object) => {
-      event.preventDefault()
-      this.setState({ activeTabKey: index })
-    }
+  handleTabClick = (index: number) => (event: Object) => {
+    event.preventDefault()
+    this.setState({ activeTabKey: index })
   }
 
   _renderTab = (child: Element<*>, index: number) => {
