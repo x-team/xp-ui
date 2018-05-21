@@ -1,11 +1,10 @@
-exports[`Avatar-1 1`] = `
+exports[`Avatar-9 1`] = `
 <div
   className="AutoUI_ui_Avatar-15">
   <img
     alt=""
     className="AutoUI_ui_Avatar-21"
     height={64}
-    src="https://icon-icons.com/icons2/1371/PNG/128/batman_90804.png"
     width={64} />
 </div>
 `;
