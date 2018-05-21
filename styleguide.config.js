@@ -4,7 +4,7 @@ const path = require('path')
 const config = require('./webpack.config.js')
 
 module.exports = snapguidist({
-  title: 'Auto Components Library',
+  title: 'XP Components Library',
   components: 'src/components/**/*.js',
   sections: [
     {
