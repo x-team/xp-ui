@@ -28,6 +28,8 @@ import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
 import SolutionForm from './components/forms/SolutionForm'
 import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
+import Tabs from './components/ui/Tabs/Tabs'
+import Tab from './components/ui/Tabs/Tab'
 
 export {
   ApplicantBadge,
@@ -59,5 +61,7 @@ export {
   Footer,
   FooterBrands,
   FooterList,
-  SolutionForm
+  SolutionForm,
+  Tabs,
+  Tab
 }

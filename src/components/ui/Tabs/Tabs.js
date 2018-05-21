@@ -5,12 +5,14 @@ import React, { Component } from 'react'
 import type { Element } from 'react'
 
 import theme from '../../../styles/theme'
+import typo from '../../../styles/typo'
+
 import elem from '../../../utils/elem'
 
 const cmz = require('cmz')
 
 const tabsStyles: Object = {
-  root: cmz(`
+  root: cmz(typo.formText, `
     position: relative;
     margin: 1em 0 1.5em;
     background-color: ${theme.baseBrighter};
@@ -102,7 +104,7 @@ const tabsStyles: Object = {
 }
 
 tabsStyles.tab = {
-  content: cmz(`
+  content: cmz(typo.formText, `
     background-color: ${theme.baseBrighter};
   `),
 
