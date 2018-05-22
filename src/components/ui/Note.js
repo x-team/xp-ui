@@ -1,18 +1,17 @@
 // @flow
 
-import { PureComponent } from 'react'
-import theme from '../../styles/theme'
+import React, { PureComponent } from 'react'
 import typo from '../../styles/typo'
 import elem from '../../utils/elem'
 import differenceInSeconds from 'date-fns/difference_in_seconds'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
 import differenceInHours from 'date-fns/difference_in_hours'
 import formatDate from 'date-fns/format'
-import type { Element } from 'react'
+import Avatar from './Avatar'
 const cmz = require('cmz')
 
 type Props = {
-  avatar?: Element<*>,
+  avatar?: string,
   date?: Date,
   name?: string,
   text?: string
@@ -22,19 +21,9 @@ const Root = elem.div(cmz(`
   display: flex
 `))
 
-const Avatar = elem.div(cmz(`
+const AvatarWrapper = elem.div(cmz(`
   margin-right: 16px
-  max-height: 40px
-  max-width: 40px
-  min-height: 40px
-  min-width: 40px
-`))
-
-const PlaceholderAvatar = elem.div(cmz(`
-  background: ${theme.iconGray}
-  border-radius: 50%
-  height: 100%
-  width: 100%
+  flex-shrink: 0
 `))
 
 const Body = elem.div(cmz(`
@@ -67,7 +56,7 @@ const timeFromNow = date => {
   const now = new Date()
   const hoursDelta = differenceInHours(now, date)
   if (hoursDelta >= 24) {
-    return formatDate(date, 'D MMM YY')
+    return formatDate(date, 'DD MMM YY')
   }
   const minutesDelta = differenceInMinutes(now, date)
   if (minutesDelta >= 60) {
@@ -81,10 +70,6 @@ const timeFromNow = date => {
 
 class Note extends PureComponent<Props> {
   interval:? number
-
-  static defaultProps = {
-    avatar: PlaceholderAvatar()
-  }
 
   componentDidMount () {
     const { date } = this.props
@@ -111,7 +96,9 @@ class Note extends PureComponent<Props> {
 
     return (
       Root(
-        Avatar(avatar),
+        avatar && AvatarWrapper(
+          <Avatar alt={name} src={avatar} size={40} />
+        ),
         Body(
           name && Name(name),
           date && Time(timeFromNow(date)),
