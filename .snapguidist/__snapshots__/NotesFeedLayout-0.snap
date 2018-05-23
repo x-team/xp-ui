@@ -1,0 +1,88 @@
+exports[`NotesFeedLayout-0 1`] = `
+<div
+  className="AutoUI_ui_NotesFeedLayout-22">
+  <div
+    className="AutoUI_ui_NotesFeedLayout-28">
+    <div
+      className="AutoUI_ui_Note-25">
+      <div
+        className="AutoUI_ui_Note-29">
+        <div
+          className="AutoUI_ui_Avatar-15">
+          <img
+            alt="Sagacious Rainbows"
+            className="AutoUI_ui_Avatar-21"
+            height={40}
+            src="https://placeimg.com/140/140/people"
+            width={40} />
+        </div>
+      </div>
+      <div
+        className="AutoUI_ui_Note-34">
+        <span
+          className="AutoUI_ui_Note-39 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+          Sagacious Rainbows
+        </span>
+        <span
+          className="AutoUI_ui_Note-49 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          23 May 18
+        </span>
+        <div
+          className="AutoUI_ui_Note-59">
+          <span
+            className="AutoUI_ui_Text-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+            <span>
+              Note of type general B
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_NotesFeedLayout-28">
+    <div
+      className="AutoUI_ui_Note-25">
+      <div
+        className="AutoUI_ui_Note-29">
+        <div
+          className="AutoUI_ui_Avatar-15">
+          <img
+            alt="Sagacious Rainbows"
+            className="AutoUI_ui_Avatar-21"
+            height={40}
+            src="https://placeimg.com/140/140/people"
+            width={40} />
+        </div>
+      </div>
+      <div
+        className="AutoUI_ui_Note-34">
+        <span
+          className="AutoUI_ui_Note-39 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+          Sagacious Rainbows
+        </span>
+        <span
+          className="AutoUI_ui_Note-49 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          23 May 18
+        </span>
+        <div
+          className="AutoUI_ui_Note-59">
+          <span
+            className="AutoUI_ui_Text-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+            <span>
+              Note of type general A
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    className="AutoUI_ui_NotesFeedLayout-33 AutoUI_ui_Button-50 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-139 outlined AutoUI_ui_Button-153">
+    <span
+      className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+      View more
+    </span>
+  </button>
+</div>
+`;
