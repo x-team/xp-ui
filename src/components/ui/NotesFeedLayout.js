@@ -1,11 +1,12 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import typo from '../../styles/typo'
+import uuidv4 from 'uuid/v4'
 import elem from '../../utils/elem'
 import Note from './Note'
 import Button from './Button'
 import ErrorBox from './ErrorBox'
+import Loader from './Loader'
 const cmz = require('cmz')
 
 type Props = {
@@ -19,15 +20,14 @@ type State = {
   perPage: number,
 }
 
-const Root = elem.div(cmz(``))
+const Root = elem.div()
 
-const Loading = elem.div(cmz(
-  typo.baseText
-))
+const Loading = elem.div(cmz(`
+  text-align: center
+`))
 
 const NoteWrapper = elem.div(cmz(`
   margin: 0 0 40px
-
 `))
 
 const buttonClass = cmz(`
@@ -49,11 +49,14 @@ class NotesFeedLayout extends PureComponent<Props, State> {
     return (
       Root(
         error && <ErrorBox errors={{ name: error }} />,
-        isFetching && Loading('Loading...'),
+        isFetching && Loading(<Loader />),
         notes && notes
           .filter((note, i) => (this.state.page * this.state.perPage) > i)
           .map(note => (
             NoteWrapper(
+              {
+                key: uuidv4()
+              },
               <Note
                 avatar={note.author_avatar}
                 date={note.updated_at}
@@ -67,7 +70,7 @@ class NotesFeedLayout extends PureComponent<Props, State> {
           <Button
             outlined
             block
-            color='monochrome'
+            color='silver'
             onClick={this.viewMore}
             className={buttonClass}
           >

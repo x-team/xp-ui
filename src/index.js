@@ -15,6 +15,7 @@ import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
+import Loader from './components/ui/Loader'
 import Milestones from './components/ui/Milestones'
 import MilestonesScreen from './components/ui/MilestonesScreen'
 import Note from './components/ui/Note'
@@ -51,6 +52,7 @@ export {
   HorizontalRuler,
   InputField,
   InputGroup,
+  Loader,
   Milestones,
   MilestonesScreen,
   Note,

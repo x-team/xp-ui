@@ -57,6 +57,7 @@
     "date-fns": "^1.29.0",
     "medium-editor": "^5.23.3",
     "recompose": "^0.26.0",
+    "uuid": "^3.2.1",
     "webfontloader": "^1.6.28"
   }
 }
