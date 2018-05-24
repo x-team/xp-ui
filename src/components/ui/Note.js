@@ -1,13 +1,16 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import typo from '../../styles/typo'
-import elem from '../../utils/elem'
 import differenceInSeconds from 'date-fns/difference_in_seconds'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
 import differenceInHours from 'date-fns/difference_in_hours'
 import formatDate from 'date-fns/format'
+
 import Avatar from './Avatar'
+
+import typo from '../../styles/typo'
+import elem from '../../utils/elem'
+
 const cmz = require('cmz')
 
 type Props = {
@@ -55,21 +58,26 @@ const Text = elem.p(typo.baseText)
 const timeFromNow = date => {
   const now = new Date()
   const hoursDelta = differenceInHours(now, date)
+
   if (hoursDelta >= 24) {
     return formatDate(date, 'DD MMM YY')
   }
+
   const minutesDelta = differenceInMinutes(now, date)
+
   if (minutesDelta >= 60) {
     return `${hoursDelta} h ago`
   }
+
   if (differenceInSeconds(now, date) >= 60) {
     return `${minutesDelta} m ago`
   }
+
   return 'just now'
 }
 
 class Note extends PureComponent<Props> {
-  interval:? number
+  interval: number
 
   componentDidMount () {
     const { date } = this.props
@@ -78,16 +86,16 @@ class Note extends PureComponent<Props> {
       const now = new Date()
       const hoursDelta = differenceInHours(now, date)
       if (hoursDelta < 1) {
-        this.interval = setInterval(() => this.forceUpdate(), 60 * 1000) // 1 minute
+        this.interval = window.setInterval(() => this.forceUpdate(), 60 * 1000) // 1 minute
       } else if (hoursDelta < 24) {
-        this.interval = setInterval(() => this.forceUpdate(), 20 * 60 * 1000) // 20 minutes
+        this.interval = window.setInterval(() => this.forceUpdate(), 20 * 60 * 1000) // 20 minutes
       }
     }
   }
 
   componentWillUnmount () {
     if (this.interval) {
-      clearInterval(this.interval)
+      window.clearInterval(this.interval)
     }
   }
 
@@ -102,7 +110,7 @@ class Note extends PureComponent<Props> {
         Body(
           name && Name(name),
           date && Time(timeFromNow(date)),
-          text && Text(text)
+          text && Text({}, text)
         )
       )
     )
