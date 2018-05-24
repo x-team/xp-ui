@@ -1,7 +1,7 @@
 exports[`NotesFeed-0 1`] = `
 <div>
   <div
-    className="AutoUI_ui_NotesFeed-25">
+    className="AutoUI_ui_NotesFeed-21">
     <div
       className="AutoUI_ui_Note-25">
       <div
@@ -39,7 +39,7 @@ exports[`NotesFeed-0 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_NotesFeed-25">
+    className="AutoUI_ui_NotesFeed-21">
     <div
       className="AutoUI_ui_Note-25">
       <div
@@ -77,7 +77,7 @@ exports[`NotesFeed-0 1`] = `
     </div>
   </div>
   <button
-    className="AutoUI_ui_NotesFeed-29 AutoUI_ui_Button-88 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-139 outlined AutoUI_ui_Button-153">
+    className="AutoUI_ui_NotesFeed-25 AutoUI_ui_Button-88 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-139 outlined AutoUI_ui_Button-153">
     <span
       className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
       View more
