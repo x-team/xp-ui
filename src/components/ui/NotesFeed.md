@@ -86,26 +86,12 @@ const sample = [
   }
 ];
 
-<NotesFeedLayout
-  notes={sample}
-/>
-```
-
-Fetching data:
-
-```js
-<NotesFeedLayout isFetching={true} />
-```
-
-Error occurred on fetching:
-
-```js
-<NotesFeedLayout error="Something wrong..." />
+<NotesFeed notes={sample} />
 ```
 
 Missing props (does component explode?):
 
 ```js
-<NotesFeedLayout />
+<NotesFeed />
 ```
 
