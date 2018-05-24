@@ -17,6 +17,7 @@ import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
 import Milestones from './components/ui/Milestones'
 import MilestonesScreen from './components/ui/MilestonesScreen'
+import Note from './components/ui/Note'
 import Roadmap from './components/ui/Roadmap'
 import RoadmapHero from './components/ui/RoadmapHero'
 import RoadmapLevel from './components/ui/RoadmapLevel'
@@ -51,6 +52,7 @@ export {
   InputGroup,
   Milestones,
   MilestonesScreen,
+  Note,
   Roadmap,
   RoadmapHero,
   RoadmapLevel,

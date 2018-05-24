@@ -6,7 +6,9 @@ const date = new Date();
   avatar='https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg'
   date={date}
   name='Samwise Gamgee'
-  text='One tiny Hobbit against all the evil the world could muster. A sane being would have given up, but Samwise burned with a magnificent madness, a glowing obsession to surmount every obstacle, to find Frodo, destroy the Ring, and cleanse Middle Earth of its festering malignancy. He knew he would try again. Fail, perhaps. And try once more. A thousand, thousand times if need be, but he would not give up the quest.'
+  text={`One tiny **Hobbit** against all the evil the world could muster.
+
+A sane being would have given up, but Samwise burned with a magnificent madness, a *glowing* obsession to surmount every obstacle, to find [Frodo](http://google.com), destroy the Ring, and cleanse Middle Earth of its festering malignancy. He knew he would try again. Fail, perhaps. And try once more. A thousand, thousand times if need be, but he would not give up the quest.`}
 />
 ```
 
@@ -19,7 +21,7 @@ date.setDate(date.getDate() - 1/240);
   avatar='https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg'
   date={date}
   name='Samwise Gamgee'
-  text='I feel like spring after winter, and sun on the leaves; and like trumpets and harps and all the songs I have ever heard!'
+  text={`I feel like spring after winter, and sun on the leaves; and like trumpets and harps and all the songs I have ever heard!`}
 />
 ```
 
@@ -44,7 +46,7 @@ date.setDate(date.getDate() - 2);
   avatar='https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg'
   date={date}
   name='Samwise Gamgee'
-  text='There, peeping among the cloud-wrack above a dark tor high up in the mountains, Sam saw a white star twinkle for a while. The beauty of it smote his heart, as he looked up out of the forsaken land, and hope returned to him. For like a shaft, clear and cold, the thought pierced him that in the end the Shadow was only a small and passing thing: there was light and high beauty for ever beyond its reach.'
+  text={`There, peeping among the cloud-wrack above a dark tor high up in the mountains, Sam saw a white star twinkle for a while. The beauty of it smote his heart, as he looked up out of the forsaken land, and hope returned to him. For like a shaft, clear and cold, the thought pierced him that in the end the Shadow was only a small and passing thing: there was light and high beauty for ever beyond its reach.`}
 />
 ```
 

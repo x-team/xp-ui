@@ -5,6 +5,7 @@ import { PureComponent } from 'react'
 import elem from '../../utils/elem'
 
 import typo from '../../styles/typo'
+import theme from '../../styles/theme'
 
 import type { Element } from 'react'
 
@@ -43,7 +44,19 @@ const Content = elem.div(cmz(
   'margin: 15px 0'
 ))
 
-const PureContent = elem.span(cmz(typo.baseText))
+const PureContent = elem.span(cmz(
+  typo.baseText,
+  `
+    a {
+      color: ${theme.baseRed}
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: underline
+    }
+  `
+))
 
 const centerAlign = cmz(`text-align: center`)
 

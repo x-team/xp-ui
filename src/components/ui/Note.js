@@ -5,8 +5,10 @@ import differenceInSeconds from 'date-fns/difference_in_seconds'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
 import differenceInHours from 'date-fns/difference_in_hours'
 import formatDate from 'date-fns/format'
+import Markdown from 'markdown-to-jsx'
 
 import Avatar from './Avatar'
+import Text from './Text'
 
 import typo from '../../styles/typo'
 import elem from '../../utils/elem'
@@ -50,10 +52,21 @@ const Time = elem.span(cmz(
     font-size: 12px
     line-height: 12px
     margin-top: 8px
+    margin-bottom: 10px
   `
 ))
 
-const Text = elem.p(typo.baseText)
+const TextWrapper = elem.div(cmz(
+  `
+    & p:first-of-type {
+      margin-top: 0
+    }
+
+    & p:last-of-type {
+      margin-bottom: 0
+    }
+  `
+))
 
 const timeFromNow = date => {
   const now = new Date()
@@ -110,7 +123,7 @@ class Note extends PureComponent<Props> {
         Body(
           name && Name(name),
           date && Time(timeFromNow(date)),
-          text && Text({}, text)
+          text && TextWrapper({}, <Text content={<Markdown>{text}</Markdown>} isPureContent />)
         )
       )
     )
