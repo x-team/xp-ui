@@ -1,13 +1,13 @@
 exports[`Text-7 1`] = `
 <section
-  className="AutoUI_ui_Text-27">
+  className="AutoUI_ui_Text-28">
   <h1
     className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
     Your roadmap to X-Team
   </h1>
   <span
-    className="AutoUI_ui_Text-39 AutoUI_typo-190" />
+    className="AutoUI_ui_Text-40 AutoUI_typo-190" />
   <div
-    className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40" />
+    className="AutoUI_ui_Text-42 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40" />
 </section>
 `;

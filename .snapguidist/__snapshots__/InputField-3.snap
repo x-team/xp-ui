@@ -3,9 +3,9 @@ exports[`InputField-3 1`] = `
   <label
     id="label-experience">
     <section
-      className="AutoUI_ui_Text-27">
+      className="AutoUI_ui_Text-28">
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-42 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         How many years of experience do you have?
       </div>
     </section>
@@ -23,7 +23,7 @@ exports[`InputField-3 1`] = `
       }
       type="text" />
     <span
-      className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Text-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
       years
     </span>
   </label>

@@ -1,20 +1,25 @@
 exports[`Note-5 1`] = `
 <div
-  className="AutoUI_ui_Note-22">
+  className="AutoUI_ui_Note-25">
   <div
-    className="AutoUI_ui_Note-31">
+    className="AutoUI_ui_Note-34">
     <span
-      className="AutoUI_ui_Note-36 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      className="AutoUI_ui_Note-39 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
       Samwise Gamgee
     </span>
     <span
-      className="AutoUI_ui_Note-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Note-49 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
       2 h ago
     </span>
-    <p
-      className="AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-      Do you remember the Shire, Mr. Frodo? It\'ll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they\'ll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?
-    </p>
+    <div
+      className="AutoUI_ui_Note-59">
+      <span
+        className="AutoUI_ui_Text-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        <span>
+          Do you remember the Shire, Mr. Frodo? It\'ll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they\'ll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?
+        </span>
+      </span>
+    </div>
   </div>
 </div>
 `;
