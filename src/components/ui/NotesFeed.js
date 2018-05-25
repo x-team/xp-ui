@@ -63,6 +63,7 @@ class NotesFeed extends PureComponent<Props, State> {
             color='silver'
             onClick={this.viewMore}
             className={buttonClass}
+            type='button'
           >
             View more
           </Button>
