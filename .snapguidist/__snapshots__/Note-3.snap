@@ -1,8 +1,8 @@
 exports[`Note-3 1`] = `
 <div
-  className="AutoUI_ui_Note-25">
+  className="AutoUI_ui_Note-24">
   <div
-    className="AutoUI_ui_Note-29">
+    className="AutoUI_ui_Note-28">
     <div
       className="AutoUI_ui_Avatar-15">
       <img
@@ -14,22 +14,20 @@ exports[`Note-3 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-34">
+    className="AutoUI_ui_Note-33">
     <span
-      className="AutoUI_ui_Note-39 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      className="AutoUI_ui_Note-38 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
       Samwise Gamgee
     </span>
     <span
-      className="AutoUI_ui_Note-49 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-      7 m ago
+      className="AutoUI_ui_Note-48 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      6 m ago
     </span>
     <div
-      className="AutoUI_ui_Note-59">
+      className="AutoUI_ui_Note-58">
       <span
         className="AutoUI_ui_Text-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-        <span>
-          I feel like spring after winter, and sun on the leaves; and like trumpets and harps and all the songs I have ever heard!
-        </span>
+        I feel like spring after winter, and sun on the leaves; and like trumpets and harps and all the songs I have ever heard!
       </span>
     </div>
   </div>
