@@ -1,8 +1,8 @@
 exports[`Note-1 1`] = `
 <div
-  className="AutoUI_ui_Note-25">
+  className="AutoUI_ui_Note-24">
   <div
-    className="AutoUI_ui_Note-29">
+    className="AutoUI_ui_Note-28">
     <div
       className="AutoUI_ui_Avatar-15">
       <img
@@ -14,40 +14,22 @@ exports[`Note-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-34">
+    className="AutoUI_ui_Note-33">
     <span
-      className="AutoUI_ui_Note-39 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      className="AutoUI_ui_Note-38 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
       Samwise Gamgee
     </span>
     <span
-      className="AutoUI_ui_Note-49 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-      1 m ago
+      className="AutoUI_ui_Note-48 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      just now
     </span>
     <div
-      className="AutoUI_ui_Note-59">
+      className="AutoUI_ui_Note-58">
       <span
         className="AutoUI_ui_Text-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-        <div>
-          <p>
-            One tiny 
-            <strong>
-              Hobbit
-            </strong>
-             against all the evil the world could muster.
-          </p>
-          <p>
-            A sane being would have given up, but Samwise burned with a magnificent madness, a 
-            <em>
-              glowing
-            </em>
-             obsession to surmount every obstacle, to find 
-            <a
-              href="http://google.com">
-              Frodo
-            </a>
-            , destroy the Ring, and cleanse Middle Earth of its festering malignancy. He knew he would try again. Fail, perhaps. And try once more. A thousand, thousand times if need be, but he would not give up the quest.
-          </p>
-        </div>
+        One tiny **Hobbit** against all the evil the world could muster.
+        
+        A sane being would have given up, but Samwise burned with a magnificent madness, a *glowing* obsession to surmount every obstacle, to find [Frodo](http://google.com), destroy the Ring, and cleanse Middle Earth of its festering malignancy. He knew he would try again. Fail, perhaps. And try once more. A thousand, thousand times if need be, but he would not give up the quest.
       </span>
     </div>
   </div>

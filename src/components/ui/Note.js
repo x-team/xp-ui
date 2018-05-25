@@ -5,7 +5,6 @@ import differenceInSeconds from 'date-fns/difference_in_seconds'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
 import differenceInHours from 'date-fns/difference_in_hours'
 import formatDate from 'date-fns/format'
-import Markdown from 'markdown-to-jsx'
 
 import Avatar from './Avatar'
 import Text from './Text'
@@ -123,7 +122,7 @@ class Note extends PureComponent<Props> {
         Body(
           name && Name(name),
           date && Time(timeFromNow(date)),
-          text && TextWrapper({}, <Text content={<Markdown>{text}</Markdown>} isPureContent />)
+          text && TextWrapper({}, <Text content={text} isPureContent />)
         )
       )
     )
