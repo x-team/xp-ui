@@ -3,9 +3,9 @@ exports[`InputField-5 1`] = `
   <label
     id="label-availability">
     <section
-      className="AutoUI_ui_Text-27">
+      className="AutoUI_ui_Text-28">
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-42 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         What’s your availability like right now? If you’re employed and would need to give a notice, how long would that take?
       </div>
     </section>

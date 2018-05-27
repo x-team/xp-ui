@@ -3,9 +3,9 @@ exports[`InputField-13 1`] = `
   <label
     id="label-invalid">
     <section
-      className="AutoUI_ui_Text-27">
+      className="AutoUI_ui_Text-28">
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-42 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         Invalid Field
       </div>
     </section>
