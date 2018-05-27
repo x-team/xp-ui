@@ -1,3 +1,5 @@
+Basic usage:
+
 ```js
 const sample = [
   {
@@ -94,4 +96,3 @@ Missing props (does component explode?):
 ```js
 <NotesFeed />
 ```
-

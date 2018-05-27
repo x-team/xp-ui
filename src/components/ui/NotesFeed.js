@@ -2,9 +2,11 @@
 
 import React, { PureComponent } from 'react'
 import uuidv4 from 'uuid/v4'
+
 import elem from '../../utils/elem'
 import Note from './Note'
 import Button from './Button'
+
 const cmz = require('cmz')
 
 type Props = {
@@ -32,16 +34,21 @@ class NotesFeed extends PureComponent<Props, State> {
     perPage: 2
   }
 
-  viewMore = () => this.setState({ page: this.state.page + 1 })
+  viewMore = () => this.setState((prevState: State) => ({ page: prevState.page + 1 }))
 
-  showViewMore = (total: number) => (total / this.state.perPage) > this.state.page
+  showViewMore = (total: number = 0) => {
+    const { page, perPage } = this.state
+    return (total / perPage) > page
+  }
 
   render () {
+    const { page, perPage } = this.state
     const { notes } = this.props
+
     return (
       Root(
         notes && notes
-          .filter((note, i) => (this.state.page * this.state.perPage) > i)
+          .filter((note, i) => (page * perPage) > i)
           .map(note => (
             NoteWrapper(
               {
@@ -56,7 +63,7 @@ class NotesFeed extends PureComponent<Props, State> {
             )
           )
         ),
-        this.showViewMore((notes && notes.length) || 0) && (
+        this.showViewMore(notes && notes.length) && (
           <Button
             outlined
             block
