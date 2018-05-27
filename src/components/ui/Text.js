@@ -44,19 +44,7 @@ const Content = elem.div(cmz(
   'margin: 15px 0'
 ))
 
-const PureContent = elem.span(cmz(
-  typo.baseText,
-  `
-    a {
-      color: ${theme.baseRed}
-      text-decoration: none
-    }
-
-    a:hover {
-      text-decoration: underline
-    }
-  `
-))
+const PureContent = elem.span(cmz(typo.baseText))
 
 const centerAlign = cmz(`text-align: center`)
 
