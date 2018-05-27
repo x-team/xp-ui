@@ -25,7 +25,7 @@ date.setDate(date.getDate() - 1/240);
 />
 ```
 
-No avatar 2 hours ago:
+No avatar, 2 hours ago:
 
 ```js
 const date = new Date();
