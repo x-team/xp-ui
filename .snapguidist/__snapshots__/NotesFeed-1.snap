@@ -29,7 +29,7 @@ exports[`NotesFeed-1 1`] = `
         <div
           className="AutoUI_ui_Note-58">
           <span
-            className="AutoUI_ui_Text-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
             Note of type general B
           </span>
         </div>
@@ -65,7 +65,7 @@ exports[`NotesFeed-1 1`] = `
         <div
           className="AutoUI_ui_Note-58">
           <span
-            className="AutoUI_ui_Text-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
             Note of type general A
           </span>
         </div>

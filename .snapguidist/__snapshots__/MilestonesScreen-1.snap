@@ -189,13 +189,13 @@ exports[`MilestonesScreen-1 1`] = `
       <div
         className="AutoUI_ui_MilestonesScreen-60">
         <section
-          className="AutoUI_ui_Text-28">
+          className="AutoUI_ui_Text-27">
           <h1
             className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
             First step
           </h1>
           <div
-            className="AutoUI_ui_Text-42 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo error hic, nemo nostrum iusto recusandae repudiandae eum doloremque necessitatibus doloribus? Provident perferendis illo totam ipsum ut sapiente, assumenda quasi!
           </div>
         </section>

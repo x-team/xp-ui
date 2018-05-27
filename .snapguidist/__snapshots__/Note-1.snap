@@ -21,12 +21,12 @@ exports[`Note-1 1`] = `
     </span>
     <span
       className="AutoUI_ui_Note-48 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-      just now
+      1 m ago
     </span>
     <div
       className="AutoUI_ui_Note-58">
       <span
-        className="AutoUI_ui_Text-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         One tiny **Hobbit** against all the evil the world could muster.
         
         A sane being would have given up, but Samwise burned with a magnificent madness, a *glowing* obsession to surmount every obstacle, to find [Frodo](http://google.com), destroy the Ring, and cleanse Middle Earth of its festering malignancy. He knew he would try again. Fail, perhaps. And try once more. A thousand, thousand times if need be, but he would not give up the quest.

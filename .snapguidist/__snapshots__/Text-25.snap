@@ -1,10 +1,10 @@
 exports[`Text-25 1`] = `
 <section
-  className="AutoUI_ui_Text-28 AutoUI_ui_Text-61">
+  className="AutoUI_ui_Text-27 AutoUI_ui_Text-48">
   <span
-    className="AutoUI_ui_Text-40 AutoUI_typo-190 AutoUI_ui_Text-63" />
+    className="AutoUI_ui_Text-39 AutoUI_typo-190 AutoUI_ui_Text-50" />
   <div
-    className="AutoUI_ui_Text-42 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
 </section>

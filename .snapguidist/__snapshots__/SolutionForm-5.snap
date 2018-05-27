@@ -4,13 +4,13 @@ exports[`SolutionForm-5 1`] = `
   <div
     className="AutoUI_forms_SolutionForm_Title-16">
     <section
-      className="AutoUI_ui_Text-28">
+      className="AutoUI_ui_Text-27">
       <h1
         className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
         Oops!
       </h1>
       <div
-        className="AutoUI_ui_Text-42 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         You haven’t submitted the right solution. Please try again.
       </div>
     </section>

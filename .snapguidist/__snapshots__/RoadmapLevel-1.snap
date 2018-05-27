@@ -43,7 +43,7 @@ exports[`RoadmapLevel-1 1`] = `
     </g>
   </svg>
   <section
-    className="AutoUI_ui_Text-28">
+    className="AutoUI_ui_Text-27">
     <h2
       className="undefined AutoUI_typo-130 AutoUI_typo-53 AutoUI_typo-22">
       lorem ipsum 1
@@ -53,7 +53,7 @@ exports[`RoadmapLevel-1 1`] = `
       Level 1
     </p>
     <div
-      className="AutoUI_ui_Text-42 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!
     </div>
   </section>
