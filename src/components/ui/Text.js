@@ -5,7 +5,6 @@ import { PureComponent } from 'react'
 import elem from '../../utils/elem'
 
 import typo from '../../styles/typo'
-import theme from '../../styles/theme'
 
 import type { Element } from 'react'
 
