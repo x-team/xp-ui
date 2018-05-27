@@ -11,7 +11,7 @@ import typo from '../../styles/typo'
 const cmz = require('cmz')
 
 export type Size = 'normal' | 'large' | 'small'
-export type Color = 'normal' | 'monochrome'
+export type Color = 'normal' | 'monochrome' | 'silver'
 
 type Props = {
   className: string | CmzAtom,
