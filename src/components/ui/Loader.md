@@ -1,3 +1,5 @@
+Basic usage:
+
 ```js
 <Loader />
 ```
