@@ -35,6 +35,16 @@ Two editors side by side:
 </div>
 ```
 
+Read only mode:
+
+```js
+<TextareaEditor
+  disableEditing
+  text="Text Area #1 With Formatted Text"
+  html="<div>Text Area #1 <b>With Formatted Text</b></div>"
+/>
+```
+
 Missing props (does component explode?):
 
 ```js

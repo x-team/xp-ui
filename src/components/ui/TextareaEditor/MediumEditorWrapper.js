@@ -118,29 +118,36 @@ class MediumEditorWrapper extends PureComponent<Props> {
     this.medium = new MediumEditor(`.editable-${id}`, { ...defaultOptions, ...options })
     this.medium.setContent(html || text)
 
-    if (charLimit != null) {
-      this.medium.on(this.input, 'keypress', (event: SyntheticInputEvent<>) => {
-        const selectionCount = MediumEditor.selection.getSelectionRange(document).toString().length
-        if (this.input.textContent.length >= charLimit + selectionCount) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-      })
-    }
-    this.medium.subscribe('editableInput', event => {
-      const { textContent, innerHTML } = this.input
-      onChange(textContent, innerHTML)
-    })
+    if (options && !options.disableEditing) {
+      if (charLimit != null) {
+        this.medium.on(this.input, 'keypress', (event: SyntheticInputEvent<>) => {
+          const selectionCount = MediumEditor.selection.getSelectionRange(document).toString().length
+          if (this.input.textContent.length >= charLimit + selectionCount) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+        })
+      }
 
-    this.medium.subscribe('focus', subscribeFunction(onFocus))
-    this.medium.subscribe('blur', subscribeFunction(target => onBlur(target)))
+      this.medium.subscribe('editableInput', event => {
+        const { textContent, innerHTML } = this.input
+        onChange(textContent, innerHTML)
+      })
+
+      this.medium.subscribe('focus', subscribeFunction(onFocus))
+      this.medium.subscribe('blur', subscribeFunction(target => onBlur(target)))
+    }
   }
 
   render () {
+    const { id, options } = this.props
     if (this.medium) {
       this.medium.saveSelection()
     }
-    return elem(`editable-${this.props.id} editable`, {ref: node => { this.input = node }})()
+    return elem(
+      `editable-${id} ${options && options.disableEditing ? '' : 'editable'}`,
+      { ref: node => { this.input = node } }
+    )()
   }
 }
 
