@@ -78,6 +78,7 @@ type Props = {
   html: string,
   id: string,
   charLimit: number,
+  large: number,
   onChange(text: string, html: string): ?void,
   onFocus(target: Object, text: string, html: string): ?void,
   onBlur(target: Object, text: string, html: string): ?void,
