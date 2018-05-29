@@ -5,11 +5,13 @@ import differenceInSeconds from 'date-fns/difference_in_seconds'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
 import differenceInHours from 'date-fns/difference_in_hours'
 import formatDate from 'date-fns/format'
+import Markdown from 'markdown-to-jsx'
 
 import Avatar from './Avatar'
 import Text from './Text'
 
 import typo from '../../styles/typo'
+import theme from '../../styles/theme'
 import elem from '../../utils/elem'
 
 const cmz = require('cmz')
@@ -63,6 +65,15 @@ const TextWrapper = elem.div(cmz(
 
     & p:last-of-type {
       margin-bottom: 0
+    }
+
+    & a {
+      color: ${theme.baseRed}
+      text-decoration: none
+    }
+
+    & a:hover {
+      text-decoration: underline
     }
   `
 ))
@@ -122,7 +133,7 @@ class Note extends PureComponent<Props> {
         Body(
           name && Name(name),
           date && Time(timeFromNow(date)),
-          text && TextWrapper({}, <Text content={text} isPureContent />)
+          text && TextWrapper({}, <Text content={<Markdown>{text}</Markdown>} isPureContent />)
         )
       )
     )

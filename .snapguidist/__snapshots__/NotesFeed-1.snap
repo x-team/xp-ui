@@ -3,9 +3,9 @@ exports[`NotesFeed-1 1`] = `
   <div
     className="AutoUI_ui_NotesFeed-23">
     <div
-      className="AutoUI_ui_Note-24">
+      className="AutoUI_ui_Note-26">
       <div
-        className="AutoUI_ui_Note-28">
+        className="AutoUI_ui_Note-30">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -17,20 +17,22 @@ exports[`NotesFeed-1 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Note-33">
+        className="AutoUI_ui_Note-35">
         <span
-          className="AutoUI_ui_Note-38 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+          className="AutoUI_ui_Note-40 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
           Sagacious Rainbows
         </span>
         <span
-          className="AutoUI_ui_Note-48 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_Note-50 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
           23 May 18
         </span>
         <div
-          className="AutoUI_ui_Note-58">
+          className="AutoUI_ui_Note-60">
           <span
             className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-            Note of type general B
+            <span>
+              Note of type general B
+            </span>
           </span>
         </div>
       </div>
@@ -39,9 +41,9 @@ exports[`NotesFeed-1 1`] = `
   <div
     className="AutoUI_ui_NotesFeed-23">
     <div
-      className="AutoUI_ui_Note-24">
+      className="AutoUI_ui_Note-26">
       <div
-        className="AutoUI_ui_Note-28">
+        className="AutoUI_ui_Note-30">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -53,20 +55,22 @@ exports[`NotesFeed-1 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Note-33">
+        className="AutoUI_ui_Note-35">
         <span
-          className="AutoUI_ui_Note-38 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+          className="AutoUI_ui_Note-40 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
           Sagacious Rainbows
         </span>
         <span
-          className="AutoUI_ui_Note-48 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_Note-50 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
           23 May 18
         </span>
         <div
-          className="AutoUI_ui_Note-58">
+          className="AutoUI_ui_Note-60">
           <span
             className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-            Note of type general A
+            <span>
+              Note of type general A
+            </span>
           </span>
         </div>
       </div>
