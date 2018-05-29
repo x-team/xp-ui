@@ -10,6 +10,18 @@ Basic:
 />
 ```
 
+Large Editor:
+```js
+<TextareaEditor
+  large
+  charLimit={30}
+  placeholder='A magical placeholder.'
+  onChange={text => console.log('Fired when textarea value changes ' + text)}
+  onFocus={target => console.log('Fired when textarea is focused: ' + target)}
+  onBlur={target => console.log('Fired when textarea is blured: ' + target)}
+/>
+```
+
 Two editors side by side:
 
 ```js
