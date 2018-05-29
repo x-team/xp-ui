@@ -1,4 +1,4 @@
-Basic:
+Basic usage:
 
 ```js
 <TextareaEditor
@@ -7,6 +7,17 @@ Basic:
   onChange={text => console.log('Fired when textarea value changes ' + text)}
   onFocus={target => console.log('Fired when textarea is focused: ' + target)}
   onBlur={target => console.log('Fired when textarea is blured: ' + target)}
+/>
+```
+
+Large editor:
+
+```js
+<TextareaEditor
+  large
+  charLimit={30}
+  placeholder='A magical placeholder.'
+  text='Some basic text goes here'
 />
 ```
 
