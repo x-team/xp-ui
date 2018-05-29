@@ -72,16 +72,21 @@ const editableClass = cmz(`
   height: 156px
 `)
 
+const largeClass = cmz(`
+  height: 256px
+`)
+
 type Props = {
   placeholder: string,
   text: string,
   html: string,
   id: string,
   charLimit: number,
+  disableEditing?: boolean,
+  large?: boolean,
   onChange(text: string, html: string): ?void,
   onFocus(target: Object, text: string, html: string): ?void,
-  onBlur(target: Object, text: string, html: string): ?void,
-  disableEditing?: boolean,
+  onBlur(target: Object, text: string, html: string): ?void
 }
 
 type State = {
@@ -100,7 +105,8 @@ type State = {
 
 class TextareaEditor extends PureComponent<Props, State> {
   static defaultProps = {
-    charLimit: 1000
+    charLimit: 1000,
+    large: false
   }
 
   state = {
@@ -152,15 +158,16 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   render () {
-    const { charLimit } = this.props
+    const { charLimit, large } = this.props
     const { id, text, html, shouldShowTextLength, options } = this.state
 
     const counterVisibilityClassName = shouldShowTextLength ? '' : 'hidden'
     const editableClassName = options.disableEditing ? '' : editableClass
+    const sizeClassName = large ? largeClass : ''
 
     return Root(
       <div>
-        <div className={`${editorContainerStyles} ${editableClassName}`}>
+        <div className={`${editorContainerStyles} ${editableClassName} ${sizeClassName}`}>
           <MediumEditorWrapper
             text={text}
             html={html}
