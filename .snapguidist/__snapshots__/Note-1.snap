@@ -1,8 +1,8 @@
 exports[`Note-1 1`] = `
 <div
-  className="AutoUI_ui_Note-24">
+  className="AutoUI_ui_Note-26">
   <div
-    className="AutoUI_ui_Note-28">
+    className="AutoUI_ui_Note-30">
     <div
       className="AutoUI_ui_Avatar-15">
       <img
@@ -14,22 +14,40 @@ exports[`Note-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-33">
+    className="AutoUI_ui_Note-35">
     <span
-      className="AutoUI_ui_Note-38 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      className="AutoUI_ui_Note-40 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
       Samwise Gamgee
     </span>
     <span
-      className="AutoUI_ui_Note-48 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Note-50 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
       just now
     </span>
     <div
-      className="AutoUI_ui_Note-58">
+      className="AutoUI_ui_Note-60">
       <span
         className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-        One tiny **Hobbit** against all the evil the world could muster.
-        
-        A sane being would have given up, but Samwise burned with a magnificent madness, a *glowing* obsession to surmount every obstacle, to find [Frodo](http://google.com), destroy the Ring, and cleanse Middle Earth of its festering malignancy. He knew he would try again. Fail, perhaps. And try once more. A thousand, thousand times if need be, but he would not give up the quest.
+        <div>
+          <p>
+            One tiny 
+            <strong>
+              Hobbit
+            </strong>
+             against all the evil the world could muster.
+          </p>
+          <p>
+            A sane being would have given up, but Samwise burned with a magnificent madness, a 
+            <em>
+              glowing
+            </em>
+             obsession to surmount every obstacle, to find 
+            <a
+              href="http://google.com">
+              Frodo
+            </a>
+            , destroy the Ring, and cleanse Middle Earth of its festering malignancy. He knew he would try again. Fail, perhaps. And try once more. A thousand, thousand times if need be, but he would not give up the quest.
+          </p>
+        </div>
       </span>
     </div>
   </div>

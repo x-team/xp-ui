@@ -55,6 +55,7 @@
     "crypto-js": "^3.1.9-1",
     "css-loader": "^0.28.9",
     "date-fns": "^1.29.0",
+    "markdown-to-jsx": "^6.6.6",
     "medium-editor": "^5.23.3",
     "recompose": "^0.26.0",
     "uuid": "^3.2.1",
