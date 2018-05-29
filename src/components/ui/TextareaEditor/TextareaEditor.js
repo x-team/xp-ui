@@ -156,10 +156,11 @@ class TextareaEditor extends PureComponent<Props, State> {
     const { id, text, html, shouldShowTextLength, options } = this.state
 
     const counterVisibilityClassName = shouldShowTextLength ? '' : 'hidden'
+    const editableClassName = options.disableEditing ? '' : editableClass
 
     return Root(
       <div>
-        <div className={`${editorContainerStyles} ${options.disableEditing ? '' : editableClass}`}>
+        <div className={`${editorContainerStyles} ${editableClassName}`}>
           <MediumEditorWrapper
             text={text}
             html={html}
