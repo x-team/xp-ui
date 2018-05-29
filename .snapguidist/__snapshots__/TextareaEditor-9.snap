@@ -1,0 +1,21 @@
+exports[`TextareaEditor-9 1`] = `
+<div
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-27 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-60">
+  <div>
+    <div
+      className="AutoUI_ui_TextareaEditor_TextareaEditor-30">
+      <div
+        className="editable-1731b8e6-c8fa-4d67-8b3f-7d9de0048fb5 editable" />
+    </div>
+    <div
+      className="AutoUI_ui_TextareaEditor_TextareaEditor-14">
+      <p
+        className="hidden">
+        0
+        /
+        1000
+      </p>
+    </div>
+  </div>
+</div>
+`;

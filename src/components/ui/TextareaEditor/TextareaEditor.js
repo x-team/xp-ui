@@ -30,10 +30,8 @@ const editorContainerStyles = cmz(`
   & {
     display: block
     width: 100%
-    height: 156px
     padding: 15px
     margin-bottom: 20px
-    resize: vertical
     border: 1px solid ${theme.lineSilver3}
     overflow: scroll
     box-sizing: border-box
@@ -63,12 +61,16 @@ const Root = elem.div([
     display: block
     width: 100%
     margin-bottom: 20px
-    resize: vertical
     box-sizing: border-box
     min-width: 320px
     margin: 0 auto
   `)
 ])
+
+const editableClass = cmz(`
+  resize: vertical
+  height: 156px
+`)
 
 type Props = {
   placeholder: string,
@@ -78,17 +80,21 @@ type Props = {
   charLimit: number,
   onChange(text: string, html: string): ?void,
   onFocus(target: Object, text: string, html: string): ?void,
-  onBlur(target: Object, text: string, html: string): ?void
+  onBlur(target: Object, text: string, html: string): ?void,
+  disableEditing?: boolean,
 }
 
 type State = {
+  id: string,
   text: string,
   html: string,
   shouldShowTextLength: boolean,
   options: {
     placeholder: {
       text: string
-    }
+    },
+    disableEditing: boolean,
+    toolbar: boolean
   }
 }
 
@@ -98,13 +104,16 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   state = {
+    id: this.props.id || 'default',
     text: this.props.text || '',
     html: this.props.html || '',
     shouldShowTextLength: false,
     options: {
       placeholder: {
         text: this.props.placeholder
-      }
+      },
+      disableEditing: this.props.disableEditing || false,
+      toolbar: !this.props.disableEditing
     }
   }
 
@@ -143,23 +152,24 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   render () {
-    const { charLimit, id } = this.props
-    const { text, html, shouldShowTextLength, options } = this.state
+    const { charLimit } = this.props
+    const { id, text, html, shouldShowTextLength, options } = this.state
 
     const counterVisibilityClassName = shouldShowTextLength ? '' : 'hidden'
 
     return Root(
       <div>
-        <div className={editorContainerStyles}>
+        <div className={`${editorContainerStyles} ${options.disableEditing ? '' : editableClass}`}>
           <MediumEditorWrapper
             text={text}
             html={html}
-            id={id || 'default'}
+            id={id}
             charLimit={charLimit}
             options={options}
             onChange={this.handleChange}
             onFocus={this.handleFocus}
-            onBlur={this.handleBlur} />
+            onBlur={this.handleBlur}
+          />
         </div>
         <div className={textCountStyles}>
           <p className={counterVisibilityClassName}>{text.length}/{charLimit}</p>

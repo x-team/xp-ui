@@ -1,10 +1,10 @@
 exports[`TextareaEditor-3 1`] = `
 <div>
   <div
-    className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-59">
+    className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-57">
     <div>
       <div
-        className="AutoUI_ui_TextareaEditor_TextareaEditor-29">
+        className="AutoUI_ui_TextareaEditor_TextareaEditor-29 AutoUI_ui_TextareaEditor_TextareaEditor-70">
         <div
           className="editable-1 editable" />
       </div>
@@ -20,10 +20,10 @@ exports[`TextareaEditor-3 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-59">
+    className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-57">
     <div>
       <div
-        className="AutoUI_ui_TextareaEditor_TextareaEditor-29">
+        className="AutoUI_ui_TextareaEditor_TextareaEditor-29 AutoUI_ui_TextareaEditor_TextareaEditor-70">
         <div
           className="editable-2 editable" />
       </div>
