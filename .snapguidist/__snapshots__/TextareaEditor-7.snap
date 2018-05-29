@@ -3,15 +3,15 @@ exports[`TextareaEditor-7 1`] = `
   className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-57">
   <div>
     <div
-      className="AutoUI_ui_TextareaEditor_TextareaEditor-29 AutoUI_ui_TextareaEditor_TextareaEditor-70">
+      className="AutoUI_ui_TextareaEditor_TextareaEditor-29  ">
       <div
-        className="editable-default editable" />
+        className="editable-default " />
     </div>
     <div
       className="AutoUI_ui_TextareaEditor_TextareaEditor-13">
       <p
         className="hidden">
-        0
+        32
         /
         1000
       </p>
