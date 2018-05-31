@@ -20,7 +20,7 @@ const tabsStyles: Object = {
   `),
 
   tabnav: cmz(`
-    padding: .5em .625em 0;
+    padding: .5em .625em 0 0;
     background: ${theme.baseBrighter};
     margin-bottom: 20px;
     position: relative;
@@ -109,7 +109,7 @@ tabsStyles.tab = {
   `),
 
   pane: cmz(`
-    margin: 0 .5em .5em;
+    margin: 0 .5em .5em 0;
   `)
 }
 
