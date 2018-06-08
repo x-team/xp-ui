@@ -1,162 +1,160 @@
 exports[`Dropdown-1 1`] = `
-<div
-  className="AutoUI_ui_Dropdown-14 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+<div>
   <div
-    className="AutoUI_ui_Dropdown-21">
-    <svg
-      height="16px"
-      viewBox="0 0 16 16"
-      width="16px">
-      <g
-        fill="none"
-        fillRule="evenodd"
-        stroke="none"
-        strokeWidth="1">
+    className="AutoUI_ui_Dropdown-15 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+    <div
+      className="AutoUI_ui_Dropdown-22 false">
+      <svg
+        height="16px"
+        viewBox="0 0 16 16"
+        width="16px">
         <g
-          transform="translate(-539.000000, -162.000000)">
+          fill="none"
+          fillRule="evenodd"
+          stroke="none"
+          strokeWidth="1">
           <g
-            transform="translate(539.000000, 162.000000)">
-            <path
-              d="M0.5,0.5 L0.5,14.5 L11.4545465,14.5 L11.4991824,4.38874719 L8.16377939,0.5 L0.5,0.5 Z"
-              stroke={
-                Object {
-                  "color": Array [
-                    90,
-                    86,
-                    101,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
+            transform="translate(-539.000000, -162.000000)">
+            <g
+              transform="translate(539.000000, 162.000000)">
+              <path
+                d="M0.5,0.5 L0.5,14.5 L11.4545465,14.5 L11.4991824,4.38874719 L8.16377939,0.5 L0.5,0.5 Z"
+                stroke={
+                  Object {
+                    "color": Array [
+                      90,
+                      86,
+                      101,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                } />
+              <path
+                d="M2.5,5.5 L4.5,5.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      90,
+                      86,
+                      101,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
                 }
-              } />
-            <path
-              d="M2.5,5.5 L4.5,5.5"
-              stroke={
-                Object {
-                  "color": Array [
-                    90,
-                    86,
-                    101,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
+                strokeLinecap="square" />
+              <path
+                d="M2.5,7.5 L7.5,7.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      90,
+                      86,
+                      101,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
                 }
-              }
-              strokeLinecap="square" />
-            <path
-              d="M2.5,7.5 L7.5,7.5"
-              stroke={
-                Object {
-                  "color": Array [
-                    90,
-                    86,
-                    101,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
+                strokeLinecap="square" />
+              <path
+                d="M2.5,9.5 L7.5,9.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      90,
+                      86,
+                      101,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
                 }
-              }
-              strokeLinecap="square" />
-            <path
-              d="M2.5,9.5 L7.5,9.5"
-              stroke={
-                Object {
-                  "color": Array [
-                    90,
-                    86,
-                    101,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
+                strokeLinecap="square" />
+              <path
+                d="M2.5,11.5 L7.5,11.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      90,
+                      86,
+                      101,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
                 }
-              }
-              strokeLinecap="square" />
-            <path
-              d="M2.5,11.5 L7.5,11.5"
-              stroke={
-                Object {
-                  "color": Array [
-                    90,
-                    86,
-                    101,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
+                strokeLinecap="square" />
+              <path
+                d="M7.5,1.5 L7.5,4.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      90,
+                      86,
+                      101,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
                 }
-              }
-              strokeLinecap="square" />
-            <path
-              d="M7.5,1.5 L7.5,4.5"
-              stroke={
-                Object {
-                  "color": Array [
-                    90,
-                    86,
-                    101,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
+                strokeLinecap="square" />
+              <path
+                d="M7.01349488,5.49634026 L11.4125741,5.49634026"
+                stroke={
+                  Object {
+                    "color": Array [
+                      90,
+                      86,
+                      101,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                } />
+              <circle
+                cx="11.5"
+                cy="11.5"
+                fill="#FFFFFF"
+                r="4.5" />
+              <path
+                d="M11.5,9.5 L11.5,13.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      90,
+                      86,
+                      101,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
                 }
-              }
-              strokeLinecap="square" />
-            <path
-              d="M7.01349488,5.49634026 L11.4125741,5.49634026"
-              stroke={
-                Object {
-                  "color": Array [
-                    90,
-                    86,
-                    101,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
+                strokeLinecap="square" />
+              <path
+                d="M9.5,11.5 L13.5,11.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      90,
+                      86,
+                      101,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
                 }
-              } />
-            <circle
-              cx="11.5"
-              cy="11.5"
-              fill="#FFFFFF"
-              r="4.5" />
-            <path
-              d="M11.5,9.5 L11.5,13.5"
-              stroke={
-                Object {
-                  "color": Array [
-                    90,
-                    86,
-                    101,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
-              strokeLinecap="square" />
-            <path
-              d="M9.5,11.5 L13.5,11.5"
-              stroke={
-                Object {
-                  "color": Array [
-                    90,
-                    86,
-                    101,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
-              strokeLinecap="square" />
+                strokeLinecap="square" />
+            </g>
           </g>
         </g>
-      </g>
-    </svg>
-    <span
-      className="AutoUI_ui_Dropdown-27">
-      <span
-        className="AutoUI_ui_Dropdown-31">
+      </svg>
+      <span>
         Add to List
       </span>
       <span
-        className="AutoUI_ui_Dropdown-34">
+        className="AutoUI_ui_Dropdown-43">
         <svg
           height="5px"
           viewBox="0 0 9 5"
@@ -183,20 +181,20 @@ exports[`Dropdown-1 1`] = `
           </g>
         </svg>
       </span>
-    </span>
-  </div>
-  <div
-    className="AutoUI_ui_Dropdown-38  ">
+    </div>
     <div
-      style={
-        Object {
-          "background": "#fff",
-        }
-      }>
-      <img
-        alt="Loading..."
-        className=""
-        src="6f647ce328b13c96401708c6fcbdb237.gif" />
+      className="AutoUI_ui_Dropdown-46 false false">
+      <div
+        style={
+          Object {
+            "background": "#f1f1f1",
+          }
+        }>
+        <img
+          alt="Loading..."
+          className=""
+          src="6f647ce328b13c96401708c6fcbdb237.gif" />
+      </div>
     </div>
   </div>
 </div>
