@@ -287,6 +287,18 @@ const getIcon = ({ icon, color }) => {
           <polygon fill={colors[color]} transform='translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) ' points='7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069' />
         </g>
       </svg>
+    ),
+
+    hamburger: (
+      <svg width="16px" height="12px" viewBox="0 0 16 12">
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="square">
+          <g transform="translate(1.000000, 0.000000)" stroke={colors[color]}>
+            <path d="M0.184210526,1 L13.8157895,1" />
+            <path d="M0.184210526,6 L13.8157895,6" />
+            <path d="M0.184210526,11 L13.8157895,11" />
+          </g>
+        </g>
+      </svg>
     )
   }
 

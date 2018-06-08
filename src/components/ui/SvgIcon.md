@@ -18,6 +18,7 @@ Basic color:
   <SvgIcon icon="add" />
   <SvgIcon icon="triangleup" />
   <SvgIcon icon="triangledown" />
+  <SvgIcon icon="hamburger" />
 </div>
 ```
 
@@ -40,6 +41,7 @@ Inverted color:
   <SvgIcon icon="x" color="inverted" />
   <SvgIcon icon="triangleup" color="inverted" />
   <SvgIcon icon="triangledown" color="inverted" />
+  <SvgIcon icon="hamburger" color="inverted" />
 </div>
 ```
 
@@ -63,6 +65,7 @@ Monochrome color:
   <SvgIcon icon="add" color="monochrome" />
   <SvgIcon icon="triangleup" color="monochrome" />
   <SvgIcon icon="triangledown" color="monochrome" />
+  <SvgIcon icon="hamburger" color="monochrome" />
 </div>
 ```
 
@@ -86,6 +89,7 @@ Grayscale color:
   <SvgIcon icon="add" color="grayscale" />
   <SvgIcon icon="triangleup" color="grayscale" />
   <SvgIcon icon="triangledown" color="grayscale" />
+  <SvgIcon icon="hamburger" color="grayscale" />
 </div>
 ```
 
@@ -109,6 +113,7 @@ Text gray color:
   <SvgIcon icon="add" color="text" />
   <SvgIcon icon="triangleup" color="text" />
   <SvgIcon icon="triangledown" color="text" />
+  <SvgIcon icon="hamburger" color="text" />
 </div>
 ```
 

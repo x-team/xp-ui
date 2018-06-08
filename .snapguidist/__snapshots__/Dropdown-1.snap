@@ -2,7 +2,7 @@ exports[`Dropdown-1 1`] = `
 <div
   className="AutoUI_ui_Dropdown-14 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
   <div
-    className="AutoUI_ui_Dropdown-20">
+    className="AutoUI_ui_Dropdown-21">
     <svg
       height="16px"
       viewBox="0 0 16 16"
@@ -150,41 +150,54 @@ exports[`Dropdown-1 1`] = `
       </g>
     </svg>
     <span
-      className="AutoUI_ui_Dropdown-26">
-      Add to List
-    </span>
-    <span
-      className="AutoUI_ui_Dropdown-29">
-      <svg
-        height="5px"
-        viewBox="0 0 9 5"
-        width="9px">
-        <g
-          fill="none"
-          fillRule="evenodd"
-          stroke="none"
-          strokeWidth="1">
-          <polygon
-            fill={
-              Object {
-                "color": Array [
-                  90,
-                  86,
-                  101,
-                ],
-                "model": "rgb",
-                "valpha": 1,
+      className="AutoUI_ui_Dropdown-27">
+      <span
+        className="AutoUI_ui_Dropdown-31">
+        Add to List
+      </span>
+      <span
+        className="AutoUI_ui_Dropdown-34">
+        <svg
+          height="5px"
+          viewBox="0 0 9 5"
+          width="9px">
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="none"
+            strokeWidth="1">
+            <polygon
+              fill={
+                Object {
+                  "color": Array [
+                    90,
+                    86,
+                    101,
+                  ],
+                  "model": "rgb",
+                  "valpha": 1,
+                }
               }
-            }
-            points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
-            transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
-        </g>
-      </svg>
+              points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
+              transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+          </g>
+        </svg>
+      </span>
     </span>
   </div>
   <div
-    className="AutoUI_ui_Dropdown-33 ">
-    Any element here...
+    className="AutoUI_ui_Dropdown-38  ">
+    <div
+      style={
+        Object {
+          "background": "#fff",
+        }
+      }>
+      <img
+        alt="Loading..."
+        className=""
+        src="6f647ce328b13c96401708c6fcbdb237.gif" />
+    </div>
   </div>
 </div>
 `;
