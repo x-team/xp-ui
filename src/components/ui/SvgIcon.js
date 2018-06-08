@@ -290,12 +290,12 @@ const getIcon = ({ icon, color }) => {
     ),
 
     hamburger: (
-      <svg width="16px" height="12px" viewBox="0 0 16 12">
-        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="square">
-          <g transform="translate(1.000000, 0.000000)" stroke={colors[color]}>
-            <path d="M0.184210526,1 L13.8157895,1" />
-            <path d="M0.184210526,6 L13.8157895,6" />
-            <path d="M0.184210526,11 L13.8157895,11" />
+      <svg width='16px' height='12px' viewBox='0 0 16 12'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='square'>
+          <g transform='translate(1.000000, 0.000000)' stroke={colors[color]}>
+            <path d='M0.184210526,1 L13.8157895,1' />
+            <path d='M0.184210526,6 L13.8157895,6' />
+            <path d='M0.184210526,11 L13.8157895,11' />
           </g>
         </g>
       </svg>

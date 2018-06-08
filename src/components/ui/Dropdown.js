@@ -1,6 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+import ClickOutside from 'react-click-outside'
 import SvgIcon from './SvgIcon'
 
 import typo from '../../styles/typo'
@@ -18,22 +19,29 @@ const styles = {
       display: inline-block
     `
   ),
-  toggler: cmz(`
-    font-weight: 600
-    cursor: pointer
-    display: flex
-    align-items: center
-  `),
   label: cmz(`
-    display: flex
-    align-items: center
+    & {
+      font-weight: 600
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: center
+      line-height: 16px
+    }
+
+    & > * {
+      margin: 0 0 0 6px
+    }
+
+    & > :first-child {
+      margin: 0
+    }
   `),
-  text: cmz(`
-    margin: 0 0 0 6px
+  padded: cmz(`
+    padding: 10px
   `),
   triangle: cmz(`
     transform: translateY(-3px)
-    margin: 0 0 0 7px
   `),
   content: cmz(`
     display: none
@@ -45,17 +53,20 @@ const styles = {
   `),
   contentright: cmz(`
     right: 0
-  `),
+  `)
 }
 
 type Props = {
   icon?: Icon,
   label?: string,
   children?: Element<*>,
+  position?: string,
+  indicator?: boolean,
+  padded?: boolean
 }
 
 type State = {
-  open: boolean,
+  open: boolean
 }
 
 class Dropdown extends PureComponent<Props, State> {
@@ -63,7 +74,9 @@ class Dropdown extends PureComponent<Props, State> {
     icon: '',
     label: '',
     children: null,
-    position: 'left'
+    position: 'left',
+    indicator: false,
+    padded: false
   }
 
   state = {
@@ -72,37 +85,42 @@ class Dropdown extends PureComponent<Props, State> {
 
   toggle = () => this.setState((prevState: State) => ({ open: !prevState.open }))
 
+  close = () => this.setState(() => ({ open: false }))
+
   render () {
-    const { icon, label, children, position } = this.props
+    const { icon, label, children, position, indicator, padded } = this.props
     const { open } = this.state
-    const childrenClasses = [
+
+    const labelClasses = [
+      styles.label,
+      padded && styles.padded
+    ].join(' ')
+    const contentClasses = [
       styles.content,
-      open ? styles.contentvisible : '',
-      position === 'right' ? styles.contentright : ''
+      open && styles.contentvisible,
+      position === 'right' && styles.contentright
     ].join(' ')
 
     return children ? (
-      <div className={styles.dropdown}>
-        <div className={styles.toggler} onClick={this.toggle}>
-          {icon && <SvgIcon icon={icon} color='text' />}
-          {label && (
-            <span className={styles.label}>
-              <span className={styles.text}>
-                {label}
-              </span>
+      <ClickOutside onClickOutside={this.close}>
+        <div className={styles.dropdown}>
+          <div className={labelClasses} onClick={this.toggle}>
+            {icon && <SvgIcon icon={icon} color='text' />}
+            {label && <span>{label}</span>}
+            {indicator && (
               <span className={styles.triangle}>
                 <SvgIcon
                   icon={open ? 'triangleup' : 'triangledown'}
                   color='text'
                 />
               </span>
-            </span>
-          )}
+            )}
+          </div>
+          <div className={contentClasses}>
+            {children}
+          </div>
         </div>
-        <div className={childrenClasses}>
-          {children}
-        </div>
-      </div>
+      </ClickOutside>
     ) : null
   }
 }
