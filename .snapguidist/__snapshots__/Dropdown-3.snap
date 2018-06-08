@@ -1,1 +1,55 @@
-exports[`Dropdown-3 1`] = `null`;
+exports[`Dropdown-3 1`] = `
+<div
+  className="AutoUI_ui_Dropdown-14 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+  <div
+    className="AutoUI_ui_Dropdown-21">
+    <svg
+      height="12px"
+      viewBox="0 0 16 12"
+      width="16px">
+      <g
+        fill="none"
+        fillRule="evenodd"
+        stroke="none"
+        strokeLinecap="square"
+        strokeWidth="1">
+        <g
+          stroke={
+            Object {
+              "color": Array [
+                90,
+                86,
+                101,
+              ],
+              "model": "rgb",
+              "valpha": 1,
+            }
+          }
+          transform="translate(1.000000, 0.000000)">
+          <path
+            d="M0.184210526,1 L13.8157895,1" />
+          <path
+            d="M0.184210526,6 L13.8157895,6" />
+          <path
+            d="M0.184210526,11 L13.8157895,11" />
+        </g>
+      </g>
+    </svg>
+    
+  </div>
+  <div
+    className="AutoUI_ui_Dropdown-38  AutoUI_ui_Dropdown-46">
+    <div
+      style={
+        Object {
+          "background": "#fff",
+        }
+      }>
+      <img
+        alt="Loading..."
+        className=""
+        src="6f647ce328b13c96401708c6fcbdb237.gif" />
+    </div>
+  </div>
+</div>
+`;
