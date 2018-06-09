@@ -613,7 +613,6 @@ exports[`SvgIcon-3 1`] = `
     <g
       fill="none"
       fillRule="evenodd"
-      id="Page-1"
       stroke="none"
       strokeWidth="1">
       <polygon
@@ -630,6 +629,38 @@ exports[`SvgIcon-3 1`] = `
         }
         points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
         transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+    </g>
+  </svg>
+  <svg
+    height="12px"
+    viewBox="0 0 16 12"
+    width="16px">
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="none"
+      strokeLinecap="square"
+      strokeWidth="1">
+      <g
+        stroke={
+          Object {
+            "color": Array [
+              255,
+              255,
+              255,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
+        transform="translate(1.000000, 0.000000)">
+        <path
+          d="M0.184210526,1 L13.8157895,1" />
+        <path
+          d="M0.184210526,6 L13.8157895,6" />
+        <path
+          d="M0.184210526,11 L13.8157895,11" />
+      </g>
     </g>
   </svg>
 </div>

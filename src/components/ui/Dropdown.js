@@ -44,12 +44,16 @@ const styles = {
     transform: translateY(-3px)
   `),
   content: cmz(`
-    display: none
+    position: absolute
     z-index: 999
+    visibility: hidden
+    opacity: 0
+    transition: visibility 0s linear 0.2s, opacity 0.2s linear
   `),
   contentvisible: cmz(`
-    display: block
-    position: absolute
+    visibility: visible
+    opacity: 1
+    transition-delay: 0s
   `),
   contentright: cmz(`
     right: 0
