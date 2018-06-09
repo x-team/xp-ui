@@ -1,0 +1,126 @@
+exports[`SelectBox-1 1`] = `
+<div
+  className="AutoUI_ui_SelectBox-10">
+  <div>
+    <input
+      aria-labelledby="label-search"
+      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83  "
+      id="search"
+      name="search"
+      placeholder="Search"
+      type="text" />
+  </div>
+  <ul>
+    <li>
+      <div
+        className="AutoUI_forms_InputField-74">
+        <label
+          id="">
+          <div
+            className="AutoUI_forms_InputField-74">
+            <label
+              className="AutoUI_forms_InputField-65 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+              <input
+                aria-labelledby=""
+                checked={true}
+                className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_forms_InputField-118 "
+                type="checkbox" />
+              <span
+                className="AutoUI_forms_InputField-131" />
+              registered
+            </label>
+          </div>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        className="AutoUI_forms_InputField-74">
+        <label
+          id="">
+          <div
+            className="AutoUI_forms_InputField-74">
+            <label
+              className="AutoUI_forms_InputField-65 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+              <input
+                aria-labelledby=""
+                checked={true}
+                className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_forms_InputField-118 "
+                type="checkbox" />
+              <span
+                className="AutoUI_forms_InputField-131" />
+              portfolio-building
+            </label>
+          </div>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        className="AutoUI_forms_InputField-74">
+        <label
+          id="">
+          <div
+            className="AutoUI_forms_InputField-74">
+            <label
+              className="AutoUI_forms_InputField-65 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+              <input
+                aria-labelledby=""
+                checked={true}
+                className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_forms_InputField-118 "
+                type="checkbox" />
+              <span
+                className="AutoUI_forms_InputField-131" />
+              portfolio-review
+            </label>
+          </div>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        className="AutoUI_forms_InputField-74">
+        <label
+          id="">
+          <div
+            className="AutoUI_forms_InputField-74">
+            <label
+              className="AutoUI_forms_InputField-65 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+              <input
+                aria-labelledby=""
+                checked={true}
+                className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_forms_InputField-118 "
+                type="checkbox" />
+              <span
+                className="AutoUI_forms_InputField-131" />
+              social-media-screen
+            </label>
+          </div>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        className="AutoUI_forms_InputField-74">
+        <label
+          id="">
+          <div
+            className="AutoUI_forms_InputField-74">
+            <label
+              className="AutoUI_forms_InputField-65 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+              <input
+                aria-labelledby=""
+                checked={false}
+                className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_forms_InputField-118 "
+                type="checkbox" />
+              <span
+                className="AutoUI_forms_InputField-131" />
+              react-shortlist
+            </label>
+          </div>
+        </label>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

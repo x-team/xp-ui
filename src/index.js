@@ -25,6 +25,7 @@ import Roadmap from './components/ui/Roadmap'
 import RoadmapHero from './components/ui/RoadmapHero'
 import RoadmapLevel from './components/ui/RoadmapLevel'
 import RoadmapTimelineElement from './components/ui/RoadmapTimelineElement'
+import SelectBox from './components/ui/SelectBox'
 import SolutionForm from './components/forms/SolutionForm'
 import SvgIcon from './components/ui/SvgIcon'
 import Tab from './components/ui/Tabs/Tab'
@@ -63,6 +64,7 @@ export {
   RoadmapHero,
   RoadmapLevel,
   RoadmapTimelineElement,
+  SelectBox,
   SolutionForm,
   SvgIcon,
   Tab,

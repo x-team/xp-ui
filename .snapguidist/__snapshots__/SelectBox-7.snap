@@ -1,0 +1,21 @@
+exports[`SelectBox-7 1`] = `
+<div
+  className="AutoUI_ui_SelectBox-10">
+  <div>
+    <input
+      aria-labelledby="label-search"
+      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83  "
+      id="search"
+      name="search"
+      placeholder="Search"
+      type="text" />
+  </div>
+  <ul>
+    <li>
+      <span>
+        nothing found...
+      </span>
+    </li>
+  </ul>
+</div>
+`;
