@@ -1,0 +1,9 @@
+exports[`Text-31 1`] = `
+<section
+  className="AutoUI_ui_Text-27">
+  <div
+    className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+    12
+  </div>
+</section>
+`;
