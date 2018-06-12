@@ -126,3 +126,16 @@ Text example (Pure content with no wrappers around):
 ```js
 <Text content="Just a sample text" isPureContent />
 ```
+
+Text example (content as HTML):
+
+```js
+<Text
+  content={
+    <div>
+      <div>Many <strong>developers</strong> who came before you started right here and went on to do some of the <em>best</em> work of their career.</div>
+      <div>That same <b>opportunity</b> begins now for <strong><a href='#'>you</a></strong>.</div>
+    </div>
+  }
+/>
+```

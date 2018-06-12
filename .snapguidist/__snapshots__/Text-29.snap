@@ -1,0 +1,32 @@
+exports[`Text-29 1`] = `
+<section
+  className="AutoUI_ui_Text-25">
+  <div
+    className="AutoUI_ui_Text-39 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+    <div>
+      <div>
+        Many 
+        <strong>
+          developers
+        </strong>
+         who came before you started right here and went on to do some of the 
+        <em>
+          best
+        </em>
+         work of their career.
+      </div>
+      <div>
+        That same 
+        <b>
+          opportunity
+        </b>
+         begins now for 
+        <strong>
+          you
+        </strong>
+        .
+      </div>
+    </div>
+  </div>
+</section>
+`;

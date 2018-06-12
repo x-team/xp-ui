@@ -1,6 +1,6 @@
 // @flow
 
-import { PureComponent } from 'react'
+import { Children, PureComponent, ReactNode } from 'react'
 
 import elem from '../../utils/elem'
 
@@ -16,7 +16,7 @@ type Props = {
   heading?: Element<*>|string,
   subHeading?: Element<*>|string,
   level?: Element<*>|string,
-  content?: Element<*>|string,
+  content?: ReactNode,
   isCentered: ?boolean,
   hasDivider: ?boolean,
   isPureContent: ?boolean,
@@ -52,6 +52,31 @@ const contentDividerCenter = cmz(`
   margin-right: auto
 `)
 
+const allowedTags = {
+  b: true,
+  div: true,
+  em: true,
+  i: true,
+  strong: true
+}
+
+const sanitize = node => {
+  if (!node) {
+    return node
+  }
+  if (typeof node.map === 'function') {
+    return node.map(sanitize)
+  }
+  if (!node.props) {
+    return node
+  }
+  if (allowedTags[node.type]) {
+    const Element = elem[node.type]()
+    return Element(sanitize(node.props.children))
+  }
+  return Children.map(node.props.children, sanitize)
+}
+
 class Text extends PureComponent<Props> {
   static defaultProps = {
     isCentered: false,
@@ -72,8 +97,10 @@ class Text extends PureComponent<Props> {
       isPureContent
     } = this.props
 
+    const sanitizedContent = sanitize(content)
+
     if (isPureContent) {
-      return PureContent(content)
+      return PureContent(sanitizedContent)
     }
 
     return Root(isCentered ? {className: centerAlign} : {},
@@ -81,7 +108,7 @@ class Text extends PureComponent<Props> {
       subHeading && SubHeading({ className: typo[subHeadingType] }, subHeading),
       level && Level({ className: typo.subheading }, level),
       hasDivider && Divider({ className: (isCentered ? contentDividerCenter : '') }),
-      Content(content)
+      Content(sanitizedContent)
     )
   }
 }
