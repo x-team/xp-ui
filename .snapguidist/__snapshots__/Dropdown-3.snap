@@ -1,0 +1,28 @@
+exports[`Dropdown-3 1`] = `
+<div>
+  <div
+    className="AutoUI_ui_Dropdown-15 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+    <div
+      className="AutoUI_ui_Dropdown-22 false">
+      
+      <span>
+        Add to List
+      </span>
+    </div>
+    <div
+      className="AutoUI_ui_Dropdown-46 false false">
+      <div
+        style={
+          Object {
+            "background": "#e9e9e9",
+          }
+        }>
+        <img
+          alt="Loading..."
+          className=""
+          src="6f647ce328b13c96401708c6fcbdb237.gif" />
+      </div>
+    </div>
+  </div>
+</div>
+`;

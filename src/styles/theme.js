@@ -79,6 +79,7 @@ export default wrap({
   iconBright: palette.white,
   iconDark: palette.tuna,
   iconGray: palette.bombay,
+  iconTextGray: palette.scarpaFlow,
 
   logoGray: palette.nobel
 })
