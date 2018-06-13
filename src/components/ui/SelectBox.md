@@ -4,31 +4,32 @@ Simple view for Add to List:
 const itemsArray = [
   {
     id: 2,
-    name: "registered",
+    value: "registered",
     selected: true
   },
   {
     id: 3,
-    name: "portfolio-building",
+    value: "portfolio-building",
     selected: true
   },
   {
     id: 4,
-    name: "portfolio-review",
+    value: "portfolio-review",
     selected: true
   },
   {
     id: 5,
-    name: "social-media-screen",
+    value: "social-media-screen",
     selected: true
   },
   {
     id: 6,
-    name: "react-shortlist",
+    value: "react-shortlist",
     selected: false
   }
 ];
 <SelectBox
+  collectionName="List"
   items={itemsArray}
   addOnSearch={true}
   width={300}
@@ -44,26 +45,27 @@ Simple view for Search module:
 const itemsArray = [
   {
     id: 2,
-    name: "registered"
+    value: "registered"
   },
   {
     id: 3,
-    name: "portfolio-building"
+    value: "portfolio-building"
   },
   {
     id: 4,
-    name: "portfolio-review"
+    value: "portfolio-review"
   },
   {
     id: 5,
-    name: "social-media-screen"
+    value: "social-media-screen"
   },
   {
     id: 6,
-    name: "react-shortlist"
+    value: "react-shortlist"
   }
 ];
 <SelectBox
+  collectionName="List"
   items={itemsArray}
   width={300}
   visibleItems={4}
@@ -78,26 +80,27 @@ Complete view for Edit Lists:
 const itemsArray = [
   {
     id: 2,
-    name: "registered"
+    value: "registered"
   },
   {
     id: 3,
-    name: "portfolio-building"
+    value: "portfolio-building"
   },
   {
     id: 4,
-    name: "portfolio-review"
+    value: "portfolio-review"
   },
   {
     id: 5,
-    name: "social-media-screen"
+    value: "social-media-screen"
   },
   {
     id: 6,
-    name: "react-shortlist"
+    value: "react-shortlist"
   }
 ];
 <SelectBox
+  collectionName="List"
   items={itemsArray}
   onSelect={(listId) => console.log('onSelect', listId)}
   onEdit={(listId) => console.log('onEdit', listId)}
