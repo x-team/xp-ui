@@ -3,11 +3,10 @@
 import React, { PureComponent } from 'react'
 import InputField from '../forms/InputField'
 import SvgIcon from './SvgIcon'
+import Dropdown from './Dropdown'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
-
-import type { Element } from 'react'
 
 const cmz = require('cmz')
 
@@ -15,10 +14,32 @@ const styles = {
   selectbox: cmz(`
     background: #fff
     position: relative
+    width: 100%
   `),
+  dropdown: cmz(`
+    width: 100%
+  `),
+  placeholder: cmz(
+    typo.baseText,
+    `
+      color: ${theme.baseDark}
+      border: 1px solid #E9EDEE
+      padding: 20px
+      height: 60px
+      width: 100%
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      position: relative
+    `
+  ),
   search: cmz(`
+    position: relative
+  `),
+  searchinput: cmz(`
     padding: 23px 30px 20px 52px
     height: 60px
+    width: 100%
   `),
   magnifier: cmz(`
     position: absolute
@@ -26,7 +47,24 @@ const styles = {
     top: 22px
     left: 22px
   `),
-  label: cmz(typo.baseText),
+  triangle: cmz(`
+    & {
+      position: absolute
+      z-index: 5
+      top: 50%
+      right: 30px
+    }
+
+    & svg {
+      position: absolute
+    }
+  `),
+  label: cmz(
+    typo.baseText,
+    `
+      line-height: 1
+    `
+  ),
   list: cmz(`
     list-style: none
     margin: 0
@@ -34,13 +72,17 @@ const styles = {
     border: 1px solid #E9EDEE
     border-top: none
     overflow-y: scroll
+    background: #fff
+    width: 100%
+    box-sizing: border-box
+  `),
+  shadow: cmz(`
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15)
   `),
   item: cmz(`
     & {
-      height: 30px
-      margin: 0 22px
-      padding: 18px 0
-      border-bottom: 1px solid #E9EDEE
+      min-height: 30px
+      margin: 22px
       display: flex
       justify-content: space-between
       align-items: center
@@ -49,6 +91,11 @@ const styles = {
     &:last-child {
       border-bottom: none
     }
+  `),
+  lined: cmz(`
+    border-bottom: 1px solid #E9EDEE
+    margin: 0 22px
+    padding: 15px 0
   `),
   control: cmz(`
     flex-shrink: 0
@@ -65,6 +112,7 @@ const styles = {
     `
       & {
         width: 70%
+        height: 30px
       }
 
       & input {
@@ -80,8 +128,7 @@ const styles = {
     typo.baseText,
     `
       display: block
-      margin: 0 22px
-      padding: 18px 0 9px
+      margin: 15px 22px
     `
   ),
   createnew: cmz(
@@ -90,35 +137,32 @@ const styles = {
       & {
         display: flex
         align-items: center
-        margin: 0 22px
-        padding: 9px 0 18px
+        margin: 15px 22px
         color: ${theme.baseRed}
         cursor: pointer
       }
 
       & svg {
-        transform: scale(0.8)
+        transform: scale(0.7)
         margin-right: 8px
       }
     `
-  ),
+  )
 }
 
 type Item = {
   id: number,
   value: string,
-  selected?: boolean,
-  editing?: string | boolean
+  editing?: string,
+  hidden?: boolean,
+  selected?: boolean
 }
 
 type Props = {
   placeholder?: string,
   items?: Array<Item>,
-  addOnSearch?: boolean,
   width?: number,
-  visibleItems?: number,
-  nesting?: boolean,
-  collapsible?: boolean,
+  itemsHeight?: number,
   expanded?: boolean,
   collectionName?: string,
   onSelect?: Function,
@@ -128,16 +172,16 @@ type Props = {
 }
 
 type State = {
-  search: string,
-  items: Array<Item>,
-  expanded: boolean
+  search?: string,
+  items?: Array<Item>,
+  expanded?: boolean
 }
 
 class SelectBox extends PureComponent<Props, State> {
   static defaultProps = {
     placeholder: 'Search',
     items: [],
-    expanded: true,
+    expanded: false,
     collectionName: ''
   }
 
@@ -149,7 +193,7 @@ class SelectBox extends PureComponent<Props, State> {
 
   updateItemsState = (updatedItem: Item) => {
     const { items } = this.state
-    const newItems = items.map((each, i) => {
+    const newItems = items && items.map((each, i) => {
       return each.id === updatedItem.id ? updatedItem : each
     })
     this.setState({ items: newItems })
@@ -159,10 +203,13 @@ class SelectBox extends PureComponent<Props, State> {
     const { items } = this.state
     const { value } = input.target
     const match = new RegExp(value.trim().toUpperCase(), 'g')
-    const filteredItems = items.map(item => ({
-      ...item,
-      hidden: !(item.value.toUpperCase().match(match) && item.value.toUpperCase().match(match).length > 0)
-    }))
+    const filteredItems = items && items.map(item => {
+      const itemMatch = item && item.value && item.value.toUpperCase().match(match)
+      return {
+        ...item,
+        hidden: !(itemMatch && itemMatch.length > 0)
+      }
+    })
     this.setState({ search: value, items: filteredItems })
   }
 
@@ -178,7 +225,7 @@ class SelectBox extends PureComponent<Props, State> {
   handleClick = (item: Item) => {
     const { onClick } = this.props
     if (!onClick) {
-      handleSelect(item)
+      this.handleSelect(item)
     } else {
       onClick(item)
     }
@@ -204,13 +251,13 @@ class SelectBox extends PureComponent<Props, State> {
   }
 
   handleCancelEdit = (item: Item) => {
-    const updatedItem = { ...item, editing: false }
+    const updatedItem = { ...item, editing: '' }
     this.updateItemsState(updatedItem)
   }
 
   handleEdit = (item: Item) => {
     const { onEdit } = this.props
-    const updatedItem = { ...item, name: item.editing, editing: false }
+    const updatedItem = { ...item, value: item.editing, editing: '' }
     if (onEdit) {
       onEdit(updatedItem)
       this.updateItemsState(updatedItem)
@@ -218,15 +265,16 @@ class SelectBox extends PureComponent<Props, State> {
   }
 
   render () {
-    const { placeholder, collectionName, addOnSearch, visibleItems, onSelect, onEdit } = this.props
+    const { placeholder, collectionName, itemsHeight, width, expanded, onSelect, onEdit, onCreateNew } = this.props
     const { items, search } = this.state
 
-    const filteredItems = items.filter(item => !item.hidden)
+    const filteredItems = items && items.filter((item: Item) => !item.hidden)
 
-    const renderCheckboxOrString = (item) => onSelect ? (
+    const renderCheckboxOrString = (item: Item) => onSelect ? (
       <InputField
         type='checkbox'
         label={item.value}
+        name={item.value}
         checked={item.selected}
         onChange={() => this.handleSelect(item)}
       />
@@ -242,38 +290,38 @@ class SelectBox extends PureComponent<Props, State> {
       </span>
     )
 
-    const renderIsEditing = (item) => !item.editing ? (
-      <li className={styles.item} key={item.id}>
+    const itemClasses = [ styles.item, expanded ? '' : styles.lined ].join(' ')
+    const renderIsEditing = (item: Item) => !item.editing ? (
+      <li className={itemClasses} key={item.id}>
         {renderCheckboxOrString(item)}
         {renderEditable(item)}
       </li>
     ) : (
-      <li className={styles.item} key={item.id}>
+      <li className={itemClasses} key={item.id}>
         <span className={styles.editinput}>
           <InputField
-            type='input'
             name={item.value}
             value={item.editing}
-            onChange={(input) => this.handleEditChange(item, input)}
+            onChange={(input = {}) => this.handleEditChange(item, input)}
           />
         </span>
         <span className={styles.control}>
           <span className={styles.controlbutton} onClick={() => this.handleCancelEdit(item)}>
-            <SvgIcon icon="x" color="grayscale" />
+            <SvgIcon icon='x' color='grayscale' />
           </span>
           <span className={styles.controlbutton} onClick={() => this.handleEdit(item)}>
-            <SvgIcon icon="check" color="grayscale" />
+            <SvgIcon icon='check' color='grayscale' />
           </span>
         </span>
       </li>
     )
 
-    const renderItemsOrEmpty = () => filteredItems.length > 0
+    const renderItemsOrEmpty = () => filteredItems && filteredItems.length > 0
       ? filteredItems.map(item => renderIsEditing(item))
       : (
         <li>
           <span className={styles.nothinglabel}>No Results for "{search}"</span>
-          {addOnSearch && (
+          {onCreateNew && (
             <span className={styles.createnew} onClick={this.handleCreateNew}>
               <SvgIcon icon='plus' />
               <span>Add new {collectionName} "{search}"</span>
@@ -282,28 +330,55 @@ class SelectBox extends PureComponent<Props, State> {
         </li>
       )
 
-    const renderItems = () => (filteredItems.length > 0 || search) && (
-      <ul className={styles.list} style={{ maxHeight: `${visibleItems * 67}px` }}>
+    const itemsClasses = [ styles.list, expanded ? '' : styles.shadow ].join(' ')
+    const renderItems = () => ((filteredItems && filteredItems.length > 0) || search) ? (
+      <ul className={itemsClasses} style={{
+        maxHeight: itemsHeight ? `${itemsHeight * 61}px` : 'auto',
+        width: width ? `${width}px` : '100%'
+      }}>
         {renderItemsOrEmpty()}
       </ul>
-    )
+    ) : ''
 
-    return (
-      <div className={styles.selectbox}>
+    const renderSearchLabel = () => placeholder === 'Search' ? (
+      <div className={styles.search}>
         <div className={styles.magnifier}>
           <SvgIcon icon='magnifier' color='grayscale' />
         </div>
         <InputField
           name='search'
           placeholder={placeholder}
-          onChange={this.handleSearch}
-          className={styles.search}
+          onChange={(input = {}) => this.handleSearch(input)}
+          className={styles.searchinput}
         />
-        {renderItems()}
+        <div className={styles.triangle}>
+          <SvgIcon icon='triangledown' color='grayscale' />
+        </div>
+      </div>
+    ) : (
+      <div className={styles.placeholder}>
+        {placeholder}
+        <div className={styles.triangle}>
+          <SvgIcon icon='triangledown' color='grayscale' />
+        </div>
+      </div>
+    )
+
+    return (
+      <div className={styles.selectbox} style={{ width: width ? `${width}px` : '100%' }}>
+        {expanded ? (
+          <div>
+            {renderSearchLabel()}
+            {renderItems()}
+          </div>
+        ) : (
+          <Dropdown label={renderSearchLabel()} className={styles.dropdown}>
+            {renderItems()}
+          </Dropdown>
+        )}
       </div>
     )
   }
 }
 
 export default SelectBox
-

@@ -31,9 +31,8 @@ const itemsArray = [
 <SelectBox
   collectionName="List"
   items={itemsArray}
-  addOnSearch={true}
   width={300}
-  visibleItems={3}
+  itemsHeight={3}
   onSelect={(listId) => console.log('onSelect', listId)}
   onCreateNew={(listName) => console.log('onCreateNew', listName)}
 />
@@ -65,11 +64,11 @@ const itemsArray = [
   }
 ];
 <SelectBox
+  placeholder="Lists"
   collectionName="List"
   items={itemsArray}
-  width={300}
-  visibleItems={4}
-  nesting={true}
+  width={200}
+  itemsHeight={4}
   onClick={(listId) => console.log('onClick', listId)}
 />
 ```
@@ -102,6 +101,7 @@ const itemsArray = [
 <SelectBox
   collectionName="List"
   items={itemsArray}
+  expanded={true}
   onSelect={(listId) => console.log('onSelect', listId)}
   onEdit={(listId) => console.log('onEdit', listId)}
   onCreateNew={(listName) => console.log('onCreateNew', listName)}

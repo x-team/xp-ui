@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import ClickOutside from 'react-click-outside'
+// import ClickOutside from 'react-click-outside'
 import SvgIcon from './SvgIcon'
 
 import typo from '../../styles/typo'
@@ -37,6 +37,9 @@ const styles = {
       margin: 0
     }
   `),
+  labelElement: cmz(`
+    width: 100%
+  `),
   padded: cmz(`
     padding: 10px
   `),
@@ -49,6 +52,7 @@ const styles = {
     visibility: hidden
     opacity: 0
     transition: visibility 0s linear 0.2s, opacity 0.2s linear
+    width: inherit
   `),
   contentvisible: cmz(`
     visibility: visible
@@ -61,12 +65,13 @@ const styles = {
 }
 
 type Props = {
-  icon?: Icon,
-  label?: string,
-  children?: Element<*>,
+  icon?: Icon | '',
+  label?: Element<*> | string,
+  children?: Element<*> | string,
   position?: string,
   indicator?: boolean,
-  padded?: boolean
+  padded?: boolean,
+  className?: string
 }
 
 type State = {
@@ -92,40 +97,44 @@ class Dropdown extends PureComponent<Props, State> {
   close = () => this.setState(() => ({ open: false }))
 
   render () {
-    const { icon, label, children, position, indicator, padded } = this.props
+    const { icon, label, children, position, indicator, padded, className } = this.props
     const { open } = this.state
 
+    const rootClasses = [
+      styles.dropdown,
+      className || ''
+    ].join(' ')
     const labelClasses = [
       styles.label,
-      padded && styles.padded
+      padded ? styles.padded : ''
     ].join(' ')
     const contentClasses = [
       styles.content,
-      open && styles.contentvisible,
-      position === 'right' && styles.contentright
+      open ? styles.contentvisible : '',
+      position === 'right' ? styles.contentright : ''
     ].join(' ')
 
-    return children ? (
-      <ClickOutside onClickOutside={this.close}>
-        <div className={styles.dropdown}>
-          <div className={labelClasses} onClick={this.toggle}>
-            {icon && <SvgIcon icon={icon} color='text' />}
-            {label && <span>{label}</span>}
-            {indicator && (
-              <span className={styles.triangle}>
-                <SvgIcon
-                  icon={open ? 'triangleup' : 'triangledown'}
-                  color='text'
-                />
-              </span>
-            )}
-          </div>
-          <div className={contentClasses}>
-            {children}
-          </div>
+      // <ClickOutside onClickOutside={this.close}>
+    return (children || label || icon) ? (
+      <div className={rootClasses}>
+        <div className={labelClasses} onClick={this.toggle}>
+          {icon && <SvgIcon icon={icon} color='text' />}
+          {label && <span className={styles.labelElement}>{label}</span>}
+          {indicator && (
+            <span className={styles.triangle}>
+              <SvgIcon
+                icon={open ? 'triangleup' : 'triangledown'}
+                color='text'
+              />
+            </span>
+          )}
         </div>
-      </ClickOutside>
+        <div className={contentClasses}>
+          {children}
+        </div>
+      </div>
     ) : null
+      // </ClickOutside>
   }
 }
 
