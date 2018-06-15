@@ -198,7 +198,7 @@ class SelectBox extends PureComponent<Props, State> {
     expanded: this.props.expanded
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate (prevProps: Props) {
     if (!Object.is(this.props.items, prevProps.items)) {
       this.setState({ items: this.props.items })
     }
