@@ -1,26 +1,28 @@
 exports[`Dropdown-3 1`] = `
-<div
-  className="AutoUI_ui_Dropdown-15 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 ">
+<div>
   <div
-    className="AutoUI_ui_Dropdown-22 ">
-    
-    <span
-      className="AutoUI_ui_Dropdown-40">
-      Add to List
-    </span>
-  </div>
-  <div
-    className="AutoUI_ui_Dropdown-49  ">
+    className="AutoUI_ui_Dropdown-15 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 ">
     <div
-      style={
-        Object {
-          "background": "#e9e9e9",
-        }
-      }>
-      <img
-        alt="Loading..."
-        className=""
-        src="6f647ce328b13c96401708c6fcbdb237.gif" />
+      className="AutoUI_ui_Dropdown-22 ">
+      
+      <span
+        className="AutoUI_ui_Dropdown-40">
+        Add to List
+      </span>
+    </div>
+    <div
+      className="AutoUI_ui_Dropdown-49  ">
+      <div
+        style={
+          Object {
+            "background": "#e9e9e9",
+          }
+        }>
+        <img
+          alt="Loading..."
+          className=""
+          src="6f647ce328b13c96401708c6fcbdb237.gif" />
+      </div>
     </div>
   </div>
 </div>
