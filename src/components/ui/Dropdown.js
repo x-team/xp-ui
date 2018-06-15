@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-// import ClickOutside from 'react-click-outside'
+import ClickOutside from 'react-click-outside'
 import SvgIcon from './SvgIcon'
 
 import typo from '../../styles/typo'
@@ -114,27 +114,27 @@ class Dropdown extends PureComponent<Props, State> {
       position === 'right' ? styles.contentright : ''
     ].join(' ')
 
-      // <ClickOutside onClickOutside={this.close}>
     return (children || label || icon) ? (
-      <div className={rootClasses}>
-        <div className={labelClasses} onClick={this.toggle}>
-          {icon && <SvgIcon icon={icon} color='text' />}
-          {label && <span className={styles.labelElement}>{label}</span>}
-          {indicator && (
-            <span className={styles.triangle}>
-              <SvgIcon
-                icon={open ? 'triangleup' : 'triangledown'}
-                color='text'
-              />
-            </span>
-          )}
+      <ClickOutside onClickOutside={this.close}>
+        <div className={rootClasses}>
+          <div className={labelClasses} onClick={this.toggle}>
+            {icon && <SvgIcon icon={icon} color='text' />}
+            {label && <span className={styles.labelElement}>{label}</span>}
+            {indicator && (
+              <span className={styles.triangle}>
+                <SvgIcon
+                  icon={open ? 'triangleup' : 'triangledown'}
+                  color='text'
+                />
+              </span>
+            )}
+          </div>
+          <div className={contentClasses}>
+            {children}
+          </div>
         </div>
-        <div className={contentClasses}>
-          {children}
-        </div>
-      </div>
+      </ClickOutside>
     ) : null
-      // </ClickOutside>
   }
 }
 

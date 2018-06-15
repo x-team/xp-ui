@@ -36,16 +36,23 @@ const styles = {
   search: cmz(`
     position: relative
   `),
+  // The !important used below is required to override the global input[type="text"] styles
   searchinput: cmz(`
-    padding: 23px 30px 20px 52px
-    height: 60px
+    padding: 23px 30px 20px 52px !important
+    height: 60px !important
     width: 100%
   `),
   magnifier: cmz(`
-    position: absolute
-    z-index: 5
-    top: 22px
-    left: 22px
+    & {
+      position: absolute
+      z-index: 5
+      top: 23px
+      left: 22px
+    }
+
+    & svg {
+      position: absolute
+    }
   `),
   triangle: cmz(`
     & {
@@ -189,6 +196,12 @@ class SelectBox extends PureComponent<Props, State> {
     search: '',
     items: this.props.items,
     expanded: this.props.expanded
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!Object.is(this.props.items, prevProps.items)) {
+      this.setState({ items: this.props.items })
+    }
   }
 
   updateItemsState = (updatedItem: Item) => {
