@@ -32,7 +32,7 @@ type Props = {
 const Root = elem.div()
 
 const FilesList = elem.div(cmz(`
-  margin-bottom: 30px
+  margin-top: 30px
 `))
 
 const FileItem = elem.div(cmz(`
@@ -50,6 +50,7 @@ const FileName = elem.div(cmz(
     width: 100%
     font-size: 16px
     line-height: 1
+    text-align: left
   `
 ))
 
@@ -160,7 +161,6 @@ class AttachFiles extends PureComponent<Props> {
     }
 
     return Root(
-      renderFiles(files),
       HiddenInput({
         type: 'file',
         accept: acceptedTypes,
@@ -169,7 +169,8 @@ class AttachFiles extends PureComponent<Props> {
       }),
       <Button outlined onClick={this.triggerFileSelection}>
         {ButtonLabel('Attach a file')}
-      </Button>
+      </Button>,
+      renderFiles(files)
     )
   }
 }
