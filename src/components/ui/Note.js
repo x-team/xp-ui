@@ -9,6 +9,7 @@ import Markdown from 'markdown-to-jsx'
 
 import Avatar from './Avatar'
 import Text from './Text'
+import FileLinks from './FileLinks'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
@@ -20,7 +21,8 @@ type Props = {
   avatar?: string,
   date?: Date,
   name?: string,
-  text?: string
+  text?: string,
+  files?: Array<Object>
 }
 
 const Root = elem.div(cmz(`
@@ -78,6 +80,19 @@ const TextWrapper = elem.div(cmz(
   `
 ))
 
+const FileLinksWrapper = elem.div(cmz(
+  `
+    & a {
+      color: ${theme.baseRed}
+      text-decoration: none
+    }
+
+    & a:hover {
+      text-decoration: underline
+    }
+  `
+))
+
 const timeFromNow = date => {
   const now = new Date()
   const hoursDelta = differenceInHours(now, date)
@@ -123,7 +138,7 @@ class Note extends PureComponent<Props> {
   }
 
   render () {
-    const { avatar, date, name, text } = this.props
+    const { avatar, date, name, text, files } = this.props
 
     return (
       Root(
@@ -133,7 +148,8 @@ class Note extends PureComponent<Props> {
         Body(
           name && Name(name),
           date && Time(timeFromNow(date)),
-          text && TextWrapper({}, <Text content={<Markdown>{text}</Markdown>} isPureContent />)
+          text && TextWrapper({}, <Text content={<Markdown>{text}</Markdown>} isPureContent />),
+          FileLinksWrapper({}, <FileLinks files={files} />)
         )
       )
     )

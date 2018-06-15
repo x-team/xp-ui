@@ -1,0 +1,13 @@
+exports[`FileLink-1 1`] = `
+<div
+  className="AutoUI_ui_FileLink-15">
+  <div
+    className="AutoUI_ui_FileLink-19 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+    <a
+      href="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
+      target="_blank">
+      View Attachment
+    </a>
+  </div>
+</div>
+`;

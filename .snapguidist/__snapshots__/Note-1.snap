@@ -1,8 +1,8 @@
 exports[`Note-1 1`] = `
 <div
-  className="AutoUI_ui_Note-26">
+  className="AutoUI_ui_Note-28">
   <div
-    className="AutoUI_ui_Note-30">
+    className="AutoUI_ui_Note-32">
     <div
       className="AutoUI_ui_Avatar-15">
       <img
@@ -14,17 +14,17 @@ exports[`Note-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-35">
+    className="AutoUI_ui_Note-37">
     <span
-      className="AutoUI_ui_Note-40 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      className="AutoUI_ui_Note-42 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
       Samwise Gamgee
     </span>
     <span
-      className="AutoUI_ui_Note-50 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Note-52 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
       just now
     </span>
     <div
-      className="AutoUI_ui_Note-60">
+      className="AutoUI_ui_Note-62">
       <span
         className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         <div>
@@ -49,6 +49,39 @@ exports[`Note-1 1`] = `
           </p>
         </div>
       </span>
+    </div>
+    <div
+      className="AutoUI_ui_Note-83">
+      <div>
+        <div
+          className="AutoUI_ui_FileLinks-17">
+          <div
+            className="AutoUI_ui_FileLink-15">
+            <div
+              className="AutoUI_ui_FileLink-19 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+              <a
+                href="https://s3.amazonaws.com/auto-exam-videos/148c4cb11547066f20d313197c88b7cd.pdf"
+                target="_blank">
+                View Attachment
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="AutoUI_ui_FileLinks-17">
+          <div
+            className="AutoUI_ui_FileLink-15">
+            <div
+              className="AutoUI_ui_FileLink-19 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+              <a
+                href="https://s3.amazonaws.com/auto-exam-videos/148c4cb11547066f20d313197c88b7cd.pdf"
+                target="_blank">
+                View Attachment
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
