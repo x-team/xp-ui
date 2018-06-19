@@ -66,6 +66,19 @@ const styles = {
       position: absolute
     }
   `),
+  close: cmz(`
+    & {
+      position: absolute
+      z-index: 5
+      top: calc(50% - 7px)
+      right: 40px
+      cursor: pointer
+    }
+
+    & svg {
+      position: absolute
+    }
+  `),
   label: cmz(
     typo.baseText,
     `
@@ -160,9 +173,11 @@ const styles = {
 type Item = {
   id: number,
   value: string,
-  editing?: string,
-  hidden?: boolean,
-  selected?: boolean
+  selected?: boolean,
+
+  selecting?: boolean,
+  editing?: boolean | string,
+  hidden?: boolean
 }
 
 type Props = {
@@ -181,7 +196,8 @@ type Props = {
 type State = {
   search?: string,
   items?: Array<Item>,
-  expanded?: boolean
+  expanded?: boolean,
+  creating?: boolean
 }
 
 class SelectBox extends Component<Props, State> {
@@ -195,48 +211,74 @@ class SelectBox extends Component<Props, State> {
   state: State = {
     search: '',
     items: this.props.items,
-    expanded: this.props.expanded
+    view: this.props.items.map(each => ({
+      id: each.id,
+      value: each.value,
+      selected: each.selected || false,
+      selecting: false,
+      editing: false,
+      hidden: false
+    })),
+    expanded: this.props.expanded,
+    creating: false
   }
 
   componentDidUpdate (prevProps: Props, prevState: State) {
-    console.log(!Object.is(prevProps, this.props))
+    console.log('!componentDidUpdate')
+    // console.log('prevProps:', prevProps)
+    // console.log('this.props:', this.props)
+    // console.log('prevState:', prevState)
+    // console.log('this.state:', this.state)
+    //
+    // to do: deeply compare states and props.
+    // the props will change from application and it's values are expected
+    // to be the correct. internally all changes handles only state.
+    // the events that communicate with application must be async.
+    //
+    // to do: separate what is data (aka props.items) from states concerns:
+    // -> state.items holds changes of props.items and merge with view.items.
+    //
     // if (!Object.is(prevProps, this.props)) {
       // this.setState((prevState, props) => ({ ...prevProps, ...prevState }))
     // }
   }
 
-
   updateItemsState = (updatedItem: Item) => {
-    const { items } = this.state
-    const newItems = items && items.map((each, i) => {
+    const { view } = this.state
+    const newItems = view && view.map((each, i) => {
       return each.id === updatedItem.id ? updatedItem : each
     })
-    this.setState({ items: newItems })
+    this.setState({ view: newItems })
   }
 
   handleSearch = (input: Object) => {
-    const { items } = this.state
+    const { view } = this.state
     const match = new RegExp(input.trim().toUpperCase(), 'g')
-    const filteredItems = items && items.map(item => {
+    const filteredItems = view && view.map(item => {
       const itemMatch = item && item.value && item.value.toUpperCase().match(match)
       return {
         ...item,
         hidden: !(itemMatch && itemMatch.length > 0)
       }
     })
-    // console.log(filteredItems)
-    this.setState(() => ({ search: input, items: filteredItems }))
+    this.setState({ search: input, view: filteredItems })
   }
 
   handleSelect = (item: Item) => {
-    const { items } = this.state
-    const { onSelect } = this.props
-    const updatedItem = { ...item, selected: !item.selected }
-    if (onSelect) {
-      this.updateItemsState({ ...updatedItem, selecting: true })
-      onSelect((updatedItem) => {
-        this.updateItemsState({ ...updatedItem, selecting: false })
-      })
+    if (!item.selecting) {
+      const { view } = this.state
+      const { onSelect } = this.props
+      const updatedItem = {
+        ...view.find(obj => obj.id === item.id),
+        selected: !item.selected
+      }
+      if (onSelect) {
+        this.updateItemsState({ ...updatedItem, selecting: true })
+        onSelect(updatedItem).then(() => {
+          const uncachedItem = this.state.view.find(obj => obj.id === item.id)
+          this.updateItemsState({ ...uncachedItem, selecting: false })
+        })
+      }
     }
   }
 
@@ -250,14 +292,17 @@ class SelectBox extends Component<Props, State> {
   }
 
   handleCreateNew = () => {
-    const { search } = this.state
-    const { onCreateNew } = this.props
-    if (onCreateNew) {
-      this.setState(() => ({ creating: true }))
-      onCreateNew(search, () => {
-        this.setState(() => ({ creating: false }))
-        // this.handleSearch('')
-      })
+    const { view, search, creating } = this.state
+    if (!creating) {
+      const { onCreateNew } = this.props
+      if (onCreateNew) {
+        this.setState(() => ({ creating: true }))
+        onCreateNew(search).then((item) => {
+          const uncachedView = this.state.view
+          this.setState(() => ({ view: [...uncachedView, item], creating: false }))
+          this.handleSearch('')
+        })
+      }
     }
   }
 
@@ -281,22 +326,26 @@ class SelectBox extends Component<Props, State> {
     const { onEdit } = this.props
     const updatedItem = { ...item, value: item.editing, editing: '' }
     if (onEdit) {
-      onEdit(updatedItem)
       this.updateItemsState(updatedItem)
+      onEdit(updatedItem)
+      // to do: async
     }
   }
 
   render () {
     const { placeholder, collectionName, itemsHeight, width, expanded, onSelect, onEdit, onCreateNew } = this.props
-    const { items, search, creating } = this.state
+    const { view, search, creating } = this.state
 
-    const filteredItems = items && items.filter((item: Item) => !item.hidden)
+    // console.log('render: this.state.items:', this.state.items)
+
+    const filteredItems = view && view.filter((item: Item) => !item.hidden)
 
     const renderCheckboxOrString = (item: Item) => onSelect ? (
       item.selecting ? (
         <span>... {item.value}</span>
       ) : (
         <InputField
+          key={`${item.id}${item.selected}`}
           type='checkbox'
           label={item.value}
           name={item.value}
@@ -392,9 +441,11 @@ class SelectBox extends Component<Props, State> {
           autoComplete='off'
           disabled={creating}
         />
-        <div className={styles.triangle}>
-          <SvgIcon icon='triangledown' color='grayscale' />
-        </div>
+        {search !== '' && (
+          <div className={styles.close} onClick={() => this.handleSearch('')}>
+            <SvgIcon icon='x' color='grayscale' />
+          </div>
+        )}
       </div>
     ) : (
       <div className={styles.placeholder}>

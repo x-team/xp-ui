@@ -34,16 +34,7 @@ const itemsArray = [
   width={300}
   itemsHeight={3}
   onSelect={item => console.log('onSelect:', item)}
-  onCreateNew={(listName, done) => {
-    done && setTimeout(() => {
-      itemsArray.push({
-        id: new Date().getUTCMilliseconds(),
-        value: listName
-      })
-      console.log('onCreateNew:', listName)
-      done()
-    }, 5000)
-  }}
+  onCreateNew={listName => console.log('onCreateNew:', listName)}
 />
 ```
 
@@ -111,24 +102,23 @@ const itemsArray = [
   collectionName="List"
   items={itemsArray}
   expanded={true}
-  onSelect={item => {
-    setTimeout(() => {
-      const index = itemsArray.findIndex(obj => item.id === obj.id)
-      itemsArray[index].selected = !itemsArray[index].selected
-      console.log('onSelect:', item)
-    }, 1000)
-  }}
+  onSelect={item =>
+    new Promise(resolve =>
+      setTimeout(() => {
+        console.log('onSelect:', item);
+        resolve(true);
+      }, 2500)
+    )
+  }
   onEdit={item => console.log('onEdit:', item)}
-  onCreateNew={(listName, done) => {
-    done && setTimeout(() => {
-      itemsArray.push({
-        id: new Date().getUTCMilliseconds(),
-        value: listName
-      })
-      console.log('onCreateNew:', listName)
-      done()
-    }, 5000)
-  }}
+  onCreateNew={listName =>
+    new Promise(resolve =>
+      setTimeout(() => {
+        console.log('onCreateNew:', listName);
+        resolve({ id: new Date().getUTCMilliseconds(), value: listName });
+      }, 3000)
+    )
+  }
 />
 ```
 
