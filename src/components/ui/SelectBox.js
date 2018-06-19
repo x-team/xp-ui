@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import InputField from '../forms/InputField'
 import SvgIcon from './SvgIcon'
 import Dropdown from './Dropdown'
@@ -184,7 +184,7 @@ type State = {
   expanded?: boolean
 }
 
-class SelectBox extends PureComponent<Props, State> {
+class SelectBox extends Component<Props, State> {
   static defaultProps = {
     placeholder: 'Search',
     items: [],
@@ -198,11 +198,13 @@ class SelectBox extends PureComponent<Props, State> {
     expanded: this.props.expanded
   }
 
-  componentDidUpdate (prevProps: Props) {
-    if (!Object.is(this.props.items, prevProps.items)) {
-      this.setState({ items: this.props.items })
-    }
+  componentDidUpdate (prevProps: Props, prevState: State) {
+    console.log(!Object.is(prevProps, this.props))
+    // if (!Object.is(prevProps, this.props)) {
+      // this.setState((prevState, props) => ({ ...prevProps, ...prevState }))
+    // }
   }
+
 
   updateItemsState = (updatedItem: Item) => {
     const { items } = this.state
@@ -214,8 +216,7 @@ class SelectBox extends PureComponent<Props, State> {
 
   handleSearch = (input: Object) => {
     const { items } = this.state
-    const { value } = input.target
-    const match = new RegExp(value.trim().toUpperCase(), 'g')
+    const match = new RegExp(input.trim().toUpperCase(), 'g')
     const filteredItems = items && items.map(item => {
       const itemMatch = item && item.value && item.value.toUpperCase().match(match)
       return {
@@ -223,15 +224,19 @@ class SelectBox extends PureComponent<Props, State> {
         hidden: !(itemMatch && itemMatch.length > 0)
       }
     })
-    this.setState({ search: value, items: filteredItems })
+    // console.log(filteredItems)
+    this.setState(() => ({ search: input, items: filteredItems }))
   }
 
   handleSelect = (item: Item) => {
+    const { items } = this.state
     const { onSelect } = this.props
     const updatedItem = { ...item, selected: !item.selected }
     if (onSelect) {
-      onSelect(updatedItem)
-      this.updateItemsState(updatedItem)
+      this.updateItemsState({ ...updatedItem, selecting: true })
+      onSelect((updatedItem) => {
+        this.updateItemsState({ ...updatedItem, selecting: false })
+      })
     }
   }
 
@@ -248,7 +253,11 @@ class SelectBox extends PureComponent<Props, State> {
     const { search } = this.state
     const { onCreateNew } = this.props
     if (onCreateNew) {
-      onCreateNew(search)
+      this.setState(() => ({ creating: true }))
+      onCreateNew(search, () => {
+        this.setState(() => ({ creating: false }))
+        // this.handleSearch('')
+      })
     }
   }
 
@@ -279,18 +288,22 @@ class SelectBox extends PureComponent<Props, State> {
 
   render () {
     const { placeholder, collectionName, itemsHeight, width, expanded, onSelect, onEdit, onCreateNew } = this.props
-    const { items, search } = this.state
+    const { items, search, creating } = this.state
 
     const filteredItems = items && items.filter((item: Item) => !item.hidden)
 
     const renderCheckboxOrString = (item: Item) => onSelect ? (
-      <InputField
-        type='checkbox'
-        label={item.value}
-        name={item.value}
-        checked={item.selected}
-        onChange={() => this.handleSelect(item)}
-      />
+      item.selecting ? (
+        <span>... {item.value}</span>
+      ) : (
+        <InputField
+          type='checkbox'
+          label={item.value}
+          name={item.value}
+          checked={item.selected}
+          onChange={() => this.handleSelect(item)}
+        />
+      )
     ) : (
       <span className={styles.label} onClick={() => this.handleClick(item)}>
         {item.value}
@@ -316,6 +329,12 @@ class SelectBox extends PureComponent<Props, State> {
             name={item.value}
             value={item.editing}
             onChange={(input = {}) => this.handleEditChange(item, input)}
+            autoFocus='autofocus'
+            onFocus={(e) => {
+              const val = e.target.value
+              e.target.value = ''
+              e.target.value = val
+            }}
           />
         </span>
         <span className={styles.control}>
@@ -333,11 +352,17 @@ class SelectBox extends PureComponent<Props, State> {
       ? filteredItems.map(item => renderIsEditing(item))
       : (
         <li>
-          <span className={styles.nothinglabel}>No Results for "{search}"</span>
-          {onCreateNew && (
-            <span className={styles.createnew} onClick={this.handleCreateNew}>
-              <SvgIcon icon='plus' />
-              <span>Add new {collectionName} "{search}"</span>
+          {creating ? (
+            <span className={styles.nothinglabel}>Adding new {collectionName} "{search}"...</span>
+          ) : (
+            <span>
+              <span className={styles.nothinglabel}>No Results for "{search}"</span>
+              {onCreateNew && (
+                <span className={styles.createnew} onClick={this.handleCreateNew}>
+                  <SvgIcon icon='plus' />
+                  <span>Add new {collectionName} "{search}"</span>
+                </span>
+              )}
             </span>
           )}
         </li>
@@ -360,9 +385,12 @@ class SelectBox extends PureComponent<Props, State> {
         </div>
         <InputField
           name='search'
+          value={search}
           placeholder={placeholder}
-          onChange={(input = {}) => this.handleSearch(input)}
+          onChange={(input = {}) => this.handleSearch(input.target.value)}
           className={styles.searchinput}
+          autoComplete='off'
+          disabled={creating}
         />
         <div className={styles.triangle}>
           <SvgIcon icon='triangledown' color='grayscale' />
@@ -385,7 +413,11 @@ class SelectBox extends PureComponent<Props, State> {
             {renderItems()}
           </div>
         ) : (
-          <Dropdown label={renderSearchLabel()} className={styles.dropdown}>
+          <Dropdown
+            toggle={placeholder === 'Search' ? false : true}
+            label={renderSearchLabel()}
+            className={styles.dropdown}
+          >
             {renderItems()}
           </Dropdown>
         )}

@@ -58,15 +58,14 @@ const itemsArray = [
     selected: false
   }
 ];
-<Dropdown icon="add" label="Add to List" indicator padded>
+<Dropdown icon="add" label="This is a Dropdown" indicator padded>
   <SelectBox
     collectionName="List"
     items={itemsArray}
-    expanded={true}
+    expanded={false}
     width={300}
     itemsHeight={3}
-    onSelect={(listId) => console.log('onSelect', listId)}
-    onCreateNew={(listName) => console.log('onCreateNew', listName)}
+    onClick={item => console.log('onClick:', item)}
   />
 </Dropdown>
 ```

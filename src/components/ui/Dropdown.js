@@ -71,6 +71,7 @@ type Props = {
   position?: string,
   indicator?: boolean,
   padded?: boolean,
+  toggle?: boolean,
   className?: string
 }
 
@@ -85,7 +86,8 @@ class Dropdown extends PureComponent<Props, State> {
     children: null,
     position: 'left',
     indicator: false,
-    padded: false
+    padded: false,
+    toggle: true
   }
 
   state = {
@@ -94,10 +96,12 @@ class Dropdown extends PureComponent<Props, State> {
 
   toggle = () => this.setState((prevState: State) => ({ open: !prevState.open }))
 
+  open = () => this.setState((prevState: State) => ({ open: true }))
+
   close = () => this.setState(() => ({ open: false }))
 
   render () {
-    const { icon, label, children, position, indicator, padded, className } = this.props
+    const { icon, label, children, position, indicator, padded, toggle, className } = this.props
     const { open } = this.state
 
     const rootClasses = [
@@ -117,7 +121,7 @@ class Dropdown extends PureComponent<Props, State> {
     return (children || label || icon) ? (
       <ClickOutside onClickOutside={this.close}>
         <div className={rootClasses}>
-          <div className={labelClasses} onClick={this.toggle}>
+          <div className={labelClasses} onClick={() => toggle ? this.toggle() : this.open()}>
             {icon && <SvgIcon icon={icon} color='text' />}
             {label && <span className={styles.labelElement}>{label}</span>}
             {indicator && (
