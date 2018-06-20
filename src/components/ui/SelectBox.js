@@ -254,7 +254,7 @@ class SelectBox extends Component<Props, State> {
       return {
         id: each.id,
         value: each.value,
-        selected: each.selected || viewItem.selected || false,
+        selected: each.selected || false,
         selecting: each.selecting || viewItem.selecting || false,
         editing: each.editing || viewItem.editing || false,
         saving: each.saving || viewItem.saving || false,
