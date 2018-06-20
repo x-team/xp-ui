@@ -289,55 +289,49 @@ class SelectBox extends Component<Props, State> {
   }
 
   handleSelect = (item: Item) => {
-    if (!item.selecting) {
-      const { view } = this.state
-      const { onSelect } = this.props
+    const { onSelect } = this.props
+    const { view } = this.state
+    if (!item.selecting && onSelect && (typeof onSelect.then === 'function')) {
       const updatedItem = {
         ...view.find(obj => obj.id === item.id),
         selected: !item.selected
       }
-      if (onSelect) {
-        this.updateItemsState({ ...updatedItem, selecting: true })
-        onSelect(updatedItem).then(() => {
-          const uncachedItem = this.state.view.find(obj => obj.id === item.id)
-          this.updateItemsState({ ...uncachedItem, selecting: false })
-        })
-      }
+      this.updateItemsState({ ...updatedItem, selecting: true })
+      onSelect(updatedItem).then(() => {
+        const uncachedItem = this.state.view.find(obj => obj.id === item.id)
+        this.updateItemsState({ ...uncachedItem, selecting: false })
+      })
     }
   }
 
   handleClick = (item: Item) => {
-    if (!item.selecting) {
-      const { view } = this.state
-      const { onClick } = this.props
-      if (!onClick) {
-        this.handleSelect(item)
-      } else {
-        const updatedItem = {
-          ...view.find(obj => obj.id === item.id),
-          selected: !item.selected
-        }
-        this.updateItemsState({ ...updatedItem, selecting: true })
-        onClick(item).then(() => {
-          const uncachedItem = this.state.view.find(obj => obj.id === item.id)
-          this.updateItemsState({ ...uncachedItem, selecting: false })
-        })
+    const { onClick } = this.props
+    const { view } = this.state
+    if (!item.selecting && onClick && (typeof onClick.then === 'function')) {
+      const updatedItem = {
+        ...view.find(obj => obj.id === item.id),
+        selected: !item.selected
       }
+      this.updateItemsState({ ...updatedItem, selecting: true })
+      onClick(item).then(() => {
+        const uncachedItem = this.state.view.find(obj => obj.id === item.id)
+        this.updateItemsState({ ...uncachedItem, selecting: false })
+      })
+    } else {
+      this.handleSelect(item)
     }
   }
 
   handleCreateNew = () => {
+    const { onCreateNew } = this.props
     const { view, search, creating } = this.state
-    if (!creating) {
-      const { onCreateNew } = this.props
-      if (onCreateNew) {
-        this.setState(() => ({ creating: true }))
-        onCreateNew(search).then((item) => {
-          const uncachedView = this.state.view
-          this.setState(() => ({ view: [...uncachedView, item], creating: false }))
-          this.handleSearch('')
-        })
-      }
+    if (!creating && onCreateNew && (typeof onCreateNew.then === 'function')) {
+      this.setState(() => ({ creating: true }))
+      onCreateNew(search).then((item) => {
+        const uncachedView = this.state.view
+        this.setState(() => ({ view: [...uncachedView, item], creating: false }))
+        this.handleSearch('')
+      })
     }
   }
 
@@ -358,13 +352,13 @@ class SelectBox extends Component<Props, State> {
   }
 
   handleEdit = (item: Item) => {
-    const { view } = this.state
     const { onEdit } = this.props
-    const updatedItem = {
-      ...view.find(obj => obj.id === item.id),
-      value: item.editing
-    }
-    if (onEdit) {
+    const { view } = this.state
+    if (onEdit && (typeof onEdit.then === 'function')) {
+      const updatedItem = {
+        ...view.find(obj => obj.id === item.id),
+        value: item.editing
+      }
       this.updateItemsState({ ...updatedItem, saving: true })
       onEdit(updatedItem).then((item) => {
         const uncachedItem = this.state.view.find(obj => obj.id === item.id)
@@ -374,7 +368,16 @@ class SelectBox extends Component<Props, State> {
   }
 
   render () {
-    const { placeholder, collectionName, itemsHeight, width, expanded, onSelect, onEdit, onCreateNew } = this.props
+    const {
+      placeholder,
+      collectionName,
+      itemsHeight,
+      width,
+      expanded,
+      onSelect,
+      onEdit,
+      onCreateNew
+    } = this.props
     const { view, search, creating } = this.state
 
     const filteredItems = view && view.filter((item: Item) => !item.hidden)
@@ -480,6 +483,7 @@ class SelectBox extends Component<Props, State> {
       )
 
     const itemsClasses = [ styles.list, expanded ? '' : styles.shadow ].join(' ')
+
     const renderItems = () => ((filteredItems && filteredItems.length > 0) || search) ? (
       <ul className={itemsClasses} style={{
         maxHeight: itemsHeight ? `${itemsHeight * 61}px` : 'auto',
