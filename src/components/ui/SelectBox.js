@@ -85,6 +85,13 @@ const styles = {
       line-height: 1
     `
   ),
+  labelevent: cmz(
+    typo.baseText,
+    `
+      line-height: 1
+      font-style: italic
+    `
+  ),
   list: cmz(`
     list-style: none
     margin: 0
@@ -117,6 +124,11 @@ const styles = {
     margin: 0 22px
     padding: 15px 0
   `),
+  editing: cmz(`
+    & input {
+      border-bottom: 1px solid ${theme.baseRed}
+    }
+  `),
   control: cmz(`
     flex-shrink: 0
     display: flex
@@ -127,6 +139,13 @@ const styles = {
     display: flex
     align-items: center
   `),
+  saving: cmz(typo.baseText),
+  selecting: cmz(
+    typo.baseText,
+    `
+      padding: 0 0 0 13px
+    `
+  ),
   editinput: cmz(
     typo.baseText,
     `
@@ -215,11 +234,12 @@ class SelectBox extends Component<Props, State> {
       id: each.id,
       value: each.value,
       selected: each.selected || false,
-      selecting: false,
-      editing: false,
-      hidden: false
+      selecting: each.selecting || false,
+      editing: each.editing || false,
+      saving: each.saving || false,
+      hidden: each.hidden || false
     })),
-    expanded: this.props.expanded,
+    expanded: this.props.expanded || false,
     creating: false
   }
 
@@ -228,15 +248,22 @@ class SelectBox extends Component<Props, State> {
     // console.log('prevProps:', prevProps)
     // console.log('this.props:', this.props)
     // console.log('prevState:', prevState)
-    // console.log('this.state:', this.state)
+    console.log('this.state:', this.state)
     //
     // to do: deeply compare states and props.
     // the props will change from application and it's values are expected
     // to be the correct. internally all changes handles only state.
     // the events that communicate with application must be async.
+    // - in this component we have transitional states:
+    //   - selecting (applies on each item on view)
+    //   - editing (applies on each item on view)
+    //   - creating (applies on state)
+    //   - searching (not available currently because the search won't require async, at least not yet)
     //
     // to do: separate what is data (aka props.items) from states concerns:
-    // -> state.items holds changes of props.items and merge with view.items.
+    // -> state.items holds changes of props.items and merge with state.view.items.
+    //
+    // to do: input and output filters
     //
     // if (!Object.is(prevProps, this.props)) {
       // this.setState((prevState, props) => ({ ...prevProps, ...prevState }))
@@ -246,7 +273,7 @@ class SelectBox extends Component<Props, State> {
   updateItemsState = (updatedItem: Item) => {
     const { view } = this.state
     const newItems = view && view.map((each, i) => {
-      return each.id === updatedItem.id ? updatedItem : each
+      return each.id === updatedItem.id ? { ...each, ...updatedItem } : each
     })
     this.setState({ view: newItems })
   }
@@ -256,10 +283,7 @@ class SelectBox extends Component<Props, State> {
     const match = new RegExp(input.trim().toUpperCase(), 'g')
     const filteredItems = view && view.map(item => {
       const itemMatch = item && item.value && item.value.toUpperCase().match(match)
-      return {
-        ...item,
-        hidden: !(itemMatch && itemMatch.length > 0)
-      }
+      return { ...item, hidden: !(itemMatch && itemMatch.length > 0) }
     })
     this.setState({ search: input, view: filteredItems })
   }
@@ -283,11 +307,22 @@ class SelectBox extends Component<Props, State> {
   }
 
   handleClick = (item: Item) => {
-    const { onClick } = this.props
-    if (!onClick) {
-      this.handleSelect(item)
-    } else {
-      onClick(item)
+    if (!item.selecting) {
+      const { view } = this.state
+      const { onClick } = this.props
+      if (!onClick) {
+        this.handleSelect(item)
+      } else {
+        const updatedItem = {
+          ...view.find(obj => obj.id === item.id),
+          selected: !item.selected
+        }
+        this.updateItemsState({ ...updatedItem, selecting: true })
+        onClick(item).then(() => {
+          const uncachedItem = this.state.view.find(obj => obj.id === item.id)
+          this.updateItemsState({ ...uncachedItem, selecting: false })
+        })
+      }
     }
   }
 
@@ -323,12 +358,18 @@ class SelectBox extends Component<Props, State> {
   }
 
   handleEdit = (item: Item) => {
+    const { view } = this.state
     const { onEdit } = this.props
-    const updatedItem = { ...item, value: item.editing, editing: '' }
+    const updatedItem = {
+      ...view.find(obj => obj.id === item.id),
+      value: item.editing
+    }
     if (onEdit) {
-      this.updateItemsState(updatedItem)
-      onEdit(updatedItem)
-      // to do: async
+      this.updateItemsState({ ...updatedItem, saving: true })
+      onEdit(updatedItem).then((item) => {
+        const uncachedItem = this.state.view.find(obj => obj.id === item.id)
+        this.updateItemsState({ ...uncachedItem, saving: false, editing: false })
+      })
     }
   }
 
@@ -336,13 +377,13 @@ class SelectBox extends Component<Props, State> {
     const { placeholder, collectionName, itemsHeight, width, expanded, onSelect, onEdit, onCreateNew } = this.props
     const { view, search, creating } = this.state
 
-    // console.log('render: this.state.items:', this.state.items)
-
     const filteredItems = view && view.filter((item: Item) => !item.hidden)
 
     const renderCheckboxOrString = (item: Item) => onSelect ? (
       item.selecting ? (
-        <span>... {item.value}</span>
+        <span className={styles.selecting}>
+          ... {item.value}
+        </span>
       ) : (
         <InputField
           key={`${item.id}${item.selected}`}
@@ -354,9 +395,15 @@ class SelectBox extends Component<Props, State> {
         />
       )
     ) : (
-      <span className={styles.label} onClick={() => this.handleClick(item)}>
-        {item.value}
-      </span>
+      item.selecting ? (
+        <span className={styles.labelevent}>
+          {item.value}
+        </span>
+      ) : (
+        <span className={styles.label} onClick={() => this.handleClick(item)}>
+          {item.value}
+        </span>
+      )
     )
 
     const renderEditable = (item) => onEdit && (
@@ -365,14 +412,20 @@ class SelectBox extends Component<Props, State> {
       </span>
     )
 
-    const itemClasses = [ styles.item, expanded ? '' : styles.lined ].join(' ')
-    const renderIsEditing = (item: Item) => !item.editing ? (
-      <li className={itemClasses} key={item.id}>
-        {renderCheckboxOrString(item)}
-        {renderEditable(item)}
+    const itemClasses = (item) => ([
+      styles.item,
+      expanded ? '' : styles.lined,
+      (item.editing && item.editing !== item.value) ? styles.editing : ''
+    ].join(' '))
+
+    const renderIsSavingOrEditing = (item: Item) => item.saving ? (
+      <li className={itemClasses(item)} key={item.id}>
+        <span className={styles.saving}>
+          Saving "{item.value}"...
+        </span>
       </li>
     ) : (
-      <li className={itemClasses} key={item.id}>
+      <li className={itemClasses(item)} key={item.id}>
         <span className={styles.editinput}>
           <InputField
             name={item.value}
@@ -396,6 +449,15 @@ class SelectBox extends Component<Props, State> {
         </span>
       </li>
     )
+
+    const renderIsEditing = (item: Item) => item.editing
+      ? renderIsSavingOrEditing(item)
+      : (
+        <li className={itemClasses(item)} key={item.id}>
+          {renderCheckboxOrString(item)}
+          {renderEditable(item)}
+        </li>
+      )
 
     const renderItemsOrEmpty = () => filteredItems && filteredItems.length > 0
       ? filteredItems.map(item => renderIsEditing(item))

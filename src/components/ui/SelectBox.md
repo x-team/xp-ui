@@ -33,8 +33,23 @@ const itemsArray = [
   items={itemsArray}
   width={300}
   itemsHeight={3}
-  onSelect={item => console.log('onSelect:', item)}
-  onCreateNew={listName => console.log('onCreateNew:', listName)}
+  onSelect={item =>
+    new Promise(resolve =>
+      setTimeout(() => {
+        console.log('onSelect:', item);
+        resolve(item);
+      }, 3000)
+    )
+  }
+  onCreateNew={listName =>
+    new Promise(resolve =>
+      setTimeout(() => {
+        const newItem = { id: new Date().getUTCMilliseconds(), value: listName }
+        console.log('onCreateNew:', newItem);
+        resolve(newItem);
+      }, 3000)
+    )
+  }
 />
 ```
 
@@ -69,7 +84,14 @@ const itemsArray = [
   items={itemsArray}
   width={200}
   itemsHeight={4}
-  onClick={item => console.log('onClick:', item)}
+  onClick={item =>
+    new Promise(resolve =>
+      setTimeout(() => {
+        console.log('onClick:', item);
+        resolve(item);
+      }, 3000)
+    )
+  }
 />
 ```
 
@@ -106,16 +128,24 @@ const itemsArray = [
     new Promise(resolve =>
       setTimeout(() => {
         console.log('onSelect:', item);
-        resolve(true);
-      }, 2500)
+        resolve(item);
+      }, 3000)
     )
   }
-  onEdit={item => console.log('onEdit:', item)}
+  onEdit={item =>
+    new Promise(resolve =>
+      setTimeout(() => {
+        console.log('onEdit:', item);
+        resolve(item);
+      }, 3000)
+    )
+  }
   onCreateNew={listName =>
     new Promise(resolve =>
       setTimeout(() => {
-        console.log('onCreateNew:', listName);
-        resolve({ id: new Date().getUTCMilliseconds(), value: listName });
+        const newItem = { id: new Date().getUTCMilliseconds(), value: listName }
+        console.log('onCreateNew:', newItem);
+        resolve(newItem);
       }, 3000)
     )
   }
