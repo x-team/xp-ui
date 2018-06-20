@@ -193,7 +193,6 @@ type Item = {
   id: number,
   value: string,
   selected?: boolean,
-
   selecting?: boolean,
   editing?: boolean | string,
   hidden?: boolean
@@ -215,6 +214,7 @@ type Props = {
 type State = {
   search?: string,
   items?: Array<Item>,
+  view: Array<Item>,
   expanded?: boolean,
   creating?: boolean
 }
@@ -248,27 +248,28 @@ class SelectBox extends Component<Props, State> {
     // console.log('prevProps:', prevProps)
     // console.log('this.props:', this.props)
     // console.log('prevState:', prevState)
-    console.log('this.state:', this.state)
-    //
-    // to do: deeply compare states and props.
-    // the props will change from application and it's values are expected
-    // to be the correct. internally all changes handles only state.
-    // the events that communicate with application must be async.
-    // - in this component we have transitional states:
-    //   - selecting (applies on each item on view)
-    //   - editing (applies on each item on view)
-    //   - creating (applies on state)
-    //   - searching (not available currently because the search won't require async, at least not yet)
-    //
-    // to do: separate what is data (aka props.items) from states concerns:
-    // -> state.items holds changes of props.items and merge with state.view.items.
-    //
-    // to do: input and output filters
-    //
+    // console.log('this.state:', this.state)
+
+    const viewItems = this.mapItemsInput(this.state.items)
+    console.log(this.state.view) // updated
+    console.log(viewItems) // gets outdated with state only changes
+    console.log(JSON.stringify(this.state.view) !== JSON.stringify(viewItems)) //
     // if (!Object.is(prevProps, this.props)) {
-      // this.setState((prevState, props) => ({ ...prevProps, ...prevState }))
+      // this.setState((prevState, props) => ({
+         // ...prevState
+      // }))
     // }
   }
+
+  mapItemsInput = items => items.map(each => ({
+    id: each.id,
+    value: each.value,
+    selected: each.selected || false,
+    selecting: each.selecting || false,
+    editing: each.editing || false,
+    saving: each.saving || false,
+    hidden: each.hidden || false
+  }))
 
   updateItemsState = (updatedItem: Item) => {
     const { view } = this.state
@@ -290,32 +291,42 @@ class SelectBox extends Component<Props, State> {
 
   handleSelect = (item: Item) => {
     const { onSelect } = this.props
-    const { view } = this.state
-    if (!item.selecting && onSelect && (typeof onSelect.then === 'function')) {
-      const updatedItem = {
-        ...view.find(obj => obj.id === item.id),
+    if (!item.selecting && onSelect && (typeof onSelect().then === 'function')) {
+      this.updateItemsState({
+        ...this.state.view.find(obj => obj.id === item.id),
+        selecting: true
+      })
+      onSelect({
+        ...this.state.view.find(obj => obj.id === item.id),
         selected: !item.selected
-      }
-      this.updateItemsState({ ...updatedItem, selecting: true })
-      onSelect(updatedItem).then(() => {
-        const uncachedItem = this.state.view.find(obj => obj.id === item.id)
-        this.updateItemsState({ ...uncachedItem, selecting: false })
+      }).then((reponseItem) => {
+        const uncachedItem = this.state.view.find(obj => obj.id === reponseItem.id)
+        uncachedItem && this.updateItemsState({
+          ...uncachedItem,
+          selected: !item.selected,
+          selecting: false
+        })
       })
     }
   }
 
   handleClick = (item: Item) => {
     const { onClick } = this.props
-    const { view } = this.state
-    if (!item.selecting && onClick && (typeof onClick.then === 'function')) {
-      const updatedItem = {
-        ...view.find(obj => obj.id === item.id),
+    if (!item.selecting && onClick && (typeof onClick().then === 'function')) {
+      this.updateItemsState({
+        ...this.state.view.find(obj => obj.id === item.id),
+        selecting: true
+      })
+      onClick({
+        ...this.state.view.find(obj => obj.id === item.id),
         selected: !item.selected
-      }
-      this.updateItemsState({ ...updatedItem, selecting: true })
-      onClick(item).then(() => {
-        const uncachedItem = this.state.view.find(obj => obj.id === item.id)
-        this.updateItemsState({ ...uncachedItem, selecting: false })
+      }).then((reponseItem) => {
+        const uncachedItem = this.state.view.find(obj => obj.id === reponseItem.id)
+        uncachedItem && this.updateItemsState({
+          ...uncachedItem,
+          selected: !item.selected,
+          selecting: false
+        })
       })
     } else {
       this.handleSelect(item)
@@ -324,12 +335,11 @@ class SelectBox extends Component<Props, State> {
 
   handleCreateNew = () => {
     const { onCreateNew } = this.props
-    const { view, search, creating } = this.state
-    if (!creating && onCreateNew && (typeof onCreateNew.then === 'function')) {
+    const { search, creating } = this.state
+    if (!creating && onCreateNew && (typeof onCreateNew().then === 'function')) {
       this.setState(() => ({ creating: true }))
-      onCreateNew(search).then((item) => {
-        const uncachedView = this.state.view
-        this.setState(() => ({ view: [...uncachedView, item], creating: false }))
+      onCreateNew(search).then((reponseItem) => {
+        this.setState(() => ({ view: [...this.state.view, reponseItem], creating: false }))
         this.handleSearch('')
       })
     }
@@ -353,16 +363,22 @@ class SelectBox extends Component<Props, State> {
 
   handleEdit = (item: Item) => {
     const { onEdit } = this.props
-    const { view } = this.state
-    if (onEdit && (typeof onEdit.then === 'function')) {
-      const updatedItem = {
-        ...view.find(obj => obj.id === item.id),
+    if (onEdit && (typeof onEdit().then === 'function')) {
+      this.updateItemsState({
+        ...this.state.view.find(obj => obj.id === item.id),
+        saving: true
+      })
+      onEdit({
+        ...this.state.view.find(obj => obj.id === item.id),
         value: item.editing
-      }
-      this.updateItemsState({ ...updatedItem, saving: true })
-      onEdit(updatedItem).then((item) => {
-        const uncachedItem = this.state.view.find(obj => obj.id === item.id)
-        this.updateItemsState({ ...uncachedItem, saving: false, editing: false })
+      }).then((reponseItem) => {
+        const uncachedItem = this.state.view.find(obj => obj.id === reponseItem.id)
+        this.updateItemsState({
+          ...uncachedItem,
+          value: reponseItem.value,
+          saving: false,
+          editing: false
+      })
       })
     }
   }
@@ -424,7 +440,7 @@ class SelectBox extends Component<Props, State> {
     const renderIsSavingOrEditing = (item: Item) => item.saving ? (
       <li className={itemClasses(item)} key={item.id}>
         <span className={styles.saving}>
-          Saving "{item.value}"...
+          Saving "{item.editing}"...
         </span>
       </li>
     ) : (

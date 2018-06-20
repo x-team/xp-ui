@@ -35,7 +35,7 @@ const itemsArray = [
   itemsHeight={3}
   onSelect={item =>
     new Promise(resolve =>
-      setTimeout(() => {
+      item && setTimeout(() => {
         console.log('onSelect:', item);
         resolve(item);
       }, 3000)
@@ -43,7 +43,7 @@ const itemsArray = [
   }
   onCreateNew={listName =>
     new Promise(resolve =>
-      setTimeout(() => {
+      listName && setTimeout(() => {
         const newItem = { id: new Date().getUTCMilliseconds(), value: listName }
         console.log('onCreateNew:', newItem);
         resolve(newItem);
@@ -86,7 +86,7 @@ const itemsArray = [
   itemsHeight={4}
   onClick={item =>
     new Promise(resolve =>
-      setTimeout(() => {
+      item && setTimeout(() => {
         console.log('onClick:', item);
         resolve(item);
       }, 3000)
@@ -126,7 +126,7 @@ const itemsArray = [
   expanded={true}
   onSelect={item =>
     new Promise(resolve =>
-      setTimeout(() => {
+      item && setTimeout(() => {
         console.log('onSelect:', item);
         resolve(item);
       }, 3000)
@@ -134,7 +134,7 @@ const itemsArray = [
   }
   onEdit={item =>
     new Promise(resolve =>
-      setTimeout(() => {
+      item && setTimeout(() => {
         console.log('onEdit:', item);
         resolve(item);
       }, 3000)
@@ -142,8 +142,9 @@ const itemsArray = [
   }
   onCreateNew={listName =>
     new Promise(resolve =>
-      setTimeout(() => {
+      listName && setTimeout(() => {
         const newItem = { id: new Date().getUTCMilliseconds(), value: listName }
+        itemsArray.push(newItem) // Side-effect to force props update
         console.log('onCreateNew:', newItem);
         resolve(newItem);
       }, 3000)

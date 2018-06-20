@@ -3,25 +3,51 @@ Labeled button:
 ```
 <Dropdown icon="add" label="Add to List" indicator>
   <div style={{ background: '#e9e9e9' }}>
-    <Loader />
+    <Dropdown label="Add to List">
+      <div style={{ background: '#c9c9c9' }}>
+        <Dropdown icon="calendar" label="Add to List" position="right" indicator padded>
+          <div style={{ background: '#b9b9b9' }}>
+            <Loader />
+          </div>
+        </Dropdown>
+      </div>
+    </Dropdown>
   </div>
 </Dropdown>
 ```
 
-Only text label:
+Label and indicator positioned on the right:
 
 ```
-<Dropdown label="Add to List">
-  <div style={{ background: '#e9e9e9' }}>
-    <Loader />
-  </div>
-</Dropdown>
+const itemsArray = [
+  { id: 1, value: "item-1" },
+  { id: 2, value: "item-2" },
+  { id: 3, value: "item-3" },
+  { id: 4, value: "item-4" },
+  { id: 5, value: "item-5" },
+  { id: 6, value: "item-6" }
+];
+<div style={{ textAlign: 'right' }}>
+  <Dropdown label="Find something" position="right" padded indicator>
+    <SelectBox
+      items={itemsArray}
+      expanded={true}
+      width={500}
+      onClick={item => new Promise(resolve => {
+        if (item) {
+          console.log('onClick:', item);
+          resolve(item);
+        }
+      })}
+    />
+  </Dropdown>
+</div>
 ```
 
 Icon only button:
 
 ```
-<Dropdown icon="hamburger" position="right" padded>
+<Dropdown icon="hamburger" padded>
   <div style={{ background: '#e9e9e9' }}>
     <Loader />
   </div>
@@ -32,31 +58,11 @@ SelectBox example:
 
 ```
 const itemsArray = [
-  {
-    id: 2,
-    value: "registered",
-    selected: true
-  },
-  {
-    id: 3,
-    value: "portfolio-building",
-    selected: true
-  },
-  {
-    id: 4,
-    value: "portfolio-review",
-    selected: true
-  },
-  {
-    id: 5,
-    value: "social-media-screen",
-    selected: true
-  },
-  {
-    id: 6,
-    value: "react-shortlist",
-    selected: false
-  }
+  { id: 2, value: "registered", selected: true },
+  { id: 3, value: "portfolio-building", selected: true },
+  { id: 4, value: "portfolio-review", selected: true },
+  { id: 5, value: "social-media-screen", selected: true },
+  { id: 6, value: "react-shortlist", selected: false }
 ];
 <Dropdown icon="add" label="This is a Dropdown" indicator padded>
   <SelectBox
@@ -65,10 +71,12 @@ const itemsArray = [
     expanded={false}
     width={300}
     itemsHeight={3}
-    onClick={item => new Promise(resolve =>
-      console.log('onClick:', item);
-      resolve(item);
-    )}
+    onClick={item => new Promise(resolve => {
+      if (item) {
+        console.log('onClick:', item);
+        resolve(item);
+      }
+    })}
   />
 </Dropdown>
 ```

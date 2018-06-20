@@ -39,6 +39,7 @@ const styles = {
   `),
   labelElement: cmz(`
     width: 100%
+    white-space: nowrap
   `),
   padded: cmz(`
     padding: 10px
