@@ -237,32 +237,30 @@ class SelectBox extends Component<Props, State> {
   }
 
   componentDidUpdate (prevProps: Props, prevState: State) {
-    console.log('!componentDidUpdate')
-    // console.log('prevProps:', prevProps)
-    // console.log('this.props:', this.props)
-    // console.log('prevState:', prevState)
-    // console.log('this.state:', this.state)
-
-    // const viewItems = this.mapItemsInput(this.state.items)
-    // console.log(this.state.view) // updated
-    // console.log(viewItems) // gets outdated with state only changes
-    // console.log(JSON.stringify(this.state.view) !== JSON.stringify(viewItems)) //
-    // if (!Object.is(prevProps, this.props)) {
-      // this.setState((prevState, props) => ({
-         // ...prevState
-      // }))
-    // }
+    if (!Object.is(prevProps, this.props)) {
+      const viewItems = this.mapItemsInput(this.props.items || [], this.state.view)
+      this.setState((prevState, props) => ({
+        ...prevState,
+        items: viewItems,
+        view: viewItems,
+        expanded: this.props.expanded
+      }))
+    }
   }
 
-  mapItemsInput = (items: Array<Item>) => items.map(each => ({
-    id: each.id,
-    value: each.value,
-    selected: each.selected || false,
-    selecting: each.selecting || false,
-    editing: each.editing || false,
-    saving: each.saving || false,
-    hidden: each.hidden || false
-  }))
+  mapItemsInput = (items: Array<Item>, view: Array<Item>) =>
+    items.map((each, i) => {
+      const viewItem = view.find(item => item.id === each.id) || {}
+      return {
+        id: each.id,
+        value: each.value,
+        selected: each.selected || viewItem.selected || false,
+        selecting: each.selecting || viewItem.selecting || false,
+        editing: each.editing || viewItem.editing || false,
+        saving: each.saving || viewItem.saving || false,
+        hidden: each.hidden || viewItem.hidden || false
+      }
+    })
 
   updateItemsState = (updatedItem: Item) => {
     const { view } = this.state
@@ -284,7 +282,7 @@ class SelectBox extends Component<Props, State> {
 
   handleSelect = (item: Item) => {
     const { onSelect } = this.props
-    if (!item.selecting && onSelect && (typeof onSelect().then === 'function')) {
+    if (!item.selecting && onSelect) { // to do: check if onSelect is a promise
       this.updateItemsState({
         ...this.state.view.find(obj => obj.id === item.id),
         selecting: true
@@ -299,13 +297,13 @@ class SelectBox extends Component<Props, State> {
           selected: !item.selected,
           selecting: false
         })
-      })
+      }) // to do: catch
     }
   }
 
   handleClick = (item: Item) => {
     const { onClick } = this.props
-    if (!item.selecting && onClick && (typeof onClick().then === 'function')) {
+    if (!item.selecting && onClick) { // to do: check if onClick is a promise
       this.updateItemsState({
         ...this.state.view.find(obj => obj.id === item.id),
         selecting: true
@@ -320,7 +318,7 @@ class SelectBox extends Component<Props, State> {
           selected: !item.selected,
           selecting: false
         })
-      })
+      }) // to do: catch
     } else {
       this.handleSelect(item)
     }
@@ -329,12 +327,12 @@ class SelectBox extends Component<Props, State> {
   handleCreateNew = () => {
     const { onCreateNew } = this.props
     const { search, creating } = this.state
-    if (!creating && onCreateNew && (typeof onCreateNew().then === 'function')) {
+    if (!creating && onCreateNew) { // to do: check if onCreateNew is a promise
       this.setState(() => ({ creating: true }))
       onCreateNew(search).then((reponseItem) => {
         this.setState(() => ({ view: [...this.state.view, reponseItem], creating: false }))
         this.handleSearch('')
-      })
+      }) // to do: catch
     }
   }
 
@@ -356,7 +354,7 @@ class SelectBox extends Component<Props, State> {
 
   handleEdit = (item: Item) => {
     const { onEdit } = this.props
-    if (onEdit && (typeof onEdit().then === 'function')) {
+    if (onEdit) { // to do: check if onEdit is a promise
       this.updateItemsState({
         ...this.state.view.find(obj => obj.id === item.id),
         saving: true
@@ -372,7 +370,7 @@ class SelectBox extends Component<Props, State> {
           saving: false,
           editing: false
         })
-      })
+      }) // to do: catch
     }
   }
 
