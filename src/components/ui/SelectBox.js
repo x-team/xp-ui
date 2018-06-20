@@ -195,6 +195,7 @@ type Item = {
   selected?: boolean,
   selecting?: boolean,
   editing?: boolean | string,
+  saving?: boolean,
   hidden?: boolean
 }
 
@@ -213,7 +214,7 @@ type Props = {
 
 type State = {
   search?: string,
-  items?: Array<Item>,
+  items: Array<Item>,
   view: Array<Item>,
   expanded?: boolean,
   creating?: boolean
@@ -229,16 +230,8 @@ class SelectBox extends Component<Props, State> {
 
   state: State = {
     search: '',
-    items: this.props.items,
-    view: this.props.items.map(each => ({
-      id: each.id,
-      value: each.value,
-      selected: each.selected || false,
-      selecting: each.selecting || false,
-      editing: each.editing || false,
-      saving: each.saving || false,
-      hidden: each.hidden || false
-    })),
+    items: this.props.items || [],
+    view: this.props.items || [],
     expanded: this.props.expanded || false,
     creating: false
   }
@@ -250,10 +243,10 @@ class SelectBox extends Component<Props, State> {
     // console.log('prevState:', prevState)
     // console.log('this.state:', this.state)
 
-    const viewItems = this.mapItemsInput(this.state.items)
-    console.log(this.state.view) // updated
-    console.log(viewItems) // gets outdated with state only changes
-    console.log(JSON.stringify(this.state.view) !== JSON.stringify(viewItems)) //
+    // const viewItems = this.mapItemsInput(this.state.items)
+    // console.log(this.state.view) // updated
+    // console.log(viewItems) // gets outdated with state only changes
+    // console.log(JSON.stringify(this.state.view) !== JSON.stringify(viewItems)) //
     // if (!Object.is(prevProps, this.props)) {
       // this.setState((prevState, props) => ({
          // ...prevState
@@ -261,7 +254,7 @@ class SelectBox extends Component<Props, State> {
     // }
   }
 
-  mapItemsInput = items => items.map(each => ({
+  mapItemsInput = (items: Array<Item>) => items.map(each => ({
     id: each.id,
     value: each.value,
     selected: each.selected || false,
@@ -279,14 +272,14 @@ class SelectBox extends Component<Props, State> {
     this.setState({ view: newItems })
   }
 
-  handleSearch = (input: Object) => {
+  handleSearch = (input: string) => {
     const { view } = this.state
     const match = new RegExp(input.trim().toUpperCase(), 'g')
     const filteredItems = view && view.map(item => {
       const itemMatch = item && item.value && item.value.toUpperCase().match(match)
       return { ...item, hidden: !(itemMatch && itemMatch.length > 0) }
     })
-    this.setState({ search: input, view: filteredItems })
+    this.setState({ ...this.state, search: input, view: filteredItems })
   }
 
   handleSelect = (item: Item) => {
@@ -378,7 +371,7 @@ class SelectBox extends Component<Props, State> {
           value: reponseItem.value,
           saving: false,
           editing: false
-      })
+        })
       })
     }
   }
@@ -405,7 +398,7 @@ class SelectBox extends Component<Props, State> {
         </span>
       ) : (
         <InputField
-          key={`${item.id}${item.selected}`}
+          key={`${item.id}${item.selected ? 'selected' : 'unselected'}`}
           type='checkbox'
           label={item.value}
           name={item.value}
@@ -547,7 +540,7 @@ class SelectBox extends Component<Props, State> {
           </div>
         ) : (
           <Dropdown
-            toggle={placeholder === 'Search' ? false : true}
+            toggle={placeholder !== 'Search'}
             label={renderSearchLabel()}
             className={styles.dropdown}
           >
