@@ -1,0 +1,7 @@
+exports[`VideoPlayer-21 1`] = `
+<iframe
+  className="AutoUI_ui_VideoPlayer-20"
+  height={360}
+  src="https://www.youtube.com/embed/R6NUFRNEai4?showinfo=0&autoplay=0&controls=0&loop=0&muted=0&poster=&preload=auto"
+  width={640} />
+`;

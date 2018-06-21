@@ -5,12 +5,16 @@ import React, { PureComponent } from 'react'
 const cmz = require('cmz')
 
 type Props = {
+  src: string,
+  embedded?: boolean,
   width?: number,
   height?: number,
-  poster?: string,
-  embedded?: boolean,
+  autoPlay?: boolean,
   showControls?: boolean,
-  src: string,
+  loop?: boolean,
+  muted?: boolean,
+  poster?: string,
+  preload?: 'auto' | 'metadata' | 'none',
 }
 
 const iframeStyles = cmz(`
@@ -24,39 +28,76 @@ const videoStyles = cmz(`
 
 class VideoPlayer extends PureComponent<Props> {
   static defaultProps = {
-    showControls: true,
     embedded: false,
-    poster: ''
+    autoPlay: false,
+    showControls: true,
+    loop: false,
+    muted: false,
+    poster: '',
+    preload: 'auto'
+  }
+
+  getEmbeddedVideoSrc = () => {
+    const {
+      src,
+      autoPlay,
+      showControls,
+      loop,
+      muted,
+      poster,
+      preload
+    } = this.props
+
+    return Object.entries({
+      autoplay: autoPlay,
+      controls: showControls,
+      loop,
+      muted,
+      poster,
+      preload
+    }).reduce((result, [key, val]) => {
+      const value = typeof val !== 'boolean'
+        ? val
+        : val === true ? 1 : 0
+
+      return `${result}&${key}=${String(value)}`
+    }, `${src}?showinfo=0`)
   }
 
   render () {
     const {
-      width,
-      height,
-      poster,
       src,
       embedded,
-      showControls
+      width,
+      height,
+      autoPlay,
+      showControls,
+      loop,
+      muted,
+      poster,
+      preload
     } = this.props
-
-    const embeddedVideoSrc = showControls ? `${src}?showinfo=0` : `${src}?controls=0&showinfo=0`
 
     return embedded
       ? (
         <iframe
           className={iframeStyles}
+          src={this.getEmbeddedVideoSrc()}
           width={width}
           height={height}
-          src={embeddedVideoSrc}
         />
       )
       : (
         <video
           className={videoStyles}
-          controls={showControls}
           width={width}
           height={height}
+          autoPlay={autoPlay}
+          controls={showControls}
+          loop={loop}
+          muted={muted}
           poster={poster}
+          preload={preload}
         >
           <source src={src} />
           Video cannot be played in this browser.
