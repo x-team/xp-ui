@@ -33,14 +33,7 @@ const itemsArray = [
   items={itemsArray}
   width={300}
   itemsHeight={3}
-  onSelect={item =>
-    new Promise(resolve =>
-      item && setTimeout(() => {
-        console.log('onSelect:', item);
-        resolve(item);
-      }, 3000)
-    )
-  }
+  onSelect={item => console.log('onSelect:', item)}
   onCreateNew={listName =>
     new Promise(resolve =>
       listName && setTimeout(() => {

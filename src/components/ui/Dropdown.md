@@ -33,12 +33,7 @@ const itemsArray = [
       items={itemsArray}
       expanded={true}
       width={500}
-      onClick={item => new Promise(resolve => {
-        if (item) {
-          console.log('onClick:', item);
-          resolve(item);
-        }
-      })}
+      onClick={item => console.log('onClick:', item)}
     />
   </Dropdown>
 </div>
@@ -71,12 +66,7 @@ const itemsArray = [
     expanded={false}
     width={300}
     itemsHeight={3}
-    onClick={item => new Promise(resolve => {
-      if (item) {
-        console.log('onClick:', item);
-        resolve(item);
-      }
-    })}
+    onClick={item => console.log('onClick:', item)}
   />
 </Dropdown>
 ```
