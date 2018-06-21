@@ -352,6 +352,13 @@ class SelectBox extends Component<Props, State> {
     this.updateItemsState(updatedItem)
   }
 
+  handleEscKeyPress = (e: any, item: Item) => {
+    const evt = e || window.event
+    if (evt.keyCode === 27) {
+      this.handleCancelEdit(item)
+    }
+  }
+
   handleEdit = (item: Item) => {
     const { onEdit } = this.props
     if (onEdit) { // to do: check if onEdit is a promise
@@ -447,6 +454,7 @@ class SelectBox extends Component<Props, State> {
               e.target.value = ''
               e.target.value = val
             }}
+            onKeyUp={(e: any) => this.handleEscKeyPress(e, item)}
           />
         </span>
         <span className={styles.control}>
