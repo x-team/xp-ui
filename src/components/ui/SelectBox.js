@@ -262,9 +262,11 @@ class SelectBox extends Component<Props, State> {
       }
     })
 
+  getUncachedItem = (item: Item) => this.state.view.find(obj => obj.id === item.id)
+
   updateItemsState = (updatedItem: Item) => {
     const { view } = this.state
-    const newItems = view && view.map((each, i) => {
+    const newItems = view && view.filter(each => Boolean(each.id)).map((each, i) => {
       return each.id === updatedItem.id ? { ...each, ...updatedItem } : each
     })
     this.setState({ view: newItems })
@@ -284,17 +286,15 @@ class SelectBox extends Component<Props, State> {
     const { onSelect } = this.props
     if (!item.selecting && onSelect) {
       this.updateItemsState({
-        ...this.state.view.find(obj => obj.id === item.id),
+        ...this.getUncachedItem(item),
         selecting: true
       })
       Promise.resolve(onSelect({
-        ...this.state.view.find(obj => obj.id === item.id),
+        ...this.getUncachedItem(item),
         selected: !item.selected
       })).then((reponseItem) => {
-        const currentItem = reponseItem || item
-        const uncachedItem = this.state.view.find(obj => obj.id === currentItem.id)
-        uncachedItem && this.updateItemsState({
-          ...uncachedItem,
+        this.updateItemsState({
+          ...this.getUncachedItem(reponseItem || item),
           selected: !item.selected,
           selecting: false
         })
@@ -306,17 +306,15 @@ class SelectBox extends Component<Props, State> {
     const { onClick } = this.props
     if (!item.selecting && onClick) {
       this.updateItemsState({
-        ...this.state.view.find(obj => obj.id === item.id),
+        ...this.getUncachedItem(item),
         selecting: true
       })
       Promise.resolve(onClick({
-        ...this.state.view.find(obj => obj.id === item.id),
+        ...this.getUncachedItem(item),
         selected: !item.selected
       })).then((reponseItem) => {
-        const currentItem = reponseItem || item
-        const uncachedItem = this.state.view.find(obj => obj.id === currentItem.id)
-        uncachedItem && this.updateItemsState({
-          ...uncachedItem,
+        this.updateItemsState({
+          ...this.getUncachedItem(reponseItem || item),
           selected: !item.selected,
           selecting: false
         })
@@ -332,7 +330,10 @@ class SelectBox extends Component<Props, State> {
     if (!creating && onCreateNew) {
       this.setState(() => ({ creating: true }))
       Promise.resolve(onCreateNew(search)).then((reponseItem) => {
-        reponseItem && this.setState(() => ({ view: [...this.state.view, reponseItem], creating: false }))
+        this.setState(() => ({
+          view: [...this.state.view, reponseItem],
+          creating: false
+        }))
         this.handleSearch('')
       }) // to do: catch state
     }
@@ -365,18 +366,16 @@ class SelectBox extends Component<Props, State> {
     const { onEdit } = this.props
     if (onEdit) {
       this.updateItemsState({
-        ...this.state.view.find(obj => obj.id === item.id),
+        ...this.getUncachedItem(item),
         saving: true
       })
       Promise.resolve(onEdit({
-        ...this.state.view.find(obj => obj.id === item.id),
+        ...this.getUncachedItem(item),
         value: item.editing
       })).then((reponseItem) => {
-        const currentItem = reponseItem || item
-        const uncachedItem = this.state.view.find(obj => obj.id === currentItem.id)
         this.updateItemsState({
-          ...uncachedItem,
-          value: currentItem.value,
+          ...this.getUncachedItem(reponseItem || item),
+          value: reponseItem.value || item.value,
           saving: false,
           editing: false
         })
