@@ -1,4 +1,4 @@
-exports[`VideoPlayer-15 1`] = `
+exports[`VideoPlayer-23 1`] = `
 <video
   autoPlay={false}
   className="AutoUI_ui_VideoPlayer-24"
@@ -6,10 +6,8 @@ exports[`VideoPlayer-15 1`] = `
   loop={false}
   muted={false}
   poster=""
-  preload="auto"
-  width={640}>
-  <source
-    src="https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4" />
+  preload="auto">
+  <source />
   Video cannot be played in this browser.
 </video>
 `;

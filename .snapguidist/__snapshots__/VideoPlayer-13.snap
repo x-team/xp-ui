@@ -1,7 +1,16 @@
 exports[`VideoPlayer-13 1`] = `
-<iframe
-  className="AutoUI_ui_VideoPlayer-16"
-  height={315}
-  src="https://www.youtube.com/embed/R6NUFRNEai4?showinfo=0"
-  width={560} />
+<video
+  autoPlay={false}
+  className="AutoUI_ui_VideoPlayer-24"
+  controls={true}
+  height={360}
+  loop={false}
+  muted={false}
+  poster=""
+  preload="auto"
+  width={640}>
+  <source
+    src="https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4" />
+  Video cannot be played in this browser.
+</video>
 `;

@@ -4,13 +4,47 @@ Regular video, source is provided only, video is set to its original sizes:
 <VideoPlayer src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'} />
 ```
 
-Poster set:
+Loop set, custom width and custom height set:
 
 ```js
 <VideoPlayer
   src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'}
-  width={560}
+  width={640}
+  height={360}
+  loop={true}
+/>
+```
+
+Muted set, custom width and custom height set:
+
+```js
+<VideoPlayer
+  src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'}
+  width={640}
+  height={360}
+  muted={true}
+/>
+```
+
+Poster set, custom width and custom height set:
+
+```js
+<VideoPlayer
+  src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'}
+  width={640}
+  height={360}
   poster={'http://www.hdfbcover.com/randomcovers/covers/never-stop-dreaming-quote-fb-cover.jpg'}
+/>
+```
+
+No preload, custom width and custom height set:
+
+```js
+<VideoPlayer
+  src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'}
+  width={640}
+  height={360}
+  preload={'none'}
 />
 ```
 
@@ -19,8 +53,8 @@ No controls, custom width and custom height set:
 ```js
 <VideoPlayer
   src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'}
-  width={560}
-  height={320}
+  width={640}
+  height={360}
   showControls={false}
 />
 ```
@@ -30,17 +64,8 @@ Visible controls, custom width and custom height set:
 ```js
 <VideoPlayer
   src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'}
-  width={540}
-  height={320}
-/>
-```
-
-Visible controls, custom height set / auto width:
-
-```js
-<VideoPlayer
-  src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'}
-  height={320}
+  width={640}
+  height={360}
 />
 ```
 
@@ -49,7 +74,16 @@ Visible controls, custom width set / auto height:
 ```js
 <VideoPlayer
   src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'}
-  width={560}
+  width={640}
+/>
+```
+
+Visible controls, custom height set / auto width:
+
+```js
+<VideoPlayer
+  src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'}
+  height={360}
 />
 ```
 
@@ -59,8 +93,8 @@ Embedded video, visible controls:
 <VideoPlayer
   src={'https://www.youtube.com/embed/R6NUFRNEai4'}
   embedded
-  width={560}
-  height={315}
+  width={640}
+  height={360}
 />
 ```
 
@@ -70,8 +104,8 @@ Embedded video, hidden controls:
 <VideoPlayer
   src={'https://www.youtube.com/embed/R6NUFRNEai4'}
   embedded
-  width={560}
-  height={315}
+  width={640}
+  height={360}
   showControls={false}
 />
 ```
