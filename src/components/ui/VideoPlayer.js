@@ -14,7 +14,7 @@ type Props = {
   loop?: boolean,
   muted?: boolean,
   poster?: string,
-  preload?: 'auto' | 'metadata' | 'none',
+  preload?: 'auto' | 'metadata' | 'none'
 }
 
 const iframeStyles = cmz(`
