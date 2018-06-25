@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
+
 import InputField from '../forms/InputField'
 import SvgIcon from './SvgIcon'
 import Dropdown from './Dropdown'
@@ -12,7 +13,7 @@ const cmz = require('cmz')
 
 const styles = {
   selectbox: cmz(`
-    background: #fff
+    background: ${theme.baseBrighter}
     position: relative
     width: 100%
   `),
@@ -99,7 +100,7 @@ const styles = {
     border: 1px solid ${theme.lineSilver2}
     border-top: none
     overflow-y: scroll
-    background: #fff
+    background: ${theme.baseBrighter}
     width: 100%
     box-sizing: border-box
   `),
@@ -408,9 +409,11 @@ class SelectBox extends Component<Props, State> {
 
   handleEditingKeyUp = (e: any, item: Item) => {
     const evt = e || window.event
+
     if (evt.keyCode === 27) { // Esc
       this.handleCancelEdit(item)
     }
+
     if (evt.keyCode === 13) { // Enter
       this.handleEdit(item)
     }

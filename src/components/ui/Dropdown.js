@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react'
 import ClickOutside from 'react-click-outside'
+
 import SvgIcon from './SvgIcon'
 
 import typo from '../../styles/typo'
