@@ -5,7 +5,7 @@ Labeled button:
   <div style={{ background: '#e9e9e9' }}>
     <Dropdown label="Add to List">
       <div style={{ background: '#c9c9c9' }}>
-        <Dropdown icon="calendar" label="Add to List" position="right" indicator padded>
+        <Dropdown icon="calendar" label="Add to List" targetOrigin="right" indicator padded>
           <div style={{ background: '#b9b9b9' }}>
             <Loader />
           </div>
@@ -28,7 +28,7 @@ const itemsArray = [
   { id: 6, value: "item-6" }
 ];
 <div style={{ textAlign: 'right' }}>
-  <Dropdown label="Find something" position="right" padded indicator>
+  <Dropdown label="Find something" targetOrigin="right" padded indicator>
     <SelectBox
       items={itemsArray}
       expanded={true}

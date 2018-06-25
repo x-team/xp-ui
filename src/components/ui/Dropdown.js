@@ -69,7 +69,7 @@ type Props = {
   icon?: Icon | '',
   label?: Element<*> | string,
   children?: Element<*> | string,
-  position?: string,
+  targetOrigin?: string,
   indicator?: boolean,
   padded?: boolean,
   toggle?: boolean,
@@ -85,7 +85,7 @@ class Dropdown extends PureComponent<Props, State> {
     icon: '',
     label: '',
     children: null,
-    position: 'left',
+    targetOrigin: 'left',
     indicator: false,
     padded: false,
     toggle: true
@@ -102,7 +102,7 @@ class Dropdown extends PureComponent<Props, State> {
   close = () => this.setState(() => ({ open: false }))
 
   render () {
-    const { icon, label, children, position, indicator, padded, toggle, className } = this.props
+    const { icon, label, children, targetOrigin, indicator, padded, toggle, className } = this.props
     const { open } = this.state
 
     const rootClasses = [
@@ -116,7 +116,7 @@ class Dropdown extends PureComponent<Props, State> {
     const contentClasses = [
       styles.content,
       open ? styles.contentvisible : '',
-      position === 'right' ? styles.contentright : ''
+      targetOrigin === 'right' ? styles.contentright : ''
     ].join(' ')
 
     return (children || label || icon) ? (
