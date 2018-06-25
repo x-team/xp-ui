@@ -434,7 +434,7 @@ class SelectBox extends Component<Props, State> {
     const renderCheckboxOrString = (item: Item) => onSelect ? (
       item.selecting ? (
         <span className={styles.selecting}>
-          <span className={styles.selectingdots}></span>
+          <span className={styles.selectingdots} />
           {item.value}
         </span>
       ) : (
