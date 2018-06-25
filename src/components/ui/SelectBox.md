@@ -32,7 +32,7 @@ const itemsArray = [
   collectionName="List"
   items={itemsArray}
   width={300}
-  itemsHeight={3}
+  visibleItems={3}
   onSelect={item => console.log('onSelect:', item)}
   onCreateNew={listName =>
     new Promise(resolve =>
@@ -76,7 +76,7 @@ const itemsArray = [
   collectionName="List"
   items={itemsArray}
   width={200}
-  itemsHeight={4}
+  visibleItems={4}
   onClick={item =>
     new Promise(resolve =>
       item && setTimeout(() => {

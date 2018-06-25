@@ -203,7 +203,7 @@ type Props = {
   placeholder?: string,
   items?: Array<Item>,
   width?: number,
-  itemsHeight?: number,
+  visibleItems?: number,
   expanded?: boolean,
   collectionName?: string,
   onSelect?: Function,
@@ -355,13 +355,6 @@ class SelectBox extends Component<Props, State> {
     this.updateItemsState(updatedItem)
   }
 
-  handleEscKeyPress = (e: any, item: Item) => {
-    const evt = e || window.event
-    if (evt.keyCode === 27) {
-      this.handleCancelEdit(item)
-    }
-  }
-
   handleEdit = (item: Item) => {
     const { onEdit } = this.props
     if (onEdit) {
@@ -383,11 +376,21 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
+  handleEditingKeyUp = (e: any, item: Item) => {
+    const evt = e || window.event
+    if (evt.keyCode === 27) { // Esc
+      this.handleCancelEdit(item)
+    }
+    if (evt.keyCode === 13) { // Enter
+      this.handleEdit(item)
+    }
+  }
+
   render () {
     const {
       placeholder,
       collectionName,
-      itemsHeight,
+      visibleItems,
       width,
       expanded,
       onSelect,
@@ -456,7 +459,7 @@ class SelectBox extends Component<Props, State> {
               e.target.value = ''
               e.target.value = val
             }}
-            onKeyUp={(e: any) => this.handleEscKeyPress(e, item)}
+            onKeyUp={(e: any) => this.handleEditingKeyUp(e, item)}
           />
         </span>
         <span className={styles.control}>
@@ -503,7 +506,7 @@ class SelectBox extends Component<Props, State> {
 
     const renderItems = () => ((filteredItems && filteredItems.length > 0) || search) ? (
       <ul className={itemsClasses} style={{
-        maxHeight: itemsHeight ? `${itemsHeight * 61}px` : 'auto',
+        maxHeight: visibleItems ? `${visibleItems * 61}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
         {renderItemsOrEmpty()}
