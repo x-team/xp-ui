@@ -1,9 +1,9 @@
 exports[`Dropdown-5 1`] = `
 <div>
   <div
-    className="AutoUI_ui_Dropdown-15 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 ">
+    className="AutoUI_ui_Dropdown-16 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 ">
     <div
-      className="AutoUI_ui_Dropdown-22 AutoUI_ui_Dropdown-44">
+      className="AutoUI_ui_Dropdown-23 AutoUI_ui_Dropdown-45">
       <svg
         height="12px"
         viewBox="0 0 16 12"
@@ -39,7 +39,7 @@ exports[`Dropdown-5 1`] = `
       
     </div>
     <div
-      className="AutoUI_ui_Dropdown-50  ">
+      className="AutoUI_ui_Dropdown-51  ">
       <div
         style={
           Object {
