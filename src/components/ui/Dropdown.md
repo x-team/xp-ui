@@ -65,7 +65,7 @@ const itemsArray = [
     items={itemsArray}
     expanded={false}
     width={300}
-    itemsHeight={3}
+    visibleItems={3}
     onClick={item => console.log('onClick:', item)}
   />
 </Dropdown>

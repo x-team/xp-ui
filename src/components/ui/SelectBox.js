@@ -23,7 +23,7 @@ const styles = {
     typo.baseText,
     `
       color: ${theme.baseDark}
-      border: 1px solid #E9EDEE
+      border: 1px solid ${theme.lineSilver2}
       padding: 20px
       height: 60px
       width: 100%
@@ -96,7 +96,7 @@ const styles = {
     list-style: none
     margin: 0
     padding: 0
-    border: 1px solid #E9EDEE
+    border: 1px solid ${theme.lineSilver2}
     border-top: none
     overflow-y: scroll
     background: #fff
@@ -120,7 +120,7 @@ const styles = {
     }
   `),
   lined: cmz(`
-    border-bottom: 1px solid #E9EDEE
+    border-bottom: 1px solid ${theme.lineSilver2}
     margin: 0 22px
     padding: 15px 0
   `),
@@ -143,9 +143,39 @@ const styles = {
   selecting: cmz(
     typo.baseText,
     `
-      padding: 0 0 0 13px
+      padding: 0 0 0 30px
+      position: relative
     `
   ),
+  selectingdots: cmz(`
+    & {
+      position: absolute
+      top: calc(50% - 9px)
+      left: 0
+      width: 20px
+      height: 20px
+      border-top-color: ${theme.lineSilver2}
+      border-left-color: ${theme.lineSilver2}
+      animation: spinner 400ms linear infinite
+      border-bottom-color: transparent
+      border-right-color: transparent
+      border-style: solid
+      border-width: 2px
+      border-radius: 50%
+      box-sizing: border-box
+      display: inline-block
+      vertical-align: middle
+    }
+
+    @keyframes spinner {
+      0% {
+        transform: rotate(0deg)
+      }
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+  `),
   editinput: cmz(
     typo.baseText,
     `
@@ -404,7 +434,8 @@ class SelectBox extends Component<Props, State> {
     const renderCheckboxOrString = (item: Item) => onSelect ? (
       item.selecting ? (
         <span className={styles.selecting}>
-          ... {item.value}
+          <span className={styles.selectingdots}></span>
+          {item.value}
         </span>
       ) : (
         <InputField
