@@ -88,18 +88,30 @@ button generated with custom element (&lt;a&gt;)
 <Button component='a' color={'monochrome'}>custom default button state</Button>
 ```
 
+button with pro tag (works with selected). for best use see use cases
+
+```js
+<Button pro selected>custom default button state</Button>
+```
+
 ### Use Cases
 
 skill tag
 
 ```js
-<Button outlined rounded raised color={'silver'}>Androind</Button>
+<Button outlined rounded raised color={'silver'}>Android</Button>
 ```
 
 selected skill tag
 
 ```js
 <Button selected outlined rounded raised color={'silver'}>Android</Button>
+```
+
+selected pro skill tag
+
+```js
+<Button pro selected outlined rounded raised color={'silver'}>Android</Button>
 ```
 
 Missing props (does component explode?):
