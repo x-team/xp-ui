@@ -23,6 +23,7 @@ type Props = {
   selected: ?boolean,
   disabled: ?boolean,
   block: ?boolean,
+  pro: ?boolean,
   component: string,
   children?: Element<*> | string
 }
@@ -40,6 +41,7 @@ const baseStyles = {
     cursor: pointer
     white-space: nowrap
     transition: all .3s ease-out
+    position: relative
   `),
 
   content: cmz(typo.labelText, 'font-size: inherit')
@@ -175,6 +177,28 @@ const extraStyles = {
       box-shadow: none
       border-color: ${theme.baseRed}
     }
+  `),
+
+  pro: cmz(`
+    & {
+      border-top-left-radius: 0;
+    }
+    &:before {
+      transition: all .3s ease-out
+      content: 'pro'
+      width: 30px
+      height: 14px
+      line-height: 12px
+      position: absolute
+      top: -14px
+      left: -2px
+      background-color: ${theme.baseRed}
+      color: white
+      font-size: 8px
+      font-weight: 100
+      text-transform: uppercase
+      
+    }
   `)
 }
 
@@ -203,6 +227,7 @@ class Button extends PureComponent<Props> {
       raised,
       selected,
       block,
+      pro,
       component: CustomComponent,
       children,
       ...rest
@@ -220,7 +245,8 @@ class Button extends PureComponent<Props> {
       selected && extraStyles.selected,
       selected && 'selected',
       block && extraStyles.block,
-      disabled && extraStyles.disabled
+      disabled && extraStyles.disabled,
+      selected && pro && extraStyles.pro,
     ].filter(Boolean).join(' ')
     const buttonClassName = `${colorClassName} ${sizeClassName} ${extraClassName}`
 
