@@ -6,6 +6,7 @@ import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
+import Dropdown from './components/ui/Dropdown'
 import ErrorBox from './components/ui/ErrorBox'
 import FilterBar from './components/ui/FilterBar'
 import Footer from './components/ui/Footer/Footer'
@@ -24,6 +25,7 @@ import Roadmap from './components/ui/Roadmap'
 import RoadmapHero from './components/ui/RoadmapHero'
 import RoadmapLevel from './components/ui/RoadmapLevel'
 import RoadmapTimelineElement from './components/ui/RoadmapTimelineElement'
+import SelectBox from './components/ui/SelectBox'
 import SolutionForm from './components/forms/SolutionForm'
 import SvgIcon from './components/ui/SvgIcon'
 import Tab from './components/ui/Tabs/Tab'
@@ -43,6 +45,7 @@ export {
   Button,
   CollapsibleSection,
   ColorPalette,
+  Dropdown,
   ErrorBox,
   FilterBar,
   Footer,
@@ -61,6 +64,7 @@ export {
   RoadmapHero,
   RoadmapLevel,
   RoadmapTimelineElement,
+  SelectBox,
   SolutionForm,
   SvgIcon,
   Tab,

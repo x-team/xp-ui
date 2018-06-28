@@ -1,0 +1,172 @@
+exports[`Dropdown-3 1`] = `
+<div
+  style={
+    Object {
+      "textAlign": "right",
+    }
+  }>
+  <div>
+    <div
+      className="AutoUI_ui_Dropdown-16 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 ">
+      <div
+        className="AutoUI_ui_Dropdown-23 AutoUI_ui_Dropdown-45">
+        
+        <span
+          className="AutoUI_ui_Dropdown-41">
+          Find something
+        </span>
+        <span
+          className="AutoUI_ui_Dropdown-48">
+          <svg
+            height="5px"
+            viewBox="0 0 9 5"
+            width="9px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <polygon
+                fill={
+                  Object {
+                    "color": Array [
+                      90,
+                      86,
+                      101,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                }
+                points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
+                transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+            </g>
+          </svg>
+        </span>
+      </div>
+      <div
+        className="AutoUI_ui_Dropdown-51  AutoUI_ui_Dropdown-64">
+        <div
+          className="AutoUI_ui_SelectBox-15"
+          style={
+            Object {
+              "width": "500px",
+            }
+          }>
+          <div>
+            <div
+              className="AutoUI_ui_SelectBox-37">
+              <div
+                className="AutoUI_ui_SelectBox-46">
+                <svg
+                  height="17px"
+                  viewBox="0 0 16 17"
+                  width="16px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <circle
+                      cx="7.5"
+                      cy="7.5"
+                      r="6.5"
+                      stroke={
+                        Object {
+                          "color": Array [
+                            178,
+                            182,
+                            188,
+                          ],
+                          "model": "rgb",
+                          "valpha": 1,
+                        }
+                      } />
+                    <path
+                      d="M11.7538745,12.6062275 L15.5,16.5"
+                      stroke={
+                        Object {
+                          "color": Array [
+                            178,
+                            182,
+                            188,
+                          ],
+                          "model": "rgb",
+                          "valpha": 1,
+                        }
+                      }
+                      strokeLinecap="square" />
+                  </g>
+                </svg>
+              </div>
+              <div>
+                <input
+                  aria-labelledby="label-search"
+                  autoComplete="off"
+                  className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_ui_SelectBox-41"
+                  disabled={false}
+                  id="search"
+                  name="search"
+                  placeholder="Search"
+                  type="text"
+                  value="" />
+              </div>
+            </div>
+            <ul
+              className="AutoUI_ui_SelectBox-96 "
+              style={
+                Object {
+                  "maxHeight": "auto",
+                  "width": "500px",
+                }
+              }>
+              <li
+                className="AutoUI_ui_SelectBox-110  ">
+                <span
+                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                  item-1
+                </span>
+              </li>
+              <li
+                className="AutoUI_ui_SelectBox-110  ">
+                <span
+                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                  item-2
+                </span>
+              </li>
+              <li
+                className="AutoUI_ui_SelectBox-110  ">
+                <span
+                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                  item-3
+                </span>
+              </li>
+              <li
+                className="AutoUI_ui_SelectBox-110  ">
+                <span
+                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                  item-4
+                </span>
+              </li>
+              <li
+                className="AutoUI_ui_SelectBox-110  ">
+                <span
+                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                  item-5
+                </span>
+              </li>
+              <li
+                className="AutoUI_ui_SelectBox-110  ">
+                <span
+                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                  item-6
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

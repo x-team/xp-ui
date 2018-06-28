@@ -1,9 +1,14 @@
 exports[`VideoPlayer-3 1`] = `
 <video
-  className="AutoUI_ui_VideoPlayer-20"
+  autoPlay={false}
+  className="AutoUI_ui_VideoPlayer-24"
   controls={true}
-  poster="http://www.hdfbcover.com/randomcovers/covers/never-stop-dreaming-quote-fb-cover.jpg"
-  width={560}>
+  height={360}
+  loop={true}
+  muted={false}
+  poster=""
+  preload="auto"
+  width={640}>
   <source
     src="https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4" />
   Video cannot be played in this browser.

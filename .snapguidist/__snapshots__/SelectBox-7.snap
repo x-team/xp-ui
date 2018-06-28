@@ -1,0 +1,84 @@
+exports[`SelectBox-7 1`] = `
+<div
+  className="AutoUI_ui_SelectBox-15"
+  style={
+    Object {
+      "width": "100%",
+    }
+  }>
+  <div>
+    <div
+      className="AutoUI_ui_Dropdown-16 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-20">
+      <div
+        className="AutoUI_ui_Dropdown-23 ">
+        
+        <span
+          className="AutoUI_ui_Dropdown-41">
+          <div
+            className="AutoUI_ui_SelectBox-37">
+            <div
+              className="AutoUI_ui_SelectBox-46">
+              <svg
+                height="17px"
+                viewBox="0 0 16 17"
+                width="16px">
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  stroke="none"
+                  strokeWidth="1">
+                  <circle
+                    cx="7.5"
+                    cy="7.5"
+                    r="6.5"
+                    stroke={
+                      Object {
+                        "color": Array [
+                          178,
+                          182,
+                          188,
+                        ],
+                        "model": "rgb",
+                        "valpha": 1,
+                      }
+                    } />
+                  <path
+                    d="M11.7538745,12.6062275 L15.5,16.5"
+                    stroke={
+                      Object {
+                        "color": Array [
+                          178,
+                          182,
+                          188,
+                        ],
+                        "model": "rgb",
+                        "valpha": 1,
+                      }
+                    }
+                    strokeLinecap="square" />
+                </g>
+              </svg>
+            </div>
+            <div>
+              <input
+                aria-labelledby="label-search"
+                autoComplete="off"
+                className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_ui_SelectBox-41"
+                disabled={false}
+                id="search"
+                name="search"
+                placeholder="Search"
+                type="text"
+                value="" />
+            </div>
+          </div>
+        </span>
+      </div>
+      <div
+        className="AutoUI_ui_Dropdown-51  ">
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;
