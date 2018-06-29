@@ -90,8 +90,7 @@ class TruncatedList extends PureComponent<Props, State> {
       ? visible - 1
       : visible
     const nextIncrement = increment || itemsLength - realVisible
-    const nextRealIncrement = hiddenItems < nextIncrement
-      || (inserted && nextIncrement + 1 === hiddenItems)
+    const nextRealIncrement = hiddenItems < nextIncrement || (inserted && nextIncrement + 1 === hiddenItems)
       ? hiddenItems
       : nextIncrement
     const nextView = increment ? realVisible + (page > 1 ? (page - 1) * increment : 0) : realVisible + nextRealIncrement
