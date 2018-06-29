@@ -1,0 +1,57 @@
+exports[`TruncatedList-15 1`] = `
+<ul
+  className="AutoUI_ui_TruncatedList-8">
+  <li
+    className="AutoUI_ui_TruncatedList-13">
+    1
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13">
+    2
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13">
+    3
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13">
+    4
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13">
+    5
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13">
+    6
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13">
+    7
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13">
+    8
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13 AutoUI_ui_TruncatedList-17">
+    9
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13 AutoUI_ui_TruncatedList-17">
+    10
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13 AutoUI_ui_TruncatedList-17">
+    11
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13 AutoUI_ui_TruncatedList-17">
+    12
+  </li>
+  <li
+    className="AutoUI_ui_TruncatedList-13">
+    +4 more
+  </li>
+</ul>
+`;
