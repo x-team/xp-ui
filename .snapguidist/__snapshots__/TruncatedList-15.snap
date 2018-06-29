@@ -2,51 +2,51 @@ exports[`TruncatedList-15 1`] = `
 <ul
   className="AutoUI_ui_TruncatedList-8">
   <li
-    className="AutoUI_ui_TruncatedList-13">
+    className="AutoUI_ui_TruncatedList-14">
     1
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13">
+    className="AutoUI_ui_TruncatedList-14">
     2
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13">
+    className="AutoUI_ui_TruncatedList-14">
     3
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13">
+    className="AutoUI_ui_TruncatedList-14">
     4
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13">
+    className="AutoUI_ui_TruncatedList-14">
     5
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13">
+    className="AutoUI_ui_TruncatedList-14">
     6
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13">
+    className="AutoUI_ui_TruncatedList-14">
     7
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13">
+    className="AutoUI_ui_TruncatedList-14">
     8
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13 AutoUI_ui_TruncatedList-17">
+    className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
     9
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13 AutoUI_ui_TruncatedList-17">
+    className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
     10
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13 AutoUI_ui_TruncatedList-17">
+    className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
     11
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13">
+    className="AutoUI_ui_TruncatedList-14">
     +3 more
   </li>
 </ul>
