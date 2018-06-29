@@ -22,7 +22,7 @@ const styles = {
 type Props = {
   items: Array<*>,
   visible: number,
-  increment: number | boolean,
+  increment: number,
   inserted: boolean,
   viewMore: Function | void
 }
@@ -39,7 +39,7 @@ class TruncatedList extends PureComponent<Props, State> {
   static defaultProps = {
     items: [],
     visible: 2,
-    increment: false,
+    increment: 0,
     inserted: false
   }
 
@@ -62,7 +62,7 @@ class TruncatedList extends PureComponent<Props, State> {
       allVisible: prevState.allVisible || hiddenAmount === 0,
       hiddenItems: inserted ? hiddenAmount + 1 : hiddenAmount,
       page: prevState.page || 1,
-      pagesCount: increment ? hiddenAmount / Number(increment) + 1 : 2,
+      pagesCount: increment ? hiddenAmount / increment + 1 : 2,
       itemsLength: items.length
     }
   }
@@ -74,7 +74,7 @@ class TruncatedList extends PureComponent<Props, State> {
         ? prevState.page + 1 >= prevState.pagesCount
         : true,
       hiddenItems: increment
-        ? prevState.itemsLength - (inserted ? visible - 1 : visible) - (prevState.page * Number(increment))
+        ? prevState.itemsLength - (inserted ? visible - 1 : visible) - (prevState.page * increment)
         : 0,
       page: increment
         ? prevState.page + 1
@@ -89,11 +89,12 @@ class TruncatedList extends PureComponent<Props, State> {
     const realVisible = inserted
       ? visible - 1
       : visible
-    const nextIncrement = Number(increment) || itemsLength - realVisible
-    const nextRealIncrement = hiddenItems < nextIncrement || nextIncrement + 1 === hiddenItems
+    const nextIncrement = increment || itemsLength - realVisible
+    const nextRealIncrement = hiddenItems < nextIncrement
+      || (inserted && nextIncrement + 1 === hiddenItems)
       ? hiddenItems
       : nextIncrement
-    const nextView = increment ? realVisible + (page > 1 ? (page - 1) * Number(increment) : 0) : realVisible + nextRealIncrement
+    const nextView = increment ? realVisible + (page > 1 ? (page - 1) * increment : 0) : realVisible + nextRealIncrement
 
     const renderShowMore = () => {
       return viewMore

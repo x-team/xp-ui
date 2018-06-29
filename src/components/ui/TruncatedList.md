@@ -4,9 +4,9 @@ TruncatedList is an invisible component that receives a list of anything and cre
 
 - `items={[Component,Component]}`
 - `visible={2}`
-- `increment={3}`
+- `increment={0}`
+- `inserted={false}`
 - `viewMore={(amount , action) => <span onClick={action}>show + {amount}</span>}`
-- `inserted={true}`
 
 ### Examples
 
