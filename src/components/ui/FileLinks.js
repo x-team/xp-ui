@@ -27,12 +27,8 @@ class FileLinks extends PureComponent<Props, null> {
         files && files
           .map(file => (
             FileLinkWrapper(
-              {
-                key: uuidv4()
-              },
-              <FileLink
-                path={file.path}
-              />
+              { key: uuidv4() },
+              <FileLink path={file.path} name={file.filename} />
             )
           )
         )

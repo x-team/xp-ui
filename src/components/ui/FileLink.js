@@ -9,7 +9,8 @@ import typo from '../../styles/typo'
 const cmz = require('cmz')
 
 type Props = {
-  path: string
+  path: string,
+  name?: string
 }
 
 const Root = elem.div(cmz(`
@@ -31,13 +32,13 @@ const LinkWrapper = elem.div(cmz(
 
 class FileLink extends PureComponent<Props> {
   render () {
-    const { path } = this.props
+    const { path, name } = this.props
 
     return (
       Root(
         LinkWrapper(
           <a href={path} target='_blank'>
-            View Attachment
+            {name || 'View Attachment'}
           </a>
         )
       )
