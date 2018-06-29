@@ -4,8 +4,9 @@ import React, { PureComponent } from 'react'
 
 import theme from '../../styles/theme'
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'x'
-export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check'
+export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text'
+
 type Props = {
   icon: ?Icon,
   color: Color,
@@ -20,7 +21,8 @@ const getIcon = ({ icon, color }) => {
     default: theme.iconRed,
     inverted: theme.iconBright,
     monochrome: theme.iconDark,
-    grayscale: theme.iconGray
+    grayscale: theme.iconGray,
+    text: theme.iconTextGray
   }
 
   const icons = {
@@ -247,6 +249,80 @@ const getIcon = ({ icon, color }) => {
               <path d='M14,7 L0,7' />
             </g>
           </g>
+        </g>
+      </svg>
+    ),
+
+    add: (
+      <svg width='16px' height='16px' viewBox='0 0 16 16'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <g transform='translate(-539.000000, -162.000000)'>
+            <g transform='translate(539.000000, 162.000000)'>
+              <path d='M0.5,0.5 L0.5,14.5 L11.4545465,14.5 L11.4991824,4.38874719 L8.16377939,0.5 L0.5,0.5 Z' stroke={colors[color]} />
+              <path d='M2.5,5.5 L4.5,5.5' stroke={colors[color]} strokeLinecap='square' />
+              <path d='M2.5,7.5 L7.5,7.5' stroke={colors[color]} strokeLinecap='square' />
+              <path d='M2.5,9.5 L7.5,9.5' stroke={colors[color]} strokeLinecap='square' />
+              <path d='M2.5,11.5 L7.5,11.5' stroke={colors[color]} strokeLinecap='square' />
+              <path d='M7.5,1.5 L7.5,4.5' stroke={colors[color]} strokeLinecap='square' />
+              <path d='M7.01349488,5.49634026 L11.4125741,5.49634026' stroke={colors[color]} />
+              <circle fill='#FFFFFF' cx='11.5' cy='11.5' r='4.5' />
+              <path d='M11.5,9.5 L11.5,13.5' stroke={colors[color]} strokeLinecap='square' />
+              <path d='M9.5,11.5 L13.5,11.5' stroke={colors[color]} strokeLinecap='square' />
+            </g>
+          </g>
+        </g>
+      </svg>
+    ),
+
+    triangleup: (
+      <svg width='9px' height='5px' viewBox='0 0 9 5'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <polygon fill={colors[color]} transform='translate(4.242641, 4.242641) rotate(225.000000) translate(-4.242641, -4.242641) ' points='7.24264069 1.24264069 7.24264069 7.24264069 1.24264069 7.24264069' />
+        </g>
+      </svg>
+    ),
+
+    triangledown: (
+      <svg width='9px' height='5px' viewBox='0 0 9 5'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <polygon fill={colors[color]} transform='translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) ' points='7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069' />
+        </g>
+      </svg>
+    ),
+
+    hamburger: (
+      <svg width='16px' height='12px' viewBox='0 0 16 12'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='square'>
+          <g transform='translate(1.000000, 0.000000)' stroke={colors[color]}>
+            <path d='M0.184210526,1 L13.8157895,1' />
+            <path d='M0.184210526,6 L13.8157895,6' />
+            <path d='M0.184210526,11 L13.8157895,11' />
+          </g>
+        </g>
+      </svg>
+    ),
+
+    magnifier: (
+      <svg width='16px' height='17px' viewBox='0 0 16 17'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <circle stroke={colors[color]} cx='7.5' cy='7.5' r='6.5' />
+          <path d='M11.7538745,12.6062275 L15.5,16.5' stroke={colors[color]} strokeLinecap='square' />
+        </g>
+      </svg>
+    ),
+
+    edit: (
+      <svg width='14px' height='14px' viewBox='0 0 14 14'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <path d='M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z' fill={colors[color]} fillRule='nonzero' />
+        </g>
+      </svg>
+    ),
+
+    check: (
+      <svg width='17px' height='13px' viewBox='0 0 17 13'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <polyline stroke={colors[color]} strokeWidth='2' transform='translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) ' points='15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872' />
         </g>
       </svg>
     )
