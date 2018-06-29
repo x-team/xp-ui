@@ -62,8 +62,7 @@ class NotesFeed extends PureComponent<Props, State> {
                 files={note.files}
               />
             )
-          )
-        ),
+          )),
         this.showViewMore(notes && notes.length) && (
           <Button
             outlined
