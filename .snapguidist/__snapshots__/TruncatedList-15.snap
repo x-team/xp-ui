@@ -46,12 +46,8 @@ exports[`TruncatedList-15 1`] = `
     11
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-13 AutoUI_ui_TruncatedList-17">
-    12
-  </li>
-  <li
     className="AutoUI_ui_TruncatedList-13">
-    +4 more
+    +3 more
   </li>
 </ul>
 `;
