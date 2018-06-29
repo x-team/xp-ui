@@ -44,9 +44,10 @@ const FileItem = elem.div(cmz(`
   border-bottom: 2px solid ${theme.baseSilver}
 `))
 
-const FileName = elem.div(cmz(
+const FileName = elem.a(cmz(
   typo.baseText,
   `
+    color: ${theme.baseRed}
     width: 100%
     font-size: 16px
     line-height: 1
@@ -150,7 +151,7 @@ class AttachFiles extends PureComponent<Props> {
                     borderBottomColor: file.progress !== 100 ? theme.baseSilver : 'transparent'
                   }
                 },
-                FileName(file.filename),
+                FileName({href: file.path, target: '_blank'}, file.filename),
                 renderButton(file),
                 renderProgress(file.progress)
               )
