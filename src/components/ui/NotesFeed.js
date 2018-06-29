@@ -61,8 +61,7 @@ class NotesFeed extends PureComponent<Props, State> {
                 text={note.body}
               />
             )
-          )
-        ),
+          )),
         this.showViewMore(notes && notes.length) && (
           <Button
             outlined
