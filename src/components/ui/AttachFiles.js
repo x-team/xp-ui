@@ -57,6 +57,7 @@ const FileName = elem.a(cmz(
 
 const FileAction = elem.div(cmz(`
   cursor: pointer
+  line-height: normal
 `))
 
 const FileProgress = elem.div(cmz(`
