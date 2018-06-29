@@ -10,8 +10,9 @@ TruncatedList is an invisible component that receives a list of anything and cre
 
 ### Examples
 
-Show 4 visible of 13 total, with increments of 2, custom view more item, not inserted:
-```
+Show 4 visible `Loader`s components of 13 total, with increments of 2, custom view more item, not inserted:
+
+```js
 const items = Array(13).fill(<Loader />);
 <TruncatedList
   items={items}
@@ -31,8 +32,9 @@ const items = Array(13).fill(<Loader />);
 />
 ```
 
-Show 6 visible of 30 total, with increments of 6, with inserted custom view more item:
-```
+Show 6 visible `Loader`s components of 30 total, with increments of 6, with inserted custom view more item:
+
+```js
 const items = Array(30).fill(<Loader />);
 <TruncatedList
   items={items}
@@ -53,26 +55,9 @@ const items = Array(30).fill(<Loader />);
 />
 ```
 
-Show 5 visible of 24 total:
-```
-const items = Array(24).fill(<Loader />);
-<TruncatedList
-  items={items}
-  visible={5}
-/>
-```
+Show 5 visible `Loader`s components of 6 total, but with custom show more item inserted in the first visible count:
 
-Show 5 visible of 6 total:
-```
-const items = Array(6).fill(<Loader />);
-<TruncatedList
-  items={items}
-  visible={5}
-/>
-```
-
-Show 5 visible of 6 total, but with custom show more item inserted in the first visible count:
-```
+```js
 const items = Array(6).fill(<Loader />);
 <TruncatedList
   items={items}
@@ -91,17 +76,9 @@ const items = Array(6).fill(<Loader />);
 />
 ```
 
-Show 5 visible of 5 total:
-```
-const items = Array(5).fill(<Loader />);
-<TruncatedList
-  items={items}
-  visible={5}
-/>
-```
+Show 5 visible `Loader`s components of 4 total:
 
-Show 5 visible of 4 total:
-```
+```js
 const items = Array(4).fill(<Loader />);
 <TruncatedList
   items={items}
@@ -109,14 +86,47 @@ const items = Array(4).fill(<Loader />);
 />
 ```
 
-Show 8 visible of 11 total:
-```
+Show 5 visible `Loader`s components of 5 total:
+
+```js
+const items = Array(5).fill(<Loader />);
 <TruncatedList
-  items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
+  items={items}
+  visible={5}
+/>
+```
+
+Show 5 visible `Loader`s components of 6 total:
+
+```js
+const items = Array(6).fill(<Loader />);
+<TruncatedList
+  items={items}
+  visible={5}
+/>
+```
+
+Show 5 visible `Loader`s components of 24 total:
+
+```js
+const items = Array(24).fill(<Loader />);
+<TruncatedList
+  items={items}
+  visible={5}
+/>
+```
+
+Show 8 visible numbers of 11 total:
+
+```js
+<TruncatedList
+  items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
   visible={8}
 />
 ```
 
-```
+Missing props (does component explodes?):
+
+```js
 <TruncatedList />
 ```
