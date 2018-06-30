@@ -22,3 +22,7 @@ export function isScrolledIntoView (element) {
 
   return elemBottom <= docViewBottom
 }
+
+export function getComponentDisplayName (Component) {
+  return Component.displayName || Component.name || 'Component'
+}

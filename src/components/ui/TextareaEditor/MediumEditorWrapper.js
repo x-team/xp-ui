@@ -16,6 +16,7 @@ type Props = {
   text: string,
   html: string,
   charLimit: number,
+  linesLimit?: number,
   id: string | number,
   onChange: (string, string) => void,
   onFocus: (target: Object) => void,
@@ -96,14 +97,6 @@ class MediumEditorWrapper extends PureComponent<Props> {
   medium: MediumEditor
   input: HTMLElement
 
-  componentDidUpdate = () => {
-    this.medium.restoreSelection()
-  }
-
-  componentWillUnmount = () => {
-    this.medium.destroy()
-  }
-
   componentDidMount = () => {
     if (!this.input) return
     const subscribeFunction:((input: *) => * => void) = fun => event => fun(this.input)
@@ -137,6 +130,26 @@ class MediumEditorWrapper extends PureComponent<Props> {
       this.medium.subscribe('focus', subscribeFunction(onFocus))
       this.medium.subscribe('blur', subscribeFunction(target => onBlur(target)))
     }
+
+    this.setAutosize()
+  }
+
+  componentDidUpdate = () => {
+    this.medium.restoreSelection()
+  }
+
+  componentWillUnmount = () => {
+    this.medium.destroy()
+  }
+
+  setAutosize = () => {
+    const lineHeight = 44.4
+    const maxLines = this.props.linesLimit
+
+    if (maxLines) {
+      const maxHeight = `${maxLines * lineHeight}px`
+      this.input.style.maxHeight = maxHeight
+    }
   }
 
   render () {
@@ -146,7 +159,7 @@ class MediumEditorWrapper extends PureComponent<Props> {
     }
     return elem(
       `editable-${id} ${options && options.disableEditing ? '' : 'editable'}`,
-      { ref: node => { this.input = node } }
+      { style: { minHeight: 100 }, ref: node => { this.input = node } }
     )()
   }
 }

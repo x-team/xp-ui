@@ -1,12 +1,17 @@
 exports[`TextareaEditor-5 1`] = `
 <div>
   <div
-    className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-57">
+    className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-58">
     <div>
       <div
-        className="AutoUI_ui_TextareaEditor_TextareaEditor-29 AutoUI_ui_TextareaEditor_TextareaEditor-70 ">
+        className="AutoUI_ui_TextareaEditor_TextareaEditor-29 AutoUI_ui_TextareaEditor_TextareaEditor-71">
         <div
-          className="editable-1 editable" />
+          className="editable-1 editable"
+          style={
+            Object {
+              "minHeight": 100,
+            }
+          } />
       </div>
       <div
         className="AutoUI_ui_TextareaEditor_TextareaEditor-13">
@@ -20,12 +25,17 @@ exports[`TextareaEditor-5 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-57">
+    className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-58">
     <div>
       <div
-        className="AutoUI_ui_TextareaEditor_TextareaEditor-29 AutoUI_ui_TextareaEditor_TextareaEditor-70 ">
+        className="AutoUI_ui_TextareaEditor_TextareaEditor-29 AutoUI_ui_TextareaEditor_TextareaEditor-71">
         <div
-          className="editable-2 editable" />
+          className="editable-2 editable"
+          style={
+            Object {
+              "minHeight": 100,
+            }
+          } />
       </div>
       <div
         className="AutoUI_ui_TextareaEditor_TextareaEditor-13">

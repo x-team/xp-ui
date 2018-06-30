@@ -33,6 +33,28 @@ Textarea element:
 />
 ```
 
+Textarea element, lines limit set:
+
+```js
+<InputField
+  label="Which skills have you used professionally?"
+  name="skills"
+  type="textarea"
+  placeholder="These are my…"
+  defaultValue={`1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.`}
+  linesLimit={5}
+/>
+```
+
 Radio element:
 
 ```js

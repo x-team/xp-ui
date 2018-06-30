@@ -30,11 +30,12 @@ const editorContainerStyles = cmz(`
   & {
     display: block
     width: 100%
-    padding: 15px
+    padding: 8px 18px
     margin-bottom: 20px
     border: 1px solid ${theme.lineSilver3}
     overflow: scroll
     box-sizing: border-box
+    line-height: 30px
   }
 
   & .editable {
@@ -69,11 +70,6 @@ const Root = elem.div([
 
 const editableClass = cmz(`
   resize: vertical
-  height: 156px
-`)
-
-const largeClass = cmz(`
-  height: 256px
 `)
 
 type Props = {
@@ -82,8 +78,8 @@ type Props = {
   html: string,
   id: string,
   charLimit: number,
+  linesLimit?: number,
   disableEditing?: boolean,
-  large?: boolean,
   onChange(text: string, html: string): ?void,
   onFocus(target: Object, text: string, html: string): ?void,
   onBlur(target: Object, text: string, html: string): ?void
@@ -106,7 +102,7 @@ type State = {
 class TextareaEditor extends PureComponent<Props, State> {
   static defaultProps = {
     charLimit: 1000,
-    large: false
+    linesLimit: 0
   }
 
   state = {
@@ -158,21 +154,21 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   render () {
-    const { charLimit, large } = this.props
+    const { charLimit, linesLimit } = this.props
     const { id, text, html, shouldShowTextLength, options } = this.state
 
     const counterVisibilityClassName = shouldShowTextLength ? '' : 'hidden'
     const editableClassName = options.disableEditing ? '' : editableClass
-    const sizeClassName = large ? largeClass : ''
 
     return Root(
       <div>
-        <div className={`${editorContainerStyles} ${editableClassName} ${sizeClassName}`}>
+        <div className={`${editorContainerStyles} ${editableClassName}`}>
           <MediumEditorWrapper
             text={text}
             html={html}
             id={id}
             charLimit={charLimit}
+            linesLimit={linesLimit}
             options={options}
             onChange={this.handleChange}
             onFocus={this.handleFocus}
