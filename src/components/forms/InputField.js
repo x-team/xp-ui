@@ -221,6 +221,8 @@ const textareaStyles = cmz(`
 
 const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 
+const TextareaWithAutosize = withAutosize('textarea')
+
 const customTypesDefinitions: Object = {
   'sliding-checkbox': 'checkbox'
 }
@@ -306,7 +308,6 @@ class InputField extends PureComponent<Props> {
     }
 
     if (type === 'textarea') {
-      const TextareaWithAutosize = withAutosize(type)
       const props = {
         ...baseProps,
         className: `${inputStyles.join(' ')} ${textareaStyles} ${errorClassName} ${spacingClassName}`,
