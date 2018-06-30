@@ -9,8 +9,8 @@ type Props = {
   linesLimit?: number
 }
 
-const withAutosize = (WrappedComponent: any) => {
-  const WithAutosize = class extends PureComponent<Props> {
+const withAutosize = (Component: any) => {
+  class WithAutosize extends PureComponent<Props, void> {
     elem: any
 
     static defaultProps = {
@@ -47,12 +47,11 @@ const withAutosize = (WrappedComponent: any) => {
 
     render () {
       const { linesLimit, ...rest } = this.props
-
-      return <WrappedComponent ref={this.setAutosize} {...rest} />
+      return <Component ref={this.setAutosize} {...rest} />
     }
   }
 
-  WithAutosize.displayName = `WithAutosize(${getComponentDisplayName(WrappedComponent)})`
+  WithAutosize.displayName = `WithAutosize(${getComponentDisplayName(Component)})`
 
   return WithAutosize
 }

@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
-import withAutosize from '../higher-order/withAutosize'
+import withAutosize from '../hocs/withAutosize'
 
 import Text from '../ui/Text'
 
@@ -219,8 +219,6 @@ const textareaStyles = cmz(`
   resize: vertical
 `)
 
-const TextareaWithAutosize = withAutosize('textarea')
-
 const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 
 const customTypesDefinitions: Object = {
@@ -280,6 +278,13 @@ class InputField extends PureComponent<Props> {
     const errorClassName = isInvalid ? errorInput : ''
     const spacingClassName = postText ? inputWithPostText : ''
     const finalType = getFinalType(type)
+    const baseProps = {
+      name,
+      id: inputId,
+      value,
+      onChange,
+      'aria-labelledby': labelId
+    }
 
     if (isSpecialType(type)) {
       const { ElemBox, ElemLabel, className } = specialTypesDefinitions[type]
@@ -288,13 +293,9 @@ class InputField extends PureComponent<Props> {
         FieldRoot(
           ElemLabel(
             Tag({
+              ...baseProps,
               className: `${className} ${spacingClassName}`,
-              name,
-              id: inputId,
-              value,
-              onChange,
               type: finalType,
-              'aria-labelledby': labelId,
               ...rest
             }),
             ElemBox(),
@@ -305,29 +306,21 @@ class InputField extends PureComponent<Props> {
     }
 
     if (type === 'textarea') {
+      const TextareaWithAutosize = withAutosize(type)
       const props = {
+        ...baseProps,
         className: `${inputStyles.join(' ')} ${textareaStyles} ${errorClassName} ${spacingClassName}`,
         type,
-        name,
-        id: inputId,
-        value,
-        onChange,
-        'aria-labelledby': labelId,
         linesLimit,
         ...rest
       }
-
       return <TextareaWithAutosize {...props} />
     }
 
     return Tag({
+      ...baseProps,
       className: `${errorClassName} ${spacingClassName}`,
       type,
-      name,
-      id: inputId,
-      value,
-      onChange,
-      'aria-labelledby': labelId,
       ...rest
     })
   }
