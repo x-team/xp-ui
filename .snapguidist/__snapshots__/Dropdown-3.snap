@@ -103,7 +103,7 @@ exports[`Dropdown-3 1`] = `
                 <input
                   aria-labelledby="label-search"
                   autoComplete="off"
-                  className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_ui_SelectBox-41"
+                  className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-41"
                   disabled={false}
                   id="search"
                   name="search"

@@ -1,44 +1,31 @@
 exports[`InputField-7 1`] = `
-<section>
-  <div
-    className="AutoUI_forms_InputField-74">
-    <label
-      id="">
+<div>
+  <label
+    id="label-skills">
+    <section
+      className="AutoUI_ui_Text-27">
       <div
-        className="AutoUI_forms_InputField-74">
-        <label
-          className="AutoUI_forms_InputField-65 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-          <input
-            aria-labelledby=""
-            checked={false}
-            className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_forms_InputField-46 "
-            type="radio" />
-          <span
-            className="AutoUI_forms_InputField-38" />
-          Value 1
-        </label>
+        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        Which skills have you used professionally?
       </div>
-    </label>
-  </div>
-  <div
-    className="AutoUI_forms_InputField-74">
-    <label
-      id="">
-      <div
-        className="AutoUI_forms_InputField-74">
-        <label
-          className="AutoUI_forms_InputField-65 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
-          <input
-            aria-labelledby=""
-            checked={false}
-            className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-83 AutoUI_forms_InputField-46 "
-            type="radio" />
-          <span
-            className="AutoUI_forms_InputField-38" />
-          Value 2
-        </label>
-      </div>
-    </label>
-  </div>
-</section>
+    </section>
+    <textarea
+      aria-labelledby="label-skills"
+      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-216  "
+      defaultValue="1.
+    2.
+    3.
+    4.
+    5.
+    6.
+    7.
+    8.
+    9.
+    10."
+      id="skills"
+      name="skills"
+      placeholder="These are my…"
+      type="textarea" />
+  </label>
+</div>
 `;

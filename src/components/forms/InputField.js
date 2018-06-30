@@ -2,6 +2,8 @@
 
 import React, { PureComponent } from 'react'
 
+import withAutosize from '../higher-order/withAutosize'
+
 import Text from '../ui/Text'
 
 import elem from '../../utils/elem'
@@ -23,7 +25,8 @@ type Props = {
   onChange?: () => mixed,
   type?: Type,
   postText?: string,
-  placeholder?: string | number
+  placeholder?: string | number,
+  linesLimit?: number
 }
 
 const circle = size => `
@@ -88,7 +91,7 @@ const inputStyles = [
       outline: none
       width: 100%
       height: 70px
-      padding: 10px 18px
+      padding: 8px 18px
       border: 1px solid ${theme.formBorder}
       box-sizing: border-box
       z-index: 2
@@ -210,6 +213,14 @@ const slidingCheckboxInputStyles = {
 
 const SlidingCheckboxTick = elem.span(slidingCheckboxInputStyles.tick)
 
+const textareaStyles = cmz(`
+  height: auto
+  line-height: 30px
+  resize: vertical
+`)
+
+const TextareaWithAutosize = withAutosize('textarea')
+
 const getTagName = type => type === 'textarea' ? 'textarea' : 'input'
 
 const customTypesDefinitions: Object = {
@@ -259,6 +270,7 @@ class InputField extends PureComponent<Props> {
       onChange,
       isInvalid,
       postText,
+      linesLimit,
       ...rest
     } = this.props
 
@@ -290,6 +302,22 @@ class InputField extends PureComponent<Props> {
           )
         )
       )
+    }
+
+    if (type === 'textarea') {
+      const props = {
+        className: `${inputStyles.join(' ')} ${textareaStyles} ${errorClassName} ${spacingClassName}`,
+        type,
+        name,
+        id: inputId,
+        value,
+        onChange,
+        'aria-labelledby': labelId,
+        linesLimit,
+        ...rest
+      }
+
+      return <TextareaWithAutosize {...props} />
     }
 
     return Tag({
