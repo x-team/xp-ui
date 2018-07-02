@@ -98,8 +98,8 @@ class VideoPlayer extends PureComponent<Props> {
           muted={muted}
           poster={poster}
           preload={preload}
+          src={src}
         >
-          <source src={src} />
           Video cannot be played in this browser.
         </video>
       )
