@@ -22,6 +22,8 @@ Basic color:
   <SvgIcon icon="magnifier" />
   <SvgIcon icon="edit" />
   <SvgIcon icon="check" />
+  <SvgIcon icon="play" />
+  <SvgIcon icon="pause" />
 </div>
 ```
 
@@ -42,12 +44,15 @@ Inverted color:
   <SvgIcon icon="minus" color="inverted" />
   <SvgIcon icon="trashcan" color="inverted" />
   <SvgIcon icon="x" color="inverted" />
+  <SvgIcon icon="add" color="inverted" />
   <SvgIcon icon="triangleup" color="inverted" />
   <SvgIcon icon="triangledown" color="inverted" />
   <SvgIcon icon="hamburger" color="inverted" />
   <SvgIcon icon="magnifier" color="inverted" />
   <SvgIcon icon="edit" color="inverted" />
   <SvgIcon icon="check" color="inverted" />
+  <SvgIcon icon="play" color="inverted" />
+  <SvgIcon icon="pause" color="inverted" />
 </div>
 ```
 
@@ -75,6 +80,8 @@ Monochrome color:
   <SvgIcon icon="magnifier" color="monochrome" />
   <SvgIcon icon="edit" color="monochrome" />
   <SvgIcon icon="check" color="monochrome" />
+  <SvgIcon icon="play" color="monochrome" />
+  <SvgIcon icon="pause" color="monochrome" />
 </div>
 ```
 
@@ -89,8 +96,8 @@ Grayscale color:
   <SvgIcon icon="terminal" color="grayscale" />
   <SvgIcon icon="diamond" color="grayscale" />
   <SvgIcon icon="talking" color="grayscale" />
-  <SvgIcon icon="calendar" color="grayscale" />
   <SvgIcon icon="trophy" color="grayscale" />
+  <SvgIcon icon="calendar" color="grayscale" />
   <SvgIcon icon="plus" color="grayscale" />
   <SvgIcon icon="minus" color="grayscale" />
   <SvgIcon icon="trashcan" color="grayscale" />
@@ -102,6 +109,8 @@ Grayscale color:
   <SvgIcon icon="magnifier" color="grayscale" />
   <SvgIcon icon="edit" color="grayscale" />
   <SvgIcon icon="check" color="grayscale" />
+  <SvgIcon icon="play" color="grayscale" />
+  <SvgIcon icon="pause" color="grayscale" />
 </div>
 ```
 
@@ -116,8 +125,8 @@ Text gray color:
   <SvgIcon icon="terminal" color="text" />
   <SvgIcon icon="diamond" color="text" />
   <SvgIcon icon="talking" color="text" />
-  <SvgIcon icon="calendar" color="text" />
   <SvgIcon icon="trophy" color="text" />
+  <SvgIcon icon="calendar" color="text" />
   <SvgIcon icon="plus" color="text" />
   <SvgIcon icon="minus" color="text" />
   <SvgIcon icon="trashcan" color="text" />
@@ -129,6 +138,8 @@ Text gray color:
   <SvgIcon icon="magnifier" color="text" />
   <SvgIcon icon="edit" color="text" />
   <SvgIcon icon="check" color="text" />
+  <SvgIcon icon="play" color="text" />
+  <SvgIcon icon="pause" color="text" />
 </div>
 ```
 

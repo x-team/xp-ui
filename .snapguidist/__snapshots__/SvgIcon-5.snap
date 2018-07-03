@@ -895,5 +895,82 @@ exports[`SvgIcon-5 1`] = `
         transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
     </g>
   </svg>
+  <svg
+    height="16px"
+    viewBox="0 0 14 16"
+    width="14px">
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="none"
+      strokeWidth="1">
+      <g
+        fill={
+          Object {
+            "color": Array [
+              52,
+              50,
+              59,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
+        transform="translate(-760.000000, -380.000000)">
+        <g
+          transform="translate(685.000000, 216.000000)">
+          <g
+            transform="translate(57.000000, 156.000000)">
+            <polygon
+              points="25 9 33 23 17 23"
+              transform="translate(25.000000, 16.000000) rotate(90.000000) translate(-25.000000, -16.000000)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    height="16px"
+    viewBox="0 0 14 16"
+    width="14px">
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="none"
+      strokeWidth="1">
+      <rect
+        fill={
+          Object {
+            "color": Array [
+              52,
+              50,
+              59,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
+        height="16"
+        width="5"
+        x="0"
+        y="0" />
+      <rect
+        fill={
+          Object {
+            "color": Array [
+              52,
+              50,
+              59,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
+        height="16"
+        width="5"
+        x="9"
+        y="0" />
+    </g>
+  </svg>
 </div>
 `;

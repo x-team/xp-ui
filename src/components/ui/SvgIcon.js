@@ -325,6 +325,29 @@ const getIcon = ({ icon, color }) => {
           <polyline stroke={colors[color]} strokeWidth='2' transform='translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) ' points='15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872' />
         </g>
       </svg>
+    ),
+
+    play: (
+      <svg width='14px' height='16px' viewBox='0 0 14 16'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <g transform='translate(-760.000000, -380.000000)' fill={colors[color]}>
+            <g transform='translate(685.000000, 216.000000)'>
+              <g transform='translate(57.000000, 156.000000)'>
+                <polygon transform='translate(25.000000, 16.000000) rotate(90.000000) translate(-25.000000, -16.000000)' points='25 9 33 23 17 23' />
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    ),
+
+    pause: (
+      <svg width='14px' height='16px' viewBox='0 0 14 16'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <rect x='0' y='0' width='5' height='16' fill={colors[color]} />
+          <rect x='9' y='0' width='5' height='16' fill={colors[color]} />
+        </g>
+      </svg>
     )
   }
 

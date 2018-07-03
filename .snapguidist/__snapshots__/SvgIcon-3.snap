@@ -582,6 +582,152 @@ exports[`SvgIcon-3 1`] = `
     </g>
   </svg>
   <svg
+    height="16px"
+    viewBox="0 0 16 16"
+    width="16px">
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="none"
+      strokeWidth="1">
+      <g
+        transform="translate(-539.000000, -162.000000)">
+        <g
+          transform="translate(539.000000, 162.000000)">
+          <path
+            d="M0.5,0.5 L0.5,14.5 L11.4545465,14.5 L11.4991824,4.38874719 L8.16377939,0.5 L0.5,0.5 Z"
+            stroke={
+              Object {
+                "color": Array [
+                  255,
+                  255,
+                  255,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            } />
+          <path
+            d="M2.5,5.5 L4.5,5.5"
+            stroke={
+              Object {
+                "color": Array [
+                  255,
+                  255,
+                  255,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            }
+            strokeLinecap="square" />
+          <path
+            d="M2.5,7.5 L7.5,7.5"
+            stroke={
+              Object {
+                "color": Array [
+                  255,
+                  255,
+                  255,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            }
+            strokeLinecap="square" />
+          <path
+            d="M2.5,9.5 L7.5,9.5"
+            stroke={
+              Object {
+                "color": Array [
+                  255,
+                  255,
+                  255,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            }
+            strokeLinecap="square" />
+          <path
+            d="M2.5,11.5 L7.5,11.5"
+            stroke={
+              Object {
+                "color": Array [
+                  255,
+                  255,
+                  255,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            }
+            strokeLinecap="square" />
+          <path
+            d="M7.5,1.5 L7.5,4.5"
+            stroke={
+              Object {
+                "color": Array [
+                  255,
+                  255,
+                  255,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            }
+            strokeLinecap="square" />
+          <path
+            d="M7.01349488,5.49634026 L11.4125741,5.49634026"
+            stroke={
+              Object {
+                "color": Array [
+                  255,
+                  255,
+                  255,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            } />
+          <circle
+            cx="11.5"
+            cy="11.5"
+            fill="#FFFFFF"
+            r="4.5" />
+          <path
+            d="M11.5,9.5 L11.5,13.5"
+            stroke={
+              Object {
+                "color": Array [
+                  255,
+                  255,
+                  255,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            }
+            strokeLinecap="square" />
+          <path
+            d="M9.5,11.5 L13.5,11.5"
+            stroke={
+              Object {
+                "color": Array [
+                  255,
+                  255,
+                  255,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            }
+            strokeLinecap="square" />
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
     height="5px"
     viewBox="0 0 9 5"
     width="9px">
@@ -752,6 +898,83 @@ exports[`SvgIcon-3 1`] = `
         }
         strokeWidth="2"
         transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
+    </g>
+  </svg>
+  <svg
+    height="16px"
+    viewBox="0 0 14 16"
+    width="14px">
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="none"
+      strokeWidth="1">
+      <g
+        fill={
+          Object {
+            "color": Array [
+              255,
+              255,
+              255,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
+        transform="translate(-760.000000, -380.000000)">
+        <g
+          transform="translate(685.000000, 216.000000)">
+          <g
+            transform="translate(57.000000, 156.000000)">
+            <polygon
+              points="25 9 33 23 17 23"
+              transform="translate(25.000000, 16.000000) rotate(90.000000) translate(-25.000000, -16.000000)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    height="16px"
+    viewBox="0 0 14 16"
+    width="14px">
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="none"
+      strokeWidth="1">
+      <rect
+        fill={
+          Object {
+            "color": Array [
+              255,
+              255,
+              255,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
+        height="16"
+        width="5"
+        x="0"
+        y="0" />
+      <rect
+        fill={
+          Object {
+            "color": Array [
+              255,
+              255,
+              255,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
+        height="16"
+        width="5"
+        x="9"
+        y="0" />
     </g>
   </svg>
 </div>
