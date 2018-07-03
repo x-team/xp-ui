@@ -32,6 +32,7 @@ const itemsArray = [
     <SelectBox
       items={itemsArray}
       expanded={true}
+      lined={true}
       width={500}
       onClick={item => console.log('onClick:', item)}
     />
