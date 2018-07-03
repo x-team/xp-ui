@@ -236,6 +236,7 @@ type Props = {
   width?: number,
   visibleItems?: number,
   expanded?: boolean,
+  lined?: boolean,
   collectionName?: string,
   onSelect?: Function,
   onClick?: Function,
@@ -256,6 +257,7 @@ class SelectBox extends Component<Props, State> {
     placeholder: 'Search',
     items: [],
     expanded: false,
+    lined: false,
     collectionName: ''
   }
 
@@ -428,7 +430,8 @@ class SelectBox extends Component<Props, State> {
       expanded,
       onSelect,
       onEdit,
-      onCreateNew
+      onCreateNew,
+      lined
     } = this.props
     const { view, search, creating } = this.state
 
@@ -470,7 +473,7 @@ class SelectBox extends Component<Props, State> {
 
     const itemClasses = (item) => ([
       styles.item,
-      expanded ? '' : styles.lined,
+      (lined || !expanded) ? styles.lined : '',
       (item.editing && item.editing !== item.value) ? styles.editing : ''
     ].join(' '))
 
