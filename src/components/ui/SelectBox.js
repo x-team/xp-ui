@@ -359,18 +359,28 @@ class SelectBox extends Component<Props, State> {
 
   handleCreateNew = () => {
     const { onCreateNew } = this.props
-    const { search, creating } = this.state
-    if (!creating && onCreateNew) {
-      this.setState(() => ({ creating: true }))
-      Promise.resolve(onCreateNew(search)).then((reponseItem) => {
-        this.setState(() => ({
-          view: [...this.state.view, reponseItem],
-          creating: false
-        }))
-        this.handleSearch('')
-      }) // to do: catch state
-    }
+    const { search } = this.state
+
+    onCreateNew && onCreateNew(search)
   }
+
+  // commented, because we use redux actions for all api things
+  // and this is not working with redux 
+  //
+  // handleCreateNew = () => {
+  //   const { onCreateNew } = this.props
+  //   const { search, creating } = this.state
+  //   if (!creating && onCreateNew) {
+  //     this.setState(() => ({ creating: true }))
+  //     Promise.resolve(onCreateNew(search)).then((reponseItem) => {
+  //       this.setState(() => ({
+  //         view: [...this.state.view, reponseItem],
+  //         creating: false
+  //       }))
+  //       this.handleSearch('')
+  //     }) // to do: catch state
+  //   }
+  // }
 
   handleStartEditing = (item: Item) => {
     const updatedItem = { ...item, editing: item.value }
