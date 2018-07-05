@@ -8,9 +8,8 @@ exports[`VideoPlayer-3 1`] = `
   muted={false}
   poster=""
   preload="auto"
+  src="https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4"
   width={640}>
-  <source
-    src="https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4" />
   Video cannot be played in this browser.
 </video>
 `;

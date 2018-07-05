@@ -7,7 +7,6 @@ exports[`VideoPlayer-23 1`] = `
   muted={false}
   poster=""
   preload="auto">
-  <source />
   Video cannot be played in this browser.
 </video>
 `;

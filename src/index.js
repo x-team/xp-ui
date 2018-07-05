@@ -32,6 +32,7 @@ import Tab from './components/ui/Tabs/Tab'
 import Tabs from './components/ui/Tabs/Tabs'
 import Text from './components/ui/Text'
 import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
+import TruncatedList from './components/ui/TruncatedList'
 import Typography from './components/ui/Typography'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
@@ -71,6 +72,7 @@ export {
   Tabs,
   Text,
   TextareaEditor,
+  TruncatedList,
   Typography,
   VideoPlayer,
   XIcon
