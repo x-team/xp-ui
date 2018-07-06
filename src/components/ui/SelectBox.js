@@ -361,7 +361,20 @@ class SelectBox extends Component<Props, State> {
     const { onCreateNew } = this.props
     const { search } = this.state
 
-    onCreateNew && onCreateNew(search)
+    if (onCreateNew) {
+      const pr = onCreateNew(search)
+
+      // checking if pr is a Promise
+      if (pr && typeof pr.then === 'function') {
+        this.setState(() => ({ creating: true }))
+        Promise.resolve(pr).then((reponseItem) => {
+          this.setState(() => ({
+            view: [...this.state.view, reponseItem],
+            creating: false
+          }))
+        })
+      }
+    }
   }
 
   // commented, because we use redux actions for all api things
