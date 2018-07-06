@@ -237,6 +237,7 @@ type Props = {
   visibleItems?: number,
   expanded?: boolean,
   lined?: boolean,
+  creating?: boolean,
   collectionName?: string,
   onSelect?: Function,
   onClick?: Function,
@@ -266,18 +267,26 @@ class SelectBox extends Component<Props, State> {
     items: this.props.items || [],
     view: this.props.items || [],
     expanded: this.props.expanded || false,
-    creating: false
+    creating: this.props.creating || false
   }
 
   componentDidUpdate (prevProps: Props, prevState: State) {
     if (!Object.is(prevProps, this.props)) {
       const viewItems = this.mapItemsInput(this.props.items || [], this.state.view)
-      this.setState((prevState, props) => ({
-        ...prevState,
-        items: viewItems,
-        view: viewItems,
-        expanded: this.props.expanded
-      }))
+      this.setState((prevState, props) => {
+        const newState = {
+          ...prevState,
+          items: viewItems,
+          view: viewItems,
+          expanded: this.props.expanded
+        }
+
+        if (typeof props.creating !== 'undefined') {
+          newState.creating = props.creating
+        }
+
+        return newState
+      })
     }
   }
 
@@ -376,24 +385,6 @@ class SelectBox extends Component<Props, State> {
       }
     }
   }
-
-  // commented, because we use redux actions for all api things
-  // and this is not working with redux 
-  //
-  // handleCreateNew = () => {
-  //   const { onCreateNew } = this.props
-  //   const { search, creating } = this.state
-  //   if (!creating && onCreateNew) {
-  //     this.setState(() => ({ creating: true }))
-  //     Promise.resolve(onCreateNew(search)).then((reponseItem) => {
-  //       this.setState(() => ({
-  //         view: [...this.state.view, reponseItem],
-  //         creating: false
-  //       }))
-  //       this.handleSearch('')
-  //     }) // to do: catch state
-  //   }
-  // }
 
   handleStartEditing = (item: Item) => {
     const updatedItem = { ...item, editing: item.value }
