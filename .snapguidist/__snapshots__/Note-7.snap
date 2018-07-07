@@ -1,8 +1,8 @@
 exports[`Note-7 1`] = `
 <div
-  className="AutoUI_ui_Note-26">
+  className="AutoUI_ui_Note-28">
   <div
-    className="AutoUI_ui_Note-30">
+    className="AutoUI_ui_Note-32">
     <div
       className="AutoUI_ui_Avatar-15">
       <img
@@ -14,23 +14,26 @@ exports[`Note-7 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-35">
+    className="AutoUI_ui_Note-37">
     <span
-      className="AutoUI_ui_Note-40 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      className="AutoUI_ui_Note-42 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
       Samwise Gamgee
     </span>
     <span
-      className="AutoUI_ui_Note-50 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Note-52 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
       04 Apr 18
     </span>
     <div
-      className="AutoUI_ui_Note-60">
+      className="AutoUI_ui_Note-62">
       <span
         className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
         <span>
           There, peeping among the cloud-wrack above a dark tor high up in the mountains, Sam saw a white star twinkle for a while. The beauty of it smote his heart, as he looked up out of the forsaken land, and hope returned to him. For like a shaft, clear and cold, the thought pierced him that in the end the Shadow was only a small and passing thing: there was light and high beauty for ever beyond its reach.
         </span>
       </span>
+    </div>
+    <div>
+      <div />
     </div>
   </div>
 </div>
