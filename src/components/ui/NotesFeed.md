@@ -1,13 +1,6 @@
 Basic usage:
 
 ```js
-const files = [
-  {
-    id: 357,
-    path: 'https://s3.amazonaws.com/auto-exam-videos/148c4cb11547066f20d313197c88b7cd.pdf'
-  }
-];
-
 const sample = [
   {
     id: 357,
@@ -19,8 +12,7 @@ const sample = [
     author_name: 'Sagacious Rainbows',
     author_avatar: 'https://placeimg.com/140/140/people',
     created_at: '2018-05-23T17:30:16.000Z',
-    updated_at: '2018-05-23T17:30:16.000Z',
-    files: files
+    updated_at: '2018-05-23T17:30:16.000Z'
   },
   {
     id: 356,

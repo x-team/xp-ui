@@ -59,7 +59,6 @@ class NotesFeed extends PureComponent<Props, State> {
                 date={note.updated_at}
                 name={note.author_name}
                 text={note.body}
-                files={note.files}
               />
             )
           )),

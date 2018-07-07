@@ -47,11 +47,17 @@ const FileItem = elem.div(cmz(`
 const FileName = elem.a(cmz(
   typo.baseText,
   `
-    color: ${theme.baseRed}
-    width: 100%
-    font-size: 16px
-    line-height: 1
-    text-align: left
+    & {
+      width: 100%
+      font-size: 16px
+      line-height: 1
+      text-align: left
+      text-decoration: none
+    }
+
+    &:hover {
+      color: ${theme.baseRed}
+    }
   `
 ))
 
