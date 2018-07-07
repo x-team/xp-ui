@@ -1,5 +1,18 @@
 exports[`AttachFiles-1 1`] = `
 <div>
+  <input
+    className="AutoUI_ui_AttachFiles-83"
+    type="file" />
+  <button
+    className=" AutoUI_ui_Button-69 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-139 outlined">
+    <span
+      className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+      <span
+        className="AutoUI_ui_AttachFiles-79">
+        Attach a file
+      </span>
+    </span>
+  </button>
   <div
     className="AutoUI_ui_AttachFiles-34">
     <div
@@ -9,12 +22,14 @@ exports[`AttachFiles-1 1`] = `
           "borderBottomColor": "transparent",
         }
       }>
-      <div
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      <a
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+        href="string"
+        target="_blank">
         filename-01.zip
-      </div>
+      </a>
       <div
-        className="AutoUI_ui_AttachFiles-56"
+        className="AutoUI_ui_AttachFiles-64"
         title="Delete \"filename-01.zip\" file">
         <svg
           height="18px"
@@ -80,12 +95,14 @@ exports[`AttachFiles-1 1`] = `
           "borderBottomColor": "transparent",
         }
       }>
-      <div
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      <a
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+        href="string"
+        target="_blank">
         filename-02.zip
-      </div>
+      </a>
       <div
-        className="AutoUI_ui_AttachFiles-56"
+        className="AutoUI_ui_AttachFiles-64"
         title="Delete \"filename-02.zip\" file">
         <svg
           height="18px"
@@ -159,12 +176,14 @@ exports[`AttachFiles-1 1`] = `
           },
         }
       }>
-      <div
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      <a
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+        href="string"
+        target="_blank">
         filename-03.zip
-      </div>
+      </a>
       <div
-        className="AutoUI_ui_AttachFiles-56"
+        className="AutoUI_ui_AttachFiles-64"
         title="Cancel \"filename-03.zip\" upload">
         <svg
           height="14px"
@@ -202,7 +221,7 @@ exports[`AttachFiles-1 1`] = `
         </svg>
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-60"
+        className="AutoUI_ui_AttachFiles-69"
         style={
           Object {
             "width": "30%",
@@ -224,12 +243,14 @@ exports[`AttachFiles-1 1`] = `
           },
         }
       }>
-      <div
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      <a
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+        href="string"
+        target="_blank">
         filename-04.zip
-      </div>
+      </a>
       <div
-        className="AutoUI_ui_AttachFiles-56"
+        className="AutoUI_ui_AttachFiles-64"
         title="Cancel \"filename-04.zip\" upload">
         <svg
           height="14px"
@@ -267,7 +288,7 @@ exports[`AttachFiles-1 1`] = `
         </svg>
       </div>
       <div
-        className="AutoUI_ui_AttachFiles-60"
+        className="AutoUI_ui_AttachFiles-69"
         style={
           Object {
             "width": "90%",
@@ -275,18 +296,5 @@ exports[`AttachFiles-1 1`] = `
         } />
     </div>
   </div>
-  <input
-    className="AutoUI_ui_AttachFiles-74"
-    type="file" />
-  <button
-    className=" AutoUI_ui_Button-69 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-139 outlined">
-    <span
-      className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
-      <span
-        className="AutoUI_ui_AttachFiles-70">
-        Attach a file
-      </span>
-    </span>
-  </button>
 </div>
 `;
