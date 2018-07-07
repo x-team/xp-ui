@@ -373,7 +373,7 @@ class SelectBox extends Component<Props, State> {
     if (onCreateNew) {
       const pr = onCreateNew(search)
 
-      // checking if pr is a Promise
+      // Check if pr is a Promise
       if (pr && typeof pr.then === 'function') {
         this.setState(() => ({ creating: true }))
         Promise.resolve(pr).then((reponseItem) => {
