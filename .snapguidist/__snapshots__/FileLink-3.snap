@@ -1,0 +1,12 @@
+exports[`FileLink-3 1`] = `
+<div
+  className="AutoUI_ui_FileLink-15">
+  <div
+    className="AutoUI_ui_FileLink-19 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+    <a
+      target="_blank">
+      View Attachment
+    </a>
+  </div>
+</div>
+`;

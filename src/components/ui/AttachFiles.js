@@ -32,7 +32,7 @@ type Props = {
 const Root = elem.div()
 
 const FilesList = elem.div(cmz(`
-  margin-bottom: 30px
+  margin-top: 30px
 `))
 
 const FileItem = elem.div(cmz(`
@@ -44,17 +44,26 @@ const FileItem = elem.div(cmz(`
   border-bottom: 2px solid ${theme.baseSilver}
 `))
 
-const FileName = elem.div(cmz(
+const FileName = elem.a(cmz(
   typo.baseText,
   `
-    width: 100%
-    font-size: 16px
-    line-height: 1
+    & {
+      width: 100%
+      font-size: 16px
+      line-height: 1
+      text-align: left
+      text-decoration: none
+    }
+
+    &:hover {
+      color: ${theme.baseRed}
+    }
   `
 ))
 
 const FileAction = elem.div(cmz(`
   cursor: pointer
+  line-height: normal
 `))
 
 const FileProgress = elem.div(cmz(`
@@ -149,7 +158,7 @@ class AttachFiles extends PureComponent<Props> {
                     borderBottomColor: file.progress !== 100 ? theme.baseSilver : 'transparent'
                   }
                 },
-                FileName(file.filename),
+                FileName({href: file.path, target: '_blank'}, file.filename),
                 renderButton(file),
                 renderProgress(file.progress)
               )
@@ -160,7 +169,6 @@ class AttachFiles extends PureComponent<Props> {
     }
 
     return Root(
-      renderFiles(files),
       HiddenInput({
         type: 'file',
         accept: acceptedTypes,
@@ -169,7 +177,8 @@ class AttachFiles extends PureComponent<Props> {
       }),
       <Button outlined onClick={this.triggerFileSelection}>
         {ButtonLabel('Attach a file')}
-      </Button>
+      </Button>,
+      renderFiles(files)
     )
   }
 }
