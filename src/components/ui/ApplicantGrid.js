@@ -60,9 +60,16 @@ class ApplicantGrid extends PureComponent<Props, State> {
         itemClass={cx.item}
         isFetching={isFetching}
         hasMore={hasMore}
-        viewMore={(amount, action) => (
+        viewMore={(amount, action, isFetching) => (
           <li className={cx.more}>
-            <Button onClick={() => this.handleViewMore(action)} outlined block>View more</Button>
+            <Button
+              block
+              outlined
+              disabled={isFetching}
+              onClick={() => this.handleViewMore(action)}
+            >
+              View more
+            </Button>
           </li>
         )}
       />

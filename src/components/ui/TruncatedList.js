@@ -27,7 +27,7 @@ type Props = {
   increment?: number,
   inserted?: boolean,
   viewMore?: Function | void,
-  page: number,
+  page?: number,
   isFetching?: boolean,
   hasMore?: boolean,
   listClass?: string,
@@ -36,8 +36,6 @@ type Props = {
 
 type State = {
   allVisible: boolean,
-  isFetching: boolean,
-  hasMore: boolean,
   hiddenItems: number,
   page: number,
   pagesCount: number,
@@ -72,8 +70,6 @@ class TruncatedList extends PureComponent<Props, State> {
 
     return {
       allVisible: prevState.allVisible || hiddenAmount === 0,
-      isFetching: isFetching || false,
-      hasMore: hasMore || false,
       hiddenItems: inserted ? hiddenAmount + 1 : hiddenAmount,
       page: page || prevState.page || 1,
       pagesCount: increment ? hiddenAmount / increment + 1 : 2,
@@ -112,15 +108,18 @@ class TruncatedList extends PureComponent<Props, State> {
 
     const renderShowMore = () => {
       return viewMore
-        ? viewMore(nextRealIncrement, this.handleViewMore)
+        ? viewMore(nextRealIncrement, this.handleViewMore, isFetching)
         : (
           <li
             className={[cx.item, itemClass].join(' ')}
-            onClick={this.handleViewMore}
+            onClick={!isFetching && this.handleViewMore}
           >
-            {increment
-              ? `+${nextRealIncrement} more`
-              : `+${hiddenItems} more`
+            {isFetching
+              ? 'Loading more...'
+              : (increment
+                ? `+${nextRealIncrement} more`
+                : `+${hiddenItems} more`
+              )
             }
           </li>
         )
@@ -140,7 +139,7 @@ class TruncatedList extends PureComponent<Props, State> {
             )
           })
         }
-        {((!allVisible || hasMore) && !isFetching) && renderShowMore()}
+        {(!allVisible || hasMore) && renderShowMore()}
       </ul>
     ) : null
   }

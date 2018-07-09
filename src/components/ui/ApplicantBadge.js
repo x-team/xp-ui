@@ -39,8 +39,8 @@ const cardTheme = {
       border: 1px solid ${theme.lineSilver2}
       padding: 30px
       display: grid
-      grid-template: 'avatar name name control' 'avatar infos infos infos' 'tags tags tags tags'
-      grid-template-columns: 90px 2fr 1fr
+      grid-template: 'avatar name control' 'avatar infos infos' 'tags tags tags'
+      grid-template-columns: 90px 1fr auto
       grid-template-rows: minmax(20px, auto) auto auto
       grid-gap: 20px
       margin: 0 10px
@@ -50,6 +50,7 @@ const cardTheme = {
     border: 1px solid ${theme.baseRed}
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15)
     margin: 0
+    padding: 40px
   `),
   name: cmz(typo.badgeHeading,
     `
@@ -107,11 +108,12 @@ const cardTheme = {
     `
       & {
         margin: 0 20px 10px 0
-        white-space: nowrap
+        max-width: calc(33% - 20px)
       }
 
       &:last-of-type {
         margin-right: 0
+        width: 33%
       }
     `
   ),
@@ -121,6 +123,7 @@ const cardTheme = {
       margin: 0 0 10px 0
       flex: 1
       cursor: pointer
+      align-self: flex-end
     }
 
     &:hover {
@@ -130,6 +133,7 @@ const cardTheme = {
   label: cmz(`
     display: block
     color: ${theme.typoLabel}
+    white-space: nowrap
   `),
   value: cmz(`
     display: block
