@@ -56,12 +56,14 @@ const cardTheme = {
       grid-area: name
       display: flex
       align-items: flex-end
+      cursor: pointer
     `
   ),
   avatar: cmz(`
     grid-area: avatar
     width: 90px
     height: 90px
+    cursor: pointer
   `),
   controls: cmz(`
     grid-area: control
@@ -98,13 +100,19 @@ const cardTheme = {
     width: 100%
     display: flex
     flex-wrap: wrap
-    align-items: flex-end
+    align-items: flex-start
     margin: 0 0 -10px
   `),
   info: cmz(typo.baseText,
     `
-      margin: 0 40px 10px 0
-      white-space: nowrap
+      & {
+        margin: 0 20px 10px 0
+        white-space: nowrap
+      }
+
+      &:last-of-type {
+        margin-right: 0
+      }
     `
   ),
   moreinfos: cmz(`
@@ -137,13 +145,19 @@ const cardTheme = {
     margin: 0 0 -10px
   `),
   tag: cmz(`
-    border: 1px solid ${theme.lineSilver2}
-    border-radius: 3px
-    padding: 0 10px
-    text-transform: uppercase
-    margin: 0 10px 10px 0
-    white-space: nowrap
-    color: ${theme.typoParagraph}
+    & {
+      border: 1px solid ${theme.lineSilver2}
+      border-radius: 3px
+      padding: 0 10px
+      text-transform: uppercase
+      margin: 0 10px 10px 0
+      white-space: nowrap
+      color: ${theme.typoParagraph}
+    }
+
+    &:last-of-type {
+      margin-right: 0
+    }
   `),
   moretags: cmz(`
     & {

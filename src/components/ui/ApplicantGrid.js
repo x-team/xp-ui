@@ -41,8 +41,14 @@ class ApplicantGrid extends PureComponent<Props, State> {
     increment: 50
   }
 
+  handleViewMore = (showMore) => {
+    const { onViewMore } = this.props
+    onViewMore && onViewMore()
+    showMore()
+  }
+
   render () {
-    const { items, mode, visible, increment } = this.props
+    const { items, mode, visible, increment, isFetching, hasMore } = this.props
 
     const cx = mode === 'card' ? cardTheme : tabularTheme
 
@@ -52,9 +58,11 @@ class ApplicantGrid extends PureComponent<Props, State> {
         visible={visible}
         increment={increment}
         itemClass={cx.item}
+        isFetching={isFetching}
+        hasMore={hasMore}
         viewMore={(amount, action) => (
           <li className={cx.more}>
-            <Button onClick={action} outlined block>View more</Button>
+            <Button onClick={() => this.handleViewMore(action)} outlined block>View more</Button>
           </li>
         )}
       />
