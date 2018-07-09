@@ -7,7 +7,7 @@ import TruncatedList from './TruncatedList'
 
 const cmz = require('cmz')
 
-const cx = {
+const cardTheme = {
   item: cmz(`
     display: block
     margin: 0 0 6px
@@ -20,8 +20,11 @@ const cx = {
   `)
 }
 
+const tabularTheme = {} // to do: https://zube.io/x-team/xp-formerly-auto/c/1638
+
 type Props = {
   items?: Array<*>,
+  mode?: string,
   visible?: number,
   increment?: number
 }
@@ -33,12 +36,16 @@ type State = {
 class ApplicantGrid extends PureComponent<Props, State> {
   static defaultProps = {
     items: [],
+    mode: 'card',
     visible: 50,
     increment: 50
   }
 
   render () {
-    const { items, visible, increment } = this.props
+    const { items, mode, visible, increment } = this.props
+
+    const cx = mode === 'card' ? cardTheme : tabularTheme
+
     return items ? (
       <TruncatedList
         items={items}

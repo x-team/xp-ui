@@ -20,32 +20,13 @@ Basic card:
     {
       label: 'Rate:',
       value: '$40'
-    },
-    {
-      label: 'Timezone:',
-      value: 'UTC+7'
-    },
-    {
-      label: 'Timezone:',
-      value: 'UTC+7'
-    },
-    {
-      label: 'Avail. date:',
-      value: '11/05/2018',
-      tip: 'I\'m not currently seeking opportunities.'
-    },
-    {
-      label: 'Rate:',
-      value: '$40'
     }
   ]}
   tags={[
-    'JavaScript JavaScript',
+    'JavaScript',
     'ES2015',
     'Node',
     'Express',
-    'React',
-    'Redux',
     'React',
     'Redux',
     'Webpack'
@@ -59,6 +40,7 @@ Active card:
 <ApplicantBadge
   active={true}
   mode="card"
+  id={123123}
   name={'Ryan Chartrand'}
   email={'ryan-chartrand@x-team.com'}
   info={[
@@ -74,6 +56,10 @@ Active card:
     {
       label: 'Rate:',
       value: '$40'
+    },
+    {
+      label: 'Anything else:',
+      value: 'nonono'
     }
   ]}
   tags={[
@@ -93,6 +79,7 @@ Basic tabular:
   id={123123}
   onClick={id => console.log('Applicant selected: ' + id)}
   mode="tabular"
+  id={123123}
   name={'Ryan Chartrand'}
   email={'ryan-chartrand@x-team.com'}
   info={[
@@ -139,7 +126,10 @@ Basic tabular:
 With children:
 
 ```js
-<ApplicantBadge>
+<ApplicantBadge
+  id={123123}
+  email={'applicant@x-team.com'}
+>
   <button>Hello</button>
   <button>World</button>
   anything?
@@ -151,8 +141,15 @@ With a custom avatar:
 
 ```js
 <ApplicantBadge
+  id={123123}
   name={'Applicant'}
   email={'applicant@x-team.com'}
-  avatar=<div style={{width: 64, height: 64, borderRadius: '50%', background: 'orange' }} />
+  avatar=<div style={{width: 90, height: 90, borderRadius: '50%', background: 'orange' }} />
 />
+```
+
+Missing props (does component explode?):
+
+```js
+<ApplicantBadge />
 ```

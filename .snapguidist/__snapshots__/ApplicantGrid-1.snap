@@ -2,15 +2,15 @@ exports[`ApplicantGrid-1 1`] = `
 <ul
   className="AutoUI_ui_TruncatedList-8 ">
   <li
-    className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantGrid-13">
+    className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantGrid-11">
     <div
-      className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 ">
+      className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 ">
       <div
-        className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+        className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
         Ryan Chartrand
       </div>
       <div
-        className="AutoUI_ui_ApplicantBadge-49">
+        className="AutoUI_ui_ApplicantBadge-61">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -21,133 +21,64 @@ exports[`ApplicantGrid-1 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-54">
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="13px"
-            viewBox="0 0 17 13"
-            width="17px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeWidth="1">
-              <polyline
-                points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-            </g>
-          </svg>
-        </span>
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="14px"
-            viewBox="0 0 14 14"
-            width="14px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeLinecap="square"
-              strokeWidth="1">
-              <g
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(-1294.000000, -1073.000000)">
-                <g
-                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                  <path
-                    d="M7,0 L7,14" />
-                  <path
-                    d="M14,7 L0,7" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-      </div>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-84">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Avail. date:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               11/05/2018
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Timezone:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               UTC+7
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Rate:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               $40
             </span>
           </span>
         </li>
       </ul>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-118">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-130">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           JavaScript
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           ES2015
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Node
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Express
         </li>
         <li
@@ -163,24 +94,22 @@ exports[`ApplicantGrid-1 1`] = `
           Webpack
         </li>
         <li
-          className="AutoUI_ui_ApplicantBadge-127 AutoUI_ui_ApplicantBadge-136">
+          className="AutoUI_ui_ApplicantBadge-139 AutoUI_ui_ApplicantBadge-148">
           +3 more
         </li>
       </ul>
-      <div
-        className="AutoUI_ui_ApplicantBadge-150" />
     </div>
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantGrid-13">
+    className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantGrid-11">
     <div
-      className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 AutoUI_ui_ApplicantBadge-37">
+      className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 AutoUI_ui_ApplicantBadge-49">
       <div
-        className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+        className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
         Ryan Chartrand
       </div>
       <div
-        className="AutoUI_ui_ApplicantBadge-49">
+        className="AutoUI_ui_ApplicantBadge-61">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -191,133 +120,64 @@ exports[`ApplicantGrid-1 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-54">
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="13px"
-            viewBox="0 0 17 13"
-            width="17px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeWidth="1">
-              <polyline
-                points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-            </g>
-          </svg>
-        </span>
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="14px"
-            viewBox="0 0 14 14"
-            width="14px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeLinecap="square"
-              strokeWidth="1">
-              <g
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(-1294.000000, -1073.000000)">
-                <g
-                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                  <path
-                    d="M7,0 L7,14" />
-                  <path
-                    d="M14,7 L0,7" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-      </div>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-84">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Avail. date:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               11/05/2018
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Timezone:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               UTC+7
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Rate:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               $40
             </span>
           </span>
         </li>
       </ul>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-118">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-130">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           JavaScript
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           ES2015
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Node
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Express
         </li>
         <li
@@ -333,24 +193,22 @@ exports[`ApplicantGrid-1 1`] = `
           Webpack
         </li>
         <li
-          className="AutoUI_ui_ApplicantBadge-127 AutoUI_ui_ApplicantBadge-136">
+          className="AutoUI_ui_ApplicantBadge-139 AutoUI_ui_ApplicantBadge-148">
           +3 more
         </li>
       </ul>
-      <div
-        className="AutoUI_ui_ApplicantBadge-150" />
     </div>
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantGrid-13">
+    className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantGrid-11">
     <div
-      className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 ">
+      className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 ">
       <div
-        className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+        className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
         Ryan Chartrand
       </div>
       <div
-        className="AutoUI_ui_ApplicantBadge-49">
+        className="AutoUI_ui_ApplicantBadge-61">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -361,133 +219,64 @@ exports[`ApplicantGrid-1 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-54">
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="13px"
-            viewBox="0 0 17 13"
-            width="17px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeWidth="1">
-              <polyline
-                points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-            </g>
-          </svg>
-        </span>
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="14px"
-            viewBox="0 0 14 14"
-            width="14px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeLinecap="square"
-              strokeWidth="1">
-              <g
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(-1294.000000, -1073.000000)">
-                <g
-                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                  <path
-                    d="M7,0 L7,14" />
-                  <path
-                    d="M14,7 L0,7" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-      </div>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-84">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Avail. date:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               11/05/2018
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Timezone:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               UTC+7
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Rate:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               $40
             </span>
           </span>
         </li>
       </ul>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-118">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-130">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           JavaScript
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           ES2015
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Node
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Express
         </li>
         <li
@@ -503,24 +292,22 @@ exports[`ApplicantGrid-1 1`] = `
           Webpack
         </li>
         <li
-          className="AutoUI_ui_ApplicantBadge-127 AutoUI_ui_ApplicantBadge-136">
+          className="AutoUI_ui_ApplicantBadge-139 AutoUI_ui_ApplicantBadge-148">
           +3 more
         </li>
       </ul>
-      <div
-        className="AutoUI_ui_ApplicantBadge-150" />
     </div>
   </li>
   <li
     className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
     <div
-      className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 ">
+      className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 ">
       <div
-        className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+        className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
         Ryan Chartrand
       </div>
       <div
-        className="AutoUI_ui_ApplicantBadge-49">
+        className="AutoUI_ui_ApplicantBadge-61">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -531,133 +318,64 @@ exports[`ApplicantGrid-1 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-54">
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="13px"
-            viewBox="0 0 17 13"
-            width="17px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeWidth="1">
-              <polyline
-                points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-            </g>
-          </svg>
-        </span>
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="14px"
-            viewBox="0 0 14 14"
-            width="14px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeLinecap="square"
-              strokeWidth="1">
-              <g
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(-1294.000000, -1073.000000)">
-                <g
-                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                  <path
-                    d="M7,0 L7,14" />
-                  <path
-                    d="M14,7 L0,7" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-      </div>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-84">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Avail. date:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               11/05/2018
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Timezone:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               UTC+7
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Rate:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               $40
             </span>
           </span>
         </li>
       </ul>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-118">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-130">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           JavaScript
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           ES2015
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Node
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Express
         </li>
         <li
@@ -673,24 +391,22 @@ exports[`ApplicantGrid-1 1`] = `
           Webpack
         </li>
         <li
-          className="AutoUI_ui_ApplicantBadge-127 AutoUI_ui_ApplicantBadge-136">
+          className="AutoUI_ui_ApplicantBadge-139 AutoUI_ui_ApplicantBadge-148">
           +3 more
         </li>
       </ul>
-      <div
-        className="AutoUI_ui_ApplicantBadge-150" />
     </div>
   </li>
   <li
     className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
     <div
-      className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 ">
+      className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 ">
       <div
-        className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+        className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
         Ryan Chartrand
       </div>
       <div
-        className="AutoUI_ui_ApplicantBadge-49">
+        className="AutoUI_ui_ApplicantBadge-61">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -701,133 +417,64 @@ exports[`ApplicantGrid-1 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-54">
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="13px"
-            viewBox="0 0 17 13"
-            width="17px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeWidth="1">
-              <polyline
-                points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-            </g>
-          </svg>
-        </span>
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="14px"
-            viewBox="0 0 14 14"
-            width="14px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeLinecap="square"
-              strokeWidth="1">
-              <g
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(-1294.000000, -1073.000000)">
-                <g
-                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                  <path
-                    d="M7,0 L7,14" />
-                  <path
-                    d="M14,7 L0,7" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-      </div>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-84">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Avail. date:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               11/05/2018
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Timezone:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               UTC+7
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Rate:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               $40
             </span>
           </span>
         </li>
       </ul>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-118">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-130">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           JavaScript
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           ES2015
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Node
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Express
         </li>
         <li
@@ -843,24 +490,22 @@ exports[`ApplicantGrid-1 1`] = `
           Webpack
         </li>
         <li
-          className="AutoUI_ui_ApplicantBadge-127 AutoUI_ui_ApplicantBadge-136">
+          className="AutoUI_ui_ApplicantBadge-139 AutoUI_ui_ApplicantBadge-148">
           +3 more
         </li>
       </ul>
-      <div
-        className="AutoUI_ui_ApplicantBadge-150" />
     </div>
   </li>
   <li
     className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
     <div
-      className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 ">
+      className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 ">
       <div
-        className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+        className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
         Ryan Chartrand
       </div>
       <div
-        className="AutoUI_ui_ApplicantBadge-49">
+        className="AutoUI_ui_ApplicantBadge-61">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -871,133 +516,64 @@ exports[`ApplicantGrid-1 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-54">
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="13px"
-            viewBox="0 0 17 13"
-            width="17px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeWidth="1">
-              <polyline
-                points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-            </g>
-          </svg>
-        </span>
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="14px"
-            viewBox="0 0 14 14"
-            width="14px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeLinecap="square"
-              strokeWidth="1">
-              <g
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(-1294.000000, -1073.000000)">
-                <g
-                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                  <path
-                    d="M7,0 L7,14" />
-                  <path
-                    d="M14,7 L0,7" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-      </div>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-84">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Avail. date:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               11/05/2018
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Timezone:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               UTC+7
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Rate:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               $40
             </span>
           </span>
         </li>
       </ul>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-118">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-130">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           JavaScript
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           ES2015
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Node
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Express
         </li>
         <li
@@ -1013,24 +589,22 @@ exports[`ApplicantGrid-1 1`] = `
           Webpack
         </li>
         <li
-          className="AutoUI_ui_ApplicantBadge-127 AutoUI_ui_ApplicantBadge-136">
+          className="AutoUI_ui_ApplicantBadge-139 AutoUI_ui_ApplicantBadge-148">
           +3 more
         </li>
       </ul>
-      <div
-        className="AutoUI_ui_ApplicantBadge-150" />
     </div>
   </li>
   <li
     className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
     <div
-      className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 ">
+      className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 ">
       <div
-        className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+        className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
         Ryan Chartrand
       </div>
       <div
-        className="AutoUI_ui_ApplicantBadge-49">
+        className="AutoUI_ui_ApplicantBadge-61">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -1041,133 +615,64 @@ exports[`ApplicantGrid-1 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-54">
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="13px"
-            viewBox="0 0 17 13"
-            width="17px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeWidth="1">
-              <polyline
-                points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-            </g>
-          </svg>
-        </span>
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="14px"
-            viewBox="0 0 14 14"
-            width="14px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeLinecap="square"
-              strokeWidth="1">
-              <g
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(-1294.000000, -1073.000000)">
-                <g
-                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                  <path
-                    d="M7,0 L7,14" />
-                  <path
-                    d="M14,7 L0,7" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-      </div>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-84">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Avail. date:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               11/05/2018
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Timezone:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               UTC+7
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Rate:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               $40
             </span>
           </span>
         </li>
       </ul>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-118">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-130">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           JavaScript
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           ES2015
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Node
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Express
         </li>
         <li
@@ -1183,24 +688,22 @@ exports[`ApplicantGrid-1 1`] = `
           Webpack
         </li>
         <li
-          className="AutoUI_ui_ApplicantBadge-127 AutoUI_ui_ApplicantBadge-136">
+          className="AutoUI_ui_ApplicantBadge-139 AutoUI_ui_ApplicantBadge-148">
           +3 more
         </li>
       </ul>
-      <div
-        className="AutoUI_ui_ApplicantBadge-150" />
     </div>
   </li>
   <li
     className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
     <div
-      className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 ">
+      className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 ">
       <div
-        className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+        className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
         Ryan Chartrand
       </div>
       <div
-        className="AutoUI_ui_ApplicantBadge-49">
+        className="AutoUI_ui_ApplicantBadge-61">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -1211,133 +714,64 @@ exports[`ApplicantGrid-1 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-54">
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="13px"
-            viewBox="0 0 17 13"
-            width="17px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeWidth="1">
-              <polyline
-                points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-            </g>
-          </svg>
-        </span>
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="14px"
-            viewBox="0 0 14 14"
-            width="14px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeLinecap="square"
-              strokeWidth="1">
-              <g
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(-1294.000000, -1073.000000)">
-                <g
-                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                  <path
-                    d="M7,0 L7,14" />
-                  <path
-                    d="M14,7 L0,7" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-      </div>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-84">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Avail. date:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               11/05/2018
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Timezone:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               UTC+7
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Rate:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               $40
             </span>
           </span>
         </li>
       </ul>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-118">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-130">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           JavaScript
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           ES2015
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Node
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Express
         </li>
         <li
@@ -1353,24 +787,22 @@ exports[`ApplicantGrid-1 1`] = `
           Webpack
         </li>
         <li
-          className="AutoUI_ui_ApplicantBadge-127 AutoUI_ui_ApplicantBadge-136">
+          className="AutoUI_ui_ApplicantBadge-139 AutoUI_ui_ApplicantBadge-148">
           +3 more
         </li>
       </ul>
-      <div
-        className="AutoUI_ui_ApplicantBadge-150" />
     </div>
   </li>
   <li
     className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
     <div
-      className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 ">
+      className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 ">
       <div
-        className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+        className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
         Ryan Chartrand
       </div>
       <div
-        className="AutoUI_ui_ApplicantBadge-49">
+        className="AutoUI_ui_ApplicantBadge-61">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -1381,133 +813,64 @@ exports[`ApplicantGrid-1 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-54">
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="13px"
-            viewBox="0 0 17 13"
-            width="17px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeWidth="1">
-              <polyline
-                points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-            </g>
-          </svg>
-        </span>
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="14px"
-            viewBox="0 0 14 14"
-            width="14px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeLinecap="square"
-              strokeWidth="1">
-              <g
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(-1294.000000, -1073.000000)">
-                <g
-                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                  <path
-                    d="M7,0 L7,14" />
-                  <path
-                    d="M14,7 L0,7" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-      </div>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-84">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Avail. date:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               11/05/2018
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Timezone:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               UTC+7
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Rate:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               $40
             </span>
           </span>
         </li>
       </ul>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-118">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-130">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           JavaScript
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           ES2015
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Node
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Express
         </li>
         <li
@@ -1523,24 +886,22 @@ exports[`ApplicantGrid-1 1`] = `
           Webpack
         </li>
         <li
-          className="AutoUI_ui_ApplicantBadge-127 AutoUI_ui_ApplicantBadge-136">
+          className="AutoUI_ui_ApplicantBadge-139 AutoUI_ui_ApplicantBadge-148">
           +3 more
         </li>
       </ul>
-      <div
-        className="AutoUI_ui_ApplicantBadge-150" />
     </div>
   </li>
   <li
     className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
     <div
-      className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 ">
+      className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 ">
       <div
-        className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+        className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
         Ryan Chartrand
       </div>
       <div
-        className="AutoUI_ui_ApplicantBadge-49">
+        className="AutoUI_ui_ApplicantBadge-61">
         <div
           className="AutoUI_ui_Avatar-15">
           <img
@@ -1551,133 +912,64 @@ exports[`ApplicantGrid-1 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-54">
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="13px"
-            viewBox="0 0 17 13"
-            width="17px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeWidth="1">
-              <polyline
-                points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-            </g>
-          </svg>
-        </span>
-        <span
-          className="AutoUI_ui_ApplicantBadge-61">
-          <svg
-            height="14px"
-            viewBox="0 0 14 14"
-            width="14px">
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="none"
-              strokeLinecap="square"
-              strokeWidth="1">
-              <g
-                stroke={
-                  Object {
-                    "color": Array [
-                      246,
-                      57,
-                      84,
-                    ],
-                    "model": "rgb",
-                    "valpha": 1,
-                  }
-                }
-                strokeWidth="2"
-                transform="translate(-1294.000000, -1073.000000)">
-                <g
-                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                  <path
-                    d="M7,0 L7,14" />
-                  <path
-                    d="M14,7 L0,7" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </span>
-      </div>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-84">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Avail. date:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               11/05/2018
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Timezone:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               UTC+7
             </span>
           </span>
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-92 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span>
             <span
-              className="AutoUI_ui_ApplicantBadge-110">
+              className="AutoUI_ui_ApplicantBadge-122">
               Rate:
             </span>
             <span
-              className="AutoUI_ui_ApplicantBadge-114">
+              className="AutoUI_ui_ApplicantBadge-126">
               $40
             </span>
           </span>
         </li>
       </ul>
       <ul
-        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-118">
+        className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-130">
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           JavaScript
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           ES2015
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Node
         </li>
         <li
-          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-127">
+          className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-139">
           Express
         </li>
         <li
@@ -1693,16 +985,14 @@ exports[`ApplicantGrid-1 1`] = `
           Webpack
         </li>
         <li
-          className="AutoUI_ui_ApplicantBadge-127 AutoUI_ui_ApplicantBadge-136">
+          className="AutoUI_ui_ApplicantBadge-139 AutoUI_ui_ApplicantBadge-148">
           +3 more
         </li>
       </ul>
-      <div
-        className="AutoUI_ui_ApplicantBadge-150" />
     </div>
   </li>
   <li
-    className="AutoUI_ui_ApplicantGrid-17">
+    className="AutoUI_ui_ApplicantGrid-15">
     <button
       className=" AutoUI_ui_Button-69 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-139 outlined AutoUI_ui_Button-153">
       <span

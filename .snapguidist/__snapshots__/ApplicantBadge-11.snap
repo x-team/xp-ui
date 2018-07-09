@@ -1,17 +1,1 @@
-exports[`ApplicantBadge-11 1`] = `
-<div
-  className="AutoUI_ui_ApplicantBadge-26">
-  <img
-    alt="avatar"
-    className="AutoUI_ui_ApplicantBadge-33"
-    src="https://www.gravatar.com/avatar/61a58e425da620d1f4839c6af03ce70f?s=64" />
-  <div
-    className="AutoUI_ui_ApplicantBadge-35">
-    
-    <div
-      className="AutoUI_ui_ApplicantBadge-48">
-      sionlyngle-email@x-team.com
-    </div>
-  </div>
-</div>
-`;
+exports[`ApplicantBadge-11 1`] = `null`;

@@ -1,92 +1,21 @@
 exports[`ApplicantBadge-9 1`] = `
 <div
-  className="AutoUI_ui_ApplicantBadge-23 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-156 ">
+  className="AutoUI_ui_ApplicantBadge-36 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-168 ">
   <div
-    className="AutoUI_ui_ApplicantBadge-42 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+    className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
     Applicant
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-49">
+    className="AutoUI_ui_ApplicantBadge-61">
     <div
-      className="AutoUI_ui_Avatar-15">
-      <img
-        alt=""
-        className="AutoUI_ui_Avatar-21"
-        height={90}
-        src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=90"
-        width={90} />
-    </div>
+      style={
+        Object {
+          "background": "orange",
+          "borderRadius": "50%",
+          "height": 90,
+          "width": 90,
+        }
+      } />
   </div>
-  <div
-    className="AutoUI_ui_ApplicantBadge-54">
-    <span
-      className="AutoUI_ui_ApplicantBadge-61">
-      <svg
-        height="13px"
-        viewBox="0 0 17 13"
-        width="17px">
-        <g
-          fill="none"
-          fillRule="evenodd"
-          stroke="none"
-          strokeWidth="1">
-          <polyline
-            points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-            stroke={
-              Object {
-                "color": Array [
-                  246,
-                  57,
-                  84,
-                ],
-                "model": "rgb",
-                "valpha": 1,
-              }
-            }
-            strokeWidth="2"
-            transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-        </g>
-      </svg>
-    </span>
-    <span
-      className="AutoUI_ui_ApplicantBadge-61">
-      <svg
-        height="14px"
-        viewBox="0 0 14 14"
-        width="14px">
-        <g
-          fill="none"
-          fillRule="evenodd"
-          stroke="none"
-          strokeLinecap="square"
-          strokeWidth="1">
-          <g
-            stroke={
-              Object {
-                "color": Array [
-                  246,
-                  57,
-                  84,
-                ],
-                "model": "rgb",
-                "valpha": 1,
-              }
-            }
-            strokeWidth="2"
-            transform="translate(-1294.000000, -1073.000000)">
-            <g
-              transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-              <path
-                d="M7,0 L7,14" />
-              <path
-                d="M14,7 L0,7" />
-            </g>
-          </g>
-        </g>
-      </svg>
-    </span>
-  </div>
-  <div
-    className="AutoUI_ui_ApplicantBadge-150" />
 </div>
 `;

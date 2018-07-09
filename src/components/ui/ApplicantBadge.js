@@ -10,11 +10,24 @@ import typo from '../../styles/typo'
 
 import type { Element } from 'react'
 
+type Info = {
+  value: string,
+  label: string,
+  tip?: string
+}
+
 type Props = {
+  id: number,
+  mode?: string,
+  active?: boolean,
+  name?: string,
+  email: string,
+  info: Array<Info>,
+  tags: Array<string>,
   avatar?: Element<*>,
-  email: ?string,
-  active: ?boolean,
-  children?: Element<*> | string
+  children?: Element<*> | string,
+  onClick?: Function,
+  onExclude?: Function | void
 }
 
 const cmz = require('cmz')
@@ -24,7 +37,6 @@ const cardTheme = {
     typo.baseText,
     `
       border: 1px solid ${theme.lineSilver2}
-      // max-width: 510px
       padding: 30px
       display: grid
       grid-template: 'avatar name name control' 'avatar infos infos infos' 'tags tags tags tags'
@@ -161,7 +173,7 @@ cardTheme.displayControlsOnHover = cmz(`
   }
 `)
 
-const tabularTheme = {} // to do:
+const tabularTheme = {} // to do: https://zube.io/x-team/xp-formerly-auto/c/1638
 
 class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
@@ -170,8 +182,7 @@ class ApplicantBadge extends PureComponent<Props> {
   }
 
   render () {
-    const { mode, active, name, email, info, tags, children } = this.props
-      // avatar,
+    const { id, mode, active, name, email, info, tags, avatar, children, onExclude } = this.props
 
     const cx = mode === 'card' ? cardTheme : tabularTheme
 
@@ -182,7 +193,7 @@ class ApplicantBadge extends PureComponent<Props> {
         listClass={cx.infos}
         itemClass={cx.info}
         items={infos && info.map((info, i) => (
-          <span>
+          <span key={i}>
             <span className={cx.label}>{info.label}</span>
             <span className={cx.value}>{info.value}</span>
           </span>
@@ -215,34 +226,46 @@ class ApplicantBadge extends PureComponent<Props> {
       onClick && onClick(id)
     }
 
-    return (
+    const handleExclude = () => {
+      const { id, onExclude } = this.props
+      onExclude && onExclude(id)
+    }
+
+    return id ? (
       <div
         onClick={handleClick}
         className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}
       >
-        <div className={cx.name}>{name || email}</div>
-        <div className={cx.avatar}>
-          <Avatar
-            src={`https://www.gravatar.com/avatar/${md5(email)}?s=90`}
-            email={name ? `${name}'s avatar` : 'avatar'}
-            size={90}
-          />
-        </div>
-        <div className={cx.controls}>
-          <span className={cx.control}>
-            <SvgIcon icon='check' />
-          </span>
-          <span className={cx.control}>
-            <SvgIcon icon='x' />
-          </span>
-        </div>
-        {mapInfosToRender(info)}
-        {mapTagsToRender(tags)}
-        <div className={cx.children}>
-          {children}
-        </div>
+        {(name || email) && (
+          <div className={cx.name}>{name || email}</div>
+        )}
+        {(avatar || email) && (
+          <div className={cx.avatar}>
+            {avatar || (
+              <Avatar
+                src={`https://www.gravatar.com/avatar/${md5(email)}?s=90`}
+                email={name ? `${name}'s avatar` : 'avatar'}
+                size={90}
+              />
+            )}
+          </div>
+        )}
+        {onExclude && (
+          <div className={cx.controls}>
+            <span onClick={handleExclude} className={cx.control}>
+              <SvgIcon icon='x' />
+            </span>
+          </div>
+        )}
+        {info && info.length > 0 && mapInfosToRender(info)}
+        {tags && tags.length > 0 && mapTagsToRender(tags)}
+        {children && (
+          <div className={cx.children}>
+            {children}
+          </div>
+        )}
       </div>
-    )
+    ) : null
   }
 }
 

@@ -57,8 +57,10 @@ items[1] = (
 Tabular view:
 
 ```
+let i = 1;
 const items = Array(5).fill(
   <ApplicantBadge
+    id={i++}
     name={'Ryan Chartrand'}
     email={'ryan-chartrand@x-team.com'}
     info={[
