@@ -26,7 +26,10 @@ type Props = {
   items?: Array<*>,
   mode?: string,
   visible?: number,
-  increment?: number
+  increment?: number,
+  onViewMore?: Function,
+  isFetching?: boolean,
+  hasMore?: boolean
 }
 
 type State = {
@@ -41,7 +44,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
     increment: 50
   }
 
-  handleViewMore = (showMore) => {
+  handleViewMore = (showMore: Function) => {
     const { onViewMore } = this.props
     onViewMore && onViewMore()
     showMore()

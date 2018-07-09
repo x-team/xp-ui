@@ -23,7 +23,7 @@ const cx = {
 
 type Props = {
   items: Array<*>,
-  visible?: number,
+  visible: number,
   increment?: number,
   inserted?: boolean,
   viewMore?: Function | void,
@@ -65,7 +65,7 @@ class TruncatedList extends PureComponent<Props, State> {
   }
 
   getUpToDateState = (prevState: State | Object, props: Props) => {
-    const { items, visible, increment, inserted, isFetching, hasMore, page } = props
+    const { items, visible, increment, inserted, page } = props
     const hiddenAmount = items.length >= visible ? items.length - visible : 0
 
     return {
