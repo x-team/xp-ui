@@ -36,21 +36,30 @@ const cardTheme = {
   mode: cmz(
     typo.baseText,
     `
-      border: 1px solid ${theme.lineSilver2}
-      padding: 30px
-      display: grid
-      grid-template: 'avatar name control' 'avatar infos infos' 'tags tags tags'
-      grid-template-columns: 90px 1fr auto
-      grid-template-rows: minmax(20px, auto) auto auto
-      grid-gap: 20px
-      margin: 0 10px
+      & {
+        transition: all 0.4s ease-out
+        background: ${theme.baseBrighter}
+        border: 1px solid ${theme.lineSilver2}
+        padding: 30px
+        display: grid
+        grid-template: 'avatar name control' 'avatar infos infos' 'tags tags tags'
+        grid-template-columns: 90px 1fr auto
+        grid-template-rows: minmax(20px, auto) auto auto
+        grid-gap: 20px
+        margin: 0 10px
+      }
+
+      &:hover {
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
+      }
     `
   ),
   active: cmz(`
+    transition: all 0.2s ease-in
     border: 1px solid ${theme.baseRed}
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15)
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
     margin: 0
-    padding: 40px
+    padding: 30px 40px
   `),
   name: cmz(typo.badgeHeading,
     `

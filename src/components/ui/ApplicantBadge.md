@@ -140,8 +140,6 @@ With children:
 >
   <button>Hello</button>
   <button>World</button>
-  anything?
-  really?
 </ApplicantBadge>
 ```
 
