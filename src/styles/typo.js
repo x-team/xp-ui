@@ -69,15 +69,15 @@ export default {
         color: ${theme.typoHeading}
         letter-spacing: -1px
         line-height: 51px
-        
+
         -ms-word-break: keep-all;
         word-break: keep-all;
-        
+
         -webkit-hyphens: none;
         -moz-hyphens: none;
         hyphens: none;
       }
-      
+
       @media screen and (max-width: ${breakpoints.sm}) {
         & {
           font-size: 35px
@@ -123,6 +123,8 @@ export default {
       color: ${theme.typoHeading}
       letter-spacing: -.3px
       line-height: 19px
+      margin: 0
+      text-transform: uppercase
     `
   ),
 

@@ -1,67 +1,157 @@
-Basic usage:
+Basic card:
 
 ```js
 <ApplicantBadge
-  firstName={'Applicant'}
-  lastName={'X-Team'}
-  email={'applicant@x-team.com'}
+  id={123123}
+  onClick={id => console.log('Applicant selected: ' + id)}
+  mode="card"
+  name={'Ryan Chartrand'}
+  email={'ryan-chartrand@x-team.com'}
+  info={[
+    {
+      label: 'Avail. date:',
+      value: '11/05/2018',
+      tip: 'I\'m not currently seeking opportunities.'
+    },
+    {
+      label: 'Timezone:',
+      value: 'UTC+7'
+    },
+    {
+      label: 'Rate:',
+      value: '$40'
+    },
+    {
+      label: 'Timezone:',
+      value: 'UTC+7'
+    },
+    {
+      label: 'Timezone:',
+      value: 'UTC+7'
+    },
+    {
+      label: 'Avail. date:',
+      value: '11/05/2018',
+      tip: 'I\'m not currently seeking opportunities.'
+    },
+    {
+      label: 'Rate:',
+      value: '$40'
+    }
+  ]}
+  tags={[
+    'JavaScript JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'React',
+    'Redux',
+    'Webpack'
+  ]}
 />
 ```
 
-Active applicant:
+Active card:
 
 ```js
 <ApplicantBadge
-  firstName={'Active'}
-  lastName={'Applicant'}
-  email={'applicant@x-team.com'}
-  active
+  active={true}
+  mode="card"
+  name={'Ryan Chartrand'}
+  email={'ryan-chartrand@x-team.com'}
+  info={[
+    {
+      label: 'Avail. date:',
+      value: '11/05/2018',
+      tip: 'I\'m not currently seeking opportunities.'
+    },
+    {
+      label: 'Timezone:',
+      value: 'UTC+7'
+    },
+    {
+      label: 'Rate:',
+      value: '$40'
+    }
+  ]}
+  tags={[
+    'JavaScript',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack'
+  ]}
+/>
+```
+
+Basic tabular:
+
+```js
+<ApplicantBadge
+  id={123123}
+  onClick={id => console.log('Applicant selected: ' + id)}
+  mode="tabular"
+  name={'Ryan Chartrand'}
+  email={'ryan-chartrand@x-team.com'}
+  info={[
+    {
+      label: 'Avail. date:',
+      value: '11/05/2018',
+      tip: 'I\'m not currently seeking opportunities.'
+    },
+    {
+      label: 'Timezone:',
+      value: 'UTC+7'
+    },
+    {
+      label: 'Rate:',
+      value: '$40'
+    }
+  ]}
+  tags={[
+    'JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack',
+    'JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack',
+    'JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack',
+  ]}
 />
 ```
 
 With children:
 
 ```js
-<ApplicantBadge
-  firstName={'Applicant'}
-  lastName={'X-Team'}
-  email={'applicant@x-team.com'}
->
+<ApplicantBadge>
   <button>Hello</button>
   <button>World</button>
+  anything?
+  really?
 </ApplicantBadge>
-```
-
-No first name provided:
-
-```js
-<ApplicantBadge
-  lastName={'Lastname'}
-  email={'applicant@x-team.com'}
-/>
-```
-
-No last name provided:
-
-```js
-<ApplicantBadge
-  firstName={'Firstname'}
-  email={'applicant@x-team.com'}
-/>
-```
-
-No first name / last name provided:
-
-```js
-<ApplicantBadge email={'sionlyngle-email@x-team.com'} />
 ```
 
 With a custom avatar:
 
 ```js
 <ApplicantBadge
-  firstName={'Applicant'}
-  lastName={'X-Team'}
+  name={'Applicant'}
   email={'applicant@x-team.com'}
   avatar=<div style={{width: 64, height: 64, borderRadius: '50%', background: 'orange' }} />
 />

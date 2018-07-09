@@ -1,26 +1,213 @@
 exports[`ApplicantBadge-5 1`] = `
 <div
-  className="AutoUI_ui_ApplicantBadge-26">
-  <img
-    alt="Applicant X-Team\'s avatar"
-    className="AutoUI_ui_ApplicantBadge-33"
-    src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=64" />
-  <div
-    className="AutoUI_ui_ApplicantBadge-35">
-    <div
-      className="AutoUI_ui_ApplicantBadge-41 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
-      Applicant X-Team
-    </div>
-    <div
-      className="AutoUI_ui_ApplicantBadge-48">
-      applicant@x-team.com
-    </div>
-    <button>
-      Hello
-    </button>
-    <button>
-      World
-    </button>
+  className="  ">
+  <div>
+    Ryan Chartrand
   </div>
+  <div>
+    <div
+      className="AutoUI_ui_Avatar-15">
+      <img
+        alt=""
+        className="AutoUI_ui_Avatar-21"
+        height={90}
+        src="https://www.gravatar.com/avatar/23f320fd7fb808e571fddd54ec7404ce?s=90"
+        width={90} />
+    </div>
+  </div>
+  <div>
+    <span>
+      <svg
+        height="13px"
+        viewBox="0 0 17 13"
+        width="17px">
+        <g
+          fill="none"
+          fillRule="evenodd"
+          stroke="none"
+          strokeWidth="1">
+          <polyline
+            points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
+            stroke={
+              Object {
+                "color": Array [
+                  246,
+                  57,
+                  84,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            }
+            strokeWidth="2"
+            transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
+        </g>
+      </svg>
+    </span>
+    <span>
+      <svg
+        height="14px"
+        viewBox="0 0 14 14"
+        width="14px">
+        <g
+          fill="none"
+          fillRule="evenodd"
+          stroke="none"
+          strokeLinecap="square"
+          strokeWidth="1">
+          <g
+            stroke={
+              Object {
+                "color": Array [
+                  246,
+                  57,
+                  84,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            }
+            strokeWidth="2"
+            transform="translate(-1294.000000, -1073.000000)">
+            <g
+              transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+              <path
+                d="M7,0 L7,14" />
+              <path
+                d="M14,7 L0,7" />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </span>
+  </div>
+  <ul
+    className="AutoUI_ui_TruncatedList-8 ">
+    <li
+      className="AutoUI_ui_TruncatedList-14 ">
+      <span>
+        <span>
+          Avail. date:
+        </span>
+        <span>
+          11/05/2018
+        </span>
+      </span>
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 ">
+      <span>
+        <span>
+          Timezone:
+        </span>
+        <span>
+          UTC+7
+        </span>
+      </span>
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 ">
+      <span>
+        <span>
+          Rate:
+        </span>
+        <span>
+          $40
+        </span>
+      </span>
+    </li>
+  </ul>
+  <ul
+    className="AutoUI_ui_TruncatedList-8 ">
+    <li
+      className="AutoUI_ui_TruncatedList-14 ">
+      JavaScript
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 ">
+      ES2015
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 ">
+      Node
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 ">
+      Express
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      React
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      Redux
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      Webpack
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      JavaScript
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      ES2015
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      Node
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      Express
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      React
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      Redux
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      Webpack
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      JavaScript
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      ES2015
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      Node
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      Express
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      React
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      Redux
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      Webpack
+    </li>
+    <li
+      className=" ">
+      +17 more
+    </li>
+  </ul>
+  <div />
 </div>
 `;

@@ -26,7 +26,9 @@ type Props = {
   visible: number,
   increment: number,
   inserted: boolean,
-  viewMore: Function | void
+  viewMore: Function | void,
+  listClass?: string,
+  itemClass?: string
 }
 
 type State = {
@@ -87,7 +89,7 @@ class TruncatedList extends PureComponent<Props, State> {
   }
 
   render () {
-    const { items, visible, increment, inserted, viewMore } = this.props
+    const { items, visible, increment, inserted, viewMore, listClass, itemClass } = this.props
     const { allVisible, hiddenItems, page, itemsLength } = this.state
 
     const realVisible = inserted
@@ -104,7 +106,7 @@ class TruncatedList extends PureComponent<Props, State> {
         ? viewMore(nextRealIncrement, this.handleViewMore)
         : (
           <li
-            className={cx.item}
+            className={[cx.item, itemClass].join(' ')}
             onClick={this.handleViewMore}
           >
             {increment
@@ -116,11 +118,11 @@ class TruncatedList extends PureComponent<Props, State> {
     }
 
     return itemsLength > 0 ? (
-      <ul className={cx.list}>
+      <ul className={[cx.list, listClass].join(' ')}>
         {items
           .map((item, i) => {
             const isVisible = allVisible || i < realVisible || (increment && i < nextView)
-              ? cx.item
+              ? [cx.item, itemClass].join(' ')
               : [cx.item, cx.hidden].join(' ')
             return (
               <li className={isVisible} key={i}>
