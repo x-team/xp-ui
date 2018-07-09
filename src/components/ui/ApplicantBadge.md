@@ -2,9 +2,8 @@ Basic card:
 
 ```js
 <ApplicantBadge
-  id={123123}
-  onClick={id => console.log('Applicant selected: ' + id)}
   mode="card"
+  id={123123}
   name={'Ryan Chartrand'}
   email={'ryan-chartrand@x-team.com'}
   info={[
@@ -31,6 +30,8 @@ Basic card:
     'Redux',
     'Webpack'
   ]}
+  onClick={id => console.log('Applicant selected: ' + id)}
+  onExclude={id => console.log('Exclude selected: ' + id)}
 />
 ```
 
@@ -58,7 +59,11 @@ Active card:
       value: '$40'
     },
     {
-      label: 'Anything else:',
+      label: 'Anything:',
+      value: 'nonono'
+    },
+    {
+      label: 'Else:',
       value: 'nonono'
     }
   ]}
@@ -69,6 +74,8 @@ Active card:
     'Redux',
     'Webpack'
   ]}
+  onClick={id => console.log('Applicant selected: ' + id)}
+  onExclude={id => console.log('Exclude selected: ' + id)}
 />
 ```
 
@@ -77,7 +84,6 @@ Basic tabular:
 ```js
 <ApplicantBadge
   id={123123}
-  onClick={id => console.log('Applicant selected: ' + id)}
   mode="tabular"
   id={123123}
   name={'Ryan Chartrand'}
@@ -118,8 +124,10 @@ Basic tabular:
     'Express',
     'React',
     'Redux',
-    'Webpack',
+    'Webpack'
   ]}
+  onClick={id => console.log('Applicant selected: ' + id)}
+  onExclude={id => console.log('Exclude selected: ' + id)}
 />
 ```
 

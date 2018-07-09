@@ -232,15 +232,12 @@ class ApplicantBadge extends PureComponent<Props> {
     }
 
     return id ? (
-      <div
-        onClick={handleClick}
-        className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}
-      >
+      <div className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         {(name || email) && (
-          <div className={cx.name}>{name || email}</div>
+          <div onClick={handleClick} className={cx.name}>{name || email}</div>
         )}
         {(avatar || email) && (
-          <div className={cx.avatar}>
+          <div onClick={handleClick} className={cx.avatar}>
             {avatar || (
               <Avatar
                 src={`https://www.gravatar.com/avatar/${md5(email)}?s=90`}

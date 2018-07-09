@@ -17,6 +17,46 @@ exports[`ApplicantBadge-3 1`] = `
         width={90} />
     </div>
   </div>
+  <div
+    className="AutoUI_ui_ApplicantBadge-66">
+    <span
+      className="AutoUI_ui_ApplicantBadge-73">
+      <svg
+        height="14px"
+        viewBox="0 0 14 14"
+        width="14px">
+        <g
+          fill="none"
+          fillRule="evenodd"
+          stroke="none"
+          strokeLinecap="square"
+          strokeWidth="1">
+          <g
+            stroke={
+              Object {
+                "color": Array [
+                  246,
+                  57,
+                  84,
+                ],
+                "model": "rgb",
+                "valpha": 1,
+              }
+            }
+            strokeWidth="2"
+            transform="translate(-1294.000000, -1073.000000)">
+            <g
+              transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+              <path
+                d="M7,0 L7,14" />
+              <path
+                d="M14,7 L0,7" />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </span>
+  </div>
   <ul
     className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-96">
     <li
@@ -59,17 +99,34 @@ exports[`ApplicantBadge-3 1`] = `
       </span>
     </li>
     <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
       <span>
         <span
           className="AutoUI_ui_ApplicantBadge-122">
-          Anything else:
+          Anything:
         </span>
         <span
           className="AutoUI_ui_ApplicantBadge-126">
           nonono
         </span>
       </span>
+    </li>
+    <li
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+      <span>
+        <span
+          className="AutoUI_ui_ApplicantBadge-122">
+          Else:
+        </span>
+        <span
+          className="AutoUI_ui_ApplicantBadge-126">
+          nonono
+        </span>
+      </span>
+    </li>
+    <li
+      className="AutoUI_ui_ApplicantBadge-104 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-110">
+      +2 info
     </li>
   </ul>
   <ul
