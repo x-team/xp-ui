@@ -219,18 +219,18 @@ class ApplicantBadge extends PureComponent<Props> {
         items={infos && info.filter(info => info.value).map((info, i) => (
           <Dropdown
             key={i}
-              tooltip
-              hover
-              targetYOrigin='top'
-              label={(
-                <span>
-                  <span className={cx.label}>{info.label}</span>
-                  <span className={cx.value}>{info.value}</span>
-                </span>
-              )}
-            >
-              {info.tip && <span className={cx.tip}>{info.tip}</span>}
-            </Dropdown>
+            tooltip
+            hover
+            targetYOrigin='top'
+            label={(
+              <span>
+                <span className={cx.label}>{info.label}</span>
+                <span className={cx.value}>{info.value}</span>
+              </span>
+            )}
+          >
+            {info.tip && <span className={cx.tip}>{info.tip}</span>}
+          </Dropdown>
         ))}
         viewMore={(amount, action) => (
           <li className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
