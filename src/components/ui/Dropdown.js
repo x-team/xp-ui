@@ -5,6 +5,7 @@ import ClickOutside from 'react-click-outside'
 
 import SvgIcon from './SvgIcon'
 
+import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { Element } from 'react'
@@ -22,7 +23,7 @@ const styles = {
   ),
   label: cmz(`
     & {
-      font-weight: 600
+      font-weight: normal
       cursor: pointer
       display: flex
       align-items: center
@@ -55,14 +56,70 @@ const styles = {
     opacity: 0
     transition: visibility 0s linear 0.2s, opacity 0.2s linear
     width: inherit
+    top: 100%
   `),
-  contentvisible: cmz(`
+  contentVisible: cmz(`
     visibility: visible
     opacity: 1
     transition-delay: 0s
   `),
-  contentright: cmz(`
+  contentRight: cmz(`
     right: 0
+  `),
+  contentTop: cmz(`
+    top: unset
+    bottom: 100%
+  `),
+  tooltip: cmz(`
+    & {
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1)
+      box-sizing: border-box
+      min-width: 190px
+      border: 1px solid ${theme.lineSilver2}
+      background: white
+      padding: 0 10px
+      white-space: nowrap
+      position: relative
+    }
+
+    &:before, &:after {
+      content: ''
+      position: absolute
+      left: 4px
+      display: block
+      border-left: 10px solid transparent
+      border-right: 10px solid transparent
+    }
+
+    &:before {
+      border-bottom: 10px solid ${theme.lineSilver2}
+      bottom: 100%
+    }
+
+    &:after {
+      border-bottom: 10px solid ${theme.baseBrighter}
+      bottom: calc(100% - 1px)
+    }
+  `),
+  tooltipTop: cmz(`
+    &:before {
+      border-top: 10px solid ${theme.lineSilver2}
+      border-bottom: none
+      bottom: -10px
+    }
+
+    &:after {
+      border-top: 10px solid ${theme.baseBrighter}
+      border-bottom: none
+      bottom: -9px
+    }
+  `),
+  contentTooltip: cmz(`
+    padding-top: 10px
+  `),
+  contentTooltipTop: cmz(`
+    padding-top: unset
+    padding-bottom: 10px
   `)
 }
 
@@ -70,10 +127,13 @@ type Props = {
   icon?: Icon | '',
   label?: Element<*> | string,
   children?: Element<*> | string,
-  targetOrigin?: string,
+  targetXOrigin?: string,
+  targetYOrigin?: string,
+  hover?: boolean,
   indicator?: boolean,
   padded?: boolean,
   toggle?: boolean,
+  tooltip?: boolean,
   className?: string
 }
 
@@ -86,7 +146,9 @@ class Dropdown extends PureComponent<Props, State> {
     icon: '',
     label: '',
     children: null,
-    targetOrigin: 'left',
+    targetXOrigin: 'left',
+    targetYOrigin: 'bottom',
+    hover: false,
     indicator: false,
     padded: false,
     toggle: true
@@ -103,7 +165,7 @@ class Dropdown extends PureComponent<Props, State> {
   close = () => this.setState(() => ({ open: false }))
 
   render () {
-    const { icon, label, children, targetOrigin, indicator, padded, toggle, className } = this.props
+    const { icon, label, children, targetXOrigin, targetYOrigin, hover, indicator, padded, toggle, tooltip, className } = this.props
     const { open } = this.state
 
     const rootClasses = [
@@ -116,13 +178,25 @@ class Dropdown extends PureComponent<Props, State> {
     ].join(' ')
     const contentClasses = [
       styles.content,
-      open ? styles.contentvisible : '',
-      targetOrigin === 'right' ? styles.contentright : ''
+      open ? styles.contentVisible : '',
+      targetXOrigin === 'right' ? styles.contentRight : '',
+      targetYOrigin === 'top' ? styles.contentTop : '',
+      tooltip && children ? (
+        targetYOrigin === 'top' ? styles.contentTooltipTop : styles.contentTooltip
+      ) : ''
+    ].join(' ')
+    const tooltipClasses = [
+      styles.tooltip,
+      targetYOrigin === 'top' ? styles.tooltipTop : ''
     ].join(' ')
 
     return (children || label || icon) ? (
       <ClickOutside onClickOutside={this.close}>
-        <div className={rootClasses}>
+        <div
+          className={rootClasses}
+          onMouseEnter={hover && this.open}
+          onMouseLeave={hover && this.close}
+        >
           <div className={labelClasses} onClick={() => toggle ? this.toggle() : this.open()}>
             {icon && <SvgIcon icon={icon} color='text' />}
             {label && <span className={styles.labelElement}>{label}</span>}
@@ -135,9 +209,15 @@ class Dropdown extends PureComponent<Props, State> {
               </span>
             )}
           </div>
-          <div className={contentClasses}>
-            {children}
-          </div>
+          {children && (
+            <div className={contentClasses}>
+              {tooltip ? (
+                <div className={tooltipClasses}>
+                  {children}
+                </div>
+              ) : children}
+            </div>
+          )}
         </div>
       </ClickOutside>
     ) : null

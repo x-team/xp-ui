@@ -30,8 +30,8 @@ const items = Array(10).fill(
   <ApplicantBadge
     id={i++}
     onClick={id => console.log('Applicant selected: ' + id)}
-    name={'Ryan Chartrand'}
-    email={'ryan-chartrand@x-team.com'}
+    name={'Applicant full name'}
+    email={'applicant@email.com'}
     info={info}
     tags={tags}
   />
@@ -41,8 +41,8 @@ items[1] = (
     active={true}
     id={999}
     onClick={id => console.log('Applicant selected: ' + id)}
-    name={'Ryan Chartrand'}
-    email={'ryan-chartrand@x-team.com'}
+    name={'Applicant full name'}
+    email={'applicant@email.com'}
     info={info}
     tags={tags}
   />
@@ -61,8 +61,8 @@ let i = 1;
 const items = Array(5).fill(
   <ApplicantBadge
     id={i++}
-    name={'Ryan Chartrand'}
-    email={'ryan-chartrand@x-team.com'}
+    name={'Applicant full name'}
+    email={'applicant@email.com'}
     info={[
       {
         label: 'Avail. date:',

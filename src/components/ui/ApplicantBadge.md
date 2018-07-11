@@ -4,8 +4,8 @@ Basic card:
 <ApplicantBadge
   mode="card"
   id={123123}
-  name={'Ryan Chartrand'}
-  email={'ryan-chartrand@x-team.com'}
+  name={'Applicant full name'}
+  email={'applicant@email.com'}
   info={[
     {
       label: 'Avail. date:',
@@ -42,8 +42,8 @@ Active card:
   active={true}
   mode="card"
   id={123123}
-  name={'Ryan Chartrand'}
-  email={'ryan-chartrand@x-team.com'}
+  name={'Applicant full name'}
+  email={'applicant@email.com'}
   info={[
     {
       label: 'Avail. date:',
@@ -86,8 +86,8 @@ Basic tabular:
   id={123123}
   mode="tabular"
   id={123123}
-  name={'Ryan Chartrand'}
-  email={'ryan-chartrand@x-team.com'}
+  name={'Applicant full name'}
+  email={'applicant@email.com'}
   info={[
     {
       label: 'Avail. date:',

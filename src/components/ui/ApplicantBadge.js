@@ -4,6 +4,7 @@ import md5 from 'crypto-js/md5'
 import Avatar from './Avatar'
 import SvgIcon from './SvgIcon'
 import TruncatedList from './TruncatedList'
+import Dropdown from './Dropdown'
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -45,7 +46,7 @@ const cardTheme = {
         grid-template: 'avatar name control' 'avatar infos infos' 'tags tags tags'
         grid-template-columns: 90px 1fr auto
         grid-template-rows: minmax(20px, auto) auto auto
-        grid-gap: 20px
+        grid-gap: 15px
         margin: 0 10px
       }
 
@@ -78,9 +79,6 @@ const cardTheme = {
   controls: cmz(`
     grid-area: control
     display: flex
-    visibility: hidden
-    opacity: 0
-    transition: visibility 0s linear 0.2s, opacity 0.2s linear
   `),
   control: cmz(`
     & {
@@ -143,10 +141,17 @@ const cardTheme = {
     display: block
     color: ${theme.typoLabel}
     white-space: nowrap
+    line-height: 1.2
   `),
   value: cmz(`
     display: block
     color: ${theme.typoParagraph}
+    line-height: 1.2
+  `),
+  tip: cmz(`
+    font-size: 15px
+    color: ${theme.typoParagraph}
+    line-height: 1.4
   `),
   tags: cmz(`
     font-size: 14px
@@ -187,18 +192,10 @@ const cardTheme = {
     }
   `),
   children: cmz(`
-    grid-column: 2 / -1;
-    grid-row: 2 / -1;
+    grid-column: 1 / -1
+    grid-row: 4 / -1
   `)
 }
-
-cardTheme.displayControlsOnHover = cmz(`
-  &:hover .${cardTheme.controls} {
-    visibility: visible
-    opacity: 1
-    transition-delay: 0s
-  }
-`)
 
 const tabularTheme = {} // to do: https://zube.io/x-team/xp-formerly-auto/c/1638
 
@@ -219,11 +216,21 @@ class ApplicantBadge extends PureComponent<Props> {
         visible={4}
         listClass={cx.infos}
         itemClass={cx.info}
-        items={infos && info.map((info, i) => (
-          <span key={i}>
-            <span className={cx.label}>{info.label}</span>
-            <span className={cx.value}>{info.value}</span>
-          </span>
+        items={infos && info.filter(info => info.value).map((info, i) => (
+          <Dropdown
+            key={i}
+              tooltip
+              hover
+              targetYOrigin='top'
+              label={(
+                <span>
+                  <span className={cx.label}>{info.label}</span>
+                  <span className={cx.value}>{info.value}</span>
+                </span>
+              )}
+            >
+              {info.tip && <span className={cx.tip}>{info.tip}</span>}
+            </Dropdown>
         ))}
         viewMore={(amount, action) => (
           <li className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
@@ -274,13 +281,24 @@ class ApplicantBadge extends PureComponent<Props> {
             )}
           </div>
         )}
-        {onExclude && (
-          <div className={cx.controls}>
-            <span onClick={handleExclude} className={cx.control}>
-              <SvgIcon icon='x' />
-            </span>
-          </div>
-        )}
+        <div className={cx.controls}>
+          {onExclude && (
+            <Dropdown
+              tooltip
+              label={(
+                <span onClick={handleExclude} className={cx.control}>
+                  <SvgIcon icon='x' />
+                </span>
+              )}
+            >
+              {/*
+                // to do: display form for exclusion here
+                // - https://zube.io/x-team/xp-formerly-auto/c/2102
+                // - https://zube.io/x-team/xp-formerly-auto/c/2103
+              */}
+            </Dropdown>
+          )}
+        </div>
         {info && info.length > 0 && mapInfosToRender(info)}
         {tags && tags.length > 0 && mapTagsToRender(tags)}
         {children && (
