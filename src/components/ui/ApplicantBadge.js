@@ -28,7 +28,7 @@ type Props = {
   avatar?: Element<*>,
   children?: Element<*> | string,
   onClick?: Function,
-  onExclude?: Function | void
+  exclusionFormRender?: Function | void
 }
 
 const cmz = require('cmz')
@@ -206,7 +206,7 @@ class ApplicantBadge extends PureComponent<Props> {
   }
 
   render () {
-    const { id, mode, active, name, email, info, tags, avatar, children, onExclude } = this.props
+    const { id, mode, active, name, email, info, tags, avatar, children, exclusionFormRender } = this.props
 
     const cx = mode === 'card' ? cardTheme : tabularTheme
 
@@ -260,11 +260,6 @@ class ApplicantBadge extends PureComponent<Props> {
       onClick && onClick(id)
     }
 
-    const handleExclude = () => {
-      const { id, onExclude } = this.props
-      onExclude && onExclude(id)
-    }
-
     return id ? (
       <div className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         {(name || email) && (
@@ -282,20 +277,16 @@ class ApplicantBadge extends PureComponent<Props> {
           </div>
         )}
         <div className={cx.controls}>
-          {onExclude && (
+          {exclusionFormRender && (
             <Dropdown
               tooltip
               label={(
-                <span onClick={handleExclude} className={cx.control}>
+                <span className={cx.control}>
                   <SvgIcon icon='x' />
                 </span>
               )}
             >
-              {/*
-                // to do: display form for exclusion here
-                // - https://zube.io/x-team/xp-formerly-auto/c/2102
-                // - https://zube.io/x-team/xp-formerly-auto/c/2103
-              */}
+              {exclusionFormRender}
             </Dropdown>
           )}
         </div>
