@@ -1,20 +1,23 @@
 exports[`ApplicantBadge-9 1`] = `
 <div
-  className="AutoUI_ui_ApplicantBadge-26">
-  <img
-    alt="Firstname \'s avatar"
-    className="AutoUI_ui_ApplicantBadge-33"
-    src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=64" />
+  className="AutoUI_ui_ApplicantBadge-37 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
   <div
-    className="AutoUI_ui_ApplicantBadge-35">
-    <div
-      className="AutoUI_ui_ApplicantBadge-41 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
-      Firstname 
-    </div>
-    <div
-      className="AutoUI_ui_ApplicantBadge-48">
-      applicant@x-team.com
-    </div>
+    className="AutoUI_ui_ApplicantBadge-67 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+    Applicant
   </div>
+  <div
+    className="AutoUI_ui_ApplicantBadge-77">
+    <div
+      style={
+        Object {
+          "background": "orange",
+          "borderRadius": "50%",
+          "height": 90,
+          "width": 90,
+        }
+      } />
+  </div>
+  <div
+    className="AutoUI_ui_ApplicantBadge-84" />
 </div>
 `;

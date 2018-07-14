@@ -7,6 +7,9 @@ TruncatedList is an invisible component that receives a list of anything and cre
 - `increment={0}`
 - `inserted={false}`
 - `viewMore={(amount , action) => <span onClick={action}>show + {amount}</span>}`
+- `isFetching={false}`
+- `hasMore={false}`
+- `page={1}`
 
 ### Examples
 

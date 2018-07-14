@@ -1,36 +1,36 @@
 exports[`TruncatedList-15 1`] = `
 <ul
-  className="AutoUI_ui_TruncatedList-8">
+  className="AutoUI_ui_TruncatedList-8 ">
   <li
-    className="AutoUI_ui_TruncatedList-14">
+    className="AutoUI_ui_TruncatedList-14 ">
     1
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-14">
+    className="AutoUI_ui_TruncatedList-14 ">
     2
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-14">
+    className="AutoUI_ui_TruncatedList-14 ">
     3
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-14">
+    className="AutoUI_ui_TruncatedList-14 ">
     4
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-14">
+    className="AutoUI_ui_TruncatedList-14 ">
     5
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-14">
+    className="AutoUI_ui_TruncatedList-14 ">
     6
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-14">
+    className="AutoUI_ui_TruncatedList-14 ">
     7
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-14">
+    className="AutoUI_ui_TruncatedList-14 ">
     8
   </li>
   <li
@@ -46,7 +46,7 @@ exports[`TruncatedList-15 1`] = `
     11
   </li>
   <li
-    className="AutoUI_ui_TruncatedList-14">
+    className="AutoUI_ui_TruncatedList-14 ">
     +3 more
   </li>
 </ul>

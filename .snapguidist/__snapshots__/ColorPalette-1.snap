@@ -2,7 +2,7 @@ exports[`ColorPalette-1 1`] = `
 <section
   className="AutoUI_ui_ColorPalette-14">
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(255, 255, 255)",
@@ -14,7 +14,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(19, 14, 46)",
@@ -26,7 +26,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(0, 0, 0)",
@@ -38,7 +38,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(246, 57, 84)",
@@ -50,7 +50,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(247, 217, 220)",
@@ -62,7 +62,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(92, 184, 92)",
@@ -74,7 +74,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(216, 216, 216)",
@@ -86,7 +86,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(228, 228, 228)",
@@ -98,7 +98,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(52, 50, 59)",
@@ -110,7 +110,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(246, 57, 84)",
@@ -122,7 +122,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(90, 86, 101)",
@@ -134,7 +134,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(19, 14, 46)",
@@ -146,7 +146,19 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(178, 182, 188)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      typoLabel
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(178, 182, 188)",
@@ -158,7 +170,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(240, 241, 244)",
@@ -170,7 +182,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(145, 140, 160)",
@@ -182,7 +194,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(90, 86, 101)",
@@ -194,7 +206,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(230, 230, 237)",
@@ -206,7 +218,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(211, 47, 59)",
@@ -218,7 +230,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(247, 217, 220)",
@@ -230,7 +242,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(246, 57, 84)",
@@ -242,7 +254,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(228, 228, 228)",
@@ -254,7 +266,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(233, 237, 238)",
@@ -266,7 +278,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(240, 241, 244)",
@@ -278,7 +290,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(230, 230, 237)",
@@ -290,7 +302,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(246, 57, 84)",
@@ -302,7 +314,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(255, 255, 255)",
@@ -314,7 +326,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(52, 50, 59)",
@@ -326,7 +338,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(178, 182, 188)",
@@ -338,7 +350,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(90, 86, 101)",
@@ -350,7 +362,7 @@ exports[`ColorPalette-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
         "backgroundColor": "rgb(179, 179, 179)",

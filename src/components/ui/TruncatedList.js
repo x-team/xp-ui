@@ -24,9 +24,14 @@ const cx = {
 type Props = {
   items: Array<*>,
   visible: number,
-  increment: number,
-  inserted: boolean,
-  viewMore: Function | void
+  increment?: number,
+  inserted?: boolean,
+  viewMore?: Function | void,
+  page?: number,
+  isFetching?: boolean,
+  hasMore?: boolean,
+  listClass?: string,
+  itemClass?: string
 }
 
 type State = {
@@ -42,29 +47,31 @@ class TruncatedList extends PureComponent<Props, State> {
     items: [],
     visible: 2,
     increment: 0,
-    inserted: false
+    inserted: false,
+    isFetching: false,
+    hasMore: false
   }
 
   constructor (props: Props) {
     super(props)
-    this.state = this.getInitialState({}, this.props)
+    this.state = this.getUpToDateState({}, this.props)
   }
 
   componentDidUpdate (prevProps: Props) {
     if (!Object.is(prevProps, this.props)) {
       this.setState((prevState, props) =>
-        this.getInitialState(prevState, props))
+        this.getUpToDateState(prevState, props))
     }
   }
 
-  getInitialState = ({ allVisible, page }: State | Object, props: Props) => {
-    const { items, visible, increment, inserted } = props
+  getUpToDateState = (prevState: State | Object, props: Props) => {
+    const { items, visible, increment, inserted, page } = props
     const hiddenAmount = items.length >= visible ? items.length - visible : 0
 
     return {
-      allVisible: allVisible || hiddenAmount === 0,
+      allVisible: prevState.allVisible || hiddenAmount === 0,
       hiddenItems: inserted ? hiddenAmount + 1 : hiddenAmount,
-      page: page || 1,
+      page: page || prevState.page || 1,
       pagesCount: increment ? hiddenAmount / increment + 1 : 2,
       itemsLength: items.length
     }
@@ -87,7 +94,7 @@ class TruncatedList extends PureComponent<Props, State> {
   }
 
   render () {
-    const { items, visible, increment, inserted, viewMore } = this.props
+    const { items, visible, increment, inserted, viewMore, isFetching, hasMore, listClass, itemClass } = this.props
     const { allVisible, hiddenItems, page, itemsLength } = this.state
 
     const realVisible = inserted
@@ -101,26 +108,29 @@ class TruncatedList extends PureComponent<Props, State> {
 
     const renderShowMore = () => {
       return viewMore
-        ? viewMore(nextRealIncrement, this.handleViewMore)
+        ? viewMore(nextRealIncrement, this.handleViewMore, isFetching)
         : (
           <li
-            className={cx.item}
-            onClick={this.handleViewMore}
+            className={[cx.item, itemClass].join(' ')}
+            onClick={!isFetching && this.handleViewMore}
           >
-            {increment
-              ? `+${nextRealIncrement} more`
-              : `+${hiddenItems} more`
+            {isFetching
+              ? 'Loading more...'
+              : (increment
+                ? `+${nextRealIncrement} more`
+                : `+${hiddenItems} more`
+              )
             }
           </li>
         )
     }
 
     return itemsLength > 0 ? (
-      <ul className={cx.list}>
+      <ul className={[cx.list, listClass].join(' ')}>
         {items
           .map((item, i) => {
             const isVisible = allVisible || i < realVisible || (increment && i < nextView)
-              ? cx.item
+              ? [cx.item, itemClass].join(' ')
               : [cx.item, cx.hidden].join(' ')
             return (
               <li className={isVisible} key={i}>
@@ -129,7 +139,7 @@ class TruncatedList extends PureComponent<Props, State> {
             )
           })
         }
-        {!allVisible && renderShowMore()}
+        {(!allVisible || hasMore) && renderShowMore()}
       </ul>
     ) : null
   }

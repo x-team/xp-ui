@@ -56,7 +56,7 @@ exports[`SelectBox-5 1`] = `
         <input
           aria-labelledby="label-search"
           autoComplete="off"
-          className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-41"
+          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-41"
           disabled={false}
           id="search"
           name="search"
@@ -82,10 +82,10 @@ exports[`SelectBox-5 1`] = `
             <div
               className="AutoUI_forms_InputField-77">
               <label
-                className="AutoUI_forms_InputField-68 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                className="AutoUI_forms_InputField-68 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <input
                   aria-labelledby="label-registered"
-                  className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-121 "
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-121 "
                   id="registered"
                   name="registered"
                   type="checkbox" />
@@ -134,10 +134,10 @@ exports[`SelectBox-5 1`] = `
             <div
               className="AutoUI_forms_InputField-77">
               <label
-                className="AutoUI_forms_InputField-68 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                className="AutoUI_forms_InputField-68 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <input
                   aria-labelledby="label-portfolio-building"
-                  className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-121 "
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-121 "
                   id="portfolio-building"
                   name="portfolio-building"
                   type="checkbox" />
@@ -186,10 +186,10 @@ exports[`SelectBox-5 1`] = `
             <div
               className="AutoUI_forms_InputField-77">
               <label
-                className="AutoUI_forms_InputField-68 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                className="AutoUI_forms_InputField-68 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <input
                   aria-labelledby="label-portfolio-review"
-                  className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-121 "
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-121 "
                   id="portfolio-review"
                   name="portfolio-review"
                   type="checkbox" />
@@ -238,10 +238,10 @@ exports[`SelectBox-5 1`] = `
             <div
               className="AutoUI_forms_InputField-77">
               <label
-                className="AutoUI_forms_InputField-68 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                className="AutoUI_forms_InputField-68 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <input
                   aria-labelledby="label-social-media-screen"
-                  className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-121 "
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-121 "
                   id="social-media-screen"
                   name="social-media-screen"
                   type="checkbox" />
@@ -290,10 +290,10 @@ exports[`SelectBox-5 1`] = `
             <div
               className="AutoUI_forms_InputField-77">
               <label
-                className="AutoUI_forms_InputField-68 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                className="AutoUI_forms_InputField-68 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <input
                   aria-labelledby="label-react-shortlist"
-                  className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-121 "
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_forms_InputField-121 "
                   id="react-shortlist"
                   name="react-shortlist"
                   type="checkbox" />

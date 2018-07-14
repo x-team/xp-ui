@@ -8,12 +8,14 @@ exports[`SelectBox-7 1`] = `
   }>
   <div>
     <div
-      className="AutoUI_ui_Dropdown-16 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-20">
+      className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-20"
+      onMouseEnter={false}
+      onMouseLeave={false}>
       <div
-        className="AutoUI_ui_Dropdown-23 ">
+        className="AutoUI_ui_Dropdown-24 ">
         
         <span
-          className="AutoUI_ui_Dropdown-41">
+          className="AutoUI_ui_Dropdown-42">
           <div
             className="AutoUI_ui_SelectBox-37">
             <div
@@ -63,7 +65,7 @@ exports[`SelectBox-7 1`] = `
               <input
                 aria-labelledby="label-search"
                 autoComplete="off"
-                className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-41"
+                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-41"
                 disabled={false}
                 id="search"
                 name="search"
@@ -74,10 +76,7 @@ exports[`SelectBox-7 1`] = `
           </div>
         </span>
       </div>
-      <div
-        className="AutoUI_ui_Dropdown-51  ">
-        
-      </div>
+      
     </div>
   </div>
 </div>

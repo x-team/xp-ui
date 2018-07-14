@@ -52,6 +52,7 @@ export default wrap({
   typoSubheading: palette.radicalRed,
   typoParagraph: palette.scarpaFlow,
   typoHighlight: palette.haiti,
+  typoLabel: palette.bombay,
 
   sliderToggle: palette.bombay,
   sliderBackground: palette.athensGray,

@@ -5,13 +5,13 @@ exports[`InputField-3 1`] = `
     <section
       className="AutoUI_ui_Text-27">
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         How many years of experience do you have?
       </div>
     </section>
     <input
       aria-labelledby="label-experience"
-      className="AutoUI_typo-179 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86  AutoUI_forms_InputField-110"
+      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86  AutoUI_forms_InputField-110"
       defaultValue="1"
       id="experience"
       name="experience"
@@ -23,7 +23,7 @@ exports[`InputField-3 1`] = `
       }
       type="text" />
     <span
-      className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Text-46 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
       years
     </span>
   </label>

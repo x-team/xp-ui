@@ -1,1 +1,30 @@
-exports[`Dropdown-9 1`] = `null`;
+exports[`Dropdown-9 1`] = `
+<div>
+  <div
+    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+    onMouseEnter={false}
+    onMouseLeave={false}>
+    <div
+      className="AutoUI_ui_Dropdown-24 ">
+      
+      <span
+        className="AutoUI_ui_Dropdown-42">
+        <button
+          className=" AutoUI_ui_Button-69 AutoUI_ui_Button-31 AutoUI_ui_Button-120 ">
+          <span
+            className="AutoUI_ui_Button-45 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+            x
+          </span>
+        </button>
+      </span>
+    </div>
+    <div
+      className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117">
+      <div
+        className="AutoUI_ui_Dropdown-73 ">
+        Anything here
+      </div>
+    </div>
+  </div>
+</div>
+`;

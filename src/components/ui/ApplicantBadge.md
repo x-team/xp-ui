@@ -1,21 +1,133 @@
-Basic usage:
+Basic card:
 
 ```js
 <ApplicantBadge
-  firstName={'Applicant'}
-  lastName={'X-Team'}
-  email={'applicant@x-team.com'}
+  mode="card"
+  id={123123}
+  name={'Applicant full name'}
+  email={'applicant@email.com'}
+  info={[
+    {
+      label: 'Avail. date:',
+      value: '11/05/2018',
+      tip: 'I\'m not currently seeking opportunities.'
+    },
+    {
+      label: 'Timezone:',
+      value: 'UTC+7'
+    },
+    {
+      label: 'Rate:',
+      value: '$40'
+    }
+  ]}
+  tags={[
+    'JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack'
+  ]}
+  onClick={id => console.log('Applicant selected: ' + id)}
+  exclusionFormRender={<form>A list of inputs with a submit button</form>}
 />
 ```
 
-Active applicant:
+Active card:
 
 ```js
 <ApplicantBadge
-  firstName={'Active'}
-  lastName={'Applicant'}
-  email={'applicant@x-team.com'}
-  active
+  active={true}
+  mode="card"
+  id={123123}
+  name={'Applicant full name'}
+  email={'applicant@email.com'}
+  info={[
+    {
+      label: 'Avail. date:',
+      value: '11/05/2018',
+      tip: 'I\'m not currently seeking opportunities.'
+    },
+    {
+      label: 'Timezone:',
+      value: 'UTC+7'
+    },
+    {
+      label: 'Rate:',
+      value: '$40'
+    },
+    {
+      label: 'Anything:',
+      value: 'nonono'
+    },
+    {
+      label: 'Else:',
+      value: 'nonono'
+    }
+  ]}
+  tags={[
+    'JavaScript',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack'
+  ]}
+  onClick={id => console.log('Applicant selected: ' + id)}
+  exclusionFormRender={<form>A list of inputs with a submit button</form>}
+/>
+```
+
+Basic tabular:
+
+```js
+<ApplicantBadge
+  id={123123}
+  mode="tabular"
+  id={123123}
+  name={'Applicant full name'}
+  email={'applicant@email.com'}
+  info={[
+    {
+      label: 'Avail. date:',
+      value: '11/05/2018',
+      tip: 'I\'m not currently seeking opportunities.'
+    },
+    {
+      label: 'Timezone:',
+      value: 'UTC+7'
+    },
+    {
+      label: 'Rate:',
+      value: '$40'
+    }
+  ]}
+  tags={[
+    'JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack',
+    'JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack',
+    'JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack'
+  ]}
+  onClick={id => console.log('Applicant selected: ' + id)}
+  exclusionFormRender={<form>A list of inputs with a submit button</form>}
 />
 ```
 
@@ -23,8 +135,7 @@ With children:
 
 ```js
 <ApplicantBadge
-  firstName={'Applicant'}
-  lastName={'X-Team'}
+  id={123123}
   email={'applicant@x-team.com'}
 >
   <button>Hello</button>
@@ -32,37 +143,19 @@ With children:
 </ApplicantBadge>
 ```
 
-No first name provided:
-
-```js
-<ApplicantBadge
-  lastName={'Lastname'}
-  email={'applicant@x-team.com'}
-/>
-```
-
-No last name provided:
-
-```js
-<ApplicantBadge
-  firstName={'Firstname'}
-  email={'applicant@x-team.com'}
-/>
-```
-
-No first name / last name provided:
-
-```js
-<ApplicantBadge email={'sionlyngle-email@x-team.com'} />
-```
-
 With a custom avatar:
 
 ```js
 <ApplicantBadge
-  firstName={'Applicant'}
-  lastName={'X-Team'}
+  id={123123}
+  name={'Applicant'}
   email={'applicant@x-team.com'}
-  avatar=<div style={{width: 64, height: 64, borderRadius: '50%', background: 'orange' }} />
+  avatar=<div style={{width: 90, height: 90, borderRadius: '50%', background: 'orange' }} />
 />
+```
+
+Missing props (does component explode?):
+
+```js
+<ApplicantBadge />
 ```

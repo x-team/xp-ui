@@ -1,4 +1,5 @@
 import ApplicantBadge from './components/ui/ApplicantBadge'
+import ApplicantGrid from './components/ui/ApplicantGrid'
 import ApplicantListFilter from './components/forms/ApplicantListFilter'
 import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
@@ -39,6 +40,7 @@ import XIcon from './components/ui/XIcon'
 
 export {
   ApplicantBadge,
+  ApplicantGrid,
   ApplicantListFilter,
   ApplicantScreen,
   AttachFiles,
