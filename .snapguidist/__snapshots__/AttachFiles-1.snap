@@ -6,7 +6,7 @@ exports[`AttachFiles-1 1`] = `
   <button
     className=" AutoUI_ui_Button-69 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-139 outlined">
     <span
-      className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+      className="AutoUI_ui_Button-45 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
       <span
         className="AutoUI_ui_AttachFiles-79">
         Attach a file
@@ -23,7 +23,7 @@ exports[`AttachFiles-1 1`] = `
         }
       }>
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
         href="string"
         target="_blank">
         filename-01.zip
@@ -96,7 +96,7 @@ exports[`AttachFiles-1 1`] = `
         }
       }>
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
         href="string"
         target="_blank">
         filename-02.zip
@@ -177,7 +177,7 @@ exports[`AttachFiles-1 1`] = `
         }
       }>
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
         href="string"
         target="_blank">
         filename-03.zip
@@ -244,7 +244,7 @@ exports[`AttachFiles-1 1`] = `
         }
       }>
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
         href="string"
         target="_blank">
         filename-04.zip

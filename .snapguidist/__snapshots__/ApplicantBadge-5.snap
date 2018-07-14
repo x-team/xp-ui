@@ -64,6 +64,15 @@ exports[`ApplicantBadge-5 1`] = `
             </span>
           </span>
         </div>
+        <div
+          className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117">
+          <div
+            className="AutoUI_ui_Dropdown-73 ">
+            <form>
+              A list of inputs with a submit button
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -235,8 +244,8 @@ exports[`ApplicantBadge-5 1`] = `
       Webpack
     </li>
     <li
-      className=" ">
-      +17 more
+      className="  ">
+      + 17 more
     </li>
   </ul>
 </div>

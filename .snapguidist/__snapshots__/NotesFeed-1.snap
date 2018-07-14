@@ -23,13 +23,13 @@ exports[`NotesFeed-1 1`] = `
           Sagacious Rainbows
         </span>
         <span
-          className="AutoUI_ui_Note-52 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_Note-52 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           23 May 18
         </span>
         <div
           className="AutoUI_ui_Note-62">
           <span
-            className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-46 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <span>
               Note of type general B
             </span>
@@ -42,7 +42,7 @@ exports[`NotesFeed-1 1`] = `
               <div
                 className="AutoUI_ui_FileLink-16">
                 <div
-                  className="AutoUI_ui_FileLink-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                  className="AutoUI_ui_FileLink-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   <a
                     href="https://s3.amazonaws.com/auto-exam-videos/148c4cb11547066f20d313197c88b7cd.pdf"
                     target="_blank">
@@ -56,7 +56,7 @@ exports[`NotesFeed-1 1`] = `
               <div
                 className="AutoUI_ui_FileLink-16">
                 <div
-                  className="AutoUI_ui_FileLink-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+                  className="AutoUI_ui_FileLink-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   <a
                     href="https://s3.amazonaws.com/auto-exam-videos/148c4cb11547066f20d313197c88b7cd.pdf"
                     target="_blank">
@@ -93,13 +93,13 @@ exports[`NotesFeed-1 1`] = `
           Sagacious Rainbows
         </span>
         <span
-          className="AutoUI_ui_Note-52 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_Note-52 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           23 May 18
         </span>
         <div
           className="AutoUI_ui_Note-62">
           <span
-            className="AutoUI_ui_Text-46 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-46 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <span>
               Note of type general A
             </span>
@@ -115,7 +115,7 @@ exports[`NotesFeed-1 1`] = `
     className="AutoUI_ui_NotesFeed-27 AutoUI_ui_Button-88 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-139 outlined AutoUI_ui_Button-153"
     type="button">
     <span
-      className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+      className="AutoUI_ui_Button-45 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
       View more
     </span>
   </button>

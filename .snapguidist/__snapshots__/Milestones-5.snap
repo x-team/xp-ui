@@ -52,7 +52,7 @@ exports[`Milestones-5 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
         Level 1
       </span>
     </li>
@@ -105,7 +105,7 @@ exports[`Milestones-5 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
         Level 2
       </span>
     </li>
@@ -156,7 +156,7 @@ exports[`Milestones-5 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
         Level 3
       </span>
     </li>
@@ -215,7 +215,7 @@ exports[`Milestones-5 1`] = `
         </svg>
       </div>
       <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
         Level 4
       </span>
     </li>

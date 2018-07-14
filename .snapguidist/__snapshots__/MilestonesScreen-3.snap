@@ -70,7 +70,7 @@ exports[`MilestonesScreen-3 1`] = `
           </svg>
         </div>
         <span
-          className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+          className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
           Level 1
         </span>
       </li>
@@ -123,7 +123,7 @@ exports[`MilestonesScreen-3 1`] = `
           </svg>
         </div>
         <span
-          className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+          className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
           Level 2
         </span>
       </li>
@@ -176,7 +176,7 @@ exports[`MilestonesScreen-3 1`] = `
           </svg>
         </div>
         <span
-          className="AutoUI_ui_Milestones-127 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+          className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
           Level 3
         </span>
       </li>
@@ -195,7 +195,7 @@ exports[`MilestonesScreen-3 1`] = `
             First subsection
           </h1>
           <div
-            className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum numquam, beatae, distinctio fugiat eveniet harum, vel sint odit adipisci quos nam soluta pariatur, voluptatibus repudiandae hic mollitia ex iste rem.
           </div>
         </section>
@@ -203,7 +203,7 @@ exports[`MilestonesScreen-3 1`] = `
           <button
             className=" AutoUI_ui_Button-69 AutoUI_ui_Button-31 AutoUI_ui_Button-120 ">
             <span
-              className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+              className="AutoUI_ui_Button-45 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
               Go to the step 3
             </span>
           </button>
@@ -218,7 +218,7 @@ exports[`MilestonesScreen-3 1`] = `
             Second subsection
           </h1>
           <div
-            className="AutoUI_ui_Text-41 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ipsa illum placeat aliquid recusandae odio minus quisquam, corporis, sed consequuntur optio fugit eaque rerum, nihil mollitia. Sequi ad nulla facere.
           </div>
         </section>
@@ -226,7 +226,7 @@ exports[`MilestonesScreen-3 1`] = `
           <button
             className=" AutoUI_ui_Button-69 AutoUI_ui_Button-31 AutoUI_ui_Button-120 ">
             <span
-              className="AutoUI_ui_Button-45 AutoUI_typo-157 AutoUI_typo-53 AutoUI_typo-46">
+              className="AutoUI_ui_Button-45 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
               Go to the step 3
             </span>
           </button>

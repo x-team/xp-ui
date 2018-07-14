@@ -5,7 +5,7 @@ exports[`FileLinks-1 1`] = `
     <div
       className="AutoUI_ui_FileLink-16">
       <div
-        className="AutoUI_ui_FileLink-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_FileLink-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         <a
           href="https://s3.amazonaws.com/auto-exam-videos/148c4cb11547066f20d313197c88b7cd.pdf"
           target="_blank">
@@ -19,7 +19,7 @@ exports[`FileLinks-1 1`] = `
     <div
       className="AutoUI_ui_FileLink-16">
       <div
-        className="AutoUI_ui_FileLink-20 AutoUI_typo-168 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_FileLink-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         <a
           href="https://s3.amazonaws.com/auto-exam-videos/148c4cb11547066f20d313197c88b7cd.pdf"
           target="_blank">
