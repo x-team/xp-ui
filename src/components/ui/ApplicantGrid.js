@@ -12,6 +12,7 @@ const cardTheme = {
     display: block
     margin: 0 0 6px
   `),
+
   more: cmz(`
     & button {
       margin: 10px
@@ -20,7 +21,7 @@ const cardTheme = {
   `)
 }
 
-const tabularTheme = {} // to do: https://zube.io/x-team/xp-formerly-auto/c/1638
+const tabularTheme = {} // TODO: https://zube.io/x-team/xp-formerly-auto/c/1638
 
 type Props = {
   items?: Array<*>,
@@ -52,7 +53,6 @@ class ApplicantGrid extends PureComponent<Props, State> {
 
   render () {
     const { items, mode, visible, increment, isFetching, hasMore } = this.props
-
     const cx = mode === 'card' ? cardTheme : tabularTheme
 
     return items ? (

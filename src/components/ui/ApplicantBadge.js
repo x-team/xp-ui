@@ -55,6 +55,7 @@ const cardTheme = {
       }
     `
   ),
+
   active: cmz(`
     transition: all 0.2s ease-in
     border: 1px solid ${theme.baseRed}
@@ -62,24 +63,29 @@ const cardTheme = {
     margin: 0
     padding: 30px 40px
   `),
+
   name: cmz(typo.badgeHeading,
     `
       grid-area: name
       display: flex
       align-items: flex-end
       cursor: pointer
+      font-size: 17px
     `
   ),
+
   avatar: cmz(`
     grid-area: avatar
     width: 90px
     height: 90px
     cursor: pointer
   `),
+
   controls: cmz(`
     grid-area: control
     display: flex
   `),
+
   control: cmz(`
     & {
       display: inline-block
@@ -103,6 +109,7 @@ const cardTheme = {
       stroke: white
     }
   `),
+
   infos: cmz(`
     grid-area: infos
     width: 100%
@@ -111,6 +118,7 @@ const cardTheme = {
     align-items: flex-start
     margin: 0 0 -10px
   `),
+
   info: cmz(typo.baseText,
     `
       & {
@@ -124,9 +132,11 @@ const cardTheme = {
       }
     `
   ),
+
   moreinfos: cmz(`
     & {
-      font-size: 14px
+      color: ${theme.typoLabel}
+      font-size: 17px
       margin: 0 0 10px 0
       flex: 1
       cursor: pointer
@@ -137,22 +147,28 @@ const cardTheme = {
       color: ${theme.typoHighlight}
     }
   `),
+
   label: cmz(`
     display: block
     color: ${theme.typoLabel}
     white-space: nowrap
     line-height: 1.2
+    font-size: 17px
   `),
+
   value: cmz(`
     display: block
     color: ${theme.typoParagraph}
     line-height: 1.2
+    font-size: 17px
   `),
+
   tip: cmz(`
     font-size: 15px
     color: ${theme.typoParagraph}
     line-height: 1.4
   `),
+
   tags: cmz(`
     font-size: 14px
     grid-area: tags
@@ -162,6 +178,7 @@ const cardTheme = {
     align-items: start
     margin: 0 0 -10px
   `),
+
   tag: cmz(`
     & {
       border: 1px solid ${theme.lineSilver2}
@@ -177,6 +194,7 @@ const cardTheme = {
       margin-right: 0
     }
   `),
+
   moretags: cmz(`
     & {
       border: none
@@ -191,14 +209,20 @@ const cardTheme = {
       color: ${theme.typoHighlight}
     }
   `),
+
+  purelabel: cmz(`
+    border: none
+    color: ${theme.typoLabel}
+    font-size: 17px
+  `),
+
   children: cmz(`
     grid-column: 1 / -1
     grid-row: 4 / -1
   `)
 }
 
-const tabularTheme = {} // to do: https://zube.io/x-team/xp-formerly-auto/c/1638
-
+const tabularTheme = {} // TODO: https://zube.io/x-team/xp-formerly-auto/c/1638
 class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
     mode: 'card',
@@ -206,7 +230,18 @@ class ApplicantBadge extends PureComponent<Props> {
   }
 
   render () {
-    const { id, mode, active, name, email, info, tags, avatar, children, exclusionFormRender } = this.props
+    const {
+      id,
+      mode,
+      active,
+      name,
+      email,
+      info,
+      tags,
+      avatar,
+      children,
+      exclusionFormRender
+    } = this.props
 
     const cx = mode === 'card' ? cardTheme : tabularTheme
 
@@ -234,7 +269,7 @@ class ApplicantBadge extends PureComponent<Props> {
         ))}
         viewMore={(amount, action) => (
           <li className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
-            {`+${amount} info`}
+            {`+ ${amount} info`}
           </li>
         )}
       />
@@ -248,8 +283,8 @@ class ApplicantBadge extends PureComponent<Props> {
         listClass={cx.tags}
         itemClass={cx.tag}
         viewMore={(amount, action) => (
-          <li className={[cx.tag, cx.moretags].join(' ')} onClick={action}>
-            {`+${amount} more`}
+          <li className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
+            {`+ ${amount} more`}
           </li>
         )}
       />
@@ -290,8 +325,8 @@ class ApplicantBadge extends PureComponent<Props> {
             </Dropdown>
           )}
         </div>
-        {info && info.length > 0 && mapInfosToRender(info)}
-        {tags && tags.length > 0 && mapTagsToRender(tags)}
+        {info && info.length && mapInfosToRender(info)}
+        {tags && tags.length && mapTagsToRender(tags)}
         {children && (
           <div className={cx.children}>
             {children}

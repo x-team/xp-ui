@@ -1,6 +1,6 @@
 List view (default)
 
-```
+```js
 const info = [
   {
     label: 'Avail. date:',
@@ -56,7 +56,7 @@ items[1] = (
 
 Tabular view:
 
-```
+```js
 let i = 1;
 const items = Array(5).fill(
   <ApplicantBadge
@@ -99,6 +99,6 @@ const items = Array(5).fill(
 
 Missing props (does component explode?):
 
-```
+```js
 <ApplicantGrid />
 ```
