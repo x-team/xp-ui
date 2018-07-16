@@ -123,12 +123,10 @@ const cardTheme = {
     `
       & {
         margin: 0 20px 10px 0
-        max-width: calc(33% - 20px)
       }
 
       &:last-of-type {
         margin-right: 0
-        width: 33%
       }
     `
   ),
@@ -161,6 +159,7 @@ const cardTheme = {
     color: ${theme.typoParagraph}
     line-height: 1.2
     font-size: 17px
+    white-space: normal
   `),
 
   tip: cmz(`

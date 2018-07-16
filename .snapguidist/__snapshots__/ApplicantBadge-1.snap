@@ -94,11 +94,11 @@ exports[`ApplicantBadge-1 1`] = `
               className="AutoUI_ui_Dropdown-42">
               <span>
                 <span
-                  className="AutoUI_ui_ApplicantBadge-151">
+                  className="AutoUI_ui_ApplicantBadge-149">
                   Avail. date:
                 </span>
                 <span
-                  className="AutoUI_ui_ApplicantBadge-159">
+                  className="AutoUI_ui_ApplicantBadge-157">
                   11/05/2018
                 </span>
               </span>
@@ -109,7 +109,7 @@ exports[`ApplicantBadge-1 1`] = `
             <div
               className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
               <span
-                className="AutoUI_ui_ApplicantBadge-166">
+                className="AutoUI_ui_ApplicantBadge-165">
                 I\'m not currently seeking opportunities.
               </span>
             </div>
@@ -129,11 +129,11 @@ exports[`ApplicantBadge-1 1`] = `
               className="AutoUI_ui_Dropdown-42">
               <span>
                 <span
-                  className="AutoUI_ui_ApplicantBadge-151">
+                  className="AutoUI_ui_ApplicantBadge-149">
                   Timezone:
                 </span>
                 <span
-                  className="AutoUI_ui_ApplicantBadge-159">
+                  className="AutoUI_ui_ApplicantBadge-157">
                   UTC+7
                 </span>
               </span>
@@ -154,11 +154,11 @@ exports[`ApplicantBadge-1 1`] = `
               className="AutoUI_ui_Dropdown-42">
               <span>
                 <span
-                  className="AutoUI_ui_ApplicantBadge-151">
+                  className="AutoUI_ui_ApplicantBadge-149">
                   Rate:
                 </span>
                 <span
-                  className="AutoUI_ui_ApplicantBadge-159">
+                  className="AutoUI_ui_ApplicantBadge-157">
                   $40
                 </span>
               </span>
@@ -169,21 +169,21 @@ exports[`ApplicantBadge-1 1`] = `
     </li>
   </ul>
   <ul
-    className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-172">
+    className="AutoUI_ui_TruncatedList-8 AutoUI_ui_ApplicantBadge-171">
     <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-182">
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-181">
       JavaScript
     </li>
     <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-182">
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-181">
       ES2015
     </li>
     <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-182">
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-181">
       Node
     </li>
     <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-182">
+      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_ApplicantBadge-181">
       Express
     </li>
     <li
@@ -199,7 +199,7 @@ exports[`ApplicantBadge-1 1`] = `
       Webpack
     </li>
     <li
-      className="AutoUI_ui_ApplicantBadge-182 AutoUI_ui_ApplicantBadge-198 AutoUI_ui_ApplicantBadge-213">
+      className="AutoUI_ui_ApplicantBadge-181 AutoUI_ui_ApplicantBadge-197 AutoUI_ui_ApplicantBadge-212">
       + 3 more
     </li>
   </ul>
