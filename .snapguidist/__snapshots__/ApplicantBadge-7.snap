@@ -20,7 +20,7 @@ exports[`ApplicantBadge-7 1`] = `
   <div
     className="AutoUI_ui_ApplicantBadge-84" />
   <div
-    className="AutoUI_ui_ApplicantBadge-219">
+    className="AutoUI_ui_ApplicantBadge-218">
     <button>
       Hello
     </button>
