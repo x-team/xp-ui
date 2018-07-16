@@ -325,8 +325,8 @@ class ApplicantBadge extends PureComponent<Props> {
             </Dropdown>
           )}
         </div>
-        {info && info.length && mapInfosToRender(info)}
-        {tags && tags.length && mapTagsToRender(tags)}
+        {info && info.length > 0 && mapInfosToRender(info)}
+        {tags && tags.length > 0 && mapTagsToRender(tags)}
         {children && (
           <div className={cx.children}>
             {children}
