@@ -218,83 +218,8 @@ exports[`ApplicantBadge-3 1`] = `
       </div>
     </li>
     <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
-      <div>
-        <div
-          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-          <div
-            className="AutoUI_ui_Dropdown-24 ">
-            
-            <span
-              className="AutoUI_ui_Dropdown-42">
-              <span>
-                <span
-                  className="AutoUI_ui_ApplicantBadge-149">
-                  Rate:
-                </span>
-                <span
-                  className="AutoUI_ui_ApplicantBadge-157">
-                  $40
-                </span>
-              </span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
-      <div>
-        <div
-          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-          <div
-            className="AutoUI_ui_Dropdown-24 ">
-            
-            <span
-              className="AutoUI_ui_Dropdown-42">
-              <span>
-                <span
-                  className="AutoUI_ui_ApplicantBadge-149">
-                  Anything:
-                </span>
-                <span
-                  className="AutoUI_ui_ApplicantBadge-157">
-                  nonono
-                </span>
-              </span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
-      <div>
-        <div
-          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-          <div
-            className="AutoUI_ui_Dropdown-24 ">
-            
-            <span
-              className="AutoUI_ui_Dropdown-42">
-              <span>
-                <span
-                  className="AutoUI_ui_ApplicantBadge-149">
-                  Else:
-                </span>
-                <span
-                  className="AutoUI_ui_ApplicantBadge-157">
-                  nonono
-                </span>
-              </span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li
       className="AutoUI_ui_ApplicantBadge-122 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-134">
-      + 5 info
+      + 2 info
     </li>
   </ul>
   <ul
