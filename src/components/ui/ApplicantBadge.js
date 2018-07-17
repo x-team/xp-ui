@@ -311,7 +311,7 @@ class ApplicantBadge extends PureComponent<Props> {
           </div>
         )}
         <div className={cx.controls}>
-          {/* {exclusionFormRender && (
+          {exclusionFormRender && (
             <Dropdown
               tooltip
               label={(
@@ -320,9 +320,8 @@ class ApplicantBadge extends PureComponent<Props> {
                 </span>
               )}
             >
-              
-            </Dropdown> */}
-            {exclusionFormRender}
+              {exclusionFormRender()}
+            </Dropdown>
           )}
         </div>
         {info && info.length > 0 && mapInfosToRender(info)}
