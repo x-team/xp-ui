@@ -31,7 +31,7 @@ Basic card:
     'Webpack'
   ]}
   onClick={id => console.log('Applicant selected: ' + id)}
-  exclusionFormRender={<form>A list of inputs with a submit button</form>}
+  exclusionFormRender={() => <form>A list of inputs with a submit button</form>}
 />
 ```
 
@@ -75,7 +75,7 @@ Active card:
     'Webpack'
   ]}
   onClick={id => console.log('Applicant selected: ' + id)}
-  exclusionFormRender={<form>A list of inputs with a submit button</form>}
+  exclusionFormRender={() => <form>A list of inputs with a submit button</form>}
 />
 ```
 
@@ -127,7 +127,7 @@ Basic tabular:
     'Webpack'
   ]}
   onClick={id => console.log('Applicant selected: ' + id)}
-  exclusionFormRender={<form>A list of inputs with a submit button</form>}
+  exclusionFormRender={() => <form>A list of inputs with a submit button</form>}
 />
 ```
 
