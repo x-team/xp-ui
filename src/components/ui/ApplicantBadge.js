@@ -320,7 +320,7 @@ class ApplicantBadge extends PureComponent<Props> {
                 </span>
               )}
             >
-              {exclusionFormRender}
+              {exclusionFormRender()}
             </Dropdown>
           )}
         </div>
