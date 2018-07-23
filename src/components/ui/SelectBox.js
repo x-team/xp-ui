@@ -23,17 +23,55 @@ const styles = {
   placeholder: cmz(
     typo.baseText,
     `
-      color: ${theme.baseDark}
       border: 1px solid ${theme.lineSilver2}
-      padding: 20px
+      padding: 0 20px
       height: 60px
       width: 100%
       box-sizing: border-box
       display: flex
       align-items: center
       position: relative
+      border-radius: 2px
     `
   ),
+  selects: cmz(`
+    & {
+      width: 100%
+    }
+
+    & > div {
+      display: block
+      line-height: 1.1
+    }
+
+    & > div:first-of-type {
+      font-size: 15px
+      color: ${theme.typoLabel}
+      padding: 10px 0 0
+      transition: color 0.15s ease-out, font-size 0.15s ease-out
+    }
+
+    & > div:last-of-type {
+      width: calc(100% - 20px)
+      white-space: nowrap
+      overflow: auto
+      padding: 0 0 10px
+      transition: visibility 0s, opacity 0.15s ease-out, padding 0.15s ease-out
+      visibility: visible
+      opacity: 1
+    }
+  `),
+  selectsEmpty: cmz(`
+    & > div:first-of-type {
+      transition: color 0.15s ease-out, font-size 0.15s ease-out
+    }
+
+    & > div:last-of-type {
+      transition: visibility 1s, opacity 0.15s ease-out, padding 0.15s ease-out
+      visibility: hidden
+      opacity: 0
+    }
+  `),
   search: cmz(`
     position: relative
   `),
@@ -236,6 +274,7 @@ type Props = {
   width?: number,
   visibleItems?: number,
   expanded?: boolean,
+  hasSearch?: boolean,
   lined?: boolean,
   creating?: boolean,
   collectionName?: string,
@@ -258,6 +297,7 @@ class SelectBox extends Component<Props, State> {
     placeholder: 'Search',
     items: [],
     expanded: false,
+    hasSearch: false,
     lined: false,
     collectionName: ''
   }
@@ -442,6 +482,7 @@ class SelectBox extends Component<Props, State> {
       visibleItems,
       width,
       expanded,
+      hasSearch,
       onSelect,
       onEdit,
       onCreateNew,
@@ -553,10 +594,8 @@ class SelectBox extends Component<Props, State> {
         </li>
       )
 
-    const itemsClasses = [ styles.list, expanded ? '' : styles.shadow ].join(' ')
-
     const renderItems = () => ((filteredItems && filteredItems.length > 0) || search) ? (
-      <ul className={itemsClasses} style={{
+      <ul className={styles.list} style={{
         maxHeight: visibleItems ? `${visibleItems * 61}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
@@ -564,7 +603,9 @@ class SelectBox extends Component<Props, State> {
       </ul>
     ) : ''
 
-    const renderSearchLabel = () => placeholder === 'Search' ? (
+    const selectsClass = filteredItems && filteredItems.filter(item => item.selected).length > 0
+      ? styles.selects : styles.selectsEmpty
+    const renderSearchLabel = (isSearch: boolean = false) => isSearch ? (
       <div className={styles.search}>
         <div className={styles.magnifier}>
           <SvgIcon icon='magnifier' color='grayscale' />
@@ -572,7 +613,7 @@ class SelectBox extends Component<Props, State> {
         <InputField
           name='search'
           value={search}
-          placeholder={placeholder}
+          placeholder={hasSearch ? 'Search' : placeholder}
           onChange={(input = {}) => this.handleSearch(input.target.value)}
           className={styles.searchinput}
           autoComplete='off'
@@ -586,27 +627,39 @@ class SelectBox extends Component<Props, State> {
       </div>
     ) : (
       <div className={styles.placeholder}>
-        {placeholder}
+        <div className={selectsClass}>
+          <div>
+            {placeholder}
+          </div>
+          <div>
+            {filteredItems.filter(item => item.selected).map(item => item.value).join(', ')}
+          </div>
+        </div>
         <div className={styles.triangle}>
           <SvgIcon icon='triangledown' color='grayscale' />
         </div>
       </div>
     )
 
+    const labelIsSearch = placeholder === 'Search'
+
     return (
       <div className={styles.selectbox} style={{ width: width ? `${width}px` : '100%' }}>
         {expanded ? (
           <div>
-            {renderSearchLabel()}
+            {renderSearchLabel(labelIsSearch || hasSearch)}
             {renderItems()}
           </div>
         ) : (
           <Dropdown
-            toggle={placeholder !== 'Search'}
-            label={renderSearchLabel()}
+            toggle={!labelIsSearch}
+            label={renderSearchLabel(labelIsSearch && !hasSearch)}
             className={styles.dropdown}
           >
-            {renderItems()}
+            <div className={expanded ? '' : styles.shadow}>
+              {hasSearch && renderSearchLabel(true)}
+              {renderItems()}
+            </div>
           </Dropdown>
         )}
       </div>

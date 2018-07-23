@@ -8,9 +8,9 @@ exports[`SelectBox-5 1`] = `
   }>
   <div>
     <div
-      className="AutoUI_ui_SelectBox-37">
+      className="AutoUI_ui_SelectBox-75">
       <div
-        className="AutoUI_ui_SelectBox-46">
+        className="AutoUI_ui_SelectBox-84">
         <svg
           height="17px"
           viewBox="0 0 16 17"
@@ -56,7 +56,7 @@ exports[`SelectBox-5 1`] = `
         <input
           aria-labelledby="label-search"
           autoComplete="off"
-          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-41"
+          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-79"
           disabled={false}
           id="search"
           name="search"
@@ -66,7 +66,7 @@ exports[`SelectBox-5 1`] = `
       </div>
     </div>
     <ul
-      className="AutoUI_ui_SelectBox-96 "
+      className="AutoUI_ui_SelectBox-134"
       style={
         Object {
           "maxHeight": "auto",
@@ -74,7 +74,7 @@ exports[`SelectBox-5 1`] = `
         }
       }>
       <li
-        className="AutoUI_ui_SelectBox-110  ">
+        className="AutoUI_ui_SelectBox-148  ">
         <div
           className="AutoUI_forms_InputField-77">
           <label
@@ -97,7 +97,7 @@ exports[`SelectBox-5 1`] = `
           </label>
         </div>
         <span
-          className="AutoUI_ui_SelectBox-137">
+          className="AutoUI_ui_SelectBox-175">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -126,7 +126,7 @@ exports[`SelectBox-5 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-110  ">
+        className="AutoUI_ui_SelectBox-148  ">
         <div
           className="AutoUI_forms_InputField-77">
           <label
@@ -149,7 +149,7 @@ exports[`SelectBox-5 1`] = `
           </label>
         </div>
         <span
-          className="AutoUI_ui_SelectBox-137">
+          className="AutoUI_ui_SelectBox-175">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -178,7 +178,7 @@ exports[`SelectBox-5 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-110  ">
+        className="AutoUI_ui_SelectBox-148  ">
         <div
           className="AutoUI_forms_InputField-77">
           <label
@@ -201,7 +201,7 @@ exports[`SelectBox-5 1`] = `
           </label>
         </div>
         <span
-          className="AutoUI_ui_SelectBox-137">
+          className="AutoUI_ui_SelectBox-175">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -230,7 +230,7 @@ exports[`SelectBox-5 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-110  ">
+        className="AutoUI_ui_SelectBox-148  ">
         <div
           className="AutoUI_forms_InputField-77">
           <label
@@ -253,7 +253,7 @@ exports[`SelectBox-5 1`] = `
           </label>
         </div>
         <span
-          className="AutoUI_ui_SelectBox-137">
+          className="AutoUI_ui_SelectBox-175">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -282,7 +282,7 @@ exports[`SelectBox-5 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-110  ">
+        className="AutoUI_ui_SelectBox-148  ">
         <div
           className="AutoUI_forms_InputField-77">
           <label
@@ -305,7 +305,7 @@ exports[`SelectBox-5 1`] = `
           </label>
         </div>
         <span
-          className="AutoUI_ui_SelectBox-137">
+          className="AutoUI_ui_SelectBox-175">
           <svg
             height="14px"
             viewBox="0 0 14 14"
