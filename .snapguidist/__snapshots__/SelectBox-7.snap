@@ -17,9 +17,9 @@ exports[`SelectBox-7 1`] = `
         <span
           className="AutoUI_ui_Dropdown-42">
           <div
-            className="AutoUI_ui_SelectBox-74">
+            className="AutoUI_ui_SelectBox-75">
             <div
-              className="AutoUI_ui_SelectBox-83">
+              className="AutoUI_ui_SelectBox-84">
               <svg
                 height="17px"
                 viewBox="0 0 16 17"
@@ -65,7 +65,7 @@ exports[`SelectBox-7 1`] = `
               <input
                 aria-labelledby="label-search"
                 autoComplete="off"
-                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-78"
+                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-79"
                 disabled={false}
                 id="search"
                 name="search"
@@ -79,7 +79,7 @@ exports[`SelectBox-7 1`] = `
       <div
         className="AutoUI_ui_Dropdown-52    ">
         <div
-          className="AutoUI_ui_SelectBox-144">
+          className="AutoUI_ui_SelectBox-145">
           
         </div>
       </div>

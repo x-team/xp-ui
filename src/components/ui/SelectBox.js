@@ -31,6 +31,7 @@ const styles = {
       display: flex
       align-items: center
       position: relative
+      border-radius: 2px
     `
   ),
   selects: cmz(`
