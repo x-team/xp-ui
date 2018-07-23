@@ -47,6 +47,7 @@ const styles = {
       font-size: 15px
       color: ${theme.typoLabel}
       padding: 10px 0 0
+      transition: color 0.15s ease-out, font-size 0.15s ease-out
     }
 
     & > div:last-of-type {
@@ -54,6 +55,20 @@ const styles = {
       white-space: nowrap
       overflow: auto
       padding: 0 0 10px
+      transition: visibility 0s, opacity 0.15s ease-out, padding 0.15s ease-out
+      visibility: visible
+      opacity: 1
+    }
+  `),
+  selectsEmpty: cmz(`
+    & > div:first-of-type {
+      transition: color 0.15s ease-out, font-size 0.15s ease-out
+    }
+
+    & > div:last-of-type {
+      transition: visibility 1s, opacity 0.15s ease-out, padding 0.15s ease-out
+      visibility: hidden
+      opacity: 0
     }
   `),
   search: cmz(`
@@ -578,10 +593,8 @@ class SelectBox extends Component<Props, State> {
         </li>
       )
 
-    const itemsClasses = [ styles.list, expanded ? '' : styles.shadow ].join(' ')
-
     const renderItems = () => ((filteredItems && filteredItems.length > 0) || search) ? (
-      <ul className={itemsClasses} style={{
+      <ul className={styles.list} style={{
         maxHeight: visibleItems ? `${visibleItems * 61}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
@@ -589,6 +602,8 @@ class SelectBox extends Component<Props, State> {
       </ul>
     ) : ''
 
+    const selectsClass = filteredItems && filteredItems.filter(item => item.selected).length > 0
+      ? styles.selects : styles.selectsEmpty
     const renderSearchLabel = (isSearch: boolean = false) => isSearch ? (
       <div className={styles.search}>
         <div className={styles.magnifier}>
@@ -611,16 +626,14 @@ class SelectBox extends Component<Props, State> {
       </div>
     ) : (
       <div className={styles.placeholder}>
-        {filteredItems && filteredItems.filter(item => item.selected).length > 0 ? (
-          <div className={styles.selects}>
-            <div>
-              {placeholder}
-            </div>
-            <div>
-              {filteredItems.filter(item => item.selected).map(item => item.value).join(', ')}
-            </div>
+        <div className={selectsClass}>
+          <div>
+            {placeholder}
           </div>
-        ) : placeholder}
+          <div>
+            {filteredItems.filter(item => item.selected).map(item => item.value).join(', ')}
+          </div>
+        </div>
         <div className={styles.triangle}>
           <SvgIcon icon='triangledown' color='grayscale' />
         </div>
@@ -642,7 +655,7 @@ class SelectBox extends Component<Props, State> {
             label={renderSearchLabel(labelIsSearch && !hasSearch)}
             className={styles.dropdown}
           >
-            <div>
+            <div className={expanded ? '' : styles.shadow}>
               {hasSearch && renderSearchLabel(true)}
               {renderItems()}
             </div>
