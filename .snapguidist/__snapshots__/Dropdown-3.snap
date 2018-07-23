@@ -57,9 +57,9 @@ exports[`Dropdown-3 1`] = `
           }>
           <div>
             <div
-              className="AutoUI_ui_SelectBox-37">
+              className="AutoUI_ui_SelectBox-59">
               <div
-                className="AutoUI_ui_SelectBox-46">
+                className="AutoUI_ui_SelectBox-68">
                 <svg
                   height="17px"
                   viewBox="0 0 16 17"
@@ -105,7 +105,7 @@ exports[`Dropdown-3 1`] = `
                 <input
                   aria-labelledby="label-search"
                   autoComplete="off"
-                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-41"
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-63"
                   disabled={false}
                   id="search"
                   name="search"
@@ -115,7 +115,7 @@ exports[`Dropdown-3 1`] = `
               </div>
             </div>
             <ul
-              className="AutoUI_ui_SelectBox-96 "
+              className="AutoUI_ui_SelectBox-118 "
               style={
                 Object {
                   "maxHeight": "auto",
@@ -123,44 +123,44 @@ exports[`Dropdown-3 1`] = `
                 }
               }>
               <li
-                className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
+                className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
                 <span
-                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   item-1
                 </span>
               </li>
               <li
-                className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
+                className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
                 <span
-                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   item-2
                 </span>
               </li>
               <li
-                className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
+                className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
                 <span
-                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   item-3
                 </span>
               </li>
               <li
-                className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
+                className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
                 <span
-                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   item-4
                 </span>
               </li>
               <li
-                className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
+                className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
                 <span
-                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   item-5
                 </span>
               </li>
               <li
-                className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
+                className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
                 <span
-                  className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   item-6
                 </span>
               </li>

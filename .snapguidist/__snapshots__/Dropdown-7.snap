@@ -205,9 +205,9 @@ exports[`Dropdown-7 1`] = `
               <span
                 className="AutoUI_ui_Dropdown-42">
                 <div
-                  className="AutoUI_ui_SelectBox-37">
+                  className="AutoUI_ui_SelectBox-59">
                   <div
-                    className="AutoUI_ui_SelectBox-46">
+                    className="AutoUI_ui_SelectBox-68">
                     <svg
                       height="17px"
                       viewBox="0 0 16 17"
@@ -253,7 +253,7 @@ exports[`Dropdown-7 1`] = `
                     <input
                       aria-labelledby="label-search"
                       autoComplete="off"
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-41"
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-63"
                       disabled={false}
                       id="search"
                       name="search"
@@ -266,50 +266,52 @@ exports[`Dropdown-7 1`] = `
             </div>
             <div
               className="AutoUI_ui_Dropdown-52    ">
-              <ul
-                className="AutoUI_ui_SelectBox-96 AutoUI_ui_SelectBox-107"
-                style={
-                  Object {
-                    "maxHeight": "183px",
-                    "width": "300px",
-                  }
-                }>
-                <li
-                  className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
-                  <span
-                    className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-                    registered
-                  </span>
-                </li>
-                <li
-                  className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
-                  <span
-                    className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-                    portfolio-building
-                  </span>
-                </li>
-                <li
-                  className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
-                  <span
-                    className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-                    portfolio-review
-                  </span>
-                </li>
-                <li
-                  className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
-                  <span
-                    className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-                    social-media-screen
-                  </span>
-                </li>
-                <li
-                  className="AutoUI_ui_SelectBox-110 AutoUI_ui_SelectBox-123 ">
-                  <span
-                    className="AutoUI_ui_SelectBox-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-                    react-shortlist
-                  </span>
-                </li>
-              </ul>
+              <div>
+                <ul
+                  className="AutoUI_ui_SelectBox-118 AutoUI_ui_SelectBox-129"
+                  style={
+                    Object {
+                      "maxHeight": "183px",
+                      "width": "300px",
+                    }
+                  }>
+                  <li
+                    className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
+                    <span
+                      className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                      registered
+                    </span>
+                  </li>
+                  <li
+                    className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
+                    <span
+                      className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                      portfolio-building
+                    </span>
+                  </li>
+                  <li
+                    className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
+                    <span
+                      className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                      portfolio-review
+                    </span>
+                  </li>
+                  <li
+                    className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
+                    <span
+                      className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                      social-media-screen
+                    </span>
+                  </li>
+                  <li
+                    className="AutoUI_ui_SelectBox-132 AutoUI_ui_SelectBox-145 ">
+                    <span
+                      className="AutoUI_ui_SelectBox-105 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                      react-shortlist
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

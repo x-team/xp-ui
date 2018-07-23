@@ -72,19 +72,13 @@ const itemsArray = [
   }
 ];
 <SelectBox
-  placeholder="Lists"
+  placeholder="Select Lists"
   collectionName="List"
   items={itemsArray}
-  width={200}
+  width={330}
   visibleItems={4}
-  onClick={item =>
-    new Promise(resolve =>
-      item && setTimeout(() => {
-        console.log('onClick:', item);
-        resolve(item);
-      }, 3000)
-    )
-  }
+  hasSearch={true}
+  onSelect={item => console.log('onSelect:', item)}
 />
 ```
 
