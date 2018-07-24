@@ -189,13 +189,13 @@ exports[`MilestonesScreen-3 1`] = `
       <div
         className="AutoUI_ui_MilestonesScreen-60">
         <section
-          className="AutoUI_ui_Text-27">
+          className="AutoUI_ui_Text-29">
           <h1
             className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
             First subsection
           </h1>
           <div
-            className="AutoUI_ui_Text-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum numquam, beatae, distinctio fugiat eveniet harum, vel sint odit adipisci quos nam soluta pariatur, voluptatibus repudiandae hic mollitia ex iste rem.
           </div>
         </section>
@@ -212,13 +212,13 @@ exports[`MilestonesScreen-3 1`] = `
       <div
         className="AutoUI_ui_MilestonesScreen-60">
         <section
-          className="AutoUI_ui_Text-27">
+          className="AutoUI_ui_Text-29">
           <h1
             className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
             Second subsection
           </h1>
           <div
-            className="AutoUI_ui_Text-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ipsa illum placeat aliquid recusandae odio minus quisquam, corporis, sed consequuntur optio fugit eaque rerum, nihil mollitia. Sequi ad nulla facere.
           </div>
         </section>

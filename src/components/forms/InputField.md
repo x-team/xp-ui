@@ -106,13 +106,24 @@ makeValueChangeHandler = option => () => setState(prev => ({ cb: !prev.cb }));
 />
 ```
 
+Required element:
+
+```js
+<InputField
+  label="Required Field"
+  name="required"
+  placeholder="Required Placeholder..."
+  required
+/>
+```
+
 Invalid element:
 
 ```js
 <InputField
   label="Invalid Field"
   name="invalid"
-  placeholder="Error Placeholder.."
+  placeholder="Error Placeholder..."
   isInvalid
 />
 ```
