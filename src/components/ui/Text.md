@@ -126,3 +126,15 @@ Text example (Pure content with no wrappers around):
 ```js
 <Text content="Just a sample text" isPureContent />
 ```
+
+Text example (Required):
+
+```js
+<Text content="Just a required text" required />
+```
+
+Text example (Pure content with no wrappers around and Required):
+
+```js
+<Text content="Just a required text" isPureContent required />
+```

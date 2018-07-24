@@ -4,6 +4,7 @@ import { PureComponent } from 'react'
 
 import elem from '../../utils/elem'
 
+import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { Element } from 'react'
@@ -21,7 +22,8 @@ type Props = {
   hasDivider: ?boolean,
   isPureContent: ?boolean,
   headingType?: Type,
-  subHeadingType?: Type
+  subHeadingType?: Type,
+  required?: boolean
 }
 
 const Root = elem.section(cmz(`
@@ -52,11 +54,21 @@ const contentDividerCenter = cmz(`
   margin-right: auto
 `)
 
+const contentRequired = cmz(`
+  &::after {
+    content: '*'
+    margin-left: 5px
+    font-weight: bold
+    color: ${theme.baseRed}
+  }
+`)
+
 class Text extends PureComponent<Props> {
   static defaultProps = {
     isCentered: false,
     hasDivider: false,
-    isPureContent: false
+    isPureContent: false,
+    required: false
   }
 
   render () {
@@ -69,19 +81,21 @@ class Text extends PureComponent<Props> {
       content,
       isCentered,
       hasDivider,
-      isPureContent
+      isPureContent,
+      required
     } = this.props
+    const requiredProps = required ? { className: contentRequired } : {}
 
     if (isPureContent) {
-      return PureContent(content)
+      return PureContent(requiredProps, content)
     }
 
-    return Root(isCentered ? {className: centerAlign} : {},
+    return Root(isCentered ? { className: centerAlign } : {},
       heading && Heading({ className: typo[headingType] }, heading),
       subHeading && SubHeading({ className: typo[subHeadingType] }, subHeading),
       level && Level({ className: typo.subheading }, level),
-      hasDivider && Divider({ className: (isCentered ? contentDividerCenter : '') }),
-      Content(content)
+      hasDivider && Divider(isCentered ? { className: contentDividerCenter } : {}),
+      Content(requiredProps, content)
     )
   }
 }

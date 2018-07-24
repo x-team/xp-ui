@@ -22,6 +22,7 @@ type Props = {
   value?: boolean | number | string | Object,
   isInvalid?: boolean,
   defaultValue?: string,
+  required?: boolean,
   onChange?: () => mixed,
   type?: Type,
   postText?: string,
@@ -257,7 +258,8 @@ const isSpecialType = type => Boolean(specialTypesDefinitions[type])
 class InputField extends PureComponent<Props> {
   static defaultProps = {
     type: 'text',
-    isInvalid: false
+    isInvalid: false,
+    required: false
   }
 
   renderField = () => {
@@ -327,7 +329,7 @@ class InputField extends PureComponent<Props> {
   }
 
   render () {
-    const { label, type, id, name, postText } = this.props
+    const { label, type, id, name, postText, required } = this.props
 
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
@@ -340,7 +342,7 @@ class InputField extends PureComponent<Props> {
         label
           ? (
             <label id={labelId}>
-              {!isSpecialType(type) && <Text content={label} />}
+              {!isSpecialType(type) && <Text content={label} required={required} />}
               {this.renderField()}
               {postLabel}
             </label>

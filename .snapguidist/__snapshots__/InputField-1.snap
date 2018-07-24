@@ -3,19 +3,20 @@ exports[`InputField-1 1`] = `
   <label
     id="label-name">
     <section
-      className="AutoUI_ui_Text-27">
+      className="AutoUI_ui_Text-29">
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         First Name
       </div>
     </section>
     <input
       aria-labelledby="label-name"
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86  "
+      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
       defaultValue="Simon"
       id="name"
       name="name"
       placeholder="First name.."
+      required={false}
       type="text" />
   </label>
 </div>

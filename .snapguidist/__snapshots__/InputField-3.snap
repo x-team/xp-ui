@@ -3,19 +3,20 @@ exports[`InputField-3 1`] = `
   <label
     id="label-experience">
     <section
-      className="AutoUI_ui_Text-27">
+      className="AutoUI_ui_Text-29">
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         How many years of experience do you have?
       </div>
     </section>
     <input
       aria-labelledby="label-experience"
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86  AutoUI_forms_InputField-110"
+      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  AutoUI_forms_InputField-111"
       defaultValue="1"
       id="experience"
       name="experience"
       placeholder="Years of experience.."
+      required={false}
       style={
         Object {
           "width": "10%",
@@ -23,7 +24,7 @@ exports[`InputField-3 1`] = `
       }
       type="text" />
     <span
-      className="AutoUI_ui_Text-46 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Text-48 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
       years
     </span>
   </label>

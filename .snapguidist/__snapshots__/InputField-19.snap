@@ -1,0 +1,9 @@
+exports[`InputField-19 1`] = `
+<div>
+  <input
+    aria-labelledby=""
+    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
+    required={false}
+    type="text" />
+</div>
+`;

@@ -253,13 +253,13 @@ exports[`ApplicantScreen-3 1`] = `
           <div
             className="AutoUI_ui_MilestonesScreen-60">
             <section
-              className="AutoUI_ui_Text-27">
+              className="AutoUI_ui_Text-29">
               <h1
                 className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
                 So it begins.
               </h1>
               <div
-                className="AutoUI_ui_Text-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 Let’s kick things off with a warmup. To proceed, click the button below to download a short programming challenge. You can bookmark this page for later access.
               </div>
             </section>

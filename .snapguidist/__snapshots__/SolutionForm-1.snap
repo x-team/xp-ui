@@ -4,13 +4,13 @@ exports[`SolutionForm-1 1`] = `
   <div
     className="AutoUI_forms_SolutionForm_Title-16">
     <section
-      className="AutoUI_ui_Text-27">
+      className="AutoUI_ui_Text-29">
       <h1
         className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
         Got it?
       </h1>
       <div
-        className="AutoUI_ui_Text-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         Paste the solution below. You get 3 chances, use them wisely.
       </div>
     </section>

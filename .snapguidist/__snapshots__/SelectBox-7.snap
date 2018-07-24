@@ -65,11 +65,12 @@ exports[`SelectBox-7 1`] = `
               <input
                 aria-labelledby="label-search"
                 autoComplete="off"
-                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-86 AutoUI_ui_SelectBox-79"
+                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-79"
                 disabled={false}
                 id="search"
                 name="search"
                 placeholder="Search"
+                required={false}
                 type="text"
                 value="" />
             </div>
