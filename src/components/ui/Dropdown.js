@@ -190,6 +190,15 @@ class Dropdown extends PureComponent<Props, State> {
       targetYOrigin === 'top' ? styles.tooltipTop : ''
     ].join(' ')
 
+    const dropdownChildren = () =>
+      React.Children.map(children, child => {
+        const { props } = child
+        const { closeDropdown } = props || false
+        return closeDropdown
+          ? React.cloneElement(child, { closeDropdown: this.close })
+          : child
+      })
+
     return (children || label || icon) ? (
       <ClickOutside onClickOutside={this.close}>
         <div
@@ -213,9 +222,9 @@ class Dropdown extends PureComponent<Props, State> {
             <div className={contentClasses}>
               {tooltip ? (
                 <div className={tooltipClasses}>
-                  {children}
+                  {dropdownChildren()}
                 </div>
-              ) : children}
+              ) : dropdownChildren()}
             </div>
           )}
         </div>

@@ -85,6 +85,17 @@ Tooltip display:
 </Dropdown>
 ```
 
+Close Dropdown from children:
+
+```
+const CloseButton = ({ closeDropdown }) => <h1 onClick={closeDropdown}>Click to close!</h1>;
+CloseButton.defaultProps = { closeDropdown: true };
+
+<Dropdown tooltip label={<h1>Click to open!</h1>}>
+  <CloseButton />
+</Dropdown>
+```
+
 Missing props (does component explode?):
 
 ```
