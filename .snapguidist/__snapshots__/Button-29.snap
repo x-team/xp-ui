@@ -1,9 +1,9 @@
 exports[`Button-29 1`] = `
-<button
-  className=" AutoUI_ui_Button-88 AutoUI_ui_Button-31 AutoUI_ui_Button-120 AutoUI_ui_Button-139 outlined AutoUI_ui_Button-159 rounded AutoUI_ui_Button-163 raised">
+<a
+  className=" AutoUI_ui_Button-51 AutoUI_ui_Button-32 AutoUI_ui_Button-121 ">
   <span
-    className="AutoUI_ui_Button-45 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-    Androind
+    className="AutoUI_ui_Button-46 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+    custom default button state
   </span>
-</button>
+</a>
 `;
