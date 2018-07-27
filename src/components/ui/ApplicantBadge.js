@@ -48,6 +48,7 @@ const cardTheme = {
         grid-template-rows: minmax(20px, auto) auto auto
         grid-gap: 15px
         margin: 0 10px
+        cursor: pointer
       }
 
       &:hover {
@@ -69,7 +70,6 @@ const cardTheme = {
       grid-area: name
       display: flex
       align-items: flex-end
-      cursor: pointer
       font-size: 17px
     `
   ),
@@ -78,7 +78,6 @@ const cardTheme = {
     grid-area: avatar
     width: 90px
     height: 90px
-    cursor: pointer
   `),
 
   controls: cmz(`
@@ -136,7 +135,6 @@ const cardTheme = {
       color: ${theme.typoLabel}
       font-size: 17px
       margin: 0 0 10px 0
-      flex: 1
       cursor: pointer
       align-self: flex-end
     }
@@ -200,7 +198,6 @@ const cardTheme = {
       padding: 0 0 0 20px
       text-transform: initial
       margin: 0 0 10px 0
-      flex: 1
       cursor: pointer
     }
 
@@ -289,18 +286,19 @@ class ApplicantBadge extends PureComponent<Props> {
       />
     )
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+      e.stopPropagation()
       const { id, onClick } = this.props
       onClick && onClick(id)
     }
 
     return id ? (
-      <div className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
+      <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         {(name || email) && (
-          <div onClick={handleClick} className={cx.name}>{name || email}</div>
+          <div className={cx.name}>{name || email}</div>
         )}
         {(avatar || email) && (
-          <div onClick={handleClick} className={cx.avatar}>
+          <div className={cx.avatar}>
             {avatar || (
               <Avatar
                 src={`https://www.gravatar.com/avatar/${md5(email)}?s=90`}
