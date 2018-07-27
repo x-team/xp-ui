@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 
 import theme from '../../styles/theme'
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text'
 
 type Props = {
@@ -346,6 +346,22 @@ const getIcon = ({ icon, color }) => {
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <rect x='0' y='0' width='5' height='16' fill={colors[color]} />
           <rect x='9' y='0' width='5' height='16' fill={colors[color]} />
+        </g>
+      </svg>
+    ),
+
+    paperplane: (
+      <svg width='17px' height='17px' viewBox='0 0 17 17'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round'>
+          <g transform='translate(-756.000000, -1327.000000)' fill={colors[color]} stroke={colors[color]}>
+            <g transform='translate(516.000000, 684.000000)'>
+              <g transform='translate(228.000000, 631.000000)'>
+                <g transform='translate(23.018984, 18.018984) rotate(44.000000) translate(-23.018984, -18.018984) translate(14.518984, 9.518984)'>
+                  <polygon transform='translate(8.500000, 8.500000) rotate(-1.000000) translate(-8.500000, -8.500000) ' points='8.5 1 16 16 9.73060528 13.9603788 8.62544468 4.59226558 7.46910589 14.0393521 1 16' />
+                </g>
+              </g>
+            </g>
+          </g>
         </g>
       </svg>
     )
