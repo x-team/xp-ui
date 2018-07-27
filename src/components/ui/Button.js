@@ -20,6 +20,7 @@ type Props = {
   outlined: ?boolean,
   rounded: ?boolean,
   raised: ?boolean,
+  link: ?boolean,
   selected: ?boolean,
   disabled: ?boolean,
   block: ?boolean,
@@ -166,6 +167,24 @@ const extraStyles = {
     }
   `),
 
+  link: cmz(`
+    &.link {
+      font-size: 18px !important
+      border-color: transparent
+      color: ${theme.typoLabel}
+      line-height: 22px
+    }
+
+    &.link span {
+      text-transform: initial
+    }
+
+    &.link:hover {
+      background-color: ${theme.lineSilver2.darken(0.025)}
+      border-color: ${theme.lineSilver2.darken(0.025)}
+    }
+  `),
+
   selected: cmz(`
     & {
       border-color: ${theme.baseRed}
@@ -188,6 +207,7 @@ class Button extends PureComponent<Props> {
     disabled: false,
     rounded: false,
     raised: false,
+    link: false,
     selected: false,
     block: false
   }
@@ -201,6 +221,7 @@ class Button extends PureComponent<Props> {
       disabled,
       rounded,
       raised,
+      link,
       selected,
       block,
       component: CustomComponent,
@@ -211,12 +232,14 @@ class Button extends PureComponent<Props> {
     const colorClassName = colorStyles[color] || ''
     const sizeClassName = sizeStyles[size] || ''
     const extraClassName = [
-      outlined && extraStyles.outlined,
-      outlined && 'outlined',
+      (outlined || link) && extraStyles.outlined,
+      (outlined || link) && 'outlined',
       rounded && extraStyles.rounded,
       rounded && 'rounded',
       raised && extraStyles.raised,
       raised && 'raised',
+      link && extraStyles.link,
+      link && 'link',
       selected && extraStyles.selected,
       selected && 'selected',
       block && extraStyles.block,
