@@ -190,7 +190,7 @@ class Dropdown extends PureComponent<Props, State> {
       targetYOrigin === 'top' ? styles.tooltipTop : ''
     ].join(' ')
 
-    const handleClick = (e) => {
+    const handleClick = (e: any) => {
       e && e.stopPropagation()
       return toggle ? this.toggle() : this.open()
     }

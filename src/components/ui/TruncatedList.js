@@ -77,7 +77,7 @@ class TruncatedList extends PureComponent<Props, State> {
     }
   }
 
-  handleViewMore = (e) => {
+  handleViewMore = (e: any) => {
     e && e.stopPropagation()
     const { visible, increment, inserted } = this.props
 
