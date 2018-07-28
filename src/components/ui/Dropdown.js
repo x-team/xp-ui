@@ -190,6 +190,11 @@ class Dropdown extends PureComponent<Props, State> {
       targetYOrigin === 'top' ? styles.tooltipTop : ''
     ].join(' ')
 
+    const handleClick = (e: any) => {
+      e && e.stopPropagation()
+      return toggle ? this.toggle() : this.open()
+    }
+
     return (children || label || icon) ? (
       <ClickOutside onClickOutside={this.close}>
         <div
@@ -197,7 +202,7 @@ class Dropdown extends PureComponent<Props, State> {
           onMouseEnter={hover && this.open}
           onMouseLeave={hover && this.close}
         >
-          <div className={labelClasses} onClick={() => toggle ? this.toggle() : this.open()}>
+          <div className={labelClasses} onClick={handleClick}>
             {icon && <SvgIcon icon={icon} color='text' />}
             {label && <span className={styles.labelElement}>{label}</span>}
             {indicator && (
