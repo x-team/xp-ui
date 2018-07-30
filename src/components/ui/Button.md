@@ -64,10 +64,10 @@ raised default
 <Button raised>Raised default state</Button>
 ```
 
-link default
+Link style default
 
 ```js
-<Button link>Link default state</Button>
+<Button pseudolink>Link default state</Button>
 ```
 
 outlined default
@@ -112,7 +112,7 @@ form buttons
 
 ```js
 <div>
-  <Button link>Cancel</Button>
+  <Button pseudolink>Cancel</Button>
   <Button><SvgIcon icon={'paperplane'} color={'inverted'} /></Button>
 </div>
 ```
