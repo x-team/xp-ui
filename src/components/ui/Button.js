@@ -169,10 +169,8 @@ const extraStyles = {
 
   pseudolink: cmz(`
     &.pseudolink {
-      font-size: 18px !important
       border-color: transparent
       color: ${theme.typoLabel}
-      line-height: 22px
     }
 
     &.pseudolink span {

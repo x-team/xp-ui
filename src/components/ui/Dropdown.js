@@ -198,7 +198,7 @@ class Dropdown extends PureComponent<Props, State> {
     const dropdownChildren = () =>
       React.Children.map(children, child => {
         const { props } = child
-        const { closeDropdown } = props || false
+        const closeDropdown = props ? props.closeDropdown : false
         return closeDropdown
           ? React.cloneElement(child, { closeDropdown: this.close })
           : child
