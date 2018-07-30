@@ -24,6 +24,7 @@ Basic color:
   <SvgIcon icon="check" />
   <SvgIcon icon="play" />
   <SvgIcon icon="pause" />
+  <SvgIcon icon="paperplane" />
 </div>
 ```
 
@@ -53,6 +54,7 @@ Inverted color:
   <SvgIcon icon="check" color="inverted" />
   <SvgIcon icon="play" color="inverted" />
   <SvgIcon icon="pause" color="inverted" />
+  <SvgIcon icon="paperplane" color="inverted" />
 </div>
 ```
 
@@ -82,6 +84,7 @@ Monochrome color:
   <SvgIcon icon="check" color="monochrome" />
   <SvgIcon icon="play" color="monochrome" />
   <SvgIcon icon="pause" color="monochrome" />
+  <SvgIcon icon="paperplane" color="monochrome" />
 </div>
 ```
 
@@ -111,6 +114,7 @@ Grayscale color:
   <SvgIcon icon="check" color="grayscale" />
   <SvgIcon icon="play" color="grayscale" />
   <SvgIcon icon="pause" color="grayscale" />
+  <SvgIcon icon="paperplane" color="grayscale" />
 </div>
 ```
 
@@ -140,6 +144,7 @@ Text gray color:
   <SvgIcon icon="check" color="text" />
   <SvgIcon icon="play" color="text" />
   <SvgIcon icon="pause" color="text" />
+  <SvgIcon icon="paperplane" color="text" />
 </div>
 ```
 

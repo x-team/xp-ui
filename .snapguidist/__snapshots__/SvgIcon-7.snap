@@ -972,5 +972,54 @@ exports[`SvgIcon-7 1`] = `
         y="0" />
     </g>
   </svg>
+  <svg
+    height="13px"
+    viewBox="0 0 17 17"
+    width="17px">
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="none"
+      strokeLinecap="round"
+      strokeWidth="1">
+      <g
+        fill={
+          Object {
+            "color": Array [
+              178,
+              182,
+              188,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
+        stroke={
+          Object {
+            "color": Array [
+              178,
+              182,
+              188,
+            ],
+            "model": "rgb",
+            "valpha": 1,
+          }
+        }
+        transform="translate(-756.000000, -1327.000000)">
+        <g
+          transform="translate(516.000000, 684.000000)">
+          <g
+            transform="translate(228.000000, 631.000000)">
+            <g
+              transform="translate(23.018984, 18.018984) rotate(44.000000) translate(-23.018984, -18.018984) translate(14.518984, 9.518984)">
+              <polygon
+                points="8.5 1 16 16 9.73060528 13.9603788 8.62544468 4.59226558 7.46910589 14.0393521 1 16"
+                transform="translate(8.500000, 8.500000) rotate(-1.000000) translate(-8.500000, -8.500000) " />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
 </div>
 `;

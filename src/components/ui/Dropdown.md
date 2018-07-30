@@ -1,6 +1,6 @@
 Labeled button:
 
-```
+```js
 <Dropdown icon="add" label="Add to List" indicator>
   <div style={{ background: '#e9e9e9' }}>
     <Dropdown label="Add to List">
@@ -18,7 +18,7 @@ Labeled button:
 
 Label and indicator positioned on the right:
 
-```
+```js
 const itemsArray = [
   { id: 1, value: "item-1" },
   { id: 2, value: "item-2" },
@@ -47,7 +47,7 @@ const itemsArray = [
 
 Icon only button:
 
-```
+```js
 <Dropdown icon="hamburger" padded>
   <div style={{ background: '#e9e9e9' }}>
     <Loader />
@@ -57,7 +57,7 @@ Icon only button:
 
 SelectBox example:
 
-```
+```js
 const itemsArray = [
   { id: 2, value: "registered", selected: true },
   { id: 3, value: "portfolio-building", selected: true },
@@ -79,14 +79,25 @@ const itemsArray = [
 
 Tooltip display:
 
-```
+```js
 <Dropdown tooltip label={<Button>x</Button>}>
   Anything here
 </Dropdown>
 ```
 
+Close Dropdown from children:
+
+```js
+const CloseButton = ({ closeDropdown }) => <h1 onClick={closeDropdown}>Click to close!</h1>;
+CloseButton.defaultProps = { closeDropdown: true };
+
+<Dropdown tooltip label={<h1>Click to open!</h1>}>
+  <CloseButton />
+</Dropdown>
+```
+
 Missing props (does component explode?):
 
-```
+```js
 <Dropdown />
 ```

@@ -64,6 +64,12 @@ raised default
 <Button raised>Raised default state</Button>
 ```
 
+link-style default
+
+```js
+<Button pseudolink>Link default state</Button>
+```
+
 outlined default
 
 ```js
@@ -100,6 +106,15 @@ selected skill tag
 
 ```js
 <Button selected outlined rounded raised color={'silver'}>Android</Button>
+```
+
+exclude applicant form buttons
+
+```js
+<div style={{ textAlign: 'right' }}>
+  <Button pseudolink>Cancel</Button>
+  <Button><SvgIcon icon={'paperplane'} color={'inverted'} /></Button>
+</div>
 ```
 
 Missing props (does component explode?):
