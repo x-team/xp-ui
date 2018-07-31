@@ -5,17 +5,6 @@ import React, { PureComponent } from 'react'
 const cmz = require('cmz')
 
 const cx = {
-  list: cmz(`
-    list-style: none
-    margin: 0
-    padding: 0
-  `),
-
-  item: cmz(`
-    display: inline-block
-    padding: 0
-  `),
-
   hidden: cmz(`
     display: none
   `)
@@ -111,8 +100,8 @@ class TruncatedList extends PureComponent<Props, State> {
       return viewMore
         ? viewMore(nextRealIncrement, this.handleViewMore, isFetching)
         : (
-          <li
-            className={[cx.item, itemClass].join(' ')}
+          <span
+            className={itemClass}
             onClick={!isFetching && this.handleViewMore}
           >
             {isFetching
@@ -122,26 +111,26 @@ class TruncatedList extends PureComponent<Props, State> {
                 : `+${hiddenItems} more`
               )
             }
-          </li>
+          </span>
         )
     }
 
     return itemsLength > 0 ? (
-      <ul className={[cx.list, listClass].join(' ')}>
+      <span className={listClass}>
         {items
           .map((item, i) => {
-            const isVisible = allVisible || i < realVisible || (increment && i < nextView)
-              ? [cx.item, itemClass].join(' ')
-              : [cx.item, cx.hidden].join(' ')
+            const visibilityClass = allVisible || i < realVisible || (increment && i < nextView)
+              ? itemClass
+              : cx.hidden
             return (
-              <li className={isVisible} key={i}>
+              <span className={visibilityClass} key={i}>
                 {item}
-              </li>
+              </span>
             )
           })
         }
         {(!allVisible || hasMore) && renderShowMore()}
-      </ul>
+      </span>
     ) : null
   }
 }
