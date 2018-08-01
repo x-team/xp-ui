@@ -8,83 +8,442 @@ exports[`SelectBox-7 1`] = `
   }>
   <div>
     <div
-      className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-20"
-      onMouseEnter={false}
-      onMouseLeave={false}>
+      className="AutoUI_ui_SelectBox-75">
       <div
-        className="AutoUI_ui_Dropdown-24 ">
-        
-        <span
-          className="AutoUI_ui_Dropdown-42">
-          <div
-            className="AutoUI_ui_SelectBox-75">
-            <div
-              className="AutoUI_ui_SelectBox-84">
-              <svg
-                height="17px"
-                viewBox="0 0 16 17"
-                width="16px">
-                <g
-                  fill="none"
-                  fillRule="evenodd"
-                  stroke="none"
-                  strokeWidth="1">
-                  <circle
-                    cx="7.5"
-                    cy="7.5"
-                    r="6.5"
-                    stroke={
-                      Object {
-                        "color": Array [
-                          178,
-                          182,
-                          188,
-                        ],
-                        "model": "rgb",
-                        "valpha": 1,
-                      }
-                    } />
-                  <path
-                    d="M11.7538745,12.6062275 L15.5,16.5"
-                    stroke={
-                      Object {
-                        "color": Array [
-                          178,
-                          182,
-                          188,
-                        ],
-                        "model": "rgb",
-                        "valpha": 1,
-                      }
-                    }
-                    strokeLinecap="square" />
-                </g>
-              </svg>
-            </div>
-            <div>
-              <input
-                aria-labelledby="label-search"
-                autoComplete="off"
-                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-79"
-                disabled={false}
-                id="search"
-                name="search"
-                placeholder="Search"
-                required={false}
-                type="text"
-                value="" />
-            </div>
-          </div>
-        </span>
+        className="AutoUI_ui_SelectBox-84">
+        <svg
+          height="17px"
+          viewBox="0 0 16 17"
+          width="16px">
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="none"
+            strokeWidth="1">
+            <circle
+              cx="7.5"
+              cy="7.5"
+              r="6.5"
+              stroke={
+                Object {
+                  "color": Array [
+                    178,
+                    182,
+                    188,
+                  ],
+                  "model": "rgb",
+                  "valpha": 1,
+                }
+              } />
+            <path
+              d="M11.7538745,12.6062275 L15.5,16.5"
+              stroke={
+                Object {
+                  "color": Array [
+                    178,
+                    182,
+                    188,
+                  ],
+                  "model": "rgb",
+                  "valpha": 1,
+                }
+              }
+              strokeLinecap="square" />
+          </g>
+        </svg>
       </div>
-      <div
-        className="AutoUI_ui_Dropdown-52    ">
-        <div
-          className="AutoUI_ui_SelectBox-145">
-          
-        </div>
+      <div>
+        <input
+          aria-labelledby="label-search"
+          autoComplete="off"
+          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-79"
+          id="search"
+          name="search"
+          placeholder="Search"
+          required={false}
+          type="text"
+          value="" />
       </div>
     </div>
+    <ul
+      className="AutoUI_ui_SelectBox-134"
+      style={
+        Object {
+          "maxHeight": "auto",
+          "width": "100%",
+        }
+      }>
+      <li
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    ">
+        <div
+          className="AutoUI_forms_InputField-78">
+          <label
+            id="label-unselected">
+            <div
+              className="AutoUI_forms_InputField-78">
+              <label
+                className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                <input
+                  aria-labelledby="label-unselected"
+                  checked={false}
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                  id="unselected"
+                  name="unselected"
+                  required={false}
+                  type="checkbox" />
+                <span
+                  className="AutoUI_forms_InputField-135" />
+                unselected
+              </label>
+            </div>
+          </label>
+        </div>
+        <span
+          className="AutoUI_ui_SelectBox-179 AutoUI_ui_SelectBox-185 editButton">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <path
+                d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                fill={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                }
+                fillRule="nonzero" />
+            </g>
+          </svg>
+        </span>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    ">
+        <div
+          className="AutoUI_forms_InputField-78">
+          <label
+            id="label-selected">
+            <div
+              className="AutoUI_forms_InputField-78">
+              <label
+                className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                <input
+                  aria-labelledby="label-selected"
+                  checked={true}
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                  id="selected"
+                  name="selected"
+                  required={false}
+                  type="checkbox" />
+                <span
+                  className="AutoUI_forms_InputField-135" />
+                selected
+              </label>
+            </div>
+          </label>
+        </div>
+        <span
+          className="AutoUI_ui_SelectBox-179 AutoUI_ui_SelectBox-185 editButton">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <path
+                d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                fill={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                }
+                fillRule="nonzero" />
+            </g>
+          </svg>
+        </span>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    isSelecting">
+        <span
+          className="AutoUI_ui_SelectBox-188 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          <span
+            className="AutoUI_ui_SelectBox-195" />
+          (un)selecting
+        </span>
+        <span
+          className="AutoUI_ui_SelectBox-179 AutoUI_ui_SelectBox-185 editButton">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <path
+                d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                fill={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                }
+                fillRule="nonzero" />
+            </g>
+          </svg>
+        </span>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-170  ">
+        <span
+          className="AutoUI_ui_SelectBox-224 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          <div>
+            <input
+              aria-labelledby="label-editing"
+              autoFocus="autofocus"
+              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
+              id="editing"
+              name="editing"
+              required={false}
+              type="text"
+              value="editing this" />
+          </div>
+        </span>
+        <span
+          className="AutoUI_ui_SelectBox-175">
+          <span
+            className="AutoUI_ui_SelectBox-179">
+            <svg
+              height="14px"
+              viewBox="0 0 14 14"
+              width="14px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeLinecap="square"
+                strokeWidth="1">
+                <g
+                  stroke={
+                    Object {
+                      "color": Array [
+                        178,
+                        182,
+                        188,
+                      ],
+                      "model": "rgb",
+                      "valpha": 1,
+                    }
+                  }
+                  strokeWidth="2"
+                  transform="translate(-1294.000000, -1073.000000)">
+                  <g
+                    transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                    <path
+                      d="M7,0 L7,14" />
+                    <path
+                      d="M14,7 L0,7" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span
+            className="AutoUI_ui_SelectBox-179">
+            <svg
+              height="13px"
+              viewBox="0 0 17 13"
+              width="17px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <polyline
+                  points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
+                  stroke={
+                    Object {
+                      "color": Array [
+                        178,
+                        182,
+                        188,
+                      ],
+                      "model": "rgb",
+                      "valpha": 1,
+                    }
+                  }
+                  strokeWidth="2"
+                  transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
+              </g>
+            </svg>
+          </span>
+        </span>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-170 isSaving ">
+        <span>
+          Saving \"
+          saving this
+          \"...
+        </span>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-170 isSaving isSelecting">
+        <span>
+          Saving \"
+          saving this
+          \"...
+        </span>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   isSaving isSelecting">
+        <span
+          className="AutoUI_ui_SelectBox-188 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          <span
+            className="AutoUI_ui_SelectBox-195" />
+          selecting
+        </span>
+        <span
+          className="AutoUI_ui_SelectBox-179 AutoUI_ui_SelectBox-185 editButton">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <path
+                d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                fill={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                }
+                fillRule="nonzero" />
+            </g>
+          </svg>
+        </span>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-170  isSelecting">
+        <span
+          className="AutoUI_ui_SelectBox-224 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          <div>
+            <input
+              aria-labelledby="label-editing"
+              autoFocus="autofocus"
+              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
+              id="editing"
+              name="editing"
+              required={false}
+              type="text"
+              value="editing this" />
+          </div>
+        </span>
+        <span
+          className="AutoUI_ui_SelectBox-175">
+          <span
+            className="AutoUI_ui_SelectBox-179">
+            <svg
+              height="14px"
+              viewBox="0 0 14 14"
+              width="14px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeLinecap="square"
+                strokeWidth="1">
+                <g
+                  stroke={
+                    Object {
+                      "color": Array [
+                        178,
+                        182,
+                        188,
+                      ],
+                      "model": "rgb",
+                      "valpha": 1,
+                    }
+                  }
+                  strokeWidth="2"
+                  transform="translate(-1294.000000, -1073.000000)">
+                  <g
+                    transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                    <path
+                      d="M7,0 L7,14" />
+                    <path
+                      d="M14,7 L0,7" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span
+            className="AutoUI_ui_SelectBox-179">
+            <svg
+              height="13px"
+              viewBox="0 0 17 13"
+              width="17px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <polyline
+                  points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
+                  stroke={
+                    Object {
+                      "color": Array [
+                        178,
+                        182,
+                        188,
+                      ],
+                      "model": "rgb",
+                      "valpha": 1,
+                    }
+                  }
+                  strokeWidth="2"
+                  transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
+              </g>
+            </svg>
+          </span>
+        </span>
+      </li>
+    </ul>
   </div>
 </div>
 `;
