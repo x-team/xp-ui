@@ -306,19 +306,15 @@ exports[`SelectBox-7 1`] = `
       </li>
       <li
         className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-170 isSaving ">
-        <span>
-          Saving \"
-          saving this
-          \"...
-        </span>
+        Saving \"
+        saving this
+        \"...
       </li>
       <li
         className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-170 isSaving isSelecting">
-        <span>
-          Saving \"
-          saving this
-          \"...
-        </span>
+        Saving \"
+        saving this
+        \"...
       </li>
       <li
         className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   isSaving isSelecting">

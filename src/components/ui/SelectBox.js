@@ -283,6 +283,7 @@ type Props = {
   hasSearch?: boolean,
   lined?: boolean,
   creating?: boolean | string,
+  search?: string,
   collectionName?: string,
   onSelect?: Function,
   onClick?: Function,
@@ -295,7 +296,8 @@ type State = {
   items: Array<Item>,
   view: Array<Item>,
   expanded?: boolean,
-  creating?: boolean | string
+  creating?: boolean | string,
+  search?: string
 }
 
 class SelectBox extends Component<Props, State> {
@@ -361,7 +363,7 @@ class SelectBox extends Component<Props, State> {
     this.setState({ view: newItems })
   }
 
-  handleSearch = (input: string) => {
+  handleSearch = (input: string = '') => {
     const { view } = this.state
     const match = new RegExp(input.trim().toUpperCase(), 'g')
     const filteredItems = view && view.map(item => {
@@ -501,9 +503,7 @@ class SelectBox extends Component<Props, State> {
 
     const renderIsSavingOrEditing = (item: Item) => item.saving ? (
       <li className={itemClasses(item)} key={item.id}>
-        <span className={styles.saving}>
-          Saving "{item.editing}"...
-        </span>
+        Saving "{item.editing}"...
       </li>
     ) : (
       <li className={itemClasses(item)} key={item.id}>
