@@ -17,9 +17,11 @@ import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
+import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
 import Milestones from './components/ui/Milestones'
 import MilestonesScreen from './components/ui/MilestonesScreen'
+import Modal from './components/ui/Modal'
 import Note from './components/ui/Note'
 import NotesFeed from './components/ui/NotesFeed'
 import Roadmap from './components/ui/Roadmap'
@@ -58,9 +60,11 @@ export {
   HorizontalRuler,
   InputField,
   InputGroup,
+  ListsEditor,
   Loader,
   Milestones,
   MilestonesScreen,
+  Modal,
   Note,
   NotesFeed,
   Roadmap,

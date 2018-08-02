@@ -23,6 +23,7 @@ module.exports = snapguidist({
   ignore: [
     '**/components/forms/SolutionForm/Title.js',
     '**/components/ui/TextareaEditor/MediumEditorWrapper.js',
+    '**/components/ui/Tabs/Tabs.js',
     '**/components/ui/Tabs/Tab.js'
   ]
 })

@@ -74,7 +74,7 @@ exports[`SelectBox-7 1`] = `
         }
       }>
       <li
-        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    ">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
         <div
           className="AutoUI_forms_InputField-78">
           <label
@@ -128,7 +128,7 @@ exports[`SelectBox-7 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    ">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
         <div
           className="AutoUI_forms_InputField-78">
           <label
@@ -182,7 +182,7 @@ exports[`SelectBox-7 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    isSelecting">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   isSelecting">
         <span
           className="AutoUI_ui_SelectBox-188 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span
@@ -219,19 +219,19 @@ exports[`SelectBox-7 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-170  ">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
         <span
           className="AutoUI_ui_SelectBox-224 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <div>
             <input
-              aria-labelledby="label-editing"
+              aria-labelledby="label-editing (no changes yet)"
               autoFocus="autofocus"
               className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
-              id="editing"
-              name="editing"
+              id="editing (no changes yet)"
+              name="editing (no changes yet)"
               required={false}
               type="text"
-              value="editing this" />
+              value="editing (no changes yet)" />
           </div>
         </span>
         <span
@@ -305,19 +305,105 @@ exports[`SelectBox-7 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-170 isSaving ">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165 AutoUI_ui_SelectBox-170  ">
+        <span
+          className="AutoUI_ui_SelectBox-224 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          <div>
+            <input
+              aria-labelledby="label-editing"
+              autoFocus="autofocus"
+              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
+              id="editing"
+              name="editing"
+              required={false}
+              type="text"
+              value="editing (this is changed but not yet saved)" />
+          </div>
+        </span>
+        <span
+          className="AutoUI_ui_SelectBox-175">
+          <span
+            className="AutoUI_ui_SelectBox-179">
+            <svg
+              height="14px"
+              viewBox="0 0 14 14"
+              width="14px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeLinecap="square"
+                strokeWidth="1">
+                <g
+                  stroke={
+                    Object {
+                      "color": Array [
+                        178,
+                        182,
+                        188,
+                      ],
+                      "model": "rgb",
+                      "valpha": 1,
+                    }
+                  }
+                  strokeWidth="2"
+                  transform="translate(-1294.000000, -1073.000000)">
+                  <g
+                    transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                    <path
+                      d="M7,0 L7,14" />
+                    <path
+                      d="M14,7 L0,7" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span
+            className="AutoUI_ui_SelectBox-179">
+            <svg
+              height="13px"
+              viewBox="0 0 17 13"
+              width="17px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <polyline
+                  points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
+                  stroke={
+                    Object {
+                      "color": Array [
+                        178,
+                        182,
+                        188,
+                      ],
+                      "model": "rgb",
+                      "valpha": 1,
+                    }
+                  }
+                  strokeWidth="2"
+                  transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
+              </g>
+            </svg>
+          </span>
+        </span>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165 AutoUI_ui_SelectBox-170 isSaving ">
         Saving \"
         saving this
         \"...
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-170 isSaving isSelecting">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165 AutoUI_ui_SelectBox-170 isSaving isSelecting">
         Saving \"
         saving this
         \"...
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   isSaving isSelecting">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165  isSaving isSelecting">
         <span
           className="AutoUI_ui_SelectBox-188 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <span
@@ -354,7 +440,7 @@ exports[`SelectBox-7 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-170  isSelecting">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165 AutoUI_ui_SelectBox-170  isSelecting">
         <span
           className="AutoUI_ui_SelectBox-224 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <div>

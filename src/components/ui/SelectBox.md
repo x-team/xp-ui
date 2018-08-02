@@ -131,11 +131,16 @@ const itemsArray = [
   },
   {
     id: 5,
-    value: "editing",
-    editing: "editing this"
+    value: "editing (no changes yet)",
+    editing: "editing (no changes yet)"
   },
   {
     id: 6,
+    value: "editing",
+    editing: "editing (this is changed but not yet saved)"
+  },
+  {
+    id: 7,
     value: "saving",
     editing: "saving this",
     saving: true
@@ -168,6 +173,7 @@ const itemsArray = [
 <SelectBox
   collectionName="Stuff"
   items={itemsArray}
+  lined={true}
   expanded={true}
   onSelect={item => console.log('onSelect:', item)}
   onEdit={item => console.log('onEdit:', item)}
