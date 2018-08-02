@@ -31,6 +31,10 @@ type Props = {
   exclusionFormRender?: Function | void
 }
 
+type State = {
+  isHovering?: boolean
+}
+
 const cmz = require('cmz')
 
 const cardTheme = {
@@ -222,10 +226,24 @@ const cardTheme = {
 }
 
 const tabularTheme = {} // TODO: https://zube.io/x-team/xp-formerly-auto/c/1638
-class ApplicantBadge extends PureComponent<Props> {
+class ApplicantBadge extends PureComponent<Props, State> {
+  constructor (props: Props) {
+    super(props)
+    this.state = {
+      isHovering: false
+    }
+    this.handleMouseHover = this.handleMouseHover.bind(this)
+  }
+
   static defaultProps = {
     mode: 'card',
     active: false
+  }
+
+  handleMouseHover () {
+    this.setState({
+      isHovering: !this.state.isHovering
+    })
   }
 
   render () {
@@ -310,7 +328,23 @@ class ApplicantBadge extends PureComponent<Props> {
             )}
           </div>
         )}
-        <div className={cx.controls}>
+        <div
+          className={cx.controls}
+          onMouseEnter={this.handleMouseHover}
+          onMouseLeave={this.handleMouseHover}>
+          {exclusionFormRender &&
+            this.state.isHovering && (
+            <Dropdown
+              tooltip
+              label={(
+                <span className={cx.control}>
+                  <SvgIcon icon='check' />
+                </span>
+              )}
+            >
+              {exclusionFormRender()}
+            </Dropdown>
+          )}
           {exclusionFormRender && (
             <Dropdown
               tooltip
