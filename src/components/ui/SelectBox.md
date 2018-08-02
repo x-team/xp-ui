@@ -1,3 +1,5 @@
+_Dev note: The actions "toggle selection", "save edition" and "create new item" requires a state wrapper to fully work in integration. The transitional states "selecting" and "saving" are optional and their management is expected to be dealt in the state wrapper. These features are not available in this showcase for manual testing. Please check the examples below for items on transitional states provided by props._
+
 Simple view for Add to List:
 
 ```
@@ -34,15 +36,7 @@ const itemsArray = [
   width={300}
   visibleItems={3}
   onSelect={item => console.log('onSelect:', item)}
-  onCreateNew={listName =>
-    new Promise(resolve =>
-      listName && setTimeout(() => {
-        const newItem = { id: new Date().getUTCMilliseconds(), value: listName }
-        console.log('onCreateNew:', newItem);
-        resolve(newItem);
-      }, 3000)
-    )
-  }
+  onCreateNew={listName => console.log('onCreateNew:', listName)}
 />
 ```
 
@@ -111,33 +105,105 @@ const itemsArray = [
   collectionName="List"
   items={itemsArray}
   expanded={true}
-  onSelect={item =>
-    new Promise(resolve =>
-      item && setTimeout(() => {
-        console.log('onSelect:', item);
-        resolve(item);
-      }, 3000)
-    )
-  }
-  onEdit={item =>
-    new Promise(resolve =>
-      item && setTimeout(() => {
-        console.log('onEdit:', item);
-        resolve(item);
-      }, 3000)
-    )
-  }
-  onCreateNew={listName =>
-    new Promise(resolve =>
-      listName && setTimeout(() => {
-        const newItem = { id: new Date().getUTCMilliseconds(), value: listName }
-        itemsArray.push(newItem) // Side-effect to force props update
-        console.log('onCreateNew:', newItem);
-        resolve(newItem);
-      }, 3000)
-    )
-  }
+  onSelect={item => console.log('onSelect:', item)}
+  onEdit={item => console.log('onEdit:', item)}
+  onCreateNew={listName => console.log('onCreateNew:', listName)}
 />
+```
+
+Example of all items states:
+
+```
+const itemsArray = [
+  {
+    id: 2,
+    value: "unselected"
+  },
+  {
+    id: 3,
+    value: "selected",
+    selected: true
+  },
+  {
+    id: 4,
+    value: "(un)selecting",
+    selecting: true
+  },
+  {
+    id: 5,
+    value: "editing",
+    editing: "editing this"
+  },
+  {
+    id: 6,
+    value: "saving",
+    editing: "saving this",
+    saving: true
+  },
+
+  // bullet-proof some possible state conflicts
+  {
+    id: 222,
+    value: "saving",
+    selected: true,
+    selecting: true,
+    editing: "saving this",
+    saving: true
+  },
+  {
+    id: 333,
+    value: "selecting",
+    selected: true,
+    selecting: true,
+    saving: true // should not result saving state because saving expect the "editing" value
+  },
+  {
+    id: 444,
+    value: "editing",
+    selected: true,
+    selecting: true,
+    editing: "editing this"
+  }
+];
+<SelectBox
+  collectionName="Stuff"
+  items={itemsArray}
+  expanded={true}
+  onSelect={item => console.log('onSelect:', item)}
+  onEdit={item => console.log('onEdit:', item)}
+  onCreateNew={listName => console.log('onCreateNew:', listName)}
+/>
+```
+
+Examples of searching and creating simultaneously:
+
+```
+<div>
+  <p>The search will be always unlocked but one can't create new item while another item creation is in progress.</p>
+  <p>In the cases below there's no items provided.</p>
+  <p>Here the creating and search props were provided:</p>
+  <SelectBox
+    collectionName="Entries"
+    creating='Another entry'
+    search='Searching some entry'
+    expanded={true}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+  <p>In this case a new item is being created while nothing is being searched:</p>
+  <SelectBox
+    collectionName="Entries"
+    creating='A new entry'
+    expanded={true}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+  <p>In this case a search is being performed while nothing is being created:</p>
+  <SelectBox
+    collectionName="Entries"
+    search='Searching some entry'
+    expanded={true}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+</div>
 ```
 
 Missing props (does component explode?):

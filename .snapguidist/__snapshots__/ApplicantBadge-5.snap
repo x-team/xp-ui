@@ -76,10 +76,8 @@ exports[`ApplicantBadge-5 1`] = `
       </div>
     </div>
   </div>
-  <ul
-    className="AutoUI_ui_TruncatedList-8 ">
-    <li
-      className="AutoUI_ui_TruncatedList-14 ">
+  <span>
+    <span>
       <div>
         <div
           className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
@@ -109,9 +107,8 @@ exports[`ApplicantBadge-5 1`] = `
           </div>
         </div>
       </div>
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 ">
+    </span>
+    <span>
       <div>
         <div
           className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
@@ -132,9 +129,8 @@ exports[`ApplicantBadge-5 1`] = `
           </div>
         </div>
       </div>
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 ">
+    </span>
+    <span>
       <div>
         <div
           className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
@@ -155,98 +151,93 @@ exports[`ApplicantBadge-5 1`] = `
           </div>
         </div>
       </div>
-    </li>
-  </ul>
-  <ul
-    className="AutoUI_ui_TruncatedList-8 ">
-    <li
-      className="AutoUI_ui_TruncatedList-14 ">
+    </span>
+  </span>
+  <span>
+    <span>
       JavaScript
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 ">
+    </span>
+    <span>
       ES2015
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 ">
+    </span>
+    <span>
       Node
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 ">
+    </span>
+    <span>
       Express
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       React
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       Redux
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       Webpack
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       JavaScript
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       ES2015
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       Node
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       Express
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       React
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       Redux
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       Webpack
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       JavaScript
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       ES2015
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       Node
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       Express
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       React
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       Redux
-    </li>
-    <li
-      className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+    </span>
+    <span
+      className="AutoUI_ui_TruncatedList-8">
       Webpack
-    </li>
-    <li
+    </span>
+    <span
       className="  ">
       + 17 more
-    </li>
-  </ul>
+    </span>
+  </span>
 </div>
 `;

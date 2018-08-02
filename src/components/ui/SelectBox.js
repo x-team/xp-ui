@@ -145,7 +145,7 @@ const styles = {
   shadow: cmz(`
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15)
   `),
-  item: cmz(`
+  item: cmz(typo.baseText, `
     & {
       min-height: 30px
       margin: 22px
@@ -156,6 +156,10 @@ const styles = {
 
     &:last-child {
       border-bottom: none
+    }
+
+    &:not(.isSaving):not(.isSelecting):hover .editButton {
+      display: flex
     }
   `),
   lined: cmz(`
@@ -178,7 +182,9 @@ const styles = {
     display: flex
     align-items: center
   `),
-  saving: cmz(typo.baseText),
+  editButton: cmz('editButton', `
+    display: none
+  `),
   selecting: cmz(
     typo.baseText,
     `
@@ -276,7 +282,8 @@ type Props = {
   expanded?: boolean,
   hasSearch?: boolean,
   lined?: boolean,
-  creating?: boolean,
+  creating?: boolean | string,
+  search?: string,
   collectionName?: string,
   onSelect?: Function,
   onClick?: Function,
@@ -289,7 +296,8 @@ type State = {
   items: Array<Item>,
   view: Array<Item>,
   expanded?: boolean,
-  creating?: boolean
+  creating?: boolean | string,
+  search?: string
 }
 
 class SelectBox extends Component<Props, State> {
@@ -303,11 +311,15 @@ class SelectBox extends Component<Props, State> {
   }
 
   state: State = {
-    search: '',
+    search: this.props.search || '',
     items: this.props.items || [],
     view: this.props.items || [],
     expanded: this.props.expanded || false,
     creating: this.props.creating || false
+  }
+
+  componentDidMount () {
+    this.handleSearch(this.state.search)
   }
 
   componentDidUpdate (prevProps: Props, prevState: State) {
@@ -318,11 +330,8 @@ class SelectBox extends Component<Props, State> {
           ...prevState,
           items: viewItems,
           view: viewItems,
-          expanded: this.props.expanded
-        }
-
-        if (typeof props.creating !== 'undefined') {
-          newState.creating = props.creating
+          expanded: this.props.expanded,
+          creating: this.props.creating || false
         }
 
         return newState
@@ -337,9 +346,9 @@ class SelectBox extends Component<Props, State> {
         id: each.id,
         value: each.value,
         selected: each.selected || false,
-        selecting: each.selecting || viewItem.selecting || false,
+        selecting: each.selecting || false,
         editing: each.editing || viewItem.editing || false,
-        saving: each.saving || viewItem.saving || false,
+        saving: each.saving || false,
         hidden: each.hidden || viewItem.hidden || false
       }
     })
@@ -354,7 +363,7 @@ class SelectBox extends Component<Props, State> {
     this.setState({ view: newItems })
   }
 
-  handleSearch = (input: string) => {
+  handleSearch = (input: string = '') => {
     const { view } = this.state
     const match = new RegExp(input.trim().toUpperCase(), 'g')
     const filteredItems = view && view.map(item => {
@@ -367,40 +376,20 @@ class SelectBox extends Component<Props, State> {
   handleSelect = (item: Item) => {
     const { onSelect } = this.props
     if (!item.selecting && onSelect) {
-      this.updateItemsState({
-        ...this.getUncachedItem(item),
-        selecting: true
-      })
-      Promise.resolve(onSelect({
+      onSelect({
         ...this.getUncachedItem(item),
         selected: !item.selected
-      })).then((reponseItem) => {
-        this.updateItemsState({
-          ...this.getUncachedItem(reponseItem || item),
-          selected: !item.selected,
-          selecting: false
-        })
-      }) // to do: catch state
+      })
     }
   }
 
   handleClick = (item: Item) => {
     const { onClick } = this.props
     if (!item.selecting && onClick) {
-      this.updateItemsState({
-        ...this.getUncachedItem(item),
-        selecting: true
-      })
-      Promise.resolve(onClick({
+      onClick({
         ...this.getUncachedItem(item),
         selected: !item.selected
-      })).then((reponseItem) => {
-        this.updateItemsState({
-          ...this.getUncachedItem(reponseItem || item),
-          selected: !item.selected,
-          selecting: false
-        })
-      }) // to do: catch state
+      })
     } else {
       this.handleSelect(item)
     }
@@ -411,18 +400,7 @@ class SelectBox extends Component<Props, State> {
     const { search } = this.state
 
     if (onCreateNew) {
-      const pr = onCreateNew(search)
-
-      // Check if pr is a Promise
-      if (pr && typeof pr.then === 'function') {
-        this.setState(() => ({ creating: true }))
-        Promise.resolve(pr).then((reponseItem) => {
-          this.setState(() => ({
-            view: [...this.state.view, reponseItem],
-            creating: false
-          }))
-        })
-      }
+      onCreateNew(search)
     }
   }
 
@@ -445,21 +423,10 @@ class SelectBox extends Component<Props, State> {
   handleEdit = (item: Item) => {
     const { onEdit } = this.props
     if (onEdit) {
-      this.updateItemsState({
-        ...this.getUncachedItem(item),
-        saving: true
-      })
-      Promise.resolve(onEdit({
+      onEdit({
         ...this.getUncachedItem(item),
         value: item.editing
-      })).then((reponseItem) => {
-        this.updateItemsState({
-          ...this.getUncachedItem(reponseItem || item),
-          value: reponseItem.value || item.value,
-          saving: false,
-          editing: false
-        })
-      }) // to do: catch state
+      })
     }
   }
 
@@ -504,7 +471,7 @@ class SelectBox extends Component<Props, State> {
           type='checkbox'
           label={item.value}
           name={item.value}
-          checked={item.selected}
+          checked={!!item.selected}
           onChange={() => this.handleSelect(item)}
         />
       )
@@ -521,7 +488,7 @@ class SelectBox extends Component<Props, State> {
     )
 
     const renderEditable = (item) => onEdit && (
-      <span className={styles.controlbutton} onClick={() => this.handleStartEditing(item)}>
+      <span className={[styles.controlbutton, styles.editButton].join(' ')} onClick={() => this.handleStartEditing(item)}>
         <SvgIcon icon='edit' color='grayscale' />
       </span>
     )
@@ -529,14 +496,14 @@ class SelectBox extends Component<Props, State> {
     const itemClasses = (item) => ([
       styles.item,
       (lined || !expanded) ? styles.lined : '',
-      (item.editing && item.editing !== item.value) ? styles.editing : ''
+      (item.editing && item.editing !== item.value) ? styles.editing : '',
+      item.saving ? 'isSaving' : '',
+      item.selecting ? 'isSelecting' : ''
     ].join(' '))
 
     const renderIsSavingOrEditing = (item: Item) => item.saving ? (
       <li className={itemClasses(item)} key={item.id}>
-        <span className={styles.saving}>
-          Saving "{item.editing}"...
-        </span>
+        Saving "{item.editing}"...
       </li>
     ) : (
       <li className={itemClasses(item)} key={item.id}>
@@ -574,37 +541,32 @@ class SelectBox extends Component<Props, State> {
         </li>
       )
 
-    const renderItemsOrEmpty = () => filteredItems && filteredItems.length > 0
-      ? filteredItems.map(item => renderIsEditing(item))
-      : (
-        <li>
-          {creating ? (
-            <span className={styles.nothinglabel}>Adding new {collectionName} "{search}"...</span>
-          ) : (
-            <span>
-              <span className={styles.nothinglabel}>No Results for "{search}"</span>
-              {onCreateNew && (
-                <span className={styles.createnew} onClick={this.handleCreateNew}>
-                  <SvgIcon icon='plus' />
-                  <span>Add new {collectionName} "{search}"</span>
-                </span>
-              )}
-            </span>
-          )}
-        </li>
-      )
-
-    const renderItems = () => ((filteredItems && filteredItems.length > 0) || search) ? (
+    const renderItems = () => ((filteredItems && filteredItems.length > 0) || creating || search) ? (
       <ul className={styles.list} style={{
         maxHeight: visibleItems ? `${visibleItems * 61}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
-        {renderItemsOrEmpty()}
+        {filteredItems && filteredItems.length === 0 && (
+          <li>
+            {search && <span className={styles.nothinglabel}>No Results for "{search}"</span>}
+            {onCreateNew && !creating && (
+              <span className={styles.createnew} onClick={this.handleCreateNew}>
+                <SvgIcon icon='plus' />
+                <span>Add new {collectionName} "{search}"</span>
+              </span>
+            )}
+          </li>
+        )}
+        {creating && (
+          <li><span className={styles.nothinglabel}>Adding new {collectionName} "{creating}"...</span></li>
+        )}
+        {filteredItems.map(item => renderIsEditing(item))}
       </ul>
     ) : ''
 
     const selectsClass = filteredItems && filteredItems.filter(item => item.selected).length > 0
       ? styles.selects : styles.selectsEmpty
+
     const renderSearchLabel = (isSearch: boolean = false) => isSearch ? (
       <div className={styles.search}>
         <div className={styles.magnifier}>
@@ -617,7 +579,6 @@ class SelectBox extends Component<Props, State> {
           onChange={(input = {}) => this.handleSearch(input.target.value)}
           className={styles.searchinput}
           autoComplete='off'
-          disabled={creating}
         />
         {search !== '' && (
           <div className={styles.close} onClick={() => this.handleSearch('')}>
@@ -643,25 +604,27 @@ class SelectBox extends Component<Props, State> {
 
     const labelIsSearch = placeholder === 'Search'
 
+    const renderExpandedOrDropdown = () => expanded ? (
+      <div>
+        {renderSearchLabel(labelIsSearch || hasSearch)}
+        {renderItems()}
+      </div>
+    ) : (
+      <Dropdown
+        toggle={!labelIsSearch}
+        label={renderSearchLabel(labelIsSearch && !hasSearch)}
+        className={styles.dropdown}
+      >
+        <div className={expanded ? '' : styles.shadow}>
+          {hasSearch && renderSearchLabel(true)}
+          {renderItems()}
+        </div>
+      </Dropdown>
+    )
+
     return (
       <div className={styles.selectbox} style={{ width: width ? `${width}px` : '100%' }}>
-        {expanded ? (
-          <div>
-            {renderSearchLabel(labelIsSearch || hasSearch)}
-            {renderItems()}
-          </div>
-        ) : (
-          <Dropdown
-            toggle={!labelIsSearch}
-            label={renderSearchLabel(labelIsSearch && !hasSearch)}
-            className={styles.dropdown}
-          >
-            <div className={expanded ? '' : styles.shadow}>
-              {hasSearch && renderSearchLabel(true)}
-              {renderItems()}
-            </div>
-          </Dropdown>
-        )}
+        {renderExpandedOrDropdown()}
       </div>
     )
   }

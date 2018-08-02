@@ -264,9 +264,9 @@ class ApplicantBadge extends PureComponent<Props> {
           </Dropdown>
         ))}
         viewMore={(amount, action) => (
-          <li className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
+          <span className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
             {`+ ${amount} info`}
-          </li>
+          </span>
         )}
       />
     )
@@ -279,9 +279,9 @@ class ApplicantBadge extends PureComponent<Props> {
         listClass={cx.tags}
         itemClass={cx.tag}
         viewMore={(amount, action) => (
-          <li className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
+          <span className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
             {`+ ${amount} more`}
-          </li>
+          </span>
         )}
       />
     )

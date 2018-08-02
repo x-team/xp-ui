@@ -57,7 +57,6 @@ exports[`SelectBox-5 1`] = `
           aria-labelledby="label-search"
           autoComplete="off"
           className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-79"
-          disabled={false}
           id="search"
           name="search"
           placeholder="Search"
@@ -75,7 +74,7 @@ exports[`SelectBox-5 1`] = `
         }
       }>
       <li
-        className="AutoUI_ui_SelectBox-148  ">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    ">
         <div
           className="AutoUI_forms_InputField-78">
           <label
@@ -86,6 +85,7 @@ exports[`SelectBox-5 1`] = `
                 className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <input
                   aria-labelledby="label-registered"
+                  checked={false}
                   className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
                   id="registered"
                   name="registered"
@@ -99,7 +99,7 @@ exports[`SelectBox-5 1`] = `
           </label>
         </div>
         <span
-          className="AutoUI_ui_SelectBox-175">
+          className="AutoUI_ui_SelectBox-179 AutoUI_ui_SelectBox-185 editButton">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -128,7 +128,7 @@ exports[`SelectBox-5 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148  ">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    ">
         <div
           className="AutoUI_forms_InputField-78">
           <label
@@ -139,6 +139,7 @@ exports[`SelectBox-5 1`] = `
                 className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <input
                   aria-labelledby="label-portfolio-building"
+                  checked={false}
                   className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
                   id="portfolio-building"
                   name="portfolio-building"
@@ -152,7 +153,7 @@ exports[`SelectBox-5 1`] = `
           </label>
         </div>
         <span
-          className="AutoUI_ui_SelectBox-175">
+          className="AutoUI_ui_SelectBox-179 AutoUI_ui_SelectBox-185 editButton">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -181,7 +182,7 @@ exports[`SelectBox-5 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148  ">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    ">
         <div
           className="AutoUI_forms_InputField-78">
           <label
@@ -192,6 +193,7 @@ exports[`SelectBox-5 1`] = `
                 className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <input
                   aria-labelledby="label-portfolio-review"
+                  checked={false}
                   className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
                   id="portfolio-review"
                   name="portfolio-review"
@@ -205,7 +207,7 @@ exports[`SelectBox-5 1`] = `
           </label>
         </div>
         <span
-          className="AutoUI_ui_SelectBox-175">
+          className="AutoUI_ui_SelectBox-179 AutoUI_ui_SelectBox-185 editButton">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -234,7 +236,7 @@ exports[`SelectBox-5 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148  ">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    ">
         <div
           className="AutoUI_forms_InputField-78">
           <label
@@ -245,6 +247,7 @@ exports[`SelectBox-5 1`] = `
                 className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <input
                   aria-labelledby="label-social-media-screen"
+                  checked={false}
                   className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
                   id="social-media-screen"
                   name="social-media-screen"
@@ -258,7 +261,7 @@ exports[`SelectBox-5 1`] = `
           </label>
         </div>
         <span
-          className="AutoUI_ui_SelectBox-175">
+          className="AutoUI_ui_SelectBox-179 AutoUI_ui_SelectBox-185 editButton">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -287,7 +290,7 @@ exports[`SelectBox-5 1`] = `
         </span>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-148  ">
+        className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40    ">
         <div
           className="AutoUI_forms_InputField-78">
           <label
@@ -298,6 +301,7 @@ exports[`SelectBox-5 1`] = `
                 className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <input
                   aria-labelledby="label-react-shortlist"
+                  checked={false}
                   className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
                   id="react-shortlist"
                   name="react-shortlist"
@@ -311,7 +315,7 @@ exports[`SelectBox-5 1`] = `
           </label>
         </div>
         <span
-          className="AutoUI_ui_SelectBox-175">
+          className="AutoUI_ui_SelectBox-179 AutoUI_ui_SelectBox-185 editButton">
           <svg
             height="14px"
             viewBox="0 0 14 14"
