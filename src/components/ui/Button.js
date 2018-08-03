@@ -230,8 +230,8 @@ class Button extends PureComponent<Props> {
     const colorClassName = colorStyles[color] || ''
     const sizeClassName = sizeStyles[size] || ''
     const extraClassName = [
-      outlined && extraStyles.outlined,
-      outlined && 'outlined',
+      (outlined || pseudolink) && extraStyles.outlined,
+      (outlined || pseudolink) && 'outlined',
       rounded && extraStyles.rounded,
       rounded && 'rounded',
       raised && extraStyles.raised,

@@ -28,7 +28,8 @@ type Props = {
   avatar?: Element<*>,
   children?: Element<*> | string,
   onClick?: Function,
-  exclusionFormRender?: Function | void
+  exclusionFormRender?: Function | void,
+  isHovering?: Function
 }
 
 const cmz = require('cmz')
@@ -236,7 +237,8 @@ class ApplicantBadge extends PureComponent<Props> {
       tags,
       avatar,
       children,
-      exclusionFormRender
+      exclusionFormRender,
+      isHovering
     } = this.props
 
     const cx = mode === 'card' ? cardTheme : tabularTheme
@@ -308,7 +310,22 @@ class ApplicantBadge extends PureComponent<Props> {
             )}
           </div>
         )}
-        <div className={cx.controls}>
+        <div
+          className={cx.controls}>
+          {exclusionFormRender &&
+            isHovering != null &&
+            isHovering() && (
+            <Dropdown
+              tooltip
+              label={(
+                <span className={cx.control}>
+                  <SvgIcon icon='check' />
+                </span>
+              )}
+            >
+              {exclusionFormRender()}
+            </Dropdown>
+          )}
           {exclusionFormRender && (
             <Dropdown
               tooltip
