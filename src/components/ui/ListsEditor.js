@@ -14,6 +14,7 @@ type Props = {}
 const cx = {
   listseditor: cmz(`
     width: 500px
+    max-width: 100%
   `)
 }
 

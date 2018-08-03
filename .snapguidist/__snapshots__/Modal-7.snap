@@ -7,11 +7,11 @@ exports[`Modal-7 1`] = `
     }
   }>
   <div
-    className="AutoUI_ui_Modal-12">
+    className="AutoUI_ui_Modal-21 open">
     <section
-      className="AutoUI_ui_Modal-22">
+      className="AutoUI_ui_Modal-42">
       <a
-        className="AutoUI_ui_Modal-40 closemodal">
+        className="AutoUI_ui_Modal-50 closemodal">
         <svg
           height="14px"
           viewBox="0 0 14 14"

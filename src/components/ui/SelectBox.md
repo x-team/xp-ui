@@ -43,6 +43,8 @@ const itemsArray = [
 Simple view for Search module:
 
 ```
+const Button = require('./Button.js').default;
+const SvgIcon = require('./SvgIcon.js').default;
 const itemsArray = [
   {
     id: 2,
@@ -72,7 +74,11 @@ const itemsArray = [
   width={330}
   visibleItems={4}
   hasSearch={true}
-  onSelect={item => console.log('onSelect:', item)}
+  append={(
+    <Button selectbox>
+      <SvgIcon icon="edit" /> Edit Lists
+    </Button>
+  )}
 />
 ```
 

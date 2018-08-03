@@ -9,6 +9,8 @@ import Dropdown from './Dropdown'
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
 
+import type { Element } from 'react'
+
 const cmz = require('cmz')
 
 const styles = {
@@ -148,14 +150,18 @@ const styles = {
   item: cmz(typo.baseText, `
     & {
       min-height: 30px
-      margin: 22px
+      padding: 15px 22px
       display: flex
       justify-content: space-between
       align-items: center
     }
 
-    &:last-child {
-      border-bottom: none
+    &:hover {
+      background-color: ${theme.baseBright}
+    }
+
+    &:last-child::after {
+      background-color: transparent
     }
 
     &:not(.isSaving):not(.isSelecting):hover .editButton {
@@ -163,9 +169,20 @@ const styles = {
     }
   `),
   lined: cmz(`
-    border-bottom: 1px solid ${theme.lineSilver2}
-    margin: 0 22px
-    padding: 15px 0
+    & {
+      position: relative
+    }
+
+    &::after {
+      content: ''
+      display: block
+      height: 1px
+      width: calc(100% - 30px)
+      position: absolute
+      bottom: 0
+      left: 15px
+      background-color: ${theme.lineSilver2}
+    }
   `),
   editing: cmz(`
     & input {
@@ -261,7 +278,11 @@ const styles = {
         margin-right: 8px
       }
     `
-  )
+  ),
+  appendix: cmz(`
+    border-right: 1px solid ${theme.lineSilver2}
+    border-left: 1px solid ${theme.lineSilver2}
+  `)
 }
 
 type Item = {
@@ -288,7 +309,8 @@ type Props = {
   onSelect?: Function,
   onClick?: Function,
   onCreateNew?: Function,
-  onEdit?: Function
+  onEdit?: Function,
+  append?: Element<*>|string
 }
 
 type State = {
@@ -339,7 +361,7 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  mapItemsInput = (items: Array<Item>, view: Array<Item>) =>
+  mapItemsInput = (items: Array<Item>, view: Array<Item>): Array<Item> =>
     items.map((each, i) => {
       const viewItem = view.find(item => item.id === each.id) || {}
       return {
@@ -453,7 +475,8 @@ class SelectBox extends Component<Props, State> {
       onSelect,
       onEdit,
       onCreateNew,
-      lined
+      lined,
+      append
     } = this.props
     const { view, search, creating } = this.state
 
@@ -543,7 +566,7 @@ class SelectBox extends Component<Props, State> {
 
     const renderItems = () => ((filteredItems && filteredItems.length > 0) || creating || search) ? (
       <ul className={styles.list} style={{
-        maxHeight: visibleItems ? `${visibleItems * 61}px` : 'auto',
+        maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
         {filteredItems && filteredItems.length === 0 && (
@@ -602,12 +625,19 @@ class SelectBox extends Component<Props, State> {
       </div>
     )
 
+    const renderAppendix = () => append && (
+      <div className={styles.appendix}>
+        {append}
+      </div>
+    )
+
     const labelIsSearch = placeholder === 'Search'
 
     const renderExpandedOrDropdown = () => expanded ? (
       <div>
         {renderSearchLabel(labelIsSearch || hasSearch)}
         {renderItems()}
+        {renderAppendix()}
       </div>
     ) : (
       <Dropdown
@@ -618,6 +648,7 @@ class SelectBox extends Component<Props, State> {
         <div className={expanded ? '' : styles.shadow}>
           {hasSearch && renderSearchLabel(true)}
           {renderItems()}
+          {renderAppendix()}
         </div>
       </Dropdown>
     )

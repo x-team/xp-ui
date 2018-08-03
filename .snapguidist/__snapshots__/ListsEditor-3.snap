@@ -51,7 +51,7 @@ exports[`ListsEditor-3 1`] = `
         <div>
           <div>
             <div
-              className="AutoUI_ui_SelectBox-15"
+              className="AutoUI_ui_SelectBox-17"
               style={
                 Object {
                   "width": "100%",
@@ -59,9 +59,9 @@ exports[`ListsEditor-3 1`] = `
               }>
               <div>
                 <div
-                  className="AutoUI_ui_SelectBox-75">
+                  className="AutoUI_ui_SelectBox-77">
                   <div
-                    className="AutoUI_ui_SelectBox-84">
+                    className="AutoUI_ui_SelectBox-86">
                     <svg
                       height="17px"
                       viewBox="0 0 16 17"
@@ -107,7 +107,7 @@ exports[`ListsEditor-3 1`] = `
                     <input
                       aria-labelledby="label-search"
                       autoComplete="off"
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-79"
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-81"
                       id="search"
                       name="search"
                       placeholder="Search"
@@ -120,23 +120,23 @@ exports[`ListsEditor-3 1`] = `
               </div>
             </div>
             <button
-              className=" AutoUI_ui_Button-70 AutoUI_ui_Button-32 AutoUI_ui_Button-121 ">
+              className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-127 ">
               <span
-                className="AutoUI_ui_Button-46 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+                className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
                 Archive
               </span>
             </button>
             <button
-              className=" AutoUI_ui_Button-70 AutoUI_ui_Button-32 AutoUI_ui_Button-121 ">
+              className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-127 ">
               <span
-                className="AutoUI_ui_Button-46 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+                className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
                 Delete
               </span>
             </button>
             <button
-              className=" AutoUI_ui_Button-70 AutoUI_ui_Button-32 AutoUI_ui_Button-121 ">
+              className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-127 ">
               <span
-                className="AutoUI_ui_Button-46 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+                className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
                 Save
               </span>
             </button>

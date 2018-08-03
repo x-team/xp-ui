@@ -24,6 +24,8 @@ type Props = {
   selected: ?boolean,
   disabled: ?boolean,
   block: ?boolean,
+  wide: ?boolean,
+  selectbox: ?boolean,
   component: string,
   children?: Element<*> | string
 }
@@ -83,6 +85,10 @@ const colorStyles = {
       background-color: ${theme.baseRed.darken(0.2)}
       border-color: ${theme.baseRed.darken(0.2)}
       color: ${theme.baseBrighter}
+    }
+
+    &.pseudolink:hover {
+      color: ${theme.baseRed}
     }
   `),
 
@@ -157,6 +163,13 @@ const extraStyles = {
     width: 200px
   `),
 
+  wide: cmz(`
+    display: block
+    margin: 0 auto
+    width: 100%
+    text-transform: initial
+  `),
+
   rounded: cmz(`
     border-radius: 4px
   `),
@@ -173,13 +186,14 @@ const extraStyles = {
       color: ${theme.typoLabel}
     }
 
-    &.pseudolink span {
+    &.pseudolink > span {
       text-transform: initial
     }
 
     &.pseudolink:hover {
-      background-color: ${theme.lineSilver2.darken(0.025)}
-      border-color: ${theme.lineSilver2.darken(0.025)}
+      background-color: ${theme.baseBright}
+      border-color: transparent
+      color: ${theme.baseDark}
     }
   `),
 
@@ -192,8 +206,35 @@ const extraStyles = {
       box-shadow: none
       border-color: ${theme.baseRed}
     }
+  `),
+
+  selectbox: cmz(`
+    & {
+      background-color: ${theme.baseBrighter}
+      border-color: transparent
+      color: ${theme.baseRed}
+      padding: 20px
+      font-size: 16px !important
+    }
+
+    &:hover {
+      background-color: ${theme.baseBright}
+      border-color: transparent
+      color: ${theme.baseRed.darken(0.025)}
+    }
+
+    & > span {
+      display: flex
+      justify-content: center
+      align-items: center
+      text-transform: initial
+    }
+
+    & > span > svg {
+      margin-right: 10px
+    }
   `)
-}
+  }
 
 class Button extends PureComponent<Props> {
   static defaultProps = {
@@ -207,7 +248,9 @@ class Button extends PureComponent<Props> {
     raised: false,
     pseudolink: false,
     selected: false,
-    block: false
+    block: false,
+    wide: false,
+    selectbox: false
   }
 
   render () {
@@ -222,6 +265,8 @@ class Button extends PureComponent<Props> {
       pseudolink,
       selected,
       block,
+      wide,
+      selectbox,
       component: CustomComponent,
       children,
       ...rest
@@ -241,6 +286,8 @@ class Button extends PureComponent<Props> {
       selected && extraStyles.selected,
       selected && 'selected',
       block && extraStyles.block,
+      wide && extraStyles.wide,
+      selectbox && [extraStyles.wide, extraStyles.selectbox].join(' '),
       disabled && extraStyles.disabled
     ].filter(Boolean).join(' ')
     const buttonClassName = `${colorClassName} ${sizeClassName} ${extraClassName}`
