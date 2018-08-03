@@ -13,10 +13,10 @@ import elem from '../../utils/elem'
 const cmz = require('cmz')
 
 type File = {
-  filename: string,
-  path: string,
-  progress: number,
   id?: number | string,
+  filename: string,
+  path?: string,
+  progress?: number
 }
 
 type Files = Array<File>
@@ -24,9 +24,9 @@ type Files = Array<File>
 type Props = {
   files: Files,
   acceptedTypes: string,
+  onFileUpload: Function,
   onCancel: Function,
-  onDelete: Function,
-  onFileUpload: Function
+  onDelete: Function
 }
 
 const Root = elem.div()
@@ -56,6 +56,10 @@ const FileName = elem.a(cmz(
     }
 
     &:hover {
+      color: ${theme.typoParagraph}
+    }
+
+    &[href]:hover {
       color: ${theme.baseRed}
     }
   `
@@ -94,9 +98,10 @@ class AttachFiles extends PureComponent<Props> {
 
   static defaultProps = {
     files: [],
+    acceptedTypes: '',
+    onFileUpload: () => {},
     onCancel: () => {},
-    onDelete: () => {},
-    onFileUpload: () => {}
+    onDelete: () => {}
   }
 
   triggerFileSelection = () => {
@@ -107,9 +112,9 @@ class AttachFiles extends PureComponent<Props> {
     const {
       files,
       acceptedTypes,
+      onFileUpload,
       onCancel,
-      onDelete,
-      onFileUpload
+      onDelete
     } = this.props
 
     const renderButton = (file: File) => {
@@ -155,7 +160,7 @@ class AttachFiles extends PureComponent<Props> {
                 {
                   key: file.id || file.filename,
                   style: {
-                    borderBottomColor: file.progress !== 100 ? theme.baseSilver : 'transparent'
+                    borderBottomColor: file.progress && file.progress !== 100 ? theme.baseSilver : 'transparent'
                   }
                 },
                 FileName({href: file.path, target: '_blank'}, file.filename),

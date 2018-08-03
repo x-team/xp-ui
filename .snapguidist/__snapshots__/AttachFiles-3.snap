@@ -1,17 +1,337 @@
 exports[`AttachFiles-3 1`] = `
 <div>
   <input
-    className="AutoUI_ui_AttachFiles-83"
+    accept=""
+    className="AutoUI_ui_AttachFiles-87"
     type="file" />
   <button
     className=" AutoUI_ui_Button-70 AutoUI_ui_Button-32 AutoUI_ui_Button-121 AutoUI_ui_Button-140 outlined">
     <span
       className="AutoUI_ui_Button-46 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
       <span
-        className="AutoUI_ui_AttachFiles-79">
+        className="AutoUI_ui_AttachFiles-83">
         Attach a file
       </span>
     </span>
   </button>
+  <div
+    className="AutoUI_ui_AttachFiles-34">
+    <div
+      className="AutoUI_ui_AttachFiles-38"
+      style={
+        Object {
+          "borderBottomColor": "transparent",
+        }
+      }>
+      <a
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+        target="_blank">
+        filename-01.zip
+      </a>
+      <div
+        className="AutoUI_ui_AttachFiles-68"
+        title="Delete \"filename-01.zip\" file">
+        <svg
+          height="18px"
+          viewBox="0 0 15 18"
+          width="15px">
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="none"
+            strokeWidth="1">
+            <g
+              fill={
+                Object {
+                  "color": Array [
+                    178,
+                    182,
+                    188,
+                  ],
+                  "model": "rgb",
+                  "valpha": 1,
+                }
+              }
+              transform="translate(-1272.000000, -1013.000000)">
+              <g
+                transform="translate(1272.000000, 1013.000000)">
+                <rect
+                  height="2"
+                  width="15"
+                  x="0"
+                  y="3" />
+                <rect
+                  height="2"
+                  width="11"
+                  x="2"
+                  y="16" />
+                <rect
+                  height="12"
+                  width="2"
+                  x="2"
+                  y="5" />
+                <rect
+                  height="12"
+                  width="2"
+                  x="11"
+                  y="5" />
+                <rect
+                  height="2"
+                  width="7"
+                  x="4"
+                  y="0" />
+                <path
+                  d="M8.8890873,10.4748737 L9.94974747,11.5355339 L8.53553391,12.9497475 L7.47487373,11.8890873 L6.41421356,12.9497475 L5,11.5355339 L6.06066017,10.4748737 L5,9.41421356 L6.41421356,8 L7.47487373,9.06066017 L8.53553391,8 L9.94974747,9.41421356 L8.8890873,10.4748737 Z" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div
+        className="AutoUI_ui_AttachFiles-73"
+        style={
+          Object {
+            "width": "0%",
+          }
+        } />
+    </div>
+    <div
+      className="AutoUI_ui_AttachFiles-38"
+      style={
+        Object {
+          "borderBottomColor": "transparent",
+        }
+      }>
+      <a
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+        target="_blank">
+        filename-02.zip
+      </a>
+      <div
+        className="AutoUI_ui_AttachFiles-68"
+        title="Delete \"filename-02.zip\" file">
+        <svg
+          height="18px"
+          viewBox="0 0 15 18"
+          width="15px">
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="none"
+            strokeWidth="1">
+            <g
+              fill={
+                Object {
+                  "color": Array [
+                    178,
+                    182,
+                    188,
+                  ],
+                  "model": "rgb",
+                  "valpha": 1,
+                }
+              }
+              transform="translate(-1272.000000, -1013.000000)">
+              <g
+                transform="translate(1272.000000, 1013.000000)">
+                <rect
+                  height="2"
+                  width="15"
+                  x="0"
+                  y="3" />
+                <rect
+                  height="2"
+                  width="11"
+                  x="2"
+                  y="16" />
+                <rect
+                  height="12"
+                  width="2"
+                  x="2"
+                  y="5" />
+                <rect
+                  height="12"
+                  width="2"
+                  x="11"
+                  y="5" />
+                <rect
+                  height="2"
+                  width="7"
+                  x="4"
+                  y="0" />
+                <path
+                  d="M8.8890873,10.4748737 L9.94974747,11.5355339 L8.53553391,12.9497475 L7.47487373,11.8890873 L6.41421356,12.9497475 L5,11.5355339 L6.06066017,10.4748737 L5,9.41421356 L6.41421356,8 L7.47487373,9.06066017 L8.53553391,8 L9.94974747,9.41421356 L8.8890873,10.4748737 Z" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div
+        className="AutoUI_ui_AttachFiles-73"
+        style={
+          Object {
+            "width": "0%",
+          }
+        } />
+    </div>
+    <div
+      className="AutoUI_ui_AttachFiles-38"
+      style={
+        Object {
+          "borderBottomColor": "transparent",
+        }
+      }>
+      <a
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+        target="_blank">
+        filename-03.zip
+      </a>
+      <div
+        className="AutoUI_ui_AttachFiles-68"
+        title="Delete \"filename-03.zip\" file">
+        <svg
+          height="18px"
+          viewBox="0 0 15 18"
+          width="15px">
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="none"
+            strokeWidth="1">
+            <g
+              fill={
+                Object {
+                  "color": Array [
+                    178,
+                    182,
+                    188,
+                  ],
+                  "model": "rgb",
+                  "valpha": 1,
+                }
+              }
+              transform="translate(-1272.000000, -1013.000000)">
+              <g
+                transform="translate(1272.000000, 1013.000000)">
+                <rect
+                  height="2"
+                  width="15"
+                  x="0"
+                  y="3" />
+                <rect
+                  height="2"
+                  width="11"
+                  x="2"
+                  y="16" />
+                <rect
+                  height="12"
+                  width="2"
+                  x="2"
+                  y="5" />
+                <rect
+                  height="12"
+                  width="2"
+                  x="11"
+                  y="5" />
+                <rect
+                  height="2"
+                  width="7"
+                  x="4"
+                  y="0" />
+                <path
+                  d="M8.8890873,10.4748737 L9.94974747,11.5355339 L8.53553391,12.9497475 L7.47487373,11.8890873 L6.41421356,12.9497475 L5,11.5355339 L6.06066017,10.4748737 L5,9.41421356 L6.41421356,8 L7.47487373,9.06066017 L8.53553391,8 L9.94974747,9.41421356 L8.8890873,10.4748737 Z" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div
+        className="AutoUI_ui_AttachFiles-73"
+        style={
+          Object {
+            "width": "0%",
+          }
+        } />
+    </div>
+    <div
+      className="AutoUI_ui_AttachFiles-38"
+      style={
+        Object {
+          "borderBottomColor": "transparent",
+        }
+      }>
+      <a
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+        target="_blank">
+        filename-04.zip
+      </a>
+      <div
+        className="AutoUI_ui_AttachFiles-68"
+        title="Delete \"filename-04.zip\" file">
+        <svg
+          height="18px"
+          viewBox="0 0 15 18"
+          width="15px">
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="none"
+            strokeWidth="1">
+            <g
+              fill={
+                Object {
+                  "color": Array [
+                    178,
+                    182,
+                    188,
+                  ],
+                  "model": "rgb",
+                  "valpha": 1,
+                }
+              }
+              transform="translate(-1272.000000, -1013.000000)">
+              <g
+                transform="translate(1272.000000, 1013.000000)">
+                <rect
+                  height="2"
+                  width="15"
+                  x="0"
+                  y="3" />
+                <rect
+                  height="2"
+                  width="11"
+                  x="2"
+                  y="16" />
+                <rect
+                  height="12"
+                  width="2"
+                  x="2"
+                  y="5" />
+                <rect
+                  height="12"
+                  width="2"
+                  x="11"
+                  y="5" />
+                <rect
+                  height="2"
+                  width="7"
+                  x="4"
+                  y="0" />
+                <path
+                  d="M8.8890873,10.4748737 L9.94974747,11.5355339 L8.53553391,12.9497475 L7.47487373,11.8890873 L6.41421356,12.9497475 L5,11.5355339 L6.06066017,10.4748737 L5,9.41421356 L6.41421356,8 L7.47487373,9.06066017 L8.53553391,8 L9.94974747,9.41421356 L8.8890873,10.4748737 Z" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div
+        className="AutoUI_ui_AttachFiles-73"
+        style={
+          Object {
+            "width": "0%",
+          }
+        } />
+    </div>
+  </div>
 </div>
 `;
