@@ -28,11 +28,8 @@ type Props = {
   avatar?: Element<*>,
   children?: Element<*> | string,
   onClick?: Function,
-  exclusionFormRender?: Function | void
-}
-
-type State = {
-  isHovering?: boolean
+  exclusionFormRender?: Function | void,
+  isHovering?: Function
 }
 
 const cmz = require('cmz')
@@ -226,24 +223,10 @@ const cardTheme = {
 }
 
 const tabularTheme = {} // TODO: https://zube.io/x-team/xp-formerly-auto/c/1638
-class ApplicantBadge extends PureComponent<Props, State> {
-  constructor (props: Props) {
-    super(props)
-    this.state = {
-      isHovering: false
-    }
-    this.handleMouseHover = this.handleMouseHover.bind(this)
-  }
-
+class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
     mode: 'card',
     active: false
-  }
-
-  handleMouseHover () {
-    this.setState({
-      isHovering: !this.state.isHovering
-    })
   }
 
   render () {
@@ -257,7 +240,8 @@ class ApplicantBadge extends PureComponent<Props, State> {
       tags,
       avatar,
       children,
-      exclusionFormRender
+      exclusionFormRender,
+      isHovering
     } = this.props
 
     const cx = mode === 'card' ? cardTheme : tabularTheme
@@ -329,11 +313,10 @@ class ApplicantBadge extends PureComponent<Props, State> {
           </div>
         )}
         <div
-          className={cx.controls}
-          onMouseEnter={this.handleMouseHover}
-          onMouseLeave={this.handleMouseHover}>
+          className={cx.controls}>
           {exclusionFormRender &&
-            this.state.isHovering && (
+            isHovering != null &&
+            isHovering() && (
             <Dropdown
               tooltip
               label={(
