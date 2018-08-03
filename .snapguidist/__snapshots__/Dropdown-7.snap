@@ -254,7 +254,6 @@ exports[`Dropdown-7 1`] = `
                       aria-labelledby="label-search"
                       autoComplete="off"
                       className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-79"
-                      disabled={false}
                       id="search"
                       name="search"
                       placeholder="Search"
@@ -278,35 +277,35 @@ exports[`Dropdown-7 1`] = `
                     }
                   }>
                   <li
-                    className="AutoUI_ui_SelectBox-148 AutoUI_ui_SelectBox-161 ">
+                    className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
                     <span
                       className="AutoUI_ui_SelectBox-121 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                       registered
                     </span>
                   </li>
                   <li
-                    className="AutoUI_ui_SelectBox-148 AutoUI_ui_SelectBox-161 ">
+                    className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
                     <span
                       className="AutoUI_ui_SelectBox-121 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                       portfolio-building
                     </span>
                   </li>
                   <li
-                    className="AutoUI_ui_SelectBox-148 AutoUI_ui_SelectBox-161 ">
+                    className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
                     <span
                       className="AutoUI_ui_SelectBox-121 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                       portfolio-review
                     </span>
                   </li>
                   <li
-                    className="AutoUI_ui_SelectBox-148 AutoUI_ui_SelectBox-161 ">
+                    className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
                     <span
                       className="AutoUI_ui_SelectBox-121 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                       social-media-screen
                     </span>
                   </li>
                   <li
-                    className="AutoUI_ui_SelectBox-148 AutoUI_ui_SelectBox-161 ">
+                    className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
                     <span
                       className="AutoUI_ui_SelectBox-121 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                       react-shortlist
