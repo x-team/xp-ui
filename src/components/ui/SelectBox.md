@@ -195,7 +195,7 @@ Examples of searching and creating simultaneously:
   <p>In the cases below there's no items provided.</p>
   <p>Here the creating and search props were provided:</p>
   <SelectBox
-    collectionName="Entries"
+    collectionName="Entry"
     creating='Another entry'
     search='Searching some entry'
     expanded={true}
@@ -203,14 +203,14 @@ Examples of searching and creating simultaneously:
   />
   <p>In this case a new item is being created while nothing is being searched:</p>
   <SelectBox
-    collectionName="Entries"
+    collectionName="Entry"
     creating='A new entry'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
   <p>In this case a search is being performed while nothing is being created:</p>
   <SelectBox
-    collectionName="Entries"
+    collectionName="Entry"
     search='Searching some entry'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}

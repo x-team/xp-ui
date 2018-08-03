@@ -53,7 +53,7 @@ ListsEditor use case:
 
 ```js
 const ListsEditor = require('./ListsEditor.js').default;
-<div style={{ position: 'relative', minHeight: '500px' }}>
+<div style={{ position: 'relative', minHeight: '800px' }}>
   <Modal>
     <ListsEditor />
   </Modal>

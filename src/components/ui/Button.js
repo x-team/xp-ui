@@ -234,7 +234,7 @@ const extraStyles = {
       margin-right: 10px
     }
   `)
-  }
+}
 
 class Button extends PureComponent<Props> {
   static defaultProps = {

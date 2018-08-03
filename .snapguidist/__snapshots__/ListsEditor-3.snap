@@ -1,11 +1,12 @@
 exports[`ListsEditor-3 1`] = `
 <div
-  className="AutoUI_ui_ListsEditor-15">
-  <h1>
+  className="AutoUI_ui_ListsEditor-23">
+  <h1
+    className="AutoUI_ui_ListsEditor-27 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
     Edit Lists
   </h1>
   <section
-    className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40">
+    className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ListsEditor-56">
     <nav
       className="AutoUI_ui_Tabs_Tabs-22">
       <ul
@@ -49,7 +50,8 @@ exports[`ListsEditor-3 1`] = `
         className="AutoUI_ui_Tabs_Tabs-111"
         role="tabpanel">
         <div>
-          <div>
+          <div
+            className="AutoUI_ui_ListsEditor-34">
             <div
               className="AutoUI_ui_SelectBox-17"
               style={
@@ -116,30 +118,45 @@ exports[`ListsEditor-3 1`] = `
                       value="" />
                   </div>
                 </div>
-                
+                <ul
+                  className="AutoUI_ui_SelectBox-136 expanded"
+                  style={
+                    Object {
+                      "height": "420px",
+                      "maxHeight": "420px",
+                      "width": "100%",
+                    }
+                  }>
+                  
+                </ul>
               </div>
             </div>
-            <button
-              className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-127 ">
-              <span
-                className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-                Archive
-              </span>
-            </button>
-            <button
-              className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-127 ">
-              <span
-                className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-                Delete
-              </span>
-            </button>
-            <button
-              className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-127 ">
-              <span
-                className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-                Save
-              </span>
-            </button>
+            <div
+              className="AutoUI_ui_ListsEditor-35">
+              <div>
+                <button
+                  className="AutoUI_ui_ListsEditor-41 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-127 AutoUI_ui_Button-146 outlined">
+                  <span
+                    className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+                    Archive
+                  </span>
+                </button>
+                <button
+                  className="AutoUI_ui_ListsEditor-41 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-127 AutoUI_ui_Button-146 outlined">
+                  <span
+                    className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+                    Delete
+                  </span>
+                </button>
+              </div>
+              <button
+                className="AutoUI_ui_ListsEditor-51 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-127 ">
+                <span
+                  className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+                  Save
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

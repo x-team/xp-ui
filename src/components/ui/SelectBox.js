@@ -134,15 +134,21 @@ const styles = {
     `
   ),
   list: cmz(`
-    list-style: none
-    margin: 0
-    padding: 0
-    border: 1px solid ${theme.lineSilver2}
-    border-top: none
-    overflow-y: scroll
-    background: ${theme.baseBrighter}
-    width: 100%
-    box-sizing: border-box
+    & {
+      list-style: none
+      margin: 0
+      padding: 0
+      border: 1px solid ${theme.lineSilver2}
+      border-top: none
+      overflow-y: scroll
+      background: ${theme.baseBrighter}
+      width: 100%
+      box-sizing: border-box
+    }
+
+    &:not(.expanded):empty {
+      border: none
+    }
   `),
   shadow: cmz(`
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15)
@@ -309,6 +315,7 @@ type Props = {
   onSelect?: Function,
   onClick?: Function,
   onCreateNew?: Function,
+  onSearch?: Function,
   onEdit?: Function,
   append?: Element<*>|string
 }
@@ -386,13 +393,18 @@ class SelectBox extends Component<Props, State> {
   }
 
   handleSearch = (input: string = '') => {
+    const { onSearch } = this.props
     const { view } = this.state
     const match = new RegExp(input.trim().toUpperCase(), 'g')
     const filteredItems = view && view.map(item => {
       const itemMatch = item && item.value && item.value.toUpperCase().match(match)
       return { ...item, hidden: !(itemMatch && itemMatch.length > 0) }
     })
-    this.setState({ ...this.state, search: input, view: filteredItems })
+    this.setState({ ...this.state, search: input, view: filteredItems }, () => {
+      if (onSearch) {
+        onSearch(input)
+      }
+    })
   }
 
   handleSelect = (item: Item) => {
@@ -564,14 +576,15 @@ class SelectBox extends Component<Props, State> {
         </li>
       )
 
-    const renderItems = () => ((filteredItems && filteredItems.length > 0) || creating || search) ? (
-      <ul className={styles.list} style={{
+    const renderItems = () => (
+      <ul className={[styles.list, expanded && 'expanded'].join(' ')} style={{
+        height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
         maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
-        {filteredItems && filteredItems.length === 0 && (
+        {search && filteredItems && filteredItems.length === 0 && (
           <li>
-            {search && <span className={styles.nothinglabel}>No Results for "{search}"</span>}
+            <span className={styles.nothinglabel}>No Results for "{search}"</span>
             {onCreateNew && !creating && (
               <span className={styles.createnew} onClick={this.handleCreateNew}>
                 <SvgIcon icon='plus' />
@@ -585,7 +598,7 @@ class SelectBox extends Component<Props, State> {
         )}
         {filteredItems.map(item => renderIsEditing(item))}
       </ul>
-    ) : ''
+    )
 
     const selectsClass = filteredItems && filteredItems.filter(item => item.selected).length > 0
       ? styles.selects : styles.selectsEmpty

@@ -61,7 +61,7 @@ exports[`SelectBox-3 1`] = `
       <div
         className="AutoUI_ui_Dropdown-52    ">
         <div
-          className="AutoUI_ui_SelectBox-147">
+          className="AutoUI_ui_SelectBox-153">
           <div
             className="AutoUI_ui_SelectBox-77">
             <div
@@ -121,43 +121,45 @@ exports[`SelectBox-3 1`] = `
             </div>
           </div>
           <ul
-            className="AutoUI_ui_SelectBox-136"
+            className="AutoUI_ui_SelectBox-136 false"
             style={
               Object {
+                "height": "auto",
                 "maxHeight": "240px",
                 "width": "330px",
               }
             }>
+            
             <li
-              className="AutoUI_ui_SelectBox-150 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-171   ">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-177   ">
               <span
                 className="AutoUI_ui_SelectBox-123 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 registered
               </span>
             </li>
             <li
-              className="AutoUI_ui_SelectBox-150 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-171   ">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-177   ">
               <span
                 className="AutoUI_ui_SelectBox-123 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 portfolio-building
               </span>
             </li>
             <li
-              className="AutoUI_ui_SelectBox-150 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-171   ">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-177   ">
               <span
                 className="AutoUI_ui_SelectBox-123 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 portfolio-review
               </span>
             </li>
             <li
-              className="AutoUI_ui_SelectBox-150 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-171   ">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-177   ">
               <span
                 className="AutoUI_ui_SelectBox-123 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 social-media-screen
               </span>
             </li>
             <li
-              className="AutoUI_ui_SelectBox-150 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-171   ">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-177   ">
               <span
                 className="AutoUI_ui_SelectBox-123 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 react-shortlist
@@ -165,7 +167,7 @@ exports[`SelectBox-3 1`] = `
             </li>
           </ul>
           <div
-            className="AutoUI_ui_SelectBox-282">
+            className="AutoUI_ui_SelectBox-288">
             <button
               className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-127 AutoUI_ui_Button-166 AutoUI_ui_Button-211">
               <span

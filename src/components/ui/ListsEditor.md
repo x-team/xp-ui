@@ -1,7 +1,9 @@
 Basic:
 
 ```js
-<ListsEditor />
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <ListsEditor />
+</div>
 ```
 
 Missing props (does component explode?):

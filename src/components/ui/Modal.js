@@ -60,11 +60,11 @@ class Modal extends Component<Props, State> {
     open: false
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.setState({ open: true })
   }
 
-  noClick  = (event: any) => {
+  noClick = (event: any) => {
     event && event.stopPropagation()
   }
 
@@ -84,7 +84,7 @@ class Modal extends Component<Props, State> {
       <div className={modalClasses} onClick={this.handleClose}>
         <section className={cx.frame} onClick={this.noClick}>
           <a className={cx.close} onClick={this.handleClose}>
-            <SvgIcon icon="x" color="grayscale" />
+            <SvgIcon icon='x' color='grayscale' />
           </a>
           {children}
         </section>

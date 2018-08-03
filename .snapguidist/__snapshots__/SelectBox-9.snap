@@ -113,16 +113,17 @@ exports[`SelectBox-9 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136"
+        className="AutoUI_ui_SelectBox-136 expanded"
         style={
           Object {
+            "height": "auto",
             "maxHeight": "auto",
             "width": "100%",
           }
         }>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-258 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-264 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             No Results for \"
             Searching some entry
             \"
@@ -130,9 +131,9 @@ exports[`SelectBox-9 1`] = `
         </li>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-258 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-264 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             Adding new 
-            Entries
+            Entry
              \"
             Another entry
             \"...
@@ -211,21 +212,20 @@ exports[`SelectBox-9 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136"
+        className="AutoUI_ui_SelectBox-136 expanded"
         style={
           Object {
+            "height": "auto",
             "maxHeight": "auto",
             "width": "100%",
           }
         }>
-        <li>
-          
-        </li>
+        
         <li>
           <span
-            className="AutoUI_ui_SelectBox-258 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-264 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             Adding new 
-            Entries
+            Entry
              \"
             A new entry
             \"...
@@ -341,22 +341,23 @@ exports[`SelectBox-9 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136"
+        className="AutoUI_ui_SelectBox-136 expanded"
         style={
           Object {
+            "height": "auto",
             "maxHeight": "auto",
             "width": "100%",
           }
         }>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-258 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-264 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             No Results for \"
             Searching some entry
             \"
           </span>
           <span
-            className="AutoUI_ui_SelectBox-265 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-271 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -392,7 +393,7 @@ exports[`SelectBox-9 1`] = `
             </svg>
             <span>
               Add new 
-              Entries
+              Entry
                \"
               Searching some entry
               \"
