@@ -190,10 +190,15 @@ class Dropdown extends PureComponent<Props, State> {
       targetYOrigin === 'top' ? styles.tooltipTop : ''
     ].join(' ')
 
+    const handleClick = (e: any) => {
+      e && e.stopPropagation()
+      return toggle ? this.toggle() : this.open()
+    }
+
     const dropdownChildren = () =>
       React.Children.map(children, child => {
         const { props } = child
-        const { closeDropdown } = props || false
+        const closeDropdown = props ? props.closeDropdown : false
         return closeDropdown
           ? React.cloneElement(child, { closeDropdown: this.close })
           : child
@@ -206,7 +211,7 @@ class Dropdown extends PureComponent<Props, State> {
           onMouseEnter={hover && this.open}
           onMouseLeave={hover && this.close}
         >
-          <div className={labelClasses} onClick={() => toggle ? this.toggle() : this.open()}>
+          <div className={labelClasses} onClick={handleClick}>
             {icon && <SvgIcon icon={icon} color='text' />}
             {label && <span className={styles.labelElement}>{label}</span>}
             {indicator && (

@@ -64,10 +64,10 @@ raised default
 <Button raised>Raised default state</Button>
 ```
 
-link default
+link-style default
 
 ```js
-<Button link>Link default state</Button>
+<Button pseudolink>Link default state</Button>
 ```
 
 outlined default
@@ -108,11 +108,11 @@ selected skill tag
 <Button selected outlined rounded raised color={'silver'}>Android</Button>
 ```
 
-form buttons
+exclude applicant form buttons
 
 ```js
-<div>
-  <Button link>Cancel</Button>
+<div style={{ textAlign: 'right' }}>
+  <Button pseudolink>Cancel</Button>
   <Button><SvgIcon icon={'paperplane'} color={'inverted'} /></Button>
 </div>
 ```

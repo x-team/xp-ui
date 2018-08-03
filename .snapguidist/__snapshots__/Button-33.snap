@@ -1,6 +1,6 @@
 exports[`Button-33 1`] = `
 <button
-  className=" AutoUI_ui_Button-89 AutoUI_ui_Button-32 AutoUI_ui_Button-121 AutoUI_ui_Button-140 outlined AutoUI_ui_Button-160 rounded AutoUI_ui_Button-164 raised AutoUI_ui_Button-188 selected">
+  className=" AutoUI_ui_Button-89 AutoUI_ui_Button-32 AutoUI_ui_Button-121 AutoUI_ui_Button-140 outlined AutoUI_ui_Button-160 rounded AutoUI_ui_Button-164 raised AutoUI_ui_Button-186 selected">
   <span
     className="AutoUI_ui_Button-46 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
     Android

@@ -351,7 +351,7 @@ const getIcon = ({ icon, color }) => {
     ),
 
     paperplane: (
-      <svg width='17px' height='17px' viewBox='0 0 17 17'>
+      <svg width='17px' height='13px' viewBox='0 0 17 17'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round'>
           <g transform='translate(-756.000000, -1327.000000)' fill={colors[color]} stroke={colors[color]}>
             <g transform='translate(516.000000, 684.000000)'>

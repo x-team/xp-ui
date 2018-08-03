@@ -64,7 +64,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
         isFetching={isFetching}
         hasMore={hasMore}
         viewMore={(amount, action, isFetching) => (
-          <li className={cx.more}>
+          <span className={cx.more}>
             <Button
               block
               outlined
@@ -73,7 +73,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
             >
               View more
             </Button>
-          </li>
+          </span>
         )}
       />
     ) : null

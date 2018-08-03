@@ -66,7 +66,6 @@ exports[`SelectBox-1 1`] = `
                 aria-labelledby="label-search"
                 autoComplete="off"
                 className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-79"
-                disabled={false}
                 id="search"
                 name="search"
                 placeholder="Search"
@@ -90,7 +89,7 @@ exports[`SelectBox-1 1`] = `
               }
             }>
             <li
-              className="AutoUI_ui_SelectBox-148 AutoUI_ui_SelectBox-161 ">
+              className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -116,7 +115,7 @@ exports[`SelectBox-1 1`] = `
               </div>
             </li>
             <li
-              className="AutoUI_ui_SelectBox-148 AutoUI_ui_SelectBox-161 ">
+              className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -142,7 +141,7 @@ exports[`SelectBox-1 1`] = `
               </div>
             </li>
             <li
-              className="AutoUI_ui_SelectBox-148 AutoUI_ui_SelectBox-161 ">
+              className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -168,7 +167,7 @@ exports[`SelectBox-1 1`] = `
               </div>
             </li>
             <li
-              className="AutoUI_ui_SelectBox-148 AutoUI_ui_SelectBox-161 ">
+              className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -194,7 +193,7 @@ exports[`SelectBox-1 1`] = `
               </div>
             </li>
             <li
-              className="AutoUI_ui_SelectBox-148 AutoUI_ui_SelectBox-161 ">
+              className="AutoUI_ui_SelectBox-148 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-165   ">
               <div
                 className="AutoUI_forms_InputField-78">
                 <label

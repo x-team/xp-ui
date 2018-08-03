@@ -1,0 +1,406 @@
+exports[`SelectBox-9 1`] = `
+<div>
+  <p>
+    The search will be always unlocked but one can\'t create new item while another item creation is in progress.
+  </p>
+  <p>
+    In the cases below there\'s no items provided.
+  </p>
+  <p>
+    Here the creating and search props were provided:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-15"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-75">
+        <div
+          className="AutoUI_ui_SelectBox-84">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                cx="7.5"
+                cy="7.5"
+                r="6.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                } />
+              <path
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                }
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-79"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="Searching some entry" />
+        </div>
+        <div
+          className="AutoUI_ui_SelectBox-108">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeLinecap="square"
+              strokeWidth="1">
+              <g
+                stroke={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                }
+                strokeWidth="2"
+                transform="translate(-1294.000000, -1073.000000)">
+                <g
+                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                  <path
+                    d="M7,0 L7,14" />
+                  <path
+                    d="M14,7 L0,7" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-134"
+        style={
+          Object {
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        <li>
+          <span
+            className="AutoUI_ui_SelectBox-241 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            No Results for \"
+            Searching some entry
+            \"
+          </span>
+        </li>
+        <li>
+          <span
+            className="AutoUI_ui_SelectBox-241 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            Adding new 
+            Entries
+             \"
+            Another entry
+            \"...
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    In this case a new item is being created while nothing is being searched:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-15"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-75">
+        <div
+          className="AutoUI_ui_SelectBox-84">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                cx="7.5"
+                cy="7.5"
+                r="6.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                } />
+              <path
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                }
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-79"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="" />
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-134"
+        style={
+          Object {
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        <li>
+          
+        </li>
+        <li>
+          <span
+            className="AutoUI_ui_SelectBox-241 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            Adding new 
+            Entries
+             \"
+            A new entry
+            \"...
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    In this case a search is being performed while nothing is being created:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-15"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-75">
+        <div
+          className="AutoUI_ui_SelectBox-84">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                cx="7.5"
+                cy="7.5"
+                r="6.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                } />
+              <path
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                stroke={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                }
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-79"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="Searching some entry" />
+        </div>
+        <div
+          className="AutoUI_ui_SelectBox-108">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeLinecap="square"
+              strokeWidth="1">
+              <g
+                stroke={
+                  Object {
+                    "color": Array [
+                      178,
+                      182,
+                      188,
+                    ],
+                    "model": "rgb",
+                    "valpha": 1,
+                  }
+                }
+                strokeWidth="2"
+                transform="translate(-1294.000000, -1073.000000)">
+                <g
+                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                  <path
+                    d="M7,0 L7,14" />
+                  <path
+                    d="M14,7 L0,7" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-134"
+        style={
+          Object {
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        <li>
+          <span
+            className="AutoUI_ui_SelectBox-241 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            No Results for \"
+            Searching some entry
+            \"
+          </span>
+          <span
+            className="AutoUI_ui_SelectBox-248 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <svg
+              height="20px"
+              viewBox="0 0 20 20"
+              width="20px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <g
+                  fill={
+                    Object {
+                      "color": Array [
+                        246,
+                        57,
+                        84,
+                      ],
+                      "model": "rgb",
+                      "valpha": 1,
+                    }
+                  }
+                  transform="translate(-1191.000000, -1411.000000)">
+                  <g
+                    transform="translate(387.000000, 933.000000)">
+                    <g
+                      transform="translate(0.000000, 470.000000)">
+                      <path
+                        d="M813,17 L804,17 L804,19 L813,19 L813,28 L815,28 L815,19 L824,19 L824,17 L815,17 L815,8 L813,8 L813,17 Z" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <span>
+              Add new 
+              Entries
+               \"
+              Searching some entry
+              \"
+            </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

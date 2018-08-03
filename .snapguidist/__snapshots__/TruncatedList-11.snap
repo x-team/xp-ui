@@ -1,51 +1,44 @@
 exports[`TruncatedList-11 1`] = `
-<ul
-  className="AutoUI_ui_TruncatedList-8 ">
-  <li
-    className="AutoUI_ui_TruncatedList-14 ">
+<span>
+  <span>
     <img
       alt="Loading..."
       className=""
       src="6f647ce328b13c96401708c6fcbdb237.gif" />
-  </li>
-  <li
-    className="AutoUI_ui_TruncatedList-14 ">
+  </span>
+  <span>
     <img
       alt="Loading..."
       className=""
       src="6f647ce328b13c96401708c6fcbdb237.gif" />
-  </li>
-  <li
-    className="AutoUI_ui_TruncatedList-14 ">
+  </span>
+  <span>
     <img
       alt="Loading..."
       className=""
       src="6f647ce328b13c96401708c6fcbdb237.gif" />
-  </li>
-  <li
-    className="AutoUI_ui_TruncatedList-14 ">
+  </span>
+  <span>
     <img
       alt="Loading..."
       className=""
       src="6f647ce328b13c96401708c6fcbdb237.gif" />
-  </li>
-  <li
-    className="AutoUI_ui_TruncatedList-14 ">
+  </span>
+  <span>
     <img
       alt="Loading..."
       className=""
       src="6f647ce328b13c96401708c6fcbdb237.gif" />
-  </li>
-  <li
-    className="AutoUI_ui_TruncatedList-14 AutoUI_ui_TruncatedList-19">
+  </span>
+  <span
+    className="AutoUI_ui_TruncatedList-8">
     <img
       alt="Loading..."
       className=""
       src="6f647ce328b13c96401708c6fcbdb237.gif" />
-  </li>
-  <li
-    className="AutoUI_ui_TruncatedList-14 ">
+  </span>
+  <span>
     +1 more
-  </li>
-</ul>
+  </span>
+</span>
 `;
