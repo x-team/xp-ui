@@ -31,7 +31,8 @@ Basic card:
     'Webpack'
   ]}
   onClick={id => console.log('Applicant selected: ' + id)}
-  exclusionFormRender={() => <form>A list of inputs with a submit button</form>}
+  renderCheckDrop={() => <form>A custom list of inputs with a submit button and a checkmark icon</form>}
+  renderXDrop={() => <form>Another custom list of inputs with a submit button and an X icon</form>}
 />
 ```
 
@@ -75,7 +76,8 @@ Active card:
     'Webpack'
   ]}
   onClick={id => console.log('Applicant selected: ' + id)}
-  exclusionFormRender={() => <form>A list of inputs with a submit button</form>}
+  renderCheckDrop={() => <form>A custom list of inputs with a submit button and a checkmark icon</form>}
+  renderXDrop={() => <form>Another custom list of inputs with a submit button and an X icon</form>}
 />
 ```
 
@@ -127,7 +129,8 @@ Basic tabular:
     'Webpack'
   ]}
   onClick={id => console.log('Applicant selected: ' + id)}
-  exclusionFormRender={() => <form>A list of inputs with a submit button</form>}
+  renderCheckDrop={() => <form>A custom list of inputs with a submit button and a checkmark icon</form>}
+  renderXDrop={() => <form>Another custom list of inputs with a submit button and an X icon</form>}
 />
 ```
 

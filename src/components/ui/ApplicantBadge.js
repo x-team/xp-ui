@@ -28,7 +28,8 @@ type Props = {
   avatar?: Element<*>,
   children?: Element<*> | string,
   onClick?: Function,
-  exclusionFormRender?: Function | void
+  renderCheckDrop?: Function | void,
+  renderXDrop?: Function | void
 }
 
 const cmz = require('cmz')
@@ -243,7 +244,8 @@ class ApplicantBadge extends PureComponent<Props> {
       tags,
       avatar,
       children,
-      exclusionFormRender
+      renderCheckDrop,
+      renderXDrop
     } = this.props
 
     const cx = mode === 'card' ? cardTheme : tabularTheme
@@ -316,7 +318,19 @@ class ApplicantBadge extends PureComponent<Props> {
           </div>
         )}
         <div id='dropdown-controls' className={cx.controls}>
-          {exclusionFormRender && (
+          {renderCheckDrop && (
+            <Dropdown
+              tooltip
+              label={(
+                <span className={cx.control}>
+                  <SvgIcon icon='check' />
+                </span>
+              )}
+            >
+              {renderCheckDrop()}
+            </Dropdown>
+          )}
+          {renderXDrop && (
             <Dropdown
               tooltip
               label={(
@@ -325,7 +339,7 @@ class ApplicantBadge extends PureComponent<Props> {
                 </span>
               )}
             >
-              {exclusionFormRender()}
+              {renderXDrop()}
             </Dropdown>
           )}
         </div>
