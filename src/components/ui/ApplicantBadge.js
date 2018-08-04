@@ -80,11 +80,6 @@ const cardTheme = {
     height: 90px
   `),
 
-  controls: cmz(`
-    grid-area: control
-    display: flex
-  `),
-
   control: cmz(`
     & {
       display: inline-block
@@ -106,6 +101,18 @@ const cardTheme = {
     &:hover svg g,
     &:hover svg polyline {
       stroke: white
+    }
+  `),
+
+  controls: cmz(`
+    grid-area: control
+    display: flex
+    visibility: hidden
+  `),
+
+  displayControlsOnHover: cmz(`
+    &:hover #dropdown-controls {
+      visibility: visible
     }
   `),
 
@@ -308,7 +315,7 @@ class ApplicantBadge extends PureComponent<Props> {
             )}
           </div>
         )}
-        <div className={cx.controls}>
+        <div id='dropdown-controls' className={cx.controls}>
           {exclusionFormRender && (
             <Dropdown
               tooltip
