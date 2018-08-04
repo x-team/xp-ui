@@ -119,7 +119,7 @@ exclude applicant form buttons
 ```js
 const SvgIcon = require('./SvgIcon.js').default;
 <div style={{ textAlign: 'right' }}>
-  <Button pseudolink color={'silver'}>Cancel</Button>
+  <Button pseudolink>Cancel</Button>
   <Button><SvgIcon icon={'paperplane'} color={'inverted'} /></Button>
 </div>
 ```

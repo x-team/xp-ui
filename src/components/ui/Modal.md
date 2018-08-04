@@ -63,7 +63,7 @@ const ListsEditor = require('./ListsEditor.js').default;
 Missing props (does component explode?):
 
 ```js
-<div style={{ position: 'relative', minHeight: '300px' }}>
+<div style={{ position: 'relative', minHeight: '100px' }}>
   <Modal />
 </div>
 ```

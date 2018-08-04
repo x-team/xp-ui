@@ -112,7 +112,7 @@ exports[`NotesFeed-1 1`] = `
     </div>
   </div>
   <button
-    className="AutoUI_ui_NotesFeed-27 AutoUI_ui_Button-95 AutoUI_ui_Button-34 AutoUI_ui_Button-127 AutoUI_ui_Button-146 outlined AutoUI_ui_Button-160"
+    className="AutoUI_ui_NotesFeed-27 AutoUI_ui_Button-91 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-142 outlined AutoUI_ui_Button-156"
     type="button">
     <span
       className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">

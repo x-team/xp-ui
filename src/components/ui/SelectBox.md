@@ -218,6 +218,15 @@ Examples of searching and creating simultaneously:
 </div>
 ```
 
+Fixed height:
+
+```
+<SelectBox
+  expanded={true}
+  visibleItems={4}
+/>
+```
+
 Missing props (does component explode?):
 
 ```

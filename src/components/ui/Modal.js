@@ -80,7 +80,7 @@ class Modal extends Component<Props, State> {
   render () {
     const { children } = this.props
     const modalClasses = [cx.modal, this.state.open && 'open'].join(' ')
-    return (
+    return children ? (
       <div className={modalClasses} onClick={this.handleClose}>
         <section className={cx.frame} onClick={this.noClick}>
           <a className={cx.close} onClick={this.handleClose}>
@@ -89,7 +89,7 @@ class Modal extends Component<Props, State> {
           {children}
         </section>
       </div>
-    )
+    ) : null
   }
 }
 

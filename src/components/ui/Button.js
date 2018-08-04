@@ -86,10 +86,6 @@ const colorStyles = {
       border-color: ${theme.baseRed.darken(0.2)}
       color: ${theme.baseBrighter}
     }
-
-    &.pseudolink:hover {
-      color: ${theme.baseRed}
-    }
   `),
 
   silver: cmz(

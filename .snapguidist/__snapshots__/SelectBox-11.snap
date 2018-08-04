@@ -8,92 +8,74 @@ exports[`SelectBox-11 1`] = `
   }>
   <div>
     <div
-      className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-22"
-      onMouseEnter={false}
-      onMouseLeave={false}>
+      className="AutoUI_ui_SelectBox-77">
       <div
-        className="AutoUI_ui_Dropdown-24 ">
-        
-        <span
-          className="AutoUI_ui_Dropdown-42">
-          <div
-            className="AutoUI_ui_SelectBox-77">
-            <div
-              className="AutoUI_ui_SelectBox-86">
-              <svg
-                height="17px"
-                viewBox="0 0 16 17"
-                width="16px">
-                <g
-                  fill="none"
-                  fillRule="evenodd"
-                  stroke="none"
-                  strokeWidth="1">
-                  <circle
-                    cx="7.5"
-                    cy="7.5"
-                    r="6.5"
-                    stroke={
-                      Object {
-                        "color": Array [
-                          178,
-                          182,
-                          188,
-                        ],
-                        "model": "rgb",
-                        "valpha": 1,
-                      }
-                    } />
-                  <path
-                    d="M11.7538745,12.6062275 L15.5,16.5"
-                    stroke={
-                      Object {
-                        "color": Array [
-                          178,
-                          182,
-                          188,
-                        ],
-                        "model": "rgb",
-                        "valpha": 1,
-                      }
-                    }
-                    strokeLinecap="square" />
-                </g>
-              </svg>
-            </div>
-            <div>
-              <input
-                aria-labelledby="label-search"
-                autoComplete="off"
-                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-81"
-                id="search"
-                name="search"
-                placeholder="Search"
-                required={false}
-                type="text"
-                value="" />
-            </div>
-          </div>
-        </span>
-      </div>
-      <div
-        className="AutoUI_ui_Dropdown-52    ">
-        <div
-          className="AutoUI_ui_SelectBox-153">
-          <ul
-            className="AutoUI_ui_SelectBox-136 false"
-            style={
-              Object {
-                "height": "auto",
-                "maxHeight": "auto",
-                "width": "100%",
+        className="AutoUI_ui_SelectBox-86">
+        <svg
+          height="17px"
+          viewBox="0 0 16 17"
+          width="16px">
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="none"
+            strokeWidth="1">
+            <circle
+              cx="7.5"
+              cy="7.5"
+              r="6.5"
+              stroke={
+                Object {
+                  "color": Array [
+                    178,
+                    182,
+                    188,
+                  ],
+                  "model": "rgb",
+                  "valpha": 1,
+                }
+              } />
+            <path
+              d="M11.7538745,12.6062275 L15.5,16.5"
+              stroke={
+                Object {
+                  "color": Array [
+                    178,
+                    182,
+                    188,
+                  ],
+                  "model": "rgb",
+                  "valpha": 1,
+                }
               }
-            }>
-            
-          </ul>
-        </div>
+              strokeLinecap="square" />
+          </g>
+        </svg>
+      </div>
+      <div>
+        <input
+          aria-labelledby="label-search"
+          autoComplete="off"
+          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-81"
+          id="search"
+          name="search"
+          placeholder="Search"
+          required={false}
+          type="text"
+          value="" />
       </div>
     </div>
+    <ul
+      className="AutoUI_ui_SelectBox-136 expanded"
+      style={
+        Object {
+          "height": "240px",
+          "maxHeight": "240px",
+          "width": "100%",
+        }
+      }>
+      
+    </ul>
   </div>
 </div>
 `;
