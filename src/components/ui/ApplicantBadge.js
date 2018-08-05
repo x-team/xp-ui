@@ -28,8 +28,8 @@ type Props = {
   avatar?: Element<*>,
   children?: Element<*> | string,
   onClick?: Function,
-  renderCheckDrop?: Function | void,
-  renderXDrop?: Function | void
+  renderApprovalDropdown?: Function,
+  renderExclusionDropdown?: Function
 }
 
 const cmz = require('cmz')
@@ -244,8 +244,8 @@ class ApplicantBadge extends PureComponent<Props> {
       tags,
       avatar,
       children,
-      renderCheckDrop,
-      renderXDrop
+      renderApprovalDropdown,
+      renderExclusionDropdown
     } = this.props
 
     const cx = mode === 'card' ? cardTheme : tabularTheme
@@ -318,7 +318,7 @@ class ApplicantBadge extends PureComponent<Props> {
           </div>
         )}
         <div id='dropdown-controls' className={cx.controls}>
-          {renderCheckDrop && (
+          {renderApprovalDropdown && (
             <Dropdown
               tooltip
               label={(
@@ -327,10 +327,10 @@ class ApplicantBadge extends PureComponent<Props> {
                 </span>
               )}
             >
-              {renderCheckDrop()}
+              {renderApprovalDropdown()}
             </Dropdown>
           )}
-          {renderXDrop && (
+          {renderExclusionDropdown && (
             <Dropdown
               tooltip
               label={(
@@ -339,7 +339,7 @@ class ApplicantBadge extends PureComponent<Props> {
                 </span>
               )}
             >
-              {renderXDrop()}
+              {renderExclusionDropdown()}
             </Dropdown>
           )}
         </div>
