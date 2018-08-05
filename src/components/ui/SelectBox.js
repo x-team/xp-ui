@@ -190,9 +190,10 @@ const styles = {
       background-color: ${theme.lineSilver2}
     }
   `),
+  // !important is used to override global input values
   editing: cmz(`
     & input {
-      border-bottom: 1px solid ${theme.baseRed}
+      border-bottom: 1px solid ${theme.baseRed} !important
     }
   `),
   control: cmz(`
@@ -244,6 +245,7 @@ const styles = {
       }
     }
   `),
+  // !important is used to override global input values
   editinput: cmz(
     typo.baseText,
     `
@@ -253,11 +255,12 @@ const styles = {
       }
 
       & input {
-        height: 30px
-        padding: 0
-        border-top: none
-        border-right: none
-        border-left: none
+        height: 30px !important
+        padding: 0 !important
+        border-top: none !important
+        border-right: none !important
+        border-left: none !important
+        transition: all .2s ease
       }
     `
   ),
