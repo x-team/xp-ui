@@ -105,14 +105,14 @@ const cardTheme = {
     }
   `),
 
-  controls: cmz(`
+  controls: cmz('controls', `
     grid-area: control
     display: flex
     visibility: hidden
   `),
 
   displayControlsOnHover: cmz(`
-    &:hover #dropdown-controls {
+    &:hover .controls {
       visibility: visible
     }
   `),
@@ -317,7 +317,7 @@ class ApplicantBadge extends PureComponent<Props> {
             )}
           </div>
         )}
-        <div id='dropdown-controls' className={cx.controls}>
+        <div className={cx.controls}>
           {renderApprovalDropdown && (
             <Dropdown
               tooltip
