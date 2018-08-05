@@ -83,10 +83,10 @@ class Modal extends Component<Props, State> {
     return children ? (
       <div className={modalClasses} onClick={this.handleClose}>
         <section className={cx.frame} onClick={this.noClick}>
+          {children}
           <a className={cx.close} onClick={this.handleClose}>
             <SvgIcon icon='x' color='grayscale' />
           </a>
-          {children}
         </section>
       </div>
     ) : null

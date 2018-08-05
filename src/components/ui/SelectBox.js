@@ -298,7 +298,8 @@ type Item = {
   selecting?: boolean,
   editing?: boolean | string,
   saving?: boolean,
-  hidden?: boolean
+  hidden?: boolean,
+  archived?: boolean
 }
 
 type Props = {
@@ -351,7 +352,7 @@ class SelectBox extends Component<Props, State> {
     this.handleSearch(this.state.search)
   }
 
-  componentDidUpdate (prevProps: Props, prevState: State) {
+  componentDidUpdate (prevProps: Props) {
     if (!Object.is(prevProps, this.props)) {
       const viewItems = this.mapItemsInput(this.props.items || [], this.state.view)
       this.setState((prevState, props) => {
@@ -360,10 +361,14 @@ class SelectBox extends Component<Props, State> {
           items: viewItems,
           view: viewItems,
           expanded: this.props.expanded,
-          creating: this.props.creating || false
+          creating: this.props.creating !== 'undefined' ? this.props.creating : false
         }
 
         return newState
+      }, () => {
+        if (this.state.search !== this.props.search) {
+          this.handleSearch(this.props.search)
+        }
       })
     }
   }
@@ -371,15 +376,17 @@ class SelectBox extends Component<Props, State> {
   mapItemsInput = (items: Array<Item>, view: Array<Item>): Array<Item> =>
     items.map((each, i) => {
       const viewItem = view.find(item => item.id === each.id) || {}
-      return {
+      const isEditing = (viewItem.editing || !each.editing) && each.value !== viewItem.editing
+      const newItem = {
         id: each.id,
         value: each.value,
         selected: each.selected || false,
         selecting: each.selecting || false,
-        editing: each.editing || viewItem.editing || false,
+        editing: (isEditing && viewItem.editing) || false,
         saving: each.saving || false,
         hidden: each.hidden || viewItem.hidden || false
       }
+      return newItem
     })
 
   getUncachedItem = (item: Item) => this.state.view.find(obj => obj.id === item.id)

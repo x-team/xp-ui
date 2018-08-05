@@ -10,6 +10,30 @@ exports[`Modal-1 1`] = `
     className="AutoUI_ui_Modal-21 open">
     <section
       className="AutoUI_ui_Modal-42">
+      <h1>
+        Modal content goes here
+      </h1>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
       <a
         className="AutoUI_ui_Modal-50 closemodal">
         <svg
@@ -47,30 +71,6 @@ exports[`Modal-1 1`] = `
           </g>
         </svg>
       </a>
-      <h1>
-        Modal content goes here
-      </h1>
-      <p>
-        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-      </p>
-      <p>
-        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-      </p>
-      <p>
-        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-      </p>
-      <p>
-        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-      </p>
-      <p>
-        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-      </p>
-      <p>
-        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-      </p>
-      <p>
-        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-      </p>
     </section>
   </div>
 </div>

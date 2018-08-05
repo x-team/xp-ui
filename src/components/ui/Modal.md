@@ -53,9 +53,18 @@ ListsEditor use case:
 
 ```js
 const ListsEditor = require('./ListsEditor.js').default;
+const itemsArray = Array(18).fill({}).map((item, i) => ({
+  id: i+1,
+  value: `Sample item ${i+1}`,
+  archived: i > 12 && true
+}));
 <div style={{ position: 'relative', minHeight: '800px' }}>
   <Modal>
-    <ListsEditor />
+    <ListsEditor
+      collectionName='Lists'
+      list={itemsArray}
+      onSave={list => console.log('onSave:', list)}
+    />
   </Modal>
 </div>
 ```

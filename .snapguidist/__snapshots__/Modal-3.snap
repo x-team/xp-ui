@@ -10,43 +10,6 @@ exports[`Modal-3 1`] = `
     className="AutoUI_ui_Modal-21 open">
     <section
       className="AutoUI_ui_Modal-42">
-      <a
-        className="AutoUI_ui_Modal-50 closemodal">
-        <svg
-          height="14px"
-          viewBox="0 0 14 14"
-          width="14px">
-          <g
-            fill="none"
-            fillRule="evenodd"
-            stroke="none"
-            strokeLinecap="square"
-            strokeWidth="1">
-            <g
-              stroke={
-                Object {
-                  "color": Array [
-                    178,
-                    182,
-                    188,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
-              strokeWidth="2"
-              transform="translate(-1294.000000, -1073.000000)">
-              <g
-                transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                <path
-                  d="M7,0 L7,14" />
-                <path
-                  d="M14,7 L0,7" />
-              </g>
-            </g>
-          </g>
-        </svg>
-      </a>
       <h1>
         Modal content goes here
       </h1>
@@ -122,6 +85,43 @@ exports[`Modal-3 1`] = `
       <p>
         lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
       </p>
+      <a
+        className="AutoUI_ui_Modal-50 closemodal">
+        <svg
+          height="14px"
+          viewBox="0 0 14 14"
+          width="14px">
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="none"
+            strokeLinecap="square"
+            strokeWidth="1">
+            <g
+              stroke={
+                Object {
+                  "color": Array [
+                    178,
+                    182,
+                    188,
+                  ],
+                  "model": "rgb",
+                  "valpha": 1,
+                }
+              }
+              strokeWidth="2"
+              transform="translate(-1294.000000, -1073.000000)">
+              <g
+                transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                <path
+                  d="M7,0 L7,14" />
+                <path
+                  d="M14,7 L0,7" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </a>
     </section>
   </div>
 </div>
