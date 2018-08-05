@@ -122,6 +122,8 @@ const cx = {
     typo.sectionHeading,
     `
       text-align: center
+      margin: 0
+      padding: 0
     `
   )
 }
