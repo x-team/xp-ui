@@ -28,7 +28,9 @@ type Props = {
   avatar?: Element<*>,
   children?: Element<*> | string,
   onClick?: Function,
+  displayApprovalIcon?: boolean,
   renderApprovalDropdown?: Function,
+  displayExclusionIcon?: boolean,
   renderExclusionDropdown?: Function
 }
 
@@ -230,7 +232,9 @@ const tabularTheme = {} // TODO: https://zube.io/x-team/xp-formerly-auto/c/1638
 class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
     mode: 'card',
-    active: false
+    active: false,
+    displayApprovalIcon: false,
+    displayExclusionIcon: false
   }
 
   render () {
@@ -244,7 +248,9 @@ class ApplicantBadge extends PureComponent<Props> {
       tags,
       avatar,
       children,
+      displayApprovalIcon,
       renderApprovalDropdown,
+      displayExclusionIcon,
       renderExclusionDropdown
     } = this.props
 
@@ -318,7 +324,7 @@ class ApplicantBadge extends PureComponent<Props> {
           </div>
         )}
         <div className={cx.controls}>
-          {renderApprovalDropdown && (
+          {displayApprovalIcon ? (
             <Dropdown
               tooltip
               label={(
@@ -329,8 +335,8 @@ class ApplicantBadge extends PureComponent<Props> {
             >
               {renderApprovalDropdown()}
             </Dropdown>
-          )}
-          {renderExclusionDropdown && (
+          ) : null}
+          {displayExclusionIcon ? (
             <Dropdown
               tooltip
               label={(
@@ -341,7 +347,7 @@ class ApplicantBadge extends PureComponent<Props> {
             >
               {renderExclusionDropdown()}
             </Dropdown>
-          )}
+          ) : null}
         </div>
         {info && info.length > 0 && mapInfosToRender(info)}
         {tags && tags.length > 0 && mapTagsToRender(tags)}
