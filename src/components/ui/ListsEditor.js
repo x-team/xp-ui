@@ -55,8 +55,8 @@ const cx = {
   control: cmz(`
     display: flex
     justify-content: space-between
-    margin: 40px 0
-    padding: 0 20px
+    margin: 0
+    padding: 40px 20px
   `),
   button: cmz(`
     & {
@@ -111,12 +111,19 @@ const cx = {
     top: 0
     width: 100%
     height: 100%
-    background: rgba(255, 255, 255, 0.65)
+    background: rgba(255, 255, 255, 0.75)
     z-index: 10
     display: flex
+    flex-direction: column
     justify-content: center
     align-items: center
-  `)
+  `),
+  savingMessage: cmz(
+    typo.sectionHeading,
+    `
+      text-align: center
+    `
+  )
 }
 
 class ListsEditor extends Component<Props, State> {
@@ -247,7 +254,10 @@ class ListsEditor extends Component<Props, State> {
       <div className={cx.listseditor}>
         <h1 className={cx.heading}>Edit {collectionName}</h1>
         {saving && (
-          <div className={cx.saving}><Loader /></div>
+          <div className={cx.saving}>
+            <Loader />
+            <h2 className={cx.savingMessage}>Saving changes...</h2>
+          </div>
         )}
         <Tabs className={cx.tabs}>
           <Tab title='Active'>
