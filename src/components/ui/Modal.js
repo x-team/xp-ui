@@ -10,7 +10,8 @@ const cmz = require('cmz')
 
 type Props = {
   close: Function,
-  children?: Element<*>|string
+  children?: Element<*>|string,
+  isClosing: boolean
 }
 
 type State = {
