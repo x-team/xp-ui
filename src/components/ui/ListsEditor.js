@@ -261,7 +261,7 @@ class ListsEditor extends Component<Props, State> {
             <h2 className={cx.savingMessage}>Saving changes...</h2>
           </div>
         )}
-        <Tabs className={cx.tabs}>
+        <Tabs className={cx.tabs} tabIndex={1}>
           <Tab title='Active'>
             <div className={cx.listing}>
               <SelectBox

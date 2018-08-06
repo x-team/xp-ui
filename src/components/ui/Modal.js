@@ -32,6 +32,7 @@ const cx = {
       transition: opacity 0.3s ease-in, visibility 0.3s ease-in
       opacity: 0
       visibility: hidden
+      outline: none
     }
 
     &.open {
@@ -64,24 +65,44 @@ class Modal extends Component<Props, State> {
     this.setState({ open: true })
   }
 
+  componentDidUpdate () {
+    const { open } = this.state
+    const { isClosing } = this.props
+    if (open && isClosing) {
+      this.handleClose()
+    }
+  }
+
+  componentWillUnmount () {
+    clearTimeout(this.closeWithTimer)
+  }
+
   noClick = (event: any) => {
     event && event.stopPropagation()
   }
 
-  handleClose = () => {
+  closeWithTimer = () => setTimeout(() => {
     const { close } = this.props
-    this.setState({ open: false },
-      () => setTimeout(() => {
-        close && close()
-      }, 300)
-    )
+    close && close()
+  }, 300)
+
+  handleClose = () => {
+    this.setState({ open: false }, this.closeWithTimer)
+  }
+
+  handleKeyPress = (e: any) => {
+    const evt = e || window.event
+    evt.stopPropagation()
+    if (evt.keyCode === 27) { // Esc
+      this.handleClose()
+    }
   }
 
   render () {
     const { children } = this.props
     const modalClasses = [cx.modal, this.state.open && 'open'].join(' ')
     return children ? (
-      <div className={modalClasses} onClick={this.handleClose}>
+      <div className={modalClasses} onClick={this.handleClose} onKeyDown={this.handleKeyPress} tabIndex={0}>
         <section className={cx.frame} onClick={this.noClick}>
           {children}
           <a className={cx.close} onClick={this.handleClose}>

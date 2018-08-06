@@ -118,7 +118,8 @@ const Root = elem.section(tabsStyles.root)
 type Props = {
   children?: Element<*>,
   defaultActiveTabKey: number,
-  className: string
+  className: string,
+  tabIndex: number
 }
 
 type State = {
@@ -127,7 +128,8 @@ type State = {
 
 class Tabs extends Component<Props, State> {
   static defaultProps = {
-    defaultActiveTabKey: 0
+    defaultActiveTabKey: 0,
+    tabIndex: 0
   }
 
   state = {
@@ -140,6 +142,7 @@ class Tabs extends Component<Props, State> {
   }
 
   _renderTab = (child: Element<*>, index: number) => {
+    const { tabIndex } = this.props
     const isActiveTab = this.state.activeTabKey === index
     const activeClassName = isActiveTab ? 'active' : ''
 
@@ -148,14 +151,14 @@ class Tabs extends Component<Props, State> {
     }
 
     return (
-      <li key={index} role='presentation' className={`${tabsStyles.tabnavTab} ${activeClassName}`}>
+      <li key={tabIndex + index} role='presentation' className={`${tabsStyles.tabnavTab} ${activeClassName}`}>
         <a
           href=''
           onClick={this.handleTabClick(index)}
           role='tab'
           aria-controls={`tabs-pane-${index}`}
           aria-selected={isActiveTab}
-          tabIndex={index}
+          tabIndex={tabIndex + index}
         >
           {child.props.title}
         </a>

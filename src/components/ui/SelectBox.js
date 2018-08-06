@@ -476,6 +476,7 @@ class SelectBox extends Component<Props, State> {
 
   handleEditingKeyUp = (e: any, item: Item) => {
     const evt = e || window.event
+    evt.stopPropagation()
 
     if (evt.keyCode === 27) { // Esc
       this.handleCancelEdit(item)
@@ -563,6 +564,8 @@ class SelectBox extends Component<Props, State> {
               e.target.value = ''
               e.target.value = val
             }}
+            onKeyDown={(e: any) => e.stopPropagation()}
+            onKeyPress={(e: any) => e.stopPropagation()}
             onKeyUp={(e: any) => this.handleEditingKeyUp(e, item)}
           />
         </span>
@@ -625,6 +628,9 @@ class SelectBox extends Component<Props, State> {
           onChange={(input = {}) => this.handleSearch(input.target.value)}
           className={styles.searchinput}
           autoComplete='off'
+          onKeyDown={(e: any) => e.stopPropagation()}
+          onKeyPress={(e: any) => e.stopPropagation()}
+          onKeyUp={(e: any) => e.stopPropagation()}
         />
         {search !== '' && (
           <div className={styles.close} onClick={() => this.handleSearch('')}>

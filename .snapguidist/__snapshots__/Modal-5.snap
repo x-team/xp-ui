@@ -7,9 +7,10 @@ exports[`Modal-5 1`] = `
     }
   }>
   <div
-    className="AutoUI_ui_Modal-21 open">
+    className="AutoUI_ui_Modal-21 open"
+    tabIndex={0}>
     <section
-      className="AutoUI_ui_Modal-42">
+      className="AutoUI_ui_Modal-43">
       <div
         className="AutoUI_ui_ListsEditor-42">
         <h1
@@ -32,7 +33,7 @@ exports[`Modal-5 1`] = `
                   aria-selected={true}
                   href=""
                   role="tab"
-                  tabIndex={0}>
+                  tabIndex={1}>
                   Active
                 </a>
                 <div
@@ -46,7 +47,7 @@ exports[`Modal-5 1`] = `
                   aria-selected={false}
                   href=""
                   role="tab"
-                  tabIndex={1}>
+                  tabIndex={2}>
                   Archive
                 </a>
                 <div
@@ -863,7 +864,7 @@ exports[`Modal-5 1`] = `
         </section>
       </div>
       <a
-        className="AutoUI_ui_Modal-50 closemodal">
+        className="AutoUI_ui_Modal-51 closemodal">
         <svg
           height="14px"
           viewBox="0 0 14 14"
