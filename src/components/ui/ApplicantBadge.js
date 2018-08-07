@@ -28,7 +28,10 @@ type Props = {
   avatar?: Element<*>,
   children?: Element<*> | string,
   onClick?: Function,
-  exclusionFormRender?: Function | void
+  displayApprovalIcon?: boolean,
+  renderApprovalDropdown?: Function,
+  displayExclusionIcon?: boolean,
+  renderExclusionDropdown?: Function
 }
 
 const cmz = require('cmz')
@@ -80,11 +83,6 @@ const cardTheme = {
     height: 90px
   `),
 
-  controls: cmz(`
-    grid-area: control
-    display: flex
-  `),
-
   control: cmz(`
     & {
       display: inline-block
@@ -106,6 +104,18 @@ const cardTheme = {
     &:hover svg g,
     &:hover svg polyline {
       stroke: white
+    }
+  `),
+
+  controls: cmz('controls', `
+    grid-area: control
+    display: flex
+    visibility: hidden
+  `),
+
+  displayControlsOnHover: cmz(`
+    &:hover .controls {
+      visibility: visible
     }
   `),
 
@@ -222,7 +232,9 @@ const tabularTheme = {} // TODO: https://zube.io/x-team/xp-formerly-auto/c/1638
 class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
     mode: 'card',
-    active: false
+    active: false,
+    displayApprovalIcon: false,
+    displayExclusionIcon: false
   }
 
   render () {
@@ -236,7 +248,10 @@ class ApplicantBadge extends PureComponent<Props> {
       tags,
       avatar,
       children,
-      exclusionFormRender
+      displayApprovalIcon,
+      renderApprovalDropdown,
+      displayExclusionIcon,
+      renderExclusionDropdown
     } = this.props
 
     const cx = mode === 'card' ? cardTheme : tabularTheme
@@ -309,7 +324,19 @@ class ApplicantBadge extends PureComponent<Props> {
           </div>
         )}
         <div className={cx.controls}>
-          {exclusionFormRender && (
+          {displayApprovalIcon && (
+            <Dropdown
+              tooltip
+              label={(
+                <span className={cx.control}>
+                  <SvgIcon icon='check' />
+                </span>
+              )}
+            >
+              {renderApprovalDropdown()}
+            </Dropdown>
+          )}
+          {displayExclusionIcon && (
             <Dropdown
               tooltip
               label={(
@@ -318,7 +345,7 @@ class ApplicantBadge extends PureComponent<Props> {
                 </span>
               )}
             >
-              {exclusionFormRender()}
+              {renderExclusionDropdown()}
             </Dropdown>
           )}
         </div>

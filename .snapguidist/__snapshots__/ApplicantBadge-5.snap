@@ -28,6 +28,57 @@ exports[`ApplicantBadge-5 1`] = `
             className="AutoUI_ui_Dropdown-42">
             <span>
               <svg
+                height="13px"
+                viewBox="0 0 17 13"
+                width="17px">
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  stroke="none"
+                  strokeWidth="1">
+                  <polyline
+                    points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
+                    stroke={
+                      Object {
+                        "color": Array [
+                          246,
+                          57,
+                          84,
+                        ],
+                        "model": "rgb",
+                        "valpha": 1,
+                      }
+                    }
+                    strokeWidth="2"
+                    transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
+                </g>
+              </svg>
+            </span>
+          </span>
+        </div>
+        <div
+          className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117">
+          <div
+            className="AutoUI_ui_Dropdown-73 ">
+            <form>
+              A custom list of inputs with a submit button and a checkmark icon
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+        onMouseEnter={false}
+        onMouseLeave={false}>
+        <div
+          className="AutoUI_ui_Dropdown-24 ">
+          
+          <span
+            className="AutoUI_ui_Dropdown-42">
+            <span>
+              <svg
                 height="14px"
                 viewBox="0 0 14 14"
                 width="14px">
@@ -69,7 +120,7 @@ exports[`ApplicantBadge-5 1`] = `
           <div
             className="AutoUI_ui_Dropdown-73 ">
             <form>
-              A list of inputs with a submit button
+              Another custom list of inputs with a submit button and an X icon
             </form>
           </div>
         </div>
