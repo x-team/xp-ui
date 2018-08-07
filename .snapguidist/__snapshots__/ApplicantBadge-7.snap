@@ -1,12 +1,12 @@
 exports[`ApplicantBadge-7 1`] = `
 <div
-  className="AutoUI_ui_ApplicantBadge-37 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+  className="AutoUI_ui_ApplicantBadge-40 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-116 ">
   <div
-    className="AutoUI_ui_ApplicantBadge-68 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+    className="AutoUI_ui_ApplicantBadge-71 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
     applicant@x-team.com
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-77">
+    className="AutoUI_ui_ApplicantBadge-80">
     <div
       className="AutoUI_ui_Avatar-15">
       <img
@@ -18,9 +18,9 @@ exports[`ApplicantBadge-7 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-83" />
+    className="AutoUI_ui_ApplicantBadge-110 controls" />
   <div
-    className="AutoUI_ui_ApplicantBadge-215">
+    className="AutoUI_ui_ApplicantBadge-225">
     <button>
       Hello
     </button>
