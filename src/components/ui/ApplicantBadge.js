@@ -324,7 +324,7 @@ class ApplicantBadge extends PureComponent<Props> {
           </div>
         )}
         <div className={cx.controls}>
-          {displayApprovalIcon ? (
+          {displayApprovalIcon && (
             <Dropdown
               tooltip
               label={(
@@ -335,8 +335,8 @@ class ApplicantBadge extends PureComponent<Props> {
             >
               {renderApprovalDropdown()}
             </Dropdown>
-          ) : null}
-          {displayExclusionIcon ? (
+          )}
+          {displayExclusionIcon && (
             <Dropdown
               tooltip
               label={(
@@ -347,7 +347,7 @@ class ApplicantBadge extends PureComponent<Props> {
             >
               {renderExclusionDropdown()}
             </Dropdown>
-          ) : null}
+          )}
         </div>
         {info && info.length > 0 && mapInfosToRender(info)}
         {tags && tags.length > 0 && mapTagsToRender(tags)}
