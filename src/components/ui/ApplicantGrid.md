@@ -1,6 +1,7 @@
 List view (default)
 
 ```js
+const ApplicantBadge = require('./ApplicantBadge').default;
 const info = [
   {
     label: 'Avail. date:',
@@ -30,8 +31,8 @@ const items = Array(10).fill(
   <ApplicantBadge
     id={i++}
     onClick={id => console.log('Applicant selected: ' + id)}
-    name={'Applicant full name'}
-    email={'applicant@email.com'}
+    name='Applicant full name'
+    email='applicant@email.com'
     info={info}
     tags={tags}
   />
@@ -41,8 +42,8 @@ items[1] = (
     active={true}
     id={999}
     onClick={id => console.log('Applicant selected: ' + id)}
-    name={'Applicant full name'}
-    email={'applicant@email.com'}
+    name='Applicant full name'
+    email='applicant@email.com'
     info={info}
     tags={tags}
   />
@@ -57,12 +58,14 @@ items[1] = (
 Tabular view:
 
 ```js
+const ApplicantBadge = require('./ApplicantBadge').default;
 let i = 1;
 const items = Array(5).fill(
   <ApplicantBadge
+    mode='tabular'
     id={i++}
-    name={'Applicant full name'}
-    email={'applicant@email.com'}
+    name='Applicant full name'
+    email='applicant@email.com'
     info={[
       {
         label: 'Avail. date:',
@@ -91,7 +94,7 @@ const items = Array(5).fill(
 );
 <ApplicantGrid
   items={items}
-  mode="tabular"
+  mode='tabular'
   visible={3}
   increment={2}
 />

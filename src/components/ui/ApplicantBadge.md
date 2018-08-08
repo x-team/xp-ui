@@ -2,10 +2,10 @@ Basic card:
 
 ```js
 <ApplicantBadge
-  mode="card"
+  mode='card'
   id={123123}
-  name={'Applicant full name'}
-  email={'applicant@email.com'}
+  name='Applicant full name'
+  email='applicant@email.com'
   info={[
     {
       label: 'Avail. date:',
@@ -51,10 +51,10 @@ Active card:
 ```js
 <ApplicantBadge
   active={true}
-  mode="card"
+  mode='card'
   id={123123}
-  name={'Applicant full name'}
-  email={'applicant@email.com'}
+  name='Applicant full name'
+  email='applicant@email.com'
   info={[
     {
       label: 'Avail. date:',
@@ -106,13 +106,18 @@ Basic tabular:
 ```js
 <ApplicantBadge
   id={123123}
-  mode="tabular"
+  mode='tabular'
   id={123123}
-  name={'Applicant full name'}
-  email={'applicant@email.com'}
+  name='Applicant full name'
+  email='applicant@email.com'
   info={[
     {
       label: 'Avail. date:',
+      value: '11/05/2018',
+      tip: 'I\'m not currently seeking opportunities.'
+    },
+    {
+      label: 'Avail. updated:',
       value: '11/05/2018',
       tip: 'I\'m not currently seeking opportunities.'
     },
@@ -169,7 +174,7 @@ With children:
 ```js
 <ApplicantBadge
   id={123123}
-  email={'applicant@x-team.com'}
+  email='applicant@x-team.com'
 >
   <button>Hello</button>
   <button>World</button>
@@ -181,8 +186,8 @@ With a custom avatar:
 ```js
 <ApplicantBadge
   id={123123}
-  name={'Applicant'}
-  email={'applicant@x-team.com'}
+  name='Applicant'
+  email='applicant@x-team.com'
   avatar=<div style={{width: 90, height: 90, borderRadius: '50%', background: 'orange' }} />
 />
 ```

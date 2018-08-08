@@ -232,7 +232,162 @@ const cardTheme = {
   `)
 }
 
-const tabularTheme = {} // TODO: https://zube.io/x-team/xp-formerly-auto/c/1638
+const tabularTheme = {
+
+  mode: cmz(
+    typo.baseText,
+    `
+      & {
+        transition: all 0.4s ease-out
+        background: ${theme.baseBrighter}
+        display: grid
+        grid-template: 'avatar name tags infos children'
+        grid-template-columns: repeat(auto-fit, 1fr)
+        grid-gap: 14px
+        cursor: pointer
+        padding: 14px
+        color: ${theme.typoParagraph}
+        font-size: 17px
+      }
+
+      &:hover {
+        background: ${theme.baseBright}
+      }
+    `
+  ),
+
+  active: cmz(`
+    transition: all 0.2s ease-in
+    border: 1px solid ${theme.baseRed}
+  `),
+
+  name: cmz(typo.badgeHeading,
+    `
+      grid-area: name
+      display: flex
+      align-items: center
+      text-transform: initial
+    `
+  ),
+
+  avatar: cmz(`
+    grid-area: avatar
+    width: 42px
+    display: flex
+    align-items: center
+  `),
+
+  controls: cmz(`
+    display: none
+  `),
+
+  control: cmz(`
+    & {
+      display: none
+    }
+  `),
+
+  infos: cmz(`
+    grid-area: infos
+    width: 100%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+  `),
+
+  info: cmz(typo.baseText,
+    `
+      & {
+        font-size: 17px
+      }
+
+      &:last-of-type {
+        margin-right: 0
+      }
+    `
+  ),
+
+  moreinfos: cmz(`
+    & {
+      cursor: pointer
+    }
+
+    &:hover {
+      color: ${theme.typoHighlight}
+    }
+  `),
+
+  label: cmz(`
+    display: none
+  `),
+
+  value: cmz(`
+    display: block
+    color: ${theme.typoParagraph}
+    line-height: 1.2
+    white-space: normal
+  `),
+
+  tip: cmz(`
+    font-size: 15px
+    color: ${theme.typoParagraph}
+    line-height: 1.4
+  `),
+
+  tags: cmz(`
+    grid-area: tags
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+  `),
+
+  tag: cmz(`
+    & {
+      margin: 0 10px 0 0
+      white-space: nowrap
+      color: ${theme.typoParagraph}
+    }
+
+    &::after {
+      content: ','
+    }
+
+    &:last-of-type {
+      margin-right: 0
+    }
+  `),
+
+  moretags: cmz(`
+    & {
+      border: none
+      text-transform: initial
+      cursor: pointer
+    }
+
+    &:hover {
+      color: ${theme.typoHighlight}
+    }
+  `),
+
+  purelabel: cmz(`
+    border: none
+  `),
+
+  children: cmz(`
+    &:empty {
+      display: none
+      padding: 0
+      margin: 0
+    }
+
+    &:not(:empty) {
+      grid-area: children
+      display: flex
+      align-items: center
+    }
+  `)
+}
+
 class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
     mode: 'card',
