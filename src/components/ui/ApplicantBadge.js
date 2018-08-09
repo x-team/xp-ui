@@ -29,8 +29,10 @@ type Props = {
   children?: Element<*> | string,
   onClick?: Function,
   displayApprovalIcon?: boolean,
+  onClickApprovalIcon?: Function,
   renderApprovalDropdown?: Function,
   displayExclusionIcon?: boolean,
+  onClickExclusionIcon?: Function,
   renderExclusionDropdown?: Function
 }
 
@@ -249,8 +251,10 @@ class ApplicantBadge extends PureComponent<Props> {
       avatar,
       children,
       displayApprovalIcon,
+      onClickApprovalIcon,
       renderApprovalDropdown,
       displayExclusionIcon,
+      onClickExclusionIcon,
       renderExclusionDropdown
     } = this.props
 
@@ -328,24 +332,24 @@ class ApplicantBadge extends PureComponent<Props> {
             <Dropdown
               tooltip
               label={(
-                <span className={cx.control}>
+                <span className={cx.control} onClick={onClickApprovalIcon}>
                   <SvgIcon icon='check' />
                 </span>
               )}
             >
-              {renderApprovalDropdown()}
+              {renderApprovalDropdown && renderApprovalDropdown()}
             </Dropdown>
           )}
           {displayExclusionIcon && (
             <Dropdown
               tooltip
               label={(
-                <span className={cx.control}>
+                <span className={cx.control} onClick={onClickExclusionIcon}>
                   <SvgIcon icon='x' />
                 </span>
               )}
             >
-              {renderExclusionDropdown()}
+              {renderExclusionDropdown && renderExclusionDropdown()}
             </Dropdown>
           )}
         </div>
