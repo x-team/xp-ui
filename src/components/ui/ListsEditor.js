@@ -6,15 +6,12 @@ import SelectBox from './SelectBox'
 import Tabs from './Tabs'
 import Tab from './Tabs/Tab'
 import Button from './Button'
-import Loader from './Loader'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
 import { pluralize } from '../../utils/helpers'
 
 const cmz = require('cmz')
-
-export type Status = 'archiving' | 'deleting'
 
 type Item = {
   id: number,
@@ -28,7 +25,6 @@ type Item = {
 }
 
 type Props = {
-  status?: Status,
   collectionName?: string,
   list: Array<Item>,
   onEdit: Function,
@@ -132,32 +128,11 @@ const cx = {
     & > * {
       margin-left: 10px
     }
-  `),
-  saving: cmz(`
-    position: absolute
-    top: 0
-    width: 100%
-    height: 100%
-    background: rgba(255, 255, 255, 0.75)
-    z-index: 10
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-  `),
-  savingMessage: cmz(
-    typo.sectionHeading,
-    `
-      text-align: center
-      margin: 0
-      padding: 0
-    `
-  )
+  `)
 }
 
 class ListsEditor extends Component<Props, State> {
   static defaultProps = {
-    status: '',
     collectionName: 'Collection',
     list: []
   }
@@ -258,7 +233,7 @@ class ListsEditor extends Component<Props, State> {
     const currentListName = this.getCurrentListName(active)
     const currentList = this.state[currentListName] || []
     const { collectionName } = this.props
-    const { confirmDeletion, activeList, archiveList } = this.state
+    const { confirmDeletion } = this.state
     const selection = this.getSelection(active)
     return (
       <div className={cx.listing}>
