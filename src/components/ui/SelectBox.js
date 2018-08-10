@@ -120,12 +120,7 @@ const styles = {
       position: absolute
     }
   `),
-  label: cmz(
-    typo.baseText,
-    `
-      line-height: 1
-    `
-  ),
+  label: cmz(typo.baseText),
   labelevent: cmz(
     typo.baseText,
     `
@@ -156,7 +151,6 @@ const styles = {
   item: cmz(typo.baseText, `
     & {
       min-height: 30px
-      padding: 15px 22px
     }
 
     &:hover {
@@ -175,6 +169,10 @@ const styles = {
     display: flex
     justify-content: space-between
     align-items: center
+    padding: 15px 22px
+  `),
+  clickable: cmz(`
+    cursor: pointer
   `),
   lined: cmz(`
     & {
@@ -214,15 +212,16 @@ const styles = {
   selecting: cmz(
     typo.baseText,
     `
-      padding: 0 0 0 30px
+      display: flex
       position: relative
+      padding: 15px 22px 15px 52px
     `
   ),
   selectingdots: cmz(`
     & {
       position: absolute
       top: calc(50% - 9px)
-      left: 0
+      left: 20px
       width: 20px
       height: 20px
       border-top-color: ${theme.lineSilver2}
@@ -296,7 +295,7 @@ const styles = {
   `)
 }
 
-type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm-delete' | 'deleting' | 'deleted' | 'archiving' | 'archived'
+type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm' | 'deleting' | 'deleted' | 'archiving' | 'archived'
 
 type Item = {
   id: number,
@@ -359,7 +358,7 @@ class SelectBox extends Component<Props, State> {
   }
 
   componentDidMount () {
-    this.handleSearch(this.state.search)
+    this.handleSearch({}, this.state.search)
   }
 
   componentDidUpdate (prevProps: Props) {
@@ -394,7 +393,8 @@ class SelectBox extends Component<Props, State> {
         selecting: each.selecting || false,
         editing: (isEditing && viewItem.editing) || '',
         creating: each.creating || false,
-        hidden: each.hidden || viewItem.hidden || false
+        hidden: each.hidden || viewItem.hidden || false,
+        status: each.status || ''
       }
       return newItem
     })
@@ -409,7 +409,8 @@ class SelectBox extends Component<Props, State> {
     this.setState({ view: newItems })
   }
 
-  handleSearch = (input: string = '') => {
+  handleSearch = (e: any, input: string = '') => {
+    e.stopPropagation && e.stopPropagation()
     const { onSearch } = this.props
     const { view } = this.state
     const match = new RegExp(input.trim().toUpperCase(), 'g')
@@ -424,7 +425,8 @@ class SelectBox extends Component<Props, State> {
     })
   }
 
-  handleSelect = (item: Item) => {
+  handleSelect = (e: any, item: Item) => {
+    e.stopPropagation && e.stopPropagation()
     const { onSelect } = this.props
     if (!item.selecting && onSelect) {
       onSelect({
@@ -434,7 +436,8 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleClick = (item: Item) => {
+  handleClick = (e: any, item: Item) => {
+    e.stopPropagation && e.stopPropagation()
     const { onClick } = this.props
     if (!item.selecting && onClick) {
       onClick({
@@ -442,11 +445,12 @@ class SelectBox extends Component<Props, State> {
         selected: !item.selected
       })
     } else {
-      this.handleSelect(item)
+      this.handleSelect(e, item)
     }
   }
 
-  handleCreateNew = () => {
+  handleCreateNew = (e: any) => {
+    e.stopPropagation && e.stopPropagation()
     const { onCreateNew } = this.props
     const { search } = this.state
 
@@ -455,8 +459,9 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleStartEditing = (item: Item) => {
-    const updatedItem = { ...item, editing: item.value }
+  handleStartEditing = (e: any, item: Item) => {
+    e.stopPropagation && e.stopPropagation()
+    const updatedItem = { ...item, status: 'editing', editing: item.value }
     this.updateItemsState(updatedItem)
   }
 
@@ -466,14 +471,16 @@ class SelectBox extends Component<Props, State> {
     this.updateItemsState(updatedItem)
   }
 
-  handleCancelEdit = (item: Item) => {
-    const updatedItem = { ...item, editing: '' }
+  handleCancelEdit = (e: any, item: Item) => {
+    e.stopPropagation && e.stopPropagation()
+    const updatedItem = { ...item, status: '', editing: null }
     this.updateItemsState(updatedItem)
   }
 
-  handleEdit = (item: Item) => {
+  handleEdit = (e: any, item: Item) => {
+    e.stopPropagation && e.stopPropagation()
     const { onEdit } = this.props
-    if (onEdit) {
+    if (onEdit && item.editing !== '' && item.editing !== item.value) {
       onEdit({
         ...this.getUncachedItem(item),
         value: item.editing
@@ -486,15 +493,16 @@ class SelectBox extends Component<Props, State> {
     evt.stopPropagation()
 
     if (evt.keyCode === 27) { // Esc
-      this.handleCancelEdit(item)
+      this.handleCancelEdit(evt, item)
     }
 
     if (evt.keyCode === 13) { // Enter
-      this.handleEdit(item)
+      this.handleEdit(evt, item)
     }
   }
 
-  handleArchive = (item: Item) => {
+  handleArchive = (e: any, item: Item) => {
+    e.stopPropagation && e.stopPropagation()
     const { onArchive } = this.props
     if (onArchive) {
       onArchive({
@@ -504,8 +512,9 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleStartDeleting = (item: Item) => {
-    const updatedItem = { ...item, status: 'deleting' }
+  handleStartDeleting = (e: any, item: Item) => {
+    e.stopPropagation && e.stopPropagation()
+    const updatedItem = { ...item, status: 'confirm' }
     this.updateItemsState(updatedItem)
   }
 
@@ -532,6 +541,7 @@ class SelectBox extends Component<Props, State> {
       expanded,
       hasSearch,
       onSelect,
+      onClick,
       onEdit,
       onArchive,
       onDelete,
@@ -543,28 +553,30 @@ class SelectBox extends Component<Props, State> {
 
     const filteredItems = view && view.filter((item: Item) => !item.hidden)
 
+    const editionButton = [styles.controlbutton, styles.editablebuton].join(' ')
+
     const renderEditButton = (item) => (
-      <span className={[styles.controlbutton, styles.editablebuton].join(' ')} onClick={() => this.handleStartEditing(item)}>
-        <SvgIcon icon='edit' color='grayscale' />
+      <span className={editionButton} onClick={(e) => this.handleStartEditing(e, item)}>
+        <SvgIcon icon='edit' color='grayscale' hover='default' />
       </span>
     )
 
     const renderArchiveButton = (item) => (
-      <span className={[styles.controlbutton, styles.editablebuton].join(' ')} onClick={() => this.handleArchive(item)}>
-        <SvgIcon icon='archive' color='grayscale' />
+      <span className={editionButton} onClick={(e) => this.handleArchive(e, item)}>
+        <SvgIcon icon='archive' color='grayscale' hover='default' />
       </span>
     )
 
     const renderDeleteButton = (item) => (
-      <span className={[styles.controlbutton, styles.editablebuton].join(' ')} onClick={() => this.handleStartDeleting(item)}>
-        <SvgIcon icon='trashcan2' color='grayscale' />
+      <span className={editionButton} onClick={(e) => this.handleStartDeleting(e, item)}>
+        <SvgIcon icon='trashcan2' color='grayscale' hover='default' />
       </span>
     )
 
     const itemClasses = (item) => ([
       styles.item,
       (lined || !expanded) ? styles.lined : '',
-      (item.editing && item.editing !== item.value) ? styles.editing : ''
+      ((item.editing || item.editing === '') && item.editing !== item.value) ? styles.editing : ''
     ].join(' '))
 
     const renderEditingStatus = (item: Item) => (
@@ -579,20 +591,25 @@ class SelectBox extends Component<Props, State> {
             e.target.value = ''
             e.target.value = val
           }}
-          onKeyDown={(e: any) => e.stopPropagation()}
-          onKeyPress={(e: any) => e.stopPropagation()}
+          onKeyDown={(e: any) => e.stopPropagation && e.stopPropagation()}
+          onKeyPress={(e: any) => e.stopPropagation && e.stopPropagation()}
           onKeyUp={(e: any) => this.handleEditingKeyUp(e, item)}
+          onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
         />
       </span>
     )
 
     const renderEditingStatusControl = (item: Item) => (
       <span className={styles.control}>
-        <span className={styles.controlbutton} onClick={() => this.handleCancelEdit(item)}>
-          <SvgIcon icon='x' color='grayscale' />
+        <span className={styles.controlbutton} onClick={(e) => this.handleCancelEdit(e, item)}>
+          <SvgIcon icon='x' color='grayscale' hover='default' />
         </span>
-        <span className={styles.controlbutton} onClick={() => this.handleEdit(item)}>
-          <SvgIcon icon='check' color='grayscale' />
+        <span className={styles.controlbutton} onClick={(e) => this.handleEdit(e, item)}>
+          <SvgIcon
+            icon='check'
+            color={item.editing === item.value ? 'grayscale' : 'text'}
+            hover={item.editing !== item.value ? 'default' : null}
+          />
         </span>
       </span>
     )
@@ -635,10 +652,11 @@ class SelectBox extends Component<Props, State> {
         label={item.value}
         name={item.value}
         checked={!!item.selected}
-        onChange={() => this.handleSelect(item)}
+        onChange={() => {}}
+        onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
       />
     ) : (
-      <span className={styles.label} onClick={() => this.handleClick(item)}>
+      <span className={styles.label}>
         {item.value}
       </span>
     )
@@ -651,13 +669,19 @@ class SelectBox extends Component<Props, State> {
       </span>
     )
 
-    const getRenderWithFallback = (item: Item, method?: Function, render?: Function, control?: Function) => method ? (
+    const getRenderWithFallback = ({ item, method, render, control }) => method ? (
       <span className={styles.controlable}>
         {render && render(item)}
         {control && control(item)}
       </span>
     ) : (
-      <span className={styles.controlable}>
+      <span
+        className={[styles.controlable, (onSelect || onClick) ? styles.clickable : ''].join(' ')}
+        onClick={onSelect
+          ? (e) => this.handleSelect(e, item)
+          : (e) => this.handleClick(e, item)
+        }
+      >
         {renderDefaultStatus(item)}
         {renderDefaultStatusControl(item)}
       </span>
@@ -671,32 +695,76 @@ class SelectBox extends Component<Props, State> {
           case 'selecting':
             return renderSelectingStatus(item)
           case 'editing':
-            return getRenderWithFallback(item, onEdit, renderEditingStatus, renderEditingStatusControl)
+            return getRenderWithFallback({
+              item,
+              method: onEdit,
+              render: renderEditingStatus,
+              control: renderEditingStatusControl
+            })
           case 'saving':
-            return getRenderWithFallback(item, onEdit, renderSavingStatus)
+            return getRenderWithFallback({
+              item,
+              method: onEdit,
+              render: renderSavingStatus
+            })
           case 'edited':
-            return getRenderWithFallback(item, onEdit, renderEditedStatus)
+            return getRenderWithFallback({
+              item,
+              method: onEdit,
+              render: renderEditedStatus
+            })
           case 'creating':
-            return getRenderWithFallback(item, onCreateNew, renderCreatingStatus)
+            return getRenderWithFallback({
+              item,
+              method: onCreateNew,
+              render: renderCreatingStatus
+            })
           case 'created':
-            return getRenderWithFallback(item, onCreateNew, renderCreatedStatus)
-          case 'confirm-delete':
-            return getRenderWithFallback(item, onDelete, renderConfirmStatus)
+            return getRenderWithFallback({
+              item,
+              method: onCreateNew,
+              render: renderCreatedStatus
+            })
+          case 'confirm':
+            return getRenderWithFallback({
+              item,
+              method: onDelete,
+              render: renderConfirmStatus
+            })
           case 'deleting':
-            return getRenderWithFallback(item, onDelete, renderDeletingStatus)
+            return getRenderWithFallback({
+              item,
+              method: onDelete,
+              render: renderDeletingStatus
+            })
           case 'deleted':
-            return getRenderWithFallback(item, onDelete, renderDeletedStatus)
+            return getRenderWithFallback({
+              item,
+              method: onDelete,
+              render: renderDeletedStatus
+            })
           case 'archiving':
-            return getRenderWithFallback(item, onArchive, renderArchivingStatus)
+            return getRenderWithFallback({
+              item,
+              method: onArchive,
+              render: renderArchivingStatus
+            })
           case 'archived':
-            return getRenderWithFallback(item, onArchive, renderArchivedStatus)
+            return getRenderWithFallback({
+              item,
+              method: onArchive,
+              render: renderArchivedStatus
+            })
           default:
-            return getRenderWithFallback(item)
+            return getRenderWithFallback({ item })
         }
       }
 
       return (
-        <li className={itemClasses(item)} key={item.id}>
+        <li
+          className={itemClasses(item)}
+          key={item.id}
+        >
           {getRenderByStatus()}
         </li>
       )
@@ -712,7 +780,7 @@ class SelectBox extends Component<Props, State> {
           <li>
             <span className={styles.nothinglabel}>No Results for "{search}"</span>
             {onCreateNew && !creating && (
-              <span className={styles.createnew} onClick={this.handleCreateNew}>
+              <span className={styles.createnew} onClick={(e) => this.handleCreateNew(e)}>
                 <SvgIcon icon='plus' />
                 <span>Add new {collectionName} "{search}"</span>
               </span>
@@ -738,16 +806,16 @@ class SelectBox extends Component<Props, State> {
           name='search'
           value={search}
           placeholder={hasSearch ? 'Search' : placeholder}
-          onChange={(input = {}) => this.handleSearch(input.target.value)}
+          onChange={(input = {}) => this.handleSearch({}, input.target.value)}
           className={styles.searchinput}
           autoComplete='off'
-          onKeyDown={(e: any) => e.stopPropagation()}
-          onKeyPress={(e: any) => e.stopPropagation()}
-          onKeyUp={(e: any) => e.stopPropagation()}
+          onKeyDown={(e: any) => e.stopPropagation && e.stopPropagation()}
+          onKeyPress={(e: any) => e.stopPropagation && e.stopPropagation()}
+          onKeyUp={(e: any) => e.stopPropagation && e.stopPropagation()}
         />
         {search !== '' && (
-          <div className={styles.close} onClick={() => this.handleSearch('')}>
-            <SvgIcon icon='x' color='grayscale' />
+          <div className={styles.close} onClick={(e) => this.handleSearch(e, '')}>
+            <SvgIcon icon='x' color='grayscale' hover='default' />
           </div>
         )}
       </div>

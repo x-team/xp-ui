@@ -79,6 +79,7 @@ const itemsArray = [
       <SvgIcon icon='edit' /> Edit Lists
     </Button>
   )}
+  onClick={item => console.log('onClick:', item)}
 />
 ```
 
@@ -175,7 +176,7 @@ const itemsArray = [
   {
     id: 11,
     value: 'confirm delete',
-    status: 'confirm-delete'
+    status: 'confirm'
   },
   {
     id: 12,
@@ -202,17 +203,27 @@ const itemsArray = [
     status: 'archived'
   }
 ];
-<SelectBox
-  collectionName='Stuff'
-  items={itemsArray}
-  lined={true}
-  expanded={true}
-  onSelect={item => console.log('onSelect:', item)}
-  onEdit={item => console.log('onEdit:', item)}
-  onArchive={item => console.log('onArchive:', item)}
-  onDelete={item => console.log('onDelete:', item)}
-  onCreateNew={listName => console.log('onCreateNew:', listName)}
-/>
+<div>
+  <SelectBox
+    collectionName='Stuff'
+    items={itemsArray}
+    lined={true}
+    expanded={true}
+    onSelect={item => console.log('onSelect:', item)}
+    onEdit={item => console.log('onEdit:', item)}
+    onArchive={item => console.log('onArchive:', item)}
+    onDelete={item => console.log('onDelete:', item)}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+  <hr />
+  <p>All states but missing all methods</p>
+  <SelectBox
+    collectionName='Stuff'
+    items={itemsArray}
+    lined={true}
+    expanded={true}
+  />
+</div>
 ```
 
 Examples of searching and creating simultaneously:
