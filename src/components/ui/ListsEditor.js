@@ -259,7 +259,7 @@ class ListsEditor extends Component<Props, State> {
           onEdit={item => this.handleEdit(item)}
           onArchive={item => this.handleArchiveItem(item)}
           onDelete={item => this.handleDeleteItem(item)}
-          onCreateNew={active ? listName => this.handleCreateNew(listName) : void(0)}
+          onCreateNew={active ? listName => this.handleCreateNew(listName) : void 0}
         />
         {confirmDeletion[currentListName] ? (
           <div className={cx.control}>
