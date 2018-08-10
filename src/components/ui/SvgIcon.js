@@ -4,36 +4,152 @@ import React, { PureComponent } from 'react'
 
 import theme from '../../styles/theme'
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcan2' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive'
-export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text'
+const cmz = require('cmz')
 
-type Props = {
-  icon: ?Icon,
-  color: Color,
+// export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcan2' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive'
+// export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text'
+
+// type Props = {
+//   icon: ?Icon,
+//   color: Color,
+//   hover: Color
+// }
+
+const colors: { [string]: string } = {
+  default: theme.iconRed,
+  inverted: theme.iconBright,
+  monochrome: theme.iconDark,
+  grayscale: theme.iconGray,
+  text: theme.iconTextGray
 }
 
-const getIcon = ({ icon, color }) => {
+const styles = {
+  stroke: {
+    default: cmz(`
+      & {
+        stroke: ${theme.iconRed}
+      }
+    `),
+    inverted: cmz(`
+      & {
+        stroke: ${theme.iconBright}
+      }
+    `),
+    monochrome: cmz(`
+      & {
+        stroke: ${theme.iconDark}
+      }
+    `),
+    grayscale: cmz(`
+      & {
+        stroke: ${theme.iconGray}
+      }
+    `),
+    text: cmz(`
+      & {
+        stroke: ${theme.iconTextGray}
+      }
+    `)
+  },
+  strokeHover: {
+    default: cmz(`
+      svg:hover & {
+        stroke: ${theme.iconRed}
+      }
+    `),
+    inverted: cmz(`
+      svg:hover & {
+        stroke: ${theme.iconBright}
+      }
+    `),
+    monochrome: cmz(`
+      svg:hover & {
+        stroke: ${theme.iconDark}
+      }
+    `),
+    grayscale: cmz(`
+      svg:hover & {
+        stroke: ${theme.iconGray}
+      }
+    `),
+    text: cmz(`
+      svg:hover & {
+        stroke: ${theme.iconTextGray}
+      }
+    `)
+  },
+  fill: {
+    default: cmz(`
+      & {
+        fill: ${theme.iconRed}
+      }
+    `),
+    inverted: cmz(`
+      & {
+        fill: ${theme.iconBright}
+      }
+    `),
+    monochrome: cmz(`
+      & {
+        fill: ${theme.iconDark}
+      }
+    `),
+    grayscale: cmz(`
+      & {
+        fill: ${theme.iconGray}
+      }
+    `),
+    text: cmz(`
+      & {
+        fill: ${theme.iconTextGray}
+      }
+    `)
+  },
+  fillHover: {
+    default: cmz(`
+      svg:hover & {
+        fill: ${theme.iconRed}
+      }
+    `),
+    inverted: cmz(`
+      svg:hover & {
+        fill: ${theme.iconBright}
+      }
+    `),
+    monochrome: cmz(`
+      svg:hover & {
+        fill: ${theme.iconDark}
+      }
+    `),
+    grayscale: cmz(`
+      svg:hover & {
+        fill: ${theme.iconGray}
+      }
+    `),
+    text: cmz(`
+      svg:hover & {
+        fill: ${theme.iconTextGray}
+      }
+    `)
+  }
+}
+
+const getIcon = ({ icon, color, hover }) => {
   if (!icon) {
     return null
   }
 
-  const colors: { [string]: string } = {
-    default: theme.iconRed,
-    inverted: theme.iconBright,
-    monochrome: theme.iconDark,
-    grayscale: theme.iconGray,
-    text: theme.iconTextGray
-  }
-
+  const strokeClasses = [styles.stroke[color], styles.strokeHover[hover || color]].join(' ')
+  const fillClasses = [styles.fill[color], styles.fillHover[hover || color]].join(' ')
   const icons = {
     cog: (
       <svg width='26px' height='26px' viewBox='0 0 26 26'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
-          <g transform='translate(-402.000000, -198.000000)' strokeWidth='2' stroke={colors[color]}>
+          <g className={strokeClasses} strokeWidth='2' transform='translate(-402.000000, -198.000000)'>
             <g transform='translate(392.000000, 186.000000)'>
               <g transform='translate(11.000000, 13.000000)'>
-                <path d='M20.6328668,14.0832105 L23.8832754,13.6579955 C24.0358928,12.5546655 24.0418946,11.4881989 23.8832754,10.3420045 L20.6328668,9.91678949 C20.413372,9.00463477 20.0541208,8.14991836 19.5782631,7.3723579 L21.5768657,4.77134527 C20.9080926,3.88576649 20.1184259,3.09620398 19.2327303,2.42666184 L16.6322319,4.42500081 C15.8537115,3.94749124 14.9980249,3.58743017 14.0857498,3.36796437 L13.6604787,0.117127232 C12.5312811,-0.0397565223 11.4655312,-0.0380419458 10.3449076,0.116269944 L9.91963653,3.3653925 C9.00564666,3.5848583 8.14910269,3.94491938 7.36886743,4.42157166 L4.76836905,2.42323269 C3.91868428,3.06448432 3.10843998,3.86176241 2.42423368,4.76534425 L4.42283629,7.36549959 C3.94440632,8.14563192 3.58344034,9.00292019 3.36394559,9.91764678 L0.113536964,10.3428618 C-0.0322212701,11.3973263 -0.043367488,12.5238031 0.113536964,13.6571382 L3.36394559,14.0823532 C3.58344034,14.9970798 3.94440632,15.8543681 4.42283629,16.6345004 L2.42423368,19.2346557 C3.06642731,20.0833711 3.8638106,20.8935086 4.76836905,21.5767673 L7.36886743,19.5784283 C8.14910269,20.0559379 9.00564666,20.4151417 9.91963653,20.6346075 L10.3449076,23.8837301 C11.4655312,24.0380419 12.5312811,24.0397565 13.6604787,23.8828728 L14.0857498,20.6320356 C14.9980249,20.4125698 15.8537115,20.0525088 16.6322319,19.5749992 L19.2327303,21.5733382 C20.1184259,20.903796 20.9080926,20.1142335 21.5768657,19.2286547 L19.5782631,16.6276421 C20.0541208,15.8500816 20.413372,14.9953652 20.6328668,14.0832105 Z' stroke={colors[color]} />
-                <path d='M16,12 C16,14.2091049 14.2092777,16 12.0003858,16 C9.79072235,16 8,14.2091049 8,12 C8,9.79089506 9.79072235,8 12.0003858,8 C14.2092777,8 16,9.79089506 16,12 Z' stroke={colors[color]} />
+                <path className={strokeClasses} d='M20.6328668,14.0832105 L23.8832754,13.6579955 C24.0358928,12.5546655 24.0418946,11.4881989 23.8832754,10.3420045 L20.6328668,9.91678949 C20.413372,9.00463477 20.0541208,8.14991836 19.5782631,7.3723579 L21.5768657,4.77134527 C20.9080926,3.88576649 20.1184259,3.09620398 19.2327303,2.42666184 L16.6322319,4.42500081 C15.8537115,3.94749124 14.9980249,3.58743017 14.0857498,3.36796437 L13.6604787,0.117127232 C12.5312811,-0.0397565223 11.4655312,-0.0380419458 10.3449076,0.116269944 L9.91963653,3.3653925 C9.00564666,3.5848583 8.14910269,3.94491938 7.36886743,4.42157166 L4.76836905,2.42323269 C3.91868428,3.06448432 3.10843998,3.86176241 2.42423368,4.76534425 L4.42283629,7.36549959 C3.94440632,8.14563192 3.58344034,9.00292019 3.36394559,9.91764678 L0.113536964,10.3428618 C-0.0322212701,11.3973263 -0.043367488,12.5238031 0.113536964,13.6571382 L3.36394559,14.0823532 C3.58344034,14.9970798 3.94440632,15.8543681 4.42283629,16.6345004 L2.42423368,19.2346557 C3.06642731,20.0833711 3.8638106,20.8935086 4.76836905,21.5767673 L7.36886743,19.5784283 C8.14910269,20.0559379 9.00564666,20.4151417 9.91963653,20.6346075 L10.3449076,23.8837301 C11.4655312,24.0380419 12.5312811,24.0397565 13.6604787,23.8828728 L14.0857498,20.6320356 C14.9980249,20.4125698 15.8537115,20.0525088 16.6322319,19.5749992 L19.2327303,21.5733382 C20.1184259,20.903796 20.9080926,20.1142335 21.5768657,19.2286547 L19.5782631,16.6276421 C20.0541208,15.8500816 20.413372,14.9953652 20.6328668,14.0832105 Z' />
+                <path className={strokeClasses} d='M16,12 C16,14.2091049 14.2092777,16 12.0003858,16 C9.79072235,16 8,14.2091049 8,12 C8,9.79089506 9.79072235,8 12.0003858,8 C14.2092777,8 16,9.79089506 16,12 Z' />
               </g>
             </g>
           </g>
@@ -44,7 +160,7 @@ const getIcon = ({ icon, color }) => {
     head: (
       <svg width='37px' height='43px' viewBox='0 0 37 43'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
-          <g transform='translate(-269.000000, -1104.000000)' stroke={colors[color]} strokeWidth='2'>
+          <g className={strokeClasses} strokeWidth='2' transform='translate(-269.000000, -1104.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
               <g transform='translate(230.000000, 242.000000)'>
                 <g transform='translate(40.000000, 40.000000)'>
@@ -61,7 +177,7 @@ const getIcon = ({ icon, color }) => {
     webcam: (
       <svg width='30px' height='43px' viewBox='0 0 30 43'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
-          <g transform='translate(-929.000000, -1363.000000)' stroke={colors[color]} strokeWidth='2'>
+          <g className={strokeClasses} strokeWidth='2' transform='translate(-929.000000, -1363.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
               <g transform='translate(890.000000, 502.000000)'>
                 <g transform='translate(40.000000, 39.000000)'>
@@ -79,7 +195,7 @@ const getIcon = ({ icon, color }) => {
     message: (
       <svg width='37px' height='36px' viewBox='0 0 37 36'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
-          <g transform='translate(-269.000000, -1671.000000)' stroke={colors[color]} strokeWidth='2'>
+          <g className={strokeClasses} strokeWidth='2' transform='translate(-269.000000, -1671.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
               <g transform='translate(230.000000, 805.000000)'>
                 <g transform='translate(40.000000, 44.000000)'>
@@ -97,7 +213,7 @@ const getIcon = ({ icon, color }) => {
     terminal: (
       <svg width='42px' height='37px' viewBox='0 0 42 37'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
-          <g transform='translate(-929.000000, -1925.000000)' stroke={colors[color]} strokeWidth='2'>
+          <g className={strokeClasses} strokeWidth='2' transform='translate(-929.000000, -1925.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
               <g transform='translate(890.000000, 1063.000000)'>
                 <g transform='translate(40.000000, 40.000000)'>
@@ -120,7 +236,7 @@ const getIcon = ({ icon, color }) => {
     diamond: (
       <svg width='42px' height='39px' viewBox='0 0 42 39'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
-          <g transform='translate(-270.000000, -2228.000000)' stroke={colors[color]} strokeWidth='2'>
+          <g className={strokeClasses} strokeWidth='2' transform='translate(-270.000000, -2228.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
               <g transform='translate(230.000000, 1367.000000)'>
                 <g transform='translate(41.000000, 39.000000)'>
@@ -141,7 +257,7 @@ const getIcon = ({ icon, color }) => {
     talking: (
       <svg width='42px' height='42px' viewBox='0 0 42 42'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
-          <g transform='translate(-929.000000, -2519.000000)' stroke={colors[color]} strokeWidth='2'>
+          <g className={strokeClasses} strokeWidth='2' transform='translate(-929.000000, -2519.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
               <g transform='translate(890.000000, 1657.000000)'>
                 <g transform='translate(40.000000, 40.000000)'>
@@ -160,7 +276,7 @@ const getIcon = ({ icon, color }) => {
     trophy: (
       <svg width='42px' height='44px' viewBox='0 0 42 44'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
-          <g transform='translate(-779.000000, -3206.000000)' stroke={colors[color]} strokeWidth='2'>
+          <g className={strokeClasses} strokeWidth='2' transform='translate(-779.000000, -3206.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
               <g transform='translate(0.000000, 2294.000000)'>
                 <g transform='translate(780.000000, 90.000000)'>
@@ -182,7 +298,7 @@ const getIcon = ({ icon, color }) => {
     plus: (
       <svg width='20px' height='20px' viewBox='0 0 20 20'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <g transform='translate(-1191.000000, -1411.000000)' fill={colors[color]}>
+          <g className={fillClasses} transform='translate(-1191.000000, -1411.000000)'>
             <g transform='translate(387.000000, 933.000000)'>
               <g transform='translate(0.000000, 470.000000)'>
                 <path d='M813,17 L804,17 L804,19 L813,19 L813,28 L815,28 L815,19 L824,19 L824,17 L815,17 L815,8 L813,8 L813,17 Z' />
@@ -196,7 +312,7 @@ const getIcon = ({ icon, color }) => {
     minus: (
       <svg width='20px' height='2px' viewBox='0 0 20 2'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <g transform='translate(-1161.000000, -1106.000000)' fill={colors[color]}>
+          <g className={fillClasses} transform='translate(-1161.000000, -1106.000000)'>
             <g transform='translate(357.000000, 933.000000)'>
               <g transform='translate(0.000000, 157.000000)'>
                 <rect x='804' y='16' width='20' height='2' />
@@ -210,7 +326,7 @@ const getIcon = ({ icon, color }) => {
     calendar: (
       <svg width='40px' height='40px' viewBox='0 0 16 16'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <g transform='translate(-560.000000, -479.000000)' fill={colors[color]}>
+          <g className={fillClasses} transform='translate(-560.000000, -479.000000)'>
             <g transform='translate(363.000000, 309.000000)'>
               <g transform='translate(33.000000, 146.000000)'>
                 <path
@@ -226,7 +342,7 @@ const getIcon = ({ icon, color }) => {
     trashcan: (
       <svg width='15px' height='18px' viewBox='0 0 15 18'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <g transform='translate(-1272.000000, -1013.000000)' fill={colors[color]}>
+          <g className={fillClasses} transform='translate(-1272.000000, -1013.000000)'>
             <g transform='translate(1272.000000, 1013.000000)'>
               <rect x='0' y='3' width='15' height='2' />
               <rect x='2' y='16' width='11' height='2' />
@@ -242,14 +358,14 @@ const getIcon = ({ icon, color }) => {
 
     trashcan2: (
       <svg width='14px' height='14px' viewBox='0 0 24 24'>
-        <path transform='scale(1.333) translate(-3, -3)' fill={colors[color]} d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z' />
+        <path className={fillClasses} transform='scale(1.333) translate(-3, -3)' d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z' />
       </svg>
     ),
 
     x: (
       <svg width='14px' height='14px' viewBox='0 0 14 14'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='square'>
-          <g transform='translate(-1294.000000, -1073.000000)' stroke={colors[color]} strokeWidth='2'>
+          <g className={strokeClasses} strokeWidth='2' transform='translate(-1294.000000, -1073.000000)'>
             <g transform='translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)'>
               <path d='M7,0 L7,14' />
               <path d='M14,7 L0,7' />
@@ -264,16 +380,16 @@ const getIcon = ({ icon, color }) => {
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g transform='translate(-539.000000, -162.000000)'>
             <g transform='translate(539.000000, 162.000000)'>
-              <path d='M0.5,0.5 L0.5,14.5 L11.4545465,14.5 L11.4991824,4.38874719 L8.16377939,0.5 L0.5,0.5 Z' stroke={colors[color]} />
-              <path d='M2.5,5.5 L4.5,5.5' stroke={colors[color]} strokeLinecap='square' />
-              <path d='M2.5,7.5 L7.5,7.5' stroke={colors[color]} strokeLinecap='square' />
-              <path d='M2.5,9.5 L7.5,9.5' stroke={colors[color]} strokeLinecap='square' />
-              <path d='M2.5,11.5 L7.5,11.5' stroke={colors[color]} strokeLinecap='square' />
-              <path d='M7.5,1.5 L7.5,4.5' stroke={colors[color]} strokeLinecap='square' />
-              <path d='M7.01349488,5.49634026 L11.4125741,5.49634026' stroke={colors[color]} />
+              <path className={strokeClasses} d='M0.5,0.5 L0.5,14.5 L11.4545465,14.5 L11.4991824,4.38874719 L8.16377939,0.5 L0.5,0.5 Z' />
+              <path className={strokeClasses} strokeLinecap='square' d='M2.5,5.5 L4.5,5.5' />
+              <path className={strokeClasses} strokeLinecap='square' d='M2.5,7.5 L7.5,7.5' />
+              <path className={strokeClasses} strokeLinecap='square' d='M2.5,9.5 L7.5,9.5' />
+              <path className={strokeClasses} strokeLinecap='square' d='M2.5,11.5 L7.5,11.5' />
+              <path className={strokeClasses} strokeLinecap='square' d='M7.5,1.5 L7.5,4.5' />
+              <path className={strokeClasses} d='M7.01349488,5.49634026 L11.4125741,5.49634026' />
               <circle fill='#FFFFFF' cx='11.5' cy='11.5' r='4.5' />
-              <path d='M11.5,9.5 L11.5,13.5' stroke={colors[color]} strokeLinecap='square' />
-              <path d='M9.5,11.5 L13.5,11.5' stroke={colors[color]} strokeLinecap='square' />
+              <path className={strokeClasses} strokeLinecap='square' d='M11.5,9.5 L11.5,13.5' />
+              <path className={strokeClasses} strokeLinecap='square' d='M9.5,11.5 L13.5,11.5' />
             </g>
           </g>
         </g>
@@ -283,7 +399,7 @@ const getIcon = ({ icon, color }) => {
     triangleup: (
       <svg width='9px' height='5px' viewBox='0 0 9 5'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <polygon fill={colors[color]} transform='translate(4.242641, 4.242641) rotate(225.000000) translate(-4.242641, -4.242641) ' points='7.24264069 1.24264069 7.24264069 7.24264069 1.24264069 7.24264069' />
+          <polygon className={fillClasses} transform='translate(4.242641, 4.242641) rotate(225.000000) translate(-4.242641, -4.242641) ' points='7.24264069 1.24264069 7.24264069 7.24264069 1.24264069 7.24264069' />
         </g>
       </svg>
     ),
@@ -291,7 +407,7 @@ const getIcon = ({ icon, color }) => {
     triangledown: (
       <svg width='9px' height='5px' viewBox='0 0 9 5'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <polygon fill={colors[color]} transform='translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) ' points='7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069' />
+          <polygon className={fillClasses} transform='translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) ' points='7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069' />
         </g>
       </svg>
     ),
@@ -299,7 +415,7 @@ const getIcon = ({ icon, color }) => {
     hamburger: (
       <svg width='16px' height='12px' viewBox='0 0 16 12'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='square'>
-          <g transform='translate(1.000000, 0.000000)' stroke={colors[color]}>
+          <g className={strokeClasses} transform='translate(1.000000, 0.000000)'>
             <path d='M0.184210526,1 L13.8157895,1' />
             <path d='M0.184210526,6 L13.8157895,6' />
             <path d='M0.184210526,11 L13.8157895,11' />
@@ -311,8 +427,8 @@ const getIcon = ({ icon, color }) => {
     magnifier: (
       <svg width='16px' height='17px' viewBox='0 0 16 17'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <circle stroke={colors[color]} cx='7.5' cy='7.5' r='6.5' />
-          <path d='M11.7538745,12.6062275 L15.5,16.5' stroke={colors[color]} strokeLinecap='square' />
+          <circle className={strokeClasses} cx='7.5' cy='7.5' r='6.5' />
+          <path className={strokeClasses} strokeLinecap='square' d='M11.7538745,12.6062275 L15.5,16.5' />
         </g>
       </svg>
     ),
@@ -320,7 +436,7 @@ const getIcon = ({ icon, color }) => {
     edit: (
       <svg width='14px' height='14px' viewBox='0 0 14 14'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <path d='M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z' fill={colors[color]} fillRule='nonzero' />
+          <path className={fillClasses} d='M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z' fillRule='nonzero' />
         </g>
       </svg>
     ),
@@ -328,7 +444,7 @@ const getIcon = ({ icon, color }) => {
     check: (
       <svg width='17px' height='13px' viewBox='0 0 17 13'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <polyline stroke={colors[color]} strokeWidth='2' transform='translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) ' points='15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872' />
+          <polyline className={strokeClasses} strokeWidth='2' transform='translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) ' points='15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872' />
         </g>
       </svg>
     ),
@@ -336,7 +452,7 @@ const getIcon = ({ icon, color }) => {
     play: (
       <svg width='14px' height='16px' viewBox='0 0 14 16'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <g transform='translate(-760.000000, -380.000000)' fill={colors[color]}>
+          <g className={fillClasses} transform='translate(-760.000000, -380.000000)'>
             <g transform='translate(685.000000, 216.000000)'>
               <g transform='translate(57.000000, 156.000000)'>
                 <polygon transform='translate(25.000000, 16.000000) rotate(90.000000) translate(-25.000000, -16.000000)' points='25 9 33 23 17 23' />
@@ -350,8 +466,8 @@ const getIcon = ({ icon, color }) => {
     pause: (
       <svg width='14px' height='16px' viewBox='0 0 14 16'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <rect x='0' y='0' width='5' height='16' fill={colors[color]} />
-          <rect x='9' y='0' width='5' height='16' fill={colors[color]} />
+          <rect className={fillClasses} x='0' y='0' width='5' height='16' />
+          <rect className={fillClasses} x='9' y='0' width='5' height='16' />
         </g>
       </svg>
     ),
@@ -359,7 +475,7 @@ const getIcon = ({ icon, color }) => {
     paperplane: (
       <svg width='17px' height='13px' viewBox='0 0 17 17'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round'>
-          <g transform='translate(-756.000000, -1327.000000)' fill={colors[color]} stroke={colors[color]}>
+          <g className={fillClasses} className={strokeClasses} transform='translate(-756.000000, -1327.000000)'>
             <g transform='translate(516.000000, 684.000000)'>
               <g transform='translate(228.000000, 631.000000)'>
                 <g transform='translate(23.018984, 18.018984) rotate(44.000000) translate(-23.018984, -18.018984) translate(14.518984, 9.518984)'>
@@ -374,7 +490,7 @@ const getIcon = ({ icon, color }) => {
 
     archive: (
       <svg width='14px' height='14px' viewBox='0 0 24 24'>
-        <path transform='scale(1.333) translate(-3, -3)' fill={colors[color]} d='M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z' />
+        <path className={fillClasses} transform='scale(1.333) translate(-3, -3)' d='M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z' />
       </svg>
     )
   }
@@ -388,8 +504,8 @@ class SvgIcon extends PureComponent<Props> {
   }
 
   render () {
-    const { icon, color } = this.props
-    return getIcon({ icon, color }) || null
+    const { icon, color, hover } = this.props
+    return getIcon({ icon, color, hover }) || null
   }
 }
 

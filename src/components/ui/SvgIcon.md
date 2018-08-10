@@ -158,6 +158,39 @@ Text gray color:
 </div>
 ```
 
+Hover color:
+
+
+```
+<div>
+  <SvgIcon icon="cog" color="text" hover="default" />
+  <SvgIcon icon="head" color="text" hover="default" />
+  <SvgIcon icon="webcam" color="text" hover="default" />
+  <SvgIcon icon="message" color="text" hover="default" />
+  <SvgIcon icon="terminal" color="text" hover="default" />
+  <SvgIcon icon="diamond" color="text" hover="default" />
+  <SvgIcon icon="talking" color="text" hover="default" />
+  <SvgIcon icon="trophy" color="text" hover="default" />
+  <SvgIcon icon="calendar" color="text" hover="default" />
+  <SvgIcon icon="plus" color="text" hover="default" />
+  <SvgIcon icon="minus" color="text" hover="default" />
+  <SvgIcon icon="trashcan" color="text" hover="default" />
+  <SvgIcon icon="trashcan2" color="text" hover="default" />
+  <SvgIcon icon="x" color="text" hover="default" />
+  <SvgIcon icon="add" color="text" hover="default" />
+  <SvgIcon icon="triangleup" color="text" hover="default" />
+  <SvgIcon icon="triangledown" color="text" hover="default" />
+  <SvgIcon icon="hamburger" color="text" hover="default" />
+  <SvgIcon icon="magnifier" color="text" hover="default" />
+  <SvgIcon icon="edit" color="text" hover="default" />
+  <SvgIcon icon="check" color="text" hover="default" />
+  <SvgIcon icon="play" color="text" hover="default" />
+  <SvgIcon icon="pause" color="text" hover="default" />
+  <SvgIcon icon="paperplane" color="text" hover="default" />
+  <SvgIcon icon="archive" color="text" hover="default" />
+</div>
+```
+
 Missing props (does component explode?):
 
 ```
