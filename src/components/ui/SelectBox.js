@@ -646,7 +646,9 @@ class SelectBox extends Component<Props, State> {
       </span>
     )
 
-    const renderSavingStatus = (item: Item) => item.status
+    const renderSavingStatus = (item: Item) => (
+      `Saving "${item.value}"...`
+    )
 
     const renderEditedStatus = (item: Item) => item.status
 
@@ -682,11 +684,15 @@ class SelectBox extends Component<Props, State> {
       </div>
     )
 
-    const renderDeletingStatus = (item: Item) => item.status
+    const renderDeletingStatus = (item: Item) => (
+      `Deleting "${item.value}"...`
+    )
 
     const renderDeletedStatus = (item: Item) => item.status
 
-    const renderArchivingStatus = (item: Item) => item.status
+    const renderArchivingStatus = (item: Item) => (
+      `Archiving "${item.value}"...`
+    )
 
     const renderArchivedStatus = (item: Item) => item.status
 
