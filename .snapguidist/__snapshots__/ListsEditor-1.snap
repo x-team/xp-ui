@@ -7,14 +7,14 @@ exports[`ListsEditor-1 1`] = `
     }
   }>
   <div
-    className="AutoUI_ui_ListsEditor-42">
+    className="AutoUI_ui_ListsEditor-49">
     <h1
-      className="AutoUI_ui_ListsEditor-47 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
+      className="AutoUI_ui_ListsEditor-54 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
       Edit 
       Lists
     </h1>
     <section
-      className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ListsEditor-76">
+      className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ListsEditor-86">
       <nav
         className="AutoUI_ui_Tabs_Tabs-22">
         <ul
@@ -59,7 +59,7 @@ exports[`ListsEditor-1 1`] = `
           role="tabpanel">
           <div>
             <div
-              className="AutoUI_ui_ListsEditor-54">
+              className="AutoUI_ui_ListsEditor-62">
               <div
                 className="AutoUI_ui_SelectBox-17"
                 style={
@@ -191,6 +191,50 @@ exports[`ListsEditor-1 1`] = `
                             </g>
                           </svg>
                         </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
                       </span>
                     </li>
                     <li
@@ -246,6 +290,50 @@ exports[`ListsEditor-1 1`] = `
                                 }
                                 fillRule="nonzero" />
                             </g>
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
                           </svg>
                         </span>
                       </span>
@@ -305,6 +393,50 @@ exports[`ListsEditor-1 1`] = `
                             </g>
                           </svg>
                         </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
                       </span>
                     </li>
                     <li
@@ -360,6 +492,50 @@ exports[`ListsEditor-1 1`] = `
                                 }
                                 fillRule="nonzero" />
                             </g>
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
                           </svg>
                         </span>
                       </span>
@@ -419,6 +595,50 @@ exports[`ListsEditor-1 1`] = `
                             </g>
                           </svg>
                         </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
                       </span>
                     </li>
                     <li
@@ -474,6 +694,50 @@ exports[`ListsEditor-1 1`] = `
                                 }
                                 fillRule="nonzero" />
                             </g>
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
                           </svg>
                         </span>
                       </span>
@@ -533,6 +797,50 @@ exports[`ListsEditor-1 1`] = `
                             </g>
                           </svg>
                         </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
                       </span>
                     </li>
                     <li
@@ -588,6 +896,50 @@ exports[`ListsEditor-1 1`] = `
                                 }
                                 fillRule="nonzero" />
                             </g>
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
                           </svg>
                         </span>
                       </span>
@@ -647,6 +999,50 @@ exports[`ListsEditor-1 1`] = `
                             </g>
                           </svg>
                         </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
                       </span>
                     </li>
                     <li
@@ -702,6 +1098,50 @@ exports[`ListsEditor-1 1`] = `
                                 }
                                 fillRule="nonzero" />
                             </g>
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
                           </svg>
                         </span>
                       </span>
@@ -761,6 +1201,50 @@ exports[`ListsEditor-1 1`] = `
                             </g>
                           </svg>
                         </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
                       </span>
                     </li>
                     <li
@@ -816,6 +1300,50 @@ exports[`ListsEditor-1 1`] = `
                                 }
                                 fillRule="nonzero" />
                             </g>
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
                           </svg>
                         </span>
                       </span>
@@ -875,22 +1403,66 @@ exports[`ListsEditor-1 1`] = `
                             </g>
                           </svg>
                         </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
+                        <span
+                          className="AutoUI_ui_SelectBox-203 AutoUI_ui_SelectBox-209 editablebuton">
+                          <svg
+                            height="14px"
+                            viewBox="0 0 24 24"
+                            width="14px">
+                            <path
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              fill={
+                                Object {
+                                  "color": Array [
+                                    178,
+                                    182,
+                                    188,
+                                  ],
+                                  "model": "rgb",
+                                  "valpha": 1,
+                                }
+                              }
+                              transform="scale(1.333) translate(-3, -3)" />
+                          </svg>
+                        </span>
                       </span>
                     </li>
                   </ul>
                 </div>
               </div>
               <div
-                className="AutoUI_ui_ListsEditor-55">
+                className="AutoUI_ui_ListsEditor-63">
                 <button
-                  className="AutoUI_ui_ListsEditor-61 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-142 outlined AutoUI_ui_Button-133 disabled">
+                  className="AutoUI_ui_ListsEditor-71 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-142 outlined AutoUI_ui_Button-133 disabled">
                   <span
                     className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
                     Delete
                   </span>
                 </button>
                 <button
-                  className="AutoUI_ui_ListsEditor-61 AutoUI_ui_ListsEditor-71 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-133 disabled">
+                  className="AutoUI_ui_ListsEditor-71 AutoUI_ui_ListsEditor-81 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-133 disabled">
                   <span
                     className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
                     Archive
