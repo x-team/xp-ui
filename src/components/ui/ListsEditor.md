@@ -10,7 +10,52 @@ const itemsArray = Array(18).fill({}).map((item, i) => ({
   <ListsEditor
     collectionName='Lists'
     list={itemsArray}
-    onSave={list => console.log('onSave:', list)}
+    onEdit={list => console.log('onEdit:', list)}
+    onArchive={lists => console.log('onArchive:', lists)}
+    onDelete={lists => console.log('onDelete:', lists)}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+</div>
+```
+
+Deleting:
+
+```js
+const itemsArray = Array(18).fill({}).map((item, i) => ({
+  id: i+1,
+  value: `Sample item ${i+1}`,
+  archived: i > 12 && true
+}));
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <ListsEditor
+    status='deleting'
+    collectionName='Lists'
+    list={itemsArray}
+    onEdit={list => console.log('onEdit:', list)}
+    onArchive={lists => console.log('onArchive:', lists)}
+    onDelete={lists => console.log('onDelete:', lists)}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+</div>
+```
+
+Archiving:
+
+```js
+const itemsArray = Array(18).fill({}).map((item, i) => ({
+  id: i+1,
+  value: `Sample item ${i+1}`,
+  archived: i > 12 && true
+}));
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <ListsEditor
+    status='archiving'
+    collectionName='Lists'
+    list={itemsArray}
+    onEdit={list => console.log('onEdit:', list)}
+    onArchive={lists => console.log('onArchive:', lists)}
+    onDelete={lists => console.log('onDelete:', lists)}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 </div>
 ```
@@ -25,10 +70,13 @@ const itemsArray = Array(18).fill({}).map((item, i) => ({
 }));
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <ListsEditor
+    status='saving'
     collectionName='Lists'
     list={itemsArray}
-    saving={true}
-    onSave={list => console.log('onSave:', list)}
+    onEdit={list => console.log('onEdit:', list)}
+    onArchive={lists => console.log('onArchive:', lists)}
+    onDelete={lists => console.log('onDelete:', lists)}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 </div>
 ```

@@ -1,4 +1,4 @@
-_Dev note: The actions "toggle selection", "save edition" and "create new item" requires a state wrapper to fully work in integration. The transitional states "selecting" and "saving" are optional and their management is expected to be dealt in the state wrapper. These features are not available in this showcase for manual testing. Please check the examples below for items on transitional states provided by props._
+_Dev note: The actions 'toggle selection', 'save edition' and 'create new item' requires a state wrapper to fully work in integration. The transitional states 'selecting' and 'creating' are optional and their management is expected to be dealt in the state wrapper. These features are not available in this showcase for manual testing. Please check the examples below for items on transitional states provided by props._
 
 Simple view for Add to List:
 
@@ -6,32 +6,32 @@ Simple view for Add to List:
 const itemsArray = [
   {
     id: 2,
-    value: "registered",
+    value: 'registered',
     selected: true
   },
   {
     id: 3,
-    value: "portfolio-building",
+    value: 'portfolio-building',
     selected: true
   },
   {
     id: 4,
-    value: "portfolio-review",
+    value: 'portfolio-review',
     selected: true
   },
   {
     id: 5,
-    value: "social-media-screen",
+    value: 'social-media-screen',
     selected: true
   },
   {
     id: 6,
-    value: "react-shortlist",
+    value: 'react-shortlist',
     selected: false
   }
 ];
 <SelectBox
-  collectionName="List"
+  collectionName='List'
   items={itemsArray}
   width={300}
   visibleItems={3}
@@ -48,35 +48,35 @@ const SvgIcon = require('./SvgIcon.js').default;
 const itemsArray = [
   {
     id: 2,
-    value: "registered"
+    value: 'registered'
   },
   {
     id: 3,
-    value: "portfolio-building"
+    value: 'portfolio-building'
   },
   {
     id: 4,
-    value: "portfolio-review"
+    value: 'portfolio-review'
   },
   {
     id: 5,
-    value: "social-media-screen"
+    value: 'social-media-screen'
   },
   {
     id: 6,
-    value: "react-shortlist"
+    value: 'react-shortlist'
   }
 ];
 <SelectBox
-  placeholder="Select Lists"
-  collectionName="List"
+  placeholder='Select Lists'
+  collectionName='List'
   items={itemsArray}
   width={330}
   visibleItems={4}
   hasSearch={true}
   append={(
     <Button selectbox>
-      <SvgIcon icon="edit" /> Edit Lists
+      <SvgIcon icon='edit' /> Edit Lists
     </Button>
   )}
 />
@@ -88,31 +88,33 @@ Complete view for Edit Lists:
 const itemsArray = [
   {
     id: 2,
-    value: "registered"
+    value: 'registered'
   },
   {
     id: 3,
-    value: "portfolio-building"
+    value: 'portfolio-building'
   },
   {
     id: 4,
-    value: "portfolio-review"
+    value: 'portfolio-review'
   },
   {
     id: 5,
-    value: "social-media-screen"
+    value: 'social-media-screen'
   },
   {
     id: 6,
-    value: "react-shortlist"
+    value: 'react-shortlist'
   }
 ];
 <SelectBox
-  collectionName="List"
+  collectionName='List'
   items={itemsArray}
   expanded={true}
   onSelect={item => console.log('onSelect:', item)}
   onEdit={item => console.log('onEdit:', item)}
+  onArchive={item => console.log('onArchive:', item)}
+  onDelete={item => console.log('onDelete:', item)}
   onCreateNew={listName => console.log('onCreateNew:', listName)}
 />
 ```
@@ -123,68 +125,130 @@ Example of all items states:
 const itemsArray = [
   {
     id: 2,
-    value: "unselected"
+    value: 'unselected'
   },
   {
     id: 3,
-    value: "selected",
-    selected: true
+    value: 'selected',
+    selected: true,
+    state: 'selected'
   },
   {
     id: 4,
-    value: "(un)selecting",
-    selecting: true
+    value: '(un)selecting',
+    selecting: true,
+    state: 'selecting'
   },
   {
     id: 5,
-    value: "editing (no changes yet)",
-    editing: "editing (no changes yet)"
+    value: 'editing (no changes yet)',
+    editing: 'editing (no changes yet)'
   },
   {
     id: 6,
-    value: "editing",
-    editing: "editing (this is changed but not yet saved)"
+    value: 'editing',
+    editing: 'editing (this is changed but not yet saved)'
   },
   {
     id: 7,
-    value: "saving",
-    editing: "saving this",
-    saving: true
+    value: 'saving edition'
   },
-
-  // bullet-proof some possible state conflicts
+  {
+    id: 8,
+    value: 'edited'
+  },
+  {
+    id: 9,
+    value: 'creating',
+    editing: 'creating this',
+    creating: true,
+    state: 'creating'
+  },
+  {
+    id: 10,
+    value: 'created',
+    saved: true,
+    state: 'created'
+  },
+  {
+    id: 11,
+    value: 'confirm delete',
+    state: 'confirm-delete'
+  },
+  {
+    id: 12,
+    value: 'deleting',
+    deleting: true,
+    state: 'deleting'
+  },
+  {
+    id: 13,
+    value: 'deleted',
+    deleted: true,
+    state: 'deleted'
+  },
+  {
+    id: 14,
+    value: 'archiving',
+    archiving: true,
+    state: 'archiving'
+  },
+  {
+    id: 15,
+    value: 'archived',
+    archived: true,
+    state: 'archived'
+  }
+];
+const mixedStatesArray = [
   {
     id: 222,
-    value: "saving",
+    value: 'creating',
     selected: true,
     selecting: true,
-    editing: "saving this",
-    saving: true
+    editing: 'creating this',
+    creating: true
   },
   {
     id: 333,
-    value: "selecting",
+    value: 'selecting',
     selected: true,
     selecting: true,
-    saving: true // should not result saving state because saving expect the "editing" value
+    creating: true
   },
   {
     id: 444,
-    value: "editing",
+    value: 'editing',
     selected: true,
     selecting: true,
-    editing: "editing this"
+    editing: 'editing this'
   }
 ];
-<SelectBox
-  collectionName="Stuff"
-  items={itemsArray}
-  lined={true}
-  expanded={true}
-  onSelect={item => console.log('onSelect:', item)}
-  onEdit={item => console.log('onEdit:', item)}
-  onCreateNew={listName => console.log('onCreateNew:', listName)}
-/>
+<div>
+  <SelectBox
+    collectionName='Stuff'
+    items={itemsArray}
+    lined={true}
+    expanded={true}
+    onSelect={item => console.log('onSelect:', item)}
+    onEdit={item => console.log('onEdit:', item)}
+    onArchive={item => console.log('onArchive:', item)}
+    onDelete={item => console.log('onDelete:', item)}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+  <p>Bullet-proofing some possible state conflicts:</p>
+  <SelectBox
+    collectionName='Stuff'
+    items={mixedStatesArray}
+    lined={true}
+    expanded={true}
+    onSelect={item => console.log('onSelect:', item)}
+    onEdit={item => console.log('onEdit:', item)}
+    onArchive={item => console.log('onArchive:', item)}
+    onDelete={item => console.log('onDelete:', item)}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+</div>
 ```
 
 Examples of searching and creating simultaneously:
@@ -195,7 +259,7 @@ Examples of searching and creating simultaneously:
   <p>In the cases below there's no items provided.</p>
   <p>Here the creating and search props were provided:</p>
   <SelectBox
-    collectionName="Entry"
+    collectionName='Entry'
     creating='Another entry'
     search='Searching some entry'
     expanded={true}
@@ -203,14 +267,14 @@ Examples of searching and creating simultaneously:
   />
   <p>In this case a new item is being created while nothing is being searched:</p>
   <SelectBox
-    collectionName="Entry"
+    collectionName='Entry'
     creating='A new entry'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
   <p>In this case a search is being performed while nothing is being created:</p>
   <SelectBox
-    collectionName="Entry"
+    collectionName='Entry'
     search='Searching some entry'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}

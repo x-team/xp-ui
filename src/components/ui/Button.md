@@ -131,6 +131,12 @@ const SvgIcon = require('./SvgIcon.js').default;
 <Button selectbox><SvgIcon icon="edit" /> Edit Lists</Button>
 ```
 
+disabled outlined
+
+```js
+<Button disabled outlined>Disabled outlined state</Button>
+```
+
 Missing props (does component explode?):
 
 ```js

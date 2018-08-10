@@ -14,6 +14,7 @@ Basic color:
   <SvgIcon icon="plus" />
   <SvgIcon icon="minus" />
   <SvgIcon icon="trashcan" />
+  <SvgIcon icon="trashcan2" />
   <SvgIcon icon="x" />
   <SvgIcon icon="add" />
   <SvgIcon icon="triangleup" />
@@ -25,6 +26,7 @@ Basic color:
   <SvgIcon icon="play" />
   <SvgIcon icon="pause" />
   <SvgIcon icon="paperplane" />
+  <SvgIcon icon="archive" />
 </div>
 ```
 
@@ -44,6 +46,7 @@ Inverted color:
   <SvgIcon icon="plus" color="inverted" />
   <SvgIcon icon="minus" color="inverted" />
   <SvgIcon icon="trashcan" color="inverted" />
+  <SvgIcon icon="trashcan2" color="inverted" />
   <SvgIcon icon="x" color="inverted" />
   <SvgIcon icon="add" color="inverted" />
   <SvgIcon icon="triangleup" color="inverted" />
@@ -55,6 +58,7 @@ Inverted color:
   <SvgIcon icon="play" color="inverted" />
   <SvgIcon icon="pause" color="inverted" />
   <SvgIcon icon="paperplane" color="inverted" />
+  <SvgIcon icon="archive" color="inverted" />
 </div>
 ```
 
@@ -74,6 +78,7 @@ Monochrome color:
   <SvgIcon icon="plus" color="monochrome" />
   <SvgIcon icon="minus" color="monochrome" />
   <SvgIcon icon="trashcan" color="monochrome" />
+  <SvgIcon icon="trashcan2" color="monochrome" />
   <SvgIcon icon="x" color="monochrome" />
   <SvgIcon icon="add" color="monochrome" />
   <SvgIcon icon="triangleup" color="monochrome" />
@@ -85,6 +90,7 @@ Monochrome color:
   <SvgIcon icon="play" color="monochrome" />
   <SvgIcon icon="pause" color="monochrome" />
   <SvgIcon icon="paperplane" color="monochrome" />
+  <SvgIcon icon="archive" color="monochrome" />
 </div>
 ```
 
@@ -104,6 +110,7 @@ Grayscale color:
   <SvgIcon icon="plus" color="grayscale" />
   <SvgIcon icon="minus" color="grayscale" />
   <SvgIcon icon="trashcan" color="grayscale" />
+  <SvgIcon icon="trashcan2" color="grayscale" />
   <SvgIcon icon="x" color="grayscale" />
   <SvgIcon icon="add" color="grayscale" />
   <SvgIcon icon="triangleup" color="grayscale" />
@@ -115,6 +122,7 @@ Grayscale color:
   <SvgIcon icon="play" color="grayscale" />
   <SvgIcon icon="pause" color="grayscale" />
   <SvgIcon icon="paperplane" color="grayscale" />
+  <SvgIcon icon="archive" color="grayscale" />
 </div>
 ```
 
@@ -134,6 +142,7 @@ Text gray color:
   <SvgIcon icon="plus" color="text" />
   <SvgIcon icon="minus" color="text" />
   <SvgIcon icon="trashcan" color="text" />
+  <SvgIcon icon="trashcan2" color="text" />
   <SvgIcon icon="x" color="text" />
   <SvgIcon icon="add" color="text" />
   <SvgIcon icon="triangleup" color="text" />
@@ -145,6 +154,7 @@ Text gray color:
   <SvgIcon icon="play" color="text" />
   <SvgIcon icon="pause" color="text" />
   <SvgIcon icon="paperplane" color="text" />
+  <SvgIcon icon="archive" color="text" />
 </div>
 ```
 

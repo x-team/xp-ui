@@ -13,27 +13,37 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
+export type Status = 'archiving' | 'deleting'
+
 type Item = {
   id: number,
   value: string,
   selected?: boolean,
   selecting?: boolean,
   editing?: boolean | string,
-  saving?: boolean,
+  creating?: boolean,
   hidden?: boolean,
   archived?: boolean
 }
 
 type Props = {
+  status?: Status,
   collectionName?: string,
   list: Array<Item>,
-  saving?: boolean,
-  onSave: Function
+  onEdit: Function,
+  onArchive: Function,
+  onDelete: Function,
+  onCreateNew: Function
+}
+
+type DeleteConfirmation = {
+  activeList: boolean,
+  archiveList: boolean
 }
 
 type State = {
   search: string,
-  editing: boolean,
+  confirmDeletion: DeleteConfirmation,
   activeList: Array<Item>,
   archiveList: Array<Item>
 }
@@ -68,7 +78,7 @@ const cx = {
       border-color: transparent
     }
   `),
-  save: cmz(`
+  archive: cmz(`
     padding-right: 70px
     padding-left: 70px
     margin: 0
@@ -130,45 +140,30 @@ const cx = {
 
 class ListsEditor extends Component<Props, State> {
   static defaultProps = {
+    status: '',
     collectionName: 'Collection',
-    list: [],
-    saving: false
+    list: []
   }
 
   state = {
     search: '',
-    editing: false,
+    confirmDeletion: {
+      activeList: false,
+      archiveList: false
+    },
     activeList: this.props.list.filter(item => !item.archived),
     archiveList: this.props.list.filter(item => item.archived)
   }
 
+  getSelection = (active: boolean = true) => {
+    const { activeList, archiveList } = this.state
+    return active
+      ? activeList.filter(each => each.selected)
+      : archiveList.filter(each => each.selected)
+  }
+
   handleSearch = (search: string) => {
     this.setState({ search })
-  }
-
-  handleCreateNew = (name: string) => {
-    this.setState(() => ({
-      search: '',
-      editing: true,
-      activeList: [
-        { id: +new Date(), value: name },
-        ...this.state.activeList
-      ]
-    }))
-  }
-
-  handleEdit = (item: Item) => {
-    const { activeList, archiveList } = this.state
-    const isActive = activeList.some(each => each.id === item.id)
-    this.setState(() => ({
-      editing: true,
-      activeList: isActive
-        ? activeList.map(each => each.id === item.id ? { ...item, editing: false } : each)
-        : activeList,
-      archiveList: !isActive
-        ? archiveList.map(each => each.id === item.id ? { ...item, editing: false } : each)
-        : archiveList
-    }))
   }
 
   handleSelect = (item: Item) => {
@@ -184,64 +179,120 @@ class ListsEditor extends Component<Props, State> {
     }))
   }
 
-  handleArchive = (event: any, active: boolean = false) => {
+  handleEdit = (item: Item) => {
+    const { onEdit } = this.props
+    onEdit && onEdit(item)
+    // const { activeList, archiveList } = this.state
+    // const isActive = activeList.some(each => each.id === item.id)
+    // this.setState(() => ({
+    //   editing: true,
+    //   activeList: isActive
+    //     ? activeList.map(each => each.id === item.id ? { ...item, editing: false } : each)
+    //     : activeList,
+    //   archiveList: !isActive
+    //     ? archiveList.map(each => each.id === item.id ? { ...item, editing: false } : each)
+    //     : archiveList
+    // }))
+  }
+
+  handleArchiveItem = (item: Item) => {
+    const { onArchive } = this.props
+    onArchive && onArchive([item])
+  }
+
+  handleArchive = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
-    const { activeList, archiveList } = this.state
-    this.setState(() => ({
-      editing: true,
-      activeList: active
-        ? [
-          ...activeList
-            .filter(each => !each.selected),
-          ...archiveList
-            .filter(each => each.selected)
-            .map(each => ({ ...each, selected: false, archived: false }))
-        ] : [
-          ...activeList,
-          ...archiveList
-            .filter(each => each.selected)
-            .map(each => ({ ...each, selected: false, archived: false }))
-        ],
-      archiveList: !active
-        ? [
-          ...archiveList
-            .filter(each => !each.selected),
-          ...activeList
-            .filter(each => each.selected)
-            .map(each => ({ ...each, selected: false, archived: true }))
-        ] : [
-          ...archiveList,
-          ...activeList
-            .filter(each => each.selected)
-            .map(each => ({ ...each, selected: false, archived: true }))
-        ]
-    }))
+    const { onArchive } = this.props
+    onArchive && onArchive(this.getSelection(active))
+    // this.setState(() => ({
+    //   editing: true,
+    //   activeList: active
+    //     ? [
+    //       ...activeList
+    //         .filter(each => !each.selected),
+    //       ...archiveList
+    //         .filter(each => each.selected)
+    //         .map(each => ({ ...each, selected: false, archived: false }))
+    //     ] : [
+    //       ...activeList,
+    //       ...archiveList
+    //         .filter(each => each.selected)
+    //         .map(each => ({ ...each, selected: false, archived: false }))
+    //     ],
+    //   archiveList: !active
+    //     ? [
+    //       ...archiveList
+    //         .filter(each => !each.selected),
+    //       ...activeList
+    //         .filter(each => each.selected)
+    //         .map(each => ({ ...each, selected: false, archived: true }))
+    //     ] : [
+    //       ...archiveList,
+    //       ...activeList
+    //         .filter(each => each.selected)
+    //         .map(each => ({ ...each, selected: false, archived: true }))
+    //     ]
+    // }))
+  }
+
+  handleDeleteItem = (item: Item) => {
+    const { onDelete } = this.props
+    onDelete && onDelete([item])
   }
 
   handleDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
-    this.setState(() => ({ editing: true }))
-    const { activeList, archiveList } = this.state
-    this.setState(() => ({
-      editing: true,
-      activeList: active
-        ? activeList.filter(each => !each.selected)
-        : activeList,
-      archiveList: !active
-        ? archiveList.filter(each => !each.selected)
-        : archiveList
+    const currentList = active
+      ? { activeList: true }
+      : { archiveList: true }
+    this.setState(preState => ({
+      confirmDeletion: {
+        ...preState.confirmDeletion,
+        ...currentList
+      }
+    }))
+    //   const { activeList, archiveList } = this.state
+    //   this.setState(() => ({
+    //     editing: true,
+    //     activeList: active
+    //       ? activeList.filter(each => !each.selected)
+    //       : activeList,
+    //     archiveList: !active
+    //       ? archiveList.filter(each => !each.selected)
+    //       : archiveList
+    //   }))
+  }
+
+  confirmDelete = (event: any, active: boolean = true) => {
+    event && event.stopPropagation()
+    const { onDelete } = this.props
+    onDelete && onDelete(this.getSelection(active))
+  }
+
+  cancelDelete = (event: any, active: boolean = true) => {
+    event && event.stopPropagation()
+    const currentList = active
+      ? { activeList: false }
+      : { archiveList: false }
+    this.setState(preState => ({
+      confirmDeletion: {
+        ...preState.confirmDeletion,
+        ...currentList
+      }
     }))
   }
 
-  handleSave = (event: any) => {
-    event && event.stopPropagation()
-    const { activeList, archiveList } = this.state
-    const { onSave } = this.props
-    onSave && onSave([...activeList, ...archiveList].map(each => ({
-      id: each.id,
-      value: each.value,
-      archived: each.archived || false
-    })))
+  handleCreateNew = (name: string) => {
+    const { onCreateNew } = this.props
+    onCreateNew && onCreateNew(name)
+    // this.setState(() => ({
+    //   search: '',
+    //   editing: true,
+    //   activeList: [
+    //     { id: +new Date(), value: name },
+    //     ...this.state.activeList
+    //   ]
+    // }))
   }
 
   hasSelected = (list: Array<Item> = []) => {
@@ -250,17 +301,11 @@ class ListsEditor extends Component<Props, State> {
   }
 
   render () {
-    const { collectionName, saving } = this.props
-    const { editing, activeList, archiveList } = this.state
+    const { status, collectionName } = this.props
+    const { confirmDeletion, activeList, archiveList } = this.state
     return (
       <div className={cx.listseditor}>
         <h1 className={cx.heading}>Edit {collectionName}</h1>
-        {saving && (
-          <div className={cx.saving}>
-            <Loader />
-            <h2 className={cx.savingMessage}>Saving changes...</h2>
-          </div>
-        )}
         <Tabs className={cx.tabs} tabIndex={1}>
           <Tab title='Active'>
             <div className={cx.listing}>
@@ -271,20 +316,46 @@ class ListsEditor extends Component<Props, State> {
                 visibleItems={7}
                 search={this.state.search}
                 onSearch={search => this.handleSearch(search)}
-                onEdit={item => this.handleEdit(item)}
                 onSelect={item => this.handleSelect(item)}
+                onEdit={item => this.handleEdit(item)}
+                onArchive={item => this.handleArchiveItem(item)}
+                onDelete={item => this.handleDeleteItem(item)}
                 onCreateNew={listName => this.handleCreateNew(listName)}
               />
               <div className={cx.control}>
-                <div>
-                  {this.hasSelected(activeList) && (
-                    <div>
-                      <Button onClick={(e) => this.handleArchive(e, true)} className={cx.button} outlined>Archive</Button>
-                      <Button onClick={(e) => this.handleDelete(e, true)} className={cx.button} outlined>Delete</Button>
-                    </div>
-                  )}
-                </div>
-                <Button disabled={!editing || saving} onClick={this.handleSave} className={cx.save}>Save</Button>
+                {confirmDeletion.activeList ? (
+                  <div>confirm delete?
+                    <Button
+                      onClick={(e) => this.cancelDelete(e, true)}
+                      outlined
+                      className={cx.button}
+                    >
+                      Cancel
+                    </Button>
+                    <Button
+                      onClick={(e) => this.confirmDelete(e, true)}
+                      className={cx.button}
+                    >
+                      Yes
+                    </Button>
+                  </div>
+                ) : (
+                  <Button
+                    disabled={!this.hasSelected(activeList)}
+                    onClick={(e) => this.handleDelete(e, true)}
+                    className={cx.button}
+                    outlined
+                  >
+                    Delete
+                  </Button>
+                )}
+                <Button
+                  disabled={!this.hasSelected(activeList)}
+                  onClick={(e) => this.handleArchive(e, true)}
+                  className={[cx.button, cx.archive].join(' ')}
+                >
+                  Archive
+                </Button>
               </div>
             </div>
           </Tab>
@@ -297,19 +368,45 @@ class ListsEditor extends Component<Props, State> {
                 visibleItems={7}
                 search={this.state.search}
                 onSearch={search => this.handleSearch(search)}
-                onEdit={item => this.handleEdit(item)}
                 onSelect={item => this.handleSelect(item)}
+                onEdit={item => this.handleEdit(item)}
+                onArchive={item => this.handleArchiveItem(item)}
+                onDelete={item => this.handleDeleteItem(item)}
               />
               <div className={cx.control}>
-                <div>
-                  {this.hasSelected(archiveList) && (
-                    <div>
-                      <Button onClick={(e) => this.handleArchive(e, false)} className={cx.button} outlined>Unarchive</Button>
-                      <Button onClick={(e) => this.handleDelete(e, false)} className={cx.button} outlined>Delete</Button>
-                    </div>
-                  )}
-                </div>
-                <Button disabled={!editing || saving} onClick={this.handleSave} className={cx.save}>Save</Button>
+                {confirmDeletion.archiveList ? (
+                  <div>confirm delete?
+                    <Button
+                      onClick={(e) => this.cancelDelete(e, false)}
+                      outlined
+                      className={cx.button}
+                    >
+                      Cancel
+                    </Button>
+                    <Button
+                      onClick={(e) => this.confirmDelete(e, false)}
+                      className={cx.button}
+                    >
+                      Yes
+                    </Button>
+                  </div>
+                ) : (
+                  <Button
+                    disabled={!this.hasSelected(archiveList)}
+                    onClick={(e) => this.handleDelete(e, false)}
+                    className={cx.button}
+                    outlined
+                  >
+                    Delete
+                  </Button>
+                )}
+                <Button
+                  disabled={!this.hasSelected(archiveList)}
+                  onClick={(e) => this.handleArchive(e, false)}
+                  className={[cx.button, cx.archive].join(' ')}
+                >
+                  Unarchive
+                </Button>
               </div>
             </div>
           </Tab>

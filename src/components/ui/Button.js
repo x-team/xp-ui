@@ -130,7 +130,7 @@ const sizeStyles = {
 
 // Button variations
 const extraStyles = {
-  disabled: cmz(`
+  disabled: cmz('disabled', `
     &, &:hover {
       background: ${theme.baseHighlight}
       border-color: transparent
@@ -150,6 +150,10 @@ const extraStyles = {
 
     &.${colorStyles.monochrome} {
       color: ${theme.baseDarker}
+    }
+
+    &.disabled {
+      color: ${theme.typoLabel}
     }
   `),
 

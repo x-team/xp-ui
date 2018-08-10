@@ -170,7 +170,7 @@ const styles = {
       background-color: transparent
     }
 
-    &:not(.isSaving):not(.isSelecting):hover .editButton {
+    &:not(.isCreating):not(.isSelecting):not(.isArchiving):not(.isDeleting):hover .editablebuton {
       display: flex
     }
   `),
@@ -206,7 +206,7 @@ const styles = {
     display: flex
     align-items: center
   `),
-  editButton: cmz('editButton', `
+  editablebuton: cmz('editablebuton', `
     display: none
   `),
   selecting: cmz(
@@ -300,7 +300,7 @@ type Item = {
   selected?: boolean,
   selecting?: boolean,
   editing?: boolean | string,
-  saving?: boolean,
+  creating?: boolean,
   hidden?: boolean,
   archived?: boolean
 }
@@ -321,6 +321,8 @@ type Props = {
   onCreateNew?: Function,
   onSearch?: Function,
   onEdit?: Function,
+  onArchive?: Function,
+  onDelete?: Function,
   append?: Element<*>|string
 }
 
@@ -386,7 +388,7 @@ class SelectBox extends Component<Props, State> {
         selected: each.selected || false,
         selecting: each.selecting || false,
         editing: (isEditing && viewItem.editing) || false,
-        saving: each.saving || false,
+        creating: each.creating || false,
         hidden: each.hidden || viewItem.hidden || false
       }
       return newItem
@@ -487,6 +489,35 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
+  handleArchive = (item: Item) => {
+    const { onArchive } = this.props
+    if (onArchive) {
+      onArchive({
+        ...this.getUncachedItem(item),
+        archived: true
+      })
+    }
+  }
+
+  handleStartDeleting = (item: Item) => {
+    const updatedItem = { ...item, status: 'deleting' }
+    this.updateItemsState(updatedItem)
+  }
+
+  handleCancelDelete = (item: Item) => {
+    const updatedItem = { ...item, status: '' }
+    this.updateItemsState(updatedItem)
+  }
+
+  handleDelete = (item: Item) => {
+    const { onDelete } = this.props
+    if (onDelete) {
+      onDelete({
+        ...this.getUncachedItem(item)
+      })
+    }
+  }
+
   render () {
     const {
       placeholder,
@@ -497,6 +528,8 @@ class SelectBox extends Component<Props, State> {
       hasSearch,
       onSelect,
       onEdit,
+      onArchive,
+      onDelete,
       onCreateNew,
       lined,
       append
@@ -533,9 +566,21 @@ class SelectBox extends Component<Props, State> {
       )
     )
 
-    const renderEditable = (item) => onEdit && (
-      <span className={[styles.controlbutton, styles.editButton].join(' ')} onClick={() => this.handleStartEditing(item)}>
+    const renderEdit = (item) => onEdit && (
+      <span className={[styles.controlbutton, styles.editablebuton].join(' ')} onClick={() => this.handleStartEditing(item)}>
         <SvgIcon icon='edit' color='grayscale' />
+      </span>
+    )
+
+    const renderArchive = (item) => onArchive && (
+      <span className={[styles.controlbutton, styles.editablebuton].join(' ')} onClick={() => this.handleArchive(item)}>
+        <SvgIcon icon='archive' color='grayscale' />
+      </span>
+    )
+
+    const renderDelete = (item) => onDelete && (
+      <span className={[styles.controlbutton, styles.editablebuton].join(' ')} onClick={() => this.handleStartDeleting(item)}>
+        <SvgIcon icon='trashcan2' color='grayscale' />
       </span>
     )
 
@@ -543,13 +588,15 @@ class SelectBox extends Component<Props, State> {
       styles.item,
       (lined || !expanded) ? styles.lined : '',
       (item.editing && item.editing !== item.value) ? styles.editing : '',
-      item.saving ? 'isSaving' : '',
+      // item.archiving ? 'isArchiving' : '',
+      // item.deleting ? 'isDeleting' : '',
+      item.creating ? 'isCreating' : '',
       item.selecting ? 'isSelecting' : ''
     ].join(' '))
 
-    const renderIsSavingOrEditing = (item: Item) => item.saving ? (
+    const renderIsCreatingOrEditing = (item: Item) => item.creating ? (
       <li className={itemClasses(item)} key={item.id}>
-        Saving "{item.editing}"...
+        Creating "{item.editing}"...
       </li>
     ) : (
       <li className={itemClasses(item)} key={item.id}>
@@ -581,11 +628,15 @@ class SelectBox extends Component<Props, State> {
     )
 
     const renderIsEditing = (item: Item) => item.editing
-      ? renderIsSavingOrEditing(item)
+      ? renderIsCreatingOrEditing(item)
       : (
         <li className={itemClasses(item)} key={item.id}>
           {renderCheckboxOrString(item)}
-          {renderEditable(item)}
+          <span className={styles.control}>
+            {renderEdit(item)}
+            {renderArchive(item)}
+            {renderDelete(item)}
+          </span>
         </li>
       )
 
