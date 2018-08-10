@@ -6,21 +6,13 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-// export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcan2' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive'
-// export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcan2' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive'
+export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text'
 
-// type Props = {
-//   icon: ?Icon,
-//   color: Color,
-//   hover: Color
-// }
-
-const colors: { [string]: string } = {
-  default: theme.iconRed,
-  inverted: theme.iconBright,
-  monochrome: theme.iconDark,
-  grayscale: theme.iconGray,
-  text: theme.iconTextGray
+type Props = {
+  icon: ?Icon,
+  color: Color,
+  hover?: Color
 }
 
 const styles = {
@@ -475,7 +467,7 @@ const getIcon = ({ icon, color, hover }) => {
     paperplane: (
       <svg width='17px' height='13px' viewBox='0 0 17 17'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round'>
-          <g className={fillClasses} className={strokeClasses} transform='translate(-756.000000, -1327.000000)'>
+          <g className={[fillClasses, strokeClasses].join(' ')} transform='translate(-756.000000, -1327.000000)'>
             <g transform='translate(516.000000, 684.000000)'>
               <g transform='translate(228.000000, 631.000000)'>
                 <g transform='translate(23.018984, 18.018984) rotate(44.000000) translate(-23.018984, -18.018984) translate(14.518984, 9.518984)'>

@@ -216,7 +216,7 @@ const itemsArray = [
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
   <hr />
-  <p>All states but missing all methods</p>
+  <p>All states but missing all methods (the strings showcased below are the 'item.value')</p>
   <SelectBox
     collectionName='Stuff'
     items={itemsArray}

@@ -650,13 +650,9 @@ class SelectBox extends Component<Props, State> {
       `Saving "${item.value}"...`
     )
 
-    const renderEditedStatus = (item: Item) => item.status
-
     const renderCreatingStatus = (item: Item) => (
       `Creating "${item.value}"...`
     )
-
-    const renderCreatedStatus = (item: Item) => item.status
 
     const renderConfirmStatus = (item: Item) => (
       <div className={cx.confirm}>
@@ -688,13 +684,11 @@ class SelectBox extends Component<Props, State> {
       `Deleting "${item.value}"...`
     )
 
-    const renderDeletedStatus = (item: Item) => item.status
+    const renderDeletedStatus = (item: Item) => null
 
     const renderArchivingStatus = (item: Item) => (
       `Archiving "${item.value}"...`
     )
-
-    const renderArchivedStatus = (item: Item) => item.status
 
     const renderSelectingStatus = (item: Item) => onSelect ? (
       <span className={cx.selecting}>
@@ -769,23 +763,11 @@ class SelectBox extends Component<Props, State> {
               method: onEdit,
               render: renderSavingStatus
             })
-          case 'edited':
-            return getRenderWithFallback({
-              item,
-              method: onEdit,
-              render: renderEditedStatus
-            })
           case 'creating':
             return getRenderWithFallback({
               item,
               method: onCreateNew,
               render: renderCreatingStatus
-            })
-          case 'created':
-            return getRenderWithFallback({
-              item,
-              method: onCreateNew,
-              render: renderCreatedStatus
             })
           case 'confirm':
             return getRenderWithFallback({
@@ -800,29 +782,22 @@ class SelectBox extends Component<Props, State> {
               render: renderDeletingStatus
             })
           case 'deleted':
-            return getRenderWithFallback({
-              item,
-              method: onDelete,
-              render: renderDeletedStatus
-            })
+            return renderDeletedStatus(item)
           case 'archiving':
             return getRenderWithFallback({
               item,
               method: onArchive,
               render: renderArchivingStatus
             })
+          case 'edited':
+          case 'created':
           case 'archived':
-            return getRenderWithFallback({
-              item,
-              method: onArchive,
-              render: renderArchivedStatus
-            })
           default:
             return getRenderWithFallback({ item })
         }
       }
 
-      return (
+      return status !== 'deleted' && (
         <li
           className={itemClasses(item)}
           key={item.id}
