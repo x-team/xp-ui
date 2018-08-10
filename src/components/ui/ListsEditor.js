@@ -13,15 +13,18 @@ import { pluralize } from '../../utils/helpers'
 
 const cmz = require('cmz')
 
+type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm-delete' | 'deleting' | 'deleted' | 'archiving' | 'archived'
+
 type Item = {
   id: number,
   value: string,
   selected?: boolean,
   selecting?: boolean,
-  editing?: boolean | string,
+  editing?: string,
   creating?: boolean,
   hidden?: boolean,
-  archived?: boolean
+  archived?: boolean,
+  status?: ?Status
 }
 
 type Props = {
@@ -256,7 +259,7 @@ class ListsEditor extends Component<Props, State> {
           onEdit={item => this.handleEdit(item)}
           onArchive={item => this.handleArchiveItem(item)}
           onDelete={item => this.handleDeleteItem(item)}
-          onCreateNew={active ? listName => this.handleCreateNew(listName) : false}
+          onCreateNew={active ? listName => this.handleCreateNew(listName) : void(0)}
         />
         {confirmDeletion[currentListName] ? (
           <div className={cx.control}>

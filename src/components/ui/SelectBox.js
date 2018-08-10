@@ -296,18 +296,18 @@ const styles = {
   `)
 }
 
-type Status = 'selecting' | 'editing' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm-delete' | 'deleting' | 'deleted' | 'archiving' | 'archived'
+type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm-delete' | 'deleting' | 'deleted' | 'archiving' | 'archived'
 
 type Item = {
   id: number,
   value: string,
   selected?: boolean,
   selecting?: boolean, // deprecated
-  editing?: boolean | string, // should be string only
+  editing?: string,
   creating?: boolean, // deprecated
   hidden?: boolean, // deprecated
   archived?: boolean, // deprecated
-  status?: Status
+  status?: ?Status
 }
 
 type Props = {
@@ -392,7 +392,7 @@ class SelectBox extends Component<Props, State> {
         value: each.value,
         selected: each.selected || false,
         selecting: each.selecting || false,
-        editing: (isEditing && viewItem.editing) || false,
+        editing: (isEditing && viewItem.editing) || '',
         creating: each.creating || false,
         hidden: each.hidden || viewItem.hidden || false
       }
@@ -602,7 +602,7 @@ class SelectBox extends Component<Props, State> {
     const renderEditedStatus = (item: Item) => item.status
 
     const renderCreatingStatus = (item: Item) => (
-      `Creating "${item.editing}"...`
+      `Creating "${item.value}"...`
     )
 
     const renderCreatedStatus = (item: Item) => item.status
@@ -651,7 +651,7 @@ class SelectBox extends Component<Props, State> {
       </span>
     )
 
-    const getRenderWithFallback = (item: Item, method: Function, render: Function, control: Function) => method ? (
+    const getRenderWithFallback = (item: Item, method?: Function, render?: Function, control?: Function) => method ? (
       <span className={styles.controlable}>
         {render && render(item)}
         {control && control(item)}

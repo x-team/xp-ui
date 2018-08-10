@@ -162,8 +162,7 @@ const itemsArray = [
   },
   {
     id: 9,
-    value: 'creating',
-    editing: 'creating this',
+    value: 'creating this',
     creating: true,
     status: 'creating'
   },
