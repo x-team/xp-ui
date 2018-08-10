@@ -119,15 +119,12 @@ const cx = {
       margin: 0
     }
   `),
-  confirm: cmz(`
-    display: flex
-  `),
-  deleting: cmz(`
+  question: cmz(`
     & p {
       margin: 0
     }
   `),
-  cancel: cmz(`
+  answer: cmz(`
     & > * {
       margin-left: 10px
     }
@@ -263,11 +260,11 @@ class ListsEditor extends Component<Props, State> {
         />
         {confirmDeletion[currentListName] ? (
           <div className={cx.control}>
-            <div className={cx.deleting}>
+            <div className={cx.question}>
               <p>Delete <strong>{selection.length}</strong> {pluralize(selection.length, 'list', true)}</p>
               <p><strong>Are you sure?</strong></p>
             </div>
-            <div className={cx.cancel}>
+            <div className={cx.answer}>
               <Button
                 onClick={(e) => this.cancelDelete(e, active)}
                 pseudolink

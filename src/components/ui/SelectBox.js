@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import InputField from '../forms/InputField'
 import SvgIcon from './SvgIcon'
 import Dropdown from './Dropdown'
+import Button from './Button'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
@@ -13,7 +14,7 @@ import type { Element } from 'react'
 
 const cmz = require('cmz')
 
-const styles = {
+const cx = {
   selectbox: cmz(`
     background: ${theme.baseBrighter}
     position: relative
@@ -124,8 +125,8 @@ const styles = {
   labelevent: cmz(
     typo.baseText,
     `
-      line-height: 1
-      font-style: italic
+      display: flex
+      padding: 15px 22px
     `
   ),
   list: cmz(`
@@ -292,6 +293,35 @@ const styles = {
   appendix: cmz(`
     border-right: 1px solid ${theme.lineSilver2}
     border-left: 1px solid ${theme.lineSilver2}
+  `),
+  button: cmz(`
+    & {
+      border-color: transparent
+      margin: 0
+    }
+
+    &:hover {
+      border-color: transparent
+    }
+  `),
+  confirm: cmz(`
+    display: flex
+    justify-content: space-between
+    align-items: center
+    min-height: 30px
+    margin: 0
+    padding: 0
+    width: 100%
+  `),
+  question: cmz(`
+    & p {
+      margin: 0
+    }
+  `),
+  answer: cmz(`
+    & > * {
+      margin-left: 10px
+    }
   `)
 }
 
@@ -518,12 +548,14 @@ class SelectBox extends Component<Props, State> {
     this.updateItemsState(updatedItem)
   }
 
-  handleCancelDelete = (item: Item) => {
+  handleCancelDelete = (e: any, item: Item) => {
+    e.stopPropagation && e.stopPropagation()
     const updatedItem = { ...item, status: '' }
     this.updateItemsState(updatedItem)
   }
 
-  handleDelete = (item: Item) => {
+  handleDelete = (e: any, item: Item) => {
+    e.stopPropagation && e.stopPropagation()
     const { onDelete } = this.props
     if (onDelete) {
       onDelete({
@@ -553,7 +585,7 @@ class SelectBox extends Component<Props, State> {
 
     const filteredItems = view && view.filter((item: Item) => !item.hidden)
 
-    const editionButton = [styles.controlbutton, styles.editablebuton].join(' ')
+    const editionButton = [cx.controlbutton, cx.editablebuton].join(' ')
 
     const renderEditButton = (item) => (
       <span className={editionButton} onClick={(e) => this.handleStartEditing(e, item)}>
@@ -574,13 +606,13 @@ class SelectBox extends Component<Props, State> {
     )
 
     const itemClasses = (item) => ([
-      styles.item,
-      (lined || !expanded) ? styles.lined : '',
-      ((item.editing || item.editing === '') && item.editing !== item.value) ? styles.editing : ''
+      cx.item,
+      (lined || !expanded) ? cx.lined : '',
+      ((item.editing || item.editing === '') && item.editing !== item.value) ? cx.editing : ''
     ].join(' '))
 
     const renderEditingStatus = (item: Item) => (
-      <span className={styles.editinput}>
+      <span className={cx.editinput}>
         <InputField
           name={item.value}
           value={item.editing}
@@ -600,11 +632,11 @@ class SelectBox extends Component<Props, State> {
     )
 
     const renderEditingStatusControl = (item: Item) => (
-      <span className={styles.control}>
-        <span className={styles.controlbutton} onClick={(e) => this.handleCancelEdit(e, item)}>
+      <span className={cx.control}>
+        <span className={cx.controlbutton} onClick={(e) => this.handleCancelEdit(e, item)}>
           <SvgIcon icon='x' color='grayscale' hover='default' />
         </span>
-        <span className={styles.controlbutton} onClick={(e) => this.handleEdit(e, item)}>
+        <span className={cx.controlbutton} onClick={(e) => this.handleEdit(e, item)}>
           <SvgIcon
             icon='check'
             color={item.editing === item.value ? 'grayscale' : 'text'}
@@ -624,7 +656,31 @@ class SelectBox extends Component<Props, State> {
 
     const renderCreatedStatus = (item: Item) => item.status
 
-    const renderConfirmStatus = (item: Item) => item.status
+    const renderConfirmStatus = (item: Item) => (
+      <div className={cx.confirm}>
+        <div className={cx.question}>
+          <p>Delete <strong>"{item.value}"</strong></p>
+          <p><strong>Are you sure?</strong></p>
+        </div>
+        <div className={cx.answer}>
+          <Button
+            onClick={(e) => this.handleCancelDelete(e, item)}
+            pseudolink
+            className={cx.button}
+            size={'small'}
+          >
+            CANCEL
+          </Button>
+          <Button
+            onClick={(e) => this.handleDelete(e, item)}
+            className={[cx.button, cx.archive].join(' ')}
+            size={'small'}
+          >
+            Yes
+          </Button>
+        </div>
+      </div>
+    )
 
     const renderDeletingStatus = (item: Item) => item.status
 
@@ -635,12 +691,12 @@ class SelectBox extends Component<Props, State> {
     const renderArchivedStatus = (item: Item) => item.status
 
     const renderSelectingStatus = (item: Item) => onSelect ? (
-      <span className={styles.selecting}>
-        <span className={styles.selectingdots} />
+      <span className={cx.selecting}>
+        <span className={cx.selectingdots} />
         {item.value}
       </span>
     ) : (
-      <span className={styles.labelevent}>
+      <span className={cx.labelevent}>
         {item.value}
       </span>
     )
@@ -656,13 +712,13 @@ class SelectBox extends Component<Props, State> {
         onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
       />
     ) : (
-      <span className={styles.label}>
+      <span className={cx.label}>
         {item.value}
       </span>
     )
 
     const renderDefaultStatusControl = (item: Item) => (
-      <span className={styles.control}>
+      <span className={cx.control}>
         {onEdit && renderEditButton(item)}
         {onArchive && renderArchiveButton(item)}
         {onDelete && renderDeleteButton(item)}
@@ -670,13 +726,13 @@ class SelectBox extends Component<Props, State> {
     )
 
     const getRenderWithFallback = ({ item, method, render, control }) => method ? (
-      <span className={styles.controlable}>
+      <div className={cx.controlable}>
         {render && render(item)}
         {control && control(item)}
-      </span>
+      </div>
     ) : (
-      <span
-        className={[styles.controlable, (onSelect || onClick) ? styles.clickable : ''].join(' ')}
+      <div
+        className={[cx.controlable, (onSelect || onClick) ? cx.clickable : ''].join(' ')}
         onClick={onSelect
           ? (e) => this.handleSelect(e, item)
           : (e) => this.handleClick(e, item)
@@ -684,7 +740,7 @@ class SelectBox extends Component<Props, State> {
       >
         {renderDefaultStatus(item)}
         {renderDefaultStatusControl(item)}
-      </span>
+      </div>
     )
 
     const renderItem = (item: Item) => {
@@ -771,16 +827,16 @@ class SelectBox extends Component<Props, State> {
     }
 
     const renderItems = () => (
-      <ul className={[styles.list, expanded && 'expanded'].join(' ')} style={{
+      <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
         height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
         maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
         {search && filteredItems && filteredItems.length === 0 && (
           <li>
-            <span className={styles.nothinglabel}>No Results for "{search}"</span>
+            <span className={cx.nothinglabel}>No Results for "{search}"</span>
             {onCreateNew && !creating && (
-              <span className={styles.createnew} onClick={(e) => this.handleCreateNew(e)}>
+              <span className={cx.createnew} onClick={(e) => this.handleCreateNew(e)}>
                 <SvgIcon icon='plus' />
                 <span>Add new {collectionName} "{search}"</span>
               </span>
@@ -788,18 +844,18 @@ class SelectBox extends Component<Props, State> {
           </li>
         )}
         {creating && (
-          <li><span className={styles.nothinglabel}>Adding new {collectionName} "{creating}"...</span></li>
+          <li><span className={cx.nothinglabel}>Adding new {collectionName} "{creating}"...</span></li>
         )}
         {filteredItems.map(item => renderItem(item))}
       </ul>
     )
 
     const selectsClass = filteredItems && filteredItems.filter(item => item.selected).length > 0
-      ? styles.selects : styles.selectsEmpty
+      ? cx.selects : cx.selectsEmpty
 
     const renderSearchLabel = (isSearch: boolean = false) => isSearch ? (
-      <div className={styles.search}>
-        <div className={styles.magnifier}>
+      <div className={cx.search}>
+        <div className={cx.magnifier}>
           <SvgIcon icon='magnifier' color='grayscale' />
         </div>
         <InputField
@@ -807,20 +863,20 @@ class SelectBox extends Component<Props, State> {
           value={search}
           placeholder={hasSearch ? 'Search' : placeholder}
           onChange={(input = {}) => this.handleSearch({}, input.target.value)}
-          className={styles.searchinput}
+          className={cx.searchinput}
           autoComplete='off'
           onKeyDown={(e: any) => e.stopPropagation && e.stopPropagation()}
           onKeyPress={(e: any) => e.stopPropagation && e.stopPropagation()}
           onKeyUp={(e: any) => e.stopPropagation && e.stopPropagation()}
         />
         {search !== '' && (
-          <div className={styles.close} onClick={(e) => this.handleSearch(e, '')}>
+          <div className={cx.close} onClick={(e) => this.handleSearch(e, '')}>
             <SvgIcon icon='x' color='grayscale' hover='default' />
           </div>
         )}
       </div>
     ) : (
-      <div className={styles.placeholder}>
+      <div className={cx.placeholder}>
         <div className={selectsClass}>
           <div>
             {placeholder}
@@ -829,14 +885,14 @@ class SelectBox extends Component<Props, State> {
             {filteredItems.filter(item => item.selected).map(item => item.value).join(', ')}
           </div>
         </div>
-        <div className={styles.triangle}>
+        <div className={cx.triangle}>
           <SvgIcon icon='triangledown' color='grayscale' />
         </div>
       </div>
     )
 
     const renderAppendix = () => append && (
-      <div className={styles.appendix}>
+      <div className={cx.appendix}>
         {append}
       </div>
     )
@@ -853,9 +909,9 @@ class SelectBox extends Component<Props, State> {
       <Dropdown
         toggle={!labelIsSearch}
         label={renderSearchLabel(labelIsSearch && !hasSearch)}
-        className={styles.dropdown}
+        className={cx.dropdown}
       >
-        <div className={expanded ? '' : styles.shadow}>
+        <div className={expanded ? '' : cx.shadow}>
           {hasSearch && renderSearchLabel(true)}
           {renderItems()}
           {renderAppendix()}
@@ -864,7 +920,7 @@ class SelectBox extends Component<Props, State> {
     )
 
     return (
-      <div className={styles.selectbox} style={{ width: width ? `${width}px` : '100%' }}>
+      <div className={cx.selectbox} style={{ width: width ? `${width}px` : '100%' }}>
         {renderExpandedOrDropdown()}
       </div>
     )
