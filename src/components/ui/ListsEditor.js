@@ -172,11 +172,13 @@ class ListsEditor extends Component<Props, State> {
     archiveList: this.props.list.filter(item => item.archived)
   }
 
+  getCurrentListName = (active: boolean = true) => {
+    return active ? 'activeList' : 'archiveList'
+  }
+
   getSelection = (active: boolean = true) => {
-    const { activeList, archiveList } = this.state
-    return active
-      ? activeList.filter(each => each.selected)
-      : archiveList.filter(each => each.selected)
+    const currentList = this.state[this.getCurrentListName(active)] || []
+    return currentList.filter(each => each.selected)
   }
 
   handleSearch = (search: string) => {
@@ -184,19 +186,16 @@ class ListsEditor extends Component<Props, State> {
   }
 
   handleSelect = (item: Item, active: boolean = true) => {
-    const { activeList, archiveList } = this.state
-    const updatedList = active
-      ? { activeList: activeList.map(each => each.id === item.id ? { ...item } : each) }
-      : { archiveList: archiveList.map(each => each.id === item.id ? { ...item } : each) }
-    const selection = active
-      ? (updatedList.activeList ? updatedList.activeList.filter(each => each.selected) : [])
-      : (updatedList.archiveList ? updatedList.archiveList.filter(each => each.selected) : [])
+    const currentListName = this.getCurrentListName(active)
+    const currentList = this.state[currentListName] || []
+    const updatedList = currentList.map(each => each.id === item.id ? { ...item } : each)
+    const selection = updatedList.filter(each => each.selected)
     this.setState(preState => ({
       ...preState,
-      ...updatedList,
+      ...{ [currentListName]: updatedList },
       confirmDeletion: {
-        activeList: preState.confirmDeletion.activeList && selection.length > 0,
-        archiveList: preState.confirmDeletion.archiveList && selection.length > 0
+        ...preState.confirmDeletion,
+        ...{ [currentListName]: preState.confirmDeletion[currentListName] && selection.length > 0 }
       }
     }))
   }
@@ -224,13 +223,11 @@ class ListsEditor extends Component<Props, State> {
 
   handleDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
-    const updatedList = active
-      ? { activeList: true }
-      : { archiveList: true }
+    const currentListName = this.getCurrentListName(active)
     this.setState(preState => ({
       confirmDeletion: {
         ...preState.confirmDeletion,
-        ...updatedList
+        ...{ [currentListName]: true }
       }
     }))
   }
@@ -243,13 +240,11 @@ class ListsEditor extends Component<Props, State> {
 
   cancelDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
-    const updatedList = active
-      ? { activeList: false }
-      : { archiveList: false }
+    const currentListName = this.getCurrentListName(active)
     this.setState(preState => ({
       confirmDeletion: {
         ...preState.confirmDeletion,
-        ...updatedList
+        ...{ [currentListName]: false }
       }
     }))
   }
@@ -260,13 +255,15 @@ class ListsEditor extends Component<Props, State> {
   }
 
   renderListing = (active: boolean = true) => {
+    const currentListName = this.getCurrentListName(active)
+    const currentList = this.state[currentListName] || []
     const { collectionName } = this.props
     const { confirmDeletion, activeList, archiveList } = this.state
     const selection = this.getSelection(active)
     return (
       <div className={cx.listing}>
         <SelectBox
-          items={active ? activeList : archiveList}
+          items={currentList}
           collectionName={collectionName}
           expanded
           visibleItems={7}
@@ -277,10 +274,7 @@ class ListsEditor extends Component<Props, State> {
           onArchive={item => this.handleArchiveItem(item)}
           onDelete={item => this.handleDeleteItem(item)}
         />
-        {(active
-          ? confirmDeletion.activeList
-          : confirmDeletion.archiveList
-        ) ? (
+        {confirmDeletion[currentListName] ? (
           <div className={cx.control}>
             <div className={cx.deleting}>
               <p>Delete <strong>{selection.length}</strong> {pluralize(selection.length, 'list', true)}</p>
