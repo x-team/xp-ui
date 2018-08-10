@@ -10,6 +10,7 @@ import Loader from './Loader'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
+import { pluralize } from '../../utils/helpers'
 
 const cmz = require('cmz')
 
@@ -58,15 +59,18 @@ const cx = {
     typo.sectionHeading,
     `
       margin: 0
-      padding: 30px
+      padding: 20px
+      line-height: 1
     `
   ),
   listing: cmz(``),
   control: cmz(`
     display: flex
     justify-content: space-between
+    align-items: center
+    min-height: 60px
     margin: 0
-    padding: 40px 20px
+    padding: 20px
   `),
   button: cmz(`
     & {
@@ -114,6 +118,19 @@ const cx = {
 
     & > div > div {
       margin: 0
+    }
+  `),
+  confirm: cmz(`
+    display: flex
+  `),
+  deleting: cmz(`
+    & p {
+      margin: 0
+    }
+  `),
+  cancel: cmz(`
+    & > * {
+      margin-left: 10px
     }
   `),
   saving: cmz(`
@@ -166,33 +183,27 @@ class ListsEditor extends Component<Props, State> {
     this.setState({ search })
   }
 
-  handleSelect = (item: Item) => {
+  handleSelect = (item: Item, active: boolean = true) => {
     const { activeList, archiveList } = this.state
-    const isActive = activeList.some(each => each.id === item.id)
-    this.setState(() => ({
-      activeList: isActive
-        ? activeList.map(each => each.id === item.id ? { ...item } : each)
-        : activeList,
-      archiveList: !isActive
-        ? archiveList.map(each => each.id === item.id ? { ...item } : each)
-        : archiveList
+    const updatedList = active
+      ? { activeList: activeList.map(each => each.id === item.id ? { ...item } : each) }
+      : { archiveList: archiveList.map(each => each.id === item.id ? { ...item } : each) }
+    const selection = active
+      ? (updatedList.activeList ? updatedList.activeList.filter(each => each.selected) : [])
+      : (updatedList.archiveList ? updatedList.archiveList.filter(each => each.selected) : [])
+    this.setState(preState => ({
+      ...preState,
+      ...updatedList,
+      confirmDeletion: {
+        activeList: preState.confirmDeletion.activeList && selection.length > 0,
+        archiveList: preState.confirmDeletion.archiveList && selection.length > 0
+      }
     }))
   }
 
   handleEdit = (item: Item) => {
     const { onEdit } = this.props
     onEdit && onEdit(item)
-    // const { activeList, archiveList } = this.state
-    // const isActive = activeList.some(each => each.id === item.id)
-    // this.setState(() => ({
-    //   editing: true,
-    //   activeList: isActive
-    //     ? activeList.map(each => each.id === item.id ? { ...item, editing: false } : each)
-    //     : activeList,
-    //   archiveList: !isActive
-    //     ? archiveList.map(each => each.id === item.id ? { ...item, editing: false } : each)
-    //     : archiveList
-    // }))
   }
 
   handleArchiveItem = (item: Item) => {
@@ -204,35 +215,6 @@ class ListsEditor extends Component<Props, State> {
     event && event.stopPropagation()
     const { onArchive } = this.props
     onArchive && onArchive(this.getSelection(active))
-    // this.setState(() => ({
-    //   editing: true,
-    //   activeList: active
-    //     ? [
-    //       ...activeList
-    //         .filter(each => !each.selected),
-    //       ...archiveList
-    //         .filter(each => each.selected)
-    //         .map(each => ({ ...each, selected: false, archived: false }))
-    //     ] : [
-    //       ...activeList,
-    //       ...archiveList
-    //         .filter(each => each.selected)
-    //         .map(each => ({ ...each, selected: false, archived: false }))
-    //     ],
-    //   archiveList: !active
-    //     ? [
-    //       ...archiveList
-    //         .filter(each => !each.selected),
-    //       ...activeList
-    //         .filter(each => each.selected)
-    //         .map(each => ({ ...each, selected: false, archived: true }))
-    //     ] : [
-    //       ...archiveList,
-    //       ...activeList
-    //         .filter(each => each.selected)
-    //         .map(each => ({ ...each, selected: false, archived: true }))
-    //     ]
-    // }))
   }
 
   handleDeleteItem = (item: Item) => {
@@ -242,25 +224,15 @@ class ListsEditor extends Component<Props, State> {
 
   handleDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
-    const currentList = active
+    const updatedList = active
       ? { activeList: true }
       : { archiveList: true }
     this.setState(preState => ({
       confirmDeletion: {
         ...preState.confirmDeletion,
-        ...currentList
+        ...updatedList
       }
     }))
-    //   const { activeList, archiveList } = this.state
-    //   this.setState(() => ({
-    //     editing: true,
-    //     activeList: active
-    //       ? activeList.filter(each => !each.selected)
-    //       : activeList,
-    //     archiveList: !active
-    //       ? archiveList.filter(each => !each.selected)
-    //       : archiveList
-    //   }))
   }
 
   confirmDelete = (event: any, active: boolean = true) => {
@@ -271,13 +243,13 @@ class ListsEditor extends Component<Props, State> {
 
   cancelDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
-    const currentList = active
+    const updatedList = active
       ? { activeList: false }
       : { archiveList: false }
     this.setState(preState => ({
       confirmDeletion: {
         ...preState.confirmDeletion,
-        ...currentList
+        ...updatedList
       }
     }))
   }
@@ -285,130 +257,85 @@ class ListsEditor extends Component<Props, State> {
   handleCreateNew = (name: string) => {
     const { onCreateNew } = this.props
     onCreateNew && onCreateNew(name)
-    // this.setState(() => ({
-    //   search: '',
-    //   editing: true,
-    //   activeList: [
-    //     { id: +new Date(), value: name },
-    //     ...this.state.activeList
-    //   ]
-    // }))
   }
 
-  hasSelected = (list: Array<Item> = []) => {
-    const selected = list.filter(item => item.selected)
-    return selected && selected.length > 0
+  renderListing = (active: boolean = true) => {
+    const { collectionName } = this.props
+    const { confirmDeletion, activeList, archiveList } = this.state
+    const selection = this.getSelection(active)
+    return (
+      <div className={cx.listing}>
+        <SelectBox
+          items={active ? activeList : archiveList}
+          collectionName={collectionName}
+          expanded
+          visibleItems={7}
+          search={this.state.search}
+          onSearch={search => this.handleSearch(search)}
+          onSelect={item => this.handleSelect(item, active)}
+          onEdit={item => this.handleEdit(item)}
+          onArchive={item => this.handleArchiveItem(item)}
+          onDelete={item => this.handleDeleteItem(item)}
+        />
+        {(active
+          ? confirmDeletion.activeList
+          : confirmDeletion.archiveList
+        ) ? (
+          <div className={cx.control}>
+            <div className={cx.deleting}>
+              <p>Delete <strong>{selection.length}</strong> {pluralize(selection.length, 'list', true)}</p>
+              <p><strong>Are you sure?</strong></p>
+            </div>
+            <div className={cx.cancel}>
+              <Button
+                onClick={(e) => this.cancelDelete(e, active)}
+                pseudolink
+                className={cx.button}
+              >
+                CANCEL
+              </Button>
+              <Button
+                onClick={(e) => this.confirmDelete(e, active)}
+                className={[cx.button, cx.archive].join(' ')}
+              >
+                Yes
+              </Button>
+            </div>
+          </div>
+        ) : (
+          <div className={cx.control}>
+            <Button
+              disabled={selection.length === 0}
+              onClick={(e) => this.handleDelete(e, active)}
+              className={cx.button}
+              outlined
+            >
+              Delete
+            </Button>
+            <Button
+              disabled={selection.length === 0}
+              onClick={(e) => this.handleArchive(e, active)}
+              className={[cx.button, cx.archive].join(' ')}
+            >
+              {active ? 'Archive' : 'Unarchive' }
+            </Button>
+          </div>
+        )}
+      </div>
+    )
   }
 
   render () {
-    const { status, collectionName } = this.props
-    const { confirmDeletion, activeList, archiveList } = this.state
+    const { collectionName } = this.props
     return (
       <div className={cx.listseditor}>
         <h1 className={cx.heading}>Edit {collectionName}</h1>
         <Tabs className={cx.tabs} tabIndex={1}>
           <Tab title='Active'>
-            <div className={cx.listing}>
-              <SelectBox
-                items={activeList}
-                collectionName={collectionName}
-                expanded
-                visibleItems={7}
-                search={this.state.search}
-                onSearch={search => this.handleSearch(search)}
-                onSelect={item => this.handleSelect(item)}
-                onEdit={item => this.handleEdit(item)}
-                onArchive={item => this.handleArchiveItem(item)}
-                onDelete={item => this.handleDeleteItem(item)}
-                onCreateNew={listName => this.handleCreateNew(listName)}
-              />
-              <div className={cx.control}>
-                {confirmDeletion.activeList ? (
-                  <div>confirm delete?
-                    <Button
-                      onClick={(e) => this.cancelDelete(e, true)}
-                      outlined
-                      className={cx.button}
-                    >
-                      Cancel
-                    </Button>
-                    <Button
-                      onClick={(e) => this.confirmDelete(e, true)}
-                      className={cx.button}
-                    >
-                      Yes
-                    </Button>
-                  </div>
-                ) : (
-                  <Button
-                    disabled={!this.hasSelected(activeList)}
-                    onClick={(e) => this.handleDelete(e, true)}
-                    className={cx.button}
-                    outlined
-                  >
-                    Delete
-                  </Button>
-                )}
-                <Button
-                  disabled={!this.hasSelected(activeList)}
-                  onClick={(e) => this.handleArchive(e, true)}
-                  className={[cx.button, cx.archive].join(' ')}
-                >
-                  Archive
-                </Button>
-              </div>
-            </div>
+            {this.renderListing(true)}
           </Tab>
           <Tab title='Archive'>
-            <div className={cx.listing}>
-              <SelectBox
-                items={archiveList}
-                collectionName={collectionName}
-                expanded
-                visibleItems={7}
-                search={this.state.search}
-                onSearch={search => this.handleSearch(search)}
-                onSelect={item => this.handleSelect(item)}
-                onEdit={item => this.handleEdit(item)}
-                onArchive={item => this.handleArchiveItem(item)}
-                onDelete={item => this.handleDeleteItem(item)}
-              />
-              <div className={cx.control}>
-                {confirmDeletion.archiveList ? (
-                  <div>confirm delete?
-                    <Button
-                      onClick={(e) => this.cancelDelete(e, false)}
-                      outlined
-                      className={cx.button}
-                    >
-                      Cancel
-                    </Button>
-                    <Button
-                      onClick={(e) => this.confirmDelete(e, false)}
-                      className={cx.button}
-                    >
-                      Yes
-                    </Button>
-                  </div>
-                ) : (
-                  <Button
-                    disabled={!this.hasSelected(archiveList)}
-                    onClick={(e) => this.handleDelete(e, false)}
-                    className={cx.button}
-                    outlined
-                  >
-                    Delete
-                  </Button>
-                )}
-                <Button
-                  disabled={!this.hasSelected(archiveList)}
-                  onClick={(e) => this.handleArchive(e, false)}
-                  className={[cx.button, cx.archive].join(' ')}
-                >
-                  Unarchive
-                </Button>
-              </div>
-            </div>
+            {this.renderListing(false)}
           </Tab>
         </Tabs>
       </div>
