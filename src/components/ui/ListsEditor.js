@@ -209,8 +209,16 @@ class ListsEditor extends Component<Props, State> {
 
   confirmDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
+    const currentListName = this.getCurrentListName(active)
     const { onDelete } = this.props
-    onDelete && onDelete(this.getSelection(active))
+    this.setState(preState => ({
+      confirmDeletion: {
+        ...preState.confirmDeletion,
+        ...{ [currentListName]: false }
+      }
+    }), () => {
+      onDelete && onDelete(this.getSelection(active))
+    })
   }
 
   cancelDelete = (event: any, active: boolean = true) => {
