@@ -157,9 +157,6 @@ const styles = {
     & {
       min-height: 30px
       padding: 15px 22px
-      display: flex
-      justify-content: space-between
-      align-items: center
     }
 
     &:hover {
@@ -170,9 +167,14 @@ const styles = {
       background-color: transparent
     }
 
-    &:not(.isCreating):not(.isSelecting):not(.isArchiving):not(.isDeleting):hover .editablebuton {
+    &:hover .editablebuton {
       display: flex
     }
+  `),
+  controlable: cmz(`
+    display: flex
+    justify-content: space-between
+    align-items: center
   `),
   lined: cmz(`
     & {
@@ -294,15 +296,18 @@ const styles = {
   `)
 }
 
+type Status = 'selecting' | 'editing' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm-delete' | 'deleting' | 'deleted' | 'archiving' | 'archived'
+
 type Item = {
   id: number,
   value: string,
   selected?: boolean,
-  selecting?: boolean,
-  editing?: boolean | string,
-  creating?: boolean,
-  hidden?: boolean,
-  archived?: boolean
+  selecting?: boolean, // deprecated
+  editing?: boolean | string, // should be string only
+  creating?: boolean, // deprecated
+  hidden?: boolean, // deprecated
+  archived?: boolean, // deprecated
+  status?: Status
 }
 
 type Props = {
@@ -331,7 +336,7 @@ type State = {
   items: Array<Item>,
   view: Array<Item>,
   expanded?: boolean,
-  creating?: boolean | string,
+  creating?: boolean | string, // deprecated - should be an item status
   search?: string
 }
 
@@ -538,47 +543,19 @@ class SelectBox extends Component<Props, State> {
 
     const filteredItems = view && view.filter((item: Item) => !item.hidden)
 
-    const renderCheckboxOrString = (item: Item) => onSelect ? (
-      item.selecting ? (
-        <span className={styles.selecting}>
-          <span className={styles.selectingdots} />
-          {item.value}
-        </span>
-      ) : (
-        <InputField
-          key={`${item.id}${item.selected ? 'selected' : 'unselected'}`}
-          type='checkbox'
-          label={item.value}
-          name={item.value}
-          checked={!!item.selected}
-          onChange={() => this.handleSelect(item)}
-        />
-      )
-    ) : (
-      item.selecting ? (
-        <span className={styles.labelevent}>
-          {item.value}
-        </span>
-      ) : (
-        <span className={styles.label} onClick={() => this.handleClick(item)}>
-          {item.value}
-        </span>
-      )
-    )
-
-    const renderEdit = (item) => onEdit && (
+    const renderEditButton = (item) => (
       <span className={[styles.controlbutton, styles.editablebuton].join(' ')} onClick={() => this.handleStartEditing(item)}>
         <SvgIcon icon='edit' color='grayscale' />
       </span>
     )
 
-    const renderArchive = (item) => onArchive && (
+    const renderArchiveButton = (item) => (
       <span className={[styles.controlbutton, styles.editablebuton].join(' ')} onClick={() => this.handleArchive(item)}>
         <SvgIcon icon='archive' color='grayscale' />
       </span>
     )
 
-    const renderDelete = (item) => onDelete && (
+    const renderDeleteButton = (item) => (
       <span className={[styles.controlbutton, styles.editablebuton].join(' ')} onClick={() => this.handleStartDeleting(item)}>
         <SvgIcon icon='trashcan2' color='grayscale' />
       </span>
@@ -587,58 +564,143 @@ class SelectBox extends Component<Props, State> {
     const itemClasses = (item) => ([
       styles.item,
       (lined || !expanded) ? styles.lined : '',
-      (item.editing && item.editing !== item.value) ? styles.editing : '',
-      // item.archiving ? 'isArchiving' : '',
-      // item.deleting ? 'isDeleting' : '',
-      item.creating ? 'isCreating' : '',
-      item.selecting ? 'isSelecting' : ''
+      (item.editing && item.editing !== item.value) ? styles.editing : ''
     ].join(' '))
 
-    const renderIsCreatingOrEditing = (item: Item) => item.creating ? (
-      <li className={itemClasses(item)} key={item.id}>
-        Creating "{item.editing}"...
-      </li>
-    ) : (
-      <li className={itemClasses(item)} key={item.id}>
-        <span className={styles.editinput}>
-          <InputField
-            name={item.value}
-            value={item.editing}
-            onChange={(input = {}) => this.handleEditChange(item, input)}
-            autoFocus='autofocus'
-            onFocus={(e) => {
-              const val = e.target.value
-              e.target.value = ''
-              e.target.value = val
-            }}
-            onKeyDown={(e: any) => e.stopPropagation()}
-            onKeyPress={(e: any) => e.stopPropagation()}
-            onKeyUp={(e: any) => this.handleEditingKeyUp(e, item)}
-          />
-        </span>
-        <span className={styles.control}>
-          <span className={styles.controlbutton} onClick={() => this.handleCancelEdit(item)}>
-            <SvgIcon icon='x' color='grayscale' />
-          </span>
-          <span className={styles.controlbutton} onClick={() => this.handleEdit(item)}>
-            <SvgIcon icon='check' color='grayscale' />
-          </span>
-        </span>
-      </li>
+    const renderEditingStatus = (item: Item) => (
+      <span className={styles.editinput}>
+        <InputField
+          name={item.value}
+          value={item.editing}
+          onChange={(input = {}) => this.handleEditChange(item, input)}
+          autoFocus='autofocus'
+          onFocus={(e) => {
+            const val = e.target.value
+            e.target.value = ''
+            e.target.value = val
+          }}
+          onKeyDown={(e: any) => e.stopPropagation()}
+          onKeyPress={(e: any) => e.stopPropagation()}
+          onKeyUp={(e: any) => this.handleEditingKeyUp(e, item)}
+        />
+      </span>
     )
 
-    const renderIsEditing = (item: Item) => item.editing
-      ? renderIsCreatingOrEditing(item)
-      : (
+    const renderEditingStatusControl = (item: Item) => (
+      <span className={styles.control}>
+        <span className={styles.controlbutton} onClick={() => this.handleCancelEdit(item)}>
+          <SvgIcon icon='x' color='grayscale' />
+        </span>
+        <span className={styles.controlbutton} onClick={() => this.handleEdit(item)}>
+          <SvgIcon icon='check' color='grayscale' />
+        </span>
+      </span>
+    )
+
+    const renderSavingStatus = (item: Item) => item.status
+
+    const renderEditedStatus = (item: Item) => item.status
+
+    const renderCreatingStatus = (item: Item) => (
+      `Creating "${item.editing}"...`
+    )
+
+    const renderCreatedStatus = (item: Item) => item.status
+
+    const renderConfirmStatus = (item: Item) => item.status
+
+    const renderDeletingStatus = (item: Item) => item.status
+
+    const renderDeletedStatus = (item: Item) => item.status
+
+    const renderArchivingStatus = (item: Item) => item.status
+
+    const renderArchivedStatus = (item: Item) => item.status
+
+    const renderSelectingStatus = (item: Item) => onSelect ? (
+      <span className={styles.selecting}>
+        <span className={styles.selectingdots} />
+        {item.value}
+      </span>
+    ) : (
+      <span className={styles.labelevent}>
+        {item.value}
+      </span>
+    )
+
+    const renderDefaultStatus = (item: Item) => onSelect ? (
+      <InputField
+        key={`${item.id}${item.selected ? 'selected' : 'unselected'}`}
+        type='checkbox'
+        label={item.value}
+        name={item.value}
+        checked={!!item.selected}
+        onChange={() => this.handleSelect(item)}
+      />
+    ) : (
+      <span className={styles.label} onClick={() => this.handleClick(item)}>
+        {item.value}
+      </span>
+    )
+
+    const renderDefaultStatusControl = (item: Item) => (
+      <span className={styles.control}>
+        {onEdit && renderEditButton(item)}
+        {onArchive && renderArchiveButton(item)}
+        {onDelete && renderDeleteButton(item)}
+      </span>
+    )
+
+    const getRenderWithFallback = (item: Item, method: Function, render: Function, control: Function) => method ? (
+      <span className={styles.controlable}>
+        {render && render(item)}
+        {control && control(item)}
+      </span>
+    ) : (
+      <span className={styles.controlable}>
+        {renderDefaultStatus(item)}
+        {renderDefaultStatusControl(item)}
+      </span>
+    )
+
+    const renderItem = (item: Item) => {
+      const { status } = item
+
+      const getRenderByStatus = () => {
+        switch (status) {
+          case 'selecting':
+            return renderSelectingStatus(item)
+          case 'editing':
+            return getRenderWithFallback(item, onEdit, renderEditingStatus, renderEditingStatusControl)
+          case 'saving':
+            return getRenderWithFallback(item, onEdit, renderSavingStatus)
+          case 'edited':
+            return getRenderWithFallback(item, onEdit, renderEditedStatus)
+          case 'creating':
+            return getRenderWithFallback(item, onCreateNew, renderCreatingStatus)
+          case 'created':
+            return getRenderWithFallback(item, onCreateNew, renderCreatedStatus)
+          case 'confirm-delete':
+            return getRenderWithFallback(item, onDelete, renderConfirmStatus)
+          case 'deleting':
+            return getRenderWithFallback(item, onDelete, renderDeletingStatus)
+          case 'deleted':
+            return getRenderWithFallback(item, onDelete, renderDeletedStatus)
+          case 'archiving':
+            return getRenderWithFallback(item, onArchive, renderArchivingStatus)
+          case 'archived':
+            return getRenderWithFallback(item, onArchive, renderArchivedStatus)
+          default:
+            return getRenderWithFallback(item)
+        }
+      }
+
+      return (
         <li className={itemClasses(item)} key={item.id}>
-          {renderCheckboxOrString(item)}
-          <span className={styles.control}>
-            {renderEdit(item)}
-            {renderArchive(item)}
-            {renderDelete(item)}
-          </span>
+          {getRenderByStatus()}
         </li>
       )
+    }
 
     const renderItems = () => (
       <ul className={[styles.list, expanded && 'expanded'].join(' ')} style={{
@@ -660,7 +722,7 @@ class SelectBox extends Component<Props, State> {
         {creating && (
           <li><span className={styles.nothinglabel}>Adding new {collectionName} "{creating}"...</span></li>
         )}
-        {filteredItems.map(item => renderIsEditing(item))}
+        {filteredItems.map(item => renderItem(item))}
       </ul>
     )
 

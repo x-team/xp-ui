@@ -130,125 +130,90 @@ const itemsArray = [
   {
     id: 3,
     value: 'selected',
-    selected: true,
-    state: 'selected'
+    selected: true
   },
   {
     id: 4,
     value: '(un)selecting',
     selecting: true,
-    state: 'selecting'
+    status: 'selecting'
   },
   {
     id: 5,
     value: 'editing (no changes yet)',
-    editing: 'editing (no changes yet)'
+    editing: 'editing (no changes yet)',
+    status: 'editing'
   },
   {
     id: 6,
     value: 'editing',
-    editing: 'editing (this is changed but not yet saved)'
+    editing: 'editing (this is changed but not yet saved)',
+    status: 'editing'
   },
   {
     id: 7,
-    value: 'saving edition'
+    value: 'saving edition',
+    status: 'saving'
   },
   {
     id: 8,
-    value: 'edited'
+    value: 'edited',
+    status: 'edited'
   },
   {
     id: 9,
     value: 'creating',
     editing: 'creating this',
     creating: true,
-    state: 'creating'
+    status: 'creating'
   },
   {
     id: 10,
     value: 'created',
     saved: true,
-    state: 'created'
+    status: 'created'
   },
   {
     id: 11,
     value: 'confirm delete',
-    state: 'confirm-delete'
+    status: 'confirm-delete'
   },
   {
     id: 12,
     value: 'deleting',
     deleting: true,
-    state: 'deleting'
+    status: 'deleting'
   },
   {
     id: 13,
     value: 'deleted',
     deleted: true,
-    state: 'deleted'
+    status: 'deleted'
   },
   {
     id: 14,
     value: 'archiving',
     archiving: true,
-    state: 'archiving'
+    status: 'archiving'
   },
   {
     id: 15,
     value: 'archived',
     archived: true,
-    state: 'archived'
+    status: 'archived'
   }
 ];
-const mixedStatesArray = [
-  {
-    id: 222,
-    value: 'creating',
-    selected: true,
-    selecting: true,
-    editing: 'creating this',
-    creating: true
-  },
-  {
-    id: 333,
-    value: 'selecting',
-    selected: true,
-    selecting: true,
-    creating: true
-  },
-  {
-    id: 444,
-    value: 'editing',
-    selected: true,
-    selecting: true,
-    editing: 'editing this'
-  }
-];
-<div>
-  <SelectBox
-    collectionName='Stuff'
-    items={itemsArray}
-    lined={true}
-    expanded={true}
-    onSelect={item => console.log('onSelect:', item)}
-    onEdit={item => console.log('onEdit:', item)}
-    onArchive={item => console.log('onArchive:', item)}
-    onDelete={item => console.log('onDelete:', item)}
-    onCreateNew={listName => console.log('onCreateNew:', listName)}
-  />
-  <p>Bullet-proofing some possible state conflicts:</p>
-  <SelectBox
-    collectionName='Stuff'
-    items={mixedStatesArray}
-    lined={true}
-    expanded={true}
-    onSelect={item => console.log('onSelect:', item)}
-    onEdit={item => console.log('onEdit:', item)}
-    onArchive={item => console.log('onArchive:', item)}
-    onDelete={item => console.log('onDelete:', item)}
-    onCreateNew={listName => console.log('onCreateNew:', listName)}
-  />
-</div>
+<SelectBox
+  collectionName='Stuff'
+  items={itemsArray}
+  lined={true}
+  expanded={true}
+  onSelect={item => console.log('onSelect:', item)}
+  onEdit={item => console.log('onEdit:', item)}
+  onArchive={item => console.log('onArchive:', item)}
+  onDelete={item => console.log('onDelete:', item)}
+  onCreateNew={listName => console.log('onCreateNew:', listName)}
+/>
 ```
 
 Examples of searching and creating simultaneously:
