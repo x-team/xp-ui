@@ -1,6 +1,6 @@
 exports[`SelectBox-13 1`] = `
 <div
-  className="AutoUI_ui_SelectBox-17"
+  className="AutoUI_ui_SelectBox-18"
   style={
     Object {
       "width": "100%",
@@ -8,7 +8,7 @@ exports[`SelectBox-13 1`] = `
   }>
   <div>
     <div
-      className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-22"
+      className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-23"
       onMouseEnter={false}
       onMouseLeave={false}>
       <div
@@ -17,9 +17,9 @@ exports[`SelectBox-13 1`] = `
         <span
           className="AutoUI_ui_Dropdown-42">
           <div
-            className="AutoUI_ui_SelectBox-77">
+            className="AutoUI_ui_SelectBox-78">
             <div
-              className="AutoUI_ui_SelectBox-86">
+              className="AutoUI_ui_SelectBox-87">
               <svg
                 height="17px"
                 viewBox="0 0 16 17"
@@ -30,33 +30,13 @@ exports[`SelectBox-13 1`] = `
                   stroke="none"
                   strokeWidth="1">
                   <circle
+                    className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
                     cx="7.5"
                     cy="7.5"
-                    r="6.5"
-                    stroke={
-                      Object {
-                        "color": Array [
-                          178,
-                          182,
-                          188,
-                        ],
-                        "model": "rgb",
-                        "valpha": 1,
-                      }
-                    } />
+                    r="6.5" />
                   <path
+                    className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
                     d="M11.7538745,12.6062275 L15.5,16.5"
-                    stroke={
-                      Object {
-                        "color": Array [
-                          178,
-                          182,
-                          188,
-                        ],
-                        "model": "rgb",
-                        "valpha": 1,
-                      }
-                    }
                     strokeLinecap="square" />
                 </g>
               </svg>
@@ -65,7 +45,7 @@ exports[`SelectBox-13 1`] = `
               <input
                 aria-labelledby="label-search"
                 autoComplete="off"
-                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-81"
+                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-82"
                 id="search"
                 name="search"
                 placeholder="Search"
@@ -79,9 +59,9 @@ exports[`SelectBox-13 1`] = `
       <div
         className="AutoUI_ui_Dropdown-52    ">
         <div
-          className="AutoUI_ui_SelectBox-153">
+          className="AutoUI_ui_SelectBox-142">
           <ul
-            className="AutoUI_ui_SelectBox-136 false"
+            className="AutoUI_ui_SelectBox-125 false"
             style={
               Object {
                 "height": "auto",

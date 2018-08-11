@@ -42,17 +42,7 @@ exports[`AttachFiles-1 1`] = `
             stroke="none"
             strokeWidth="1">
             <g
-              fill={
-                Object {
-                  "color": Array [
-                    178,
-                    182,
-                    188,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
               transform="translate(-1272.000000, -1013.000000)">
               <g
                 transform="translate(1272.000000, 1013.000000)">
@@ -115,17 +105,7 @@ exports[`AttachFiles-1 1`] = `
             stroke="none"
             strokeWidth="1">
             <g
-              fill={
-                Object {
-                  "color": Array [
-                    178,
-                    182,
-                    188,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
               transform="translate(-1272.000000, -1013.000000)">
               <g
                 transform="translate(1272.000000, 1013.000000)">
@@ -197,17 +177,7 @@ exports[`AttachFiles-1 1`] = `
             strokeLinecap="square"
             strokeWidth="1">
             <g
-              stroke={
-                Object {
-                  "color": Array [
-                    178,
-                    182,
-                    188,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
               strokeWidth="2"
               transform="translate(-1294.000000, -1073.000000)">
               <g
@@ -264,17 +234,7 @@ exports[`AttachFiles-1 1`] = `
             strokeLinecap="square"
             strokeWidth="1">
             <g
-              stroke={
-                Object {
-                  "color": Array [
-                    178,
-                    182,
-                    188,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
               strokeWidth="2"
               transform="translate(-1294.000000, -1073.000000)">
               <g

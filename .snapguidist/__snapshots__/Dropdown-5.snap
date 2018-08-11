@@ -17,17 +17,7 @@ exports[`Dropdown-5 1`] = `
           strokeLinecap="square"
           strokeWidth="1">
           <g
-            stroke={
-              Object {
-                "color": Array [
-                  90,
-                  86,
-                  101,
-                ],
-                "model": "rgb",
-                "valpha": 1,
-              }
-            }
+            className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-67"
             transform="translate(1.000000, 0.000000)">
             <path
               d="M0.184210526,1 L13.8157895,1" />
