@@ -63,7 +63,10 @@ const itemsArray = Array(18).fill({}).map((item, i) => ({
     <ListsEditor
       collectionName='Lists'
       list={itemsArray}
-      onSave={list => console.log('onSave:', list)}
+      onEdit={list => console.log('onEdit:', list)}
+      onArchive={lists => console.log('onArchive:', lists)}
+      onDelete={lists => console.log('onDelete:', lists)}
+      onCreateNew={listName => console.log('onCreateNew:', listName)}
     />
   </Modal>
 </div>

@@ -122,13 +122,6 @@ const cx = {
     }
   `),
   label: cmz(typo.baseText),
-  labelevent: cmz(
-    typo.baseText,
-    `
-      display: flex
-      padding: 15px 22px
-    `
-  ),
   list: cmz(`
     & {
       list-style: none
@@ -213,16 +206,15 @@ const cx = {
   selecting: cmz(
     typo.baseText,
     `
-      display: flex
       position: relative
-      padding: 15px 22px 15px 52px
+      padding-left: 30px
     `
   ),
   selectingdots: cmz(`
     & {
       position: absolute
       top: calc(50% - 9px)
-      left: 20px
+      left: 0
       width: 20px
       height: 20px
       border-top-color: ${theme.lineSilver2}
@@ -684,8 +676,6 @@ class SelectBox extends Component<Props, State> {
       `Deleting "${item.value}"...`
     )
 
-    const renderDeletedStatus = (item: Item) => null
-
     const renderArchivingStatus = (item: Item) => (
       `Archiving "${item.value}"...`
     )
@@ -695,11 +685,7 @@ class SelectBox extends Component<Props, State> {
         <span className={cx.selectingdots} />
         {item.value}
       </span>
-    ) : (
-      <span className={cx.labelevent}>
-        {item.value}
-      </span>
-    )
+    ) : item.value
 
     const renderDefaultStatus = (item: Item) => onSelect ? (
       <InputField
@@ -749,7 +735,11 @@ class SelectBox extends Component<Props, State> {
       const getRenderByStatus = () => {
         switch (status) {
           case 'selecting':
-            return renderSelectingStatus(item)
+            return getRenderWithFallback({
+              item,
+              method: (onSelect || onClick),
+              render: renderSelectingStatus
+            })
           case 'editing':
             return getRenderWithFallback({
               item,
@@ -782,7 +772,7 @@ class SelectBox extends Component<Props, State> {
               render: renderDeletingStatus
             })
           case 'deleted':
-            return renderDeletedStatus(item)
+            return null
           case 'archiving':
             return getRenderWithFallback({
               item,

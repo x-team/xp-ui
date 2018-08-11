@@ -1,5 +1,3 @@
-_Dev note: The actions 'toggle selection', 'save edition' and 'create new item' requires a state wrapper to fully work in integration. The transitional states 'selecting' and 'creating' are optional and their management is expected to be dealt in the state wrapper. These features are not available in this showcase for manual testing. Please check the examples below for items on transitional states provided by props._
-
 Simple view for Add to List:
 
 ```

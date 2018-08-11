@@ -167,7 +167,6 @@ const extraStyles = {
     display: block
     margin: 0 auto
     width: 100%
-    text-transform: initial
   `),
 
   rounded: cmz(`
@@ -208,13 +207,12 @@ const extraStyles = {
     }
   `),
 
-  selectbox: cmz(`
+  selectbox: cmz(sizeStyles.large, `
     & {
       background-color: ${theme.baseBrighter}
       border-color: transparent
       color: ${theme.baseRed}
       padding: 20px
-      font-size: 16px !important
     }
 
     &:hover {

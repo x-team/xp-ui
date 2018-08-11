@@ -128,7 +128,7 @@ SelectBox option button
 
 ```js
 const SvgIcon = require('./SvgIcon.js').default;
-<Button selectbox><SvgIcon icon="edit" /> Edit Lists</Button>
+<Button selectbox size='large'><SvgIcon icon="edit" /> Edit Lists</Button>
 ```
 
 disabled outlined
