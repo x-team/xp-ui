@@ -812,7 +812,7 @@ class SelectBox extends Component<Props, State> {
       )
     }
 
-    const creatingFirst = (x, y) => (x.status === STATUS.CREATING ? -1 : y.status == STATUS.CREATING ? 1 : 0)
+    const creatingFirst = (x, y) => (x.status === STATUS.CREATING ? -1 : y.status === STATUS.CREATING ? 1 : 0)
 
     const renderItems = () => (
       <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
