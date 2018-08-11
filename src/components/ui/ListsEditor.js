@@ -145,6 +145,19 @@ class ListsEditor extends Component<Props, State> {
     archiveList: this.props.list.filter(item => item.archived)
   }
 
+  componentDidUpdate (prevProps: Props) {
+    if (!Object.is(prevProps, this.props)) {
+      this.setState((prevState, props) => {
+        const newState = {
+          ...prevState,
+          activeList: this.props.list.filter(item => !item.archived),
+          archiveList: this.props.list.filter(item => item.archived)
+        }
+        return newState
+      })
+    }
+  }
+
   getCurrentListName = (active: boolean = true) => {
     return active ? 'activeList' : 'archiveList'
   }
@@ -232,7 +245,9 @@ class ListsEditor extends Component<Props, State> {
 
   handleCreateNew = (name: string) => {
     const { onCreateNew } = this.props
-    onCreateNew && onCreateNew(name)
+    this.setState({ search: '' }, () => {
+      onCreateNew && onCreateNew(name)
+    })
   }
 
   renderListing = (active: boolean = true) => {

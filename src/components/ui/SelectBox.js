@@ -402,11 +402,10 @@ class SelectBox extends Component<Props, State> {
           view: viewItems,
           expanded: this.props.expanded
         }
-
         return newState
       }, () => {
         if (this.state.search !== this.props.search) {
-          this.handleSearch(this.props.search)
+          this.handleSearch({}, this.props.search)
         }
       })
     }
@@ -417,9 +416,10 @@ class SelectBox extends Component<Props, State> {
       const viewItem = view.find(item => item.id === each.id) || {}
       const isEditing = (viewItem.editing || !each.editing) && each.value !== viewItem.editing
       const newItem = {
+        ...each,
         id: each.id,
         value: each.value,
-        selected: each.selected || false,
+        selected: each.selected !== 'undefined' ? each.selected : viewItem.selected,
         editing: (isEditing && viewItem.editing) || '',
         hidden: each.hidden || viewItem.hidden || false,
         status: each.status || ''
@@ -829,7 +829,10 @@ class SelectBox extends Component<Props, State> {
             )}
           </li>
         )}
-        {filteredItems.map(item => renderItem(item))}
+        {filteredItems
+          .sort((x, y) => (x.status === STATUS.CREATING ? -1 : y.status == STATUS.CREATING ? 1 : 0))
+          .map(item => renderItem(item))
+        }
       </ul>
     )
 
