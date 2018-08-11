@@ -128,22 +128,22 @@ exports[`Modal-5 1`] = `
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
-                                id="label-Sample item 1">
+                                id="label-Sample item 7">
                                 <div
                                   className="AutoUI_forms_InputField-78">
                                   <label
                                     className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                                     <input
-                                      aria-labelledby="label-Sample item 1"
+                                      aria-labelledby="label-Sample item 7"
                                       checked={false}
                                       className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
-                                      id="Sample item 1"
-                                      name="Sample item 1"
+                                      id="Sample item 7"
+                                      name="Sample item 7"
                                       required={false}
                                       type="checkbox" />
                                     <span
                                       className="AutoUI_forms_InputField-135" />
-                                    Sample item 1
+                                    Sample item 7
                                   </label>
                                 </div>
                               </label>
@@ -202,22 +202,22 @@ exports[`Modal-5 1`] = `
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
-                                id="label-Sample item 2">
+                                id="label-Sample item 1">
                                 <div
                                   className="AutoUI_forms_InputField-78">
                                   <label
                                     className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                                     <input
-                                      aria-labelledby="label-Sample item 2"
+                                      aria-labelledby="label-Sample item 1"
                                       checked={false}
                                       className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
-                                      id="Sample item 2"
-                                      name="Sample item 2"
+                                      id="Sample item 1"
+                                      name="Sample item 1"
                                       required={false}
                                       type="checkbox" />
                                     <span
                                       className="AutoUI_forms_InputField-135" />
-                                    Sample item 2
+                                    Sample item 1
                                   </label>
                                 </div>
                               </label>
@@ -572,22 +572,22 @@ exports[`Modal-5 1`] = `
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
-                                id="label-Sample item 7">
+                                id="label-Sample item 2">
                                 <div
                                   className="AutoUI_forms_InputField-78">
                                   <label
                                     className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                                     <input
-                                      aria-labelledby="label-Sample item 7"
+                                      aria-labelledby="label-Sample item 2"
                                       checked={false}
                                       className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
-                                      id="Sample item 7"
-                                      name="Sample item 7"
+                                      id="Sample item 2"
+                                      name="Sample item 2"
                                       required={false}
                                       type="checkbox" />
                                     <span
                                       className="AutoUI_forms_InputField-135" />
-                                    Sample item 7
+                                    Sample item 2
                                   </label>
                                 </div>
                               </label>

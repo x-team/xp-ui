@@ -812,6 +812,8 @@ class SelectBox extends Component<Props, State> {
       )
     }
 
+    const creatingFirst = (x, y) => (x.status === STATUS.CREATING ? -1 : y.status == STATUS.CREATING ? 1 : 0)
+
     const renderItems = () => (
       <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
         height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
@@ -829,10 +831,7 @@ class SelectBox extends Component<Props, State> {
             )}
           </li>
         )}
-        {filteredItems
-          .sort((x, y) => (x.status === STATUS.CREATING ? -1 : y.status == STATUS.CREATING ? 1 : 0))
-          .map(item => renderItem(item))
-        }
+        {filteredItems.sort(creatingFirst).map(renderItem)}
       </ul>
     )
 
