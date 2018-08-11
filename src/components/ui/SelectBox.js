@@ -323,6 +323,8 @@ type Item = {
   id: number,
   value: string,
   selected?: boolean,
+  archived?: boolean,
+  editing?: string | null,
   hidden?: boolean,
   status?: ?Status
 }
@@ -418,6 +420,7 @@ class SelectBox extends Component<Props, State> {
         id: each.id,
         value: each.value,
         selected: each.selected || false,
+        editing: (isEditing && viewItem.editing) || '',
         hidden: each.hidden || viewItem.hidden || false,
         status: each.status || ''
       }
@@ -609,7 +612,7 @@ class SelectBox extends Component<Props, State> {
       <span className={cx.editinput}>
         <InputField
           name={item.value}
-          value={item.editing}
+          value={item.editing ? item.editing : ''}
           onChange={(input = {}) => this.handleEditChange(item, input)}
           autoFocus='autofocus'
           onFocus={(e) => {
@@ -634,7 +637,7 @@ class SelectBox extends Component<Props, State> {
           <SvgIcon
             icon='check'
             color={item.editing === item.value ? 'grayscale' : 'text'}
-            hover={item.editing !== item.value ? 'default' : null}
+            hover={item.editing === item.value ? 'grayscale' : 'default'}
           />
         </span>
       </span>
@@ -645,7 +648,7 @@ class SelectBox extends Component<Props, State> {
     )
 
     const renderCreatingStatus = (item: Item) => (
-      `Creating new ${collectionName} "${item.value}"...`
+      `Creating ${collectionName ? `new ${collectionName} ` : ''}"${item.value}"...`
     )
 
     const renderConfirmStatus = (item: Item) => (
@@ -665,7 +668,7 @@ class SelectBox extends Component<Props, State> {
           </Button>
           <Button
             onClick={(e) => this.handleDelete(e, item)}
-            className={[cx.button, cx.archive].join(' ')}
+            className={cx.button}
             size={'small'}
           >
             Yes
@@ -713,7 +716,17 @@ class SelectBox extends Component<Props, State> {
       </span>
     )
 
-    const getRenderWithFallback = ({ item, method, render, control }) => method ? (
+    const getRenderWithFallback = ({
+      item,
+      method,
+      render,
+      control
+    }: {
+      item: Item,
+      method?: Function,
+      render?: Function,
+      control?: Function
+    }) => method ? (
       <div className={cx.controlable}>
         {render && render(item)}
         {control && control(item)}
