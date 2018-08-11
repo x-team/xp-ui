@@ -323,11 +323,7 @@ type Item = {
   id: number,
   value: string,
   selected?: boolean,
-  selecting?: boolean, // deprecated
-  editing?: string,
-  creating?: boolean, // deprecated
-  hidden?: boolean, // deprecated
-  archived?: boolean, // deprecated
+  hidden?: boolean,
   status?: ?Status
 }
 
@@ -339,7 +335,6 @@ type Props = {
   expanded?: boolean,
   hasSearch?: boolean,
   lined?: boolean,
-  creating?: boolean | string,
   search?: string,
   collectionName?: string,
   onSelect?: Function,
@@ -357,8 +352,21 @@ type State = {
   items: Array<Item>,
   view: Array<Item>,
   expanded?: boolean,
-  creating?: boolean | string, // deprecated - should be an item status
   search?: string
+}
+
+const STATUS = {
+  SELECTING: 'selecting',
+  EDITING: 'editing',
+  SAVING: 'saving',
+  EDITED: 'edited',
+  CREATING: 'creating',
+  CREATED: 'created',
+  CONFIRM: 'confirm',
+  DELETING: 'deleting',
+  DELETED: 'deleted',
+  ARCHIVING: 'archiving',
+  ARCHIVED: 'archived'
 }
 
 class SelectBox extends Component<Props, State> {
@@ -375,8 +383,7 @@ class SelectBox extends Component<Props, State> {
     search: this.props.search || '',
     items: this.props.items || [],
     view: this.props.items || [],
-    expanded: this.props.expanded || false,
-    creating: this.props.creating || false
+    expanded: this.props.expanded || false
   }
 
   componentDidMount () {
@@ -391,8 +398,7 @@ class SelectBox extends Component<Props, State> {
           ...prevState,
           items: viewItems,
           view: viewItems,
-          expanded: this.props.expanded,
-          creating: this.props.creating !== 'undefined' ? this.props.creating : false
+          expanded: this.props.expanded
         }
 
         return newState
@@ -412,9 +418,6 @@ class SelectBox extends Component<Props, State> {
         id: each.id,
         value: each.value,
         selected: each.selected || false,
-        selecting: each.selecting || false,
-        editing: (isEditing && viewItem.editing) || '',
-        creating: each.creating || false,
         hidden: each.hidden || viewItem.hidden || false,
         status: each.status || ''
       }
@@ -450,7 +453,7 @@ class SelectBox extends Component<Props, State> {
   handleSelect = (e: any, item: Item) => {
     e.stopPropagation && e.stopPropagation()
     const { onSelect } = this.props
-    if (!item.selecting && onSelect) {
+    if (item.status !== STATUS.SELECTING && onSelect) {
       onSelect({
         ...this.getUncachedItem(item),
         selected: !item.selected
@@ -461,7 +464,7 @@ class SelectBox extends Component<Props, State> {
   handleClick = (e: any, item: Item) => {
     e.stopPropagation && e.stopPropagation()
     const { onClick } = this.props
-    if (!item.selecting && onClick) {
+    if (item.status !== STATUS.SELECTING && onClick) {
       onClick({
         ...this.getUncachedItem(item),
         selected: !item.selected
@@ -528,8 +531,7 @@ class SelectBox extends Component<Props, State> {
     const { onArchive } = this.props
     if (onArchive) {
       onArchive({
-        ...this.getUncachedItem(item),
-        archived: true
+        ...this.getUncachedItem(item)
       })
     }
   }
@@ -573,7 +575,7 @@ class SelectBox extends Component<Props, State> {
       lined,
       append
     } = this.props
-    const { view, search, creating } = this.state
+    const { view, search } = this.state
 
     const filteredItems = view && view.filter((item: Item) => !item.hidden)
 
@@ -643,7 +645,7 @@ class SelectBox extends Component<Props, State> {
     )
 
     const renderCreatingStatus = (item: Item) => (
-      `Creating "${item.value}"...`
+      `Creating new ${collectionName} "${item.value}"...`
     )
 
     const renderConfirmStatus = (item: Item) => (
@@ -734,60 +736,60 @@ class SelectBox extends Component<Props, State> {
 
       const getRenderByStatus = () => {
         switch (status) {
-          case 'selecting':
+          case STATUS.SELECTING:
             return getRenderWithFallback({
               item,
               method: (onSelect || onClick),
               render: renderSelectingStatus
             })
-          case 'editing':
+          case STATUS.EDITING:
             return getRenderWithFallback({
               item,
               method: onEdit,
               render: renderEditingStatus,
               control: renderEditingStatusControl
             })
-          case 'saving':
+          case STATUS.SAVING:
             return getRenderWithFallback({
               item,
               method: onEdit,
               render: renderSavingStatus
             })
-          case 'creating':
+          case STATUS.CREATING:
             return getRenderWithFallback({
               item,
               method: onCreateNew,
               render: renderCreatingStatus
             })
-          case 'confirm':
+          case STATUS.CONFIRM:
             return getRenderWithFallback({
               item,
               method: onDelete,
               render: renderConfirmStatus
             })
-          case 'deleting':
+          case STATUS.DELETING:
             return getRenderWithFallback({
               item,
               method: onDelete,
               render: renderDeletingStatus
             })
-          case 'deleted':
+          case STATUS.DELETED:
             return null
-          case 'archiving':
+          case STATUS.ARCHIVING:
             return getRenderWithFallback({
               item,
               method: onArchive,
               render: renderArchivingStatus
             })
-          case 'edited':
-          case 'created':
-          case 'archived':
+          case STATUS.EDITED:
+          case STATUS.CREATED:
+          case STATUS.ARCHIVED:
           default:
             return getRenderWithFallback({ item })
         }
       }
 
-      return status !== 'deleted' && (
+      return status !== STATUS.DELETED && (
         <li
           className={itemClasses(item)}
           key={item.id}
@@ -806,16 +808,13 @@ class SelectBox extends Component<Props, State> {
         {search && filteredItems && filteredItems.length === 0 && (
           <li>
             <span className={cx.nothinglabel}>No Results for "{search}"</span>
-            {onCreateNew && !creating && (
+            {onCreateNew && (
               <span className={cx.createnew} onClick={(e) => this.handleCreateNew(e)}>
                 <SvgIcon icon='plus' />
                 <span>Add new {collectionName} "{search}"</span>
               </span>
             )}
           </li>
-        )}
-        {creating && (
-          <li><span className={cx.nothinglabel}>Adding new {collectionName} "{creating}"...</span></li>
         )}
         {filteredItems.map(item => renderItem(item))}
       </ul>

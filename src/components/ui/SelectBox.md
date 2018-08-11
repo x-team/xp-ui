@@ -134,7 +134,6 @@ const itemsArray = [
   {
     id: 4,
     value: '(un)selecting',
-    selecting: true,
     status: 'selecting'
   },
   {
@@ -162,13 +161,11 @@ const itemsArray = [
   {
     id: 9,
     value: 'creating this',
-    creating: true,
     status: 'creating'
   },
   {
     id: 10,
     value: 'created',
-    saved: true,
     status: 'created'
   },
   {
@@ -179,25 +176,21 @@ const itemsArray = [
   {
     id: 12,
     value: 'deleting',
-    deleting: true,
     status: 'deleting'
   },
   {
     id: 13,
     value: 'deleted',
-    deleted: true,
     status: 'deleted'
   },
   {
     id: 14,
     value: 'archiving',
-    archiving: true,
     status: 'archiving'
   },
   {
     id: 15,
     value: 'archived',
-    archived: true,
     status: 'archived'
   }
 ];
