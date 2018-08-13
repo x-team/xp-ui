@@ -245,9 +245,7 @@ class ListsEditor extends Component<Props, State> {
 
   handleCreateNew = (name: string) => {
     const { onCreateNew } = this.props
-    this.setState({ search: '' }, () => {
-      onCreateNew && onCreateNew(name)
-    })
+    onCreateNew && onCreateNew(name)
   }
 
   renderListing = (active: boolean = true) => {
