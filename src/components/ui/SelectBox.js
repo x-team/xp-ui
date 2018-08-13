@@ -311,8 +311,17 @@ const cx = {
     }
   `),
   answer: cmz(`
+    & {
+      display: flex
+      flex-wrap: nowrap
+    }
+
     & > * {
       margin-left: 10px
+    }
+
+    & > *:first-of-type {
+      margin-left: 0
     }
   `)
 }
@@ -404,7 +413,7 @@ class SelectBox extends Component<Props, State> {
         }
         return newState
       }, () => {
-        if (this.state.search !== this.props.search) {
+        if (typeof this.props.search !== 'undefined' && this.props.search !== this.state.search) {
           this.handleSearch({}, this.props.search)
         }
       })
@@ -414,15 +423,14 @@ class SelectBox extends Component<Props, State> {
   mapItemsInput = (items: Array<Item>, view: Array<Item>): Array<Item> =>
     items.map((each, i) => {
       const viewItem = view.find(item => item.id === each.id) || {}
-      const isEditing = (viewItem.editing || !each.editing) && each.value !== viewItem.editing
       const newItem = {
         ...each,
         id: each.id,
         value: each.value,
-        selected: each.selected !== 'undefined' ? each.selected : viewItem.selected,
-        editing: (isEditing && viewItem.editing) || '',
-        hidden: each.hidden || viewItem.hidden || false,
-        status: each.status || ''
+        selected: typeof each.selected !== 'undefined' ? each.selected : (viewItem.selected || false),
+        status: typeof each.status !== 'undefined' ? each.status : (viewItem.status || ''),
+        editing: each.editing || viewItem.editing || '',
+        hidden: each.hidden || viewItem.hidden || false
       }
       return newItem
     })
@@ -636,8 +644,8 @@ class SelectBox extends Component<Props, State> {
         <span className={cx.controlbutton} onClick={(e) => this.handleEdit(e, item)}>
           <SvgIcon
             icon='check'
-            color={item.editing === item.value ? 'grayscale' : 'text'}
-            hover={item.editing === item.value ? 'grayscale' : 'default'}
+            color={item.editing === item.value || item.editing === '' ? 'grayscale' : 'text'}
+            hover={item.editing === item.value || item.editing === '' ? 'grayscale' : 'default'}
           />
         </span>
       </span>
