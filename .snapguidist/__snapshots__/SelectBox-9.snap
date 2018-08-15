@@ -18,9 +18,9 @@ exports[`SelectBox-9 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-78">
+        className="AutoUI_ui_SelectBox-83">
         <div
-          className="AutoUI_ui_SelectBox-87">
+          className="AutoUI_ui_SelectBox-94">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -46,7 +46,7 @@ exports[`SelectBox-9 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-82"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
             id="search"
             name="search"
             placeholder="Search"
@@ -55,7 +55,7 @@ exports[`SelectBox-9 1`] = `
             value="Searching some entry" />
         </div>
         <div
-          className="AutoUI_ui_SelectBox-111">
+          className="AutoUI_ui_SelectBox-120">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -83,7 +83,7 @@ exports[`SelectBox-9 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-125 expanded"
+        className="AutoUI_ui_SelectBox-136 expanded"
         style={
           Object {
             "height": "auto",
@@ -93,13 +93,13 @@ exports[`SelectBox-9 1`] = `
         }>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-261 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-285 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             No Results for \"
             Searching some entry
             \"
           </span>
           <span
-            className="AutoUI_ui_SelectBox-268 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-293 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -124,8 +124,8 @@ exports[`SelectBox-9 1`] = `
               </g>
             </svg>
             <span>
-              Add new 
-              Entry
+              Create new 
+              entry
                \"
               Searching some entry
               \"
@@ -147,9 +147,9 @@ exports[`SelectBox-9 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-78">
+        className="AutoUI_ui_SelectBox-83">
         <div
-          className="AutoUI_ui_SelectBox-87">
+          className="AutoUI_ui_SelectBox-94">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -175,7 +175,7 @@ exports[`SelectBox-9 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-82"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
             id="search"
             name="search"
             placeholder="Search"
@@ -185,7 +185,7 @@ exports[`SelectBox-9 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-125 expanded"
+        className="AutoUI_ui_SelectBox-136 expanded"
         style={
           Object {
             "height": "auto",
@@ -209,9 +209,9 @@ exports[`SelectBox-9 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-78">
+        className="AutoUI_ui_SelectBox-83">
         <div
-          className="AutoUI_ui_SelectBox-87">
+          className="AutoUI_ui_SelectBox-94">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -237,7 +237,7 @@ exports[`SelectBox-9 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-82"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
             id="search"
             name="search"
             placeholder="Search"
@@ -246,7 +246,7 @@ exports[`SelectBox-9 1`] = `
             value="Searching some entry" />
         </div>
         <div
-          className="AutoUI_ui_SelectBox-111">
+          className="AutoUI_ui_SelectBox-120">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -274,7 +274,7 @@ exports[`SelectBox-9 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-125 expanded"
+        className="AutoUI_ui_SelectBox-136 expanded"
         style={
           Object {
             "height": "auto",
@@ -284,13 +284,13 @@ exports[`SelectBox-9 1`] = `
         }>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-261 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-285 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             No Results for \"
             Searching some entry
             \"
           </span>
           <span
-            className="AutoUI_ui_SelectBox-268 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-293 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -315,8 +315,8 @@ exports[`SelectBox-9 1`] = `
               </g>
             </svg>
             <span>
-              Add new 
-              Entry
+              Create new 
+              entry
                \"
               Searching some entry
               \"
