@@ -9,6 +9,7 @@ import Button from './Button'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
+
 import { pluralize } from '../../utils/helpers'
 
 const cmz = require('cmz')
@@ -52,6 +53,7 @@ const cx = {
     width: 500px
     max-width: 100%
   `),
+
   heading: cmz(
     typo.sectionHeading,
     `
@@ -60,7 +62,7 @@ const cx = {
       line-height: 1
     `
   ),
-  listing: cmz(``),
+
   control: cmz(`
     display: flex
     justify-content: space-between
@@ -69,6 +71,7 @@ const cx = {
     margin: 0
     padding: 20px
   `),
+
   button: cmz(`
     & {
       border-color: transparent
@@ -79,11 +82,11 @@ const cx = {
       border-color: transparent
     }
   `),
+
   archive: cmz(`
-    padding-right: 70px
-    padding-left: 70px
     margin: 0
   `),
+
   tabs: cmz(`
     & {
       margin: 0
@@ -117,11 +120,13 @@ const cx = {
       margin: 0
     }
   `),
+
   question: cmz(`
     & p {
       margin: 0
     }
   `),
+
   answer: cmz(`
     & > * {
       margin-left: 10px
@@ -158,9 +163,7 @@ class ListsEditor extends Component<Props, State> {
     }
   }
 
-  getCurrentListName = (active: boolean = true) => {
-    return active ? 'activeList' : 'archiveList'
-  }
+  getCurrentListName = (active: boolean = true) => active ? 'activeList' : 'archiveList'
 
   getSelection = (active: boolean = true) => {
     const currentList = this.state[this.getCurrentListName(active)] || []
@@ -255,7 +258,7 @@ class ListsEditor extends Component<Props, State> {
     const { confirmDeletion } = this.state
     const selection = this.getSelection(active)
     return (
-      <div className={cx.listing}>
+      <div>
         <SelectBox
           items={currentList}
           collectionName={collectionName}
@@ -267,7 +270,7 @@ class ListsEditor extends Component<Props, State> {
           onEdit={item => this.handleEdit(item)}
           onArchive={item => this.handleArchiveItem(item)}
           onDelete={item => this.handleDeleteItem(item)}
-          onCreateNew={active ? listName => this.handleCreateNew(listName) : void 0}
+          onCreateNew={active ? listName => this.handleCreateNew(listName) : undefined}
         />
         {confirmDeletion[currentListName] ? (
           <div className={cx.control}>
@@ -277,14 +280,14 @@ class ListsEditor extends Component<Props, State> {
             </div>
             <div className={cx.answer}>
               <Button
-                onClick={(e) => this.cancelDelete(e, active)}
+                onClick={e => this.cancelDelete(e, active)}
                 pseudolink
                 className={cx.button}
               >
                 CANCEL
               </Button>
               <Button
-                onClick={(e) => this.confirmDelete(e, active)}
+                onClick={e => this.confirmDelete(e, active)}
                 className={[cx.button, cx.archive].join(' ')}
               >
                 Yes
@@ -295,7 +298,7 @@ class ListsEditor extends Component<Props, State> {
           <div className={cx.control}>
             <Button
               disabled={selection.length === 0}
-              onClick={(e) => this.handleDelete(e, active)}
+              onClick={e => this.handleDelete(e, active)}
               className={cx.button}
               outlined
             >
@@ -303,7 +306,7 @@ class ListsEditor extends Component<Props, State> {
             </Button>
             <Button
               disabled={selection.length === 0}
-              onClick={(e) => this.handleArchive(e, active)}
+              onClick={e => this.handleArchive(e, active)}
               className={[cx.button, cx.archive].join(' ')}
             >
               {active ? 'Archive' : 'Unarchive' }
@@ -323,7 +326,7 @@ class ListsEditor extends Component<Props, State> {
           <Tab title='Active'>
             {this.renderListing(true)}
           </Tab>
-          <Tab title='Archive'>
+          <Tab title='Archived'>
             {this.renderListing(false)}
           </Tab>
         </Tabs>

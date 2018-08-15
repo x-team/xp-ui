@@ -6,9 +6,10 @@ const itemsArray = Array(18).fill({}).map((item, i) => ({
   value: `Sample item ${i+1}`,
   archived: i > 12 && true
 }));
+
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <ListsEditor
-    collectionName='Lists'
+    collectionName='list'
     list={itemsArray}
     onEdit={list => console.log('onEdit:', list)}
     onArchive={lists => console.log('onArchive:', lists)}

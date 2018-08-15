@@ -20,9 +20,11 @@ const cx = {
     position: relative
     width: 100%
   `),
+
   dropdown: cmz(`
     width: 100%
   `),
+
   placeholder: cmz(
     typo.baseText,
     `
@@ -37,6 +39,7 @@ const cx = {
       border-radius: 2px
     `
   ),
+
   selects: cmz(`
     & {
       width: 100%
@@ -51,7 +54,7 @@ const cx = {
       font-size: 15px
       color: ${theme.typoLabel}
       padding: 10px 0 0
-      transition: color 0.15s ease-out, font-size 0.15s ease-out
+      transition: color .15s ease-out, font-size .15s ease-out
     }
 
     & > div:last-of-type {
@@ -59,31 +62,35 @@ const cx = {
       white-space: nowrap
       overflow: auto
       padding: 0 0 10px
-      transition: visibility 0s, opacity 0.15s ease-out, padding 0.15s ease-out
+      transition: visibility 0, opacity .15s ease-out, padding .15s ease-out
       visibility: visible
       opacity: 1
     }
   `),
+
   selectsEmpty: cmz(`
     & > div:first-of-type {
-      transition: color 0.15s ease-out, font-size 0.15s ease-out
+      transition: color .15s ease-out, font-size .15s ease-out
     }
 
     & > div:last-of-type {
-      transition: visibility 1s, opacity 0.15s ease-out, padding 0.15s ease-out
+      transition: visibility 1s, opacity .15s ease-out, padding .15s ease-out
       visibility: hidden
       opacity: 0
     }
   `),
+
   search: cmz(`
     position: relative
   `),
+
   // The !important used below is required to override the global input[type="text"] styles
-  searchinput: cmz(`
+  searchInput: cmz(`
     padding: 23px 30px 20px 52px !important
     height: 60px !important
     width: 100%
   `),
+
   magnifier: cmz(`
     & {
       position: absolute
@@ -96,6 +103,7 @@ const cx = {
       position: absolute
     }
   `),
+
   triangle: cmz(`
     & {
       position: absolute
@@ -108,6 +116,7 @@ const cx = {
       position: absolute
     }
   `),
+
   close: cmz(`
     & {
       position: absolute
@@ -121,7 +130,9 @@ const cx = {
       position: absolute
     }
   `),
+
   label: cmz(typo.baseText),
+
   list: cmz(`
     & {
       list-style: none
@@ -139,9 +150,11 @@ const cx = {
       border: none
     }
   `),
+
   shadow: cmz(`
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15)
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .15)
   `),
+
   item: cmz(typo.baseText, `
     & {
       min-height: 30px
@@ -155,19 +168,22 @@ const cx = {
       background-color: transparent
     }
 
-    &:hover .editablebuton {
+    &:hover .editableButton {
       display: flex
     }
   `),
-  controlable: cmz(`
+
+  controllable: cmz(`
     display: flex
     justify-content: space-between
     align-items: center
     padding: 15px 22px
   `),
+
   clickable: cmz(`
     cursor: pointer
   `),
+
   lined: cmz(`
     & {
       position: relative
@@ -184,25 +200,30 @@ const cx = {
       background-color: ${theme.lineSilver2}
     }
   `),
+
   // !important is used to override global input values
   editing: cmz(`
     & input {
       border-bottom: 1px solid ${theme.baseRed} !important
     }
   `),
+
   control: cmz(`
     flex-shrink: 0
     display: flex
   `),
-  controlbutton: cmz(`
+
+  controlButton: cmz(`
     cursor: pointer
     padding: 5px
     display: flex
     align-items: center
   `),
-  editablebuton: cmz('editablebuton', `
+
+  editableButton: cmz('editableButton', `
     display: none
   `),
+
   selecting: cmz(
     typo.baseText,
     `
@@ -210,7 +231,8 @@ const cx = {
       padding-left: 30px
     `
   ),
-  selectingdots: cmz(`
+
+  selectingDots: cmz(`
     & {
       position: absolute
       top: calc(50% - 9px)
@@ -232,15 +254,16 @@ const cx = {
 
     @keyframes spinner {
       0% {
-        transform: rotate(0deg)
+        transform: rotate(0)
       }
       100% {
         transform: rotate(360deg)
       }
     }
   `),
+
   // !important is used to override global input values
-  editinput: cmz(
+  editInput: cmz(
     typo.baseText,
     `
       & {
@@ -258,14 +281,16 @@ const cx = {
       }
     `
   ),
-  nothinglabel: cmz(
+
+  nothingLabel: cmz(
     typo.baseText,
     `
       display: block
       margin: 15px 22px
     `
   ),
-  createnew: cmz(
+
+  createNew: cmz(
     typo.baseText,
     `
       & {
@@ -277,15 +302,17 @@ const cx = {
       }
 
       & svg {
-        transform: scale(0.7)
+        transform: scale(.7)
         margin-right: 8px
       }
     `
   ),
+
   appendix: cmz(`
     border-right: 1px solid ${theme.lineSilver2}
     border-left: 1px solid ${theme.lineSilver2}
   `),
+
   button: cmz(`
     & {
       border-color: transparent
@@ -296,6 +323,7 @@ const cx = {
       border-color: transparent
     }
   `),
+
   confirm: cmz(`
     display: flex
     justify-content: space-between
@@ -305,11 +333,13 @@ const cx = {
     padding: 0
     width: 100%
   `),
+
   question: cmz(`
     & p {
       margin: 0
     }
   `),
+
   answer: cmz(`
     & {
       display: flex
@@ -398,7 +428,7 @@ class SelectBox extends Component<Props, State> {
   }
 
   componentDidMount () {
-    this.handleSearch({}, this.state.search)
+    this.handleSearch(null, this.state.search)
   }
 
   componentDidUpdate (prevProps: Props) {
@@ -414,7 +444,7 @@ class SelectBox extends Component<Props, State> {
         return newState
       }, () => {
         if (typeof this.props.search !== 'undefined' && this.props.search !== this.state.search) {
-          this.handleSearch({}, this.props.search)
+          this.handleSearch(null, this.props.search)
         }
       })
     }
@@ -446,7 +476,7 @@ class SelectBox extends Component<Props, State> {
   }
 
   handleSearch = (e: any, input: string = '') => {
-    e.stopPropagation && e.stopPropagation()
+    e && e.stopPropagation && e.stopPropagation()
     const { onSearch } = this.props
     const { view } = this.state
     const match = new RegExp(input.trim().toUpperCase(), 'g')
@@ -528,11 +558,13 @@ class SelectBox extends Component<Props, State> {
     const evt = e || window.event
     evt.stopPropagation()
 
-    if (evt.keyCode === 27) { // Esc
+    // Esc
+    if (evt.keyCode === 27) {
       this.handleCancelEdit(evt, item)
     }
 
-    if (evt.keyCode === 13) { // Enter
+    // Enter
+    if (evt.keyCode === 13) {
       this.handleEdit(evt, item)
     }
   }
@@ -590,22 +622,22 @@ class SelectBox extends Component<Props, State> {
 
     const filteredItems = view && view.filter((item: Item) => !item.hidden)
 
-    const editionButton = [cx.controlbutton, cx.editablebuton].join(' ')
+    const editionButton = [cx.controlButton, cx.editableButton].join(' ')
 
     const renderEditButton = (item) => (
-      <span className={editionButton} onClick={(e) => this.handleStartEditing(e, item)}>
+      <span className={editionButton} onClick={e => this.handleStartEditing(e, item)}>
         <SvgIcon icon='edit' color='grayscale' hover='default' />
       </span>
     )
 
     const renderArchiveButton = (item) => (
-      <span className={editionButton} onClick={(e) => this.handleArchive(e, item)}>
+      <span className={editionButton} onClick={e => this.handleArchive(e, item)}>
         <SvgIcon icon='archive' color='grayscale' hover='default' />
       </span>
     )
 
     const renderDeleteButton = (item) => (
-      <span className={editionButton} onClick={(e) => this.handleStartDeleting(e, item)}>
+      <span className={editionButton} onClick={e => this.handleStartDeleting(e, item)}>
         <SvgIcon icon='trashcan2' color='grayscale' hover='default' />
       </span>
     )
@@ -617,13 +649,13 @@ class SelectBox extends Component<Props, State> {
     ].join(' '))
 
     const renderEditingStatus = (item: Item) => (
-      <span className={cx.editinput}>
+      <span className={cx.editInput}>
         <InputField
           name={item.value}
           value={item.editing ? item.editing : ''}
           onChange={(input = {}) => this.handleEditChange(item, input)}
           autoFocus='autofocus'
-          onFocus={(e) => {
+          onFocus={e => {
             const val = e.target.value
             e.target.value = ''
             e.target.value = val
@@ -638,10 +670,10 @@ class SelectBox extends Component<Props, State> {
 
     const renderEditingStatusControl = (item: Item) => (
       <span className={cx.control}>
-        <span className={cx.controlbutton} onClick={(e) => this.handleCancelEdit(e, item)}>
+        <span className={cx.controlButton} onClick={e => this.handleCancelEdit(e, item)}>
           <SvgIcon icon='x' color='grayscale' hover='default' />
         </span>
-        <span className={cx.controlbutton} onClick={(e) => this.handleEdit(e, item)}>
+        <span className={cx.controlButton} onClick={e => this.handleEdit(e, item)}>
           <SvgIcon
             icon='check'
             color={item.editing === item.value || item.editing === '' ? 'grayscale' : 'text'}
@@ -662,12 +694,12 @@ class SelectBox extends Component<Props, State> {
     const renderConfirmStatus = (item: Item) => (
       <div className={cx.confirm}>
         <div className={cx.question}>
-          <p>Delete <strong>"{item.value}"</strong></p>
+          <p>Delete "{item.value}"</p>
           <p><strong>Are you sure?</strong></p>
         </div>
         <div className={cx.answer}>
           <Button
-            onClick={(e) => this.handleCancelDelete(e, item)}
+            onClick={e => this.handleCancelDelete(e, item)}
             pseudolink
             className={cx.button}
             size={'small'}
@@ -675,7 +707,7 @@ class SelectBox extends Component<Props, State> {
             CANCEL
           </Button>
           <Button
-            onClick={(e) => this.handleDelete(e, item)}
+            onClick={e => this.handleDelete(e, item)}
             className={cx.button}
             size={'small'}
           >
@@ -695,7 +727,7 @@ class SelectBox extends Component<Props, State> {
 
     const renderSelectingStatus = (item: Item) => onSelect ? (
       <span className={cx.selecting}>
-        <span className={cx.selectingdots} />
+        <span className={cx.selectingDots} />
         {item.value}
       </span>
     ) : item.value
@@ -735,16 +767,16 @@ class SelectBox extends Component<Props, State> {
       render?: Function,
       control?: Function
     }) => method ? (
-      <div className={cx.controlable}>
+      <div className={cx.controllable}>
         {render && render(item)}
         {control && control(item)}
       </div>
     ) : (
       <div
-        className={[cx.controlable, (onSelect || onClick) ? cx.clickable : ''].join(' ')}
+        className={[cx.controllable, (onSelect || onClick) ? cx.clickable : ''].join(' ')}
         onClick={onSelect
-          ? (e) => this.handleSelect(e, item)
-          : (e) => this.handleClick(e, item)
+          ? e => this.handleSelect(e, item)
+          : e => this.handleClick(e, item)
         }
       >
         {renderDefaultStatus(item)}
@@ -830,11 +862,11 @@ class SelectBox extends Component<Props, State> {
       }}>
         {search && filteredItems && filteredItems.length === 0 && (
           <li>
-            <span className={cx.nothinglabel}>No Results for "{search}"</span>
+            <span className={cx.nothingLabel}>No Results for "{search}"</span>
             {onCreateNew && (
-              <span className={cx.createnew} onClick={(e) => this.handleCreateNew(e)}>
+              <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
                 <SvgIcon icon='plus' />
-                <span>Add new {collectionName} "{search}"</span>
+                <span>Create new {collectionName} "{search}"</span>
               </span>
             )}
           </li>
@@ -855,15 +887,15 @@ class SelectBox extends Component<Props, State> {
           name='search'
           value={search}
           placeholder={hasSearch ? 'Search' : placeholder}
-          onChange={(input = {}) => this.handleSearch({}, input.target.value)}
-          className={cx.searchinput}
+          onChange={(input = {}) => this.handleSearch(null, input.target.value)}
+          className={cx.searchInput}
           autoComplete='off'
           onKeyDown={(e: any) => e.stopPropagation && e.stopPropagation()}
           onKeyPress={(e: any) => e.stopPropagation && e.stopPropagation()}
           onKeyUp={(e: any) => e.stopPropagation && e.stopPropagation()}
         />
         {search !== '' && (
-          <div className={cx.close} onClick={(e) => this.handleSearch(e, '')}>
+          <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
             <SvgIcon icon='x' color='grayscale' hover='default' />
           </div>
         )}

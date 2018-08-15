@@ -21,7 +21,7 @@ type State = {
 const cx = {
   modal: cmz(`
     & {
-      background: rgba(0, 0, 0, 0.3)
+      background: rgba(0, 0, 0, .3)
       height: 100%
       width: 100%
       position: absolute
@@ -30,7 +30,7 @@ const cx = {
       padding: 30px
       box-sizing: border-box
       z-index: 9999
-      transition: opacity 0.3s ease-in, visibility 0.3s ease-in
+      transition: opacity .3s ease-in, visibility .3s ease-in
       opacity: 0
       visibility: hidden
       outline: none
@@ -41,6 +41,7 @@ const cx = {
       visibility: visible
     }
   `),
+
   frame: cmz(`
     position: relative
     background: white
@@ -49,6 +50,7 @@ const cx = {
     min-width: 38px
     min-height: 40px
   `),
+
   close: cmz('closemodal', `
     position: absolute
     right: 12px
@@ -94,16 +96,24 @@ class Modal extends Component<Props, State> {
   handleKeyPress = (e: any) => {
     const evt = e || window.event
     evt.stopPropagation()
-    if (evt.keyCode === 27) { // Esc
+
+    // Esc
+    if (evt.keyCode === 27) {
       this.handleClose()
     }
   }
 
   render () {
     const { children } = this.props
-    const modalClasses = [cx.modal, this.state.open && 'open'].join(' ')
+    const modalClassName = [cx.modal, this.state.open && 'open'].join(' ')
+
     return children ? (
-      <div className={modalClasses} onClick={this.handleClose} onKeyDown={this.handleKeyPress} tabIndex={0}>
+      <div
+        className={modalClassName}
+        onClick={this.handleClose}
+        onKeyDown={this.handleKeyPress}
+        tabIndex={0}
+      >
         <section className={cx.frame} onClick={this.noClick}>
           {children}
           <a className={cx.close} onClick={this.handleClose}>

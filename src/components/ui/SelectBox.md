@@ -1,6 +1,6 @@
 Simple view for Add to List:
 
-```
+```js
 const itemsArray = [
   {
     id: 2,
@@ -28,8 +28,9 @@ const itemsArray = [
     selected: false
   }
 ];
+
 <SelectBox
-  collectionName='List'
+  collectionName='list'
   items={itemsArray}
   width={300}
   visibleItems={3}
@@ -40,7 +41,7 @@ const itemsArray = [
 
 Simple view for Search module:
 
-```
+```js
 const Button = require('./Button.js').default;
 const SvgIcon = require('./SvgIcon.js').default;
 const itemsArray = [
@@ -65,9 +66,10 @@ const itemsArray = [
     value: 'react-shortlist'
   }
 ];
+
 <SelectBox
   placeholder='Select Lists'
-  collectionName='List'
+  collectionName='list'
   items={itemsArray}
   width={330}
   visibleItems={4}
@@ -83,7 +85,7 @@ const itemsArray = [
 
 Complete view for Edit Lists:
 
-```
+```js
 const itemsArray = [
   {
     id: 2,
@@ -106,8 +108,9 @@ const itemsArray = [
     value: 'react-shortlist'
   }
 ];
+
 <SelectBox
-  collectionName='List'
+  collectionName='list'
   items={itemsArray}
   expanded={true}
   onSelect={item => console.log('onSelect:', item)}
@@ -120,7 +123,7 @@ const itemsArray = [
 
 Example of all items states:
 
-```
+```js
 const itemsArray = [
   {
     id: 2,
@@ -194,9 +197,10 @@ const itemsArray = [
     status: 'archived'
   }
 ];
+
 <div>
   <SelectBox
-    collectionName='Stuff'
+    collectionName='stuff'
     items={itemsArray}
     lined={true}
     expanded={true}
@@ -206,10 +210,12 @@ const itemsArray = [
     onDelete={item => console.log('onDelete:', item)}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
+
   <hr />
+
   <p>All states but missing all methods (the strings showcased below are the 'item.value')</p>
   <SelectBox
-    collectionName='Stuff'
+    collectionName='stuff'
     items={itemsArray}
     lined={true}
     expanded={true}
@@ -219,28 +225,32 @@ const itemsArray = [
 
 Examples of searching and creating simultaneously:
 
-```
+```js
 <div>
   <p>The search will be always unlocked but one can't create new item while another item creation is in progress.</p>
+
   <p>In the cases below there's no items provided.</p>
+
   <p>Here the creating and search props were provided:</p>
   <SelectBox
-    collectionName='Entry'
+    collectionName='entry'
     creating='Another entry'
     search='Searching some entry'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
+
   <p>In this case a new item is being created while nothing is being searched:</p>
   <SelectBox
-    collectionName='Entry'
+    collectionName='entry'
     creating='A new entry'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
+
   <p>In this case a search is being performed while nothing is being created:</p>
   <SelectBox
-    collectionName='Entry'
+    collectionName='entry'
     search='Searching some entry'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
@@ -250,7 +260,7 @@ Examples of searching and creating simultaneously:
 
 Fixed height:
 
-```
+```js
 <SelectBox
   expanded={true}
   visibleItems={4}
@@ -259,6 +269,6 @@ Fixed height:
 
 Missing props (does component explode?):
 
-```
+```js
 <SelectBox />
 ```

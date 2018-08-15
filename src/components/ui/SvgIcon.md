@@ -1,6 +1,6 @@
 Basic color:
 
-```
+```js
 <div>
   <SvgIcon icon="cog" />
   <SvgIcon icon="head" />
@@ -32,7 +32,7 @@ Basic color:
 
 Inverted color:
 
-```
+```js
 <div style={{ background: '#F63A55' }}>
   <SvgIcon icon="cog" color="inverted" />
   <SvgIcon icon="head" color="inverted" />
@@ -64,7 +64,7 @@ Inverted color:
 
 Monochrome color:
 
-```
+```js
 <div>
   <SvgIcon icon="cog" color="monochrome" />
   <SvgIcon icon="head" color="monochrome" />
@@ -96,7 +96,7 @@ Monochrome color:
 
 Grayscale color:
 
-```
+```js
 <div>
   <SvgIcon icon="cog" color="grayscale" />
   <SvgIcon icon="head" color="grayscale" />
@@ -128,7 +128,7 @@ Grayscale color:
 
 Text gray color:
 
-```
+```js
 <div>
   <SvgIcon icon="cog" color="text" />
   <SvgIcon icon="head" color="text" />
@@ -160,8 +160,7 @@ Text gray color:
 
 Hover color:
 
-
-```
+```js
 <div>
   <SvgIcon icon="cog" color="text" hover="default" />
   <SvgIcon icon="head" color="text" hover="default" />
@@ -193,6 +192,6 @@ Hover color:
 
 Missing props (does component explode?):
 
-```
+```js
 <SvgIcon />
 ```
