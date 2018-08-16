@@ -26,7 +26,8 @@ exports[`ApplicantBadge-5 1`] = `
           
           <span
             className="AutoUI_ui_Dropdown-42">
-            <span>
+            <span
+              onClick={null}>
               <svg
                 height="13px"
                 viewBox="0 0 17 13"
@@ -77,7 +78,8 @@ exports[`ApplicantBadge-5 1`] = `
           
           <span
             className="AutoUI_ui_Dropdown-42">
-            <span>
+            <span
+              onClick={null}>
               <svg
                 height="14px"
                 viewBox="0 0 14 14"
