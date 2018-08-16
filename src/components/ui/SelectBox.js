@@ -638,7 +638,7 @@ class SelectBox extends Component<Props, State> {
 
     const renderDeleteButton = (item) => (
       <span className={editionButton} onClick={e => this.handleStartDeleting(e, item)}>
-        <SvgIcon icon='trashcan2' color='grayscale' hover='default' />
+        <SvgIcon icon='trashcanAlt' color='grayscale' hover='default' />
       </span>
     )
 

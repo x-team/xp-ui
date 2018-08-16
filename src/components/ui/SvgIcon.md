@@ -14,7 +14,7 @@ Basic color:
   <SvgIcon icon="plus" />
   <SvgIcon icon="minus" />
   <SvgIcon icon="trashcan" />
-  <SvgIcon icon="trashcan2" />
+  <SvgIcon icon="trashcanAlt" />
   <SvgIcon icon="x" />
   <SvgIcon icon="add" />
   <SvgIcon icon="triangleup" />
@@ -46,7 +46,7 @@ Inverted color:
   <SvgIcon icon="plus" color="inverted" />
   <SvgIcon icon="minus" color="inverted" />
   <SvgIcon icon="trashcan" color="inverted" />
-  <SvgIcon icon="trashcan2" color="inverted" />
+  <SvgIcon icon="trashcanAlt" color="inverted" />
   <SvgIcon icon="x" color="inverted" />
   <SvgIcon icon="add" color="inverted" />
   <SvgIcon icon="triangleup" color="inverted" />
@@ -78,7 +78,7 @@ Monochrome color:
   <SvgIcon icon="plus" color="monochrome" />
   <SvgIcon icon="minus" color="monochrome" />
   <SvgIcon icon="trashcan" color="monochrome" />
-  <SvgIcon icon="trashcan2" color="monochrome" />
+  <SvgIcon icon="trashcanAlt" color="monochrome" />
   <SvgIcon icon="x" color="monochrome" />
   <SvgIcon icon="add" color="monochrome" />
   <SvgIcon icon="triangleup" color="monochrome" />
@@ -110,7 +110,7 @@ Grayscale color:
   <SvgIcon icon="plus" color="grayscale" />
   <SvgIcon icon="minus" color="grayscale" />
   <SvgIcon icon="trashcan" color="grayscale" />
-  <SvgIcon icon="trashcan2" color="grayscale" />
+  <SvgIcon icon="trashcanAlt" color="grayscale" />
   <SvgIcon icon="x" color="grayscale" />
   <SvgIcon icon="add" color="grayscale" />
   <SvgIcon icon="triangleup" color="grayscale" />
@@ -142,7 +142,7 @@ Text gray color:
   <SvgIcon icon="plus" color="text" />
   <SvgIcon icon="minus" color="text" />
   <SvgIcon icon="trashcan" color="text" />
-  <SvgIcon icon="trashcan2" color="text" />
+  <SvgIcon icon="trashcanAlt" color="text" />
   <SvgIcon icon="x" color="text" />
   <SvgIcon icon="add" color="text" />
   <SvgIcon icon="triangleup" color="text" />
@@ -174,7 +174,7 @@ Hover color:
   <SvgIcon icon="plus" color="text" hover="default" />
   <SvgIcon icon="minus" color="text" hover="default" />
   <SvgIcon icon="trashcan" color="text" hover="default" />
-  <SvgIcon icon="trashcan2" color="text" hover="default" />
+  <SvgIcon icon="trashcanAlt" color="text" hover="default" />
   <SvgIcon icon="x" color="text" hover="default" />
   <SvgIcon icon="add" color="text" hover="default" />
   <SvgIcon icon="triangleup" color="text" hover="default" />
