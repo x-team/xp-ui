@@ -35,13 +35,11 @@ Basic card:
     {
       key: 'approval',
       icon: () => <SvgIcon icon='check' />,
-      onClick: null,
       render: () => <form>A custom list of inputs with a submit button and a checkmark icon</form>
     },
     {
       key: 'exclusion',
       icon: () => <SvgIcon icon='x' />,
-      onClick: null,
       render: () => <form>Another custom list of inputs with a submit button and an X icon</form>
     }
   ]}
@@ -92,13 +90,11 @@ Active card:
     {
       key: 'approval',
       icon: () => <SvgIcon icon='check' />,
-      onClick: null,
       render: () => <form>A custom list of inputs with a submit button and a checkmark icon</form>
     },
     {
       key: 'exclusion',
       icon: () => <SvgIcon icon='x' />,
-      onClick: null,
       render: () => <form>Another custom list of inputs with a submit button and an X icon</form>
     }
   ]}
@@ -157,13 +153,11 @@ Basic tabular:
     {
       key: 'approval',
       icon: () => <SvgIcon icon='check' />,
-      onClick: null,
       render: () => <form>A custom list of inputs with a submit button and a checkmark icon</form>
     },
     {
       key: 'exclusion',
       icon: () => <SvgIcon icon='x' />,
-      onClick: null,
       render: () => <form>Another custom list of inputs with a submit button and an X icon</form>
     }
   ]}

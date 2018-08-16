@@ -323,7 +323,7 @@ class ApplicantBadge extends PureComponent<Props> {
         )}
         {actions.length > 0 && (
           <div className={cx.controls}>
-            {actions.map(({ key, icon: Icon, onClick, render }) => (
+            {actions.map(({ key, icon: Icon, onClick = null, render }) => (
               Icon && (
                 <Dropdown
                   key={key}
