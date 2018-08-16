@@ -28,7 +28,7 @@ exports[`ListsEditor-1 1`] = `
               aria-selected={true}
               href=""
               role="tab"
-              tabIndex={1}>
+              tabIndex={0}>
               Active
             </a>
             <div
@@ -42,7 +42,7 @@ exports[`ListsEditor-1 1`] = `
               aria-selected={false}
               href=""
               role="tab"
-              tabIndex={2}>
+              tabIndex={1}>
               Archived
             </a>
             <div
