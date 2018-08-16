@@ -19,8 +19,6 @@ exports[`ApplicantGrid-3 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-112 controls" />
       <span
         className="AutoUI_ui_ApplicantBadge-124">
         <span
@@ -165,8 +163,6 @@ exports[`ApplicantGrid-3 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-112 controls" />
       <span
         className="AutoUI_ui_ApplicantBadge-124">
         <span
@@ -311,8 +307,6 @@ exports[`ApplicantGrid-3 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-112 controls" />
       <span
         className="AutoUI_ui_ApplicantBadge-124">
         <span
@@ -458,8 +452,6 @@ exports[`ApplicantGrid-3 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-112 controls" />
       <span
         className="AutoUI_ui_ApplicantBadge-124">
         <span
@@ -605,8 +597,6 @@ exports[`ApplicantGrid-3 1`] = `
             width={90} />
         </div>
       </div>
-      <div
-        className="AutoUI_ui_ApplicantBadge-112 controls" />
       <span
         className="AutoUI_ui_ApplicantBadge-124">
         <span
