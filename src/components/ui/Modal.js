@@ -77,7 +77,7 @@ class Modal extends Component<Props, State> {
   }
 
   componentWillUnmount () {
-    clearTimeout(this.closeWithTimer)
+    clearTimeout(this.closeWithTimer())
   }
 
   noClick = (event: any) => {

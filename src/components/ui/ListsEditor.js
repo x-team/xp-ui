@@ -322,7 +322,7 @@ class ListsEditor extends Component<Props, State> {
     return (
       <div className={cx.listseditor}>
         <h1 className={cx.heading}>Edit {collectionLabel}</h1>
-        <Tabs className={cx.tabs} tabIndex={1}>
+        <Tabs className={cx.tabs}>
           <Tab title='Active'>
             {this.renderListing(true)}
           </Tab>
