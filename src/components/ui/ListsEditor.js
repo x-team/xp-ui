@@ -27,7 +27,7 @@ type Item = {
 }
 
 type Props = {
-  collectionName?: string,
+  collectionLabel?: string,
   list: Array<Item>,
   onEdit: Function,
   onArchive: Function,
@@ -136,7 +136,7 @@ const cx = {
 
 class ListsEditor extends Component<Props, State> {
   static defaultProps = {
-    collectionName: 'Collection',
+    collectionLabel: 'Collection',
     list: []
   }
 
@@ -254,14 +254,14 @@ class ListsEditor extends Component<Props, State> {
   renderListing = (active: boolean = true) => {
     const currentListName = this.getCurrentListName(active)
     const currentList = this.state[currentListName] || []
-    const { collectionName } = this.props
+    const { collectionLabel } = this.props
     const { confirmDeletion } = this.state
     const selection = this.getSelection(active)
     return (
       <div>
         <SelectBox
           items={currentList}
-          collectionName={collectionName}
+          collectionLabel={collectionLabel}
           expanded
           visibleItems={7}
           search={this.state.search}
@@ -318,10 +318,10 @@ class ListsEditor extends Component<Props, State> {
   }
 
   render () {
-    const { collectionName } = this.props
+    const { collectionLabel } = this.props
     return (
       <div className={cx.listseditor}>
-        <h1 className={cx.heading}>Edit {collectionName}</h1>
+        <h1 className={cx.heading}>Edit {collectionLabel}</h1>
         <Tabs className={cx.tabs} tabIndex={1}>
           <Tab title='Active'>
             {this.renderListing(true)}

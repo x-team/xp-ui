@@ -377,7 +377,7 @@ type Props = {
   hasSearch?: boolean,
   lined?: boolean,
   search?: string,
-  collectionName?: string,
+  collectionLabel?: string,
   onSelect?: Function,
   onClick?: Function,
   onCreateNew?: Function,
@@ -417,7 +417,7 @@ class SelectBox extends Component<Props, State> {
     expanded: false,
     hasSearch: false,
     lined: false,
-    collectionName: ''
+    collectionLabel: ''
   }
 
   state: State = {
@@ -604,7 +604,7 @@ class SelectBox extends Component<Props, State> {
   render () {
     const {
       placeholder,
-      collectionName,
+      collectionLabel,
       visibleItems,
       width,
       expanded,
@@ -688,7 +688,7 @@ class SelectBox extends Component<Props, State> {
     )
 
     const renderCreatingStatus = (item: Item) => (
-      `Creating ${collectionName ? `new ${collectionName} ` : ''}"${item.value}"...`
+      `Creating ${collectionLabel ? `new ${collectionLabel} ` : ''}"${item.value}"...`
     )
 
     const renderConfirmStatus = (item: Item) => (
@@ -866,7 +866,7 @@ class SelectBox extends Component<Props, State> {
             {onCreateNew && (
               <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
                 <SvgIcon icon='plus' />
-                <span>Create new {collectionName} "{search}"</span>
+                <span>Create new {collectionLabel} "{search}"</span>
               </span>
             )}
           </li>

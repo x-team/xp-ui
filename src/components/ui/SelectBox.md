@@ -30,7 +30,7 @@ const itemsArray = [
 ];
 
 <SelectBox
-  collectionName='list'
+  collectionLabel='list'
   items={itemsArray}
   width={300}
   visibleItems={3}
@@ -69,7 +69,7 @@ const itemsArray = [
 
 <SelectBox
   placeholder='Select Lists'
-  collectionName='list'
+  collectionLabel='list'
   items={itemsArray}
   width={330}
   visibleItems={4}
@@ -110,7 +110,7 @@ const itemsArray = [
 ];
 
 <SelectBox
-  collectionName='list'
+  collectionLabel='list'
   items={itemsArray}
   expanded={true}
   onSelect={item => console.log('onSelect:', item)}
@@ -200,7 +200,7 @@ const itemsArray = [
 
 <div>
   <SelectBox
-    collectionName='stuff'
+    collectionLabel='stuff'
     items={itemsArray}
     lined={true}
     expanded={true}
@@ -215,7 +215,7 @@ const itemsArray = [
 
   <p>All states but missing all methods (the strings showcased below are the 'item.value')</p>
   <SelectBox
-    collectionName='stuff'
+    collectionLabel='stuff'
     items={itemsArray}
     lined={true}
     expanded={true}
@@ -233,7 +233,7 @@ Examples of searching and creating simultaneously:
 
   <p>Here the creating and search props were provided:</p>
   <SelectBox
-    collectionName='entry'
+    collectionLabel='entry'
     creating='Another entry'
     search='Searching some entry'
     expanded={true}
@@ -242,7 +242,7 @@ Examples of searching and creating simultaneously:
 
   <p>In this case a new item is being created while nothing is being searched:</p>
   <SelectBox
-    collectionName='entry'
+    collectionLabel='entry'
     creating='A new entry'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
@@ -250,7 +250,7 @@ Examples of searching and creating simultaneously:
 
   <p>In this case a search is being performed while nothing is being created:</p>
   <SelectBox
-    collectionName='entry'
+    collectionLabel='entry'
     search='Searching some entry'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}

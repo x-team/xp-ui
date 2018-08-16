@@ -9,7 +9,7 @@ const itemsArray = Array(18).fill({}).map((item, i) => ({
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <ListsEditor
-    collectionName='list'
+    collectionLabel='list'
     list={itemsArray}
     onEdit={list => console.log('onEdit:', list)}
     onArchive={lists => console.log('onArchive:', lists)}
