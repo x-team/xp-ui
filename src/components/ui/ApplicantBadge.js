@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import md5 from 'crypto-js/md5'
 
 import Avatar from './Avatar'
-import SvgIcon from './SvgIcon'
 import TruncatedList from './TruncatedList'
 import Dropdown from './Dropdown'
 
@@ -17,6 +16,12 @@ type Info = {
   tip?: string
 }
 
+type Action = {
+  icon?: Function,
+  onClick?: Function,
+  render?: Function
+}
+
 type Props = {
   id: number,
   mode?: string,
@@ -28,10 +33,7 @@ type Props = {
   avatar?: Element<*>,
   children?: Element<*> | string,
   onClick?: Function,
-  displayApprovalIcon?: boolean,
-  renderApprovalDropdown?: Function,
-  displayExclusionIcon?: boolean,
-  renderExclusionDropdown?: Function
+  actions?: Array<Action>
 }
 
 const cmz = require('cmz')
@@ -233,8 +235,7 @@ class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
     mode: 'card',
     active: false,
-    displayApprovalIcon: false,
-    displayExclusionIcon: false
+    actions: []
   }
 
   render () {
@@ -248,10 +249,7 @@ class ApplicantBadge extends PureComponent<Props> {
       tags,
       avatar,
       children,
-      displayApprovalIcon,
-      renderApprovalDropdown,
-      displayExclusionIcon,
-      renderExclusionDropdown
+      actions
     } = this.props
 
     const cx = mode === 'card' ? cardTheme : tabularTheme
@@ -323,32 +321,25 @@ class ApplicantBadge extends PureComponent<Props> {
             )}
           </div>
         )}
-        <div className={cx.controls}>
-          {displayApprovalIcon && (
-            <Dropdown
-              tooltip
-              label={(
-                <span className={cx.control}>
-                  <SvgIcon icon='check' />
-                </span>
-              )}
-            >
-              {renderApprovalDropdown()}
-            </Dropdown>
-          )}
-          {displayExclusionIcon && (
-            <Dropdown
-              tooltip
-              label={(
-                <span className={cx.control}>
-                  <SvgIcon icon='x' />
-                </span>
-              )}
-            >
-              {renderExclusionDropdown()}
-            </Dropdown>
-          )}
-        </div>
+        {actions.length > 0 && (
+          <div className={cx.controls}>
+            {actions.map(({ key, icon: Icon, onClick = null, render }) => (
+              Icon && (
+                <Dropdown
+                  key={key}
+                  tooltip
+                  label={(
+                    <span className={cx.control} onClick={onClick}>
+                      <Icon />
+                    </span>
+                  )}
+                >
+                  {render && render()}
+                </Dropdown>
+              )
+            ))}
+          </div>
+        )}
         {info && info.length > 0 && mapInfosToRender(info)}
         {tags && tags.length > 0 && mapTagsToRender(tags)}
         {children && (
