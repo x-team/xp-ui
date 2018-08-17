@@ -98,7 +98,7 @@ exports[`SelectBox-1 1`] = `
                   </label>
                 </div>
                 <span
-                  className="AutoUI_ui_SelectBox-211" />
+                  className="AutoUI_ui_SelectBox-215" />
               </div>
             </li>
             <li
@@ -129,7 +129,7 @@ exports[`SelectBox-1 1`] = `
                   </label>
                 </div>
                 <span
-                  className="AutoUI_ui_SelectBox-211" />
+                  className="AutoUI_ui_SelectBox-215" />
               </div>
             </li>
             <li
@@ -160,7 +160,7 @@ exports[`SelectBox-1 1`] = `
                   </label>
                 </div>
                 <span
-                  className="AutoUI_ui_SelectBox-211" />
+                  className="AutoUI_ui_SelectBox-215" />
               </div>
             </li>
             <li
@@ -191,7 +191,7 @@ exports[`SelectBox-1 1`] = `
                   </label>
                 </div>
                 <span
-                  className="AutoUI_ui_SelectBox-211" />
+                  className="AutoUI_ui_SelectBox-215" />
               </div>
             </li>
             <li
@@ -222,7 +222,7 @@ exports[`SelectBox-1 1`] = `
                   </label>
                 </div>
                 <span
-                  className="AutoUI_ui_SelectBox-211" />
+                  className="AutoUI_ui_SelectBox-215" />
               </div>
             </li>
           </ul>

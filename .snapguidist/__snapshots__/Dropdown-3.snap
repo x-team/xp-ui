@@ -103,7 +103,7 @@ exports[`Dropdown-3 1`] = `
                     item-1
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-215" />
                 </div>
               </li>
               <li
@@ -115,7 +115,7 @@ exports[`Dropdown-3 1`] = `
                     item-2
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-215" />
                 </div>
               </li>
               <li
@@ -127,7 +127,7 @@ exports[`Dropdown-3 1`] = `
                     item-3
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-215" />
                 </div>
               </li>
               <li
@@ -139,7 +139,7 @@ exports[`Dropdown-3 1`] = `
                     item-4
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-215" />
                 </div>
               </li>
               <li
@@ -151,7 +151,7 @@ exports[`Dropdown-3 1`] = `
                     item-5
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-215" />
                 </div>
               </li>
               <li
@@ -163,7 +163,7 @@ exports[`Dropdown-3 1`] = `
                     item-6
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-215" />
                 </div>
               </li>
             </ul>
