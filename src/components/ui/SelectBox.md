@@ -188,11 +188,16 @@ const itemsArray = [
   },
   {
     id: 14,
+    value: 'dismissed',
+    status: 'dismissed'
+  },
+  {
+    id: 15,
     value: 'archiving',
     status: 'archiving'
   },
   {
-    id: 15,
+    id: 16,
     value: 'archived',
     status: 'archived'
   }
