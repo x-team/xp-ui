@@ -468,7 +468,7 @@ class SelectBox extends Component<Props, State> {
 
   setupDismissTimers = () => {
     const { items } = this.props
-    const deletedItems = items && items.filter(item => item.status === STATUS.DELETED) || []
+    const deletedItems = (items && items.filter(item => item.status === STATUS.DELETED)) || []
     deletedItems.forEach(item => {
       this.timer.push(setTimeout(() => {
         const updatedItem = { ...item, status: 'dismissed' }
