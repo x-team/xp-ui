@@ -432,7 +432,11 @@ class SelectBox extends Component<Props, State> {
     expanded: this.props.expanded || false
   }
 
+  timer: Array<*>
+
   componentDidMount () {
+    this.timer = []
+    this.setupDismissTimers()
     this.handleSearch(null, this.state.search)
   }
 
@@ -451,8 +455,26 @@ class SelectBox extends Component<Props, State> {
         if (typeof this.props.search !== 'undefined' && this.props.search !== this.state.search) {
           this.handleSearch(null, this.props.search)
         }
+        this.setupDismissTimers()
       })
     }
+  }
+
+  componentWillUnmount () {
+    this.timer.forEach(each => {
+      clearTimeout(each)
+    })
+  }
+
+  setupDismissTimers = () => {
+    const { items } = this.props
+    const deletedItems = items && items.filter(item => item.status === STATUS.DELETED) || []
+    deletedItems.forEach(item => {
+      this.timer.push(setTimeout(() => {
+        const updatedItem = { ...item, status: 'dismissed' }
+        this.updateItemsState(updatedItem)
+      }, 2500))
+    })
   }
 
   mapItemsInput = (items: Array<Item>, view: Array<Item>): Array<Item> =>
@@ -892,7 +914,14 @@ class SelectBox extends Component<Props, State> {
       )
     }
 
-    const creatingFirst = (x, y) => (x.status === STATUS.CREATING ? -1 : y.status === STATUS.CREATING ? 1 : 0)
+    const sortById = (x: Item, y: Item) => x.id - y.id
+
+    const sortByCreatingFirst = (list: Array<Item>): Array<Item> => {
+      const creating = list.filter(item => item.status === STATUS.CREATING)
+      const data = list.filter(item => item.status !== STATUS.CREATING)
+      data.unshift(...creating)
+      return data
+    }
 
     const renderItems = () => (
       <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
@@ -901,7 +930,7 @@ class SelectBox extends Component<Props, State> {
         width: width ? `${width}px` : '100%'
       }}>
         {search && filteredItems && filteredItems.length === 0 && (
-          <li>
+          <li key='search-result'>
             <span className={cx.nothingLabel}>No Results for "{search}"</span>
             {onCreateNew && (
               <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
@@ -911,7 +940,7 @@ class SelectBox extends Component<Props, State> {
             )}
           </li>
         )}
-        {filteredItems.sort(creatingFirst).map(renderItem)}
+        {sortByCreatingFirst(filteredItems.sort(sortById)).map(renderItem)}
       </ul>
     )
 
