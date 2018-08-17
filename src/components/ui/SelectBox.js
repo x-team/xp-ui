@@ -480,7 +480,7 @@ class SelectBox extends Component<Props, State> {
   mapItemsInput = (items: Array<Item>, view: Array<Item>): Array<Item> =>
     items.map((each, i) => {
       const viewItem = view.find(item => item.id === each.id) || {}
-      const updatedStatus = viewItem.status !== STATUS.DISMISSED
+      const updatedStatus = viewItem.status !== STATUS.DELETED && viewItem.status !== STATUS.DISMISSED
         ? typeof each.status !== 'undefined' ? each.status : viewItem.status
         : viewItem.status
       const newItem = {
