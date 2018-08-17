@@ -38,10 +38,16 @@ large size
 <Button size={'large'}>Large size</Button>
 ```
 
-block button
+block size
 
 ```js
 <Button block>Block size</Button>
+```
+
+wide size
+
+```js
+<Button wide>Wide size</Button>
 ```
 
 ### Extra States
@@ -111,10 +117,24 @@ selected skill tag
 exclude applicant form buttons
 
 ```js
+const SvgIcon = require('./SvgIcon.js').default;
 <div style={{ textAlign: 'right' }}>
   <Button pseudolink>Cancel</Button>
   <Button><SvgIcon icon={'paperplane'} color={'inverted'} /></Button>
 </div>
+```
+
+SelectBox option button
+
+```js
+const SvgIcon = require('./SvgIcon.js').default;
+<Button selectbox size='large'><SvgIcon icon="edit" /> Edit Lists</Button>
+```
+
+disabled outlined
+
+```js
+<Button disabled outlined>Disabled outlined state</Button>
 ```
 
 Missing props (does component explode?):

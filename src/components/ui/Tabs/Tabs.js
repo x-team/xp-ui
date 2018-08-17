@@ -117,7 +117,8 @@ const Root = elem.section(tabsStyles.root)
 
 type Props = {
   children?: Element<*>,
-  defaultActiveTabKey: number
+  defaultActiveTabKey: number,
+  className: string
 }
 
 type State = {
@@ -190,7 +191,9 @@ class Tabs extends Component<Props, State> {
   }
 
   render () {
+    const { className } = this.props
     return Root(
+      { className },
       this._renderTabs(),
       this._renderTabContent()
     )

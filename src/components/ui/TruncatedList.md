@@ -13,10 +13,12 @@ TruncatedList is an invisible component that receives a list of anything and cre
 
 ### Examples
 
-Show 4 visible `Loader`s components of 13 total, with increments of 2, custom view more item, not inserted:
+Show 4 visible `XIcon`s components of 13 total, with increments of 2, custom view more item, not inserted:
 
 ```js
-const items = Array(13).fill(<Loader />);
+const XIcon = require('./XIcon.js').default;
+const Button = require('./Button.js').default;
+const items = Array(13).fill(<XIcon />);
 <TruncatedList
   items={items}
   visible={4}
@@ -35,10 +37,12 @@ const items = Array(13).fill(<Loader />);
 />
 ```
 
-Show 6 visible `Loader`s components of 30 total, with increments of 6, with inserted custom view more item:
+Show 6 visible `XIcon`s components of 30 total, with increments of 6, with inserted custom view more item:
 
 ```js
-const items = Array(30).fill(<Loader />);
+const XIcon = require('./XIcon.js').default;
+const Button = require('./Button.js').default;
+const items = Array(30).fill(<XIcon />);
 <TruncatedList
   items={items}
   visible={6}
@@ -58,10 +62,12 @@ const items = Array(30).fill(<Loader />);
 />
 ```
 
-Show 5 visible `Loader`s components of 6 total, but with custom show more item inserted in the first visible count:
+Show 5 visible `XIcon`s components of 6 total, but with custom show more item inserted in the first visible count:
 
 ```js
-const items = Array(6).fill(<Loader />);
+const XIcon = require('./XIcon.js').default;
+const Button = require('./Button.js').default;
+const items = Array(6).fill(<XIcon />);
 <TruncatedList
   items={items}
   visible={5}
@@ -79,40 +85,44 @@ const items = Array(6).fill(<Loader />);
 />
 ```
 
-Show 5 visible `Loader`s components of 4 total:
+Show 5 visible `XIcon`s components of 4 total:
 
 ```js
-const items = Array(4).fill(<Loader />);
+const XIcon = require('./XIcon.js').default;
+const items = Array(4).fill(<XIcon />);
 <TruncatedList
   items={items}
   visible={5}
 />
 ```
 
-Show 5 visible `Loader`s components of 5 total:
+Show 5 visible `XIcon`s components of 5 total:
 
 ```js
-const items = Array(5).fill(<Loader />);
+const XIcon = require('./XIcon.js').default;
+const items = Array(5).fill(<XIcon />);
 <TruncatedList
   items={items}
   visible={5}
 />
 ```
 
-Show 5 visible `Loader`s components of 6 total:
+Show 5 visible `XIcon`s components of 6 total:
 
 ```js
-const items = Array(6).fill(<Loader />);
+const XIcon = require('./XIcon.js').default;
+const items = Array(6).fill(<XIcon />);
 <TruncatedList
   items={items}
   visible={5}
 />
 ```
 
-Show 5 visible `Loader`s components of 24 total:
+Show 5 visible `XIcon`s components of 24 total:
 
 ```js
-const items = Array(24).fill(<Loader />);
+const XIcon = require('./XIcon.js').default;
+const items = Array(24).fill(<XIcon />);
 <TruncatedList
   items={items}
   visible={5}

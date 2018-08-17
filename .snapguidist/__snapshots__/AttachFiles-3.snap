@@ -5,9 +5,9 @@ exports[`AttachFiles-3 1`] = `
     className="AutoUI_ui_AttachFiles-87"
     type="file" />
   <button
-    className=" AutoUI_ui_Button-70 AutoUI_ui_Button-32 AutoUI_ui_Button-121 AutoUI_ui_Button-140 outlined">
+    className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-142 outlined">
     <span
-      className="AutoUI_ui_Button-46 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+      className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
       <span
         className="AutoUI_ui_AttachFiles-83">
         Attach a file
@@ -41,17 +41,7 @@ exports[`AttachFiles-3 1`] = `
             stroke="none"
             strokeWidth="1">
             <g
-              fill={
-                Object {
-                  "color": Array [
-                    178,
-                    182,
-                    188,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
               transform="translate(-1272.000000, -1013.000000)">
               <g
                 transform="translate(1272.000000, 1013.000000)">
@@ -120,17 +110,7 @@ exports[`AttachFiles-3 1`] = `
             stroke="none"
             strokeWidth="1">
             <g
-              fill={
-                Object {
-                  "color": Array [
-                    178,
-                    182,
-                    188,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
               transform="translate(-1272.000000, -1013.000000)">
               <g
                 transform="translate(1272.000000, 1013.000000)">
@@ -199,17 +179,7 @@ exports[`AttachFiles-3 1`] = `
             stroke="none"
             strokeWidth="1">
             <g
-              fill={
-                Object {
-                  "color": Array [
-                    178,
-                    182,
-                    188,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
               transform="translate(-1272.000000, -1013.000000)">
               <g
                 transform="translate(1272.000000, 1013.000000)">
@@ -278,17 +248,7 @@ exports[`AttachFiles-3 1`] = `
             stroke="none"
             strokeWidth="1">
             <g
-              fill={
-                Object {
-                  "color": Array [
-                    178,
-                    182,
-                    188,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
               transform="translate(-1272.000000, -1013.000000)">
               <g
                 transform="translate(1272.000000, 1013.000000)">

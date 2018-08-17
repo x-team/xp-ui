@@ -19,17 +19,7 @@ exports[`Milestones-5 1`] = `
             strokeLinejoin="round"
             strokeWidth="1">
             <g
-              stroke={
-                Object {
-                  "color": Array [
-                    255,
-                    255,
-                    255,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-25 AutoUI_ui_SvgIcon-52"
               strokeWidth="2"
               transform="translate(-929.000000, -1363.000000)">
               <g
@@ -72,17 +62,7 @@ exports[`Milestones-5 1`] = `
             strokeLinejoin="round"
             strokeWidth="1">
             <g
-              stroke={
-                Object {
-                  "color": Array [
-                    52,
-                    50,
-                    59,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-30 AutoUI_ui_SvgIcon-57"
               strokeWidth="2"
               transform="translate(-269.000000, -1671.000000)">
               <g
@@ -125,17 +105,7 @@ exports[`Milestones-5 1`] = `
             strokeLinejoin="round"
             strokeWidth="1">
             <g
-              stroke={
-                Object {
-                  "color": Array [
-                    52,
-                    50,
-                    59,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-30 AutoUI_ui_SvgIcon-57"
               strokeWidth="2"
               transform="translate(-269.000000, -1104.000000)">
               <g
@@ -176,17 +146,7 @@ exports[`Milestones-5 1`] = `
             strokeLinejoin="round"
             strokeWidth="1">
             <g
-              stroke={
-                Object {
-                  "color": Array [
-                    52,
-                    50,
-                    59,
-                  ],
-                  "model": "rgb",
-                  "valpha": 1,
-                }
-              }
+              className="AutoUI_ui_SvgIcon-30 AutoUI_ui_SvgIcon-57"
               strokeWidth="2"
               transform="translate(-270.000000, -2228.000000)">
               <g

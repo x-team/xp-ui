@@ -26,3 +26,7 @@ export function isScrolledIntoView (element) {
 export function getComponentDisplayName (Component) {
   return Component.displayName || Component.name || 'Component'
 }
+
+export function pluralize (count: number, noun: string, stripCount: boolean = false, suffix: string = 's') {
+  return `${stripCount ? '' : `${count} `}${noun}${parseInt(count, 10) !== 1 ? suffix : ''}`
+}

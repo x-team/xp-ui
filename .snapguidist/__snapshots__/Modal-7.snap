@@ -1,0 +1,9 @@
+exports[`Modal-7 1`] = `
+<div
+  style={
+    Object {
+      "minHeight": "100px",
+      "position": "relative",
+    }
+  } />
+`;

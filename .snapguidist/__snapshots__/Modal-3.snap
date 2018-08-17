@@ -1,0 +1,119 @@
+exports[`Modal-3 1`] = `
+<div
+  style={
+    Object {
+      "minHeight": "300px",
+      "position": "relative",
+    }
+  }>
+  <div
+    className="AutoUI_ui_Modal-22 open"
+    tabIndex={0}>
+    <section
+      className="AutoUI_ui_Modal-45">
+      <h1>
+        Modal content goes here
+      </h1>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <p>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </p>
+      <a
+        className="AutoUI_ui_Modal-54 closemodal">
+        <svg
+          height="14px"
+          viewBox="0 0 14 14"
+          width="14px">
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="none"
+            strokeLinecap="square"
+            strokeWidth="1">
+            <g
+              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+              strokeWidth="2"
+              transform="translate(-1294.000000, -1073.000000)">
+              <g
+                transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                <path
+                  d="M7,0 L7,14" />
+                <path
+                  d="M14,7 L0,7" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </section>
+  </div>
+</div>
+`;
