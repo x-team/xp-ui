@@ -415,6 +415,8 @@ const STATUS = {
   ARCHIVED: 'archived'
 }
 
+const dismissTimeout = 2500
+
 class SelectBox extends Component<Props, State> {
   static defaultProps = {
     placeholder: 'Search',
@@ -432,10 +434,10 @@ class SelectBox extends Component<Props, State> {
     expanded: this.props.expanded || false
   }
 
-  timer: Array<*>
+  timers: Array<*>
 
   componentDidMount () {
-    this.timer = []
+    this.timers = []
     this.setupDismissTimers()
     this.handleSearch(null, this.state.search)
   }
@@ -461,8 +463,8 @@ class SelectBox extends Component<Props, State> {
   }
 
   componentWillUnmount () {
-    this.timer.forEach(each => {
-      clearTimeout(each)
+    this.timers.forEach(timer => {
+      clearTimeout(timer)
     })
   }
 
@@ -470,10 +472,10 @@ class SelectBox extends Component<Props, State> {
     const { items } = this.props
     const deletedItems = (items && items.filter(item => item.status === STATUS.DELETED)) || []
     deletedItems.forEach(item => {
-      this.timer.push(setTimeout(() => {
+      this.timers.push(setTimeout(() => {
         const updatedItem = { ...item, status: 'dismissed' }
         this.updateItemsState(updatedItem)
-      }, 2500))
+      }, dismissTimeout))
     })
   }
 
@@ -632,7 +634,7 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleDismissDeleteMessage = (e: any, item: Item) => {
+  handleDismissDeleteMessage = (item: Item) => (e: Object) => {
     e.stopPropagation && e.stopPropagation()
     const updatedItem = { ...item, status: 'dismissed' }
     this.updateItemsState(updatedItem)
@@ -769,7 +771,7 @@ class SelectBox extends Component<Props, State> {
         <span
           title='Dismiss this message'
           className={cx.controlButton}
-          onClick={e => this.handleDismissDeleteMessage(e, item)}
+          onClick={this.handleDismissDeleteMessage(item)}
         >
           <SvgIcon icon='x' color='grayscale' hover='default' />
         </span>
