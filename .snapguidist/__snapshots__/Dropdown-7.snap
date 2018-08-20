@@ -167,7 +167,7 @@ exports[`Dropdown-7 1`] = `
                         registered
                       </span>
                       <span
-                        className="AutoUI_ui_SelectBox-211" />
+                        className="AutoUI_ui_SelectBox-215" />
                     </div>
                   </li>
                   <li
@@ -179,7 +179,7 @@ exports[`Dropdown-7 1`] = `
                         portfolio-building
                       </span>
                       <span
-                        className="AutoUI_ui_SelectBox-211" />
+                        className="AutoUI_ui_SelectBox-215" />
                     </div>
                   </li>
                   <li
@@ -191,7 +191,7 @@ exports[`Dropdown-7 1`] = `
                         portfolio-review
                       </span>
                       <span
-                        className="AutoUI_ui_SelectBox-211" />
+                        className="AutoUI_ui_SelectBox-215" />
                     </div>
                   </li>
                   <li
@@ -203,7 +203,7 @@ exports[`Dropdown-7 1`] = `
                         social-media-screen
                       </span>
                       <span
-                        className="AutoUI_ui_SelectBox-211" />
+                        className="AutoUI_ui_SelectBox-215" />
                     </div>
                   </li>
                   <li
@@ -215,7 +215,7 @@ exports[`Dropdown-7 1`] = `
                         react-shortlist
                       </span>
                       <span
-                        className="AutoUI_ui_SelectBox-211" />
+                        className="AutoUI_ui_SelectBox-215" />
                     </div>
                   </li>
                 </ul>
