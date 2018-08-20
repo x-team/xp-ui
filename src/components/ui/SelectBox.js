@@ -426,7 +426,7 @@ class SelectBox extends Component<Props, State> {
     hasSearch: false,
     lined: false,
     collectionLabel: '',
-    dismissTimeout: dismissTimeout
+    dismissTimeout
   }
 
   state: State = {
