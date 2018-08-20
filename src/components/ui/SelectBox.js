@@ -389,7 +389,8 @@ type Props = {
   onEdit?: Function,
   onArchive?: Function,
   onDelete?: Function,
-  append?: Element<*>|string
+  append?: Element<*>|string,
+  dismissTimeout?: number
 }
 
 type State = {
@@ -424,7 +425,8 @@ class SelectBox extends Component<Props, State> {
     expanded: false,
     hasSearch: false,
     lined: false,
-    collectionLabel: ''
+    collectionLabel: '',
+    dismissTimeout: dismissTimeout
   }
 
   state: State = {
@@ -469,7 +471,7 @@ class SelectBox extends Component<Props, State> {
   }
 
   setupDismissTimers = () => {
-    const { items } = this.props
+    const { items, dismissTimeout } = this.props
     const deletedItems = (items && items.filter(item => item.status === STATUS.DELETED)) || []
     deletedItems.forEach(item => {
       this.timers.push(setTimeout(() => {

@@ -214,6 +214,7 @@ const itemsArray = [
     onArchive={item => console.log('onArchive:', item)}
     onDelete={item => console.log('onDelete:', item)}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
+    dismissTimeout={99999}
   />
 
   <hr />
