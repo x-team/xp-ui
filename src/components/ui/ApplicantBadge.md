@@ -130,6 +130,14 @@ const SvgIcon = require('./SvgIcon').default;
     {
       label: 'Rate:',
       value: '$100'
+    },
+    {
+      label: 'Status',
+      value: 'In Pipeline'
+    },
+    {
+      label: 'Rank',
+      value: 2
     }
   ]}
   tags={[

@@ -257,25 +257,23 @@ const tabularTheme = {
         display: flex
         align-items: center
         text-transform: initial
+        box-sizing: border-box
       }
     `
   ),
 
-  active: cmz(`
-  `),
-
   name: cmz(typo.badgeHeading,
     `
+      width: 300px
       white-space: nowrap
       order: 2
-      padding-right: 20px
+      font-weight: normal
     `
   ),
 
   avatar: cmz(`
     width: 42px
     order: 1
-    padding-right: 20px
   `),
 
   controls: cmz(`
@@ -289,17 +287,20 @@ const tabularTheme = {
   infos: cmz(`
     order: 4
     flex: 1
+    justify-content: space-evenly
   `),
 
   info: cmz(typo.baseText,
     `
       & {
+        width: 80px
         font-size: 17px
-        margin-right: 14px
+        margin: 0 14px
+        text-align: center
       }
 
-      &:last-of-type {
-        margin-right: 0
+      & > span {
+        white-space: nowrap
       }
     `
   ),
@@ -333,7 +334,7 @@ const tabularTheme = {
   `),
 
   tags: cmz(`
-    width: 400px
+    width: 260px
     flex-wrap: wrap
     order: 3
   `),
@@ -415,10 +416,10 @@ class ApplicantBadge extends PureComponent<Props> {
     const mapInfosToRender = (infos) => (
       <TruncatedList
         inserted
-        visible={4}
+        visible={mode === 'card' ? 4 : infos.length}
         listClass={cx.infos}
         itemClass={cx.info}
-        items={infos && info.filter(info => info.value).map((info, i) => (
+        items={infos && infos.filter(info => info.value).map((info, i) => (
           <Dropdown
             key={i}
             tooltip

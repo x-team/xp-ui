@@ -60,11 +60,10 @@ Tabular view:
 ```js
 const SvgIcon = require('./SvgIcon').default;
 const ApplicantBadge = require('./ApplicantBadge').default;
-let i = 1;
 const items = Array(5).fill(
   <ApplicantBadge
     mode='tabular'
-    id={i++}
+    id={333}
     name='Applicant full name'
     email='applicant@email.com'
     info={[
@@ -85,6 +84,14 @@ const items = Array(5).fill(
       {
         label: 'Rate:',
         value: '$100'
+      },
+      {
+        label: 'Status',
+        value: 'In Pipeline'
+      },
+      {
+        label: 'Rank',
+        value: 2
       }
     ]}
     tags={[
