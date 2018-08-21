@@ -5,9 +5,15 @@ import React, { PureComponent } from 'react'
 import Button from './Button'
 import TruncatedList from './TruncatedList'
 
+import theme from '../../styles/theme'
+
 const cmz = require('cmz')
 
 const cardTheme = {
+  list: cmz(`
+    display: block
+  `),
+
   item: cmz(`
     display: block
     margin: 0 0 6px
@@ -28,6 +34,7 @@ const tabularTheme = {
 
   item: cmz(`
     display: block
+    border-bottom: 1px solid ${theme.baseBright}
   `),
 
   more: cmz(`

@@ -323,6 +323,7 @@ const tabularTheme = {
     color: ${theme.typoParagraph}
     line-height: 1.2
     white-space: normal
+    font-size: 17px
   `),
 
   tip: cmz(`
@@ -342,6 +343,7 @@ const tabularTheme = {
       margin: 0 10px 0 0
       white-space: nowrap
       color: ${theme.typoParagraph}
+      font-size: 17px
     }
 
     &::after {
@@ -461,7 +463,6 @@ class ApplicantBadge extends PureComponent<Props> {
       onClick && onClick(id)
     }
 
-
     return id ? (
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         {(name || email) && (
@@ -484,7 +485,6 @@ class ApplicantBadge extends PureComponent<Props> {
               Icon && (
                 <Dropdown
                   key={key}
-                  targetXOrigin="right"
                   tooltip
                   className={dropdownClassName}
                   tooltipClassName={tooltipClassName}
