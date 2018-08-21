@@ -133,7 +133,7 @@ exports[`ApplicantBadge-1 1`] = `
                 </span>
                 <span
                   className="AutoUI_ui_ApplicantBadge-169">
-                  11/05/2018
+                  DD/MM/YYYY
                 </span>
               </span>
             </span>
@@ -144,7 +144,7 @@ exports[`ApplicantBadge-1 1`] = `
               className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
               <span
                 className="AutoUI_ui_ApplicantBadge-177">
-                I\'m not currently seeking opportunities.
+                Avail. date tooltip copy
               </span>
             </div>
           </div>
@@ -168,7 +168,7 @@ exports[`ApplicantBadge-1 1`] = `
                 </span>
                 <span
                   className="AutoUI_ui_ApplicantBadge-169">
-                  UTC+7
+                  UTC+00
                 </span>
               </span>
             </span>
@@ -193,7 +193,7 @@ exports[`ApplicantBadge-1 1`] = `
                 </span>
                 <span
                   className="AutoUI_ui_ApplicantBadge-169">
-                  $40
+                  $100
                 </span>
               </span>
             </span>

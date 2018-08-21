@@ -1,10 +1,12 @@
 exports[`ApplicantBadge-5 1`] = `
 <div
-  className="  ">
-  <div>
+  className="AutoUI_ui_ApplicantBadge-236 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+  <div
+    className="AutoUI_ui_ApplicantBadge-265 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
     Applicant full name
   </div>
-  <div>
+  <div
+    className="AutoUI_ui_ApplicantBadge-274">
     <div
       className="AutoUI_ui_Avatar-15">
       <img
@@ -15,7 +17,8 @@ exports[`ApplicantBadge-5 1`] = `
         width={90} />
     </div>
   </div>
-  <div>
+  <div
+    className="AutoUI_ui_ApplicantBadge-279">
     <div>
       <div
         className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
@@ -27,6 +30,7 @@ exports[`ApplicantBadge-5 1`] = `
           <span
             className="AutoUI_ui_Dropdown-42">
             <span
+              className="AutoUI_ui_ApplicantBadge-283"
               onClick={null}>
               <svg
                 height="13px"
@@ -69,6 +73,7 @@ exports[`ApplicantBadge-5 1`] = `
           <span
             className="AutoUI_ui_Dropdown-42">
             <span
+              className="AutoUI_ui_ApplicantBadge-283"
               onClick={null}>
               <svg
                 height="14px"
@@ -109,8 +114,10 @@ exports[`ApplicantBadge-5 1`] = `
       </div>
     </div>
   </div>
-  <span>
-    <span>
+  <span
+    className="AutoUI_ui_ApplicantBadge-287">
+    <span
+      className="AutoUI_ui_ApplicantBadge-293 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
       <div>
         <div
           className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
@@ -120,11 +127,13 @@ exports[`ApplicantBadge-5 1`] = `
             <span
               className="AutoUI_ui_Dropdown-42">
               <span>
-                <span>
+                <span
+                  className="AutoUI_ui_ApplicantBadge-318">
                   Avail. date:
                 </span>
-                <span>
-                  11/05/2018
+                <span
+                  className="AutoUI_ui_ApplicantBadge-322">
+                  DD/MM/YYYY
                 </span>
               </span>
             </span>
@@ -133,15 +142,17 @@ exports[`ApplicantBadge-5 1`] = `
             className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
             <div
               className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
-              <span>
-                I\'m not currently seeking opportunities.
+              <span
+                className="AutoUI_ui_ApplicantBadge-330">
+                Avail. date tooltip copy
               </span>
             </div>
           </div>
         </div>
       </div>
     </span>
-    <span>
+    <span
+      className="AutoUI_ui_ApplicantBadge-293 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
       <div>
         <div
           className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
@@ -151,11 +162,48 @@ exports[`ApplicantBadge-5 1`] = `
             <span
               className="AutoUI_ui_Dropdown-42">
               <span>
-                <span>
+                <span
+                  className="AutoUI_ui_ApplicantBadge-318">
+                  Avail. updated:
+                </span>
+                <span
+                  className="AutoUI_ui_ApplicantBadge-322">
+                  DD/MM/YYYY
+                </span>
+              </span>
+            </span>
+          </div>
+          <div
+            className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+            <div
+              className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+              <span
+                className="AutoUI_ui_ApplicantBadge-330">
+                Avail. updated tooltip copy
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+    <span
+      className="AutoUI_ui_ApplicantBadge-293 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+      <div>
+        <div
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+          <div
+            className="AutoUI_ui_Dropdown-24 ">
+            
+            <span
+              className="AutoUI_ui_Dropdown-42">
+              <span>
+                <span
+                  className="AutoUI_ui_ApplicantBadge-318">
                   Timezone:
                 </span>
-                <span>
-                  UTC+7
+                <span
+                  className="AutoUI_ui_ApplicantBadge-322">
+                  UTC+00
                 </span>
               </span>
             </span>
@@ -163,7 +211,8 @@ exports[`ApplicantBadge-5 1`] = `
         </div>
       </div>
     </span>
-    <span>
+    <span
+      className="AutoUI_ui_ApplicantBadge-293 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
       <div>
         <div
           className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
@@ -173,11 +222,63 @@ exports[`ApplicantBadge-5 1`] = `
             <span
               className="AutoUI_ui_Dropdown-42">
               <span>
-                <span>
+                <span
+                  className="AutoUI_ui_ApplicantBadge-318">
                   Rate:
                 </span>
-                <span>
-                  $40
+                <span
+                  className="AutoUI_ui_ApplicantBadge-322">
+                  $100
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </span>
+    <span
+      className="AutoUI_ui_ApplicantBadge-293 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+      <div>
+        <div
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+          <div
+            className="AutoUI_ui_Dropdown-24 ">
+            
+            <span
+              className="AutoUI_ui_Dropdown-42">
+              <span>
+                <span
+                  className="AutoUI_ui_ApplicantBadge-318">
+                  Status
+                </span>
+                <span
+                  className="AutoUI_ui_ApplicantBadge-322">
+                  In Pipeline
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </span>
+    <span
+      className="AutoUI_ui_ApplicantBadge-293 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+      <div>
+        <div
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+          <div
+            className="AutoUI_ui_Dropdown-24 ">
+            
+            <span
+              className="AutoUI_ui_Dropdown-42">
+              <span>
+                <span
+                  className="AutoUI_ui_ApplicantBadge-318">
+                  Rank
+                </span>
+                <span
+                  className="AutoUI_ui_ApplicantBadge-322">
+                  2
                 </span>
               </span>
             </span>
@@ -186,17 +287,22 @@ exports[`ApplicantBadge-5 1`] = `
       </div>
     </span>
   </span>
-  <span>
-    <span>
+  <span
+    className="AutoUI_ui_ApplicantBadge-336">
+    <span
+      className="AutoUI_ui_ApplicantBadge-342">
       JavaScript
     </span>
-    <span>
+    <span
+      className="AutoUI_ui_ApplicantBadge-342">
       ES2015
     </span>
-    <span>
+    <span
+      className="AutoUI_ui_ApplicantBadge-342">
       Node
     </span>
-    <span>
+    <span
+      className="AutoUI_ui_ApplicantBadge-342">
       Express
     </span>
     <span
@@ -268,7 +374,7 @@ exports[`ApplicantBadge-5 1`] = `
       Webpack
     </span>
     <span
-      className="  ">
+      className="AutoUI_ui_ApplicantBadge-342 AutoUI_ui_ApplicantBadge-363 AutoUI_ui_ApplicantBadge-375">
       + 17 more
     </span>
   </span>
