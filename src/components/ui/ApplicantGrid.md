@@ -5,16 +5,16 @@ const ApplicantBadge = require('./ApplicantBadge').default;
 const info = [
   {
     label: 'Avail. date:',
-    value: '11/05/2018',
-    tip: 'I\'m not currently seeking opportunities.'
+    value: 'DD/MM/YYYY',
+    tip: 'Avail. date tooltip copy'
   },
   {
     label: 'Timezone:',
-    value: 'UTC+7'
+    value: 'UTC+00'
   },
   {
     label: 'Rate:',
-    value: '$40'
+    value: '$100'
   }
 ];
 const tags = [
@@ -58,6 +58,7 @@ items[1] = (
 Tabular view:
 
 ```js
+const SvgIcon = require('./SvgIcon').default;
 const ApplicantBadge = require('./ApplicantBadge').default;
 let i = 1;
 const items = Array(5).fill(
@@ -69,16 +70,21 @@ const items = Array(5).fill(
     info={[
       {
         label: 'Avail. date:',
-        value: '11/05/2018',
-        tip: 'I\'m not currently seeking opportunities.'
+        value: 'DD/MM/YYYY',
+        tip: 'Avail. date tooltip copy'
+      },
+      {
+        label: 'Avail. updated:',
+        value: 'DD/MM/YYYY',
+        tip: 'Avail. updated tooltip copy'
       },
       {
         label: 'Timezone:',
-        value: 'UTC+7'
+        value: 'UTC+00'
       },
       {
         label: 'Rate:',
-        value: '$40'
+        value: '$100'
       }
     ]}
     tags={[
@@ -88,7 +94,34 @@ const items = Array(5).fill(
       'Express',
       'React',
       'Redux',
+      'Webpack',
+      'JavaScript',
+      'ES2015',
+      'Node',
+      'Express',
+      'React',
+      'Redux',
+      'Webpack',
+      'JavaScript',
+      'ES2015',
+      'Node',
+      'Express',
+      'React',
+      'Redux',
       'Webpack'
+    ]}
+    onClick={id => console.log('Applicant selected: ' + id)}
+    actions={[
+      {
+        key: 'approval',
+        icon: () => <SvgIcon icon='check' />,
+        render: () => <form>A custom list of inputs with a submit button and a checkmark icon</form>
+      },
+      {
+        key: 'exclusion',
+        icon: () => <SvgIcon icon='x' />,
+        render: () => <form>Another custom list of inputs with a submit button and an X icon</form>
+      }
     ]}
   />
 );

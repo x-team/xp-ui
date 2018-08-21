@@ -233,72 +233,69 @@ const cardTheme = {
 }
 
 const tabularTheme = {
-
   mode: cmz(
     typo.baseText,
     `
       & {
-        transition: all 0.4s ease-out
         background: ${theme.baseBrighter}
-        display: grid
-        grid-template: 'avatar name tags infos children'
-        grid-template-columns: repeat(auto-fit, 1fr)
-        grid-gap: 14px
+        display: flex
         cursor: pointer
         padding: 14px
         color: ${theme.typoParagraph}
         font-size: 17px
+        width: 100%
+        box-sizing: border-box
       }
 
       &:hover {
         background: ${theme.baseBright}
       }
+
+      & > * {
+        margin-right: 14px
+        flex-shrink: 0
+        display: flex
+        align-items: center
+        text-transform: initial
+      }
     `
   ),
 
   active: cmz(`
-    transition: all 0.2s ease-in
-    border: 1px solid ${theme.baseRed}
   `),
 
   name: cmz(typo.badgeHeading,
     `
-      grid-area: name
-      display: flex
-      align-items: center
-      text-transform: initial
+      white-space: nowrap
+      order: 2
+      padding-right: 20px
     `
   ),
 
   avatar: cmz(`
-    grid-area: avatar
     width: 42px
-    display: flex
-    align-items: center
+    order: 1
+    padding-right: 20px
   `),
 
   controls: cmz(`
-    display: none
+    order: 6
   `),
 
   control: cmz(`
-    & {
-      display: none
-    }
+    margin-left: 10px
   `),
 
   infos: cmz(`
-    grid-area: infos
-    width: 100%
-    display: flex
-    align-items: center
-    flex-wrap: wrap
+    order: 4
+    flex: 1
   `),
 
   info: cmz(typo.baseText,
     `
       & {
         font-size: 17px
+        margin-right: 14px
       }
 
       &:last-of-type {
@@ -335,10 +332,9 @@ const tabularTheme = {
   `),
 
   tags: cmz(`
-    grid-area: tags
-    display: flex
-    align-items: center
+    width: 400px
     flex-wrap: wrap
+    order: 3
   `),
 
   tag: cmz(`
@@ -354,6 +350,10 @@ const tabularTheme = {
 
     &:last-of-type {
       margin-right: 0
+    }
+
+    &:last-of-type::after {
+      content: ''
     }
   `),
 
@@ -381,9 +381,8 @@ const tabularTheme = {
     }
 
     &:not(:empty) {
-      grid-area: children
       display: flex
-      align-items: center
+      order: 5
     }
   `)
 }
@@ -462,6 +461,7 @@ class ApplicantBadge extends PureComponent<Props> {
       onClick && onClick(id)
     }
 
+
     return id ? (
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         {(name || email) && (
@@ -484,6 +484,7 @@ class ApplicantBadge extends PureComponent<Props> {
               Icon && (
                 <Dropdown
                   key={key}
+                  targetXOrigin="right"
                   tooltip
                   className={dropdownClassName}
                   tooltipClassName={tooltipClassName}

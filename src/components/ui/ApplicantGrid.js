@@ -21,7 +21,21 @@ const cardTheme = {
   `)
 }
 
-const tabularTheme = {} // TODO: https://zube.io/x-team/xp-formerly-auto/c/1638
+const tabularTheme = {
+  list: cmz(`
+    display: block
+  `),
+
+  item: cmz(`
+    display: block
+  `),
+
+  more: cmz(`
+    & button {
+      width: 100%
+    }
+  `)
+}
 
 type Props = {
   items?: Array<*>,
@@ -56,26 +70,29 @@ class ApplicantGrid extends PureComponent<Props, State> {
     const cx = mode === 'card' ? cardTheme : tabularTheme
 
     return items ? (
-      <TruncatedList
-        items={items}
-        visible={visible}
-        increment={increment}
-        itemClass={cx.item}
-        isFetching={isFetching}
-        hasMore={hasMore}
-        viewMore={(amount, action, isFetching) => (
-          <span className={cx.more}>
-            <Button
-              block
-              outlined
-              disabled={isFetching}
-              onClick={() => this.handleViewMore(action)}
-            >
-              View more
-            </Button>
-          </span>
-        )}
-      />
+      <div>
+        <TruncatedList
+          items={items}
+          visible={visible}
+          increment={increment}
+          listClass={cx.list}
+          itemClass={cx.item}
+          isFetching={isFetching}
+          hasMore={hasMore}
+          viewMore={(amount, action, isFetching) => (
+            <span className={cx.more}>
+              <Button
+                block
+                outlined
+                disabled={isFetching}
+                onClick={() => this.handleViewMore(action)}
+                >
+                View more
+              </Button>
+            </span>
+          )}
+        />
+      </div>
     ) : null
   }
 }
