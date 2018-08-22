@@ -194,15 +194,15 @@ class ListsEditor extends Component<Props, State> {
     onEdit && onEdit(item)
   }
 
-  handleArchiveItem = (item: Item) => {
+  handleArchiveItem = (item: Item, active: boolean) => {
     const { onArchive } = this.props
-    onArchive && onArchive([item])
+    onArchive && onArchive([item], active)
   }
 
   handleArchive = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
     const { onArchive } = this.props
-    onArchive && onArchive(this.getSelection(active))
+    onArchive && onArchive(this.getSelection(active), active)
   }
 
   handleDeleteItem = (item: Item) => {
@@ -268,7 +268,7 @@ class ListsEditor extends Component<Props, State> {
           onSearch={search => this.handleSearch(search)}
           onSelect={item => this.handleSelect(item, active)}
           onEdit={item => this.handleEdit(item)}
-          onArchive={item => this.handleArchiveItem(item)}
+          onArchive={item => this.handleArchiveItem(item, active)}
           onDelete={item => this.handleDeleteItem(item)}
           onCreateNew={active ? listName => this.handleCreateNew(listName) : undefined}
         />
