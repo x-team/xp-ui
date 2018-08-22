@@ -194,9 +194,9 @@ class ListsEditor extends Component<Props, State> {
     onEdit && onEdit(item)
   }
 
-  handleArchiveItem = (item: Item, active: boolean) => {
+  handleArchiveItem = (item: Item, isArchived: boolean) => {
     const { onArchive } = this.props
-    onArchive && onArchive([item], active)
+    onArchive && onArchive([item], isArchived)
   }
 
   handleArchive = (event: any, active: boolean = true) => {
