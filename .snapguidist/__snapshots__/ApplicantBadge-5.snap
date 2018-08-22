@@ -48,7 +48,7 @@ exports[`ApplicantBadge-5 1`] = `
           </span>
         </div>
         <div
-          className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117">
+          className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117 ">
           <div
             className="AutoUI_ui_Dropdown-73 ">
             <form>
@@ -98,7 +98,7 @@ exports[`ApplicantBadge-5 1`] = `
           </span>
         </div>
         <div
-          className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117">
+          className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117 ">
           <div
             className="AutoUI_ui_Dropdown-73 ">
             <form>
@@ -130,7 +130,7 @@ exports[`ApplicantBadge-5 1`] = `
             </span>
           </div>
           <div
-            className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120">
+            className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
             <div
               className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
               <span>

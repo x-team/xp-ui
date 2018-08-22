@@ -86,7 +86,7 @@ exports[`Dropdown-7 1`] = `
       </span>
     </div>
     <div
-      className="AutoUI_ui_Dropdown-52    ">
+      className="AutoUI_ui_Dropdown-52     ">
       <div
         className="AutoUI_ui_SelectBox-18"
         style={
@@ -145,7 +145,7 @@ exports[`Dropdown-7 1`] = `
               </span>
             </div>
             <div
-              className="AutoUI_ui_Dropdown-52    ">
+              className="AutoUI_ui_Dropdown-52     ">
               <div
                 className="AutoUI_ui_SelectBox-154">
                 <ul

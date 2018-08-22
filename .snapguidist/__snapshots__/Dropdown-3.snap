@@ -37,7 +37,7 @@ exports[`Dropdown-3 1`] = `
         </span>
       </div>
       <div
-        className="AutoUI_ui_Dropdown-52  AutoUI_ui_Dropdown-66  ">
+        className="AutoUI_ui_Dropdown-52  AutoUI_ui_Dropdown-66   ">
         <div
           className="AutoUI_ui_SelectBox-18"
           style={

@@ -19,7 +19,7 @@ exports[`Dropdown-9 1`] = `
       </span>
     </div>
     <div
-      className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117">
+      className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117 ">
       <div
         className="AutoUI_ui_Dropdown-73 ">
         Anything here
