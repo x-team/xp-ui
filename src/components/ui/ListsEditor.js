@@ -14,7 +14,7 @@ import { pluralize } from '../../utils/helpers'
 
 const cmz = require('cmz')
 
-type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm' | 'deleting' | 'deleted' | 'archiving' | 'archived'
+type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm' | 'deleting' | 'deleted' | 'dismissed' | 'archiving' | 'archived'
 
 type Item = {
   id: number,

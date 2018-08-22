@@ -188,11 +188,16 @@ const itemsArray = [
   },
   {
     id: 14,
+    value: 'dismissed',
+    status: 'dismissed'
+  },
+  {
+    id: 15,
     value: 'archiving',
     status: 'archiving'
   },
   {
-    id: 15,
+    id: 16,
     value: 'archived',
     status: 'archived'
   }
@@ -209,6 +214,7 @@ const itemsArray = [
     onArchive={item => console.log('onArchive:', item)}
     onDelete={item => console.log('onDelete:', item)}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
+    dismissTimeout={99999}
   />
 
   <hr />

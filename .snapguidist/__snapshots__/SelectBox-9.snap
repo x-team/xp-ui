@@ -93,13 +93,13 @@ exports[`SelectBox-9 1`] = `
         }>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-285 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-289 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             No Results for \"
             Searching some entry
             \"
           </span>
           <span
-            className="AutoUI_ui_SelectBox-293 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-297 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -284,13 +284,13 @@ exports[`SelectBox-9 1`] = `
         }>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-285 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-289 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             No Results for \"
             Searching some entry
             \"
           </span>
           <span
-            className="AutoUI_ui_SelectBox-293 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-297 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
