@@ -1,19 +1,20 @@
 List view (default)
 
 ```js
+const ApplicantBadge = require('./ApplicantBadge').default;
 const info = [
   {
     label: 'Avail. date:',
-    value: '11/05/2018',
-    tip: 'I\'m not currently seeking opportunities.'
+    value: 'DD/MM/YYYY',
+    tip: 'Avail. date tooltip copy'
   },
   {
     label: 'Timezone:',
-    value: 'UTC+7'
+    value: 'UTC+00'
   },
   {
     label: 'Rate:',
-    value: '$40'
+    value: '$100'
   }
 ];
 const tags = [
@@ -30,8 +31,8 @@ const items = Array(10).fill(
   <ApplicantBadge
     id={i++}
     onClick={id => console.log('Applicant selected: ' + id)}
-    name={'Applicant full name'}
-    email={'applicant@email.com'}
+    name='Applicant full name'
+    email='applicant@email.com'
     info={info}
     tags={tags}
   />
@@ -41,8 +42,8 @@ items[1] = (
     active={true}
     id={999}
     onClick={id => console.log('Applicant selected: ' + id)}
-    name={'Applicant full name'}
-    email={'applicant@email.com'}
+    name='Applicant full name'
+    email='applicant@email.com'
     info={info}
     tags={tags}
   />
@@ -57,25 +58,40 @@ items[1] = (
 Tabular view:
 
 ```js
-let i = 1;
+const SvgIcon = require('./SvgIcon').default;
+const ApplicantBadge = require('./ApplicantBadge').default;
 const items = Array(5).fill(
   <ApplicantBadge
-    id={i++}
-    name={'Applicant full name'}
-    email={'applicant@email.com'}
+    mode='tabular'
+    id={333}
+    name='Applicant full name'
+    email='applicant@email.com'
     info={[
       {
         label: 'Avail. date:',
-        value: '11/05/2018',
-        tip: 'I\'m not currently seeking opportunities.'
+        value: 'DD/MM/YYYY',
+        tip: 'Avail. date tooltip copy'
+      },
+      {
+        label: 'Avail. updated:',
+        value: 'DD/MM/YYYY',
+        tip: 'Avail. updated tooltip copy'
       },
       {
         label: 'Timezone:',
-        value: 'UTC+7'
+        value: 'UTC+00'
       },
       {
         label: 'Rate:',
-        value: '$40'
+        value: '$100'
+      },
+      {
+        label: 'Status',
+        value: 'In Pipeline'
+      },
+      {
+        label: 'Rank',
+        value: 2
       }
     ]}
     tags={[
@@ -85,13 +101,40 @@ const items = Array(5).fill(
       'Express',
       'React',
       'Redux',
+      'Webpack',
+      'JavaScript',
+      'ES2015',
+      'Node',
+      'Express',
+      'React',
+      'Redux',
+      'Webpack',
+      'JavaScript',
+      'ES2015',
+      'Node',
+      'Express',
+      'React',
+      'Redux',
       'Webpack'
+    ]}
+    onClick={id => console.log('Applicant selected: ' + id)}
+    actions={[
+      {
+        key: 'approval',
+        icon: () => <SvgIcon icon='check' />,
+        render: () => <form>A custom list of inputs with a submit button and a checkmark icon</form>
+      },
+      {
+        key: 'exclusion',
+        icon: () => <SvgIcon icon='x' />,
+        render: () => <form>Another custom list of inputs with a submit button and an X icon</form>
+      }
     ]}
   />
 );
 <ApplicantGrid
   items={items}
-  mode="tabular"
+  mode='tabular'
   visible={3}
   increment={2}
 />

@@ -1,24 +1,25 @@
 Basic card:
 
 ```js
+const SvgIcon = require('./SvgIcon').default;
 <ApplicantBadge
-  mode="card"
+  mode='card'
   id={123123}
-  name={'Applicant full name'}
-  email={'applicant@email.com'}
+  name='Applicant full name'
+  email='applicant@email.com'
   info={[
     {
       label: 'Avail. date:',
-      value: '11/05/2018',
-      tip: 'I\'m not currently seeking opportunities.'
+      value: 'DD/MM/YYYY',
+      tip: 'Avail. date tooltip copy'
     },
     {
       label: 'Timezone:',
-      value: 'UTC+7'
+      value: 'UTC+00'
     },
     {
       label: 'Rate:',
-      value: '$40'
+      value: '$100'
     }
   ]}
   tags={[
@@ -49,25 +50,26 @@ Basic card:
 Active card:
 
 ```js
+const SvgIcon = require('./SvgIcon').default;
 <ApplicantBadge
   active={true}
-  mode="card"
+  mode='card'
   id={123123}
-  name={'Applicant full name'}
-  email={'applicant@email.com'}
+  name='Applicant full name'
+  email='applicant@email.com'
   info={[
     {
       label: 'Avail. date:',
-      value: '11/05/2018',
-      tip: 'I\'m not currently seeking opportunities.'
+      value: 'DD/MM/YYYY',
+      tip: 'Avail. date tooltip copy'
     },
     {
       label: 'Timezone:',
-      value: 'UTC+7'
+      value: 'UTC+00'
     },
     {
       label: 'Rate:',
-      value: '$40'
+      value: '$100'
     },
     {
       label: 'Anything:',
@@ -104,25 +106,38 @@ Active card:
 Basic tabular:
 
 ```js
+const SvgIcon = require('./SvgIcon').default;
 <ApplicantBadge
+  mode='tabular'
   id={123123}
-  mode="tabular"
-  id={123123}
-  name={'Applicant full name'}
-  email={'applicant@email.com'}
+  name='Applicant full name'
+  email='applicant@email.com'
   info={[
     {
       label: 'Avail. date:',
-      value: '11/05/2018',
-      tip: 'I\'m not currently seeking opportunities.'
+      value: 'DD/MM/YYYY',
+      tip: 'Avail. date tooltip copy'
+    },
+    {
+      label: 'Avail. updated:',
+      value: 'DD/MM/YYYY',
+      tip: 'Avail. updated tooltip copy'
     },
     {
       label: 'Timezone:',
-      value: 'UTC+7'
+      value: 'UTC+00'
     },
     {
       label: 'Rate:',
-      value: '$40'
+      value: '$100'
+    },
+    {
+      label: 'Status',
+      value: 'In Pipeline'
+    },
+    {
+      label: 'Rank',
+      value: 2
     }
   ]}
   tags={[
@@ -169,7 +184,7 @@ With children:
 ```js
 <ApplicantBadge
   id={123123}
-  email={'applicant@x-team.com'}
+  email='applicant@x-team.com'
 >
   <button>Hello</button>
   <button>World</button>
@@ -181,8 +196,8 @@ With a custom avatar:
 ```js
 <ApplicantBadge
   id={123123}
-  name={'Applicant'}
-  email={'applicant@x-team.com'}
+  name='Applicant'
+  email='applicant@x-team.com'
   avatar=<div style={{width: 90, height: 90, borderRadius: '50%', background: 'orange' }} />
 />
 ```
