@@ -13,17 +13,7 @@ exports[`RoadmapLevel-3 1`] = `
       strokeLinejoin="round"
       strokeWidth="1">
       <g
-        stroke={
-          Object {
-            "color": Array [
-              246,
-              57,
-              84,
-            ],
-            "model": "rgb",
-            "valpha": 1,
-          }
-        }
+        className="AutoUI_ui_SvgIcon-20 AutoUI_ui_SvgIcon-47"
         strokeWidth="2"
         transform="translate(-269.000000, -1104.000000)">
         <g

@@ -19,17 +19,7 @@ exports[`CollapsibleSection-9 1`] = `
           stroke="none"
           strokeWidth="1">
           <g
-            fill={
-              Object {
-                "color": Array [
-                  246,
-                  57,
-                  84,
-                ],
-                "model": "rgb",
-                "valpha": 1,
-              }
-            }
+            className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
             transform="translate(-1191.000000, -1411.000000)">
             <g
               transform="translate(387.000000, 933.000000)">
@@ -65,17 +55,7 @@ exports[`CollapsibleSection-9 1`] = `
           stroke="none"
           strokeWidth="1">
           <g
-            fill={
-              Object {
-                "color": Array [
-                  246,
-                  57,
-                  84,
-                ],
-                "model": "rgb",
-                "valpha": 1,
-              }
-            }
+            className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
             transform="translate(-1191.000000, -1411.000000)">
             <g
               transform="translate(387.000000, 933.000000)">
@@ -111,17 +91,7 @@ exports[`CollapsibleSection-9 1`] = `
           stroke="none"
           strokeWidth="1">
           <g
-            fill={
-              Object {
-                "color": Array [
-                  246,
-                  57,
-                  84,
-                ],
-                "model": "rgb",
-                "valpha": 1,
-              }
-            }
+            className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
             transform="translate(-1191.000000, -1411.000000)">
             <g
               transform="translate(387.000000, 933.000000)">
@@ -157,17 +127,7 @@ exports[`CollapsibleSection-9 1`] = `
           stroke="none"
           strokeWidth="1">
           <g
-            fill={
-              Object {
-                "color": Array [
-                  246,
-                  57,
-                  84,
-                ],
-                "model": "rgb",
-                "valpha": 1,
-              }
-            }
+            className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
             transform="translate(-1191.000000, -1411.000000)">
             <g
               transform="translate(387.000000, 933.000000)">
@@ -203,17 +163,7 @@ exports[`CollapsibleSection-9 1`] = `
           stroke="none"
           strokeWidth="1">
           <g
-            fill={
-              Object {
-                "color": Array [
-                  246,
-                  57,
-                  84,
-                ],
-                "model": "rgb",
-                "valpha": 1,
-              }
-            }
+            className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
             transform="translate(-1191.000000, -1411.000000)">
             <g
               transform="translate(387.000000, 933.000000)">

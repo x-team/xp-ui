@@ -67,7 +67,7 @@ const itemsArray = [
 ];
 <Dropdown icon="add" label="This is a Dropdown" indicator padded>
   <SelectBox
-    collectionName="List"
+    collectionLabel="List"
     items={itemsArray}
     expanded={false}
     width={300}

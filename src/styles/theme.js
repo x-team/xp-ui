@@ -31,6 +31,7 @@ const palette = {
   manatee: '#918CA0',
   athensGray: '#F0F1F4',
   athensGrayAlt: '#E6E6ED',
+  athensGrayBright: '#F9FAFB',
   mercury: '#E4E4E4',
   porcelain: '#E9EDEE',
   brickRed: '#D32F3B',
@@ -40,6 +41,7 @@ const palette = {
 
 export default wrap({
   baseBrighter: palette.white,
+  baseBright: palette.athensGrayBright,
   baseDarker: palette.haiti,
   baseDark: palette.black,
   baseRed: palette.radicalRed,

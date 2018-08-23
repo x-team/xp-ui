@@ -1,0 +1,137 @@
+exports[`ListsEditor-3 1`] = `
+<div
+  className="AutoUI_ui_ListsEditor-51">
+  <h1
+    className="AutoUI_ui_ListsEditor-57 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
+    Edit 
+    Collection
+  </h1>
+  <section
+    className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ListsEditor-90">
+    <nav
+      className="AutoUI_ui_Tabs_Tabs-22">
+      <ul
+        className="AutoUI_ui_Tabs_Tabs-29"
+        role="tablist">
+        <li
+          className="AutoUI_ui_Tabs_Tabs-51 active"
+          role="presentation">
+          <a
+            aria-controls="tabs-pane-0"
+            aria-selected={true}
+            href=""
+            role="tab"
+            tabIndex={0}>
+            Active
+          </a>
+          <div
+            className="AutoUI_ui_Tabs_Tabs-37 active" />
+        </li>
+        <li
+          className="AutoUI_ui_Tabs_Tabs-51 "
+          role="presentation">
+          <a
+            aria-controls="tabs-pane-1"
+            aria-selected={false}
+            href=""
+            role="tab"
+            tabIndex={1}>
+            Archived
+          </a>
+          <div
+            className="AutoUI_ui_Tabs_Tabs-37 " />
+        </li>
+      </ul>
+    </nav>
+    <div
+      className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40">
+      <div
+        aria-hidden="false"
+        aria-labelledby="tabs-tab-0"
+        className="AutoUI_ui_Tabs_Tabs-111"
+        role="tabpanel">
+        <div>
+          <div>
+            <div
+              className="AutoUI_ui_SelectBox-18"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }>
+              <div>
+                <div
+                  className="AutoUI_ui_SelectBox-83">
+                  <div
+                    className="AutoUI_ui_SelectBox-94">
+                    <svg
+                      height="17px"
+                      viewBox="0 0 16 17"
+                      width="16px">
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                        stroke="none"
+                        strokeWidth="1">
+                        <circle
+                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                          cx="7.5"
+                          cy="7.5"
+                          r="6.5" />
+                        <path
+                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                          d="M11.7538745,12.6062275 L15.5,16.5"
+                          strokeLinecap="square" />
+                      </g>
+                    </svg>
+                  </div>
+                  <div>
+                    <input
+                      aria-labelledby="label-search"
+                      autoComplete="off"
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+                      id="search"
+                      name="search"
+                      placeholder="Search"
+                      required={false}
+                      type="text"
+                      value="" />
+                  </div>
+                </div>
+                <ul
+                  className="AutoUI_ui_SelectBox-136 expanded"
+                  style={
+                    Object {
+                      "height": "420px",
+                      "maxHeight": "420px",
+                      "width": "100%",
+                    }
+                  }>
+                  
+                </ul>
+              </div>
+            </div>
+            <div
+              className="AutoUI_ui_ListsEditor-66">
+              <button
+                className="AutoUI_ui_ListsEditor-75 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-142 outlined AutoUI_ui_Button-133 disabled">
+                <span
+                  className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+                  Delete
+                </span>
+              </button>
+              <button
+                className="AutoUI_ui_ListsEditor-75 AutoUI_ui_ListsEditor-86 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-133 disabled">
+                <span
+                  className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+                  Archive
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
