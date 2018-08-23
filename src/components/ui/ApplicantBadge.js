@@ -19,7 +19,9 @@ type Info = {
 type Action = {
   icon?: Function,
   onClick?: Function,
-  render?: Function
+  render?: Function,
+  dropdownClassName?: string,
+  tooltipClassName?: string
 }
 
 type Props = {
@@ -323,11 +325,13 @@ class ApplicantBadge extends PureComponent<Props> {
         )}
         {actions.length > 0 && (
           <div className={cx.controls}>
-            {actions.map(({ key, icon: Icon, onClick = null, render }) => (
+            {actions.map(({ key, icon: Icon, onClick = null, render, dropdownClassName, tooltipClassName }) => (
               Icon && (
                 <Dropdown
                   key={key}
                   tooltip
+                  className={dropdownClassName}
+                  tooltipClassName={tooltipClassName}
                   label={(
                     <span className={cx.control} onClick={onClick}>
                       <Icon />

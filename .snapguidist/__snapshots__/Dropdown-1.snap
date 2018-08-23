@@ -86,7 +86,7 @@ exports[`Dropdown-1 1`] = `
       </span>
     </div>
     <div
-      className="AutoUI_ui_Dropdown-52    ">
+      className="AutoUI_ui_Dropdown-52     ">
       <div
         style={
           Object {
@@ -107,7 +107,7 @@ exports[`Dropdown-1 1`] = `
               </span>
             </div>
             <div
-              className="AutoUI_ui_Dropdown-52    ">
+              className="AutoUI_ui_Dropdown-52     ">
               <div
                 style={
                   Object {
@@ -168,7 +168,7 @@ exports[`Dropdown-1 1`] = `
                       </span>
                     </div>
                     <div
-                      className="AutoUI_ui_Dropdown-52  AutoUI_ui_Dropdown-66  ">
+                      className="AutoUI_ui_Dropdown-52  AutoUI_ui_Dropdown-66   ">
                       <div
                         style={
                           Object {

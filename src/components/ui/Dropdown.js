@@ -134,7 +134,8 @@ type Props = {
   padded?: boolean,
   toggle?: boolean,
   tooltip?: boolean,
-  className?: string
+  className?: string,
+  tooltipClassName?: string
 }
 
 type State = {
@@ -165,7 +166,7 @@ class Dropdown extends PureComponent<Props, State> {
   close = () => this.setState(() => ({ open: false }))
 
   render () {
-    const { icon, label, children, targetXOrigin, targetYOrigin, hover, indicator, padded, toggle, tooltip, className } = this.props
+    const { icon, label, children, targetXOrigin, targetYOrigin, hover, indicator, padded, toggle, tooltip, className, tooltipClassName } = this.props
     const { open } = this.state
 
     const rootClasses = [
@@ -183,7 +184,8 @@ class Dropdown extends PureComponent<Props, State> {
       targetYOrigin === 'top' ? styles.contentTop : '',
       tooltip && children ? (
         targetYOrigin === 'top' ? styles.contentTooltipTop : styles.contentTooltip
-      ) : ''
+      ) : '',
+      tooltipClassName || ''
     ].join(' ')
     const tooltipClasses = [
       styles.tooltip,
