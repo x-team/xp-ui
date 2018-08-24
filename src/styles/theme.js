@@ -27,7 +27,6 @@ const palette = {
   alto: '#D8D8D8',
   nobel: '#B3B3B3',
   tuna: '#34323B',
-  scarpaFlow: '#5A5665',
   manatee: '#918CA0',
   athensGray: '#F0F1F4',
   athensGrayAlt: '#E6E6ED',
@@ -52,7 +51,7 @@ export default wrap({
 
   typoHeading: palette.tuna,
   typoSubheading: palette.radicalRed,
-  typoParagraph: palette.scarpaFlow,
+  typoParagraph: palette.tuna,
   typoHighlight: palette.haiti,
   typoLabel: palette.bombay,
 
@@ -60,7 +59,7 @@ export default wrap({
   sliderBackground: palette.athensGray,
 
   formPlaceholder: palette.manatee,
-  formText: palette.scarpaFlow,
+  formText: palette.tuna,
   formBorder: palette.athensGrayAlt,
   formError: palette.brickRed,
   formErrorShadow: palette.wePeep,
@@ -82,7 +81,7 @@ export default wrap({
   iconBright: palette.white,
   iconDark: palette.tuna,
   iconGray: palette.bombay,
-  iconTextGray: palette.scarpaFlow,
+  iconTextGray: palette.tuna,
 
   logoGray: palette.nobel
 })
