@@ -5,7 +5,6 @@ import React, { Component } from 'react'
 import InputField from '../forms/InputField'
 import SvgIcon from './SvgIcon'
 import Dropdown from './Dropdown'
-import Button from './Button'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
@@ -329,34 +328,20 @@ const cx = {
   `),
 
   confirm: cmz(`
-    display: flex
-    justify-content: space-between
-    align-items: center
-    min-height: 30px
-    margin: 0
-    padding: 0
-    width: 100%
-  `),
+    & {
+      display: block
+      min-height: 30px
+      margin: 0
+      padding: 0
+      width: 70%
+    }
 
-  question: cmz(`
     & p {
       margin: 0
     }
   `),
 
-  answer: cmz(`
-    & {
-      display: flex
-      flex-wrap: nowrap
-    }
-
-    & > * {
-      margin-left: 10px
-    }
-
-    & > *:first-of-type {
-      margin-left: 0
-    }
+  question: cmz(`
   `)
 }
 
@@ -620,13 +605,13 @@ class SelectBox extends Component<Props, State> {
     this.updateItemsState(updatedItem)
   }
 
-  handleCancelDelete = (e: any, item: Item) => {
+  handleCancelDelete = (item: Item) => (e: Object) => {
     e.stopPropagation && e.stopPropagation()
     const updatedItem = { ...item, status: '' }
     this.updateItemsState(updatedItem)
   }
 
-  handleDelete = (e: any, item: Item) => {
+  handleDelete = (item: Item) => (e: Object) => {
     e.stopPropagation && e.stopPropagation()
     const { onDelete } = this.props
     if (onDelete) {
@@ -734,28 +719,20 @@ class SelectBox extends Component<Props, State> {
 
     const renderConfirmStatus = (item: Item) => (
       <div className={cx.confirm}>
-        <div className={cx.question}>
-          <p>Delete "{item.value}"</p>
-          <p><strong>Are you sure?</strong></p>
-        </div>
-        <div className={cx.answer}>
-          <Button
-            onClick={e => this.handleCancelDelete(e, item)}
-            pseudolink
-            className={cx.button}
-            size={'small'}
-          >
-            CANCEL
-          </Button>
-          <Button
-            onClick={e => this.handleDelete(e, item)}
-            className={cx.button}
-            size={'small'}
-          >
-            Yes
-          </Button>
-        </div>
+        <p>Delete "{item.value}"</p>
+        <p><strong>Are you sure?</strong></p>
       </div>
+    )
+
+    const renderConfirmStatusControl = (item: Item) => (
+      <span className={cx.control}>
+        <span className={cx.controlButton} onClick={this.handleCancelDelete(item)}>
+          <SvgIcon icon='x' color='grayscale' hover='default' />
+        </span>
+        <span className={cx.controlButton} onClick={this.handleDelete(item)}>
+          <SvgIcon icon='check' color='grayscale' hover='default' />
+        </span>
+      </span>
     )
 
     const renderDeletingStatus = (item: Item) => (
@@ -877,7 +854,8 @@ class SelectBox extends Component<Props, State> {
             return getRenderWithFallback({
               item,
               method: onDelete,
-              render: renderConfirmStatus
+              render: renderConfirmStatus,
+              control: renderConfirmStatusControl
             })
           case STATUS.DELETING:
             return getRenderWithFallback({
@@ -933,10 +911,12 @@ class SelectBox extends Component<Props, State> {
         maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
-        {search && filteredItems && filteredItems.length === 0 && (
+        {search && filteredItems && filteredItems.length !== 1 && (
           <li key='search-result'>
-            <span className={cx.nothingLabel}>No Results for "{search}"</span>
-            {onCreateNew && (
+            {filteredItems.length === 0 && (
+              <span className={cx.nothingLabel}>No Results for "{search}"</span>
+            )}
+            {onCreateNew && !filteredItems.find(each => each.value === search.trim()) && (
               <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
                 <SvgIcon icon='plus' />
                 <span>Create new {collectionLabel} "{search}"</span>

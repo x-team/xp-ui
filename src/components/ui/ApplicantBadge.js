@@ -19,7 +19,9 @@ type Info = {
 type Action = {
   icon?: Function,
   onClick?: Function,
-  render?: Function
+  render?: Function,
+  dropdownClassName?: string,
+  tooltipClassName?: string
 }
 
 type Props = {
@@ -230,7 +232,164 @@ const cardTheme = {
   `)
 }
 
-const tabularTheme = {} // TODO: https://zube.io/x-team/xp-formerly-auto/c/1638
+const tabularTheme = {
+  mode: cmz(
+    typo.baseText,
+    `
+      & {
+        background: ${theme.baseBrighter}
+        display: flex
+        cursor: pointer
+        padding: 14px
+        color: ${theme.typoParagraph}
+        font-size: 17px
+        width: 100%
+        box-sizing: border-box
+      }
+
+      &:hover {
+        background: ${theme.baseBright}
+      }
+
+      & > * {
+        margin-right: 14px
+        flex-shrink: 0
+        display: flex
+        align-items: center
+        text-transform: initial
+        box-sizing: border-box
+      }
+    `
+  ),
+
+  name: cmz(typo.badgeHeading,
+    `
+      width: 300px
+      white-space: nowrap
+      order: 2
+      font-weight: normal
+    `
+  ),
+
+  avatar: cmz(`
+    width: 42px
+    order: 1
+  `),
+
+  controls: cmz(`
+    order: 6
+  `),
+
+  control: cmz(`
+    margin-left: 10px
+  `),
+
+  infos: cmz(`
+    order: 4
+    flex: 1
+    justify-content: space-evenly
+  `),
+
+  info: cmz(typo.baseText,
+    `
+      & {
+        width: 80px
+        font-size: 17px
+        margin: 0 14px
+        text-align: center
+      }
+
+      & > span {
+        white-space: nowrap
+      }
+    `
+  ),
+
+  moreinfos: cmz(`
+    & {
+      cursor: pointer
+    }
+
+    &:hover {
+      color: ${theme.typoHighlight}
+    }
+  `),
+
+  label: cmz(`
+    display: none
+  `),
+
+  value: cmz(`
+    display: block
+    color: ${theme.typoParagraph}
+    line-height: 1.2
+    white-space: normal
+    font-size: 17px
+  `),
+
+  tip: cmz(`
+    font-size: 15px
+    color: ${theme.typoParagraph}
+    line-height: 1.4
+  `),
+
+  tags: cmz(`
+    width: 260px
+    flex-wrap: wrap
+    order: 3
+  `),
+
+  tag: cmz(`
+    & {
+      margin: 0 10px 0 0
+      white-space: nowrap
+      color: ${theme.typoParagraph}
+      font-size: 17px
+    }
+
+    &::after {
+      content: ','
+    }
+
+    &:last-of-type {
+      margin-right: 0
+    }
+
+    &:last-of-type::after {
+      content: ''
+    }
+  `),
+
+  moretags: cmz(`
+    & {
+      border: none
+      text-transform: initial
+      cursor: pointer
+    }
+
+    &:hover {
+      color: ${theme.typoHighlight}
+    }
+  `),
+
+  purelabel: cmz(`
+    border: none
+  `),
+
+  children: cmz(`
+    &:empty {
+      display: none
+      padding: 0
+      margin: 0
+    }
+
+    &:not(:empty) {
+      display: flex
+      order: 5
+    }
+  `)
+}
+
 class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
     mode: 'card',
@@ -257,10 +416,10 @@ class ApplicantBadge extends PureComponent<Props> {
     const mapInfosToRender = (infos) => (
       <TruncatedList
         inserted
-        visible={4}
+        visible={mode === 'card' ? 4 : infos.length}
         listClass={cx.infos}
         itemClass={cx.info}
-        items={infos && info.filter(info => info.value).map((info, i) => (
+        items={infos && infos.filter(info => info.value).map((info, i) => (
           <Dropdown
             key={i}
             tooltip
@@ -323,11 +482,13 @@ class ApplicantBadge extends PureComponent<Props> {
         )}
         {actions.length > 0 && (
           <div className={cx.controls}>
-            {actions.map(({ key, icon: Icon, onClick = null, render }) => (
+            {actions.map(({ key, icon: Icon, onClick = null, render, dropdownClassName, tooltipClassName }) => (
               Icon && (
                 <Dropdown
                   key={key}
                   tooltip
+                  className={dropdownClassName}
+                  tooltipClassName={tooltipClassName}
                   label={(
                     <span className={cx.control} onClick={onClick}>
                       <Icon />
