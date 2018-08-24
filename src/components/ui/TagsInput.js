@@ -19,7 +19,7 @@ const cx = {
     }
     & .Select-control {
       display: flex
-      padding-left: 5px
+      padding-left: 15px
       border: 1px solid ${theme.lineSilver2}
       border-radius: 2px
     }
@@ -50,7 +50,7 @@ const cx = {
       font-size: 17px
     }
     &.Select--multi .Select-control .Select-input {
-      margin-left: 15px
+      margin-left: 5px
       line-height: 60px
       height: 60px
     }
@@ -103,11 +103,12 @@ class TagsInput extends Component<Props, State> {
   }
 
   handleChange = (values: Array<*>) => {
+    const newValues = values.map(each => each.label).join(',')
     this.setState(prevState => ({
-      values: values.map(each => each.label).join(',')
+      values: newValues
     }), () => {
       const { onChange } = this.props
-      onChange && onChange()
+      onChange && onChange(newValues)
     })
   }
 

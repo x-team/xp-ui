@@ -7,7 +7,7 @@ import SelectBox from './SelectBox'
 import SvgIcon from './SvgIcon'
 import TagsInput from './TagsInput'
 
-// import theme from '../../styles/theme'
+import theme from '../../styles/theme'
 
 import type { Element } from 'react'
 
@@ -15,8 +15,9 @@ const cmz = require('cmz')
 
 const cx = {
   header: cmz(`
-    background-color: silver
+    background-color: ${theme.baseBright}
   `),
+
   headerContainer: cmz(`
     & {
       padding: 30px 60px
@@ -27,7 +28,7 @@ const cx = {
     &:first-of-type {
       display: flex
       align-items: center
-      border-bottom: 1px solid silver
+      border-bottom: 1px solid ${theme.lineSilver4}
     }
     &:last-of-type {
       padding-top: 0
@@ -36,16 +37,19 @@ const cx = {
       display: inline-block
     }
   `),
+
   listsButton: cmz(`
     width: 100px
     height: 50px
     margin-left: 10px
   `),
+
   formList: cmz(`
     display: inline-block
     width: 50%
     margin-top: 20px
   `),
+
   formButton: cmz(`
     display: block
     width: 100%
@@ -61,22 +65,46 @@ type Props = {
 }
 
 class SearchForm extends PureComponent<Props> {
+  static defaultProps = {
+    lists: [],
+    onSelectList: () => {},
+    onClickShowLists: () => {},
+    keywords: [],
+    onChangeKeywords: () => {},
+    fields: [],
+    onSelectField: () => {},
+    onSubmit: () => {},
+    openListEditorModal: () => {},
+    renderApplicantsStatusFilter: null
+  }
+
   render () {
-    // const { onSubmit, children } = this.props
+    const {
+      lists,
+      onSelectList,
+      onClickShowLists,
+      keywords,
+      onChangeKeywords,
+      fields,
+      onSelectField,
+      onSubmit,
+      openListEditorModal,
+      renderApplicantsStatusFilter
+     } = this.props
 
     return (
       <div className={cx.header}>
         <div className={cx.headerContainer}>
           <SelectBox
             placeholder='Select Lists'
-            items={[]/*this.mapListsToItems()*/}
+            items={lists}
             width={330}
             visibleItems={3}
             hasSearch
             collectionLabel='List'
-            onSelect={()=>{}/*this.handleSelectList*/}
+            onSelect={onSelectList}
             append={
-              <Button selectbox onClick={()=>{}/*this.openListEditorModal*/}>
+              <Button selectbox onClick={openListEditorModal}>
                 <SvgIcon icon='edit' /> Edit lists
               </Button>
             }
@@ -86,22 +114,25 @@ class SearchForm extends PureComponent<Props> {
             type='button'
             size='large'
             raised
-            onClick={()=>{}/*this.handleClickShowLists*/}
+            onClick={onClickShowLists}
           >
             Show
           </Button>
         </div>
         <div className={cx.headerContainer}>
-          <form onSubmit={()=>{}/*this.handleSubmit*/}>
-            <TagsInput />
+          <form onSubmit={onSubmit}>
+            <TagsInput
+              value={keywords}
+              onChange={onChangeKeywords}
+            />
             <div className={cx.formList}>
               <SelectBox
                 placeholder='Fields'
-                items={[]/*this.mapFieldsToItems()*/}
+                items={fields}
                 visibleItems={3}
                 hasSearch
                 collectionLabel='Field'
-                onSelect={()=>{}/*this.handleSelectField*/}
+                onSelect={onSelectField}
               />
             </div>
             <Button className={cx.formButton} type='submit' size='large' raised>
@@ -109,7 +140,7 @@ class SearchForm extends PureComponent<Props> {
             </Button>
           </form>
         </div>
-        <div className={cx.headerContainer}>{/*this.renderApplicantsStatusFilter*/}</div>
+        <div className={cx.headerContainer}>{renderApplicantsStatusFilter}</div>
       </div>
     )
   }
