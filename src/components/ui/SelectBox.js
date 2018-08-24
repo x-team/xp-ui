@@ -911,10 +911,12 @@ class SelectBox extends Component<Props, State> {
         maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
-        {search && filteredItems && filteredItems.length === 0 && (
+        {search && filteredItems && filteredItems.length !== 1 && (
           <li key='search-result'>
-            <span className={cx.nothingLabel}>No Results for "{search}"</span>
-            {onCreateNew && (
+            {filteredItems.length === 0 && (
+              <span className={cx.nothingLabel}>No Results for "{search}"</span>
+            )}
+            {onCreateNew && !filteredItems.find(each => each.value === search.trim()) && (
               <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
                 <SvgIcon icon='plus' />
                 <span>Create new {collectionLabel} "{search}"</span>
