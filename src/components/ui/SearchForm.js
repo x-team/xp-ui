@@ -139,7 +139,7 @@ class SearchForm extends PureComponent<Props> {
         <div className={cx.headerContainer}>
           <form onSubmit={onSubmit}>
             <Keywords
-              value={keywords}
+              values={keywords}
               onChange={onChangeKeywords}
             />
             <div className={cx.formList}>
