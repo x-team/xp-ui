@@ -1,8 +1,8 @@
 exports[`SearchForm-3 1`] = `
 <div
-  className="AutoUI_ui_FilterBar-17">
+  className="AutoUI_ui_SearchForm-17 AutoUI_ui_SearchForm-69">
   <div
-    className="AutoUI_ui_FilterBar-20">
+    className="AutoUI_ui_SearchForm-21">
     <div
       className="AutoUI_ui_SelectBox-18"
       style={
@@ -136,7 +136,7 @@ exports[`SearchForm-3 1`] = `
       </div>
     </div>
     <button
-      className="AutoUI_ui_FilterBar-39 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-125 AutoUI_ui_Button-176 raised"
+      className="AutoUI_ui_SearchForm-41 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-125 AutoUI_ui_Button-176 raised"
       type="button">
       <span
         className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
@@ -145,15 +145,15 @@ exports[`SearchForm-3 1`] = `
     </button>
   </div>
   <div
-    className="AutoUI_ui_FilterBar-20">
+    className="AutoUI_ui_SearchForm-21">
     <form>
       <div
-        className="Select AutoUI_ui_FilterBar-44 is-clearable is-searchable Select--multi">
+        className="Select AutoUI_ui_Keywords-14 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 is-clearable is-searchable Select--multi">
         <div
           className="Select-control">
           <span
             className="Select-multi-value-wrapper"
-            id="react-select-5--value">
+            id="react-select-20--value">
             <div
               className="Select-placeholder">
               Keywords
@@ -166,7 +166,7 @@ exports[`SearchForm-3 1`] = `
                 }
               }>
               <input
-                aria-activedescendant="react-select-5--value"
+                aria-activedescendant="react-select-20--value"
                 aria-expanded="false"
                 aria-haspopup="false"
                 aria-owns=""
@@ -203,7 +203,7 @@ exports[`SearchForm-3 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_FilterBar-104">
+        className="AutoUI_ui_SearchForm-47">
         <div
           className="AutoUI_ui_SelectBox-18"
           style={
@@ -313,7 +313,7 @@ exports[`SearchForm-3 1`] = `
         </div>
       </div>
       <button
-        className="AutoUI_ui_FilterBar-109 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-125 AutoUI_ui_Button-176 raised"
+        className="AutoUI_ui_SearchForm-53 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-125 AutoUI_ui_Button-176 raised"
         type="submit">
         <span
           className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
@@ -323,6 +323,6 @@ exports[`SearchForm-3 1`] = `
     </form>
   </div>
   <div
-    className="AutoUI_ui_FilterBar-20" />
+    className="AutoUI_ui_SearchForm-21" />
 </div>
 `;

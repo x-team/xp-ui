@@ -1,8 +1,8 @@
 Basic:
 
 ```js
-<TagsInput
-  values="a,simple,string,separated,by,commas"
+<Keywords
+  values="a,simple,string,separated,by,commas,with,opperators,and,or"
   onChange={values => console.log({ values })}
 />
 ```
@@ -10,5 +10,5 @@ Basic:
 Missing props (does component explode?):
 
 ```js
-<TagsInput />
+<Keywords />
 ```

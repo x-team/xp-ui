@@ -16,6 +16,7 @@ import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
+import Keywords from './components/ui/Keywords'
 import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
 import Milestones from './components/ui/Milestones'
@@ -59,6 +60,7 @@ export {
   HorizontalRuler,
   InputField,
   InputGroup,
+  Keywords,
   ListsEditor,
   Loader,
   Milestones,

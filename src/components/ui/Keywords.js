@@ -28,10 +28,10 @@ const cx = {
       height: 60px
     }
     & .Select-control .Select-placeholder {
-      line-height: 60px
+      line-height: 60px !important
       color: ${theme.typoParagraph}
       cursor: text
-      padding-left: 20px
+      padding-left: 20px !important
     }
     & .Select-control .Select-value .Select-value-label {
       color: ${theme.typoParagraph}
@@ -44,8 +44,8 @@ const cx = {
       margin-left: 0
     }
     &.Select--multi .Select-control .Select-value {
-      padding: 0
-      line-height: initial
+      padding: 0 !important
+      line-height: initial !important
       margin-top: 0
       font-size: 17px
     }
@@ -53,6 +53,7 @@ const cx = {
       margin-left: 5px
       line-height: 60px
       height: 60px
+      padding: 0 !important;
     }
     &.Select--multi .Select-multi-value-wrapper {
       white-space: nowrap
@@ -85,7 +86,7 @@ type State = {
   values: string
 }
 
-class TagsInput extends Component<Props, State> {
+class Keywords extends Component<Props, State> {
   static defaultProps = {
     values: ''
   }
@@ -102,11 +103,16 @@ class TagsInput extends Component<Props, State> {
     }
   }
 
+  uppercaseOpperators = (value: string) => {
+    const upperCasedLabel = value.toUpperCase()
+    return ['AND', 'OR'].includes(upperCasedLabel) ? upperCasedLabel : value
+  }
+
   handleChange = (values: Array<*>) => {
-    const newValues = values.map(each => each.label).join(',')
-    this.setState(prevState => ({
-      values: newValues
-    }), () => {
+    const newValues = values
+      .map(each => this.uppercaseOpperators(each.label))
+      .join(',')
+    this.setState(prevState => ({ values: newValues }), () => {
       const { onChange } = this.props
       onChange && onChange(newValues)
     })
@@ -117,7 +123,10 @@ class TagsInput extends Component<Props, State> {
       .split(',')
       .map(String)
       .filter(Boolean)
-      .map((keyword, i) => ({ value: i, label: keyword })) || []
+      .map((keyword, i) => ({
+        value: i,
+        label: this.uppercaseOpperators(keyword)
+      })) || []
 
     return (
       <Select.Creatable
@@ -133,4 +142,4 @@ class TagsInput extends Component<Props, State> {
   }
 }
 
-export default TagsInput
+export default Keywords

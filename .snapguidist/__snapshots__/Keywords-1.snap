@@ -1,0 +1,305 @@
+exports[`Keywords-1 1`] = `
+<div
+  className="Select AutoUI_ui_Keywords-14 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 has-value is-clearable is-searchable Select--multi">
+  <input
+    disabled={false}
+    name="keywords"
+    type="hidden"
+    value="0" />
+  <input
+    disabled={false}
+    name="keywords"
+    type="hidden"
+    value="1" />
+  <input
+    disabled={false}
+    name="keywords"
+    type="hidden"
+    value="2" />
+  <input
+    disabled={false}
+    name="keywords"
+    type="hidden"
+    value="3" />
+  <input
+    disabled={false}
+    name="keywords"
+    type="hidden"
+    value="4" />
+  <input
+    disabled={false}
+    name="keywords"
+    type="hidden"
+    value="5" />
+  <input
+    disabled={false}
+    name="keywords"
+    type="hidden"
+    value="6" />
+  <input
+    disabled={false}
+    name="keywords"
+    type="hidden"
+    value="7" />
+  <input
+    disabled={false}
+    name="keywords"
+    type="hidden"
+    value="8" />
+  <input
+    disabled={false}
+    name="keywords"
+    type="hidden"
+    value="9" />
+  <div
+    className="Select-control">
+    <span
+      className="Select-multi-value-wrapper"
+      id="react-select-6--value">
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-6--value-0"
+          role="option">
+          a
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-6--value-1"
+          role="option">
+          simple
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-6--value-2"
+          role="option">
+          string
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-6--value-3"
+          role="option">
+          AND
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-6--value-4"
+          role="option">
+          separated
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-6--value-5"
+          role="option">
+          by
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-6--value-6"
+          role="option">
+          commas
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-6--value-7"
+          role="option">
+          OR
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-6--value-8"
+          role="option">
+          use
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-6--value-9"
+          role="option">
+          tabs
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-input"
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }>
+        <input
+          aria-activedescendant="react-select-6--value"
+          aria-expanded="false"
+          aria-haspopup="false"
+          aria-owns=""
+          required={false}
+          role="combobox"
+          style={
+            Object {
+              "boxSizing": "content-box",
+              "width": "5px",
+            }
+          }
+          value="" />
+        <div
+          style={
+            Object {
+              "height": 0,
+              "left": 0,
+              "overflow": "scroll",
+              "position": "absolute",
+              "top": 0,
+              "visibility": "hidden",
+              "whiteSpace": "pre",
+            }
+          }>
+          
+        </div>
+      </div>
+    </span>
+    <span
+      aria-label="Clear all"
+      className="Select-clear-zone"
+      title="Clear all">
+      <span
+        className="Select-clear"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "&times;",
+          }
+        } />
+    </span>
+    <span
+      className="Select-arrow-zone">
+      <span
+        className="Select-arrow" />
+    </span>
+  </div>
+</div>
+`;

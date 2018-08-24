@@ -22,8 +22,7 @@ Tabular view mode:
 <SearchForm
   mode="tabular"
   onSubmit={() => console.log('onSubmit')}
->
-</SearchForm>
+/>
 ```
 
 Missing props (does component explode?):

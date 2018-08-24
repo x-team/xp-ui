@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react'
 import Button from './Button'
 import SelectBox from './SelectBox'
 import SvgIcon from './SvgIcon'
-import TagsInput from './TagsInput'
+import Keywords from './Keywords'
 
 import theme from '../../styles/theme'
 
@@ -59,13 +59,27 @@ const cx = {
   `)
 }
 
+const cardTheme = {
+  header: cmz(`
+    width: 630px
+  `)
+}
+
+const tabularTheme = {
+  header: cmz(`
+    width: 100%
+  `)
+}
+
 type Props = {
+  mode: 'card' | 'tabular'
   // onSubmit: Function,
   // children: Element<*>|string
 }
 
 class SearchForm extends PureComponent<Props> {
   static defaultProps = {
+    mode: 'card',
     lists: [],
     onSelectList: () => {},
     onClickShowLists: () => {},
@@ -80,6 +94,7 @@ class SearchForm extends PureComponent<Props> {
 
   render () {
     const {
+      mode,
       lists,
       onSelectList,
       onClickShowLists,
@@ -90,10 +105,12 @@ class SearchForm extends PureComponent<Props> {
       onSubmit,
       openListEditorModal,
       renderApplicantsStatusFilter
-     } = this.props
+    } = this.props
+
+    const theme = mode === 'card' ? cardTheme : tabularTheme
 
     return (
-      <div className={cx.header}>
+      <div className={[cx.header, theme.header].join(' ')}>
         <div className={cx.headerContainer}>
           <SelectBox
             placeholder='Select Lists'
@@ -121,7 +138,7 @@ class SearchForm extends PureComponent<Props> {
         </div>
         <div className={cx.headerContainer}>
           <form onSubmit={onSubmit}>
-            <TagsInput
+            <Keywords
               value={keywords}
               onChange={onChangeKeywords}
             />
