@@ -739,21 +739,14 @@ class SelectBox extends Component<Props, State> {
           <p><strong>Are you sure?</strong></p>
         </div>
         <div className={cx.answer}>
-          <Button
-            onClick={e => this.handleCancelDelete(e, item)}
-            pseudolink
-            className={cx.button}
-            size={'small'}
-          >
-            CANCEL
-          </Button>
-          <Button
-            onClick={e => this.handleDelete(e, item)}
-            className={cx.button}
-            size={'small'}
-          >
-            Yes
-          </Button>
+          <span className={cx.control}>
+            <span className={cx.controlButton} onClick={e => this.handleCancelDelete(e, item)}>
+              <SvgIcon icon='x' color='grayscale' hover='default' />
+            </span>
+            <span className={cx.controlButton} onClick={e => this.handleDelete(e, item)}>
+              <SvgIcon icon='check' color='grayscale' hover='default' />
+            </span>
+          </span>
         </div>
       </div>
     )
