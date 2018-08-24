@@ -1,6 +1,6 @@
 exports[`Keywords-1 1`] = `
 <div
-  className="Select AutoUI_ui_Keywords-14 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 has-value is-clearable is-searchable Select--multi">
+  className="Select AutoUI_ui_Keywords-14 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  has-value is-clearable is-searchable Select--multi">
   <input
     disabled={false}
     name="keywords"
@@ -55,7 +55,7 @@ exports[`Keywords-1 1`] = `
     className="Select-control">
     <span
       className="Select-multi-value-wrapper"
-      id="react-select-6--value">
+      id="react-select-15--value">
       <div
         className="Select-value">
         <span
@@ -66,7 +66,7 @@ exports[`Keywords-1 1`] = `
         <span
           aria-selected="true"
           className="Select-value-label"
-          id="react-select-6--value-0"
+          id="react-select-15--value-0"
           role="option">
           a
           <span
@@ -85,7 +85,7 @@ exports[`Keywords-1 1`] = `
         <span
           aria-selected="true"
           className="Select-value-label"
-          id="react-select-6--value-1"
+          id="react-select-15--value-1"
           role="option">
           simple
           <span
@@ -104,7 +104,7 @@ exports[`Keywords-1 1`] = `
         <span
           aria-selected="true"
           className="Select-value-label"
-          id="react-select-6--value-2"
+          id="react-select-15--value-2"
           role="option">
           string
           <span
@@ -123,26 +123,7 @@ exports[`Keywords-1 1`] = `
         <span
           aria-selected="true"
           className="Select-value-label"
-          id="react-select-6--value-3"
-          role="option">
-          AND
-          <span
-            className="Select-aria-only">
-             
-          </span>
-        </span>
-      </div>
-      <div
-        className="Select-value">
-        <span
-          aria-hidden="true"
-          className="Select-value-icon">
-          ×
-        </span>
-        <span
-          aria-selected="true"
-          className="Select-value-label"
-          id="react-select-6--value-4"
+          id="react-select-15--value-3"
           role="option">
           separated
           <span
@@ -161,7 +142,7 @@ exports[`Keywords-1 1`] = `
         <span
           aria-selected="true"
           className="Select-value-label"
-          id="react-select-6--value-5"
+          id="react-select-15--value-4"
           role="option">
           by
           <span
@@ -180,7 +161,7 @@ exports[`Keywords-1 1`] = `
         <span
           aria-selected="true"
           className="Select-value-label"
-          id="react-select-6--value-6"
+          id="react-select-15--value-5"
           role="option">
           commas
           <span
@@ -199,47 +180,66 @@ exports[`Keywords-1 1`] = `
         <span
           aria-selected="true"
           className="Select-value-label"
-          id="react-select-6--value-7"
+          id="react-select-15--value-6"
+          role="option">
+          with
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-15--value-7"
+          role="option">
+          opperators
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-15--value-8"
+          role="option">
+          AND
+          <span
+            className="Select-aria-only">
+             
+          </span>
+        </span>
+      </div>
+      <div
+        className="Select-value">
+        <span
+          aria-hidden="true"
+          className="Select-value-icon">
+          ×
+        </span>
+        <span
+          aria-selected="true"
+          className="Select-value-label"
+          id="react-select-15--value-9"
           role="option">
           OR
-          <span
-            className="Select-aria-only">
-             
-          </span>
-        </span>
-      </div>
-      <div
-        className="Select-value">
-        <span
-          aria-hidden="true"
-          className="Select-value-icon">
-          ×
-        </span>
-        <span
-          aria-selected="true"
-          className="Select-value-label"
-          id="react-select-6--value-8"
-          role="option">
-          use
-          <span
-            className="Select-aria-only">
-             
-          </span>
-        </span>
-      </div>
-      <div
-        className="Select-value">
-        <span
-          aria-hidden="true"
-          className="Select-value-icon">
-          ×
-        </span>
-        <span
-          aria-selected="true"
-          className="Select-value-label"
-          id="react-select-6--value-9"
-          role="option">
-          tabs
           <span
             className="Select-aria-only">
              
@@ -254,7 +254,7 @@ exports[`Keywords-1 1`] = `
           }
         }>
         <input
-          aria-activedescendant="react-select-6--value"
+          aria-activedescendant="react-select-15--value"
           aria-expanded="false"
           aria-haspopup="false"
           aria-owns=""
