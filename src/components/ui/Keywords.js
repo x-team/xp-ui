@@ -79,7 +79,8 @@ const cx = {
 
 type Props = {
   values: string,
-  onChange: Function
+  onChange: Function,
+  className: string
 }
 
 type State = {
@@ -88,7 +89,8 @@ type State = {
 
 class Keywords extends Component<Props, State> {
   static defaultProps = {
-    values: ''
+    values: '',
+    className: ''
   }
 
   state: State = {
@@ -110,7 +112,7 @@ class Keywords extends Component<Props, State> {
 
   handleChange = (values: Array<*>) => {
     const newValues = values
-      .map(each => this.uppercaseOpperators(each.label))
+      .map(keyword => this.uppercaseOpperators(keyword.label))
       .join(',')
     this.setState(prevState => ({ values: newValues }), () => {
       const { onChange } = this.props
@@ -130,9 +132,9 @@ class Keywords extends Component<Props, State> {
 
     return (
       <Select.Creatable
-        className={cx.formTagList.toString()}
+        className={[cx.formTagList.toString(), this.props.className].join(' ')}
         name='keywords'
-        placeholder='Keywords'
+        placeholder='Type keywords'
         value={keywords}
         multi
         clearable
