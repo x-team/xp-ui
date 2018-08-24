@@ -605,13 +605,13 @@ class SelectBox extends Component<Props, State> {
     this.updateItemsState(updatedItem)
   }
 
-  handleCancelDelete = (e: any, item: Item) => {
+  handleCancelDelete = (item: Item) => (e: Object) => {
     e.stopPropagation && e.stopPropagation()
     const updatedItem = { ...item, status: '' }
     this.updateItemsState(updatedItem)
   }
 
-  handleDelete = (e: any, item: Item) => {
+  handleDelete = (item: Item) => (e: Object) => {
     e.stopPropagation && e.stopPropagation()
     const { onDelete } = this.props
     if (onDelete) {
@@ -726,10 +726,10 @@ class SelectBox extends Component<Props, State> {
 
     const renderConfirmStatusControl = (item: Item) => (
       <span className={cx.control}>
-        <span className={cx.controlButton} onClick={e => this.handleCancelDelete(e, item)}>
+        <span className={cx.controlButton} onClick={this.handleCancelDelete(item)}>
           <SvgIcon icon='x' color='grayscale' hover='default' />
         </span>
-        <span className={cx.controlButton} onClick={e => this.handleDelete(e, item)}>
+        <span className={cx.controlButton} onClick={this.handleDelete(item)}>
           <SvgIcon icon='check' color='grayscale' hover='default' />
         </span>
       </span>
