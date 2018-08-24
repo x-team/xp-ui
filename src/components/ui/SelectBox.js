@@ -5,7 +5,6 @@ import React, { Component } from 'react'
 import InputField from '../forms/InputField'
 import SvgIcon from './SvgIcon'
 import Dropdown from './Dropdown'
-import Button from './Button'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
