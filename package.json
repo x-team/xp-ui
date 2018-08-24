@@ -42,6 +42,7 @@
     "jest": "^21.2.1",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
+    "react-select": "1.2.1",
     "react-styleguidist": "^6.1.0",
     "snapguidist": "^2.1.1",
     "snazzy": "^7.0.0",
