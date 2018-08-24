@@ -9,8 +9,6 @@ import Keywords from './Keywords'
 
 import theme from '../../styles/theme'
 
-import type { Element } from 'react'
-
 const cmz = require('cmz')
 
 const cardTheme = {
@@ -127,7 +125,17 @@ const tabularTheme = {
 }
 
 type Props = {
-  mode: 'card' | 'tabular'
+  mode: 'card' | 'tabular',
+  lists: Array<*>,
+  onSelectList: Function,
+  onClickShowLists: Function,
+  keywords: string,
+  onChangeKeywords: Function,
+  fields: Array<*>,
+  onSelectField: Function,
+  onSubmit: Function,
+  openListEditorModal: Function,
+  renderApplicantsStatusFilter: any
 }
 
 class SearchForm extends PureComponent<Props> {
@@ -175,7 +183,7 @@ class SearchForm extends PureComponent<Props> {
               onSelect={onSelectList}
               append={
                 <Button selectbox onClick={openListEditorModal}>
-                  <SvgIcon icon='edit' /> Edit lists
+                  <span><SvgIcon icon='edit' /> Edit lists</span>
                 </Button>
               }
             />
