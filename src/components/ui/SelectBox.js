@@ -329,34 +329,20 @@ const cx = {
   `),
 
   confirm: cmz(`
-    display: flex
-    justify-content: space-between
-    align-items: center
-    min-height: 30px
-    margin: 0
-    padding: 0
-    width: 100%
-  `),
+    & {
+      display: block
+      min-height: 30px
+      margin: 0
+      padding: 0
+      width: 70%
+    }
 
-  question: cmz(`
     & p {
       margin: 0
     }
   `),
 
-  answer: cmz(`
-    & {
-      display: flex
-      flex-wrap: nowrap
-    }
-
-    & > * {
-      margin-left: 10px
-    }
-
-    & > *:first-of-type {
-      margin-left: 0
-    }
+  question: cmz(`
   `)
 }
 
@@ -734,21 +720,20 @@ class SelectBox extends Component<Props, State> {
 
     const renderConfirmStatus = (item: Item) => (
       <div className={cx.confirm}>
-        <div className={cx.question}>
-          <p>Delete "{item.value}"</p>
-          <p><strong>Are you sure?</strong></p>
-        </div>
-        <div className={cx.answer}>
-          <span className={cx.control}>
-            <span className={cx.controlButton} onClick={e => this.handleCancelDelete(e, item)}>
-              <SvgIcon icon='x' color='grayscale' hover='default' />
-            </span>
-            <span className={cx.controlButton} onClick={e => this.handleDelete(e, item)}>
-              <SvgIcon icon='check' color='grayscale' hover='default' />
-            </span>
-          </span>
-        </div>
+        <p>Delete "{item.value}"</p>
+        <p><strong>Are you sure?</strong></p>
       </div>
+    )
+
+    const renderConfirmStatusControl = (item: Item) => (
+      <span className={cx.control}>
+        <span className={cx.controlButton} onClick={e => this.handleCancelDelete(e, item)}>
+          <SvgIcon icon='x' color='grayscale' hover='default' />
+        </span>
+        <span className={cx.controlButton} onClick={e => this.handleDelete(e, item)}>
+          <SvgIcon icon='check' color='grayscale' hover='default' />
+        </span>
+      </span>
     )
 
     const renderDeletingStatus = (item: Item) => (
@@ -870,7 +855,8 @@ class SelectBox extends Component<Props, State> {
             return getRenderWithFallback({
               item,
               method: onDelete,
-              render: renderConfirmStatus
+              render: renderConfirmStatus,
+              control: renderConfirmStatusControl
             })
           case STATUS.DELETING:
             return getRenderWithFallback({

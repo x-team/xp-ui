@@ -522,72 +522,66 @@ exports[`SelectBox-7 1`] = `
             className="AutoUI_ui_SelectBox-176">
             <div
               className="AutoUI_ui_SelectBox-331">
-              <div
-                className="AutoUI_ui_SelectBox-341">
-                <p>
-                  Delete \"
-                  confirm delete
-                  \"
-                </p>
-                <p>
-                  <strong>
-                    Are you sure?
-                  </strong>
-                </p>
-              </div>
-              <div
-                className="AutoUI_ui_SelectBox-347">
-                <span
-                  className="AutoUI_ui_SelectBox-215">
-                  <span
-                    className="AutoUI_ui_SelectBox-220">
-                    <svg
-                      height="14px"
-                      viewBox="0 0 14 14"
-                      width="14px">
-                      <g
-                        fill="none"
-                        fillRule="evenodd"
-                        stroke="none"
-                        strokeLinecap="square"
-                        strokeWidth="1">
-                        <g
-                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
-                          strokeWidth="2"
-                          transform="translate(-1294.000000, -1073.000000)">
-                          <g
-                            transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
-                            <path
-                              d="M7,0 L7,14" />
-                            <path
-                              d="M14,7 L0,7" />
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-220">
-                    <svg
-                      height="13px"
-                      viewBox="0 0 17 13"
-                      width="17px">
-                      <g
-                        fill="none"
-                        fillRule="evenodd"
-                        stroke="none"
-                        strokeWidth="1">
-                        <polyline
-                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
-                          points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
-                          strokeWidth="2"
-                          transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
-                      </g>
-                    </svg>
-                  </span>
-                </span>
-              </div>
+              <p>
+                Delete \"
+                confirm delete
+                \"
+              </p>
+              <p>
+                <strong>
+                  Are you sure?
+                </strong>
+              </p>
             </div>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeLinecap="square"
+                    strokeWidth="1">
+                    <g
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                      strokeWidth="2"
+                      transform="translate(-1294.000000, -1073.000000)">
+                      <g
+                        transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                        <path
+                          d="M7,0 L7,14" />
+                        <path
+                          d="M14,7 L0,7" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220">
+                <svg
+                  height="13px"
+                  viewBox="0 0 17 13"
+                  width="17px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <polyline
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                      points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
+                      strokeWidth="2"
+                      transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
+                  </g>
+                </svg>
+              </span>
+            </span>
           </div>
         </li>
         <li
