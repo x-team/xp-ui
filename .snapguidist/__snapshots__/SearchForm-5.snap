@@ -6,7 +6,7 @@ exports[`SearchForm-5 1`] = `
     <div
       className="AutoUI_ui_SearchForm-35">
       <div
-        className="AutoUI_ui_SelectBox-18"
+        className="AutoUI_ui_SelectBox-17"
         style={
           Object {
             "width": "100%",
@@ -14,7 +14,7 @@ exports[`SearchForm-5 1`] = `
         }>
         <div>
           <div
-            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-24"
+            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-23"
             onMouseEnter={false}
             onMouseLeave={false}>
             <div
@@ -23,9 +23,9 @@ exports[`SearchForm-5 1`] = `
               <span
                 className="AutoUI_ui_Dropdown-42">
                 <div
-                  className="AutoUI_ui_SelectBox-28 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  className="AutoUI_ui_SelectBox-27 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   <div
-                    className="AutoUI_ui_SelectBox-71">
+                    className="AutoUI_ui_SelectBox-70">
                     <div>
                       Select Lists
                     </div>
@@ -34,7 +34,7 @@ exports[`SearchForm-5 1`] = `
                     </div>
                   </div>
                   <div
-                    className="AutoUI_ui_SelectBox-107">
+                    className="AutoUI_ui_SelectBox-106">
                     <svg
                       height="5px"
                       viewBox="0 0 9 5"
@@ -55,13 +55,13 @@ exports[`SearchForm-5 1`] = `
               </span>
             </div>
             <div
-              className="AutoUI_ui_Dropdown-52    ">
+              className="AutoUI_ui_Dropdown-52     ">
               <div
-                className="AutoUI_ui_SelectBox-154">
+                className="AutoUI_ui_SelectBox-153">
                 <div
-                  className="AutoUI_ui_SelectBox-83">
+                  className="AutoUI_ui_SelectBox-82">
                   <div
-                    className="AutoUI_ui_SelectBox-94">
+                    className="AutoUI_ui_SelectBox-93">
                     <svg
                       height="17px"
                       viewBox="0 0 16 17"
@@ -87,7 +87,7 @@ exports[`SearchForm-5 1`] = `
                     <input
                       aria-labelledby="label-search"
                       autoComplete="off"
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-87"
                       id="search"
                       name="search"
                       placeholder="Search"
@@ -97,7 +97,7 @@ exports[`SearchForm-5 1`] = `
                   </div>
                 </div>
                 <ul
-                  className="AutoUI_ui_SelectBox-136 false"
+                  className="AutoUI_ui_SelectBox-135 false"
                   style={
                     Object {
                       "height": "auto",
@@ -108,7 +108,7 @@ exports[`SearchForm-5 1`] = `
                   
                 </ul>
                 <div
-                  className="AutoUI_ui_SelectBox-315">
+                  className="AutoUI_ui_SelectBox-314">
                   <button
                     className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-166 AutoUI_ui_Button-210 AutoUI_ui_Button-125">
                     <span
@@ -154,7 +154,7 @@ exports[`SearchForm-5 1`] = `
         className="Select-control">
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-12--value">
+          id="react-select-14--value">
           <div
             className="Select-placeholder">
             Type keywords
@@ -167,7 +167,7 @@ exports[`SearchForm-5 1`] = `
               }
             }>
             <input
-              aria-activedescendant="react-select-12--value"
+              aria-activedescendant="react-select-14--value"
               aria-expanded="false"
               aria-haspopup="false"
               aria-owns=""
@@ -206,7 +206,7 @@ exports[`SearchForm-5 1`] = `
     <div
       className="AutoUI_ui_SearchForm-48">
       <div
-        className="AutoUI_ui_SelectBox-18"
+        className="AutoUI_ui_SelectBox-17"
         style={
           Object {
             "width": "100%",
@@ -214,7 +214,7 @@ exports[`SearchForm-5 1`] = `
         }>
         <div>
           <div
-            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-24"
+            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-23"
             onMouseEnter={false}
             onMouseLeave={false}>
             <div
@@ -223,9 +223,9 @@ exports[`SearchForm-5 1`] = `
               <span
                 className="AutoUI_ui_Dropdown-42">
                 <div
-                  className="AutoUI_ui_SelectBox-28 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  className="AutoUI_ui_SelectBox-27 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   <div
-                    className="AutoUI_ui_SelectBox-71">
+                    className="AutoUI_ui_SelectBox-70">
                     <div>
                       Select Fields
                     </div>
@@ -234,7 +234,7 @@ exports[`SearchForm-5 1`] = `
                     </div>
                   </div>
                   <div
-                    className="AutoUI_ui_SelectBox-107">
+                    className="AutoUI_ui_SelectBox-106">
                     <svg
                       height="5px"
                       viewBox="0 0 9 5"
@@ -255,13 +255,13 @@ exports[`SearchForm-5 1`] = `
               </span>
             </div>
             <div
-              className="AutoUI_ui_Dropdown-52    ">
+              className="AutoUI_ui_Dropdown-52     ">
               <div
-                className="AutoUI_ui_SelectBox-154">
+                className="AutoUI_ui_SelectBox-153">
                 <div
-                  className="AutoUI_ui_SelectBox-83">
+                  className="AutoUI_ui_SelectBox-82">
                   <div
-                    className="AutoUI_ui_SelectBox-94">
+                    className="AutoUI_ui_SelectBox-93">
                     <svg
                       height="17px"
                       viewBox="0 0 16 17"
@@ -287,7 +287,7 @@ exports[`SearchForm-5 1`] = `
                     <input
                       aria-labelledby="label-search"
                       autoComplete="off"
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-87"
                       id="search"
                       name="search"
                       placeholder="Search"
@@ -297,7 +297,7 @@ exports[`SearchForm-5 1`] = `
                   </div>
                 </div>
                 <ul
-                  className="AutoUI_ui_SelectBox-136 false"
+                  className="AutoUI_ui_SelectBox-135 false"
                   style={
                     Object {
                       "height": "auto",
