@@ -9,7 +9,6 @@ import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
 import Dropdown from './components/ui/Dropdown'
 import ErrorBox from './components/ui/ErrorBox'
-import FilterBar from './components/ui/FilterBar'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
@@ -17,6 +16,7 @@ import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
+import Keywords from './components/ui/Keywords'
 import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
 import Milestones from './components/ui/Milestones'
@@ -28,6 +28,7 @@ import Roadmap from './components/ui/Roadmap'
 import RoadmapHero from './components/ui/RoadmapHero'
 import RoadmapLevel from './components/ui/RoadmapLevel'
 import RoadmapTimelineElement from './components/ui/RoadmapTimelineElement'
+import SearchForm from './components/ui/SearchForm'
 import SelectBox from './components/ui/SelectBox'
 import SolutionForm from './components/forms/SolutionForm'
 import SvgIcon from './components/ui/SvgIcon'
@@ -52,7 +53,6 @@ export {
   ColorPalette,
   Dropdown,
   ErrorBox,
-  FilterBar,
   Footer,
   FooterBrands,
   FooterList,
@@ -60,6 +60,7 @@ export {
   HorizontalRuler,
   InputField,
   InputGroup,
+  Keywords,
   ListsEditor,
   Loader,
   Milestones,
@@ -71,6 +72,7 @@ export {
   RoadmapHero,
   RoadmapLevel,
   RoadmapTimelineElement,
+  SearchForm,
   SelectBox,
   SolutionForm,
   SvgIcon,

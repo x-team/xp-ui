@@ -1,0 +1,57 @@
+exports[`Keywords-3 1`] = `
+<div
+  className="Select AutoUI_ui_Keywords-14 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  is-clearable is-searchable Select--multi">
+  <div
+    className="Select-control">
+    <span
+      className="Select-multi-value-wrapper"
+      id="react-select-13--value">
+      <div
+        className="Select-placeholder">
+        Type keywords
+      </div>
+      <div
+        className="Select-input"
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }>
+        <input
+          aria-activedescendant="react-select-13--value"
+          aria-expanded="false"
+          aria-haspopup="false"
+          aria-owns=""
+          required={false}
+          role="combobox"
+          style={
+            Object {
+              "boxSizing": "content-box",
+              "width": "5px",
+            }
+          }
+          value="" />
+        <div
+          style={
+            Object {
+              "height": 0,
+              "left": 0,
+              "overflow": "scroll",
+              "position": "absolute",
+              "top": 0,
+              "visibility": "hidden",
+              "whiteSpace": "pre",
+            }
+          }>
+          
+        </div>
+      </div>
+    </span>
+    <span
+      className="Select-arrow-zone">
+      <span
+        className="Select-arrow" />
+    </span>
+  </div>
+</div>
+`;
