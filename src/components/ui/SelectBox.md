@@ -200,6 +200,16 @@ const itemsArray = [
     id: 16,
     value: 'archived',
     status: 'archived'
+  },
+  {
+    id: 17,
+    value: 'unarchiving',
+    status: 'unarchiving'
+  },
+  {
+    id: 18,
+    value: 'unarchived',
+    status: 'unarchived'
   }
 ];
 
