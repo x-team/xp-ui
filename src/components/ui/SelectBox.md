@@ -284,7 +284,20 @@ const itemsArray = [
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
-  <p>Valid list and search is provided. One of the items in the search result matches exactly with search string. The "create new" button should be hidden:</p>
+  <p>Valid list and search is provided. One result is found on search, but don't match exactly with the search string. The "create new" button should be visible:</p>
+  <SelectBox
+    collectionLabel='entry'
+    search='another'
+    items={[
+      {id: 1, value: 'entry'},
+      {id: 2, value: 'entry another entry'},
+      {id: 3, value: 'justtoentrymakesure'}
+    ]}
+    expanded={true}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+
+  <p>Valid list and search is provided. At least one of the items in the search result matches exactly with search string. The "create new" button should be hidden:</p>
   <SelectBox
     collectionLabel='entry'
     search='entry'
