@@ -1,4 +1,5 @@
 // @flow
+/* global SyntheticInputEvent */
 
 import React, { Component } from 'react'
 import '../../assets/react-select.css'
@@ -121,7 +122,8 @@ class Keywords extends Component<Props, State> {
     })
   }
 
-  handleInputKeyDown = (event: any) => {
+  handleInputKeyDown = (event: SyntheticInputEvent<>) => {
+    // ENTER
     if (event && event.keyCode === 13) {
       const { onSubmit } = this.props
       onSubmit && onSubmit()
