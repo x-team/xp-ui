@@ -80,6 +80,7 @@ const cx = {
 type Props = {
   values: string,
   onChange: Function,
+  onSubmit: Function,
   className: string
 }
 
@@ -120,6 +121,13 @@ class Keywords extends Component<Props, State> {
     })
   }
 
+  handleInputKeyDown = (event: any) => {
+    if (event && event.keyCode === 13) {
+      const { onSubmit } = this.props
+      onSubmit && onSubmit()
+    }
+  }
+
   render () {
     const keywords = this.state.values
       .split(',')
@@ -139,6 +147,7 @@ class Keywords extends Component<Props, State> {
         multi
         clearable
         onChange={this.handleChange}
+        onInputKeyDown={this.handleInputKeyDown}
       />
     )
   }

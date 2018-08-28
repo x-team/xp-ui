@@ -204,6 +204,7 @@ class SearchForm extends PureComponent<Props> {
           <Keywords
             values={keywords}
             onChange={onChangeKeywords}
+            onSubmit={onSubmit}
             className={theme.formKeywords}
           />
           <div className={theme.selectFields}>
