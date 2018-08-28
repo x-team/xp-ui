@@ -924,7 +924,7 @@ class SelectBox extends Component<Props, State> {
         maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
-        {search && filteredItems && filteredItems.length !== 1 && (
+        {search && filteredItems && (
           <li key='search-result'>
             {filteredItems.length === 0 && (
               <span className={cx.nothingLabel}>No Results for "{search}"</span>
