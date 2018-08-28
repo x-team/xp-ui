@@ -259,6 +259,7 @@ class ListsEditor extends Component<Props, State> {
     const { collectionLabel } = this.props
     const { confirmDeletion } = this.state
     const selection = this.getSelection(active)
+
     return (
       <div>
         <SelectBox
@@ -321,6 +322,7 @@ class ListsEditor extends Component<Props, State> {
 
   render () {
     const { title } = this.props
+
     return (
       <div className={cx.listseditor}>
         <h1 className={cx.heading}>Edit {title}</h1>
