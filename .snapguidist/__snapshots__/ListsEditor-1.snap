@@ -7,14 +7,14 @@ exports[`ListsEditor-1 1`] = `
     }
   }>
   <div
-    className="AutoUI_ui_ListsEditor-51">
+    className="AutoUI_ui_ListsEditor-52">
     <h1
-      className="AutoUI_ui_ListsEditor-57 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
+      className="AutoUI_ui_ListsEditor-58 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
       Edit 
-      list
+      
     </h1>
     <section
-      className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ListsEditor-90">
+      className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ListsEditor-91">
       <nav
         className="AutoUI_ui_Tabs_Tabs-22">
         <ul
@@ -1081,16 +1081,16 @@ exports[`ListsEditor-1 1`] = `
                 </div>
               </div>
               <div
-                className="AutoUI_ui_ListsEditor-66">
+                className="AutoUI_ui_ListsEditor-67">
                 <button
-                  className="AutoUI_ui_ListsEditor-75 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-142 outlined AutoUI_ui_Button-133 disabled">
+                  className="AutoUI_ui_ListsEditor-76 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-142 outlined AutoUI_ui_Button-133 disabled">
                   <span
                     className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
                     Delete
                   </span>
                 </button>
                 <button
-                  className="AutoUI_ui_ListsEditor-75 AutoUI_ui_ListsEditor-86 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-133 disabled">
+                  className="AutoUI_ui_ListsEditor-76 AutoUI_ui_ListsEditor-87 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-133 disabled">
                   <span
                     className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
                     Archive
