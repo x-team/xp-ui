@@ -153,6 +153,11 @@ class SearchForm extends PureComponent<Props> {
     renderApplicantsStatusFilter: null
   }
 
+  handleModalOpen = (e: Object) => {
+    e.preventDefault()
+    this.props.openListEditorModal()
+  }
+
   render () {
     const {
       mode,
@@ -164,7 +169,6 @@ class SearchForm extends PureComponent<Props> {
       fields,
       onSelectField,
       onSubmit,
-      openListEditorModal,
       renderApplicantsStatusFilter
     } = this.props
 
@@ -182,7 +186,7 @@ class SearchForm extends PureComponent<Props> {
               collectionLabel='List'
               onSelect={onSelectList}
               append={
-                <Button selectbox onClick={openListEditorModal}>
+                <Button type='button' selectbox onClick={this.handleModalOpen}>
                   <span><SvgIcon icon='edit' /> Edit lists</span>
                 </Button>
               }
