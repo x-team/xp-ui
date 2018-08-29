@@ -188,11 +188,16 @@ const itemsArray = [
   },
   {
     id: 14,
+    value: 'dismissed',
+    status: 'dismissed'
+  },
+  {
+    id: 15,
     value: 'archiving',
     status: 'archiving'
   },
   {
-    id: 15,
+    id: 16,
     value: 'archived',
     status: 'archived'
   }
@@ -209,6 +214,7 @@ const itemsArray = [
     onArchive={item => console.log('onArchive:', item)}
     onDelete={item => console.log('onDelete:', item)}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
+    dismissTimeout={99999}
   />
 
   <hr />
@@ -223,37 +229,102 @@ const itemsArray = [
 </div>
 ```
 
-Examples of searching and creating simultaneously:
+"Searching" and "creating" use cases:
 
 ```js
 <div>
-  <p>The search will be always unlocked but one can't create new item while another item creation is in progress.</p>
-
-  <p>In the cases below there's no items provided.</p>
-
-  <p>Here the creating and search props were provided:</p>
+  <p>Empty list and no search provided. The "create new" button should be hidden:</p>
   <SelectBox
     collectionLabel='entry'
-    creating='Another entry'
-    search='Searching some entry'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
-  <p>In this case a new item is being created while nothing is being searched:</p>
+  <p>Empty list and search is provided. Nothing is found on search. The "create new" button should should be visible:</p>
   <SelectBox
     collectionLabel='entry'
-    creating='A new entry'
+    search='wat?'
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
-  <p>In this case a search is being performed while nothing is being created:</p>
+  <p>Valid list and search is provided. Nothing is found on search. The "create new" button should be visible:</p>
   <SelectBox
     collectionLabel='entry'
-    search='Searching some entry'
+    search='wat?'
+    items={[
+      {id: 1, value: 'entry'},
+      {id: 2, value: 'entry another entry'},
+      {id: 3, value: 'justtoentrymakesure'}
+    ]}
     expanded={true}
     onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+
+  <p>Valid list and search is provided. Some results are found on search, but none of them matches exactly with search string. The "create new" button should be visible:</p>
+  <SelectBox
+    collectionLabel='entry'
+    search='ent'
+    items={[
+      {id: 1, value: 'entry'},
+      {id: 2, value: 'entry another entry'},
+      {id: 3, value: 'justtoentrymakesure'}
+    ]}
+    expanded={true}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+
+  <p>Valid list and search is provided. One of the items in the search result matches exactly with search string. The "create new" button should be hidden:</p>
+  <SelectBox
+    collectionLabel='entry'
+    search='entry'
+    items={[
+      {id: 1, value: 'entry'},
+      {id: 2, value: 'entry another entry'},
+      {id: 3, value: 'justtoentrymakesure'}
+    ]}
+    expanded={true}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+
+  <p>A new item is being created right after something was searched. The "create new" button should be hidden:</p>
+  <SelectBox
+    collectionLabel='entry'
+    search='entr'
+    items={[
+      {id: 1, value: 'entry'},
+      {id: 2, value: 'entry another entry'},
+      {id: 3, value: 'justtoentrymakesure'},
+      {id: 4, value: 'entr', status: 'creating'}
+    ]}
+    expanded={true}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+
+  <p>A new item is being created while nothing is being searched. The "create new" button should be hidden:</p>
+  <SelectBox
+    collectionLabel='entry'
+    items={[
+      {id: 1, value: 'entry'},
+      {id: 2, value: 'entry another entry'},
+      {id: 3, value: 'justtoentrymakesure'},
+      {id: 4, value: 'entr', status: 'creating'}
+    ]}
+    expanded={true}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+  />
+
+  <p>In all searching and creating situations. If the method "onCreateNew" is forgotten or invalid, the "create new" button will be always hidden and items with "creating" status will have fallback to default render:</p>
+  <SelectBox
+    collectionLabel='entry'
+    search='ent'
+    items={[
+      {id: 1, value: 'entry'},
+      {id: 2, value: 'entry another entry'},
+      {id: 3, value: 'justtoentrymakesure'},
+      {id: 4, value: 'entr', status: 'creating'}
+    ]}
+    expanded={true}
   />
 </div>
 ```

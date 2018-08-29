@@ -37,9 +37,9 @@ exports[`Dropdown-3 1`] = `
         </span>
       </div>
       <div
-        className="AutoUI_ui_Dropdown-52  AutoUI_ui_Dropdown-66  ">
+        className="AutoUI_ui_Dropdown-52  AutoUI_ui_Dropdown-66   ">
         <div
-          className="AutoUI_ui_SelectBox-18"
+          className="AutoUI_ui_SelectBox-17"
           style={
             Object {
               "width": "500px",
@@ -47,9 +47,9 @@ exports[`Dropdown-3 1`] = `
           }>
           <div>
             <div
-              className="AutoUI_ui_SelectBox-83">
+              className="AutoUI_ui_SelectBox-82">
               <div
-                className="AutoUI_ui_SelectBox-94">
+                className="AutoUI_ui_SelectBox-93">
                 <svg
                   height="17px"
                   viewBox="0 0 16 17"
@@ -75,7 +75,7 @@ exports[`Dropdown-3 1`] = `
                 <input
                   aria-labelledby="label-search"
                   autoComplete="off"
-                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-87"
                   id="search"
                   name="search"
                   placeholder="Search"
@@ -85,7 +85,7 @@ exports[`Dropdown-3 1`] = `
               </div>
             </div>
             <ul
-              className="AutoUI_ui_SelectBox-136 expanded"
+              className="AutoUI_ui_SelectBox-135 expanded"
               style={
                 Object {
                   "height": "auto",
@@ -95,75 +95,75 @@ exports[`Dropdown-3 1`] = `
               }>
               
               <li
-                className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+                className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-186 ">
                 <div
-                  className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+                  className="AutoUI_ui_SelectBox-175 AutoUI_ui_SelectBox-182">
                   <span
-                    className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    className="AutoUI_ui_SelectBox-133 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                     item-1
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-214" />
                 </div>
               </li>
               <li
-                className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+                className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-186 ">
                 <div
-                  className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+                  className="AutoUI_ui_SelectBox-175 AutoUI_ui_SelectBox-182">
                   <span
-                    className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    className="AutoUI_ui_SelectBox-133 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                     item-2
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-214" />
                 </div>
               </li>
               <li
-                className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+                className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-186 ">
                 <div
-                  className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+                  className="AutoUI_ui_SelectBox-175 AutoUI_ui_SelectBox-182">
                   <span
-                    className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    className="AutoUI_ui_SelectBox-133 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                     item-3
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-214" />
                 </div>
               </li>
               <li
-                className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+                className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-186 ">
                 <div
-                  className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+                  className="AutoUI_ui_SelectBox-175 AutoUI_ui_SelectBox-182">
                   <span
-                    className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    className="AutoUI_ui_SelectBox-133 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                     item-4
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-214" />
                 </div>
               </li>
               <li
-                className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+                className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-186 ">
                 <div
-                  className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+                  className="AutoUI_ui_SelectBox-175 AutoUI_ui_SelectBox-182">
                   <span
-                    className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    className="AutoUI_ui_SelectBox-133 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                     item-5
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-214" />
                 </div>
               </li>
               <li
-                className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+                className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-186 ">
                 <div
-                  className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+                  className="AutoUI_ui_SelectBox-175 AutoUI_ui_SelectBox-182">
                   <span
-                    className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    className="AutoUI_ui_SelectBox-133 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                     item-6
                   </span>
                   <span
-                    className="AutoUI_ui_SelectBox-211" />
+                    className="AutoUI_ui_SelectBox-214" />
                 </div>
               </li>
             </ul>

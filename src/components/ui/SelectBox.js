@@ -5,7 +5,6 @@ import React, { Component } from 'react'
 import InputField from '../forms/InputField'
 import SvgIcon from './SvgIcon'
 import Dropdown from './Dropdown'
-import Button from './Button'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
@@ -201,6 +200,10 @@ const cx = {
     }
   `),
 
+  message: cmz(`
+    font-style: italic
+  `),
+
   // !important is used to override global input values
   editing: cmz(`
     & input {
@@ -325,38 +328,24 @@ const cx = {
   `),
 
   confirm: cmz(`
-    display: flex
-    justify-content: space-between
-    align-items: center
-    min-height: 30px
-    margin: 0
-    padding: 0
-    width: 100%
-  `),
+    & {
+      display: block
+      min-height: 30px
+      margin: 0
+      padding: 0
+      width: 70%
+    }
 
-  question: cmz(`
     & p {
       margin: 0
     }
   `),
 
-  answer: cmz(`
-    & {
-      display: flex
-      flex-wrap: nowrap
-    }
-
-    & > * {
-      margin-left: 10px
-    }
-
-    & > *:first-of-type {
-      margin-left: 0
-    }
+  question: cmz(`
   `)
 }
 
-type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm' | 'deleting' | 'deleted' | 'archiving' | 'archived'
+type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm' | 'deleting' | 'deleted' | 'dismissed' | 'archiving' | 'archived'
 
 type Item = {
   id: number,
@@ -385,7 +374,8 @@ type Props = {
   onEdit?: Function,
   onArchive?: Function,
   onDelete?: Function,
-  append?: Element<*>|string
+  append?: Element<*>|string,
+  dismissTimeout?: number
 }
 
 type State = {
@@ -406,9 +396,12 @@ const STATUS = {
   CONFIRM: 'confirm',
   DELETING: 'deleting',
   DELETED: 'deleted',
+  DISMISSED: 'dismissed',
   ARCHIVING: 'archiving',
   ARCHIVED: 'archived'
 }
+
+const dismissTimeout = 2500
 
 class SelectBox extends Component<Props, State> {
   static defaultProps = {
@@ -417,7 +410,8 @@ class SelectBox extends Component<Props, State> {
     expanded: false,
     hasSearch: false,
     lined: false,
-    collectionLabel: ''
+    collectionLabel: '',
+    dismissTimeout
   }
 
   state: State = {
@@ -427,7 +421,11 @@ class SelectBox extends Component<Props, State> {
     expanded: this.props.expanded || false
   }
 
+  timers: Array<*>
+
   componentDidMount () {
+    this.timers = []
+    this.setupDismissTimers()
     this.handleSearch(null, this.state.search)
   }
 
@@ -446,19 +444,40 @@ class SelectBox extends Component<Props, State> {
         if (typeof this.props.search !== 'undefined' && this.props.search !== this.state.search) {
           this.handleSearch(null, this.props.search)
         }
+        this.setupDismissTimers()
       })
     }
+  }
+
+  componentWillUnmount () {
+    this.timers.forEach(timer => {
+      clearTimeout(timer)
+    })
+  }
+
+  setupDismissTimers = () => {
+    const { items, dismissTimeout } = this.props
+    const deletedItems = (items && items.filter(item => item.status === STATUS.DELETED)) || []
+    deletedItems.forEach(item => {
+      this.timers.push(setTimeout(() => {
+        const updatedItem = { ...item, status: 'dismissed' }
+        this.updateItemsState(updatedItem)
+      }, dismissTimeout))
+    })
   }
 
   mapItemsInput = (items: Array<Item>, view: Array<Item>): Array<Item> =>
     items.map((each, i) => {
       const viewItem = view.find(item => item.id === each.id) || {}
+      const updatedStatus = viewItem.status !== STATUS.DELETED && viewItem.status !== STATUS.DISMISSED
+        ? typeof each.status !== 'undefined' ? each.status : viewItem.status
+        : viewItem.status
       const newItem = {
         ...each,
         id: each.id,
         value: each.value,
         selected: typeof each.selected !== 'undefined' ? each.selected : (viewItem.selected || false),
-        status: typeof each.status !== 'undefined' ? each.status : (viewItem.status || ''),
+        status: updatedStatus || '',
         editing: each.editing || viewItem.editing || '',
         hidden: each.hidden || viewItem.hidden || false
       }
@@ -482,7 +501,8 @@ class SelectBox extends Component<Props, State> {
     const match = new RegExp(input.trim().toUpperCase(), 'g')
     const filteredItems = view && view.map(item => {
       const itemMatch = item && item.value && item.value.toUpperCase().match(match)
-      return { ...item, hidden: !(itemMatch && itemMatch.length > 0) }
+      const shouldHide = item.status === STATUS.DISMISSED || !(itemMatch && itemMatch.length > 0)
+      return { ...item, hidden: shouldHide }
     })
     this.setState({ ...this.state, search: input, view: filteredItems }, () => {
       if (onSearch) {
@@ -585,13 +605,13 @@ class SelectBox extends Component<Props, State> {
     this.updateItemsState(updatedItem)
   }
 
-  handleCancelDelete = (e: any, item: Item) => {
+  handleCancelDelete = (item: Item) => (e: Object) => {
     e.stopPropagation && e.stopPropagation()
     const updatedItem = { ...item, status: '' }
     this.updateItemsState(updatedItem)
   }
 
-  handleDelete = (e: any, item: Item) => {
+  handleDelete = (item: Item) => (e: Object) => {
     e.stopPropagation && e.stopPropagation()
     const { onDelete } = this.props
     if (onDelete) {
@@ -599,6 +619,12 @@ class SelectBox extends Component<Props, State> {
         ...this.getUncachedItem(item)
       })
     }
+  }
+
+  handleDismissDeleteMessage = (item: Item) => (e: Object) => {
+    e.stopPropagation && e.stopPropagation()
+    const updatedItem = { ...item, status: 'dismissed' }
+    this.updateItemsState(updatedItem)
   }
 
   render () {
@@ -620,7 +646,7 @@ class SelectBox extends Component<Props, State> {
     } = this.props
     const { view, search } = this.state
 
-    const filteredItems = view && view.filter((item: Item) => !item.hidden)
+    const filteredItems = view && view.filter((item: Item) => !item.hidden && item.status !== STATUS.DISMISSED)
 
     const editionButton = [cx.controlButton, cx.editableButton].join(' ')
 
@@ -693,32 +719,42 @@ class SelectBox extends Component<Props, State> {
 
     const renderConfirmStatus = (item: Item) => (
       <div className={cx.confirm}>
-        <div className={cx.question}>
-          <p>Delete "{item.value}"</p>
-          <p><strong>Are you sure?</strong></p>
-        </div>
-        <div className={cx.answer}>
-          <Button
-            onClick={e => this.handleCancelDelete(e, item)}
-            pseudolink
-            className={cx.button}
-            size={'small'}
-          >
-            CANCEL
-          </Button>
-          <Button
-            onClick={e => this.handleDelete(e, item)}
-            className={cx.button}
-            size={'small'}
-          >
-            Yes
-          </Button>
-        </div>
+        <p>Delete "{item.value}"</p>
+        <p><strong>Are you sure?</strong></p>
       </div>
+    )
+
+    const renderConfirmStatusControl = (item: Item) => (
+      <span className={cx.control}>
+        <span className={cx.controlButton} onClick={this.handleCancelDelete(item)}>
+          <SvgIcon icon='x' color='grayscale' hover='default' />
+        </span>
+        <span className={cx.controlButton} onClick={this.handleDelete(item)}>
+          <SvgIcon icon='check' color='grayscale' hover='default' />
+        </span>
+      </span>
     )
 
     const renderDeletingStatus = (item: Item) => (
       `Deleting "${item.value}"...`
+    )
+
+    const renderDeletedStatus = (item: Item) => (
+      <span className={cx.message}>
+        The item "{item.value}" was successfully deleted.
+      </span>
+    )
+
+    const renderDeletedStatusControl = (item: Item) => (
+      <span className={cx.control}>
+        <span
+          title='Dismiss this message'
+          className={cx.controlButton}
+          onClick={this.handleDismissDeleteMessage(item)}
+        >
+          <SvgIcon icon='x' color='grayscale' hover='default' />
+        </span>
+      </span>
     )
 
     const renderArchivingStatus = (item: Item) => (
@@ -818,7 +854,8 @@ class SelectBox extends Component<Props, State> {
             return getRenderWithFallback({
               item,
               method: onDelete,
-              render: renderConfirmStatus
+              render: renderConfirmStatus,
+              control: renderConfirmStatusControl
             })
           case STATUS.DELETING:
             return getRenderWithFallback({
@@ -827,6 +864,13 @@ class SelectBox extends Component<Props, State> {
               render: renderDeletingStatus
             })
           case STATUS.DELETED:
+            return getRenderWithFallback({
+              item,
+              method: onDelete,
+              render: renderDeletedStatus,
+              control: renderDeletedStatusControl
+            })
+          case STATUS.DISMISSED:
             return null
           case STATUS.ARCHIVING:
             return getRenderWithFallback({
@@ -842,7 +886,7 @@ class SelectBox extends Component<Props, State> {
         }
       }
 
-      return status !== STATUS.DELETED && (
+      return item.status !== STATUS.DISMISSED && (
         <li
           className={itemClasses(item)}
           key={item.id}
@@ -852,7 +896,14 @@ class SelectBox extends Component<Props, State> {
       )
     }
 
-    const creatingFirst = (x, y) => (x.status === STATUS.CREATING ? -1 : y.status === STATUS.CREATING ? 1 : 0)
+    const sortById = (x: Item, y: Item) => x.id - y.id
+
+    const sortByCreatingFirst = (list: Array<Item>): Array<Item> => {
+      const creating = list.filter(item => item.status === STATUS.CREATING)
+      const data = list.filter(item => item.status !== STATUS.CREATING)
+      data.unshift(...creating)
+      return data
+    }
 
     const renderItems = () => (
       <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
@@ -860,10 +911,12 @@ class SelectBox extends Component<Props, State> {
         maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
-        {search && filteredItems && filteredItems.length === 0 && (
-          <li>
-            <span className={cx.nothingLabel}>No Results for "{search}"</span>
-            {onCreateNew && (
+        {search && filteredItems && filteredItems.length !== 1 && (
+          <li key='search-result'>
+            {filteredItems.length === 0 && (
+              <span className={cx.nothingLabel}>No Results for "{search}"</span>
+            )}
+            {onCreateNew && !filteredItems.find(each => each.value === search.trim()) && (
               <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
                 <SvgIcon icon='plus' />
                 <span>Create new {collectionLabel} "{search}"</span>
@@ -871,7 +924,7 @@ class SelectBox extends Component<Props, State> {
             )}
           </li>
         )}
-        {filteredItems.sort(creatingFirst).map(renderItem)}
+        {sortByCreatingFirst(filteredItems.sort(sortById)).map(renderItem)}
       </ul>
     )
 

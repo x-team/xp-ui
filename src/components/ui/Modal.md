@@ -61,7 +61,8 @@ const itemsArray = Array(18).fill({}).map((item, i) => ({
 <div style={{ position: 'relative', minHeight: '800px' }}>
   <Modal>
     <ListsEditor
-      collectionLabel='Lists'
+      collectionLabel='List'
+      title='Lists'
       list={itemsArray}
       onEdit={list => console.log('onEdit:', list)}
       onArchive={lists => console.log('onArchive:', lists)}
