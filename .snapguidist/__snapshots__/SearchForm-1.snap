@@ -181,7 +181,7 @@ exports[`SearchForm-1 1`] = `
       </button>
     </div>
     <div
-      className="Select AutoUI_ui_Keywords-14 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-40 has-value is-clearable is-searchable Select--multi">
+      className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-40 has-value is-clearable is-searchable Select--multi">
       <input
         disabled={false}
         name="keywords"
