@@ -1,11 +1,37 @@
 exports[`CollapsibleSection-13 1`] = `
 <section
-  className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-31"
+  className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-31 AutoUI_ui_CollapsibleSection-30"
   data-test="portfolioItem">
   <h3
-    className="AutoUI_ui_CollapsibleSection-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+    className="AutoUI_ui_CollapsibleSection-54 AutoUI_ui_CollapsibleSection-30 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
     Consectetur suscipit alias velit magni tenetur veritatis sed fuga
   </h3>
+  <div
+    className="AutoUI_ui_CollapsibleSection-69">
+    <svg
+      height="20px"
+      viewBox="0 0 20 20"
+      width="20px">
+      <g
+        fill="none"
+        fillRule="evenodd"
+        stroke="none"
+        strokeWidth="1">
+        <g
+          className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
+          transform="translate(-1191.000000, -1411.000000)">
+          <g
+            transform="translate(387.000000, 933.000000)">
+            <g
+              transform="translate(0.000000, 470.000000)">
+              <path
+                d="M813,17 L804,17 L804,19 L813,19 L813,28 L815,28 L815,19 L824,19 L824,17 L815,17 L815,8 L813,8 L813,17 Z" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
   <div
     className="AutoUI_ui_CollapsibleSection-91">
     <div

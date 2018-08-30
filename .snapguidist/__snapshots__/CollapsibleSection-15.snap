@@ -1,1 +1,19 @@
-exports[`CollapsibleSection-15 1`] = `null`;
+exports[`CollapsibleSection-15 1`] = `
+<section
+  className="AutoUI_ui_CollapsibleSection-34 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_CollapsibleSection-31"
+  data-test="portfolioItem">
+  <h3
+    className="AutoUI_ui_CollapsibleSection-54 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+    Consectetur suscipit alias velit magni tenetur veritatis sed fuga
+  </h3>
+  <div
+    className="AutoUI_ui_CollapsibleSection-91">
+    <div
+      className="AutoUI_ui_CollapsibleSection-112">
+      <p>
+        This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.
+      </p>
+    </div>
+  </div>
+</section>
+`;
