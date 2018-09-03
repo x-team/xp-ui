@@ -4,8 +4,24 @@ import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import React, { PureComponent } from 'react'
+import { getClassName } from '../../utils/helpers'
 
 const cmz = require('cmz')
+
+type HeaderColumn = {
+  name: string,
+  label: string,
+  isSortable?: boolean,
+  size: string
+}
+
+type Props = {
+  className?: string,
+  headerColumns: Array<HeaderColumn>,
+  sortBy?: string,
+  sortDirection?: string,
+  onSortingChange: Function
+}
 
 const SORT_DIRECTIONS = {
   ASCENDING: 'asc',
@@ -17,15 +33,14 @@ const cx = {
     `
       & {
         display: flex
-        width: 100vw
+        width: fit-content
         margin: 14px
       }
   
       & > span {
           margin-right: 14px
           color: ${theme.typoLabel}
-          font-size: 18px
-          white-space: nowrap
+          font-size: 16px
           font-weight: normal
           flex-wrap: wrap
         }
@@ -61,21 +76,30 @@ const cx = {
   `),
   [`${SORT_DIRECTIONS.ASCENDING}Sort`]: cmz(`
     &:after {
-      content: ' \\25B4'
+      content: ''
+      width: 0
+      height: 0 
+      border-left: 4px solid transparent
+      border-right: 4px solid transparent
+      border-bottom: 4px solid ${theme.typoLabel}
+      vertical-align: middle
+      display: inline-block;
+      margin-left: 5px;
     }
   `),
   [`${SORT_DIRECTIONS.DESCENDING}Sort`]: cmz(`
     &:after {
-      content: ' \\25BE'
+      content: ''
+      width: 0
+      height: 0 
+      border-left: 4px solid transparent
+      border-right: 4px solid transparent
+      border-top: 4px solid ${theme.typoLabel}
+      vertical-align: middle
+      display: inline-block;
+      margin-left: 5px;
     }
   `)
-}
-
-type Props = {
-  config: Array<*>,
-  sortBy?: string,
-  sortDirection?: string,
-  onSortingChange: Function
 }
 
 const toggleDirection = (direction: ?string) => {
@@ -92,13 +116,9 @@ const getSortDirection = (columnName: string, sortBy: ?string, sortDirection: ?s
   return SORT_DIRECTIONS.ASCENDING
 }
 
-const getClassName = (config: Object) => Object.keys(config)
-  .filter(className => config && className && config[className])
-  .join(' ')
-
 class ApplicantGridHeader extends PureComponent<Props> {
   handleColumnClick = (name: string, isSortable: ?boolean) => () => {
-    if(!isSortable) {
+    if (!isSortable) {
       return
     }
     const {
@@ -110,19 +130,29 @@ class ApplicantGridHeader extends PureComponent<Props> {
   }
 
   render () {
-    const { config, sortBy, sortDirection } = this.props
+    const {
+      className,
+      headerColumns,
+      sortBy,
+      sortDirection
+    } = this.props
     const direction = sortDirection || SORT_DIRECTIONS.ASCENDING
+    const componentCustomClassName = className || ''
+    const componentClassName = getClassName({
+      [cx.container]: true,
+      [componentCustomClassName]: className
+    })
     return (
-      <div className={cx.container}>
+      <div className={componentClassName}>
         <span className={cx.placeHolder} />
-        {config.map(headerColumn => {
+        {headerColumns.map(headerColumn => {
           const {
             isSortable,
             name,
             size,
             label
           } = headerColumn
-          const className = getClassName({
+          const columnClassName = getClassName({
             [cx[size]]: true,
             [cx.sortable]: isSortable,
             [cx[`${direction}Sort`]]: sortBy === name
@@ -131,7 +161,7 @@ class ApplicantGridHeader extends PureComponent<Props> {
           return (
             <span
               key={name}
-              className={className}
+              className={columnClassName}
               onClick={this.handleColumnClick(name, isSortable)}
             >
               {label}
