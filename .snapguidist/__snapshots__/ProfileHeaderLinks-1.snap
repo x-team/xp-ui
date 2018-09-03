@@ -1,0 +1,40 @@
+exports[`ProfileHeaderLinks-1 1`] = `
+<ul
+  className="AutoUI_ui_ProfileHeaderLinks-10">
+  <li
+    className="AutoUI_ui_ProfileHeaderLinks-21">
+    <span
+      className="AutoUI_ui_ProfileHeaderLinks-32">
+      Profile
+    </span>
+  </li>
+  <li
+    className="AutoUI_ui_ProfileHeaderLinks-21">
+    <span
+      className="AutoUI_ui_ProfileHeaderLinks-32">
+      Portfolio
+    </span>
+  </li>
+  <li
+    className="AutoUI_ui_ProfileHeaderLinks-21">
+    <span
+      className="AutoUI_ui_ProfileHeaderLinks-32">
+      Contact
+    </span>
+  </li>
+  <li
+    className="AutoUI_ui_ProfileHeaderLinks-21">
+    <span
+      className="AutoUI_ui_ProfileHeaderLinks-32">
+      Notes
+    </span>
+  </li>
+  <li
+    className="AutoUI_ui_ProfileHeaderLinks-21">
+    <span
+      className="AutoUI_ui_ProfileHeaderLinks-32">
+      Ads
+    </span>
+  </li>
+</ul>
+`;

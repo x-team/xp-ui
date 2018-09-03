@@ -14,7 +14,6 @@ const cmz = require('cmz')
 const cardTheme = {
   searchFormContainer: cmz(`
     background-color: ${theme.baseBright}
-    width: 630px
   `),
 
   searchForm: cmz(`
