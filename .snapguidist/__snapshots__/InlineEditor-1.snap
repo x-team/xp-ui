@@ -1,0 +1,12 @@
+exports[`InlineEditor-1 1`] = `
+<div>
+  <div
+    className="AutoUI_ui_InlineEditor_InlineEditor-10">
+    <div>
+      <p>
+        This is a sample text. Click on me to edit me!
+      </p>
+    </div>
+  </div>
+</div>
+`;
