@@ -345,7 +345,7 @@ const cx = {
   `)
 }
 
-type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm' | 'deleting' | 'deleted' | 'dismissed' | 'archiving' | 'archived'
+type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm' | 'deleting' | 'deleted' | 'dismissed' | 'archiving' | 'archived' | 'unarchiving' | 'unarchived'
 
 type Item = {
   id: number,
@@ -398,7 +398,9 @@ const STATUS = {
   DELETED: 'deleted',
   DISMISSED: 'dismissed',
   ARCHIVING: 'archiving',
-  ARCHIVED: 'archived'
+  ARCHIVED: 'archived',
+  UNARCHIVING: 'unarchiving',
+  UNARCHIVED: 'unarchived'
 }
 
 const dismissTimeout = 2500
@@ -761,6 +763,10 @@ class SelectBox extends Component<Props, State> {
       `Archiving "${item.value}"...`
     )
 
+    const renderUnarchivingStatus = (item: Item) => (
+      `Unarchiving "${item.value}"...`
+    )
+
     const renderSelectingStatus = (item: Item) => onSelect ? (
       <span className={cx.selecting}>
         <span className={cx.selectingDots} />
@@ -878,9 +884,16 @@ class SelectBox extends Component<Props, State> {
               method: onArchive,
               render: renderArchivingStatus
             })
+          case STATUS.UNARCHIVING:
+            return getRenderWithFallback({
+              item,
+              method: onArchive,
+              render: renderUnarchivingStatus
+            })
           case STATUS.EDITED:
           case STATUS.CREATED:
           case STATUS.ARCHIVED:
+          case STATUS.UNARCHIVED:
           default:
             return getRenderWithFallback({ item })
         }
@@ -911,7 +924,7 @@ class SelectBox extends Component<Props, State> {
         maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
         width: width ? `${width}px` : '100%'
       }}>
-        {search && filteredItems && filteredItems.length !== 1 && (
+        {search && filteredItems && (
           <li key='search-result'>
             {filteredItems.length === 0 && (
               <span className={cx.nothingLabel}>No Results for "{search}"</span>

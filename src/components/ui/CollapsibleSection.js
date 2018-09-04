@@ -203,6 +203,6 @@ class CollapsibleSection extends PureComponent<Props> {
 }
 
 export default compose(
-  withState('isCollapsed', 'handleToggleCollapse', true),
+  withState('isCollapsed', 'handleToggleCollapse', props => props.isCollapsed),
   onlyUpdateForKeys(['isCollapsed', 'visible', 'children'])
 )(CollapsibleSection)

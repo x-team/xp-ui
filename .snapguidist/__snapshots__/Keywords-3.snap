@@ -1,11 +1,11 @@
 exports[`Keywords-3 1`] = `
 <div
-  className="Select AutoUI_ui_Keywords-14 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  is-clearable is-searchable Select--multi">
+  className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  is-clearable is-searchable Select--multi">
   <div
     className="Select-control">
     <span
       className="Select-multi-value-wrapper"
-      id="react-select-13--value">
+      id="react-select-28--value">
       <div
         className="Select-placeholder">
         Type keywords
@@ -18,7 +18,7 @@ exports[`Keywords-3 1`] = `
           }
         }>
         <input
-          aria-activedescendant="react-select-13--value"
+          aria-activedescendant="react-select-28--value"
           aria-expanded="false"
           aria-haspopup="false"
           aria-owns=""
