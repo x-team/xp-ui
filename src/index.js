@@ -40,6 +40,7 @@ import TruncatedList from './components/ui/TruncatedList'
 import Typography from './components/ui/Typography'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
+import InlineEditor from './components/ui/InlineEditor/InlineEditor'
 
 export {
   ApplicantBadge,
@@ -83,5 +84,6 @@ export {
   TruncatedList,
   Typography,
   VideoPlayer,
-  XIcon
+  XIcon,
+  InlineEditor
 }
