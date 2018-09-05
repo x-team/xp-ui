@@ -2,10 +2,9 @@
 
 import React, { PureComponent } from 'react'
 
-const cmz = require('cmz')
-
 import theme from '../../styles/theme'
-const color = {}
+
+const cmz = require('cmz')
 
 const cx = {
   header: cmz(`
@@ -35,7 +34,7 @@ const cx = {
       font-family: 'Open Sans', sans-serif
       font-size: 13px
       font-weight: 400
-      color: ${color.typoParagraph}
+      color: ${theme.typoParagraph}
       text-transform: uppercase
       letter-spacing: 1px
       transition: color .5s ease

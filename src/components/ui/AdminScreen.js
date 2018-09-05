@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
-import theme from '../../styles/theme'
+import Modal from './Modal'
 
 import type { Element } from 'react'
 
@@ -12,6 +12,7 @@ const cx = {
   admin: cmz(`
     background: salmon
     height: 100%
+    position: relative
   `),
 
   header: cmz(`
@@ -20,10 +21,14 @@ const cx = {
   `)
 }
 
-
 type Props = {
   header?: Element<*>,
-  children?: Element<*>
+  children?: Element<*>,
+  modal?: {
+    onClose: Function,
+    content: Element<*>,
+    isClosing: boolean
+  }
 }
 
 type State = {
@@ -32,14 +37,24 @@ type State = {
 class AdminScreen extends PureComponent<Props, State> {
   static defaultProps = {
     header: null,
-    children: null
+    children: null,
+    modal: {
+      onClose: () => {},
+      content: null
+    }
   }
 
   render () {
+    const { header, children, modal } = this.props
     return (
       <div className={cx.admin}>
-        <div className={cx.header}>{this.props.header}</div>
-        {this.props.children}
+        {modal && modal.content && (
+          <Modal onClose={modal.onClose}>
+            {modal.content}
+          </Modal>
+        )}
+        <div className={cx.header}>{header}</div>
+        {children}
       </div>
     )
   }

@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 
 import ProfileHeaderLinks from './ProfileHeaderLinks'
 
-import theme from '../../styles/theme'
+// import theme from '../../styles/theme'
 
 import type { Element } from 'react'
 
