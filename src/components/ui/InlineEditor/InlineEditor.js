@@ -10,10 +10,23 @@ const cx = {
   container: cmz(`
     cursor: pointer
   `),
+  link: cmz(`
+    & {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  `),
   button: cmz(`
     margin-top: 10px
     margin-right: 10px
-`)
+  `),
+  warningMessage: cmz(`
+    padding: 10px 0
+  `)
 }
 
 const ENTER_KEY_CODE = 13
@@ -39,7 +52,6 @@ type Props = {
 }
 
 type State = {
-  lastValue: any,
   editValue: any,
   editing: boolean
 }
@@ -49,7 +61,6 @@ class InlineEditor extends PureComponent<Props, State> {
 
   state = {
     editing: false,
-    lastValue: this.props.value,
     editValue: this.props.value
   }
 
@@ -81,12 +92,50 @@ class InlineEditor extends PureComponent<Props, State> {
     )
   }
 
+  renderWarningMessage = () => {
+    return (
+      <p className={cx.warningMessage}>
+        You have unsaved changes.&nbsp;
+        <a
+          href=''
+          className={cx.link}
+          onClick={this.handleEditLinkClick}
+        >
+          View edits
+        </a>
+        &nbsp;-&nbsp;
+        <a
+          href=''
+          className={cx.link}
+          onClick={this.handleDiscardLinkClick}
+        >
+          Discard
+        </a>
+      </p>
+    )
+  }
+
+  setEditing = () => {
+    this.setState({ editing: true })
+  }
+
   handleContainerClick = () => {
     if (this.isEditing()) {
       this.abortChanges()
     } else {
-      this.setState({ editing: true })
+      this.setEditing()
     }
+  }
+
+  handleEditLinkClick = (evt: Object) => {
+    evt.preventDefault()
+    this.setEditing()
+  }
+
+  handleDiscardLinkClick = (evt: Object) => {
+    evt.preventDefault()
+    evt.stopPropagation()
+    this.abortChanges()
   }
 
   handleComponentClick = (evt: Object) => {
@@ -113,16 +162,15 @@ class InlineEditor extends PureComponent<Props, State> {
     const { editValue } = this.state
     this.props.onSave(editValue)
     this.setState({
-      lastValue: editValue,
       editing: false
     })
   }
 
   abortChanges = () => {
-    const { lastValue } = this.state
+    const { value } = this.props
     this.props.onCancel()
     this.setState({
-      editValue: lastValue,
+      editValue: value,
       editing: false
     })
   }
@@ -136,9 +184,18 @@ class InlineEditor extends PureComponent<Props, State> {
     this.setState({ editValue: value })
   }
 
+  componentWillReceiveProps (nextProps: Props) {
+    const { value } = nextProps
+    const { editValue } = this.state
+    if (this.props.value !== value && editValue !== value) {
+      this.setState({ editValue: value })
+    }
+  }
+
   render () {
     const { editValue } = this.state
-    const { editor, presenter } = this.props
+    const { editor, presenter, value } = this.props
+    const hasUnsavedChanges = value !== editValue
     const mainComponentRenderer = this.isEditing() ? editor : presenter
     const props = {
       value: editValue,
@@ -156,6 +213,7 @@ class InlineEditor extends PureComponent<Props, State> {
             {mainComponentRenderer(props)}
           </div>
           {this.isEditing() && this.renderControls()}
+          {(!this.isEditing() && hasUnsavedChanges) && this.renderWarningMessage()}
         </div>
       </ClickOutside>
     )
