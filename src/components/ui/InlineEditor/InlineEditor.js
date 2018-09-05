@@ -44,11 +44,17 @@ type PresenterProps = {
 }
 
 type Props = {
+  /** Component's value */
   value: any,
+  /** Editing mode render function */
   editor(props: EditorProps): any,
+  /** Presentation mode render function */
   presenter(props: PresenterProps): any,
+  /** On save changes callback */
   onSave(data: any): ?void,
+  /** On change callback */
   onChange?: (data: any) => ?void,
+  /** On cancel changes callback */
   onCancel(): ?void
 }
 
@@ -57,6 +63,9 @@ type State = {
   editing: boolean
 }
 
+/**
+ * A generic component that provides inline editing functionality to any component.
+ */
 class InlineEditor extends PureComponent<Props, State> {
   static defaultProps = {
     onChange: () => {}
@@ -177,6 +186,10 @@ class InlineEditor extends PureComponent<Props, State> {
     this.abortChanges()
   }
 
+  handleClickOutside = () => {
+    this.setEditing(false)
+  }
+
   handleValueChange = (value: any) => {
     this.setState({ editValue: value })
   }
@@ -200,7 +213,7 @@ class InlineEditor extends PureComponent<Props, State> {
     }
 
     return (
-      <ClickOutside onClickOutside={this.abortChanges}>
+      <ClickOutside onClickOutside={this.handleClickOutside}>
         <div
           className={cx.container}
           onClick={this.handleContainerClick}
