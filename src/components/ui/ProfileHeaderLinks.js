@@ -4,6 +4,7 @@ import React, { PureComponent } from 'react'
 
 const cmz = require('cmz')
 
+import theme from '../../styles/theme'
 const color = {}
 
 const cx = {
@@ -14,8 +15,8 @@ const cx = {
     width: 100%
     margin: 0
     padding: 20px 0
-    background-color: ${color.gray7}
-    border-bottom: 1px solid ${color.gray8}
+    background-color: ${theme.baseBright}
+    border-bottom: 1px solid ${theme.lineSilver1}
   `),
 
   linkWrapper: cmz(`
@@ -34,7 +35,7 @@ const cx = {
       font-family: 'Open Sans', sans-serif
       font-size: 13px
       font-weight: 400
-      color: ${color.gray6}
+      color: ${color.typoParagraph}
       text-transform: uppercase
       letter-spacing: 1px
       transition: color .5s ease
@@ -42,12 +43,12 @@ const cx = {
     }
 
     &:hover {
-      color: ${color.tuna}
+      color: ${theme.typoHighlight}
     }
   `),
 
   activeLink: cmz(`
-    color: ${color.tuna}
+    color: ${theme.typoHighlight}
   `)
 }
 

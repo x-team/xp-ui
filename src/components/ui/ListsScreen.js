@@ -125,9 +125,11 @@ class ListsScreen extends PureComponent<Props, State> {
           </div>
         </div>
         <div className={cx.search}>
-          <div className={cx.searchForm}>{this.props.search}</div>
+          <div className={cx.searchForm}>
+            {this.props.search}
+          </div>
           <div className={cx.applicantGrid}>
-            ApplicantGrid ({this.state.view})
+            {this.props.result}
           </div>
         </div>
       </div>
