@@ -8,6 +8,11 @@ import { getClassName } from '../../utils/helpers'
 
 const cmz = require('cmz')
 
+type SortDirections = {
+  ASCENDING: 'asc',
+  DESCENDING: 'desc'
+}
+
 type HeaderColumn = {
   name: string,
   label: string,
@@ -19,13 +24,41 @@ type Props = {
   className?: string,
   headerColumns: Array<HeaderColumn>,
   sortBy?: string,
-  sortDirection?: string,
+  sortDirection?: $Values<SortDirections>, // eslint-disable-line no-undef
   onSortingChange: Function
 }
 
-const SORT_DIRECTIONS = {
+const SORT_DIRECTIONS: SortDirections = {
   ASCENDING: 'asc',
   DESCENDING: 'desc'
+}
+
+const arrowBase = cmz(`
+  &:after {
+    content: ''
+    width: 0
+    height: 0 
+    border-left: 4px solid transparent
+    border-right: 4px solid transparent
+    vertical-align: middle
+    display: inline-block;
+    margin-left: 5px;
+  }
+`)
+
+const arrow = {
+  up: cmz(arrowBase,
+    `
+      &:after {
+        border-bottom: 4px solid ${theme.typoLabel}
+      }
+    `),
+  down: cmz(arrowBase,
+    `
+      &:after {
+        border-top: 4px solid ${theme.typoLabel}
+      }
+    `)
 }
 
 const cx = {
@@ -74,46 +107,23 @@ const cx = {
       color: ${theme.baseDark}
     }
   `),
-  [`${SORT_DIRECTIONS.ASCENDING}Sort`]: cmz(`
-    &:after {
-      content: ''
-      width: 0
-      height: 0 
-      border-left: 4px solid transparent
-      border-right: 4px solid transparent
-      border-bottom: 4px solid ${theme.typoLabel}
-      vertical-align: middle
-      display: inline-block;
-      margin-left: 5px;
-    }
-  `),
-  [`${SORT_DIRECTIONS.DESCENDING}Sort`]: cmz(`
-    &:after {
-      content: ''
-      width: 0
-      height: 0 
-      border-left: 4px solid transparent
-      border-right: 4px solid transparent
-      border-top: 4px solid ${theme.typoLabel}
-      vertical-align: middle
-      display: inline-block;
-      margin-left: 5px;
-    }
-  `)
+  [`${SORT_DIRECTIONS.ASCENDING}Sort`]: arrow.up,
+  [`${SORT_DIRECTIONS.DESCENDING}Sort`]: arrow.down
 }
 
-const toggleDirection = (direction: ?string) => {
-  if (direction === SORT_DIRECTIONS.ASCENDING) {
-    return SORT_DIRECTIONS.DESCENDING
-  }
-  return SORT_DIRECTIONS.ASCENDING
+// eslint-disable-next-line no-undef
+const toggleDirection = (direction: ?$Values<SortDirections>) => {
+  const { ASCENDING, DESCENDING } = SORT_DIRECTIONS
+  return direction === ASCENDING
+    ? DESCENDING
+    : ASCENDING
 }
 
-const getSortDirection = (columnName: string, sortBy: ?string, sortDirection: ?string): string => {
-  if (columnName === sortBy) {
-    return toggleDirection(sortDirection)
-  }
-  return SORT_DIRECTIONS.ASCENDING
+// eslint-disable-next-line no-undef
+const getSortDirection = (columnName: string, sortBy: ?string, sortDirection: ?$Values<SortDirections>): string => {
+  return columnName === sortBy
+    ? toggleDirection(sortDirection)
+    : SORT_DIRECTIONS.ASCENDING
 }
 
 class ApplicantGridHeader extends PureComponent<Props> {
