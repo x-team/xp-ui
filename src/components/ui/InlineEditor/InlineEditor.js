@@ -48,6 +48,7 @@ type Props = {
   editor(props: EditorProps): any,
   presenter(props: PresenterProps): any,
   onSave(data: any): ?void,
+  onChange?: (data: any) => ?void,
   onCancel(): ?void
 }
 
@@ -57,7 +58,9 @@ type State = {
 }
 
 class InlineEditor extends PureComponent<Props, State> {
-  static defaultProps = {}
+  static defaultProps = {
+    onChange: () => {}
+  }
 
   state = {
     editing: false,
@@ -115,21 +118,17 @@ class InlineEditor extends PureComponent<Props, State> {
     )
   }
 
-  setEditing = () => {
-    this.setState({ editing: true })
+  setEditing = (editing: boolean) => {
+    this.setState({ editing })
   }
 
   handleContainerClick = () => {
-    if (this.isEditing()) {
-      this.abortChanges()
-    } else {
-      this.setEditing()
-    }
+    this.setEditing(!this.isEditing())
   }
 
   handleEditLinkClick = (evt: Object) => {
     evt.preventDefault()
-    this.setEditing()
+    this.setEditing(true)
   }
 
   handleDiscardLinkClick = (evt: Object) => {
@@ -149,7 +148,7 @@ class InlineEditor extends PureComponent<Props, State> {
     if (isEnterKey(keyCode)) {
       this.saveChanges()
     } else if (isEscapeKey(keyCode)) {
-      this.abortChanges()
+      this.setEditing(false)
     }
   }
 
@@ -161,9 +160,7 @@ class InlineEditor extends PureComponent<Props, State> {
   saveChanges = () => {
     const { editValue } = this.state
     this.props.onSave(editValue)
-    this.setState({
-      editing: false
-    })
+    this.setEditing(false)
   }
 
   abortChanges = () => {
