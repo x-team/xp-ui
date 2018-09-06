@@ -7,7 +7,7 @@ import Button from '../Button'
 const cmz = require('cmz')
 
 const cx = {
-  container: cmz(`
+  containerEditable: cmz(`
     cursor: pointer
   `),
   link: cmz(`
@@ -40,12 +40,15 @@ type EditorProps = {
 }
 
 type PresenterProps = {
-  value: any
+  value: any,
+  editable?: boolean
 }
 
 type Props = {
   /** Component's value */
   value: any,
+  /** To control whethere component can be editable or not */
+  editable?: boolean,
   /** Editing mode render function */
   editor(props: EditorProps): any,
   /** Presentation mode render function */
@@ -68,7 +71,8 @@ type State = {
  */
 class InlineEditor extends PureComponent<Props, State> {
   static defaultProps = {
-    onChange: () => {}
+    onChange: () => {},
+    editable: true
   }
 
   state = {
@@ -132,7 +136,10 @@ class InlineEditor extends PureComponent<Props, State> {
   }
 
   handleContainerClick = () => {
-    this.setEditing(!this.isEditing())
+    const { editable } = this.props
+    if (editable) {
+      this.setEditing(!this.isEditing())
+    }
   }
 
   handleEditLinkClick = (evt: Object) => {
@@ -204,18 +211,19 @@ class InlineEditor extends PureComponent<Props, State> {
 
   render () {
     const { editValue } = this.state
-    const { editor, presenter, value } = this.props
+    const { editor, presenter, value, editable } = this.props
     const hasUnsavedChanges = value !== editValue
     const mainComponentRenderer = this.isEditing() ? editor : presenter
     const props = {
       value: editValue,
-      onValueChange: this.handleValueChange
+      onValueChange: this.handleValueChange,
+      editable
     }
 
     return (
       <ClickOutside onClickOutside={this.handleClickOutside}>
         <div
-          className={cx.container}
+          className={editable ? cx.containerEditable : ''}
           onClick={this.handleContainerClick}
           onKeyDown={this.handleKeyDown}
         >
@@ -223,7 +231,7 @@ class InlineEditor extends PureComponent<Props, State> {
             {mainComponentRenderer(props)}
           </div>
           {this.isEditing() && this.renderControls()}
-          {(!this.isEditing() && hasUnsavedChanges) && this.renderWarningMessage()}
+          {(!this.isEditing() && hasUnsavedChanges && editable) && this.renderWarningMessage()}
         </div>
       </ClickOutside>
     )

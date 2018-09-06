@@ -1,0 +1,12 @@
+exports[`InlineEditor-7 1`] = `
+<div>
+  <div
+    className="">
+    <div>
+      <p>
+        This is a sample text. I am not editable so clicking on me will no allow edit mode!
+      </p>
+    </div>
+  </div>
+</div>
+`;

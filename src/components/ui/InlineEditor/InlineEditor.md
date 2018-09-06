@@ -45,30 +45,26 @@ With TextArea usage:
 With Keywords usage:
 
 ```js
-
-const Presenter = ({ value }) => (
-  <div>
-    <h3>Keywords</h3>
-    <ul>
-      {value.split(',').map(item => (
-        <li key={item}>
-          {item}
-        </li>
-      ))}
-    </ul>
-  </div>
-)
-
-const Editor = ({ onValueChange, value }) => (
-  <Keywords
-  values={value}
-  onChange={values => onValueChange(values)}
-  onSubmit={() => console.log('Submit keywords')}
-/>
-);
 <InlineEditor
-  editor={Editor}
-  presenter={Presenter}
+  editor={({ onValueChange, value }) => (
+    <Keywords
+    values={value}
+    onChange={values => onValueChange(values)}
+    onSubmit={() => console.log('Submit keywords')}
+  />
+  )}
+  presenter={({ value }) => (
+    <div>
+      <h3>Keywords</h3>
+      <ul>
+        {value.split(',').map(item => (
+          <li key={item}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
   onSave={() => {}}
   onCancel={() => {}}
   value="a,simple,string,separated,by,commas,with,operators,and,or"
@@ -76,3 +72,27 @@ const Editor = ({ onValueChange, value }) => (
 ```
 
 
+Not editable usage (editable false):
+
+```js
+
+// Not editable usage
+
+<InlineEditor
+  editable={false}
+  editor={({ onValueChange, value }) => (
+    <InputField
+      label="Example"
+      autoFocus
+      onChange={(evt) => {
+        onValueChange(evt.target.value)
+      }}
+      value={value}
+    />
+  )}
+  presenter={({ value }) => <p>{value}</p>}
+  onSave={() => {}}
+  onCancel={() => {}}
+  value={"This is a sample text. I am not editable so clicking on me will no allow edit mode!"}
+/>
+```
