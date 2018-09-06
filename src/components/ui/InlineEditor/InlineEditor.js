@@ -58,7 +58,7 @@ type Props = {
   /** On change callback */
   onChange?: (data: any) => ?void,
   /** On cancel changes callback */
-  onCancel(): ?void
+  onCancel?: () => ?void,
 }
 
 type State = {
@@ -72,6 +72,7 @@ type State = {
 class InlineEditor extends PureComponent<Props, State> {
   static defaultProps = {
     onChange: () => {},
+    onCancel: () => {},
     editable: true
   }
 
@@ -180,12 +181,15 @@ class InlineEditor extends PureComponent<Props, State> {
   }
 
   abortChanges = () => {
-    const { value } = this.props
-    this.props.onCancel()
+    const { value, onCancel } = this.props
     this.setState({
       editValue: value,
       editing: false
     })
+
+    if (onCancel) {
+      onCancel()
+    }
   }
 
   handleCancelClick = (evt: Object) => {

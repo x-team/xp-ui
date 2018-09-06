@@ -17,7 +17,6 @@ With InputField usage:
   )}
   presenter={({ value }) => <p>{value}</p>}
   onSave={() => {}}
-  onCancel={() => {}}
   value={"This is a sample text. Click on me to edit me!"}
 />
 ```
@@ -37,7 +36,6 @@ With TextArea usage:
 )}
   presenter={({ value }) => <p>{value}</p>}
   onSave={() => {}}
-  onCancel={() => {}}
   value={"This is a sample text. Click on me to edit me!"}
 />
 ```
@@ -66,7 +64,6 @@ With Keywords usage:
     </div>
   )}
   onSave={() => {}}
-  onCancel={() => {}}
   value="a,simple,string,separated,by,commas,with,operators,and,or"
 />
 ```
@@ -92,7 +89,6 @@ Not editable usage (editable false):
   )}
   presenter={({ value }) => <p>{value}</p>}
   onSave={() => {}}
-  onCancel={() => {}}
   value={"This is a sample text. I am not editable so clicking on me will no allow edit mode!"}
 />
 ```
