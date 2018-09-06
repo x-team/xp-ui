@@ -1,5 +1,6 @@
 import ApplicantBadge from './components/ui/ApplicantBadge'
 import ApplicantGrid from './components/ui/ApplicantGrid'
+import ApplicantGridHeader from './components/ui/ApplicantGridHeader'
 import ApplicantListFilter from './components/forms/ApplicantListFilter'
 import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
@@ -45,6 +46,7 @@ import InlineEditor from './components/ui/InlineEditor/InlineEditor'
 export {
   ApplicantBadge,
   ApplicantGrid,
+  ApplicantGridHeader,
   ApplicantListFilter,
   ApplicantScreen,
   AttachFiles,
