@@ -15,7 +15,14 @@ With InputField usage:
       value={value}
     />
   )}
-  presenter={({ value }) => <p>{value}</p>}
+  presenter={({ value, activateEditingMode }) => (
+    <div
+      onClick={activateEditingMode}
+      style={{cursor: 'pointer'}}
+    >
+      <p>{value}</p>
+    </div>
+  )}
   onSave={() => {}}
   value={"This is a sample text. Click on me to edit me!"}
 />
@@ -34,7 +41,14 @@ With TextArea usage:
     text={value}
   />
 )}
-  presenter={({ value }) => <p>{value}</p>}
+  presenter={({ value, activateEditingMode }) => (
+    <div
+      onClick={activateEditingMode}
+      style={{cursor: 'pointer'}}
+    >
+      <p>{value}</p>
+    </div>
+  )}
   onSave={() => {}}
   value={"This is a sample text. Click on me to edit me!"}
 />
@@ -51,8 +65,11 @@ With Keywords usage:
     onSubmit={() => console.log('Submit keywords')}
   />
   )}
-  presenter={({ value }) => (
-    <div>
+  presenter={({ value, activateEditingMode }) => (
+    <div
+      onClick={activateEditingMode}
+      style={{cursor: 'pointer'}}
+    >
       <h3>Keywords</h3>
       <ul>
         {value.split(',').map(item => (
@@ -87,7 +104,14 @@ Not editable usage (editable false):
       value={value}
     />
   )}
-  presenter={({ value }) => <p>{value}</p>}
+  presenter={({ value, activateEditingMode }) => (
+    <div
+      onClick={activateEditingMode}
+      style={{cursor: 'pointer'}}
+    >
+      <p>{value}</p>
+    </div>
+  )}
   onSave={() => {}}
   value={"This is a sample text. I am not editable so clicking on me will no allow edit mode!"}
 />

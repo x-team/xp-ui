@@ -7,9 +7,6 @@ import Button from '../Button'
 const cmz = require('cmz')
 
 const cx = {
-  containerEditable: cmz(`
-    cursor: pointer
-  `),
   link: cmz(`
     & {
       text-decoration: none;
@@ -41,7 +38,8 @@ type EditorProps = {
 
 type PresenterProps = {
   value: any,
-  editable?: boolean
+  editable?: boolean,
+  activateEditingMode(): ?void
 }
 
 type Props = {
@@ -137,9 +135,8 @@ class InlineEditor extends PureComponent<Props, State> {
   }
 
   handleContainerClick = () => {
-    const { editable } = this.props
-    if (editable) {
-      this.setEditing(!this.isEditing())
+    if (this.isEditing()) {
+      this.setEditing(false)
     }
   }
 
@@ -205,6 +202,13 @@ class InlineEditor extends PureComponent<Props, State> {
     this.setState({ editValue: value })
   }
 
+  handleActivateEditingMode = () => {
+    const { editable } = this.props
+    if (editable) {
+      this.setEditing(true)
+    }
+  }
+
   componentWillReceiveProps (nextProps: Props) {
     const { value } = nextProps
     const { editValue } = this.state
@@ -221,13 +225,13 @@ class InlineEditor extends PureComponent<Props, State> {
     const props = {
       value: editValue,
       onValueChange: this.handleValueChange,
+      activateEditingMode: this.handleActivateEditingMode,
       editable
     }
 
     return (
       <ClickOutside onClickOutside={this.handleClickOutside}>
         <div
-          className={editable ? cx.containerEditable : ''}
           onClick={this.handleContainerClick}
           onKeyDown={this.handleKeyDown}
         >

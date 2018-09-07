@@ -1,9 +1,13 @@
 exports[`InlineEditor-5 1`] = `
 <div>
-  <div
-    className="AutoUI_ui_InlineEditor_InlineEditor-10">
+  <div>
     <div>
-      <div>
+      <div
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }>
         <h3>
           Keywords
         </h3>
