@@ -39,6 +39,7 @@ type EditorProps = {
 type PresenterProps = {
   value: any,
   editable?: boolean,
+  hover?: boolean,
   activateEditingMode(): ?void
 }
 
@@ -61,7 +62,8 @@ type Props = {
 
 type State = {
   editValue: any,
-  editing: boolean
+  editing: boolean,
+  hover: boolean
 }
 
 /**
@@ -76,6 +78,7 @@ class InlineEditor extends PureComponent<Props, State> {
 
   state = {
     editing: false,
+    hover: false,
     editValue: this.props.value
   }
 
@@ -209,6 +212,14 @@ class InlineEditor extends PureComponent<Props, State> {
     }
   }
 
+  handleMouseEnter = () => {
+    this.setState({ hover: true })
+  }
+
+  handleMouseLeave = () => {
+    this.setState({ hover: false })
+  }
+
   componentWillReceiveProps (nextProps: Props) {
     const { value } = nextProps
     const { editValue } = this.state
@@ -218,7 +229,7 @@ class InlineEditor extends PureComponent<Props, State> {
   }
 
   render () {
-    const { editValue } = this.state
+    const { editValue, hover } = this.state
     const { editor, presenter, value, editable } = this.props
     const hasUnsavedChanges = value !== editValue
     const mainComponentRenderer = this.isEditing() ? editor : presenter
@@ -226,7 +237,8 @@ class InlineEditor extends PureComponent<Props, State> {
       value: editValue,
       onValueChange: this.handleValueChange,
       activateEditingMode: this.handleActivateEditingMode,
-      editable
+      editable,
+      hover
     }
 
     return (
@@ -234,6 +246,8 @@ class InlineEditor extends PureComponent<Props, State> {
         <div
           onClick={this.handleContainerClick}
           onKeyDown={this.handleKeyDown}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
         >
           <div onClick={this.handleComponentClick}>
             {mainComponentRenderer(props)}
