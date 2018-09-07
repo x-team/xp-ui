@@ -10,13 +10,11 @@ const cmz = require('cmz')
 
 const cx = {
   admin: cmz(`
-    background: salmon
     height: 100%
     position: relative
   `),
 
   header: cmz(`
-    background: aqua
     height: 86px
   `)
 }
@@ -26,8 +24,7 @@ type Props = {
   children?: Element<*>,
   modal?: {
     onClose: Function,
-    content: Element<*>,
-    isClosing: boolean
+    content: Element<*>
   }
 }
 

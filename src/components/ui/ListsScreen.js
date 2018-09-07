@@ -4,25 +4,38 @@ import React, { PureComponent } from 'react'
 
 import ProfileHeaderLinks from './ProfileHeaderLinks'
 
-// import theme from '../../styles/theme'
+import theme from '../../styles/theme'
 
 import type { Element } from 'react'
 
 const cmz = require('cmz')
 
+const MODE = ['lists', 'tabular']
+
+const dimensions = {
+  screenHeight: '100vh',
+  headerHeight: '86px',
+  searchWidth: {
+    [MODE[0]]: '470px',
+    [MODE[1]]: '100%'
+  }
+}
+
 const cx = {
   main: cmz(`
-    background: antiquewhite
     position: relative
-    height: calc(100vh - 86px)
-    overflow-y: scroll
+    height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
+    overflow: hidden
   `),
 
   search: cmz(`
-    background: olive
     position: absolute
     top: 0
     width: 470px
+    height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
+    display: flex
+    flex-direction: column
+    border-right: 2px solid ${theme.lineSilver1}
   `),
   // .Admin--card .Search {
   //   width: 470px
@@ -32,8 +45,6 @@ const cx = {
   // }
 
   searchForm: cmz(`
-    background: orange
-    height: 365px
   `),
   // .Admin--card .SearchForm {
   //   height: 365px
@@ -43,19 +54,18 @@ const cx = {
   // }
 
   applicantGrid: cmz(`
-    background: teal
-    overflow-y: scroll
-    height: calc(100vh - 86px - 365px)
+    background-color: ${theme.baseBright}
+    overflow-y: auto
+    height: 100%
   `),
   // .Admin--card .ApplicantGrid {
-  //   height: calc(100vh - 70px - 470px)
+  //   height: calc(${dimensions.screenHeight} - 70px - 470px)
   // }
   // .Admin--tabular .ApplicantGrid {
-  //   height: calc(100vh - 70px - 200px)
+  //   height: calc(${dimensions.screenHeight} - 70px - 200px)
   // }
 
   applicant: cmz(`
-    background: purple
     position: absolute
     width: calc(100% - 470px)
     top: 0
@@ -67,14 +77,12 @@ const cx = {
   // }
 
   headings: cmz(`
-    background: springgreen
     height: 60px
   `),
 
   profile: cmz(`
-    background: brown
-    overflow-y: scroll
-    height: calc(100vh - 86px - 60px)
+    overflow-y: auto
+    height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight} - 60px)
   `)
 }
 
@@ -82,34 +90,32 @@ type Props = {
   applicant?: Element<*>,
   search?: Element<*>,
   result?: Element<*>,
-  view?: string
+  mode?: string
 }
 
 type State = {
-  view: string
+  mode: string
 }
-
-const VIEW = ['applicant', 'tabular']
 
 class ListsScreen extends PureComponent<Props, State> {
   static defaultProps = {
     applicant: null,
     search: null,
     result: null,
-    view: VIEW[0]
+    mode: MODE[0]
   }
 
   state = {
-    view: VIEW[0]
+    mode: MODE[0]
   }
 
   componentDidUpdate (prevProps: Props) {
-    this.setState((prevState, props) => ({ ...prevState, view: props.view }))
+    this.setState((prevState, props) => ({ ...prevState, mode: props.mode }))
   }
 
-  toggleView = () => {
+  toggleViewMode = () => {
     this.setState({
-      view: this.state.view === VIEW[0] ? VIEW[1] : VIEW[0]
+      mode: this.state.mode === MODE[0] ? MODE[1] : MODE[0]
     })
   }
 
