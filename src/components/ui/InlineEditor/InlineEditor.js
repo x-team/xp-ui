@@ -134,7 +134,14 @@ class InlineEditor extends PureComponent<Props, State> {
   }
 
   setEditing = (editing: boolean) => {
-    this.setState({ editing })
+    let update = { editing }
+    if (!editing) {
+      update = {
+        ...update,
+        hover: false
+      }
+    }
+    this.setState(update)
   }
 
   handleContainerClick = () => {
@@ -184,7 +191,8 @@ class InlineEditor extends PureComponent<Props, State> {
     const { value, onCancel } = this.props
     this.setState({
       editValue: value,
-      editing: false
+      editing: false,
+      hover: false
     })
 
     if (onCancel) {
