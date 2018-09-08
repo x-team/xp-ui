@@ -18,7 +18,7 @@ const cardTheme = {
 
   searchForm: cmz(`
     & {
-      padding: 30px 50px
+      width: 100%
     }
     &:empty {
       padding: 0

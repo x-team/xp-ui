@@ -16,6 +16,7 @@ const cx = {
     padding: 20px 0
     background-color: ${theme.baseBright}
     border-bottom: 1px solid ${theme.lineSilver1}
+    z-index: 3
   `),
 
   linkWrapper: cmz(`

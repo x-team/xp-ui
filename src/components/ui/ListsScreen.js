@@ -15,9 +15,14 @@ const MODE = ['lists', 'tabular']
 const dimensions = {
   screenHeight: '100vh',
   headerHeight: '86px',
+  headingHeight: '60px',
   searchWidth: {
     [MODE[0]]: '470px',
     [MODE[1]]: '100%'
+  },
+  searchHeight: {
+    [MODE[0]]: '500px',
+    [MODE[1]]: 'auto'
   }
 }
 
@@ -25,26 +30,32 @@ const cx = {
   main: cmz(`
     position: relative
     height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
-    overflow: hidden
+    overflow-y: auto
   `),
 
   search: cmz(`
     position: absolute
     top: 0
-    width: 470px
-    height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
+    width: ${dimensions.searchWidth[MODE[0]]}
+    min-height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
     display: flex
     flex-direction: column
     border-right: 2px solid ${theme.lineSilver1}
   `),
   // .Admin--card .Search {
-  //   width: 470px
+  //   width: ${dimensions.searchWidth[MODE[0]]}
   // }
   // .Admin--tabular .Search {
   //   width: 100%
   // }
 
   searchForm: cmz(`
+    background-color: ${theme.baseBright}
+    position: fixed
+    z-index: 999
+    width: ${dimensions.searchWidth[MODE[0]]}
+    padding: 30px
+    box-sizing: border-box
   `),
   // .Admin--card .SearchForm {
   //   height: 365px
@@ -55,21 +66,23 @@ const cx = {
 
   applicantGrid: cmz(`
     background-color: ${theme.baseBright}
-    overflow-y: auto
-    height: 100%
+    min-height: ${dimensions.screenHeight}
+    padding: ${dimensions.searchHeight[MODE[0]]} 30px 30px
+    width: ${dimensions.searchWidth[MODE[0]]}
+    box-sizing: border-box
   `),
   // .Admin--card .ApplicantGrid {
-  //   height: calc(${dimensions.screenHeight} - 70px - 470px)
+  //   height: calc(${dimensions.screenHeight} - 70px - ${dimensions.searchWidth[MODE[0]]})
   // }
   // .Admin--tabular .ApplicantGrid {
   //   height: calc(${dimensions.screenHeight} - 70px - 200px)
   // }
 
   applicant: cmz(`
-    position: absolute
-    width: calc(100% - 470px)
-    top: 0
-    padding-left: 470px
+    position: fixed
+    left: ${dimensions.searchWidth[MODE[0]]}
+    height: 100%
+    width: calc(100% - ${dimensions.searchWidth[MODE[0]]})
   `),
   // .Admin--card .Applicant {
   // }
@@ -77,12 +90,13 @@ const cx = {
   // }
 
   headings: cmz(`
-    height: 60px
+    height: ${dimensions.headingHeight}
   `),
 
   profile: cmz(`
     overflow-y: auto
-    height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight} - 60px)
+    height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight} - ${dimensions.headingHeight})
+    padding-top: 10px
   `)
 }
 
