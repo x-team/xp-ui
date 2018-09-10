@@ -23,7 +23,6 @@ With InputField usage:
       <p>{value}</p>
     </div>
   )}
-  onSave={() => {}}
   value={"This is a sample text. Click on me to edit me!"}
 />
 ```
@@ -49,7 +48,6 @@ With TextArea usage:
       <p>{value}</p>
     </div>
   )}
-  onSave={() => {}}
   value={"This is a sample text. Click on me to edit me!"}
 />
 ```
@@ -80,7 +78,6 @@ With Keywords usage:
       </ul>
     </div>
   )}
-  onSave={() => {}}
   value="a,simple,string,separated,by,commas,with,operators,and,or"
 />
 ```
@@ -93,7 +90,7 @@ Not editable usage (editable false):
 // Not editable usage
 
 <InlineEditor
-  editable={false}
+  isEditable={false}
   editor={({ onValueChange, value }) => (
     <InputField
       label="Example"
@@ -112,7 +109,6 @@ Not editable usage (editable false):
       <p>{value}</p>
     </div>
   )}
-  onSave={() => {}}
   value={"This is a sample text. I am not editable so clicking on me will no allow edit mode!"}
 />
 ```
