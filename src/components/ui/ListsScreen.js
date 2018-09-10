@@ -36,58 +36,32 @@ const cx = {
   search: cmz(`
     position: absolute
     top: 0
-    width: ${dimensions.searchWidth[MODE[0]]}
     min-height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
     display: flex
     flex-direction: column
     border-right: 2px solid ${theme.lineSilver1}
   `),
-  // .Admin--card .Search {
-  //   width: ${dimensions.searchWidth[MODE[0]]}
-  // }
-  // .Admin--tabular .Search {
-  //   width: 100%
-  // }
 
   searchForm: cmz(`
     background-color: ${theme.baseBright}
     position: fixed
     z-index: 999
-    width: ${dimensions.searchWidth[MODE[0]]}
     padding: 30px
     box-sizing: border-box
   `),
-  // .Admin--card .SearchForm {
-  //   height: 365px
-  // }
-  // .Admin--tabular .SearchForm {
-  //   height: 200px
-  // }
 
   applicantGrid: cmz(`
     background-color: ${theme.baseBright}
-    min-height: ${dimensions.screenHeight}
+    min-height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
     padding: ${dimensions.searchHeight[MODE[0]]} 30px 30px
-    width: ${dimensions.searchWidth[MODE[0]]}
     box-sizing: border-box
   `),
-  // .Admin--card .ApplicantGrid {
-  //   height: calc(${dimensions.screenHeight} - 70px - ${dimensions.searchWidth[MODE[0]]})
-  // }
-  // .Admin--tabular .ApplicantGrid {
-  //   height: calc(${dimensions.screenHeight} - 70px - 200px)
-  // }
 
   applicant: cmz(`
     position: fixed
     left: ${dimensions.searchWidth[MODE[0]]}
     height: 100%
-    width: calc(100% - ${dimensions.searchWidth[MODE[0]]})
   `),
-  // .Admin--card .Applicant {
-  // }
-  // .Admin--tabular .Applicant {
-  // }
 
   headings: cmz(`
     height: ${dimensions.headingHeight}
@@ -100,6 +74,42 @@ const cx = {
   `)
 }
 
+const listTheme = {
+  search: cmz(cx.search, `
+    width: ${dimensions.searchWidth[MODE[0]]}
+  `),
+
+  searchForm: cmz(cx.searchForm, `
+    width: ${dimensions.searchWidth[MODE[0]]}
+  `),
+
+  applicantGrid: cmz(cx.applicantGrid, `
+    width: ${dimensions.searchWidth[MODE[0]]}
+  `),
+
+  applicant: cmz(cx.applicant, `
+    width: calc(100% - ${dimensions.searchWidth[MODE[0]]})
+  `)
+}
+
+const tabularTheme = {
+  search: cmz(cx.search, `
+    width: ${dimensions.searchWidth[MODE[1]]}
+  `),
+
+  searchForm: cmz(cx.searchForm, `
+    width: ${dimensions.searchWidth[MODE[1]]}
+  `),
+
+  applicantGrid: cmz(cx.applicantGrid, `
+    width: ${dimensions.searchWidth[MODE[1]]}
+  `),
+
+  applicant: cmz(cx.applicant, `
+    width: ${dimensions.searchWidth[MODE[1]]}
+  `)
+}
+
 type Props = {
   applicant?: Element<*>,
   search?: Element<*>,
@@ -107,11 +117,7 @@ type Props = {
   mode?: string
 }
 
-type State = {
-  mode: string
-}
-
-class ListsScreen extends PureComponent<Props, State> {
+class ListsScreen extends PureComponent<Props, void> {
   static defaultProps = {
     applicant: null,
     search: null,
@@ -119,24 +125,11 @@ class ListsScreen extends PureComponent<Props, State> {
     mode: MODE[0]
   }
 
-  state = {
-    mode: MODE[0]
-  }
-
-  componentDidUpdate (prevProps: Props) {
-    this.setState((prevState, props) => ({ ...prevState, mode: props.mode }))
-  }
-
-  toggleViewMode = () => {
-    this.setState({
-      mode: this.state.mode === MODE[0] ? MODE[1] : MODE[0]
-    })
-  }
-
   render () {
+    const themeClasses = this.props.mode === 'tabular' ? tabularTheme : listTheme
     return (
       <div className={cx.main}>
-        <div className={cx.applicant}>
+        <div className={themeClasses.applicant}>
           <div className={cx.headings}>
             <ProfileHeaderLinks />
           </div>
@@ -144,11 +137,11 @@ class ListsScreen extends PureComponent<Props, State> {
             {this.props.applicant}
           </div>
         </div>
-        <div className={cx.search}>
-          <div className={cx.searchForm}>
+        <div className={themeClasses.search}>
+          <div className={themeClasses.searchForm}>
             {this.props.search}
           </div>
-          <div className={cx.applicantGrid}>
+          <div className={themeClasses.applicantGrid}>
             {this.props.result}
           </div>
         </div>

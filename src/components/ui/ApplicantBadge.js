@@ -40,7 +40,7 @@ type Props = {
 
 const cmz = require('cmz')
 
-const cardTheme = {
+const listTheme = {
   mode: cmz(
     typo.baseText,
     `
@@ -392,7 +392,7 @@ const tabularTheme = {
 
 class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
-    mode: 'card',
+    mode: 'list',
     active: false,
     actions: []
   }
@@ -411,12 +411,12 @@ class ApplicantBadge extends PureComponent<Props> {
       actions
     } = this.props
 
-    const cx = mode === 'card' ? cardTheme : tabularTheme
+    const cx = mode === 'tabular' ? tabularTheme : listTheme
 
     const mapInfosToRender = (infos) => (
       <TruncatedList
         inserted
-        visible={mode === 'card' ? 4 : infos.length}
+        visible={mode === 'list' ? 4 : infos.length}
         listClass={cx.infos}
         itemClass={cx.info}
         items={infos && infos.filter(info => info.value).map((info, i) => (

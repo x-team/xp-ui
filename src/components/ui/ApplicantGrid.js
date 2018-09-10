@@ -9,7 +9,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-const cardTheme = {
+const listTheme = {
   list: cmz(`
     display: block
   `),
@@ -61,7 +61,7 @@ type State = {
 class ApplicantGrid extends PureComponent<Props, State> {
   static defaultProps = {
     items: [],
-    mode: 'card',
+    mode: 'list',
     visible: 50,
     increment: 50
   }
@@ -74,7 +74,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
 
   render () {
     const { items, mode, visible, increment, isFetching, hasMore } = this.props
-    const cx = mode === 'card' ? cardTheme : tabularTheme
+    const cx = mode === 'tabular' ? tabularTheme : listTheme
 
     return items ? (
       <div>

@@ -37,7 +37,7 @@ const arrowBase = cmz(`
   &:after {
     content: ''
     width: 0
-    height: 0 
+    height: 0
     border-left: 4px solid transparent
     border-right: 4px solid transparent
     vertical-align: middle
@@ -69,7 +69,7 @@ const cx = {
         width: fit-content
         margin: 14px
       }
-  
+
       & > span {
           margin-right: 14px
           color: ${theme.typoLabel}
@@ -77,7 +77,7 @@ const cx = {
           font-weight: normal
           flex-wrap: wrap
         }
-      
+
   `),
   placeHolder: cmz(`
     width: 42px
@@ -102,7 +102,7 @@ const cx = {
     & {
       cursor: pointer
     }
-     
+
     &:hover {
       color: ${theme.baseDark}
     }
@@ -155,7 +155,7 @@ class ApplicantGridHeader extends PureComponent<Props> {
     return (
       <div className={componentClassName}>
         <span className={cx.placeHolder} />
-        {headerColumns.map(headerColumn => {
+        {headerColumns && headerColumns.map(headerColumn => {
           const {
             isSortable,
             name,

@@ -6,12 +6,13 @@ import Button from './Button'
 import SelectBox from './SelectBox'
 import SvgIcon from './SvgIcon'
 import Keywords from './Keywords'
+import ApplicantGridHeader from './ApplicantGridHeader'
 
 import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-const cardTheme = {
+const listTheme = {
   searchFormContainer: cmz(`
     background-color: ${theme.baseBright}
   `),
@@ -124,7 +125,7 @@ const tabularTheme = {
 }
 
 type Props = {
-  mode: 'card' | 'tabular',
+  mode: 'list' | 'tabular',
   lists: Array<*>,
   onSelectList: Function,
   onClickShowLists: Function,
@@ -139,7 +140,7 @@ type Props = {
 
 class SearchForm extends PureComponent<Props> {
   static defaultProps = {
-    mode: 'card',
+    mode: 'list',
     lists: [],
     onSelectList: () => {},
     onClickShowLists: () => {},
@@ -168,15 +169,19 @@ class SearchForm extends PureComponent<Props> {
       fields,
       onSelectField,
       onSubmit,
-      renderApplicantsStatusFilter
+      renderApplicantsStatusFilter,
+      headerColumns,
+      onSortingChange,
+      sortBy,
+      sortDirection
     } = this.props
 
-    const theme = mode === 'card' ? cardTheme : tabularTheme
+    const themeClasses = mode === 'tabular' ? tabularTheme : listTheme
 
     return (
-      <div className={theme.searchFormContainer}>
-        <form onSubmit={onSubmit} className={theme.searchForm}>
-          <div className={theme.selectLists}>
+      <div className={themeClasses.searchFormContainer}>
+        <form onSubmit={onSubmit} className={themeClasses.searchForm}>
+          <div className={themeClasses.selectLists}>
             <SelectBox
               placeholder='Select Lists'
               items={lists}
@@ -191,7 +196,7 @@ class SearchForm extends PureComponent<Props> {
               }
             />
             <Button
-              className={theme.listsButton}
+              className={themeClasses.listsButton}
               type='button'
               size='large'
               raised
@@ -204,9 +209,9 @@ class SearchForm extends PureComponent<Props> {
             values={keywords}
             onChange={onChangeKeywords}
             onSubmit={onSubmit}
-            className={theme.formKeywords}
+            className={themeClasses.formKeywords}
           />
-          <div className={theme.selectFields}>
+          <div className={themeClasses.selectFields}>
             <SelectBox
               placeholder='Select Fields'
               items={fields}
@@ -217,7 +222,7 @@ class SearchForm extends PureComponent<Props> {
             />
           </div>
           <Button
-            className={theme.formButton}
+            className={themeClasses.formButton}
             type='submit'
             size='large'
             raised
@@ -226,7 +231,15 @@ class SearchForm extends PureComponent<Props> {
           </Button>
         </form>
         {renderApplicantsStatusFilter && (
-          <div className={theme.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>
+          <div className={themeClasses.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>
+        )}
+        {mode === 'tabular' && (
+          <ApplicantGridHeader
+            headerColumns={headerColumns}
+            onSortingChange={onSortingChange}
+            sortBy={sortBy}
+            sortDirection={sortDirection}
+          />
         )}
       </div>
     )
