@@ -135,7 +135,11 @@ type Props = {
   onSelectField: Function,
   onSubmit: Function,
   openListEditorModal: Function,
-  renderApplicantsStatusFilter: any
+  renderApplicantsStatusFilter: any,
+  headerColumns?: Array<*>,
+  sortBy?: string,
+  sortDirection?: string,
+  onSortingChange?: Function
 }
 
 class SearchForm extends PureComponent<Props> {
@@ -150,7 +154,11 @@ class SearchForm extends PureComponent<Props> {
     onSelectField: () => {},
     onSubmit: () => {},
     openListEditorModal: () => {},
-    renderApplicantsStatusFilter: null
+    renderApplicantsStatusFilter: null,
+    headerColumns: [],
+    sortBy: '',
+    sortDirection: 'asc',
+    onSortingChange: () => {}
   }
 
   handleModalOpen = (e: Object) => {

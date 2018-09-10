@@ -54,7 +54,7 @@ const styles = {
     z-index: 999
     visibility: hidden
     opacity: 0
-    transition: visibility 0s linear 0.2s, opacity 0.2s linear
+    transition: visibility 0s linear 0.1s, opacity 0.1s linear
     width: inherit
     top: 100%
   `),

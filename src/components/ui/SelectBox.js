@@ -53,15 +53,17 @@ const cx = {
       font-size: 15px
       color: ${theme.typoLabel}
       padding: 10px 0 0
-      transition: color .15s ease-out, font-size .15s ease-out
+      transition: color .10s ease-out, font-size .10s ease-out
     }
 
     & > div:last-of-type {
       width: calc(100% - 20px)
+      height: 24px
       white-space: nowrap
-      overflow: auto
+      overflow-x: overlay
+      overflow-y: hidden
       padding: 0 0 10px
-      transition: visibility 0, opacity .15s ease-out, padding .15s ease-out
+      transition: visibility 0s, opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       visibility: visible
       opacity: 1
     }
@@ -69,13 +71,14 @@ const cx = {
 
   selectsEmpty: cmz(`
     & > div:first-of-type {
-      transition: color .15s ease-out, font-size .15s ease-out
+      transition: color .10s ease-out, font-size .10s ease-out
     }
 
     & > div:last-of-type {
-      transition: visibility 1s, opacity .15s ease-out, padding .15s ease-out
+      transition: visibility 0s, opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       visibility: hidden
       opacity: 0
+      height: 0
     }
   `),
 
@@ -139,7 +142,7 @@ const cx = {
       padding: 0
       border: 1px solid ${theme.lineSilver2}
       border-top: none
-      overflow-y: scroll
+      overflow-y: auto
       background: ${theme.baseBrighter}
       width: 100%
       box-sizing: border-box
