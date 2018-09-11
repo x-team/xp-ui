@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import ClickOutside from 'react-click-outside'
 
-import Button from '../Button'
+import Button from './Button'
 
 const cmz = require('cmz')
 
@@ -49,7 +49,7 @@ type PresenterProps = {
 type Props = {
   /** Component's value */
   value: any,
-  /** To control whethere component can be editable or not */
+  /** To control whether component can be editable or not */
   isEditable: boolean,
   /** Editing mode render function */
   editor(props: EditorProps): any,
@@ -63,7 +63,7 @@ type Props = {
 
 type State = {
   editValue: any,
-  isInEditionMode: boolean,
+  isInEditMode: boolean,
   isHover: boolean
 }
 
@@ -76,9 +76,16 @@ class InlineEditor extends PureComponent<Props, State> {
   }
 
   state = {
-    isInEditionMode: false,
+    isInEditMode: false,
     isHover: false,
     editValue: this.props.value
+  }
+
+  componentWillReceiveProps (nextProps: Props) {
+    const { value } = nextProps
+    if (this.props.value !== value && this.state.editValue !== value) {
+      this.setState({ editValue: value })
+    }
   }
 
   renderControls = () => (
@@ -105,28 +112,20 @@ class InlineEditor extends PureComponent<Props, State> {
 
   renderWarningMessage = () => (
     <p className={cx.warningMessage}>
-      You have unsaved changes.&nbsp;
-      <a
-        href=''
-        className={cx.link}
-        onClick={this.handleEditLinkClick}
-      >
+      You have unsaved changes.{' '}
+      <a href='#' className={cx.link} onClick={this.handleEditLinkClick}>
         View edits
       </a>
-      &nbsp;-&nbsp;
-      <a
-        href=''
-        className={cx.link}
-        onClick={this.handleDiscardLinkClick}
-      >
+      {' - '}
+      <a href='#' className={cx.link} onClick={this.handleDiscardLinkClick}>
         Discard
       </a>
     </p>
   )
 
-  setEditing = (isInEditionMode: boolean) => {
-    let update = { isInEditionMode }
-    if (!isInEditionMode) {
+  setEditing = (isInEditMode: boolean) => {
+    let update = { isInEditMode }
+    if (!isInEditMode) {
       update = {
         ...update,
         isHover: false
@@ -136,32 +135,30 @@ class InlineEditor extends PureComponent<Props, State> {
   }
 
   handleContainerClick = () => {
-    const { isInEditionMode } = this.state
-    if (isInEditionMode) {
+    if (this.state.isInEditMode) {
       this.setEditing(false)
     }
   }
 
-  handleEditLinkClick = (evt: Object) => {
-    evt.preventDefault()
+  handleEditLinkClick = (event: Object) => {
+    event.preventDefault()
     this.setEditing(true)
   }
 
-  handleDiscardLinkClick = (evt: Object) => {
-    evt.preventDefault()
-    evt.stopPropagation()
+  handleDiscardLinkClick = (event: Object) => {
+    event.preventDefault()
+    event.stopPropagation()
     this.abortChanges()
   }
 
-  handleComponentClick = (evt: Object) => {
-    const { isInEditionMode } = this.state
-    if (isInEditionMode) {
-      evt.stopPropagation()
+  handleComponentClick = (event: Object) => {
+    if (this.state.isInEditMode) {
+      event.stopPropagation()
     }
   }
 
-  handleKeyDown = (evt: Object) => {
-    const { keyCode } = evt
+  handleKeyDown = (event: Object) => {
+    const { keyCode } = event
     const { ENTER, ESCAPE } = KEY_CODES
 
     if (isKeyOfType(keyCode, ENTER)) {
@@ -171,8 +168,8 @@ class InlineEditor extends PureComponent<Props, State> {
     }
   }
 
-  handleSaveClick = (evt: Object) => {
-    evt.stopPropagation()
+  handleSaveClick = (event: Object) => {
+    event.stopPropagation()
     this.saveChanges()
   }
 
@@ -189,9 +186,10 @@ class InlineEditor extends PureComponent<Props, State> {
 
   abortChanges = () => {
     const { value, onCancel } = this.props
+
     this.setState({
       editValue: value,
-      isInEditionMode: false,
+      isInEditMode: false,
       isHover: false
     })
 
@@ -200,8 +198,8 @@ class InlineEditor extends PureComponent<Props, State> {
     }
   }
 
-  handleCancelClick = (evt: Object) => {
-    evt.stopPropagation()
+  handleCancelClick = (event: Object) => {
+    event.stopPropagation()
     this.abortChanges()
   }
 
@@ -214,8 +212,7 @@ class InlineEditor extends PureComponent<Props, State> {
   }
 
   handleActivateEditingMode = () => {
-    const { isEditable } = this.props
-    if (isEditable) {
+    if (this.props.isEditable) {
       this.setEditing(true)
     }
   }
@@ -228,19 +225,11 @@ class InlineEditor extends PureComponent<Props, State> {
     this.setState({ isHover: false })
   }
 
-  componentWillReceiveProps (nextProps: Props) {
-    const { value } = nextProps
-    const { editValue } = this.state
-    if (this.props.value !== value && editValue !== value) {
-      this.setState({ editValue: value })
-    }
-  }
-
   render () {
-    const { editValue, isHover, isInEditionMode } = this.state
+    const { editValue, isHover, isInEditMode } = this.state
     const { editor, presenter, value, isEditable } = this.props
     const hasUnsavedChanges = value !== editValue
-    const mainComponentRenderer = isInEditionMode ? editor : presenter
+    const mainComponentRenderer = isInEditMode ? editor : presenter
     const props = {
       value: editValue,
       onValueChange: this.handleValueChange,
@@ -248,7 +237,7 @@ class InlineEditor extends PureComponent<Props, State> {
       isEditable,
       isHover
     }
-    const canRenderWarning = (!isInEditionMode && hasUnsavedChanges && isEditable)
+    const canRenderWarning = !isInEditMode && hasUnsavedChanges && isEditable
 
     return (
       <ClickOutside onClickOutside={this.handleClickOutside}>
@@ -259,9 +248,9 @@ class InlineEditor extends PureComponent<Props, State> {
           onMouseLeave={this.handleMouseLeave}
         >
           <div onClick={this.handleComponentClick}>
-            {mainComponentRenderer(props)}
+            {mainComponentRenderer && mainComponentRenderer(props)}
           </div>
-          {isInEditionMode && this.renderControls()}
+          {isInEditMode && this.renderControls()}
           {canRenderWarning && this.renderWarningMessage()}
         </div>
       </ClickOutside>

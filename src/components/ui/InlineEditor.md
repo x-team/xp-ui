@@ -1,54 +1,46 @@
 With InputField usage:
 
 ```js
-
-// InputField Usage
-
 <InlineEditor
   editor={({ onValueChange, value }) => (
     <InputField
       label="Example"
       autoFocus
-      onChange={(evt) => {
-        onValueChange(evt.target.value)
-      }}
+      onChange={evt => onValueChange(evt.target.value)}
       value={value}
     />
   )}
   presenter={({ value, activateEditingMode }) => (
     <div
       onClick={activateEditingMode}
-      style={{cursor: 'pointer'}}
+      style={{ cursor: 'pointer' }}
     >
       <p>{value}</p>
     </div>
   )}
-  value={"This is a sample text. Click on me to edit me!"}
+  value="This is a sample text. Click on me to edit me!"
 />
 ```
-
 
 With TextArea usage:
 
 ```js
 <InlineEditor
   editor={({ onValueChange, value }) => (
-  <TextareaEditor
-    onChange={(text) => {
-      onValueChange(text)
-    }}
-    text={value}
-  />
-)}
+    <TextareaEditor
+      onChange={text => onValueChange(text)}
+      text={value}
+    />
+  )}
   presenter={({ value, activateEditingMode }) => (
     <div
       onClick={activateEditingMode}
-      style={{cursor: 'pointer'}}
+      style={{ cursor: 'pointer' }}
     >
       <p>{value}</p>
     </div>
   )}
-  value={"This is a sample text. Click on me to edit me!"}
+  value="This is a sample text. Click on me to edit me!"
 />
 ```
 
@@ -58,15 +50,15 @@ With Keywords usage:
 <InlineEditor
   editor={({ onValueChange, value }) => (
     <Keywords
-    values={value}
-    onChange={values => onValueChange(values)}
-    onSubmit={() => console.log('Submit keywords')}
-  />
+      values={value}
+      onChange={values => onValueChange(values)}
+      onSubmit={() => console.log('Submit keywords')}
+    />
   )}
   presenter={({ value, activateEditingMode }) => (
     <div
       onClick={activateEditingMode}
-      style={{cursor: 'pointer'}}
+      style={{ cursor: 'pointer' }}
     >
       <h3>Keywords</h3>
       <ul>
@@ -82,12 +74,9 @@ With Keywords usage:
 />
 ```
 
-
 Not editable usage (editable false):
 
 ```js
-
-// Not editable usage
 
 <InlineEditor
   isEditable={false}
@@ -95,20 +84,24 @@ Not editable usage (editable false):
     <InputField
       label="Example"
       autoFocus
-      onChange={(evt) => {
-        onValueChange(evt.target.value)
-      }}
+      onChange={evt => onValueChange(evt.target.value)}
       value={value}
     />
   )}
   presenter={({ value, activateEditingMode }) => (
     <div
       onClick={activateEditingMode}
-      style={{cursor: 'pointer'}}
+      style={{ cursor: 'pointer' }}
     >
       <p>{value}</p>
     </div>
   )}
-  value={"This is a sample text. I am not editable so clicking on me will no allow edit mode!"}
+  value="This is a sample text. I am not editable so clicking on me will not allow edit mode!"
 />
+```
+
+Missing props (does component explode?):
+
+```js
+<InlineEditor />
 ```

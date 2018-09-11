@@ -9,7 +9,7 @@ exports[`InlineEditor-7 1`] = `
           }
         }>
         <p>
-          This is a sample text. I am not editable so clicking on me will no allow edit mode!
+          This is a sample text. I am not editable so clicking on me will not allow edit mode!
         </p>
       </div>
     </div>
