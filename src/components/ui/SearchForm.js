@@ -32,8 +32,8 @@ const listTheme = {
   `),
 
   listsSelector: cmz(`
-    width: calc(100% - 106px)
-    max-width: calc(100% - 106px)
+    width: calc(100% - 116px)
+    max-width: calc(100% - 116px)
   `),
 
   listsButton: cmz(`
