@@ -62,7 +62,7 @@ const cardTheme = {
   applicantsStatusFilter: cmz(`
     width: 100%
     background-color: ${theme.baseBright}
-    padding: 50px 30px 30px
+    padding: 10px 30px 30px
     box-sizing: border-box
   `)
 }
@@ -119,7 +119,7 @@ const tabularTheme = {
   applicantsStatusFilter: cmz(`
     width: 100%
     background-color: ${theme.baseBrighter}
-    padding: 50px 30px 30px
+    padding: 10px 30px 30px
     box-sizing: border-box
   `)
 }
