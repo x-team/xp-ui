@@ -26,15 +26,19 @@ const listTheme = {
     }
   `),
 
-  listsButton: cmz(`
-    width: 100px
-    height: 58px
-    margin-left: 10px
-  `),
-
   selectLists: cmz(`
     display: flex
     align-items: center
+  `),
+
+  listsSelector: cmz(`
+    width: calc(100% - 106px)
+  `),
+
+  listsButton: cmz(`
+    width: 106px
+    height: 58px
+    margin-left: 10px
   `),
 
   formKeywords: cmz(`
@@ -47,7 +51,7 @@ const listTheme = {
 
   selectFields: cmz(`
     display: inline-block
-    width: 50%
+    width: 100%
     margin-top: 20px
   `),
 
@@ -62,7 +66,7 @@ const listTheme = {
   applicantsStatusFilter: cmz(`
     width: 100%
     background-color: ${theme.baseBright}
-    padding: 10px 30px 30px
+    padding: 20px 10px 0
     box-sizing: border-box
   `)
 }
@@ -84,17 +88,20 @@ const tabularTheme = {
     box-sizing: border-box
   `),
 
-  listsButton: cmz(`
-    margin: 0 10px 0 20px
-    width: 100px
-    height: 58px
-  `),
-
   selectLists: cmz(`
     width: 420px
     display: flex
     flex-shrink: 0
     align-items: center
+  `),
+
+  listsSelector: cmz(`
+  `),
+
+  listsButton: cmz(`
+    margin: 0 10px 0 20px
+    width: 106px
+    height: 58px
   `),
 
   formKeywords: cmz(`
@@ -118,8 +125,8 @@ const tabularTheme = {
 
   applicantsStatusFilter: cmz(`
     width: 100%
-    background-color: ${theme.baseBrighter}
-    padding: 10px 30px 30px
+    background-color: ${theme.baseBright}
+    padding: 20px 30px 30px
     box-sizing: border-box
   `)
 }
@@ -202,6 +209,7 @@ class SearchForm extends PureComponent<Props> {
                   <span><SvgIcon icon='edit' /> Edit lists</span>
                 </Button>
               }
+              className={themeClasses.listsSelector}
             />
             <Button
               className={themeClasses.listsButton}
@@ -219,16 +227,15 @@ class SearchForm extends PureComponent<Props> {
             onSubmit={onSubmit}
             className={themeClasses.formKeywords}
           />
-          <div className={themeClasses.selectFields}>
-            <SelectBox
-              placeholder='Select Fields'
-              items={fields}
-              visibleItems={3}
-              hasSearch
-              collectionLabel='Field'
-              onSelect={onSelectField}
-            />
-          </div>
+          <SelectBox
+            placeholder='Select Fields'
+            items={fields}
+            visibleItems={3}
+            hasSearch
+            collectionLabel='Field'
+            onSelect={onSelectField}
+            className={themeClasses.selectFields}
+          />
           <Button
             className={themeClasses.formButton}
             type='submit'

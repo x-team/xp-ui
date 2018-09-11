@@ -45,7 +45,6 @@ const listTheme = {
     typo.baseText,
     `
       & {
-        transition: all 0.4s ease-out
         background: ${theme.baseBrighter}
         border: 1px solid ${theme.lineSilver2}
         padding: 30px
@@ -65,7 +64,6 @@ const listTheme = {
   ),
 
   active: cmz(`
-    transition: all 0.2s ease-in
     border: 1px solid ${theme.baseRed}
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
     margin: 0

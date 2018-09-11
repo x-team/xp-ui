@@ -10,6 +10,10 @@ import theme from '../../styles/theme'
 const cmz = require('cmz')
 
 const listTheme = {
+  wrapper: cmz(`
+    outline: none
+  `),
+
   list: cmz(`
     display: block
   `),
@@ -28,6 +32,10 @@ const listTheme = {
 }
 
 const tabularTheme = {
+  wrapper: cmz(`
+    outline: none
+  `),
+
   list: cmz(`
     display: block
   `),
@@ -51,7 +59,8 @@ type Props = {
   increment?: number,
   onViewMore?: Function,
   isFetching?: boolean,
-  hasMore?: boolean
+  hasMore?: boolean,
+  onKeyPress?: Function
 }
 
 type State = {
@@ -63,7 +72,8 @@ class ApplicantGrid extends PureComponent<Props, State> {
     items: [],
     mode: 'list',
     visible: 50,
-    increment: 50
+    increment: 50,
+    onKeyPress: () => {}
   }
 
   handleViewMore = (showMore: Function) => {
@@ -73,11 +83,18 @@ class ApplicantGrid extends PureComponent<Props, State> {
   }
 
   render () {
-    const { items, mode, visible, increment, isFetching, hasMore } = this.props
+    const { items, mode, visible, increment, isFetching, hasMore, onKeyPress } = this.props
     const cx = mode === 'tabular' ? tabularTheme : listTheme
 
+
+
     return items ? (
-      <div>
+      <div
+        className={cx.wrapper}
+        data-test='applicants'
+        tabIndex={0}
+        onKeyPress={onKeyPress}
+      >
         <TruncatedList
           items={items}
           visible={visible}

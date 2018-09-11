@@ -17,11 +17,11 @@ const dimensions = {
   headerHeight: '86px',
   headingHeight: '60px',
   searchWidth: {
-    [MODE[0]]: '470px',
+    [MODE[0]]: '530px',
     [MODE[1]]: '100%'
   },
   searchHeight: {
-    [MODE[0]]: '500px',
+    [MODE[0]]: '410px',
     [MODE[1]]: 'auto'
   }
 }
@@ -34,26 +34,22 @@ const cx = {
   `),
 
   search: cmz(`
-    position: absolute
-    top: 0
-    min-height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
-    display: flex
-    flex-direction: column
+    position: relative
     border-right: 2px solid ${theme.lineSilver1}
+    background-color: ${theme.baseBright}
   `),
 
   searchForm: cmz(`
-    background-color: ${theme.baseBright}
     position: fixed
-    z-index: 999
-    padding: 30px
+    z-index: 9999
+    padding: 30px 30px 0
     box-sizing: border-box
+    background-color: ${theme.baseBright}
   `),
 
   applicantGrid: cmz(`
-    background-color: ${theme.baseBright}
     min-height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
-    padding: ${dimensions.searchHeight[MODE[0]]} 30px 30px
+    padding: ${dimensions.searchHeight[MODE[0]]} 30px 40px
     box-sizing: border-box
   `),
 
@@ -71,6 +67,7 @@ const cx = {
     overflow-y: auto
     height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight} - ${dimensions.headingHeight})
     padding-top: 10px
+    box-sizing: border-box
   `)
 }
 
