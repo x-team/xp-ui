@@ -30,3 +30,7 @@ export function getComponentDisplayName (Component) {
 export function pluralize (count: number, noun: string, stripCount: boolean = false, suffix: string = 's') {
   return `${stripCount ? '' : `${count} `}${noun}${parseInt(count, 10) !== 1 ? suffix : ''}`
 }
+
+export const getClassName = (config: Object) => Object.keys(config)
+  .filter(className => config && className && config[className])
+  .join(' ')
