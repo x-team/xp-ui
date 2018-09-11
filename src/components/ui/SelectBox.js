@@ -378,7 +378,6 @@ type Props = {
   onArchive?: Function,
   onDelete?: Function,
   append?: Element<*>|string,
-  className?: string,
   dismissTimeout?: number
 }
 
@@ -648,8 +647,7 @@ class SelectBox extends Component<Props, State> {
       onDelete,
       onCreateNew,
       lined,
-      append,
-      className
+      append
     } = this.props
     const { view, search } = this.state
 
@@ -1016,7 +1014,7 @@ class SelectBox extends Component<Props, State> {
     )
 
     return (
-      <div className={[cx.selectbox, className].join(' ')} style={{ width: width ? `${width}px` : '100%' }}>
+      <div className={cx.selectbox} style={{ width: width ? `${width}px` : '100%' }}>
         {renderExpandedOrDropdown()}
       </div>
     )

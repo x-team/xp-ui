@@ -33,6 +33,7 @@ const listTheme = {
 
   listsSelector: cmz(`
     width: calc(100% - 106px)
+    max-width: calc(100% - 106px)
   `),
 
   listsButton: cmz(`
@@ -197,20 +198,21 @@ class SearchForm extends PureComponent<Props> {
       <div className={themeClasses.searchFormContainer}>
         <form onSubmit={onSubmit} className={themeClasses.searchForm}>
           <div className={themeClasses.selectLists}>
-            <SelectBox
-              placeholder='Select Lists'
-              items={lists}
-              visibleItems={3}
-              hasSearch
-              collectionLabel='List'
-              onSelect={onSelectList}
-              append={
-                <Button type='button' selectbox onClick={this.handleModalOpen}>
-                  <span><SvgIcon icon='edit' /> Edit lists</span>
-                </Button>
-              }
-              className={themeClasses.listsSelector}
-            />
+            <div className={themeClasses.listsSelector}>
+              <SelectBox
+                placeholder='Select Lists'
+                items={lists}
+                visibleItems={3}
+                hasSearch
+                collectionLabel='List'
+                onSelect={onSelectList}
+                append={
+                  <Button type='button' selectbox onClick={this.handleModalOpen}>
+                    <span><SvgIcon icon='edit' /> Edit lists</span>
+                  </Button>
+                }
+              />
+            </div>
             <Button
               className={themeClasses.listsButton}
               type='button'
@@ -227,15 +229,16 @@ class SearchForm extends PureComponent<Props> {
             onSubmit={onSubmit}
             className={themeClasses.formKeywords}
           />
-          <SelectBox
-            placeholder='Select Fields'
-            items={fields}
-            visibleItems={3}
-            hasSearch
-            collectionLabel='Field'
-            onSelect={onSelectField}
-            className={themeClasses.selectFields}
-          />
+          <div className={themeClasses.selectFields}>
+            <SelectBox
+              placeholder='Select Fields'
+              items={fields}
+              visibleItems={3}
+              hasSearch
+              collectionLabel='Field'
+              onSelect={onSelectField}
+            />
+          </div>
           <Button
             className={themeClasses.formButton}
             type='submit'

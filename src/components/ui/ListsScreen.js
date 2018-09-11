@@ -49,7 +49,7 @@ const cx = {
 
   applicantGrid: cmz(`
     min-height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
-    padding: ${dimensions.searchHeight[MODE[0]]} 30px 40px
+    padding: ${dimensions.searchHeight[MODE[0]]} 30px 30px
     box-sizing: border-box
   `),
 
