@@ -60,6 +60,8 @@ const cx = {
   `),
 
   headings: cmz(`
+    position: relative
+    z-index: 9999
     height: ${dimensions.headingHeight}
   `),
 

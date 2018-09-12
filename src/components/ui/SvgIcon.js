@@ -6,7 +6,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'tabular' | 'cards'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text'
 
 type Props = {
@@ -483,6 +483,30 @@ const getIcon = ({ icon, color, hover }) => {
     archive: (
       <svg width='14px' height='14px' viewBox='0 0 24 24'>
         <path className={fillClassName} transform='scale(1.333) translate(-3, -3)' d='M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z' />
+      </svg>
+    ),
+
+    tabular: (
+      <svg width='15px' height='16px' viewBox='0 0 15 16'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <rect className={fillClassName} x='3' y='0' width='12' height='2' />
+          <rect className={fillClassName} x='3' y='7' width='12' height='2' />
+          <rect className={fillClassName} x='3' y='14' width='12' height='2' />
+          <rect className={fillClassName} x='0' y='0' width='2' height='2' />
+          <rect className={fillClassName} x='0' y='7' width='2' height='2' />
+          <rect className={fillClassName} x='0' y='14' width='2' height='2' />
+        </g>
+      </svg>
+    ),
+
+    cards: (
+      <svg width='17px' height='17px' viewBox='0 0 17 17'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <rect className={strokeClassName} strokeWidth='2' x='1' y='1' width='5' height='5' />
+          <rect className={strokeClassName} strokeWidth='2' x='1' y='11' width='5' height='5' />
+          <rect className={strokeClassName} strokeWidth='2' x='11' y='1' width='5' height='5' />
+          <rect className={strokeClassName} strokeWidth='2' x='11' y='11' width='5' height='5' />
+        </g>
       </svg>
     )
   }

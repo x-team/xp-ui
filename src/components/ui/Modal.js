@@ -28,7 +28,7 @@ const cx = {
       overflow: auto
       padding: 30px
       box-sizing: border-box
-      z-index: 9999
+      z-index: 99999
       opacity: 0
       visibility: hidden
       outline: none

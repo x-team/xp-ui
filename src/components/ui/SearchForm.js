@@ -42,6 +42,20 @@ const listTheme = {
     margin-left: 10px
   `),
 
+  displayButtons: cmz(`
+    display: flex
+    flex-wrap: nowrap
+    margin-left: 10px
+    cursor: pointer
+  `),
+
+  displayButton: cmz(`
+    & svg {
+      display: block
+      padding: 10px
+    }
+  `),
+
   formKeywords: cmz(`
     display: block
     width: 100%
@@ -105,6 +119,15 @@ const tabularTheme = {
     height: 58px
   `),
 
+  displayButtons: cmz(`
+    display: flex
+    flex-wrap: nowrap
+  `),
+
+  displayButton: cmz(`
+    padding: 10px
+  `),
+
   formKeywords: cmz(`
     margin: 0 10px
     min-width: 300px
@@ -147,7 +170,8 @@ type Props = {
   headerColumns?: Array<*>,
   sortBy?: string,
   sortDirection?: string,
-  onSortingChange?: Function
+  onSortingChange?: Function,
+  switchDisplay?: Function
 }
 
 class SearchForm extends PureComponent<Props> {
@@ -166,7 +190,8 @@ class SearchForm extends PureComponent<Props> {
     headerColumns: [],
     sortBy: '',
     sortDirection: 'asc',
-    onSortingChange: () => {}
+    onSortingChange: () => {},
+    switchDisplay: () => {}
   }
 
   handleModalOpen = (e: Object) => {
@@ -189,7 +214,8 @@ class SearchForm extends PureComponent<Props> {
       headerColumns,
       onSortingChange,
       sortBy,
-      sortDirection
+      sortDirection,
+      switchDisplay
     } = this.props
 
     const themeClasses = mode === 'tabular' ? tabularTheme : listTheme
@@ -222,6 +248,28 @@ class SearchForm extends PureComponent<Props> {
             >
               Show
             </Button>
+            <div className={themeClasses.displayButtons}>
+              <div
+                className={themeClasses.displayButton}
+                onClick={() => switchDisplay('tabular')}
+              >
+                <SvgIcon
+                  icon='tabular'
+                  color={mode === 'tabular' ? 'default' : 'grayscale'}
+                  hover='default'
+                />
+              </div>
+              <div
+                className={themeClasses.displayButton}
+                onClick={() => switchDisplay('list')}
+              >
+                <SvgIcon
+                  icon='cards'
+                  color={mode !== 'tabular' ? 'default' : 'grayscale'}
+                  hover='default'
+                />
+              </div>
+            </div>
           </div>
           <Keywords
             values={keywords}

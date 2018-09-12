@@ -457,9 +457,14 @@ class ApplicantBadge extends PureComponent<Props> {
     )
 
     const handleClick = (e) => {
-      e.stopPropagation()
+      e && e.stopPropagation()
       const { id, onClick } = this.props
       onClick && onClick(id)
+    }
+
+    const handleControlClick = (controlClick: Function) => {
+      handleClick()
+      controlClick && controlClick()
     }
 
     return id ? (
@@ -487,8 +492,9 @@ class ApplicantBadge extends PureComponent<Props> {
                   tooltip
                   className={dropdownClassName}
                   tooltipClassName={tooltipClassName}
+                  onClick={() => handleControlClick(onClick)}
                   label={(
-                    <span className={cx.control} onClick={onClick}>
+                    <span className={cx.control}>
                       <Icon />
                     </span>
                   )}
