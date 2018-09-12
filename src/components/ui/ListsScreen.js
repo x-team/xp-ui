@@ -66,7 +66,6 @@ const cx = {
   profile: cmz(`
     overflow-y: auto
     height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight} - ${dimensions.headingHeight})
-    padding-top: 10px
     box-sizing: border-box
   `)
 }
