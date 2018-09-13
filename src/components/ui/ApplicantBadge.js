@@ -463,7 +463,11 @@ class ApplicantBadge extends PureComponent<Props> {
     }
 
     const handleControlClick = (controlClick: Function) => {
-      handleClick()
+      // handleClick()
+      // ^ to do: https://x-team-internal.atlassian.net/browse/XP-2155
+      // the handleClick() solution causes re-render of applicantbadge, and because the popup elements
+      // belongs to this component, they got hidden once this component re-renders.
+      // better solution is move the popup forms to applicantgrid instead, similar implementation as the modal.
       controlClick && controlClick()
     }
 
