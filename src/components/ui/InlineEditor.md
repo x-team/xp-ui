@@ -26,6 +26,7 @@ With TextArea usage:
 
 ```js
 <InlineEditor
+  shouldSaveOnEnter={false}
   editor={({ onValueChange, value }) => (
     <TextareaEditor
       onChange={text => onValueChange(text)}
@@ -48,6 +49,7 @@ With Keywords usage:
 
 ```js
 <InlineEditor
+  shouldSaveOnEnter={false}
   editor={({ onValueChange, value }) => (
     <Keywords
       values={value}

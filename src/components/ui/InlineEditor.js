@@ -49,8 +49,10 @@ type PresenterProps = {
 type Props = {
   /** Component's value */
   value: any,
-  /** To control whether component can be editable or not */
+  /** To control whether the component can be editable or not */
   isEditable: boolean,
+  /** To control whether the component will save changes on enter or not */
+  shouldSaveOnEnter: boolean,
   /** Editing mode render function */
   editor(props: EditorProps): any,
   /** Presentation mode render function */
@@ -72,7 +74,8 @@ type State = {
  */
 class InlineEditor extends PureComponent<Props, State> {
   static defaultProps = {
-    isEditable: true
+    isEditable: true,
+    shouldSaveOnEnter: true
   }
 
   state = {
@@ -135,9 +138,10 @@ class InlineEditor extends PureComponent<Props, State> {
 
   handleKeyDown = (event: Object) => {
     const { keyCode } = event
+    const { shouldSaveOnEnter } = this.props
     const { ENTER, ESCAPE } = KEY_CODES
 
-    if (isKeyOfType(keyCode, ENTER)) {
+    if (isKeyOfType(keyCode, ENTER) && shouldSaveOnEnter) {
       this.saveChanges()
     } else if (isKeyOfType(keyCode, ESCAPE)) {
       this.abortChanges()
