@@ -422,7 +422,7 @@ class ApplicantBadge extends PureComponent<Props> {
             key={i}
             tooltip
             hover
-            targetYOrigin='top'
+            targetYOrigin={mode === 'tabular' ? 'bottom' : 'top'}
             label={(
               <span>
                 <span className={cx.label}>{info.label}</span>

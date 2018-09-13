@@ -18,12 +18,7 @@ const listTheme = {
   `),
 
   searchForm: cmz(`
-    & {
-      width: 100%
-    }
-    &:empty {
-      padding: 0
-    }
+    width: 100%
   `),
 
   selectLists: cmz(`
@@ -32,8 +27,8 @@ const listTheme = {
   `),
 
   listsSelector: cmz(`
-    width: calc(100% - 116px)
-    max-width: calc(100% - 116px)
+    width: calc(100% - 202px)
+    max-width: calc(100% - 202px)
   `),
 
   listsButton: cmz(`
@@ -44,6 +39,7 @@ const listTheme = {
 
   displayButtons: cmz(`
     display: flex
+    align-items: center
     flex-wrap: nowrap
     margin-left: 10px
     cursor: pointer
@@ -89,7 +85,6 @@ const listTheme = {
 const tabularTheme = {
   searchFormContainer: cmz(`
     width: 100%
-    background-color: ${theme.baseBright}
     display: flex
     flex-direction: column
     box-sizing: border-box
@@ -99,18 +94,19 @@ const tabularTheme = {
     display: flex
     flex-shrink: 0
     width: 100%
-    padding: 50px 30px 30px
+    padding: 30px
     box-sizing: border-box
+    background-color: ${theme.baseBright}
   `),
 
   selectLists: cmz(`
-    width: 420px
     display: flex
     flex-shrink: 0
     align-items: center
   `),
 
   listsSelector: cmz(`
+    width: 250px
   `),
 
   listsButton: cmz(`
@@ -121,16 +117,21 @@ const tabularTheme = {
 
   displayButtons: cmz(`
     display: flex
+    align-items: center
     flex-wrap: nowrap
+    margin-left: 10px
+    cursor: pointer
   `),
 
   displayButton: cmz(`
-    padding: 10px
+    & svg {
+      display: block
+      padding: 10px
+    }
   `),
 
   formKeywords: cmz(`
     margin: 0 10px
-    min-width: 300px
     height: 58px
     flex: 1
     flex-shrink: 0
@@ -138,7 +139,7 @@ const tabularTheme = {
 
   selectFields: cmz(`
     flex-shrink: 0
-    width: 300px
+    width: 250px
     margin: 0 10px
   `),
 
@@ -149,7 +150,6 @@ const tabularTheme = {
 
   applicantsStatusFilter: cmz(`
     width: 100%
-    background-color: ${theme.baseBright}
     padding: 20px 30px 30px
     box-sizing: border-box
   `)
@@ -167,11 +167,11 @@ type Props = {
   onSubmit: Function,
   openListEditorModal: Function,
   renderApplicantsStatusFilter: any,
-  headerColumns?: Array<*>,
-  sortBy?: string,
-  sortDirection?: string,
+  headerColumns: Array<*>,
+  sortBy: string,
+  sortDirection: string,
   onSortingChange?: Function,
-  switchDisplay?: Function
+  switchDisplay: Function
 }
 
 class SearchForm extends PureComponent<Props> {
@@ -199,6 +199,11 @@ class SearchForm extends PureComponent<Props> {
     this.props.openListEditorModal()
   }
 
+  handleSwitchDisplay = (e: Object, mode: string) => {
+    e.preventDefault()
+    this.props.switchDisplay(mode)
+  }
+
   render () {
     const {
       mode,
@@ -219,6 +224,33 @@ class SearchForm extends PureComponent<Props> {
     } = this.props
 
     const themeClasses = mode === 'tabular' ? tabularTheme : listTheme
+
+    const renderDislpaySwitchButtons = () => (
+      <div className={themeClasses.displayButtons}>
+        <a
+          // to do: make able to click on new tab
+          className={themeClasses.displayButton}
+          onClick={(e) => this.handleSwitchDisplay(e, 'tabular')}
+        >
+          <SvgIcon
+            icon='tabular'
+            color={mode === 'tabular' ? 'default' : 'grayscale'}
+            hover='default'
+          />
+        </a>
+        <a
+          // to do: make able to click on new tab
+          className={themeClasses.displayButton}
+          onClick={(e) => this.handleSwitchDisplay(e, 'list')}
+        >
+          <SvgIcon
+            icon='cards'
+            color={mode !== 'tabular' ? 'default' : 'grayscale'}
+            hover='default'
+          />
+        </a>
+      </div>
+    )
 
     return (
       <div className={themeClasses.searchFormContainer}>
@@ -242,34 +274,12 @@ class SearchForm extends PureComponent<Props> {
             <Button
               className={themeClasses.listsButton}
               type='button'
-              size='large'
               raised
               onClick={onClickShowLists}
             >
               Show
             </Button>
-            <div className={themeClasses.displayButtons}>
-              <div
-                className={themeClasses.displayButton}
-                onClick={() => switchDisplay('tabular')}
-              >
-                <SvgIcon
-                  icon='tabular'
-                  color={mode === 'tabular' ? 'default' : 'grayscale'}
-                  hover='default'
-                />
-              </div>
-              <div
-                className={themeClasses.displayButton}
-                onClick={() => switchDisplay('list')}
-              >
-                <SvgIcon
-                  icon='cards'
-                  color={mode !== 'tabular' ? 'default' : 'grayscale'}
-                  hover='default'
-                />
-              </div>
-            </div>
+            {mode !== 'tabular' && renderDislpaySwitchButtons()}
           </div>
           <Keywords
             values={keywords}
@@ -290,11 +300,11 @@ class SearchForm extends PureComponent<Props> {
           <Button
             className={themeClasses.formButton}
             type='submit'
-            size='large'
             raised
           >
             Filter
           </Button>
+          {mode === 'tabular' && renderDislpaySwitchButtons()}
         </form>
         {renderApplicantsStatusFilter && (
           <div className={themeClasses.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>
