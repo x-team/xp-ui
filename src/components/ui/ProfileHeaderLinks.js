@@ -60,8 +60,8 @@ class ProfileHeaderLinks extends PureComponent<any, State> {
   links: Array<Object> = [
     { label: 'Profile', hash: '#profile' },
     { label: 'Portfolio', hash: '#portfolio' },
-    { label: 'Contact', hash: '#contact' },
     { label: 'Notes', hash: '#notes' },
+    { label: 'Contact', hash: '#contact' },
     { label: 'Ads', hash: '#ads' }
   ]
 
@@ -88,7 +88,7 @@ class ProfileHeaderLinks extends PureComponent<any, State> {
     window.location.hash = hash
   }
 
-  get headerLinks (): any {
+  headerLinks = (): any => {
     const { activeLink } = this.state
 
     return this.links.map(({ label, hash }) => {
@@ -106,7 +106,7 @@ class ProfileHeaderLinks extends PureComponent<any, State> {
 
   render () {
     return (
-      <ul className={cx.header}>{this.headerLinks}</ul>
+      <ul className={cx.header}>{this.headerLinks()}</ul>
     )
   }
 }

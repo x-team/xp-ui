@@ -30,10 +30,7 @@ type Props = {
   }
 }
 
-type State = {
-}
-
-class AdminScreen extends PureComponent<Props, State> {
+class AdminScreen extends PureComponent<Props, void> {
   static defaultProps = {
     header: null,
     children: null,

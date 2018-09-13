@@ -52,15 +52,25 @@ const tabularTheme = {
   `)
 }
 
+type DisplayModes = {
+  LIST: 'list',
+  TABULAR: 'tabular'
+}
+
 type Props = {
   items?: Array<*>,
-  mode?: string,
+  mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
   visible?: number,
   increment?: number,
   onViewMore?: Function,
   isFetching?: boolean,
   hasMore?: boolean,
   onKeyPress?: Function
+}
+
+const DISPLAY_MODES: DisplayModes = {
+  LIST: 'list',
+  TABULAR: 'tabular'
 }
 
 type State = {
@@ -70,7 +80,7 @@ type State = {
 class ApplicantGrid extends PureComponent<Props, State> {
   static defaultProps = {
     items: [],
-    mode: 'list',
+    mode: DISPLAY_MODES.LIST,
     visible: 50,
     increment: 50,
     onKeyPress: () => {}
@@ -84,9 +94,8 @@ class ApplicantGrid extends PureComponent<Props, State> {
 
   render () {
     const { items, mode, visible, increment, isFetching, hasMore, onKeyPress } = this.props
-    const cx = mode === 'tabular' ? tabularTheme : listTheme
-
-
+    const { TABULAR } = DISPLAY_MODES
+    const cx = mode === TABULAR ? tabularTheme : listTheme
 
     return items ? (
       <div

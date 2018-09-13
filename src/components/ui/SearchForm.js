@@ -155,6 +155,11 @@ const tabularTheme = {
   `)
 }
 
+type SortDirections = {
+  ASCENDING: 'asc',
+  DESCENDING: 'desc'
+}
+
 type Props = {
   mode: 'list' | 'tabular',
   lists: Array<*>,
@@ -169,9 +174,14 @@ type Props = {
   renderApplicantsStatusFilter: any,
   headerColumns: Array<*>,
   sortBy: string,
-  sortDirection: string,
-  onSortingChange?: Function,
+  sortDirection: $Values<SortDirections>, // eslint-disable-line no-undef
+  onSortingChange: Function,
   switchDisplay: Function
+}
+
+const SORT_DIRECTIONS: SortDirections = {
+  ASCENDING: 'asc',
+  DESCENDING: 'desc'
 }
 
 class SearchForm extends PureComponent<Props> {
@@ -189,7 +199,7 @@ class SearchForm extends PureComponent<Props> {
     renderApplicantsStatusFilter: null,
     headerColumns: [],
     sortBy: '',
-    sortDirection: 'asc',
+    sortDirection: SORT_DIRECTIONS.ASCENDING,
     onSortingChange: () => {},
     switchDisplay: () => {}
   }
@@ -219,8 +229,8 @@ class SearchForm extends PureComponent<Props> {
       headerColumns,
       onSortingChange,
       sortBy,
-      sortDirection,
-      switchDisplay
+      sortDirection
+
     } = this.props
 
     const themeClasses = mode === 'tabular' ? tabularTheme : listTheme
