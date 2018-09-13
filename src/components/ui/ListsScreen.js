@@ -10,19 +10,34 @@ import type { Element } from 'react'
 
 const cmz = require('cmz')
 
-const MODE = ['lists', 'tabular']
+type DisplayModes = {
+  LIST: 'list',
+  TABULAR: 'tabular'
+}
+
+type Props = {
+  applicant?: Element<*>,
+  search?: Element<*>,
+  result?: Element<*>,
+  mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
+}
+
+const DISPLAY_MODES: DisplayModes = {
+  LIST: 'list',
+  TABULAR: 'tabular'
+}
 
 const dimensions = {
   screenHeight: '100vh',
   headerHeight: '86px',
   headingHeight: '60px',
   searchWidth: {
-    [MODE[0]]: '530px',
-    [MODE[1]]: '100%'
+    [DISPLAY_MODES.LIST]: '530px',
+    [DISPLAY_MODES.TABULAR]: '100%'
   },
   searchHeight: {
-    [MODE[0]]: '410px',
-    [MODE[1]]: 'auto'
+    [DISPLAY_MODES.LIST]: '410px',
+    [DISPLAY_MODES.TABULAR]: 'auto'
   }
 }
 
@@ -53,13 +68,13 @@ const listTheme = {
   `),
 
   search: cmz(cx.search, `
-    width: ${dimensions.searchWidth[MODE[0]]}
+    width: ${dimensions.searchWidth[DISPLAY_MODES.LIST]}
     border-right: 2px solid ${theme.lineSilver1}
     background-color: ${theme.baseBright}
   `),
 
   searchForm: cmz(cx.searchForm, `
-    width: ${dimensions.searchWidth[MODE[0]]}
+    width: ${dimensions.searchWidth[DISPLAY_MODES.LIST]}
     position: fixed
     z-index: 9999
     padding: 30px 30px 0
@@ -67,15 +82,15 @@ const listTheme = {
   `),
 
   applicantGrid: cmz(cx.applicantGrid, `
-    width: ${dimensions.searchWidth[MODE[0]]}
+    width: ${dimensions.searchWidth[DISPLAY_MODES.LIST]}
     min-height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
-    padding: ${dimensions.searchHeight[MODE[0]]} 30px 30px
+    padding: ${dimensions.searchHeight[DISPLAY_MODES.LIST]} 30px 30px
   `),
 
   applicant: cmz(cx.applicant, `
-    width: calc(100% - ${dimensions.searchWidth[MODE[0]]})
+    width: calc(100% - ${dimensions.searchWidth[DISPLAY_MODES.LIST]})
     position: fixed
-    left: ${dimensions.searchWidth[MODE[0]]}
+    left: ${dimensions.searchWidth[DISPLAY_MODES.LIST]}
     height: 100%
     overflow: auto
   `),
@@ -97,18 +112,18 @@ const tabularTheme = {
   main: cmz(cx.main, ``),
 
   search: cmz(cx.search, `
-    width: ${dimensions.searchWidth[MODE[1]]}
+    width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
     display: flex
     flex-direction: column
     height: 100%
   `),
 
   searchForm: cmz(cx.searchForm, `
-    width: ${dimensions.searchWidth[MODE[1]]}
+    width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
   `),
 
   applicantGrid: cmz(cx.applicantGrid, `
-    width: calc(${dimensions.searchWidth[MODE[1]]} - 60px)
+    width: calc(${dimensions.searchWidth[DISPLAY_MODES.TABULAR]} - 60px)
     margin: 0 auto
     overflow-y: auto
     flex: 1
@@ -128,23 +143,16 @@ const tabularTheme = {
   `)
 }
 
-type Props = {
-  applicant?: Element<*>,
-  search?: Element<*>,
-  result?: Element<*>,
-  mode?: string
-}
-
 class ListsScreen extends PureComponent<Props, void> {
   static defaultProps = {
     applicant: null,
     search: null,
     result: null,
-    mode: MODE[0]
+    mode: DISPLAY_MODES.LIST
   }
 
   render () {
-    const themeClasses = this.props.mode === 'tabular' ? tabularTheme : listTheme
+    const themeClasses = this.props.mode === DISPLAY_MODES.TABULAR ? tabularTheme : listTheme
     return (
       <div className={themeClasses.main}>
         <div className={themeClasses.applicant}>

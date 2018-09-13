@@ -10,6 +10,11 @@ import typo from '../../styles/typo'
 
 import type { Element } from 'react'
 
+type DisplayModes = {
+  LIST: 'list',
+  TABULAR: 'tabular'
+}
+
 type Info = {
   value: string,
   label: string,
@@ -26,7 +31,7 @@ type Action = {
 
 type Props = {
   id: number,
-  mode?: string,
+  mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
   active?: boolean,
   name?: string,
   email: string,
@@ -39,6 +44,11 @@ type Props = {
 }
 
 const cmz = require('cmz')
+
+const DISPLAY_MODES: DisplayModes = {
+  LIST: 'list',
+  TABULAR: 'tabular'
+}
 
 const listTheme = {
   mode: cmz(
@@ -390,7 +400,7 @@ const tabularTheme = {
 
 class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
-    mode: 'list',
+    mode: DISPLAY_MODES.LIST,
     active: false,
     actions: []
   }
@@ -409,12 +419,12 @@ class ApplicantBadge extends PureComponent<Props> {
       actions
     } = this.props
 
-    const cx = mode === 'tabular' ? tabularTheme : listTheme
+    const cx = mode === DISPLAY_MODES.TABULAR ? tabularTheme : listTheme
 
     const mapInfosToRender = (infos) => (
       <TruncatedList
         inserted
-        visible={mode === 'list' ? 4 : infos.length}
+        visible={mode === DISPLAY_MODES.LIST ? 4 : infos.length}
         listClass={cx.infos}
         itemClass={cx.info}
         items={infos && infos.filter(info => info.value).map((info, i) => (
@@ -422,7 +432,7 @@ class ApplicantBadge extends PureComponent<Props> {
             key={i}
             tooltip
             hover
-            targetYOrigin={mode === 'tabular' ? 'bottom' : 'top'}
+            targetYOrigin={mode === DISPLAY_MODES.TABULAR ? 'bottom' : 'top'}
             label={(
               <span>
                 <span className={cx.label}>{info.label}</span>
@@ -456,19 +466,10 @@ class ApplicantBadge extends PureComponent<Props> {
       />
     )
 
-    const handleClick = (e) => {
+    const handleClick = (e: any) => {
       e && e.stopPropagation()
       const { id, onClick } = this.props
       onClick && onClick(id)
-    }
-
-    const handleControlClick = (controlClick: Function) => {
-      // handleClick()
-      // ^ to do: https://x-team-internal.atlassian.net/browse/XP-2155
-      // the handleClick() solution causes re-render of applicantbadge, and because the popup elements
-      // belongs to this component, they got hidden once this component re-renders.
-      // better solution is move the popup forms to applicantgrid instead, similar implementation as the modal.
-      controlClick && controlClick()
     }
 
     return id ? (
@@ -496,7 +497,7 @@ class ApplicantBadge extends PureComponent<Props> {
                   tooltip
                   className={dropdownClassName}
                   tooltipClassName={tooltipClassName}
-                  onClick={() => handleControlClick(onClick)}
+                  onClick={onClick}
                   label={(
                     <span className={cx.control}>
                       <Icon />

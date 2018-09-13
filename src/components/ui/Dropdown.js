@@ -208,7 +208,7 @@ class Dropdown extends PureComponent<Props, State> {
     ].join(' ')
 
     const handleClick = (e: any) => {
-      e && e.stopPropagation()
+      e && e.preventDefault() && e.stopPropagation()
       onClick && onClick()
       return toggle ? this.toggle() : this.open()
     }

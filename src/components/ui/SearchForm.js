@@ -238,7 +238,6 @@ class SearchForm extends PureComponent<Props> {
     const renderDislpaySwitchButtons = () => (
       <div className={themeClasses.displayButtons}>
         <a
-          // to do: make able to click on new tab
           className={themeClasses.displayButton}
           onClick={(e) => this.handleSwitchDisplay(e, 'tabular')}
         >
@@ -249,7 +248,6 @@ class SearchForm extends PureComponent<Props> {
           />
         </a>
         <a
-          // to do: make able to click on new tab
           className={themeClasses.displayButton}
           onClick={(e) => this.handleSwitchDisplay(e, 'list')}
         >
