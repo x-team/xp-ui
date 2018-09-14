@@ -10,6 +10,7 @@ import Markdown from 'markdown-to-jsx'
 import Avatar from './Avatar'
 import Text from './Text'
 import FileLinks from './FileLinks'
+import PencilButton from './PencilButton'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
@@ -22,7 +23,9 @@ type Props = {
   date?: Date,
   name?: string,
   text?: string,
-  files?: Array<Object>
+  files?: Array<Object>,
+  isHover?: boolean,
+  onEditClick?: Function
 }
 
 const Root = elem.div(cmz(`
@@ -37,6 +40,11 @@ const AvatarWrapper = elem.div(cmz(`
 const Body = elem.div(cmz(`
   display: flex
   flex-direction: column
+`))
+
+const Options = elem.div(cmz(`
+  padding-top: 4px
+  margin-left: auto
 `))
 
 const Name = elem.span(cmz(
@@ -127,7 +135,7 @@ class Note extends PureComponent<Props> {
   }
 
   render () {
-    const { avatar, date, name, text, files } = this.props
+    const { avatar, date, name, text, files, isHover, onEditClick } = this.props
 
     return (
       Root(
@@ -139,6 +147,9 @@ class Note extends PureComponent<Props> {
           date && Time(timeFromNow(date)),
           text && TextWrapper({}, <Text content={<Markdown>{text}</Markdown>} isPureContent />),
           FileLinksWrapper({}, <FileLinks files={files} />)
+        ),
+        Options(
+          isHover && <PencilButton color='monochrome' onClick={onEditClick} />
         )
       )
     )

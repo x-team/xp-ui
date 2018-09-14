@@ -102,7 +102,9 @@ const sample = [
   }
 ];
 
-<NotesFeed notes={sample} />
+const onNoteUpdateCallback = (updatedNote) => (console.log('Updated note: ', updatedNote));
+
+<NotesFeed notes={sample} onNoteUpdate={onNoteUpdateCallback} />
 ```
 
 Missing props (does component explode?):
