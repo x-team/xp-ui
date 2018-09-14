@@ -51,6 +51,8 @@ type Props = {
   value: any,
   /** To control whether the component can be editable or not */
   isEditable: boolean,
+  /** To control whether the component can be saved or not */
+  isValid: boolean,
   /** To control whether the component will save changes on enter or not */
   shouldSaveOnEnter: boolean,
   /** Editing mode render function */
@@ -75,6 +77,7 @@ type State = {
 class InlineEditor extends PureComponent<Props, State> {
   static defaultProps = {
     isEditable: true,
+    isValid: true,
     shouldSaveOnEnter: true
   }
 
@@ -155,12 +158,14 @@ class InlineEditor extends PureComponent<Props, State> {
 
   saveChanges = () => {
     const { editValue } = this.state
-    const { onSave } = this.props
+    const { onSave, isValid } = this.props
 
-    this.setEditing(false)
+    if (isValid) {
+      this.setEditing(false)
 
-    if (onSave) {
-      onSave(editValue)
+      if (onSave) {
+        onSave(editValue)
+      }
     }
   }
 

@@ -102,6 +102,33 @@ Not editable usage (editable false):
 />
 ```
 
+Invalid usage (isValid false):
+The same button won't be triggered
+
+```js
+
+<InlineEditor
+  isValid={false}
+  editor={({ onValueChange, value }) => (
+    <InputField
+      label="Example"
+      autoFocus
+      onChange={evt => onValueChange(evt.target.value)}
+      value={value}
+    />
+  )}
+  presenter={({ value, activateEditingMode }) => (
+    <div
+      onClick={activateEditingMode}
+      style={{ cursor: 'pointer' }}
+    >
+      <p>{value}</p>
+    </div>
+  )}
+  value='This is a sample text. I am editable but changes will not be saved once clicking "SAVE"'
+/>
+```
+
 Missing props (does component explode?):
 
 ```js
