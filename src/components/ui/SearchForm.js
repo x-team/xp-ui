@@ -135,6 +135,7 @@ const tabularTheme = {
     height: 58px
     flex: 1
     flex-shrink: 0
+    min-width: 200px
   `),
 
   selectFields: cmz(`

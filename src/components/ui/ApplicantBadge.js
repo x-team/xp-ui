@@ -134,10 +134,10 @@ const listTheme = {
   infos: cmz(`
     grid-area: infos
     width: 100%
+    margin: 0 0 -10px
     display: flex
     flex-wrap: wrap
     align-items: flex-start
-    margin: 0 0 -10px
   `),
 
   info: cmz(typo.baseText,
@@ -192,10 +192,13 @@ const listTheme = {
     font-size: 14px
     grid-area: tags
     width: 100%
+    margin: 0 0 -10px
+  `),
+
+  tagsInner: cmz(`
     display: flex
     flex-wrap: wrap
     align-items: start
-    margin: 0 0 -10px
   `),
 
   tag: cmz(`
@@ -286,6 +289,7 @@ const tabularTheme = {
 
   controls: cmz(`
     order: 6
+    width: 80px
   `),
 
   control: cmz(`
@@ -295,23 +299,17 @@ const tabularTheme = {
   infos: cmz(`
     order: 4
     flex: 1
-    justify-content: space-evenly
+    display: flex
+    justify-content: space-between
   `),
 
-  info: cmz(typo.baseText,
-    `
-      & {
-        width: 80px
-        font-size: 17px
-        margin: 0 14px
-        text-align: center
-      }
-
-      & > span {
-        white-space: nowrap
-      }
-    `
-  ),
+  info: cmz(typo.baseText, `
+    width: 80px
+    font-size: 17px
+    margin: 0 14px
+    text-align: center
+    display: block
+  `),
 
   moreinfos: cmz(`
     & {
@@ -343,8 +341,12 @@ const tabularTheme = {
 
   tags: cmz(`
     width: 260px
-    flex-wrap: wrap
     order: 3
+  `),
+
+  tagsInner: cmz(`
+    display: flex
+    flex-wrap: wrap
   `),
 
   tag: cmz(`
@@ -402,7 +404,8 @@ class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
     mode: DISPLAY_MODES.LIST,
     active: false,
-    actions: []
+    actions: [],
+    info: []
   }
 
   render () {
@@ -421,32 +424,34 @@ class ApplicantBadge extends PureComponent<Props> {
 
     const cx = mode === DISPLAY_MODES.TABULAR ? tabularTheme : listTheme
 
+    const filteredInfos = mode === DISPLAY_MODES.TABULAR ? info : info.filter(each => each.value)
+
     const mapInfosToRender = (infos) => (
       <TruncatedList
         inserted
         visible={mode === DISPLAY_MODES.LIST ? 4 : infos.length}
         listClass={cx.infos}
         itemClass={cx.info}
-        items={infos && infos.filter(info => info.value).map((info, i) => (
+        items={filteredInfos.map((info, i) => (
           <Dropdown
             key={i}
             tooltip
             hover
-            targetYOrigin={mode === DISPLAY_MODES.TABULAR ? 'bottom' : 'top'}
+            targetYOrigin='top'
             label={(
-              <span>
+              <div>
                 <span className={cx.label}>{info.label}</span>
                 <span className={cx.value}>{info.value}</span>
-              </span>
+              </div>
             )}
           >
-            {info.tip && <span className={cx.tip}>{info.tip}</span>}
+            {info.tip && <div className={cx.tip}>{info.tip}</div>}
           </Dropdown>
         ))}
         viewMore={(amount, action) => (
-          <span className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
+          <div className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
             {`+ ${amount} info`}
-          </span>
+          </div>
         )}
       />
     )
@@ -456,12 +461,12 @@ class ApplicantBadge extends PureComponent<Props> {
         inserted
         visible={5}
         items={tags}
-        listClass={cx.tags}
+        listClass={cx.tagsInner}
         itemClass={cx.tag}
         viewMore={(amount, action) => (
-          <span className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
+          <div className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
             {`+ ${amount} more`}
-          </span>
+          </div>
         )}
       />
     )
@@ -474,44 +479,42 @@ class ApplicantBadge extends PureComponent<Props> {
 
     return id ? (
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
-        {(name || email) && (
-          <div className={cx.name}>{name || email}</div>
-        )}
-        {(avatar || email) && (
-          <div className={cx.avatar}>
-            {avatar || (
-              <Avatar
-                src={`https://www.gravatar.com/avatar/${md5(email)}?s=90`}
-                email={name ? `${name}'s avatar` : 'avatar'}
-                size={90}
-              />
-            )}
-          </div>
-        )}
-        {actions.length > 0 && (
-          <div className={cx.controls}>
-            {actions.map(({ key, icon: Icon, onClick = null, render, dropdownClassName, tooltipClassName }) => (
-              Icon && (
-                <Dropdown
-                  key={key}
-                  tooltip
-                  className={dropdownClassName}
-                  tooltipClassName={tooltipClassName}
-                  onClick={onClick}
-                  label={(
-                    <span className={cx.control}>
-                      <Icon />
-                    </span>
-                  )}
-                >
-                  {render && render()}
-                </Dropdown>
-              )
-            ))}
-          </div>
-        )}
-        {info && info.length > 0 && mapInfosToRender(info)}
-        {tags && tags.length > 0 && mapTagsToRender(tags)}
+        <div className={cx.name}>{name || email}</div>
+        <div className={cx.avatar}>
+          {avatar || (
+            <Avatar
+              src={`https://www.gravatar.com/avatar/${md5(email)}?s=90`}
+              email={name ? `${name}'s avatar` : 'avatar'}
+              size={90}
+            />
+          )}
+        </div>
+        <div className={cx.controls}>
+          {actions.map(({ key, icon: Icon, onClick = null, render, dropdownClassName, tooltipClassName }) => (
+            Icon && (
+              <Dropdown
+                key={key}
+                tooltip
+                className={dropdownClassName}
+                tooltipClassName={tooltipClassName}
+                onClick={onClick}
+                label={(
+                  <span className={cx.control}>
+                    <Icon />
+                  </span>
+                )}
+              >
+                {render && render()}
+              </Dropdown>
+            )
+          ))}
+        </div>
+        <div className={cx.infos}>
+          {info && info.length > 0 && mapInfosToRender(info)}
+        </div>
+        <div className={cx.tags}>
+          {tags && tags.length > 0 && mapTagsToRender(tags)}
+        </div>
         {children && (
           <div className={cx.children}>
             {children}

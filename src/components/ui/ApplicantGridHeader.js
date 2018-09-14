@@ -66,21 +66,30 @@ const cx = {
     `
       & {
         display: flex
-        width: fit-content
-        margin: 14px
+        width: calc(100% - 60px)
+        margin: 0 auto
+        padding: 14px
+        box-sizing: border-box
+        color: ${theme.typoLabel}
+        font-size: 16px
+        line-height: 1.2
       }
 
       & > span {
-          margin-right: 14px
-          color: ${theme.typoLabel}
-          font-size: 16px
-          font-weight: normal
-          flex-wrap: wrap
-        }
+        margin-right: 14px
+        font-weight: normal
+        flex-wrap: wrap
+        flex-shrink: 0
+      }
 
+      & > span:first-of-type {
+        padding-right: 56px
+      }
   `),
-  placeHolder: cmz(`
-    width: 42px
+  grouped: cmz(`
+    flex: 1
+    display: flex
+    justify-content: space-between
   `),
   small: cmz(`
     & {
@@ -152,32 +161,42 @@ class ApplicantGridHeader extends PureComponent<Props> {
       [cx.container]: true,
       [componentCustomClassName]: className
     })
+
+    const renderCell = (headerColumn) => {
+      if (Array.isArray(headerColumn)) {
+        return (
+          <div className={cx.grouped}>
+            {headerColumn.map(renderCell)}
+          </div>
+        )
+      } else {
+        const {
+          isSortable,
+          name,
+          size,
+          label
+        } = headerColumn
+        const columnClassName = getClassName({
+          [cx[size]]: true,
+          [cx.sortable]: isSortable,
+          [cx[`${direction}Sort`]]: sortBy === name
+        })
+
+        return (
+          <span
+            key={name}
+            className={columnClassName}
+            onClick={this.handleColumnClick(name, isSortable)}
+          >
+            {label}
+          </span>
+        )
+      }
+    }
+
     return (
       <div className={componentClassName}>
-        <span className={cx.placeHolder} />
-        {headerColumns && headerColumns.map(headerColumn => {
-          const {
-            isSortable,
-            name,
-            size,
-            label
-          } = headerColumn
-          const columnClassName = getClassName({
-            [cx[size]]: true,
-            [cx.sortable]: isSortable,
-            [cx[`${direction}Sort`]]: sortBy === name
-          })
-
-          return (
-            <span
-              key={name}
-              className={columnClassName}
-              onClick={this.handleColumnClick(name, isSortable)}
-            >
-              {label}
-            </span>
-          )
-        })}
+        {headerColumns && headerColumns.map(renderCell)}
       </div>
     )
   }
