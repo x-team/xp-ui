@@ -13,14 +13,13 @@ const styles = {
     background: transparent
     border: none
     cursor: pointer
-    font-size: 15px;
-    height: auto !important
-    opacity: 0;
-    transition: opacity .25s linear;
+    opacity: 0
+    padding: 5px
+    transition: opacity .25s linear
   `),
 
   editButtonVisible: cmz(`
-    opacity: 1;
+    opacity: 1
   `)
 }
 
@@ -47,12 +46,13 @@ class PencilButton extends Component<Props, void> {
   render () {
     const { visible, color, hover } = this.props
     return (
-      <button
+      <span
+        role='button'
         onClick={this.handleClick}
         className={`${styles.editButton} ${visible ? styles.editButtonVisible : ''}`}
       >
         <SvgIcon icon='edit' color={color} hover={hover} />
-      </button>
+      </span>
     )
   }
 }

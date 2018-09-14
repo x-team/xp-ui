@@ -1,6 +1,7 @@
 exports[`PencilButton-17 1`] = `
-<button
-  className="AutoUI_ui_PencilButton-12 AutoUI_ui_PencilButton-22">
+<span
+  className="AutoUI_ui_PencilButton-12 AutoUI_ui_PencilButton-21"
+  role="button">
   <svg
     height="14px"
     viewBox="0 0 14 14"
@@ -16,5 +17,5 @@ exports[`PencilButton-17 1`] = `
         fillRule="nonzero" />
     </g>
   </svg>
-</button>
+</span>
 `;
