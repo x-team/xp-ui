@@ -65,7 +65,7 @@ type Props = {
   /** On save changes callback */
   onSave(data: any): void,
   /** On cancel changes callback */
-  onCancel: () => void,
+  onCancel?: () => void,
 }
 
 type State = {
