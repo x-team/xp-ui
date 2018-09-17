@@ -18,7 +18,7 @@ type Props = {
 
 type State = {
   page: number,
-  perPage: number,
+  perPage: number
 }
 
 const Root = elem.div()
@@ -31,6 +31,10 @@ const buttonClass = cmz(`
   width: 100%
 `)
 
+const InlineEditorWrapper = elem.div(cmz(`
+  margin-bottom: 24px
+`))
+
 class NotesFeed extends PureComponent<Props, State> {
   state = {
     page: 1,
@@ -41,7 +45,7 @@ class NotesFeed extends PureComponent<Props, State> {
 
   showViewMore = (total: number = 0) => {
     const { page, perPage } = this.state
-    return (total / perPage) > page
+    return total / perPage > page
   }
 
   getNoteWrapper = (note: any, value: string, isHover: boolean, activateEditingMode: Function) =>
@@ -64,35 +68,39 @@ class NotesFeed extends PureComponent<Props, State> {
     const { page, perPage } = this.state
     const { notes, onNoteUpdate } = this.props
     return Root(
-      notes && notes
-        .filter((note, i) => page * perPage > i)
-        .map(note => (
-          <InlineEditor
-            value={note.body}
-            onSave={updatedText =>
-              onNoteUpdate && onNoteUpdate({
-                ...note,
-                ...{ body: updatedText }
-              })
-            }
-            presenter={({ value, isHover, activateEditingMode }) =>
-              this.getNoteWrapper(
-                note,
-                value,
-                isHover,
-                activateEditingMode
-              )
-            }
-            editor={({ onValueChange, value }) => (
-              <TextareaEditor
-                onChange={text => onValueChange(text)}
-                text={value}
-              />
-            )}
-          />
-        )), this.showViewMore(notes && notes.length) && <Button outlined block color="silver" onClick={this.viewMore} className={buttonClass} type="button">
-        View more
-      </Button>
+      notes &&
+        notes.filter((note, i) => page * perPage > i).map(note =>
+          InlineEditorWrapper(
+            <InlineEditor
+              value={note.body}
+              onSave={updatedText =>
+                onNoteUpdate &&
+                onNoteUpdate({
+                  ...note,
+                  ...{ body: updatedText }
+                })
+              }
+              presenter={({ value, isHover, activateEditingMode }) =>
+                this.getNoteWrapper(note, value, isHover, activateEditingMode)
+              }
+              editor={({ onValueChange, value }) => (
+                <TextareaEditor onChange={text => onValueChange(text)} text={value} />
+              )}
+            />
+          )
+        ),
+      this.showViewMore(notes && notes.length) && (
+        <Button
+          outlined
+          block
+          color='silver'
+          onClick={this.viewMore}
+          className={buttonClass}
+          type='button'
+        >
+          View more
+        </Button>
+      )
     )
   }
 }
