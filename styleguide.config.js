@@ -21,11 +21,11 @@ module.exports = snapguidist({
     module: config.module
   },
   ignore: [
-    '**/components/AdminScreen.js',
-    '**/components/ListsScreen.js',
     '**/components/forms/SolutionForm/Title.js',
     '**/components/ui/TextareaEditor/MediumEditorWrapper.js',
     '**/components/ui/Tabs/index.js',
-    '**/components/ui/Tabs/Tab.js'
+    '**/components/ui/Tabs/Tab.js',
+    '**/components/ui/AdminScreen.js',
+    '**/components/ui/ListsScreen.js'
   ]
 })
