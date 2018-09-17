@@ -1,10 +1,10 @@
 exports[`SearchForm-3 1`] = `
 <div
-  className="AutoUI_ui_SearchForm-71">
+  className="AutoUI_ui_SearchForm-65">
   <form
-    className="AutoUI_ui_SearchForm-79">
+    className="AutoUI_ui_SearchForm-73">
     <div
-      className="AutoUI_ui_SearchForm-93">
+      className="AutoUI_ui_SearchForm-81">
       <div
         className="AutoUI_ui_SelectBox-17"
         style={
@@ -169,17 +169,9 @@ exports[`SearchForm-3 1`] = `
           </div>
         </div>
       </div>
-      <button
-        className="AutoUI_ui_SearchForm-87 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-125 AutoUI_ui_Button-176 raised"
-        type="button">
-        <span
-          className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-          Show
-        </span>
-      </button>
     </div>
     <div
-      className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-100 has-value is-clearable is-searchable Select--multi">
+      className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-88 has-value is-clearable is-searchable Select--multi">
       <input
         disabled={false}
         name="keywords"
@@ -362,7 +354,7 @@ exports[`SearchForm-3 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-108">
+      className="AutoUI_ui_SearchForm-96">
       <div
         className="AutoUI_ui_SelectBox-17"
         style={
@@ -501,16 +493,16 @@ exports[`SearchForm-3 1`] = `
       </div>
     </div>
     <button
-      className="AutoUI_ui_SearchForm-114 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-125 AutoUI_ui_Button-176 raised"
+      className="AutoUI_ui_SearchForm-102 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-125 AutoUI_ui_Button-176 raised"
       type="submit">
       <span
         className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-        Filter
+        Show
       </span>
     </button>
   </form>
   <div
-    className="AutoUI_ui_SearchForm-119">
+    className="AutoUI_ui_SearchForm-107">
     Here it goes ApplicantsStatusFilter component
   </div>
 </div>
