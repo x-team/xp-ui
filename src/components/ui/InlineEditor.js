@@ -10,12 +10,12 @@ const cmz = require('cmz')
 const cx = {
   link: cmz(`
     & {
-      text-decoration: none;
-      color: inherit;
+      text-decoration: none
+      color: inherit
     }
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: underline
     }
   `),
   button: cmz(`
@@ -94,27 +94,32 @@ class InlineEditor extends PureComponent<Props, State> {
     }
   }
 
-  renderControls = () => (
-    <div>
-      <Button
-        className={cx.button}
-        size='small'
-        color='silver'
-        rounded
-        onClick={this.handleSaveClick}
-      >
-        Save
-      </Button>
-      <Button
-        className={cx.button}
-        size='small'
-        rounded
-        onClick={this.handleCancelClick}
-      >
-        Cancel
-      </Button>
-    </div>
-  )
+  renderControls = () => {
+    const { editValue } = this.state
+    const { value } = this.props
+    return (
+      <div>
+        <Button
+          className={cx.button}
+          size='small'
+          rounded
+          onClick={this.handleSaveClick}
+          disabled={editValue === value}
+        >
+          Save
+        </Button>
+        <Button
+          className={cx.button}
+          size='small'
+          rounded
+          color='silver'
+          onClick={this.handleCancelClick}
+        >
+          Cancel
+        </Button>
+      </div>
+    )
+  }
 
   setEditing = (isInEditMode: boolean) => {
     let update = { isInEditMode }
@@ -210,7 +215,7 @@ class InlineEditor extends PureComponent<Props, State> {
     this.setState({ isHover: false })
   }
 
-  render () {
+  renderContent = () => {
     const { editValue, isHover, isInEditMode } = this.state
     const { editor, presenter, isEditable } = this.props
     const mainComponentRenderer = isInEditMode ? editor : presenter
@@ -223,20 +228,27 @@ class InlineEditor extends PureComponent<Props, State> {
     }
 
     return (
-      <ClickOutside onClickOutside={this.handleClickOutside}>
-        <div
-          onClick={this.handleContainerClick}
-          onKeyDown={this.handleKeyDown}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
-        >
-          <div onClick={this.handleComponentClick}>
-            {mainComponentRenderer && mainComponentRenderer(props)}
-          </div>
-          {isInEditMode && this.renderControls()}
+      <div
+        onClick={this.handleContainerClick}
+        onKeyDown={this.handleKeyDown}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+      >
+        <div onClick={this.handleComponentClick}>
+          {mainComponentRenderer && mainComponentRenderer(props)}
         </div>
-      </ClickOutside>
+        {isInEditMode && this.renderControls()}
+      </div>
     )
+  }
+
+  render () {
+    return this.state.isInEditMode
+      ? (
+        <ClickOutside onClickOutside={this.handleClickOutside}>
+          {this.renderContent()}
+        </ClickOutside>
+      ) : this.renderContent()
   }
 }
 

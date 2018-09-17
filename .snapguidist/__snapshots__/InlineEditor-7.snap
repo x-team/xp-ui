@@ -1,17 +1,15 @@
 exports[`InlineEditor-7 1`] = `
 <div>
   <div>
-    <div>
-      <div
-        style={
-          Object {
-            "cursor": "pointer",
-          }
-        }>
-        <p>
-          This is a sample text. I am not editable so clicking on me will not allow edit mode!
-        </p>
-      </div>
+    <div
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }>
+      <p>
+        This is a sample text. I am not editable so clicking on me will not allow edit mode!
+      </p>
     </div>
   </div>
 </div>
