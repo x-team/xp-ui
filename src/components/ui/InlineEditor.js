@@ -100,6 +100,7 @@ class InlineEditor extends PureComponent<Props, State> {
         className={cx.button}
         size='small'
         color='silver'
+        type='button'
         rounded
         onClick={this.handleSaveClick}
       >
@@ -108,6 +109,7 @@ class InlineEditor extends PureComponent<Props, State> {
       <Button
         className={cx.button}
         size='small'
+        type='button'
         rounded
         onClick={this.handleCancelClick}
       >
