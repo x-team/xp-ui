@@ -26,59 +26,32 @@ exports[`ApplicantGrid-1 1`] = `
           className="AutoUI_ui_ApplicantBadge-126">
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Avail. date:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        DD/MM/YYYY
-                      </span>
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
-                  <div
-                    className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
                     <span
-                      className="AutoUI_ui_ApplicantBadge-177">
-                      Avail. date tooltip copy
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Avail. date:
                     </span>
-                  </div>
-                </div>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      DD/MM/YYYY
+                    </span>
+                  </span>
+                </span>
               </div>
-            </div>
-          </span>
-          <span
-            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
                 <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
+                  className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
                   <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Timezone:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        UTC+00
-                      </span>
-                    </span>
+                    className="AutoUI_ui_ApplicantBadge-177">
+                    Avail. date tooltip copy
                   </span>
                 </div>
               </div>
@@ -86,26 +59,47 @@ exports[`ApplicantGrid-1 1`] = `
           </span>
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Rate:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        $100
-                      </span>
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Timezone:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      UTC+00
                     </span>
                   </span>
-                </div>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span
+            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Rate:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      $100
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </span>
@@ -171,59 +165,32 @@ exports[`ApplicantGrid-1 1`] = `
           className="AutoUI_ui_ApplicantBadge-126">
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Avail. date:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        DD/MM/YYYY
-                      </span>
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
-                  <div
-                    className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
                     <span
-                      className="AutoUI_ui_ApplicantBadge-177">
-                      Avail. date tooltip copy
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Avail. date:
                     </span>
-                  </div>
-                </div>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      DD/MM/YYYY
+                    </span>
+                  </span>
+                </span>
               </div>
-            </div>
-          </span>
-          <span
-            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
                 <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
+                  className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
                   <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Timezone:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        UTC+00
-                      </span>
-                    </span>
+                    className="AutoUI_ui_ApplicantBadge-177">
+                    Avail. date tooltip copy
                   </span>
                 </div>
               </div>
@@ -231,26 +198,47 @@ exports[`ApplicantGrid-1 1`] = `
           </span>
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Rate:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        $100
-                      </span>
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Timezone:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      UTC+00
                     </span>
                   </span>
-                </div>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span
+            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Rate:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      $100
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </span>
@@ -316,59 +304,32 @@ exports[`ApplicantGrid-1 1`] = `
           className="AutoUI_ui_ApplicantBadge-126">
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Avail. date:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        DD/MM/YYYY
-                      </span>
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
-                  <div
-                    className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
                     <span
-                      className="AutoUI_ui_ApplicantBadge-177">
-                      Avail. date tooltip copy
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Avail. date:
                     </span>
-                  </div>
-                </div>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      DD/MM/YYYY
+                    </span>
+                  </span>
+                </span>
               </div>
-            </div>
-          </span>
-          <span
-            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
                 <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
+                  className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
                   <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Timezone:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        UTC+00
-                      </span>
-                    </span>
+                    className="AutoUI_ui_ApplicantBadge-177">
+                    Avail. date tooltip copy
                   </span>
                 </div>
               </div>
@@ -376,26 +337,47 @@ exports[`ApplicantGrid-1 1`] = `
           </span>
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Rate:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        $100
-                      </span>
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Timezone:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      UTC+00
                     </span>
                   </span>
-                </div>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span
+            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Rate:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      $100
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </span>
@@ -461,59 +443,32 @@ exports[`ApplicantGrid-1 1`] = `
           className="AutoUI_ui_ApplicantBadge-126">
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Avail. date:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        DD/MM/YYYY
-                      </span>
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
-                  <div
-                    className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
                     <span
-                      className="AutoUI_ui_ApplicantBadge-177">
-                      Avail. date tooltip copy
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Avail. date:
                     </span>
-                  </div>
-                </div>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      DD/MM/YYYY
+                    </span>
+                  </span>
+                </span>
               </div>
-            </div>
-          </span>
-          <span
-            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
                 <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
+                  className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
                   <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Timezone:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        UTC+00
-                      </span>
-                    </span>
+                    className="AutoUI_ui_ApplicantBadge-177">
+                    Avail. date tooltip copy
                   </span>
                 </div>
               </div>
@@ -521,26 +476,47 @@ exports[`ApplicantGrid-1 1`] = `
           </span>
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Rate:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        $100
-                      </span>
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Timezone:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      UTC+00
                     </span>
                   </span>
-                </div>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span
+            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Rate:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      $100
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </span>
@@ -606,59 +582,32 @@ exports[`ApplicantGrid-1 1`] = `
           className="AutoUI_ui_ApplicantBadge-126">
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Avail. date:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        DD/MM/YYYY
-                      </span>
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
-                  <div
-                    className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
                     <span
-                      className="AutoUI_ui_ApplicantBadge-177">
-                      Avail. date tooltip copy
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Avail. date:
                     </span>
-                  </div>
-                </div>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      DD/MM/YYYY
+                    </span>
+                  </span>
+                </span>
               </div>
-            </div>
-          </span>
-          <span
-            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
                 <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
+                  className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
                   <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Timezone:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        UTC+00
-                      </span>
-                    </span>
+                    className="AutoUI_ui_ApplicantBadge-177">
+                    Avail. date tooltip copy
                   </span>
                 </div>
               </div>
@@ -666,26 +615,47 @@ exports[`ApplicantGrid-1 1`] = `
           </span>
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Rate:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        $100
-                      </span>
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Timezone:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      UTC+00
                     </span>
                   </span>
-                </div>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span
+            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Rate:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      $100
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </span>
@@ -751,59 +721,32 @@ exports[`ApplicantGrid-1 1`] = `
           className="AutoUI_ui_ApplicantBadge-126">
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Avail. date:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        DD/MM/YYYY
-                      </span>
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
-                  <div
-                    className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
                     <span
-                      className="AutoUI_ui_ApplicantBadge-177">
-                      Avail. date tooltip copy
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Avail. date:
                     </span>
-                  </div>
-                </div>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      DD/MM/YYYY
+                    </span>
+                  </span>
+                </span>
               </div>
-            </div>
-          </span>
-          <span
-            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
                 <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
+                  className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
                   <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Timezone:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        UTC+00
-                      </span>
-                    </span>
+                    className="AutoUI_ui_ApplicantBadge-177">
+                    Avail. date tooltip copy
                   </span>
                 </div>
               </div>
@@ -811,26 +754,47 @@ exports[`ApplicantGrid-1 1`] = `
           </span>
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Rate:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        $100
-                      </span>
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Timezone:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      UTC+00
                     </span>
                   </span>
-                </div>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span
+            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Rate:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      $100
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </span>
@@ -896,59 +860,32 @@ exports[`ApplicantGrid-1 1`] = `
           className="AutoUI_ui_ApplicantBadge-126">
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Avail. date:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        DD/MM/YYYY
-                      </span>
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
-                  <div
-                    className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
                     <span
-                      className="AutoUI_ui_ApplicantBadge-177">
-                      Avail. date tooltip copy
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Avail. date:
                     </span>
-                  </div>
-                </div>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      DD/MM/YYYY
+                    </span>
+                  </span>
+                </span>
               </div>
-            </div>
-          </span>
-          <span
-            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
                 <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
+                  className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
                   <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Timezone:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        UTC+00
-                      </span>
-                    </span>
+                    className="AutoUI_ui_ApplicantBadge-177">
+                    Avail. date tooltip copy
                   </span>
                 </div>
               </div>
@@ -956,26 +893,47 @@ exports[`ApplicantGrid-1 1`] = `
           </span>
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Rate:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        $100
-                      </span>
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Timezone:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      UTC+00
                     </span>
                   </span>
-                </div>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span
+            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Rate:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      $100
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </span>
@@ -1041,59 +999,32 @@ exports[`ApplicantGrid-1 1`] = `
           className="AutoUI_ui_ApplicantBadge-126">
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Avail. date:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        DD/MM/YYYY
-                      </span>
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
-                  <div
-                    className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
                     <span
-                      className="AutoUI_ui_ApplicantBadge-177">
-                      Avail. date tooltip copy
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Avail. date:
                     </span>
-                  </div>
-                </div>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      DD/MM/YYYY
+                    </span>
+                  </span>
+                </span>
               </div>
-            </div>
-          </span>
-          <span
-            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
                 <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
+                  className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
                   <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Timezone:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        UTC+00
-                      </span>
-                    </span>
+                    className="AutoUI_ui_ApplicantBadge-177">
+                    Avail. date tooltip copy
                   </span>
                 </div>
               </div>
@@ -1101,26 +1032,47 @@ exports[`ApplicantGrid-1 1`] = `
           </span>
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Rate:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        $100
-                      </span>
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Timezone:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      UTC+00
                     </span>
                   </span>
-                </div>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span
+            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Rate:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      $100
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </span>
@@ -1186,59 +1138,32 @@ exports[`ApplicantGrid-1 1`] = `
           className="AutoUI_ui_ApplicantBadge-126">
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Avail. date:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        DD/MM/YYYY
-                      </span>
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
-                  <div
-                    className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
                     <span
-                      className="AutoUI_ui_ApplicantBadge-177">
-                      Avail. date tooltip copy
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Avail. date:
                     </span>
-                  </div>
-                </div>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      DD/MM/YYYY
+                    </span>
+                  </span>
+                </span>
               </div>
-            </div>
-          </span>
-          <span
-            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
                 <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
+                  className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
                   <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Timezone:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        UTC+00
-                      </span>
-                    </span>
+                    className="AutoUI_ui_ApplicantBadge-177">
+                    Avail. date tooltip copy
                   </span>
                 </div>
               </div>
@@ -1246,26 +1171,47 @@ exports[`ApplicantGrid-1 1`] = `
           </span>
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Rate:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        $100
-                      </span>
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Timezone:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      UTC+00
                     </span>
                   </span>
-                </div>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span
+            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Rate:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      $100
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </span>
@@ -1331,59 +1277,32 @@ exports[`ApplicantGrid-1 1`] = `
           className="AutoUI_ui_ApplicantBadge-126">
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Avail. date:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        DD/MM/YYYY
-                      </span>
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
-                  <div
-                    className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
                     <span
-                      className="AutoUI_ui_ApplicantBadge-177">
-                      Avail. date tooltip copy
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Avail. date:
                     </span>
-                  </div>
-                </div>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      DD/MM/YYYY
+                    </span>
+                  </span>
+                </span>
               </div>
-            </div>
-          </span>
-          <span
-            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
                 <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
+                  className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
                   <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Timezone:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        UTC+00
-                      </span>
-                    </span>
+                    className="AutoUI_ui_ApplicantBadge-177">
+                    Avail. date tooltip copy
                   </span>
                 </div>
               </div>
@@ -1391,26 +1310,47 @@ exports[`ApplicantGrid-1 1`] = `
           </span>
           <span
             className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-            <div>
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               <div
-                className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                <div
-                  className="AutoUI_ui_Dropdown-24 ">
-                  
-                  <span
-                    className="AutoUI_ui_Dropdown-42">
-                    <span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-161">
-                        Rate:
-                      </span>
-                      <span
-                        className="AutoUI_ui_ApplicantBadge-169">
-                        $100
-                      </span>
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Timezone:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      UTC+00
                     </span>
                   </span>
-                </div>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span
+            className="AutoUI_ui_ApplicantBadge-135 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <div
+              className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div
+                className="AutoUI_ui_Dropdown-24 ">
+                
+                <span
+                  className="AutoUI_ui_Dropdown-42">
+                  <span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-161">
+                      Rate:
+                    </span>
+                    <span
+                      className="AutoUI_ui_ApplicantBadge-169">
+                      $100
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </span>
