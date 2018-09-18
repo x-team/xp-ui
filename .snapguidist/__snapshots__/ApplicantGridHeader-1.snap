@@ -8,29 +8,27 @@ exports[`ApplicantGridHeader-1 1`] = `
   <div
     className="AutoUI_ui_ApplicantGridHeader-65 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 custom-class-name">
     <span
-      className="AutoUI_ui_ApplicantGridHeader-82" />
-    <span
-      className="AutoUI_ui_ApplicantGridHeader-98 AutoUI_ui_ApplicantGridHeader-101 AutoUI_ui_ApplicantGridHeader-56 AutoUI_ui_ApplicantGridHeader-36">
+      className="AutoUI_ui_ApplicantGridHeader-107 AutoUI_ui_ApplicantGridHeader-110 AutoUI_ui_ApplicantGridHeader-56 AutoUI_ui_ApplicantGridHeader-36">
       Field1
     </span>
     <span
-      className="AutoUI_ui_ApplicantGridHeader-98">
+      className="AutoUI_ui_ApplicantGridHeader-107">
       Field2
     </span>
     <span
-      className="AutoUI_ui_ApplicantGridHeader-95">
+      className="AutoUI_ui_ApplicantGridHeader-104">
       Field3
     </span>
     <span
-      className="AutoUI_ui_ApplicantGridHeader-95 AutoUI_ui_ApplicantGridHeader-101">
+      className="AutoUI_ui_ApplicantGridHeader-104 AutoUI_ui_ApplicantGridHeader-110">
       Field4
     </span>
     <span
-      className="AutoUI_ui_ApplicantGridHeader-85 AutoUI_ui_ApplicantGridHeader-101">
+      className="AutoUI_ui_ApplicantGridHeader-94 AutoUI_ui_ApplicantGridHeader-110">
       Field5
     </span>
     <span
-      className="AutoUI_ui_ApplicantGridHeader-85 AutoUI_ui_ApplicantGridHeader-101">
+      className="AutoUI_ui_ApplicantGridHeader-94 AutoUI_ui_ApplicantGridHeader-110">
       Field6
     </span>
   </div>

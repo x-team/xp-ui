@@ -22,7 +22,7 @@ type HeaderColumn = {
 
 type Props = {
   className?: string,
-  headerColumns: Array<HeaderColumn>,
+  headerColumns: Array<HeaderColumn | Array<HeaderColumn>>,
   sortBy?: string,
   sortDirection?: $Values<SortDirections>, // eslint-disable-line no-undef
   onSortingChange: Function
@@ -165,7 +165,7 @@ class ApplicantGridHeader extends PureComponent<Props> {
     const renderCell = (headerColumn) => {
       if (Array.isArray(headerColumn)) {
         return (
-          <div className={cx.grouped}>
+          <div key={`grouped${headerColumns.indexOf(headerColumn).toString()}`} className={cx.grouped}>
             {headerColumn.map(renderCell)}
           </div>
         )

@@ -7,10 +7,10 @@ exports[`Modal-1 1`] = `
     }
   }>
   <div
-    className="AutoUI_ui_Modal-22 open"
+    className="AutoUI_ui_Modal-21 open"
     tabIndex={0}>
     <section
-      className="AutoUI_ui_Modal-45">
+      className="AutoUI_ui_Modal-43">
       <h1>
         Modal content goes here
       </h1>
@@ -36,7 +36,7 @@ exports[`Modal-1 1`] = `
         lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
       </p>
       <a
-        className="AutoUI_ui_Modal-54 closemodal">
+        className="AutoUI_ui_Modal-52 closemodal">
         <svg
           height="14px"
           viewBox="0 0 14 14"

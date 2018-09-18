@@ -27,14 +27,8 @@ const listTheme = {
   `),
 
   listsSelector: cmz(`
-    width: calc(100% - 202px)
-    max-width: calc(100% - 202px)
-  `),
-
-  listsButton: cmz(`
-    width: 106px
-    height: 58px
-    margin-left: 10px
+    width: calc(100% - 82px)
+    max-width: calc(100% - 82px)
   `),
 
   displayButtons: cmz(`
@@ -109,12 +103,6 @@ const tabularTheme = {
     width: 250px
   `),
 
-  listsButton: cmz(`
-    margin: 0 10px 0 20px
-    width: 106px
-    height: 58px
-  `),
-
   displayButtons: cmz(`
     display: flex
     align-items: center
@@ -165,7 +153,6 @@ type Props = {
   mode: 'list' | 'tabular',
   lists: Array<*>,
   onSelectList: Function,
-  onClickShowLists: Function,
   keywords: string,
   onChangeKeywords: Function,
   fields: Array<*>,
@@ -190,7 +177,6 @@ class SearchForm extends PureComponent<Props> {
     mode: 'list',
     lists: [],
     onSelectList: () => {},
-    onClickShowLists: () => {},
     keywords: '',
     onChangeKeywords: () => {},
     fields: [],
@@ -220,7 +206,6 @@ class SearchForm extends PureComponent<Props> {
       mode,
       lists,
       onSelectList,
-      onClickShowLists,
       keywords,
       onChangeKeywords,
       fields,
@@ -280,14 +265,6 @@ class SearchForm extends PureComponent<Props> {
                 }
               />
             </div>
-            <Button
-              className={themeClasses.listsButton}
-              type='button'
-              raised
-              onClick={onClickShowLists}
-            >
-              Show
-            </Button>
             {mode !== 'tabular' && renderDislpaySwitchButtons()}
           </div>
           <Keywords
@@ -311,7 +288,7 @@ class SearchForm extends PureComponent<Props> {
             type='submit'
             raised
           >
-            Filter
+            Show
           </Button>
           {mode === 'tabular' && renderDislpaySwitchButtons()}
         </form>
