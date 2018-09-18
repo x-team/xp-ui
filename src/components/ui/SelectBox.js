@@ -923,7 +923,7 @@ class SelectBox extends Component<Props, State> {
 
     const renderItems = () => {
       const items = shouldSortItems
-        ? sortByCreatingFirst(filteredItems.sort(sortById))
+        ? filteredItems.sort(sortById)
         : filteredItems
       return (
         <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
@@ -944,7 +944,7 @@ class SelectBox extends Component<Props, State> {
               )}
             </li>
           )}
-          {items.map(renderItem)}
+          {sortByCreatingFirst(items).map(renderItem)}
         </ul>
       )
     }
