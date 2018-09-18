@@ -26,12 +26,6 @@ const cardTheme = {
     }
   `),
 
-  listsButton: cmz(`
-    width: 100px
-    height: 58px
-    margin-left: 10px
-  `),
-
   selectLists: cmz(`
     display: flex
     align-items: center
@@ -47,7 +41,7 @@ const cardTheme = {
 
   selectFields: cmz(`
     display: inline-block
-    width: 50%
+    width: 100%
     margin-top: 20px
   `),
 
@@ -82,12 +76,6 @@ const tabularTheme = {
     width: 100%
     padding: 50px 30px 30px
     box-sizing: border-box
-  `),
-
-  listsButton: cmz(`
-    margin: 0 10px 0 20px
-    width: 100px
-    height: 58px
   `),
 
   selectLists: cmz(`
@@ -128,7 +116,6 @@ type Props = {
   mode: 'card' | 'tabular',
   lists: Array<*>,
   onSelectList: Function,
-  onClickShowLists: Function,
   keywords: string,
   onChangeKeywords: Function,
   fields: Array<*>,
@@ -143,7 +130,6 @@ class SearchForm extends PureComponent<Props> {
     mode: 'card',
     lists: [],
     onSelectList: () => {},
-    onClickShowLists: () => {},
     keywords: '',
     onChangeKeywords: () => {},
     fields: [],
@@ -163,7 +149,6 @@ class SearchForm extends PureComponent<Props> {
       mode,
       lists,
       onSelectList,
-      onClickShowLists,
       keywords,
       onChangeKeywords,
       fields,
@@ -191,15 +176,6 @@ class SearchForm extends PureComponent<Props> {
                 </Button>
               }
             />
-            <Button
-              className={theme.listsButton}
-              type='button'
-              size='large'
-              raised
-              onClick={onClickShowLists}
-            >
-              Show
-            </Button>
           </div>
           <Keywords
             values={keywords}
@@ -223,7 +199,7 @@ class SearchForm extends PureComponent<Props> {
             size='large'
             raised
           >
-            Filter
+            Show
           </Button>
         </form>
         {renderApplicantsStatusFilter && (
