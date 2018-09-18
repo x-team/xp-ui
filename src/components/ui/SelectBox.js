@@ -363,6 +363,7 @@ type Props = {
   width?: number,
   visibleItems?: number,
   expanded?: boolean,
+  shouldSortItems?: boolean,
   hasSearch?: boolean,
   lined?: boolean,
   search?: string,
@@ -413,7 +414,8 @@ class SelectBox extends Component<Props, State> {
     hasSearch: false,
     lined: false,
     collectionLabel: '',
-    dismissTimeout
+    dismissTimeout,
+    shouldSortItems: true
   }
 
   state: State = {
@@ -644,7 +646,8 @@ class SelectBox extends Component<Props, State> {
       onDelete,
       onCreateNew,
       lined,
-      append
+      append,
+      shouldSortItems
     } = this.props
     const { view, search } = this.state
 
@@ -918,28 +921,33 @@ class SelectBox extends Component<Props, State> {
       return data
     }
 
-    const renderItems = () => (
-      <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
-        height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
-        maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
-        width: width ? `${width}px` : '100%'
-      }}>
-        {search && filteredItems && (
-          <li key='search-result'>
-            {filteredItems.length === 0 && (
-              <span className={cx.nothingLabel}>No Results for "{search}"</span>
-            )}
-            {onCreateNew && !filteredItems.find(each => each.value === search.trim()) && (
-              <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
-                <SvgIcon icon='plus' />
-                <span>Create new {collectionLabel} "{search}"</span>
-              </span>
-            )}
-          </li>
-        )}
-        {sortByCreatingFirst(filteredItems.sort(sortById)).map(renderItem)}
-      </ul>
-    )
+    const renderItems = () => {
+      const items = shouldSortItems
+        ? sortByCreatingFirst(filteredItems.sort(sortById))
+        : filteredItems
+      return (
+        <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
+          height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
+          maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
+          width: width ? `${width}px` : '100%'
+        }}>
+          {search && filteredItems && (
+            <li key='search-result'>
+              {filteredItems.length === 0 && (
+                <span className={cx.nothingLabel}>No Results for "{search}"</span>
+              )}
+              {onCreateNew && !filteredItems.find(each => each.value === search.trim()) && (
+                <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
+                  <SvgIcon icon='plus' />
+                  <span>Create new {collectionLabel} "{search}"</span>
+                </span>
+              )}
+            </li>
+          )}
+          {items.map(renderItem)}
+        </ul>
+      )
+    }
 
     const selectsClass = filteredItems && filteredItems.filter(item => item.selected).length > 0
       ? cx.selects : cx.selectsEmpty
