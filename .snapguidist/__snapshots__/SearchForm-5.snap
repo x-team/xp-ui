@@ -4,7 +4,7 @@ exports[`SearchForm-5 1`] = `
   <form
     className="AutoUI_ui_SearchForm-20">
     <div
-      className="AutoUI_ui_SearchForm-35">
+      className="AutoUI_ui_SearchForm-29">
       <div
         className="AutoUI_ui_SelectBox-17"
         style={
@@ -138,17 +138,9 @@ exports[`SearchForm-5 1`] = `
           </div>
         </div>
       </div>
-      <button
-        className="AutoUI_ui_SearchForm-29 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-125 AutoUI_ui_Button-176 raised"
-        type="button">
-        <span
-          className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-          Show
-        </span>
-      </button>
     </div>
     <div
-      className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-40 is-clearable is-searchable Select--multi">
+      className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-34 is-clearable is-searchable Select--multi">
       <div
         className="Select-control">
         <span
@@ -203,7 +195,7 @@ exports[`SearchForm-5 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-48">
+      className="AutoUI_ui_SearchForm-42">
       <div
         className="AutoUI_ui_SelectBox-17"
         style={
@@ -311,11 +303,11 @@ exports[`SearchForm-5 1`] = `
       </div>
     </div>
     <button
-      className="AutoUI_ui_SearchForm-54 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-125 AutoUI_ui_Button-176 raised"
+      className="AutoUI_ui_SearchForm-48 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-125 AutoUI_ui_Button-176 raised"
       type="submit">
       <span
         className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-        Filter
+        Show
       </span>
     </button>
   </form>
