@@ -12,129 +12,127 @@ exports[`SearchForm-5 1`] = `
             "width": "100%",
           }
         }>
-        <div>
+        <div
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-23"
+          onMouseEnter={false}
+          onMouseLeave={false}>
           <div
-            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-23"
-            onMouseEnter={false}
-            onMouseLeave={false}>
-            <div
-              className="AutoUI_ui_Dropdown-24 ">
-              
-              <span
-                className="AutoUI_ui_Dropdown-42">
-                <div
-                  className="AutoUI_ui_SelectBox-27 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-                  <div
-                    className="AutoUI_ui_SelectBox-70">
-                    <div>
-                      Select Lists
-                    </div>
-                    <div>
-                      
-                    </div>
-                  </div>
-                  <div
-                    className="AutoUI_ui_SelectBox-106">
-                    <svg
-                      height="5px"
-                      viewBox="0 0 9 5"
-                      width="9px">
-                      <g
-                        fill="none"
-                        fillRule="evenodd"
-                        stroke="none"
-                        strokeWidth="1">
-                        <polygon
-                          className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
-                          points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
-                          transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </span>
-            </div>
-            <div
-              className="AutoUI_ui_Dropdown-52     ">
+            className="AutoUI_ui_Dropdown-24 ">
+            
+            <span
+              className="AutoUI_ui_Dropdown-42">
               <div
-                className="AutoUI_ui_SelectBox-153">
+                className="AutoUI_ui_SelectBox-27 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <div
-                  className="AutoUI_ui_SelectBox-82">
-                  <div
-                    className="AutoUI_ui_SelectBox-93">
-                    <svg
-                      height="17px"
-                      viewBox="0 0 16 17"
-                      width="16px">
-                      <g
-                        fill="none"
-                        fillRule="evenodd"
-                        stroke="none"
-                        strokeWidth="1">
-                        <circle
-                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
-                          cx="7.5"
-                          cy="7.5"
-                          r="6.5" />
-                        <path
-                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
-                          d="M11.7538745,12.6062275 L15.5,16.5"
-                          strokeLinecap="square" />
-                      </g>
-                    </svg>
+                  className="AutoUI_ui_SelectBox-70">
+                  <div>
+                    Select Lists
                   </div>
                   <div>
-                    <input
-                      aria-labelledby="label-search"
-                      autoComplete="off"
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-87"
-                      id="search"
-                      name="search"
-                      placeholder="Search"
-                      required={false}
-                      type="text"
-                      value="" />
+                    
                   </div>
                 </div>
-                <ul
-                  className="AutoUI_ui_SelectBox-135 false"
-                  style={
-                    Object {
-                      "height": "auto",
-                      "maxHeight": "180px",
-                      "width": "100%",
-                    }
-                  }>
-                  
-                </ul>
                 <div
-                  className="AutoUI_ui_SelectBox-314">
-                  <button
-                    className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-166 AutoUI_ui_Button-210 AutoUI_ui_Button-125"
-                    type="button">
-                    <span
-                      className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-                      <span>
-                        <svg
-                          height="14px"
-                          viewBox="0 0 14 14"
-                          width="14px">
-                          <g
-                            fill="none"
-                            fillRule="evenodd"
-                            stroke="none"
-                            strokeWidth="1">
-                            <path
-                              className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
-                              d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
-                              fillRule="nonzero" />
-                          </g>
-                        </svg>
-                         Edit lists
-                      </span>
-                    </span>
-                  </button>
+                  className="AutoUI_ui_SelectBox-106">
+                  <svg
+                    height="5px"
+                    viewBox="0 0 9 5"
+                    width="9px">
+                    <g
+                      fill="none"
+                      fillRule="evenodd"
+                      stroke="none"
+                      strokeWidth="1">
+                      <polygon
+                        className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+                        points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
+                        transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+                    </g>
+                  </svg>
                 </div>
+              </div>
+            </span>
+          </div>
+          <div
+            className="AutoUI_ui_Dropdown-52     ">
+            <div
+              className="AutoUI_ui_SelectBox-153">
+              <div
+                className="AutoUI_ui_SelectBox-82">
+                <div
+                  className="AutoUI_ui_SelectBox-93">
+                  <svg
+                    height="17px"
+                    viewBox="0 0 16 17"
+                    width="16px">
+                    <g
+                      fill="none"
+                      fillRule="evenodd"
+                      stroke="none"
+                      strokeWidth="1">
+                      <circle
+                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                        cx="7.5"
+                        cy="7.5"
+                        r="6.5" />
+                      <path
+                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                        d="M11.7538745,12.6062275 L15.5,16.5"
+                        strokeLinecap="square" />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <input
+                    aria-labelledby="label-search"
+                    autoComplete="off"
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-87"
+                    id="search"
+                    name="search"
+                    placeholder="Search"
+                    required={false}
+                    type="text"
+                    value="" />
+                </div>
+              </div>
+              <ul
+                className="AutoUI_ui_SelectBox-135 false"
+                style={
+                  Object {
+                    "height": "auto",
+                    "maxHeight": "180px",
+                    "width": "100%",
+                  }
+                }>
+                
+              </ul>
+              <div
+                className="AutoUI_ui_SelectBox-314">
+                <button
+                  className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-166 AutoUI_ui_Button-210 AutoUI_ui_Button-125"
+                  type="button">
+                  <span
+                    className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+                    <span>
+                      <svg
+                        height="14px"
+                        viewBox="0 0 14 14"
+                        width="14px">
+                        <g
+                          fill="none"
+                          fillRule="evenodd"
+                          stroke="none"
+                          strokeWidth="1">
+                          <path
+                            className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
+                            d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                            fillRule="nonzero" />
+                        </g>
+                      </svg>
+                       Edit lists
+                    </span>
+                  </span>
+                </button>
               </div>
             </div>
           </div>
@@ -155,7 +153,7 @@ exports[`SearchForm-5 1`] = `
         className="Select-control">
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-31--value">
+          id="react-select-16--value">
           <div
             className="Select-placeholder">
             Type keywords
@@ -168,7 +166,7 @@ exports[`SearchForm-5 1`] = `
               }
             }>
             <input
-              aria-activedescendant="react-select-31--value"
+              aria-activedescendant="react-select-16--value"
               aria-expanded="false"
               aria-haspopup="false"
               aria-owns=""
@@ -213,102 +211,100 @@ exports[`SearchForm-5 1`] = `
             "width": "100%",
           }
         }>
-        <div>
+        <div
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-23"
+          onMouseEnter={false}
+          onMouseLeave={false}>
           <div
-            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-23"
-            onMouseEnter={false}
-            onMouseLeave={false}>
-            <div
-              className="AutoUI_ui_Dropdown-24 ">
-              
-              <span
-                className="AutoUI_ui_Dropdown-42">
-                <div
-                  className="AutoUI_ui_SelectBox-27 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-                  <div
-                    className="AutoUI_ui_SelectBox-70">
-                    <div>
-                      Select Fields
-                    </div>
-                    <div>
-                      
-                    </div>
-                  </div>
-                  <div
-                    className="AutoUI_ui_SelectBox-106">
-                    <svg
-                      height="5px"
-                      viewBox="0 0 9 5"
-                      width="9px">
-                      <g
-                        fill="none"
-                        fillRule="evenodd"
-                        stroke="none"
-                        strokeWidth="1">
-                        <polygon
-                          className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
-                          points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
-                          transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </span>
-            </div>
-            <div
-              className="AutoUI_ui_Dropdown-52     ">
+            className="AutoUI_ui_Dropdown-24 ">
+            
+            <span
+              className="AutoUI_ui_Dropdown-42">
               <div
-                className="AutoUI_ui_SelectBox-153">
+                className="AutoUI_ui_SelectBox-27 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                 <div
-                  className="AutoUI_ui_SelectBox-82">
-                  <div
-                    className="AutoUI_ui_SelectBox-93">
-                    <svg
-                      height="17px"
-                      viewBox="0 0 16 17"
-                      width="16px">
-                      <g
-                        fill="none"
-                        fillRule="evenodd"
-                        stroke="none"
-                        strokeWidth="1">
-                        <circle
-                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
-                          cx="7.5"
-                          cy="7.5"
-                          r="6.5" />
-                        <path
-                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
-                          d="M11.7538745,12.6062275 L15.5,16.5"
-                          strokeLinecap="square" />
-                      </g>
-                    </svg>
+                  className="AutoUI_ui_SelectBox-70">
+                  <div>
+                    Select Fields
                   </div>
                   <div>
-                    <input
-                      aria-labelledby="label-search"
-                      autoComplete="off"
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-87"
-                      id="search"
-                      name="search"
-                      placeholder="Search"
-                      required={false}
-                      type="text"
-                      value="" />
+                    
                   </div>
                 </div>
-                <ul
-                  className="AutoUI_ui_SelectBox-135 false"
-                  style={
-                    Object {
-                      "height": "auto",
-                      "maxHeight": "180px",
-                      "width": "100%",
-                    }
-                  }>
-                  
-                </ul>
+                <div
+                  className="AutoUI_ui_SelectBox-106">
+                  <svg
+                    height="5px"
+                    viewBox="0 0 9 5"
+                    width="9px">
+                    <g
+                      fill="none"
+                      fillRule="evenodd"
+                      stroke="none"
+                      strokeWidth="1">
+                      <polygon
+                        className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+                        points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
+                        transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+                    </g>
+                  </svg>
+                </div>
               </div>
+            </span>
+          </div>
+          <div
+            className="AutoUI_ui_Dropdown-52     ">
+            <div
+              className="AutoUI_ui_SelectBox-153">
+              <div
+                className="AutoUI_ui_SelectBox-82">
+                <div
+                  className="AutoUI_ui_SelectBox-93">
+                  <svg
+                    height="17px"
+                    viewBox="0 0 16 17"
+                    width="16px">
+                    <g
+                      fill="none"
+                      fillRule="evenodd"
+                      stroke="none"
+                      strokeWidth="1">
+                      <circle
+                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                        cx="7.5"
+                        cy="7.5"
+                        r="6.5" />
+                      <path
+                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                        d="M11.7538745,12.6062275 L15.5,16.5"
+                        strokeLinecap="square" />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <input
+                    aria-labelledby="label-search"
+                    autoComplete="off"
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-87"
+                    id="search"
+                    name="search"
+                    placeholder="Search"
+                    required={false}
+                    type="text"
+                    value="" />
+                </div>
+              </div>
+              <ul
+                className="AutoUI_ui_SelectBox-135 false"
+                style={
+                  Object {
+                    "height": "auto",
+                    "maxHeight": "180px",
+                    "width": "100%",
+                  }
+                }>
+                
+              </ul>
             </div>
           </div>
         </div>

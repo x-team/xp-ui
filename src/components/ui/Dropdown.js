@@ -206,37 +206,44 @@ class Dropdown extends PureComponent<Props, State> {
           : child
       })
 
-    return (children || label || icon) ? (
-      <ClickOutside onClickOutside={this.close}>
-        <div
-          className={rootClasses}
-          onMouseEnter={hover && this.open}
-          onMouseLeave={hover && this.close}
-        >
-          <div className={labelClasses} onClick={handleClick}>
-            {icon && <SvgIcon icon={icon} color='text' />}
-            {label && <span className={styles.labelElement}>{label}</span>}
-            {indicator && (
-              <span className={styles.triangle}>
-                <SvgIcon
-                  icon={open ? 'triangleup' : 'triangledown'}
-                  color='text'
-                />
-              </span>
-            )}
-          </div>
-          {children && (
-            <div className={contentClasses}>
-              {tooltip ? (
-                <div className={tooltipClasses}>
-                  {dropdownChildren()}
-                </div>
-              ) : dropdownChildren()}
-            </div>
+    const renderContent = () => (
+      <div
+        className={rootClasses}
+        onMouseEnter={hover && this.open}
+        onMouseLeave={hover && this.close}
+      >
+        <div className={labelClasses} onClick={handleClick}>
+          {icon && <SvgIcon icon={icon} color='text' />}
+          {label && <span className={styles.labelElement}>{label}</span>}
+          {indicator && (
+            <span className={styles.triangle}>
+              <SvgIcon
+                icon={open ? 'triangleup' : 'triangledown'}
+                color='text'
+              />
+            </span>
           )}
         </div>
-      </ClickOutside>
-    ) : null
+        {children && (
+          <div className={contentClasses}>
+            {tooltip ? (
+              <div className={tooltipClasses}>
+                {dropdownChildren()}
+              </div>
+            ) : dropdownChildren()}
+          </div>
+        )}
+      </div>
+    )
+
+    const renderContentWrapper = () => open
+      ? (
+        <ClickOutside onClickOutside={this.close}>
+          {renderContent()}
+        </ClickOutside>
+      ) : renderContent()
+
+    return (children || label || icon) ? renderContentWrapper() : null
   }
 }
 
