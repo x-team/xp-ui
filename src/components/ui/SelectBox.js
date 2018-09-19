@@ -13,6 +13,19 @@ import type { Element } from 'react'
 
 const cmz = require('cmz')
 
+const close = cmz(`
+  & {
+    position: absolute
+    z-index: 5
+    top: calc(50% - 7px)
+    cursor: pointer
+  }
+
+  & svg {
+    position: absolute
+  }
+`)
+
 const cx = {
   selectbox: cmz(`
     background: ${theme.baseBrighter}
@@ -116,17 +129,15 @@ const cx = {
     }
   `),
 
-  close: cmz(`
+  close: cmz(close, `
     & {
-      position: absolute
-      z-index: 5
-      top: calc(50% - 7px)
       right: 40px
-      cursor: pointer
     }
+  `),
 
-    & svg {
-      position: absolute
+  clear: cmz(close, `
+    & {
+      right: 55px
     }
   `),
 
@@ -365,11 +376,13 @@ type Props = {
   expanded?: boolean,
   shouldSortItems?: boolean,
   hasSearch?: boolean,
+  hasClear?: boolean,
   lined?: boolean,
   search?: string,
   collectionLabel?: string,
   onSelect?: Function,
   onClick?: Function,
+  onClear?: Function,
   onCreateNew?: Function,
   onSearch?: Function,
   onEdit?: Function,
@@ -412,6 +425,7 @@ class SelectBox extends Component<Props, State> {
     items: [],
     expanded: false,
     hasSearch: false,
+    hasClear: false,
     lined: false,
     collectionLabel: '',
     dismissTimeout,
@@ -513,6 +527,23 @@ class SelectBox extends Component<Props, State> {
         onSearch(input)
       }
     })
+  }
+
+  handleClearClick = (e: any) => {
+    e.stopPropagation && e.stopPropagation()
+    const { onClear } = this.props
+    const { view } = this.state
+
+    const filteredItems = view && view.map(item => {
+      return { ...item, selected: false }
+    })
+
+    this.setState({
+      ...this.state,
+      view: filteredItems
+    })
+
+    onClear && onClear()
   }
 
   handleSelect = (e: any, item: Item) => {
@@ -639,6 +670,7 @@ class SelectBox extends Component<Props, State> {
       width,
       expanded,
       hasSearch,
+      hasClear,
       onSelect,
       onClick,
       onEdit,
@@ -651,7 +683,9 @@ class SelectBox extends Component<Props, State> {
     } = this.props
     const { view, search } = this.state
 
-    const filteredItems = view && view.filter((item: Item) => !item.hidden && item.status !== STATUS.DISMISSED)
+    const isItemNotDismissed = (item: Item) => item.status !== STATUS.DISMISSED
+    const filteredItems = view && view.filter((item: Item) => !item.hidden && isItemNotDismissed(item))
+    const selectedItems = view && view.filter(isItemNotDismissed)
 
     const editionButton = [cx.controlButton, cx.editableButton].join(' ')
 
@@ -950,8 +984,10 @@ class SelectBox extends Component<Props, State> {
       )
     }
 
-    const selectsClass = filteredItems && filteredItems.filter(item => item.selected).length > 0
-      ? cx.selects : cx.selectsEmpty
+    const filteredSelectedItems = (selectedItems || []).filter(item => item.selected)
+    const selectsClass = filteredSelectedItems.length
+      ? cx.selects
+      : cx.selectsEmpty
 
     const renderSearchLabel = (isSearch: boolean = false) => isSearch ? (
       <div className={cx.search}>
@@ -982,9 +1018,14 @@ class SelectBox extends Component<Props, State> {
             {placeholder}
           </div>
           <div>
-            {filteredItems.filter(item => item.selected).map(item => item.value).join(', ')}
+            {filteredSelectedItems.map(item => item.value).join(', ')}
           </div>
         </div>
+        { (hasClear && filteredSelectedItems.length > 0) &&
+          <div className={cx.clear} onClick={e => this.handleClearClick(e)}>
+            <SvgIcon icon='x' color='grayscale' hover='default' />
+          </div>
+        }
         <div className={cx.triangle}>
           <SvgIcon icon='triangledown' color='grayscale' />
         </div>

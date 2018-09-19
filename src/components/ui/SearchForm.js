@@ -116,6 +116,7 @@ type Props = {
   mode: 'card' | 'tabular',
   lists: Array<*>,
   onSelectList: Function,
+  onClearList: Function,
   keywords: string,
   onChangeKeywords: Function,
   fields: Array<*>,
@@ -130,6 +131,7 @@ class SearchForm extends PureComponent<Props> {
     mode: 'card',
     lists: [],
     onSelectList: () => {},
+    onClearList: () => {},
     keywords: '',
     onChangeKeywords: () => {},
     fields: [],
@@ -149,6 +151,7 @@ class SearchForm extends PureComponent<Props> {
       mode,
       lists,
       onSelectList,
+      onClearList,
       keywords,
       onChangeKeywords,
       fields,
@@ -168,9 +171,11 @@ class SearchForm extends PureComponent<Props> {
               items={lists}
               visibleItems={3}
               hasSearch
+              hasClear
               collectionLabel='List'
-              onSelect={onSelectList}
               shouldSortItems={false}
+              onClick={onSelectList}
+              onClear={onClearList}
               append={
                 <Button type='button' selectbox onClick={this.handleModalOpen}>
                   <span><SvgIcon icon='edit' /> Edit lists</span>
