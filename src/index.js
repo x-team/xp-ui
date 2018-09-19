@@ -15,6 +15,7 @@ import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
+import InlineEditor from './components/ui/InlineEditor'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
 import Keywords from './components/ui/Keywords'
@@ -42,7 +43,6 @@ import TruncatedList from './components/ui/TruncatedList'
 import Typography from './components/ui/Typography'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
-import InlineEditor from './components/ui/InlineEditor'
 
 export {
   ApplicantBadge,
@@ -62,6 +62,7 @@ export {
   FooterList,
   HeaderBar,
   HorizontalRuler,
+  InlineEditor,
   InputField,
   InputGroup,
   Keywords,
@@ -88,6 +89,5 @@ export {
   TruncatedList,
   Typography,
   VideoPlayer,
-  XIcon,
-  InlineEditor
+  XIcon
 }
