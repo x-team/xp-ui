@@ -15,6 +15,7 @@ import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
+import InlineEditor from './components/ui/InlineEditor'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
 import Keywords from './components/ui/Keywords'
@@ -61,6 +62,7 @@ export {
   FooterList,
   HeaderBar,
   HorizontalRuler,
+  InlineEditor,
   InputField,
   InputGroup,
   Keywords,
