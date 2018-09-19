@@ -25,6 +25,7 @@ import MilestonesScreen from './components/ui/MilestonesScreen'
 import Modal from './components/ui/Modal'
 import Note from './components/ui/Note'
 import NotesFeed from './components/ui/NotesFeed'
+import PencilButton from './components/ui/PencilButton'
 import Roadmap from './components/ui/Roadmap'
 import RoadmapHero from './components/ui/RoadmapHero'
 import RoadmapLevel from './components/ui/RoadmapLevel'
@@ -71,6 +72,7 @@ export {
   Modal,
   Note,
   NotesFeed,
+  PencilButton,
   Roadmap,
   RoadmapHero,
   RoadmapLevel,
