@@ -529,18 +529,17 @@ class SelectBox extends Component<Props, State> {
     })
   }
 
-  handleClearClick = (e: any) => {
-    e.stopPropagation && e.stopPropagation()
+  handleClearClick = (event: any) => {
+    event.stopPropagation()
     const { onClear } = this.props
     const { view } = this.state
 
-    const filteredItems = view && view.map(item => {
-      return { ...item, selected: false }
-    })
-
     this.setState({
       ...this.state,
-      view: filteredItems
+      view: (view || []).map(item => ({
+        ...item,
+        selected: false
+      }))
     })
 
     onClear && onClear()
@@ -988,6 +987,7 @@ class SelectBox extends Component<Props, State> {
     const selectsClass = filteredSelectedItems.length
       ? cx.selects
       : cx.selectsEmpty
+    const shouldShowClearElement = hasClear && filteredSelectedItems.length > 0
 
     const renderSearchLabel = (isSearch: boolean = false) => isSearch ? (
       <div className={cx.search}>
@@ -1018,14 +1018,17 @@ class SelectBox extends Component<Props, State> {
             {placeholder}
           </div>
           <div>
-            {filteredSelectedItems.map(item => item.value).join(', ')}
+            {filteredSelectedItems
+              .reduce((acc, { value }) => (
+                acc ? `${acc}, ${value}` : value
+              ), '')}
           </div>
         </div>
-        { (hasClear && filteredSelectedItems.length > 0) &&
-          <div className={cx.clear} onClick={e => this.handleClearClick(e)}>
+        {shouldShowClearElement && (
+          <div className={cx.clear} onClick={this.handleClearClick}>
             <SvgIcon icon='x' color='grayscale' hover='default' />
           </div>
-        }
+        )}
         <div className={cx.triangle}>
           <SvgIcon icon='triangledown' color='grayscale' />
         </div>

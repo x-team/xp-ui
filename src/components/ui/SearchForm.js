@@ -130,8 +130,6 @@ class SearchForm extends PureComponent<Props> {
   static defaultProps = {
     mode: 'card',
     lists: [],
-    onSelectList: () => {},
-    onClearList: () => {},
     keywords: '',
     onChangeKeywords: () => {},
     fields: [],
