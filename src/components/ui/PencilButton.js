@@ -3,19 +3,20 @@
 
 import React, { Component } from 'react'
 
-import type { Color } from './SvgIcon'
 import SvgIcon from './SvgIcon'
+
+import type { Color } from './SvgIcon'
 
 const cmz = require('cmz')
 
-const styles = {
+const cx = {
   editButton: cmz(`
     background: transparent
     border: none
-    cursor: pointer
     opacity: 0
     padding: 5px
     transition: opacity .25s linear
+    cursor: pointer
   `),
 
   editButtonVisible: cmz(`
@@ -45,11 +46,13 @@ class PencilButton extends Component<Props, void> {
 
   render () {
     const { visible, color, hover } = this.props
+    const visibleClassName = visible ? cx.editButtonVisible : ''
+
     return (
       <span
         role='button'
         onClick={this.handleClick}
-        className={`${styles.editButton} ${visible ? styles.editButtonVisible : ''}`}
+        className={`${cx.editButton} ${visibleClassName}`}
       >
         <SvgIcon icon='edit' color={color} hover={hover} />
       </span>
