@@ -131,17 +131,14 @@ class SearchForm extends PureComponent<Props> {
     mode: 'card',
     lists: [],
     keywords: '',
-    onChangeKeywords: () => {},
     fields: [],
-    onSelectField: () => {},
-    onSubmit: () => {},
-    openListEditorModal: () => {},
     renderApplicantsStatusFilter: null
   }
 
   handleModalOpen = (e: Object) => {
+    const { openListEditorModal } = this.props
     e.preventDefault()
-    this.props.openListEditorModal()
+    openListEditorModal && openListEditorModal()
   }
 
   render () {
