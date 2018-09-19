@@ -925,6 +925,7 @@ class SelectBox extends Component<Props, State> {
       const items = shouldSortItems
         ? filteredItems.sort(sortById)
         : filteredItems
+
       return (
         <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
           height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
