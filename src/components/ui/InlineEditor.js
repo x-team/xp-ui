@@ -18,10 +18,12 @@ const cx = {
       text-decoration: underline
     }
   `),
+
   button: cmz(`
     margin-top: 10px
     margin-right: 10px
   `),
+
   warningMessage: cmz(`
     padding: 10px 0
   `)
@@ -53,7 +55,7 @@ type Props = {
   isEditable: boolean,
   /** To control whether the component can be saved or not */
   isValid: boolean,
-  /** To control whether the component will save changes on enter or not */
+  /** To control whether the component will save changes on Enter or not */
   shouldSaveOnEnter: boolean,
   /** Editing mode render function */
   editor(props: EditorProps): any,
@@ -97,6 +99,7 @@ class InlineEditor extends PureComponent<Props, State> {
   renderControls = () => {
     const { editValue } = this.state
     const { value } = this.props
+
     return (
       <div>
         <Button

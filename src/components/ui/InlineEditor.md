@@ -6,7 +6,7 @@ With InputField usage:
     <InputField
       label="Example"
       autoFocus
-      onChange={evt => onValueChange(evt.target.value)}
+      onChange={event => onValueChange(event.target.value)}
       value={value}
     />
   )}
@@ -22,7 +22,7 @@ With InputField usage:
 />
 ```
 
-With TextArea usage:
+With TextArea usage (not saving on Enter):
 
 ```js
 <InlineEditor
@@ -45,7 +45,7 @@ With TextArea usage:
 />
 ```
 
-With Keywords usage:
+With Keywords usage (not saving on Enter):
 
 ```js
 <InlineEditor
@@ -79,14 +79,13 @@ With Keywords usage:
 Not editable usage (editable false):
 
 ```js
-
 <InlineEditor
   isEditable={false}
   editor={({ onValueChange, value }) => (
     <InputField
       label="Example"
       autoFocus
-      onChange={evt => onValueChange(evt.target.value)}
+      onChange={event => onValueChange(event.target.value)}
       value={value}
     />
   )}
@@ -106,14 +105,13 @@ Invalid usage (isValid false):
 The same button won't be triggered
 
 ```js
-
 <InlineEditor
   isValid={false}
   editor={({ onValueChange, value }) => (
     <InputField
       label="Example"
       autoFocus
-      onChange={evt => onValueChange(evt.target.value)}
+      onChange={event => onValueChange(event.target.value)}
       value={value}
     />
   )}
