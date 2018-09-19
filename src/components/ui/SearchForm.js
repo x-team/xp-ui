@@ -170,6 +170,7 @@ class SearchForm extends PureComponent<Props> {
               hasSearch
               collectionLabel='List'
               onSelect={onSelectList}
+              shouldSortItems={false}
               append={
                 <Button type='button' selectbox onClick={this.handleModalOpen}>
                   <span><SvgIcon icon='edit' /> Edit lists</span>
