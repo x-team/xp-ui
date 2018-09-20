@@ -7,6 +7,7 @@ const SvgIcon = require('./SvgIcon').default;
   id={123123}
   name='Applicant full name'
   email='applicant@email.com'
+  status='accepted'
   info={[
     {
       label: 'Avail. date:',
@@ -52,6 +53,7 @@ Active card:
 ```js
 const SvgIcon = require('./SvgIcon').default;
 <ApplicantBadge
+  status='pending'
   active={true}
   mode='card'
   id={123123}
@@ -108,6 +110,7 @@ Basic tabular:
 ```js
 const SvgIcon = require('./SvgIcon').default;
 <ApplicantBadge
+  status='excluded'
   mode='tabular'
   id={123123}
   name='Applicant full name'
@@ -185,6 +188,7 @@ With children:
 <ApplicantBadge
   id={123123}
   email='applicant@x-team.com'
+  status='accepted'
 >
   <button>Hello</button>
   <button>World</button>
@@ -196,6 +200,7 @@ With a custom avatar:
 ```js
 <ApplicantBadge
   id={123123}
+  status='accepted'
   name='Applicant'
   email='applicant@x-team.com'
   avatar=<div style={{width: 90, height: 90, borderRadius: '50%', background: 'orange' }} />

@@ -27,6 +27,8 @@ type Action = {
   tooltipClassName?: string
 }
 
+type Status = 'accepted' | 'pending' | 'excluded'
+
 type Props = {
   id: number,
   mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
@@ -38,10 +40,42 @@ type Props = {
   avatar?: Element<*>,
   children?: Element<*> | string,
   onClick?: Function,
-  actions?: Array<Action>
+  actions?: Array<Action>,
+  status: Status
 }
 
 const cmz = require('cmz')
+
+const statusDotBaseStyle = cmz(`
+  display: inline-block
+  box-sizing: border-box
+  width: 10px
+  height: 10px
+  margin: 1px 10px 0 10px
+  border-radius: 50%
+  align-self: center
+`)
+
+const statusDotStyles = {
+  accepted: cmz(
+    statusDotBaseStyle,
+    `
+      background-color: ${theme.statusAccepted}
+    `
+  ),
+  pending: cmz(
+    statusDotBaseStyle,
+    `
+      background-color: ${theme.statusPending}
+    `
+  ),
+  excluded: cmz(
+    statusDotBaseStyle,
+    `
+      background-color: ${theme.statusExluded}
+    `
+  )
+}
 
 const listTheme = {
   mode: cmz(
@@ -401,6 +435,10 @@ class ApplicantBadge extends PureComponent<Props> {
     info: []
   }
 
+  renderStatusIndicator = () => (
+    <span className={statusDotStyles[this.props.status]} />
+  )
+
   render () {
     const {
       id,
@@ -472,7 +510,10 @@ class ApplicantBadge extends PureComponent<Props> {
 
     return id ? (
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
-        <div className={cx.name}>{name || email}</div>
+        <div className={cx.name}>
+          {name || email}
+          {this.renderStatusIndicator()}
+        </div>
         <div className={cx.avatar}>
           {avatar || (
             <Avatar
