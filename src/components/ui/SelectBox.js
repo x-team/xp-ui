@@ -395,7 +395,8 @@ type Props = {
   onArchive?: Function,
   onDelete?: Function,
   append?: Element<*>|string,
-  dismissTimeout?: number
+  dismissTimeout?: number,
+  areItemsToggleable?: boolean,
 }
 
 type State = {
@@ -435,7 +436,8 @@ class SelectBox extends Component<Props, State> {
     lined: false,
     collectionLabel: '',
     dismissTimeout,
-    shouldSortItems: true
+    shouldSortItems: true,
+    areItemsToggleable: true
   }
 
   state: State = {
@@ -562,16 +564,16 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleClick = (e: any, item: Item) => {
-    e.stopPropagation && e.stopPropagation()
-    const { onClick } = this.props
+  handleClick = (event: any, item: Item) => {
+    event.stopPropagation()
+    const { onClick, areItemsToggleable } = this.props
     if (item.status !== STATUS.SELECTING && onClick) {
       onClick({
         ...this.getUncachedItem(item),
-        selected: !item.selected
+        selected: !areItemsToggleable || !item.selected
       })
     } else {
-      this.handleSelect(e, item)
+      this.handleSelect(event, item)
     }
   }
 
