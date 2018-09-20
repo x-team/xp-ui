@@ -142,10 +142,11 @@ class ApplicantGridHeader extends PureComponent<Props> {
     }
     const {
       sortBy,
-      sortDirection
+      sortDirection,
+      onSortingChange
     } = this.props
     const direction = getSortDirection(name, sortBy, sortDirection)
-    this.props.onSortingChange({ sortBy: name, sortDirection: direction })
+    onSortingChange && onSortingChange({ sortBy: name, sortDirection: direction })
   }
 
   render () {
@@ -165,33 +166,36 @@ class ApplicantGridHeader extends PureComponent<Props> {
     const renderCell = (headerColumn) => {
       if (Array.isArray(headerColumn)) {
         return (
-          <div key={`grouped${headerColumns.indexOf(headerColumn).toString()}`} className={cx.grouped}>
+          <div
+            key={`grouped${headerColumns.indexOf(headerColumn).toString()}`}
+            className={cx.grouped}
+          >
             {headerColumn.map(renderCell)}
           </div>
         )
-      } else {
-        const {
-          isSortable,
-          name,
-          size,
-          label
-        } = headerColumn
-        const columnClassName = getClassName({
-          [cx[size]]: true,
-          [cx.sortable]: isSortable,
-          [cx[`${direction}Sort`]]: sortBy === name
-        })
-
-        return (
-          <span
-            key={name}
-            className={columnClassName}
-            onClick={this.handleColumnClick(name, isSortable)}
-          >
-            {label}
-          </span>
-        )
       }
+
+      const {
+        isSortable,
+        name,
+        size,
+        label
+      } = headerColumn
+      const columnClassName = getClassName({
+        [cx[size]]: true,
+        [cx.sortable]: isSortable,
+        [cx[`${direction}Sort`]]: sortBy === name
+      })
+
+      return (
+        <span
+          key={name}
+          className={columnClassName}
+          onClick={this.handleColumnClick(name, isSortable)}
+        >
+          {label}
+        </span>
+      )
     }
 
     return (

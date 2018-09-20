@@ -11,8 +11,9 @@ Card view mode:
   fields={[{id:1,value:'an unselected field'}]}
   onSelectField={() => console.log('onSelectField')}
   onSubmit={() => console.log('onSubmit')}
-  openListEditorModal={(e) => {e.preventDefault();console.log('openListEditorModal')}}
+  openListEditorModal={() => console.log('openListEditorModal')}
   renderApplicantsStatusFilter={'Here it goes ApplicantsStatusFilter component'}
+  switchDisplay={(mode) => console.log('switchDisplay:', mode)}
 />
 ```
 
@@ -29,8 +30,9 @@ Tabular view mode:
   fields={[{id:1,value:'an unselected field'}]}
   onSelectField={() => console.log('onSelectField')}
   onSubmit={() => console.log('onSubmit')}
-  openListEditorModal={(e) => {e.preventDefault();console.log('openListEditorModal')}}
+  openListEditorModal={() => console.log('openListEditorModal')}
   renderApplicantsStatusFilter={'Here it goes ApplicantsStatusFilter component'}
+  switchDisplay={(mode) => console.log('switchDisplay:', mode)}
 />
 ```
 

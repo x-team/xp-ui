@@ -83,6 +83,100 @@ const itemsArray = [
 />
 ```
 
+Simple view for Search module with one selected:
+
+```js
+const Button = require('./Button.js').default;
+const SvgIcon = require('./SvgIcon.js').default;
+const itemsArray = [
+  {
+    id: 2,
+    value: 'registered',
+    selected: true
+  },
+  {
+    id: 3,
+    value: 'portfolio-building'
+  },
+  {
+    id: 4,
+    value: 'portfolio-review'
+  },
+  {
+    id: 5,
+    value: 'social-media-screen'
+  },
+  {
+    id: 6,
+    value: 'react-shortlist'
+  }
+];
+
+<SelectBox
+  placeholder='Select Lists'
+  collectionLabel='list'
+  items={itemsArray}
+  width={330}
+  visibleItems={4}
+  hasSearch={true}
+  append={(
+    <Button selectbox>
+      <SvgIcon icon='edit' /> Edit Lists
+    </Button>
+  )}
+  onClick={item => console.log('onClick:', item)}
+/>
+```
+
+Simple view, selectable with many selected:
+
+```js
+const Button = require('./Button.js').default;
+const SvgIcon = require('./SvgIcon.js').default;
+const itemsArray = [
+  {
+    id: 2,
+    value: 'registered',
+    selected: true
+  },
+  {
+    id: 3,
+    value: 'portfolio-building',
+    selected: true
+  },
+  {
+    id: 4,
+    value: 'portfolio-review',
+    selected: true
+  },
+  {
+    id: 5,
+    value: 'social-media-screen',
+    selected: true
+  },
+  {
+    id: 6,
+    value: 'react-shortlist',
+    selected: true
+  }
+];
+
+<SelectBox
+  placeholder='Select Lists'
+  collectionLabel='list'
+  items={itemsArray}
+  width={330}
+  visibleItems={4}
+  hasSearch={true}
+  append={(
+    <Button selectbox>
+      <SvgIcon icon='edit' /> Edit Lists
+    </Button>
+  )}
+  onSelect={item => console.log('onSelect:', item)}
+/>
+```
+
 Complete view for Edit Lists:
 
 ```js

@@ -54,7 +54,7 @@ const styles = {
     z-index: 999
     visibility: hidden
     opacity: 0
-    transition: visibility 0s linear 0.1s, opacity 0.1s linear
+    transition: visibility 0 linear 0.1s, opacity 0.1s linear
     width: inherit
     top: 100%
   `),
@@ -207,8 +207,8 @@ class Dropdown extends PureComponent<Props, State> {
       targetYOrigin === 'top' ? styles.tooltipTop : ''
     ].join(' ')
 
-    const handleClick = (e: any) => {
-      e && e.preventDefault() && e.stopPropagation()
+    const handleClick = (e: Object) => {
+      e.preventDefault() && e.stopPropagation()
       onClick && onClick()
       return toggle ? this.toggle() : this.open()
     }

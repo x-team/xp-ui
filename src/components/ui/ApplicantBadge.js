@@ -7,13 +7,11 @@ import Dropdown from './Dropdown'
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
+import { size } from '../../utils/helpers'
 
 import type { Element } from 'react'
-
-type DisplayModes = {
-  LIST: 'list',
-  TABULAR: 'tabular'
-}
+import type { DisplayModes } from '../../utils/types'
+import { DISPLAY_MODES } from '../../utils/constants'
 
 type Info = {
   value: string,
@@ -44,11 +42,6 @@ type Props = {
 }
 
 const cmz = require('cmz')
-
-const DISPLAY_MODES: DisplayModes = {
-  LIST: 'list',
-  TABULAR: 'tabular'
-}
 
 const listTheme = {
   mode: cmz(
@@ -471,8 +464,8 @@ class ApplicantBadge extends PureComponent<Props> {
       />
     )
 
-    const handleClick = (e: any) => {
-      e && e.stopPropagation()
+    const handleClick = (e: Object) => {
+      e.stopPropagation()
       const { id, onClick } = this.props
       onClick && onClick(id)
     }
@@ -510,10 +503,10 @@ class ApplicantBadge extends PureComponent<Props> {
           ))}
         </div>
         <div className={cx.infos}>
-          {info && info.length > 0 && mapInfosToRender(info)}
+          {size(info) > 0 && mapInfosToRender(info)}
         </div>
         <div className={cx.tags}>
-          {tags && tags.length > 0 && mapTagsToRender(tags)}
+          {size(tags) > 0 && mapTagsToRender(tags)}
         </div>
         {children && (
           <div className={cx.children}>

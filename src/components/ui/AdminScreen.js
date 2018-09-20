@@ -35,7 +35,6 @@ class AdminScreen extends PureComponent<Props, void> {
     header: null,
     children: null,
     modal: {
-      onClose: () => {},
       content: null
     }
   }

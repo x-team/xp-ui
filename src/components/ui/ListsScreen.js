@@ -7,24 +7,16 @@ import ProfileHeaderLinks from './ProfileHeaderLinks'
 import theme from '../../styles/theme'
 
 import type { Element } from 'react'
+import type { DisplayModes } from '../../utils/types'
+import { DISPLAY_MODES } from '../../utils/constants'
 
 const cmz = require('cmz')
-
-type DisplayModes = {
-  LIST: 'list',
-  TABULAR: 'tabular'
-}
 
 type Props = {
   applicant?: Element<*>,
   search?: Element<*>,
   result?: Element<*>,
   mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
-}
-
-const DISPLAY_MODES: DisplayModes = {
-  LIST: 'list',
-  TABULAR: 'tabular'
 }
 
 const dimensions = {
@@ -57,9 +49,7 @@ const cx = {
 
   applicantGrid: cmz(`
     box-sizing: border-box
-  `),
-
-  applicant: cmz(``)
+  `)
 }
 
 const listTheme = {
@@ -87,7 +77,7 @@ const listTheme = {
     padding: ${dimensions.searchHeight[DISPLAY_MODES.LIST]} 30px 30px
   `),
 
-  applicant: cmz(cx.applicant, `
+  applicant: cmz(`
     width: calc(100% - ${dimensions.searchWidth[DISPLAY_MODES.LIST]})
     position: fixed
     left: ${dimensions.searchWidth[DISPLAY_MODES.LIST]}
@@ -109,7 +99,7 @@ const listTheme = {
 }
 
 const tabularTheme = {
-  main: cmz(cx.main, ``),
+  main: cmz(cx.main),
 
   search: cmz(cx.search, `
     width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
@@ -130,7 +120,7 @@ const tabularTheme = {
     border-top: 1px solid ${theme.lineSilver1}
   `),
 
-  applicant: cmz(cx.applicant, `
+  applicant: cmz(`
     display: none
   `),
 

@@ -7,6 +7,9 @@ import TruncatedList from './TruncatedList'
 
 import theme from '../../styles/theme'
 
+import type { DisplayModes } from '../../utils/types'
+import { DISPLAY_MODES } from '../../utils/constants'
+
 const cmz = require('cmz')
 
 const listTheme = {
@@ -52,11 +55,6 @@ const tabularTheme = {
   `)
 }
 
-type DisplayModes = {
-  LIST: 'list',
-  TABULAR: 'tabular'
-}
-
 type Props = {
   items?: Array<*>,
   mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
@@ -68,11 +66,6 @@ type Props = {
   onKeyPress?: Function
 }
 
-const DISPLAY_MODES: DisplayModes = {
-  LIST: 'list',
-  TABULAR: 'tabular'
-}
-
 type State = {
   open: boolean
 }
@@ -82,8 +75,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
     items: [],
     mode: DISPLAY_MODES.LIST,
     visible: 50,
-    increment: 50,
-    onKeyPress: () => {}
+    increment: 50
   }
 
   handleViewMore = (showMore: Function) => {
@@ -97,12 +89,16 @@ class ApplicantGrid extends PureComponent<Props, State> {
     const { TABULAR } = DISPLAY_MODES
     const cx = mode === TABULAR ? tabularTheme : listTheme
 
+    const handleKeyPress = () => {
+      onKeyPress && onKeyPress()
+    }
+
     return items ? (
       <div
         className={cx.wrapper}
         data-test='applicants'
         tabIndex={0}
-        onKeyPress={onKeyPress}
+        onKeyPress={handleKeyPress}
       >
         <TruncatedList
           items={items}

@@ -28,7 +28,7 @@ Basic color:
   <SvgIcon icon="paperplane" />
   <SvgIcon icon="archive" />
   <SvgIcon icon="tabular" />
-  <SvgIcon icon="cards" />
+  <SvgIcon icon="grid" />
 </div>
 ```
 
@@ -62,7 +62,7 @@ Inverted color:
   <SvgIcon icon="paperplane" color="inverted" />
   <SvgIcon icon="archive" color="inverted" />
   <SvgIcon icon="tabular" color="inverted" />
-  <SvgIcon icon="cards" color="inverted" />
+  <SvgIcon icon="grid" color="inverted" />
 </div>
 ```
 
@@ -96,7 +96,7 @@ Monochrome color:
   <SvgIcon icon="paperplane" color="monochrome" />
   <SvgIcon icon="archive" color="monochrome" />
   <SvgIcon icon="tabular" color="monochrome" />
-  <SvgIcon icon="cards" color="monochrome" />
+  <SvgIcon icon="grid" color="monochrome" />
 </div>
 ```
 
@@ -130,7 +130,7 @@ Grayscale color:
   <SvgIcon icon="paperplane" color="grayscale" />
   <SvgIcon icon="archive" color="grayscale" />
   <SvgIcon icon="tabular" color="grayscale" />
-  <SvgIcon icon="cards" color="grayscale" />
+  <SvgIcon icon="grid" color="grayscale" />
 </div>
 ```
 
@@ -164,7 +164,7 @@ Text gray color:
   <SvgIcon icon="paperplane" color="text" />
   <SvgIcon icon="archive" color="text" />
   <SvgIcon icon="tabular" color="text" />
-  <SvgIcon icon="cards" color="text" />
+  <SvgIcon icon="grid" color="text" />
 </div>
 ```
 
@@ -198,7 +198,7 @@ Hover color:
   <SvgIcon icon="paperplane" color="text" hover="default" />
   <SvgIcon icon="archive" color="text" hover="default" />
   <SvgIcon icon="tabular" color="text" hover="default" />
-  <SvgIcon icon="cards" color="text" hover="default" />
+  <SvgIcon icon="grid" color="text" hover="default" />
 </div>
 ```
 

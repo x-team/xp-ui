@@ -63,8 +63,7 @@ const cx = {
       overflow-x: overlay
       overflow-y: hidden
       padding: 0 0 10px
-      transition: visibility 0s, opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
-      visibility: visible
+      transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       opacity: 1
     }
   `),
@@ -75,8 +74,7 @@ const cx = {
     }
 
     & > div:last-of-type {
-      transition: visibility 0s, opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
-      visibility: hidden
+      transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       opacity: 0
       height: 0
     }

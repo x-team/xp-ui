@@ -6,7 +6,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'tabular' | 'cards'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'tabular' | 'grid'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text'
 
 type Props = {
@@ -499,7 +499,7 @@ const getIcon = ({ icon, color, hover }) => {
       </svg>
     ),
 
-    cards: (
+    grid: (
       <svg width='17px' height='17px' viewBox='0 0 17 17'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <rect className={strokeClassName} strokeWidth='2' x='1' y='1' width='5' height='5' />

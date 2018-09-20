@@ -10,6 +10,8 @@ import ApplicantGridHeader from './ApplicantGridHeader'
 
 import theme from '../../styles/theme'
 
+import type { DisplayModes } from '../../utils/types'
+
 const cmz = require('cmz')
 
 const listTheme = {
@@ -150,7 +152,7 @@ type SortDirections = {
 }
 
 type Props = {
-  mode: 'list' | 'tabular',
+  mode: $Values<DisplayModes>, // eslint-disable-line no-undef
   lists: Array<*>,
   onSelectList: Function,
   keywords: string,
@@ -172,33 +174,30 @@ const SORT_DIRECTIONS: SortDirections = {
   DESCENDING: 'desc'
 }
 
+const SELECTBOX_HEIGTH = 3
+
 class SearchForm extends PureComponent<Props> {
   static defaultProps = {
     mode: 'list',
     lists: [],
-    onSelectList: () => {},
     keywords: '',
-    onChangeKeywords: () => {},
     fields: [],
-    onSelectField: () => {},
-    onSubmit: () => {},
-    openListEditorModal: () => {},
     renderApplicantsStatusFilter: null,
     headerColumns: [],
     sortBy: '',
-    sortDirection: SORT_DIRECTIONS.ASCENDING,
-    onSortingChange: () => {},
-    switchDisplay: () => {}
+    sortDirection: SORT_DIRECTIONS.ASCENDING
   }
 
   handleModalOpen = (e: Object) => {
+    const { openListEditorModal } = this.props
     e.preventDefault()
-    this.props.openListEditorModal()
+    openListEditorModal && openListEditorModal()
   }
 
-  handleSwitchDisplay = (e: Object, mode: string) => {
+  handleSwitchDisplay = (mode: string) => (e: Object) => {
+    const { switchDisplay } = this.props
     e.preventDefault()
-    this.props.switchDisplay(mode)
+    switchDisplay && switchDisplay(mode)
   }
 
   render () {
@@ -216,7 +215,6 @@ class SearchForm extends PureComponent<Props> {
       onSortingChange,
       sortBy,
       sortDirection
-
     } = this.props
 
     const themeClasses = mode === 'tabular' ? tabularTheme : listTheme
@@ -225,7 +223,7 @@ class SearchForm extends PureComponent<Props> {
       <div className={themeClasses.displayButtons}>
         <a
           className={themeClasses.displayButton}
-          onClick={(e) => this.handleSwitchDisplay(e, 'tabular')}
+          onClick={this.handleSwitchDisplay('tabular')}
         >
           <SvgIcon
             icon='tabular'
@@ -235,10 +233,10 @@ class SearchForm extends PureComponent<Props> {
         </a>
         <a
           className={themeClasses.displayButton}
-          onClick={(e) => this.handleSwitchDisplay(e, 'list')}
+          onClick={this.handleSwitchDisplay('list')}
         >
           <SvgIcon
-            icon='cards'
+            icon='grid'
             color={mode !== 'tabular' ? 'default' : 'grayscale'}
             hover='default'
           />
@@ -247,23 +245,26 @@ class SearchForm extends PureComponent<Props> {
     )
 
     return (
-      <div className={theme.searchFormContainer}>
-        <form onSubmit={onSubmit} className={theme.searchForm}>
-          <div className={theme.selectLists}>
-            <SelectBox
-              placeholder='Select Lists'
-              items={lists}
-              visibleItems={3}
-              hasSearch
-              collectionLabel='List'
-              onSelect={onSelectList}
-              shouldSortItems={false}
-              append={
-                <Button type='button' selectbox onClick={this.handleModalOpen}>
-                  <span><SvgIcon icon='edit' /> Edit lists</span>
-                </Button>
-              }
-            />
+      <div className={themeClasses.searchFormContainer}>
+        <form onSubmit={onSubmit} className={themeClasses.searchForm}>
+          <div className={themeClasses.selectLists}>
+            <div className={themeClasses.listsSelector}>
+              <SelectBox
+                placeholder='Select Lists'
+                items={lists}
+                visibleItems={SELECTBOX_HEIGTH}
+                hasSearch
+                collectionLabel='List'
+                onSelect={onSelectList}
+                shouldSortItems={false}
+                append={
+                  <Button type='button' selectbox onClick={this.handleModalOpen}>
+                    <span><SvgIcon icon='edit' /> Edit lists</span>
+                  </Button>
+                }
+              />
+            </div>
+            {mode !== 'tabular' && renderDislpaySwitchButtons()}
           </div>
           <Keywords
             values={keywords}
