@@ -385,5 +385,41 @@ exports[`ColorPalette-1 1`] = `
       logoGray
     </div>
   </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(95, 207, 33)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      statusAccepted
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(248, 231, 28)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      statusPending
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(246, 57, 84)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      statusExluded
+    </div>
+  </div>
 </section>
 `;
