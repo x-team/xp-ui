@@ -13,12 +13,12 @@ import type { Element } from 'react'
 
 const cmz = require('cmz')
 
-const close = cmz(`
+const controlBaseClass = cmz(`
   & {
     position: absolute
-    z-index: 5
     top: calc(50% - 7px)
     cursor: pointer
+    z-index: 5
   }
 
   & svg {
@@ -129,17 +129,23 @@ const cx = {
     }
   `),
 
-  close: cmz(close, `
-    & {
-      right: 40px
-    }
-  `),
+  close: cmz(
+    controlBaseClass,
+    `
+      & {
+        right: 40px
+      }
+    `
+  ),
 
-  clear: cmz(close, `
-    & {
-      right: 55px
-    }
-  `),
+  clear: cmz(
+    controlBaseClass,
+    `
+      & {
+        right: 55px
+      }
+    `
+  ),
 
   label: cmz(typo.baseText),
 
