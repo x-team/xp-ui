@@ -247,25 +247,23 @@ class SearchForm extends PureComponent<Props> {
     )
 
     return (
-      <div className={themeClasses.searchFormContainer}>
-        <form onSubmit={onSubmit} className={themeClasses.searchForm}>
-          <div className={themeClasses.selectLists}>
-            <div className={themeClasses.listsSelector}>
-              <SelectBox
-                placeholder='Select Lists'
-                items={lists}
-                visibleItems={3}
-                hasSearch
-                collectionLabel='List'
-                onSelect={onSelectList}
-                append={
-                  <Button type='button' selectbox onClick={this.handleModalOpen}>
-                    <span><SvgIcon icon='edit' /> Edit lists</span>
-                  </Button>
-                }
-              />
-            </div>
-            {mode !== 'tabular' && renderDislpaySwitchButtons()}
+      <div className={theme.searchFormContainer}>
+        <form onSubmit={onSubmit} className={theme.searchForm}>
+          <div className={theme.selectLists}>
+            <SelectBox
+              placeholder='Select Lists'
+              items={lists}
+              visibleItems={3}
+              hasSearch
+              collectionLabel='List'
+              onSelect={onSelectList}
+              shouldSortItems={false}
+              append={
+                <Button type='button' selectbox onClick={this.handleModalOpen}>
+                  <span><SvgIcon icon='edit' /> Edit lists</span>
+                </Button>
+              }
+            />
           </div>
           <Keywords
             values={keywords}
