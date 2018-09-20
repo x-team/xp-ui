@@ -36,9 +36,8 @@ const palette = {
   brickRed: '#D32F3B',
   wePeep: '#F7D9DC',
   bombay: '#B2B6BC',
-  green: '#5fcf21',
-  mustard: '#f8e71c',
-  red: '#f63a55'
+  lima: '#5fcf21',
+  ripeLemon: '#f8e71c'
 }
 
 export default wrap({
@@ -88,9 +87,9 @@ export default wrap({
 
   logoGray: palette.nobel,
 
-  statusAccepted: palette.green,
-  statusPending: palette.mustard,
-  statusExluded: palette.red
+  statusAccepted: palette.lima,
+  statusPending: palette.ripeLemon,
+  statusExluded: palette.radicalRed
 })
 
 export const breakpoints = {
