@@ -56,7 +56,7 @@ exports[`SearchForm-5 1`] = `
           <div
             className="AutoUI_ui_Dropdown-52     ">
             <div
-              className="AutoUI_ui_SelectBox-164">
+              className="AutoUI_ui_SelectBox-170">
               <div
                 className="AutoUI_ui_SelectBox-95">
                 <div
@@ -96,7 +96,7 @@ exports[`SearchForm-5 1`] = `
                 </div>
               </div>
               <ul
-                className="AutoUI_ui_SelectBox-146 false"
+                className="AutoUI_ui_SelectBox-152 false"
                 style={
                   Object {
                     "height": "auto",
@@ -107,7 +107,7 @@ exports[`SearchForm-5 1`] = `
                 
               </ul>
               <div
-                className="AutoUI_ui_SelectBox-325">
+                className="AutoUI_ui_SelectBox-331">
                 <button
                   className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-166 AutoUI_ui_Button-210 AutoUI_ui_Button-125"
                   type="button">
@@ -247,7 +247,7 @@ exports[`SearchForm-5 1`] = `
           <div
             className="AutoUI_ui_Dropdown-52     ">
             <div
-              className="AutoUI_ui_SelectBox-164">
+              className="AutoUI_ui_SelectBox-170">
               <div
                 className="AutoUI_ui_SelectBox-95">
                 <div
@@ -287,7 +287,7 @@ exports[`SearchForm-5 1`] = `
                 </div>
               </div>
               <ul
-                className="AutoUI_ui_SelectBox-146 false"
+                className="AutoUI_ui_SelectBox-152 false"
                 style={
                   Object {
                     "height": "auto",

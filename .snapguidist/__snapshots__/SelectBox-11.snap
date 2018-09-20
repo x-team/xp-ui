@@ -46,7 +46,7 @@ exports[`SelectBox-11 1`] = `
       </div>
     </div>
     <ul
-      className="AutoUI_ui_SelectBox-146 expanded"
+      className="AutoUI_ui_SelectBox-152 expanded"
       style={
         Object {
           "height": "240px",
