@@ -48,7 +48,7 @@ const statusDotBaseStyle = cmz(`
   box-sizing: border-box
   width: 10px
   height: 10px
-  margin: 1px 10px  0 15px
+  margin: 1px 10px 0 10px
   border-radius: 50%
   align-self: center
 `)
