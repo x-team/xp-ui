@@ -679,20 +679,13 @@ exports[`SvgIcon-11 1`] = `
       transform="scale(1.333) translate(-3, -3)" />
   </svg>
   <svg
-<<<<<<< HEAD
     height="16px"
     viewBox="0 0 15 16"
     width="15px">
-=======
-    height="13px"
-    viewBox="0 0 12 13"
-    width="12px">
->>>>>>> origin/release-sept-17-23
     <g
       fill="none"
       fillRule="evenodd"
       stroke="none"
-<<<<<<< HEAD
       strokeWidth="1">
       <rect
         className="AutoUI_ui_SvgIcon-94 AutoUI_ui_SvgIcon-101"
@@ -769,11 +762,19 @@ exports[`SvgIcon-11 1`] = `
         width="5"
         x="11"
         y="11" />
-=======
+    </g>
+  </svg>
+  <svg
+    height="13px"
+    viewBox="0 0 12 13"
+    width="12px">
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="none"
       strokeWidth="10">
       <g
         className="AutoUI_ui_SvgIcon-94 AutoUI_ui_SvgIcon-101"
-        fill="#FFFFFF"
         transform="translate(-7.000000, -7.000000)">
         <g
           transform="translate(10.365228, 10.944176) rotate(-135.000000) translate(-10.365228, -10.944176) translate(5.865228, 2.944176)">
@@ -781,7 +782,6 @@ exports[`SvgIcon-11 1`] = `
             d="M1.29684211,0.538947368 C1.04799179,0.307066223 0.660202339,0.313908315 0.419686906,0.554423748 C0.179171473,0.794939181 0.172329381,1.18272863 0.404210526,1.43157895 L7.14105263,8.16842105 L0.404210526,14.6694737 C0.172329381,14.918324 0.179171473,15.3061135 0.419686906,15.5466289 C0.660202339,15.7871443 1.04799179,15.7939864 1.29684211,15.5621053 L8.80842105,8.16842105 L1.29684211,0.538947368 Z" />
         </g>
       </g>
->>>>>>> origin/release-sept-17-23
     </g>
   </svg>
 </div>

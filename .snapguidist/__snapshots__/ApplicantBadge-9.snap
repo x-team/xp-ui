@@ -1,24 +1,14 @@
 exports[`ApplicantBadge-9 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_ApplicantBadge-54 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-128 ">
+  className="AutoUI_ui_ApplicantBadge-81 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-155 ">
   <div
-    className="AutoUI_ui_ApplicantBadge-83 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
-=======
-  className="AutoUI_ui_ApplicantBadge-78 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-154 ">
-  <div
-    className="AutoUI_ui_ApplicantBadge-109 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
->>>>>>> origin/release-sept-17-23
+    className="AutoUI_ui_ApplicantBadge-110 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
     Applicant
     <span
-      className="AutoUI_ui_ApplicantBadge-57 AutoUI_ui_ApplicantBadge-46" />
+      className="AutoUI_ui_ApplicantBadge-60 AutoUI_ui_ApplicantBadge-49" />
   </div>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_ApplicantBadge-92">
-=======
-    className="AutoUI_ui_ApplicantBadge-118">
->>>>>>> origin/release-sept-17-23
+    className="AutoUI_ui_ApplicantBadge-119">
     <div
       style={
         Object {
@@ -30,10 +20,10 @@ exports[`ApplicantBadge-9 1`] = `
       } />
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-122 controls" />
+    className="AutoUI_ui_ApplicantBadge-149 controls" />
   <div
-    className="AutoUI_ui_ApplicantBadge-134" />
+    className="AutoUI_ui_ApplicantBadge-161" />
   <div
-    className="AutoUI_ui_ApplicantBadge-191" />
+    className="AutoUI_ui_ApplicantBadge-218" />
 </div>
 `;
