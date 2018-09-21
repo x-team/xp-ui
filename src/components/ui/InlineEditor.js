@@ -1,7 +1,6 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-
 import isEqual from 'lodash.isequal'
 import ClickOutside from 'react-click-outside'
 
