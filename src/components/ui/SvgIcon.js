@@ -6,7 +6,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'tabular' | 'grid'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text'
 
 type Props = {
@@ -486,7 +486,7 @@ const getIcon = ({ icon, color, hover }) => {
       </svg>
     ),
 
-    tabular: (
+    list: (
       <svg width='15px' height='16px' viewBox='0 0 15 16'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <rect className={fillClassName} x='3' y='0' width='12' height='2' />

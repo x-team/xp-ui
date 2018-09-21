@@ -224,9 +224,10 @@ class SearchForm extends PureComponent<Props> {
         <a
           className={themeClasses.displayButton}
           onClick={this.handleSwitchDisplay('tabular')}
+          title='View in tabular mode'
         >
           <SvgIcon
-            icon='tabular'
+            icon='grid'
             color={mode === 'tabular' ? 'default' : 'grayscale'}
             hover='default'
           />
@@ -234,9 +235,10 @@ class SearchForm extends PureComponent<Props> {
         <a
           className={themeClasses.displayButton}
           onClick={this.handleSwitchDisplay('list')}
+          title='View in list mode'
         >
           <SvgIcon
-            icon='grid'
+            icon='list'
             color={mode !== 'tabular' ? 'default' : 'grayscale'}
             hover='default'
           />
