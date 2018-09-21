@@ -565,8 +565,8 @@ class SelectBox extends Component<Props, State> {
   }
 
   handleClick = (event: any, item: Item) => {
-    event.stopPropagation()
     const { onClick, areItemsToggleable } = this.props
+    areItemsToggleable && event.stopPropagation()
     if (item.status !== STATUS.SELECTING && onClick) {
       onClick({
         ...this.getUncachedItem(item),
@@ -667,6 +667,11 @@ class SelectBox extends Component<Props, State> {
     e.stopPropagation && e.stopPropagation()
     const updatedItem = { ...item, status: 'dismissed' }
     this.updateItemsState(updatedItem)
+  }
+
+  handleCloseDropdown = (closeDropdown: Function | boolean) => (event: any) => {
+    event.stopPropagation()
+    closeDropdown && typeof closeDropdown === 'function' && closeDropdown()
   }
 
   render () {
@@ -1051,6 +1056,14 @@ class SelectBox extends Component<Props, State> {
 
     const labelIsSearch = placeholder === 'Search'
 
+    const SelectBoxItems = ({ closeDropdown }) => (
+      <div className={expanded ? '' : cx.shadow} onClick={this.handleCloseDropdown(closeDropdown)}>
+        {hasSearch && renderSearchLabel(true)}
+        {renderItems()}
+        {renderAppendix()}
+      </div>
+    )
+
     const renderExpandedOrDropdown = () => expanded ? (
       <div>
         {renderSearchLabel(labelIsSearch || hasSearch)}
@@ -1063,11 +1076,7 @@ class SelectBox extends Component<Props, State> {
         label={renderSearchLabel(labelIsSearch && !hasSearch)}
         className={cx.dropdown}
       >
-        <div className={expanded ? '' : cx.shadow}>
-          {hasSearch && renderSearchLabel(true)}
-          {renderItems()}
-          {renderAppendix()}
-        </div>
+        <SelectBoxItems closeDropdown />
       </Dropdown>
     )
 
