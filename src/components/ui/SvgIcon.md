@@ -29,6 +29,7 @@ Basic color:
   <SvgIcon icon="archive" />
   <SvgIcon icon="list" />
   <SvgIcon icon="grid" />
+  <SvgIcon icon="dock" />
 </div>
 ```
 
@@ -63,6 +64,7 @@ Inverted color:
   <SvgIcon icon="archive" color="inverted" />
   <SvgIcon icon="list" color="inverted" />
   <SvgIcon icon="grid" color="inverted" />
+  <SvgIcon icon="dock" color="inverted" />
 </div>
 ```
 
@@ -97,6 +99,7 @@ Monochrome color:
   <SvgIcon icon="archive" color="monochrome" />
   <SvgIcon icon="list" color="monochrome" />
   <SvgIcon icon="grid" color="monochrome" />
+  <SvgIcon icon="dock" color="monochrome" />
 </div>
 ```
 
@@ -131,6 +134,7 @@ Grayscale color:
   <SvgIcon icon="archive" color="grayscale" />
   <SvgIcon icon="list" color="grayscale" />
   <SvgIcon icon="grid" color="grayscale" />
+  <SvgIcon icon="dock" color="grayscale" />
 </div>
 ```
 
@@ -165,6 +169,7 @@ Text gray color:
   <SvgIcon icon="archive" color="text" />
   <SvgIcon icon="list" color="text" />
   <SvgIcon icon="grid" color="text" />
+  <SvgIcon icon="dock" color="text" />
 </div>
 ```
 
@@ -199,6 +204,7 @@ Hover color:
   <SvgIcon icon="archive" color="text" hover="default" />
   <SvgIcon icon="list" color="text" hover="default" />
   <SvgIcon icon="grid" color="text" hover="default" />
+  <SvgIcon icon="dock" color="text" hover="default" />
 </div>
 ```
 

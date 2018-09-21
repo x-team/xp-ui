@@ -1,6 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+import isEqual from 'lodash.isequal'
 import ClickOutside from 'react-click-outside'
 
 import Button from './Button'
@@ -107,7 +108,7 @@ class InlineEditor extends PureComponent<Props, State> {
           size='small'
           rounded
           onClick={this.handleSaveClick}
-          disabled={editValue === value}
+          disabled={isEqual(editValue, value)}
         >
           Save
         </Button>
