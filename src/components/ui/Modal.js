@@ -78,11 +78,11 @@ class Modal extends Component<Props, State> {
   }
 
   handleKeyPress = (e: any) => {
-    const evt = e || window.event
-    evt.stopPropagation()
+    const event = e || window.event
+    event.stopPropagation()
 
     // Esc
-    if (evt.keyCode === 27) {
+    if (event.keyCode === 27) {
       this.handleClose()
     }
   }

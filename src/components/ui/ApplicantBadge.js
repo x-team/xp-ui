@@ -5,13 +5,14 @@ import Avatar from './Avatar'
 import TruncatedList from './TruncatedList'
 import Dropdown from './Dropdown'
 
+import { size } from '../../utils/helpers'
+import { DISPLAY_MODES } from '../../utils/constants'
+
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
-import { size } from '../../utils/helpers'
 
 import type { Element } from 'react'
 import type { DisplayModes } from '../../utils/types'
-import { DISPLAY_MODES } from '../../utils/constants'
 
 type Info = {
   value: string,
@@ -502,8 +503,8 @@ class ApplicantBadge extends PureComponent<Props> {
       />
     )
 
-    const handleClick = (e: Object) => {
-      e.stopPropagation()
+    const handleClick = (event: Object) => {
+      event.stopPropagation()
       const { id, onClick } = this.props
       onClick && onClick(id)
     }

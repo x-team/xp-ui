@@ -188,15 +188,15 @@ class SearchForm extends PureComponent<Props> {
     sortDirection: SORT_DIRECTIONS.ASCENDING
   }
 
-  handleModalOpen = (e: Object) => {
+  handleModalOpen = (event: Object) => {
     const { openListEditorModal } = this.props
-    e.preventDefault()
+    event.preventDefault()
     openListEditorModal && openListEditorModal()
   }
 
-  handleSwitchDisplay = (mode: string) => (e: Object) => {
+  handleSwitchDisplay = (mode: string) => (event: Object) => {
     const { switchDisplay } = this.props
-    e.preventDefault()
+    event.preventDefault()
     switchDisplay && switchDisplay(mode)
   }
 

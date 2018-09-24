@@ -4,11 +4,12 @@ import React, { PureComponent } from 'react'
 
 import ProfileHeaderLinks from './ProfileHeaderLinks'
 
+import { DISPLAY_MODES } from '../../utils/constants'
+
 import theme from '../../styles/theme'
 
 import type { Element } from 'react'
 import type { DisplayModes } from '../../utils/types'
-import { DISPLAY_MODES } from '../../utils/constants'
 
 const cmz = require('cmz')
 
