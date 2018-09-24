@@ -37,7 +37,7 @@ const KEY_CODES = {
 
 const isKeyOfType = (keyCode: number, type: number) => keyCode === type
 
-type EditorProps = {
+export type EditorProps = {
   value: any,
   onValueChange(data: any): void
 }

@@ -5,6 +5,7 @@ import uuidv4 from 'uuid/v4'
 
 import elem from '../../utils/elem'
 import Button from './Button'
+import type { EditorProps } from './InlineEditor'
 import InlineEditor from './InlineEditor'
 import Note from './Note'
 import TextareaEditor from './TextareaEditor/TextareaEditor'
@@ -48,7 +49,7 @@ class NotesFeed extends PureComponent<Props, State> {
     return total / perPage > page
   }
 
-  getNoteWrapper = (note: any, value: string, isHover: boolean, activateEditingMode: Function) =>
+  renderPresenter = (note: any, value: string, isHover: boolean, activateEditingMode: Function) =>
     NoteWrapper(
       {
         key: uuidv4()
@@ -64,31 +65,32 @@ class NotesFeed extends PureComponent<Props, State> {
       />
     )
 
+  renderEditor = ({ onValueChange, value }: EditorProps) =>
+    <TextareaEditor onChange={onValueChange} text={value} />
+
   render () {
     const { page, perPage } = this.state
     const { notes, onNoteUpdate } = this.props
     return Root(
       notes &&
-        notes.filter((note, i) => page * perPage > i).map(note =>
-          InlineEditorWrapper(
-            <InlineEditor
-              value={note.body}
-              onSave={updatedText =>
-                onNoteUpdate &&
-                onNoteUpdate({
-                  ...note,
-                  ...{ body: updatedText }
-                })
-              }
-              presenter={({ value, isHover, activateEditingMode }) =>
-                this.getNoteWrapper(note, value, isHover, activateEditingMode)
-              }
-              editor={({ onValueChange, value }) => (
-                <TextareaEditor onChange={text => onValueChange(text)} text={value} />
-              )}
-            />
-          )
-        ),
+      notes.filter((note, i) => page * perPage > i).map(note =>
+        InlineEditorWrapper(
+          <InlineEditor
+            value={note.body}
+            onSave={updatedText =>
+              onNoteUpdate &&
+              onNoteUpdate({
+                ...note,
+                ...{ body: updatedText }
+              })
+            }
+            presenter={({ value, isHover, activateEditingMode }) =>
+              this.renderPresenter(note, value, isHover, activateEditingMode)
+            }
+            editor={this.renderEditor}
+          />
+        )
+      ),
       this.showViewMore(notes && notes.length) && (
         <Button
           outlined
