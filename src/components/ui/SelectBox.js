@@ -1071,9 +1071,8 @@ class SelectBox extends Component<Props, State> {
         toggle={!labelIsSearch}
         label={renderSearchLabel(labelIsSearch && !hasSearch)}
         className={cx.dropdown}
-        isClosableFromChild
       >
-        <DropdownCloseControl className={expanded ? '' : cx.shadow}>
+        <DropdownCloseControl className={expanded ? '' : cx.shadow} closeDropdown>
           {hasSearch && renderSearchLabel(true)}
           {renderItems()}
           {renderAppendix()}
