@@ -11,23 +11,18 @@ const cx = {
     position: relative
     display: flex
     justify-content: center
+    flex-wrap: wrap
     width: 100%
     margin: 0
-    padding: 20px 0
+    padding: 20px 0 10px
     background-color: ${theme.baseBright}
     border-bottom: 1px solid ${theme.lineSilver1}
     z-index: 3
   `),
 
   linkWrapper: cmz(`
-    & {
-      margin-right: 20px
-      list-style-type: none
-    }
-
-    &:last-of-type {
-      margin-right: 0
-    }
+    margin: 0 0 10px
+    list-style-type: none
   `),
 
   link: cmz(`
@@ -35,20 +30,21 @@ const cx = {
       font-family: 'Open Sans', sans-serif
       font-size: 13px
       font-weight: 400
-      color: ${theme.typoParagraph}
+      color: ${theme.baseHighlightBright}
       text-transform: uppercase
       letter-spacing: 1px
       transition: color .5s ease
       cursor: pointer
+      padding: 0 20px
     }
 
     &:hover {
-      color: ${theme.typoHighlight}
+      color: ${theme.typoParagraph}
     }
   `),
 
   activeLink: cmz(`
-    color: ${theme.typoHighlight}
+    color: ${theme.typoParagraph}
   `)
 }
 

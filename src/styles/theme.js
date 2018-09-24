@@ -37,7 +37,8 @@ const palette = {
   wePeep: '#F7D9DC',
   bombay: '#B2B6BC',
   lima: '#5fcf21',
-  ripeLemon: '#f8e71c'
+  ripeLemon: '#f8e71c',
+  frenchGray: '#c2c1c5'
 }
 
 export default wrap({
@@ -50,6 +51,7 @@ export default wrap({
   baseGreen: palette.fern,
   baseSilver: palette.alto,
   baseHighlight: palette.mercury,
+  baseHighlightBright: palette.frenchGray,
 
   typoHeading: palette.tuna,
   typoSubheading: palette.radicalRed,
