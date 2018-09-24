@@ -135,7 +135,8 @@ type Props = {
   toggle?: boolean,
   tooltip?: boolean,
   className?: string,
-  tooltipClassName?: string
+  tooltipClassName?: string,
+  isClosableFromChild?: boolean
 }
 
 type State = {
@@ -152,7 +153,8 @@ class Dropdown extends PureComponent<Props, State> {
     hover: false,
     indicator: false,
     padded: false,
-    toggle: true
+    toggle: true,
+    isClosableFromChild: false
   }
 
   state = {
@@ -197,14 +199,16 @@ class Dropdown extends PureComponent<Props, State> {
       return toggle ? this.toggle() : this.open()
     }
 
-    const dropdownChildren = () =>
-      React.Children.map(children, child => {
+    const dropdownChildren = () => {
+      const { isClosableFromChild } = this.props
+      return React.Children.map(children, child => {
         const { props } = child
-        const closeDropdown = props ? props.closeDropdown : false
-        return closeDropdown
+        const shouldInjectCloseDropdown = (props && props.closeDropdown) || isClosableFromChild
+        return shouldInjectCloseDropdown
           ? React.cloneElement(child, { closeDropdown: this.close })
           : child
       })
+    }
 
     const renderContent = () => (
       <div

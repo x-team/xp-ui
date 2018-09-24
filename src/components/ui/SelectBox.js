@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import InputField from '../forms/InputField'
 import SvgIcon from './SvgIcon'
 import Dropdown from './Dropdown'
+import withProps from '../hocs/withProps'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
@@ -426,6 +427,11 @@ const STATUS = {
 
 const dismissTimeout = 2500
 
+const DropdownCloseControl = withProps(({ className, closeDropdown }) => ({
+  className,
+  onClick: closeDropdown
+}))('div')
+
 class SelectBox extends Component<Props, State> {
   static defaultProps = {
     placeholder: 'Search',
@@ -669,10 +675,7 @@ class SelectBox extends Component<Props, State> {
     this.updateItemsState(updatedItem)
   }
 
-  handleCloseDropdown = (closeDropdown: Function | boolean) => (event: any) => {
-    event.stopPropagation()
-    closeDropdown && typeof closeDropdown === 'function' && closeDropdown()
-  }
+  handleByStoppingPropagation = (event: any) => event.stopPropagation && event.stopPropagation()
 
   render () {
     const {
@@ -1014,9 +1017,10 @@ class SelectBox extends Component<Props, State> {
           onChange={(input = {}) => this.handleSearch(null, input.target.value)}
           className={cx.searchInput}
           autoComplete='off'
-          onKeyDown={(e: any) => e.stopPropagation && e.stopPropagation()}
-          onKeyPress={(e: any) => e.stopPropagation && e.stopPropagation()}
-          onKeyUp={(e: any) => e.stopPropagation && e.stopPropagation()}
+          onKeyDown={this.handleByStoppingPropagation}
+          onKeyPress={this.handleByStoppingPropagation}
+          onKeyUp={this.handleByStoppingPropagation}
+          onClick={this.handleByStoppingPropagation}
         />
         {search !== '' && (
           <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
@@ -1056,14 +1060,6 @@ class SelectBox extends Component<Props, State> {
 
     const labelIsSearch = placeholder === 'Search'
 
-    const SelectBoxItems = ({ closeDropdown }) => (
-      <div className={expanded ? '' : cx.shadow} onClick={this.handleCloseDropdown(closeDropdown)}>
-        {hasSearch && renderSearchLabel(true)}
-        {renderItems()}
-        {renderAppendix()}
-      </div>
-    )
-
     const renderExpandedOrDropdown = () => expanded ? (
       <div>
         {renderSearchLabel(labelIsSearch || hasSearch)}
@@ -1075,8 +1071,13 @@ class SelectBox extends Component<Props, State> {
         toggle={!labelIsSearch}
         label={renderSearchLabel(labelIsSearch && !hasSearch)}
         className={cx.dropdown}
+        isClosableFromChild
       >
-        <SelectBoxItems closeDropdown />
+        <DropdownCloseControl className={expanded ? '' : cx.shadow}>
+          {hasSearch && renderSearchLabel(true)}
+          {renderItems()}
+          {renderAppendix()}
+        </DropdownCloseControl>
       </Dropdown>
     )
 
