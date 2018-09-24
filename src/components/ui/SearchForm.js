@@ -6,7 +6,6 @@ import Button from './Button'
 import SelectBox from './SelectBox'
 import SvgIcon from './SvgIcon'
 import Keywords from './Keywords'
-import ApplicantGridHeader from './ApplicantGridHeader'
 
 import theme from '../../styles/theme'
 
@@ -141,14 +140,9 @@ const tabularTheme = {
 
   applicantsStatusFilter: cmz(`
     width: 100%
-    padding: 20px 30px 30px
+    padding: 20px 30px
     box-sizing: border-box
   `)
-}
-
-type SortDirections = {
-  ASCENDING: 'asc',
-  DESCENDING: 'desc'
 }
 
 type Props = {
@@ -162,16 +156,7 @@ type Props = {
   onSubmit: Function,
   openListEditorModal: Function,
   renderApplicantsStatusFilter: any,
-  headerColumns: Array<*>,
-  sortBy: string,
-  sortDirection: $Values<SortDirections>, // eslint-disable-line no-undef
-  onSortingChange: Function,
   switchDisplay: Function
-}
-
-const SORT_DIRECTIONS: SortDirections = {
-  ASCENDING: 'asc',
-  DESCENDING: 'desc'
 }
 
 const SELECTBOX_HEIGTH = 3
@@ -182,10 +167,7 @@ class SearchForm extends PureComponent<Props> {
     lists: [],
     keywords: '',
     fields: [],
-    renderApplicantsStatusFilter: null,
-    headerColumns: [],
-    sortBy: '',
-    sortDirection: SORT_DIRECTIONS.ASCENDING
+    renderApplicantsStatusFilter: null
   }
 
   handleModalOpen = (event: Object) => {
@@ -210,11 +192,7 @@ class SearchForm extends PureComponent<Props> {
       fields,
       onSelectField,
       onSubmit,
-      renderApplicantsStatusFilter,
-      headerColumns,
-      onSortingChange,
-      sortBy,
-      sortDirection
+      renderApplicantsStatusFilter
     } = this.props
 
     const themeClasses = mode === 'tabular' ? tabularTheme : listTheme
@@ -295,14 +273,6 @@ class SearchForm extends PureComponent<Props> {
         </form>
         {renderApplicantsStatusFilter && (
           <div className={themeClasses.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>
-        )}
-        {mode === 'tabular' && (
-          <ApplicantGridHeader
-            headerColumns={headerColumns}
-            onSortingChange={onSortingChange}
-            sortBy={sortBy}
-            sortDirection={sortDirection}
-          />
         )}
       </div>
     )

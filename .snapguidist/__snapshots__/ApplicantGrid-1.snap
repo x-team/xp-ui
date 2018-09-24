@@ -1,12 +1,12 @@
 exports[`ApplicantGrid-1 1`] = `
 <div
-  className="AutoUI_ui_ApplicantGrid-16"
+  className="AutoUI_ui_ApplicantGrid-17"
   data-test="applicants"
   tabIndex={0}>
   <span
-    className="AutoUI_ui_ApplicantGrid-20">
+    className="AutoUI_ui_ApplicantGrid-23">
     <span
-      className="AutoUI_ui_ApplicantGrid-24">
+      className="AutoUI_ui_ApplicantGrid-27">
       <div
         className="AutoUI_ui_ApplicantBadge-82 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-162 ">
         <div
@@ -155,7 +155,7 @@ exports[`ApplicantGrid-1 1`] = `
       </div>
     </span>
     <span
-      className="AutoUI_ui_ApplicantGrid-24">
+      className="AutoUI_ui_ApplicantGrid-27">
       <div
         className="AutoUI_ui_ApplicantBadge-82 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-162 AutoUI_ui_ApplicantBadge-104">
         <div
@@ -304,7 +304,7 @@ exports[`ApplicantGrid-1 1`] = `
       </div>
     </span>
     <span
-      className="AutoUI_ui_ApplicantGrid-24">
+      className="AutoUI_ui_ApplicantGrid-27">
       <div
         className="AutoUI_ui_ApplicantBadge-82 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-162 ">
         <div
@@ -1496,7 +1496,7 @@ exports[`ApplicantGrid-1 1`] = `
       </div>
     </span>
     <span
-      className="AutoUI_ui_ApplicantGrid-29">
+      className="AutoUI_ui_ApplicantGrid-32">
       <button
         className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-142 outlined AutoUI_ui_Button-160">
         <span

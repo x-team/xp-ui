@@ -4,6 +4,7 @@ import React, { PureComponent } from 'react'
 
 import Button from './Button'
 import TruncatedList from './TruncatedList'
+import ApplicantGridHeader from './ApplicantGridHeader'
 
 import theme from '../../styles/theme'
 
@@ -16,6 +17,8 @@ const listTheme = {
   wrapper: cmz(`
     outline: none
   `),
+
+  tabular: '',
 
   list: cmz(`
     display: block
@@ -37,6 +40,17 @@ const listTheme = {
 const tabularTheme = {
   wrapper: cmz(`
     outline: none
+    overflow-y: auto
+    overflow-x: visible
+    height: calc(100% - 60px)
+  `),
+
+  tabular: cmz(`
+    position: relative
+    overflow-x: auto
+    overflow-y: hidden
+    height: calc(100vh - 300px)
+    min-width: 1448px
   `),
 
   list: cmz(`
@@ -55,6 +69,11 @@ const tabularTheme = {
   `)
 }
 
+type SortDirections = {
+  ASCENDING: 'asc',
+  DESCENDING: 'desc'
+}
+
 type Props = {
   items?: Array<*>,
   mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
@@ -63,11 +82,20 @@ type Props = {
   onViewMore?: Function,
   isFetching?: boolean,
   hasMore?: boolean,
-  onKeyPress?: Function
+  onKeyPress?: Function,
+  headerColumns: Array<*>,
+  sortBy: string,
+  sortDirection: $Values<SortDirections>, // eslint-disable-line no-undef
+  onSortingChange: Function
 }
 
 type State = {
   open: boolean
+}
+
+const SORT_DIRECTIONS: SortDirections = {
+  ASCENDING: 'asc',
+  DESCENDING: 'desc'
 }
 
 class ApplicantGrid extends PureComponent<Props, State> {
@@ -75,7 +103,10 @@ class ApplicantGrid extends PureComponent<Props, State> {
     items: [],
     mode: DISPLAY_MODES.LIST,
     visible: 50,
-    increment: 50
+    increment: 50,
+    headerColumns: [],
+    sortBy: '',
+    sortDirection: SORT_DIRECTIONS.ASCENDING
   }
 
   handleViewMore = (showMore: Function) => {
@@ -85,7 +116,19 @@ class ApplicantGrid extends PureComponent<Props, State> {
   }
 
   render () {
-    const { items, mode, visible, increment, isFetching, hasMore, onKeyPress } = this.props
+    const {
+      items,
+      mode,
+      visible,
+      increment,
+      isFetching,
+      hasMore,
+      onKeyPress,
+      headerColumns,
+      onSortingChange,
+      sortBy,
+      sortDirection
+    } = this.props
     const { TABULAR } = DISPLAY_MODES
     const cx = mode === TABULAR ? tabularTheme : listTheme
 
@@ -93,7 +136,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
       onKeyPress && onKeyPress()
     }
 
-    return items ? (
+    const renderItems = () => items && (
       <div
         className={cx.wrapper}
         data-test='applicants'
@@ -122,7 +165,19 @@ class ApplicantGrid extends PureComponent<Props, State> {
           )}
         />
       </div>
-    ) : null
+    )
+
+    return mode === 'tabular' ? (
+      <div className={cx.tabular}>
+        <ApplicantGridHeader
+          headerColumns={headerColumns}
+          onSortingChange={onSortingChange}
+          sortBy={sortBy}
+          sortDirection={sortDirection}
+        />
+        {renderItems()}
+      </div>
+    ) : renderItems()
   }
 }
 

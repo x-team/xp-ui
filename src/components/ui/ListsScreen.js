@@ -26,7 +26,7 @@ const dimensions = {
   headingHeight: '60px',
   searchWidth: {
     [DISPLAY_MODES.LIST]: '530px',
-    [DISPLAY_MODES.TABULAR]: '100%'
+    [DISPLAY_MODES.TABULAR]: '100vw'
   },
   searchHeight: {
     [DISPLAY_MODES.LIST]: '410px',
@@ -114,11 +114,11 @@ const tabularTheme = {
   `),
 
   applicantGrid: cmz(cx.applicantGrid, `
-    width: calc(${dimensions.searchWidth[DISPLAY_MODES.TABULAR]} - 60px)
+    width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
     margin: 0 auto
-    overflow-y: auto
+    overflow-x: auto
     flex: 1
-    border-top: 1px solid ${theme.lineSilver1}
+    padding: 0 30px
   `),
 
   applicant: cmz(`

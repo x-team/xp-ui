@@ -288,7 +288,7 @@ const tabularTheme = {
         padding: 14px
         color: ${theme.typoParagraph}
         font-size: 17px
-        width: 100%
+        min-width: 100%
         box-sizing: border-box
       }
 
