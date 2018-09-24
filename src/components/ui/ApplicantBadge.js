@@ -147,9 +147,15 @@ const listTheme = {
   `),
 
   controls: cmz('controls', `
-    grid-area: control
-    display: flex
-    visibility: hidden
+    & {
+      grid-area: control
+      display: flex
+      visibility: hidden
+    }
+
+    & > div {
+      display: flex
+    }
   `),
 
   displayControlsOnHover: cmz(`
