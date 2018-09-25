@@ -67,7 +67,7 @@ const cx = {
       & {
         display: flex
         min-width: 100%
-        padding: 14px 14px 14px 44px
+        padding: 14px
         color: ${theme.typoLabel}
         font-size: 16px
         line-height: 1.2

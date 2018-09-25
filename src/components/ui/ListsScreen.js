@@ -2,8 +2,6 @@
 
 import React, { PureComponent } from 'react'
 
-import ProfileHeaderLinks from './ProfileHeaderLinks'
-
 import { DISPLAY_MODES } from '../../utils/constants'
 
 import theme from '../../styles/theme'
@@ -14,6 +12,7 @@ import type { DisplayModes } from '../../utils/types'
 const cmz = require('cmz')
 
 type Props = {
+  header?: Element<*>,
   applicant?: Element<*>,
   search?: Element<*>,
   result?: Element<*>,
@@ -139,6 +138,7 @@ const tabularTheme = {
 
 class ListsScreen extends PureComponent<Props, void> {
   static defaultProps = {
+    header: null,
     applicant: null,
     search: null,
     result: null,
@@ -151,7 +151,7 @@ class ListsScreen extends PureComponent<Props, void> {
       <div className={themeClasses.main}>
         <div className={themeClasses.applicant}>
           <div className={themeClasses.headings}>
-            <ProfileHeaderLinks />
+            {this.props.header}
           </div>
           <div className={themeClasses.profile}>
             {this.props.applicant}

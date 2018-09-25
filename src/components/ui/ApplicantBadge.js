@@ -460,9 +460,9 @@ class ApplicantBadge extends PureComponent<Props> {
       actions
     } = this.props
 
-    const cx = mode === DISPLAY_MODES.TABULAR ? tabularTheme : listTheme
-
-    const filteredInfos = mode === DISPLAY_MODES.TABULAR ? info : info.filter(each => each.value)
+    const isTabular = mode === DISPLAY_MODES.TABULAR
+    const cx = isTabular ? tabularTheme : listTheme
+    const filteredInfos = isTabular ? info : info.filter(each => each.value)
 
     const mapInfosToRender = (infos) => (
       <TruncatedList
@@ -531,7 +531,7 @@ class ApplicantBadge extends PureComponent<Props> {
           )}
         </div>
         <div className={cx.controls}>
-          {actions.map(({ key, icon: Icon, onClick = null, render, dropdownClassName, tooltipClassName }) => (
+          {!isTabular && actions.map(({ key, icon: Icon, onClick = null, render, dropdownClassName, tooltipClassName }) => (
             Icon && (
               <Dropdown
                 key={key}

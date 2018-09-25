@@ -129,8 +129,9 @@ class ApplicantGrid extends PureComponent<Props, State> {
       sortBy,
       sortDirection
     } = this.props
-    const { TABULAR } = DISPLAY_MODES
-    const cx = mode === TABULAR ? tabularTheme : listTheme
+
+    const isTabular = mode === DISPLAY_MODES.TABULAR
+    const cx = isTabular ? tabularTheme : listTheme
 
     const handleKeyPress = () => {
       onKeyPress && onKeyPress()
@@ -167,7 +168,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
       </div>
     )
 
-    return mode === 'tabular' ? (
+    return isTabular ? (
       <div className={cx.tabular}>
         <ApplicantGridHeader
           headerColumns={headerColumns}
