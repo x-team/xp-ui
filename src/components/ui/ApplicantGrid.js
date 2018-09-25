@@ -50,7 +50,7 @@ const tabularTheme = {
     overflow-x: auto
     overflow-y: hidden
     height: calc(100vh - 300px)
-    min-width: 1448px
+    min-width: 100%
   `),
 
   list: cmz(`
