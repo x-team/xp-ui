@@ -322,8 +322,7 @@ const tabularTheme = {
   `),
 
   controls: cmz(`
-    order: 6
-    width: 80px
+    display: none
   `),
 
   control: cmz(`
