@@ -99,21 +99,23 @@ class InlineEditor extends PureComponent<Props, State> {
 
   renderControls = () => {
     const { editValue } = this.state
-    const { value } = this.props
+    const { value, isValid } = this.props
 
     return (
       <div>
         <Button
           className={cx.button}
+          type='button'
           size='small'
           rounded
           onClick={this.handleSaveClick}
-          disabled={isEqual(editValue, value)}
+          disabled={isEqual(editValue, value) || !isValid}
         >
           Save
         </Button>
         <Button
           className={cx.button}
+          type='button'
           size='small'
           rounded
           color='silver'
