@@ -669,13 +669,13 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleDismissDeleteMessage = (item: Item) => (e: Object) => {
-    e.stopPropagation && e.stopPropagation()
+  handleDismissDeleteMessage = (item: Item) => (event: Object) => {
+    event.stopPropagation && event.stopPropagation()
     const updatedItem = { ...item, status: 'dismissed' }
     this.updateItemsState(updatedItem)
   }
 
-  handleByStoppingPropagation = (event: any) => event.stopPropagation && event.stopPropagation()
+  handleByStoppingPropagation = (event: Object) => event.stopPropagation && event.stopPropagation()
 
   render () {
     const {
