@@ -26,7 +26,7 @@ const dimensions = {
   headingHeight: '60px',
   searchWidth: {
     [DISPLAY_MODES.LIST]: '530px',
-    [DISPLAY_MODES.TABULAR]: '1448px'
+    [DISPLAY_MODES.TABULAR]: '1508px'
   },
   searchHeight: {
     [DISPLAY_MODES.LIST]: '410px',
@@ -100,21 +100,24 @@ const listTheme = {
 }
 
 const tabularTheme = {
-  main: cmz(cx.main),
+  main: cmz('tabularview', cx.main),
 
   search: cmz(cx.search, `
-    min-width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
+    min-width: 100%
+    width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
     display: flex
     flex-direction: column
     height: 100%
   `),
 
   searchForm: cmz(cx.searchForm, `
-    min-width: calc(${dimensions.searchWidth[DISPLAY_MODES.TABULAR]} + 60px)
+    min-width: 100%
+    width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
   `),
 
   applicantGrid: cmz(cx.applicantGrid, `
-    min-width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
+    min-width: 100%
+    width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
     margin: 0 auto
     overflow-x: auto
     flex: 1

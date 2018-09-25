@@ -67,14 +67,13 @@ const cx = {
       & {
         display: flex
         min-width: 100%
-        margin: 0 auto
         padding: 14px 14px 14px 44px
-        box-sizing: border-box
         color: ${theme.typoLabel}
         font-size: 16px
         line-height: 1.2
         border-bottom: 1px solid ${theme.lineSilver1}
         position: sticky
+        box-sizing: border-box
       }
 
       & > span {
