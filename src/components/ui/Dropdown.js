@@ -54,7 +54,7 @@ const styles = {
     z-index: 999
     visibility: hidden
     opacity: 0
-    transition: visibility 0s linear 0.2s, opacity 0.2s linear
+    transition: visibility 0 linear 0.1s, opacity 0.1s linear
     width: inherit
     top: 100%
   `),
@@ -135,7 +135,8 @@ type Props = {
   toggle?: boolean,
   tooltip?: boolean,
   className?: string,
-  tooltipClassName?: string
+  tooltipClassName?: string,
+  onClick?: Function
 }
 
 type State = {
@@ -166,7 +167,21 @@ class Dropdown extends PureComponent<Props, State> {
   close = () => this.setState(() => ({ open: false }))
 
   render () {
-    const { icon, label, children, targetXOrigin, targetYOrigin, hover, indicator, padded, toggle, tooltip, className, tooltipClassName } = this.props
+    const {
+      icon,
+      label,
+      children,
+      targetXOrigin,
+      targetYOrigin,
+      hover,
+      indicator,
+      padded,
+      toggle,
+      tooltip,
+      className,
+      tooltipClassName,
+      onClick
+    } = this.props
     const { open } = this.state
 
     const rootClasses = [
@@ -192,8 +207,9 @@ class Dropdown extends PureComponent<Props, State> {
       targetYOrigin === 'top' ? styles.tooltipTop : ''
     ].join(' ')
 
-    const handleClick = (e: any) => {
-      e && e.stopPropagation()
+    const handleClick = (e: Object) => {
+      e.preventDefault() && e.stopPropagation()
+      onClick && onClick()
       return toggle ? this.toggle() : this.open()
     }
 

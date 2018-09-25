@@ -24,6 +24,7 @@ module.exports = snapguidist({
     '**/components/forms/SolutionForm/Title.js',
     '**/components/ui/TextareaEditor/MediumEditorWrapper.js',
     '**/components/ui/Tabs/index.js',
-    '**/components/ui/Tabs/Tab.js'
+    '**/components/ui/Tabs/Tab.js',
+    '**/components/ui/ListsScreen.js'
   ]
 })

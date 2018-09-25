@@ -1,0 +1,60 @@
+exports[`FilterBar-3 1`] = `
+<div
+  className="AutoUI_ui_FilterBar-17">
+  <form
+    className="AutoUI_ui_FilterBar-22">
+    <div
+      className="AutoUI_ui_FilterBar-29">
+      <div>
+        <input
+          aria-labelledby=""
+          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
+          placeholder="Search..."
+          required={false}
+          type="text" />
+      </div>
+      <div>
+        <input
+          aria-labelledby=""
+          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
+          placeholder="This could be a select box..."
+          required={false}
+          type="text" />
+      </div>
+      <svg
+        height="36px"
+        viewBox="0 0 37 36"
+        width="37px">
+        <g
+          fill="none"
+          fillRule="evenodd"
+          stroke="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1">
+          <g
+            className="AutoUI_ui_SvgIcon-30 AutoUI_ui_SvgIcon-57"
+            strokeWidth="2"
+            transform="translate(-269.000000, -1671.000000)">
+            <g
+              transform="translate(0.000000, 823.000000)">
+              <g
+                transform="translate(230.000000, 805.000000)">
+                <g
+                  transform="translate(40.000000, 44.000000)">
+                  <path
+                    d="M8,8 L28,8" />
+                  <path
+                    d="M8,16 L28,16" />
+                  <polygon
+                    points="35 -8.8817842e-16 0 -8.8817842e-16 0 26.3225806 19.4234914 26.3225806 19.4234914 34 27.8265841 26.3225806 35 26.3225806" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </form>
+</div>
+`;

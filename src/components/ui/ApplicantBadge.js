@@ -5,10 +5,14 @@ import Avatar from './Avatar'
 import TruncatedList from './TruncatedList'
 import Dropdown from './Dropdown'
 
+import { size } from '../../utils/helpers'
+import { DISPLAY_MODES } from '../../utils/constants'
+
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { Element } from 'react'
+import type { DisplayModes } from '../../utils/types'
 
 type Info = {
   value: string,
@@ -28,7 +32,7 @@ type Status = 'accepted' | 'pending' | 'excluded'
 
 type Props = {
   id: number,
-  mode?: string,
+  mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
   active?: boolean,
   name?: string,
   email: string,
@@ -74,12 +78,11 @@ const statusDotStyles = {
   )
 }
 
-const cardTheme = {
+const listTheme = {
   mode: cmz(
     typo.baseText,
     `
       & {
-        transition: all 0.4s ease-out
         background: ${theme.baseBrighter}
         border: 1px solid ${theme.lineSilver2}
         padding: 30px
@@ -99,7 +102,6 @@ const cardTheme = {
   ),
 
   active: cmz(`
-    transition: all 0.2s ease-in
     border: 1px solid ${theme.baseRed}
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
     margin: 0
@@ -146,9 +148,15 @@ const cardTheme = {
   `),
 
   controls: cmz('controls', `
-    grid-area: control
-    display: flex
-    visibility: hidden
+    & {
+      grid-area: control
+      display: flex
+      visibility: hidden
+    }
+
+    & > div {
+      display: flex
+    }
   `),
 
   displayControlsOnHover: cmz(`
@@ -160,10 +168,10 @@ const cardTheme = {
   infos: cmz(`
     grid-area: infos
     width: 100%
+    margin: 0 0 -10px
     display: flex
     flex-wrap: wrap
     align-items: flex-start
-    margin: 0 0 -10px
   `),
 
   info: cmz(typo.baseText,
@@ -218,10 +226,13 @@ const cardTheme = {
     font-size: 14px
     grid-area: tags
     width: 100%
+    margin: 0 0 -10px
+  `),
+
+  tagsInner: cmz(`
     display: flex
     flex-wrap: wrap
     align-items: start
-    margin: 0 0 -10px
   `),
 
   tag: cmz(`
@@ -277,7 +288,7 @@ const tabularTheme = {
         padding: 14px
         color: ${theme.typoParagraph}
         font-size: 17px
-        width: 100%
+        min-width: 100%
         box-sizing: border-box
       }
 
@@ -311,7 +322,7 @@ const tabularTheme = {
   `),
 
   controls: cmz(`
-    order: 6
+    display: none
   `),
 
   control: cmz(`
@@ -321,23 +332,17 @@ const tabularTheme = {
   infos: cmz(`
     order: 4
     flex: 1
-    justify-content: space-evenly
+    display: flex
+    justify-content: space-between
   `),
 
-  info: cmz(typo.baseText,
-    `
-      & {
-        width: 80px
-        font-size: 17px
-        margin: 0 14px
-        text-align: center
-      }
-
-      & > span {
-        white-space: nowrap
-      }
-    `
-  ),
+  info: cmz(typo.baseText, `
+    width: 80px
+    font-size: 17px
+    margin: 0 14px
+    text-align: center
+    display: block
+  `),
 
   moreinfos: cmz(`
     & {
@@ -369,8 +374,12 @@ const tabularTheme = {
 
   tags: cmz(`
     width: 260px
-    flex-wrap: wrap
     order: 3
+  `),
+
+  tagsInner: cmz(`
+    display: flex
+    flex-wrap: wrap
   `),
 
   tag: cmz(`
@@ -426,9 +435,10 @@ const tabularTheme = {
 
 class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
-    mode: 'card',
+    mode: DISPLAY_MODES.LIST,
     active: false,
-    actions: []
+    actions: [],
+    info: []
   }
 
   renderStatusIndicator = () => (
@@ -449,34 +459,36 @@ class ApplicantBadge extends PureComponent<Props> {
       actions
     } = this.props
 
-    const cx = mode === 'card' ? cardTheme : tabularTheme
+    const isTabular = mode === DISPLAY_MODES.TABULAR
+    const cx = isTabular ? tabularTheme : listTheme
+    const filteredInfos = isTabular ? info : info.filter(each => each.value)
 
     const mapInfosToRender = (infos) => (
       <TruncatedList
         inserted
-        visible={mode === 'card' ? 4 : infos.length}
+        visible={mode === DISPLAY_MODES.LIST ? 4 : infos.length}
         listClass={cx.infos}
         itemClass={cx.info}
-        items={infos && infos.filter(info => info.value).map((info, i) => (
+        items={filteredInfos.map((info, i) => (
           <Dropdown
             key={i}
             tooltip
             hover
             targetYOrigin='top'
             label={(
-              <span>
+              <div>
                 <span className={cx.label}>{info.label}</span>
                 <span className={cx.value}>{info.value}</span>
-              </span>
+              </div>
             )}
           >
-            {info.tip && <span className={cx.tip}>{info.tip}</span>}
+            {info.tip && <div className={cx.tip}>{info.tip}</div>}
           </Dropdown>
         ))}
         viewMore={(amount, action) => (
-          <span className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
+          <div className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
             {`+ ${amount} info`}
-          </span>
+          </div>
         )}
       />
     )
@@ -486,64 +498,63 @@ class ApplicantBadge extends PureComponent<Props> {
         inserted
         visible={5}
         items={tags}
-        listClass={cx.tags}
+        listClass={cx.tagsInner}
         itemClass={cx.tag}
         viewMore={(amount, action) => (
-          <span className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
+          <div className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
             {`+ ${amount} more`}
-          </span>
+          </div>
         )}
       />
     )
 
-    const handleClick = (e) => {
-      e.stopPropagation()
+    const handleClick = (event: Object) => {
+      event.stopPropagation()
       const { id, onClick } = this.props
       onClick && onClick(id)
     }
 
     return id ? (
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
-        {(name || email) && (
-          <div className={cx.name}>
-            {name || email}
-            {this.renderStatusIndicator()}
-          </div>
-        )}
-        {(avatar || email) && (
-          <div className={cx.avatar}>
-            {avatar || (
-              <Avatar
-                src={`https://www.gravatar.com/avatar/${md5(email)}?s=90`}
-                email={name ? `${name}'s avatar` : 'avatar'}
-                size={90}
-              />
-            )}
-          </div>
-        )}
-        {actions.length > 0 && (
-          <div className={cx.controls}>
-            {actions.map(({ key, icon: Icon, onClick = null, render, dropdownClassName, tooltipClassName }) => (
-              Icon && (
-                <Dropdown
-                  key={key}
-                  tooltip
-                  className={dropdownClassName}
-                  tooltipClassName={tooltipClassName}
-                  label={(
-                    <span className={cx.control} onClick={onClick}>
-                      <Icon />
-                    </span>
-                  )}
-                >
-                  {render && render()}
-                </Dropdown>
-              )
-            ))}
-          </div>
-        )}
-        {info && info.length > 0 && mapInfosToRender(info)}
-        {tags && tags.length > 0 && mapTagsToRender(tags)}
+        <div className={cx.name}>
+          {name || email}
+          {this.renderStatusIndicator()}
+        </div>
+        <div className={cx.avatar}>
+          {avatar || (
+            <Avatar
+              src={`https://www.gravatar.com/avatar/${md5(email)}?s=90`}
+              email={name ? `${name}'s avatar` : 'avatar'}
+              size={90}
+            />
+          )}
+        </div>
+        <div className={cx.controls}>
+          {!isTabular && actions.map(({ key, icon: Icon, onClick = null, render, dropdownClassName, tooltipClassName }) => (
+            Icon && (
+              <Dropdown
+                key={key}
+                tooltip
+                className={dropdownClassName}
+                tooltipClassName={tooltipClassName}
+                onClick={onClick}
+                label={(
+                  <span className={cx.control}>
+                    <Icon />
+                  </span>
+                )}
+              >
+                {render && render()}
+              </Dropdown>
+            )
+          ))}
+        </div>
+        <div className={cx.infos}>
+          {size(info) > 0 && mapInfosToRender(info)}
+        </div>
+        <div className={cx.tags}>
+          {size(tags) > 0 && mapTagsToRender(tags)}
+        </div>
         {children && (
           <div className={cx.children}>
             {children}

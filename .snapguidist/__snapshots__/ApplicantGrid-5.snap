@@ -1,1 +1,6 @@
-exports[`ApplicantGrid-5 1`] = `<div />`;
+exports[`ApplicantGrid-5 1`] = `
+<div
+  className="AutoUI_ui_ApplicantGrid-17"
+  data-test="applicants"
+  tabIndex={0} />
+`;

@@ -684,6 +684,92 @@ exports[`SvgIcon-3 1`] = `
       transform="scale(1.333) translate(-3, -3)" />
   </svg>
   <svg
+    height="16px"
+    viewBox="0 0 15 16"
+    width="15px">
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="none"
+      strokeWidth="1">
+      <rect
+        className="AutoUI_ui_SvgIcon-79 AutoUI_ui_SvgIcon-106"
+        height="2"
+        width="12"
+        x="3"
+        y="0" />
+      <rect
+        className="AutoUI_ui_SvgIcon-79 AutoUI_ui_SvgIcon-106"
+        height="2"
+        width="12"
+        x="3"
+        y="7" />
+      <rect
+        className="AutoUI_ui_SvgIcon-79 AutoUI_ui_SvgIcon-106"
+        height="2"
+        width="12"
+        x="3"
+        y="14" />
+      <rect
+        className="AutoUI_ui_SvgIcon-79 AutoUI_ui_SvgIcon-106"
+        height="2"
+        width="2"
+        x="0"
+        y="0" />
+      <rect
+        className="AutoUI_ui_SvgIcon-79 AutoUI_ui_SvgIcon-106"
+        height="2"
+        width="2"
+        x="0"
+        y="7" />
+      <rect
+        className="AutoUI_ui_SvgIcon-79 AutoUI_ui_SvgIcon-106"
+        height="2"
+        width="2"
+        x="0"
+        y="14" />
+    </g>
+  </svg>
+  <svg
+    height="17px"
+    viewBox="0 0 17 17"
+    width="17px">
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="none"
+      strokeWidth="1">
+      <rect
+        className="AutoUI_ui_SvgIcon-25 AutoUI_ui_SvgIcon-52"
+        height="5"
+        strokeWidth="2"
+        width="5"
+        x="1"
+        y="1" />
+      <rect
+        className="AutoUI_ui_SvgIcon-25 AutoUI_ui_SvgIcon-52"
+        height="5"
+        strokeWidth="2"
+        width="5"
+        x="1"
+        y="11" />
+      <rect
+        className="AutoUI_ui_SvgIcon-25 AutoUI_ui_SvgIcon-52"
+        height="5"
+        strokeWidth="2"
+        width="5"
+        x="11"
+        y="1" />
+      <rect
+        className="AutoUI_ui_SvgIcon-25 AutoUI_ui_SvgIcon-52"
+        height="5"
+        strokeWidth="2"
+        width="5"
+        x="11"
+        y="11" />
+    </g>
+  </svg>
+  <svg
     height="13px"
     viewBox="0 0 12 13"
     width="12px">
@@ -694,7 +780,6 @@ exports[`SvgIcon-3 1`] = `
       strokeWidth="10">
       <g
         className="AutoUI_ui_SvgIcon-79 AutoUI_ui_SvgIcon-106"
-        fill="#FFFFFF"
         transform="translate(-7.000000, -7.000000)">
         <g
           transform="translate(10.365228, 10.944176) rotate(-135.000000) translate(-10.365228, -10.944176) translate(5.865228, 2.944176)">

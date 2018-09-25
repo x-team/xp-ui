@@ -1,14 +1,14 @@
 exports[`ApplicantBadge-7 1`] = `
 <div
-  className="AutoUI_ui_ApplicantBadge-78 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-154 ">
+  className="AutoUI_ui_ApplicantBadge-82 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-162 ">
   <div
-    className="AutoUI_ui_ApplicantBadge-109 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+    className="AutoUI_ui_ApplicantBadge-111 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
     applicant@x-team.com
     <span
-      className="AutoUI_ui_ApplicantBadge-57 AutoUI_ui_ApplicantBadge-46" />
+      className="AutoUI_ui_ApplicantBadge-61 AutoUI_ui_ApplicantBadge-50" />
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-118">
+    className="AutoUI_ui_ApplicantBadge-120">
     <div
       className="AutoUI_ui_Avatar-15">
       <img
@@ -20,7 +20,13 @@ exports[`ApplicantBadge-7 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-263">
+    className="AutoUI_ui_ApplicantBadge-150 controls" />
+  <div
+    className="AutoUI_ui_ApplicantBadge-168" />
+  <div
+    className="AutoUI_ui_ApplicantBadge-225" />
+  <div
+    className="AutoUI_ui_ApplicantBadge-274">
     <button>
       Hello
     </button>

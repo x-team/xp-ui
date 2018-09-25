@@ -1,61 +1,1058 @@
 exports[`SelectBox-11 1`] = `
-<div
-  className="AutoUI_ui_SelectBox-17"
-  style={
-    Object {
-      "width": "100%",
-    }
-  }>
-  <div>
-    <div
-      className="AutoUI_ui_SelectBox-82">
+<div>
+  <div
+    className="AutoUI_ui_SelectBox-17"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
       <div
-        className="AutoUI_ui_SelectBox-93">
-        <svg
-          height="17px"
-          viewBox="0 0 16 17"
-          width="16px">
-          <g
-            fill="none"
-            fillRule="evenodd"
-            stroke="none"
-            strokeWidth="1">
-            <circle
-              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
-              cx="7.5"
-              cy="7.5"
-              r="6.5" />
-            <path
-              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
-              d="M11.7538745,12.6062275 L15.5,16.5"
-              strokeLinecap="square" />
-          </g>
-        </svg>
+        className="AutoUI_ui_SelectBox-83">
+        <div
+          className="AutoUI_ui_SelectBox-94">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="" />
+        </div>
       </div>
-      <div>
-        <input
-          aria-labelledby="label-search"
-          autoComplete="off"
-          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-87"
-          id="search"
-          name="search"
-          placeholder="Search"
-          required={false}
-          type="text"
-          value="" />
-      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-136 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176">
+            Creating new stuff \"creating this\"...
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+            <div
+              className="AutoUI_forms_InputField-78">
+              <label
+                id="label-unselected">
+                <div
+                  className="AutoUI_forms_InputField-78">
+                  <label
+                    className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    <input
+                      aria-labelledby="label-unselected"
+                      checked={false}
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      id="unselected"
+                      name="unselected"
+                      required={false}
+                      type="checkbox" />
+                    <span
+                      className="AutoUI_forms_InputField-135" />
+                    unselected
+                  </label>
+                </div>
+              </label>
+            </div>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <path
+                      className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                      d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                      fillRule="nonzero" />
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+            <div
+              className="AutoUI_forms_InputField-78">
+              <label
+                id="label-selected">
+                <div
+                  className="AutoUI_forms_InputField-78">
+                  <label
+                    className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    <input
+                      aria-labelledby="label-selected"
+                      checked={true}
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      id="selected"
+                      name="selected"
+                      required={false}
+                      type="checkbox" />
+                    <span
+                      className="AutoUI_forms_InputField-135" />
+                    selected
+                  </label>
+                </div>
+              </label>
+            </div>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <path
+                      className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                      d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                      fillRule="nonzero" />
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176">
+            <span
+              className="AutoUI_ui_SelectBox-231 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              <span
+                className="AutoUI_ui_SelectBox-239" />
+              (un)selecting
+            </span>
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176">
+            <span
+              className="AutoUI_ui_SelectBox-270 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              <div>
+                <input
+                  aria-labelledby="label-editing (no changes yet)"
+                  autoFocus="autofocus"
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
+                  id="editing (no changes yet)"
+                  name="editing (no changes yet)"
+                  required={false}
+                  type="text"
+                  value="editing (no changes yet)" />
+              </div>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeLinecap="square"
+                    strokeWidth="1">
+                    <g
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                      strokeWidth="2"
+                      transform="translate(-1294.000000, -1073.000000)">
+                      <g
+                        transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                        <path
+                          d="M7,0 L7,14" />
+                        <path
+                          d="M14,7 L0,7" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220">
+                <svg
+                  height="13px"
+                  viewBox="0 0 17 13"
+                  width="17px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <polyline
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                      points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
+                      strokeWidth="2"
+                      transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
+                  </g>
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 AutoUI_ui_SelectBox-209">
+          <div
+            className="AutoUI_ui_SelectBox-176">
+            <span
+              className="AutoUI_ui_SelectBox-270 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              <div>
+                <input
+                  aria-labelledby="label-editing"
+                  autoFocus="autofocus"
+                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
+                  id="editing"
+                  name="editing"
+                  required={false}
+                  type="text"
+                  value="editing (this is changed but not yet saved)" />
+              </div>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeLinecap="square"
+                    strokeWidth="1">
+                    <g
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                      strokeWidth="2"
+                      transform="translate(-1294.000000, -1073.000000)">
+                      <g
+                        transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                        <path
+                          d="M7,0 L7,14" />
+                        <path
+                          d="M14,7 L0,7" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220">
+                <svg
+                  height="13px"
+                  viewBox="0 0 17 13"
+                  width="17px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <polyline
+                      className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-47"
+                      points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
+                      strokeWidth="2"
+                      transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
+                  </g>
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176">
+            Saving \"saving edition\"...
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+            <div
+              className="AutoUI_forms_InputField-78">
+              <label
+                id="label-edited">
+                <div
+                  className="AutoUI_forms_InputField-78">
+                  <label
+                    className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    <input
+                      aria-labelledby="label-edited"
+                      checked={false}
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      id="edited"
+                      name="edited"
+                      required={false}
+                      type="checkbox" />
+                    <span
+                      className="AutoUI_forms_InputField-135" />
+                    edited
+                  </label>
+                </div>
+              </label>
+            </div>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <path
+                      className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                      d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                      fillRule="nonzero" />
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+            <div
+              className="AutoUI_forms_InputField-78">
+              <label
+                id="label-created">
+                <div
+                  className="AutoUI_forms_InputField-78">
+                  <label
+                    className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    <input
+                      aria-labelledby="label-created"
+                      checked={false}
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      id="created"
+                      name="created"
+                      required={false}
+                      type="checkbox" />
+                    <span
+                      className="AutoUI_forms_InputField-135" />
+                    created
+                  </label>
+                </div>
+              </label>
+            </div>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <path
+                      className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                      d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                      fillRule="nonzero" />
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176">
+            <div
+              className="AutoUI_ui_SelectBox-331">
+              <p>
+                Delete \"
+                confirm delete
+                \"
+              </p>
+              <p>
+                <strong>
+                  Are you sure?
+                </strong>
+              </p>
+            </div>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeLinecap="square"
+                    strokeWidth="1">
+                    <g
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                      strokeWidth="2"
+                      transform="translate(-1294.000000, -1073.000000)">
+                      <g
+                        transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                        <path
+                          d="M7,0 L7,14" />
+                        <path
+                          d="M14,7 L0,7" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220">
+                <svg
+                  height="13px"
+                  viewBox="0 0 17 13"
+                  width="17px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <polyline
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                      points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
+                      strokeWidth="2"
+                      transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
+                  </g>
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176">
+            Deleting \"deleting\"...
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176">
+            <span
+              className="AutoUI_ui_SelectBox-204">
+              The item \"
+              deleted
+              \" was successfully deleted.
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220"
+                title="Dismiss this message">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeLinecap="square"
+                    strokeWidth="1">
+                    <g
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                      strokeWidth="2"
+                      transform="translate(-1294.000000, -1073.000000)">
+                      <g
+                        transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                        <path
+                          d="M7,0 L7,14" />
+                        <path
+                          d="M14,7 L0,7" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176">
+            Archiving \"archiving\"...
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+            <div
+              className="AutoUI_forms_InputField-78">
+              <label
+                id="label-archived">
+                <div
+                  className="AutoUI_forms_InputField-78">
+                  <label
+                    className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    <input
+                      aria-labelledby="label-archived"
+                      checked={false}
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      id="archived"
+                      name="archived"
+                      required={false}
+                      type="checkbox" />
+                    <span
+                      className="AutoUI_forms_InputField-135" />
+                    archived
+                  </label>
+                </div>
+              </label>
+            </div>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <path
+                      className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                      d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                      fillRule="nonzero" />
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176">
+            Unarchiving \"unarchiving\"...
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+            <div
+              className="AutoUI_forms_InputField-78">
+              <label
+                id="label-unarchived">
+                <div
+                  className="AutoUI_forms_InputField-78">
+                  <label
+                    className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                    <input
+                      aria-labelledby="label-unarchived"
+                      checked={false}
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      id="unarchived"
+                      name="unarchived"
+                      required={false}
+                      type="checkbox" />
+                    <span
+                      className="AutoUI_forms_InputField-135" />
+                    unarchived
+                  </label>
+                </div>
+              </label>
+            </div>
+            <span
+              className="AutoUI_ui_SelectBox-215">
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 14 14"
+                  width="14px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <path
+                      className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                      d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                      fillRule="nonzero" />
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-220 AutoUI_ui_SelectBox-227 editableButton">
+                <svg
+                  height="14px"
+                  viewBox="0 0 24 24"
+                  width="14px">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    transform="scale(1.333) translate(-3, -3)" />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+      </ul>
     </div>
-    <ul
-      className="AutoUI_ui_SelectBox-135 expanded"
-      style={
-        Object {
-          "height": "240px",
-          "maxHeight": "240px",
-          "width": "100%",
-        }
-      }>
-      
-    </ul>
+  </div>
+  <hr />
+  <p>
+    All states but missing all methods (the strings showcased below are the \'item.value\')
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-17"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-83">
+        <div
+          className="AutoUI_ui_SelectBox-94">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="" />
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-136 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              creating this
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              unselected
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              selected
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              (un)selecting
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              editing (no changes yet)
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 AutoUI_ui_SelectBox-209">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              editing
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              saving edition
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              edited
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              created
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              confirm delete
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              deleting
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              deleted
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              archiving
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              archived
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              unarchiving
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
+          <div
+            className="AutoUI_ui_SelectBox-176 ">
+            <span
+              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              unarchived
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-215" />
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

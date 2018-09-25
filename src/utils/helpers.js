@@ -34,3 +34,11 @@ export function pluralize (count: number, noun: string, stripCount: boolean = fa
 export const getClassName = (config: Object) => Object.keys(config)
   .filter(className => config && className && config[className])
   .join(' ')
+
+export function size (collection: ?string | ?Object | ?Array<*>): number {
+  if (collection == null) return 0
+
+  if (Array.isArray(collection) || typeof collection === 'string') return collection.length
+
+  return Object.keys(collection).length
+}
