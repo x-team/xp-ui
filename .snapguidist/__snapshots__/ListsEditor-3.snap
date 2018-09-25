@@ -53,7 +53,7 @@ exports[`ListsEditor-3 1`] = `
         <div>
           <div>
             <div
-              className="AutoUI_ui_SelectBox-17"
+              className="AutoUI_ui_SelectBox-31"
               style={
                 Object {
                   "width": "100%",
@@ -61,9 +61,15 @@ exports[`ListsEditor-3 1`] = `
               }>
               <div>
                 <div
+<<<<<<< HEAD
                   className="AutoUI_ui_SelectBox-83">
                   <div
                     className="AutoUI_ui_SelectBox-94">
+=======
+                  className="AutoUI_ui_SelectBox-96">
+                  <div
+                    className="AutoUI_ui_SelectBox-107">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
                     <svg
                       height="17px"
                       viewBox="0 0 16 17"
@@ -89,7 +95,11 @@ exports[`ListsEditor-3 1`] = `
                     <input
                       aria-labelledby="label-search"
                       autoComplete="off"
+<<<<<<< HEAD
                       className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+=======
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
                       id="search"
                       name="search"
                       placeholder="Search"
@@ -99,7 +109,11 @@ exports[`ListsEditor-3 1`] = `
                   </div>
                 </div>
                 <ul
+<<<<<<< HEAD
                   className="AutoUI_ui_SelectBox-136 expanded"
+=======
+                  className="AutoUI_ui_SelectBox-153 expanded"
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
                   style={
                     Object {
                       "height": "420px",

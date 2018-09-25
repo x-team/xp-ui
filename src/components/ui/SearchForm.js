@@ -7,6 +7,8 @@ import SelectBox from './SelectBox'
 import SvgIcon from './SvgIcon'
 import Keywords from './Keywords'
 
+import { DISPLAY_MODES } from '../../utils/constants'
+
 import theme from '../../styles/theme'
 
 import type { DisplayModes } from '../../utils/types'
@@ -149,6 +151,7 @@ type Props = {
   mode: $Values<DisplayModes>, // eslint-disable-line no-undef
   lists: Array<*>,
   onSelectList: Function,
+  onClearList: Function,
   keywords: string,
   onChangeKeywords: Function,
   fields: Array<*>,
@@ -187,6 +190,7 @@ class SearchForm extends PureComponent<Props> {
       mode,
       lists,
       onSelectList,
+      onClearList,
       keywords,
       onChangeKeywords,
       fields,
@@ -195,7 +199,8 @@ class SearchForm extends PureComponent<Props> {
       renderApplicantsStatusFilter
     } = this.props
 
-    const themeClasses = mode === 'tabular' ? tabularTheme : listTheme
+    const isTabular = mode === DISPLAY_MODES.TABULAR
+    const themeClasses = isTabular ? tabularTheme : listTheme
 
     const renderDislpaySwitchButtons = () => (
       <div className={themeClasses.displayButtons}>
@@ -206,7 +211,7 @@ class SearchForm extends PureComponent<Props> {
         >
           <SvgIcon
             icon='grid'
-            color={mode === 'tabular' ? 'default' : 'grayscale'}
+            color={isTabular ? 'default' : 'grayscale'}
             hover='default'
           />
         </a>
@@ -217,7 +222,7 @@ class SearchForm extends PureComponent<Props> {
         >
           <SvgIcon
             icon='list'
-            color={mode !== 'tabular' ? 'default' : 'grayscale'}
+            color={!isTabular ? 'default' : 'grayscale'}
             hover='default'
           />
         </a>
@@ -234,9 +239,12 @@ class SearchForm extends PureComponent<Props> {
                 items={lists}
                 visibleItems={SELECTBOX_HEIGTH}
                 hasSearch
+                hasClear
                 collectionLabel='List'
-                onSelect={onSelectList}
+                onClick={onSelectList}
+                onClear={onClearList}
                 shouldSortItems={false}
+                areItemsToggleable={false}
                 append={
                   <Button type='button' selectbox onClick={this.handleModalOpen}>
                     <span><SvgIcon icon='edit' /> Edit lists</span>
@@ -244,7 +252,7 @@ class SearchForm extends PureComponent<Props> {
                 }
               />
             </div>
-            {mode !== 'tabular' && renderDislpaySwitchButtons()}
+            {!isTabular && renderDislpaySwitchButtons()}
           </div>
           <Keywords
             values={keywords}
@@ -269,7 +277,7 @@ class SearchForm extends PureComponent<Props> {
           >
             Show
           </Button>
-          {mode === 'tabular' && renderDislpaySwitchButtons()}
+          {isTabular && renderDislpaySwitchButtons()}
         </form>
         {renderApplicantsStatusFilter && (
           <div className={themeClasses.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>

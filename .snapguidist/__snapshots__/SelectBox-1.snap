@@ -1,13 +1,13 @@
 exports[`SelectBox-1 1`] = `
 <div
-  className="AutoUI_ui_SelectBox-17"
+  className="AutoUI_ui_SelectBox-31"
   style={
     Object {
       "width": "300px",
     }
   }>
   <div
-    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-23"
+    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-37"
     onMouseEnter={false}
     onMouseLeave={false}>
     <div
@@ -16,9 +16,15 @@ exports[`SelectBox-1 1`] = `
       <span
         className="AutoUI_ui_Dropdown-42">
         <div
+<<<<<<< HEAD
           className="AutoUI_ui_SelectBox-83">
           <div
             className="AutoUI_ui_SelectBox-94">
+=======
+          className="AutoUI_ui_SelectBox-96">
+          <div
+            className="AutoUI_ui_SelectBox-107">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
             <svg
               height="17px"
               viewBox="0 0 16 17"
@@ -44,7 +50,11 @@ exports[`SelectBox-1 1`] = `
             <input
               aria-labelledby="label-search"
               autoComplete="off"
+<<<<<<< HEAD
               className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+=======
+              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
               id="search"
               name="search"
               placeholder="Search"
@@ -58,9 +68,15 @@ exports[`SelectBox-1 1`] = `
     <div
       className="AutoUI_ui_Dropdown-52     ">
       <div
+<<<<<<< HEAD
         className="AutoUI_ui_SelectBox-154">
         <ul
           className="AutoUI_ui_SelectBox-136 false"
+=======
+        className="AutoUI_ui_SelectBox-171">
+        <ul
+          className="AutoUI_ui_SelectBox-153 false"
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
           style={
             Object {
               "height": "auto",
@@ -70,9 +86,15 @@ exports[`SelectBox-1 1`] = `
           }>
           
           <li
+<<<<<<< HEAD
             className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
             <div
               className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+=======
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+            <div
+              className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -97,6 +119,7 @@ exports[`SelectBox-1 1`] = `
                 </label>
               </div>
               <span
+<<<<<<< HEAD
                 className="AutoUI_ui_SelectBox-215" />
             </div>
           </li>
@@ -104,6 +127,15 @@ exports[`SelectBox-1 1`] = `
             className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
             <div
               className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+=======
+                className="AutoUI_ui_SelectBox-232" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+            <div
+              className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -128,6 +160,7 @@ exports[`SelectBox-1 1`] = `
                 </label>
               </div>
               <span
+<<<<<<< HEAD
                 className="AutoUI_ui_SelectBox-215" />
             </div>
           </li>
@@ -135,6 +168,15 @@ exports[`SelectBox-1 1`] = `
             className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
             <div
               className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+=======
+                className="AutoUI_ui_SelectBox-232" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+            <div
+              className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -159,6 +201,7 @@ exports[`SelectBox-1 1`] = `
                 </label>
               </div>
               <span
+<<<<<<< HEAD
                 className="AutoUI_ui_SelectBox-215" />
             </div>
           </li>
@@ -166,6 +209,15 @@ exports[`SelectBox-1 1`] = `
             className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
             <div
               className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+=======
+                className="AutoUI_ui_SelectBox-232" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+            <div
+              className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -190,6 +242,7 @@ exports[`SelectBox-1 1`] = `
                 </label>
               </div>
               <span
+<<<<<<< HEAD
                 className="AutoUI_ui_SelectBox-215" />
             </div>
           </li>
@@ -197,6 +250,15 @@ exports[`SelectBox-1 1`] = `
             className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
             <div
               className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
+=======
+                className="AutoUI_ui_SelectBox-232" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+            <div
+              className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -221,7 +283,11 @@ exports[`SelectBox-1 1`] = `
                 </label>
               </div>
               <span
+<<<<<<< HEAD
                 className="AutoUI_ui_SelectBox-215" />
+=======
+                className="AutoUI_ui_SelectBox-232" />
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
             </div>
           </li>
         </ul>

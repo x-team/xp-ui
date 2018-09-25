@@ -1,6 +1,6 @@
 exports[`SelectBox-5 1`] = `
 <div
-  className="AutoUI_ui_SelectBox-17"
+  className="AutoUI_ui_SelectBox-31"
   style={
     Object {
       "width": "330px",
@@ -11,12 +11,66 @@ exports[`SelectBox-5 1`] = `
     onMouseEnter={false}
     onMouseLeave={false}>
     <div
+<<<<<<< HEAD
       className="AutoUI_ui_Dropdown-24 ">
       
       <span
         className="AutoUI_ui_Dropdown-42">
         <div
           className="AutoUI_ui_SelectBox-27 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+=======
+      className="AutoUI_ui_SelectBox-96">
+      <div
+        className="AutoUI_ui_SelectBox-107">
+        <svg
+          height="17px"
+          viewBox="0 0 16 17"
+          width="16px">
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="none"
+            strokeWidth="1">
+            <circle
+              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+              cx="7.5"
+              cy="7.5"
+              r="6.5" />
+            <path
+              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+              d="M11.7538745,12.6062275 L15.5,16.5"
+              strokeLinecap="square" />
+          </g>
+        </svg>
+      </div>
+      <div>
+        <input
+          aria-labelledby="label-search"
+          autoComplete="off"
+          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
+          id="search"
+          name="search"
+          placeholder="Search"
+          required={false}
+          type="text"
+          value="" />
+      </div>
+    </div>
+    <ul
+      className="AutoUI_ui_SelectBox-153 expanded"
+      style={
+        Object {
+          "height": "auto",
+          "maxHeight": "auto",
+          "width": "100%",
+        }
+      }>
+      
+      <li
+        className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+        <div
+          className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
           <div
             className="AutoUI_ui_SelectBox-42">
             <div>
@@ -26,6 +80,60 @@ exports[`SelectBox-5 1`] = `
               registered
             </div>
           </div>
+<<<<<<< HEAD
+=======
+          <span
+            className="AutoUI_ui_SelectBox-232">
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 14 14"
+                width="14px">
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  stroke="none"
+                  strokeWidth="1">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                    fillRule="nonzero" />
+                </g>
+              </svg>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 24 24"
+                width="14px">
+                <path
+                  className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                  d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                  transform="scale(1.333) translate(-3, -3)" />
+              </svg>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 24 24"
+                width="14px">
+                <path
+                  className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  transform="scale(1.333) translate(-3, -3)" />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+        <div
+          className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
           <div
             className="AutoUI_ui_SelectBox-107">
             <svg
@@ -44,6 +152,7 @@ exports[`SelectBox-5 1`] = `
               </g>
             </svg>
           </div>
+<<<<<<< HEAD
         </div>
       </span>
     </div>
@@ -166,6 +275,234 @@ exports[`SelectBox-5 1`] = `
             className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-166 AutoUI_ui_Button-210 AutoUI_ui_Button-125">
             <span
               className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+=======
+          <span
+            className="AutoUI_ui_SelectBox-232">
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 14 14"
+                width="14px">
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  stroke="none"
+                  strokeWidth="1">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                    fillRule="nonzero" />
+                </g>
+              </svg>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 24 24"
+                width="14px">
+                <path
+                  className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                  d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                  transform="scale(1.333) translate(-3, -3)" />
+              </svg>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 24 24"
+                width="14px">
+                <path
+                  className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  transform="scale(1.333) translate(-3, -3)" />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+        <div
+          className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+          <div
+            className="AutoUI_forms_InputField-78">
+            <label
+              id="label-portfolio-review">
+              <div
+                className="AutoUI_forms_InputField-78">
+                <label
+                  className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  <input
+                    aria-labelledby="label-portfolio-review"
+                    checked={false}
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                    id="portfolio-review"
+                    name="portfolio-review"
+                    required={false}
+                    type="checkbox" />
+                  <span
+                    className="AutoUI_forms_InputField-135" />
+                  portfolio-review
+                </label>
+              </div>
+            </label>
+          </div>
+          <span
+            className="AutoUI_ui_SelectBox-232">
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 14 14"
+                width="14px">
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  stroke="none"
+                  strokeWidth="1">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                    fillRule="nonzero" />
+                </g>
+              </svg>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 24 24"
+                width="14px">
+                <path
+                  className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                  d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                  transform="scale(1.333) translate(-3, -3)" />
+              </svg>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 24 24"
+                width="14px">
+                <path
+                  className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  transform="scale(1.333) translate(-3, -3)" />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+        <div
+          className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+          <div
+            className="AutoUI_forms_InputField-78">
+            <label
+              id="label-social-media-screen">
+              <div
+                className="AutoUI_forms_InputField-78">
+                <label
+                  className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  <input
+                    aria-labelledby="label-social-media-screen"
+                    checked={false}
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                    id="social-media-screen"
+                    name="social-media-screen"
+                    required={false}
+                    type="checkbox" />
+                  <span
+                    className="AutoUI_forms_InputField-135" />
+                  social-media-screen
+                </label>
+              </div>
+            </label>
+          </div>
+          <span
+            className="AutoUI_ui_SelectBox-232">
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 14 14"
+                width="14px">
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  stroke="none"
+                  strokeWidth="1">
+                  <path
+                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                    d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
+                    fillRule="nonzero" />
+                </g>
+              </svg>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 24 24"
+                width="14px">
+                <path
+                  className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                  d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                  transform="scale(1.333) translate(-3, -3)" />
+              </svg>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 24 24"
+                width="14px">
+                <path
+                  className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  transform="scale(1.333) translate(-3, -3)" />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </li>
+      <li
+        className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+        <div
+          className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+          <div
+            className="AutoUI_forms_InputField-78">
+            <label
+              id="label-react-shortlist">
+              <div
+                className="AutoUI_forms_InputField-78">
+                <label
+                  className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                  <input
+                    aria-labelledby="label-react-shortlist"
+                    checked={false}
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                    id="react-shortlist"
+                    name="react-shortlist"
+                    required={false}
+                    type="checkbox" />
+                  <span
+                    className="AutoUI_forms_InputField-135" />
+                  react-shortlist
+                </label>
+              </div>
+            </label>
+          </div>
+          <span
+            className="AutoUI_ui_SelectBox-232">
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
               <svg
                 height="14px"
                 viewBox="0 0 14 14"
@@ -183,7 +520,35 @@ exports[`SelectBox-5 1`] = `
               </svg>
                Edit Lists
             </span>
+<<<<<<< HEAD
           </button>
+=======
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 24 24"
+                width="14px">
+                <path
+                  className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                  d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"
+                  transform="scale(1.333) translate(-3, -3)" />
+              </svg>
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+              <svg
+                height="14px"
+                viewBox="0 0 24 24"
+                width="14px">
+                <path
+                  className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-101"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  transform="scale(1.333) translate(-3, -3)" />
+              </svg>
+            </span>
+          </span>
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
         </div>
       </div>
     </div>

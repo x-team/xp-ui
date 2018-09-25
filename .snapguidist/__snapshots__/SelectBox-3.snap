@@ -1,13 +1,13 @@
 exports[`SelectBox-3 1`] = `
 <div
-  className="AutoUI_ui_SelectBox-17"
+  className="AutoUI_ui_SelectBox-31"
   style={
     Object {
       "width": "330px",
     }
   }>
   <div
-    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-23"
+    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-37"
     onMouseEnter={false}
     onMouseLeave={false}>
     <div
@@ -16,9 +16,13 @@ exports[`SelectBox-3 1`] = `
       <span
         className="AutoUI_ui_Dropdown-42">
         <div
-          className="AutoUI_ui_SelectBox-27 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_SelectBox-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
           <div
+<<<<<<< HEAD
             className="AutoUI_ui_SelectBox-71">
+=======
+            className="AutoUI_ui_SelectBox-84">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
             <div>
               Select Lists
             </div>
@@ -27,7 +31,11 @@ exports[`SelectBox-3 1`] = `
             </div>
           </div>
           <div
+<<<<<<< HEAD
             className="AutoUI_ui_SelectBox-107">
+=======
+            className="AutoUI_ui_SelectBox-120">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
             <svg
               height="5px"
               viewBox="0 0 9 5"
@@ -50,11 +58,19 @@ exports[`SelectBox-3 1`] = `
     <div
       className="AutoUI_ui_Dropdown-52     ">
       <div
+<<<<<<< HEAD
         className="AutoUI_ui_SelectBox-154">
         <div
           className="AutoUI_ui_SelectBox-83">
           <div
             className="AutoUI_ui_SelectBox-94">
+=======
+        className="AutoUI_ui_SelectBox-171">
+        <div
+          className="AutoUI_ui_SelectBox-96">
+          <div
+            className="AutoUI_ui_SelectBox-107">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
             <svg
               height="17px"
               viewBox="0 0 16 17"
@@ -80,7 +96,11 @@ exports[`SelectBox-3 1`] = `
             <input
               aria-labelledby="label-search"
               autoComplete="off"
+<<<<<<< HEAD
               className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+=======
+              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
               id="search"
               name="search"
               placeholder="Search"
@@ -90,7 +110,11 @@ exports[`SelectBox-3 1`] = `
           </div>
         </div>
         <ul
+<<<<<<< HEAD
           className="AutoUI_ui_SelectBox-136 false"
+=======
+          className="AutoUI_ui_SelectBox-153 false"
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
           style={
             Object {
               "height": "auto",
@@ -100,6 +124,7 @@ exports[`SelectBox-3 1`] = `
           }>
           
           <li
+<<<<<<< HEAD
             className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-187 ">
             <div
               className="AutoUI_ui_SelectBox-176 AutoUI_ui_SelectBox-183">
@@ -157,11 +182,74 @@ exports[`SelectBox-3 1`] = `
               </span>
               <span
                 className="AutoUI_ui_SelectBox-215" />
+=======
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+            <div
+              className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+              <span
+                className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                registered
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-232" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+            <div
+              className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+              <span
+                className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                portfolio-building
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-232" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+            <div
+              className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+              <span
+                className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                portfolio-review
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-232" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+            <div
+              className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+              <span
+                className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                social-media-screen
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-232" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+            <div
+              className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+              <span
+                className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                react-shortlist
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-232" />
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
             </div>
           </li>
         </ul>
         <div
+<<<<<<< HEAD
           className="AutoUI_ui_SelectBox-315">
+=======
+          className="AutoUI_ui_SelectBox-332">
+>>>>>>> Add clear click functionality and fix bug on lists filter (#222)
           <button
             className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-166 AutoUI_ui_Button-210 AutoUI_ui_Button-125">
             <span

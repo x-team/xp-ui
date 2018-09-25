@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import InputField from '../forms/InputField'
 import SvgIcon from './SvgIcon'
 import Dropdown from './Dropdown'
+import withProps from '../hocs/withProps'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
@@ -12,6 +13,19 @@ import theme from '../../styles/theme'
 import type { Element } from 'react'
 
 const cmz = require('cmz')
+
+const controlBaseClass = cmz(`
+  & {
+    position: absolute
+    top: calc(50% - 7px)
+    cursor: pointer
+    z-index: 5
+  }
+
+  & svg {
+    position: absolute
+  }
+`)
 
 const cx = {
   selectbox: cmz(`
@@ -117,19 +131,23 @@ const cx = {
     }
   `),
 
-  close: cmz(`
-    & {
-      position: absolute
-      z-index: 5
-      top: calc(50% - 7px)
-      right: 40px
-      cursor: pointer
-    }
+  close: cmz(
+    controlBaseClass,
+    `
+      & {
+        right: 40px
+      }
+    `
+  ),
 
-    & svg {
-      position: absolute
-    }
-  `),
+  clear: cmz(
+    controlBaseClass,
+    `
+      & {
+        right: 55px
+      }
+    `
+  ),
 
   label: cmz(typo.baseText),
 
@@ -366,18 +384,21 @@ type Props = {
   expanded?: boolean,
   shouldSortItems?: boolean,
   hasSearch?: boolean,
+  hasClear?: boolean,
   lined?: boolean,
   search?: string,
   collectionLabel?: string,
   onSelect?: Function,
   onClick?: Function,
+  onClear?: Function,
   onCreateNew?: Function,
   onSearch?: Function,
   onEdit?: Function,
   onArchive?: Function,
   onDelete?: Function,
   append?: Element<*>|string,
-  dismissTimeout?: number
+  dismissTimeout?: number,
+  areItemsToggleable?: boolean,
 }
 
 type State = {
@@ -407,16 +428,23 @@ const STATUS = {
 
 const dismissTimeout = 2500
 
+const DropdownCloseControl = withProps(({ className, closeDropdown }) => ({
+  className,
+  onClick: closeDropdown
+}))('div')
+
 class SelectBox extends Component<Props, State> {
   static defaultProps = {
     placeholder: 'Search',
     items: [],
     expanded: false,
     hasSearch: false,
+    hasClear: false,
     lined: false,
     collectionLabel: '',
     dismissTimeout,
-    shouldSortItems: true
+    shouldSortItems: true,
+    areItemsToggleable: true
   }
 
   state: State = {
@@ -516,6 +544,22 @@ class SelectBox extends Component<Props, State> {
     })
   }
 
+  handleClearClick = (event: any) => {
+    event.stopPropagation()
+    const { onClear } = this.props
+    const { view } = this.state
+
+    this.setState({
+      ...this.state,
+      view: (view || []).map(item => ({
+        ...item,
+        selected: false
+      }))
+    })
+
+    onClear && onClear()
+  }
+
   handleSelect = (e: any, item: Item) => {
     e.stopPropagation && e.stopPropagation()
     const { onSelect } = this.props
@@ -527,16 +571,16 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleClick = (e: any, item: Item) => {
-    e.stopPropagation && e.stopPropagation()
-    const { onClick } = this.props
+  handleClick = (event: any, item: Item) => {
+    const { onClick, areItemsToggleable } = this.props
+    areItemsToggleable && event.stopPropagation()
     if (item.status !== STATUS.SELECTING && onClick) {
       onClick({
         ...this.getUncachedItem(item),
-        selected: !item.selected
+        selected: !areItemsToggleable || !item.selected
       })
     } else {
-      this.handleSelect(e, item)
+      this.handleSelect(event, item)
     }
   }
 
@@ -626,11 +670,13 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleDismissDeleteMessage = (item: Item) => (e: Object) => {
-    e.stopPropagation && e.stopPropagation()
+  handleDismissDeleteMessage = (item: Item) => (event: Object) => {
+    event.stopPropagation && event.stopPropagation()
     const updatedItem = { ...item, status: 'dismissed' }
     this.updateItemsState(updatedItem)
   }
+
+  handleByStoppingPropagation = (event: Object) => event.stopPropagation && event.stopPropagation()
 
   render () {
     const {
@@ -640,6 +686,7 @@ class SelectBox extends Component<Props, State> {
       width,
       expanded,
       hasSearch,
+      hasClear,
       onSelect,
       onClick,
       onEdit,
@@ -652,7 +699,9 @@ class SelectBox extends Component<Props, State> {
     } = this.props
     const { view, search } = this.state
 
-    const filteredItems = view && view.filter((item: Item) => !item.hidden && item.status !== STATUS.DISMISSED)
+    const isItemNotDismissed = (item: Item) => item.status !== STATUS.DISMISSED
+    const filteredItems = view && view.filter((item: Item) => !item.hidden && isItemNotDismissed(item))
+    const selectedItems = view && view.filter(isItemNotDismissed)
 
     const editionButton = [cx.controlButton, cx.editableButton].join(' ')
 
@@ -951,8 +1000,11 @@ class SelectBox extends Component<Props, State> {
       )
     }
 
-    const selectsClass = filteredItems && filteredItems.filter(item => item.selected).length > 0
-      ? cx.selects : cx.selectsEmpty
+    const filteredSelectedItems = (selectedItems || []).filter(item => item.selected)
+    const selectsClass = filteredSelectedItems.length
+      ? cx.selects
+      : cx.selectsEmpty
+    const shouldShowClearElement = hasClear && filteredSelectedItems.length > 0
 
     const renderSearchLabel = (isSearch: boolean = false) => isSearch ? (
       <div className={cx.search}>
@@ -966,9 +1018,10 @@ class SelectBox extends Component<Props, State> {
           onChange={(input = {}) => this.handleSearch(null, input.target.value)}
           className={cx.searchInput}
           autoComplete='off'
-          onKeyDown={(e: any) => e.stopPropagation && e.stopPropagation()}
-          onKeyPress={(e: any) => e.stopPropagation && e.stopPropagation()}
-          onKeyUp={(e: any) => e.stopPropagation && e.stopPropagation()}
+          onKeyDown={this.handleByStoppingPropagation}
+          onKeyPress={this.handleByStoppingPropagation}
+          onKeyUp={this.handleByStoppingPropagation}
+          onClick={this.handleByStoppingPropagation}
         />
         {search !== '' && (
           <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
@@ -983,9 +1036,17 @@ class SelectBox extends Component<Props, State> {
             {placeholder}
           </div>
           <div>
-            {filteredItems.filter(item => item.selected).map(item => item.value).join(', ')}
+            {filteredSelectedItems
+              .reduce((acc, { value }) => (
+                acc ? `${acc}, ${value}` : value
+              ), '')}
           </div>
         </div>
+        {shouldShowClearElement && (
+          <div className={cx.clear} onClick={this.handleClearClick}>
+            <SvgIcon icon='x' color='grayscale' hover='default' />
+          </div>
+        )}
         <div className={cx.triangle}>
           <SvgIcon icon='triangledown' color='grayscale' />
         </div>
@@ -1012,11 +1073,11 @@ class SelectBox extends Component<Props, State> {
         label={renderSearchLabel(labelIsSearch && !hasSearch)}
         className={cx.dropdown}
       >
-        <div className={expanded ? '' : cx.shadow}>
+        <DropdownCloseControl className={expanded ? '' : cx.shadow} closeDropdown>
           {hasSearch && renderSearchLabel(true)}
           {renderItems()}
           {renderAppendix()}
-        </div>
+        </DropdownCloseControl>
       </Dropdown>
     )
 
