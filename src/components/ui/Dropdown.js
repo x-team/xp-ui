@@ -138,7 +138,7 @@ type Props = {
   className?: string,
   tooltipClassName?: string,
   onClick?: Function,
-  onClose?: Function
+  style?: Object
 }
 
 type State = {
@@ -156,7 +156,8 @@ class Dropdown extends PureComponent<Props, State> {
     hover: false,
     indicator: false,
     padded: false,
-    toggle: true
+    toggle: true,
+    style: {}
   }
 
   state = {
@@ -188,7 +189,8 @@ class Dropdown extends PureComponent<Props, State> {
       tooltip,
       className,
       tooltipClassName,
-      onClick
+      onClick,
+      style
     } = this.props
     const { open } = this.state
 
@@ -232,6 +234,7 @@ class Dropdown extends PureComponent<Props, State> {
 
     const renderContent = () => (
       <div
+        style={style}
         className={rootClasses}
         onMouseEnter={hover && this.open}
         onMouseLeave={hover && this.close}

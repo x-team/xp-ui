@@ -9,16 +9,27 @@ exports[`SelectBox-17 1`] = `
   <div
     className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-37"
     onMouseEnter={false}
-    onMouseLeave={false}>
+    onMouseLeave={false}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
     <div
       className="AutoUI_ui_Dropdown-24 ">
       
       <span
         className="AutoUI_ui_Dropdown-42">
         <div
+<<<<<<< HEAD
           className="AutoUI_ui_SelectBox-97">
           <div
             className="AutoUI_ui_SelectBox-108">
+=======
+          className="AutoUI_ui_SelectBox-96">
+          <div
+            className="AutoUI_ui_SelectBox-107">
+>>>>>>> Add item renderer support to Select box component
             <svg
               height="17px"
               viewBox="0 0 16 17"
@@ -44,7 +55,11 @@ exports[`SelectBox-17 1`] = `
             <input
               aria-labelledby="label-search"
               autoComplete="off"
+<<<<<<< HEAD
               className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
+=======
+              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
+>>>>>>> Add item renderer support to Select box component
               id="search"
               name="search"
               placeholder="Search"
@@ -58,9 +73,15 @@ exports[`SelectBox-17 1`] = `
     <div
       className="AutoUI_ui_Dropdown-52     ">
       <div
+<<<<<<< HEAD
         className="AutoUI_ui_SelectBox-172">
         <ul
           className="AutoUI_ui_SelectBox-154 false"
+=======
+        className="AutoUI_ui_SelectBox-171">
+        <ul
+          className="AutoUI_ui_SelectBox-153 false"
+>>>>>>> Add item renderer support to Select box component
           style={
             Object {
               "height": "auto",

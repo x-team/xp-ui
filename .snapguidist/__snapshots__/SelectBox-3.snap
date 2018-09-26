@@ -9,25 +9,44 @@ exports[`SelectBox-3 1`] = `
   <div
     className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-37"
     onMouseEnter={false}
-    onMouseLeave={false}>
+    onMouseLeave={false}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
     <div
       className="AutoUI_ui_Dropdown-24 ">
       
       <span
         className="AutoUI_ui_Dropdown-42">
         <div
-          className="AutoUI_ui_SelectBox-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+          className="AutoUI_ui_SelectBox-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+          style={
+            Object {
+              "border": "1px solid rgb(233, 237, 238)",
+            }
+          }>
           <div
+<<<<<<< HEAD
             className="AutoUI_ui_SelectBox-85">
+=======
+            className="AutoUI_ui_SelectBox-84">
+>>>>>>> Add item renderer support to Select box component
             <div>
               Select Lists
             </div>
-            <div>
+            <div
+              style={Object {}}>
               
             </div>
           </div>
           <div
+<<<<<<< HEAD
             className="AutoUI_ui_SelectBox-121">
+=======
+            className="AutoUI_ui_SelectBox-120">
+>>>>>>> Add item renderer support to Select box component
             <svg
               height="5px"
               viewBox="0 0 9 5"
@@ -50,11 +69,19 @@ exports[`SelectBox-3 1`] = `
     <div
       className="AutoUI_ui_Dropdown-52     ">
       <div
+<<<<<<< HEAD
         className="AutoUI_ui_SelectBox-172">
         <div
           className="AutoUI_ui_SelectBox-97">
           <div
             className="AutoUI_ui_SelectBox-108">
+=======
+        className="AutoUI_ui_SelectBox-171">
+        <div
+          className="AutoUI_ui_SelectBox-96">
+          <div
+            className="AutoUI_ui_SelectBox-107">
+>>>>>>> Add item renderer support to Select box component
             <svg
               height="17px"
               viewBox="0 0 16 17"
@@ -80,7 +107,11 @@ exports[`SelectBox-3 1`] = `
             <input
               aria-labelledby="label-search"
               autoComplete="off"
+<<<<<<< HEAD
               className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
+=======
+              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
+>>>>>>> Add item renderer support to Select box component
               id="search"
               name="search"
               placeholder="Search"
@@ -90,7 +121,11 @@ exports[`SelectBox-3 1`] = `
           </div>
         </div>
         <ul
+<<<<<<< HEAD
           className="AutoUI_ui_SelectBox-154 false"
+=======
+          className="AutoUI_ui_SelectBox-153 false"
+>>>>>>> Add item renderer support to Select box component
           style={
             Object {
               "height": "auto",
@@ -100,7 +135,11 @@ exports[`SelectBox-3 1`] = `
           }>
           
           <li
+<<<<<<< HEAD
             className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+=======
+            className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+>>>>>>> Add item renderer support to Select box component
             <div
               className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
               <span
@@ -156,12 +195,20 @@ exports[`SelectBox-3 1`] = `
                 react-shortlist
               </span>
               <span
+<<<<<<< HEAD
                 className="AutoUI_ui_SelectBox-233" />
+=======
+                className="AutoUI_ui_SelectBox-232" />
+>>>>>>> Add item renderer support to Select box component
             </div>
           </li>
         </ul>
         <div
+<<<<<<< HEAD
           className="AutoUI_ui_SelectBox-333">
+=======
+          className="AutoUI_ui_SelectBox-332">
+>>>>>>> Add item renderer support to Select box component
           <button
             className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-166 AutoUI_ui_Button-210 AutoUI_ui_Button-125">
             <span

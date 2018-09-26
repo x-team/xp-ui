@@ -73,9 +73,15 @@ exports[`Modal-5 1`] = `
                     }>
                     <div>
                       <div
+<<<<<<< HEAD
                         className="AutoUI_ui_SelectBox-97">
                         <div
                           className="AutoUI_ui_SelectBox-108">
+=======
+                        className="AutoUI_ui_SelectBox-96">
+                        <div
+                          className="AutoUI_ui_SelectBox-107">
+>>>>>>> Add item renderer support to Select box component
                           <svg
                             height="17px"
                             viewBox="0 0 16 17"
@@ -101,7 +107,11 @@ exports[`Modal-5 1`] = `
                           <input
                             aria-labelledby="label-search"
                             autoComplete="off"
+<<<<<<< HEAD
                             className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
+=======
+                            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
+>>>>>>> Add item renderer support to Select box component
                             id="search"
                             name="search"
                             placeholder="Search"
@@ -111,7 +121,11 @@ exports[`Modal-5 1`] = `
                         </div>
                       </div>
                       <ul
+<<<<<<< HEAD
                         className="AutoUI_ui_SelectBox-154 expanded"
+=======
+                        className="AutoUI_ui_SelectBox-153 expanded"
+>>>>>>> Add item renderer support to Select box component
                         style={
                           Object {
                             "height": "420px",
@@ -121,9 +135,15 @@ exports[`Modal-5 1`] = `
                         }>
                         
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -148,9 +168,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -168,7 +194,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -180,7 +210,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -195,9 +229,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -222,9 +262,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -242,7 +288,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -254,7 +304,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -269,9 +323,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -296,9 +356,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -316,7 +382,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -328,7 +398,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -343,9 +417,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -370,9 +450,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -390,7 +476,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -402,7 +492,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -417,9 +511,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -444,9 +544,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -464,7 +570,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -476,7 +586,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -491,9 +605,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -518,9 +638,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -538,7 +664,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -550,7 +680,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -565,9 +699,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -592,9 +732,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -612,7 +758,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -624,7 +774,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -639,9 +793,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -666,9 +826,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -686,7 +852,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -698,7 +868,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -713,9 +887,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -740,9 +920,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -760,7 +946,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -772,7 +962,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -787,9 +981,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -814,9 +1014,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -834,7 +1040,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -846,7 +1056,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -861,9 +1075,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -888,9 +1108,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -908,7 +1134,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -920,7 +1150,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -935,9 +1169,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -962,9 +1202,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -982,7 +1228,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -994,7 +1244,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -1009,9 +1263,15 @@ exports[`Modal-5 1`] = `
                           </div>
                         </li>
                         <li
+<<<<<<< HEAD
                           className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-227">
                           <div
                             className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
+=======
+                          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-226">
+                          <div
+                            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+>>>>>>> Add item renderer support to Select box component
                             <div
                               className="AutoUI_forms_InputField-78">
                               <label
@@ -1036,9 +1296,15 @@ exports[`Modal-5 1`] = `
                               </label>
                             </div>
                             <span
+<<<<<<< HEAD
                               className="AutoUI_ui_SelectBox-233">
                               <span
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                              className="AutoUI_ui_SelectBox-232">
+                              <span
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 14 14"
@@ -1056,7 +1322,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"
@@ -1068,7 +1338,11 @@ exports[`Modal-5 1`] = `
                                 </svg>
                               </span>
                               <span
+<<<<<<< HEAD
                                 className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
+=======
+                                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
+>>>>>>> Add item renderer support to Select box component
                                 <svg
                                   height="14px"
                                   viewBox="0 0 24 24"

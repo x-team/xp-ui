@@ -6,7 +6,11 @@ exports[`SearchForm-3 1`] = `
     <div
       className="AutoUI_ui_SearchForm-99">
       <div
+<<<<<<< HEAD
         className="AutoUI_ui_SearchForm-108">
+=======
+        className="AutoUI_ui_SearchForm-105">
+>>>>>>> Add item renderer support to Select box component
         <div
           className="AutoUI_ui_SelectBox-31"
           style={
@@ -17,25 +21,46 @@ exports[`SearchForm-3 1`] = `
           <div
             className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-37"
             onMouseEnter={false}
-            onMouseLeave={false}>
+            onMouseLeave={false}
+            style={
+              Object {
+                "width": "100%",
+              }
+            }>
             <div
               className="AutoUI_ui_Dropdown-24 ">
               
               <span
                 className="AutoUI_ui_Dropdown-42">
                 <div
+<<<<<<< HEAD
                   className="AutoUI_ui_SelectBox-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                   <div
                     className="AutoUI_ui_SelectBox-56">
+=======
+                  className="AutoUI_ui_SelectBox-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+                  style={
+                    Object {
+                      "border": "1px solid rgb(233, 237, 238)",
+                    }
+                  }>
+                  <div
+                    className="AutoUI_ui_SelectBox-55">
+>>>>>>> Add item renderer support to Select box component
                     <div>
                       Select Lists
                     </div>
-                    <div>
+                    <div
+                      style={Object {}}>
                       a selected list
                     </div>
                   </div>
                   <div
+<<<<<<< HEAD
                     className="AutoUI_ui_SelectBox-143 AutoUI_ui_SelectBox-17">
+=======
+                    className="AutoUI_ui_SelectBox-142 AutoUI_ui_SelectBox-17">
+>>>>>>> Add item renderer support to Select box component
                     <svg
                       height="14px"
                       viewBox="0 0 14 14"
@@ -62,7 +87,11 @@ exports[`SearchForm-3 1`] = `
                     </svg>
                   </div>
                   <div
+<<<<<<< HEAD
                     className="AutoUI_ui_SelectBox-121">
+=======
+                    className="AutoUI_ui_SelectBox-120">
+>>>>>>> Add item renderer support to Select box component
                     <svg
                       height="5px"
                       viewBox="0 0 9 5"
@@ -85,11 +114,19 @@ exports[`SearchForm-3 1`] = `
             <div
               className="AutoUI_ui_Dropdown-52     ">
               <div
+<<<<<<< HEAD
                 className="AutoUI_ui_SelectBox-172">
                 <div
                   className="AutoUI_ui_SelectBox-97">
                   <div
                     className="AutoUI_ui_SelectBox-108">
+=======
+                className="AutoUI_ui_SelectBox-171">
+                <div
+                  className="AutoUI_ui_SelectBox-96">
+                  <div
+                    className="AutoUI_ui_SelectBox-107">
+>>>>>>> Add item renderer support to Select box component
                     <svg
                       height="17px"
                       viewBox="0 0 16 17"
@@ -115,7 +152,11 @@ exports[`SearchForm-3 1`] = `
                     <input
                       aria-labelledby="label-search"
                       autoComplete="off"
+<<<<<<< HEAD
                       className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
+=======
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
+>>>>>>> Add item renderer support to Select box component
                       id="search"
                       name="search"
                       placeholder="Search"
@@ -125,7 +166,11 @@ exports[`SearchForm-3 1`] = `
                   </div>
                 </div>
                 <ul
+<<<<<<< HEAD
                   className="AutoUI_ui_SelectBox-154 false"
+=======
+                  className="AutoUI_ui_SelectBox-153 false"
+>>>>>>> Add item renderer support to Select box component
                   style={
                     Object {
                       "height": "auto",
@@ -135,6 +180,7 @@ exports[`SearchForm-3 1`] = `
                   }>
                   
                   <li
+<<<<<<< HEAD
                     className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
                     <div
                       className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
@@ -144,11 +190,26 @@ exports[`SearchForm-3 1`] = `
                       </span>
                       <span
                         className="AutoUI_ui_SelectBox-233" />
+=======
+                    className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+                    <div
+                      className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+                      <span
+                        className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                        a selected list
+                      </span>
+                      <span
+                        className="AutoUI_ui_SelectBox-232" />
+>>>>>>> Add item renderer support to Select box component
                     </div>
                   </li>
                 </ul>
                 <div
+<<<<<<< HEAD
                   className="AutoUI_ui_SelectBox-333">
+=======
+                  className="AutoUI_ui_SelectBox-332">
+>>>>>>> Add item renderer support to Select box component
                   <button
                     className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-166 AutoUI_ui_Button-210 AutoUI_ui_Button-125"
                     type="button">
@@ -176,6 +237,7 @@ exports[`SearchForm-3 1`] = `
                   </button>
                 </div>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -315,13 +377,19 @@ exports[`SearchForm-3 1`] = `
                   </div>
                 </li>
               </ul>
+=======
+>>>>>>> Add item renderer support to Select box component
             </div>
           </div>
         </div>
       </div>
     </div>
     <div
+<<<<<<< HEAD
       className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-129 has-value is-clearable is-searchable Select--multi">
+=======
+      className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-124 has-value is-clearable is-searchable Select--multi">
+>>>>>>> Add item renderer support to Select box component
       <input
         disabled={false}
         name="keywords"
@@ -503,8 +571,163 @@ exports[`SearchForm-3 1`] = `
         </span>
       </div>
     </div>
+<<<<<<< HEAD
     <button
       className="AutoUI_ui_SearchForm-144 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-176 raised"
+=======
+    <div
+      className="AutoUI_ui_SearchForm-132">
+      <div
+        className="AutoUI_ui_SelectBox-31"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }>
+        <div
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-37"
+          onMouseEnter={false}
+          onMouseLeave={false}
+          style={
+            Object {
+              "width": "100%",
+            }
+          }>
+          <div
+            className="AutoUI_ui_Dropdown-24 ">
+            
+            <span
+              className="AutoUI_ui_Dropdown-42">
+              <div
+                className="AutoUI_ui_SelectBox-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+                style={
+                  Object {
+                    "border": "1px solid rgb(233, 237, 238)",
+                  }
+                }>
+                <div
+                  className="AutoUI_ui_SelectBox-84">
+                  <div>
+                    Select Fields
+                  </div>
+                  <div
+                    style={Object {}}>
+                    
+                  </div>
+                </div>
+                <div
+                  className="AutoUI_ui_SelectBox-120">
+                  <svg
+                    height="5px"
+                    viewBox="0 0 9 5"
+                    width="9px">
+                    <g
+                      fill="none"
+                      fillRule="evenodd"
+                      stroke="none"
+                      strokeWidth="1">
+                      <polygon
+                        className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+                        points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
+                        transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div
+            className="AutoUI_ui_Dropdown-52     ">
+            <div
+              className="AutoUI_ui_SelectBox-171">
+              <div
+                className="AutoUI_ui_SelectBox-96">
+                <div
+                  className="AutoUI_ui_SelectBox-107">
+                  <svg
+                    height="17px"
+                    viewBox="0 0 16 17"
+                    width="16px">
+                    <g
+                      fill="none"
+                      fillRule="evenodd"
+                      stroke="none"
+                      strokeWidth="1">
+                      <circle
+                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                        cx="7.5"
+                        cy="7.5"
+                        r="6.5" />
+                      <path
+                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                        d="M11.7538745,12.6062275 L15.5,16.5"
+                        strokeLinecap="square" />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <input
+                    aria-labelledby="label-search"
+                    autoComplete="off"
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
+                    id="search"
+                    name="search"
+                    placeholder="Search"
+                    required={false}
+                    type="text"
+                    value="" />
+                </div>
+              </div>
+              <ul
+                className="AutoUI_ui_SelectBox-153 false"
+                style={
+                  Object {
+                    "height": "auto",
+                    "maxHeight": "180px",
+                    "width": "100%",
+                  }
+                }>
+                
+                <li
+                  className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
+                    <div
+                      className="AutoUI_forms_InputField-78">
+                      <label
+                        id="label-an unselected field">
+                        <div
+                          className="AutoUI_forms_InputField-78">
+                          <label
+                            className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                            <input
+                              aria-labelledby="label-an unselected field"
+                              checked={false}
+                              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                              id="an unselected field"
+                              name="an unselected field"
+                              required={false}
+                              type="checkbox" />
+                            <span
+                              className="AutoUI_forms_InputField-135" />
+                            an unselected field
+                          </label>
+                        </div>
+                      </label>
+                    </div>
+                    <span
+                      className="AutoUI_ui_SelectBox-232" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      className="AutoUI_ui_SearchForm-138 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-176 raised"
+>>>>>>> Add item renderer support to Select box component
       type="submit">
       <span
         className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
@@ -512,9 +735,15 @@ exports[`SearchForm-3 1`] = `
       </span>
     </button>
     <div
+<<<<<<< HEAD
       className="AutoUI_ui_SearchForm-114">
       <a
         className="AutoUI_ui_SearchForm-122"
+=======
+      className="AutoUI_ui_SearchForm-109">
+      <a
+        className="AutoUI_ui_SearchForm-117"
+>>>>>>> Add item renderer support to Select box component
         title="View in tabular mode">
         <svg
           height="17px"
@@ -557,7 +786,11 @@ exports[`SearchForm-3 1`] = `
         </svg>
       </a>
       <a
+<<<<<<< HEAD
         className="AutoUI_ui_SearchForm-122"
+=======
+        className="AutoUI_ui_SearchForm-117"
+>>>>>>> Add item renderer support to Select box component
         title="View in list mode">
         <svg
           height="16px"
@@ -610,7 +843,11 @@ exports[`SearchForm-3 1`] = `
     </div>
   </form>
   <div
+<<<<<<< HEAD
     className="AutoUI_ui_SearchForm-150">
+=======
+    className="AutoUI_ui_SearchForm-143">
+>>>>>>> Add item renderer support to Select box component
     Here it goes ApplicantsStatusFilter component
   </div>
 </div>

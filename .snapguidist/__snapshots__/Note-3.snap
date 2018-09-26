@@ -20,8 +20,13 @@ exports[`Note-3 1`] = `
       Samwise Gamgee
     </span>
     <span
+<<<<<<< HEAD
       className="AutoUI_ui_Note-58 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
       29 Sep 18
+=======
+      className="AutoUI_ui_Note-52 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+      25 Sep 18
+>>>>>>> Add item renderer support to Select box component
     </span>
     <div
       className="AutoUI_ui_Note-68">

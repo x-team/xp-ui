@@ -2,7 +2,8 @@ exports[`Dropdown-1 1`] = `
 <div
   className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
   onMouseEnter={false}
-  onMouseLeave={false}>
+  onMouseLeave={false}
+  style={Object {}}>
   <div
     className="AutoUI_ui_Dropdown-24 ">
     <svg
@@ -95,7 +96,8 @@ exports[`Dropdown-1 1`] = `
       <div
         className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
         onMouseEnter={false}
-        onMouseLeave={false}>
+        onMouseLeave={false}
+        style={Object {}}>
         <div
           className="AutoUI_ui_Dropdown-24 ">
           
@@ -115,7 +117,8 @@ exports[`Dropdown-1 1`] = `
             <div
               className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
               onMouseEnter={false}
-              onMouseLeave={false}>
+              onMouseLeave={false}
+              style={Object {}}>
               <div
                 className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-46">
                 <svg

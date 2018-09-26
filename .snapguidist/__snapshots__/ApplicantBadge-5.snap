@@ -28,7 +28,8 @@ exports[`ApplicantBadge-5 1`] = `
       <span
         className="AutoUI_ui_ApplicantBadge-339 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         <div
-          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+          style={Object {}}>
           <div
             className="AutoUI_ui_Dropdown-24 ">
             
@@ -61,7 +62,8 @@ exports[`ApplicantBadge-5 1`] = `
       <span
         className="AutoUI_ui_ApplicantBadge-339 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         <div
-          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+          style={Object {}}>
           <div
             className="AutoUI_ui_Dropdown-24 ">
             
@@ -94,7 +96,8 @@ exports[`ApplicantBadge-5 1`] = `
       <span
         className="AutoUI_ui_ApplicantBadge-339 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         <div
-          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+          style={Object {}}>
           <div
             className="AutoUI_ui_Dropdown-24 ">
             
@@ -117,7 +120,8 @@ exports[`ApplicantBadge-5 1`] = `
       <span
         className="AutoUI_ui_ApplicantBadge-339 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         <div
-          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+          style={Object {}}>
           <div
             className="AutoUI_ui_Dropdown-24 ">
             
@@ -140,7 +144,8 @@ exports[`ApplicantBadge-5 1`] = `
       <span
         className="AutoUI_ui_ApplicantBadge-339 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         <div
-          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+          style={Object {}}>
           <div
             className="AutoUI_ui_Dropdown-24 ">
             
@@ -163,7 +168,8 @@ exports[`ApplicantBadge-5 1`] = `
       <span
         className="AutoUI_ui_ApplicantBadge-339 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         <div
-          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+          className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+          style={Object {}}>
           <div
             className="AutoUI_ui_Dropdown-24 ">
             
