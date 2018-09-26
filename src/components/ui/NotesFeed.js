@@ -1,14 +1,14 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import uuidv4 from 'uuid/v4'
 
 import elem from '../../utils/elem'
 import Button from './Button'
-import type { EditorProps } from './InlineEditor'
 import InlineEditor from './InlineEditor'
 import Note from './Note'
 import TextareaEditor from './TextareaEditor/TextareaEditor'
+
+import type { EditorProps } from './InlineEditor'
 
 const cmz = require('cmz')
 
@@ -51,9 +51,6 @@ class NotesFeed extends PureComponent<Props, State> {
 
   renderPresenter = (note: any, value: string, isHover: boolean, activateEditingMode: Function) =>
     NoteWrapper(
-      {
-        key: uuidv4()
-      },
       <Note
         avatar={note.author_avatar}
         date={note.updated_at}
@@ -77,6 +74,9 @@ class NotesFeed extends PureComponent<Props, State> {
         .filter((note, i) => page * perPage > i)
         .map(note =>
           InlineEditorWrapper(
+            {
+              key: note.id
+            },
             <InlineEditor
               value={note.body}
               onSave={updatedText =>
