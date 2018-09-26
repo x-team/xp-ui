@@ -71,25 +71,27 @@ class NotesFeed extends PureComponent<Props, State> {
   render () {
     const { page, perPage } = this.state
     const { notes, onNoteUpdate } = this.props
+
     return Root(
-      notes &&
-      notes.filter((note, i) => page * perPage > i).map(note =>
-        InlineEditorWrapper(
-          <InlineEditor
-            value={note.body}
-            onSave={updatedText =>
-              onNoteUpdate &&
-              onNoteUpdate({
-                ...note,
-                ...{ body: updatedText }
-              })
-            }
-            presenter={({ value, isHover, activateEditingMode }) =>
-              this.renderPresenter(note, value, isHover, activateEditingMode)
-            }
-            editor={this.renderEditor}
-          />
-        )
+      notes && notes
+        .filter((note, i) => page * perPage > i)
+        .map(note =>
+          InlineEditorWrapper(
+            <InlineEditor
+              value={note.body}
+              onSave={updatedText =>
+                onNoteUpdate &&
+                onNoteUpdate({
+                  ...note,
+                  ...{ body: updatedText }
+                })
+              }
+              presenter={({ value, isHover, activateEditingMode }) =>
+                this.renderPresenter(note, value, isHover, activateEditingMode)
+              }
+              editor={this.renderEditor}
+            />
+          )
       ),
       this.showViewMore(notes && notes.length) && (
         <Button

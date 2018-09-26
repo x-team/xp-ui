@@ -1,5 +1,5 @@
-/* global HTMLTextAreaElement */
 // @flow
+/* global HTMLTextAreaElement */
 
 import React, { PureComponent } from 'react'
 
