@@ -35,7 +35,10 @@ const palette = {
   porcelain: '#E9EDEE',
   brickRed: '#D32F3B',
   wePeep: '#F7D9DC',
-  bombay: '#B2B6BC'
+  bombay: '#B2B6BC',
+  lima: '#5fcf21',
+  ripeLemon: '#f8e71c',
+  frenchGray: '#c2c1c5'
 }
 
 export default wrap({
@@ -48,6 +51,7 @@ export default wrap({
   baseGreen: palette.fern,
   baseSilver: palette.alto,
   baseHighlight: palette.mercury,
+  baseHighlightBright: palette.frenchGray,
 
   typoHeading: palette.tuna,
   typoSubheading: palette.radicalRed,
@@ -83,7 +87,11 @@ export default wrap({
   iconGray: palette.bombay,
   iconTextGray: palette.tuna,
 
-  logoGray: palette.nobel
+  logoGray: palette.nobel,
+
+  statusAccepted: palette.lima,
+  statusPending: palette.ripeLemon,
+  statusExluded: palette.radicalRed
 })
 
 export const breakpoints = {

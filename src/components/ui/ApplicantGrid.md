@@ -35,6 +35,7 @@ const items = Array(10).fill(
     email='applicant@email.com'
     info={info}
     tags={tags}
+    status='accepted'
   />
 );
 items[1] = (
@@ -46,6 +47,7 @@ items[1] = (
     email='applicant@email.com'
     info={info}
     tags={tags}
+    status='excluded'
   />
 );
 <ApplicantGrid
@@ -66,6 +68,7 @@ const items = Array(5).fill(
     id={333}
     name='Applicant full name'
     email='applicant@email.com'
+    status='accepted'
     info={[
       {
         label: 'Avail. date:',

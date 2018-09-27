@@ -9,32 +9,42 @@ import Keywords from './Keywords'
 
 import theme from '../../styles/theme'
 
+import type { DisplayModes } from '../../utils/types'
+
 const cmz = require('cmz')
 
-const cardTheme = {
+const listTheme = {
   searchFormContainer: cmz(`
     background-color: ${theme.baseBright}
-    width: 630px
   `),
 
   searchForm: cmz(`
-    & {
-      padding: 30px 50px
-    }
-    &:empty {
-      padding: 0
-    }
-  `),
-
-  listsButton: cmz(`
-    width: 100px
-    height: 58px
-    margin-left: 10px
+    width: 100%
   `),
 
   selectLists: cmz(`
     display: flex
     align-items: center
+  `),
+
+  listsSelector: cmz(`
+    width: calc(100% - 82px)
+    max-width: calc(100% - 82px)
+  `),
+
+  displayButtons: cmz(`
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    margin-left: 10px
+    cursor: pointer
+  `),
+
+  displayButton: cmz(`
+    & svg {
+      display: block
+      padding: 10px
+    }
   `),
 
   formKeywords: cmz(`
@@ -47,7 +57,7 @@ const cardTheme = {
 
   selectFields: cmz(`
     display: inline-block
-    width: 50%
+    width: 100%
     margin-top: 20px
   `),
 
@@ -62,15 +72,14 @@ const cardTheme = {
   applicantsStatusFilter: cmz(`
     width: 100%
     background-color: ${theme.baseBright}
-    padding: 10px 30px 30px
+    padding: 20px 10px 0
     box-sizing: border-box
   `)
 }
 
 const tabularTheme = {
   searchFormContainer: cmz(`
-    width: 100%
-    background-color: ${theme.baseBright}
+    min-width: 100%
     display: flex
     flex-direction: column
     box-sizing: border-box
@@ -80,34 +89,47 @@ const tabularTheme = {
     display: flex
     flex-shrink: 0
     width: 100%
-    padding: 50px 30px 30px
+    padding: 30px
     box-sizing: border-box
-  `),
-
-  listsButton: cmz(`
-    margin: 0 10px 0 20px
-    width: 100px
-    height: 58px
+    background-color: ${theme.baseBright}
   `),
 
   selectLists: cmz(`
-    width: 420px
     display: flex
     flex-shrink: 0
     align-items: center
   `),
 
+  listsSelector: cmz(`
+    width: 250px
+  `),
+
+  displayButtons: cmz(`
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    margin-left: 10px
+    cursor: pointer
+  `),
+
+  displayButton: cmz(`
+    & svg {
+      display: block
+      padding: 10px
+    }
+  `),
+
   formKeywords: cmz(`
     margin: 0 10px
-    min-width: 300px
     height: 58px
     flex: 1
     flex-shrink: 0
+    min-width: 200px
   `),
 
   selectFields: cmz(`
     flex-shrink: 0
-    width: 300px
+    width: 250px
     margin: 0 10px
   `),
 
@@ -118,44 +140,46 @@ const tabularTheme = {
 
   applicantsStatusFilter: cmz(`
     width: 100%
-    background-color: ${theme.baseBrighter}
-    padding: 10px 30px 30px
+    padding: 20px 30px
     box-sizing: border-box
   `)
 }
 
 type Props = {
-  mode: 'card' | 'tabular',
+  mode: $Values<DisplayModes>, // eslint-disable-line no-undef
   lists: Array<*>,
   onSelectList: Function,
-  onClickShowLists: Function,
   keywords: string,
   onChangeKeywords: Function,
   fields: Array<*>,
   onSelectField: Function,
   onSubmit: Function,
   openListEditorModal: Function,
-  renderApplicantsStatusFilter: any
+  renderApplicantsStatusFilter: any,
+  switchDisplay: Function
 }
+
+const SELECTBOX_HEIGTH = 3
 
 class SearchForm extends PureComponent<Props> {
   static defaultProps = {
-    mode: 'card',
+    mode: 'list',
     lists: [],
-    onSelectList: () => {},
-    onClickShowLists: () => {},
     keywords: '',
-    onChangeKeywords: () => {},
     fields: [],
-    onSelectField: () => {},
-    onSubmit: () => {},
-    openListEditorModal: () => {},
     renderApplicantsStatusFilter: null
   }
 
-  handleModalOpen = (e: Object) => {
-    e.preventDefault()
-    this.props.openListEditorModal()
+  handleModalOpen = (event: Object) => {
+    const { openListEditorModal } = this.props
+    event.preventDefault()
+    openListEditorModal && openListEditorModal()
+  }
+
+  handleSwitchDisplay = (mode: string) => (event: Object) => {
+    const { switchDisplay } = this.props
+    event.preventDefault()
+    switchDisplay && switchDisplay(mode)
   }
 
   render () {
@@ -163,7 +187,6 @@ class SearchForm extends PureComponent<Props> {
       mode,
       lists,
       onSelectList,
-      onClickShowLists,
       keywords,
       onChangeKeywords,
       fields,
@@ -172,42 +195,64 @@ class SearchForm extends PureComponent<Props> {
       renderApplicantsStatusFilter
     } = this.props
 
-    const theme = mode === 'card' ? cardTheme : tabularTheme
+    const themeClasses = mode === 'tabular' ? tabularTheme : listTheme
+
+    const renderDislpaySwitchButtons = () => (
+      <div className={themeClasses.displayButtons}>
+        <a
+          className={themeClasses.displayButton}
+          onClick={this.handleSwitchDisplay('tabular')}
+          title='View in tabular mode'
+        >
+          <SvgIcon
+            icon='grid'
+            color={mode === 'tabular' ? 'default' : 'grayscale'}
+            hover='default'
+          />
+        </a>
+        <a
+          className={themeClasses.displayButton}
+          onClick={this.handleSwitchDisplay('list')}
+          title='View in list mode'
+        >
+          <SvgIcon
+            icon='list'
+            color={mode !== 'tabular' ? 'default' : 'grayscale'}
+            hover='default'
+          />
+        </a>
+      </div>
+    )
 
     return (
-      <div className={theme.searchFormContainer}>
-        <form onSubmit={onSubmit} className={theme.searchForm}>
-          <div className={theme.selectLists}>
-            <SelectBox
-              placeholder='Select Lists'
-              items={lists}
-              visibleItems={3}
-              hasSearch
-              collectionLabel='List'
-              onSelect={onSelectList}
-              append={
-                <Button type='button' selectbox onClick={this.handleModalOpen}>
-                  <span><SvgIcon icon='edit' /> Edit lists</span>
-                </Button>
-              }
-            />
-            <Button
-              className={theme.listsButton}
-              type='button'
-              size='large'
-              raised
-              onClick={onClickShowLists}
-            >
-              Show
-            </Button>
+      <div className={themeClasses.searchFormContainer}>
+        <form onSubmit={onSubmit} className={themeClasses.searchForm}>
+          <div className={themeClasses.selectLists}>
+            <div className={themeClasses.listsSelector}>
+              <SelectBox
+                placeholder='Select Lists'
+                items={lists}
+                visibleItems={SELECTBOX_HEIGTH}
+                hasSearch
+                collectionLabel='List'
+                onSelect={onSelectList}
+                shouldSortItems={false}
+                append={
+                  <Button type='button' selectbox onClick={this.handleModalOpen}>
+                    <span><SvgIcon icon='edit' /> Edit lists</span>
+                  </Button>
+                }
+              />
+            </div>
+            {mode !== 'tabular' && renderDislpaySwitchButtons()}
           </div>
           <Keywords
             values={keywords}
             onChange={onChangeKeywords}
             onSubmit={onSubmit}
-            className={theme.formKeywords}
+            className={themeClasses.formKeywords}
           />
-          <div className={theme.selectFields}>
+          <div className={themeClasses.selectFields}>
             <SelectBox
               placeholder='Select Fields'
               items={fields}
@@ -218,16 +263,16 @@ class SearchForm extends PureComponent<Props> {
             />
           </div>
           <Button
-            className={theme.formButton}
+            className={themeClasses.formButton}
             type='submit'
-            size='large'
             raised
           >
-            Filter
+            Show
           </Button>
+          {mode === 'tabular' && renderDislpaySwitchButtons()}
         </form>
         {renderApplicantsStatusFilter && (
-          <div className={theme.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>
+          <div className={themeClasses.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>
         )}
       </div>
     )

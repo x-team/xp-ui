@@ -53,29 +53,30 @@ const cx = {
       font-size: 15px
       color: ${theme.typoLabel}
       padding: 10px 0 0
-      transition: color .15s ease-out, font-size .15s ease-out
+      transition: color .10s ease-out, font-size .10s ease-out
     }
 
     & > div:last-of-type {
       width: calc(100% - 20px)
+      height: 24px
       white-space: nowrap
-      overflow: auto
+      overflow-x: overlay
+      overflow-y: hidden
       padding: 0 0 10px
-      transition: visibility 0, opacity .15s ease-out, padding .15s ease-out
-      visibility: visible
+      transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       opacity: 1
     }
   `),
 
   selectsEmpty: cmz(`
     & > div:first-of-type {
-      transition: color .15s ease-out, font-size .15s ease-out
+      transition: color .10s ease-out, font-size .10s ease-out
     }
 
     & > div:last-of-type {
-      transition: visibility 1s, opacity .15s ease-out, padding .15s ease-out
-      visibility: hidden
+      transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       opacity: 0
+      height: 0
     }
   `),
 
@@ -139,7 +140,7 @@ const cx = {
       padding: 0
       border: 1px solid ${theme.lineSilver2}
       border-top: none
-      overflow-y: scroll
+      overflow-y: auto
       background: ${theme.baseBrighter}
       width: 100%
       box-sizing: border-box
@@ -363,6 +364,7 @@ type Props = {
   width?: number,
   visibleItems?: number,
   expanded?: boolean,
+  shouldSortItems?: boolean,
   hasSearch?: boolean,
   lined?: boolean,
   search?: string,
@@ -413,7 +415,8 @@ class SelectBox extends Component<Props, State> {
     hasSearch: false,
     lined: false,
     collectionLabel: '',
-    dismissTimeout
+    dismissTimeout,
+    shouldSortItems: true
   }
 
   state: State = {
@@ -644,7 +647,8 @@ class SelectBox extends Component<Props, State> {
       onDelete,
       onCreateNew,
       lined,
-      append
+      append,
+      shouldSortItems
     } = this.props
     const { view, search } = this.state
 
@@ -918,28 +922,34 @@ class SelectBox extends Component<Props, State> {
       return data
     }
 
-    const renderItems = () => (
-      <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
-        height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
-        maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
-        width: width ? `${width}px` : '100%'
-      }}>
-        {search && filteredItems && (
-          <li key='search-result'>
-            {filteredItems.length === 0 && (
-              <span className={cx.nothingLabel}>No Results for "{search}"</span>
-            )}
-            {onCreateNew && !filteredItems.find(each => each.value === search.trim()) && (
-              <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
-                <SvgIcon icon='plus' />
-                <span>Create new {collectionLabel} "{search}"</span>
-              </span>
-            )}
-          </li>
-        )}
-        {sortByCreatingFirst(filteredItems.sort(sortById)).map(renderItem)}
-      </ul>
-    )
+    const renderItems = () => {
+      const items = shouldSortItems
+        ? filteredItems.sort(sortById)
+        : filteredItems
+
+      return (
+        <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
+          height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
+          maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
+          width: width ? `${width}px` : '100%'
+        }}>
+          {search && filteredItems && (
+            <li key='search-result'>
+              {filteredItems.length === 0 && (
+                <span className={cx.nothingLabel}>No Results for "{search}"</span>
+              )}
+              {onCreateNew && !filteredItems.find(each => each.value === search.trim()) && (
+                <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
+                  <SvgIcon icon='plus' />
+                  <span>Create new {collectionLabel} "{search}"</span>
+                </span>
+              )}
+            </li>
+          )}
+          {sortByCreatingFirst(items).map(renderItem)}
+        </ul>
+      )
+    }
 
     const selectsClass = filteredItems && filteredItems.filter(item => item.selected).length > 0
       ? cx.selects : cx.selectsEmpty

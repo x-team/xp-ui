@@ -9,9 +9,8 @@ import type { Element } from 'react'
 const cmz = require('cmz')
 
 type Props = {
-  close: Function,
-  children?: Element<*>|string,
-  isClosing: boolean
+  onClose: Function,
+  children?: Element<*>|string
 }
 
 type State = {
@@ -29,8 +28,7 @@ const cx = {
       overflow: auto
       padding: 30px
       box-sizing: border-box
-      z-index: 9999
-      transition: opacity .3s ease-in, visibility .3s ease-in
+      z-index: 99999
       opacity: 0
       visibility: hidden
       outline: none
@@ -68,37 +66,23 @@ class Modal extends Component<Props, State> {
     this.setState({ open: true })
   }
 
-  componentDidUpdate () {
-    const { open } = this.state
-    const { isClosing } = this.props
-    if (open && isClosing) {
-      this.handleClose()
-    }
-  }
-
-  componentWillUnmount () {
-    clearTimeout(this.closeWithTimer())
-  }
-
   noClick = (event: any) => {
     event && event.stopPropagation()
   }
 
-  closeWithTimer = () => setTimeout(() => {
-    const { close } = this.props
-    close && close()
-  }, 300)
-
   handleClose = () => {
-    this.setState({ open: false }, this.closeWithTimer)
+    const { onClose } = this.props
+    this.setState({ open: false }, () => {
+      onClose && onClose()
+    })
   }
 
   handleKeyPress = (e: any) => {
-    const evt = e || window.event
-    evt.stopPropagation()
+    const event = e || window.event
+    event.stopPropagation()
 
     // Esc
-    if (evt.keyCode === 27) {
+    if (event.keyCode === 27) {
       this.handleClose()
     }
   }

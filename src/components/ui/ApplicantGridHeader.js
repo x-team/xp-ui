@@ -22,7 +22,7 @@ type HeaderColumn = {
 
 type Props = {
   className?: string,
-  headerColumns: Array<HeaderColumn>,
+  headerColumns: Array<HeaderColumn | Array<HeaderColumn>>,
   sortBy?: string,
   sortDirection?: $Values<SortDirections>, // eslint-disable-line no-undef
   onSortingChange: Function
@@ -37,7 +37,7 @@ const arrowBase = cmz(`
   &:after {
     content: ''
     width: 0
-    height: 0 
+    height: 0
     border-left: 4px solid transparent
     border-right: 4px solid transparent
     vertical-align: middle
@@ -66,21 +66,31 @@ const cx = {
     `
       & {
         display: flex
-        width: fit-content
-        margin: 14px
+        min-width: 100%
+        padding: 14px
+        color: ${theme.typoLabel}
+        font-size: 16px
+        line-height: 1.2
+        border-bottom: 1px solid ${theme.lineSilver1}
+        position: sticky
+        box-sizing: border-box
       }
-  
+
       & > span {
-          margin-right: 14px
-          color: ${theme.typoLabel}
-          font-size: 16px
-          font-weight: normal
-          flex-wrap: wrap
-        }
-      
+        margin-right: 14px
+        font-weight: normal
+        flex-wrap: wrap
+        flex-shrink: 0
+      }
+
+      & > span:first-of-type {
+        padding-right: 56px
+      }
   `),
-  placeHolder: cmz(`
-    width: 42px
+  grouped: cmz(`
+    flex: 1
+    display: flex
+    justify-content: space-between
   `),
   small: cmz(`
     & {
@@ -102,7 +112,7 @@ const cx = {
     & {
       cursor: pointer
     }
-     
+
     &:hover {
       color: ${theme.baseDark}
     }
@@ -133,10 +143,11 @@ class ApplicantGridHeader extends PureComponent<Props> {
     }
     const {
       sortBy,
-      sortDirection
+      sortDirection,
+      onSortingChange
     } = this.props
     const direction = getSortDirection(name, sortBy, sortDirection)
-    this.props.onSortingChange({ sortBy: name, sortDirection: direction })
+    onSortingChange && onSortingChange({ sortBy: name, sortDirection: direction })
   }
 
   render () {
@@ -152,32 +163,45 @@ class ApplicantGridHeader extends PureComponent<Props> {
       [cx.container]: true,
       [componentCustomClassName]: className
     })
+
+    const renderCell = (headerColumn) => {
+      if (Array.isArray(headerColumn)) {
+        return (
+          <div
+            key={`grouped${headerColumns.indexOf(headerColumn).toString()}`}
+            className={cx.grouped}
+          >
+            {headerColumn.map(renderCell)}
+          </div>
+        )
+      }
+
+      const {
+        isSortable,
+        name,
+        size,
+        label
+      } = headerColumn
+      const columnClassName = getClassName({
+        [cx[size]]: true,
+        [cx.sortable]: isSortable,
+        [cx[`${direction}Sort`]]: sortBy === name
+      })
+
+      return (
+        <span
+          key={name}
+          className={columnClassName}
+          onClick={this.handleColumnClick(name, isSortable)}
+        >
+          {label}
+        </span>
+      )
+    }
+
     return (
       <div className={componentClassName}>
-        <span className={cx.placeHolder} />
-        {headerColumns.map(headerColumn => {
-          const {
-            isSortable,
-            name,
-            size,
-            label
-          } = headerColumn
-          const columnClassName = getClassName({
-            [cx[size]]: true,
-            [cx.sortable]: isSortable,
-            [cx[`${direction}Sort`]]: sortBy === name
-          })
-
-          return (
-            <span
-              key={name}
-              className={columnClassName}
-              onClick={this.handleColumnClick(name, isSortable)}
-            >
-              {label}
-            </span>
-          )
-        })}
+        {headerColumns && headerColumns.map(renderCell)}
       </div>
     )
   }

@@ -1,0 +1,16 @@
+exports[`InlineEditor-9 1`] = `
+<div>
+  <div>
+    <div
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }>
+      <p>
+        This is a sample text. I am editable but changes will not be saved once clicking \"SAVE\"
+      </p>
+    </div>
+  </div>
+</div>
+`;

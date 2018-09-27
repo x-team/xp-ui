@@ -6,7 +6,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text'
 
 type Props = {
@@ -483,6 +483,42 @@ const getIcon = ({ icon, color, hover }) => {
     archive: (
       <svg width='14px' height='14px' viewBox='0 0 24 24'>
         <path className={fillClassName} transform='scale(1.333) translate(-3, -3)' d='M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z' />
+      </svg>
+    ),
+
+    list: (
+      <svg width='15px' height='16px' viewBox='0 0 15 16'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <rect className={fillClassName} x='3' y='0' width='12' height='2' />
+          <rect className={fillClassName} x='3' y='7' width='12' height='2' />
+          <rect className={fillClassName} x='3' y='14' width='12' height='2' />
+          <rect className={fillClassName} x='0' y='0' width='2' height='2' />
+          <rect className={fillClassName} x='0' y='7' width='2' height='2' />
+          <rect className={fillClassName} x='0' y='14' width='2' height='2' />
+        </g>
+      </svg>
+    ),
+
+    grid: (
+      <svg width='17px' height='17px' viewBox='0 0 17 17'>
+        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+          <rect className={strokeClassName} strokeWidth='2' x='1' y='1' width='5' height='5' />
+          <rect className={strokeClassName} strokeWidth='2' x='1' y='11' width='5' height='5' />
+          <rect className={strokeClassName} strokeWidth='2' x='11' y='1' width='5' height='5' />
+          <rect className={strokeClassName} strokeWidth='2' x='11' y='11' width='5' height='5' />
+        </g>
+      </svg>
+    ),
+
+    dock: (
+      <svg width='12px' height='13px' viewBox='0 0 12 13'>
+        <g stroke='none' strokeWidth='10' fill='none' fillRule='evenodd'>
+          <g className={fillClassName} transform='translate(-7.000000, -7.000000)'>
+            <g transform='translate(10.365228, 10.944176) rotate(-135.000000) translate(-10.365228, -10.944176) translate(5.865228, 2.944176)'>
+              <path d='M1.29684211,0.538947368 C1.04799179,0.307066223 0.660202339,0.313908315 0.419686906,0.554423748 C0.179171473,0.794939181 0.172329381,1.18272863 0.404210526,1.43157895 L7.14105263,8.16842105 L0.404210526,14.6694737 C0.172329381,14.918324 0.179171473,15.3061135 0.419686906,15.5466289 C0.660202339,15.7871443 1.04799179,15.7939864 1.29684211,15.5621053 L8.80842105,8.16842105 L1.29684211,0.538947368 Z' />
+            </g>
+          </g>
+        </g>
       </svg>
     )
   }
