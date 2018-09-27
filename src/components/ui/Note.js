@@ -23,6 +23,7 @@ import type { EditorProps, PresenterProps } from './InlineEditor'
 const cmz = require('cmz')
 
 const Root = elem.div(cmz(`
+  position: relative
   display: flex
 `))
 
@@ -37,6 +38,9 @@ const Body = elem.div(cmz(`
 `))
 
 const Options = elem.div(cmz(`
+  position: absolute
+  top: 4px
+  right: 4px
   padding-top: 4px
   margin-left: auto
 `))
