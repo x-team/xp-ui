@@ -111,6 +111,14 @@ class ApplicantGrid extends PureComponent<Props, State> {
     sortDirection: SORT_DIRECTIONS.ASCENDING
   }
 
+  componentDidUpdate = (prevProps: Props) => {
+    const { sortDirection, sortBy } = this.props
+    const isSortChanged = prevProps.sortDirection !== sortDirection || prevProps.sortBy !== sortBy
+    if (this.listContainer && isSortChanged) {
+      this.listContainer.scrollTop = 0
+    }
+  }
+
   handleViewMore = (showMore: Function) => {
     const { onViewMore } = this.props
     onViewMore && onViewMore()
@@ -119,11 +127,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
 
   handleSortChange = (sortOptions: Object) => {
     const { onSortingChange } = this.props
-
     onSortingChange && onSortingChange(sortOptions)
-    if (this.listContainer) {
-      this.listContainer.scrollTop = 0
-    }
   }
 
   handleSetContainer = (comp: ?Object) => {
