@@ -37,16 +37,21 @@ class NotesFeed extends PureComponent<Props, State> {
     return total / perPage > page
   }
 
+  handleNoteUpdate = (note: Object) => (updatedText: string) => {
+    const { onNoteUpdate } = this.props
+    onNoteUpdate && onNoteUpdate({ ...note, body: updatedText })
+  }
+
   render () {
     const { page, perPage } = this.state
-    const { notes, onNoteUpdate } = this.props
+    const { notes } = this.props
 
     return Root(
       notes && notes
         .filter((note, i) => page * perPage > i)
         .map(note => <Note
           key={note.id}
-          onNoteUpdate={updatedText => onNoteUpdate && onNoteUpdate({ ...note, body: updatedText })}
+          onNoteUpdate={this.handleNoteUpdate(note)}
           avatar={note.author_avatar}
           date={note.updated_at}
           name={note.author_name}

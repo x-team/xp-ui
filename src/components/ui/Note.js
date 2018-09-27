@@ -121,7 +121,8 @@ type Props = {
 }
 
 type State = {
-  isHover?: boolean
+  newValueIsValid: boolean,
+  isHover: boolean
 }
 
 class Note extends PureComponent<Props, State> {
@@ -129,6 +130,7 @@ class Note extends PureComponent<Props, State> {
   activateEditingMode: Function
 
   state = {
+    newValueIsValid: true,
     isHover: false
   }
 
@@ -165,11 +167,17 @@ class Note extends PureComponent<Props, State> {
     return TextWrapper({}, <Text content={<Markdown>{value}</Markdown>} isPureContent />)
   }
 
-  renderEditor = ({ onValueChange, value }: EditorProps) =>
-    <TextareaEditor onChange={onValueChange} text={value} />
+  handleEditorValueChange = (onValueChange: Function) => (value: any) => {
+    this.setState({ newValueIsValid: !!value.trim() })
+    onValueChange(value)
+  }
+
+  renderEditor = ({ onValueChange, value }: EditorProps) => (
+    <TextareaEditor onChange={this.handleEditorValueChange(onValueChange)} text={value} />
+  )
 
   render () {
-    const { isHover } = this.state
+    const { isHover, newValueIsValid } = this.state
     const { avatar, name, date, files, text, onNoteUpdate } = this.props
 
     return (
@@ -184,9 +192,11 @@ class Note extends PureComponent<Props, State> {
         Body(
           name && Name(name),
           date && Time(timeFromNow(date)),
-          text && InlineEditorWrapper(
+        text &&
+          InlineEditorWrapper(
             <InlineEditor
               value={text}
+              isValid={newValueIsValid}
               onSave={onNoteUpdate}
               presenter={this.renderPresenter}
               editor={this.renderEditor}
