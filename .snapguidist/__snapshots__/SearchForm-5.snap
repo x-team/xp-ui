@@ -240,62 +240,7 @@ exports[`SearchForm-5 1`] = `
       </div>
     </div>
     <div
-      className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-52 is-clearable is-searchable Select--multi">
-      <div
-        className="Select-control">
-        <span
-          className="Select-multi-value-wrapper"
-          id="react-select-51--value">
-          <div
-            className="Select-placeholder">
-            Type keywords
-          </div>
-          <div
-            className="Select-input"
-            style={
-              Object {
-                "display": "inline-block",
-              }
-            }>
-            <input
-              aria-activedescendant="react-select-51--value"
-              aria-expanded="false"
-              aria-haspopup="false"
-              aria-owns=""
-              required={false}
-              role="combobox"
-              style={
-                Object {
-                  "boxSizing": "content-box",
-                  "width": "5px",
-                }
-              }
-              value="" />
-            <div
-              style={
-                Object {
-                  "height": 0,
-                  "left": 0,
-                  "overflow": "scroll",
-                  "position": "absolute",
-                  "top": 0,
-                  "visibility": "hidden",
-                  "whiteSpace": "pre",
-                }
-              }>
-              
-            </div>
-          </div>
-        </span>
-        <span
-          className="Select-arrow-zone">
-          <span
-            className="Select-arrow" />
-        </span>
-      </div>
-    </div>
-    <div
-      className="AutoUI_ui_SearchForm-60">
+      className="AutoUI_ui_SearchForm-58">
       <div
         className="AutoUI_ui_SelectBox-31"
         style={
@@ -400,6 +345,61 @@ exports[`SearchForm-5 1`] = `
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div
+      className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-52 is-clearable is-searchable Select--multi">
+      <div
+        className="Select-control">
+        <span
+          className="Select-multi-value-wrapper"
+          id="react-select-14--value">
+          <div
+            className="Select-placeholder">
+            Type keywords
+          </div>
+          <div
+            className="Select-input"
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }>
+            <input
+              aria-activedescendant="react-select-14--value"
+              aria-expanded="false"
+              aria-haspopup="false"
+              aria-owns=""
+              required={false}
+              role="combobox"
+              style={
+                Object {
+                  "boxSizing": "content-box",
+                  "width": "5px",
+                }
+              }
+              value="" />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }>
+              
+            </div>
+          </div>
+        </span>
+        <span
+          className="Select-arrow-zone">
+          <span
+            className="Select-arrow" />
+        </span>
       </div>
     </div>
     <button

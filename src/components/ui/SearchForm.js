@@ -52,15 +52,15 @@ const listTheme = {
   formKeywords: cmz(`
     display: block
     width: 100%
-    margin: 20px 0 0
-    padding: 20px 0 0
-    border-top: 1px solid ${theme.lineSilver4}
+    margin-top: 20px
   `),
 
   selectFields: cmz(`
     display: inline-block
     width: 100%
-    margin-top: 20px
+    margin: 20px 0 0
+    padding: 20px 0 0
+    border-top: 1px solid ${theme.lineSilver4}
   `),
 
   formButton: cmz(`
@@ -100,7 +100,6 @@ const tabularTheme = {
     display: flex
     align-items: center
     margin-right: 10px
-    order: 1
     width: 100%
     max-width: 300px
     min-width: 200px
@@ -118,7 +117,6 @@ const tabularTheme = {
     flex-wrap: nowrap
     margin-left: 10px
     cursor: pointer
-    order: 5
   `),
 
   displayButton: cmz(`
@@ -134,7 +132,6 @@ const tabularTheme = {
     flex: 1
     flex-shrink: 0
     min-width: 200px
-    order: 3
   `),
 
   selectFields: cmz(`
@@ -142,14 +139,12 @@ const tabularTheme = {
     max-width: 300px
     min-width: 200px
     margin: 0 10px
-    order: 2
   `),
 
   formButton: cmz(`
     margin: 0 10px
     height: 58px
     padding: 10px 40px
-    order: 4
   `),
 
   applicantsStatusFilter: cmz(`
@@ -266,12 +261,6 @@ class SearchForm extends PureComponent<Props> {
             </div>
             {!isTabular && renderDisplaySwitchButtons()}
           </div>
-          <Keywords
-            values={keywords}
-            onChange={onChangeKeywords}
-            onSubmit={onSubmit}
-            className={themeClasses.formKeywords}
-          />
           <div className={themeClasses.selectFields}>
             <SelectBox
               placeholder='Select Fields'
@@ -282,6 +271,12 @@ class SearchForm extends PureComponent<Props> {
               onSelect={onSelectField}
             />
           </div>
+          <Keywords
+            values={keywords}
+            onChange={onChangeKeywords}
+            onSubmit={onSubmit}
+            className={themeClasses.formKeywords}
+          />
           <Button
             className={themeClasses.formButton}
             type='submit'
