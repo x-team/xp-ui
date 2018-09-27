@@ -9,7 +9,7 @@ import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { Element } from 'react'
-import type { Icon } from './SvgIcon'
+import type { Color, Icon } from './SvgIcon'
 
 const cmz = require('cmz')
 
@@ -125,6 +125,7 @@ const styles = {
 
 type Props = {
   icon?: Icon | '',
+  iconColor?: Color,
   label?: Element<*> | string,
   children?: Element<*> | string,
   targetXOrigin?: string,
@@ -146,6 +147,7 @@ type State = {
 class Dropdown extends PureComponent<Props, State> {
   static defaultProps = {
     icon: '',
+    iconColor: 'text',
     label: '',
     children: null,
     targetXOrigin: 'left',
@@ -169,6 +171,7 @@ class Dropdown extends PureComponent<Props, State> {
   render () {
     const {
       icon,
+      iconColor,
       label,
       children,
       targetXOrigin,
@@ -229,7 +232,7 @@ class Dropdown extends PureComponent<Props, State> {
         onMouseLeave={hover && this.close}
       >
         <div className={labelClasses} onClick={handleClick}>
-          {icon && <SvgIcon icon={icon} color='text' />}
+          {icon && <SvgIcon icon={icon} color={iconColor} />}
           {label && <span className={styles.labelElement}>{label}</span>}
           {indicator && (
             <span className={styles.triangle}>
