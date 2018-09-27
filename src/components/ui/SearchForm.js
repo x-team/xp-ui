@@ -98,12 +98,18 @@ const tabularTheme = {
 
   selectLists: cmz(`
     display: flex
-    flex-shrink: 0
     align-items: center
+    margin-right: 10px
+    order: 1
+    width: 100%
+    max-width: 300px
+    min-width: 200px
   `),
 
   listsSelector: cmz(`
-    width: 250px
+    width: inherit
+    max-width: inherit
+    min-width: inherit
   `),
 
   displayButtons: cmz(`
@@ -112,6 +118,7 @@ const tabularTheme = {
     flex-wrap: nowrap
     margin-left: 10px
     cursor: pointer
+    order: 5
   `),
 
   displayButton: cmz(`
@@ -127,17 +134,22 @@ const tabularTheme = {
     flex: 1
     flex-shrink: 0
     min-width: 200px
+    order: 3
   `),
 
   selectFields: cmz(`
     flex-shrink: 0
-    width: 250px
+    max-width: 300px
+    min-width: 200px
     margin: 0 10px
+    order: 2
   `),
 
   formButton: cmz(`
     margin: 0 10px
     height: 58px
+    padding: 10px 40px
+    order: 4
   `),
 
   applicantsStatusFilter: cmz(`
