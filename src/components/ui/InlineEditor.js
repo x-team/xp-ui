@@ -42,7 +42,7 @@ export type EditorProps = {
   onValueChange(data: any): void
 }
 
-type PresenterProps = {
+export type PresenterProps = {
   value: any,
   isEditable: boolean,
   isHover: boolean,

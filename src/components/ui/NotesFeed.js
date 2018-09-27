@@ -4,11 +4,7 @@ import React, { PureComponent } from 'react'
 
 import elem from '../../utils/elem'
 import Button from './Button'
-import InlineEditor from './InlineEditor'
 import Note from './Note'
-import TextareaEditor from './TextareaEditor/TextareaEditor'
-
-import type { EditorProps } from './InlineEditor'
 
 const cmz = require('cmz')
 
@@ -24,17 +20,9 @@ type State = {
 
 const Root = elem.div()
 
-const NoteWrapper = elem.div(cmz(`
-  margin: 0 0 40px
-`))
-
 const buttonClass = cmz(`
   width: 100%
 `)
-
-const InlineEditorWrapper = elem.div(cmz(`
-  margin-bottom: 24px
-`))
 
 class NotesFeed extends PureComponent<Props, State> {
   state = {
@@ -49,22 +37,6 @@ class NotesFeed extends PureComponent<Props, State> {
     return total / perPage > page
   }
 
-  renderPresenter = (note: any, value: string, isHover: boolean, activateEditingMode: Function) =>
-    NoteWrapper(
-      <Note
-        avatar={note.author_avatar}
-        date={note.updated_at}
-        name={note.author_name}
-        text={value}
-        files={note.files}
-        isHover={isHover}
-        onEditClick={activateEditingMode}
-      />
-    )
-
-  renderEditor = ({ onValueChange, value }: EditorProps) =>
-    <TextareaEditor onChange={onValueChange} text={value} />
-
   render () {
     const { page, perPage } = this.state
     const { notes, onNoteUpdate } = this.props
@@ -72,27 +44,16 @@ class NotesFeed extends PureComponent<Props, State> {
     return Root(
       notes && notes
         .filter((note, i) => page * perPage > i)
-        .map(note =>
-          InlineEditorWrapper(
-            {
-              key: note.id
-            },
-            <InlineEditor
-              value={note.body}
-              onSave={updatedText =>
-                onNoteUpdate &&
-                onNoteUpdate({
-                  ...note,
-                  ...{ body: updatedText }
-                })
-              }
-              presenter={({ value, isHover, activateEditingMode }) =>
-                this.renderPresenter(note, value, isHover, activateEditingMode)
-              }
-              editor={this.renderEditor}
-            />
-          )
-      ),
+        .map(note => <Note
+          key={note.id}
+          onNoteUpdate={updatedText => onNoteUpdate && onNoteUpdate({ ...note, body: updatedText })}
+          avatar={note.author_avatar}
+          date={note.updated_at}
+          name={note.author_name}
+          text={note.body}
+          files={note.files}
+        />
+        ),
       this.showViewMore(notes && notes.length) && (
         <Button
           outlined
