@@ -130,7 +130,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
     onSortingChange && onSortingChange(sortOptions)
   }
 
-  handleSetContainer = (comp: ?Object) => {
+  setContainerRef = (comp: ?Object) => {
     this.listContainer = comp
   }
 
@@ -157,7 +157,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
 
     const renderItems = () => items && (
       <div
-        ref={this.handleSetContainer}
+        ref={this.setContainerRef}
         className={cx.wrapper}
         data-test='applicants'
         tabIndex={0}
