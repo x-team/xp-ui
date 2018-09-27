@@ -202,7 +202,7 @@ class SearchForm extends PureComponent<Props> {
     const isTabular = mode === DISPLAY_MODES.TABULAR
     const themeClasses = isTabular ? tabularTheme : listTheme
 
-    const renderDislpaySwitchButtons = () => (
+    const renderDisplaySwitchButtons = () => (
       <div className={themeClasses.displayButtons}>
         <a
           className={themeClasses.displayButton}
@@ -252,7 +252,7 @@ class SearchForm extends PureComponent<Props> {
                 }
               />
             </div>
-            {!isTabular && renderDislpaySwitchButtons()}
+            {!isTabular && renderDisplaySwitchButtons()}
           </div>
           <Keywords
             values={keywords}
@@ -277,7 +277,7 @@ class SearchForm extends PureComponent<Props> {
           >
             Show
           </Button>
-          {isTabular && renderDislpaySwitchButtons()}
+          {isTabular && renderDisplaySwitchButtons()}
         </form>
         {renderApplicantsStatusFilter && (
           <div className={themeClasses.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>

@@ -1,11 +1,10 @@
 exports[`SelectBox-13 1`] = `
-<<<<<<< HEAD
 <div>
   <p>
     Empty list and no search provided. The \"create new\" button should be hidden:
   </p>
   <div
-    className="AutoUI_ui_SelectBox-17"
+    className="AutoUI_ui_SelectBox-31"
     style={
       Object {
         "width": "100%",
@@ -13,9 +12,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-83">
+        className="AutoUI_ui_SelectBox-97">
         <div
-          className="AutoUI_ui_SelectBox-94">
+          className="AutoUI_ui_SelectBox-108">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -41,7 +40,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
             id="search"
             name="search"
             placeholder="Search"
@@ -51,7 +50,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136 expanded"
+        className="AutoUI_ui_SelectBox-154 expanded"
         style={
           Object {
             "height": "auto",
@@ -67,7 +66,7 @@ exports[`SelectBox-13 1`] = `
     Empty list and search is provided. Nothing is found on search. The \"create new\" button should should be visible:
   </p>
   <div
-    className="AutoUI_ui_SelectBox-17"
+    className="AutoUI_ui_SelectBox-31"
     style={
       Object {
         "width": "100%",
@@ -75,9 +74,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-83">
+        className="AutoUI_ui_SelectBox-97">
         <div
-          className="AutoUI_ui_SelectBox-94">
+          className="AutoUI_ui_SelectBox-108">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -103,7 +102,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
             id="search"
             name="search"
             placeholder="Search"
@@ -112,7 +111,7 @@ exports[`SelectBox-13 1`] = `
             value="wat?" />
         </div>
         <div
-          className="AutoUI_ui_SelectBox-120">
+          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -140,7 +139,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136 expanded"
+        className="AutoUI_ui_SelectBox-154 expanded"
         style={
           Object {
             "height": "auto",
@@ -150,35 +149,13 @@ exports[`SelectBox-13 1`] = `
         }>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-289 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-307 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             No Results for \"
             wat?
             \"
           </span>
           <span
-            className="AutoUI_ui_SelectBox-297 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-=======
-<div
-  className="AutoUI_ui_SelectBox-31"
-  style={
-    Object {
-      "width": "100%",
-    }
-  }>
-  <div
-    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-37"
-    onMouseEnter={false}
-    onMouseLeave={false}>
-    <div
-      className="AutoUI_ui_Dropdown-24 ">
-      
-      <span
-        className="AutoUI_ui_Dropdown-42">
-        <div
-          className="AutoUI_ui_SelectBox-96">
-          <div
-            className="AutoUI_ui_SelectBox-107">
->>>>>>> Add clear click functionality and fix bug on lists filter (#222)
+            className="AutoUI_ui_SelectBox-315 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -218,7 +195,7 @@ exports[`SelectBox-13 1`] = `
     Valid list and search is provided. Nothing is found on search. The \"create new\" button should be visible:
   </p>
   <div
-    className="AutoUI_ui_SelectBox-17"
+    className="AutoUI_ui_SelectBox-31"
     style={
       Object {
         "width": "100%",
@@ -226,9 +203,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-83">
+        className="AutoUI_ui_SelectBox-97">
         <div
-          className="AutoUI_ui_SelectBox-94">
+          className="AutoUI_ui_SelectBox-108">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -254,7 +231,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
             id="search"
             name="search"
             placeholder="Search"
@@ -263,7 +240,7 @@ exports[`SelectBox-13 1`] = `
             value="wat?" />
         </div>
         <div
-          className="AutoUI_ui_SelectBox-120">
+          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -291,7 +268,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136 expanded"
+        className="AutoUI_ui_SelectBox-154 expanded"
         style={
           Object {
             "height": "auto",
@@ -301,13 +278,13 @@ exports[`SelectBox-13 1`] = `
         }>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-289 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-307 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             No Results for \"
             wat?
             \"
           </span>
           <span
-            className="AutoUI_ui_SelectBox-297 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-315 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -347,7 +324,7 @@ exports[`SelectBox-13 1`] = `
     Valid list and search is provided. Some results are found on search, but none of them matches exactly with search string. The \"create new\" button should be visible:
   </p>
   <div
-    className="AutoUI_ui_SelectBox-17"
+    className="AutoUI_ui_SelectBox-31"
     style={
       Object {
         "width": "100%",
@@ -355,9 +332,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-83">
+        className="AutoUI_ui_SelectBox-97">
         <div
-          className="AutoUI_ui_SelectBox-94">
+          className="AutoUI_ui_SelectBox-108">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -383,7 +360,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
             id="search"
             name="search"
             placeholder="Search"
@@ -392,7 +369,7 @@ exports[`SelectBox-13 1`] = `
             value="ent" />
         </div>
         <div
-          className="AutoUI_ui_SelectBox-120">
+          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -420,7 +397,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136 expanded"
+        className="AutoUI_ui_SelectBox-154 expanded"
         style={
           Object {
             "height": "auto",
@@ -430,7 +407,7 @@ exports[`SelectBox-13 1`] = `
         }>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-297 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-315 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -464,53 +441,39 @@ exports[`SelectBox-13 1`] = `
           </span>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
-<<<<<<< HEAD
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               justtoentrymakesure
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
-=======
-          <div>
-            <input
-              aria-labelledby="label-search"
-              autoComplete="off"
-              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
-              id="search"
-              name="search"
-              placeholder="Search"
-              required={false}
-              type="text"
-              value="" />
->>>>>>> Add clear click functionality and fix bug on lists filter (#222)
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
       </ul>
@@ -520,7 +483,7 @@ exports[`SelectBox-13 1`] = `
     Valid list and search is provided. One result is found on search, but don\'t match exactly with the search string. The \"create new\" button should be visible:
   </p>
   <div
-    className="AutoUI_ui_SelectBox-17"
+    className="AutoUI_ui_SelectBox-31"
     style={
       Object {
         "width": "100%",
@@ -528,9 +491,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-83">
+        className="AutoUI_ui_SelectBox-97">
         <div
-          className="AutoUI_ui_SelectBox-94">
+          className="AutoUI_ui_SelectBox-108">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -556,7 +519,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
             id="search"
             name="search"
             placeholder="Search"
@@ -565,7 +528,7 @@ exports[`SelectBox-13 1`] = `
             value="another" />
         </div>
         <div
-          className="AutoUI_ui_SelectBox-120">
+          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -593,7 +556,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136 expanded"
+        className="AutoUI_ui_SelectBox-154 expanded"
         style={
           Object {
             "height": "auto",
@@ -603,7 +566,7 @@ exports[`SelectBox-13 1`] = `
         }>
         <li>
           <span
-            className="AutoUI_ui_SelectBox-297 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            className="AutoUI_ui_SelectBox-315 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -637,15 +600,15 @@ exports[`SelectBox-13 1`] = `
           </span>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
       </ul>
@@ -655,7 +618,7 @@ exports[`SelectBox-13 1`] = `
     Valid list and search is provided. At least one of the items in the search result matches exactly with search string. The \"create new\" button should be hidden:
   </p>
   <div
-    className="AutoUI_ui_SelectBox-17"
+    className="AutoUI_ui_SelectBox-31"
     style={
       Object {
         "width": "100%",
@@ -663,9 +626,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-83">
+        className="AutoUI_ui_SelectBox-97">
         <div
-          className="AutoUI_ui_SelectBox-94">
+          className="AutoUI_ui_SelectBox-108">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -691,7 +654,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
             id="search"
             name="search"
             placeholder="Search"
@@ -700,7 +663,7 @@ exports[`SelectBox-13 1`] = `
             value="entry" />
         </div>
         <div
-          className="AutoUI_ui_SelectBox-120">
+          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -728,7 +691,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136 expanded"
+        className="AutoUI_ui_SelectBox-154 expanded"
         style={
           Object {
             "height": "auto",
@@ -738,39 +701,39 @@ exports[`SelectBox-13 1`] = `
         }>
         <li />
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               justtoentrymakesure
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
       </ul>
@@ -780,7 +743,7 @@ exports[`SelectBox-13 1`] = `
     A new item is being created right after something was searched. The \"create new\" button should be hidden:
   </p>
   <div
-    className="AutoUI_ui_SelectBox-17"
+    className="AutoUI_ui_SelectBox-31"
     style={
       Object {
         "width": "100%",
@@ -788,9 +751,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-83">
+        className="AutoUI_ui_SelectBox-97">
         <div
-          className="AutoUI_ui_SelectBox-94">
+          className="AutoUI_ui_SelectBox-108">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -816,7 +779,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
             id="search"
             name="search"
             placeholder="Search"
@@ -825,7 +788,7 @@ exports[`SelectBox-13 1`] = `
             value="entr" />
         </div>
         <div
-          className="AutoUI_ui_SelectBox-120">
+          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -853,7 +816,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136 expanded"
+        className="AutoUI_ui_SelectBox-154 expanded"
         style={
           Object {
             "height": "auto",
@@ -863,46 +826,46 @@ exports[`SelectBox-13 1`] = `
         }>
         <li />
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176">
+            className="AutoUI_ui_SelectBox-194">
             Creating new entry \"entr\"...
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               justtoentrymakesure
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
       </ul>
@@ -912,7 +875,7 @@ exports[`SelectBox-13 1`] = `
     A new item is being created while nothing is being searched. The \"create new\" button should be hidden:
   </p>
   <div
-    className="AutoUI_ui_SelectBox-17"
+    className="AutoUI_ui_SelectBox-31"
     style={
       Object {
         "width": "100%",
@@ -920,9 +883,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-        className="AutoUI_ui_SelectBox-83">
+        className="AutoUI_ui_SelectBox-97">
         <div
-          className="AutoUI_ui_SelectBox-94">
+          className="AutoUI_ui_SelectBox-108">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -948,7 +911,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
             id="search"
             name="search"
             placeholder="Search"
@@ -958,7 +921,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136 expanded"
+        className="AutoUI_ui_SelectBox-154 expanded"
         style={
           Object {
             "height": "auto",
@@ -968,46 +931,46 @@ exports[`SelectBox-13 1`] = `
         }>
         
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176">
+            className="AutoUI_ui_SelectBox-194">
             Creating new entry \"entr\"...
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               justtoentrymakesure
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
       </ul>
@@ -1017,7 +980,7 @@ exports[`SelectBox-13 1`] = `
     In all searching and creating situations. If the method \"onCreateNew\" is forgotten or invalid, the \"create new\" button will be always hidden and items with \"creating\" status will have fallback to default render:
   </p>
   <div
-    className="AutoUI_ui_SelectBox-17"
+    className="AutoUI_ui_SelectBox-31"
     style={
       Object {
         "width": "100%",
@@ -1025,10 +988,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-83">
+        className="AutoUI_ui_SelectBox-97">
         <div
-          className="AutoUI_ui_SelectBox-94">
+          className="AutoUI_ui_SelectBox-108">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -1054,7 +1016,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-88"
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
             id="search"
             name="search"
             placeholder="Search"
@@ -1063,7 +1025,7 @@ exports[`SelectBox-13 1`] = `
             value="ent" />
         </div>
         <div
-          className="AutoUI_ui_SelectBox-120">
+          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -1089,23 +1051,9 @@ exports[`SelectBox-13 1`] = `
             </g>
           </svg>
         </div>
-=======
-        className="AutoUI_ui_SelectBox-171">
-        <ul
-          className="AutoUI_ui_SelectBox-153 false"
-          style={
-            Object {
-              "height": "auto",
-              "maxHeight": "auto",
-              "width": "100%",
-            }
-          }>
-          
-        </ul>
->>>>>>> Add clear click functionality and fix bug on lists filter (#222)
       </div>
       <ul
-        className="AutoUI_ui_SelectBox-136 expanded"
+        className="AutoUI_ui_SelectBox-154 expanded"
         style={
           Object {
             "height": "auto",
@@ -1115,51 +1063,51 @@ exports[`SelectBox-13 1`] = `
         }>
         <li />
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entr
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-158 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-176 ">
+            className="AutoUI_ui_SelectBox-194 ">
             <span
-              className="AutoUI_ui_SelectBox-134 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               justtoentrymakesure
             </span>
             <span
-              className="AutoUI_ui_SelectBox-215" />
+              className="AutoUI_ui_SelectBox-233" />
           </div>
         </li>
       </ul>
