@@ -137,7 +137,8 @@ type Props = {
   tooltip?: boolean,
   className?: string,
   tooltipClassName?: string,
-  onClick?: Function
+  onClick?: Function,
+  onClose?: Function
 }
 
 type State = {
@@ -166,7 +167,11 @@ class Dropdown extends PureComponent<Props, State> {
 
   open = () => this.setState((prevState: State) => ({ open: true }))
 
-  close = () => this.setState(() => ({ open: false }))
+  close = () => {
+    const { onClose } = this.props
+    this.setState(() => ({ open: false }))
+    onClose && onClose()
+  }
 
   render () {
     const {
