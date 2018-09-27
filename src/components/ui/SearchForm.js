@@ -52,15 +52,15 @@ const listTheme = {
   formKeywords: cmz(`
     display: block
     width: 100%
-    margin: 20px 0 0
-    padding: 20px 0 0
-    border-top: 1px solid ${theme.lineSilver4}
+    margin-top: 20px
   `),
 
   selectFields: cmz(`
     display: inline-block
     width: 100%
-    margin-top: 20px
+    margin: 20px 0 0
+    padding: 20px 0 0
+    border-top: 1px solid ${theme.lineSilver4}
   `),
 
   formButton: cmz(`
@@ -98,12 +98,17 @@ const tabularTheme = {
 
   selectLists: cmz(`
     display: flex
-    flex-shrink: 0
     align-items: center
+    margin-right: 10px
+    width: 100%
+    max-width: 300px
+    min-width: 200px
   `),
 
   listsSelector: cmz(`
-    width: 250px
+    width: inherit
+    max-width: inherit
+    min-width: inherit
   `),
 
   displayButtons: cmz(`
@@ -131,13 +136,15 @@ const tabularTheme = {
 
   selectFields: cmz(`
     flex-shrink: 0
-    width: 250px
+    max-width: 300px
+    min-width: 200px
     margin: 0 10px
   `),
 
   formButton: cmz(`
     margin: 0 10px
     height: 58px
+    padding: 10px 40px
   `),
 
   applicantsStatusFilter: cmz(`
@@ -254,12 +261,6 @@ class SearchForm extends PureComponent<Props> {
             </div>
             {!isTabular && renderDisplaySwitchButtons()}
           </div>
-          <Keywords
-            values={keywords}
-            onChange={onChangeKeywords}
-            onSubmit={onSubmit}
-            className={themeClasses.formKeywords}
-          />
           <div className={themeClasses.selectFields}>
             <SelectBox
               placeholder='Select Fields'
@@ -270,6 +271,12 @@ class SearchForm extends PureComponent<Props> {
               onSelect={onSelectField}
             />
           </div>
+          <Keywords
+            values={keywords}
+            onChange={onChangeKeywords}
+            onSubmit={onSubmit}
+            className={themeClasses.formKeywords}
+          />
           <Button
             className={themeClasses.formButton}
             type='submit'
