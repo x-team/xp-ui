@@ -1,8 +1,8 @@
 exports[`Note-1 1`] = `
 <div
-  className="AutoUI_ui_Note-28">
+  className="AutoUI_ui_Note-25">
   <div
-    className="AutoUI_ui_Note-32">
+    className="AutoUI_ui_Note-30">
     <div
       className="AutoUI_ui_Avatar-15">
       <img
@@ -14,45 +14,54 @@ exports[`Note-1 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-37">
+    className="AutoUI_ui_Note-35">
     <span
-      className="AutoUI_ui_Note-42 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      className="AutoUI_ui_Note-48 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
       Samwise Gamgee
     </span>
     <span
-      className="AutoUI_ui_Note-52 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Note-58 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
       just now
     </span>
     <div
-      className="AutoUI_ui_Note-62">
-      <span
-        className="AutoUI_ui_Text-48 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+      className="AutoUI_ui_Note-68">
+      <div>
         <div>
-          <p>
-            One tiny 
-            <strong>
-              Hobbit
-            </strong>
-             against all the evil the world could muster.
-          </p>
-          <p>
-            A sane being would have given up, but Samwise burned with a magnificent madness, a 
-            <em>
-              glowing
-            </em>
-             obsession to surmount every obstacle, to find 
-            <a
-              href="http://google.com">
-              Frodo
-            </a>
-            , destroy the Ring, and cleanse Middle Earth of its festering malignancy. He knew he would try again. Fail, perhaps. And try once more. A thousand, thousand times if need be, but he would not give up the quest.
-          </p>
+          <div
+            className="AutoUI_ui_Note-74">
+            <span
+              className="AutoUI_ui_Text-48 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              <div>
+                <p>
+                  One tiny 
+                  <strong>
+                    Hobbit
+                  </strong>
+                   against all the evil the world could muster.
+                </p>
+                <p>
+                  A sane being would have given up, but Samwise burned with a magnificent madness, a 
+                  <em>
+                    glowing
+                  </em>
+                   obsession to surmount every obstacle, to find 
+                  <a
+                    href="http://google.com">
+                    Frodo
+                  </a>
+                  , destroy the Ring, and cleanse Middle Earth of its festering malignancy. He knew he would try again. Fail, perhaps. And try once more. A thousand, thousand times if need be, but he would not give up the quest.
+                </p>
+              </div>
+            </span>
+          </div>
         </div>
-      </span>
+      </div>
     </div>
     <div>
       <div />
     </div>
   </div>
+  <div
+    className="AutoUI_ui_Note-40" />
 </div>
 `;

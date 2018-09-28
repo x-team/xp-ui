@@ -1,28 +1,24 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import uuidv4 from 'uuid/v4'
 
 import elem from '../../utils/elem'
-import Note from './Note'
 import Button from './Button'
+import Note from './Note'
 
 const cmz = require('cmz')
 
 type Props = {
   notes?: Array<*>,
+  onNoteUpdate?: Function
 }
 
 type State = {
   page: number,
-  perPage: number,
+  perPage: number
 }
 
 const Root = elem.div()
-
-const NoteWrapper = elem.div(cmz(`
-  margin: 0 0 40px
-`))
 
 const buttonClass = cmz(`
   width: 100%
@@ -38,43 +34,42 @@ class NotesFeed extends PureComponent<Props, State> {
 
   showViewMore = (total: number = 0) => {
     const { page, perPage } = this.state
-    return (total / perPage) > page
+    return total / perPage > page
+  }
+
+  handleNoteUpdate = (note: Object) => (updatedText: string) => {
+    const { onNoteUpdate } = this.props
+    onNoteUpdate && onNoteUpdate({ ...note, body: updatedText })
   }
 
   render () {
     const { page, perPage } = this.state
     const { notes } = this.props
 
-    return (
-      Root(
-        notes && notes
-          .filter((note, i) => (page * perPage) > i)
-          .map(note => (
-            NoteWrapper(
-              {
-                key: uuidv4()
-              },
-              <Note
-                avatar={note.author_avatar}
-                date={note.updated_at}
-                name={note.author_name}
-                text={note.body}
-                files={note.files}
-              />
-            )
-          )),
-        this.showViewMore(notes && notes.length) && (
-          <Button
-            outlined
-            block
-            color='silver'
-            onClick={this.viewMore}
-            className={buttonClass}
-            type='button'
-          >
-            View more
-          </Button>
-        )
+    return Root(
+      notes && notes
+        .filter((note, i) => page * perPage > i)
+        .map(note => <Note
+          key={note.id}
+          onNoteUpdate={this.handleNoteUpdate(note)}
+          avatar={note.author_avatar}
+          date={note.updated_at}
+          name={note.author_name}
+          text={note.body}
+          files={note.files}
+        />
+        ),
+      this.showViewMore(notes && notes.length) && (
+        <Button
+          outlined
+          block
+          color='silver'
+          onClick={this.viewMore}
+          className={buttonClass}
+          type='button'
+        >
+          View more
+        </Button>
       )
     )
   }

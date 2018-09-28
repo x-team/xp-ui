@@ -53,7 +53,7 @@ const sample = [
     updated_at: '2018-05-23T15:18:03.000Z'
   },
   {
-    id: 357,
+    id: 358,
     target_type: 'general',
     target_id: null,
     body: 'Note of type general B',
@@ -65,7 +65,7 @@ const sample = [
     updated_at: '2018-05-23T17:30:16.000Z'
   },
   {
-    id: 356,
+    id: 359,
     target_type: 'general',
     target_id: null,
     body: 'Note of type general A',
@@ -77,7 +77,7 @@ const sample = [
     updated_at: '2018-05-23T17:29:50.000Z'
   },
   {
-    id: 204,
+    id: 360,
     target_type: 'general',
     target_id: null,
     body: 'Note of type general C',
@@ -89,7 +89,7 @@ const sample = [
     updated_at: '2018-05-23T15:18:03.000Z'
   },
   {
-    id: 204,
+    id: 361,
     target_type: 'general',
     target_id: null,
     body: 'Note of type general C',
@@ -102,7 +102,7 @@ const sample = [
   }
 ];
 
-<NotesFeed notes={sample} />
+<NotesFeed notes={sample} onNoteUpdate={updatedNote => console.log('Updated note: ', updatedNote)} />
 ```
 
 Missing props (does component explode?):
