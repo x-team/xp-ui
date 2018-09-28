@@ -99,6 +99,8 @@ const SORT_DIRECTIONS: SortDirections = {
 }
 
 class ApplicantGrid extends PureComponent<Props, State> {
+  listContainer: ?Object
+
   static defaultProps = {
     items: [],
     mode: DISPLAY_MODES.LIST,
@@ -109,10 +111,27 @@ class ApplicantGrid extends PureComponent<Props, State> {
     sortDirection: SORT_DIRECTIONS.ASCENDING
   }
 
+  componentDidUpdate = (prevProps: Props) => {
+    const { sortDirection, sortBy } = this.props
+    const isSortChanged = prevProps.sortDirection !== sortDirection || prevProps.sortBy !== sortBy
+    if (this.listContainer && isSortChanged) {
+      this.listContainer.scrollTop = 0
+    }
+  }
+
   handleViewMore = (showMore: Function) => {
     const { onViewMore } = this.props
     onViewMore && onViewMore()
     showMore()
+  }
+
+  handleSortChange = (sortOptions: Object) => {
+    const { onSortingChange } = this.props
+    onSortingChange && onSortingChange(sortOptions)
+  }
+
+  setContainerRef = (comp: ?Object) => {
+    this.listContainer = comp
   }
 
   render () {
@@ -125,7 +144,6 @@ class ApplicantGrid extends PureComponent<Props, State> {
       hasMore,
       onKeyPress,
       headerColumns,
-      onSortingChange,
       sortBy,
       sortDirection
     } = this.props
@@ -139,6 +157,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
 
     const renderItems = () => items && (
       <div
+        ref={this.setContainerRef}
         className={cx.wrapper}
         data-test='applicants'
         tabIndex={0}
@@ -172,7 +191,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
       <div className={cx.tabular}>
         <ApplicantGridHeader
           headerColumns={headerColumns}
-          onSortingChange={onSortingChange}
+          onSortingChange={this.handleSortChange}
           sortBy={sortBy}
           sortDirection={sortDirection}
         />
