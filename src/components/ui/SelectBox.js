@@ -150,7 +150,7 @@ const cx = {
     `
       right: 55px
       transform: scale(0.9)
-      top: calc(50% - 9px)
+      top: calc(50% - 5px)
     `
   ),
 
