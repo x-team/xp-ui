@@ -13,7 +13,7 @@ import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 
-type Type = 'checkbox' | 'color' | 'date' | 'email' | 'hidden' | 'month' | 'number' | 'password' | 'radio' | 'search' | 'tel' | 'text' | 'textarea' | 'time' | 'url' | 'week'
+import type { InputType } from '../../utils/types'
 
 type Props = {
   label?: string,
@@ -24,7 +24,7 @@ type Props = {
   defaultValue?: string,
   required?: boolean,
   onChange?: () => mixed,
-  type?: Type,
+  type?: InputType,
   postText?: string,
   placeholder?: string | number,
   linesLimit?: number

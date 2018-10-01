@@ -11,6 +11,7 @@ import typo from '../../styles/typo'
 import theme from '../../styles/theme'
 
 import type { Element } from 'react'
+import type { InputType } from '../../utils/types'
 
 const cmz = require('cmz')
 
@@ -399,7 +400,7 @@ type Props = {
   append?: Element<*>|string,
   dismissTimeout?: number,
   areItemsToggleable?: boolean,
-  inputType?: string
+  inputType?: InputType
 }
 
 type State = {
