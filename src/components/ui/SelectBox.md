@@ -31,6 +31,7 @@ const itemsArray = [
 
 <SelectBox
   collectionLabel='list'
+  lined
   items={itemsArray}
   width={300}
   visibleItems={3}
@@ -73,7 +74,6 @@ const itemsArray = [
   items={itemsArray}
   width={330}
   visibleItems={4}
-  hasSearch={true}
   append={(
     <Button selectbox>
       <SvgIcon icon='edit' /> Edit Lists
@@ -118,7 +118,6 @@ const itemsArray = [
   items={itemsArray}
   width={330}
   visibleItems={4}
-  hasSearch={true}
   append={(
     <Button selectbox>
       <SvgIcon icon='edit' /> Edit Lists
@@ -167,7 +166,6 @@ const itemsArray = [
   items={itemsArray}
   width={330}
   visibleItems={4}
-  hasSearch={true}
   append={(
     <Button selectbox>
       <SvgIcon icon='edit' /> Edit Lists
@@ -206,7 +204,7 @@ const itemsArray = [
 <SelectBox
   collectionLabel='list'
   items={itemsArray}
-  expanded={true}
+  expanded
   onSelect={item => console.log('onSelect:', item)}
   onEdit={item => console.log('onEdit:', item)}
   onArchive={item => console.log('onArchive:', item)}
@@ -311,8 +309,8 @@ const itemsArray = [
   <SelectBox
     collectionLabel='stuff'
     items={itemsArray}
-    lined={true}
-    expanded={true}
+    lined
+    expanded
     onSelect={item => console.log('onSelect:', item)}
     onEdit={item => console.log('onEdit:', item)}
     onArchive={item => console.log('onArchive:', item)}
@@ -327,8 +325,8 @@ const itemsArray = [
   <SelectBox
     collectionLabel='stuff'
     items={itemsArray}
-    lined={true}
-    expanded={true}
+    lined
+    expanded
   />
 </div>
 ```
@@ -340,7 +338,7 @@ const itemsArray = [
   <p>Empty list and no search provided. The "create new" button should be hidden:</p>
   <SelectBox
     collectionLabel='entry'
-    expanded={true}
+    expanded
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
@@ -348,7 +346,7 @@ const itemsArray = [
   <SelectBox
     collectionLabel='entry'
     search='wat?'
-    expanded={true}
+    expanded
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
@@ -361,7 +359,7 @@ const itemsArray = [
       {id: 2, value: 'entry another entry'},
       {id: 3, value: 'justtoentrymakesure'}
     ]}
-    expanded={true}
+    expanded
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
@@ -374,7 +372,7 @@ const itemsArray = [
       {id: 2, value: 'entry another entry'},
       {id: 3, value: 'justtoentrymakesure'}
     ]}
-    expanded={true}
+    expanded
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
@@ -387,7 +385,7 @@ const itemsArray = [
       {id: 2, value: 'entry another entry'},
       {id: 3, value: 'justtoentrymakesure'}
     ]}
-    expanded={true}
+    expanded
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
@@ -400,7 +398,7 @@ const itemsArray = [
       {id: 2, value: 'entry another entry'},
       {id: 3, value: 'justtoentrymakesure'}
     ]}
-    expanded={true}
+    expanded
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
@@ -414,7 +412,7 @@ const itemsArray = [
       {id: 3, value: 'justtoentrymakesure'},
       {id: 4, value: 'entr', status: 'creating'}
     ]}
-    expanded={true}
+    expanded
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
@@ -427,7 +425,7 @@ const itemsArray = [
       {id: 3, value: 'justtoentrymakesure'},
       {id: 4, value: 'entr', status: 'creating'}
     ]}
-    expanded={true}
+    expanded
     onCreateNew={listName => console.log('onCreateNew:', listName)}
   />
 
@@ -441,7 +439,7 @@ const itemsArray = [
       {id: 3, value: 'justtoentrymakesure'},
       {id: 4, value: 'entr', status: 'creating'}
     ]}
-    expanded={true}
+    expanded
   />
 </div>
 ```
@@ -493,7 +491,7 @@ Fixed height:
 
 ```js
 <SelectBox
-  expanded={true}
+  expanded
   visibleItems={4}
 />
 ```

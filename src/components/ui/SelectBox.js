@@ -438,7 +438,7 @@ class SelectBox extends Component<Props, State> {
     placeholder: '',
     items: [],
     expanded: false,
-    hasSearch: false,
+    hasSearch: true,
     hasClear: false,
     lined: false,
     collectionLabel: '',
