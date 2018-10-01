@@ -81,7 +81,7 @@ const itemsArray = [
 </Dropdown>
 ```
 
-Another SelectBox example:
+SelectBox example using radio buttons:
 
 ```js
 const SelectBox = require('./SelectBox.js').default;
@@ -95,12 +95,14 @@ const itemsArray = [
 <Dropdown label='registered' indicator padded>
   <SelectBox
     collectionLabel='List'
+    inputType='radio'
     items={itemsArray}
     hasSearch={false}
     expanded
+    lined
     width={300}
     visibleItems={4}
-    onClick={item => console.log('onClick:', item)}
+    onSelect={item => console.log('onSelect:', item)}
   />
 </Dropdown>
 ```

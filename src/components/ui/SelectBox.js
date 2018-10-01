@@ -399,6 +399,7 @@ type Props = {
   append?: Element<*>|string,
   dismissTimeout?: number,
   areItemsToggleable?: boolean,
+  inputType?: string
 }
 
 type State = {
@@ -444,7 +445,8 @@ class SelectBox extends Component<Props, State> {
     collectionLabel: '',
     dismissTimeout,
     shouldSortItems: true,
-    areItemsToggleable: true
+    areItemsToggleable: true,
+    inputType: 'checkbox'
   }
 
   state: State = {
@@ -695,7 +697,8 @@ class SelectBox extends Component<Props, State> {
       onCreateNew,
       lined,
       append,
-      shouldSortItems
+      shouldSortItems,
+      inputType
     } = this.props
     const { view, search } = this.state
 
@@ -830,7 +833,7 @@ class SelectBox extends Component<Props, State> {
     const renderDefaultStatus = (item: Item) => onSelect ? (
       <InputField
         key={`${item.id}${item.selected ? 'selected' : 'unselected'}`}
-        type='checkbox'
+        type={inputType}
         label={item.value}
         name={item.value}
         checked={!!item.selected}
