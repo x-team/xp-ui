@@ -2,27 +2,119 @@ exports[`Dropdown-9 1`] = `
 <div
   className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
   onMouseEnter={false}
-  onMouseLeave={false}
-  style={Object {}}>
+  onMouseLeave={false}>
   <div
-    className="AutoUI_ui_Dropdown-24 ">
+    className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44">
     
     <span
-      className="AutoUI_ui_Dropdown-42">
-      <button
-        className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 ">
-        <span
-          className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-          x
-        </span>
-      </button>
+      className="AutoUI_ui_Dropdown-40">
+      registered
+    </span>
+    <span
+      className="AutoUI_ui_Dropdown-47">
+      <svg
+        height="5px"
+        viewBox="0 0 9 5"
+        width="9px">
+        <g
+          fill="none"
+          fillRule="evenodd"
+          stroke="none"
+          strokeWidth="1">
+          <polygon
+            className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+            points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
+            transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+        </g>
+      </svg>
     </span>
   </div>
   <div
-    className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117 ">
+    className="AutoUI_ui_Dropdown-50     ">
     <div
-      className="AutoUI_ui_Dropdown-73 ">
-      Anything here
+      className="AutoUI_ui_SelectBox-31"
+      style={
+        Object {
+          "width": "300px",
+        }
+      }>
+      <div>
+        <div
+          className="AutoUI_ui_SelectBox-41 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-62">
+          
+        </div>
+        <ul
+          className="AutoUI_ui_SelectBox-160 expanded"
+          style={
+            Object {
+              "height": "240px",
+              "maxHeight": "240px",
+              "width": "300px",
+            }
+          }>
+          
+          <li
+            className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+            <div
+              className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
+              <span
+                className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-223">
+                registered
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-238" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+            <div
+              className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
+              <span
+                className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                portfolio-building
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-238" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+            <div
+              className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
+              <span
+                className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                portfolio-review
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-238" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+            <div
+              className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
+              <span
+                className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                social-media-screen
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-238" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+            <div
+              className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
+              <span
+                className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                react-shortlist
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-238" />
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

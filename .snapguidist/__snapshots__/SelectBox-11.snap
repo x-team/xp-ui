@@ -9,15 +9,9 @@ exports[`SelectBox-11 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -43,11 +37,7 @@ exports[`SelectBox-11 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -57,11 +47,7 @@ exports[`SelectBox-11 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -71,28 +57,16 @@ exports[`SelectBox-11 1`] = `
         }>
         
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196">
             Creating new stuff \"creating this\"...
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
             <div
               className="AutoUI_forms_InputField-78">
               <label
@@ -117,15 +91,9 @@ exports[`SelectBox-11 1`] = `
               </label>
             </div>
             <span
-<<<<<<< HEAD
-              className="AutoUI_ui_SelectBox-233">
+              className="AutoUI_ui_SelectBox-238">
               <span
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-              className="AutoUI_ui_SelectBox-232">
-              <span
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 14 14"
@@ -143,11 +111,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -159,11 +123,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -178,15 +138,9 @@ exports[`SelectBox-11 1`] = `
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
             <div
               className="AutoUI_forms_InputField-78">
               <label
@@ -211,15 +165,9 @@ exports[`SelectBox-11 1`] = `
               </label>
             </div>
             <span
-<<<<<<< HEAD
-              className="AutoUI_ui_SelectBox-233">
+              className="AutoUI_ui_SelectBox-238">
               <span
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-              className="AutoUI_ui_SelectBox-232">
-              <span
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 14 14"
@@ -237,11 +185,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -253,11 +197,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -272,41 +212,23 @@ exports[`SelectBox-11 1`] = `
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194">
+            className="AutoUI_ui_SelectBox-196">
             <span
-              className="AutoUI_ui_SelectBox-249 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-254 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               <span
-                className="AutoUI_ui_SelectBox-257" />
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
-            <span
-              className="AutoUI_ui_SelectBox-248 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              <span
-                className="AutoUI_ui_SelectBox-256" />
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-262" />
               (un)selecting
             </span>
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194">
+            className="AutoUI_ui_SelectBox-196">
             <span
-              className="AutoUI_ui_SelectBox-288 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
-            <span
-              className="AutoUI_ui_SelectBox-287 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-292 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               <div>
                 <input
                   aria-labelledby="label-editing (no changes yet)"
@@ -320,15 +242,9 @@ exports[`SelectBox-11 1`] = `
               </div>
             </span>
             <span
-<<<<<<< HEAD
-              className="AutoUI_ui_SelectBox-233">
+              className="AutoUI_ui_SelectBox-238">
               <span
-                className="AutoUI_ui_SelectBox-238">
-=======
-              className="AutoUI_ui_SelectBox-232">
-              <span
-                className="AutoUI_ui_SelectBox-237">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243">
                 <svg
                   height="14px"
                   viewBox="0 0 14 14"
@@ -355,11 +271,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238">
-=======
-                className="AutoUI_ui_SelectBox-237">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243">
                 <svg
                   height="13px"
                   viewBox="0 0 17 13"
@@ -381,19 +293,11 @@ exports[`SelectBox-11 1`] = `
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-227">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 AutoUI_ui_SelectBox-232">
           <div
-            className="AutoUI_ui_SelectBox-194">
+            className="AutoUI_ui_SelectBox-196">
             <span
-              className="AutoUI_ui_SelectBox-288 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 AutoUI_ui_SelectBox-226">
-          <div
-            className="AutoUI_ui_SelectBox-193">
-            <span
-              className="AutoUI_ui_SelectBox-287 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-292 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
               <div>
                 <input
                   aria-labelledby="label-editing"
@@ -407,15 +311,9 @@ exports[`SelectBox-11 1`] = `
               </div>
             </span>
             <span
-<<<<<<< HEAD
-              className="AutoUI_ui_SelectBox-233">
+              className="AutoUI_ui_SelectBox-238">
               <span
-                className="AutoUI_ui_SelectBox-238">
-=======
-              className="AutoUI_ui_SelectBox-232">
-              <span
-                className="AutoUI_ui_SelectBox-237">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243">
                 <svg
                   height="14px"
                   viewBox="0 0 14 14"
@@ -442,11 +340,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238">
-=======
-                className="AutoUI_ui_SelectBox-237">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243">
                 <svg
                   height="13px"
                   viewBox="0 0 17 13"
@@ -468,28 +362,16 @@ exports[`SelectBox-11 1`] = `
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196">
             Saving \"saving edition\"...
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
             <div
               className="AutoUI_forms_InputField-78">
               <label
@@ -514,15 +396,9 @@ exports[`SelectBox-11 1`] = `
               </label>
             </div>
             <span
-<<<<<<< HEAD
-              className="AutoUI_ui_SelectBox-233">
+              className="AutoUI_ui_SelectBox-238">
               <span
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-              className="AutoUI_ui_SelectBox-232">
-              <span
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 14 14"
@@ -540,11 +416,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -556,11 +428,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -575,15 +443,9 @@ exports[`SelectBox-11 1`] = `
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
             <div
               className="AutoUI_forms_InputField-78">
               <label
@@ -608,15 +470,9 @@ exports[`SelectBox-11 1`] = `
               </label>
             </div>
             <span
-<<<<<<< HEAD
-              className="AutoUI_ui_SelectBox-233">
+              className="AutoUI_ui_SelectBox-238">
               <span
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-              className="AutoUI_ui_SelectBox-232">
-              <span
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 14 14"
@@ -634,11 +490,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -650,11 +502,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -669,19 +517,11 @@ exports[`SelectBox-11 1`] = `
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194">
+            className="AutoUI_ui_SelectBox-196">
             <div
-              className="AutoUI_ui_SelectBox-349">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
-            <div
-              className="AutoUI_ui_SelectBox-348">
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-350">
               <p>
                 Delete \"
                 confirm delete
@@ -694,15 +534,9 @@ exports[`SelectBox-11 1`] = `
               </p>
             </div>
             <span
-<<<<<<< HEAD
-              className="AutoUI_ui_SelectBox-233">
+              className="AutoUI_ui_SelectBox-238">
               <span
-                className="AutoUI_ui_SelectBox-238">
-=======
-              className="AutoUI_ui_SelectBox-232">
-              <span
-                className="AutoUI_ui_SelectBox-237">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243">
                 <svg
                   height="14px"
                   viewBox="0 0 14 14"
@@ -729,11 +563,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238">
-=======
-                className="AutoUI_ui_SelectBox-237">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243">
                 <svg
                   height="13px"
                   viewBox="0 0 17 13"
@@ -755,46 +585,26 @@ exports[`SelectBox-11 1`] = `
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196">
             Deleting \"deleting\"...
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194">
+            className="AutoUI_ui_SelectBox-196">
             <span
-              className="AutoUI_ui_SelectBox-222">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
-            <span
-              className="AutoUI_ui_SelectBox-221">
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-227">
               The item \"
               deleted
               \" was successfully deleted.
             </span>
             <span
-<<<<<<< HEAD
-              className="AutoUI_ui_SelectBox-233">
+              className="AutoUI_ui_SelectBox-238">
               <span
-                className="AutoUI_ui_SelectBox-238"
-=======
-              className="AutoUI_ui_SelectBox-232">
-              <span
-                className="AutoUI_ui_SelectBox-237"
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243"
                 title="Dismiss this message">
                 <svg
                   height="14px"
@@ -825,28 +635,16 @@ exports[`SelectBox-11 1`] = `
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196">
             Archiving \"archiving\"...
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
             <div
               className="AutoUI_forms_InputField-78">
               <label
@@ -871,15 +669,9 @@ exports[`SelectBox-11 1`] = `
               </label>
             </div>
             <span
-<<<<<<< HEAD
-              className="AutoUI_ui_SelectBox-233">
+              className="AutoUI_ui_SelectBox-238">
               <span
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-              className="AutoUI_ui_SelectBox-232">
-              <span
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 14 14"
@@ -897,11 +689,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -913,11 +701,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -932,28 +716,16 @@ exports[`SelectBox-11 1`] = `
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196">
             Unarchiving \"unarchiving\"...
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 AutoUI_ui_SelectBox-201">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 AutoUI_ui_SelectBox-200">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196 AutoUI_ui_SelectBox-203">
             <div
               className="AutoUI_forms_InputField-78">
               <label
@@ -978,15 +750,9 @@ exports[`SelectBox-11 1`] = `
               </label>
             </div>
             <span
-<<<<<<< HEAD
-              className="AutoUI_ui_SelectBox-233">
+              className="AutoUI_ui_SelectBox-238">
               <span
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-              className="AutoUI_ui_SelectBox-232">
-              <span
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 14 14"
@@ -1004,11 +770,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -1020,11 +782,7 @@ exports[`SelectBox-11 1`] = `
                 </svg>
               </span>
               <span
-<<<<<<< HEAD
-                className="AutoUI_ui_SelectBox-238 AutoUI_ui_SelectBox-245 editableButton">
-=======
-                className="AutoUI_ui_SelectBox-237 AutoUI_ui_SelectBox-244 editableButton">
->>>>>>> Add item renderer support to Select box component
+                className="AutoUI_ui_SelectBox-243 AutoUI_ui_SelectBox-250 editableButton">
                 <svg
                   height="14px"
                   viewBox="0 0 24 24"
@@ -1054,15 +812,9 @@ exports[`SelectBox-11 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -1088,11 +840,7 @@ exports[`SelectBox-11 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -1102,11 +850,7 @@ exports[`SelectBox-11 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -1116,387 +860,195 @@ exports[`SelectBox-11 1`] = `
         }>
         
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               creating this
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               unselected
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-223">
               selected
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               (un)selecting
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               editing (no changes yet)
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-227">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 AutoUI_ui_SelectBox-232">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               editing
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               saving edition
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               edited
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               created
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               confirm delete
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               deleting
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               deleted
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               archiving
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               archived
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               unarchiving
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-205 ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-207 ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               unarchived
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              creating this
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              unselected
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              selected
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              (un)selecting
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              editing (no changes yet)
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 AutoUI_ui_SelectBox-226">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              editing
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              saving edition
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              edited
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              created
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              confirm delete
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              deleting
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              deleted
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              archiving
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              archived
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              unarchiving
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-204 ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              unarchived
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
       </ul>

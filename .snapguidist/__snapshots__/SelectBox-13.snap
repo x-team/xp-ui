@@ -12,15 +12,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -46,11 +40,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -60,11 +50,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -88,15 +74,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -122,11 +102,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -135,11 +111,7 @@ exports[`SelectBox-13 1`] = `
             value="wat?" />
         </div>
         <div
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
-=======
-          className="AutoUI_ui_SelectBox-133 AutoUI_ui_SelectBox-17">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-140 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -167,11 +139,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -181,21 +149,13 @@ exports[`SelectBox-13 1`] = `
         }>
         <li>
           <span
-<<<<<<< HEAD
-            className="AutoUI_ui_SelectBox-307 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-=======
-            className="AutoUI_ui_SelectBox-306 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-310 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             No Results for \"
             wat?
             \"
           </span>
           <span
-<<<<<<< HEAD
-            className="AutoUI_ui_SelectBox-315 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-=======
-            className="AutoUI_ui_SelectBox-314 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-318 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -243,15 +203,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -277,11 +231,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -290,11 +240,7 @@ exports[`SelectBox-13 1`] = `
             value="wat?" />
         </div>
         <div
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
-=======
-          className="AutoUI_ui_SelectBox-133 AutoUI_ui_SelectBox-17">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-140 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -322,11 +268,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -336,21 +278,13 @@ exports[`SelectBox-13 1`] = `
         }>
         <li>
           <span
-<<<<<<< HEAD
-            className="AutoUI_ui_SelectBox-307 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-=======
-            className="AutoUI_ui_SelectBox-306 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-310 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             No Results for \"
             wat?
             \"
           </span>
           <span
-<<<<<<< HEAD
-            className="AutoUI_ui_SelectBox-315 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-=======
-            className="AutoUI_ui_SelectBox-314 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-318 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -398,15 +332,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -432,11 +360,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -445,11 +369,7 @@ exports[`SelectBox-13 1`] = `
             value="ent" />
         </div>
         <div
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
-=======
-          className="AutoUI_ui_SelectBox-133 AutoUI_ui_SelectBox-17">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-140 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -477,11 +397,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -491,11 +407,7 @@ exports[`SelectBox-13 1`] = `
         }>
         <li>
           <span
-<<<<<<< HEAD
-            className="AutoUI_ui_SelectBox-315 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-=======
-            className="AutoUI_ui_SelectBox-314 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-318 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -529,75 +441,39 @@ exports[`SelectBox-13 1`] = `
           </span>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               justtoentrymakesure
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry another entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              justtoentrymakesure
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
       </ul>
@@ -615,15 +491,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -649,11 +519,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -662,11 +528,7 @@ exports[`SelectBox-13 1`] = `
             value="another" />
         </div>
         <div
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
-=======
-          className="AutoUI_ui_SelectBox-133 AutoUI_ui_SelectBox-17">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-140 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -694,11 +556,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -708,11 +566,7 @@ exports[`SelectBox-13 1`] = `
         }>
         <li>
           <span
-<<<<<<< HEAD
-            className="AutoUI_ui_SelectBox-315 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-=======
-            className="AutoUI_ui_SelectBox-314 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-318 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
             <svg
               height="20px"
               viewBox="0 0 20 20"
@@ -746,27 +600,15 @@ exports[`SelectBox-13 1`] = `
           </span>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry another entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
       </ul>
@@ -784,15 +626,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -818,11 +654,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -831,11 +663,7 @@ exports[`SelectBox-13 1`] = `
             value="entry" />
         </div>
         <div
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
-=======
-          className="AutoUI_ui_SelectBox-133 AutoUI_ui_SelectBox-17">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-140 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -863,11 +691,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -877,75 +701,39 @@ exports[`SelectBox-13 1`] = `
         }>
         <li />
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               justtoentrymakesure
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry another entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              justtoentrymakesure
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
       </ul>
@@ -963,15 +751,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -997,11 +779,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -1010,11 +788,7 @@ exports[`SelectBox-13 1`] = `
             value="entr" />
         </div>
         <div
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
-=======
-          className="AutoUI_ui_SelectBox-133 AutoUI_ui_SelectBox-17">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-140 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -1042,11 +816,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -1056,88 +826,46 @@ exports[`SelectBox-13 1`] = `
         }>
         <li />
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196">
             Creating new entry \"entr\"...
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               justtoentrymakesure
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry another entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              justtoentrymakesure
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
       </ul>
@@ -1155,15 +883,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -1189,11 +911,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -1203,11 +921,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -1217,88 +931,46 @@ exports[`SelectBox-13 1`] = `
         }>
         
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194">
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193">
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_ui_SelectBox-196">
             Creating new entry \"entr\"...
           </div>
         </li>
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               justtoentrymakesure
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry another entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              justtoentrymakesure
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
       </ul>
@@ -1316,15 +988,9 @@ exports[`SelectBox-13 1`] = `
     }>
     <div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-97">
+        className="AutoUI_ui_SelectBox-105">
         <div
-          className="AutoUI_ui_SelectBox-108">
-=======
-        className="AutoUI_ui_SelectBox-96">
-        <div
-          className="AutoUI_ui_SelectBox-107">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-116">
           <svg
             height="17px"
             viewBox="0 0 16 17"
@@ -1350,11 +1016,7 @@ exports[`SelectBox-13 1`] = `
           <input
             aria-labelledby="label-search"
             autoComplete="off"
-<<<<<<< HEAD
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-102"
-=======
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-101"
->>>>>>> Add item renderer support to Select box component
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-110"
             id="search"
             name="search"
             placeholder="Search"
@@ -1363,11 +1025,7 @@ exports[`SelectBox-13 1`] = `
             value="ent" />
         </div>
         <div
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-134 AutoUI_ui_SelectBox-17">
-=======
-          className="AutoUI_ui_SelectBox-133 AutoUI_ui_SelectBox-17">
->>>>>>> Add item renderer support to Select box component
+          className="AutoUI_ui_SelectBox-140 AutoUI_ui_SelectBox-17">
           <svg
             height="14px"
             viewBox="0 0 14 14"
@@ -1395,11 +1053,7 @@ exports[`SelectBox-13 1`] = `
         </div>
       </div>
       <ul
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-154 expanded"
-=======
-        className="AutoUI_ui_SelectBox-153 expanded"
->>>>>>> Add item renderer support to Select box component
+        className="AutoUI_ui_SelectBox-160 expanded"
         style={
           Object {
             "height": "auto",
@@ -1409,99 +1063,51 @@ exports[`SelectBox-13 1`] = `
         }>
         <li />
         <li
-<<<<<<< HEAD
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entr
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               entry another entry
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
         <li
-          className="AutoUI_ui_SelectBox-176 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          className="AutoUI_ui_SelectBox-181 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
           <div
-            className="AutoUI_ui_SelectBox-194 ">
+            className="AutoUI_ui_SelectBox-196 ">
             <span
-              className="AutoUI_ui_SelectBox-152 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              className="AutoUI_ui_SelectBox-156 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
               justtoentrymakesure
             </span>
             <span
-              className="AutoUI_ui_SelectBox-233" />
-=======
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entr
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              entry another entry
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
-          </div>
-        </li>
-        <li
-          className="AutoUI_ui_SelectBox-175 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
-          <div
-            className="AutoUI_ui_SelectBox-193 ">
-            <span
-              className="AutoUI_ui_SelectBox-151 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-              justtoentrymakesure
-            </span>
-            <span
-              className="AutoUI_ui_SelectBox-232" />
->>>>>>> Add item renderer support to Select box component
+              className="AutoUI_ui_SelectBox-238" />
           </div>
         </li>
       </ul>
