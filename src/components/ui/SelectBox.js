@@ -35,40 +35,50 @@ const cx = {
   `),
 
   dropdown: cmz(`
-    width: auto
+    width: 100%
   `),
 
   placeholder: cmz(
     typo.baseText,
     `
-      padding: 0 20px
-      height: 60px
-      width: 100%
-      box-sizing: border-box
-      display: flex
-      align-items: center
-      position: relative
-      border-radius: 2px
+      & {
+        border: 1px solid ${theme.lineSilver2}
+        padding: 0 20px
+        height: 60px
+        width: 100%
+        box-sizing: border-box
+        display: flex
+        align-items: center
+        position: relative
+        border-radius: 2px
+      }
+
+      & > div {
+        width: inherit
+      }
     `
   ),
+
+  noSearchAndPlaceholder: cmz(`
+    height: 1px
+    border: none
+    border-top: 1px solid ${theme.lineSilver2}
+  `),
 
   selects: cmz(`
     & {
       width: 100%
     }
-
     & > div {
       display: block
       line-height: 1.1
     }
-
     & > div:first-of-type {
       font-size: 15px
       color: ${theme.typoLabel}
       padding: 10px 0 0
       transition: color .10s ease-out, font-size .10s ease-out
     }
-
     & > div:last-of-type {
       width: calc(100% - 20px)
       height: 24px
@@ -85,7 +95,6 @@ const cx = {
     & > div:first-of-type {
       transition: color .10s ease-out, font-size .10s ease-out
     }
-
     & > div:last-of-type {
       transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       opacity: 0
@@ -111,7 +120,6 @@ const cx = {
       top: 23px
       left: 22px
     }
-
     & svg {
       position: absolute
     }
@@ -124,7 +132,6 @@ const cx = {
       top: 50%
       right: 30px
     }
-
     & svg {
       position: absolute
     }
@@ -133,22 +140,22 @@ const cx = {
   close: cmz(
     controlBaseClass,
     `
-      & {
-        right: 40px
-      }
+      right: 40px
     `
   ),
 
   clear: cmz(
     controlBaseClass,
     `
-      & {
-        right: 55px
-      }
+      right: 55px
+      transform: scale(0.9)
+      top: calc(50% - 9px)
     `
   ),
 
-  label: cmz(typo.baseText),
+  label: cmz(typo.baseText, `
+    border-bottom: 1px solid transparent
+  `),
 
   list: cmz(`
     & {
@@ -162,7 +169,6 @@ const cx = {
       width: 100%
       box-sizing: border-box
     }
-
     &:not(.expanded):empty {
       border: none
     }
@@ -176,15 +182,12 @@ const cx = {
     & {
       min-height: 30px
     }
-
     &:hover {
       background-color: ${theme.baseBright}
     }
-
     &:last-child::after {
       background-color: transparent
     }
-
     &:hover .editableButton {
       display: flex
     }
@@ -205,7 +208,6 @@ const cx = {
     & {
       position: relative
     }
-
     &::after {
       content: ''
       display: block
@@ -216,6 +218,10 @@ const cx = {
       left: 15px
       background-color: ${theme.lineSilver2}
     }
+  `),
+
+  active: cmz(`
+    border-bottom: 1px solid ${theme.baseRed}
   `),
 
   message: cmz(`
@@ -272,7 +278,6 @@ const cx = {
       display: inline-block
       vertical-align: middle
     }
-
     @keyframes spinner {
       0% {
         transform: rotate(0)
@@ -291,7 +296,6 @@ const cx = {
         width: 70%
         height: 30px
       }
-
       & input {
         height: 30px !important
         padding: 0 !important
@@ -321,7 +325,6 @@ const cx = {
         color: ${theme.baseRed}
         cursor: pointer
       }
-
       & svg {
         transform: scale(.7)
         margin-right: 8px
@@ -339,7 +342,6 @@ const cx = {
       border-color: transparent
       margin: 0
     }
-
     &:hover {
       border-color: transparent
     }
@@ -353,7 +355,6 @@ const cx = {
       padding: 0
       width: 70%
     }
-
     & p {
       margin: 0
     }
@@ -398,8 +399,6 @@ type Props = {
   append?: Element<*>|string,
   dismissTimeout?: number,
   areItemsToggleable?: boolean,
-  itemRenderer?: Function,
-  isBordered?: boolean
 }
 
 type State = {
@@ -436,7 +435,7 @@ const DropdownCloseControl = withProps(({ className, closeDropdown }) => ({
 
 class SelectBox extends Component<Props, State> {
   static defaultProps = {
-    placeholder: 'Search',
+    placeholder: '',
     items: [],
     expanded: false,
     hasSearch: false,
@@ -445,8 +444,7 @@ class SelectBox extends Component<Props, State> {
     collectionLabel: '',
     dismissTimeout,
     shouldSortItems: true,
-    areItemsToggleable: true,
-    isBordered: true
+    areItemsToggleable: true
   }
 
   state: State = {
@@ -697,9 +695,7 @@ class SelectBox extends Component<Props, State> {
       onCreateNew,
       lined,
       append,
-      shouldSortItems,
-      itemRenderer,
-      isBordered
+      shouldSortItems
     } = this.props
     const { view, search } = this.state
 
@@ -831,25 +827,21 @@ class SelectBox extends Component<Props, State> {
       </span>
     ) : item.value
 
-    const renderDefaultStatus = (item: Item) => {
-      if (itemRenderer) return itemRenderer(item)
-
-      return onSelect ? (
-        <InputField
-          key={`${item.id}${item.selected ? 'selected' : 'unselected'}`}
-          type='checkbox'
-          label={item.value}
-          name={item.value}
-          checked={!!item.selected}
-          onChange={() => {}}
-          onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
-        />
-      ) : (
-        <span className={cx.label}>
-          {item.value}
-        </span>
-      )
-    }
+    const renderDefaultStatus = (item: Item) => onSelect ? (
+      <InputField
+        key={`${item.id}${item.selected ? 'selected' : 'unselected'}`}
+        type='checkbox'
+        label={item.value}
+        name={item.value}
+        checked={!!item.selected}
+        onChange={() => {}}
+        onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
+      />
+    ) : (
+      <span className={[cx.label, item.selected ? cx.active : ''].join(' ')}>
+        {item.value}
+      </span>
+    )
 
     const renderDefaultStatusControl = (item: Item) => (
       <span className={cx.control}>
@@ -1014,65 +1006,61 @@ class SelectBox extends Component<Props, State> {
       : cx.selectsEmpty
     const shouldShowClearElement = hasClear && filteredSelectedItems.length > 0
 
-    const renderSearchLabel = (isSearch: boolean = false) => {
-      const placeholderStyle = isBordered
-      ? {
-        container: { border: `1px solid ${theme.lineSilver2}` },
-        items: {}
-      }
-      : {
-        container: {},
-        items: { overflow: 'visible', paddingRight: '20px' }
-      }
-      const triangleColor = isBordered ? 'grayscale' : 'monochrome'
+    const renderSearchLabel = (stopClickPropagation: boolean = true) => (
+      <div className={cx.search}>
+        <div className={cx.magnifier}>
+          <SvgIcon icon='magnifier' color='grayscale' />
+        </div>
+        <InputField
+          name='search'
+          value={search}
+          placeholder={'Search'}
+          onChange={(input = {}) => this.handleSearch(null, input.target.value)}
+          className={cx.searchInput}
+          autoComplete='off'
+          onKeyDown={this.handleByStoppingPropagation}
+          onKeyPress={this.handleByStoppingPropagation}
+          onKeyUp={this.handleByStoppingPropagation}
+          onClick={stopClickPropagation && this.handleByStoppingPropagation}
+        />
+        {search !== '' && (
+          <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
+            <SvgIcon icon='x' color='grayscale' hover='default' />
+          </div>
+        )}
+      </div>
+    )
 
-      return isSearch ? (
-        <div className={cx.search}>
-          <div className={cx.magnifier}>
-            <SvgIcon icon='magnifier' color='grayscale' />
-          </div>
-          <InputField
-            name='search'
-            value={search}
-            placeholder={hasSearch ? 'Search' : placeholder}
-            onChange={(input = {}) => this.handleSearch(null, input.target.value)}
-            className={cx.searchInput}
-            autoComplete='off'
-            onKeyDown={this.handleByStoppingPropagation}
-            onKeyPress={this.handleByStoppingPropagation}
-            onKeyUp={this.handleByStoppingPropagation}
-            onClick={this.handleByStoppingPropagation}
-          />
-          {search !== '' && (
-            <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
-              <SvgIcon icon='x' color='grayscale' hover='default' />
+    const renderPlaceholder = () => (
+      <div className={[
+        cx.placeholder,
+        (!hasSearch && !placeholder) ? cx.noSearchAndPlaceholder : ''
+      ].join(' ')}>
+        {placeholder && (
+          <div>
+            <div className={selectsClass}>
+              <div>
+                {placeholder}
+              </div>
+              <div>
+                {filteredSelectedItems
+                  .reduce((acc, { value }) => (
+                    acc ? `${acc}, ${value}` : value
+                  ), '')}
+              </div>
             </div>
-          )}
-        </div>
-      ) : (
-        <div className={cx.placeholder} style={placeholderStyle.container}>
-          <div className={selectsClass}>
-            <div>
-              {placeholder}
-            </div>
-            <div style={placeholderStyle.items}>
-              {filteredSelectedItems
-                .reduce((acc, { value }) => (
-                  acc ? `${acc}, ${value}` : value
-                ), '')}
+            {shouldShowClearElement && (
+              <div className={cx.clear} onClick={this.handleClearClick}>
+                <SvgIcon icon='x' color='grayscale' hover='default' />
+              </div>
+            )}
+            <div className={cx.triangle}>
+              <SvgIcon icon='triangledown' color='grayscale' />
             </div>
           </div>
-          {shouldShowClearElement && (
-            <div className={cx.clear} onClick={this.handleClearClick}>
-              <SvgIcon icon='x' color='grayscale' hover='default' />
-            </div>
-          )}
-          <div className={cx.triangle}>
-            <SvgIcon icon='triangledown' color={triangleColor} />
-          </div>
-        </div>
-      )
-    }
+        )}
+      </div>
+    )
 
     const renderAppendix = () => append && (
       <div className={cx.appendix}>
@@ -1080,34 +1068,25 @@ class SelectBox extends Component<Props, State> {
       </div>
     )
 
-    const labelIsSearch = placeholder === 'Search'
-
-    const renderExpandedOrDropdown = () => {
-      const dropdownStyle = isBordered
-        ? { width: '100%' }
-        : {}
-
-      return expanded ? (
-        <div>
-          {renderSearchLabel(labelIsSearch || hasSearch)}
+    const renderExpandedOrDropdown = () => expanded ? (
+      <div>
+        {(placeholder || !hasSearch) ? renderPlaceholder() : renderSearchLabel()}
+        {renderItems()}
+        {renderAppendix()}
+      </div>
+    ) : (
+      <Dropdown
+        toggle={!!placeholder}
+        label={(placeholder || !hasSearch) ? renderPlaceholder() : renderSearchLabel(false)}
+        className={cx.dropdown}
+      >
+        <DropdownCloseControl className={expanded ? '' : cx.shadow} closeDropdown>
+          {(placeholder && hasSearch) && renderSearchLabel()}
           {renderItems()}
           {renderAppendix()}
-        </div>
-      ) : (
-        <Dropdown
-          toggle={!labelIsSearch}
-          label={renderSearchLabel(labelIsSearch && !hasSearch)}
-          className={cx.dropdown}
-          style={dropdownStyle}
-        >
-          <DropdownCloseControl className={expanded ? '' : cx.shadow} closeDropdown>
-            {hasSearch && renderSearchLabel(true)}
-            {renderItems()}
-            {renderAppendix()}
-          </DropdownCloseControl>
-        </Dropdown>
-      )
-    }
+        </DropdownCloseControl>
+      </Dropdown>
+    )
 
     return (
       <div className={cx.selectbox} style={{ width: width ? `${width}px` : '100%' }}>

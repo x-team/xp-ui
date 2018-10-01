@@ -30,11 +30,9 @@ const styles = {
       justify-content: center
       line-height: 16px
     }
-
     & > * {
       margin: 0 0 0 6px
     }
-
     & > :first-child {
       margin: 0
     }
@@ -81,7 +79,6 @@ const styles = {
       white-space: nowrap
       position: relative
     }
-
     &:before, &:after {
       content: ''
       position: absolute
@@ -90,12 +87,10 @@ const styles = {
       border-left: 10px solid transparent
       border-right: 10px solid transparent
     }
-
     &:before {
       border-bottom: 10px solid ${theme.lineSilver2}
       bottom: 100%
     }
-
     &:after {
       border-bottom: 10px solid ${theme.baseBrighter}
       bottom: calc(100% - 1px)
@@ -107,7 +102,6 @@ const styles = {
       border-bottom: none
       bottom: -10px
     }
-
     &:after {
       border-top: 10px solid ${theme.baseBrighter}
       border-bottom: none
@@ -138,7 +132,7 @@ type Props = {
   className?: string,
   tooltipClassName?: string,
   onClick?: Function,
-  style?: Object
+  onClose?: Function
 }
 
 type State = {
@@ -156,8 +150,7 @@ class Dropdown extends PureComponent<Props, State> {
     hover: false,
     indicator: false,
     padded: false,
-    toggle: true,
-    style: {}
+    toggle: true
   }
 
   state = {
@@ -189,8 +182,7 @@ class Dropdown extends PureComponent<Props, State> {
       tooltip,
       className,
       tooltipClassName,
-      onClick,
-      style
+      onClick
     } = this.props
     const { open } = this.state
 
@@ -234,7 +226,6 @@ class Dropdown extends PureComponent<Props, State> {
 
     const renderContent = () => (
       <div
-        style={style}
         className={rootClasses}
         onMouseEnter={hover && this.open}
         onMouseLeave={hover && this.close}
@@ -246,7 +237,7 @@ class Dropdown extends PureComponent<Props, State> {
             <span className={styles.triangle}>
               <SvgIcon
                 icon={open ? 'triangleup' : 'triangledown'}
-                color='text'
+                color='grayscale'
               />
             </span>
           )}

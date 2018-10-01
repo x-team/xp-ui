@@ -1,6 +1,7 @@
 Labeled button:
 
 ```js
+const Loader = require('./Loader.js').default;
 <Dropdown icon="add" label="Add to List" indicator>
   <div style={{ background: '#e9e9e9' }}>
     <Dropdown label="Add to List">
@@ -19,6 +20,7 @@ Labeled button:
 Label and indicator positioned on the right:
 
 ```js
+const SelectBox = require('./SelectBox.js').default;
 const itemsArray = [
   { id: 1, value: "item-1" },
   { id: 2, value: "item-2" },
@@ -48,6 +50,7 @@ const itemsArray = [
 Icon only button:
 
 ```js
+const Loader = require('./Loader.js').default;
 <Dropdown icon="hamburger" padded>
   <div style={{ background: '#e9e9e9' }}>
     <Loader />
@@ -58,6 +61,7 @@ Icon only button:
 SelectBox example:
 
 ```js
+const SelectBox = require('./SelectBox.js').default;
 const itemsArray = [
   { id: 2, value: "registered", selected: true },
   { id: 3, value: "portfolio-building", selected: true },
@@ -69,9 +73,33 @@ const itemsArray = [
   <SelectBox
     collectionLabel="List"
     items={itemsArray}
-    expanded={false}
+    expanded={true}
     width={300}
     visibleItems={3}
+    onClick={item => console.log('onClick:', item)}
+  />
+</Dropdown>
+```
+
+Another SelectBox example:
+
+```js
+const SelectBox = require('./SelectBox.js').default;
+const itemsArray = [
+  { id: 2, value: "registered", selected: true },
+  { id: 3, value: "portfolio-building", selected: false },
+  { id: 4, value: "portfolio-review", selected: false },
+  { id: 5, value: "social-media-screen", selected: false },
+  { id: 6, value: "react-shortlist", selected: false }
+];
+<Dropdown label="registered" indicator padded>
+  <SelectBox
+    collectionLabel="List"
+    items={itemsArray}
+    hasSearch={false}
+    expanded={true}
+    width={300}
+    visibleItems={4}
     onClick={item => console.log('onClick:', item)}
   />
 </Dropdown>
@@ -80,6 +108,7 @@ const itemsArray = [
 Tooltip display:
 
 ```js
+const Button = require('./Button.js').default;
 <Dropdown tooltip label={<Button>x</Button>}>
   Anything here
 </Dropdown>

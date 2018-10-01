@@ -446,6 +446,49 @@ const itemsArray = [
 </div>
 ```
 
+"Searching" and "creating" use cases:
+
+```js
+const itemsArray = [
+  {id: 1, value: 'entry'},
+  {id: 2, value: 'entry another entry'},
+  {id: 3, value: 'justtoentrymakesure'},
+  {id: 4, value: 'entr', status: 'creating'}
+];
+
+const casesMatrix = [
+  [false, true],
+  [false, true, 'Custom placeholder'],
+  [false, false],
+  [false, false, 'Custom placeholder'],
+  [true, true],
+  [true, true, 'Custom placeholder'],
+  [true, false],
+  [true, false, 'Custom placeholder']
+];
+
+<div>
+  {casesMatrix.map(i => (
+    <div>
+      <h3>
+        hasSearch: {i[0].toString()}
+        <br/>
+        expanded: {i[1].toString()}
+        <br/>
+        placeholder: {(i[2] && i[2].toString()) || '<undefined>'}
+      </h3>
+      <SelectBox
+        items={itemsArray}
+        hasSearch={i[0]}
+        expanded={i[1]}
+        placeholder={i[2]}
+      />
+    </div>
+  ))}
+</div>
+```
+
+
 Fixed height:
 
 ```js
