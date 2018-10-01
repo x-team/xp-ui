@@ -11,9 +11,9 @@ import elem from '../../utils/elem'
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
-const cmz = require('cmz')
-
 import type { InputType } from '../../utils/types'
+
+const cmz = require('cmz')
 
 type Props = {
   label?: string,
