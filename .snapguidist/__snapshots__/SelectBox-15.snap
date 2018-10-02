@@ -23,7 +23,6 @@ exports[`SelectBox-15 1`] = `
           className="AutoUI_ui_SelectBox-42 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-67">
           
         </div>
-        
         <ul
           className="AutoUI_ui_SelectBox-165 expanded"
           style={
@@ -487,7 +486,6 @@ exports[`SelectBox-15 1`] = `
               value="" />
           </div>
         </div>
-        
         <ul
           className="AutoUI_ui_SelectBox-165 expanded"
           style={
@@ -570,38 +568,6 @@ exports[`SelectBox-15 1`] = `
       }>
       <div>
         <div
-          className="AutoUI_ui_SelectBox-42 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-          <div>
-            <div
-              className="AutoUI_ui_SelectBox-99">
-              <div>
-                Custom placeholder
-              </div>
-              <div>
-                
-              </div>
-            </div>
-            <div
-              className="AutoUI_ui_SelectBox-133">
-              <svg
-                height="5px"
-                viewBox="0 0 9 5"
-                width="9px">
-                <g
-                  fill="none"
-                  fillRule="evenodd"
-                  stroke="none"
-                  strokeWidth="1">
-                  <polygon
-                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
-                    points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
-                    transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
-                </g>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div
           className="AutoUI_ui_SelectBox-110">
           <div
             className="AutoUI_ui_SelectBox-121">
@@ -633,7 +599,7 @@ exports[`SelectBox-15 1`] = `
               className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-115"
               id="search"
               name="search"
-              placeholder="Search"
+              placeholder="Custom placeholder"
               required={false}
               type="text"
               value="" />
@@ -935,7 +901,7 @@ exports[`SelectBox-15 1`] = `
                   className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-115"
                   id="search"
                   name="search"
-                  placeholder="Search"
+                  placeholder="Custom placeholder"
                   required={false}
                   type="text"
                   value="" />

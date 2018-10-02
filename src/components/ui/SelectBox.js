@@ -54,10 +54,6 @@ const cx = {
         border-radius: 2px
       }
 
-      &:not(:only-of-type) {
-        border-bottom: none
-      }
-
       & > div {
         width: inherit
       }

@@ -49,7 +49,6 @@ exports[`SelectBox-13 1`] = `
             value="" />
         </div>
       </div>
-      
       <ul
         className="AutoUI_ui_SelectBox-165 expanded"
         style={
@@ -139,7 +138,6 @@ exports[`SelectBox-13 1`] = `
           </svg>
         </div>
       </div>
-      
       <ul
         className="AutoUI_ui_SelectBox-165 expanded"
         style={
@@ -269,7 +267,6 @@ exports[`SelectBox-13 1`] = `
           </svg>
         </div>
       </div>
-      
       <ul
         className="AutoUI_ui_SelectBox-165 expanded"
         style={
@@ -399,7 +396,6 @@ exports[`SelectBox-13 1`] = `
           </svg>
         </div>
       </div>
-      
       <ul
         className="AutoUI_ui_SelectBox-165 expanded"
         style={
@@ -559,7 +555,6 @@ exports[`SelectBox-13 1`] = `
           </svg>
         </div>
       </div>
-      
       <ul
         className="AutoUI_ui_SelectBox-165 expanded"
         style={
@@ -695,7 +690,6 @@ exports[`SelectBox-13 1`] = `
           </svg>
         </div>
       </div>
-      
       <ul
         className="AutoUI_ui_SelectBox-165 expanded"
         style={
@@ -821,7 +815,6 @@ exports[`SelectBox-13 1`] = `
           </svg>
         </div>
       </div>
-      
       <ul
         className="AutoUI_ui_SelectBox-165 expanded"
         style={
@@ -927,7 +920,6 @@ exports[`SelectBox-13 1`] = `
             value="" />
         </div>
       </div>
-      
       <ul
         className="AutoUI_ui_SelectBox-165 expanded"
         style={
@@ -1060,7 +1052,6 @@ exports[`SelectBox-13 1`] = `
           </svg>
         </div>
       </div>
-      
       <ul
         className="AutoUI_ui_SelectBox-165 expanded"
         style={

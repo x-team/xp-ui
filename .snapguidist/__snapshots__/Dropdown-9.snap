@@ -43,7 +43,6 @@ exports[`Dropdown-9 1`] = `
           className="AutoUI_ui_SelectBox-42 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-67">
           
         </div>
-        
         <ul
           className="AutoUI_ui_SelectBox-165 expanded"
           style={

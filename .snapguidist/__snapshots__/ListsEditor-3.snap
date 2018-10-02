@@ -98,7 +98,6 @@ exports[`ListsEditor-3 1`] = `
                       value="" />
                   </div>
                 </div>
-                
                 <ul
                   className="AutoUI_ui_SelectBox-165 expanded"
                   style={
