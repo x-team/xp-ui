@@ -40,11 +40,12 @@ exports[`Dropdown-9 1`] = `
       }>
       <div>
         <div
-          className="AutoUI_ui_SelectBox-42 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-63">
+          className="AutoUI_ui_SelectBox-42 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-67">
           
         </div>
+        
         <ul
-          className="AutoUI_ui_SelectBox-161 expanded"
+          className="AutoUI_ui_SelectBox-165 expanded"
           style={
             Object {
               "height": "240px",
@@ -54,9 +55,9 @@ exports[`Dropdown-9 1`] = `
           }>
           
           <li
-            className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+            className="AutoUI_ui_SelectBox-186 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-212 ">
             <div
-              className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+              className="AutoUI_ui_SelectBox-201 AutoUI_ui_SelectBox-208">
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -81,13 +82,13 @@ exports[`Dropdown-9 1`] = `
                 </label>
               </div>
               <span
-                className="AutoUI_ui_SelectBox-239" />
+                className="AutoUI_ui_SelectBox-243" />
             </div>
           </li>
           <li
-            className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+            className="AutoUI_ui_SelectBox-186 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-212 ">
             <div
-              className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+              className="AutoUI_ui_SelectBox-201 AutoUI_ui_SelectBox-208">
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -112,13 +113,13 @@ exports[`Dropdown-9 1`] = `
                 </label>
               </div>
               <span
-                className="AutoUI_ui_SelectBox-239" />
+                className="AutoUI_ui_SelectBox-243" />
             </div>
           </li>
           <li
-            className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+            className="AutoUI_ui_SelectBox-186 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-212 ">
             <div
-              className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+              className="AutoUI_ui_SelectBox-201 AutoUI_ui_SelectBox-208">
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -143,13 +144,13 @@ exports[`Dropdown-9 1`] = `
                 </label>
               </div>
               <span
-                className="AutoUI_ui_SelectBox-239" />
+                className="AutoUI_ui_SelectBox-243" />
             </div>
           </li>
           <li
-            className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+            className="AutoUI_ui_SelectBox-186 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-212 ">
             <div
-              className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+              className="AutoUI_ui_SelectBox-201 AutoUI_ui_SelectBox-208">
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -174,13 +175,13 @@ exports[`Dropdown-9 1`] = `
                 </label>
               </div>
               <span
-                className="AutoUI_ui_SelectBox-239" />
+                className="AutoUI_ui_SelectBox-243" />
             </div>
           </li>
           <li
-            className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+            className="AutoUI_ui_SelectBox-186 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-212 ">
             <div
-              className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+              className="AutoUI_ui_SelectBox-201 AutoUI_ui_SelectBox-208">
               <div
                 className="AutoUI_forms_InputField-78">
                 <label
@@ -205,7 +206,7 @@ exports[`Dropdown-9 1`] = `
                 </label>
               </div>
               <span
-                className="AutoUI_ui_SelectBox-239" />
+                className="AutoUI_ui_SelectBox-243" />
             </div>
           </li>
         </ul>
