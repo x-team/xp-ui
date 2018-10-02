@@ -16,9 +16,9 @@ exports[`SelectBox-19 1`] = `
       <span
         className="AutoUI_ui_Dropdown-40">
         <div
-          className="AutoUI_ui_SelectBox-110">
+          className="AutoUI_ui_SelectBox-106">
           <div
-            className="AutoUI_ui_SelectBox-121">
+            className="AutoUI_ui_SelectBox-117">
             <svg
               height="17px"
               viewBox="0 0 16 17"
@@ -44,7 +44,7 @@ exports[`SelectBox-19 1`] = `
             <input
               aria-labelledby="label-search"
               autoComplete="off"
-              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-115"
+              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-111"
               id="search"
               name="search"
               onClick={false}
@@ -59,10 +59,10 @@ exports[`SelectBox-19 1`] = `
     <div
       className="AutoUI_ui_Dropdown-50     ">
       <div
-        className="AutoUI_ui_SelectBox-182">
+        className="AutoUI_ui_SelectBox-178">
         
         <ul
-          className="AutoUI_ui_SelectBox-165 false"
+          className="AutoUI_ui_SelectBox-161 false"
           style={
             Object {
               "height": "auto",
