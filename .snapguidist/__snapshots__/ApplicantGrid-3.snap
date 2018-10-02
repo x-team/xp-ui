@@ -45,7 +45,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -59,9 +59,9 @@ exports[`ApplicantGrid-3 1`] = `
                     </span>
                   </div>
                   <div
-                    className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+                    className="AutoUI_ui_Dropdown-50   AutoUI_ui_Dropdown-67 AutoUI_ui_Dropdown-114 ">
                     <div
-                      className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                      className="AutoUI_ui_Dropdown-71 AutoUI_ui_Dropdown-99">
                       <div
                         className="AutoUI_ui_ApplicantBadge-369">
                         Avail. date tooltip copy
@@ -78,7 +78,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -92,9 +92,9 @@ exports[`ApplicantGrid-3 1`] = `
                     </span>
                   </div>
                   <div
-                    className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+                    className="AutoUI_ui_Dropdown-50   AutoUI_ui_Dropdown-67 AutoUI_ui_Dropdown-114 ">
                     <div
-                      className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                      className="AutoUI_ui_Dropdown-71 AutoUI_ui_Dropdown-99">
                       <div
                         className="AutoUI_ui_ApplicantBadge-369">
                         Avail. updated tooltip copy
@@ -111,7 +111,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -134,7 +134,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -157,7 +157,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -180,7 +180,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -329,7 +329,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -343,9 +343,9 @@ exports[`ApplicantGrid-3 1`] = `
                     </span>
                   </div>
                   <div
-                    className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+                    className="AutoUI_ui_Dropdown-50   AutoUI_ui_Dropdown-67 AutoUI_ui_Dropdown-114 ">
                     <div
-                      className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                      className="AutoUI_ui_Dropdown-71 AutoUI_ui_Dropdown-99">
                       <div
                         className="AutoUI_ui_ApplicantBadge-369">
                         Avail. date tooltip copy
@@ -362,7 +362,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -376,9 +376,9 @@ exports[`ApplicantGrid-3 1`] = `
                     </span>
                   </div>
                   <div
-                    className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+                    className="AutoUI_ui_Dropdown-50   AutoUI_ui_Dropdown-67 AutoUI_ui_Dropdown-114 ">
                     <div
-                      className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                      className="AutoUI_ui_Dropdown-71 AutoUI_ui_Dropdown-99">
                       <div
                         className="AutoUI_ui_ApplicantBadge-369">
                         Avail. updated tooltip copy
@@ -395,7 +395,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -418,7 +418,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -441,7 +441,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -464,7 +464,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -613,7 +613,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -627,9 +627,9 @@ exports[`ApplicantGrid-3 1`] = `
                     </span>
                   </div>
                   <div
-                    className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+                    className="AutoUI_ui_Dropdown-50   AutoUI_ui_Dropdown-67 AutoUI_ui_Dropdown-114 ">
                     <div
-                      className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                      className="AutoUI_ui_Dropdown-71 AutoUI_ui_Dropdown-99">
                       <div
                         className="AutoUI_ui_ApplicantBadge-369">
                         Avail. date tooltip copy
@@ -646,7 +646,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -660,9 +660,9 @@ exports[`ApplicantGrid-3 1`] = `
                     </span>
                   </div>
                   <div
-                    className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+                    className="AutoUI_ui_Dropdown-50   AutoUI_ui_Dropdown-67 AutoUI_ui_Dropdown-114 ">
                     <div
-                      className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                      className="AutoUI_ui_Dropdown-71 AutoUI_ui_Dropdown-99">
                       <div
                         className="AutoUI_ui_ApplicantBadge-369">
                         Avail. updated tooltip copy
@@ -679,7 +679,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -702,7 +702,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -725,7 +725,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -748,7 +748,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -897,7 +897,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -911,9 +911,9 @@ exports[`ApplicantGrid-3 1`] = `
                     </span>
                   </div>
                   <div
-                    className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+                    className="AutoUI_ui_Dropdown-50   AutoUI_ui_Dropdown-67 AutoUI_ui_Dropdown-114 ">
                     <div
-                      className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                      className="AutoUI_ui_Dropdown-71 AutoUI_ui_Dropdown-99">
                       <div
                         className="AutoUI_ui_ApplicantBadge-369">
                         Avail. date tooltip copy
@@ -930,7 +930,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -944,9 +944,9 @@ exports[`ApplicantGrid-3 1`] = `
                     </span>
                   </div>
                   <div
-                    className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+                    className="AutoUI_ui_Dropdown-50   AutoUI_ui_Dropdown-67 AutoUI_ui_Dropdown-114 ">
                     <div
-                      className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                      className="AutoUI_ui_Dropdown-71 AutoUI_ui_Dropdown-99">
                       <div
                         className="AutoUI_ui_ApplicantBadge-369">
                         Avail. updated tooltip copy
@@ -963,7 +963,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -986,7 +986,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -1009,7 +1009,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -1032,7 +1032,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -1181,7 +1181,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -1195,9 +1195,9 @@ exports[`ApplicantGrid-3 1`] = `
                     </span>
                   </div>
                   <div
-                    className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+                    className="AutoUI_ui_Dropdown-50   AutoUI_ui_Dropdown-67 AutoUI_ui_Dropdown-114 ">
                     <div
-                      className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                      className="AutoUI_ui_Dropdown-71 AutoUI_ui_Dropdown-99">
                       <div
                         className="AutoUI_ui_ApplicantBadge-369">
                         Avail. date tooltip copy
@@ -1214,7 +1214,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -1228,9 +1228,9 @@ exports[`ApplicantGrid-3 1`] = `
                     </span>
                   </div>
                   <div
-                    className="AutoUI_ui_Dropdown-52   AutoUI_ui_Dropdown-69 AutoUI_ui_Dropdown-120 ">
+                    className="AutoUI_ui_Dropdown-50   AutoUI_ui_Dropdown-67 AutoUI_ui_Dropdown-114 ">
                     <div
-                      className="AutoUI_ui_Dropdown-73 AutoUI_ui_Dropdown-104">
+                      className="AutoUI_ui_Dropdown-71 AutoUI_ui_Dropdown-99">
                       <div
                         className="AutoUI_ui_ApplicantBadge-369">
                         Avail. updated tooltip copy
@@ -1247,7 +1247,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -1270,7 +1270,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -1293,7 +1293,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">
@@ -1316,7 +1316,7 @@ exports[`ApplicantGrid-3 1`] = `
                     className="AutoUI_ui_Dropdown-24 ">
                     
                     <span
-                      className="AutoUI_ui_Dropdown-42">
+                      className="AutoUI_ui_Dropdown-40">
                       <div>
                         <span
                           className="AutoUI_ui_ApplicantBadge-357">

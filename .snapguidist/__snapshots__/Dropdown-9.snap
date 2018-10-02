@@ -4,24 +4,212 @@ exports[`Dropdown-9 1`] = `
   onMouseEnter={false}
   onMouseLeave={false}>
   <div
-    className="AutoUI_ui_Dropdown-24 ">
+    className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44">
     
     <span
-      className="AutoUI_ui_Dropdown-42">
-      <button
-        className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 ">
-        <span
-          className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
-          x
-        </span>
-      </button>
+      className="AutoUI_ui_Dropdown-40">
+      registered
+    </span>
+    <span
+      className="AutoUI_ui_Dropdown-47">
+      <svg
+        height="5px"
+        viewBox="0 0 9 5"
+        width="9px">
+        <g
+          fill="none"
+          fillRule="evenodd"
+          stroke="none"
+          strokeWidth="1">
+          <polygon
+            className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+            points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
+            transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+        </g>
+      </svg>
     </span>
   </div>
   <div
-    className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117 ">
+    className="AutoUI_ui_Dropdown-50     ">
     <div
-      className="AutoUI_ui_Dropdown-73 ">
-      Anything here
+      className="AutoUI_ui_SelectBox-32"
+      style={
+        Object {
+          "width": "300px",
+        }
+      }>
+      <div>
+        <div
+          className="AutoUI_ui_SelectBox-42 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-63">
+          
+        </div>
+        <ul
+          className="AutoUI_ui_SelectBox-161 expanded"
+          style={
+            Object {
+              "height": "240px",
+              "maxHeight": "240px",
+              "width": "300px",
+            }
+          }>
+          
+          <li
+            className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+            <div
+              className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+              <div
+                className="AutoUI_forms_InputField-78">
+                <label
+                  id="label-registered">
+                  <div
+                    className="AutoUI_forms_InputField-78">
+                    <label
+                      className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                      <input
+                        aria-labelledby="label-registered"
+                        checked={true}
+                        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-50 "
+                        id="registered"
+                        name="registered"
+                        required={false}
+                        type="radio" />
+                      <span
+                        className="AutoUI_forms_InputField-42" />
+                      registered
+                    </label>
+                  </div>
+                </label>
+              </div>
+              <span
+                className="AutoUI_ui_SelectBox-239" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+            <div
+              className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+              <div
+                className="AutoUI_forms_InputField-78">
+                <label
+                  id="label-portfolio-building">
+                  <div
+                    className="AutoUI_forms_InputField-78">
+                    <label
+                      className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                      <input
+                        aria-labelledby="label-portfolio-building"
+                        checked={false}
+                        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-50 "
+                        id="portfolio-building"
+                        name="portfolio-building"
+                        required={false}
+                        type="radio" />
+                      <span
+                        className="AutoUI_forms_InputField-42" />
+                      portfolio-building
+                    </label>
+                  </div>
+                </label>
+              </div>
+              <span
+                className="AutoUI_ui_SelectBox-239" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+            <div
+              className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+              <div
+                className="AutoUI_forms_InputField-78">
+                <label
+                  id="label-portfolio-review">
+                  <div
+                    className="AutoUI_forms_InputField-78">
+                    <label
+                      className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                      <input
+                        aria-labelledby="label-portfolio-review"
+                        checked={false}
+                        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-50 "
+                        id="portfolio-review"
+                        name="portfolio-review"
+                        required={false}
+                        type="radio" />
+                      <span
+                        className="AutoUI_forms_InputField-42" />
+                      portfolio-review
+                    </label>
+                  </div>
+                </label>
+              </div>
+              <span
+                className="AutoUI_ui_SelectBox-239" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+            <div
+              className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+              <div
+                className="AutoUI_forms_InputField-78">
+                <label
+                  id="label-social-media-screen">
+                  <div
+                    className="AutoUI_forms_InputField-78">
+                    <label
+                      className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                      <input
+                        aria-labelledby="label-social-media-screen"
+                        checked={false}
+                        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-50 "
+                        id="social-media-screen"
+                        name="social-media-screen"
+                        required={false}
+                        type="radio" />
+                      <span
+                        className="AutoUI_forms_InputField-42" />
+                      social-media-screen
+                    </label>
+                  </div>
+                </label>
+              </div>
+              <span
+                className="AutoUI_ui_SelectBox-239" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+            <div
+              className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+              <div
+                className="AutoUI_forms_InputField-78">
+                <label
+                  id="label-react-shortlist">
+                  <div
+                    className="AutoUI_forms_InputField-78">
+                    <label
+                      className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                      <input
+                        aria-labelledby="label-react-shortlist"
+                        checked={false}
+                        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-50 "
+                        id="react-shortlist"
+                        name="react-shortlist"
+                        required={false}
+                        type="radio" />
+                      <span
+                        className="AutoUI_forms_InputField-42" />
+                      react-shortlist
+                    </label>
+                  </div>
+                </label>
+              </div>
+              <span
+                className="AutoUI_ui_SelectBox-239" />
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
