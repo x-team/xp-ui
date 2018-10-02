@@ -7,6 +7,8 @@ import SelectBox from './SelectBox'
 import SvgIcon from './SvgIcon'
 import Keywords from './Keywords'
 
+import { DISPLAY_MODES } from '../../utils/constants'
+
 import theme from '../../styles/theme'
 
 import type { DisplayModes } from '../../utils/types'
@@ -50,15 +52,15 @@ const listTheme = {
   formKeywords: cmz(`
     display: block
     width: 100%
-    margin: 20px 0 0
-    padding: 20px 0 0
-    border-top: 1px solid ${theme.lineSilver4}
+    margin-top: 20px
   `),
 
   selectFields: cmz(`
     display: inline-block
     width: 100%
-    margin-top: 20px
+    margin: 20px 0 0
+    padding: 20px 0 0
+    border-top: 1px solid ${theme.lineSilver4}
   `),
 
   formButton: cmz(`
@@ -96,12 +98,17 @@ const tabularTheme = {
 
   selectLists: cmz(`
     display: flex
-    flex-shrink: 0
     align-items: center
+    margin-right: 10px
+    width: 100%
+    max-width: 300px
+    min-width: 200px
   `),
 
   listsSelector: cmz(`
-    width: 250px
+    width: inherit
+    max-width: inherit
+    min-width: inherit
   `),
 
   displayButtons: cmz(`
@@ -129,13 +136,15 @@ const tabularTheme = {
 
   selectFields: cmz(`
     flex-shrink: 0
-    width: 250px
+    max-width: 300px
+    min-width: 200px
     margin: 0 10px
   `),
 
   formButton: cmz(`
     margin: 0 10px
     height: 58px
+    padding: 10px 40px
   `),
 
   applicantsStatusFilter: cmz(`
@@ -149,6 +158,7 @@ type Props = {
   mode: $Values<DisplayModes>, // eslint-disable-line no-undef
   lists: Array<*>,
   onSelectList: Function,
+  onClearList: Function,
   keywords: string,
   onChangeKeywords: Function,
   fields: Array<*>,
@@ -187,6 +197,7 @@ class SearchForm extends PureComponent<Props> {
       mode,
       lists,
       onSelectList,
+      onClearList,
       keywords,
       onChangeKeywords,
       fields,
@@ -195,9 +206,10 @@ class SearchForm extends PureComponent<Props> {
       renderApplicantsStatusFilter
     } = this.props
 
-    const themeClasses = mode === 'tabular' ? tabularTheme : listTheme
+    const isTabular = mode === DISPLAY_MODES.TABULAR
+    const themeClasses = isTabular ? tabularTheme : listTheme
 
-    const renderDislpaySwitchButtons = () => (
+    const renderDisplaySwitchButtons = () => (
       <div className={themeClasses.displayButtons}>
         <a
           className={themeClasses.displayButton}
@@ -206,7 +218,7 @@ class SearchForm extends PureComponent<Props> {
         >
           <SvgIcon
             icon='grid'
-            color={mode === 'tabular' ? 'default' : 'grayscale'}
+            color={isTabular ? 'default' : 'grayscale'}
             hover='default'
           />
         </a>
@@ -217,7 +229,7 @@ class SearchForm extends PureComponent<Props> {
         >
           <SvgIcon
             icon='list'
-            color={mode !== 'tabular' ? 'default' : 'grayscale'}
+            color={!isTabular ? 'default' : 'grayscale'}
             hover='default'
           />
         </a>
@@ -234,9 +246,12 @@ class SearchForm extends PureComponent<Props> {
                 items={lists}
                 visibleItems={SELECTBOX_HEIGTH}
                 hasSearch
+                hasClear
                 collectionLabel='List'
-                onSelect={onSelectList}
+                onClick={onSelectList}
+                onClear={onClearList}
                 shouldSortItems={false}
+                areItemsToggleable={false}
                 append={
                   <Button type='button' selectbox onClick={this.handleModalOpen}>
                     <span><SvgIcon icon='edit' /> Edit lists</span>
@@ -244,14 +259,8 @@ class SearchForm extends PureComponent<Props> {
                 }
               />
             </div>
-            {mode !== 'tabular' && renderDislpaySwitchButtons()}
+            {!isTabular && renderDisplaySwitchButtons()}
           </div>
-          <Keywords
-            values={keywords}
-            onChange={onChangeKeywords}
-            onSubmit={onSubmit}
-            className={themeClasses.formKeywords}
-          />
           <div className={themeClasses.selectFields}>
             <SelectBox
               placeholder='Select Fields'
@@ -262,6 +271,12 @@ class SearchForm extends PureComponent<Props> {
               onSelect={onSelectField}
             />
           </div>
+          <Keywords
+            values={keywords}
+            onChange={onChangeKeywords}
+            onSubmit={onSubmit}
+            className={themeClasses.formKeywords}
+          />
           <Button
             className={themeClasses.formButton}
             type='submit'
@@ -269,7 +284,7 @@ class SearchForm extends PureComponent<Props> {
           >
             Show
           </Button>
-          {mode === 'tabular' && renderDislpaySwitchButtons()}
+          {isTabular && renderDisplaySwitchButtons()}
         </form>
         {renderApplicantsStatusFilter && (
           <div className={themeClasses.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>

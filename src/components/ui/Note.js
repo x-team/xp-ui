@@ -10,22 +10,20 @@ import Markdown from 'markdown-to-jsx'
 import Avatar from './Avatar'
 import Text from './Text'
 import FileLinks from './FileLinks'
+import PencilButton from './PencilButton'
+import InlineEditor from './InlineEditor'
+import TextareaEditor from './TextareaEditor/TextareaEditor'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
 import elem from '../../utils/elem'
 
+import type { EditorProps, PresenterProps } from './InlineEditor'
+
 const cmz = require('cmz')
 
-type Props = {
-  avatar?: string,
-  date?: Date,
-  name?: string,
-  text?: string,
-  files?: Array<Object>
-}
-
 const Root = elem.div(cmz(`
+  position: relative
   display: flex
 `))
 
@@ -37,6 +35,14 @@ const AvatarWrapper = elem.div(cmz(`
 const Body = elem.div(cmz(`
   display: flex
   flex-direction: column
+`))
+
+const Options = elem.div(cmz(`
+  position: absolute
+  top: 4px
+  right: 4px
+  padding-top: 4px
+  margin-left: auto
 `))
 
 const Name = elem.span(cmz(
@@ -56,6 +62,12 @@ const Time = elem.span(cmz(
     line-height: 12px
     margin-top: 8px
     margin-bottom: 10px
+  `
+))
+
+const InlineEditorWrapper = elem.div(cmz(
+  `
+    margin-bottom: 24px
   `
 ))
 
@@ -103,8 +115,28 @@ const timeFromNow = date => {
   return 'just now'
 }
 
-class Note extends PureComponent<Props> {
+type Props = {
+  avatar?: string,
+  date?: Date,
+  name?: string,
+  text?: string,
+  files?: Array<Object>,
+  onNoteUpdate: Function
+}
+
+type State = {
+  newValueIsValid: boolean,
+  isHover: boolean
+}
+
+class Note extends PureComponent<Props, State> {
   interval: number
+  activateEditingMode: Function
+
+  state = {
+    newValueIsValid: true,
+    isHover: false
+  }
 
   componentDidMount () {
     const { date } = this.props
@@ -126,19 +158,58 @@ class Note extends PureComponent<Props> {
     }
   }
 
+  handleMouseEnter = () => {
+    this.setState({ isHover: true })
+  }
+
+  handleMouseLeave = () => {
+    this.setState({ isHover: false })
+  }
+
+  renderPresenter = ({ value, activateEditingMode }: PresenterProps) => {
+    this.activateEditingMode = activateEditingMode
+    return TextWrapper({}, <Text content={<Markdown>{value}</Markdown>} isPureContent />)
+  }
+
+  handleEditorValueChange = (onValueChange: Function) => (value: any) => {
+    this.setState({ newValueIsValid: !!value.trim() })
+    onValueChange(value)
+  }
+
+  renderEditor = ({ onValueChange, value }: EditorProps) => (
+    <TextareaEditor onChange={this.handleEditorValueChange(onValueChange)} text={value} />
+  )
+
   render () {
-    const { avatar, date, name, text, files } = this.props
+    const { isHover, newValueIsValid } = this.state
+    const { avatar, name, date, files, text, onNoteUpdate } = this.props
 
     return (
       Root(
+        {
+          onMouseEnter: this.handleMouseEnter,
+          onMouseLeave: this.handleMouseLeave
+        },
         avatar && AvatarWrapper(
           <Avatar alt={name} src={avatar} size={40} />
         ),
         Body(
           name && Name(name),
           date && Time(timeFromNow(date)),
-          text && TextWrapper({}, <Text content={<Markdown>{text}</Markdown>} isPureContent />),
+        text &&
+          InlineEditorWrapper(
+            <InlineEditor
+              value={text}
+              isValid={newValueIsValid}
+              onSave={onNoteUpdate}
+              presenter={this.renderPresenter}
+              editor={this.renderEditor}
+            />
+          ),
           FileLinksWrapper({}, <FileLinks files={files} />)
+        ),
+        Options(
+          isHover && <PencilButton color='monochrome' onClick={this.activateEditingMode} />
         )
       )
     )

@@ -37,12 +37,12 @@ const KEY_CODES = {
 
 const isKeyOfType = (keyCode: number, type: number) => keyCode === type
 
-type EditorProps = {
+export type EditorProps = {
   value: any,
   onValueChange(data: any): void
 }
 
-type PresenterProps = {
+export type PresenterProps = {
   value: any,
   isEditable: boolean,
   isHover: boolean,
@@ -65,7 +65,7 @@ type Props = {
   /** On save changes callback */
   onSave(data: any): void,
   /** On cancel changes callback */
-  onCancel: () => void,
+  onCancel?: () => void,
 }
 
 type State = {

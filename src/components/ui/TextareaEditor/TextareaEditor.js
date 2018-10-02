@@ -1,5 +1,5 @@
-/* global HTMLTextAreaElement */
 // @flow
+/* global HTMLTextAreaElement */
 
 import React, { PureComponent } from 'react'
 
@@ -73,16 +73,16 @@ const editableClass = cmz(`
 `)
 
 type Props = {
-  placeholder: string,
+  placeholder?: string,
   text: string,
-  html: string,
-  id: string,
+  html?: string,
+  id?: string,
   charLimit: number,
   linesLimit?: number,
   disableEditing?: boolean,
-  onChange(text: string, html: string): ?void,
-  onFocus(target: Object, text: string, html: string): ?void,
-  onBlur(target: Object, text: string, html: string): ?void
+  onChange?: (text: string, html: string) => void,
+  onFocus?: (target: Object, text: string, html: string) => void,
+  onBlur?: (target: Object, text: string, html: string) => void
 }
 
 type State = {
@@ -112,7 +112,7 @@ class TextareaEditor extends PureComponent<Props, State> {
     shouldShowTextLength: false,
     options: {
       placeholder: {
-        text: this.props.placeholder
+        text: this.props.placeholder || ''
       },
       disableEditing: this.props.disableEditing || false,
       toolbar: !this.props.disableEditing

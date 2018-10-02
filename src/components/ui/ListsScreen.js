@@ -153,7 +153,7 @@ class ListsScreen extends PureComponent<Props, void> {
           <div className={themeClasses.headings}>
             {this.props.header}
           </div>
-          <div className={themeClasses.profile}>
+          <div id='profile--preview' className={themeClasses.profile}>
             {this.props.applicant}
           </div>
         </div>
