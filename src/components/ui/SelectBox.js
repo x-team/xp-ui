@@ -1018,7 +1018,7 @@ class SelectBox extends Component<Props, State> {
         <InputField
           name='search'
           value={search}
-          placeholder={placeholder || 'Search'}
+          placeholder={(expanded && placeholder) ? placeholder : 'Search'}
           onChange={(input = {}) => this.handleSearch(null, input.target.value)}
           className={cx.searchInput}
           autoComplete='off'
