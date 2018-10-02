@@ -400,7 +400,8 @@ type Props = {
   append?: Element<*>|string,
   dismissTimeout?: number,
   areItemsToggleable?: boolean,
-  inputType?: InputType
+  inputType?: InputType,
+  closeDropdown?: boolean | Function
 }
 
 type State = {
@@ -447,7 +448,8 @@ class SelectBox extends Component<Props, State> {
     dismissTimeout,
     shouldSortItems: true,
     areItemsToggleable: true,
-    inputType: 'checkbox'
+    inputType: 'checkbox',
+    closeDropdown: false
   }
 
   state: State = {
@@ -565,23 +567,25 @@ class SelectBox extends Component<Props, State> {
 
   handleSelect = (e: any, item: Item) => {
     e.stopPropagation && e.stopPropagation()
-    const { onSelect } = this.props
+    const { onSelect, closeDropdown } = this.props
     if (item.status !== STATUS.SELECTING && onSelect) {
       onSelect({
         ...this.getUncachedItem(item),
         selected: !item.selected
       })
+      closeDropdown && typeof closeDropdown === 'function' && closeDropdown()
     }
   }
 
   handleClick = (event: any, item: Item) => {
-    const { onClick, areItemsToggleable } = this.props
+    const { onClick, areItemsToggleable, closeDropdown } = this.props
     areItemsToggleable && event.stopPropagation()
     if (item.status !== STATUS.SELECTING && onClick) {
       onClick({
         ...this.getUncachedItem(item),
         selected: !areItemsToggleable || !item.selected
       })
+      closeDropdown && typeof closeDropdown === 'function' && closeDropdown()
     } else {
       this.handleSelect(event, item)
     }
