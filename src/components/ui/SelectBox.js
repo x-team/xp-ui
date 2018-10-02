@@ -1022,7 +1022,7 @@ class SelectBox extends Component<Props, State> {
         <InputField
           name='search'
           value={search}
-          placeholder={'Search'}
+          placeholder={placeholder || 'Search'}
           onChange={(input = {}) => this.handleSearch(null, input.target.value)}
           className={cx.searchInput}
           autoComplete='off'
@@ -1078,8 +1078,7 @@ class SelectBox extends Component<Props, State> {
 
     const renderExpandedOrDropdown = () => expanded ? (
       <div>
-        {(placeholder || !hasSearch) ? renderPlaceholder() : renderSearchLabel()}
-        {(placeholder && hasSearch) && renderSearchLabel()}
+        {hasSearch ? renderSearchLabel() : renderPlaceholder()}
         {renderItems()}
         {renderAppendix()}
       </div>
