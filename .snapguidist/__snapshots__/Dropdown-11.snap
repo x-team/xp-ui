@@ -7,19 +7,21 @@ exports[`Dropdown-11 1`] = `
     className="AutoUI_ui_Dropdown-24 ">
     
     <span
-      className="AutoUI_ui_Dropdown-42">
-      <h1>
-        Click to open!
-      </h1>
+      className="AutoUI_ui_Dropdown-40">
+      <button
+        className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 ">
+        <span
+          className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+          x
+        </span>
+      </button>
     </span>
   </div>
   <div
-    className="AutoUI_ui_Dropdown-52    AutoUI_ui_Dropdown-117 ">
+    className="AutoUI_ui_Dropdown-50    AutoUI_ui_Dropdown-111 ">
     <div
-      className="AutoUI_ui_Dropdown-73 ">
-      <h1>
-        Click to close!
-      </h1>
+      className="AutoUI_ui_Dropdown-71 ">
+      Anything here
     </div>
   </div>
 </div>

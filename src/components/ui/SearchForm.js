@@ -245,7 +245,6 @@ class SearchForm extends PureComponent<Props> {
                 placeholder='Select Lists'
                 items={lists}
                 visibleItems={SELECTBOX_HEIGTH}
-                hasSearch
                 hasClear
                 collectionLabel='List'
                 onClick={onSelectList}
@@ -266,7 +265,6 @@ class SearchForm extends PureComponent<Props> {
               placeholder='Select Fields'
               items={fields}
               visibleItems={3}
-              hasSearch
               collectionLabel='Field'
               onSelect={onSelectField}
             />
