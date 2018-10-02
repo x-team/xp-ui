@@ -54,6 +54,10 @@ const cx = {
         border-radius: 2px
       }
 
+      &:not(:only-of-type) {
+        border-bottom: none
+      }
+
       & > div {
         width: inherit
       }
@@ -1075,6 +1079,7 @@ class SelectBox extends Component<Props, State> {
     const renderExpandedOrDropdown = () => expanded ? (
       <div>
         {(placeholder || !hasSearch) ? renderPlaceholder() : renderSearchLabel()}
+        {(placeholder && hasSearch) && renderSearchLabel()}
         {renderItems()}
         {renderAppendix()}
       </div>
