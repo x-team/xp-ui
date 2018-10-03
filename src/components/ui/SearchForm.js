@@ -148,6 +148,8 @@ const tabularTheme = {
     margin: 0 10px
   `),
 
+  formButtonContainer: '',
+
   formButton: cmz(`
     margin: 0 10px
     height: 58px
