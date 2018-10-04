@@ -256,7 +256,7 @@ class SearchForm extends PureComponent<Props> {
           <div className={themeClasses.selectLists}>
             <div className={themeClasses.listsSelector}>
               <SelectBox
-                placeholder='Select Lists'
+                placeholder='Select List'
                 items={lists}
                 visibleItems={SELECTBOX_HEIGTH}
                 hasClear

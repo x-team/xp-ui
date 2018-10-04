@@ -17,7 +17,7 @@ const cx = {
   header: cmz(`
     height: 86px
     position: relative
-    z-index: 1
+    z-index: 10000
   `)
 }
 
