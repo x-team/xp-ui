@@ -617,7 +617,7 @@ exports[`SearchForm-1 1`] = `
     </div>
   </form>
   <div
-    className="AutoUI_ui_SearchForm-88">
+    className="AutoUI_ui_SearchForm-89">
     Here it goes ApplicantsStatusFilter component
   </div>
 </div>

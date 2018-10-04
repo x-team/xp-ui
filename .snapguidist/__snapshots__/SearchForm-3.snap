@@ -1,12 +1,12 @@
 exports[`SearchForm-3 1`] = `
 <div
-  className="AutoUI_ui_SearchForm-97">
+  className="AutoUI_ui_SearchForm-98">
   <form
-    className="AutoUI_ui_SearchForm-104">
+    className="AutoUI_ui_SearchForm-105">
     <div
-      className="AutoUI_ui_SearchForm-113">
+      className="AutoUI_ui_SearchForm-114">
       <div
-        className="AutoUI_ui_SearchForm-122">
+        className="AutoUI_ui_SearchForm-123">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -184,7 +184,7 @@ exports[`SearchForm-3 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-151">
+      className="AutoUI_ui_SearchForm-152">
       <div
         className="AutoUI_ui_SelectBox-32"
         style={
@@ -325,7 +325,7 @@ exports[`SearchForm-3 1`] = `
       </div>
     </div>
     <div
-      className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-143 has-value is-clearable is-searchable Select--multi">
+      className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-144 has-value is-clearable is-searchable Select--multi">
       <input
         disabled={false}
         name="keywords"
@@ -509,7 +509,7 @@ exports[`SearchForm-3 1`] = `
     </div>
     <div>
       <button
-        className="AutoUI_ui_SearchForm-158 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-176 raised"
+        className="AutoUI_ui_SearchForm-159 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-176 raised"
         type="submit">
         <span
           className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
@@ -518,9 +518,9 @@ exports[`SearchForm-3 1`] = `
       </button>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-128">
+      className="AutoUI_ui_SearchForm-129">
       <a
-        className="AutoUI_ui_SearchForm-136"
+        className="AutoUI_ui_SearchForm-137"
         title="View in tabular mode">
         <svg
           height="17px"
@@ -563,7 +563,7 @@ exports[`SearchForm-3 1`] = `
         </svg>
       </a>
       <a
-        className="AutoUI_ui_SearchForm-136"
+        className="AutoUI_ui_SearchForm-137"
         title="View in list mode">
         <svg
           height="16px"
@@ -616,7 +616,7 @@ exports[`SearchForm-3 1`] = `
     </div>
   </form>
   <div
-    className="AutoUI_ui_SearchForm-164">
+    className="AutoUI_ui_SearchForm-166">
     Here it goes ApplicantsStatusFilter component
   </div>
 </div>
