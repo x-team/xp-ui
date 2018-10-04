@@ -51,10 +51,17 @@ const listTheme = {
   `),
 
   formKeywords: cmz(`
-    display: block
-    width: 100%
-    margin-top: 20px
-    padding: 0 30px
+   & {
+     display: block
+     width: 100%
+     margin-top: 20px
+     padding: 0 30px
+    }
+
+    & .Select-menu-outer {
+      width: calc(100% - 60px)
+      left: 30px
+    }
   `),
 
   selectFields: cmz(`
