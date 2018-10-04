@@ -59,7 +59,7 @@ const styles = {
   contentVisible: cmz(`
     visibility: visible
     opacity: 1
-    transition-delay: 0s
+    transition-delay: 0
   `),
   contentRight: cmz(`
     right: 0
