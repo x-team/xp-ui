@@ -552,7 +552,6 @@ class SelectBox extends Component<Props, State> {
   handleClearClick = (event: any) => {
     event.stopPropagation()
     const { onClear } = this.props
-
     onClear && onClear()
   }
 
