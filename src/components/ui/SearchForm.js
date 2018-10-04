@@ -148,8 +148,6 @@ const tabularTheme = {
     margin: 0 10px
   `),
 
-  formButtonContainer: '',
-
   formButton: cmz(`
     margin: 0 10px
     height: 58px
@@ -216,7 +214,7 @@ class SearchForm extends PureComponent<Props> {
     } = this.props
 
     const isTabular = mode === DISPLAY_MODES.TABULAR
-    const themeClasses = isTabular ? tabularTheme : listTheme
+    const themeClasses: Object = isTabular ? tabularTheme : listTheme
 
     const renderDisplaySwitchButtons = () => (
       <div className={themeClasses.displayButtons}>
