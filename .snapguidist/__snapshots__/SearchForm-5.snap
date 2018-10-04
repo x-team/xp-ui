@@ -357,7 +357,7 @@ exports[`SearchForm-5 1`] = `
         className="Select-control">
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-10--value">
+          id="react-select-13--value">
           <div
             className="Select-placeholder">
             Type keywords
@@ -370,7 +370,7 @@ exports[`SearchForm-5 1`] = `
               }
             }>
             <input
-              aria-activedescendant="react-select-10--value"
+              aria-activedescendant="react-select-13--value"
               aria-expanded="false"
               aria-haspopup="false"
               aria-owns=""
