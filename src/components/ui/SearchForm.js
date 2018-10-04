@@ -69,7 +69,7 @@ const listTheme = {
     height: 58px
     margin-top: 20px
     padding: 0 24px
-    transition: margin, padding 0s
+    transition: none
   `),
 
   applicantsStatusFilter: cmz(`
@@ -146,7 +146,7 @@ const tabularTheme = {
     margin: 0 10px
     height: 58px
     padding: 10px 40px
-    transition: margin, padding 0s
+    transition: none
   `),
 
   applicantsStatusFilter: cmz(`
