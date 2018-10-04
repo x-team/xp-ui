@@ -67,7 +67,6 @@ const listTheme = {
     width: ${dimensions.searchWidth[DISPLAY_MODES.LIST]}
     position: fixed
     z-index: 9999
-    padding: 30px 30px 0
     background-color: ${theme.baseBright}
   `),
 
