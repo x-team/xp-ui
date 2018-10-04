@@ -29,7 +29,7 @@ exports[`SearchForm-1 1`] = `
                     <div
                       className="AutoUI_ui_SelectBox-69">
                       <div>
-                        Select Lists
+                        Select List
                       </div>
                       <div>
                         a selected list

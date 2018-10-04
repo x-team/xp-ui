@@ -552,15 +552,6 @@ class SelectBox extends Component<Props, State> {
   handleClearClick = (event: any) => {
     event.stopPropagation()
     const { onClear } = this.props
-    const { view } = this.state
-
-    this.setState({
-      ...this.state,
-      view: (view || []).map(item => ({
-        ...item,
-        selected: false
-      }))
-    })
 
     onClear && onClear()
   }
