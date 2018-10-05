@@ -389,6 +389,18 @@ exports[`ColorPalette-1 1`] = `
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
+        "backgroundColor": "rgb(240, 241, 244)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      iconMutedGray
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
         "backgroundColor": "rgb(179, 179, 179)",
       }
     }>

@@ -19,30 +19,30 @@ exports[`Dropdown-7 1`] = `
           <g
             transform="translate(539.000000, 162.000000)">
             <path
-              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-67"
+              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-72"
               d="M0.5,0.5 L0.5,14.5 L11.4545465,14.5 L11.4991824,4.38874719 L8.16377939,0.5 L0.5,0.5 Z" />
             <path
-              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-67"
+              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-72"
               d="M2.5,5.5 L4.5,5.5"
               strokeLinecap="square" />
             <path
-              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-67"
+              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-72"
               d="M2.5,7.5 L7.5,7.5"
               strokeLinecap="square" />
             <path
-              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-67"
+              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-72"
               d="M2.5,9.5 L7.5,9.5"
               strokeLinecap="square" />
             <path
-              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-67"
+              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-72"
               d="M2.5,11.5 L7.5,11.5"
               strokeLinecap="square" />
             <path
-              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-67"
+              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-72"
               d="M7.5,1.5 L7.5,4.5"
               strokeLinecap="square" />
             <path
-              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-67"
+              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-72"
               d="M7.01349488,5.49634026 L11.4125741,5.49634026" />
             <circle
               cx="11.5"
@@ -50,11 +50,11 @@ exports[`Dropdown-7 1`] = `
               fill="#FFFFFF"
               r="4.5" />
             <path
-              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-67"
+              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-72"
               d="M11.5,9.5 L11.5,13.5"
               strokeLinecap="square" />
             <path
-              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-67"
+              className="AutoUI_ui_SvgIcon-40 AutoUI_ui_SvgIcon-72"
               d="M9.5,11.5 L13.5,11.5"
               strokeLinecap="square" />
           </g>
@@ -77,7 +77,7 @@ exports[`Dropdown-7 1`] = `
           stroke="none"
           strokeWidth="1">
           <polygon
-            className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+            className="AutoUI_ui_SvgIcon-99 AutoUI_ui_SvgIcon-131"
             points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
             transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
         </g>
@@ -108,12 +108,12 @@ exports[`Dropdown-7 1`] = `
                 stroke="none"
                 strokeWidth="1">
                 <circle
-                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                   cx="7.5"
                   cy="7.5"
                   r="6.5" />
                 <path
-                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                   d="M11.7538745,12.6062275 L15.5,16.5"
                   strokeLinecap="square" />
               </g>
