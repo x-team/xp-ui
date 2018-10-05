@@ -11,9 +11,9 @@ import elem from '../../utils/elem'
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
-const cmz = require('cmz')
+import type { InputType } from '../../utils/types'
 
-type Type = 'checkbox' | 'color' | 'date' | 'email' | 'hidden' | 'month' | 'number' | 'password' | 'radio' | 'search' | 'tel' | 'text' | 'textarea' | 'time' | 'url' | 'week'
+const cmz = require('cmz')
 
 type Props = {
   label?: string,
@@ -24,7 +24,7 @@ type Props = {
   defaultValue?: string,
   required?: boolean,
   onChange?: () => mixed,
-  type?: Type,
+  type?: InputType,
   postText?: string,
   placeholder?: string | number,
   linesLimit?: number

@@ -4,7 +4,7 @@ exports[`Dropdown-5 1`] = `
   onMouseEnter={false}
   onMouseLeave={false}>
   <div
-    className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-46">
+    className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44">
     <svg
       height="12px"
       viewBox="0 0 16 12"
@@ -30,7 +30,7 @@ exports[`Dropdown-5 1`] = `
     
   </div>
   <div
-    className="AutoUI_ui_Dropdown-52     ">
+    className="AutoUI_ui_Dropdown-50     ">
     <div
       style={
         Object {

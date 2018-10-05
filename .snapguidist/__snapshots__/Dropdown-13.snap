@@ -1,1 +1,26 @@
-exports[`Dropdown-13 1`] = `null`;
+exports[`Dropdown-13 1`] = `
+<div
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+  onMouseEnter={false}
+  onMouseLeave={false}>
+  <div
+    className="AutoUI_ui_Dropdown-24 ">
+    
+    <span
+      className="AutoUI_ui_Dropdown-40">
+      <h1>
+        Click to open!
+      </h1>
+    </span>
+  </div>
+  <div
+    className="AutoUI_ui_Dropdown-50    AutoUI_ui_Dropdown-111 ">
+    <div
+      className="AutoUI_ui_Dropdown-71 ">
+      <h1>
+        Click to close!
+      </h1>
+    </div>
+  </div>
+</div>
+`;

@@ -30,11 +30,9 @@ const styles = {
       justify-content: center
       line-height: 16px
     }
-
     & > * {
       margin: 0 0 0 6px
     }
-
     & > :first-child {
       margin: 0
     }
@@ -81,7 +79,6 @@ const styles = {
       white-space: nowrap
       position: relative
     }
-
     &:before, &:after {
       content: ''
       position: absolute
@@ -90,12 +87,10 @@ const styles = {
       border-left: 10px solid transparent
       border-right: 10px solid transparent
     }
-
     &:before {
       border-bottom: 10px solid ${theme.lineSilver2}
       bottom: 100%
     }
-
     &:after {
       border-bottom: 10px solid ${theme.baseBrighter}
       bottom: calc(100% - 1px)
@@ -107,7 +102,6 @@ const styles = {
       border-bottom: none
       bottom: -10px
     }
-
     &:after {
       border-top: 10px solid ${theme.baseBrighter}
       border-bottom: none
@@ -243,7 +237,7 @@ class Dropdown extends PureComponent<Props, State> {
             <span className={styles.triangle}>
               <SvgIcon
                 icon={open ? 'triangleup' : 'triangledown'}
-                color='text'
+                color='grayscale'
               />
             </span>
           )}
