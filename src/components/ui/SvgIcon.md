@@ -31,6 +31,9 @@ Basic color:
   <SvgIcon icon="grid" />
   <SvgIcon icon="dock" />
   <SvgIcon icon="show" />
+  <SvgIcon icon="github" />
+  <SvgIcon icon="linkedin" />
+  <SvgIcon icon="stackoverflow" />
 </div>
 ```
 
@@ -67,6 +70,9 @@ Inverted color:
   <SvgIcon icon="grid" color="inverted" />
   <SvgIcon icon="dock" color="inverted" />
   <SvgIcon icon="show" color="inverted" />
+  <SvgIcon icon="github" color="inverted" />
+  <SvgIcon icon="linkedin" color="inverted" />
+  <SvgIcon icon="stackoverflow" color="inverted" />
 </div>
 ```
 
@@ -103,6 +109,9 @@ Monochrome color:
   <SvgIcon icon="grid" color="monochrome" />
   <SvgIcon icon="dock" color="monochrome" />
   <SvgIcon icon="show" color="monochrome" />
+  <SvgIcon icon="github" color="monochrome" />
+  <SvgIcon icon="linkedin" color="monochrome" />
+  <SvgIcon icon="stackoverflow" color="monochrome" />
 </div>
 ```
 
@@ -139,6 +148,9 @@ Grayscale color:
   <SvgIcon icon="grid" color="grayscale" />
   <SvgIcon icon="dock" color="grayscale" />
   <SvgIcon icon="show" color="grayscale" />
+  <SvgIcon icon="github" color="grayscale" />
+  <SvgIcon icon="linkedin" color="grayscale" />
+  <SvgIcon icon="stackoverflow" color="grayscale" />
 </div>
 ```
 
@@ -175,6 +187,48 @@ Text gray color:
   <SvgIcon icon="grid" color="text" />
   <SvgIcon icon="dock" color="text" />
   <SvgIcon icon="show" color="text" />
+  <SvgIcon icon="github" color="text" />
+  <SvgIcon icon="linkedin" color="text" />
+  <SvgIcon icon="stackoverflow" color="text" />
+</div>
+```
+
+Muted gray color:
+
+```js
+<div>
+  <SvgIcon icon="cog" color="mutedgray" />
+  <SvgIcon icon="head" color="mutedgray" />
+  <SvgIcon icon="webcam" color="mutedgray" />
+  <SvgIcon icon="message" color="mutedgray" />
+  <SvgIcon icon="terminal" color="mutedgray" />
+  <SvgIcon icon="diamond" color="mutedgray" />
+  <SvgIcon icon="talking" color="mutedgray" />
+  <SvgIcon icon="trophy" color="mutedgray" />
+  <SvgIcon icon="calendar" color="mutedgray" />
+  <SvgIcon icon="plus" color="mutedgray" />
+  <SvgIcon icon="minus" color="mutedgray" />
+  <SvgIcon icon="trashcan" color="mutedgray" />
+  <SvgIcon icon="trashcanAlt" color="mutedgray" />
+  <SvgIcon icon="x" color="mutedgray" />
+  <SvgIcon icon="add" color="mutedgray" />
+  <SvgIcon icon="triangleup" color="mutedgray" />
+  <SvgIcon icon="triangledown" color="mutedgray" />
+  <SvgIcon icon="hamburger" color="mutedgray" />
+  <SvgIcon icon="magnifier" color="mutedgray" />
+  <SvgIcon icon="edit" color="mutedgray" />
+  <SvgIcon icon="check" color="mutedgray" />
+  <SvgIcon icon="play" color="mutedgray" />
+  <SvgIcon icon="pause" color="mutedgray" />
+  <SvgIcon icon="paperplane" color="mutedgray" />
+  <SvgIcon icon="archive" color="mutedgray" />
+  <SvgIcon icon="list" color="mutedgray" />
+  <SvgIcon icon="grid" color="mutedgray" />
+  <SvgIcon icon="dock" color="mutedgray" />
+  <SvgIcon icon="show" color="mutedgray" />
+  <SvgIcon icon="github" color="mutedgray" />
+  <SvgIcon icon="linkedin" color="mutedgray" />
+  <SvgIcon icon="stackoverflow" color="mutedgray" />
 </div>
 ```
 
@@ -211,6 +265,9 @@ Hover color:
   <SvgIcon icon="grid" color="text" hover="default" />
   <SvgIcon icon="dock" color="text" hover="default" />
   <SvgIcon icon="show" color="text" hover="default" />
+  <SvgIcon icon="github" color="text" hover="default" />
+  <SvgIcon icon="linkedin" color="text" hover="default" />
+  <SvgIcon icon="stackoverflow" color="text" hover="default" />
 </div>
 ```
 

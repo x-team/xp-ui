@@ -128,7 +128,7 @@ exports[`SelectBox-15 1`] = `
                   stroke="none"
                   strokeWidth="1">
                   <polygon
-                    className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+                    className="AutoUI_ui_SvgIcon-99 AutoUI_ui_SvgIcon-131"
                     points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
                     transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
                 </g>
@@ -351,7 +351,7 @@ exports[`SelectBox-15 1`] = `
                       stroke="none"
                       strokeWidth="1">
                       <polygon
-                        className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+                        className="AutoUI_ui_SvgIcon-99 AutoUI_ui_SvgIcon-131"
                         points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
                         transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
                     </g>
@@ -462,12 +462,12 @@ exports[`SelectBox-15 1`] = `
                 stroke="none"
                 strokeWidth="1">
                 <circle
-                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                   cx="7.5"
                   cy="7.5"
                   r="6.5" />
                 <path
-                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                   d="M11.7538745,12.6062275 L15.5,16.5"
                   strokeLinecap="square" />
               </g>
@@ -581,12 +581,12 @@ exports[`SelectBox-15 1`] = `
                 stroke="none"
                 strokeWidth="1">
                 <circle
-                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                   cx="7.5"
                   cy="7.5"
                   r="6.5" />
                 <path
-                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                   d="M11.7538745,12.6062275 L15.5,16.5"
                   strokeLinecap="square" />
               </g>
@@ -708,12 +708,12 @@ exports[`SelectBox-15 1`] = `
                     stroke="none"
                     strokeWidth="1">
                     <circle
-                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                       cx="7.5"
                       cy="7.5"
                       r="6.5" />
                     <path
-                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                       d="M11.7538745,12.6062275 L15.5,16.5"
                       strokeLinecap="square" />
                   </g>
@@ -855,7 +855,7 @@ exports[`SelectBox-15 1`] = `
                       stroke="none"
                       strokeWidth="1">
                       <polygon
-                        className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+                        className="AutoUI_ui_SvgIcon-99 AutoUI_ui_SvgIcon-131"
                         points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
                         transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
                     </g>
@@ -883,12 +883,12 @@ exports[`SelectBox-15 1`] = `
                     stroke="none"
                     strokeWidth="1">
                     <circle
-                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                       cx="7.5"
                       cy="7.5"
                       r="6.5" />
                     <path
-                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                       d="M11.7538745,12.6062275 L15.5,16.5"
                       strokeLinecap="square" />
                   </g>
