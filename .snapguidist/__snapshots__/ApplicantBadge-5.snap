@@ -40,7 +40,7 @@ exports[`ApplicantBadge-5 1`] = `
                 stroke="none"
                 strokeWidth="1">
                 <polyline
-                  className="AutoUI_ui_SvgIcon-20 AutoUI_ui_SvgIcon-47"
+                  className="AutoUI_ui_SvgIcon-20 AutoUI_ui_SvgIcon-52"
                   points="15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872"
                   strokeWidth="2"
                   transform="translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) " />
@@ -81,7 +81,7 @@ exports[`ApplicantBadge-5 1`] = `
                 strokeLinecap="square"
                 strokeWidth="1">
                 <g
-                  className="AutoUI_ui_SvgIcon-20 AutoUI_ui_SvgIcon-47"
+                  className="AutoUI_ui_SvgIcon-20 AutoUI_ui_SvgIcon-52"
                   strokeWidth="2"
                   transform="translate(-1294.000000, -1073.000000)">
                   <g

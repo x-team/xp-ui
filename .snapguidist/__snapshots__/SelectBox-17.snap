@@ -21,12 +21,12 @@ exports[`SelectBox-17 1`] = `
             stroke="none"
             strokeWidth="1">
             <circle
-              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
               cx="7.5"
               cy="7.5"
               r="6.5" />
             <path
-              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
               d="M11.7538745,12.6062275 L15.5,16.5"
               strokeLinecap="square" />
           </g>
