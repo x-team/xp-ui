@@ -1,0 +1,79 @@
+exports[`MilestonesScreen-7 1`] = `
+<div>
+  <div
+    className="AutoUI_ui_MilestonesScreen-35">
+    <div
+      className="AutoUI_ui_MilestonesScreen-58 AutoUI_ui_MilestonesScreen-23">
+      <div
+        className="AutoUI_ui_MilestonesScreen-70">
+        <section
+          className="AutoUI_ui_Text-29">
+          <h1
+            className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+            First subsection
+          </h1>
+          <div
+            className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At suscipit dicta aliquam sint libero minima officiis alias ducimus. Fugit praesentium itaque, iure molestias aut beatae odit facilis inventore doloremque eaque.
+          </div>
+        </section>
+        <div>
+          <button
+            className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 ">
+            <span
+              className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+              Go to the step N+1
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="AutoUI_ui_MilestonesScreen-70">
+        <section
+          className="AutoUI_ui_Text-29">
+          <h1
+            className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+            Second subsection
+          </h1>
+          <div
+            className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque iusto quisquam, sed eius optio. Obcaecati, hic! Possimus sit magnam vero laboriosam obcaecati nostrum a molestiae amet aut. Corrupti, voluptas.
+          </div>
+        </section>
+        <div>
+          <button
+            className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 ">
+            <span
+              className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+              Go to the step N+1
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="AutoUI_ui_MilestonesScreen-70">
+        <section
+          className="AutoUI_ui_Text-29">
+          <h1
+            className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+            Third subsection
+          </h1>
+          <div
+            className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minima aperiam dolorem natus repudiandae reprehenderit neque laudantium quasi voluptates architecto, ratione asperiores odio hic rerum alias dolores quo sint culpa!
+          </div>
+        </section>
+        <div>
+          <button
+            className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 ">
+            <span
+              className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+              Go to the step N+1
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

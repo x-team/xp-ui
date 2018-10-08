@@ -15,7 +15,17 @@ const cmz = require('cmz')
 type Props = {
   level: number,
   children?: Element<*>,
-  cta?: Element<*>
+  cta?: Element<*>,
+  hideMilestones?: boolean
+}
+
+const cx = {
+  hiddenMilestones: cmz(`
+    & > *:only-child,
+    & > *:first-child {
+      padding-top: 0 !important
+    }
+  `)
 }
 
 const Root = elem.div()
@@ -68,13 +78,14 @@ class MilestonesScreen extends PureComponent<Props> {
   static defaultProps = {
     level: 0,
     children: null,
-    cta: null
+    cta: null,
+    hideMilestones: false
   }
 
   render () {
-    const { level, children, cta } = this.props
+    const { level, children, cta, hideMilestones } = this.props
 
-    const milestones = level > 0 && (
+    const milestones = level > 0 && !hideMilestones && (
       <Milestones
         level={level}
         levels={[
@@ -92,7 +103,10 @@ class MilestonesScreen extends PureComponent<Props> {
 
     return Root(
       milestones,
-      Wrapper(Content(childBlocks))
+      Wrapper(Content(
+        { className: hideMilestones && cx.hiddenMilestones },
+        childBlocks
+      ))
     )
   }
 }

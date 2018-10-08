@@ -54,3 +54,27 @@ N-th step:
   />
 </MilestonesScreen>
 ```
+
+Hidden Milestone Icons
+```js
+<MilestonesScreen
+  level={3}
+  cta={<Button>Go to the step N+1</Button>}
+  hideMilestones
+>
+  <Text
+    heading="First subsection"
+    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. At suscipit dicta aliquam sint libero minima officiis alias ducimus. Fugit praesentium itaque, iure molestias aut beatae odit facilis inventore doloremque eaque."
+  />
+
+  <Text
+    heading="Second subsection"
+    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque iusto quisquam, sed eius optio. Obcaecati, hic! Possimus sit magnam vero laboriosam obcaecati nostrum a molestiae amet aut. Corrupti, voluptas."
+  />
+
+  <Text
+    heading="Third subsection"
+    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minima aperiam dolorem natus repudiandae reprehenderit neque laudantium quasi voluptates architecto, ratione asperiores odio hic rerum alias dolores quo sint culpa!"
+  />
+</MilestonesScreen>
+```
