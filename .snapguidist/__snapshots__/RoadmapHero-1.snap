@@ -17,8 +17,10 @@ exports[`RoadmapHero-1 1`] = `
       </div>
     </section>
   </div>
-  <img
-    alt="X-Team Roadmap"
-    src="9b763a8d6b786b4bae25e47d04bcff97.png" />
+  <div>
+    <img
+      alt="X-Team Roadmap"
+      src="9b763a8d6b786b4bae25e47d04bcff97.png" />
+  </div>
 </div>
 `;

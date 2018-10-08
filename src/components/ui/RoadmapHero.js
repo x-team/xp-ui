@@ -50,6 +50,8 @@ const HeroHeading = elem.div(cmz(`
 `))
 const HeroImage = elem.img()
 
+const ImageContainer = elem.div()
+
 class RoadmapHero extends PureComponent<Props, State> {
   static defaultProps = {
     imgUrl: require('../../assets/x-roadmap.png'),
@@ -80,10 +82,12 @@ class RoadmapHero extends PureComponent<Props, State> {
 
     return Root(
       HeroHeading(<Text {... { heading, content, hasDivider, headingType: 'mainHeading', isCentered }} />),
-      HeroImage({
-        src: imgUrl,
-        alt: 'X-Team Roadmap'
-      })
+      ImageContainer(
+        HeroImage({
+          src: imgUrl,
+          alt: 'X-Team Roadmap'
+        })
+      )
     )
   }
 }
