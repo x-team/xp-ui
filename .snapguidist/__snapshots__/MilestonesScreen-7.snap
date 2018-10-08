@@ -1,11 +1,11 @@
-exports[`MilestonesScreen-5 1`] = `
+exports[`MilestonesScreen-7 1`] = `
 <div>
   <div
-    className="AutoUI_ui_MilestonesScreen-22">
+    className="AutoUI_ui_MilestonesScreen-35">
     <div
-      className="AutoUI_ui_MilestonesScreen-45">
+      className="AutoUI_ui_MilestonesScreen-58 AutoUI_ui_MilestonesScreen-23">
       <div
-        className="AutoUI_ui_MilestonesScreen-58">
+        className="AutoUI_ui_MilestonesScreen-70">
         <section
           className="AutoUI_ui_Text-29">
           <h1
@@ -28,7 +28,7 @@ exports[`MilestonesScreen-5 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_MilestonesScreen-58">
+        className="AutoUI_ui_MilestonesScreen-70">
         <section
           className="AutoUI_ui_Text-29">
           <h1
@@ -51,7 +51,7 @@ exports[`MilestonesScreen-5 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_MilestonesScreen-58">
+        className="AutoUI_ui_MilestonesScreen-70">
         <section
           className="AutoUI_ui_Text-29">
           <h1
