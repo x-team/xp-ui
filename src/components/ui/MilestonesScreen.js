@@ -1,10 +1,8 @@
 // @flow
 
-import React, { PureComponent, Children } from 'react'
+import { PureComponent, Children } from 'react'
 
 import elem from '../../utils/elem'
-
-import Milestones from './Milestones'
 
 import theme, { breakpoints } from '../../styles/theme'
 
@@ -13,7 +11,6 @@ import type { Element } from 'react'
 const cmz = require('cmz')
 
 type Props = {
-  level: number,
   children?: Element<*>,
   cta?: Element<*>
 }
@@ -49,6 +46,7 @@ const Content = elem.div(cmz(`
   & > *:only-child,
   & > *:first-child {
     border-top: none !important
+    padding-top: 0 !important
   }
 
   & > *:only-child,
@@ -66,34 +64,19 @@ const Block = elem.div(cmz(`
 
 class MilestonesScreen extends PureComponent<Props> {
   static defaultProps = {
-    level: 0,
     children: null,
     cta: null
   }
 
   render () {
-    const { level, children, cta } = this.props
-
-    const milestones = level > 0 && (
-      <Milestones
-        level={level}
-        levels={[
-          { icon: 'cog' },
-          { icon: 'message' },
-          { icon: 'webcam' }
-        ]}
-      />
-    )
+    const { children, cta } = this.props
     const childBlocks = Children.map(children, (child, index) => Block(
       { key: index },
       child,
       CTA(cta)
     ))
 
-    return Root(
-      milestones,
-      Wrapper(Content(childBlocks))
-    )
+    return Root(Wrapper(Content(childBlocks)))
   }
 }
 
