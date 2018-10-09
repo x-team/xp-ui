@@ -64,7 +64,7 @@ const cx = {
     flex: 1
     overflow: auto
     padding: 65px 100px
-  `),
+  `)
 }
 
 type Props = {

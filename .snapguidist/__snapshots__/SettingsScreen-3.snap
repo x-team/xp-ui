@@ -1,20 +1,16 @@
 exports[`SettingsScreen-3 1`] = `
 <div
-  style={
-    Object {
-      "height": "500px",
-    }
-  }>
+  className="AutoUI_ui_SettingsScreen-13">
   <div
-    className="AutoUI_ui_SettingsScreen-12">
-    <div
-      className="AutoUI_ui_SettingsScreen-18" />
-    <div
-      className="AutoUI_ui_SettingsScreen-25">
-      <div>
-        Anything goes in the content
-      </div>
-    </div>
+    className="AutoUI_ui_SettingsScreen-19">
+    <h1
+      className="AutoUI_ui_SettingsScreen-29 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34">
+      Settings
+    </h1>
+    <ul
+      className="AutoUI_ui_SettingsScreen-35 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40" />
   </div>
+  <div
+    className="AutoUI_ui_SettingsScreen-61" />
 </div>
 `;
