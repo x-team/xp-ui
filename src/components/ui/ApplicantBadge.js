@@ -55,6 +55,7 @@ const statusDotBaseStyle = cmz(`
   margin: 1px 10px 0 10px
   border-radius: 50%
   align-self: center
+  flex-shrink: 0
 `)
 
 const statusDotStyles = {
@@ -310,7 +311,7 @@ const tabularTheme = {
   name: cmz(typo.badgeHeading,
     `
       width: 300px
-      white-space: nowrap
+      white-space: normal
       order: 2
       font-weight: normal
     `
