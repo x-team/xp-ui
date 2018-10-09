@@ -27,6 +27,7 @@ const listTheme = {
   selectLists: cmz(`
     display: flex
     align-items: center
+    padding: 30px 30px 0
   `),
 
   listsSelector: cmz(`
@@ -50,31 +51,45 @@ const listTheme = {
   `),
 
   formKeywords: cmz(`
-    display: block
-    width: 100%
-    margin-top: 20px
+   & {
+     display: block
+     width: 100%
+     margin-top: 20px
+     padding: 0 30px
+    }
+
+    & .Select-menu-outer {
+      width: calc(100% - 60px)
+      left: 30px
+    }
   `),
 
   selectFields: cmz(`
     display: inline-block
     width: 100%
     margin: 20px 0 0
-    padding: 20px 0 0
+    padding: 20px 30px 0
     border-top: 1px solid ${theme.lineSilver4}
+    box-sizing: border-box
+  `),
+
+  formButtonContainer: cmz(`
+    padding: 0 30px
   `),
 
   formButton: cmz(`
     display: block
     width: 100%
-    height: 40px
+    height: 58px
     margin-top: 20px
     padding: 0 24px
+    transition: none
   `),
 
   applicantsStatusFilter: cmz(`
     width: 100%
     background-color: ${theme.baseBright}
-    padding: 20px 10px 0
+    padding: 20px 30px 0
     box-sizing: border-box
   `)
 }
@@ -145,6 +160,7 @@ const tabularTheme = {
     margin: 0 10px
     height: 58px
     padding: 10px 40px
+    transition: none
   `),
 
   applicantsStatusFilter: cmz(`
@@ -207,7 +223,7 @@ class SearchForm extends PureComponent<Props> {
     } = this.props
 
     const isTabular = mode === DISPLAY_MODES.TABULAR
-    const themeClasses = isTabular ? tabularTheme : listTheme
+    const themeClasses: Object = isTabular ? tabularTheme : listTheme
 
     const renderDisplaySwitchButtons = () => (
       <div className={themeClasses.displayButtons}>
@@ -242,7 +258,7 @@ class SearchForm extends PureComponent<Props> {
           <div className={themeClasses.selectLists}>
             <div className={themeClasses.listsSelector}>
               <SelectBox
-                placeholder='Select Lists'
+                placeholder='Select List'
                 items={lists}
                 visibleItems={SELECTBOX_HEIGTH}
                 hasClear
@@ -275,13 +291,15 @@ class SearchForm extends PureComponent<Props> {
             onSubmit={onSubmit}
             className={themeClasses.formKeywords}
           />
-          <Button
-            className={themeClasses.formButton}
-            type='submit'
-            raised
-          >
-            Show
-          </Button>
+          <div className={themeClasses.formButtonContainer}>
+            <Button
+              className={themeClasses.formButton}
+              type='submit'
+              raised
+            >
+              Show
+            </Button>
+          </div>
           {isTabular && renderDisplaySwitchButtons()}
         </form>
         {renderApplicantsStatusFilter && (

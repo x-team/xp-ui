@@ -42,7 +42,7 @@ type Props = {
   children?: Element<*> | string,
   onClick?: Function,
   actions?: Array<Action>,
-  status: Status
+  status?: Status
 }
 
 const cmz = require('cmz')
@@ -456,7 +456,8 @@ class ApplicantBadge extends PureComponent<Props> {
       tags,
       avatar,
       children,
-      actions
+      actions,
+      status
     } = this.props
 
     const isTabular = mode === DISPLAY_MODES.TABULAR
@@ -518,7 +519,7 @@ class ApplicantBadge extends PureComponent<Props> {
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         <div className={cx.name}>
           {name || email}
-          {this.renderStatusIndicator()}
+          {status && this.renderStatusIndicator()}
         </div>
         <div className={cx.avatar}>
           {avatar || (

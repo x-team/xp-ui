@@ -3,21 +3,21 @@ exports[`ApplicantBadge-9 1`] = `
   className="AutoUI_ui_ApplicantBadge-82 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-162 ">
   <div
     className="AutoUI_ui_ApplicantBadge-111 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
-    Applicant
+    applicant@x-team.com
     <span
       className="AutoUI_ui_ApplicantBadge-61 AutoUI_ui_ApplicantBadge-50" />
   </div>
   <div
     className="AutoUI_ui_ApplicantBadge-120">
     <div
-      style={
-        Object {
-          "background": "orange",
-          "borderRadius": "50%",
-          "height": 90,
-          "width": 90,
-        }
-      } />
+      className="AutoUI_ui_Avatar-15">
+      <img
+        alt=""
+        className="AutoUI_ui_Avatar-21"
+        height={90}
+        src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=90"
+        width={90} />
+    </div>
   </div>
   <div
     className="AutoUI_ui_ApplicantBadge-150 controls" />
@@ -25,5 +25,14 @@ exports[`ApplicantBadge-9 1`] = `
     className="AutoUI_ui_ApplicantBadge-168" />
   <div
     className="AutoUI_ui_ApplicantBadge-225" />
+  <div
+    className="AutoUI_ui_ApplicantBadge-274">
+    <button>
+      Hello
+    </button>
+    <button>
+      World
+    </button>
+  </div>
 </div>
 `;
