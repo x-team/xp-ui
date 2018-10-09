@@ -1,0 +1,20 @@
+exports[`SettingsScreen-3 1`] = `
+<div
+  style={
+    Object {
+      "height": "500px",
+    }
+  }>
+  <div
+    className="AutoUI_ui_SettingsScreen-12">
+    <div
+      className="AutoUI_ui_SettingsScreen-18" />
+    <div
+      className="AutoUI_ui_SettingsScreen-25">
+      <div>
+        Anything goes in the content
+      </div>
+    </div>
+  </div>
+</div>
+`;

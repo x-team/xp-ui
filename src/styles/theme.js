@@ -38,7 +38,9 @@ const palette = {
   bombay: '#B2B6BC',
   lima: '#5fcf21',
   ripeLemon: '#f8e71c',
-  frenchGray: '#c2c1c5'
+  frenchGray: '#c2c1c5',
+  frenchGrayDarker: '#B8B7BC',
+  scarpaFlow: '#5A5665'
 }
 
 export default wrap({
@@ -56,7 +58,9 @@ export default wrap({
   typoHeading: palette.tuna,
   typoSubheading: palette.radicalRed,
   typoParagraph: palette.tuna,
+  typoParagraphOnDarkBackground: palette.frenchGrayDarker,
   typoHighlight: palette.haiti,
+  typoHighlightOnDarkBackground: palette.scarpaFlow,
   typoLabel: palette.bombay,
 
   sliderToggle: palette.bombay,

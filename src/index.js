@@ -37,6 +37,7 @@ import RoadmapTimelineElement from './components/ui/RoadmapTimelineElement'
 import SearchForm from './components/ui/SearchForm'
 import SelectBox from './components/ui/SelectBox'
 import SolutionForm from './components/forms/SolutionForm'
+import SettingsScreen from './components/ui/SettingsScreen'
 import SvgIcon from './components/ui/SvgIcon'
 import Tab from './components/ui/Tabs/Tab'
 import Tabs from './components/ui/Tabs/Tabs'
@@ -88,6 +89,7 @@ export {
   SelectBox,
   SolutionForm,
   SvgIcon,
+  SettingsScreen,
   Tab,
   Tabs,
   Text,
