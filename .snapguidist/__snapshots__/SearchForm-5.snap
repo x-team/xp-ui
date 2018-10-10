@@ -90,6 +90,7 @@ exports[`SearchForm-5 1`] = `
                     <input
                       aria-labelledby="label-search"
                       autoComplete="off"
+                      autoFocus={false}
                       className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-111"
                       id="search"
                       name="search"
@@ -326,6 +327,7 @@ exports[`SearchForm-5 1`] = `
                   <input
                     aria-labelledby="label-search"
                     autoComplete="off"
+                    autoFocus={false}
                     className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-111"
                     id="search"
                     name="search"
@@ -357,7 +359,7 @@ exports[`SearchForm-5 1`] = `
         className="Select-control">
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-16--value">
+          id="react-select-13--value">
           <div
             className="Select-placeholder">
             Type keywords
@@ -370,7 +372,7 @@ exports[`SearchForm-5 1`] = `
               }
             }>
             <input
-              aria-activedescendant="react-select-16--value"
+              aria-activedescendant="react-select-13--value"
               aria-expanded="false"
               aria-haspopup="false"
               aria-owns=""
