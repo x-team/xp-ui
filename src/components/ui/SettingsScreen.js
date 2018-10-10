@@ -23,40 +23,48 @@ const cx = {
     overflow: auto
     background-color: ${theme.baseBright}
     border-right: 2px solid ${theme.lineSilver1}
-    padding: 65px 50px 65px 70px
+    padding: 51px 50px 65px 70px
   `),
 
   heading: cmz(typo.sectionHeading, `
     text-transform: uppercase
+    font-size: 26px
+    font-weight: 800
     margin: 0 0 40px
     color: ${theme.typoHighlightOnDarkBackground}
   `),
 
-  menu: cmz(typo.baseText, `
-    font-size: 16px
-    line-height: 1.6
-    text-transform: uppercase
-    list-style: none
-    padding: 0
-    margin: 0
-    color: ${theme.typoParagraphOnDarkBackground}
-  `),
-
-  menuItem: cmz(`
-    & {
-      margin: 20px 0
-    }
-
-    & a {
-      text-decoration: none
+  menu: cmz(typo.baseText,
+    `
+      font-size: 16px
+      line-height: 1.6
+      text-transform: uppercase
+      list-style: none
+      padding: 0
+      margin: 0
       color: ${theme.typoParagraphOnDarkBackground}
-    }
+    `
+  ),
 
-    & a:hover,
-    & a.activeLink {
-      color: ${theme.typoHighlightOnDarkBackground}
-    }
-  `),
+  menuItem: cmz(typo.badgeHeading,
+    `
+      & {
+        margin: 20px 0
+      }
+
+      & a {
+        text-decoration: none
+        color: ${theme.typoParagraphOnDarkBackground}
+        font-size: 13px
+        letter-spacing: 1px
+      }
+
+      & a:hover,
+      & a.activeLink {
+        color: ${theme.typoHighlightOnDarkBackground}
+      }
+    `
+  ),
 
   content: cmz(`
     box-sizing: border-box
@@ -80,6 +88,7 @@ class SettingsScreen extends PureComponent<Props, void> {
 
   render () {
     const { menu, children } = this.props
+
     return (
       <div className={cx.main}>
         <div className={cx.navigation}>
