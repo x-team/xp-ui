@@ -1,0 +1,9 @@
+exports[`SettingsScreen-5 1`] = `
+<div
+  className="AutoUI_ui_SettingsScreen-12">
+  <div
+    className="AutoUI_ui_SettingsScreen-18" />
+  <div
+    className="AutoUI_ui_SettingsScreen-25" />
+</div>
+`;

@@ -28,7 +28,7 @@ const dimensions = {
     [DISPLAY_MODES.TABULAR]: '1508px'
   },
   searchHeight: {
-    [DISPLAY_MODES.LIST]: '410px',
+    [DISPLAY_MODES.LIST]: '420px',
     [DISPLAY_MODES.TABULAR]: 'auto'
   }
 }
