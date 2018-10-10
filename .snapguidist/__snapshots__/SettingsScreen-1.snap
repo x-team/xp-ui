@@ -3,6 +3,7 @@ exports[`SettingsScreen-1 1`] = `
   style={
     Object {
       "height": "500px",
+      "overflow": "hidden",
     }
   }>
   <div
@@ -14,359 +15,359 @@ exports[`SettingsScreen-1 1`] = `
         Settings
       </h1>
       <ul
-        className="AutoUI_ui_SettingsScreen-35 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+        className="AutoUI_ui_SettingsScreen-37 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <a
             href="#">
             Menu link
           </a>
         </li>
         <li
-          className="AutoUI_ui_SettingsScreen-45">
+          className="AutoUI_ui_SettingsScreen-49 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
           <p>
             A strangely wide menu item just to make it more difficult and breakable, also this is not a link (
             <a
@@ -379,7 +380,7 @@ exports[`SettingsScreen-1 1`] = `
       </ul>
     </div>
     <div
-      className="AutoUI_ui_SettingsScreen-61">
+      className="AutoUI_ui_SettingsScreen-69">
       <div>
         <p>
           Anything goes in the content
