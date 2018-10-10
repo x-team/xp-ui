@@ -82,6 +82,7 @@ exports[`SelectBox-3 1`] = `
             <input
               aria-labelledby="label-search"
               autoComplete="off"
+              autoFocus={false}
               className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-111"
               id="search"
               name="search"

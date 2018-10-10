@@ -401,7 +401,8 @@ type Props = {
   dismissTimeout?: number,
   areItemsToggleable?: boolean,
   inputType?: InputType,
-  closeDropdown?: boolean | Function
+  closeDropdown?: boolean | Function,
+  autoFocus?: boolean
 }
 
 type State = {
@@ -449,7 +450,8 @@ class SelectBox extends Component<Props, State> {
     shouldSortItems: true,
     areItemsToggleable: true,
     inputType: 'checkbox',
-    closeDropdown: false
+    closeDropdown: false,
+    autoFocus: false
   }
 
   state: State = {
@@ -693,7 +695,8 @@ class SelectBox extends Component<Props, State> {
       lined,
       append,
       shouldSortItems,
-      inputType
+      inputType,
+      autoFocus
     } = this.props
     const { view, search } = this.state
 
@@ -1020,6 +1023,7 @@ class SelectBox extends Component<Props, State> {
           onKeyPress={this.handleByStoppingPropagation}
           onKeyUp={this.handleByStoppingPropagation}
           onClick={stopClickPropagation && this.handleByStoppingPropagation}
+          autoFocus={autoFocus}
         />
         {search !== '' && (
           <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
