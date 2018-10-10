@@ -161,12 +161,36 @@ exports[`ColorPalette-1 1`] = `
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     style={
       Object {
+        "backgroundColor": "rgb(184, 183, 188)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      typoParagraphOnDarkBackground
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
         "backgroundColor": "rgb(19, 14, 46)",
       }
     }>
     <div
       className="AutoUI_ui_ColorPalette-34">
       typoHighlight
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    style={
+      Object {
+        "backgroundColor": "rgb(90, 86, 101)",
+      }
+    }>
+    <div
+      className="AutoUI_ui_ColorPalette-34">
+      typoHighlightOnDarkBackground
     </div>
   </div>
   <div
