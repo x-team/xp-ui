@@ -1,14 +1,14 @@
 exports[`ApplicantBadge-9 1`] = `
 <div
-  className="AutoUI_ui_ApplicantBadge-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-163 ">
+  className="AutoUI_ui_ApplicantBadge-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-176 ">
   <div
-    className="AutoUI_ui_ApplicantBadge-112 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+    className="AutoUI_ui_ApplicantBadge-114 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
     applicant@x-team.com
     <span
-      className="AutoUI_ui_ApplicantBadge-62 AutoUI_ui_ApplicantBadge-50" />
+      className="AutoUI_ui_ApplicantBadge-62 AutoUI_ui_ApplicantBadge-51" />
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-121">
+    className="AutoUI_ui_ApplicantBadge-123">
     <div
       className="AutoUI_ui_Avatar-15">
       <img
@@ -20,13 +20,15 @@ exports[`ApplicantBadge-9 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-151 controls" />
+    className="AutoUI_ui_ApplicantBadge-161 controls" />
   <div
-    className="AutoUI_ui_ApplicantBadge-169" />
+    className="AutoUI_ui_ApplicantBadge-182" />
   <div
-    className="AutoUI_ui_ApplicantBadge-226" />
+    className="AutoUI_ui_ApplicantBadge-129" />
   <div
-    className="AutoUI_ui_ApplicantBadge-275">
+    className="AutoUI_ui_ApplicantBadge-239" />
+  <div
+    className="AutoUI_ui_ApplicantBadge-288">
     <button>
       Hello
     </button>
