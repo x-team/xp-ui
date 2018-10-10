@@ -213,6 +213,14 @@ const itemsArray = [
 />
 ```
 
+Example with auto-focus on search field:
+
+```js
+<SelectBox
+  autoFocus
+/>
+```
+
 Example of all items states:
 
 ```js
