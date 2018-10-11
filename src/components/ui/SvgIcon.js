@@ -604,7 +604,6 @@ const getIcon = ({ icon, color, hover }) => {
         <path className={strokeClassName} fillRule='evenodd' clipRule='evenodd' d='M13 13H2.5V2.5H7.75V1H2.5C1.6675 1 1 1.675 1 2.5V13C1 13.825 1.6675 14.5 2.5 14.5H13C13.825 14.5 14.5 13.825 14.5 13V7.75H13V13Z' />
         <path className={strokeClassName} fillRule='evenodd' clipRule='evenodd' d='M9.68 1V2.5H12.3725L5 9.8725L6.0575 10.93L13.43 3.5575V6.25H14.93V1H9.68Z' />
       </svg>
-
     )
   }
 
