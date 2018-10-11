@@ -92,7 +92,7 @@ const cx = {
     display: flex
     justify-content: space-between
   `),
-  small: cmz(`
+  tiny: cmz(`
     & {
       width: 80px
       margin: 0 14px
@@ -101,6 +101,9 @@ const cx = {
     & > span {
       white-space: nowrap
     }
+  `),
+  small: cmz(`
+    width: 150px
   `),
   medium: cmz(`
     width: 260px
