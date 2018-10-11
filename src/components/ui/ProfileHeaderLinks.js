@@ -97,7 +97,7 @@ class ProfileHeaderLinks extends PureComponent<Props, State> {
       const clickHandler = hash ? this.scrollToHash(hash) : this.openURL(url)
 
       return (
-        <li key={hash} className={cx.linkWrapper}>
+        <li key={hash || url} className={cx.linkWrapper}>
           <span className={linkClassName} onClick={clickHandler}>
             {label}
           </span>
