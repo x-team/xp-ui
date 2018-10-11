@@ -2,7 +2,6 @@ First step:
 
 ```js
 <MilestonesScreen
-  level={1}
   cta={<Button>Go to the step 2</Button>}
 >
   <Text
@@ -16,7 +15,6 @@ Second step:
 
 ```js
 <MilestonesScreen
-  level={2}
   cta={<Button>Go to the step 3</Button>}
 >
   <Text
@@ -35,7 +33,6 @@ N-th step:
 
 ```js
 <MilestonesScreen
-  level={3}
   cta={<Button>Go to the step N+1</Button>}
 >
   <Text
