@@ -1,40 +1,4 @@
 exports[`ProfileHeaderLinks-3 1`] = `
 <ul
-  className="AutoUI_ui_ProfileHeaderLinks-10">
-  <li
-    className="AutoUI_ui_ProfileHeaderLinks-23">
-    <span
-      className="AutoUI_ui_ProfileHeaderLinks-28">
-      Profile
-    </span>
-  </li>
-  <li
-    className="AutoUI_ui_ProfileHeaderLinks-23">
-    <span
-      className="AutoUI_ui_ProfileHeaderLinks-28">
-      Portfolio
-    </span>
-  </li>
-  <li
-    className="AutoUI_ui_ProfileHeaderLinks-23">
-    <span
-      className="AutoUI_ui_ProfileHeaderLinks-28">
-      Notes
-    </span>
-  </li>
-  <li
-    className="AutoUI_ui_ProfileHeaderLinks-23">
-    <span
-      className="AutoUI_ui_ProfileHeaderLinks-28">
-      Contact
-    </span>
-  </li>
-  <li
-    className="AutoUI_ui_ProfileHeaderLinks-23">
-    <span
-      className="AutoUI_ui_ProfileHeaderLinks-28">
-      Ads
-    </span>
-  </li>
-</ul>
+  className="AutoUI_ui_ProfileHeaderLinks-10" />
 `;
