@@ -160,12 +160,12 @@ const listTheme = {
 
   controls: cmz('controls', `
     & {
-      grid-area: control
-      display: flex
-      visibility: hidden
-      justify-content: flex-end;
       position: absolute
       right: -15px
+      display: flex
+      grid-area: control
+      visibility: hidden
+      justify-content: flex-end
     }
 
     & > div {
@@ -446,13 +446,16 @@ const tabularTheme = {
     }
   `),
 
-  applicantStatus: cmz(typo.baseText, `
-    width: 150px
-    font-size: 17px
-    text-align: left
-    display: block,
-    order: 4
-  `)
+  applicantStatus: cmz(
+    typo.baseText,
+    `
+      width: 150px
+      font-size: 17px
+      text-align: left
+      display: block,
+      order: 4
+    `
+  )
 }
 
 class ApplicantBadge extends PureComponent<Props> {
