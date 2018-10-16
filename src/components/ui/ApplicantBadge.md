@@ -23,6 +23,7 @@ const SvgIcon = require('./SvgIcon').default;
       value: '$100'
     }
   ]}
+  ranking={5}
   tags={[
     'JavaScript',
     'ES2015',
@@ -82,6 +83,7 @@ const SvgIcon = require('./SvgIcon').default;
       value: 'nonono'
     }
   ]}
+  ranking={5}
   tags={[
     'JavaScript',
     'Express',
@@ -129,6 +131,7 @@ const SvgIcon = require('./SvgIcon').default;
       value: '$100'
     }
   ]}
+  ranking={5}
   tags={[
     'JavaScript',
     'ES2015',
@@ -192,6 +195,7 @@ const SvgIcon = require('./SvgIcon').default;
       value: 2
     }
   ]}
+  ranking={5}
   tags={[
     'JavaScript',
     'ES2015',
@@ -270,6 +274,7 @@ const SvgIcon = require('./SvgIcon').default;
       value: 2
     }
   ]}
+  ranking={5}
   tags={[
     'JavaScript',
     'ES2015',
@@ -359,6 +364,7 @@ const SvgIcon = require('./SvgIcon').default;
       value: '$100'
     }
   ]}
+  ranking={5}
   tags={[
     'JavaScript',
     'ES2015',

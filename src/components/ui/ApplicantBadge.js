@@ -4,6 +4,7 @@ import md5 from 'crypto-js/md5'
 import Avatar from './Avatar'
 import TruncatedList from './TruncatedList'
 import Dropdown from './Dropdown'
+import InputField from '../forms/InputField'
 
 import { size } from '../../utils/helpers'
 import { DISPLAY_MODES } from '../../utils/constants'
@@ -32,6 +33,7 @@ type Status = 'accepted' | 'pending' | 'excluded'
 
 type Props = {
   id: number,
+  token: string,
   mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
   active?: boolean,
   name?: string,
@@ -43,7 +45,9 @@ type Props = {
   onClick?: Function,
   actions?: Array<Action>,
   status?: Status,
-  applicantStatus?: string
+  applicantStatus?: string,
+  ranking?: number,
+  updateApplicant?: Function
 }
 
 const cmz = require('cmz')
@@ -442,7 +446,7 @@ const tabularTheme = {
 
     &:not(:empty) {
       display: flex
-      order: 6
+      order: 7
     }
   `),
 
@@ -451,9 +455,17 @@ const tabularTheme = {
     `
       width: 150px
       font-size: 17px
-      text-align: left
-      display: block,
       order: 4
+    `
+  ),
+
+  ranking: cmz(
+    typo.baseText,
+    `
+      width: 80px
+      font-size: 17px
+      order: 6
+      justify-content: center
     `
   )
 }
@@ -470,6 +482,16 @@ class ApplicantBadge extends PureComponent<Props> {
     <span className={statusDotStyles[this.props.status]} />
   )
 
+  stopPropagation = (event: any) => {
+    event && event.stopPropagation()
+  }
+
+  handleRankingChange = (event: any) => {
+    const { target: { value: ranking } } = event
+    const { id, token, updateApplicant } = this.props
+    updateApplicant && updateApplicant(id, token, { ranking })
+  }
+
   render () {
     const {
       id,
@@ -483,7 +505,8 @@ class ApplicantBadge extends PureComponent<Props> {
       children,
       actions,
       status,
-      applicantStatus
+      applicantStatus,
+      ranking
     } = this.props
 
     const isTabular = mode === DISPLAY_MODES.TABULAR
@@ -582,6 +605,21 @@ class ApplicantBadge extends PureComponent<Props> {
         <div className={cx.applicantStatus}>
           {applicantStatus}
         </div>
+        {isTabular && (
+          <div className={cx.ranking}>
+            <InputField
+              type='number'
+              defaultValue={ranking}
+              min='1'
+              max='10'
+              onChange={this.handleRankingChange}
+              onKeyDown={this.stopPropagation}
+              onKeyPress={this.stopPropagation}
+              onKeyUp={this.stopPropagation}
+              onClick={this.stopPropagation}
+            />
+          </div>
+        )}
         <div className={cx.tags}>
           {size(tags) > 0 && mapTagsToRender(tags)}
         </div>
