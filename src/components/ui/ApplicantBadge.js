@@ -33,7 +33,6 @@ type Status = 'accepted' | 'pending' | 'excluded'
 
 type Props = {
   id: number,
-  token: string,
   mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
   active?: boolean,
   name?: string,
@@ -47,7 +46,7 @@ type Props = {
   status?: Status,
   applicantStatus?: string,
   ranking?: number,
-  updateApplicant?: Function
+  handleRankingChange?: (ranking: number | null) => void,
 }
 
 const cmz = require('cmz')
@@ -486,10 +485,11 @@ class ApplicantBadge extends PureComponent<Props> {
     event && event.stopPropagation()
   }
 
-  handleRankingChange = (event: any) => {
-    const { target: { value: ranking } } = event
-    const { id, token, updateApplicant } = this.props
-    updateApplicant && updateApplicant(id, token, { ranking })
+  handleRankingChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
+    const { handleRankingChange } = this.props
+    const { target: { value: rankingAsString } } = event
+    const ranking = rankingAsString === '' ? null : Number.parseInt(rankingAsString, 10)
+    handleRankingChange && handleRankingChange(ranking)
   }
 
   render () {
