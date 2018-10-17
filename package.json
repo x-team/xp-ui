@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack.standalone.js",
-    "flow": "flow check src/",
-    "lint": "standard 'src/**/*.js' | snazzy",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
+    "flow": "flow check src",
+    "lint": "standard \"src/**/*.js\" | snazzy",
     "test": "npm run lint && npm run flow",
     "start": "styleguidist server",
     "styleguide:build": "styleguidist build"
@@ -35,6 +35,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
+    "cross-env": "^5.2.0",
     "eslint-plugin-flowtype": "^2.40.1",
     "eslint-plugin-react": "^7.5.1",
     "file-loader": "^1.1.6",
