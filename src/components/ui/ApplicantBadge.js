@@ -4,7 +4,7 @@ import md5 from 'crypto-js/md5'
 import Avatar from './Avatar'
 import TruncatedList from './TruncatedList'
 import Dropdown from './Dropdown'
-import InputField from '../forms/InputField'
+import SelectBox from './SelectBox'
 
 import { size } from '../../utils/helpers'
 import { DISPLAY_MODES } from '../../utils/constants'
@@ -485,10 +485,9 @@ class ApplicantBadge extends PureComponent<Props> {
     event && event.stopPropagation()
   }
 
-  handleRankingChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
+  handleRankingChange = (item: {id: number | null, value: string }) => {
     const { handleRankingChange } = this.props
-    const { target: { value: rankingAsString } } = event
-    const ranking = rankingAsString === '' ? null : Number.parseInt(rankingAsString, 10)
+    const ranking = item.id
     handleRankingChange && handleRankingChange(ranking)
   }
 
@@ -607,16 +606,25 @@ class ApplicantBadge extends PureComponent<Props> {
         </div>
         {isTabular && (
           <div className={cx.ranking}>
-            <InputField
-              type='number'
-              defaultValue={ranking}
-              min='1'
-              max='10'
-              onChange={this.handleRankingChange}
-              onKeyDown={this.stopPropagation}
-              onKeyPress={this.stopPropagation}
-              onKeyUp={this.stopPropagation}
-              onClick={this.stopPropagation}
+            <SelectBox
+              placeholder={' '}
+              visibleItems={4}
+              hasSearch={false}
+              shouldSortItems={false}
+              onClick={this.handleRankingChange}
+              items={[
+                { id: 1, value: '1' },
+                { id: 2, value: '2' },
+                { id: 3, value: '3' },
+                { id: 4, value: '4' },
+                { id: 5, value: '5' },
+                { id: 6, value: '6' },
+                { id: 7, value: '7' },
+                { id: 8, value: '8' },
+                { id: 9, value: '9' },
+                { id: 10, value: '10' },
+                { id: null, value: '-' }
+              ].map(item => ({ ...item, selected: item.id === ranking }))}
             />
           </div>
         )}
