@@ -110,6 +110,7 @@ const inputStyles = [
 
 const inputWithPostText = cmz(`
   margin-right: 10px
+  display: inline-block
 `)
 
 const errorInput = cmz(`
