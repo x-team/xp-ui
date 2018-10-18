@@ -79,13 +79,13 @@ exports[`SelectBox-13 1`] = `
                     <input
                       aria-labelledby="label-unselected"
                       checked={false}
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                       id="unselected"
                       name="unselected"
                       required={false}
                       type="checkbox" />
                     <span
-                      className="AutoUI_forms_InputField-135" />
+                      className="AutoUI_forms_InputField-136" />
                     unselected
                   </label>
                 </div>
@@ -153,13 +153,13 @@ exports[`SelectBox-13 1`] = `
                     <input
                       aria-labelledby="label-selected"
                       checked={true}
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                       id="selected"
                       name="selected"
                       required={false}
                       type="checkbox" />
                     <span
-                      className="AutoUI_forms_InputField-135" />
+                      className="AutoUI_forms_InputField-136" />
                     selected
                   </label>
                 </div>
@@ -384,13 +384,13 @@ exports[`SelectBox-13 1`] = `
                     <input
                       aria-labelledby="label-edited"
                       checked={false}
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                       id="edited"
                       name="edited"
                       required={false}
                       type="checkbox" />
                     <span
-                      className="AutoUI_forms_InputField-135" />
+                      className="AutoUI_forms_InputField-136" />
                     edited
                   </label>
                 </div>
@@ -458,13 +458,13 @@ exports[`SelectBox-13 1`] = `
                     <input
                       aria-labelledby="label-created"
                       checked={false}
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                       id="created"
                       name="created"
                       required={false}
                       type="checkbox" />
                     <span
-                      className="AutoUI_forms_InputField-135" />
+                      className="AutoUI_forms_InputField-136" />
                     created
                   </label>
                 </div>
@@ -657,13 +657,13 @@ exports[`SelectBox-13 1`] = `
                     <input
                       aria-labelledby="label-archived"
                       checked={false}
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                       id="archived"
                       name="archived"
                       required={false}
                       type="checkbox" />
                     <span
-                      className="AutoUI_forms_InputField-135" />
+                      className="AutoUI_forms_InputField-136" />
                     archived
                   </label>
                 </div>
@@ -738,13 +738,13 @@ exports[`SelectBox-13 1`] = `
                     <input
                       aria-labelledby="label-unarchived"
                       checked={false}
-                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                       id="unarchived"
                       name="unarchived"
                       required={false}
                       type="checkbox" />
                     <span
-                      className="AutoUI_forms_InputField-135" />
+                      className="AutoUI_forms_InputField-136" />
                     unarchived
                   </label>
                 </div>
