@@ -33,6 +33,7 @@ type Status = 'accepted' | 'pending' | 'excluded'
 
 type Props = {
   id: number,
+  listId?: number,
   mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
   active?: boolean,
   name?: string,
@@ -466,6 +467,18 @@ const tabularTheme = {
       order: 6
       justify-content: center
     `
+  ),
+
+  disabledRanking: cmz(
+    `
+      width: 100%
+      height: 60px
+      color: rgb(52, 50, 59)
+      background: rgb(235, 235, 228)
+      border: 1px solid rgb(233, 237, 238)
+      border-radius: 2px
+      box-sizing: border-box
+    `
   )
 }
 
@@ -481,10 +494,6 @@ class ApplicantBadge extends PureComponent<Props> {
     <span className={statusDotStyles[this.props.status]} />
   )
 
-  stopPropagation = (event: any) => {
-    event && event.stopPropagation()
-  }
-
   handleRankingChange = (item: {id: number | null, value: string }) => {
     const { handleRankingChange } = this.props
     const ranking = item.id
@@ -494,6 +503,7 @@ class ApplicantBadge extends PureComponent<Props> {
   render () {
     const {
       id,
+      listId,
       mode,
       active,
       name,
@@ -606,26 +616,30 @@ class ApplicantBadge extends PureComponent<Props> {
         </div>
         {isTabular && (
           <div className={cx.ranking}>
-            <SelectBox
-              placeholder={' '}
-              visibleItems={4}
-              hasSearch={false}
-              shouldSortItems={false}
-              onClick={this.handleRankingChange}
-              items={[
-                { id: 1, value: '1' },
-                { id: 2, value: '2' },
-                { id: 3, value: '3' },
-                { id: 4, value: '4' },
-                { id: 5, value: '5' },
-                { id: 6, value: '6' },
-                { id: 7, value: '7' },
-                { id: 8, value: '8' },
-                { id: 9, value: '9' },
-                { id: 10, value: '10' },
-                { id: null, value: '-' }
-              ].map(item => ({ ...item, selected: item.id === ranking }))}
-            />
+            {!listId ? (
+              <div className={cx.disabledRanking} />
+            ) : (
+              <SelectBox
+                placeholder={' '}
+                visibleItems={4}
+                hasSearch={false}
+                shouldSortItems={false}
+                onClick={this.handleRankingChange}
+                items={[
+                  { id: 1, value: '1' },
+                  { id: 2, value: '2' },
+                  { id: 3, value: '3' },
+                  { id: 4, value: '4' },
+                  { id: 5, value: '5' },
+                  { id: 6, value: '6' },
+                  { id: 7, value: '7' },
+                  { id: 8, value: '8' },
+                  { id: 9, value: '9' },
+                  { id: 10, value: '10' },
+                  { id: null, value: '-' }
+                ].map(item => ({ ...item, selected: item.id === ranking }))}
+              />
+            )}
           </div>
         )}
         <div className={cx.tags}>
