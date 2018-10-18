@@ -48,21 +48,21 @@ const cx = {
   `)
 }
 
+type Props = {
+  links: Array<Object>
+}
+
 type State = {
   activeLink: string
 }
 
-class ProfileHeaderLinks extends PureComponent<any, State> {
-  links: Array<Object> = [
-    { label: 'Profile', hash: '#profile' },
-    { label: 'Portfolio', hash: '#portfolio' },
-    { label: 'Notes', hash: '#notes' },
-    { label: 'Contact', hash: '#contact' },
-    { label: 'Ads', hash: '#ads' }
-  ]
-
+class ProfileHeaderLinks extends PureComponent<Props, State> {
   state = {
     activeLink: ''
+  }
+
+  static defaultProps = {
+    links: []
   }
 
   componentDidMount () {
@@ -84,15 +84,21 @@ class ProfileHeaderLinks extends PureComponent<any, State> {
     window.location.hash = hash
   }
 
+  openURL = (url: string) => () => {
+    window.open(url, '_blank')
+  }
+
   headerLinks = (): any => {
     const { activeLink } = this.state
+    const { links } = this.props
 
-    return this.links.map(({ label, hash }) => {
+    return links.map(({ label, hash, url }) => {
       const linkClassName = [[cx.link], hash === activeLink && cx.activeLink].filter(Boolean).join(' ')
+      const clickHandler = hash ? this.scrollToHash(hash) : this.openURL(url)
 
       return (
-        <li key={hash} className={cx.linkWrapper}>
-          <span className={linkClassName} onClick={this.scrollToHash(hash)}>
+        <li key={hash || url} className={cx.linkWrapper}>
+          <span className={linkClassName} onClick={clickHandler}>
             {label}
           </span>
         </li>

@@ -48,7 +48,7 @@ exports[`SearchForm-1 1`] = `
                           strokeLinecap="square"
                           strokeWidth="1">
                           <g
-                            className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                            className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
                             strokeWidth="2"
                             transform="translate(-1294.000000, -1073.000000)">
                             <g
@@ -74,7 +74,7 @@ exports[`SearchForm-1 1`] = `
                           stroke="none"
                           strokeWidth="1">
                           <polygon
-                            className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+                            className="AutoUI_ui_SvgIcon-99 AutoUI_ui_SvgIcon-131"
                             points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
                             transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
                         </g>
@@ -102,12 +102,12 @@ exports[`SearchForm-1 1`] = `
                         stroke="none"
                         strokeWidth="1">
                         <circle
-                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                           cx="7.5"
                           cy="7.5"
                           r="6.5" />
                         <path
-                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                          className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                           d="M11.7538745,12.6062275 L15.5,16.5"
                           strokeLinecap="square" />
                       </g>
@@ -117,6 +117,7 @@ exports[`SearchForm-1 1`] = `
                     <input
                       aria-labelledby="label-search"
                       autoComplete="off"
+                      autoFocus={false}
                       className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-111"
                       id="search"
                       name="search"
@@ -167,7 +168,7 @@ exports[`SearchForm-1 1`] = `
                             stroke="none"
                             strokeWidth="1">
                             <path
-                              className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
+                              className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
                               d="M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z"
                               fillRule="nonzero" />
                           </g>
@@ -197,28 +198,28 @@ exports[`SearchForm-1 1`] = `
               stroke="none"
               strokeWidth="1">
               <rect
-                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
                 height="5"
                 strokeWidth="2"
                 width="5"
                 x="1"
                 y="1" />
               <rect
-                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
                 height="5"
                 strokeWidth="2"
                 width="5"
                 x="1"
                 y="11" />
               <rect
-                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
                 height="5"
                 strokeWidth="2"
                 width="5"
                 x="11"
                 y="1" />
               <rect
-                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-47"
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
                 height="5"
                 strokeWidth="2"
                 width="5"
@@ -240,37 +241,37 @@ exports[`SearchForm-1 1`] = `
               stroke="none"
               strokeWidth="1">
               <rect
-                className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
+                className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
                 height="2"
                 width="12"
                 x="3"
                 y="0" />
               <rect
-                className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
+                className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
                 height="2"
                 width="12"
                 x="3"
                 y="7" />
               <rect
-                className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
+                className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
                 height="2"
                 width="12"
                 x="3"
                 y="14" />
               <rect
-                className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
+                className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
                 height="2"
                 width="2"
                 x="0"
                 y="0" />
               <rect
-                className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
+                className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
                 height="2"
                 width="2"
                 x="0"
                 y="7" />
               <rect
-                className="AutoUI_ui_SvgIcon-74 AutoUI_ui_SvgIcon-101"
+                className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
                 height="2"
                 width="2"
                 x="0"
@@ -322,7 +323,7 @@ exports[`SearchForm-1 1`] = `
                         stroke="none"
                         strokeWidth="1">
                         <polygon
-                          className="AutoUI_ui_SvgIcon-89 AutoUI_ui_SvgIcon-116"
+                          className="AutoUI_ui_SvgIcon-99 AutoUI_ui_SvgIcon-131"
                           points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
                           transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
                       </g>
@@ -350,12 +351,12 @@ exports[`SearchForm-1 1`] = `
                       stroke="none"
                       strokeWidth="1">
                       <circle
-                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                         cx="7.5"
                         cy="7.5"
                         r="6.5" />
                       <path
-                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-62"
+                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
                         d="M11.7538745,12.6062275 L15.5,16.5"
                         strokeLinecap="square" />
                     </g>
@@ -365,6 +366,7 @@ exports[`SearchForm-1 1`] = `
                   <input
                     aria-labelledby="label-search"
                     autoComplete="off"
+                    autoFocus={false}
                     className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-111"
                     id="search"
                     name="search"
@@ -452,7 +454,7 @@ exports[`SearchForm-1 1`] = `
         className="Select-control">
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-14--value">
+          id="react-select-12--value">
           <div
             className="Select-value">
             <span
@@ -463,7 +465,7 @@ exports[`SearchForm-1 1`] = `
             <span
               aria-selected="true"
               className="Select-value-label"
-              id="react-select-14--value-0"
+              id="react-select-12--value-0"
               role="option">
               a keyword
               <span
@@ -482,7 +484,7 @@ exports[`SearchForm-1 1`] = `
             <span
               aria-selected="true"
               className="Select-value-label"
-              id="react-select-14--value-1"
+              id="react-select-12--value-1"
               role="option">
               OR
               <span
@@ -501,7 +503,7 @@ exports[`SearchForm-1 1`] = `
             <span
               aria-selected="true"
               className="Select-value-label"
-              id="react-select-14--value-2"
+              id="react-select-12--value-2"
               role="option">
               two
               <span
@@ -520,7 +522,7 @@ exports[`SearchForm-1 1`] = `
             <span
               aria-selected="true"
               className="Select-value-label"
-              id="react-select-14--value-3"
+              id="react-select-12--value-3"
               role="option">
               AND
               <span
@@ -539,7 +541,7 @@ exports[`SearchForm-1 1`] = `
             <span
               aria-selected="true"
               className="Select-value-label"
-              id="react-select-14--value-4"
+              id="react-select-12--value-4"
               role="option">
               much more
               <span
@@ -556,7 +558,7 @@ exports[`SearchForm-1 1`] = `
               }
             }>
             <input
-              aria-activedescendant="react-select-14--value"
+              aria-activedescendant="react-select-12--value"
               aria-expanded="false"
               aria-haspopup="false"
               aria-owns=""

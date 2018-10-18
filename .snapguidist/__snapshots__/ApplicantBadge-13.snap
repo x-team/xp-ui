@@ -1,1 +1,31 @@
-exports[`ApplicantBadge-13 1`] = `null`;
+exports[`ApplicantBadge-13 1`] = `
+<div
+  className="AutoUI_ui_ApplicantBadge-83 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-176 ">
+  <div
+    className="AutoUI_ui_ApplicantBadge-114 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+    Applicant
+    <span
+      className="AutoUI_ui_ApplicantBadge-62 AutoUI_ui_ApplicantBadge-51" />
+  </div>
+  <div
+    className="AutoUI_ui_ApplicantBadge-123">
+    <div
+      style={
+        Object {
+          "background": "orange",
+          "borderRadius": "50%",
+          "height": 90,
+          "width": 90,
+        }
+      } />
+  </div>
+  <div
+    className="AutoUI_ui_ApplicantBadge-161 controls" />
+  <div
+    className="AutoUI_ui_ApplicantBadge-182" />
+  <div
+    className="AutoUI_ui_ApplicantBadge-129" />
+  <div
+    className="AutoUI_ui_ApplicantBadge-239" />
+</div>
+`;

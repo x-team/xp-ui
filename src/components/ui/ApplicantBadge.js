@@ -42,7 +42,8 @@ type Props = {
   children?: Element<*> | string,
   onClick?: Function,
   actions?: Array<Action>,
-  status?: Status
+  status?: Status,
+  applicantStatus?: string
 }
 
 const cmz = require('cmz')
@@ -52,9 +53,9 @@ const statusDotBaseStyle = cmz(`
   box-sizing: border-box
   width: 10px
   height: 10px
-  margin: 1px 10px 0 10px
+  margin: 3px 10px 0 10px
   border-radius: 50%
-  align-self: center
+  flex-shrink: 0
 `)
 
 const statusDotStyles = {
@@ -86,13 +87,15 @@ const listTheme = {
         background: ${theme.baseBrighter}
         border: 1px solid ${theme.lineSilver2}
         padding: 30px
+        padding-top: 10px
         display: grid
-        grid-template: 'avatar name control' 'avatar infos infos' 'tags tags tags'
+        grid-template: 'blank blank control' 'avatar name status' 'avatar infos infos' 'tags tags tags'
         grid-template-columns: 90px 1fr auto
         grid-template-rows: minmax(20px, auto) auto auto
         grid-gap: 15px
         margin: 0 10px
         cursor: pointer
+        position: relative
       }
 
       &:hover {
@@ -112,8 +115,8 @@ const listTheme = {
     `
       grid-area: name
       display: flex
-      align-items: flex-end
-      font-size: 17px
+      align-items: flex-start
+      font-size: 16px
     `
   ),
 
@@ -121,6 +124,14 @@ const listTheme = {
     grid-area: avatar
     width: 90px
     height: 90px
+  `),
+
+  applicantStatus: cmz(`
+    grid-area: status
+    font-size: 15px
+    line-height: 1
+    max-width: 65px
+    text-align: center
   `),
 
   control: cmz(`
@@ -149,9 +160,12 @@ const listTheme = {
 
   controls: cmz('controls', `
     & {
-      grid-area: control
+      position: absolute
+      right: -15px
       display: flex
+      grid-area: control
       visibility: hidden
+      justify-content: flex-end
     }
 
     & > div {
@@ -310,7 +324,7 @@ const tabularTheme = {
   name: cmz(typo.badgeHeading,
     `
       width: 300px
-      white-space: nowrap
+      white-space: normal
       order: 2
       font-weight: normal
     `
@@ -330,7 +344,7 @@ const tabularTheme = {
   `),
 
   infos: cmz(`
-    order: 4
+    order: 5
     flex: 1
     display: flex
     justify-content: space-between
@@ -428,9 +442,20 @@ const tabularTheme = {
 
     &:not(:empty) {
       display: flex
-      order: 5
+      order: 6
     }
-  `)
+  `),
+
+  applicantStatus: cmz(
+    typo.baseText,
+    `
+      width: 150px
+      font-size: 17px
+      text-align: left
+      display: block,
+      order: 4
+    `
+  )
 }
 
 class ApplicantBadge extends PureComponent<Props> {
@@ -457,7 +482,8 @@ class ApplicantBadge extends PureComponent<Props> {
       avatar,
       children,
       actions,
-      status
+      status,
+      applicantStatus
     } = this.props
 
     const isTabular = mode === DISPLAY_MODES.TABULAR
@@ -552,6 +578,9 @@ class ApplicantBadge extends PureComponent<Props> {
         </div>
         <div className={cx.infos}>
           {size(info) > 0 && mapInfosToRender(info)}
+        </div>
+        <div className={cx.applicantStatus}>
+          {applicantStatus}
         </div>
         <div className={cx.tags}>
           {size(tags) > 0 && mapTagsToRender(tags)}
