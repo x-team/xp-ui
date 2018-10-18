@@ -186,20 +186,12 @@ exports[`ApplicantBadge-9 1`] = `
     </span>
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-453 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-    Booked (Available Soon)
-  </div>
+    className="AutoUI_ui_ApplicantBadge-453 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40" />
   <div
     className="AutoUI_ui_ApplicantBadge-462 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-    <div>
-      <input
-        aria-labelledby=""
-        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
-        defaultValue={5}
-        max="10"
-        min="1"
-        required={false}
-        type="number" />
+    <div
+      className="AutoUI_ui_ApplicantBadge-472 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+      5
     </div>
   </div>
   <div

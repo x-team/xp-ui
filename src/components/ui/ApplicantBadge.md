@@ -23,7 +23,6 @@ const SvgIcon = require('./SvgIcon').default;
       value: '$100'
     }
   ]}
-  ranking={5}
   tags={[
     'JavaScript',
     'ES2015',
@@ -165,6 +164,7 @@ const SvgIcon = require('./SvgIcon').default;
   status='excluded'
   mode='tabular'
   id={123123}
+  ranking={5}
   name='Applicant full name'
   email='applicant@email.com'
   info={[
@@ -195,7 +195,85 @@ const SvgIcon = require('./SvgIcon').default;
       value: 2
     }
   ]}
+  tags={[
+    'JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack',
+    'JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack',
+    'JavaScript',
+    'ES2015',
+    'Node',
+    'Express',
+    'React',
+    'Redux',
+    'Webpack'
+  ]}
+  onClick={id => console.log('Applicant selected: ' + id)}
+  actions={[
+    {
+      key: 'approval',
+      icon: () => <SvgIcon icon='check' />,
+      render: () => <form>A custom list of inputs with a submit button and a checkmark icon</form>
+    },
+    {
+      key: 'exclusion',
+      icon: () => <SvgIcon icon='x' />,
+      render: () => <form>Another custom list of inputs with a submit button and an X icon</form>
+    }
+  ]}
+/>
+```
+
+Basic tabular Ranking dropdown is disabled:
+
+```js
+const SvgIcon = require('./SvgIcon').default;
+<ApplicantBadge
+  status='excluded'
+  mode='tabular'
+  id={123123}
+  disableRankingDropdown={true}
   ranking={5}
+  name='Applicant full name'
+  email='applicant@email.com'
+  info={[
+    {
+      label: 'Avail. date:',
+      value: 'DD/MM/YYYY',
+      tip: 'Avail. date tooltip copy'
+    },
+    {
+      label: 'Avail. updated:',
+      value: 'DD/MM/YYYY',
+      tip: 'Avail. updated tooltip copy'
+    },
+    {
+      label: 'Timezone:',
+      value: 'UTC+00'
+    },
+    {
+      label: 'Rate:',
+      value: '$100'
+    },
+    {
+      label: 'Status',
+      value: 'In Pipeline'
+    },
+    {
+      label: 'Rank',
+      value: 2
+    }
+  ]}
   tags={[
     'JavaScript',
     'ES2015',

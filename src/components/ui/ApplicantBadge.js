@@ -33,7 +33,6 @@ type Status = 'accepted' | 'pending' | 'excluded'
 
 type Props = {
   id: number,
-  listId?: number,
   mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
   active?: boolean,
   name?: string,
@@ -46,6 +45,7 @@ type Props = {
   actions?: Array<Action>,
   status?: Status,
   applicantStatus?: string,
+  disableRankingDropdown?: boolean,
   ranking?: number,
   handleRankingChange?: (ranking: number | null) => void,
 }
@@ -470,14 +470,18 @@ const tabularTheme = {
   ),
 
   disabledRanking: cmz(
+    typo.baseText,
     `
       width: 100%
-      height: 60px
-      color: rgb(52, 50, 59)
-      background: rgb(235, 235, 228)
-      border: 1px solid rgb(233, 237, 238)
+      height: 3.75rem
+      color: ${theme.logoGray}
+      background: ${theme.lineSilver2}
+      border: 1px solid ${theme.lineSilver2}
       border-radius: 2px
       box-sizing: border-box
+      display: flex
+      align-items: center
+      padding: 0 1.25rem
     `
   )
 }
@@ -487,14 +491,15 @@ class ApplicantBadge extends PureComponent<Props> {
     mode: DISPLAY_MODES.LIST,
     active: false,
     actions: [],
-    info: []
+    info: [],
+    disableRankingDropdown: false,
   }
 
   renderStatusIndicator = () => (
     <span className={statusDotStyles[this.props.status]} />
   )
 
-  handleRankingChange = (item: {id: number | null, value: string }) => {
+  handleRankingChange = (item: { id: number | null, value: string }) => {
     const { handleRankingChange } = this.props
     const ranking = item.id
     handleRankingChange && handleRankingChange(ranking)
@@ -503,7 +508,6 @@ class ApplicantBadge extends PureComponent<Props> {
   render () {
     const {
       id,
-      listId,
       mode,
       active,
       name,
@@ -515,6 +519,7 @@ class ApplicantBadge extends PureComponent<Props> {
       actions,
       status,
       applicantStatus,
+      disableRankingDropdown,
       ranking
     } = this.props
 
@@ -616,8 +621,10 @@ class ApplicantBadge extends PureComponent<Props> {
         </div>
         {isTabular && (
           <div className={cx.ranking}>
-            {!listId ? (
-              <div className={cx.disabledRanking} />
+            {disableRankingDropdown ? (
+              <div className={cx.disabledRanking}>
+                {ranking}
+              </div>
             ) : (
               <SelectBox
                 placeholder={' '}
@@ -637,7 +644,8 @@ class ApplicantBadge extends PureComponent<Props> {
                   { id: 9, value: '9' },
                   { id: 10, value: '10' },
                   { id: null, value: '-' }
-                ].map(item => ({ ...item, selected: item.id === ranking }))}
+                ].map(item => ({ ...item, selected: item.id === ranking }))
+                }
               />
             )}
           </div>
