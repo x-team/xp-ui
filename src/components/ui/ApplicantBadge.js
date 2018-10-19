@@ -468,7 +468,7 @@ const tabularTheme = {
         justify-content: center
       }
 
-      & div {
+      & div, & span {
         font-size: 1.063rem
       }
     `
