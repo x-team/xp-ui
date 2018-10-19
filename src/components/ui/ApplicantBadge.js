@@ -47,7 +47,7 @@ type Props = {
   applicantStatus?: string,
   disableRankingDropdown?: boolean,
   ranking?: number,
-  handleRankingChange?: (ranking: number | null) => void,
+  handleRankingChange?: (ranking: ?number) => void,
 }
 
 const cmz = require('cmz')
@@ -462,18 +462,24 @@ const tabularTheme = {
   ranking: cmz(
     typo.baseText,
     `
-      width: 80px
-      font-size: 17px
-      order: 6
-      justify-content: center
+      & {
+        width: 80px
+        order: 6
+        justify-content: center
+      }
+
+      & div {
+        font-size: 1.063rem
+      }
     `
   ),
 
   disabledRanking: cmz(
     typo.baseText,
     `
+      font-size: 1.063rem
       width: 100%
-      height: 3.75rem
+      height: 60px
       color: ${theme.logoGray}
       background: ${theme.lineSilver2}
       border: 1px solid ${theme.lineSilver2}
@@ -499,9 +505,8 @@ class ApplicantBadge extends PureComponent<Props> {
     <span className={statusDotStyles[this.props.status]} />
   )
 
-  handleRankingChange = (item: { id: number | null, value: string }) => {
+  handleRankingChange = ({ id: ranking, value }: {id: ?number, value: string}) => {
     const { handleRankingChange } = this.props
-    const ranking = item.id
     handleRankingChange && handleRankingChange(ranking)
   }
 
@@ -578,7 +583,25 @@ class ApplicantBadge extends PureComponent<Props> {
       onClick && onClick(id)
     }
 
-    return id ? (
+    if (!id) {
+      return null
+    }
+
+    const ranks = [
+      { id: 1, value: '1' },
+      { id: 2, value: '2' },
+      { id: 3, value: '3' },
+      { id: 4, value: '4' },
+      { id: 5, value: '5' },
+      { id: 6, value: '6' },
+      { id: 7, value: '7' },
+      { id: 8, value: '8' },
+      { id: 9, value: '9' },
+      { id: 10, value: '10' },
+      { id: null, value: '-' }
+    ].map(item => ({ ...item, selected: item.id === ranking }))
+
+    return (
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         <div className={cx.name}>
           {name || email}
@@ -632,20 +655,7 @@ class ApplicantBadge extends PureComponent<Props> {
                 hasSearch={false}
                 shouldSortItems={false}
                 onClick={this.handleRankingChange}
-                items={[
-                  { id: 1, value: '1' },
-                  { id: 2, value: '2' },
-                  { id: 3, value: '3' },
-                  { id: 4, value: '4' },
-                  { id: 5, value: '5' },
-                  { id: 6, value: '6' },
-                  { id: 7, value: '7' },
-                  { id: 8, value: '8' },
-                  { id: 9, value: '9' },
-                  { id: 10, value: '10' },
-                  { id: null, value: '-' }
-                ].map(item => ({ ...item, selected: item.id === ranking }))
-                }
+                items={ranks}
               />
             )}
           </div>
@@ -659,7 +669,7 @@ class ApplicantBadge extends PureComponent<Props> {
           </div>
         )}
       </div>
-    ) : null
+    )
   }
 }
 
