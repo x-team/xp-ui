@@ -47,7 +47,7 @@ type Props = {
   applicantStatus?: string,
   disableRankingDropdown?: boolean,
   ranking?: number,
-  handleRankingChange?: (ranking: ?number) => void,
+  handleRankingChange?: (ranking: number | null) => void,
 }
 
 const cmz = require('cmz')
@@ -505,7 +505,7 @@ class ApplicantBadge extends PureComponent<Props> {
     <span className={statusDotStyles[this.props.status]} />
   )
 
-  handleRankingChange = ({ id: ranking, value }: {id: ?number, value: string}) => {
+  handleRankingChange = ({ id: ranking, value }: {id: number | null, value: string}) => {
     const { handleRankingChange } = this.props
     handleRankingChange && handleRankingChange(ranking)
   }
