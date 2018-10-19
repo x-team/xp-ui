@@ -10,6 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
     "flow": "flow check src",
     "lint": "standard \"src/**/*.js\" | snazzy",
+    "lint-fix": "standard \"src/**/*.js\" --fix | snazzy",
     "test": "npm run lint && npm run flow",
     "start": "styleguidist server",
     "styleguide:build": "styleguidist build"
