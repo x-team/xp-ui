@@ -401,13 +401,13 @@ exports[`SearchForm-1 1`] = `
                             <input
                               aria-labelledby="label-an unselected field"
                               checked={false}
-                              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                               id="an unselected field"
                               name="an unselected field"
                               required={false}
                               type="checkbox" />
                             <span
-                              className="AutoUI_forms_InputField-135" />
+                              className="AutoUI_forms_InputField-136" />
                             an unselected field
                           </label>
                         </div>
@@ -454,7 +454,7 @@ exports[`SearchForm-1 1`] = `
         className="Select-control">
         <span
           className="Select-multi-value-wrapper"
-          id="react-select-24--value">
+          id="react-select-13--value">
           <div
             className="Select-value">
             <span
@@ -465,7 +465,7 @@ exports[`SearchForm-1 1`] = `
             <span
               aria-selected="true"
               className="Select-value-label"
-              id="react-select-24--value-0"
+              id="react-select-13--value-0"
               role="option">
               a keyword
               <span
@@ -484,7 +484,7 @@ exports[`SearchForm-1 1`] = `
             <span
               aria-selected="true"
               className="Select-value-label"
-              id="react-select-24--value-1"
+              id="react-select-13--value-1"
               role="option">
               OR
               <span
@@ -503,7 +503,7 @@ exports[`SearchForm-1 1`] = `
             <span
               aria-selected="true"
               className="Select-value-label"
-              id="react-select-24--value-2"
+              id="react-select-13--value-2"
               role="option">
               two
               <span
@@ -522,7 +522,7 @@ exports[`SearchForm-1 1`] = `
             <span
               aria-selected="true"
               className="Select-value-label"
-              id="react-select-24--value-3"
+              id="react-select-13--value-3"
               role="option">
               AND
               <span
@@ -541,7 +541,7 @@ exports[`SearchForm-1 1`] = `
             <span
               aria-selected="true"
               className="Select-value-label"
-              id="react-select-24--value-4"
+              id="react-select-13--value-4"
               role="option">
               much more
               <span
@@ -558,7 +558,7 @@ exports[`SearchForm-1 1`] = `
               }
             }>
             <input
-              aria-activedescendant="react-select-24--value"
+              aria-activedescendant="react-select-13--value"
               aria-expanded="false"
               aria-haspopup="false"
               aria-owns=""
