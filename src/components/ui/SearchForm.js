@@ -27,7 +27,7 @@ const listTheme = {
   selectLists: cmz(`
     display: flex
     align-items: center
-    padding: 30px
+    padding: 30px 30px 20px
     border-bottom: 1px solid ${theme.lineSilver4}
   `),
 
