@@ -492,7 +492,7 @@ class ApplicantBadge extends PureComponent<Props> {
     active: false,
     actions: [],
     info: [],
-    disableRankingDropdown: false,
+    disableRankingDropdown: false
   }
 
   renderStatusIndicator = () => (
