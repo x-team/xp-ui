@@ -114,6 +114,16 @@ selected skill tag
 <Button selected outlined rounded raised color={'silver'}>Android</Button>
 ```
 
+skill tag pro
+ ```js
+<Button tag='pro' outlined rounded raised color={'silver'}>Android</Button>
+```
+
+selected skill tag pro
+ ```js
+<Button tag='pro' selected outlined rounded raised color={'silver'}>Android</Button>
+```
+
 exclude applicant form buttons
 
 ```js

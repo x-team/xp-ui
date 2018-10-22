@@ -27,7 +27,8 @@ type Props = {
   wide: ?boolean,
   selectbox: ?boolean,
   component: string,
-  children?: Element<*> | string
+  children?: Element<*> | string,
+  tag?: string
 }
 
 const baseStyles = {
@@ -43,6 +44,8 @@ const baseStyles = {
     cursor: pointer
     white-space: nowrap
     transition: all .3s ease-out
+    position: relative
+    font-size: 1rem
   `),
 
   content: cmz(typo.labelText, 'font-size: inherit')
@@ -207,6 +210,29 @@ const extraStyles = {
     }
   `),
 
+  // width: 30px
+  tag: cmz(`
+    & {
+      border-top-left-radius: 0
+    }
+
+    &::before {
+      transition: all .3s ease-out
+      content: attr(data-tag)
+      line-height: 2
+      position: absolute
+      bottom: calc(100% - 5px)
+      left: -2px
+      background-color: ${theme.baseRed}
+      color: ${theme.baseBrighter}
+      font-size: 0.5rem
+      font-weight: 100
+      text-transform: uppercase
+      padding: 0 8px
+      font-weight: bold
+    }
+  `),
+
   selectbox: cmz(sizeStyles.large, `
     & {
       background-color: ${theme.baseBrighter}
@@ -267,6 +293,7 @@ class Button extends PureComponent<Props> {
       selectbox,
       component: CustomComponent,
       children,
+      tag,
       ...rest
     } = this.props
 
@@ -286,12 +313,17 @@ class Button extends PureComponent<Props> {
       block && extraStyles.block,
       wide && extraStyles.wide,
       selectbox && [extraStyles.wide, extraStyles.selectbox].join(' '),
-      disabled && extraStyles.disabled
+      disabled && extraStyles.disabled,
+      tag && extraStyles.tag
     ].filter(Boolean).join(' ')
     const buttonClassName = `${colorClassName} ${sizeClassName} ${extraClassName}`
 
     return (
-      <CustomComponent {...rest} className={`${String(customClassName)} ${buttonClassName}`}>
+      <CustomComponent
+        {...rest}
+        className={`${String(customClassName)} ${buttonClassName}`}
+        data-tag={tag}
+      >
         <span className={baseStyles.content}>{children}</span>
       </CustomComponent>
     )
