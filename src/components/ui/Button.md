@@ -105,7 +105,7 @@ button generated with custom element (&lt;a&gt;)
 skill tag
 
 ```js
-<Button outlined rounded raised color={'silver'}>Androind</Button>
+<Button outlined rounded raised color={'silver'}>Android</Button>
 ```
 
 selected skill tag
