@@ -153,10 +153,10 @@ exports[`SearchForm-1 1`] = `
                 <div
                   className="AutoUI_ui_SelectBox-336">
                   <button
-                    className=" AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-166 AutoUI_ui_Button-210 AutoUI_ui_Button-125"
+                    className=" AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-169 AutoUI_ui_Button-236 AutoUI_ui_Button-128"
                     type="button">
                     <span
-                      className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+                      className="AutoUI_ui_Button-51 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
                       <span>
                         <svg
                           height="14px"
@@ -609,10 +609,10 @@ exports[`SearchForm-1 1`] = `
     <div
       className="AutoUI_ui_SearchForm-76">
       <button
-        className="AutoUI_ui_SearchForm-80 AutoUI_ui_Button-72 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-176 raised"
+        className="AutoUI_ui_SearchForm-80 AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-179 raised"
         type="submit">
         <span
-          className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+          className="AutoUI_ui_Button-51 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
           Show
         </span>
       </button>
