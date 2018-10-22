@@ -210,26 +210,24 @@ const extraStyles = {
     }
   `),
 
-  // width: 30px
   tag: cmz(`
     & {
       border-top-left-radius: 0
     }
 
     &::before {
-      transition: all .3s ease-out
-      content: attr(data-tag)
-      line-height: 2
       position: absolute
-      bottom: calc(100% - 5px)
       left: -2px
+      bottom: calc(100% - 5px)
+      content: attr(data-tag)
+      padding: 0 .5rem
       background-color: ${theme.baseRed}
-      color: ${theme.baseBrighter}
-      font-size: 0.5rem
-      font-weight: 100
-      text-transform: uppercase
-      padding: 0 8px
       font-weight: bold
+      line-height: 2
+      color: ${theme.baseBrighter}
+      font-size: .5rem
+      text-transform: uppercase
+      transition: all .3s ease-out
     }
   `),
 
