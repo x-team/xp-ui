@@ -50,6 +50,21 @@ date.setDate(date.getDate() - 2);
 />
 ```
 
+Showing note type in sub header:
+
+```js
+const date = new Date();
+date.setDate(date.getDate() - 1/12);
+<Note
+  noteType='interview'
+  avatar='https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg'
+  showNoteType
+  date={date}
+  name='Samwise Gamgee'
+  text={`Do you remember the Shire, Mr. Frodo? It'll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they'll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?`}
+/>
+```
+
 Missing props (does component explode?):
 
 ```js
