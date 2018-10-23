@@ -20,10 +20,10 @@ exports[`NotesFeed-1 1`] = `
         className="AutoUI_ui_Note-48 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
         Sagacious Rainbows
       </span>
-      <span
+      <div
         className="AutoUI_ui_Note-58 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         23 May 18
-      </span>
+      </div>
       <div
         className="AutoUI_ui_Note-68">
         <div>
@@ -96,10 +96,10 @@ exports[`NotesFeed-1 1`] = `
         className="AutoUI_ui_Note-48 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
         Sagacious Rainbows
       </span>
-      <span
+      <div
         className="AutoUI_ui_Note-58 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
         23 May 18
-      </span>
+      </div>
       <div
         className="AutoUI_ui_Note-68">
         <div>
@@ -124,7 +124,7 @@ exports[`NotesFeed-1 1`] = `
       className="AutoUI_ui_Note-40" />
   </div>
   <button
-    className="AutoUI_ui_NotesFeed-23 AutoUI_ui_Button-94 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-145 outlined AutoUI_ui_Button-163"
+    className="AutoUI_ui_NotesFeed-24 AutoUI_ui_Button-94 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-145 outlined AutoUI_ui_Button-163"
     type="button">
     <span
       className="AutoUI_ui_Button-51 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">

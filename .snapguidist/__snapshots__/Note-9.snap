@@ -2,7 +2,44 @@ exports[`Note-9 1`] = `
 <div
   className="AutoUI_ui_Note-25">
   <div
+    className="AutoUI_ui_Note-30">
+    <div
+      className="AutoUI_ui_Avatar-15">
+      <img
+        alt="Samwise Gamgee"
+        className="AutoUI_ui_Avatar-21"
+        height={40}
+        src="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
+        width={40} />
+    </div>
+  </div>
+  <div
     className="AutoUI_ui_Note-35">
+    <span
+      className="AutoUI_ui_Note-48 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
+      Samwise Gamgee
+    </span>
+    <div
+      className="AutoUI_ui_Note-58 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+      22 Oct 18
+      , in Interview Notes
+    </div>
+    <div
+      className="AutoUI_ui_Note-68">
+      <div>
+        <div>
+          <div
+            className="AutoUI_ui_Note-74">
+            <span
+              className="AutoUI_ui_Text-48 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              <span>
+                Do you remember the Shire, Mr. Frodo? It\'ll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they\'ll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
     <div>
       <div />
     </div>

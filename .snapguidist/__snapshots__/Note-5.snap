@@ -7,10 +7,10 @@ exports[`Note-5 1`] = `
       className="AutoUI_ui_Note-48 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22">
       Samwise Gamgee
     </span>
-    <span
+    <div
       className="AutoUI_ui_Note-58 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
       22 Oct 18
-    </span>
+    </div>
     <div
       className="AutoUI_ui_Note-68">
       <div>
