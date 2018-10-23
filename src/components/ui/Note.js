@@ -65,12 +65,6 @@ const SubHeader = elem.div(cmz(
   `
 ))
 
-const NoteType = elem.span(cmz(
-  `
-    text-transform: capitalize
-  `
-))
-
 const InlineEditorWrapper = elem.div(cmz(
   `
     margin-bottom: 24px
@@ -191,7 +185,8 @@ class Note extends PureComponent<Props, State> {
   render () {
     const { isHover, newValueIsValid } = this.state
     const { avatar, name, date, files, text, onNoteUpdate, noteType, showNoteType } = this.props
-    const noteTypeText = noteType ? ', in ' + noteType + ' Notes' : ''
+    const capitalizedNoteType = noteType ? noteType.charAt(0).toUpperCase() + noteType.slice(1) : ''
+    const noteTypeText = noteType ? `, in ${capitalizedNoteType} Notes` : ''
 
     return (
       Root(
@@ -206,7 +201,7 @@ class Note extends PureComponent<Props, State> {
           name && Name(name),
           SubHeader(
             date && timeFromNow(date),
-            showNoteType && noteType && NoteType(noteTypeText)
+            showNoteType && noteTypeText
           ),
         text &&
           InlineEditorWrapper(
