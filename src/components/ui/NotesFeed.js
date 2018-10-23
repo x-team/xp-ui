@@ -10,6 +10,7 @@ const cmz = require('cmz')
 
 type Props = {
   notes?: Array<*>,
+  showNoteType?: boolean,
   onNoteUpdate?: Function
 }
 
@@ -44,7 +45,7 @@ class NotesFeed extends PureComponent<Props, State> {
 
   render () {
     const { page, perPage } = this.state
-    const { notes } = this.props
+    const { notes, showNoteType } = this.props
 
     return Root(
       notes && notes
@@ -57,6 +58,8 @@ class NotesFeed extends PureComponent<Props, State> {
           name={note.author_name}
           text={note.body}
           files={note.files}
+          noteType={note.target_type}
+          showNoteType={showNoteType}
         />
         ),
       this.showViewMore(notes && notes.length) && (

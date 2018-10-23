@@ -55,13 +55,19 @@ const Name = elem.span(cmz(
   `
 ))
 
-const Time = elem.span(cmz(
+const SubHeader = elem.div(cmz(
   typo.baseText,
   `
     font-size: 12px
     line-height: 12px
     margin-top: 8px
     margin-bottom: 10px
+  `
+))
+
+const NoteType = elem.span(cmz(
+  `
+    text-transform: capitalize
   `
 ))
 
@@ -121,6 +127,8 @@ type Props = {
   name?: string,
   text?: string,
   files?: Array<Object>,
+  noteType?: string,
+  showNoteType?: boolean,
   onNoteUpdate: Function
 }
 
@@ -182,7 +190,8 @@ class Note extends PureComponent<Props, State> {
 
   render () {
     const { isHover, newValueIsValid } = this.state
-    const { avatar, name, date, files, text, onNoteUpdate } = this.props
+    const { avatar, name, date, files, text, onNoteUpdate, noteType, showNoteType } = this.props
+    const noteTypeText = noteType ? ', in ' + noteType + ' Notes' : ''
 
     return (
       Root(
@@ -195,7 +204,10 @@ class Note extends PureComponent<Props, State> {
         ),
         Body(
           name && Name(name),
-          date && Time(timeFromNow(date)),
+          SubHeader(
+            date && timeFromNow(date),
+            showNoteType && noteType && NoteType(noteTypeText)
+          ),
         text &&
           InlineEditorWrapper(
             <InlineEditor
