@@ -107,15 +107,16 @@ class Keywords extends Component<Props, State> {
     }
   }
 
-  uppercaseOpperators = (value: string) => {
+  uppercaseOperators = (value: string) => {
     const upperCasedLabel = value.toUpperCase()
     return ['AND', 'OR'].includes(upperCasedLabel) ? upperCasedLabel : value
   }
 
   handleChange = (values: Array<*>) => {
     const newValues = values
-      .map(keyword => this.uppercaseOpperators(keyword.label))
+      .map(keyword => this.uppercaseOperators(keyword.label))
       .join(',')
+
     this.setState(prevState => ({ values: newValues }), () => {
       const { onChange } = this.props
       onChange && onChange(newValues)
@@ -130,6 +131,17 @@ class Keywords extends Component<Props, State> {
     }
   }
 
+  handleBlur = (event: SyntheticInputEvent<>) => {
+    const { values } = this.state
+    const { target: { value: input } } = event
+    const newValues = [values, input].filter(Boolean).join(',')
+
+    this.setState({ values: newValues }, () => {
+      const { onChange } = this.props
+      onChange && onChange(newValues)
+    })
+  }
+
   render () {
     const keywords = this.state.values
       .split(',')
@@ -137,7 +149,7 @@ class Keywords extends Component<Props, State> {
       .filter(Boolean)
       .map((keyword, i) => ({
         value: i,
-        label: this.uppercaseOpperators(keyword)
+        label: this.uppercaseOperators(keyword)
       })) || []
 
     return (
@@ -150,6 +162,7 @@ class Keywords extends Component<Props, State> {
         clearable
         onChange={this.handleChange}
         onInputKeyDown={this.handleInputKeyDown}
+        onBlur={this.handleBlur}
       />
     )
   }
