@@ -10,11 +10,11 @@ exports[`InputField-11 1`] = `
         <input
           aria-labelledby=""
           checked={true}
-          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
           required={false}
           type="checkbox" />
         <span
-          className="AutoUI_forms_InputField-135" />
+          className="AutoUI_forms_InputField-136" />
         Checkbox
       </label>
     </div>

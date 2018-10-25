@@ -4,6 +4,7 @@ import md5 from 'crypto-js/md5'
 import Avatar from './Avatar'
 import TruncatedList from './TruncatedList'
 import Dropdown from './Dropdown'
+import SelectBox from './SelectBox'
 
 import { size } from '../../utils/helpers'
 import { DISPLAY_MODES } from '../../utils/constants'
@@ -43,7 +44,10 @@ type Props = {
   onClick?: Function,
   actions?: Array<Action>,
   status?: Status,
-  applicantStatus?: string
+  applicantStatus?: string,
+  disableRankingDropdown?: boolean,
+  ranking?: number,
+  handleRankingChange?: (ranking: number | null) => void,
 }
 
 const cmz = require('cmz')
@@ -442,7 +446,7 @@ const tabularTheme = {
 
     &:not(:empty) {
       display: flex
-      order: 6
+      order: 7
     }
   `),
 
@@ -451,9 +455,39 @@ const tabularTheme = {
     `
       width: 150px
       font-size: 17px
-      text-align: left
-      display: block,
       order: 4
+    `
+  ),
+
+  ranking: cmz(
+    typo.baseText,
+    `
+      & {
+        width: 80px
+        order: 6
+        justify-content: center
+      }
+
+      & div, & span {
+        font-size: 1.063rem
+      }
+    `
+  ),
+
+  disabledRanking: cmz(
+    typo.baseText,
+    `
+      font-size: 1.063rem
+      width: 100%
+      height: 60px
+      color: ${theme.logoGray}
+      background: ${theme.lineSilver2}
+      border: 1px solid ${theme.lineSilver2}
+      border-radius: 2px
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      padding: 0 1.25rem
     `
   )
 }
@@ -463,12 +497,18 @@ class ApplicantBadge extends PureComponent<Props> {
     mode: DISPLAY_MODES.LIST,
     active: false,
     actions: [],
-    info: []
+    info: [],
+    disableRankingDropdown: false
   }
 
   renderStatusIndicator = () => (
     <span className={statusDotStyles[this.props.status]} />
   )
+
+  handleRankingChange = ({ id: ranking, value }: {id: number | null, value: string}) => {
+    const { handleRankingChange } = this.props
+    handleRankingChange && handleRankingChange(ranking)
+  }
 
   render () {
     const {
@@ -483,7 +523,9 @@ class ApplicantBadge extends PureComponent<Props> {
       children,
       actions,
       status,
-      applicantStatus
+      applicantStatus,
+      disableRankingDropdown,
+      ranking
     } = this.props
 
     const isTabular = mode === DISPLAY_MODES.TABULAR
@@ -541,7 +583,25 @@ class ApplicantBadge extends PureComponent<Props> {
       onClick && onClick(id)
     }
 
-    return id ? (
+    if (!id) {
+      return null
+    }
+
+    const ranks = [
+      { id: 1, value: '1' },
+      { id: 2, value: '2' },
+      { id: 3, value: '3' },
+      { id: 4, value: '4' },
+      { id: 5, value: '5' },
+      { id: 6, value: '6' },
+      { id: 7, value: '7' },
+      { id: 8, value: '8' },
+      { id: 9, value: '9' },
+      { id: 10, value: '10' },
+      { id: null, value: '-' }
+    ].map(item => ({ ...item, selected: item.id === ranking }))
+
+    return (
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         <div className={cx.name}>
           {name || email}
@@ -582,6 +642,24 @@ class ApplicantBadge extends PureComponent<Props> {
         <div className={cx.applicantStatus}>
           {applicantStatus}
         </div>
+        {isTabular && (
+          <div className={cx.ranking}>
+            {disableRankingDropdown ? (
+              <div className={cx.disabledRanking}>
+                {ranking}
+              </div>
+            ) : (
+              <SelectBox
+                placeholder={' '}
+                visibleItems={4}
+                hasSearch={false}
+                shouldSortItems={false}
+                onClick={this.handleRankingChange}
+                items={ranks}
+              />
+            )}
+          </div>
+        )}
         <div className={cx.tags}>
           {size(tags) > 0 && mapTagsToRender(tags)}
         </div>
@@ -591,7 +669,7 @@ class ApplicantBadge extends PureComponent<Props> {
           </div>
         )}
       </div>
-    ) : null
+    )
   }
 }
 

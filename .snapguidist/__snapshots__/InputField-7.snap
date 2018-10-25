@@ -11,7 +11,7 @@ exports[`InputField-7 1`] = `
     </section>
     <textarea
       aria-labelledby="label-skills"
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-217  "
+      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-218  "
       defaultValue="1.
     2.
     3.

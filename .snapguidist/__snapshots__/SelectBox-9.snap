@@ -71,13 +71,13 @@ exports[`SelectBox-9 1`] = `
                   <input
                     aria-labelledby="label-registered"
                     checked={false}
-                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                     id="registered"
                     name="registered"
                     required={false}
                     type="checkbox" />
                   <span
-                    className="AutoUI_forms_InputField-135" />
+                    className="AutoUI_forms_InputField-136" />
                   registered
                 </label>
               </div>
@@ -145,13 +145,13 @@ exports[`SelectBox-9 1`] = `
                   <input
                     aria-labelledby="label-portfolio-building"
                     checked={false}
-                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                     id="portfolio-building"
                     name="portfolio-building"
                     required={false}
                     type="checkbox" />
                   <span
-                    className="AutoUI_forms_InputField-135" />
+                    className="AutoUI_forms_InputField-136" />
                   portfolio-building
                 </label>
               </div>
@@ -219,13 +219,13 @@ exports[`SelectBox-9 1`] = `
                   <input
                     aria-labelledby="label-portfolio-review"
                     checked={false}
-                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                     id="portfolio-review"
                     name="portfolio-review"
                     required={false}
                     type="checkbox" />
                   <span
-                    className="AutoUI_forms_InputField-135" />
+                    className="AutoUI_forms_InputField-136" />
                   portfolio-review
                 </label>
               </div>
@@ -293,13 +293,13 @@ exports[`SelectBox-9 1`] = `
                   <input
                     aria-labelledby="label-social-media-screen"
                     checked={false}
-                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                     id="social-media-screen"
                     name="social-media-screen"
                     required={false}
                     type="checkbox" />
                   <span
-                    className="AutoUI_forms_InputField-135" />
+                    className="AutoUI_forms_InputField-136" />
                   social-media-screen
                 </label>
               </div>
@@ -367,13 +367,13 @@ exports[`SelectBox-9 1`] = `
                   <input
                     aria-labelledby="label-react-shortlist"
                     checked={false}
-                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-122 "
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
                     id="react-shortlist"
                     name="react-shortlist"
                     required={false}
                     type="checkbox" />
                   <span
-                    className="AutoUI_forms_InputField-135" />
+                    className="AutoUI_forms_InputField-136" />
                   react-shortlist
                 </label>
               </div>
