@@ -27,7 +27,8 @@ const listTheme = {
   selectLists: cmz(`
     display: flex
     align-items: center
-    padding: 30px 30px 0
+    padding: 30px 30px 20px
+    border-bottom: 1px solid ${theme.lineSilver4}
   `),
 
   listsSelector: cmz(`
@@ -64,13 +65,21 @@ const listTheme = {
     }
   `),
 
+  fieldsAndStatusesContainer: cmz(`
+    display: flex
+    margin: 20px 0 0
+    padding: 0 30px
+    box-sizing: border-box
+  `),
+
   selectFields: cmz(`
     display: inline-block
-    width: 100%
-    margin: 20px 0 0
-    padding: 20px 30px 0
-    border-top: 1px solid ${theme.lineSilver4}
-    box-sizing: border-box
+    width: 50%
+    margin-right: 16px
+  `),
+
+  selectStatuses: cmz(`
+    width: 50%
   `),
 
   formButtonContainer: cmz(`
@@ -149,11 +158,21 @@ const tabularTheme = {
     min-width: 200px
   `),
 
+  fieldsAndStatusesContainer: cmz(`
+    display: inline-flex
+  `),
+
   selectFields: cmz(`
     flex-shrink: 0
     max-width: 300px
     min-width: 200px
     margin: 0 10px
+  `),
+
+  selectStatuses: cmz(`
+    margin: 0 10px
+    max-width: 300px
+    min-width: 200px
   `),
 
   formButton: cmz(`
@@ -179,6 +198,8 @@ type Props = {
   onChangeKeywords: Function,
   fields: Array<*>,
   onSelectField: Function,
+  statuses: Array<*>,
+  onSelectStatus: Function,
   onSubmit: Function,
   openListEditorModal: Function,
   renderApplicantsStatusFilter: any,
@@ -193,6 +214,7 @@ class SearchForm extends PureComponent<Props> {
     lists: [],
     keywords: '',
     fields: [],
+    statuses: [],
     renderApplicantsStatusFilter: null
   }
 
@@ -218,6 +240,8 @@ class SearchForm extends PureComponent<Props> {
       onChangeKeywords,
       fields,
       onSelectField,
+      statuses,
+      onSelectStatus,
       onSubmit,
       renderApplicantsStatusFilter
     } = this.props
@@ -276,14 +300,26 @@ class SearchForm extends PureComponent<Props> {
             </div>
             {!isTabular && renderDisplaySwitchButtons()}
           </div>
-          <div className={themeClasses.selectFields}>
-            <SelectBox
-              placeholder='Select Fields'
-              items={fields}
-              visibleItems={3}
-              collectionLabel='Field'
-              onSelect={onSelectField}
-            />
+          <div className={themeClasses.fieldsAndStatusesContainer}>
+            <div className={themeClasses.selectFields}>
+              <SelectBox
+                placeholder='Select Fields'
+                items={fields}
+                visibleItems={3}
+                collectionLabel='Field'
+                onSelect={onSelectField}
+              />
+            </div>
+            <div className={themeClasses.selectStatuses}>
+              <SelectBox
+                hasSearch={false}
+                placeholder='Status'
+                items={statuses}
+                visibleItems={10}
+                collectionLabel='Status'
+                onSelect={onSelectStatus}
+              />
+            </div>
           </div>
           <Keywords
             values={keywords}

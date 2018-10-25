@@ -348,7 +348,7 @@ const tabularTheme = {
   `),
 
   infos: cmz(`
-    order: 5
+    order: 4
     flex: 1
     display: flex
     justify-content: space-between
@@ -455,7 +455,7 @@ const tabularTheme = {
     `
       width: 150px
       font-size: 17px
-      order: 4
+      order: 5
     `
   ),
 
