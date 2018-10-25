@@ -86,8 +86,7 @@ type Props = {
 }
 
 type State = {
-  values: string,
-  input: string
+  values: string
 }
 
 class Keywords extends Component<Props, State> {
@@ -97,8 +96,7 @@ class Keywords extends Component<Props, State> {
   }
 
   state: State = {
-    values: this.props.values,
-    input: ''
+    values: this.props.values
   }
 
   componentDidUpdate (prevProps: Props) {
@@ -115,7 +113,6 @@ class Keywords extends Component<Props, State> {
   }
 
   handleChange = (values: Array<*>) => {
-    const { input } = this.state
     const newValues = values
       .map(keyword => this.uppercaseOpperators(keyword.label))
       .join(',')
@@ -126,11 +123,6 @@ class Keywords extends Component<Props, State> {
     })
   }
 
-  handleInputChange = (value: string) => {
-    this.setState({ input: value })
-    return value
-  }
-
   handleInputKeyDown = (event: SyntheticInputEvent<>) => {
     // ENTER
     if (event && event.keyCode === 13) {
@@ -139,13 +131,11 @@ class Keywords extends Component<Props, State> {
     }
   }
 
-  handleBlur = () => {
-    const { values, input } = this.state
+  handleBlur = (event: SyntheticInputEvent<>) => {
+    const { values } = this.state
+    const { target: { value: input } } = event
     const newValues = [values, input].filter(Boolean).join(',')
-    this.setState({
-      values: newValues,
-      input: ''
-    }, () => {
+    this.setState({ values: newValues }, () => {
       const { onChange } = this.props
       onChange && onChange(newValues)
     })
@@ -170,9 +160,7 @@ class Keywords extends Component<Props, State> {
         multi
         clearable
         onChange={this.handleChange}
-        onInputChange={this.handleInputChange}
         onInputKeyDown={this.handleInputKeyDown}
-        onSelectResetsInput={false}
         onBlur={this.handleBlur}
       />
     )
