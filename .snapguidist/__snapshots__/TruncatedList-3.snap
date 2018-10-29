@@ -206,9 +206,9 @@ exports[`TruncatedList-3 1`] = `
       src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAACACAMAAAAVp0btAAAAPFBMVEVMaXFYU1IjISAuKyspJiYEBANeWFgDAwIYGBgqKChMSEdnYWBSTUw7NzZEQD84NDRAPDsBAQEAAAAcGhmojgR2AAAAEXRSTlMAQf/p9v41+wMFaiZUt4rHnuUwTmUAAARhSURBVGjexZvrdoIwEIRBQInYWvD937XhIkbIZWc2oue0/8J8Owlkk2yKIvEzxbXq7H/yZ4qyuvLNi7a4PgYewMrXw+lGA5hR/kIDWPmTbU4DTNFfehZglu9pgEW+JwEm8+fmFMAqzwEs0c/NT/ggdOTHJ9Rn7Alr9D3nwJs8DuBETzmwkZ8ASvkTNvIwwCjfu+0xB3byYBfsoscc8MhDDnjl5Q545QEHAvJSBwLyYgeC8jKAoLwQwDP0kC6IyIsAItFLHIjKCwCi0acdMMUtJp8ESESfciApnwAQyMcABPJRgKT5cQCR/Nj8cbVSZPRhAKF80AFh9CEAsXzAAXH0fgBA3gsARO8DgOQ9AKD8FgCU3wFA5vsAQPkdABj9Op+2Mz0svwA8f78PuL37HpmKar4CdDXR/pVRtG6uizSvnr1f0gDXGeBcEx1gB9AKcFIBGBxgmki9qwUYoCUANvO4OdiBXRqhA0Ad8GQxii54oADeJErhAAgQyOGOciCYQh4DEMlgjwCIJtA5AKqBz98/7kByAfVZBwRL6E86IFrBfw5AuIGgAzDBLrDzvWwHRwdQBBwANpA0AL8LQLXbgKrkO3g0QNOvAPV2/w7ZQOQdaLwOwBuohknp7G9oVoCucjZgK3D/VtEFza4L8O3jrA4Q0ed0gIpeA+A4MA5CLnpNF/RvXUDL53HgflYcwKkHYbv8FQc70L8ANPIZHND+JoCGAbhYAJNB365LGmoyrEql+bq5uOq+LW8K9fCn92amz05bmE71+neVJnob+k+t+fzx8udFvuG/v9a8uzb65kJPf3nkG3b+tc2zyJPpz9w8hzwF4DbXynMO/OWTZwB+HxnlUYDWyjc55TGA8TiiuQw55RGAseyozxs9Vj9wewz55aUAhjlNkcjLADLI98E3R1I/wKWbIvk0wIfl0/UD3Wfl4wAtmW8sz5TIxwAML1+K5cP1A3aldOfkT4h8yAE23QGjDznApjuEfMABasKn5L0AfxeV/L2Hmu+6QCn/04PN385fiynfGA6Lfnf+TKU7q4fm3uMjt1nP3w2X7ry6sOOO/+vbU57ZYHgNYeqzvdpPTvjuAG5Tp27BjyZ97LutvwEdeA2dHPKCc8dg9Oc6gzzogNO840pn9p9vACCDvLf+Tvgwt3mu6AGAN3qi8ClWfykAWIfes/CLqdsx9H7Vhr7FC+cS+XPy+L/c1N2AhYOp+uMogKc5WDiZXj910eP/0lN3AxSOStaPQYCAeUDhrGz9HAAI9p24cFh2gSAAEBk60sLpm3T/xAMQHbmywvGb/P5Jtz/+T9TdpAvnb8j9mw1A8uaEBYjX7WA3mDYAorqbSCaAX6DaHP+L6m4idTv4DTYHQHhzKFK3w1ygc47/a2ndjReAvUC4AAA3xwJ1O+wFyhkA2Xj2ACjub84AYN3Nrm5HcX91BLiXmrobnTxz/P8GoJVnjl+dpUwOecWp53fknRf3O/Lri/st+QXge/Lzi3uA/D8VOT3fioLq1AAAAABJRU5ErkJggg==" />
   </span>
   <button
-    className=" AutoUI_ui_Button-91 AutoUI_ui_Button-34 AutoUI_ui_Button-123 AutoUI_ui_Button-142 outlined AutoUI_ui_Button-172 rounded AutoUI_ui_Button-176 raised">
+    className=" AutoUI_ui_Button-94 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-145 outlined AutoUI_ui_Button-175 rounded AutoUI_ui_Button-179 raised">
     <span
-      className="AutoUI_ui_Button-48 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+      className="AutoUI_ui_Button-51 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
       +6 more of 30
     </span>
   </button>

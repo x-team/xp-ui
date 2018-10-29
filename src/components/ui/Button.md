@@ -105,13 +105,23 @@ button generated with custom element (&lt;a&gt;)
 skill tag
 
 ```js
-<Button outlined rounded raised color={'silver'}>Androind</Button>
+<Button outlined rounded raised color={'silver'}>Android</Button>
 ```
 
 selected skill tag
 
 ```js
 <Button selected outlined rounded raised color={'silver'}>Android</Button>
+```
+
+skill tag pro
+ ```js
+<Button tag='pro' outlined rounded raised color={'silver'}>Android</Button>
+```
+
+selected skill tag pro
+ ```js
+<Button tag='pro' selected outlined rounded raised color={'silver'}>Android</Button>
 ```
 
 exclude applicant form buttons
