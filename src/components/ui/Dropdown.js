@@ -227,8 +227,8 @@ class Dropdown extends PureComponent<Props, State> {
     const renderContent = () => (
       <div
         className={rootClasses}
-        onMouseEnter={hover && this.open}
-        onMouseLeave={hover && this.close}
+        onMouseEnter={hover ? this.open : void 0}
+        onMouseLeave={hover ? this.close : void 0}
       >
         <div className={labelClasses} onClick={handleClick}>
           {icon && <SvgIcon icon={icon} color={iconColor} />}
