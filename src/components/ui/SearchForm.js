@@ -27,7 +27,7 @@ const listTheme = {
   selectLists: cmz(`
     display: flex
     align-items: center
-    padding: 30px 30px 20px
+    padding: 20px
     border-bottom: 1px solid ${theme.lineSilver4}
   `),
 
@@ -56,7 +56,7 @@ const listTheme = {
      display: block
      width: 100%
      margin-top: 20px
-     padding: 0 30px
+     padding: 0 20px
     }
 
     & .Select-menu-outer {
@@ -68,28 +68,31 @@ const listTheme = {
   fieldsAndStatusesContainer: cmz(`
     display: flex
     margin: 20px 0 0
-    padding: 0 30px
+    padding: 0 20px
     box-sizing: border-box
   `),
 
   selectFields: cmz(`
     display: inline-block
-    width: 50%
+    width: calc(50% - 8px)
+    max-width: calc(50% - 8px)
     margin-right: 16px
   `),
 
   selectStatuses: cmz(`
-    width: 50%
+    display: inline-block
+    width: calc(50% - 8px)
+    max-width: calc(50% - 8px)
   `),
 
   formButtonContainer: cmz(`
-    padding: 0 30px
+    padding: 0 20px
   `),
 
   formButton: cmz(`
     display: block
     width: 100%
-    height: 58px
+    height: 40px
     margin-top: 20px
     padding: 0 24px
     transition: none
@@ -98,7 +101,7 @@ const listTheme = {
   applicantsStatusFilter: cmz(`
     width: 100%
     background-color: ${theme.baseBright}
-    padding: 20px 30px 0
+    padding: 10px 20px 0
     box-sizing: border-box
   `)
 }
@@ -115,7 +118,7 @@ const tabularTheme = {
     display: flex
     flex-shrink: 0
     width: 100%
-    padding: 30px
+    padding: 20px 30px
     box-sizing: border-box
     background-color: ${theme.baseBright}
   `),
@@ -152,7 +155,7 @@ const tabularTheme = {
 
   formKeywords: cmz(`
     margin: 0 10px
-    height: 58px
+    height: 40px
     flex: 1
     flex-shrink: 0
     min-width: 200px
@@ -177,7 +180,7 @@ const tabularTheme = {
 
   formButton: cmz(`
     margin: 0 10px
-    height: 58px
+    height: 40px
     padding: 10px 40px
     transition: none
   `),
@@ -305,7 +308,7 @@ class SearchForm extends PureComponent<Props> {
               <SelectBox
                 placeholder='Select Field'
                 items={fields}
-                visibleItems={3}
+                visibleItems={SELECTBOX_HEIGTH}
                 collectionLabel='Field'
                 onClick={onSelectField}
                 closeDropdown
@@ -316,7 +319,7 @@ class SearchForm extends PureComponent<Props> {
                 hasSearch={false}
                 placeholder='Status'
                 items={statuses}
-                visibleItems={10}
+                visibleItems={SELECTBOX_HEIGTH}
                 collectionLabel='Status'
                 onSelect={onSelectStatus}
               />

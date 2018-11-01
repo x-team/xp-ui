@@ -49,7 +49,7 @@ const tabularTheme = {
     position: relative
     overflow-x: auto
     overflow-y: hidden
-    height: calc(100vh - 300px)
+    height: calc(100vh - 220px)
     min-width: 100%
   `),
 

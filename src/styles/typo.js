@@ -171,7 +171,7 @@ export default {
     textRendering,
     typeface.text,
     `
-      font-size: 20px
+      font-size: 16px
       color: ${theme.typoParagraph}
       line-height: 30px
     `

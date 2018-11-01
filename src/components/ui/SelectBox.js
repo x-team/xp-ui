@@ -44,8 +44,8 @@ const cx = {
     `
       & {
         border: 1px solid ${theme.lineSilver2}
-        padding: 0 20px
-        height: 60px
+        padding: 0 10px
+        height: 40px
         width: 100%
         box-sizing: border-box
         display: flex
@@ -77,16 +77,16 @@ const cx = {
     & > div:first-of-type {
       font-size: 15px
       color: ${theme.typoLabel}
-      padding: 10px 0 0
+      padding: 0
       transition: color .10s ease-out, font-size .10s ease-out
     }
     & > div:last-of-type {
       width: calc(100% - 20px)
-      height: 24px
+      height: auto
       white-space: nowrap
       overflow-x: overlay
       overflow-y: hidden
-      padding: 0 0 10px
+      padding: 0
       transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       opacity: 1
     }
@@ -131,7 +131,7 @@ const cx = {
       position: absolute
       z-index: 5
       top: 50%
-      right: 30px
+      right: 20px
     }
     & svg {
       position: absolute
@@ -141,14 +141,14 @@ const cx = {
   close: cmz(
     controlBaseClass,
     `
-      right: 40px
+      right: 30px
     `
   ),
 
   clear: cmz(
     controlBaseClass,
     `
-      right: 55px
+      right: 45px
       transform: scale(0.9)
       top: calc(50% - 5px)
     `

@@ -90,8 +90,7 @@ const listTheme = {
       & {
         background: ${theme.baseBrighter}
         border: 1px solid ${theme.lineSilver2}
-        padding: 30px
-        padding-top: 10px
+        padding: 10px 20px
         display: grid
         grid-template: 'blank blank control' 'avatar name status' 'avatar infos infos' 'tags tags tags'
         grid-template-columns: 90px 1fr auto
@@ -112,7 +111,7 @@ const listTheme = {
     border: 1px solid ${theme.baseRed}
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
     margin: 0
-    padding: 30px 40px
+    padding: 10px 20px
   `),
 
   name: cmz(typo.badgeHeading,
