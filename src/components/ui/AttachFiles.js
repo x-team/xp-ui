@@ -163,7 +163,7 @@ class AttachFiles extends PureComponent<Props> {
                     borderBottomColor: file.progress && file.progress !== 100 ? theme.baseSilver : 'transparent'
                   }
                 },
-                FileName({href: file.path, target: '_blank'}, file.filename),
+                FileName({ href: file.path, target: '_blank' }, file.filename),
                 renderButton(file),
                 renderProgress(file.progress)
               )

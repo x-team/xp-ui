@@ -30,8 +30,7 @@ class FileLinks extends PureComponent<Props, null> {
               { key: uuidv4() },
               <FileLink path={file.path} name={file.filename} />
             )
-          )
-        )
+          ))
       )
     )
   }

@@ -49,7 +49,7 @@ const Root = elem.section(cmz(
   &:first-child {
     border-top: 1px solid transparent
   }
-`), {'data-test': `portfolioItem`})
+`), { 'data-test': 'portfolioItem' })
 
 const Header = elem.h3(cmz(`
   & {
