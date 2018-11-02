@@ -30,7 +30,7 @@ Fixes https://x-team-internal.atlassian.net/browse/XP-[ISSUE_NUMBER]
 - [ ] set appropriate labels for a PR (`In Review` or `In Progress` depending on its status)
 - [ ] move respective Jira issue to the `IN REVIEW` column
 - [ ] make sure your code lints (`npm run lint`)
-- [ ] Flow typechecks passed (`npm run typecheck`)
+- [ ] Flow typechecks passed (`npm run flow`)
 - [ ] my change requires a change to the component's documentation (`.snap`)
 - [ ] component's documentation (`.snap`) is changed or added accordingly
 - [ ] if you've fixed a bug or added code that should be tested, add unit tests
