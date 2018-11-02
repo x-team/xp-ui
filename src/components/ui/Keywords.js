@@ -20,7 +20,7 @@ const cx = {
     }
     & .Select-control {
       display: flex
-      padding-left: 15px
+      padding-left: 14px
       border: 1px solid ${theme.lineSilver2}
       border-radius: 2px
     }
@@ -32,7 +32,7 @@ const cx = {
       line-height: 38px !important
       color: ${theme.typoParagraph}
       cursor: text
-      padding-left: 10px !important
+      padding-left: 14px !important
     }
     & .Select-control .Select-value .Select-value-label {
       color: ${theme.typoParagraph}
@@ -48,10 +48,10 @@ const cx = {
       padding: 0 !important
       line-height: initial !important
       margin-top: 0
-      font-size: 17px
+      font-size: 16px
     }
     &.Select--multi .Select-control .Select-input {
-      margin-left: 5px
+      margin: 0 5px 0 0
       line-height: 40px
       height: 40px
       padding: 0 !important;

@@ -44,7 +44,7 @@ const cx = {
     `
       & {
         border: 1px solid ${theme.lineSilver2}
-        padding: 0 10px
+        padding: 0 14px
         height: 40px
         width: 100%
         box-sizing: border-box
@@ -75,7 +75,7 @@ const cx = {
       line-height: 1.1
     }
     & > div:first-of-type {
-      font-size: 15px
+      font-size: 14px
       color: ${theme.typoLabel}
       padding: 0
       transition: color .10s ease-out, font-size .10s ease-out
@@ -131,7 +131,7 @@ const cx = {
       position: absolute
       z-index: 5
       top: 50%
-      right: 20px
+      right: 24px
     }
     & svg {
       position: absolute
@@ -141,14 +141,14 @@ const cx = {
   close: cmz(
     controlBaseClass,
     `
-      right: 30px
+      right: 34px
     `
   ),
 
   clear: cmz(
     controlBaseClass,
     `
-      right: 45px
+      right: 49px
       transform: scale(0.9)
       top: calc(50% - 5px)
     `

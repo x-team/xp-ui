@@ -27,8 +27,8 @@ const listTheme = {
   selectLists: cmz(`
     display: flex
     align-items: center
-    padding: 20px
-    border-bottom: 1px solid ${theme.lineSilver4}
+    margin: 16px 0
+    padding: 0 40px
   `),
 
   listsSelector: cmz(`
@@ -52,24 +52,22 @@ const listTheme = {
   `),
 
   formKeywords: cmz(`
-   & {
-     display: block
-     width: 100%
-     margin-top: 20px
-     padding: 0 20px
+    & {
+      display: block
+      flex: 1
+      padding: 0
+      margin-right: 16px
     }
 
     & .Select-menu-outer {
-      width: calc(100% - 60px)
-      left: 30px
+      width: 100%
     }
   `),
 
   fieldsAndStatusesContainer: cmz(`
     display: flex
-    margin: 20px 0 0
-    padding: 0 20px
-    box-sizing: border-box
+    margin: 16px 0
+    padding: 0 40px
   `),
 
   selectFields: cmz(`
@@ -85,23 +83,26 @@ const listTheme = {
     max-width: calc(50% - 8px)
   `),
 
-  formButtonContainer: cmz(`
-    padding: 0 20px
+  keywordsAndformButtonContainer: cmz(`
+    display: flex
+    margin: 16px 0
+    padding: 0 40px
   `),
 
   formButton: cmz(`
     display: block
-    width: 100%
+    width: 100px
     height: 40px
-    margin-top: 20px
-    padding: 0 24px
+    margin: 0
+    padding: 0
+    border: none
     transition: none
   `),
 
   applicantsStatusFilter: cmz(`
     width: 100%
     background-color: ${theme.baseBright}
-    padding: 10px 20px 0
+    padding: 0 40px
     box-sizing: border-box
   `)
 }
@@ -176,6 +177,11 @@ const tabularTheme = {
     margin: 0 10px
     max-width: 300px
     min-width: 200px
+  `),
+
+  keywordsAndformButtonContainer: cmz(`
+    flex: 1
+    display: flex
   `),
 
   formButton: cmz(`
@@ -325,13 +331,13 @@ class SearchForm extends PureComponent<Props> {
               />
             </div>
           </div>
-          <Keywords
-            values={keywords}
-            onChange={onChangeKeywords}
-            onSubmit={onSubmit}
-            className={themeClasses.formKeywords}
-          />
-          <div className={themeClasses.formButtonContainer}>
+          <div className={themeClasses.keywordsAndformButtonContainer}>
+            <Keywords
+              values={keywords}
+              onChange={onChangeKeywords}
+              onSubmit={onSubmit}
+              className={themeClasses.formKeywords}
+            />
             <Button
               className={themeClasses.formButton}
               type='submit'
