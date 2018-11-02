@@ -105,7 +105,7 @@ class SolutionForm extends PureComponent<Props> {
     return Root(
       <Title {... { hasAttempted, maxAttempts }} />,
       Form(
-        {onSubmit},
+        { onSubmit },
         TextareaComponent({
           name: 'solution',
           onChange: onValueChange,
