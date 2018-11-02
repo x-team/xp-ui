@@ -25,6 +25,7 @@ module.exports = snapguidist({
     '**/components/ui/TextareaEditor/MediumEditorWrapper.js',
     '**/components/ui/Tabs/index.js',
     '**/components/ui/Tabs/Tab.js',
-    '**/components/ui/ListsScreen.js'
+    '**/components/ui/ListsScreen.js',
+    '**/components/**/*.stories.js'
   ]
 })
