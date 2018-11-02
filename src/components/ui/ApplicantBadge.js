@@ -90,11 +90,11 @@ const listTheme = {
       & {
         background: ${theme.baseBrighter}
         border: 1px solid ${theme.lineSilver2}
-        padding: 10px 20px
+        padding: 20px
         display: grid
-        grid-template: 'blank blank control' 'avatar name status' 'avatar infos infos' 'tags tags tags'
-        grid-template-columns: 90px 1fr auto
-        grid-template-rows: minmax(20px, auto) auto auto
+        grid-template: 'avatar name status' 'avatar infos infos' 'tags tags tags'
+        grid-template-columns: 65px 1fr auto
+        grid-template-rows: minmax(10px, auto) auto auto
         grid-gap: 15px
         margin: 0 10px
         cursor: pointer
@@ -111,7 +111,7 @@ const listTheme = {
     border: 1px solid ${theme.baseRed}
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
     margin: 0
-    padding: 10px 20px
+    padding: 30px
   `),
 
   name: cmz(typo.badgeHeading,
@@ -125,13 +125,13 @@ const listTheme = {
 
   avatar: cmz(`
     grid-area: avatar
-    width: 90px
-    height: 90px
+    width: 65px
+    height: 65px
   `),
 
   applicantStatus: cmz(`
     grid-area: status
-    font-size: 15px
+    font-size: 14px
     line-height: 1
     max-width: 65px
     text-align: center
@@ -166,7 +166,7 @@ const listTheme = {
       position: absolute
       right: -15px
       display: flex
-      grid-area: control
+      grid-area: status
       visibility: hidden
       justify-content: flex-end
     }
@@ -195,6 +195,7 @@ const listTheme = {
     `
       & {
         margin: 0 20px 10px 0
+        line-height: 1
       }
 
       &:last-of-type {
@@ -206,7 +207,7 @@ const listTheme = {
   moreinfos: cmz(`
     & {
       color: ${theme.typoLabel}
-      font-size: 17px
+      font-size: 16px
       margin: 0 0 10px 0
       cursor: pointer
       align-self: flex-end
@@ -222,14 +223,14 @@ const listTheme = {
     color: ${theme.typoLabel}
     white-space: nowrap
     line-height: 1.2
-    font-size: 17px
+    font-size: 12px
   `),
 
   value: cmz(`
     display: block
     color: ${theme.typoParagraph}
     line-height: 1.2
-    font-size: 17px
+    font-size: 16px
     white-space: normal
   `),
 
@@ -263,6 +264,10 @@ const listTheme = {
       color: ${theme.typoParagraph}
     }
 
+    &:first-of-type {
+      margin-left: 0
+    }
+
     &:last-of-type {
       margin-right: 0
     }
@@ -271,10 +276,12 @@ const listTheme = {
   moretags: cmz(`
     & {
       border: none
-      padding: 0 0 0 20px
+      padding: 0
       text-transform: initial
-      margin: 0 0 10px 0
+      margin: 0 10px
       cursor: pointer
+      text-align: right
+      flex: 1
     }
 
     &:hover {
@@ -285,7 +292,7 @@ const listTheme = {
   purelabel: cmz(`
     border: none
     color: ${theme.typoLabel}
-    font-size: 17px
+    font-size: 16px
   `),
 
   children: cmz(`
@@ -304,7 +311,7 @@ const tabularTheme = {
         cursor: pointer
         padding: 14px
         color: ${theme.typoParagraph}
-        font-size: 17px
+        font-size: 16px
         min-width: 100%
         box-sizing: border-box
       }
@@ -355,7 +362,7 @@ const tabularTheme = {
 
   info: cmz(typo.baseText, `
     width: 80px
-    font-size: 17px
+    font-size: 16px
     margin: 0 14px
     text-align: center
     display: block
@@ -380,7 +387,7 @@ const tabularTheme = {
     color: ${theme.typoParagraph}
     line-height: 1.2
     white-space: normal
-    font-size: 17px
+    font-size: 16px
   `),
 
   tip: cmz(`
@@ -404,7 +411,7 @@ const tabularTheme = {
       margin: 0 10px 0 0
       white-space: nowrap
       color: ${theme.typoParagraph}
-      font-size: 17px
+      font-size: 16px
     }
 
     &::after {
@@ -453,7 +460,7 @@ const tabularTheme = {
     typo.baseText,
     `
       width: 150px
-      font-size: 17px
+      font-size: 16px
       order: 5
     `
   ),
@@ -534,7 +541,7 @@ class ApplicantBadge extends PureComponent<Props> {
     const mapInfosToRender = (infos) => (
       <TruncatedList
         inserted
-        visible={mode === DISPLAY_MODES.LIST ? 4 : infos.length}
+        visible={isTabular ? infos.length : 4}
         listClass={cx.infos}
         itemClass={cx.info}
         items={filteredInfos.map((info, i) => (
@@ -563,7 +570,7 @@ class ApplicantBadge extends PureComponent<Props> {
     const mapTagsToRender = (tags) => (
       <TruncatedList
         inserted
-        visible={5}
+        visible={4}
         items={tags}
         listClass={cx.tagsInner}
         itemClass={cx.tag}
@@ -608,9 +615,9 @@ class ApplicantBadge extends PureComponent<Props> {
         <div className={cx.avatar}>
           {avatar || (
             <Avatar
-              src={`https://www.gravatar.com/avatar/${md5(email)}?s=90`}
+              src={`https://www.gravatar.com/avatar/${md5(email)}?s=65`}
               email={name ? `${name}'s avatar` : 'avatar'}
-              size={90}
+              size={65}
             />
           )}
         </div>

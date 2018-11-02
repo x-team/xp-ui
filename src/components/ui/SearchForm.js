@@ -27,7 +27,7 @@ const listTheme = {
   selectLists: cmz(`
     display: flex
     align-items: center
-    margin: 16px 0
+    margin: 20px 0 10px
     padding: 0 40px
   `),
 
@@ -66,7 +66,7 @@ const listTheme = {
 
   fieldsAndStatusesContainer: cmz(`
     display: flex
-    margin: 16px 0
+    margin: 10px 0
     padding: 0 40px
   `),
 
@@ -85,7 +85,7 @@ const listTheme = {
 
   keywordsAndformButtonContainer: cmz(`
     display: flex
-    margin: 16px 0
+    margin: 10px 0
     padding: 0 40px
   `),
 

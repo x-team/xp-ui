@@ -28,7 +28,7 @@ const dimensions = {
     [DISPLAY_MODES.TABULAR]: '1508px'
   },
   searchHeight: {
-    [DISPLAY_MODES.LIST]: '224px',
+    [DISPLAY_MODES.LIST]: '210px',
     [DISPLAY_MODES.TABULAR]: 'auto'
   }
 }
@@ -73,7 +73,7 @@ const listTheme = {
   applicantGrid: cmz(cx.applicantGrid, `
     width: ${dimensions.searchWidth[DISPLAY_MODES.LIST]}
     min-height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
-    padding: ${dimensions.searchHeight[DISPLAY_MODES.LIST]} 20px 30px
+    padding: ${dimensions.searchHeight[DISPLAY_MODES.LIST]} 40px 30px
   `),
 
   applicant: cmz(`
