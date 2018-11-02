@@ -164,7 +164,8 @@ const listTheme = {
   controls: cmz('controls', `
     & {
       position: absolute
-      right: -15px
+      right: -20px
+      top: -15px
       display: flex
       grid-area: status
       visibility: hidden
@@ -255,13 +256,15 @@ const listTheme = {
 
   tag: cmz(`
     & {
+      font-size: 12px
       border: 1px solid ${theme.lineSilver2}
       border-radius: 3px
       padding: 0 10px
       text-transform: uppercase
-      margin: 0 10px 10px 0
+      margin: 0 5px 5px 0
       white-space: nowrap
       color: ${theme.typoParagraph}
+      line-height: 1.3
     }
 
     &:first-of-type {
