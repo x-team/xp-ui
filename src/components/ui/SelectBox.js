@@ -1046,7 +1046,7 @@ class SelectBox extends Component<Props, State> {
           onKeyDown={this.handleByStoppingPropagation}
           onKeyPress={this.handleByStoppingPropagation}
           onKeyUp={this.handleByStoppingPropagation}
-          onClick={stopClickPropagation ? this.handleByStoppingPropagation : void 0}
+          onClick={stopClickPropagation ? this.handleByStoppingPropagation : undefined}
           autoFocus={autoFocus}
         />
         {search !== '' && (
