@@ -139,16 +139,23 @@ const listTheme = {
 
   control: cmz(`
     & {
-      display: inline-block
+      display: flex
       padding: 0
       margin: 0 0 0 5px
       border: 0
       border-radius: 2px
       cursor: pointer
-      width: 20px
-      height: 20px
+      width: 14px
+      height: 14px
       text-align: center
-      line-height: 1
+      line-height: 0
+      justify-content: center
+      align-items: center
+    }
+
+    & svg {
+      width: 12px
+      height: 12px
     }
 
     &:hover {
@@ -164,7 +171,7 @@ const listTheme = {
   controls: cmz('controls', `
     & {
       position: absolute
-      right: -20px
+      right: -15px
       top: -15px
       display: flex
       grid-area: status
@@ -259,9 +266,9 @@ const listTheme = {
       font-size: 12px
       border: 1px solid ${theme.lineSilver2}
       border-radius: 3px
-      padding: 0 10px
+      padding: 4px 10px
       text-transform: uppercase
-      margin: 0 5px 5px 0
+      margin: 0 10px 5px 0
       white-space: nowrap
       color: ${theme.typoParagraph}
       line-height: 1.3
