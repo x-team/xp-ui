@@ -203,8 +203,7 @@ class Note extends PureComponent<Props, State> {
             date && timeFromNow(date),
             showNoteType && noteTypeText
           ),
-        text &&
-          InlineEditorWrapper(
+          text && InlineEditorWrapper(
             <InlineEditor
               value={text}
               isValid={newValueIsValid}

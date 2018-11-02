@@ -178,7 +178,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
                 outlined
                 disabled={isFetching}
                 onClick={() => this.handleViewMore(action)}
-                >
+              >
                 View more
               </Button>
             </span>
