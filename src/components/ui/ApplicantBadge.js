@@ -88,6 +88,7 @@ const listTheme = {
     typo.baseText,
     `
       & {
+        font-size: 16px
         background: ${theme.baseBrighter}
         border: 1px solid ${theme.lineSilver2}
         padding: 20px
@@ -104,14 +105,33 @@ const listTheme = {
       &:hover {
         box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
       }
+
+      &::after {
+        content: ''
+        display: block
+        width: calc(100% - 120px)
+        height: 1px
+        position: absolute
+        top: 44px
+        left: 100px
+        background: ${theme.lineSilver2}
+      }
     `
   ),
 
   active: cmz(`
-    border: 1px solid ${theme.baseRed}
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
-    margin: 0
-    padding: 30px
+    & {
+      border: 1px solid ${theme.baseRed}
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
+      margin: 0
+      padding: 30px
+    }
+
+    &::after {
+      width: calc(100% - 130px)
+      left: 110px
+      top: 54px
+    }
   `),
 
   name: cmz(typo.badgeHeading,
@@ -124,9 +144,15 @@ const listTheme = {
   ),
 
   avatar: cmz(`
-    grid-area: avatar
-    width: 65px
-    height: 65px
+    & {
+      grid-area: avatar
+      width: 65px
+      height: 65px
+    }
+
+    & > * {
+      max-width: 65px
+    }
   `),
 
   applicantStatus: cmz(`
@@ -202,6 +228,7 @@ const listTheme = {
   info: cmz(typo.baseText,
     `
       & {
+        font-size: 16px
         margin: 0 20px 10px 0
         line-height: 1
       }
@@ -316,12 +343,12 @@ const tabularTheme = {
     typo.baseText,
     `
       & {
+        font-size: 16px
         background: ${theme.baseBrighter}
         display: flex
         cursor: pointer
         padding: 14px
         color: ${theme.typoParagraph}
-        font-size: 16px
         min-width: 100%
         box-sizing: border-box
       }
@@ -479,6 +506,7 @@ const tabularTheme = {
     typo.baseText,
     `
       & {
+        font-size: 16px
         width: 80px
         order: 6
         justify-content: center

@@ -27,8 +27,8 @@ const listTheme = {
   selectLists: cmz(`
     display: flex
     align-items: center
-    margin: 20px 0 10px
-    padding: 0 40px
+    margin: 0 0 10px
+    padding: 20px 40px 0
   `),
 
   listsSelector: cmz(`
@@ -85,8 +85,8 @@ const listTheme = {
 
   keywordsAndformButtonContainer: cmz(`
     display: flex
-    margin: 10px 0
-    padding: 0 40px
+    margin: 10px 0 0
+    padding: 0 40px 10px
   `),
 
   formButton: cmz(`
