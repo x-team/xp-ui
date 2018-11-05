@@ -210,7 +210,7 @@ exports[`SearchForm-3 1`] = `
                     <div
                       className="AutoUI_ui_SelectBox-95">
                       <div>
-                        Select Fields
+                        Select Field
                       </div>
                       <div>
                         
@@ -295,29 +295,10 @@ exports[`SearchForm-3 1`] = `
                     className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
                     <div
                       className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                      <div
-                        className="AutoUI_forms_InputField-78">
-                        <label
-                          id="label-an unselected field">
-                          <div
-                            className="AutoUI_forms_InputField-78">
-                            <label
-                              className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-                              <input
-                                aria-labelledby="label-an unselected field"
-                                checked={false}
-                                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
-                                id="an unselected field"
-                                name="an unselected field"
-                                required={false}
-                                type="checkbox" />
-                              <span
-                                className="AutoUI_forms_InputField-136" />
-                              an unselected field
-                            </label>
-                          </div>
-                        </label>
-                      </div>
+                      <span
+                        className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                        an unselected field
+                      </span>
                       <span
                         className="AutoUI_ui_SelectBox-239" />
                     </div>
