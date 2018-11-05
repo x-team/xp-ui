@@ -1,14 +1,14 @@
 exports[`ApplicantBadge-15 1`] = `
 <div
-  className="AutoUI_ui_ApplicantBadge-87 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-180 ">
+  className="AutoUI_ui_ApplicantBadge-87 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-213 ">
   <div
-    className="AutoUI_ui_ApplicantBadge-118 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+    className="AutoUI_ui_ApplicantBadge-137 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
     Applicant
     <span
       className="AutoUI_ui_ApplicantBadge-66 AutoUI_ui_ApplicantBadge-55" />
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-127">
+    className="AutoUI_ui_ApplicantBadge-146">
     <div
       style={
         Object {
@@ -20,12 +20,12 @@ exports[`ApplicantBadge-15 1`] = `
       } />
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-165 controls" />
+    className="AutoUI_ui_ApplicantBadge-197 controls" />
   <div
-    className="AutoUI_ui_ApplicantBadge-186" />
+    className="AutoUI_ui_ApplicantBadge-219" />
   <div
-    className="AutoUI_ui_ApplicantBadge-133" />
+    className="AutoUI_ui_ApplicantBadge-158" />
   <div
-    className="AutoUI_ui_ApplicantBadge-243" />
+    className="AutoUI_ui_ApplicantBadge-278" />
 </div>
 `;
