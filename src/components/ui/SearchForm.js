@@ -303,11 +303,11 @@ class SearchForm extends PureComponent<Props> {
           <div className={themeClasses.fieldsAndStatusesContainer}>
             <div className={themeClasses.selectFields}>
               <SelectBox
-                placeholder='Select Fields'
+                placeholder='Select Field'
                 items={fields}
                 visibleItems={3}
                 collectionLabel='Field'
-                onSelect={onSelectField}
+                onClick={onSelectField}
               />
             </div>
             <div className={themeClasses.selectStatuses}>
