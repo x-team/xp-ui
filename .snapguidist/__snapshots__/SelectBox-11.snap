@@ -61,18 +61,20 @@ exports[`SelectBox-11 1`] = `
       className="AutoUI_ui_Dropdown-50     ">
       <div
         className="AutoUI_ui_SelectBox-178">
-        
-        <ul
-          className="AutoUI_ui_SelectBox-161 false"
-          style={
-            Object {
-              "height": "auto",
-              "maxHeight": "auto",
-              "width": "100%",
-            }
-          }>
+        <div>
           
-        </ul>
+          <ul
+            className="AutoUI_ui_SelectBox-161 false"
+            style={
+              Object {
+                "height": "auto",
+                "maxHeight": "auto",
+                "width": "100%",
+              }
+            }>
+            
+          </ul>
+        </div>
       </div>
     </div>
   </div>

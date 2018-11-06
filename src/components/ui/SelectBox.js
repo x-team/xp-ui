@@ -570,7 +570,7 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleClick = (event: any, item: Item, internalCloseDropdown: ?Function) => {
+  handleClick = (event: any, item: Item, internalCloseDropdown?: Function) => {
     const { onClick, areItemsToggleable, closeDropdown } = this.props
     areItemsToggleable && event.stopPropagation()
     if (item.status !== STATUS.SELECTING && onClick) {
