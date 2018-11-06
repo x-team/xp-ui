@@ -432,9 +432,10 @@ const STATUS = {
 
 const dismissTimeout = 2500
 
-const DropdownCloseControl = withProps(({ className, closeDropdown }) => ({
+const DropdownCloseControl = withProps(({ className, closeDropdown, children: childrenAsAFunction }) => ({
   className,
-  onClick: closeDropdown
+  onClick: closeDropdown,
+  children: childrenAsAFunction(closeDropdown)
 }))('div')
 
 class SelectBox extends Component<Props, State> {
@@ -569,7 +570,7 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleClick = (event: any, item: Item) => {
+  handleClick = (event: any, item: Item, internalCloseDropdown: ?Function) => {
     const { onClick, areItemsToggleable, closeDropdown } = this.props
     areItemsToggleable && event.stopPropagation()
     if (item.status !== STATUS.SELECTING && onClick) {
@@ -577,7 +578,11 @@ class SelectBox extends Component<Props, State> {
         ...this.getUncachedItem(item),
         selected: !areItemsToggleable || !item.selected
       })
-      closeDropdown && typeof closeDropdown === 'function' && closeDropdown()
+      if (closeDropdown && typeof closeDropdown === 'function') {
+        closeDropdown()
+      } else if (internalCloseDropdown) {
+        internalCloseDropdown()
+      }
     } else {
       this.handleSelect(event, item)
     }
@@ -856,12 +861,14 @@ class SelectBox extends Component<Props, State> {
       item,
       method,
       render,
-      control
+      control,
+      internalCloseDropdown
     }: {
       item: Item,
       method?: Function,
       render?: Function,
-      control?: Function
+      control?: Function,
+      internalCloseDropdown?: Function
     }) => method ? (
       <div className={cx.controllable}>
         {render && render(item)}
@@ -872,7 +879,7 @@ class SelectBox extends Component<Props, State> {
         className={[cx.controllable, (onSelect || onClick) ? cx.clickable : ''].join(' ')}
         onClick={onSelect
           ? e => this.handleSelect(e, item)
-          : e => this.handleClick(e, item)
+          : e => this.handleClick(e, item, internalCloseDropdown)
         }
       >
         {renderDefaultStatus(item)}
@@ -880,7 +887,7 @@ class SelectBox extends Component<Props, State> {
       </div>
     )
 
-    const renderItem = (item: Item) => {
+    const renderItem = (item: Item, internalCloseDropdown?: Function) => {
       const { status } = item
 
       const getRenderByStatus = () => {
@@ -949,7 +956,7 @@ class SelectBox extends Component<Props, State> {
           case STATUS.ARCHIVED:
           case STATUS.UNARCHIVED:
           default:
-            return getRenderWithFallback({ item })
+            return getRenderWithFallback({ item, internalCloseDropdown })
         }
       }
 
@@ -972,7 +979,7 @@ class SelectBox extends Component<Props, State> {
       return data
     }
 
-    const renderItems = () => {
+    const renderItems = (internalCloseDropdown?: Function) => {
       const items = shouldSortItems
         ? filteredItems.sort(sortById)
         : filteredItems
@@ -996,7 +1003,7 @@ class SelectBox extends Component<Props, State> {
               )}
             </li>
           )}
-          {sortByCreatingFirst(items).map(renderItem)}
+          {sortByCreatingFirst(items).map((item: Item) => renderItem(item, internalCloseDropdown))}
         </ul>
       )
     }
@@ -1083,9 +1090,13 @@ class SelectBox extends Component<Props, State> {
         className={cx.dropdown}
       >
         <DropdownCloseControl className={expanded ? '' : cx.shadow} closeDropdown>
-          {(placeholder && hasSearch) && renderSearchLabel()}
-          {renderItems()}
-          {renderAppendix()}
+          {(internalCloseDropdown?: Function) => (
+            <div>
+              {(placeholder && hasSearch) && renderSearchLabel()}
+              {renderItems(internalCloseDropdown)}
+              {renderAppendix()}
+            </div>
+          )}
         </DropdownCloseControl>
       </Dropdown>
     )
