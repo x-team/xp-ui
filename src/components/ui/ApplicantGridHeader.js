@@ -88,13 +88,19 @@ const cx = {
       }
   `),
   grouped: cmz(`
-    flex: 1
-    display: flex
-    justify-content: space-between
+    & {
+      flex: 1
+      display: flex
+      justify-content: space-between
+    }
+
+    & > span {
+      text-align: center
+    }
   `),
   tiny: cmz(`
     & {
-      width: 80px
+      width: 100px
       margin: 0 14px
     }
 

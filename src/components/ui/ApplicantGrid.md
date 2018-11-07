@@ -62,7 +62,8 @@ Tabular view:
 ```js
 const SvgIcon = require('./SvgIcon').default;
 const ApplicantBadge = require('./ApplicantBadge').default;
-const items = Array(5).fill(
+const SelectBox = require('./SelectBox').default;
+const items = Array(15).fill(
   <ApplicantBadge
     mode='tabular'
     id={333}
@@ -91,10 +92,6 @@ const items = Array(5).fill(
       {
         label: 'Status',
         value: 'In Pipeline'
-      },
-      {
-        label: 'Rank',
-        value: 2
       }
     ]}
     tags={[
@@ -135,12 +132,74 @@ const items = Array(5).fill(
     ]}
   />
 );
-<ApplicantGrid
-  items={items}
-  mode='tabular'
-  visible={3}
-  increment={2}
-/>
+const headerColumns = [
+  {
+    name: 'fullName',
+    label: 'Name',
+    isSortable: true,
+    size: 'large'
+  },
+  {
+    name: 'skills',
+    label: 'Skills',
+    size: 'medium'
+  },
+  [
+    {
+      name: 'availabilityDate',
+      label: 'Avail. Date',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: <SelectBox />,
+      isFiltering: false
+    },
+    {
+      name: 'availabilityUpdated',
+      label: 'Avail. Updated',
+      isSortable: true,
+      size: 'tiny'
+    },
+    {
+      name: 'timezoneOffset',
+      label: 'Timezone',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: <SelectBox />,
+      isFiltering: false
+    },
+    {
+      name: 'rate',
+      label: 'Rate',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: <SelectBox />,
+      isFiltering: false
+    },
+    {
+      name: 'status',
+      label: 'Status',
+      size: 'small'
+    }
+  ],
+  {
+    name: 'ranking',
+    label: 'Ranking',
+    isSortable: true,
+    size: 'tiny'
+  }
+];
+<div style={{width: '1698px', height: 'auto'}}>
+  <ApplicantGrid
+    items={items}
+    mode='tabular'
+    visible={5}
+    increment={2}
+    headerColumns={headerColumns}
+    sortBy={'timezoneOffset'}
+    sortDirection={'desc'}
+    onSortingChange={sortOptions => console.log(sortOptions)}
+  />
+</div>
 ```
 
 Missing props (does component explode?):

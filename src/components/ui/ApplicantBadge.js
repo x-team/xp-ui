@@ -355,7 +355,7 @@ const tabularTheme = {
   `),
 
   info: cmz(typo.baseText, `
-    width: 80px
+    width: 100px
     font-size: 17px
     margin: 0 14px
     text-align: center
@@ -451,10 +451,8 @@ const tabularTheme = {
   `),
 
   applicantStatus: cmz(
-    typo.baseText,
     `
-      width: 150px
-      font-size: 17px
+      display: none
       order: 5
     `
   ),
@@ -463,7 +461,7 @@ const tabularTheme = {
     typo.baseText,
     `
       & {
-        width: 80px
+        width: 100px
         order: 6
         justify-content: center
       }
@@ -505,7 +503,9 @@ class ApplicantBadge extends PureComponent<Props> {
     <span className={statusDotStyles[this.props.status]} />
   )
 
-  handleRankingChange = ({ id: ranking, value }: {id: number | null, value: string}) => {
+  handleRankingChange = (event, { id: ranking, value }: {id: number | null, value: string}) => {
+    event.preventDefault() && event.stopPropagation()
+    console.log(this, 'whats going on')
     const { handleRankingChange } = this.props
     handleRankingChange && handleRankingChange(ranking)
   }

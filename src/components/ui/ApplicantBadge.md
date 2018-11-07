@@ -242,7 +242,7 @@ const SvgIcon = require('./SvgIcon').default;
   status='excluded'
   mode='tabular'
   id={123123}
-  disableRankingDropdown={true}
+  disableRankingDropdown={false}
   ranking={5}
   name='Applicant full name'
   email='applicant@email.com'
@@ -268,10 +268,6 @@ const SvgIcon = require('./SvgIcon').default;
     {
       label: 'Status',
       value: 'In Pipeline'
-    },
-    {
-      label: 'Rank',
-      value: 2
     }
   ]}
   tags={[

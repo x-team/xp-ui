@@ -1,47 +1,67 @@
 Default Applicant Grid Header
 
 ```js
-const headerConfig = [
+const SelectBox = require('./SelectBox').default;
+const headerColumns = [
   {
-    name: 'field1',
-    label: 'Field1',
+    name: 'fullName',
+    label: 'Name',
     isSortable: true,
     size: 'large'
   },
   {
-    name: 'field2',
-    label: 'Field2',
-    size: 'large'
-  },
-  {
-    name: 'field3',
-    label: 'Field3',
-    isSortable: false,
+    name: 'skills',
+    label: 'Skills',
     size: 'medium'
   },
+  [
+    {
+      name: 'availabilityDate',
+      label: 'Avail. Date',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: <SelectBox />,
+      isFiltering: false
+    },
+    {
+      name: 'availabilityUpdated',
+      label: 'Avail. Updated',
+      isSortable: true,
+      size: 'tiny'
+    },
+    {
+      name: 'timezoneOffset',
+      label: 'Timezone',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: <SelectBox />,
+      isFiltering: false
+    },
+    {
+      name: 'rate',
+      label: 'Rate',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: <SelectBox />,
+      isFiltering: false
+    }
+  ],
   {
-    name: 'field4',
-    label: 'Field4',
-    isSortable: true,
-    size: 'medium'
-  },
-  {
-    name: 'field5',
-    label: 'Field5',
-    isSortable: true,
+    name: 'status',
+    label: 'Status',
     size: 'small'
   },
   {
-    name: 'field6',
-    label: 'Field6',
+    name: 'ranking',
+    label: 'Ranking',
     isSortable: true,
-    size: 'small'
+    size: 'tiny'
   }
 ];
 <div style={{overflowX: 'scroll'}}>
   <ApplicantGridHeader
     className={`custom-class-name`}
-    headerColumns={headerConfig}
+    headerColumns={headerColumns}
     onSortingChange={() => {}}
     sortBy={`field1`}
     sortDirection={`desc`}
