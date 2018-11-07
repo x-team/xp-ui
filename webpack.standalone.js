@@ -4,6 +4,7 @@ const base = require('./webpack.config')
 
 module.exports = {
   entry: './src/index.js',
+  devtool: 'source-maps',
   output: {
     path: path.resolve('./lib'),
     filename: 'auto-ui.js',

@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
+    "watch": "npm run build -- --watch",
     "flow": "flow check src",
     "lint": "standard \"src/**/*.js\" | snazzy",
     "lint-fix": "standard \"src/**/*.js\" --fix | snazzy",
