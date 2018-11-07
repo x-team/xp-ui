@@ -6,6 +6,9 @@ import typo from '../../styles/typo'
 import React, { PureComponent } from 'react'
 import { getClassName } from '../../utils/helpers'
 
+import Dropdown from './Dropdown'
+import Button from './Button'
+
 const cmz = require('cmz')
 
 type SortDirections = {
@@ -50,13 +53,21 @@ const arrow = {
   up: cmz(arrowBase,
     `
       &:after {
-        border-bottom: 4px solid ${theme.typoLabel}
+        border-bottom: 4px solid ${theme.iconDark}
+      }
+
+      &.isFitering:after {
+        border-top: 4px solid ${theme.baseRed}
       }
     `),
   down: cmz(arrowBase,
     `
       &:after {
-        border-top: 4px solid ${theme.typoLabel}
+        border-top: 4px solid ${theme.iconDark}
+      }
+
+      &.isFitering:after {
+        border-top: 4px solid ${theme.baseRed}
       }
     `)
 }
@@ -68,17 +79,19 @@ const cx = {
         display: flex
         min-width: 100%
         padding: 14px
-        color: ${theme.typoLabel}
-        font-size: 16px
+        font-size: 14px
         line-height: 1.2
         border-bottom: 1px solid ${theme.lineSilver1}
         position: sticky
         box-sizing: border-box
+        z-index: 9999
+        text-transform: uppercase
+        font-weight: bold
+        background: ${theme.baseBright}
       }
 
       & > span {
         margin-right: 14px
-        font-weight: normal
         flex-wrap: wrap
         flex-shrink: 0
       }
@@ -96,6 +109,7 @@ const cx = {
 
     & > span {
       text-align: center
+      position: relative
     }
   `),
   tiny: cmz(`
@@ -126,6 +140,32 @@ const cx = {
     &:hover {
       color: ${theme.baseDark}
     }
+  `),
+  filtering: cmz(`
+    &,
+    &:hover {
+      color: ${theme.baseRed}
+    }
+  `),
+  filter: cmz(`
+    & {
+      position: absolute
+      top: 0
+      right: -10px
+    }
+
+    & svg {
+      width: 12px
+    }
+  `),
+  dropdown: cmz(`
+    background: ${theme.baseBrighter}
+    margin-top: 10px
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1)
+  `),
+  clearButton: cmz(`
+    text-align: right
+    padding: 10px
   `),
   [`${SORT_DIRECTIONS.ASCENDING}Sort`]: arrow.up,
   [`${SORT_DIRECTIONS.DESCENDING}Sort`]: arrow.down
@@ -160,6 +200,10 @@ class ApplicantGridHeader extends PureComponent<Props> {
     onSortingChange && onSortingChange({ sortBy: name, sortDirection: direction })
   }
 
+  noClick = (event: Object) => {
+    event && event.stopPropagation()
+  }
+
   render () {
     const {
       className,
@@ -190,12 +234,16 @@ class ApplicantGridHeader extends PureComponent<Props> {
         isSortable,
         name,
         size,
-        label
+        label,
+        filterRender,
+        isFiltering
       } = headerColumn
       const columnClassName = getClassName({
         [cx[size]]: true,
         [cx.sortable]: isSortable,
-        [cx[`${direction}Sort`]]: sortBy === name
+        [cx[`${direction}Sort`]]: sortBy === name,
+        [cx.filtering]: isFiltering,
+        'isFitering': isFiltering
       })
 
       return (
@@ -205,6 +253,30 @@ class ApplicantGridHeader extends PureComponent<Props> {
           onClick={this.handleColumnClick(name, isSortable)}
         >
           {label}
+          {filterRender && (
+            <div className={cx.filter} onClick={this.noClick}>
+              <Dropdown
+                icon='filter'
+                targetXOrigin='right'
+                iconColor={isFiltering ? 'default' : 'text'}
+              >
+                <div className={cx.dropdown}>
+                  {filterRender}
+                  {isFiltering && (
+                    <div className={cx.clearButton}>
+                      <Button
+                        onClick={() => console.log('clearing...')}
+                        size={'small'}
+                        pseudolink
+                      >
+                        Clear filter
+                      </Button>
+                    </div>
+                  )}
+                </div>
+              </Dropdown>
+            </div>
+          )}
         </span>
       )
     }

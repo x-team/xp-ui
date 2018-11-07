@@ -147,7 +147,11 @@ const headerColumns = [
       label: 'Avail. Date',
       isSortable: true,
       size: 'tiny',
-      filterRender: <SelectBox />,
+      filterRender: (
+        <div>
+          Anything goes here
+        </div>
+      ),
       isFiltering: false
     },
     {
@@ -161,16 +165,37 @@ const headerColumns = [
       label: 'Timezone',
       isSortable: true,
       size: 'tiny',
-      filterRender: <SelectBox />,
-      isFiltering: false
+      filterRender: (
+        <SelectBox
+          placeholder='Timezone filter...'
+          onSelect={(value) => console.log(value)}
+          items={[
+            { id: '01', value: '01' },
+            { id: '02', value: '02', selected: true },
+            { id: '03', value: '03' },
+            { id: '04', value: '04', selected: true },
+            { id: '05', value: '05' }
+          ]}
+          expanded
+          lined
+          hasSearch={false}
+          width={200}
+          visibleItems={4}
+        />
+      ),
+      isFiltering: true
     },
     {
       name: 'rate',
       label: 'Rate',
       isSortable: true,
       size: 'tiny',
-      filterRender: <SelectBox />,
-      isFiltering: false
+      filterRender: (
+        <div>
+          Anything goes here
+        </div>
+      ),
+      isFiltering: true
     },
   ],
   {
