@@ -1,5 +1,5 @@
 // @flow
-/* global HTMLInputElement */
+/* global SyntheticEvent, HTMLInputElement */
 
 import React, { PureComponent } from 'react'
 
@@ -108,11 +108,15 @@ class AttachFiles extends PureComponent<Props> {
     this.fileInput.click()
   }
 
+  onFileUpload = (event: SyntheticEvent<HTMLInputElement>) => {
+    this.props.onFileUpload(event)
+    this.fileInput.value = ''
+  }
+
   render () {
     const {
       files,
       acceptedTypes,
-      onFileUpload,
       onCancel,
       onDelete
     } = this.props
@@ -177,7 +181,7 @@ class AttachFiles extends PureComponent<Props> {
       HiddenInput({
         type: 'file',
         accept: acceptedTypes,
-        onChange: onFileUpload,
+        onChange: this.onFileUpload,
         ref: node => { this.fileInput = node }
       }),
       <Button outlined onClick={this.triggerFileSelection}>
