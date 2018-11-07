@@ -452,8 +452,9 @@ const tabularTheme = {
 
   applicantStatus: cmz(
     `
-      display: none
+      width: 100px
       order: 5
+      justify-content: center
     `
   ),
 
@@ -503,9 +504,7 @@ class ApplicantBadge extends PureComponent<Props> {
     <span className={statusDotStyles[this.props.status]} />
   )
 
-  handleRankingChange = (event, { id: ranking, value }: {id: number | null, value: string}) => {
-    event.preventDefault() && event.stopPropagation()
-    console.log(this, 'whats going on')
+  handleRankingChange = ({ id: ranking, value }: {id: number | null, value: string}) => {
     const { handleRankingChange } = this.props
     handleRankingChange && handleRankingChange(ranking)
   }

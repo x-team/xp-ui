@@ -44,13 +44,13 @@ const headerColumns = [
       size: 'tiny',
       filterRender: <SelectBox />,
       isFiltering: false
+    },
+    {
+      name: 'status',
+      label: 'Status',
+      size: 'tiny'
     }
   ],
-  {
-    name: 'status',
-    label: 'Status',
-    size: 'small'
-  },
   {
     name: 'ranking',
     label: 'Ranking',

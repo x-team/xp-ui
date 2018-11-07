@@ -70,6 +70,7 @@ const items = Array(15).fill(
     name='Applicant full name'
     email='applicant@email.com'
     status='accepted'
+    applicantStatus='In Pipeline'
     info={[
       {
         label: 'Avail. date:',
@@ -88,10 +89,6 @@ const items = Array(15).fill(
       {
         label: 'Rate:',
         value: '$100'
-      },
-      {
-        label: 'Status',
-        value: 'In Pipeline'
       }
     ]}
     tags={[
@@ -178,7 +175,7 @@ const headerColumns = [
     {
       name: 'status',
       label: 'Status',
-      size: 'small'
+      size: 'tiny'
     }
   ],
   {
