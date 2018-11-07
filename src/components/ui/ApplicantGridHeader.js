@@ -102,6 +102,7 @@ const cx = {
     & {
       width: 100px
       margin: 0 14px
+      text-align: center
     }
 
     & > span {

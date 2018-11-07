@@ -352,6 +352,7 @@ const tabularTheme = {
     flex: 1
     display: flex
     justify-content: space-between
+    margin: 0
   `),
 
   info: cmz(typo.baseText, `
@@ -455,6 +456,8 @@ const tabularTheme = {
       width: 100px
       order: 5
       justify-content: center
+      margin: 0 14px
+      text-align: center
     `
   ),
 
@@ -465,6 +468,7 @@ const tabularTheme = {
         width: 100px
         order: 6
         justify-content: center
+        margin: 0 14px
       }
 
       & div, & span {

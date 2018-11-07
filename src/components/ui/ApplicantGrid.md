@@ -172,12 +172,12 @@ const headerColumns = [
       filterRender: <SelectBox />,
       isFiltering: false
     },
-    {
-      name: 'status',
-      label: 'Status',
-      size: 'tiny'
-    }
   ],
+  {
+    name: 'status',
+    label: 'Status',
+    size: 'tiny'
+  },
   {
     name: 'ranking',
     label: 'Ranking',
