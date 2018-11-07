@@ -580,7 +580,7 @@ class SelectBox extends Component<Props, State> {
       })
       if (closeDropdown && typeof closeDropdown === 'function') {
         closeDropdown()
-      } else if (internalCloseDropdown) {
+      } else if (closeDropdown && internalCloseDropdown) {
         internalCloseDropdown()
       }
     } else {
