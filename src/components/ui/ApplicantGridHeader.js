@@ -1,5 +1,5 @@
 // @flow
-/* globals SyntheticMouseEvent */
+/* globals SyntheticMouseEvent, HTMLButtonElement */
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -8,9 +8,6 @@ import React, { PureComponent } from 'react'
 import { getClassName } from '../../utils/helpers'
 
 import Dropdown from './Dropdown'
-import Button from './Button'
-
-import type { Element } from 'react'
 
 const cmz = require('cmz')
 
@@ -24,7 +21,7 @@ type HeaderColumn = {
   label: string,
   isSortable?: boolean,
   size: string,
-  filterRender?: Element<*>,
+  filterRender?: Function,
   isFiltering?: boolean
 }
 
@@ -209,6 +206,10 @@ class ApplicantGridHeader extends PureComponent<Props> {
     event && event.stopPropagation()
   }
 
+  onChangeFilter = () => {
+    this.forceUpdate()
+  }
+
   render () {
     const {
       className,
@@ -266,7 +267,7 @@ class ApplicantGridHeader extends PureComponent<Props> {
                 iconColor={isFiltering ? 'default' : 'text'}
               >
                 <div className={cx.dropdown}>
-                  {filterRender}
+                  {filterRender({ onChangeFilter: this.onChangeFilter })}
                 </div>
               </Dropdown>
             </div>

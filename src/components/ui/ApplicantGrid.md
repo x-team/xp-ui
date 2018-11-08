@@ -165,10 +165,10 @@ const headerColumns = [
       label: 'Timezone',
       isSortable: true,
       size: 'tiny',
-      filterRender: (
+      filterRender: ({ onChange }) => (
         <SelectBox
           placeholder='Timezone filter...'
-          onSelect={(value) => console.log(value)}
+          onSelect={(value) => onChange(value)}
           items={[
             { id: '01', value: '01' },
             { id: '02', value: '02', selected: true },
