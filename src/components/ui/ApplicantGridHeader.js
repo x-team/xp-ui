@@ -9,6 +9,8 @@ import { getClassName } from '../../utils/helpers'
 
 import Dropdown from './Dropdown'
 
+import type { Element } from 'react'
+
 const cmz = require('cmz')
 
 type SortDirections = {
@@ -21,7 +23,7 @@ type HeaderColumn = {
   label: string,
   isSortable?: boolean,
   size: string,
-  filterRender?: Function,
+  filterRender?: (onChangeFilter: () => void) => Element<*>,
   isFiltering?: boolean
 }
 
@@ -83,7 +85,7 @@ const cx = {
         padding: 14px 30px 14px 14px
         font-size: 14px
         line-height: 1.2
-        border-bottom: 1px solid ${theme.lineSilver1}
+        border-top: 1px solid ${theme.lineSilver1}
         position: sticky
         box-sizing: border-box
         z-index: 9999
@@ -112,6 +114,7 @@ const cx = {
     & > span {
       text-align: center
       position: relative
+      white-space: nowrap
     }
   `),
   tiny: cmz(`
@@ -265,9 +268,10 @@ class ApplicantGridHeader extends PureComponent<Props> {
                 icon='filter'
                 targetXOrigin='right'
                 iconColor={isFiltering ? 'default' : 'text'}
+                onClose={this.onChangeFilter}
               >
                 <div className={cx.dropdown}>
-                  {filterRender({ onChangeFilter: this.onChangeFilter })}
+                  {filterRender(this.onChangeFilter)}
                 </div>
               </Dropdown>
             </div>

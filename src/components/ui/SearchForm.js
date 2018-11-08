@@ -183,9 +183,15 @@ const tabularTheme = {
   `),
 
   applicantsStatusFilter: cmz(`
-    width: 100%
-    padding: 20px 30px
-    box-sizing: border-box
+    & {
+      width: 100%
+      padding: 20px 30px 0
+      box-sizing: border-box
+    }
+
+    & > form {
+      border: none
+    }
   `)
 }
 
