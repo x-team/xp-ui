@@ -90,7 +90,6 @@ const headerColumns = [
     onSortingChange={(value) => console.log('onSortingChange', value)}
     sortBy={`availabilityUpdated`}
     sortDirection={`desc`}
-    onFilterChange={(value) => console.log('onFilterChange', value)}
    />
 </div>
 ```
