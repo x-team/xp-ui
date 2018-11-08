@@ -1,4 +1,5 @@
 // @flow
+/* globals SyntheticMouseEvent */
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -57,7 +58,7 @@ const arrow = {
   up: cmz(arrowBase,
     `
       &:after {
-        border-bottom: 4px solid ${theme.iconDark}
+        border-top: 4px solid ${theme.iconDark}
       }
 
       &.isFitering:after {
@@ -82,7 +83,7 @@ const cx = {
       & {
         display: flex
         min-width: 100%
-        padding: 14px
+        padding: 14px 30px 14px 14px
         font-size: 14px
         line-height: 1.2
         border-bottom: 1px solid ${theme.lineSilver1}
@@ -204,7 +205,7 @@ class ApplicantGridHeader extends PureComponent<Props> {
     onSortingChange && onSortingChange({ sortBy: name, sortDirection: direction })
   }
 
-  noClick = (event: Object) => {
+  stopPropagation = (event: SyntheticMouseEvent<HTMLButtonElement>) => {
     event && event.stopPropagation()
   }
 
@@ -258,7 +259,7 @@ class ApplicantGridHeader extends PureComponent<Props> {
         >
           {label}
           {filterRender && (
-            <div className={cx.filter} onClick={this.noClick}>
+            <div className={cx.filter} onClick={this.stopPropagation}>
               <Dropdown
                 icon='filter'
                 targetXOrigin='right'
@@ -266,17 +267,6 @@ class ApplicantGridHeader extends PureComponent<Props> {
               >
                 <div className={cx.dropdown}>
                   {filterRender}
-                  {isFiltering && (
-                    <div className={cx.clearButton}>
-                      <Button
-                        onClick={() => console.log('clearing...')}
-                        size={'small'}
-                        pseudolink
-                      >
-                        Clear filter
-                      </Button>
-                    </div>
-                  )}
                 </div>
               </Dropdown>
             </div>

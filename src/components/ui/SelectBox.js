@@ -1040,34 +1040,32 @@ class SelectBox extends Component<Props, State> {
       </div>
     )
 
-    const renderPlaceholder = () => (
+    const renderPlaceholder = () => placeholder && (
       <div className={[
         cx.placeholder,
         (!hasSearch && !placeholder) ? cx.noSearchAndPlaceholder : ''
       ].join(' ')}>
-        {placeholder && (
-          <div>
-            <div className={selectsClass}>
-              <div>
-                {placeholder}
-              </div>
-              <div>
-                {filteredSelectedItems
-                  .reduce((acc, { value }) => (
-                    acc ? `${acc}, ${value}` : value
-                  ), '')}
-              </div>
+        <div>
+          <div className={selectsClass}>
+            <div>
+              {placeholder}
             </div>
-            {shouldShowClearElement && (
-              <div className={cx.clear} onClick={this.handleClearClick}>
-                <SvgIcon icon='x' color='grayscale' hover='default' />
-              </div>
-            )}
-            <div className={cx.triangle}>
-              <SvgIcon icon='triangledown' color='grayscale' />
+            <div>
+              {filteredSelectedItems
+                .reduce((acc, { value }) => (
+                  acc ? `${acc}, ${value}` : value
+                ), '')}
             </div>
           </div>
-        )}
+          {shouldShowClearElement && (
+            <div className={cx.clear} onClick={this.handleClearClick}>
+              <SvgIcon icon='x' color='grayscale' hover='default' />
+            </div>
+          )}
+          <div className={cx.triangle}>
+            <SvgIcon icon='triangledown' color='grayscale' />
+          </div>
+        </div>
       </div>
     )
 
