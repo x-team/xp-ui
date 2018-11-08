@@ -9,6 +9,8 @@ import { getClassName } from '../../utils/helpers'
 import Dropdown from './Dropdown'
 import Button from './Button'
 
+import type { Element } from 'react'
+
 const cmz = require('cmz')
 
 type SortDirections = {
@@ -20,7 +22,9 @@ type HeaderColumn = {
   name: string,
   label: string,
   isSortable?: boolean,
-  size: string
+  size: string,
+  filterRender?: Element<*>,
+  isFiltering?: boolean
 }
 
 type Props = {
