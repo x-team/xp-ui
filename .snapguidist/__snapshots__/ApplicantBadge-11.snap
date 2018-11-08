@@ -245,149 +245,151 @@ exports[`ApplicantBadge-11 1`] = `
           className="AutoUI_ui_Dropdown-50     ">
           <div
             className="AutoUI_ui_SelectBox-178">
-            <ul
-              className="AutoUI_ui_SelectBox-161 false"
-              style={
-                Object {
-                  "height": "auto",
-                  "maxHeight": "240px",
-                  "width": "100%",
-                }
-              }>
-              
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                    1
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                    2
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                    3
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                    4
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-224">
-                    5
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                    6
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                    7
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                    8
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                    9
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                    10
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-              <li
-                className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
-                <div
-                  className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
-                  <span
-                    className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
-                    -
-                  </span>
-                  <span
-                    className="AutoUI_ui_SelectBox-239" />
-                </div>
-              </li>
-            </ul>
+            <div>
+              <ul
+                className="AutoUI_ui_SelectBox-161 false"
+                style={
+                  Object {
+                    "height": "auto",
+                    "maxHeight": "240px",
+                    "width": "100%",
+                  }
+                }>
+                
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      1
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      2
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      3
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      4
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-224">
+                      5
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      6
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      7
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      8
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      9
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      10
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                    <span
+                      className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      -
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-239" />
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -83,6 +83,95 @@ const itemsArray = [
 />
 ```
 
+Simple view for Search module with close dropdown on item click:
+
+```js
+const Button = require('./Button.js').default;
+const SvgIcon = require('./SvgIcon.js').default;
+const itemsArray = [
+  {
+    id: 2,
+    value: 'registered'
+  },
+  {
+    id: 3,
+    value: 'portfolio-building'
+  },
+  {
+    id: 4,
+    value: 'portfolio-review'
+  },
+  {
+    id: 5,
+    value: 'social-media-screen'
+  },
+  {
+    id: 6,
+    value: 'react-shortlist'
+  }
+];
+
+<SelectBox
+  placeholder='Select Lists'
+  collectionLabel='list'
+  items={itemsArray}
+  width={330}
+  visibleItems={4}
+  append={(
+    <Button selectbox>
+      <SvgIcon icon='edit' /> Edit Lists
+    </Button>
+  )}
+  onClick={item => console.log('onClick:', item)}
+  closeDropdown
+/>
+```
+
+Simple view for Search module with close dropdown on item click and one selected:
+
+```js
+const Button = require('./Button.js').default;
+const SvgIcon = require('./SvgIcon.js').default;
+const itemsArray = [
+  {
+    id: 2,
+    value: 'registered'
+  },
+  {
+    id: 3,
+    value: 'portfolio-building',
+    selected: true
+  },
+  {
+    id: 4,
+    value: 'portfolio-review'
+  },
+  {
+    id: 5,
+    value: 'social-media-screen'
+  },
+  {
+    id: 6,
+    value: 'react-shortlist'
+  }
+];
+
+<SelectBox
+  placeholder='Select Lists'
+  collectionLabel='list'
+  items={itemsArray}
+  width={330}
+  visibleItems={4}
+  append={(
+    <Button selectbox>
+      <SvgIcon icon='edit' /> Edit Lists
+    </Button>
+  )}
+  onClick={item => console.log('onClick:', item)}
+  closeDropdown
+/>
+```
+
 Simple view for Search module with one selected:
 
 ```js
