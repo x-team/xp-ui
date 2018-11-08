@@ -57,11 +57,11 @@ const arrow = {
   up: cmz(arrowBase,
     `
       &:after {
-        border-top: 4px solid ${theme.iconDark}
+        border-bottom: 4px solid ${theme.iconDark}
       }
 
       &.isFitering:after {
-        border-top: 4px solid ${theme.baseRed}
+        border-bottom: 4px solid ${theme.baseRed}
       }
     `),
   down: cmz(arrowBase,
@@ -80,7 +80,7 @@ const cx = {
   container: cmz(typo.baseText,
     `
       & {
-        display: flex
+        display: inline-flex
         min-width: 100%
         padding: 14px 30px 14px 14px
         font-size: 14px
@@ -203,6 +203,7 @@ class ApplicantGridHeader extends PureComponent<Props> {
     } = this.props
     const direction = getSortDirection(name, sortBy, sortDirection)
     onSortingChange && onSortingChange({ sortBy: name, sortDirection: direction })
+    this.forceUpdate()
   }
 
   stopPropagation = (event: SyntheticMouseEvent<HTMLButtonElement>) => {

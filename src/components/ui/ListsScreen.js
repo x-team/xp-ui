@@ -25,7 +25,7 @@ const dimensions = {
   headingHeight: '60px',
   searchWidth: {
     [DISPLAY_MODES.LIST]: '530px',
-    [DISPLAY_MODES.TABULAR]: '1508px'
+    [DISPLAY_MODES.TABULAR]: '1516px'
   },
   searchHeight: {
     [DISPLAY_MODES.LIST]: '420px',

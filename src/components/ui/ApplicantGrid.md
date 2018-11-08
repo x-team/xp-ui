@@ -147,7 +147,7 @@ const headerColumns = [
       label: 'Avail. Date',
       isSortable: true,
       size: 'tiny',
-      filterRender: (
+      filterRender: (onChange) => (
         <div>
           Anything goes here
         </div>
@@ -165,7 +165,7 @@ const headerColumns = [
       label: 'Timezone',
       isSortable: true,
       size: 'tiny',
-      filterRender: ({ onChange }) => (
+      filterRender: (onChange) => (
         <SelectBox
           placeholder='Timezone filter...'
           onSelect={(value) => onChange(value)}
@@ -190,7 +190,7 @@ const headerColumns = [
       label: 'Rate',
       isSortable: true,
       size: 'tiny',
-      filterRender: (
+      filterRender: (onChange) => (
         <div>
           Anything goes here
         </div>
@@ -210,7 +210,7 @@ const headerColumns = [
     size: 'tiny'
   }
 ];
-<div style={{width: '1698px', height: 'auto'}}>
+<div style={{overflowX: 'scroll', width: '1698px', height: 'auto'}}>
   <ApplicantGrid
     items={items}
     mode='tabular'

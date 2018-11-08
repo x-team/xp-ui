@@ -165,6 +165,7 @@ const SvgIcon = require('./SvgIcon').default;
   mode='tabular'
   id={123123}
   ranking={5}
+  applicantStatus='In Pipeline'
   name='Applicant full name'
   email='applicant@email.com'
   info={[
@@ -185,14 +186,6 @@ const SvgIcon = require('./SvgIcon').default;
     {
       label: 'Rate:',
       value: '$100'
-    },
-    {
-      label: 'Status',
-      value: 'In Pipeline'
-    },
-    {
-      label: 'Rank',
-      value: 2
     }
   ]}
   tags={[
@@ -244,6 +237,7 @@ const SvgIcon = require('./SvgIcon').default;
   id={123123}
   disableRankingDropdown={true}
   ranking={5}
+  applicantStatus='In Pipeline'
   name='Applicant full name'
   email='applicant@email.com'
   info={[
@@ -264,10 +258,6 @@ const SvgIcon = require('./SvgIcon').default;
     {
       label: 'Rate:',
       value: '$100'
-    },
-    {
-      label: 'Status',
-      value: 'In Pipeline'
     }
   ]}
   tags={[
@@ -338,14 +328,6 @@ const SvgIcon = require('./SvgIcon').default;
     {
       label: 'Rate:',
       value: '$100'
-    },
-    {
-      label: 'Status',
-      value: 'In Pipeline'
-    },
-    {
-      label: 'Rank',
-      value: 2
     }
   ]}
   ranking={5}
