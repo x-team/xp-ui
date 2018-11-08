@@ -24,7 +24,7 @@ exports[`SelectBox-7 1`] = `
                 Select Lists
               </div>
               <div>
-                registered
+                portfolio-building
               </div>
             </div>
             <div
@@ -108,7 +108,7 @@ exports[`SelectBox-7 1`] = `
               <div
                 className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
                 <span
-                  className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-224">
+                  className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
                   registered
                 </span>
                 <span
@@ -120,7 +120,7 @@ exports[`SelectBox-7 1`] = `
               <div
                 className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
                 <span
-                  className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                  className="AutoUI_ui_SelectBox-157 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-224">
                   portfolio-building
                 </span>
                 <span
