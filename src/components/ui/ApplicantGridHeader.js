@@ -203,7 +203,6 @@ class ApplicantGridHeader extends PureComponent<Props> {
     } = this.props
     const direction = getSortDirection(name, sortBy, sortDirection)
     onSortingChange && onSortingChange({ sortBy: name, sortDirection: direction })
-    this.forceUpdate()
   }
 
   stopPropagation = (event: SyntheticMouseEvent<HTMLButtonElement>) => {
