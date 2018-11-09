@@ -23,7 +23,7 @@ type HeaderColumn = {
   label: string,
   isSortable?: boolean,
   size: string,
-  filterRender?: (onChangeFilter: () => void) => Element<*>,
+  filterRender?: ({ onChangeFilter: () => void, isFetching?: boolean }) => Element<*>,
   isFilteringFn?: () => boolean
 }
 
@@ -32,7 +32,8 @@ type Props = {
   headerColumns: Array<HeaderColumn | Array<HeaderColumn>>,
   sortBy?: string,
   sortDirection?: $Values<SortDirections>, // eslint-disable-line no-undef
-  onSortingChange: Function
+  onSortingChange: Function,
+  isFetching?: boolean
 }
 
 const SORT_DIRECTIONS: SortDirections = {
@@ -218,7 +219,8 @@ class ApplicantGridHeader extends PureComponent<Props> {
       className,
       headerColumns,
       sortBy,
-      sortDirection
+      sortDirection,
+      isFetching
     } = this.props
     const direction = sortDirection || SORT_DIRECTIONS.ASCENDING
     const componentCustomClassName = className || ''
@@ -272,7 +274,7 @@ class ApplicantGridHeader extends PureComponent<Props> {
                 onClose={this.onChangeFilter}
               >
                 <div className={cx.dropdown}>
-                  {filterRender(this.onChangeFilter)}
+                  {filterRender({ onChangeFilter: this.onChangeFilter, isFetching })}
                 </div>
               </Dropdown>
             </div>

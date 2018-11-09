@@ -147,7 +147,7 @@ const headerColumns = [
       label: 'Avail. Date',
       isSortable: true,
       size: 'tiny',
-      filterRender: (onChange) => (
+      filterRender: ({ onChange, isFetching }) => (
         <div>
           Anything goes here
         </div>
@@ -165,7 +165,7 @@ const headerColumns = [
       label: 'Timezone',
       isSortable: true,
       size: 'tiny',
-      filterRender: (onChange) => (
+      filterRender: ({ onChange, isFetching }) => (
         <SelectBox
           placeholder='Timezone filter...'
           onSelect={(value) => onChange(value)}
@@ -190,7 +190,7 @@ const headerColumns = [
       label: 'Rate',
       isSortable: true,
       size: 'tiny',
-      filterRender: (onChange) => (
+      filterRender: ({ onChange, isFetching }) => (
         <div>
           Anything goes here
         </div>

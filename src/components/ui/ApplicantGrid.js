@@ -192,6 +192,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
     return isTabular ? (
       <div className={cx.tabular}>
         <ApplicantGridHeader
+          isFetching={isFetching}
           headerColumns={headerColumns}
           onSortingChange={this.handleSortChange}
           sortBy={sortBy}
