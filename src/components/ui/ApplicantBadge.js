@@ -55,9 +55,9 @@ const cmz = require('cmz')
 const statusDotBaseStyle = cmz(`
   display: inline-block
   box-sizing: border-box
-  width: 10px
-  height: 10px
-  margin: 3px 10px 0 10px
+  width: 8px
+  height: 8px
+  margin: 3px 0 0
   border-radius: 50%
   flex-shrink: 0
 `)
@@ -91,10 +91,10 @@ const listTheme = {
         font-size: 16px
         background: ${theme.baseBrighter}
         border: 1px solid ${theme.lineSilver2}
-        padding: 20px
+        padding: 20px 20px 10px
         display: grid
         grid-template: 'avatar name status' 'avatar infos infos' 'tags tags tags'
-        grid-template-columns: 65px 1fr auto
+        grid-template-columns: 50px 1fr auto
         grid-template-rows: minmax(10px, auto) auto auto
         grid-gap: 15px
         margin: 0 10px
@@ -109,11 +109,11 @@ const listTheme = {
       &::after {
         content: ''
         display: block
-        width: calc(100% - 120px)
+        width: calc(100% - 105px)
         height: 1px
         position: absolute
-        top: 44px
-        left: 100px
+        top: 42px
+        left: 85px
         background: ${theme.lineSilver2}
       }
     `
@@ -124,13 +124,13 @@ const listTheme = {
       border: 1px solid ${theme.baseRed}
       box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
       margin: 0
-      padding: 30px
+      padding: 30px 30px 20px
     }
 
     &::after {
-      width: calc(100% - 130px)
-      left: 110px
-      top: 54px
+      width: calc(100% - 125px)
+      top: 52px
+      left: 95px
     }
   `),
 
@@ -139,19 +139,29 @@ const listTheme = {
       grid-area: name
       display: flex
       align-items: flex-start
-      font-size: 16px
+      font-size: 14px
+      line-height: 1
+      position: relative
+      overflow: hidden
     `
   ),
+
+  nameInner: cmz(`
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    padding-right: 8px
+  `),
 
   avatar: cmz(`
     & {
       grid-area: avatar
-      width: 65px
-      height: 65px
+      width: 50px
+      height: 50px
     }
 
     & > * {
-      max-width: 65px
+      max-width: 50px
     }
   `),
 
@@ -159,7 +169,6 @@ const listTheme = {
     grid-area: status
     font-size: 14px
     line-height: 1
-    max-width: 65px
     text-align: center
   `),
 
@@ -219,33 +228,31 @@ const listTheme = {
   infos: cmz(`
     grid-area: infos
     width: 100%
-    margin: 0 0 -10px
+    margin: 0
     display: flex
     flex-wrap: wrap
     align-items: flex-start
   `),
 
-  info: cmz(typo.baseText,
-    `
-      & {
-        font-size: 16px
-        margin: 0 20px 10px 0
-        line-height: 1
-      }
+  info: cmz(`
+    & {
+      margin: 0 10px 6px 0
+      line-height: 1
+    }
 
-      &:last-of-type {
-        margin-right: 0
-      }
-    `
-  ),
+    &:last-of-type {
+      margin-right: 0
+    }
+  `),
 
   moreinfos: cmz(`
     & {
       color: ${theme.typoLabel}
-      font-size: 16px
-      margin: 0 0 10px 0
+      margin: 0 0 6px 0
       cursor: pointer
       align-self: flex-end
+      font-size: 14px
+      line-height: 1
     }
 
     &:hover {
@@ -254,19 +261,20 @@ const listTheme = {
   `),
 
   label: cmz(`
-    display: block
+    display: inline-block
     color: ${theme.typoLabel}
     white-space: nowrap
-    line-height: 1.2
-    font-size: 12px
+    font-size: 14px
+    line-height: 1
+    margin-right: 4px
   `),
 
   value: cmz(`
-    display: block
+    display: inline-block
     color: ${theme.typoParagraph}
-    line-height: 1.2
-    font-size: 16px
     white-space: normal
+    font-size: 14px
+    line-height: 1
   `),
 
   tip: cmz(`
@@ -279,18 +287,18 @@ const listTheme = {
     font-size: 14px
     grid-area: tags
     width: 100%
-    margin: 0 0 -10px
+    margin: -10px 0 0
   `),
 
   tagsInner: cmz(`
     display: flex
     flex-wrap: wrap
-    align-items: start
+    align-items: baseline
   `),
 
   tag: cmz(`
     & {
-      font-size: 12px
+      font-size: 14px
       border: 1px solid ${theme.lineSilver2}
       border-radius: 3px
       padding: 4px 10px
@@ -329,7 +337,7 @@ const listTheme = {
   purelabel: cmz(`
     border: none
     color: ${theme.typoLabel}
-    font-size: 16px
+    font-size: 14px
   `),
 
   children: cmz(`
@@ -374,8 +382,13 @@ const tabularTheme = {
       white-space: normal
       order: 2
       font-weight: normal
+      position: relative
     `
   ),
+
+  nameInner: cmz(`
+    padding-right: 8px
+  `),
 
   avatar: cmz(`
     width: 42px
@@ -647,7 +660,7 @@ class ApplicantBadge extends PureComponent<Props> {
     return (
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         <div className={cx.name}>
-          {name || email}
+          <div className={cx.nameInner}>{name || email}</div>
           {status && this.renderStatusIndicator()}
         </div>
         <div className={cx.avatar}>

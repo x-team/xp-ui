@@ -57,6 +57,7 @@ const listTheme = {
       flex: 1
       padding: 0
       margin-right: 16px
+      max-width: calc(100% - 116px)
     }
 
     & .Select-menu-outer {
@@ -182,6 +183,7 @@ const tabularTheme = {
   keywordsAndformButtonContainer: cmz(`
     flex: 1
     display: flex
+    max-width: 100%
   `),
 
   formButton: cmz(`

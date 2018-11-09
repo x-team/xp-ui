@@ -74,20 +74,24 @@ const cx = {
     }
     & > div {
       display: block
-      line-height: 1.1
+      line-height: 1.2
     }
     & > div:first-of-type {
-      font-size: 14px
+      font-size: 13px
       color: ${theme.typoLabel}
       padding: 0
       transition: color .10s ease-out, font-size .10s ease-out
+      height: 13px
+    }
+    & > div:first-of-type:empty {
+      height: 0
     }
     & > div:last-of-type {
       width: calc(100% - 20px)
       height: auto
       white-space: nowrap
-      overflow-x: overlay
-      overflow-y: hidden
+      overflow: hidden
+      text-overflow: ellipsis
       padding: 0
       transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       opacity: 1

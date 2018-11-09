@@ -47,7 +47,7 @@ const cx = {
     &.Select--multi .Select-control .Select-value {
       padding: 0 !important
       line-height: initial !important
-      margin-top: 0
+      margin: 0 5px 0 0
       font-size: 16px
     }
     &.Select--multi .Select-control .Select-input {
