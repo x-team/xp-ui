@@ -55,9 +55,9 @@ const cmz = require('cmz')
 const statusDotBaseStyle = cmz(`
   display: inline-block
   box-sizing: border-box
-  width: 10px
-  height: 10px
-  margin: 3px 10px 0 10px
+  width: 8px
+  height: 8px
+  margin: 3px 0 0
   border-radius: 50%
   flex-shrink: 0
 `)
@@ -88,14 +88,14 @@ const listTheme = {
     typo.baseText,
     `
       & {
+        font-size: 16px
         background: ${theme.baseBrighter}
         border: 1px solid ${theme.lineSilver2}
-        padding: 30px
-        padding-top: 10px
+        padding: 20px 20px 10px
         display: grid
-        grid-template: 'blank blank control' 'avatar name status' 'avatar infos infos' 'tags tags tags'
-        grid-template-columns: 90px 1fr auto
-        grid-template-rows: minmax(20px, auto) auto auto
+        grid-template: 'avatar name status' 'avatar infos infos' 'tags tags tags'
+        grid-template-columns: 50px 1fr auto
+        grid-template-rows: minmax(10px, auto) auto auto
         grid-gap: 15px
         margin: 0 10px
         cursor: pointer
@@ -105,14 +105,33 @@ const listTheme = {
       &:hover {
         box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
       }
+
+      &::after {
+        content: ''
+        display: block
+        width: calc(100% - 105px)
+        height: 1px
+        position: absolute
+        top: 42px
+        left: 85px
+        background: ${theme.lineSilver2}
+      }
     `
   ),
 
   active: cmz(`
-    border: 1px solid ${theme.baseRed}
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
-    margin: 0
-    padding: 30px 40px
+    & {
+      border: 1px solid ${theme.baseRed}
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
+      margin: 0
+      padding: 30px 30px 20px
+    }
+
+    &::after {
+      width: calc(100% - 125px)
+      top: 52px
+      left: 95px
+    }
   `),
 
   name: cmz(typo.badgeHeading,
@@ -120,36 +139,58 @@ const listTheme = {
       grid-area: name
       display: flex
       align-items: flex-start
-      font-size: 16px
+      font-size: 15px
+      line-height: 1
+      position: relative
+      overflow: hidden
     `
   ),
 
+  nameInner: cmz(`
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    padding-right: 8px
+  `),
+
   avatar: cmz(`
-    grid-area: avatar
-    width: 90px
-    height: 90px
+    & {
+      grid-area: avatar
+      width: 50px
+      height: 50px
+    }
+
+    & > * {
+      max-width: 50px
+    }
   `),
 
   applicantStatus: cmz(`
     grid-area: status
-    font-size: 15px
+    font-size: 16px
     line-height: 1
-    max-width: 65px
     text-align: center
   `),
 
   control: cmz(`
     & {
-      display: inline-block
+      display: flex
       padding: 0
       margin: 0 0 0 5px
       border: 0
       border-radius: 2px
       cursor: pointer
-      width: 20px
-      height: 20px
+      width: 14px
+      height: 14px
       text-align: center
-      line-height: 1
+      line-height: 0
+      justify-content: center
+      align-items: center
+    }
+
+    & svg {
+      width: 12px
+      height: 12px
     }
 
     &:hover {
@@ -166,8 +207,9 @@ const listTheme = {
     & {
       position: absolute
       right: -15px
+      top: -15px
       display: flex
-      grid-area: control
+      grid-area: status
       visibility: hidden
       justify-content: flex-end
     }
@@ -186,31 +228,31 @@ const listTheme = {
   infos: cmz(`
     grid-area: infos
     width: 100%
-    margin: 0 0 -10px
+    margin: 0
     display: flex
     flex-wrap: wrap
     align-items: flex-start
   `),
 
-  info: cmz(typo.baseText,
-    `
-      & {
-        margin: 0 20px 10px 0
-      }
+  info: cmz(`
+    & {
+      margin: 0 10px 6px 0
+      line-height: 1
+    }
 
-      &:last-of-type {
-        margin-right: 0
-      }
-    `
-  ),
+    &:last-of-type {
+      margin-right: 0
+    }
+  `),
 
   moreinfos: cmz(`
     & {
       color: ${theme.typoLabel}
-      font-size: 17px
-      margin: 0 0 10px 0
+      margin: 0 0 6px 0
       cursor: pointer
       align-self: flex-end
+      font-size: 14px
+      line-height: 1
     }
 
     &:hover {
@@ -219,19 +261,20 @@ const listTheme = {
   `),
 
   label: cmz(`
-    display: block
+    display: inline-block
     color: ${theme.typoLabel}
     white-space: nowrap
-    line-height: 1.2
-    font-size: 17px
+    font-size: 14px
+    line-height: 1
+    margin-right: 4px
   `),
 
   value: cmz(`
-    display: block
+    display: inline-block
     color: ${theme.typoParagraph}
-    line-height: 1.2
-    font-size: 17px
     white-space: normal
+    font-size: 14px
+    line-height: 1
   `),
 
   tip: cmz(`
@@ -244,24 +287,30 @@ const listTheme = {
     font-size: 14px
     grid-area: tags
     width: 100%
-    margin: 0 0 -10px
+    margin: -10px 0 0
   `),
 
   tagsInner: cmz(`
     display: flex
     flex-wrap: wrap
-    align-items: start
+    align-items: baseline
   `),
 
   tag: cmz(`
     & {
+      font-size: 14px
       border: 1px solid ${theme.lineSilver2}
       border-radius: 3px
-      padding: 0 10px
+      padding: 4px 10px
       text-transform: uppercase
-      margin: 0 10px 10px 0
+      margin: 0 10px 5px 0
       white-space: nowrap
       color: ${theme.typoParagraph}
+      line-height: 1.3
+    }
+
+    &:first-of-type {
+      margin-left: 0
     }
 
     &:last-of-type {
@@ -272,10 +321,12 @@ const listTheme = {
   moretags: cmz(`
     & {
       border: none
-      padding: 0 0 0 20px
+      padding: 0
       text-transform: initial
-      margin: 0 0 10px 0
+      margin: 0 10px
       cursor: pointer
+      text-align: right
+      flex: 1
     }
 
     &:hover {
@@ -286,7 +337,7 @@ const listTheme = {
   purelabel: cmz(`
     border: none
     color: ${theme.typoLabel}
-    font-size: 17px
+    font-size: 16px
   `),
 
   children: cmz(`
@@ -300,12 +351,12 @@ const tabularTheme = {
     typo.baseText,
     `
       & {
+        font-size: 16px
         background: ${theme.baseBrighter}
         display: flex
         cursor: pointer
         padding: 14px
         color: ${theme.typoParagraph}
-        font-size: 17px
         min-width: 100%
         box-sizing: border-box
       }
@@ -331,8 +382,13 @@ const tabularTheme = {
       white-space: normal
       order: 2
       font-weight: normal
+      position: relative
     `
   ),
+
+  nameInner: cmz(`
+    padding-right: 8px
+  `),
 
   avatar: cmz(`
     width: 42px
@@ -356,7 +412,7 @@ const tabularTheme = {
 
   info: cmz(typo.baseText, `
     width: 80px
-    font-size: 17px
+    font-size: 16px
     margin: 0 14px
     text-align: center
     display: block
@@ -381,7 +437,7 @@ const tabularTheme = {
     color: ${theme.typoParagraph}
     line-height: 1.2
     white-space: normal
-    font-size: 17px
+    font-size: 16px
   `),
 
   tip: cmz(`
@@ -405,7 +461,7 @@ const tabularTheme = {
       margin: 0 10px 0 0
       white-space: nowrap
       color: ${theme.typoParagraph}
-      font-size: 17px
+      font-size: 16px
     }
 
     &::after {
@@ -454,7 +510,7 @@ const tabularTheme = {
     typo.baseText,
     `
       width: 150px
-      font-size: 17px
+      font-size: 16px
       order: 5
     `
   ),
@@ -463,6 +519,7 @@ const tabularTheme = {
     typo.baseText,
     `
       & {
+        font-size: 16px
         width: 80px
         order: 6
         justify-content: center
@@ -535,7 +592,7 @@ class ApplicantBadge extends PureComponent<Props> {
     const mapInfosToRender = (infos) => (
       <TruncatedList
         inserted
-        visible={mode === DISPLAY_MODES.LIST ? 4 : infos.length}
+        visible={isTabular ? infos.length : 4}
         listClass={cx.infos}
         itemClass={cx.info}
         items={filteredInfos.map((info, i) => (
@@ -564,7 +621,7 @@ class ApplicantBadge extends PureComponent<Props> {
     const mapTagsToRender = (tags) => (
       <TruncatedList
         inserted
-        visible={5}
+        visible={4}
         items={tags}
         listClass={cx.tagsInner}
         itemClass={cx.tag}
@@ -603,15 +660,15 @@ class ApplicantBadge extends PureComponent<Props> {
     return (
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         <div className={cx.name}>
-          {name || email}
+          <div className={cx.nameInner} title={name || email}>{name || email}</div>
           {status && this.renderStatusIndicator()}
         </div>
         <div className={cx.avatar}>
           {avatar || (
             <Avatar
-              src={`https://www.gravatar.com/avatar/${md5(email)}?s=90`}
+              src={`https://www.gravatar.com/avatar/${md5(email)}?s=65`}
               email={name ? `${name}'s avatar` : 'avatar'}
-              size={90}
+              size={65}
             />
           )}
         </div>

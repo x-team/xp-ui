@@ -1,40 +1,35 @@
 exports[`ApplicantBadge-13 1`] = `
 <div
-  className="AutoUI_ui_ApplicantBadge-87 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-180 ">
+  className="AutoUI_ui_ApplicantBadge-87 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_ApplicantBadge-222 ">
   <div
-    className="AutoUI_ui_ApplicantBadge-118 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
-    applicant@x-team.com
+    className="AutoUI_ui_ApplicantBadge-137 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
+    <div
+      className="AutoUI_ui_ApplicantBadge-149"
+      title="Applicant">
+      Applicant
+    </div>
     <span
       className="AutoUI_ui_ApplicantBadge-66 AutoUI_ui_ApplicantBadge-55" />
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-127">
+    className="AutoUI_ui_ApplicantBadge-156">
     <div
-      className="AutoUI_ui_Avatar-15">
-      <img
-        alt=""
-        className="AutoUI_ui_Avatar-21"
-        height={90}
-        src="https://www.gravatar.com/avatar/0e618c4e06e5fba781c75a9a1b51c1d3?s=90"
-        width={90} />
-    </div>
+      style={
+        Object {
+          "background": "orange",
+          "borderRadius": "50%",
+          "height": 50,
+          "width": 50,
+        }
+      } />
   </div>
   <div
-    className="AutoUI_ui_ApplicantBadge-165 controls" />
+    className="AutoUI_ui_ApplicantBadge-206 controls" />
   <div
-    className="AutoUI_ui_ApplicantBadge-186" />
+    className="AutoUI_ui_ApplicantBadge-228" />
   <div
-    className="AutoUI_ui_ApplicantBadge-133" />
+    className="AutoUI_ui_ApplicantBadge-168" />
   <div
-    className="AutoUI_ui_ApplicantBadge-243" />
-  <div
-    className="AutoUI_ui_ApplicantBadge-292">
-    <button>
-      Hello
-    </button>
-    <button>
-      World
-    </button>
-  </div>
+    className="AutoUI_ui_ApplicantBadge-286" />
 </div>
 `;

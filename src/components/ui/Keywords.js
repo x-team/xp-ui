@@ -14,25 +14,25 @@ const cmz = require('cmz')
 const cx = {
   formTagList: cmz(typo.baseText, `
     & {
-      font-size: 20px
+      font-size: 16px
       text-rendering: optimizeLegibility
       -webkit-font-smoothing: antialiased
     }
     & .Select-control {
       display: flex
-      padding-left: 15px
+      padding-left: 14px
       border: 1px solid ${theme.lineSilver2}
       border-radius: 2px
     }
     & .Select-control,
     & .Select-control .Select-placeholder {
-      height: 60px
+      height: 40px
     }
     & .Select-control .Select-placeholder {
-      line-height: 60px !important
+      line-height: 38px !important
       color: ${theme.typoParagraph}
       cursor: text
-      padding-left: 20px !important
+      padding-left: 14px !important
     }
     & .Select-control .Select-value .Select-value-label {
       color: ${theme.typoParagraph}
@@ -47,13 +47,13 @@ const cx = {
     &.Select--multi .Select-control .Select-value {
       padding: 0 !important
       line-height: initial !important
-      margin-top: 0
-      font-size: 17px
+      margin: 0 5px 0 0
+      font-size: 16px
     }
     &.Select--multi .Select-control .Select-input {
-      margin-left: 5px
-      line-height: 60px
-      height: 60px
+      margin: 0 5px 0 0
+      line-height: 40px
+      height: 40px
       padding: 0 !important;
     }
     &.Select--multi .Select-multi-value-wrapper {
@@ -73,7 +73,7 @@ const cx = {
       width: 45px
     }
     &.Select--multi .Select-control .Select-clear-zone span {
-      line-height: 60px
+      line-height: 40px
     }
   `)
 }
