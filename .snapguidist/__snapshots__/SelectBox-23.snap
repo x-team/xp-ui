@@ -8,9 +8,9 @@ exports[`SelectBox-23 1`] = `
   }>
   <div>
     <div
-      className="AutoUI_ui_SelectBox-108">
+      className="AutoUI_ui_SelectBox-112">
       <div
-        className="AutoUI_ui_SelectBox-119">
+        className="AutoUI_ui_SelectBox-123">
         <svg
           height="17px"
           viewBox="0 0 16 17"
@@ -37,7 +37,7 @@ exports[`SelectBox-23 1`] = `
           aria-labelledby="label-search"
           autoComplete="off"
           autoFocus={false}
-          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-113"
+          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
           id="search"
           name="search"
           placeholder="Search"
@@ -47,7 +47,7 @@ exports[`SelectBox-23 1`] = `
       </div>
     </div>
     <ul
-      className="AutoUI_ui_SelectBox-164 expanded"
+      className="AutoUI_ui_SelectBox-168 expanded"
       style={
         Object {
           "height": "240px",
