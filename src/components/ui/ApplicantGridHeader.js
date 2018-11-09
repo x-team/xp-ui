@@ -24,7 +24,7 @@ type HeaderColumn = {
   isSortable?: boolean,
   size: string,
   filterRender?: (onChangeFilter: () => void) => Element<*>,
-  isFiltering?: boolean
+  isFilteringFn?: () => boolean
 }
 
 type Props = {
@@ -246,8 +246,9 @@ class ApplicantGridHeader extends PureComponent<Props> {
         size,
         label,
         filterRender,
-        isFiltering
+        isFilteringFn
       } = headerColumn
+      const isFiltering = isFilteringFn && isFilteringFn()
       const columnClassName = getClassName({
         [cx[size]]: true,
         [cx.sortable]: isSortable,
