@@ -4,7 +4,8 @@ exports[`ApplicantBadge-11 1`] = `
   <div
     className="AutoUI_ui_ApplicantBadge-137 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
     <div
-      className="AutoUI_ui_ApplicantBadge-149">
+      className="AutoUI_ui_ApplicantBadge-149"
+      title="applicant@x-team.com">
       applicant@x-team.com
     </div>
     <span

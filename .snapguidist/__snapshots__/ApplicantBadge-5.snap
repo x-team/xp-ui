@@ -4,7 +4,8 @@ exports[`ApplicantBadge-5 1`] = `
   <div
     className="AutoUI_ui_ApplicantBadge-137 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34">
     <div
-      className="AutoUI_ui_ApplicantBadge-149">
+      className="AutoUI_ui_ApplicantBadge-149"
+      title="Applicant full name but not a regular name this is a very long name I dont understand the reason someone have such big name">
       Applicant full name but not a regular name this is a very long name I dont understand the reason someone have such big name
     </div>
   </div>
