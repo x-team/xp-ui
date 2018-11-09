@@ -139,7 +139,7 @@ const listTheme = {
       grid-area: name
       display: flex
       align-items: flex-start
-      font-size: 14px
+      font-size: 15px
       line-height: 1
       position: relative
       overflow: hidden
@@ -167,7 +167,7 @@ const listTheme = {
 
   applicantStatus: cmz(`
     grid-area: status
-    font-size: 14px
+    font-size: 16px
     line-height: 1
     text-align: center
   `),
@@ -337,7 +337,7 @@ const listTheme = {
   purelabel: cmz(`
     border: none
     color: ${theme.typoLabel}
-    font-size: 14px
+    font-size: 16px
   `),
 
   children: cmz(`
@@ -660,7 +660,7 @@ class ApplicantBadge extends PureComponent<Props> {
     return (
       <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         <div className={cx.name}>
-          <div className={cx.nameInner}>{name || email}</div>
+          <div className={cx.nameInner} title={name || email}>{name || email}</div>
           {status && this.renderStatusIndicator()}
         </div>
         <div className={cx.avatar}>
