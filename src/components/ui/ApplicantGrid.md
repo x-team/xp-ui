@@ -62,13 +62,15 @@ Tabular view:
 ```js
 const SvgIcon = require('./SvgIcon').default;
 const ApplicantBadge = require('./ApplicantBadge').default;
-const items = Array(5).fill(
+const SelectBox = require('./SelectBox').default;
+const items = Array(15).fill(
   <ApplicantBadge
     mode='tabular'
     id={333}
     name='Applicant full name'
     email='applicant@email.com'
     status='accepted'
+    applicantStatus='In Pipeline'
     info={[
       {
         label: 'Avail. date:',
@@ -87,14 +89,6 @@ const items = Array(5).fill(
       {
         label: 'Rate:',
         value: '$100'
-      },
-      {
-        label: 'Status',
-        value: 'In Pipeline'
-      },
-      {
-        label: 'Rank',
-        value: 2
       }
     ]}
     tags={[
@@ -135,12 +129,99 @@ const items = Array(5).fill(
     ]}
   />
 );
-<ApplicantGrid
-  items={items}
-  mode='tabular'
-  visible={3}
-  increment={2}
-/>
+const headerColumns = [
+  {
+    name: 'fullName',
+    label: 'Name',
+    isSortable: true,
+    size: 'large'
+  },
+  {
+    name: 'skills',
+    label: 'Skills',
+    size: 'medium'
+  },
+  [
+    {
+      name: 'availabilityDate',
+      label: 'Avail. Date',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: ({ onChange, isFetching }) => (
+        <div>
+          Anything goes here
+        </div>
+      ),
+      isFilteringFn: () => false
+    },
+    {
+      name: 'availabilityUpdated',
+      label: 'Avail. Updated',
+      isSortable: true,
+      size: 'tiny'
+    },
+    {
+      name: 'timezoneOffset',
+      label: 'Timezone',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: ({ onChange, isFetching }) => (
+        <SelectBox
+          placeholder='Timezone filter...'
+          onSelect={(value) => onChange(value)}
+          items={[
+            { id: '01', value: '01' },
+            { id: '02', value: '02', selected: true },
+            { id: '03', value: '03' },
+            { id: '04', value: '04', selected: true },
+            { id: '05', value: '05' }
+          ]}
+          expanded
+          lined
+          hasSearch={false}
+          width={200}
+          visibleItems={4}
+        />
+      ),
+      isFilteringFn: () => true
+    },
+    {
+      name: 'rate',
+      label: 'Rate',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: ({ onChange, isFetching }) => (
+        <div>
+          Anything goes here
+        </div>
+      ),
+      isFilteringFn: () => true
+    },
+  ],
+  {
+    name: 'status',
+    label: 'Status',
+    size: 'tiny'
+  },
+  {
+    name: 'ranking',
+    label: 'Ranking',
+    isSortable: true,
+    size: 'tiny'
+  }
+];
+<div style={{overflowX: 'scroll', width: '1698px', height: 'auto'}}>
+  <ApplicantGrid
+    items={items}
+    mode='tabular'
+    visible={5}
+    increment={2}
+    headerColumns={headerColumns}
+    sortBy={'timezoneOffset'}
+    sortDirection={'desc'}
+    onSortingChange={sortOptions => console.log(sortOptions)}
+  />
+</div>
 ```
 
 Missing props (does component explode?):
