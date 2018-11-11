@@ -5,9 +5,10 @@ const SvgIcon = require('./SvgIcon').default;
 <ApplicantBadge
   mode='card'
   id={123123}
-  name='Applicant full name'
+  name='Applicant full name but not a regular name this is a very long name I dont understand the reason someone have such big name'
   email='applicant@email.com'
   status='accepted'
+  applicantStatus='Booked (Available Soon)'
   info={[
     {
       label: 'Avail. date:',
@@ -57,8 +58,9 @@ const SvgIcon = require('./SvgIcon').default;
   active={true}
   mode='card'
   id={123123}
-  name='Applicant full name'
+  name='short name'
   email='applicant@email.com'
+  applicantStatus='Booked (Available Soon)'
   info={[
     {
       label: 'Avail. date:',
@@ -113,7 +115,7 @@ const SvgIcon = require('./SvgIcon').default;
 <ApplicantBadge
   mode='card'
   id={123123}
-  name='Applicant full name'
+  name='Applicant full name but not a regular name this is a very long name I dont understand the reason someone have such big name'
   email='applicant@email.com'
   info={[
     {
@@ -162,11 +164,12 @@ Basic tabular:
 const SvgIcon = require('./SvgIcon').default;
 <ApplicantBadge
   status='excluded'
+  applicantStatus='Booked (Available Soon)'
   mode='tabular'
   id={123123}
   ranking={5}
   applicantStatus='In Pipeline'
-  name='Applicant full name'
+  name='Applicant full name but not a regular name this is a very long name I dont understand the reason someone have such big name'
   email='applicant@email.com'
   info={[
     {
@@ -188,6 +191,7 @@ const SvgIcon = require('./SvgIcon').default;
       value: '$100'
     }
   ]}
+  ranking={5}
   tags={[
     'JavaScript',
     'ES2015',
@@ -330,7 +334,6 @@ const SvgIcon = require('./SvgIcon').default;
       value: '$100'
     }
   ]}
-  ranking={5}
   tags={[
     'JavaScript',
     'ES2015',
@@ -391,58 +394,7 @@ With a custom avatar:
   status='accepted'
   name='Applicant'
   email='applicant@x-team.com'
-  avatar=<div style={{width: 90, height: 90, borderRadius: '50%', background: 'orange' }} />
-/>
-```
-
-With applicant status:
-
-```js
-const SvgIcon = require('./SvgIcon').default;
-<ApplicantBadge
-  mode='card'
-  id={123123}
-  name='Applicant full name'
-  email='applicant@email.com'
-  applicantStatus='Booked'
-  info={[
-    {
-      label: 'Avail. date:',
-      value: 'DD/MM/YYYY',
-      tip: 'Avail. date tooltip copy'
-    },
-    {
-      label: 'Timezone:',
-      value: 'UTC+00'
-    },
-    {
-      label: 'Rate:',
-      value: '$100'
-    }
-  ]}
-  ranking={5}
-  tags={[
-    'JavaScript',
-    'ES2015',
-    'Node',
-    'Express',
-    'React',
-    'Redux',
-    'Webpack'
-  ]}
-  onClick={id => console.log('Applicant selected: ' + id)}
-  actions={[
-    {
-      key: 'approval',
-      icon: () => <SvgIcon icon='check' />,
-      render: () => <form>A custom list of inputs with a submit button and a checkmark icon</form>
-    },
-    {
-      key: 'exclusion',
-      icon: () => <SvgIcon icon='x' />,
-      render: () => <form>Another custom list of inputs with a submit button and an X icon</form>
-    }
-  ]}
+  avatar=<div style={{width: 50, height: 50, borderRadius: '50%', background: 'orange' }} />
 />
 ```
 

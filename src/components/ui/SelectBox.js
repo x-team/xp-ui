@@ -33,6 +33,7 @@ const cx = {
     background: ${theme.baseBrighter}
     position: relative
     width: 100%
+    font-size: 16px
   `),
 
   dropdown: cmz(`
@@ -43,9 +44,10 @@ const cx = {
     typo.baseText,
     `
       & {
+        font-size: 16px
         border: 1px solid ${theme.lineSilver2}
-        padding: 0 20px
-        height: 60px
+        padding: 0 14px
+        height: 40px
         width: 100%
         box-sizing: border-box
         display: flex
@@ -72,21 +74,25 @@ const cx = {
     }
     & > div {
       display: block
-      line-height: 1.1
+      line-height: 1.2
     }
     & > div:first-of-type {
-      font-size: 15px
+      font-size: 13px
       color: ${theme.typoLabel}
-      padding: 10px 0 0
+      padding: 0
       transition: color .10s ease-out, font-size .10s ease-out
+      height: 13px
+    }
+    & > div:first-of-type:empty {
+      height: 0
     }
     & > div:last-of-type {
       width: calc(100% - 20px)
-      height: 24px
+      height: auto
       white-space: nowrap
-      overflow-x: overlay
-      overflow-y: hidden
-      padding: 0 0 10px
+      overflow: hidden
+      text-overflow: ellipsis
+      padding: 0
       transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       opacity: 1
     }
@@ -131,7 +137,7 @@ const cx = {
       position: absolute
       z-index: 5
       top: 50%
-      right: 30px
+      right: 24px
     }
     & svg {
       position: absolute
@@ -141,20 +147,21 @@ const cx = {
   close: cmz(
     controlBaseClass,
     `
-      right: 40px
+      right: 34px
     `
   ),
 
   clear: cmz(
     controlBaseClass,
     `
-      right: 55px
+      right: 49px
       transform: scale(0.9)
       top: calc(50% - 5px)
     `
   ),
 
   label: cmz(typo.baseText, `
+    font-size: 16px
     border-bottom: 1px solid transparent
   `),
 
@@ -181,6 +188,7 @@ const cx = {
 
   item: cmz(typo.baseText, `
     & {
+      font-size: 16px
       min-height: 30px
     }
     &:hover {
@@ -255,6 +263,7 @@ const cx = {
   selecting: cmz(
     typo.baseText,
     `
+      font-size: 16px
       position: relative
       padding-left: 30px
     `
@@ -294,6 +303,7 @@ const cx = {
     typo.baseText,
     `
       & {
+        font-size: 16px
         width: 70%
         height: 30px
       }
@@ -311,6 +321,7 @@ const cx = {
   nothingLabel: cmz(
     typo.baseText,
     `
+      font-size: 16px
       display: block
       margin: 15px 22px
     `
@@ -320,6 +331,7 @@ const cx = {
     typo.baseText,
     `
       & {
+        font-size: 16px
         display: flex
         align-items: center
         margin: 15px 22px

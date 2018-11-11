@@ -7,7 +7,7 @@ exports[`SelectBox-15 1`] = `
     }
   }>
   <div
-    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-38"
+    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-39"
     onMouseEnter={false}
     onMouseLeave={false}>
     <div
@@ -16,9 +16,9 @@ exports[`SelectBox-15 1`] = `
       <span
         className="AutoUI_ui_Dropdown-40">
         <div
-          className="AutoUI_ui_SelectBox-106">
+          className="AutoUI_ui_SelectBox-112">
           <div
-            className="AutoUI_ui_SelectBox-117">
+            className="AutoUI_ui_SelectBox-123">
             <svg
               height="17px"
               viewBox="0 0 16 17"
@@ -45,7 +45,7 @@ exports[`SelectBox-15 1`] = `
               aria-labelledby="label-search"
               autoComplete="off"
               autoFocus={true}
-              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-111"
+              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
               id="search"
               name="search"
               onClick={false}
@@ -60,11 +60,11 @@ exports[`SelectBox-15 1`] = `
     <div
       className="AutoUI_ui_Dropdown-50     ">
       <div
-        className="AutoUI_ui_SelectBox-178">
+        className="AutoUI_ui_SelectBox-185">
         <div>
           
           <ul
-            className="AutoUI_ui_SelectBox-161 false"
+            className="AutoUI_ui_SelectBox-168 false"
             style={
               Object {
                 "height": "auto",

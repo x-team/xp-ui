@@ -87,10 +87,10 @@ exports[`ApplicantGridHeader-1 1`] = `
                   }>
                   <div>
                     <div
-                      className="AutoUI_ui_SelectBox-42 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+                      className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
                       <div>
                         <div
-                          className="AutoUI_ui_SelectBox-69">
+                          className="AutoUI_ui_SelectBox-71">
                           <div>
                             Timezone filter...
                           </div>
@@ -99,7 +99,7 @@ exports[`ApplicantGridHeader-1 1`] = `
                           </div>
                         </div>
                         <div
-                          className="AutoUI_ui_SelectBox-129">
+                          className="AutoUI_ui_SelectBox-135">
                           <svg
                             height="5px"
                             viewBox="0 0 9 5"
@@ -119,7 +119,7 @@ exports[`ApplicantGridHeader-1 1`] = `
                       </div>
                     </div>
                     <ul
-                      className="AutoUI_ui_SelectBox-161 expanded"
+                      className="AutoUI_ui_SelectBox-168 expanded"
                       style={
                         Object {
                           "height": "240px",
@@ -129,9 +129,9 @@ exports[`ApplicantGridHeader-1 1`] = `
                       }>
                       
                       <li
-                        className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                        className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-216 ">
                         <div
-                          className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                          className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
                           <div
                             className="AutoUI_forms_InputField-78">
                             <label
@@ -156,13 +156,13 @@ exports[`ApplicantGridHeader-1 1`] = `
                             </label>
                           </div>
                           <span
-                            className="AutoUI_ui_SelectBox-239" />
+                            className="AutoUI_ui_SelectBox-247" />
                         </div>
                       </li>
                       <li
-                        className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                        className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-216 ">
                         <div
-                          className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                          className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
                           <div
                             className="AutoUI_forms_InputField-78">
                             <label
@@ -187,13 +187,13 @@ exports[`ApplicantGridHeader-1 1`] = `
                             </label>
                           </div>
                           <span
-                            className="AutoUI_ui_SelectBox-239" />
+                            className="AutoUI_ui_SelectBox-247" />
                         </div>
                       </li>
                       <li
-                        className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                        className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-216 ">
                         <div
-                          className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                          className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
                           <div
                             className="AutoUI_forms_InputField-78">
                             <label
@@ -218,13 +218,13 @@ exports[`ApplicantGridHeader-1 1`] = `
                             </label>
                           </div>
                           <span
-                            className="AutoUI_ui_SelectBox-239" />
+                            className="AutoUI_ui_SelectBox-247" />
                         </div>
                       </li>
                       <li
-                        className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                        className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-216 ">
                         <div
-                          className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                          className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
                           <div
                             className="AutoUI_forms_InputField-78">
                             <label
@@ -249,13 +249,13 @@ exports[`ApplicantGridHeader-1 1`] = `
                             </label>
                           </div>
                           <span
-                            className="AutoUI_ui_SelectBox-239" />
+                            className="AutoUI_ui_SelectBox-247" />
                         </div>
                       </li>
                       <li
-                        className="AutoUI_ui_SelectBox-182 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-208 ">
+                        className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-216 ">
                         <div
-                          className="AutoUI_ui_SelectBox-197 AutoUI_ui_SelectBox-204">
+                          className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
                           <div
                             className="AutoUI_forms_InputField-78">
                             <label
@@ -280,7 +280,7 @@ exports[`ApplicantGridHeader-1 1`] = `
                             </label>
                           </div>
                           <span
-                            className="AutoUI_ui_SelectBox-239" />
+                            className="AutoUI_ui_SelectBox-247" />
                         </div>
                       </li>
                     </ul>
