@@ -408,10 +408,11 @@ const tabularTheme = {
     flex: 1
     display: flex
     justify-content: space-between
+    margin: 0
   `),
 
   info: cmz(typo.baseText, `
-    width: 80px
+    width: 100px
     font-size: 16px
     margin: 0 14px
     text-align: center
@@ -507,11 +508,13 @@ const tabularTheme = {
   `),
 
   applicantStatus: cmz(
-    typo.baseText,
     `
-      width: 150px
+      width: 100px
       font-size: 16px
       order: 5
+      justify-content: center
+      margin: 0 14px
+      text-align: center
     `
   ),
 
@@ -520,9 +523,10 @@ const tabularTheme = {
     `
       & {
         font-size: 16px
-        width: 80px
+        width: 100px
         order: 6
         justify-content: center
+        margin: 0 14px
       }
 
       & div, & span {
@@ -536,7 +540,7 @@ const tabularTheme = {
     `
       font-size: 1.063rem
       width: 100%
-      height: 60px
+      height: 40px
       color: ${theme.logoGray}
       background: ${theme.lineSilver2}
       border: 1px solid ${theme.lineSilver2}

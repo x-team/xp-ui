@@ -1,49 +1,94 @@
 Default Applicant Grid Header
 
 ```js
-const headerConfig = [
+const SelectBox = require('./SelectBox').default;
+const headerColumns = [
   {
-    name: 'field1',
-    label: 'Field1',
+    name: 'fullName',
+    label: 'Name',
     isSortable: true,
     size: 'large'
   },
   {
-    name: 'field2',
-    label: 'Field2',
-    size: 'large'
-  },
-  {
-    name: 'field3',
-    label: 'Field3',
-    isSortable: false,
+    name: 'skills',
+    label: 'Skills',
     size: 'medium'
   },
+  [
+    {
+      name: 'availabilityDate',
+      label: 'Avail. Date',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: (onChange) => (
+        <div>
+          Anything goes here
+        </div>
+      ),
+      isFiltering: false
+    },
+    {
+      name: 'availabilityUpdated',
+      label: 'Avail. Updated',
+      isSortable: true,
+      size: 'tiny'
+    },
+    {
+      name: 'timezoneOffset',
+      label: 'Timezone',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: (onChange) => (
+        <SelectBox
+          placeholder='Timezone filter...'
+          onSelect={(value) => console.log(value)}
+          items={[
+            { id: '01', value: '01' },
+            { id: '02', value: '02', selected: true },
+            { id: '03', value: '03' },
+            { id: '04', value: '04', selected: true },
+            { id: '05', value: '05' }
+          ]}
+          expanded
+          lined
+          hasSearch={false}
+          width={200}
+          visibleItems={4}
+        />
+      ),
+      isFiltering: true
+    },
+    {
+      name: 'rate',
+      label: 'Rate',
+      isSortable: true,
+      size: 'tiny',
+      filterRender: (onChange) => (
+        <div>
+          Anything goes here
+        </div>
+      ),
+      isFiltering: true
+    },
+  ],
   {
-    name: 'field4',
-    label: 'Field4',
-    isSortable: true,
-    size: 'medium'
+    name: 'status',
+    label: 'Status',
+    size: 'tiny'
   },
   {
-    name: 'field5',
-    label: 'Field5',
+    name: 'ranking',
+    label: 'Ranking',
     isSortable: true,
-    size: 'small'
-  },
-  {
-    name: 'field6',
-    label: 'Field6',
-    isSortable: true,
-    size: 'small'
+    size: 'tiny'
   }
 ];
-<div style={{overflowX: 'scroll'}}>
+<div style={{overflowX: 'scroll', height: '400px'}}>
   <ApplicantGridHeader
     className={`custom-class-name`}
-    headerColumns={headerConfig}
-    onSortingChange={() => {}}
-    sortBy={`field1`}
+    headerColumns={headerColumns}
+    onSortingChange={(value) => console.log('onSortingChange', value)}
+    sortBy={`availabilityUpdated`}
     sortDirection={`desc`}
    />
 </div>

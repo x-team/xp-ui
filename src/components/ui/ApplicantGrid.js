@@ -155,6 +155,19 @@ class ApplicantGrid extends PureComponent<Props, State> {
       onKeyPress && onKeyPress()
     }
 
+    const renderViewMore = (amount, action, isFetching) => (
+      <span className={cx.more}>
+        <Button
+          block
+          outlined
+          disabled={isFetching}
+          onClick={() => this.handleViewMore(action)}
+        >
+          View more
+        </Button>
+      </span>
+    )
+
     const renderItems = () => items && (
       <div
         ref={this.setContainerRef}
@@ -171,18 +184,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
           itemClass={cx.item}
           isFetching={isFetching}
           hasMore={hasMore}
-          viewMore={(amount, action, isFetching) => (
-            <span className={cx.more}>
-              <Button
-                block
-                outlined
-                disabled={isFetching}
-                onClick={() => this.handleViewMore(action)}
-              >
-                View more
-              </Button>
-            </span>
-          )}
+          viewMore={renderViewMore}
         />
       </div>
     )
@@ -190,6 +192,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
     return isTabular ? (
       <div className={cx.tabular}>
         <ApplicantGridHeader
+          isFetching={isFetching}
           headerColumns={headerColumns}
           onSortingChange={this.handleSortChange}
           sortBy={sortBy}
