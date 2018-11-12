@@ -107,7 +107,7 @@ exports[`ListsEditor-1 1`] = `
                     </div>
                   </div>
                   <ul
-                    className="AutoUI_ui_SelectBox-168 expanded"
+                    className="AutoUI_ui_SelectBox-173 expanded"
                     style={
                       Object {
                         "height": "420px",
@@ -117,9 +117,9 @@ exports[`ListsEditor-1 1`] = `
                     }>
                     
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -144,9 +144,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -164,7 +164,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -176,7 +176,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -191,9 +191,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -218,9 +218,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -238,7 +238,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -250,7 +250,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -265,9 +265,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -292,9 +292,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -312,7 +312,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -324,7 +324,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -339,9 +339,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -366,9 +366,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -386,7 +386,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -398,7 +398,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -413,9 +413,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -440,9 +440,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -460,7 +460,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -472,7 +472,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -487,9 +487,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -514,9 +514,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -534,7 +534,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -546,7 +546,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -561,9 +561,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -588,9 +588,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -608,7 +608,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -620,7 +620,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -635,9 +635,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -662,9 +662,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -682,7 +682,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -694,7 +694,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -709,9 +709,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -736,9 +736,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -756,7 +756,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -768,7 +768,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -783,9 +783,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -810,9 +810,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -830,7 +830,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -842,7 +842,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -857,9 +857,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -884,9 +884,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -904,7 +904,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -916,7 +916,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -931,9 +931,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -958,9 +958,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -978,7 +978,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -990,7 +990,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -1005,9 +1005,9 @@ exports[`ListsEditor-1 1`] = `
                       </div>
                     </li>
                     <li
-                      className="AutoUI_ui_SelectBox-189 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-241">
+                      className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-246">
                       <div
-                        className="AutoUI_ui_SelectBox-205 AutoUI_ui_SelectBox-212">
+                        className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
                           className="AutoUI_forms_InputField-78">
                           <label
@@ -1032,9 +1032,9 @@ exports[`ListsEditor-1 1`] = `
                           </label>
                         </div>
                         <span
-                          className="AutoUI_ui_SelectBox-247">
+                          className="AutoUI_ui_SelectBox-252">
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 14 14"
@@ -1052,7 +1052,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"
@@ -1064,7 +1064,7 @@ exports[`ListsEditor-1 1`] = `
                             </svg>
                           </span>
                           <span
-                            className="AutoUI_ui_SelectBox-252 AutoUI_ui_SelectBox-259 editableButton">
+                            className="AutoUI_ui_SelectBox-257 AutoUI_ui_SelectBox-264 editableButton">
                             <svg
                               height="14px"
                               viewBox="0 0 24 24"

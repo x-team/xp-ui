@@ -1,3 +1,5 @@
+/* globals SyntheticEvent, HTMLElement */
+
 export function throttle (callback, timeout) {
   let now = Date.now()
   return function () {
@@ -41,4 +43,8 @@ export function size (collection: ?string | ?Object | ?Array<*>): number {
   if (Array.isArray(collection) || typeof collection === 'string') return collection.length
 
   return Object.keys(collection).length
+}
+
+export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
+  event && event.stopPropagation()
 }

@@ -100,7 +100,7 @@ exports[`ListsEditor-3 1`] = `
                   </div>
                 </div>
                 <ul
-                  className="AutoUI_ui_SelectBox-168 expanded"
+                  className="AutoUI_ui_SelectBox-173 expanded"
                   style={
                     Object {
                       "height": "420px",
