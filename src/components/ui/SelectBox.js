@@ -165,6 +165,11 @@ const cx = {
     border-bottom: 1px solid transparent
   `),
 
+  value: cmz(`
+    font-size: 1.063rem !important
+    color: ${theme.formText} !important
+  `),
+
   list: cmz(`
     & {
       list-style: none
@@ -1060,10 +1065,12 @@ class SelectBox extends Component<Props, State> {
         {placeholder && (
           <div>
             <div className={selectsClass}>
-              <div>
-                {placeholder}
-              </div>
-              <div>
+              {placeholder.trim() && (
+                <div>
+                  {placeholder}
+                </div>
+              )}
+              <div className={cx.value}>
                 {filteredSelectedItems
                   .reduce((acc, { value }) => (
                     acc ? `${acc}, ${value}` : value

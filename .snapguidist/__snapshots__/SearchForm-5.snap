@@ -31,7 +31,8 @@ exports[`SearchForm-5 1`] = `
                       <div>
                         Select List
                       </div>
-                      <div>
+                      <div
+                        className="AutoUI_ui_SelectBox-168">
                         
                       </div>
                     </div>
@@ -60,7 +61,7 @@ exports[`SearchForm-5 1`] = `
             <div
               className="AutoUI_ui_Dropdown-50     ">
               <div
-                className="AutoUI_ui_SelectBox-185">
+                className="AutoUI_ui_SelectBox-190">
                 <div>
                   <div
                     className="AutoUI_ui_SelectBox-112">
@@ -102,7 +103,7 @@ exports[`SearchForm-5 1`] = `
                     </div>
                   </div>
                   <ul
-                    className="AutoUI_ui_SelectBox-168 false"
+                    className="AutoUI_ui_SelectBox-173 false"
                     style={
                       Object {
                         "height": "auto",
@@ -113,7 +114,7 @@ exports[`SearchForm-5 1`] = `
                     
                   </ul>
                   <div
-                    className="AutoUI_ui_SelectBox-348">
+                    className="AutoUI_ui_SelectBox-353">
                     <button
                       className=" AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-169 AutoUI_ui_Button-234 AutoUI_ui_Button-128"
                       type="button">
@@ -272,7 +273,8 @@ exports[`SearchForm-5 1`] = `
                       <div>
                         Select Field
                       </div>
-                      <div>
+                      <div
+                        className="AutoUI_ui_SelectBox-168">
                         
                       </div>
                     </div>
@@ -301,7 +303,7 @@ exports[`SearchForm-5 1`] = `
             <div
               className="AutoUI_ui_Dropdown-50     ">
               <div
-                className="AutoUI_ui_SelectBox-185">
+                className="AutoUI_ui_SelectBox-190">
                 <div>
                   <div
                     className="AutoUI_ui_SelectBox-112">
@@ -343,7 +345,7 @@ exports[`SearchForm-5 1`] = `
                     </div>
                   </div>
                   <ul
-                    className="AutoUI_ui_SelectBox-168 false"
+                    className="AutoUI_ui_SelectBox-173 false"
                     style={
                       Object {
                         "height": "auto",
@@ -385,7 +387,8 @@ exports[`SearchForm-5 1`] = `
                       <div>
                         Status
                       </div>
-                      <div>
+                      <div
+                        className="AutoUI_ui_SelectBox-168">
                         
                       </div>
                     </div>
@@ -414,10 +417,10 @@ exports[`SearchForm-5 1`] = `
             <div
               className="AutoUI_ui_Dropdown-50     ">
               <div
-                className="AutoUI_ui_SelectBox-185">
+                className="AutoUI_ui_SelectBox-190">
                 <div>
                   <ul
-                    className="AutoUI_ui_SelectBox-168 false"
+                    className="AutoUI_ui_SelectBox-173 false"
                     style={
                       Object {
                         "height": "auto",
@@ -442,7 +445,7 @@ exports[`SearchForm-5 1`] = `
           className="Select-control">
           <span
             className="Select-multi-value-wrapper"
-            id="react-select-12--value">
+            id="react-select-16--value">
             <div
               className="Select-placeholder">
               Type keywords
@@ -455,7 +458,7 @@ exports[`SearchForm-5 1`] = `
                 }
               }>
               <input
-                aria-activedescendant="react-select-12--value"
+                aria-activedescendant="react-select-16--value"
                 aria-expanded="false"
                 aria-haspopup="false"
                 aria-owns=""

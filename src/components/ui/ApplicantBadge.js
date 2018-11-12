@@ -6,7 +6,7 @@ import TruncatedList from './TruncatedList'
 import Dropdown from './Dropdown'
 import SelectBox from './SelectBox'
 
-import { size } from '../../utils/helpers'
+import { size, stopPropagation } from '../../utils/helpers'
 import { DISPLAY_MODES } from '../../utils/constants'
 
 import theme from '../../styles/theme'
@@ -523,7 +523,7 @@ const tabularTheme = {
     `
       & {
         font-size: 16px
-        width: 100px
+        width: 100px;
         order: 6
         justify-content: center
         margin: 0 14px
@@ -550,7 +550,11 @@ const tabularTheme = {
       align-items: center
       padding: 0 1.25rem
     `
-  )
+  ),
+
+  rankingSelector: cmz(`
+    width: 100%;
+  `)
 }
 
 class ApplicantBadge extends PureComponent<Props> {
@@ -709,14 +713,16 @@ class ApplicantBadge extends PureComponent<Props> {
                 {ranking}
               </div>
             ) : (
-              <SelectBox
-                placeholder={' '}
-                visibleItems={4}
-                hasSearch={false}
-                shouldSortItems={false}
-                onClick={this.handleRankingChange}
-                items={ranks}
-              />
+              <div className={cx.rankingSelector} onClick={stopPropagation}>
+                <SelectBox
+                  placeholder=' '
+                  visibleItems={4}
+                  hasSearch={false}
+                  shouldSortItems={false}
+                  onClick={this.handleRankingChange}
+                  items={ranks}
+                />
+              </div>
             )}
           </div>
         )}
