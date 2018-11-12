@@ -721,7 +721,6 @@ class ApplicantBadge extends PureComponent<Props> {
                   shouldSortItems={false}
                   onClick={this.handleRankingChange}
                   items={ranks}
-                  closeDropdown
                 />
               </div>
             )}
