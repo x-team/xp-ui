@@ -33,7 +33,7 @@ const cx = {
     background: ${theme.baseBrighter}
     position: relative
     width: 100%
-    font-size: 16px
+    font-size: 20px
   `),
 
   dropdown: cmz(`
@@ -161,7 +161,7 @@ const cx = {
   ),
 
   label: cmz(typo.baseText, `
-    font-size: 16px
+    font-size: 20px
     border-bottom: 1px solid transparent
   `),
 
@@ -188,7 +188,7 @@ const cx = {
 
   item: cmz(typo.baseText, `
     & {
-      font-size: 16px
+      font-size: 20px
       min-height: 30px
     }
     &:hover {
@@ -263,7 +263,7 @@ const cx = {
   selecting: cmz(
     typo.baseText,
     `
-      font-size: 16px
+      font-size: 20px
       position: relative
       padding-left: 30px
     `
@@ -303,7 +303,7 @@ const cx = {
     typo.baseText,
     `
       & {
-        font-size: 16px
+        font-size: 20px
         width: 70%
         height: 30px
       }
@@ -321,7 +321,7 @@ const cx = {
   nothingLabel: cmz(
     typo.baseText,
     `
-      font-size: 16px
+      font-size: 20px
       display: block
       margin: 15px 22px
     `
@@ -331,7 +331,7 @@ const cx = {
     typo.baseText,
     `
       & {
-        font-size: 16px
+        font-size: 20px
         display: flex
         align-items: center
         margin: 15px 22px
