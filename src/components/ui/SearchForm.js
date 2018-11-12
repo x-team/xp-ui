@@ -161,6 +161,7 @@ const tabularTheme = {
     flex: 1
     flex-shrink: 0
     min-width: 200px
+    max-width: 350px;
   `),
 
   fieldsAndStatusesContainer: cmz(`
