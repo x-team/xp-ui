@@ -188,9 +188,9 @@ exports[`SearchForm-3 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-168">
+      className="AutoUI_ui_SearchForm-169">
       <div
-        className="AutoUI_ui_SearchForm-173">
+        className="AutoUI_ui_SearchForm-174">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -316,7 +316,7 @@ exports[`SearchForm-3 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_SearchForm-180">
+        className="AutoUI_ui_SearchForm-181">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -578,7 +578,7 @@ exports[`SearchForm-3 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-186">
+      className="AutoUI_ui_SearchForm-187">
       <div
         className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-160 has-value is-clearable is-searchable Select--multi">
         <input
@@ -763,7 +763,7 @@ exports[`SearchForm-3 1`] = `
         </div>
       </div>
       <button
-        className="AutoUI_ui_SearchForm-192 AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-179 raised"
+        className="AutoUI_ui_SearchForm-193 AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-179 raised"
         type="submit">
         <span
           className="AutoUI_ui_Button-51 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
@@ -870,7 +870,7 @@ exports[`SearchForm-3 1`] = `
     </div>
   </form>
   <div
-    className="AutoUI_ui_SearchForm-199">
+    className="AutoUI_ui_SearchForm-200">
     Here it goes ApplicantsStatusFilter component
   </div>
 </div>
