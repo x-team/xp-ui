@@ -523,7 +523,7 @@ const tabularTheme = {
     `
       & {
         font-size: 16px
-        width: 70px;
+        width: 100px;
         order: 6
         justify-content: center
         margin: 0 14px
@@ -715,12 +715,13 @@ class ApplicantBadge extends PureComponent<Props> {
             ) : (
               <div className={cx.rankingSelector} onClick={stopPropagation}>
                 <SelectBox
-                  placeholder={' '}
+                  placeholder=' '
                   visibleItems={4}
                   hasSearch={false}
                   shouldSortItems={false}
                   onClick={this.handleRankingChange}
                   items={ranks}
+                  closeDropdown
                 />
               </div>
             )}
