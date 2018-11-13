@@ -6,16 +6,18 @@ exports[`InputGroup-1 1`] = `
     stackoverflow.com/users/
   </span>
   <div>
-    <input
-      aria-labelledby="label-soAccount"
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
-      defaultValue="so_account"
-      id="soAccount"
-      maxLength={20}
-      name="soAccount"
-      placeholder="stackoverflow account.."
-      required={false}
-      type="text" />
+    <div>
+      <input
+        aria-labelledby="label-soAccount"
+        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88  "
+        defaultValue="so_account"
+        id="soAccount"
+        maxLength={20}
+        name="soAccount"
+        placeholder="stackoverflow account.."
+        required={false}
+        type="text" />
+    </div>
   </div>
 </div>
 `;

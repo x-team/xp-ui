@@ -11,7 +11,7 @@ exports[`InputField-3 1`] = `
     </section>
     <input
       aria-labelledby="label-experience"
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  AutoUI_forms_InputField-111"
+      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88  AutoUI_forms_InputField-112"
       defaultValue="1"
       id="experience"
       name="experience"

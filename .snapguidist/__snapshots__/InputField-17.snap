@@ -1,21 +1,21 @@
 exports[`InputField-17 1`] = `
 <div>
   <label
-    id="label-invalid">
+    id="label-required">
     <section
       className="AutoUI_ui_Text-29">
       <div
-        className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
-        Invalid Field
+        className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_Text-57">
+        Required Field
       </div>
     </section>
     <input
-      aria-labelledby="label-invalid"
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-116 "
-      id="invalid"
-      name="invalid"
-      placeholder="Error Placeholder..."
-      required={false}
+      aria-labelledby="label-required"
+      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88  "
+      id="required"
+      name="required"
+      placeholder="Required Placeholder..."
+      required={true}
       type="text" />
   </label>
 </div>

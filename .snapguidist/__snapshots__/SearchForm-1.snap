@@ -116,17 +116,19 @@ exports[`SearchForm-1 1`] = `
                       </svg>
                     </div>
                     <div>
-                      <input
-                        aria-labelledby="label-search"
-                        autoComplete="off"
-                        autoFocus={false}
-                        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
-                        id="search"
-                        name="search"
-                        placeholder="Search"
-                        required={false}
-                        type="text"
-                        value="" />
+                      <div>
+                        <input
+                          aria-labelledby="label-search"
+                          autoComplete="off"
+                          autoFocus={false}
+                          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117"
+                          id="search"
+                          name="search"
+                          placeholder="Search"
+                          required={false}
+                          type="text"
+                          value="" />
+                      </div>
                     </div>
                   </div>
                   <ul
@@ -370,17 +372,19 @@ exports[`SearchForm-1 1`] = `
                       </svg>
                     </div>
                     <div>
-                      <input
-                        aria-labelledby="label-search"
-                        autoComplete="off"
-                        autoFocus={false}
-                        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
-                        id="search"
-                        name="search"
-                        placeholder="Search"
-                        required={false}
-                        type="text"
-                        value="" />
+                      <div>
+                        <input
+                          aria-labelledby="label-search"
+                          autoComplete="off"
+                          autoFocus={false}
+                          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117"
+                          id="search"
+                          name="search"
+                          placeholder="Search"
+                          required={false}
+                          type="text"
+                          value="" />
+                      </div>
                     </div>
                   </div>
                   <ul
@@ -485,23 +489,23 @@ exports[`SearchForm-1 1`] = `
                       <div
                         className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
-                          className="AutoUI_forms_InputField-78">
+                          className="AutoUI_forms_InputField-79">
                           <label
                             id="label-In Pipeline">
                             <div
-                              className="AutoUI_forms_InputField-78">
+                              className="AutoUI_forms_InputField-79">
                               <label
-                                className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                                className="AutoUI_forms_InputField-70 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                                 <input
                                   aria-labelledby="label-In Pipeline"
                                   checked={false}
-                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
+                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_forms_InputField-124 "
                                   id="In Pipeline"
                                   name="In Pipeline"
                                   required={false}
                                   type="checkbox" />
                                 <span
-                                  className="AutoUI_forms_InputField-136" />
+                                  className="AutoUI_forms_InputField-137" />
                                 In Pipeline
                               </label>
                             </div>
@@ -516,23 +520,23 @@ exports[`SearchForm-1 1`] = `
                       <div
                         className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
-                          className="AutoUI_forms_InputField-78">
+                          className="AutoUI_forms_InputField-79">
                           <label
                             id="label-Booked">
                             <div
-                              className="AutoUI_forms_InputField-78">
+                              className="AutoUI_forms_InputField-79">
                               <label
-                                className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                                className="AutoUI_forms_InputField-70 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                                 <input
                                   aria-labelledby="label-Booked"
                                   checked={false}
-                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
+                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_forms_InputField-124 "
                                   id="Booked"
                                   name="Booked"
                                   required={false}
                                   type="checkbox" />
                                 <span
-                                  className="AutoUI_forms_InputField-136" />
+                                  className="AutoUI_forms_InputField-137" />
                                 Booked
                               </label>
                             </div>
@@ -547,23 +551,23 @@ exports[`SearchForm-1 1`] = `
                       <div
                         className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
-                          className="AutoUI_forms_InputField-78">
+                          className="AutoUI_forms_InputField-79">
                           <label
                             id="label-Internal">
                             <div
-                              className="AutoUI_forms_InputField-78">
+                              className="AutoUI_forms_InputField-79">
                               <label
-                                className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                                className="AutoUI_forms_InputField-70 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                                 <input
                                   aria-labelledby="label-Internal"
                                   checked={false}
-                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
+                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_forms_InputField-124 "
                                   id="Internal"
                                   name="Internal"
                                   required={false}
                                   type="checkbox" />
                                 <span
-                                  className="AutoUI_forms_InputField-136" />
+                                  className="AutoUI_forms_InputField-137" />
                                 Internal
                               </label>
                             </div>
@@ -578,23 +582,23 @@ exports[`SearchForm-1 1`] = `
                       <div
                         className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
-                          className="AutoUI_forms_InputField-78">
+                          className="AutoUI_forms_InputField-79">
                           <label
                             id="label-Unqualified">
                             <div
-                              className="AutoUI_forms_InputField-78">
+                              className="AutoUI_forms_InputField-79">
                               <label
-                                className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                                className="AutoUI_forms_InputField-70 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                                 <input
                                   aria-labelledby="label-Unqualified"
                                   checked={false}
-                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
+                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_forms_InputField-124 "
                                   id="Unqualified"
                                   name="Unqualified"
                                   required={false}
                                   type="checkbox" />
                                 <span
-                                  className="AutoUI_forms_InputField-136" />
+                                  className="AutoUI_forms_InputField-137" />
                                 Unqualified
                               </label>
                             </div>
@@ -609,23 +613,23 @@ exports[`SearchForm-1 1`] = `
                       <div
                         className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
-                          className="AutoUI_forms_InputField-78">
+                          className="AutoUI_forms_InputField-79">
                           <label
                             id="label-Lost">
                             <div
-                              className="AutoUI_forms_InputField-78">
+                              className="AutoUI_forms_InputField-79">
                               <label
-                                className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                                className="AutoUI_forms_InputField-70 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                                 <input
                                   aria-labelledby="label-Lost"
                                   checked={false}
-                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
+                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_forms_InputField-124 "
                                   id="Lost"
                                   name="Lost"
                                   required={false}
                                   type="checkbox" />
                                 <span
-                                  className="AutoUI_forms_InputField-136" />
+                                  className="AutoUI_forms_InputField-137" />
                                 Lost
                               </label>
                             </div>
@@ -640,23 +644,23 @@ exports[`SearchForm-1 1`] = `
                       <div
                         className="AutoUI_ui_SelectBox-210 AutoUI_ui_SelectBox-217">
                         <div
-                          className="AutoUI_forms_InputField-78">
+                          className="AutoUI_forms_InputField-79">
                           <label
                             id="label-Left">
                             <div
-                              className="AutoUI_forms_InputField-78">
+                              className="AutoUI_forms_InputField-79">
                               <label
-                                className="AutoUI_forms_InputField-69 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+                                className="AutoUI_forms_InputField-70 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
                                 <input
                                   aria-labelledby="label-Left"
                                   checked={false}
-                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_forms_InputField-123 "
+                                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_forms_InputField-124 "
                                   id="Left"
                                   name="Left"
                                   required={false}
                                   type="checkbox" />
                                 <span
-                                  className="AutoUI_forms_InputField-136" />
+                                  className="AutoUI_forms_InputField-137" />
                                 Left
                               </label>
                             </div>
@@ -707,7 +711,7 @@ exports[`SearchForm-1 1`] = `
           className="Select-control">
           <span
             className="Select-multi-value-wrapper"
-            id="react-select-14--value">
+            id="react-select-12--value">
             <div
               className="Select-value">
               <span
@@ -718,7 +722,7 @@ exports[`SearchForm-1 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-14--value-0"
+                id="react-select-12--value-0"
                 role="option">
                 a keyword
                 <span
@@ -737,7 +741,7 @@ exports[`SearchForm-1 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-14--value-1"
+                id="react-select-12--value-1"
                 role="option">
                 OR
                 <span
@@ -756,7 +760,7 @@ exports[`SearchForm-1 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-14--value-2"
+                id="react-select-12--value-2"
                 role="option">
                 two
                 <span
@@ -775,7 +779,7 @@ exports[`SearchForm-1 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-14--value-3"
+                id="react-select-12--value-3"
                 role="option">
                 AND
                 <span
@@ -794,7 +798,7 @@ exports[`SearchForm-1 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-14--value-4"
+                id="react-select-12--value-4"
                 role="option">
                 much more
                 <span
@@ -811,7 +815,7 @@ exports[`SearchForm-1 1`] = `
                 }
               }>
               <input
-                aria-activedescendant="react-select-14--value"
+                aria-activedescendant="react-select-12--value"
                 aria-expanded="false"
                 aria-haspopup="false"
                 aria-owns=""

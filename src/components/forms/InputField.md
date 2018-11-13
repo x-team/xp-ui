@@ -9,11 +9,23 @@ Standard use (text input element):
 />
 ```
 
-Standard use (with 'postText' defined)
+Standard use (with `label` and 'postText' defined)
 
 ```js
 <InputField
   label="How many years of experience do you have?"
+  name="experience"
+  placeholder="Years of experience.."
+  defaultValue="1"
+  style={{ width: '10%' }}
+  postText="years"
+/>
+```
+
+Standard use (with only 'postText' defined)
+
+```js
+<InputField
   name="experience"
   placeholder="Years of experience.."
   defaultValue="1"

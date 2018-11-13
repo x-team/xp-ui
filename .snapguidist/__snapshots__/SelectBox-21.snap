@@ -480,17 +480,19 @@ exports[`SelectBox-21 1`] = `
             </svg>
           </div>
           <div>
-            <input
-              aria-labelledby="label-search"
-              autoComplete="off"
-              autoFocus={false}
-              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
-              id="search"
-              name="search"
-              placeholder="Search"
-              required={false}
-              type="text"
-              value="" />
+            <div>
+              <input
+                aria-labelledby="label-search"
+                autoComplete="off"
+                autoFocus={false}
+                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117"
+                id="search"
+                name="search"
+                placeholder="Search"
+                required={false}
+                type="text"
+                value="" />
+            </div>
           </div>
         </div>
         <ul
@@ -600,17 +602,19 @@ exports[`SelectBox-21 1`] = `
             </svg>
           </div>
           <div>
-            <input
-              aria-labelledby="label-search"
-              autoComplete="off"
-              autoFocus={false}
-              className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
-              id="search"
-              name="search"
-              placeholder="Custom placeholder"
-              required={false}
-              type="text"
-              value="" />
+            <div>
+              <input
+                aria-labelledby="label-search"
+                autoComplete="off"
+                autoFocus={false}
+                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117"
+                id="search"
+                name="search"
+                placeholder="Custom placeholder"
+                required={false}
+                type="text"
+                value="" />
+            </div>
           </div>
         </div>
         <ul
@@ -728,18 +732,20 @@ exports[`SelectBox-21 1`] = `
                 </svg>
               </div>
               <div>
-                <input
-                  aria-labelledby="label-search"
-                  autoComplete="off"
-                  autoFocus={false}
-                  className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
-                  id="search"
-                  name="search"
-                  onClick={false}
-                  placeholder="Search"
-                  required={false}
-                  type="text"
-                  value="" />
+                <div>
+                  <input
+                    aria-labelledby="label-search"
+                    autoComplete="off"
+                    autoFocus={false}
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117"
+                    id="search"
+                    name="search"
+                    onClick={false}
+                    placeholder="Search"
+                    required={false}
+                    type="text"
+                    value="" />
+                </div>
               </div>
             </div>
           </span>
@@ -908,17 +914,19 @@ exports[`SelectBox-21 1`] = `
                   </svg>
                 </div>
                 <div>
-                  <input
-                    aria-labelledby="label-search"
-                    autoComplete="off"
-                    autoFocus={false}
-                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
-                    id="search"
-                    name="search"
-                    placeholder="Search"
-                    required={false}
-                    type="text"
-                    value="" />
+                  <div>
+                    <input
+                      aria-labelledby="label-search"
+                      autoComplete="off"
+                      autoFocus={false}
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117"
+                      id="search"
+                      name="search"
+                      placeholder="Search"
+                      required={false}
+                      type="text"
+                      value="" />
+                  </div>
                 </div>
               </div>
               <ul

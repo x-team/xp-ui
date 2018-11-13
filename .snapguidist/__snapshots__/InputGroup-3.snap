@@ -4,11 +4,13 @@ exports[`InputGroup-3 1`] = `
   <span
     className="AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputGroup-31" />
   <div>
-    <input
-      aria-labelledby=""
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87  "
-      required={false}
-      type="text" />
+    <div>
+      <input
+        aria-labelledby=""
+        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88  "
+        required={false}
+        type="text" />
+    </div>
   </div>
 </div>
 `;
