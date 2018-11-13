@@ -30,13 +30,13 @@ const controlBaseClass = cmz(`
 
 const cx = {
   selectbox: cmz(`
-    background: ${theme.baseBrighter}
     position: relative
     width: 100%
     font-size: 20px
   `),
 
   dropdown: cmz(`
+    background: ${theme.baseBrighter}
     width: 100%
   `),
 
