@@ -66,6 +66,7 @@ const listTheme = {
   `),
 
   fieldsAndStatusesContainer: cmz(`
+    align-items: flex-end
     display: flex
     margin: 10px 0
     padding: 0 40px
@@ -117,6 +118,7 @@ const tabularTheme = {
   `),
 
   searchForm: cmz(`
+    align-items: flex-end
     display: flex
     flex-shrink: 0
     width: 100%
@@ -166,6 +168,7 @@ const tabularTheme = {
 
   fieldsAndStatusesContainer: cmz(`
     display: inline-flex
+    align-items: flex-end
   `),
 
   selectFields: cmz(`
