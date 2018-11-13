@@ -1,6 +1,11 @@
 exports[`ApplicantGrid-5 1`] = `
-<div
-  className="AutoUI_ui_ApplicantGrid-17"
-  data-test="applicants"
-  tabIndex={0} />
+<section
+  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50">
+  <h2
+    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22">
+    No results found
+  </h2>
+  <div
+    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40" />
+</section>
 `;

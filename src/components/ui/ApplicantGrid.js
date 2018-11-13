@@ -4,6 +4,8 @@ import React, { PureComponent } from 'react'
 
 import Button from './Button'
 import TruncatedList from './TruncatedList'
+import Text from './Text'
+
 import ApplicantGridHeader from './ApplicantGridHeader'
 
 import theme from '../../styles/theme'
@@ -168,7 +170,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
       </span>
     )
 
-    const renderItems = () => items && (
+    const renderItems = () => items && items.length > 0 ? (
       <div
         ref={this.setContainerRef}
         className={cx.wrapper}
@@ -187,7 +189,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
           viewMore={renderViewMore}
         />
       </div>
-    )
+    ) : <Text subHeading='No results found' isCentered />
 
     return isTabular ? (
       <div className={cx.tabular}>
