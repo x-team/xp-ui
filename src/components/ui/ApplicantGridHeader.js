@@ -89,7 +89,7 @@ const cx = {
         border-top: 1px solid ${theme.lineSilver1}
         position: sticky
         box-sizing: border-box
-        z-index: 9999
+        z-index: 999
         text-transform: uppercase
         font-weight: bold
         background: ${theme.baseBright}
