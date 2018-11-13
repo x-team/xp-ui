@@ -109,7 +109,7 @@ const tabularTheme = {
   `),
 
   searchForm: cmz(cx.searchForm, `
-    z-index: 99999
+    z-index: 9999
     min-width: 100%
     width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
   `),
