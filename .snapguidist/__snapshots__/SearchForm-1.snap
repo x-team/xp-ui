@@ -15,7 +15,7 @@ exports[`SearchForm-1 1`] = `
             }
           }>
           <div
-            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-39"
+            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-38"
             onMouseEnter={false}
             onMouseLeave={false}>
             <div
@@ -287,7 +287,7 @@ exports[`SearchForm-1 1`] = `
     <div
       className="AutoUI_ui_SearchForm-68">
       <div
-        className="AutoUI_ui_SearchForm-74">
+        className="AutoUI_ui_SearchForm-75">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -296,7 +296,7 @@ exports[`SearchForm-1 1`] = `
             }
           }>
           <div
-            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-39"
+            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-38"
             onMouseEnter={false}
             onMouseLeave={false}>
             <div
@@ -413,7 +413,7 @@ exports[`SearchForm-1 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_SearchForm-81">
+        className="AutoUI_ui_SearchForm-82">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -422,7 +422,7 @@ exports[`SearchForm-1 1`] = `
             }
           }>
           <div
-            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-39"
+            className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-38"
             onMouseEnter={false}
             onMouseLeave={false}>
             <div
@@ -675,7 +675,7 @@ exports[`SearchForm-1 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-87">
+      className="AutoUI_ui_SearchForm-88">
       <div
         className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-54 has-value is-clearable is-searchable Select--multi">
         <input
@@ -860,7 +860,7 @@ exports[`SearchForm-1 1`] = `
         </div>
       </div>
       <button
-        className="AutoUI_ui_SearchForm-93 AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-179 raised"
+        className="AutoUI_ui_SearchForm-94 AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-179 raised"
         type="submit">
         <span
           className="AutoUI_ui_Button-51 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
@@ -870,7 +870,7 @@ exports[`SearchForm-1 1`] = `
     </div>
   </form>
   <div
-    className="AutoUI_ui_SearchForm-103">
+    className="AutoUI_ui_SearchForm-104">
     Here it goes ApplicantsStatusFilter component
   </div>
 </div>

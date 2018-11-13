@@ -7,7 +7,7 @@ exports[`SelectBox-9 1`] = `
     }
   }>
   <div
-    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-39"
+    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-38"
     onMouseEnter={false}
     onMouseLeave={false}>
     <div
