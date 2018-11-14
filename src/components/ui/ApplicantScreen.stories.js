@@ -7,7 +7,7 @@ import MilestonesScreen from './MilestonesScreen'
 import Button from './Button'
 
 storiesOf('UI Components/ApplicantScreen', module)
-  .add('Standard use', () => (
+  .add('standard use', () => (
     <ApplicantScreen>
       <Text
         content={`We’d love to start to get to know more about you. Please fill out these quick questions so we can introduce you to an Ambassador who will work with you 1-on-1 to get qualified to become an X-Teamer.`}
@@ -15,7 +15,7 @@ storiesOf('UI Components/ApplicantScreen', module)
       />
     </ApplicantScreen>
   ))
-  .add('With Milestones injected', () => (
+  .add('with milestones injected', () => (
     <ApplicantScreen>
       <MilestonesScreen
         level={1}
@@ -27,4 +27,7 @@ storiesOf('UI Components/ApplicantScreen', module)
         />
       </MilestonesScreen>
     </ApplicantScreen>
+  ))
+  .add('missing props (does component explode?)', () => (
+    <ApplicantScreen />
   ))
