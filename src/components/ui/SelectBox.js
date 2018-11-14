@@ -30,12 +30,13 @@ const controlBaseClass = cmz(`
 
 const cx = {
   selectbox: cmz(`
-    background: ${theme.baseBrighter}
     position: relative
     width: 100%
+    font-size: 20px
   `),
 
   dropdown: cmz(`
+    background: ${theme.baseBrighter}
     width: 100%
   `),
 
@@ -43,9 +44,10 @@ const cx = {
     typo.baseText,
     `
       & {
+        font-size: 16px
         border: 1px solid ${theme.lineSilver2}
-        padding: 0 20px
-        height: 60px
+        padding: 0 14px
+        height: 40px
         width: 100%
         box-sizing: border-box
         display: flex
@@ -72,21 +74,25 @@ const cx = {
     }
     & > div {
       display: block
-      line-height: 1.1
+      line-height: 1.2
     }
     & > div:first-of-type {
-      font-size: 15px
+      font-size: 13px
       color: ${theme.typoLabel}
-      padding: 10px 0 0
+      padding: 0
       transition: color .10s ease-out, font-size .10s ease-out
+      height: 13px
+    }
+    & > div:first-of-type:empty {
+      height: 0
     }
     & > div:last-of-type {
       width: calc(100% - 20px)
-      height: 24px
+      height: auto
       white-space: nowrap
-      overflow-x: overlay
-      overflow-y: hidden
-      padding: 0 0 10px
+      overflow: hidden
+      text-overflow: ellipsis
+      padding: 0
       transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out
       opacity: 1
     }
@@ -131,7 +137,7 @@ const cx = {
       position: absolute
       z-index: 5
       top: 50%
-      right: 30px
+      right: 24px
     }
     & svg {
       position: absolute
@@ -141,21 +147,27 @@ const cx = {
   close: cmz(
     controlBaseClass,
     `
-      right: 40px
+      right: 34px
     `
   ),
 
   clear: cmz(
     controlBaseClass,
     `
-      right: 55px
+      right: 49px
       transform: scale(0.9)
       top: calc(50% - 5px)
     `
   ),
 
   label: cmz(typo.baseText, `
+    font-size: 20px
     border-bottom: 1px solid transparent
+  `),
+
+  value: cmz(`
+    font-size: 1.063rem !important
+    color: ${theme.formText} !important
   `),
 
   list: cmz(`
@@ -181,6 +193,7 @@ const cx = {
 
   item: cmz(typo.baseText, `
     & {
+      font-size: 20px
       min-height: 30px
     }
     &:hover {
@@ -255,6 +268,7 @@ const cx = {
   selecting: cmz(
     typo.baseText,
     `
+      font-size: 20px
       position: relative
       padding-left: 30px
     `
@@ -294,6 +308,7 @@ const cx = {
     typo.baseText,
     `
       & {
+        font-size: 20px
         width: 70%
         height: 30px
       }
@@ -311,6 +326,7 @@ const cx = {
   nothingLabel: cmz(
     typo.baseText,
     `
+      font-size: 20px
       display: block
       margin: 15px 22px
     `
@@ -320,6 +336,7 @@ const cx = {
     typo.baseText,
     `
       & {
+        font-size: 20px
         display: flex
         align-items: center
         margin: 15px 22px
@@ -432,9 +449,10 @@ const STATUS = {
 
 const dismissTimeout = 2500
 
-const DropdownCloseControl = withProps(({ className, closeDropdown }) => ({
+const DropdownCloseControl = withProps(({ className, closeDropdown, children: childrenAsAFunction }) => ({
   className,
-  onClick: closeDropdown
+  onClick: closeDropdown,
+  children: childrenAsAFunction(closeDropdown)
 }))('div')
 
 class SelectBox extends Component<Props, State> {
@@ -569,7 +587,7 @@ class SelectBox extends Component<Props, State> {
     }
   }
 
-  handleClick = (event: any, item: Item) => {
+  handleClick = (event: any, item: Item, internalCloseDropdown?: Function) => {
     const { onClick, areItemsToggleable, closeDropdown } = this.props
     areItemsToggleable && event.stopPropagation()
     if (item.status !== STATUS.SELECTING && onClick) {
@@ -577,7 +595,11 @@ class SelectBox extends Component<Props, State> {
         ...this.getUncachedItem(item),
         selected: !areItemsToggleable || !item.selected
       })
-      closeDropdown && typeof closeDropdown === 'function' && closeDropdown()
+      if (closeDropdown && typeof closeDropdown === 'function') {
+        closeDropdown()
+      } else if (closeDropdown && internalCloseDropdown) {
+        internalCloseDropdown()
+      }
     } else {
       this.handleSelect(event, item)
     }
@@ -856,12 +878,14 @@ class SelectBox extends Component<Props, State> {
       item,
       method,
       render,
-      control
+      control,
+      internalCloseDropdown
     }: {
       item: Item,
       method?: Function,
       render?: Function,
-      control?: Function
+      control?: Function,
+      internalCloseDropdown?: Function
     }) => method ? (
       <div className={cx.controllable}>
         {render && render(item)}
@@ -872,7 +896,7 @@ class SelectBox extends Component<Props, State> {
         className={[cx.controllable, (onSelect || onClick) ? cx.clickable : ''].join(' ')}
         onClick={onSelect
           ? e => this.handleSelect(e, item)
-          : e => this.handleClick(e, item)
+          : e => this.handleClick(e, item, internalCloseDropdown)
         }
       >
         {renderDefaultStatus(item)}
@@ -880,7 +904,7 @@ class SelectBox extends Component<Props, State> {
       </div>
     )
 
-    const renderItem = (item: Item) => {
+    const renderItem = (item: Item, internalCloseDropdown?: Function) => {
       const { status } = item
 
       const getRenderByStatus = () => {
@@ -949,7 +973,7 @@ class SelectBox extends Component<Props, State> {
           case STATUS.ARCHIVED:
           case STATUS.UNARCHIVED:
           default:
-            return getRenderWithFallback({ item })
+            return getRenderWithFallback({ item, internalCloseDropdown })
         }
       }
 
@@ -972,7 +996,7 @@ class SelectBox extends Component<Props, State> {
       return data
     }
 
-    const renderItems = () => {
+    const renderItems = (internalCloseDropdown?: Function) => {
       const items = shouldSortItems
         ? filteredItems.sort(sortById)
         : filteredItems
@@ -996,7 +1020,7 @@ class SelectBox extends Component<Props, State> {
               )}
             </li>
           )}
-          {sortByCreatingFirst(items).map(renderItem)}
+          {sortByCreatingFirst(items).map((item: Item) => renderItem(item, internalCloseDropdown))}
         </ul>
       )
     }
@@ -1041,10 +1065,12 @@ class SelectBox extends Component<Props, State> {
         {placeholder && (
           <div>
             <div className={selectsClass}>
-              <div>
-                {placeholder}
-              </div>
-              <div>
+              {placeholder.trim() && (
+                <div>
+                  {placeholder}
+                </div>
+              )}
+              <div className={cx.value}>
                 {filteredSelectedItems
                   .reduce((acc, { value }) => (
                     acc ? `${acc}, ${value}` : value
@@ -1083,9 +1109,13 @@ class SelectBox extends Component<Props, State> {
         className={cx.dropdown}
       >
         <DropdownCloseControl className={expanded ? '' : cx.shadow} closeDropdown>
-          {(placeholder && hasSearch) && renderSearchLabel()}
-          {renderItems()}
-          {renderAppendix()}
+          {(internalCloseDropdown?: Function) => (
+            <div>
+              {(placeholder && hasSearch) && renderSearchLabel()}
+              {renderItems(internalCloseDropdown)}
+              {renderAppendix()}
+            </div>
+          )}
         </DropdownCloseControl>
       </Dropdown>
     )

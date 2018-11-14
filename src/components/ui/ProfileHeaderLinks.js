@@ -28,7 +28,7 @@ const cx = {
   link: cmz(`
     & {
       font-family: 'Open Sans', sans-serif
-      font-size: 13px
+      font-size: 12px
       font-weight: 400
       color: ${theme.baseHighlightBright}
       text-transform: uppercase

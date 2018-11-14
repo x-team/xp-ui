@@ -1,4 +1,4 @@
-exports[`SelectBox-15 1`] = `
+exports[`SelectBox-25 1`] = `
 <div
   className="AutoUI_ui_SelectBox-32"
   style={
@@ -44,7 +44,7 @@ exports[`SelectBox-15 1`] = `
             <input
               aria-labelledby="label-search"
               autoComplete="off"
-              autoFocus={true}
+              autoFocus={false}
               className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
               id="search"
               name="search"

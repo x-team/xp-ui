@@ -21,14 +21,14 @@ type Props = {
 
 const dimensions = {
   screenHeight: '100vh',
-  headerHeight: '86px',
+  headerHeight: '56px',
   headingHeight: '60px',
   searchWidth: {
     [DISPLAY_MODES.LIST]: '530px',
-    [DISPLAY_MODES.TABULAR]: '1508px'
+    [DISPLAY_MODES.TABULAR]: '1516px'
   },
   searchHeight: {
-    [DISPLAY_MODES.LIST]: '420px',
+    [DISPLAY_MODES.LIST]: '220px',
     [DISPLAY_MODES.TABULAR]: 'auto'
   }
 }
@@ -73,7 +73,7 @@ const listTheme = {
   applicantGrid: cmz(cx.applicantGrid, `
     width: ${dimensions.searchWidth[DISPLAY_MODES.LIST]}
     min-height: calc(${dimensions.screenHeight} - ${dimensions.headerHeight})
-    padding: ${dimensions.searchHeight[DISPLAY_MODES.LIST]} 30px 30px
+    padding: ${dimensions.searchHeight[DISPLAY_MODES.LIST]} 40px 30px
   `),
 
   applicant: cmz(`
@@ -109,6 +109,7 @@ const tabularTheme = {
   `),
 
   searchForm: cmz(cx.searchForm, `
+    z-index: 9999
     min-width: 100%
     width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
   `),

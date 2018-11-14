@@ -1,62 +1,1126 @@
 exports[`SelectBox-19 1`] = `
-<div
-  className="AutoUI_ui_SelectBox-32"
-  style={
-    Object {
-      "width": "100%",
-    }
-  }>
-  <div>
-    <div
-      className="AutoUI_ui_SelectBox-106">
+<div>
+  <p>
+    Empty list and no search provided. The \"create new\" button should be hidden:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-32"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
       <div
-        className="AutoUI_ui_SelectBox-117">
-        <svg
-          height="17px"
-          viewBox="0 0 16 17"
-          width="16px">
-          <g
-            fill="none"
-            fillRule="evenodd"
-            stroke="none"
-            strokeWidth="1">
-            <circle
-              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
-              cx="7.5"
-              cy="7.5"
-              r="6.5" />
-            <path
-              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
-              d="M11.7538745,12.6062275 L15.5,16.5"
-              strokeLinecap="square" />
-          </g>
-        </svg>
+        className="AutoUI_ui_SelectBox-112">
+        <div
+          className="AutoUI_ui_SelectBox-123">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            autoFocus={false}
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="" />
+        </div>
       </div>
-      <div>
-        <input
-          aria-labelledby="label-search"
-          autoComplete="off"
-          autoFocus={false}
-          className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-111"
-          id="search"
-          name="search"
-          placeholder="Search"
-          required={false}
-          type="text"
-          value="" />
-      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-173 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        
+      </ul>
     </div>
-    <ul
-      className="AutoUI_ui_SelectBox-161 expanded"
-      style={
-        Object {
-          "height": "240px",
-          "maxHeight": "240px",
-          "width": "100%",
-        }
-      }>
-      
-    </ul>
+  </div>
+  <p>
+    Empty list and search is provided. Nothing is found on search. The \"create new\" button should should be visible:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-32"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-112">
+        <div
+          className="AutoUI_ui_SelectBox-123">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            autoFocus={false}
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="wat?" />
+        </div>
+        <div
+          className="AutoUI_ui_SelectBox-147 AutoUI_ui_SelectBox-18">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeLinecap="square"
+              strokeWidth="1">
+              <g
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
+                strokeWidth="2"
+                transform="translate(-1294.000000, -1073.000000)">
+                <g
+                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                  <path
+                    d="M7,0 L7,14" />
+                  <path
+                    d="M14,7 L0,7" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-173 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        <li>
+          <span
+            className="AutoUI_ui_SelectBox-326 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            No Results for \"
+            wat?
+            \"
+          </span>
+          <span
+            className="AutoUI_ui_SelectBox-335 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <svg
+              height="20px"
+              viewBox="0 0 20 20"
+              width="20px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <g
+                  className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
+                  transform="translate(-1191.000000, -1411.000000)">
+                  <g
+                    transform="translate(387.000000, 933.000000)">
+                    <g
+                      transform="translate(0.000000, 470.000000)">
+                      <path
+                        d="M813,17 L804,17 L804,19 L813,19 L813,28 L815,28 L815,19 L824,19 L824,17 L815,17 L815,8 L813,8 L813,17 Z" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <span>
+              Create new 
+              entry
+               \"
+              wat?
+              \"
+            </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    Valid list and search is provided. Nothing is found on search. The \"create new\" button should be visible:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-32"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-112">
+        <div
+          className="AutoUI_ui_SelectBox-123">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            autoFocus={false}
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="wat?" />
+        </div>
+        <div
+          className="AutoUI_ui_SelectBox-147 AutoUI_ui_SelectBox-18">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeLinecap="square"
+              strokeWidth="1">
+              <g
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
+                strokeWidth="2"
+                transform="translate(-1294.000000, -1073.000000)">
+                <g
+                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                  <path
+                    d="M7,0 L7,14" />
+                  <path
+                    d="M14,7 L0,7" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-173 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        <li>
+          <span
+            className="AutoUI_ui_SelectBox-326 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            No Results for \"
+            wat?
+            \"
+          </span>
+          <span
+            className="AutoUI_ui_SelectBox-335 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <svg
+              height="20px"
+              viewBox="0 0 20 20"
+              width="20px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <g
+                  className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
+                  transform="translate(-1191.000000, -1411.000000)">
+                  <g
+                    transform="translate(387.000000, 933.000000)">
+                    <g
+                      transform="translate(0.000000, 470.000000)">
+                      <path
+                        d="M813,17 L804,17 L804,19 L813,19 L813,28 L815,28 L815,19 L824,19 L824,17 L815,17 L815,8 L813,8 L813,17 Z" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <span>
+              Create new 
+              entry
+               \"
+              wat?
+              \"
+            </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    Valid list and search is provided. Some results are found on search, but none of them matches exactly with search string. The \"create new\" button should be visible:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-32"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-112">
+        <div
+          className="AutoUI_ui_SelectBox-123">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            autoFocus={false}
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="ent" />
+        </div>
+        <div
+          className="AutoUI_ui_SelectBox-147 AutoUI_ui_SelectBox-18">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeLinecap="square"
+              strokeWidth="1">
+              <g
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
+                strokeWidth="2"
+                transform="translate(-1294.000000, -1073.000000)">
+                <g
+                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                  <path
+                    d="M7,0 L7,14" />
+                  <path
+                    d="M14,7 L0,7" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-173 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        <li>
+          <span
+            className="AutoUI_ui_SelectBox-335 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <svg
+              height="20px"
+              viewBox="0 0 20 20"
+              width="20px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <g
+                  className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
+                  transform="translate(-1191.000000, -1411.000000)">
+                  <g
+                    transform="translate(387.000000, 933.000000)">
+                    <g
+                      transform="translate(0.000000, 470.000000)">
+                      <path
+                        d="M813,17 L804,17 L804,19 L813,19 L813,28 L815,28 L815,19 L824,19 L824,17 L815,17 L815,8 L813,8 L813,17 Z" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <span>
+              Create new 
+              entry
+               \"
+              ent
+              \"
+            </span>
+          </span>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry another entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              justtoentrymakesure
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    Valid list and search is provided. One result is found on search, but don\'t match exactly with the search string. The \"create new\" button should be visible:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-32"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-112">
+        <div
+          className="AutoUI_ui_SelectBox-123">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            autoFocus={false}
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="another" />
+        </div>
+        <div
+          className="AutoUI_ui_SelectBox-147 AutoUI_ui_SelectBox-18">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeLinecap="square"
+              strokeWidth="1">
+              <g
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
+                strokeWidth="2"
+                transform="translate(-1294.000000, -1073.000000)">
+                <g
+                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                  <path
+                    d="M7,0 L7,14" />
+                  <path
+                    d="M14,7 L0,7" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-173 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        <li>
+          <span
+            className="AutoUI_ui_SelectBox-335 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+            <svg
+              height="20px"
+              viewBox="0 0 20 20"
+              width="20px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <g
+                  className="AutoUI_ui_SvgIcon-84 AutoUI_ui_SvgIcon-116"
+                  transform="translate(-1191.000000, -1411.000000)">
+                  <g
+                    transform="translate(387.000000, 933.000000)">
+                    <g
+                      transform="translate(0.000000, 470.000000)">
+                      <path
+                        d="M813,17 L804,17 L804,19 L813,19 L813,28 L815,28 L815,19 L824,19 L824,17 L815,17 L815,8 L813,8 L813,17 Z" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <span>
+              Create new 
+              entry
+               \"
+              another
+              \"
+            </span>
+          </span>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry another entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    Valid list and search is provided. At least one of the items in the search result matches exactly with search string. The \"create new\" button should be hidden:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-32"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-112">
+        <div
+          className="AutoUI_ui_SelectBox-123">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            autoFocus={false}
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="entry" />
+        </div>
+        <div
+          className="AutoUI_ui_SelectBox-147 AutoUI_ui_SelectBox-18">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeLinecap="square"
+              strokeWidth="1">
+              <g
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
+                strokeWidth="2"
+                transform="translate(-1294.000000, -1073.000000)">
+                <g
+                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                  <path
+                    d="M7,0 L7,14" />
+                  <path
+                    d="M14,7 L0,7" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-173 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        <li />
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry another entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              justtoentrymakesure
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    A new item is being created right after something was searched. The \"create new\" button should be hidden:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-32"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-112">
+        <div
+          className="AutoUI_ui_SelectBox-123">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            autoFocus={false}
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="entr" />
+        </div>
+        <div
+          className="AutoUI_ui_SelectBox-147 AutoUI_ui_SelectBox-18">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeLinecap="square"
+              strokeWidth="1">
+              <g
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
+                strokeWidth="2"
+                transform="translate(-1294.000000, -1073.000000)">
+                <g
+                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                  <path
+                    d="M7,0 L7,14" />
+                  <path
+                    d="M14,7 L0,7" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-173 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        <li />
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210">
+            Creating new entry \"entr\"...
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry another entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              justtoentrymakesure
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    A new item is being created while nothing is being searched. The \"create new\" button should be hidden:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-32"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-112">
+        <div
+          className="AutoUI_ui_SelectBox-123">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            autoFocus={false}
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="" />
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-173 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210">
+            Creating new entry \"entr\"...
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry another entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              justtoentrymakesure
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    In all searching and creating situations. If the method \"onCreateNew\" is forgotten or invalid, the \"create new\" button will be always hidden and items with \"creating\" status will have fallback to default render:
+  </p>
+  <div
+    className="AutoUI_ui_SelectBox-32"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }>
+    <div>
+      <div
+        className="AutoUI_ui_SelectBox-112">
+        <div
+          className="AutoUI_ui_SelectBox-123">
+          <svg
+            height="17px"
+            viewBox="0 0 16 17"
+            width="16px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeWidth="1">
+              <circle
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                cx="7.5"
+                cy="7.5"
+                r="6.5" />
+              <path
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                d="M11.7538745,12.6062275 L15.5,16.5"
+                strokeLinecap="square" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <input
+            aria-labelledby="label-search"
+            autoComplete="off"
+            autoFocus={false}
+            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-87 AutoUI_ui_SelectBox-117"
+            id="search"
+            name="search"
+            placeholder="Search"
+            required={false}
+            type="text"
+            value="ent" />
+        </div>
+        <div
+          className="AutoUI_ui_SelectBox-147 AutoUI_ui_SelectBox-18">
+          <svg
+            height="14px"
+            viewBox="0 0 14 14"
+            width="14px">
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="none"
+              strokeLinecap="square"
+              strokeWidth="1">
+              <g
+                className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-52"
+                strokeWidth="2"
+                transform="translate(-1294.000000, -1073.000000)">
+                <g
+                  transform="translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)">
+                  <path
+                    d="M7,0 L7,14" />
+                  <path
+                    d="M14,7 L0,7" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ul
+        className="AutoUI_ui_SelectBox-173 expanded"
+        style={
+          Object {
+            "height": "auto",
+            "maxHeight": "auto",
+            "width": "100%",
+          }
+        }>
+        <li />
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entr
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              entry another entry
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+        <li
+          className="AutoUI_ui_SelectBox-194 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+          <div
+            className="AutoUI_ui_SelectBox-210 ">
+            <span
+              className="AutoUI_ui_SelectBox-163 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              justtoentrymakesure
+            </span>
+            <span
+              className="AutoUI_ui_SelectBox-252" />
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

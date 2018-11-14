@@ -1,10 +1,15 @@
 // @flow
+/* globals SyntheticMouseEvent, HTMLButtonElement */
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import React, { PureComponent } from 'react'
 import { getClassName } from '../../utils/helpers'
+
+import Dropdown from './Dropdown'
+
+import type { Element } from 'react'
 
 const cmz = require('cmz')
 
@@ -17,7 +22,9 @@ type HeaderColumn = {
   name: string,
   label: string,
   isSortable?: boolean,
-  size: string
+  size: string,
+  filterRender?: ({ onChangeFilter: () => void, isFetching?: boolean }) => Element<*>,
+  isFilteringFn?: () => boolean
 }
 
 type Props = {
@@ -25,7 +32,8 @@ type Props = {
   headerColumns: Array<HeaderColumn | Array<HeaderColumn>>,
   sortBy?: string,
   sortDirection?: $Values<SortDirections>, // eslint-disable-line no-undef
-  onSortingChange: Function
+  onSortingChange: Function,
+  isFetching?: boolean
 }
 
 const SORT_DIRECTIONS: SortDirections = {
@@ -50,13 +58,21 @@ const arrow = {
   up: cmz(arrowBase,
     `
       &:after {
-        border-bottom: 4px solid ${theme.typoLabel}
+        border-bottom: 4px solid ${theme.iconDark}
+      }
+
+      &.isFitering:after {
+        border-bottom: 4px solid ${theme.baseRed}
       }
     `),
   down: cmz(arrowBase,
     `
       &:after {
-        border-top: 4px solid ${theme.typoLabel}
+        border-top: 4px solid ${theme.iconDark}
+      }
+
+      &.isFitering:after {
+        border-top: 4px solid ${theme.baseRed}
       }
     `)
 }
@@ -65,20 +81,22 @@ const cx = {
   container: cmz(typo.baseText,
     `
       & {
-        display: flex
+        display: inline-flex
         min-width: 100%
-        padding: 14px
-        color: ${theme.typoLabel}
-        font-size: 16px
+        padding: 14px 30px 14px 14px
+        font-size: 14px
         line-height: 1.2
-        border-bottom: 1px solid ${theme.lineSilver1}
+        border-top: 1px solid ${theme.lineSilver1}
         position: sticky
         box-sizing: border-box
+        z-index: 999
+        text-transform: uppercase
+        font-weight: bold
+        background: ${theme.baseBright}
       }
 
       & > span {
         margin-right: 14px
-        font-weight: normal
         flex-wrap: wrap
         flex-shrink: 0
       }
@@ -88,14 +106,23 @@ const cx = {
       }
   `),
   grouped: cmz(`
-    flex: 1
-    display: flex
-    justify-content: space-between
+    & {
+      flex: 1
+      display: flex
+      justify-content: space-between
+    }
+
+    & > span {
+      text-align: center
+      position: relative
+      white-space: nowrap
+    }
   `),
   tiny: cmz(`
     & {
-      width: 80px
+      width: 100px
       margin: 0 14px
+      text-align: center
     }
 
     & > span {
@@ -119,6 +146,32 @@ const cx = {
     &:hover {
       color: ${theme.baseDark}
     }
+  `),
+  filtering: cmz(`
+    &,
+    &:hover {
+      color: ${theme.baseRed}
+    }
+  `),
+  filter: cmz(`
+    & {
+      position: absolute
+      top: 0
+      right: -10px
+    }
+
+    & svg {
+      width: 12px
+    }
+  `),
+  dropdown: cmz(`
+    background: ${theme.baseBrighter}
+    margin-top: 10px
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1)
+  `),
+  clearButton: cmz(`
+    text-align: right
+    padding: 10px
   `),
   [`${SORT_DIRECTIONS.ASCENDING}Sort`]: arrow.up,
   [`${SORT_DIRECTIONS.DESCENDING}Sort`]: arrow.down
@@ -153,12 +206,21 @@ class ApplicantGridHeader extends PureComponent<Props> {
     onSortingChange && onSortingChange({ sortBy: name, sortDirection: direction })
   }
 
+  stopPropagation = (event: SyntheticMouseEvent<HTMLButtonElement>) => {
+    event && event.stopPropagation()
+  }
+
+  onChangeFilter = () => {
+    this.forceUpdate()
+  }
+
   render () {
     const {
       className,
       headerColumns,
       sortBy,
-      sortDirection
+      sortDirection,
+      isFetching
     } = this.props
     const direction = sortDirection || SORT_DIRECTIONS.ASCENDING
     const componentCustomClassName = className || ''
@@ -183,12 +245,17 @@ class ApplicantGridHeader extends PureComponent<Props> {
         isSortable,
         name,
         size,
-        label
+        label,
+        filterRender,
+        isFilteringFn
       } = headerColumn
+      const isFiltering = isFilteringFn && isFilteringFn()
       const columnClassName = getClassName({
         [cx[size]]: true,
         [cx.sortable]: isSortable,
-        [cx[`${direction}Sort`]]: sortBy === name
+        [cx[`${direction}Sort`]]: sortBy === name,
+        [cx.filtering]: isFiltering,
+        'isFitering': isFiltering
       })
 
       return (
@@ -198,6 +265,20 @@ class ApplicantGridHeader extends PureComponent<Props> {
           onClick={this.handleColumnClick(name, isSortable)}
         >
           {label}
+          {filterRender && (
+            <div className={cx.filter} onClick={this.stopPropagation}>
+              <Dropdown
+                icon='filter'
+                targetXOrigin='right'
+                iconColor={isFiltering ? 'default' : 'text'}
+                onClose={this.onChangeFilter}
+              >
+                <div className={cx.dropdown}>
+                  {filterRender({ onChangeFilter: this.onChangeFilter, isFetching })}
+                </div>
+              </Dropdown>
+            </div>
+          )}
         </span>
       )
     }

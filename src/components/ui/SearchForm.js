@@ -27,8 +27,8 @@ const listTheme = {
   selectLists: cmz(`
     display: flex
     align-items: center
-    padding: 30px 30px 20px
-    border-bottom: 1px solid ${theme.lineSilver4}
+    margin: 0 0 10px
+    padding: 20px 40px 0
   `),
 
   listsSelector: cmz(`
@@ -52,53 +52,59 @@ const listTheme = {
   `),
 
   formKeywords: cmz(`
-   & {
-     display: block
-     width: 100%
-     margin-top: 20px
-     padding: 0 30px
+    & {
+      display: block
+      flex: 1
+      padding: 0
+      margin-right: 16px
+      max-width: calc(100% - 116px)
     }
 
     & .Select-menu-outer {
-      width: calc(100% - 60px)
-      left: 30px
+      width: 100%
     }
   `),
 
   fieldsAndStatusesContainer: cmz(`
+    align-items: flex-end
     display: flex
-    margin: 20px 0 0
-    padding: 0 30px
-    box-sizing: border-box
+    margin: 10px 0
+    padding: 0 40px
   `),
 
   selectFields: cmz(`
     display: inline-block
-    width: 50%
+    width: calc(50% - 8px)
+    max-width: calc(50% - 8px)
     margin-right: 16px
   `),
 
   selectStatuses: cmz(`
-    width: 50%
+    display: inline-block
+    width: calc(50% - 8px)
+    max-width: calc(50% - 8px)
   `),
 
-  formButtonContainer: cmz(`
-    padding: 0 30px
+  keywordsAndformButtonContainer: cmz(`
+    display: flex
+    margin: 10px 0 0
+    padding: 0 40px 10px
   `),
 
   formButton: cmz(`
     display: block
-    width: 100%
-    height: 58px
-    margin-top: 20px
-    padding: 0 24px
+    width: 100px
+    height: 40px
+    margin: 0
+    padding: 0
+    border: none
     transition: none
   `),
 
   applicantsStatusFilter: cmz(`
     width: 100%
     background-color: ${theme.baseBright}
-    padding: 20px 30px 0
+    padding: 0 40px
     box-sizing: border-box
   `)
 }
@@ -112,10 +118,11 @@ const tabularTheme = {
   `),
 
   searchForm: cmz(`
+    align-items: flex-end
     display: flex
     flex-shrink: 0
     width: 100%
-    padding: 30px
+    padding: 20px 30px
     box-sizing: border-box
     background-color: ${theme.baseBright}
   `),
@@ -152,7 +159,7 @@ const tabularTheme = {
 
   formKeywords: cmz(`
     margin: 0 10px
-    height: 58px
+    height: 40px
     flex: 1
     flex-shrink: 0
     min-width: 200px
@@ -160,6 +167,7 @@ const tabularTheme = {
 
   fieldsAndStatusesContainer: cmz(`
     display: inline-flex
+    align-items: flex-end
   `),
 
   selectFields: cmz(`
@@ -175,17 +183,29 @@ const tabularTheme = {
     min-width: 200px
   `),
 
+  keywordsAndformButtonContainer: cmz(`
+    flex: 1
+    display: flex
+    max-width: 100%
+  `),
+
   formButton: cmz(`
     margin: 0 10px
-    height: 58px
+    height: 40px
     padding: 10px 40px
     transition: none
   `),
 
   applicantsStatusFilter: cmz(`
-    width: 100%
-    padding: 20px 30px
-    box-sizing: border-box
+    & {
+      width: 100%
+      padding: 20px 30px 0
+      box-sizing: border-box
+    }
+
+    & > form {
+      border: none
+    }
   `)
 }
 
@@ -303,11 +323,12 @@ class SearchForm extends PureComponent<Props> {
           <div className={themeClasses.fieldsAndStatusesContainer}>
             <div className={themeClasses.selectFields}>
               <SelectBox
-                placeholder='Select Fields'
+                placeholder='Select Field'
                 items={fields}
-                visibleItems={3}
+                visibleItems={SELECTBOX_HEIGTH}
                 collectionLabel='Field'
-                onSelect={onSelectField}
+                onClick={onSelectField}
+                closeDropdown
               />
             </div>
             <div className={themeClasses.selectStatuses}>
@@ -315,19 +336,19 @@ class SearchForm extends PureComponent<Props> {
                 hasSearch={false}
                 placeholder='Status'
                 items={statuses}
-                visibleItems={10}
+                visibleItems={SELECTBOX_HEIGTH}
                 collectionLabel='Status'
                 onSelect={onSelectStatus}
               />
             </div>
           </div>
-          <Keywords
-            values={keywords}
-            onChange={onChangeKeywords}
-            onSubmit={onSubmit}
-            className={themeClasses.formKeywords}
-          />
-          <div className={themeClasses.formButtonContainer}>
+          <div className={themeClasses.keywordsAndformButtonContainer}>
+            <Keywords
+              values={keywords}
+              onChange={onChangeKeywords}
+              onSubmit={onSubmit}
+              className={themeClasses.formKeywords}
+            />
             <Button
               className={themeClasses.formButton}
               type='submit'

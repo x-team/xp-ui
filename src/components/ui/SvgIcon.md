@@ -35,6 +35,7 @@ Basic color:
   <SvgIcon icon="linkedin" />
   <SvgIcon icon="stackoverflow" />
   <SvgIcon icon="redirect" />
+  <SvgIcon icon="filter" />
 </div>
 ```
 
@@ -75,6 +76,7 @@ Inverted color:
   <SvgIcon icon="linkedin" color="inverted" />
   <SvgIcon icon="stackoverflow" color="inverted" />
   <SvgIcon icon="redirect" color="inverted" />
+  <SvgIcon icon="filter" color="inverted" />
 </div>
 ```
 
@@ -115,6 +117,7 @@ Monochrome color:
   <SvgIcon icon="linkedin" color="monochrome" />
   <SvgIcon icon="stackoverflow" color="monochrome" />
   <SvgIcon icon="redirect" color="monochrome" />
+  <SvgIcon icon="filter" color="monochrome" />
 </div>
 ```
 
@@ -155,6 +158,7 @@ Grayscale color:
   <SvgIcon icon="linkedin" color="grayscale" />
   <SvgIcon icon="stackoverflow" color="grayscale" />
   <SvgIcon icon="redirect" color="grayscale" />
+  <SvgIcon icon="filter" color="grayscale" />
 </div>
 ```
 
@@ -195,6 +199,7 @@ Text gray color:
   <SvgIcon icon="linkedin" color="text" />
   <SvgIcon icon="stackoverflow" color="text" />
   <SvgIcon icon="redirect" color="text" />
+  <SvgIcon icon="filter" color="text" />
 </div>
 ```
 
@@ -235,6 +240,7 @@ Muted gray color:
   <SvgIcon icon="linkedin" color="mutedgray" />
   <SvgIcon icon="stackoverflow" color="mutedgray" />
   <SvgIcon icon="redirect" color="mutedgray" />
+  <SvgIcon icon="filter" color="mutedgray" />
 </div>
 ```
 
@@ -275,6 +281,7 @@ Hover color:
   <SvgIcon icon="linkedin" color="text" hover="default" />
   <SvgIcon icon="stackoverflow" color="text" hover="default" />
   <SvgIcon icon="redirect" color="text" hover="default" />
+  <SvgIcon icon="filter" color="text" hover="default" />
 </div>
 ```
 
