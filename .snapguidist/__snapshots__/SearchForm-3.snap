@@ -614,7 +614,7 @@ exports[`SearchForm-3 1`] = `
           className="Select-control">
           <span
             className="Select-multi-value-wrapper"
-            id="react-select-13--value">
+            id="react-select-15--value">
             <div
               className="Select-value">
               <span
@@ -625,7 +625,7 @@ exports[`SearchForm-3 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-13--value-0"
+                id="react-select-15--value-0"
                 role="option">
                 a keyword
                 <span
@@ -644,7 +644,7 @@ exports[`SearchForm-3 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-13--value-1"
+                id="react-select-15--value-1"
                 role="option">
                 OR
                 <span
@@ -663,7 +663,7 @@ exports[`SearchForm-3 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-13--value-2"
+                id="react-select-15--value-2"
                 role="option">
                 two
                 <span
@@ -682,7 +682,7 @@ exports[`SearchForm-3 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-13--value-3"
+                id="react-select-15--value-3"
                 role="option">
                 AND
                 <span
@@ -701,7 +701,7 @@ exports[`SearchForm-3 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-13--value-4"
+                id="react-select-15--value-4"
                 role="option">
                 much more
                 <span
@@ -718,7 +718,7 @@ exports[`SearchForm-3 1`] = `
                 }
               }>
               <input
-                aria-activedescendant="react-select-13--value"
+                aria-activedescendant="react-select-15--value"
                 aria-expanded="false"
                 aria-haspopup="false"
                 aria-owns=""
