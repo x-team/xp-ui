@@ -43,7 +43,7 @@ storiesOf('UI Components/Button/Extra States', module)
     </Button>
   ))
   .add('button generated with custom element (<a>)', () => (
-    <Button component="a" color={'monochrome'}>
+    <Button component='a' color={'monochrome'}>
       custom default button state
     </Button>
   ))
@@ -60,12 +60,12 @@ storiesOf('UI Components/Button/Use Cases', module)
     </Button>
   ))
   .add('skill tag pro', () => (
-    <Button tag="pro" outlined rounded raised color={'silver'}>
+    <Button tag='pro' outlined rounded raised color={'silver'}>
       Android
     </Button>
   ))
   .add('selected skill tag pro', () => (
-    <Button tag="pro" selected outlined rounded raised color={'silver'}>
+    <Button tag='pro' selected outlined rounded raised color={'silver'}>
       Android
     </Button>
   ))
@@ -78,8 +78,8 @@ storiesOf('UI Components/Button/Use Cases', module)
     </div>
   ))
   .add('SelectBox option button', () => (
-    <Button selectbox size="large">
-      <SvgIcon icon="edit" /> Edit Lists
+    <Button selectbox size='large'>
+      <SvgIcon icon='edit' /> Edit Lists
     </Button>
   ))
   .add('disabled outlined', () => (

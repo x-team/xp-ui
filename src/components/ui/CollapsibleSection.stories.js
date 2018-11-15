@@ -6,7 +6,7 @@ import CollapsibleSection from './CollapsibleSection'
 storiesOf('UI Components/CollapsibleSection', module)
   .add('Basic', () => (
     <CollapsibleSection
-      title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
+      title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       visible={
         <p>
           This paragraph is always visible. Ipsa recusandae sequi, dicta
@@ -29,7 +29,7 @@ storiesOf('UI Components/CollapsibleSection', module)
     </CollapsibleSection>
   ))
   .add('Basic without visible element', () => (
-    <CollapsibleSection title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga">
+    <CollapsibleSection title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
         recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum
@@ -46,7 +46,7 @@ storiesOf('UI Components/CollapsibleSection', module)
   ))
   .add('Expanded', () => (
     <CollapsibleSection
-      title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
+      title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       isCollapsed={false}
       visible={
         <p>
@@ -71,7 +71,7 @@ storiesOf('UI Components/CollapsibleSection', module)
   ))
   .add('Two columns', () => (
     <CollapsibleSection
-      title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
+      title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       isTwoColumns
       visible={
         <p>
@@ -96,7 +96,7 @@ storiesOf('UI Components/CollapsibleSection', module)
   ))
   .add('Hide visible element on expand', () => (
     <CollapsibleSection
-      title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
+      title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       isTwoColumns
       toggleVisible
       visible={
@@ -122,7 +122,7 @@ storiesOf('UI Components/CollapsibleSection', module)
   ))
   .add('Basic with many items', () => (
     <div>
-      <CollapsibleSection title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?">
+      <CollapsibleSection title='Lorem ipsum dolor sit amet, consectetur adipisicing elit?'>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
           recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum
@@ -136,7 +136,7 @@ storiesOf('UI Components/CollapsibleSection', module)
           veritatis sed fuga.
         </p>
       </CollapsibleSection>
-      <CollapsibleSection title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?">
+      <CollapsibleSection title='Lorem ipsum dolor sit amet, consectetur adipisicing elit?'>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
           recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum
@@ -150,7 +150,7 @@ storiesOf('UI Components/CollapsibleSection', module)
           veritatis sed fuga.
         </p>
       </CollapsibleSection>
-      <CollapsibleSection title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?">
+      <CollapsibleSection title='Lorem ipsum dolor sit amet, consectetur adipisicing elit?'>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
           recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum
@@ -164,7 +164,7 @@ storiesOf('UI Components/CollapsibleSection', module)
           veritatis sed fuga.
         </p>
       </CollapsibleSection>
-      <CollapsibleSection title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?">
+      <CollapsibleSection title='Lorem ipsum dolor sit amet, consectetur adipisicing elit?'>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
           recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum
@@ -178,7 +178,7 @@ storiesOf('UI Components/CollapsibleSection', module)
           veritatis sed fuga.
         </p>
       </CollapsibleSection>
-      <CollapsibleSection title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?">
+      <CollapsibleSection title='Lorem ipsum dolor sit amet, consectetur adipisicing elit?'>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
           recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum
@@ -196,7 +196,7 @@ storiesOf('UI Components/CollapsibleSection', module)
   ))
   .add('Small display with content', () => (
     <CollapsibleSection
-      title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
+      title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       visible={
         <p>
           This paragraph is always visible. Ipsa recusandae sequi, dicta
@@ -221,7 +221,7 @@ storiesOf('UI Components/CollapsibleSection', module)
   ))
   .add('Small display without content', () => (
     <CollapsibleSection
-      title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
+      title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       visible={
         <p>
           This paragraph is always visible. Ipsa recusandae sequi, dicta

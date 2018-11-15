@@ -9,14 +9,14 @@ import Button from './Button'
 
 storiesOf('UI Components/Dropdown', module)
   .add('Labeled button', () => (
-    <Dropdown icon="add" label="Add to List" indicator>
+    <Dropdown icon='add' label='Add to List' indicator>
       <div style={{ background: '#e9e9e9' }}>
-        <Dropdown label="Add to List">
+        <Dropdown label='Add to List'>
           <div style={{ background: '#c9c9c9' }}>
             <Dropdown
-              icon="calendar"
-              label="Add to List"
-              targetXOrigin="right"
+              icon='calendar'
+              label='Add to List'
+              targetXOrigin='right'
               indicator
               padded
             >
@@ -36,11 +36,11 @@ storiesOf('UI Components/Dropdown', module)
       { id: 3, value: 'item-3' },
       { id: 4, value: 'item-4' },
       { id: 5, value: 'item-5' },
-      { id: 6, value: 'item-6' },
+      { id: 6, value: 'item-6' }
     ]
     return (
       <div style={{ textAlign: 'right' }}>
-        <Dropdown label="Find something" targetXOrigin="right" padded indicator>
+        <Dropdown label='Find something' targetXOrigin='right' padded indicator>
           <SelectBox
             items={itemsArray}
             expanded
@@ -53,7 +53,7 @@ storiesOf('UI Components/Dropdown', module)
     )
   })
   .add('Icon only button', () => (
-    <Dropdown icon="hamburger" padded>
+    <Dropdown icon='hamburger' padded>
       <div style={{ background: '#e9e9e9' }}>
         <Loader />
       </div>
@@ -65,12 +65,12 @@ storiesOf('UI Components/Dropdown', module)
       { id: 3, value: 'portfolio-building', selected: true },
       { id: 4, value: 'portfolio-review', selected: true },
       { id: 5, value: 'social-media-screen', selected: true },
-      { id: 6, value: 'react-shortlist', selected: false },
+      { id: 6, value: 'react-shortlist', selected: false }
     ]
     return (
-      <Dropdown icon="add" label="This is a Dropdown" indicator padded>
+      <Dropdown icon='add' label='This is a Dropdown' indicator padded>
         <SelectBox
-          collectionLabel="List"
+          collectionLabel='List'
           items={itemsArray}
           expanded
           width={300}
@@ -86,13 +86,13 @@ storiesOf('UI Components/Dropdown', module)
       { id: 3, value: 'portfolio-building', selected: false },
       { id: 4, value: 'portfolio-review', selected: false },
       { id: 5, value: 'social-media-screen', selected: false },
-      { id: 6, value: 'react-shortlist', selected: false },
+      { id: 6, value: 'react-shortlist', selected: false }
     ]
     return (
-      <Dropdown label="registered" indicator padded>
+      <Dropdown label='registered' indicator padded>
         <SelectBox
-          collectionLabel="List"
-          inputType="radio"
+          collectionLabel='List'
+          inputType='radio'
           items={itemsArray}
           hasSearch={false}
           expanded
