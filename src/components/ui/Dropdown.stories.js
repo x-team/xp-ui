@@ -8,7 +8,7 @@ import SelectBox from './SelectBox'
 import Button from './Button'
 
 storiesOf('UI Components/Dropdown', module)
-  .add('Labeled button', () => (
+  .add('labeled button', () => (
     <Dropdown icon='add' label='Add to List' indicator>
       <div style={{ background: '#e9e9e9' }}>
         <Dropdown label='Add to List'>
@@ -29,7 +29,7 @@ storiesOf('UI Components/Dropdown', module)
       </div>
     </Dropdown>
   ))
-  .add('Label and indicator positioned on the right', () => {
+  .add('label and indicator positioned on the right', () => {
     const itemsArray = [
       { id: 1, value: 'item-1' },
       { id: 2, value: 'item-2' },
@@ -52,7 +52,7 @@ storiesOf('UI Components/Dropdown', module)
       </div>
     )
   })
-  .add('Icon only button', () => (
+  .add('icon only button', () => (
     <Dropdown icon='hamburger' padded>
       <div style={{ background: '#e9e9e9' }}>
         <Loader />
@@ -104,12 +104,12 @@ storiesOf('UI Components/Dropdown', module)
       </Dropdown>
     )
   })
-  .add('Tooltip display', () => (
+  .add('tooltip display', () => (
     <Dropdown tooltip label={<Button>x</Button>}>
       Anything here
     </Dropdown>
   ))
-  .add('Close Dropdown from childre', () => {
+  .add('close Dropdown from children', () => {
     const CloseButton = ({ closeDropdown }) => (
       <h1 onClick={closeDropdown}>Click to close!</h1>
     )
@@ -121,4 +121,4 @@ storiesOf('UI Components/Dropdown', module)
       </Dropdown>
     )
   })
-  .add('Missing props (does component explode?)', () => <Dropdown />)
+  .add('missing props (does component explode?)', () => <Dropdown />)

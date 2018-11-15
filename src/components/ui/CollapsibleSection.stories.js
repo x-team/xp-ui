@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import CollapsibleSection from './CollapsibleSection'
 
 storiesOf('UI Components/CollapsibleSection', module)
-  .add('Basic', () => (
+  .add('basic', () => (
     <CollapsibleSection
       title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       visible={
@@ -28,7 +28,7 @@ storiesOf('UI Components/CollapsibleSection', module)
       </p>
     </CollapsibleSection>
   ))
-  .add('Basic without visible element', () => (
+  .add('basic without visible element', () => (
     <CollapsibleSection title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
@@ -44,7 +44,7 @@ storiesOf('UI Components/CollapsibleSection', module)
       </p>
     </CollapsibleSection>
   ))
-  .add('Expanded', () => (
+  .add('expanded', () => (
     <CollapsibleSection
       title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       isCollapsed={false}
@@ -69,7 +69,7 @@ storiesOf('UI Components/CollapsibleSection', module)
       </p>
     </CollapsibleSection>
   ))
-  .add('Two columns', () => (
+  .add('two columns', () => (
     <CollapsibleSection
       title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       isTwoColumns
@@ -94,7 +94,7 @@ storiesOf('UI Components/CollapsibleSection', module)
       </p>
     </CollapsibleSection>
   ))
-  .add('Hide visible element on expand', () => (
+  .add('hide visible element on expand', () => (
     <CollapsibleSection
       title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       isTwoColumns
@@ -120,7 +120,7 @@ storiesOf('UI Components/CollapsibleSection', module)
       </p>
     </CollapsibleSection>
   ))
-  .add('Basic with many items', () => (
+  .add('basic with many items', () => (
     <div>
       <CollapsibleSection title='Lorem ipsum dolor sit amet, consectetur adipisicing elit?'>
         <p>
@@ -194,7 +194,7 @@ storiesOf('UI Components/CollapsibleSection', module)
       </CollapsibleSection>
     </div>
   ))
-  .add('Small display with content', () => (
+  .add('small display with content', () => (
     <CollapsibleSection
       title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       visible={
@@ -219,7 +219,7 @@ storiesOf('UI Components/CollapsibleSection', module)
       </p>
     </CollapsibleSection>
   ))
-  .add('Small display without content', () => (
+  .add('small display without content', () => (
     <CollapsibleSection
       title='Consectetur suscipit alias velit magni tenetur veritatis sed fuga'
       visible={
@@ -231,4 +231,4 @@ storiesOf('UI Components/CollapsibleSection', module)
       small
     />
   ))
-  .add('Missing props (does component explode?)', () => <CollapsibleSection />)
+  .add('missing props (does component explode?)', () => <CollapsibleSection />)

@@ -87,6 +87,6 @@ storiesOf('UI Components/Button/Use Cases', module)
       Disabled outlined state
     </Button>
   ))
-  .add('Missing props (does component explode?):', () => (
+  .add('missing props (does component explode?):', () => (
     <Button>Regular button with no props</Button>
   ))
