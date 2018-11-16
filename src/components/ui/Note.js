@@ -5,7 +5,7 @@ import differenceInSeconds from 'date-fns/difference_in_seconds'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
 import differenceInHours from 'date-fns/difference_in_hours'
 import formatDate from 'date-fns/format'
-import Markdown from 'markdown-to-jsx'
+import { compiler as markdownCompiler } from 'markdown-to-jsx'
 
 import Avatar from './Avatar'
 import Text from './Text'
@@ -170,7 +170,16 @@ class Note extends PureComponent<Props, State> {
 
   renderPresenter = ({ value, activateEditingMode }: PresenterProps) => {
     this.activateEditingMode = activateEditingMode
-    return TextWrapper({}, <Text content={<Markdown>{value}</Markdown>} isPureContent />)
+
+    const content = (() => {
+      try {
+        return markdownCompiler(value)
+      } catch (err) {
+        return value
+      }
+    })()
+
+    return TextWrapper({}, <Text content={content} isPureContent />)
   }
 
   handleEditorValueChange = (onValueChange: Function) => (value: any) => {

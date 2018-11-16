@@ -65,6 +65,12 @@ date.setDate(date.getDate() - 1/12);
 />
 ```
 
+Note with unparseable markdown text:
+
+```js
+<Note text='[one] [two]' />
+```
+
 Missing props (does component explode?):
 
 ```js
