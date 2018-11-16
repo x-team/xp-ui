@@ -9,7 +9,7 @@ storiesOf('UI Components/InlineEditor', module)
     <InlineEditor
       editor={({ onValueChange, value }) => (
         <InputField
-          label="Example"
+          label='Example'
           autoFocus
           onChange={event => onValueChange(event.target.value)}
           value={value}
@@ -23,11 +23,10 @@ storiesOf('UI Components/InlineEditor', module)
           <p>{value}</p>
         </div>
       )}
-      value="This is a sample text. Click on me to edit me!"
+      value='This is a sample text. Click on me to edit me!'
     />
   ))
 
   .add('missing props (does component explode?)', () => (
     <InlineEditor />
   ))
-  
