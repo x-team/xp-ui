@@ -16,6 +16,11 @@ module.exports = {
         options: {
           limit: 50000
         }
+      },
+      {
+        test: /\.js$/,
+        use: ['source-map-loader'],
+        enforce: 'pre'
       }
     ]
   }
