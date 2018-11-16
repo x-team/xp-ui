@@ -1,3 +1,6 @@
+// flow-typed signature: d87955256c0438e8d919bd2cfe5423e9
+// flow-typed version: 028ef45280/@storybook/addon-options_v4.x.x/flow_>=v0.25.x
+
 declare module '@storybook/addon-options' {
   declare type Theme = {
     /**
