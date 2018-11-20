@@ -27,7 +27,8 @@ type Props = {
   type?: InputType,
   postText?: string,
   placeholder?: string | number,
-  linesLimit?: number
+  linesLimit?: number,
+  disabled?: boolean
 }
 
 const circle = size => `
@@ -348,7 +349,12 @@ class InputField extends PureComponent<Props> {
               {postLabel}
             </label>
           )
-          : this.renderField()
+          : (
+            <div>
+              {this.renderField()}
+              {postLabel}
+            </div>
+          )
       )
     )
   }
