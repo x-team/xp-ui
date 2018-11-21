@@ -23,8 +23,7 @@ type HeaderColumn = {
   label: string,
   isSortable?: boolean,
   size: string,
-  filterRender?: ({ onChangeFilter: () => void, isFetching?: boolean }) => Element<*>,
-  isFilteringFn?: () => boolean
+  filterRender?: ({ onChangeFilter: () => void, isFetching?: boolean }) => Element<*>
 }
 
 type Props = {
@@ -147,12 +146,6 @@ const cx = {
       color: ${theme.baseDark}
     }
   `),
-  filtering: cmz(`
-    &,
-    &:hover {
-      color: ${theme.baseRed}
-    }
-  `),
   filter: cmz(`
     & {
       position: absolute
@@ -246,16 +239,12 @@ class ApplicantGridHeader extends PureComponent<Props> {
         name,
         size,
         label,
-        filterRender,
-        isFilteringFn
+        filterRender
       } = headerColumn
-      const isFiltering = isFilteringFn && isFilteringFn()
       const columnClassName = getClassName({
         [cx[size]]: true,
         [cx.sortable]: isSortable,
-        [cx[`${direction}Sort`]]: sortBy === name,
-        [cx.filtering]: isFiltering,
-        'isFitering': isFiltering
+        [cx[`${direction}Sort`]]: sortBy === name
       })
 
       return (
@@ -270,7 +259,6 @@ class ApplicantGridHeader extends PureComponent<Props> {
               <Dropdown
                 icon='filter'
                 targetXOrigin='right'
-                iconColor={isFiltering ? 'default' : 'text'}
                 onClose={this.onChangeFilter}
               >
                 <div className={cx.dropdown}>

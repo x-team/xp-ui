@@ -22,6 +22,7 @@ Card view mode:
   onSubmit={() => console.log('onSubmit')}
   openListEditorModal={() => console.log('openListEditorModal')}
   renderApplicantsStatusFilter={'Here it goes ApplicantsStatusFilter component'}
+  renderTabularFilterTags={'Here it goes the tabular filters'}
   switchDisplay={(mode) => console.log('switchDisplay:', mode)}
 />
 ```
@@ -50,6 +51,7 @@ Tabular view mode:
   onSubmit={() => console.log('onSubmit')}
   openListEditorModal={() => console.log('openListEditorModal')}
   renderApplicantsStatusFilter={'Here it goes ApplicantsStatusFilter component'}
+  renderTabularFilterTags={'Here it goes the tabular filters'}
   switchDisplay={(mode) => console.log('switchDisplay:', mode)}
 />
 ```

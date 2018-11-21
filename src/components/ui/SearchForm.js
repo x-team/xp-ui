@@ -12,6 +12,7 @@ import { DISPLAY_MODES } from '../../utils/constants'
 import theme from '../../styles/theme'
 
 import type { DisplayModes } from '../../utils/types'
+import type { Node } from 'react'
 
 const cmz = require('cmz')
 
@@ -224,6 +225,7 @@ type Props = {
   onSubmit: Function,
   openListEditorModal: Function,
   renderApplicantsStatusFilter: any,
+  renderTabularFilterTags: Node,
   switchDisplay: Function
 }
 
@@ -264,7 +266,8 @@ class SearchForm extends PureComponent<Props> {
       statuses,
       onSelectStatus,
       onSubmit,
-      renderApplicantsStatusFilter
+      renderApplicantsStatusFilter,
+      renderTabularFilterTags
     } = this.props
 
     const isTabular = mode === DISPLAY_MODES.TABULAR
@@ -360,6 +363,8 @@ class SearchForm extends PureComponent<Props> {
           </div>
           {isTabular && renderDisplaySwitchButtons()}
         </form>
+        {isTabular && renderTabularFilterTags}
+
         {renderApplicantsStatusFilter && (
           <div className={themeClasses.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>
         )}
