@@ -7,22 +7,22 @@ exports[`ApplicantGridHeader-1 1`] = `
     }
   }>
   <div
-    className="AutoUI_ui_ApplicantGridHeader-81 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 custom-class-name">
+    className="AutoUI_ui_ApplicantGridHeader-80 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 custom-class-name">
     <span
-      className="AutoUI_ui_ApplicantGridHeader-138 AutoUI_ui_ApplicantGridHeader-141">
+      className="AutoUI_ui_ApplicantGridHeader-137 AutoUI_ui_ApplicantGridHeader-140">
       Name
     </span>
     <span
-      className="AutoUI_ui_ApplicantGridHeader-135">
+      className="AutoUI_ui_ApplicantGridHeader-134">
       Skills
     </span>
     <div
-      className="AutoUI_ui_ApplicantGridHeader-108">
+      className="AutoUI_ui_ApplicantGridHeader-107">
       <span
-        className="AutoUI_ui_ApplicantGridHeader-121 AutoUI_ui_ApplicantGridHeader-141">
+        className="AutoUI_ui_ApplicantGridHeader-120 AutoUI_ui_ApplicantGridHeader-140">
         Avail. Date
         <div
-          className="AutoUI_ui_ApplicantGridHeader-156">
+          className="AutoUI_ui_ApplicantGridHeader-149">
           <div
             className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
             onMouseEnter={false}
@@ -41,7 +41,7 @@ exports[`ApplicantGridHeader-1 1`] = `
             <div
               className="AutoUI_ui_Dropdown-50  AutoUI_ui_Dropdown-64   ">
               <div
-                className="AutoUI_ui_ApplicantGridHeader-167">
+                className="AutoUI_ui_ApplicantGridHeader-160">
                 <div>
                   Anything goes here
                 </div>
@@ -51,14 +51,14 @@ exports[`ApplicantGridHeader-1 1`] = `
         </div>
       </span>
       <span
-        className="AutoUI_ui_ApplicantGridHeader-121 AutoUI_ui_ApplicantGridHeader-141 AutoUI_ui_ApplicantGridHeader-68 AutoUI_ui_ApplicantGridHeader-44">
+        className="AutoUI_ui_ApplicantGridHeader-120 AutoUI_ui_ApplicantGridHeader-140 AutoUI_ui_ApplicantGridHeader-67 AutoUI_ui_ApplicantGridHeader-43">
         Avail. Updated
       </span>
       <span
-        className="AutoUI_ui_ApplicantGridHeader-121 AutoUI_ui_ApplicantGridHeader-141">
+        className="AutoUI_ui_ApplicantGridHeader-120 AutoUI_ui_ApplicantGridHeader-140">
         Timezone
         <div
-          className="AutoUI_ui_ApplicantGridHeader-156">
+          className="AutoUI_ui_ApplicantGridHeader-149">
           <div
             className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
             onMouseEnter={false}
@@ -77,7 +77,7 @@ exports[`ApplicantGridHeader-1 1`] = `
             <div
               className="AutoUI_ui_Dropdown-50  AutoUI_ui_Dropdown-64   ">
               <div
-                className="AutoUI_ui_ApplicantGridHeader-167">
+                className="AutoUI_ui_ApplicantGridHeader-160">
                 <div
                   className="AutoUI_ui_SelectBox-32"
                   style={
@@ -293,10 +293,10 @@ exports[`ApplicantGridHeader-1 1`] = `
         </div>
       </span>
       <span
-        className="AutoUI_ui_ApplicantGridHeader-121 AutoUI_ui_ApplicantGridHeader-141">
+        className="AutoUI_ui_ApplicantGridHeader-120 AutoUI_ui_ApplicantGridHeader-140">
         Rate
         <div
-          className="AutoUI_ui_ApplicantGridHeader-156">
+          className="AutoUI_ui_ApplicantGridHeader-149">
           <div
             className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
             onMouseEnter={false}
@@ -315,7 +315,7 @@ exports[`ApplicantGridHeader-1 1`] = `
             <div
               className="AutoUI_ui_Dropdown-50  AutoUI_ui_Dropdown-64   ">
               <div
-                className="AutoUI_ui_ApplicantGridHeader-167">
+                className="AutoUI_ui_ApplicantGridHeader-160">
                 <div>
                   Anything goes here
                 </div>
@@ -326,11 +326,11 @@ exports[`ApplicantGridHeader-1 1`] = `
       </span>
     </div>
     <span
-      className="AutoUI_ui_ApplicantGridHeader-121">
+      className="AutoUI_ui_ApplicantGridHeader-120">
       Status
     </span>
     <span
-      className="AutoUI_ui_ApplicantGridHeader-121 AutoUI_ui_ApplicantGridHeader-141">
+      className="AutoUI_ui_ApplicantGridHeader-120 AutoUI_ui_ApplicantGridHeader-140">
       Ranking
     </span>
   </div>
