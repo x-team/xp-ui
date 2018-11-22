@@ -5,6 +5,38 @@ exports[`Note-13 1`] = `
     className="AutoUI_ui_Note-35">
     <div
       className="AutoUI_ui_Note-58 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40" />
+    <div
+      className="AutoUI_ui_Note-68">
+      <div>
+        <div>
+          <div
+            className="AutoUI_ui_Note-74">
+            <span
+              className="AutoUI_ui_Text-48 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+              <div>
+                <h1
+                  id="hello">
+                  Hello
+                </h1>
+                <h2>
+                  This is 
+                  <strong>
+                    bold
+                  </strong>
+                   text
+                </h2>
+                <p>
+                  HR and 
+                  <em>
+                    italic
+                  </em>
+                </p>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
     <div>
       <div />
     </div>
