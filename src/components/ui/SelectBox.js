@@ -458,7 +458,7 @@ type Props = {
   inputType?: InputType,
   closeDropdown?: boolean | Function,
   autoFocus?: boolean,
-  size: 'small'
+  size?: 'small'
 }
 
 type State = {
@@ -1115,30 +1115,30 @@ class SelectBox extends Component<Props, State> {
       ].join(' ')
 
       return (
-       <div className={searchClasses}>
-         <div className={cx.magnifier}>
-           <SvgIcon icon='magnifier' color='grayscale' />
-         </div>
-         <InputField
-           name='search'
-           value={search}
-           placeholder={(expanded && placeholder) ? placeholder : 'Search'}
-           onChange={(input = {}) => this.handleSearch(null, input.target.value)}
-           className={cx.searchInput}
-           autoComplete='off'
-           onKeyDown={this.handleByStoppingPropagation}
-           onKeyPress={this.handleByStoppingPropagation}
-           onKeyUp={this.handleByStoppingPropagation}
-           onClick={stopClickPropagation && this.handleByStoppingPropagation}
-           autoFocus={autoFocus}
-         />
-         {search !== '' && (
-           <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
-             <SvgIcon icon='x' color='grayscale' hover='default' />
-           </div>
-         )}
-       </div>
-     )
+        <div className={searchClasses}>
+          <div className={cx.magnifier}>
+            <SvgIcon icon='magnifier' color='grayscale' />
+          </div>
+          <InputField
+            name='search'
+            value={search}
+            placeholder={(expanded && placeholder) ? placeholder : 'Search'}
+            onChange={(input = {}) => this.handleSearch(null, input.target.value)}
+            className={cx.searchInput}
+            autoComplete='off'
+            onKeyDown={this.handleByStoppingPropagation}
+            onKeyPress={this.handleByStoppingPropagation}
+            onKeyUp={this.handleByStoppingPropagation}
+            onClick={stopClickPropagation && this.handleByStoppingPropagation}
+            autoFocus={autoFocus}
+          />
+          {search !== '' && (
+            <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
+              <SvgIcon icon='x' color='grayscale' hover='default' />
+            </div>
+          )}
+        </div>
+      )
     }
 
     const renderPlaceholder = () => (
