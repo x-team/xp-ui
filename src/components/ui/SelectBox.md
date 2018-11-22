@@ -428,6 +428,125 @@ const itemsArray = [
 </div>
 ```
 
+Example of all items states (small size):
+
+```js
+const itemsArray = [
+  {
+    id: 2,
+    value: 'unselected'
+  },
+  {
+    id: 3,
+    value: 'selected',
+    selected: true
+  },
+  {
+    id: 4,
+    value: '(un)selecting',
+    status: 'selecting'
+  },
+  {
+    id: 5,
+    value: 'editing (no changes yet)',
+    editing: 'editing (no changes yet)',
+    status: 'editing'
+  },
+  {
+    id: 6,
+    value: 'editing',
+    editing: 'editing (this is changed but not yet saved)',
+    status: 'editing'
+  },
+  {
+    id: 7,
+    value: 'saving edition',
+    status: 'saving'
+  },
+  {
+    id: 8,
+    value: 'edited',
+    status: 'edited'
+  },
+  {
+    id: 9,
+    value: 'creating this',
+    status: 'creating'
+  },
+  {
+    id: 10,
+    value: 'created',
+    status: 'created'
+  },
+  {
+    id: 11,
+    value: 'confirm delete',
+    status: 'confirm'
+  },
+  {
+    id: 12,
+    value: 'deleting',
+    status: 'deleting'
+  },
+  {
+    id: 13,
+    value: 'deleted',
+    status: 'deleted'
+  },
+  {
+    id: 14,
+    value: 'dismissed',
+    status: 'dismissed'
+  },
+  {
+    id: 15,
+    value: 'archiving',
+    status: 'archiving'
+  },
+  {
+    id: 16,
+    value: 'archived',
+    status: 'archived'
+  },
+  {
+    id: 17,
+    value: 'unarchiving',
+    status: 'unarchiving'
+  },
+  {
+    id: 18,
+    value: 'unarchived',
+    status: 'unarchived'
+  }
+];
+
+<div>
+  <SelectBox
+    size='small'
+    collectionLabel='stuff'
+    items={itemsArray}
+    lined
+    expanded
+    onSelect={item => console.log('onSelect:', item)}
+    onEdit={item => console.log('onEdit:', item)}
+    onArchive={item => console.log('onArchive:', item)}
+    onDelete={item => console.log('onDelete:', item)}
+    onCreateNew={listName => console.log('onCreateNew:', listName)}
+    dismissTimeout={99999}
+  />
+
+  <hr />
+
+  <p>All states but missing all methods (the strings showcased below are the 'item.value')</p>
+  <SelectBox
+    collectionLabel='stuff'
+    items={itemsArray}
+    lined
+    expanded
+  />
+</div>
+```
+
 "Searching" and "creating" use cases:
 
 ```js

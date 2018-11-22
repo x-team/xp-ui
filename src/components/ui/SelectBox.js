@@ -113,6 +113,12 @@ const cx = {
     position: relative
   `),
 
+  searchSmall: cmz(`
+    & input {
+      font-size: 16px
+    }
+  `),
+
   // The !important used below is required to override the global input[type="text"] styles
   searchInput: cmz(`
     padding: 23px 30px 20px 52px !important
@@ -207,11 +213,25 @@ const cx = {
     }
   `),
 
+  itemSmall: cmz(`
+    font-size: 16px
+  `),
+
   controllable: cmz(`
     display: flex
     justify-content: space-between
     align-items: center
     padding: 15px 22px
+  `),
+
+  controllableSmall: cmz(`
+    & {
+      font-size: 16px
+    }
+
+    & label {
+      font-size: 16px
+    }
   `),
 
   clickable: cmz(`
@@ -274,6 +294,10 @@ const cx = {
     `
   ),
 
+  selectingSmall: cmz(`
+    font-size: 16px
+  `),
+
   selectingDots: cmz(`
     & {
       position: absolute
@@ -323,6 +347,12 @@ const cx = {
     `
   ),
 
+  editInputSmall: cmz(`
+    & input {
+      font-size: 16px
+    }
+  `),
+
   nothingLabel: cmz(
     typo.baseText,
     `
@@ -331,6 +361,10 @@ const cx = {
       margin: 15px 22px
     `
   ),
+
+  nothingLabelSmall: cmz(`
+    font-size: 16px
+  `),
 
   createNew: cmz(
     typo.baseText,
@@ -349,6 +383,10 @@ const cx = {
       }
     `
   ),
+
+  createNewSmall: cmz(`
+      font-size: 16px
+  `),
 
   appendix: cmz(`
     border-right: 1px solid ${theme.lineSilver2}
@@ -419,7 +457,8 @@ type Props = {
   areItemsToggleable?: boolean,
   inputType?: InputType,
   closeDropdown?: boolean | Function,
-  autoFocus?: boolean
+  autoFocus?: boolean,
+  size: 'small'
 }
 
 type State = {
@@ -718,7 +757,8 @@ class SelectBox extends Component<Props, State> {
       append,
       shouldSortItems,
       inputType,
-      autoFocus
+      autoFocus,
+      size
     } = this.props
     const { view, search } = this.state
 
@@ -748,29 +788,37 @@ class SelectBox extends Component<Props, State> {
 
     const itemClasses = (item) => ([
       cx.item,
+      (size === 'small') ? cx.itemSmall : '',
       (lined || !expanded) ? cx.lined : '',
       ((item.editing || item.editing === '') && item.editing !== item.value) ? cx.editing : ''
     ].join(' '))
 
-    const renderEditingStatus = (item: Item) => (
-      <span className={cx.editInput}>
-        <InputField
-          name={item.value}
-          value={item.editing ? item.editing : ''}
-          onChange={(input = {}) => this.handleEditChange(item, input)}
-          autoFocus='autofocus'
-          onFocus={e => {
-            const val = e.target.value
-            e.target.value = ''
-            e.target.value = val
-          }}
-          onKeyDown={(e: any) => e.stopPropagation && e.stopPropagation()}
-          onKeyPress={(e: any) => e.stopPropagation && e.stopPropagation()}
-          onKeyUp={(e: any) => this.handleEditingKeyUp(e, item)}
-          onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
-        />
-      </span>
-    )
+    const renderEditingStatus = (item: Item) => {
+      const itemClasses = [
+        cx.editInput,
+        (size === 'small') ? cx.editInputSmall : ''
+      ].join(' ')
+
+      return (
+        <span className={itemClasses}>
+          <InputField
+            name={item.value}
+            value={item.editing ? item.editing : ''}
+            onChange={(input = {}) => this.handleEditChange(item, input)}
+            autoFocus='autofocus'
+            onFocus={e => {
+              const val = e.target.value
+              e.target.value = ''
+              e.target.value = val
+            }}
+            onKeyDown={(e: any) => e.stopPropagation && e.stopPropagation()}
+            onKeyPress={(e: any) => e.stopPropagation && e.stopPropagation()}
+            onKeyUp={(e: any) => this.handleEditingKeyUp(e, item)}
+            onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
+          />
+        </span>
+      )
+    }
 
     const renderEditingStatusControl = (item: Item) => (
       <span className={cx.control}>
@@ -843,12 +891,19 @@ class SelectBox extends Component<Props, State> {
       `Unarchiving "${item.value}"...`
     )
 
-    const renderSelectingStatus = (item: Item) => onSelect ? (
-      <span className={cx.selecting}>
-        <span className={cx.selectingDots} />
-        {item.value}
-      </span>
-    ) : item.value
+    const renderSelectingStatus = (item: Item) => {
+      const itemClasses = [
+        cx.selecting,
+        (size === 'small') ? cx.selectingSmall : ''
+      ].join(' ')
+
+      return onSelect ? (
+        <span className={itemClasses}>
+          <span className={cx.selectingDots} />
+          {item.value}
+        </span>
+      ) : item.value
+    }
 
     const renderDefaultStatus = (item: Item) => onSelect ? (
       <InputField
@@ -886,23 +941,35 @@ class SelectBox extends Component<Props, State> {
       render?: Function,
       control?: Function,
       internalCloseDropdown?: Function
-    }) => method ? (
-      <div className={cx.controllable}>
-        {render && render(item)}
-        {control && control(item)}
-      </div>
-    ) : (
-      <div
-        className={[cx.controllable, (onSelect || onClick) ? cx.clickable : ''].join(' ')}
-        onClick={onSelect
-          ? e => this.handleSelect(e, item)
-          : e => this.handleClick(e, item, internalCloseDropdown)
-        }
-      >
-        {renderDefaultStatus(item)}
-        {renderDefaultStatusControl(item)}
-      </div>
-    )
+    }) => {
+      if (method) {
+        return (
+          <div className={cx.controllable}>
+            {render && render(item)}
+            {control && control(item)}
+          </div>
+        )
+      } else {
+        const controllableClass = [
+          cx.controllable,
+          (size === 'small') ? cx.controllableSmall : '',
+          (onSelect || onClick) ? cx.clickable : ''
+        ].join(' ')
+
+        return (
+          <div
+            className={controllableClass}
+            onClick={onSelect
+              ? e => this.handleSelect(e, item)
+              : e => this.handleClick(e, item, internalCloseDropdown)
+            }
+          >
+            {renderDefaultStatus(item)}
+            {renderDefaultStatusControl(item)}
+          </div>
+        )
+      }
+    }
 
     const renderItem = (item: Item, internalCloseDropdown?: Function) => {
       const { status } = item
@@ -1001,6 +1068,16 @@ class SelectBox extends Component<Props, State> {
         ? filteredItems.sort(sortById)
         : filteredItems
 
+      const nothingClasses = [
+        cx.nothingLabel,
+        (size === 'small') ? cx.nothingLabelSmall : ''
+      ].join(' ')
+
+      const createNewClasses = [
+        cx.createNew,
+        (size === 'small') ? cx.createNewSmall : ''
+      ].join(' ')
+
       return (
         <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
           height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
@@ -1010,10 +1087,10 @@ class SelectBox extends Component<Props, State> {
           {search && filteredItems && (
             <li key='search-result'>
               {filteredItems.length === 0 && (
-                <span className={cx.nothingLabel}>No Results for "{search}"</span>
+                <span className={nothingClasses}>No Results for "{search}"</span>
               )}
               {onCreateNew && !filteredItems.find(each => each.value === search.trim()) && (
-                <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
+                <span className={createNewClasses} onClick={e => this.handleCreateNew(e)}>
                   <SvgIcon icon='plus' />
                   <span>Create new {collectionLabel} "{search}"</span>
                 </span>
@@ -1031,31 +1108,38 @@ class SelectBox extends Component<Props, State> {
       : cx.selectsEmpty
     const shouldShowClearElement = hasClear && filteredSelectedItems.length > 0
 
-    const renderSearchLabel = (stopClickPropagation: boolean = true) => (
-      <div className={cx.search}>
-        <div className={cx.magnifier}>
-          <SvgIcon icon='magnifier' color='grayscale' />
-        </div>
-        <InputField
-          name='search'
-          value={search}
-          placeholder={(expanded && placeholder) ? placeholder : 'Search'}
-          onChange={(input = {}) => this.handleSearch(null, input.target.value)}
-          className={cx.searchInput}
-          autoComplete='off'
-          onKeyDown={this.handleByStoppingPropagation}
-          onKeyPress={this.handleByStoppingPropagation}
-          onKeyUp={this.handleByStoppingPropagation}
-          onClick={stopClickPropagation && this.handleByStoppingPropagation}
-          autoFocus={autoFocus}
-        />
-        {search !== '' && (
-          <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
-            <SvgIcon icon='x' color='grayscale' hover='default' />
-          </div>
-        )}
-      </div>
-    )
+    const renderSearchLabel = (stopClickPropagation: boolean = true) => {
+      const searchClasses = [
+        cx.search,
+        (size === 'small') ? cx.searchSmall : ''
+      ].join(' ')
+
+      return (
+       <div className={searchClasses}>
+         <div className={cx.magnifier}>
+           <SvgIcon icon='magnifier' color='grayscale' />
+         </div>
+         <InputField
+           name='search'
+           value={search}
+           placeholder={(expanded && placeholder) ? placeholder : 'Search'}
+           onChange={(input = {}) => this.handleSearch(null, input.target.value)}
+           className={cx.searchInput}
+           autoComplete='off'
+           onKeyDown={this.handleByStoppingPropagation}
+           onKeyPress={this.handleByStoppingPropagation}
+           onKeyUp={this.handleByStoppingPropagation}
+           onClick={stopClickPropagation && this.handleByStoppingPropagation}
+           autoFocus={autoFocus}
+         />
+         {search !== '' && (
+           <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
+             <SvgIcon icon='x' color='grayscale' hover='default' />
+           </div>
+         )}
+       </div>
+     )
+    }
 
     const renderPlaceholder = () => (
       <div className={[

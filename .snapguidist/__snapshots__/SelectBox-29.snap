@@ -1,0 +1,84 @@
+exports[`SelectBox-29 1`] = `
+<div
+  className="AutoUI_ui_SelectBox-32"
+  style={
+    Object {
+      "width": "100%",
+    }
+  }>
+  <div
+    className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-38"
+    onMouseEnter={false}
+    onMouseLeave={false}>
+    <div
+      className="AutoUI_ui_Dropdown-24 ">
+      
+      <span
+        className="AutoUI_ui_Dropdown-40">
+        <div
+          className="AutoUI_ui_SelectBox-112">
+          <div
+            className="AutoUI_ui_SelectBox-123">
+            <svg
+              height="17px"
+              viewBox="0 0 16 17"
+              width="16px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <circle
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                  cx="7.5"
+                  cy="7.5"
+                  r="6.5" />
+                <path
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                  d="M11.7538745,12.6062275 L15.5,16.5"
+                  strokeLinecap="square" />
+              </g>
+            </svg>
+          </div>
+          <div>
+            <div>
+              <input
+                aria-labelledby="label-search"
+                autoComplete="off"
+                autoFocus={false}
+                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117"
+                id="search"
+                name="search"
+                onClick={false}
+                placeholder="Search"
+                required={false}
+                type="text"
+                value="" />
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div
+      className="AutoUI_ui_Dropdown-50     ">
+      <div
+        className="AutoUI_ui_SelectBox-190">
+        <div>
+          
+          <ul
+            className="AutoUI_ui_SelectBox-173 false"
+            style={
+              Object {
+                "height": "auto",
+                "maxHeight": "auto",
+                "width": "100%",
+              }
+            }>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
