@@ -115,7 +115,7 @@ const cx = {
 
   searchSmall: cmz(`
     & input {
-      font-size: 16px
+      font-size: 16px !important
     }
   `),
 
@@ -169,6 +169,10 @@ const cx = {
   label: cmz(typo.baseText, `
     font-size: 20px
     border-bottom: 1px solid transparent
+  `),
+
+  labelSmall: cmz(`
+    font-size: 16px
   `),
 
   value: cmz(`
@@ -905,21 +909,33 @@ class SelectBox extends Component<Props, State> {
       ) : item.value
     }
 
-    const renderDefaultStatus = (item: Item) => onSelect ? (
-      <InputField
-        key={`${item.id}${item.selected ? 'selected' : 'unselected'}`}
-        type={inputType}
-        label={item.value}
-        name={item.value}
-        checked={!!item.selected}
-        onChange={() => {}}
-        onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
-      />
-    ) : (
-      <span className={[cx.label, item.selected ? cx.active : ''].join(' ')}>
-        {item.value}
-      </span>
-    )
+    const renderDefaultStatus = (item: Item) => {
+      if (onSelect) {
+        return (
+          <InputField
+            key={`${item.id}${item.selected ? 'selected' : 'unselected'}`}
+            type={inputType}
+            label={item.value}
+            name={item.value}
+            checked={!!item.selected}
+            onChange={() => {}}
+            onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
+          />
+        )
+      } else {
+        const spanClassnames = [
+          cx.label,
+          (size === 'small') ? cx.labelSmall : '',
+          item.selected ? cx.active : ''
+        ].join(' ')
+
+        return (
+          <span className={spanClassnames}>
+            {item.value}
+          </span>
+        )
+      }
+    }
 
     const renderDefaultStatusControl = (item: Item) => (
       <span className={cx.control}>

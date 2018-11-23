@@ -306,6 +306,7 @@ class SearchForm extends PureComponent<Props> {
           <div className={themeClasses.selectLists}>
             <div className={themeClasses.listsSelector}>
               <SelectBox
+                size='small'
                 placeholder='Select List'
                 items={lists}
                 visibleItems={SELECTBOX_HEIGTH}
@@ -327,6 +328,7 @@ class SearchForm extends PureComponent<Props> {
           <div className={themeClasses.fieldsAndStatusesContainer}>
             <div className={themeClasses.selectFields}>
               <SelectBox
+                size='small'
                 placeholder='Select Field'
                 items={fields}
                 visibleItems={SELECTBOX_HEIGTH}
@@ -337,6 +339,7 @@ class SearchForm extends PureComponent<Props> {
             </div>
             <div className={themeClasses.selectStatuses}>
               <SelectBox
+                size='small'
                 hasSearch={false}
                 placeholder='Status'
                 items={statuses}
