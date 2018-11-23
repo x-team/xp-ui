@@ -107,6 +107,10 @@ const listTheme = {
     background-color: ${theme.baseBright}
     padding: 0 40px
     box-sizing: border-box
+  `),
+
+  editListButton: cmz(`
+    padding: 14px;
   `)
 }
 
@@ -208,6 +212,10 @@ const tabularTheme = {
     & > form {
       border: none
     }
+  `),
+
+  editListButton: cmz(`
+    padding: 14px;
   `)
 }
 
@@ -317,7 +325,7 @@ class SearchForm extends PureComponent<Props> {
                 shouldSortItems={false}
                 areItemsToggleable={false}
                 append={
-                  <Button type='button' selectbox onClick={this.handleModalOpen}>
+                  <Button className={themeClasses.editListButton} size='small' type='button' selectbox onClick={this.handleModalOpen}>
                     <span><SvgIcon icon='edit' /> Edit lists</span>
                   </Button>
                 }

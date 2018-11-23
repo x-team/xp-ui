@@ -113,17 +113,17 @@ const cx = {
     position: relative
   `),
 
-  searchSmall: cmz(`
-    & input {
-      font-size: 1rem !important;
-    }
-  `),
-
   // The !important used below is required to override the global input[type="text"] styles
   searchInput: cmz(`
     padding: 23px 30px 20px 52px !important
     height: 60px !important
     width: 100%
+  `),
+
+  searchInputSmall: cmz(`
+    font-size: 1rem !important;
+    padding: 20px 30px 18px 40px !important;
+    height: 40px !important;
   `),
 
   magnifier: cmz(`
@@ -136,6 +136,11 @@ const cx = {
     & svg {
       position: absolute
     }
+  `),
+
+  magnifierSmall: cmz(`
+    top: 12px;
+    left: 14px;
   `),
 
   triangle: cmz(`
@@ -1128,38 +1133,31 @@ class SelectBox extends Component<Props, State> {
       : cx.selectsEmpty
     const shouldShowClearElement = hasClear && filteredSelectedItems.length > 0
 
-    const renderSearchLabel = (stopClickPropagation: boolean = true) => {
-      const searchClasses = [
-        cx.search,
-        (size === 'small') ? cx.searchSmall : ''
-      ].join(' ')
-
-      return (
-        <div className={searchClasses}>
-          <div className={cx.magnifier}>
-            <SvgIcon icon='magnifier' color='grayscale' />
-          </div>
-          <InputField
-            name='search'
-            value={search}
-            placeholder={(expanded && placeholder) ? placeholder : 'Search'}
-            onChange={(input = {}) => this.handleSearch(null, input.target.value)}
-            className={cx.searchInput}
-            autoComplete='off'
-            onKeyDown={this.handleByStoppingPropagation}
-            onKeyPress={this.handleByStoppingPropagation}
-            onKeyUp={this.handleByStoppingPropagation}
-            onClick={stopClickPropagation && this.handleByStoppingPropagation}
-            autoFocus={autoFocus}
-          />
-          {search !== '' && (
-            <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
-              <SvgIcon icon='x' color='grayscale' hover='default' />
-            </div>
-          )}
+    const renderSearchLabel = (stopClickPropagation: boolean = true) => (
+      <div className={cx.search}>
+        <div className={[cx.magnifier, size === 'small' ? cx.magnifierSmall : ''].join(' ')}>
+          <SvgIcon icon='magnifier' color='grayscale' />
         </div>
-      )
-    }
+        <InputField
+          name='search'
+          value={search}
+          placeholder={(expanded && placeholder) ? placeholder : 'Search'}
+          onChange={(input = {}) => this.handleSearch(null, input.target.value)}
+          className={[cx.searchInput, size === 'small' ? cx.searchInputSmall : ''].join(' ')}
+          autoComplete='off'
+          onKeyDown={this.handleByStoppingPropagation}
+          onKeyPress={this.handleByStoppingPropagation}
+          onKeyUp={this.handleByStoppingPropagation}
+          onClick={stopClickPropagation && this.handleByStoppingPropagation}
+          autoFocus={autoFocus}
+        />
+        {search !== '' && (
+          <div className={cx.close} onClick={e => this.handleSearch(e, '')}>
+            <SvgIcon icon='x' color='grayscale' hover='default' />
+          </div>
+        )}
+      </div>
+    )
 
     const renderPlaceholder = () => (
       <div className={[
