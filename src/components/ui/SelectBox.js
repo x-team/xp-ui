@@ -205,6 +205,8 @@ const cx = {
     & {
       font-size: 20px
       min-height: 30px
+      display: flex;
+      align-items: center;
     }
     &:hover {
       background-color: ${theme.baseBright}
@@ -218,7 +220,8 @@ const cx = {
   `),
 
   itemSmall: cmz(`
-    font-size: 16px
+    font-size: 16px;
+    min-height: 40px;
   `),
 
   controllable: cmz(`
@@ -230,7 +233,8 @@ const cx = {
 
   controllableSmall: cmz(`
     & {
-      font-size: 16px
+      font-size: 16px;
+      padding: 0 14px;
     }
 
     & label {
