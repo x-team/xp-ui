@@ -225,7 +225,7 @@ type Props = {
   onSubmit: Function,
   openListEditorModal: Function,
   renderApplicantsStatusFilter: any,
-  renderTabularFilterTags: Node,
+  tabularFilterTags: Node,
   switchDisplay: Function
 }
 
@@ -267,7 +267,7 @@ class SearchForm extends PureComponent<Props> {
       onSelectStatus,
       onSubmit,
       renderApplicantsStatusFilter,
-      renderTabularFilterTags
+      tabularFilterTags
     } = this.props
 
     const isTabular = mode === DISPLAY_MODES.TABULAR
@@ -363,7 +363,7 @@ class SearchForm extends PureComponent<Props> {
           </div>
           {isTabular && renderDisplaySwitchButtons()}
         </form>
-        {isTabular && renderTabularFilterTags}
+        {isTabular && tabularFilterTags}
 
         {renderApplicantsStatusFilter && (
           <div className={themeClasses.applicantsStatusFilter}>{renderApplicantsStatusFilter}</div>
