@@ -1,64 +1,998 @@
 exports[`SelectBox-23 1`] = `
-<div
-  className="AutoUI_ui_SelectBox-32"
-  style={
-    Object {
-      "width": "100%",
-    }
-  }>
+<div>
   <div>
+    <h3>
+      hasSearch: 
+      false
+      <br />
+      expanded: 
+      true
+      <br />
+      placeholder: 
+      <undefined>
+    </h3>
     <div
-      className="AutoUI_ui_SelectBox-112">
-      <div
-        className="AutoUI_ui_SelectBox-123">
-        <svg
-          height="17px"
-          viewBox="0 0 16 17"
-          width="16px">
-          <g
-            fill="none"
-            fillRule="evenodd"
-            stroke="none"
-            strokeWidth="1">
-            <circle
-              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
-              cx="7.5"
-              cy="7.5"
-              r="6.5" />
-            <path
-              className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
-              d="M11.7538745,12.6062275 L15.5,16.5"
-              strokeLinecap="square" />
-          </g>
-        </svg>
-      </div>
-      <div>
-        <div>
-          <input
-            aria-labelledby="label-search"
-            autoComplete="off"
-            autoFocus={false}
-            className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117"
-            id="search"
-            name="search"
-            placeholder="Search"
-            required={false}
-            type="text"
-            value="" />
-        </div>
-      </div>
-    </div>
-    <ul
-      className="AutoUI_ui_SelectBox-173 expanded"
+      className="AutoUI_ui_SelectBox-32"
       style={
         Object {
-          "height": "240px",
-          "maxHeight": "240px",
           "width": "100%",
         }
       }>
-      
-    </ul>
+      <div>
+        <div
+          className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-65">
+          
+        </div>
+        <ul
+          className="AutoUI_ui_SelectBox-188 expanded"
+          style={
+            Object {
+              "height": "auto",
+              "maxHeight": "auto",
+              "width": "100%",
+            }
+          }>
+          
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entr
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entry
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entry another entry
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                justtoentrymakesure
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>
+      hasSearch: 
+      false
+      <br />
+      expanded: 
+      true
+      <br />
+      placeholder: 
+      Custom placeholder
+    </h3>
+    <div
+      className="AutoUI_ui_SelectBox-32"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }>
+      <div>
+        <div
+          className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+          <div>
+            <div
+              className="AutoUI_ui_SelectBox-101">
+              <div>
+                Custom placeholder
+              </div>
+              <div
+                className="AutoUI_ui_SelectBox-183">
+                
+              </div>
+            </div>
+            <div
+              className="AutoUI_ui_SelectBox-146">
+              <svg
+                height="5px"
+                viewBox="0 0 9 5"
+                width="9px">
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  stroke="none"
+                  strokeWidth="1">
+                  <polygon
+                    className="AutoUI_ui_SvgIcon-99 AutoUI_ui_SvgIcon-131"
+                    points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
+                    transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <ul
+          className="AutoUI_ui_SelectBox-188 expanded"
+          style={
+            Object {
+              "height": "auto",
+              "maxHeight": "auto",
+              "width": "100%",
+            }
+          }>
+          
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entr
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entry
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entry another entry
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                justtoentrymakesure
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>
+      hasSearch: 
+      false
+      <br />
+      expanded: 
+      false
+      <br />
+      placeholder: 
+      <undefined>
+    </h3>
+    <div
+      className="AutoUI_ui_SelectBox-32"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }>
+      <div
+        className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-38"
+        onMouseEnter={false}
+        onMouseLeave={false}>
+        <div
+          className="AutoUI_ui_Dropdown-24 ">
+          
+          <span
+            className="AutoUI_ui_Dropdown-40">
+            <div
+              className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-65">
+              
+            </div>
+          </span>
+        </div>
+        <div
+          className="AutoUI_ui_Dropdown-50     ">
+          <div
+            className="AutoUI_ui_SelectBox-205">
+            <div>
+              
+              <ul
+                className="AutoUI_ui_SelectBox-188 false"
+                style={
+                  Object {
+                    "height": "auto",
+                    "maxHeight": "auto",
+                    "width": "100%",
+                  }
+                }>
+                
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entr
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entry
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entry another entry
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      justtoentrymakesure
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>
+      hasSearch: 
+      false
+      <br />
+      expanded: 
+      false
+      <br />
+      placeholder: 
+      Custom placeholder
+    </h3>
+    <div
+      className="AutoUI_ui_SelectBox-32"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }>
+      <div
+        className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-38"
+        onMouseEnter={false}
+        onMouseLeave={false}>
+        <div
+          className="AutoUI_ui_Dropdown-24 ">
+          
+          <span
+            className="AutoUI_ui_Dropdown-40">
+            <div
+              className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div>
+                <div
+                  className="AutoUI_ui_SelectBox-101">
+                  <div>
+                    Custom placeholder
+                  </div>
+                  <div
+                    className="AutoUI_ui_SelectBox-183">
+                    
+                  </div>
+                </div>
+                <div
+                  className="AutoUI_ui_SelectBox-146">
+                  <svg
+                    height="5px"
+                    viewBox="0 0 9 5"
+                    width="9px">
+                    <g
+                      fill="none"
+                      fillRule="evenodd"
+                      stroke="none"
+                      strokeWidth="1">
+                      <polygon
+                        className="AutoUI_ui_SvgIcon-99 AutoUI_ui_SvgIcon-131"
+                        points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
+                        transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="AutoUI_ui_Dropdown-50     ">
+          <div
+            className="AutoUI_ui_SelectBox-205">
+            <div>
+              <ul
+                className="AutoUI_ui_SelectBox-188 false"
+                style={
+                  Object {
+                    "height": "auto",
+                    "maxHeight": "auto",
+                    "width": "100%",
+                  }
+                }>
+                
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entr
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entry
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entry another entry
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      justtoentrymakesure
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>
+      hasSearch: 
+      true
+      <br />
+      expanded: 
+      true
+      <br />
+      placeholder: 
+      <undefined>
+    </h3>
+    <div
+      className="AutoUI_ui_SelectBox-32"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }>
+      <div>
+        <div
+          className="AutoUI_ui_SelectBox-112">
+          <div
+            className="AutoUI_ui_SelectBox-129 ">
+            <svg
+              height="17px"
+              viewBox="0 0 16 17"
+              width="16px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <circle
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                  cx="7.5"
+                  cy="7.5"
+                  r="6.5" />
+                <path
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                  d="M11.7538745,12.6062275 L15.5,16.5"
+                  strokeLinecap="square" />
+              </g>
+            </svg>
+          </div>
+          <div>
+            <div>
+              <input
+                aria-labelledby="label-search"
+                autoComplete="off"
+                autoFocus={false}
+                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117 "
+                id="search"
+                name="search"
+                placeholder="Search"
+                required={false}
+                type="text"
+                value="" />
+            </div>
+          </div>
+        </div>
+        <ul
+          className="AutoUI_ui_SelectBox-188 expanded"
+          style={
+            Object {
+              "height": "auto",
+              "maxHeight": "auto",
+              "width": "100%",
+            }
+          }>
+          
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entr
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entry
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entry another entry
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                justtoentrymakesure
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>
+      hasSearch: 
+      true
+      <br />
+      expanded: 
+      true
+      <br />
+      placeholder: 
+      Custom placeholder
+    </h3>
+    <div
+      className="AutoUI_ui_SelectBox-32"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }>
+      <div>
+        <div
+          className="AutoUI_ui_SelectBox-112">
+          <div
+            className="AutoUI_ui_SelectBox-129 ">
+            <svg
+              height="17px"
+              viewBox="0 0 16 17"
+              width="16px">
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1">
+                <circle
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                  cx="7.5"
+                  cy="7.5"
+                  r="6.5" />
+                <path
+                  className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                  d="M11.7538745,12.6062275 L15.5,16.5"
+                  strokeLinecap="square" />
+              </g>
+            </svg>
+          </div>
+          <div>
+            <div>
+              <input
+                aria-labelledby="label-search"
+                autoComplete="off"
+                autoFocus={false}
+                className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117 "
+                id="search"
+                name="search"
+                placeholder="Custom placeholder"
+                required={false}
+                type="text"
+                value="" />
+            </div>
+          </div>
+        </div>
+        <ul
+          className="AutoUI_ui_SelectBox-188 expanded"
+          style={
+            Object {
+              "height": "auto",
+              "maxHeight": "auto",
+              "width": "100%",
+            }
+          }>
+          
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entr
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entry
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                entry another entry
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+          <li
+            className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   ">
+            <div
+              className="AutoUI_ui_SelectBox-232  ">
+              <span
+                className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                justtoentrymakesure
+              </span>
+              <span
+                className="AutoUI_ui_SelectBox-285" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>
+      hasSearch: 
+      true
+      <br />
+      expanded: 
+      false
+      <br />
+      placeholder: 
+      <undefined>
+    </h3>
+    <div
+      className="AutoUI_ui_SelectBox-32"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }>
+      <div
+        className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-38"
+        onMouseEnter={false}
+        onMouseLeave={false}>
+        <div
+          className="AutoUI_ui_Dropdown-24 ">
+          
+          <span
+            className="AutoUI_ui_Dropdown-40">
+            <div
+              className="AutoUI_ui_SelectBox-112">
+              <div
+                className="AutoUI_ui_SelectBox-129 ">
+                <svg
+                  height="17px"
+                  viewBox="0 0 16 17"
+                  width="16px">
+                  <g
+                    fill="none"
+                    fillRule="evenodd"
+                    stroke="none"
+                    strokeWidth="1">
+                    <circle
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                      cx="7.5"
+                      cy="7.5"
+                      r="6.5" />
+                    <path
+                      className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                      d="M11.7538745,12.6062275 L15.5,16.5"
+                      strokeLinecap="square" />
+                  </g>
+                </svg>
+              </div>
+              <div>
+                <div>
+                  <input
+                    aria-labelledby="label-search"
+                    autoComplete="off"
+                    autoFocus={false}
+                    className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117 "
+                    id="search"
+                    name="search"
+                    onClick={false}
+                    placeholder="Search"
+                    required={false}
+                    type="text"
+                    value="" />
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="AutoUI_ui_Dropdown-50     ">
+          <div
+            className="AutoUI_ui_SelectBox-205">
+            <div>
+              
+              <ul
+                className="AutoUI_ui_SelectBox-188 false"
+                style={
+                  Object {
+                    "height": "auto",
+                    "maxHeight": "auto",
+                    "width": "100%",
+                  }
+                }>
+                
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entr
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entry
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entry another entry
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      justtoentrymakesure
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>
+      hasSearch: 
+      true
+      <br />
+      expanded: 
+      false
+      <br />
+      placeholder: 
+      Custom placeholder
+    </h3>
+    <div
+      className="AutoUI_ui_SelectBox-32"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }>
+      <div
+        className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SelectBox-38"
+        onMouseEnter={false}
+        onMouseLeave={false}>
+        <div
+          className="AutoUI_ui_Dropdown-24 ">
+          
+          <span
+            className="AutoUI_ui_Dropdown-40">
+            <div
+              className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 ">
+              <div>
+                <div
+                  className="AutoUI_ui_SelectBox-101">
+                  <div>
+                    Custom placeholder
+                  </div>
+                  <div
+                    className="AutoUI_ui_SelectBox-183">
+                    
+                  </div>
+                </div>
+                <div
+                  className="AutoUI_ui_SelectBox-146">
+                  <svg
+                    height="5px"
+                    viewBox="0 0 9 5"
+                    width="9px">
+                    <g
+                      fill="none"
+                      fillRule="evenodd"
+                      stroke="none"
+                      strokeWidth="1">
+                      <polygon
+                        className="AutoUI_ui_SvgIcon-99 AutoUI_ui_SvgIcon-131"
+                        points="7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069"
+                        transform="translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) " />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="AutoUI_ui_Dropdown-50     ">
+          <div
+            className="AutoUI_ui_SelectBox-205">
+            <div>
+              <div
+                className="AutoUI_ui_SelectBox-112">
+                <div
+                  className="AutoUI_ui_SelectBox-129 ">
+                  <svg
+                    height="17px"
+                    viewBox="0 0 16 17"
+                    width="16px">
+                    <g
+                      fill="none"
+                      fillRule="evenodd"
+                      stroke="none"
+                      strokeWidth="1">
+                      <circle
+                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                        cx="7.5"
+                        cy="7.5"
+                        r="6.5" />
+                      <path
+                        className="AutoUI_ui_SvgIcon-35 AutoUI_ui_SvgIcon-67"
+                        d="M11.7538745,12.6062275 L15.5,16.5"
+                        strokeLinecap="square" />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <div>
+                    <input
+                      aria-labelledby="label-search"
+                      autoComplete="off"
+                      autoFocus={false}
+                      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-88 AutoUI_ui_SelectBox-117 "
+                      id="search"
+                      name="search"
+                      placeholder="Search"
+                      required={false}
+                      type="text"
+                      value="" />
+                  </div>
+                </div>
+              </div>
+              <ul
+                className="AutoUI_ui_SelectBox-188 false"
+                style={
+                  Object {
+                    "height": "auto",
+                    "maxHeight": "auto",
+                    "width": "100%",
+                  }
+                }>
+                
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entr
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entry
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      entry another entry
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+                <li
+                  className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  AutoUI_ui_SelectBox-254 ">
+                  <div
+                    className="AutoUI_ui_SelectBox-232  ">
+                    <span
+                      className="AutoUI_ui_SelectBox-174 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40  ">
+                      justtoentrymakesure
+                    </span>
+                    <span
+                      className="AutoUI_ui_SelectBox-285" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
