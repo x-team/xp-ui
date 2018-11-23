@@ -157,8 +157,7 @@ storiesOf('UI Components/ApplicantGrid', module)
             <div>
               Anything goes here
             </div>
-          ),
-          isFilteringFn: () => false
+          )
         },
         {
           name: 'availabilityUpdated',
@@ -188,8 +187,7 @@ storiesOf('UI Components/ApplicantGrid', module)
               width={200}
               visibleItems={4}
             />
-          ),
-          isFilteringFn: () => true
+          )
         },
         {
           name: 'rate',
@@ -200,8 +198,7 @@ storiesOf('UI Components/ApplicantGrid', module)
             <div>
               Anything goes here
             </div>
-          ),
-          isFilteringFn: () => true
+          )
         }
       ],
       {
