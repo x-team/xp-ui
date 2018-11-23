@@ -71,6 +71,18 @@ Note with unparseable markdown text:
 <Note text='[one] [two]' />
 ```
 
+Note with markdown text with break lines:
+
+```js
+<Note text={`# Hello
+This is **bold** text
+-------
+
+HR and *italic*
+`} />
+```
+
+
 Missing props (does component explode?):
 
 ```js
