@@ -715,6 +715,7 @@ class ApplicantBadge extends PureComponent<Props> {
             ) : (
               <div className={cx.rankingSelector} onClick={stopPropagation}>
                 <SelectBox
+                  size='small'
                   placeholder=' '
                   visibleItems={4}
                   hasSearch={false}
