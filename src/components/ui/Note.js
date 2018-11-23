@@ -168,14 +168,15 @@ class Note extends PureComponent<Props, State> {
     this.setState({ isHover: false })
   }
 
-  renderPresenter = ({ value, activateEditingMode }: PresenterProps) => {
+  renderPresenter = ({ activateEditingMode }: PresenterProps) => {
     this.activateEditingMode = activateEditingMode
+    const { text } = this.props
 
     const content = (() => {
       try {
-        return markdownCompiler(value)
+        return markdownCompiler(text)
       } catch (err) {
-        return value
+        return text
       }
     })()
 
@@ -187,12 +188,16 @@ class Note extends PureComponent<Props, State> {
     onValueChange(value)
   }
 
-  renderEditor = ({ onValueChange, value }: EditorProps) => (
-    <TextareaEditor
-      onChange={this.handleEditorValueChange(onValueChange)}
-      text={value.replace(/(?:\r\n|\r|\n)/g, '<br>\n')}
-    />
-  )
+  renderEditor = ({ onValueChange }: EditorProps) => {
+    const { text } = this.props
+    const value = text || ''
+    return (
+      <TextareaEditor
+        onChange={this.handleEditorValueChange(onValueChange)}
+        text={value.replace(/(?:\r\n|\r|\n)/g, '<br>\n')}
+      />
+    )
+  }
 
   render () {
     const { isHover, newValueIsValid } = this.state
