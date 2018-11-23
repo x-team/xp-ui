@@ -615,10 +615,14 @@ exports[`SearchForm-3 1`] = `
           <span
             className="Select-multi-value-wrapper"
 <<<<<<< HEAD
+<<<<<<< HEAD
             id="react-select-13--value">
 =======
             id="react-select-9--value">
 >>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
+=======
+            id="react-select-13--value">
+>>>>>>> aaf9501649bb... Add link icon (#286)
             <div
               className="Select-value">
               <span
@@ -630,10 +634,14 @@ exports[`SearchForm-3 1`] = `
                 aria-selected="true"
                 className="Select-value-label"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 id="react-select-13--value-0"
 =======
                 id="react-select-9--value-0"
 >>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
+=======
+                id="react-select-13--value-0"
+>>>>>>> aaf9501649bb... Add link icon (#286)
                 role="option">
                 a keyword
                 <span
@@ -653,10 +661,14 @@ exports[`SearchForm-3 1`] = `
                 aria-selected="true"
                 className="Select-value-label"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 id="react-select-13--value-1"
 =======
                 id="react-select-9--value-1"
 >>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
+=======
+                id="react-select-13--value-1"
+>>>>>>> aaf9501649bb... Add link icon (#286)
                 role="option">
                 OR
                 <span
@@ -676,10 +688,14 @@ exports[`SearchForm-3 1`] = `
                 aria-selected="true"
                 className="Select-value-label"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 id="react-select-13--value-2"
 =======
                 id="react-select-9--value-2"
 >>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
+=======
+                id="react-select-13--value-2"
+>>>>>>> aaf9501649bb... Add link icon (#286)
                 role="option">
                 two
                 <span
@@ -699,10 +715,14 @@ exports[`SearchForm-3 1`] = `
                 aria-selected="true"
                 className="Select-value-label"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 id="react-select-13--value-3"
 =======
                 id="react-select-9--value-3"
 >>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
+=======
+                id="react-select-13--value-3"
+>>>>>>> aaf9501649bb... Add link icon (#286)
                 role="option">
                 AND
                 <span
@@ -722,10 +742,14 @@ exports[`SearchForm-3 1`] = `
                 aria-selected="true"
                 className="Select-value-label"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 id="react-select-13--value-4"
 =======
                 id="react-select-9--value-4"
 >>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
+=======
+                id="react-select-13--value-4"
+>>>>>>> aaf9501649bb... Add link icon (#286)
                 role="option">
                 much more
                 <span
@@ -743,10 +767,14 @@ exports[`SearchForm-3 1`] = `
               }>
               <input
 <<<<<<< HEAD
+<<<<<<< HEAD
                 aria-activedescendant="react-select-13--value"
 =======
                 aria-activedescendant="react-select-9--value"
 >>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
+=======
+                aria-activedescendant="react-select-13--value"
+>>>>>>> aaf9501649bb... Add link icon (#286)
                 aria-expanded="false"
                 aria-haspopup="false"
                 aria-owns=""

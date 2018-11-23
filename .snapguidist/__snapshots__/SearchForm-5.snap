@@ -450,10 +450,14 @@ exports[`SearchForm-5 1`] = `
           <span
             className="Select-multi-value-wrapper"
 <<<<<<< HEAD
+<<<<<<< HEAD
             id="react-select-14--value">
 =======
             id="react-select-15--value">
 >>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
+=======
+            id="react-select-14--value">
+>>>>>>> aaf9501649bb... Add link icon (#286)
             <div
               className="Select-placeholder">
               Type keywords
@@ -467,10 +471,14 @@ exports[`SearchForm-5 1`] = `
               }>
               <input
 <<<<<<< HEAD
+<<<<<<< HEAD
                 aria-activedescendant="react-select-14--value"
 =======
                 aria-activedescendant="react-select-15--value"
 >>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
+=======
+                aria-activedescendant="react-select-14--value"
+>>>>>>> aaf9501649bb... Add link icon (#286)
                 aria-expanded="false"
                 aria-haspopup="false"
                 aria-owns=""
