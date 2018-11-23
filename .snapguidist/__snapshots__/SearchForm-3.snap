@@ -1,12 +1,12 @@
 exports[`SearchForm-3 1`] = `
 <div
-  className="AutoUI_ui_SearchForm-113">
+  className="AutoUI_ui_SearchForm-114">
   <form
-    className="AutoUI_ui_SearchForm-120">
+    className="AutoUI_ui_SearchForm-121">
     <div
-      className="AutoUI_ui_SearchForm-130">
+      className="AutoUI_ui_SearchForm-131">
       <div
-        className="AutoUI_ui_SearchForm-139">
+        className="AutoUI_ui_SearchForm-140">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -190,9 +190,9 @@ exports[`SearchForm-3 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-169">
+      className="AutoUI_ui_SearchForm-170">
       <div
-        className="AutoUI_ui_SearchForm-174">
+        className="AutoUI_ui_SearchForm-175">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -320,7 +320,7 @@ exports[`SearchForm-3 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_SearchForm-181">
+        className="AutoUI_ui_SearchForm-182">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -582,9 +582,9 @@ exports[`SearchForm-3 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-187">
+      className="AutoUI_ui_SearchForm-188">
       <div
-        className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-160 has-value is-clearable is-searchable Select--multi">
+        className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-161 has-value is-clearable is-searchable Select--multi">
         <input
           disabled={false}
           name="keywords"
@@ -614,7 +614,7 @@ exports[`SearchForm-3 1`] = `
           className="Select-control">
           <span
             className="Select-multi-value-wrapper"
-            id="react-select-15--value">
+            id="react-select-9--value">
             <div
               className="Select-value">
               <span
@@ -625,7 +625,7 @@ exports[`SearchForm-3 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-15--value-0"
+                id="react-select-9--value-0"
                 role="option">
                 a keyword
                 <span
@@ -644,7 +644,7 @@ exports[`SearchForm-3 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-15--value-1"
+                id="react-select-9--value-1"
                 role="option">
                 OR
                 <span
@@ -663,7 +663,7 @@ exports[`SearchForm-3 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-15--value-2"
+                id="react-select-9--value-2"
                 role="option">
                 two
                 <span
@@ -682,7 +682,7 @@ exports[`SearchForm-3 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-15--value-3"
+                id="react-select-9--value-3"
                 role="option">
                 AND
                 <span
@@ -701,7 +701,7 @@ exports[`SearchForm-3 1`] = `
               <span
                 aria-selected="true"
                 className="Select-value-label"
-                id="react-select-15--value-4"
+                id="react-select-9--value-4"
                 role="option">
                 much more
                 <span
@@ -718,7 +718,7 @@ exports[`SearchForm-3 1`] = `
                 }
               }>
               <input
-                aria-activedescendant="react-select-15--value"
+                aria-activedescendant="react-select-9--value"
                 aria-expanded="false"
                 aria-haspopup="false"
                 aria-owns=""
@@ -767,7 +767,7 @@ exports[`SearchForm-3 1`] = `
         </div>
       </div>
       <button
-        className="AutoUI_ui_SearchForm-193 AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-179 raised"
+        className="AutoUI_ui_SearchForm-194 AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-179 raised"
         type="submit">
         <span
           className="AutoUI_ui_Button-51 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
@@ -776,9 +776,9 @@ exports[`SearchForm-3 1`] = `
       </button>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-145">
+      className="AutoUI_ui_SearchForm-146">
       <a
-        className="AutoUI_ui_SearchForm-153"
+        className="AutoUI_ui_SearchForm-154"
         title="View in tabular mode">
         <svg
           height="17px"
@@ -821,7 +821,7 @@ exports[`SearchForm-3 1`] = `
         </svg>
       </a>
       <a
-        className="AutoUI_ui_SearchForm-153"
+        className="AutoUI_ui_SearchForm-154"
         title="View in list mode">
         <svg
           height="16px"
@@ -873,8 +873,9 @@ exports[`SearchForm-3 1`] = `
       </a>
     </div>
   </form>
+  Here it goes the tabular filters
   <div
-    className="AutoUI_ui_SearchForm-200">
+    className="AutoUI_ui_SearchForm-201">
     Here it goes ApplicantsStatusFilter component
   </div>
 </div>
