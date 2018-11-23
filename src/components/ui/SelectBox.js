@@ -115,7 +115,7 @@ const cx = {
 
   searchSmall: cmz(`
     & input {
-      font-size: 16px !important
+      font-size: 1rem !important;
     }
   `),
 
@@ -172,7 +172,7 @@ const cx = {
   `),
 
   labelSmall: cmz(`
-    font-size: 16px
+    font-size: 1rem;
   `),
 
   value: cmz(`
@@ -220,7 +220,7 @@ const cx = {
   `),
 
   itemSmall: cmz(`
-    font-size: 16px;
+    font-size: 1rem;
     min-height: 40px;
   `),
 
@@ -233,12 +233,12 @@ const cx = {
 
   controllableSmall: cmz(`
     & {
-      font-size: 16px;
+      font-size: 1rem;
       padding: 0 14px;
     }
 
     & label {
-      font-size: 16px
+      font-size: 1rem;
     }
   `),
 
@@ -303,7 +303,7 @@ const cx = {
   ),
 
   selectingSmall: cmz(`
-    font-size: 16px
+    font-size: 1rem;
   `),
 
   selectingDots: cmz(`
@@ -357,7 +357,7 @@ const cx = {
 
   editInputSmall: cmz(`
     & input {
-      font-size: 16px
+      font-size: 1rem;
     }
   `),
 
@@ -371,7 +371,7 @@ const cx = {
   ),
 
   nothingLabelSmall: cmz(`
-    font-size: 16px
+    font-size: 1rem;
   `),
 
   createNew: cmz(
@@ -393,7 +393,7 @@ const cx = {
   ),
 
   createNewSmall: cmz(`
-      font-size: 16px
+      font-size: 1rem;
   `),
 
   appendix: cmz(`
