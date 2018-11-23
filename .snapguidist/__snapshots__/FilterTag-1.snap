@@ -1,0 +1,15 @@
+exports[`FilterTag-1 1`] = `
+<span
+  className="AutoUI_ui_FilterTag-11 AutoUI_ui_Button-94 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-145 outlined AutoUI_ui_Button-175 rounded AutoUI_ui_Button-179 raised AutoUI_ui_Button-202 selected">
+  <span
+    className="AutoUI_ui_Button-51 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">
+    <span>
+      <= 2018-01-01
+    </span>
+    <span
+      className="AutoUI_ui_FilterTag-25">
+      ×
+    </span>
+  </span>
+</span>
+`;

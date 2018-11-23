@@ -1,12 +1,12 @@
 exports[`SearchForm-5 1`] = `
 <div
-  className="AutoUI_ui_SearchForm-19">
+  className="AutoUI_ui_SearchForm-20">
   <form
-    className="AutoUI_ui_SearchForm-23">
+    className="AutoUI_ui_SearchForm-24">
     <div
-      className="AutoUI_ui_SearchForm-27">
+      className="AutoUI_ui_SearchForm-28">
       <div
-        className="AutoUI_ui_SearchForm-34">
+        className="AutoUI_ui_SearchForm-35">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -150,9 +150,9 @@ exports[`SearchForm-5 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_SearchForm-39">
+        className="AutoUI_ui_SearchForm-40">
         <a
-          className="AutoUI_ui_SearchForm-47"
+          className="AutoUI_ui_SearchForm-48"
           title="View in tabular mode">
           <svg
             height="17px"
@@ -195,7 +195,7 @@ exports[`SearchForm-5 1`] = `
           </svg>
         </a>
         <a
-          className="AutoUI_ui_SearchForm-47"
+          className="AutoUI_ui_SearchForm-48"
           title="View in list mode">
           <svg
             height="16px"
@@ -248,9 +248,9 @@ exports[`SearchForm-5 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-68">
+      className="AutoUI_ui_SearchForm-69">
       <div
-        className="AutoUI_ui_SearchForm-75">
+        className="AutoUI_ui_SearchForm-76">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -366,7 +366,7 @@ exports[`SearchForm-5 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_SearchForm-82">
+        className="AutoUI_ui_SearchForm-83">
         <div
           className="AutoUI_ui_SelectBox-32"
           style={
@@ -442,14 +442,18 @@ exports[`SearchForm-5 1`] = `
       </div>
     </div>
     <div
-      className="AutoUI_ui_SearchForm-88">
+      className="AutoUI_ui_SearchForm-89">
       <div
-        className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-54 is-clearable is-searchable Select--multi">
+        className="Select AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_SearchForm-55 is-clearable is-searchable Select--multi">
         <div
           className="Select-control">
           <span
             className="Select-multi-value-wrapper"
+<<<<<<< HEAD
             id="react-select-14--value">
+=======
+            id="react-select-15--value">
+>>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
             <div
               className="Select-placeholder">
               Type keywords
@@ -462,7 +466,11 @@ exports[`SearchForm-5 1`] = `
                 }
               }>
               <input
+<<<<<<< HEAD
                 aria-activedescendant="react-select-14--value"
+=======
+                aria-activedescendant="react-select-15--value"
+>>>>>>> a83c917addd4... Show filtering tags above results on Tabular view (#283)
                 aria-expanded="false"
                 aria-haspopup="false"
                 aria-owns=""
@@ -499,7 +507,7 @@ exports[`SearchForm-5 1`] = `
         </div>
       </div>
       <button
-        className="AutoUI_ui_SearchForm-94 AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-179 raised"
+        className="AutoUI_ui_SearchForm-95 AutoUI_ui_Button-75 AutoUI_ui_Button-35 AutoUI_ui_Button-126 AutoUI_ui_Button-179 raised"
         type="submit">
         <span
           className="AutoUI_ui_Button-51 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46">

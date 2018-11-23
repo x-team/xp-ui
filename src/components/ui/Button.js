@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 
 import type { CmzAtom } from 'cmz'
-import type { Element } from 'react'
+import type { Node } from 'react'
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -27,7 +27,7 @@ type Props = {
   wide: ?boolean,
   selectbox: ?boolean,
   component: string,
-  children?: Element<*> | string,
+  children?: Node,
   tag?: string
 }
 

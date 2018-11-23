@@ -151,8 +151,7 @@ const headerColumns = [
         <div>
           Anything goes here
         </div>
-      ),
-      isFilteringFn: () => false
+      )
     },
     {
       name: 'availabilityUpdated',
@@ -182,8 +181,7 @@ const headerColumns = [
           width={200}
           visibleItems={4}
         />
-      ),
-      isFilteringFn: () => true
+      )
     },
     {
       name: 'rate',
@@ -194,8 +192,7 @@ const headerColumns = [
         <div>
           Anything goes here
         </div>
-      ),
-      isFilteringFn: () => true
+      )
     },
   ],
   {
