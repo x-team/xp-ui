@@ -27,6 +27,7 @@ storiesOf('UI Components/SearchForm', module)
       onSubmit={action('onSubmit')}
       openListEditorModal={action('openListEditorModal')}
       renderApplicantsStatusFilter={'Here it goes ApplicantsStatusFilter component'}
+      tabularFilterTags={'Here it goes the tabular filters'}
       switchDisplay={(mode) => console.log('switchDisplay:', mode)}
     />
   ))
@@ -52,6 +53,7 @@ storiesOf('UI Components/SearchForm', module)
       onSubmit={action('onSubmit')}
       openListEditorModal={action('openListEditorModal')}
       renderApplicantsStatusFilter={'Here it goes ApplicantsStatusFilter component'}
+      tabularFilterTags={'Here it goes the tabular filters'}
       switchDisplay={(mode) => console.log('switchDisplay:', mode)}
     />
   ))
