@@ -189,12 +189,12 @@ class Note extends PureComponent<Props, State> {
   }
 
   renderEditor = ({ onValueChange }: EditorProps) => {
-    const { text } = this.props
-    const value = text || ''
+    const { text = '' } = this.props
+
     return (
       <TextareaEditor
         onChange={this.handleEditorValueChange(onValueChange)}
-        text={value.replace(/(?:\r\n|\r|\n)/g, '<br>\n')}
+        text={text.replace(/(?:\r\n|\r|\n)/g, '<br>\n')}
       />
     )
   }
