@@ -21,7 +21,11 @@ exports[`Note-9 1`] = `
     </span>
     <div
       className="AutoUI_ui_Note-58 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40">
+<<<<<<< HEAD
       25 Nov 18
+=======
+      23 Nov 18
+>>>>>>> 6b63d7010118... Update the note text with the state text instead of current value (#287)
       , in Interview Notes
     </div>
     <div
