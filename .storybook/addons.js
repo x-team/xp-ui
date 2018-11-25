@@ -12,3 +12,6 @@ import '@storybook/addon-options/register'
 
 // Allows to write notes (text or HTML) for our stories
 import '@storybook/addon-notes/register'
+
+// Allow to edit React props dynamically using the Storybook UI
+import '@storybook/addon-knobs/register'
