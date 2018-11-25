@@ -8,7 +8,7 @@ _UI component library for the Auto platform._
 
 You need to install:
 
-- [`nvm`](https://github.com/creationix/nvm)
+- [nvm](https://github.com/creationix/nvm)
 
 ## Get started
 
@@ -18,7 +18,7 @@ You need to install:
 
 ## Live preview
 
-The latest Styleguidist spec page build out of `master` branch is available for preview [here](https://x-team.github.io/auto-ui/).
+The latest Storybook spec page built out of `master` branch is available for preview [here](https://x-team.github.io/auto-ui/).
 
 ## Contributing
 
