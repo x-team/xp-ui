@@ -1,21 +1,19 @@
 {
   "name": "auto-ui",
-  "version": "1.0.0",
-  "description": "UI component library for the Auto platform.",
+  "version": "2.0.0",
+  "description": "UI component library for the XP platform.",
   "main": "lib/auto-ui.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "start": "start-storybook -p 9001 -c .storybook",
     "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
     "watch": "npm run build -- --watch",
     "flow": "flow check src",
     "lint": "standard \"src/**/*.js\" | snazzy",
     "lint-fix": "standard \"src/**/*.js\" --fix | snazzy",
     "test": "npm run lint && npm run flow",
-    "start": "styleguidist server",
-    "styleguide:build": "styleguidist build",
-    "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook -o .storybook-static"
   },
   "keywords": [],
@@ -59,8 +57,6 @@
     "react-dom": "^16.6.0",
     "react-dom-factories": "^1.0.2",
     "react-select": "1.2.1",
-    "react-styleguidist": "^6.5.3",
-    "snapguidist": "^2.1.1",
     "snazzy": "^8.0.0",
     "source-map-loader": "^0.2.4",
     "standard": "^12.0.1",

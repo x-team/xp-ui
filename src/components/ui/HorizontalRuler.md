@@ -1,5 +1,0 @@
-Basic:
-
-```js
-<HorizontalRuler />
-```
