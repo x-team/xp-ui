@@ -229,6 +229,4 @@ storiesOf('UI Components/ApplicantGrid', module)
       </div>
     )
   })
-  .add('missing props (does component explode?)', () => (
-    <ApplicantGrid />
-  ))
+  .add('missing props (does component explode?)', () => <ApplicantGrid />)
