@@ -2,11 +2,11 @@ sudo: false
 language: node_js
 before_deploy:
   - npm run build
-  - npm run styleguide:build
+  - npm run storybook:build
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: "$GITHUB_TOKEN"
   on:
     branch: master
-  local_dir: styleguide
+  local_dir: .storybook-static
