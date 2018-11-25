@@ -71,4 +71,13 @@ storiesOf('UI Components/Note', module)
 
   .add('note with unparseable markdown text', () => <Note text='[one] [two]' />)
 
+  .add('note with markdown text with break lines', () => (
+    <Note text={`# Hello
+This is **bold** text
+-------
+
+HR and *italic*
+`} />
+  ))
+
   .add('missing props (does component explode?)', () => <Note />)
