@@ -17,7 +17,7 @@ const cmz = require('cmz')
 
 type Props = {
   label?: string,
-  name: string,
+  name?: string,
   id?: string,
   value?: boolean | number | string | Object,
   isInvalid?: boolean,

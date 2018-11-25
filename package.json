@@ -1,20 +1,20 @@
 {
   "name": "auto-ui",
-  "version": "1.0.0",
-  "description": "UI component library for the Auto platform.",
+  "version": "2.0.0",
+  "description": "UI component library for the XP platform.",
   "main": "lib/auto-ui.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "start": "start-storybook -p 9001 -c .storybook",
     "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
     "watch": "npm run build -- --watch",
     "flow": "flow check src",
     "lint": "standard \"src/**/*.js\" | snazzy",
     "lint-fix": "standard \"src/**/*.js\" --fix | snazzy",
     "test": "npm run lint && npm run flow",
-    "start": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "storybook:build": "build-storybook -c .storybook -o .storybook-static"
   },
   "keywords": [],
   "author": "joshwnj",
@@ -27,7 +27,17 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^4.0.2",
+    "@storybook/addon-backgrounds": "^4.0.2",
+    "@storybook/addon-console": "^1.1.0",
+    "@storybook/addon-info": "^4.0.2",
+    "@storybook/addon-knobs": "^4.0.8",
+    "@storybook/addon-notes": "^4.0.2",
+    "@storybook/addon-options": "^4.0.2",
+    "@storybook/addon-viewport": "^4.0.2",
+    "@storybook/react": "^4.0.2",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "10.0.1",
     "babel-loader": "^7.1.5",
     "babel-plugin-cmz-names": "^1.5.0",
@@ -38,6 +48,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "cross-env": "^5.2.0",
+    "css-loader": "^1.0.1",
     "eslint-plugin-flowtype": "^3.2.0",
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
@@ -47,11 +58,10 @@
     "react-dom": "^16.6.0",
     "react-dom-factories": "^1.0.2",
     "react-select": "1.2.1",
-    "react-styleguidist": "^6.5.3",
-    "snapguidist": "^3.1.2",
     "snazzy": "^8.0.0",
     "source-map-loader": "^0.2.4",
     "standard": "^12.0.1",
+    "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^3.8.1"
   },
@@ -59,7 +69,6 @@
     "cmz": "^3.12.1",
     "color": "^3.1.0",
     "crypto-js": "^3.1.9-1",
-    "css-loader": "^1.0.1",
     "date-fns": "^1.29.0",
     "lodash.isequal": "^4.5.0",
     "markdown-to-jsx": "^6.8.3",
