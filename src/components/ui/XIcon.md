@@ -1,5 +1,0 @@
-XIcon
-
-```js
-<XIcon />
-```

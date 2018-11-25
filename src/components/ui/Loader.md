@@ -1,5 +1,0 @@
-Basic usage:
-
-```js
-<Loader />
-```
