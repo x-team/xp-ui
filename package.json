@@ -15,7 +15,8 @@
     "test": "npm run lint && npm run flow",
     "start": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o .storybook-static"
   },
   "keywords": [],
   "author": "joshwnj",
