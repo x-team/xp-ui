@@ -32,6 +32,7 @@
     "@storybook/addon-backgrounds": "^4.0.2",
     "@storybook/addon-console": "^1.1.0",
     "@storybook/addon-info": "^4.0.2",
+    "@storybook/addon-knobs": "^4.0.8",
     "@storybook/addon-notes": "^4.0.2",
     "@storybook/addon-options": "^4.0.2",
     "@storybook/addon-viewport": "^4.0.2",
