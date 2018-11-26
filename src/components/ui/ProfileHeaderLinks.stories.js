@@ -14,7 +14,10 @@ storiesOf('UI Components/ProfileHeaderLinks', module)
           url: 'http://localhost:8000/'
         }
       ]}
-    />
+    >
+      <button>any extra</button>
+      <button>elements here</button>
+    </ProfileHeaderLinks>
   ))
 
   .add('missing props (does component explode?)', () => <ProfileHeaderLinks />)

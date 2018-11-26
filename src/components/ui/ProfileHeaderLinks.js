@@ -1,8 +1,10 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import React, { Children, PureComponent } from 'react'
 
 import theme from '../../styles/theme'
+
+import type { ChildrenArray, Element } from 'react'
 
 const cmz = require('cmz')
 
@@ -43,13 +45,18 @@ const cx = {
     }
   `),
 
+  child: cmz(`
+    display: inline-block
+  `),
+
   activeLink: cmz(`
     color: ${theme.typoParagraph}
   `)
 }
 
 type Props = {
-  links: Array<Object>
+  links: Array<Object>,
+  children?: ChildrenArray<Element<*>|string>|Element<*>|string
 }
 
 type State = {
@@ -88,7 +95,7 @@ class ProfileHeaderLinks extends PureComponent<Props, State> {
     window.open(url, '_blank')
   }
 
-  headerLinks = (): any => {
+  renderLinks = (): any => {
     const { activeLink } = this.state
     const { links } = this.props
 
@@ -106,9 +113,26 @@ class ProfileHeaderLinks extends PureComponent<Props, State> {
     })
   }
 
+  renderChildren = (): any => {
+    const { children } = this.props
+
+    return Children.map(children, (child, i) => {
+      return (
+        <li key={i} className={cx.linkWrapper}>
+          <div className={cx.child}>
+            {child}
+          </div>
+        </li>
+      )
+    })
+  }
+
   render () {
     return (
-      <ul className={cx.header}>{this.headerLinks()}</ul>
+      <ul className={cx.header}>
+        {this.renderLinks()}
+        {this.renderChildren()}
+      </ul>
     )
   }
 }
