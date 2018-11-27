@@ -234,6 +234,7 @@ const cx = {
     justify-content: space-between
     align-items: center
     padding: 15px 22px
+    flex: 1 0 auto
   `),
 
   controllableSmall: cmz(`
@@ -273,6 +274,7 @@ const cx = {
 
   message: cmz(`
     font-style: italic
+    flex: 1 0 auto
   `),
 
   // !important is used to override global input values
@@ -283,8 +285,8 @@ const cx = {
   `),
 
   control: cmz(`
-    flex-shrink: 0
     display: flex
+    flex: 0 0 auto
   `),
 
   controlButton: cmz(`
@@ -304,6 +306,7 @@ const cx = {
       font-size: 20px
       position: relative
       padding-left: 30px
+      flex: 1 0 auto
     `
   ),
 
@@ -346,8 +349,8 @@ const cx = {
     `
       & {
         font-size: 20px
-        width: 70%
         height: 30px
+        flex: 0 0 70%
       }
       & input {
         height: 30px !important
@@ -376,7 +379,8 @@ const cx = {
   ),
 
   nothingLabelSmall: cmz(`
-    font-size: 1rem;
+    font-size: 1rem
+    padding: 0 14px;
   `),
 
   createNew: cmz(
@@ -398,7 +402,8 @@ const cx = {
   ),
 
   createNewSmall: cmz(`
-      font-size: 1rem;
+    font-size: 1rem
+    padding: 0 14px
   `),
 
   appendix: cmz(`
@@ -423,6 +428,7 @@ const cx = {
       margin: 0
       padding: 0
       width: 70%
+      flex: 1 0 auto
     }
     & p {
       margin: 0
@@ -799,7 +805,7 @@ class SelectBox extends Component<Props, State> {
       </span>
     )
 
-    const itemClasses = (item) => ([
+    const getItemClasses = (item) => ([
       cx.item,
       (size === 'small') ? cx.itemSmall : '',
       (lined || !expanded) ? cx.lined : '',
@@ -968,8 +974,13 @@ class SelectBox extends Component<Props, State> {
       internalCloseDropdown?: Function
     }) => {
       if (method) {
+        const controllableClass = [
+          cx.controllable,
+          (size === 'small') ? cx.controllableSmall : '',
+        ].join(' ')
+
         return (
-          <div className={cx.controllable}>
+          <div className={controllableClass}>
             {render && render(item)}
             {control && control(item)}
           </div>
@@ -1071,7 +1082,7 @@ class SelectBox extends Component<Props, State> {
 
       return item.status !== STATUS.DISMISSED && (
         <li
-          className={itemClasses(item)}
+          className={getItemClasses(item)}
           key={item.id}
         >
           {getRenderByStatus()}
