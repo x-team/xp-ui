@@ -28,11 +28,10 @@ Fixes https://x-team-internal.atlassian.net/browse/XP-[ISSUE_NUMBER]
 <!-- Remove items that do not apply. Just tick completed items in UI -->
 - [ ] set yourself as an assignee
 - [ ] set appropriate labels for a PR (`In Review` or `In Progress` depending on its status)
-- [ ] move respective Jira issue to the `IN REVIEW` column
+- [ ] move respective JIRA issue to the `IN REVIEW` column
 - [ ] make sure your code lints (`npm run lint`)
 - [ ] Flow typechecks passed (`npm run flow`)
-- [ ] my change requires a change to the component's documentation (`.snap`)
-- [ ] component's documentation (`.snap`) is changed or added accordingly
+- [ ] component's documentation (`.stories.js` file) is changed or added accordingly to reflect any new or updated use cases or variants usage.
 - [ ] if you've fixed a bug or added code that should be tested, add unit tests
 - [ ] if any snapshots have been changed, verify that component still works and looks as expected and update the changed snapshot
 - [ ] **manually tested the component** by running it in the browser and checked nothing is broken and operates as expected!

@@ -28,6 +28,7 @@ const videoStyles = cmz(`
 
 class VideoPlayer extends PureComponent<Props> {
   static defaultProps = {
+    src: '',
     embedded: false,
     autoPlay: false,
     showControls: true,

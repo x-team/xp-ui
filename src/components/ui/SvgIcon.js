@@ -6,7 +6,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'link'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray'
 
 type Props = {
@@ -624,6 +624,7 @@ const getIcon = ({ icon, color, hover }) => {
 
 class SvgIcon extends PureComponent<Props> {
   static defaultProps = {
+    icon: undefined,
     color: 'default'
   }
 
