@@ -43,6 +43,7 @@
     "babel-eslint": "10.0.1",
     "babel-loader": "^7.1.5",
     "babel-plugin-cmz-names": "^1.5.0",
+    "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-syntax-flow": "^6.18.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-env": "^1.7.0",

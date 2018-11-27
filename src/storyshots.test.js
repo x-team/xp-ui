@@ -8,8 +8,6 @@ window.requestAnimationFrame = () => {
 window.cancelAnimationFrame = () => {
   throw new Error('cancelAnimationFrame. is not supported in Node')
 }
-window.matchMedia = () => {
-  return {}
-}
+window.matchMedia = () => ({})
 
 initStoryshots()
