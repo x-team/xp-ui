@@ -1,10 +1,16 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { select } from '@storybook/addon-knobs'
 
 import SelectBox from './SelectBox'
 import Button from './Button'
 import SvgIcon from './SvgIcon'
+
+const sizes = {
+  Default: '',
+  Small: 'small'
+}
 
 storiesOf('UI Components/SelectBox', module)
   .add('simple view for Add to List', () => {
@@ -398,6 +404,7 @@ storiesOf('UI Components/SelectBox', module)
           onDelete={action('onDelete')}
           onCreateNew={action('onCreateNew')}
           dismissTimeout={99999}
+          size={select('Size', sizes, sizes.Default)}
         />
 
         <hr />

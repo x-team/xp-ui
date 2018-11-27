@@ -976,7 +976,7 @@ class SelectBox extends Component<Props, State> {
       if (method) {
         const controllableClass = [
           cx.controllable,
-          (size === 'small') ? cx.controllableSmall : '',
+          (size === 'small') ? cx.controllableSmall : ''
         ].join(' ')
 
         return (
