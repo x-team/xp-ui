@@ -4,7 +4,7 @@ import React, { Children, PureComponent } from 'react'
 
 import theme from '../../styles/theme'
 
-import type { ChildrenArray, Element } from 'react'
+import type { Node } from 'react'
 
 const cmz = require('cmz')
 
@@ -22,7 +22,7 @@ const cx = {
     z-index: 3
   `),
 
-  linkWrapper: cmz(`
+  itemWrapper: cmz(`
     margin: 0 0 10px
     list-style-type: none
   `),
@@ -56,7 +56,7 @@ const cx = {
 
 type Props = {
   links: Array<Object>,
-  children?: ChildrenArray<Element<*>|string>|Element<*>|string
+  children?: Node
 }
 
 type State = {
@@ -104,7 +104,7 @@ class ProfileHeaderLinks extends PureComponent<Props, State> {
       const clickHandler = hash ? this.scrollToHash(hash) : this.openURL(url)
 
       return (
-        <li key={hash || url} className={cx.linkWrapper}>
+        <li key={hash || url} className={cx.itemWrapper}>
           <span className={linkClassName} onClick={clickHandler}>
             {label}
           </span>
@@ -118,7 +118,7 @@ class ProfileHeaderLinks extends PureComponent<Props, State> {
 
     return Children.map(children, (child, i) => {
       return (
-        <li key={i} className={cx.linkWrapper}>
+        <li key={i} className={cx.itemWrapper}>
           <div className={cx.child}>
             {child}
           </div>
