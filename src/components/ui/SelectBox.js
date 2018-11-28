@@ -120,6 +120,12 @@ const cx = {
     width: 100%
   `),
 
+  searchInputSmall: cmz(`
+    font-size: 1rem !important
+    padding: 20px 30px 18px 40px !important
+    height: 40px !important
+  `),
+
   magnifier: cmz(`
     & {
       position: absolute
@@ -130,6 +136,11 @@ const cx = {
     & svg {
       position: absolute
     }
+  `),
+
+  magnifierSmall: cmz(`
+    top: 12px
+    left: 14px
   `),
 
   triangle: cmz(`
@@ -165,6 +176,10 @@ const cx = {
     border-bottom: 1px solid transparent
   `),
 
+  labelSmall: cmz(`
+    font-size: 1rem
+  `),
+
   value: cmz(`
     font-size: 1.063rem !important
     color: ${theme.formText} !important
@@ -195,6 +210,8 @@ const cx = {
     & {
       font-size: 20px
       min-height: 30px
+      display: flex
+      align-items: center
     }
     &:hover {
       background-color: ${theme.baseBright}
@@ -207,11 +224,28 @@ const cx = {
     }
   `),
 
+  itemSmall: cmz(`
+    font-size: 1rem
+    min-height: 40px
+  `),
+
   controllable: cmz(`
     display: flex
     justify-content: space-between
     align-items: center
     padding: 15px 22px
+    flex: 1 0 auto
+  `),
+
+  controllableSmall: cmz(`
+    & {
+      font-size: 1rem
+      padding: 0 14px
+    }
+
+    & label {
+      font-size: 1rem
+    }
   `),
 
   clickable: cmz(`
@@ -240,6 +274,7 @@ const cx = {
 
   message: cmz(`
     font-style: italic
+    flex: 1 0 auto
   `),
 
   // !important is used to override global input values
@@ -250,8 +285,8 @@ const cx = {
   `),
 
   control: cmz(`
-    flex-shrink: 0
     display: flex
+    flex: 0 0 auto
   `),
 
   controlButton: cmz(`
@@ -271,8 +306,13 @@ const cx = {
       font-size: 20px
       position: relative
       padding-left: 30px
+      flex: 1 0 auto
     `
   ),
+
+  selectingSmall: cmz(`
+    font-size: 1rem
+  `),
 
   selectingDots: cmz(`
     & {
@@ -309,8 +349,8 @@ const cx = {
     `
       & {
         font-size: 20px
-        width: 70%
         height: 30px
+        flex: 0 0 70%
       }
       & input {
         height: 30px !important
@@ -323,6 +363,12 @@ const cx = {
     `
   ),
 
+  editInputSmall: cmz(`
+    & input {
+      font-size: 1rem
+    }
+  `),
+
   nothingLabel: cmz(
     typo.baseText,
     `
@@ -331,6 +377,11 @@ const cx = {
       margin: 15px 22px
     `
   ),
+
+  nothingLabelSmall: cmz(`
+    font-size: 1rem
+    padding: 0 14px
+  `),
 
   createNew: cmz(
     typo.baseText,
@@ -349,6 +400,11 @@ const cx = {
       }
     `
   ),
+
+  createNewSmall: cmz(`
+    font-size: 1rem
+    padding: 0 14px
+  `),
 
   appendix: cmz(`
     border-right: 1px solid ${theme.lineSilver2}
@@ -372,6 +428,7 @@ const cx = {
       margin: 0
       padding: 0
       width: 70%
+      flex: 1 0 auto
     }
     & p {
       margin: 0
@@ -419,7 +476,8 @@ type Props = {
   areItemsToggleable?: boolean,
   inputType?: InputType,
   closeDropdown?: boolean | Function,
-  autoFocus?: boolean
+  autoFocus?: boolean,
+  size?: 'small'
 }
 
 type State = {
@@ -718,7 +776,8 @@ class SelectBox extends Component<Props, State> {
       append,
       shouldSortItems,
       inputType,
-      autoFocus
+      autoFocus,
+      size
     } = this.props
     const { view, search } = this.state
 
@@ -746,31 +805,39 @@ class SelectBox extends Component<Props, State> {
       </span>
     )
 
-    const itemClasses = (item) => ([
+    const getItemClasses = (item) => ([
       cx.item,
+      (size === 'small') ? cx.itemSmall : '',
       (lined || !expanded) ? cx.lined : '',
       ((item.editing || item.editing === '') && item.editing !== item.value) ? cx.editing : ''
     ].join(' '))
 
-    const renderEditingStatus = (item: Item) => (
-      <span className={cx.editInput}>
-        <InputField
-          name={item.value}
-          value={item.editing ? item.editing : ''}
-          onChange={(input = {}) => this.handleEditChange(item, input)}
-          autoFocus='autofocus'
-          onFocus={e => {
-            const val = e.target.value
-            e.target.value = ''
-            e.target.value = val
-          }}
-          onKeyDown={(e: any) => e.stopPropagation && e.stopPropagation()}
-          onKeyPress={(e: any) => e.stopPropagation && e.stopPropagation()}
-          onKeyUp={(e: any) => this.handleEditingKeyUp(e, item)}
-          onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
-        />
-      </span>
-    )
+    const renderEditingStatus = (item: Item) => {
+      const itemClasses = [
+        cx.editInput,
+        (size === 'small') ? cx.editInputSmall : ''
+      ].join(' ')
+
+      return (
+        <span className={itemClasses}>
+          <InputField
+            name={item.value}
+            value={item.editing ? item.editing : ''}
+            onChange={(input = {}) => this.handleEditChange(item, input)}
+            autoFocus='autofocus'
+            onFocus={e => {
+              const val = e.target.value
+              e.target.value = ''
+              e.target.value = val
+            }}
+            onKeyDown={(e: any) => e.stopPropagation && e.stopPropagation()}
+            onKeyPress={(e: any) => e.stopPropagation && e.stopPropagation()}
+            onKeyUp={(e: any) => this.handleEditingKeyUp(e, item)}
+            onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
+          />
+        </span>
+      )
+    }
 
     const renderEditingStatusControl = (item: Item) => (
       <span className={cx.control}>
@@ -843,28 +910,47 @@ class SelectBox extends Component<Props, State> {
       `Unarchiving "${item.value}"...`
     )
 
-    const renderSelectingStatus = (item: Item) => onSelect ? (
-      <span className={cx.selecting}>
-        <span className={cx.selectingDots} />
-        {item.value}
-      </span>
-    ) : item.value
+    const renderSelectingStatus = (item: Item) => {
+      const itemClasses = [
+        cx.selecting,
+        (size === 'small') ? cx.selectingSmall : ''
+      ].join(' ')
 
-    const renderDefaultStatus = (item: Item) => onSelect ? (
-      <InputField
-        key={`${item.id}${item.selected ? 'selected' : 'unselected'}`}
-        type={inputType}
-        label={item.value}
-        name={item.value}
-        checked={!!item.selected}
-        onChange={() => {}}
-        onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
-      />
-    ) : (
-      <span className={[cx.label, item.selected ? cx.active : ''].join(' ')}>
-        {item.value}
-      </span>
-    )
+      return onSelect ? (
+        <span className={itemClasses}>
+          <span className={cx.selectingDots} />
+          {item.value}
+        </span>
+      ) : item.value
+    }
+
+    const renderDefaultStatus = (item: Item) => {
+      if (onSelect) {
+        return (
+          <InputField
+            key={`${item.id}${item.selected ? 'selected' : 'unselected'}`}
+            type={inputType}
+            label={item.value}
+            name={item.value}
+            checked={!!item.selected}
+            onChange={() => {}}
+            onClick={(e: any) => e.stopPropagation && e.stopPropagation()}
+          />
+        )
+      } else {
+        const spanClassnames = [
+          cx.label,
+          (size === 'small') ? cx.labelSmall : '',
+          item.selected ? cx.active : ''
+        ].join(' ')
+
+        return (
+          <span className={spanClassnames}>
+            {item.value}
+          </span>
+        )
+      }
+    }
 
     const renderDefaultStatusControl = (item: Item) => (
       <span className={cx.control}>
@@ -886,23 +972,40 @@ class SelectBox extends Component<Props, State> {
       render?: Function,
       control?: Function,
       internalCloseDropdown?: Function
-    }) => method ? (
-      <div className={cx.controllable}>
-        {render && render(item)}
-        {control && control(item)}
-      </div>
-    ) : (
-      <div
-        className={[cx.controllable, (onSelect || onClick) ? cx.clickable : ''].join(' ')}
-        onClick={onSelect
-          ? e => this.handleSelect(e, item)
-          : e => this.handleClick(e, item, internalCloseDropdown)
-        }
-      >
-        {renderDefaultStatus(item)}
-        {renderDefaultStatusControl(item)}
-      </div>
-    )
+    }) => {
+      if (method) {
+        const controllableClass = [
+          cx.controllable,
+          (size === 'small') ? cx.controllableSmall : ''
+        ].join(' ')
+
+        return (
+          <div className={controllableClass}>
+            {render && render(item)}
+            {control && control(item)}
+          </div>
+        )
+      } else {
+        const controllableClass = [
+          cx.controllable,
+          (size === 'small') ? cx.controllableSmall : '',
+          (onSelect || onClick) ? cx.clickable : ''
+        ].join(' ')
+
+        return (
+          <div
+            className={controllableClass}
+            onClick={onSelect
+              ? e => this.handleSelect(e, item)
+              : e => this.handleClick(e, item, internalCloseDropdown)
+            }
+          >
+            {renderDefaultStatus(item)}
+            {renderDefaultStatusControl(item)}
+          </div>
+        )
+      }
+    }
 
     const renderItem = (item: Item, internalCloseDropdown?: Function) => {
       const { status } = item
@@ -979,7 +1082,7 @@ class SelectBox extends Component<Props, State> {
 
       return item.status !== STATUS.DISMISSED && (
         <li
-          className={itemClasses(item)}
+          className={getItemClasses(item)}
           key={item.id}
         >
           {getRenderByStatus()}
@@ -1001,6 +1104,16 @@ class SelectBox extends Component<Props, State> {
         ? filteredItems.sort(sortById)
         : filteredItems
 
+      const nothingClasses = [
+        cx.nothingLabel,
+        (size === 'small') ? cx.nothingLabelSmall : ''
+      ].join(' ')
+
+      const createNewClasses = [
+        cx.createNew,
+        (size === 'small') ? cx.createNewSmall : ''
+      ].join(' ')
+
       return (
         <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
           height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
@@ -1010,10 +1123,10 @@ class SelectBox extends Component<Props, State> {
           {search && filteredItems && (
             <li key='search-result'>
               {filteredItems.length === 0 && (
-                <span className={cx.nothingLabel}>No Results for "{search}"</span>
+                <span className={nothingClasses}>No Results for "{search}"</span>
               )}
               {onCreateNew && !filteredItems.find(each => each.value === search.trim()) && (
-                <span className={cx.createNew} onClick={e => this.handleCreateNew(e)}>
+                <span className={createNewClasses} onClick={e => this.handleCreateNew(e)}>
                   <SvgIcon icon='plus' />
                   <span>Create new {collectionLabel} "{search}"</span>
                 </span>
@@ -1033,7 +1146,7 @@ class SelectBox extends Component<Props, State> {
 
     const renderSearchLabel = (stopClickPropagation: boolean = true) => (
       <div className={cx.search}>
-        <div className={cx.magnifier}>
+        <div className={[cx.magnifier, size === 'small' ? cx.magnifierSmall : ''].join(' ')}>
           <SvgIcon icon='magnifier' color='grayscale' />
         </div>
         <InputField
@@ -1041,7 +1154,7 @@ class SelectBox extends Component<Props, State> {
           value={search}
           placeholder={(expanded && placeholder) ? placeholder : 'Search'}
           onChange={(input = {}) => this.handleSearch(null, input.target.value)}
-          className={cx.searchInput}
+          className={[cx.searchInput, size === 'small' ? cx.searchInputSmall : ''].join(' ')}
           autoComplete='off'
           onKeyDown={this.handleByStoppingPropagation}
           onKeyPress={this.handleByStoppingPropagation}
