@@ -119,6 +119,7 @@ const tabularTheme = {
     width: ${dimensions.searchWidth[DISPLAY_MODES.TABULAR]}
     margin: 0 auto
     overflow-x: auto
+    overflow-y: hidden
     flex: 1
     padding: 0 30px
   `),

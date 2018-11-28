@@ -104,6 +104,10 @@ const cx = {
         padding-right: 56px
       }
   `),
+  column: cmz(`
+    display: inline-flex
+    align-items: center
+  `),
   grouped: cmz(`
     & {
       flex: 1
@@ -148,9 +152,7 @@ const cx = {
   `),
   filter: cmz(`
     & {
-      position: absolute
-      top: 0
-      right: -10px
+      margin-right: 10px
     }
 
     & svg {
@@ -242,6 +244,7 @@ class ApplicantGridHeader extends PureComponent<Props> {
         filterRender
       } = headerColumn
       const columnClassName = getClassName({
+        [cx.column]: true,
         [cx[size]]: true,
         [cx.sortable]: isSortable,
         [cx[`${direction}Sort`]]: sortBy === name
@@ -253,12 +256,11 @@ class ApplicantGridHeader extends PureComponent<Props> {
           className={columnClassName}
           onClick={this.handleColumnClick(name, isSortable)}
         >
-          {label}
           {filterRender && (
             <div className={cx.filter} onClick={this.stopPropagation}>
               <Dropdown
                 icon='filter'
-                targetXOrigin='right'
+                targetXOrigin='left'
                 onClose={this.onChangeFilter}
               >
                 <div className={cx.dropdown}>
@@ -267,6 +269,7 @@ class ApplicantGridHeader extends PureComponent<Props> {
               </Dropdown>
             </div>
           )}
+          {label}
         </span>
       )
     }
