@@ -1,20 +1,30 @@
-import { JSDOM } from 'jsdom';
+// @flow
 
-const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
-const { window } = jsdom;
+import { JSDOM } from 'jsdom'
 
-function copyProps(src, target) {
+const jsdom = new JSDOM('<!doctype html><html><body></body></html>')
+const { window } = jsdom
+
+function copyProps (src: Object, target: Object) {
   Object.defineProperties(target, {
     ...Object.getOwnPropertyDescriptors(src),
-    ...Object.getOwnPropertyDescriptors(target),
-  });
+    ...Object.getOwnPropertyDescriptors(target)
+  })
 }
 
-global.window = window;
-global.document = window.document;
+// Mock date for tests
+const constantDate = new Date('2018-06-13T04:41:20')
+/* eslint no-global-assign:off */
+Date = class extends Date {
+  constructor (date) {
+    super()
+    return constantDate
+  }
+}
+
 window.matchMedia = () => ({})
 global.navigator = {
-  userAgent: 'node.js',
-};
+  userAgent: 'node.js'
+}
 
-copyProps(window, global);
+copyProps(window, global)

@@ -12,8 +12,8 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
     "watch": "npm run build -- --watch",
     "flow": "flow check src",
-    "lint": "standard \"src/**/*.js\" | snazzy",
-    "lint-fix": "standard \"src/**/*.js\" --fix | snazzy",
+    "lint": "standard \"src/**/*.js\" \".jest/**/*.js\" \"jest.config.js\" | snazzy",
+    "lint-fix": "standard \"src/**/*.js\" \".jest/**/*.js\" \"jest.config.js\" --fix | snazzy",
     "test": "npm run lint && npm run flow && npm run jest",
     "storybook:build": "build-storybook -c .storybook -o .storybook-static"
   },
