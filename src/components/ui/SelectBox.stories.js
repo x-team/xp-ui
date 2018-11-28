@@ -51,6 +51,7 @@ storiesOf('UI Components/SelectBox', module)
         visibleItems={3}
         onSelect={action('onSelect')}
         onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
       />
     )
   })
@@ -91,6 +92,7 @@ storiesOf('UI Components/SelectBox', module)
           </Button>
         )}
         onClick={action('onClick')}
+        size={select('Size', sizes, sizes.Default)}
       />
     )
   })
@@ -132,6 +134,7 @@ storiesOf('UI Components/SelectBox', module)
         )}
         onClick={action('onClick')}
         closeDropdown
+        size={select('Size', sizes, sizes.Default)}
       />
     )
   })
@@ -174,6 +177,7 @@ storiesOf('UI Components/SelectBox', module)
         )}
         onClick={action('onClick')}
         closeDropdown
+        size={select('Size', sizes, sizes.Default)}
       />
     )
   })
@@ -215,6 +219,7 @@ storiesOf('UI Components/SelectBox', module)
           </Button>
         )}
         onClick={action('onClick')}
+        size={select('Size', sizes, sizes.Default)}
       />
     )
   })
@@ -260,6 +265,7 @@ storiesOf('UI Components/SelectBox', module)
           </Button>
         )}
         onSelect={action('onSelect')}
+        size={select('Size', sizes, sizes.Default)}
       />
     )
   })
@@ -297,10 +303,11 @@ storiesOf('UI Components/SelectBox', module)
         onArchive={action('onArchive')}
         onDelete={action('onDelete')}
         onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
       />
     )
   })
-  .add('example with auto-focus on search field', () => <SelectBox autoFocus />)
+  .add('example with auto-focus on search field', () => <SelectBox autoFocus size={select('Size', sizes, sizes.Default)} />)
   .add('example of all items states', () => {
     const itemsArray = [
       {
@@ -415,6 +422,7 @@ storiesOf('UI Components/SelectBox', module)
           items={itemsArray}
           lined
           expanded
+          size={select('Size', sizes, sizes.Default)}
         />
       </div>
     )
@@ -426,6 +434,7 @@ storiesOf('UI Components/SelectBox', module)
         collectionLabel='entry'
         expanded
         onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
       />
 
       <p>Empty list and search is provided. Nothing is found on search. The "create new" button should should be visible:</p>
@@ -434,6 +443,7 @@ storiesOf('UI Components/SelectBox', module)
         search='wat?'
         expanded
         onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
       />
 
       <p>Valid list and search is provided. Nothing is found on search. The "create new" button should be visible:</p>
@@ -447,6 +457,7 @@ storiesOf('UI Components/SelectBox', module)
         ]}
         expanded
         onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
       />
 
       <p>Valid list and search is provided. Some results are found on search, but none of them matches exactly with search string. The "create new" button should be visible:</p>
@@ -460,6 +471,7 @@ storiesOf('UI Components/SelectBox', module)
         ]}
         expanded
         onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
       />
 
       <p>Valid list and search is provided. One result is found on search, but don't match exactly with the search string. The "create new" button should be visible:</p>
@@ -473,6 +485,7 @@ storiesOf('UI Components/SelectBox', module)
         ]}
         expanded
         onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
       />
 
       <p>Valid list and search is provided. At least one of the items in the search result matches exactly with search string. The "create new" button should be hidden:</p>
@@ -486,6 +499,7 @@ storiesOf('UI Components/SelectBox', module)
         ]}
         expanded
         onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
       />
 
       <p>A new item is being created right after something was searched. The "create new" button should be hidden:</p>
@@ -500,6 +514,7 @@ storiesOf('UI Components/SelectBox', module)
         ]}
         expanded
         onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
       />
 
       <p>A new item is being created while nothing is being searched. The "create new" button should be hidden:</p>
@@ -513,6 +528,7 @@ storiesOf('UI Components/SelectBox', module)
         ]}
         expanded
         onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
       />
 
       <p>In all searching and creating situations. If the method "onCreateNew" is forgotten or invalid, the "create new" button will be always hidden and items with "creating" status will have fallback to default render:</p>
@@ -526,6 +542,7 @@ storiesOf('UI Components/SelectBox', module)
           { id: 4, value: 'entr', status: 'creating' }
         ]}
         expanded
+        size={select('Size', sizes, sizes.Default)}
       />
     </div>
   ))
@@ -564,6 +581,7 @@ storiesOf('UI Components/SelectBox', module)
               hasSearch={i[0]}
               expanded={i[1]}
               placeholder={i[2]}
+              size={select('Size', sizes, sizes.Default)}
             />
           </div>
         ))}
@@ -574,6 +592,7 @@ storiesOf('UI Components/SelectBox', module)
     <SelectBox
       expanded
       visibleItems={4}
+      size={select('Size', sizes, sizes.Default)}
     />
   ))
   .add('missing props (does component explode?)', () => <SelectBox />)
