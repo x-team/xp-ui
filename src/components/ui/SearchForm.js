@@ -110,7 +110,7 @@ const listTheme = {
   `),
 
   editListButton: cmz(`
-    padding: 14px;
+    padding: 14px
   `)
 }
 
@@ -215,7 +215,7 @@ const tabularTheme = {
   `),
 
   editListButton: cmz(`
-    padding: 14px;
+    padding: 14px
   `)
 }
 

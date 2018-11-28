@@ -121,9 +121,9 @@ const cx = {
   `),
 
   searchInputSmall: cmz(`
-    font-size: 1rem !important;
-    padding: 20px 30px 18px 40px !important;
-    height: 40px !important;
+    font-size: 1rem !important
+    padding: 20px 30px 18px 40px !important
+    height: 40px !important
   `),
 
   magnifier: cmz(`
@@ -139,8 +139,8 @@ const cx = {
   `),
 
   magnifierSmall: cmz(`
-    top: 12px;
-    left: 14px;
+    top: 12px
+    left: 14px
   `),
 
   triangle: cmz(`
@@ -177,7 +177,7 @@ const cx = {
   `),
 
   labelSmall: cmz(`
-    font-size: 1rem;
+    font-size: 1rem
   `),
 
   value: cmz(`
@@ -210,8 +210,8 @@ const cx = {
     & {
       font-size: 20px
       min-height: 30px
-      display: flex;
-      align-items: center;
+      display: flex
+      align-items: center
     }
     &:hover {
       background-color: ${theme.baseBright}
@@ -225,8 +225,8 @@ const cx = {
   `),
 
   itemSmall: cmz(`
-    font-size: 1rem;
-    min-height: 40px;
+    font-size: 1rem
+    min-height: 40px
   `),
 
   controllable: cmz(`
@@ -239,12 +239,12 @@ const cx = {
 
   controllableSmall: cmz(`
     & {
-      font-size: 1rem;
-      padding: 0 14px;
+      font-size: 1rem
+      padding: 0 14px
     }
 
     & label {
-      font-size: 1rem;
+      font-size: 1rem
     }
   `),
 
@@ -311,7 +311,7 @@ const cx = {
   ),
 
   selectingSmall: cmz(`
-    font-size: 1rem;
+    font-size: 1rem
   `),
 
   selectingDots: cmz(`
@@ -365,7 +365,7 @@ const cx = {
 
   editInputSmall: cmz(`
     & input {
-      font-size: 1rem;
+      font-size: 1rem
     }
   `),
 
@@ -380,7 +380,7 @@ const cx = {
 
   nothingLabelSmall: cmz(`
     font-size: 1rem
-    padding: 0 14px;
+    padding: 0 14px
   `),
 
   createNew: cmz(
