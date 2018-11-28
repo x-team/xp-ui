@@ -48,8 +48,8 @@ const arrowBase = cmz(`
     border-left: 4px solid transparent
     border-right: 4px solid transparent
     vertical-align: middle
-    display: inline-block
-    margin-left: 5px
+    display: inline-block;
+    margin-left: 5px;
   }
 `)
 
@@ -105,7 +105,8 @@ const cx = {
       }
   `),
   column: cmz(`
-    display: inline-flex
+    display: inline-flex;
+    align-items: center;
   `),
   grouped: cmz(`
     & {
