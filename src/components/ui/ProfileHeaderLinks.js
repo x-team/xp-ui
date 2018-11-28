@@ -1,8 +1,10 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import React, { Children, PureComponent } from 'react'
 
 import theme from '../../styles/theme'
+
+import type { Node } from 'react'
 
 const cmz = require('cmz')
 
@@ -20,7 +22,7 @@ const cx = {
     z-index: 3
   `),
 
-  linkWrapper: cmz(`
+  itemWrapper: cmz(`
     margin: 0 0 10px
     list-style-type: none
   `),
@@ -43,13 +45,18 @@ const cx = {
     }
   `),
 
+  child: cmz(`
+    display: inline-block
+  `),
+
   activeLink: cmz(`
     color: ${theme.typoParagraph}
   `)
 }
 
 type Props = {
-  links: Array<Object>
+  links: Array<Object>,
+  children?: Node
 }
 
 type State = {
@@ -88,7 +95,7 @@ class ProfileHeaderLinks extends PureComponent<Props, State> {
     window.open(url, '_blank')
   }
 
-  headerLinks = (): any => {
+  renderLinks = (): any => {
     const { activeLink } = this.state
     const { links } = this.props
 
@@ -97,7 +104,7 @@ class ProfileHeaderLinks extends PureComponent<Props, State> {
       const clickHandler = hash ? this.scrollToHash(hash) : this.openURL(url)
 
       return (
-        <li key={hash || url} className={cx.linkWrapper}>
+        <li key={hash || url} className={cx.itemWrapper}>
           <span className={linkClassName} onClick={clickHandler}>
             {label}
           </span>
@@ -106,9 +113,24 @@ class ProfileHeaderLinks extends PureComponent<Props, State> {
     })
   }
 
+  renderChildren = (): any => {
+    const { children } = this.props
+
+    return Children.map(children, (child, i) => (
+      <li key={i} className={cx.itemWrapper}>
+        <div className={cx.child}>
+          {child}
+        </div>
+      </li>
+    ))
+  }
+
   render () {
     return (
-      <ul className={cx.header}>{this.headerLinks()}</ul>
+      <ul className={cx.header}>
+        {this.renderLinks()}
+        {this.renderChildren()}
+      </ul>
     )
   }
 }
