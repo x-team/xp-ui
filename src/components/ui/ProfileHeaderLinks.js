@@ -116,15 +116,13 @@ class ProfileHeaderLinks extends PureComponent<Props, State> {
   renderChildren = (): any => {
     const { children } = this.props
 
-    return Children.map(children, (child, i) => {
-      return (
-        <li key={i} className={cx.itemWrapper}>
-          <div className={cx.child}>
-            {child}
-          </div>
-        </li>
-      )
-    })
+    return Children.map(children, (child, i) => (
+      <li key={i} className={cx.itemWrapper}>
+        <div className={cx.child}>
+          {child}
+        </div>
+      </li>
+    ))
   }
 
   render () {
