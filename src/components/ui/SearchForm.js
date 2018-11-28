@@ -107,6 +107,10 @@ const listTheme = {
     background-color: ${theme.baseBright}
     padding: 0 40px
     box-sizing: border-box
+  `),
+
+  editListButton: cmz(`
+    padding: 14px
   `)
 }
 
@@ -208,6 +212,10 @@ const tabularTheme = {
     & > form {
       border: none
     }
+  `),
+
+  editListButton: cmz(`
+    padding: 14px
   `)
 }
 
@@ -306,6 +314,7 @@ class SearchForm extends PureComponent<Props> {
           <div className={themeClasses.selectLists}>
             <div className={themeClasses.listsSelector}>
               <SelectBox
+                size='small'
                 placeholder='Select List'
                 items={lists}
                 visibleItems={SELECTBOX_HEIGTH}
@@ -316,7 +325,7 @@ class SearchForm extends PureComponent<Props> {
                 shouldSortItems={false}
                 areItemsToggleable={false}
                 append={
-                  <Button type='button' selectbox onClick={this.handleModalOpen}>
+                  <Button className={themeClasses.editListButton} size='small' type='button' selectbox onClick={this.handleModalOpen}>
                     <span><SvgIcon icon='edit' /> Edit lists</span>
                   </Button>
                 }
@@ -327,6 +336,7 @@ class SearchForm extends PureComponent<Props> {
           <div className={themeClasses.fieldsAndStatusesContainer}>
             <div className={themeClasses.selectFields}>
               <SelectBox
+                size='small'
                 placeholder='Select Field'
                 items={fields}
                 visibleItems={SELECTBOX_HEIGTH}
@@ -337,6 +347,7 @@ class SearchForm extends PureComponent<Props> {
             </div>
             <div className={themeClasses.selectStatuses}>
               <SelectBox
+                size='small'
                 hasSearch={false}
                 placeholder='Status'
                 items={statuses}
