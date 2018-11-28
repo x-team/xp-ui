@@ -1,2 +1,4 @@
-const registerRequireContextHook = require('babel-plugin-require-context-hook/register');
-registerRequireContextHook();
+// @flow
+
+const registerRequireContextHook = require('babel-plugin-require-context-hook/register')
+registerRequireContextHook()
