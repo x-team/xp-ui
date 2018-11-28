@@ -138,6 +138,10 @@ const cx = {
 }
 
 class Footer extends PureComponent<Props> {
+  static defaultProps = {
+    lists: []
+  }
+
   render () {
     const { lists, brands, copyright } = this.props
 

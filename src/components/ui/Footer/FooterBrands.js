@@ -97,6 +97,10 @@ const cx = {
 }
 
 class FooterBrands extends PureComponent<Props> {
+  static defaultProps = {
+    brands: []
+  }
+
   render () {
     const { message, brands } = this.props
 
