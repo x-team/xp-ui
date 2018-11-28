@@ -105,8 +105,8 @@ const cx = {
       }
   `),
   column: cmz(`
-    display: inline-flex;
-    align-items: center;
+    display: inline-flex
+    align-items: center
   `),
   grouped: cmz(`
     & {
