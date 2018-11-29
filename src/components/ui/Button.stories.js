@@ -18,126 +18,128 @@ const colours = {
   Silver: 'silver'
 }
 
+const StoryButton = (props) => (
+  <Button
+    size={select('Size', sizes, props.size || null)}
+    color={select('Color', colours, props.color || null)}
+    readOnly={boolean('Ready-only', props.readOnly || false)}
+    outlined={boolean('Outlined', props.outlined || false)}
+    rounded={boolean('Rounded', props.rounded || false)}
+    raised={boolean('Raised', props.raised || false)}
+    pseudolink={boolean('Pseudolink', props.pseudolink || false)}
+    selected={boolean('Selected', props.selected || false)}
+    disabled={boolean('Disabled', props.disabled || false)}
+    block={boolean('Block', props.block || false)}
+    wide={boolean('Wide', props.wide || false)}
+    selectbox={boolean('Selectbox', props.selectbox || false)}
+    tag={text('Tag', props.tag || undefined)}
+  >
+    {text('Content', props.children || 'This is a button')}
+  </Button>
+)
+
 storiesOf('UI Components/Button/With Knobs', module)
-  .add('all effects', () => (
-    <Button
-      size={select('Size', sizes, null)}
-      color={select('Color', colours, null)}
-      readOnly={boolean('Ready-only', false)}
-      outlined={boolean('Outlined', false)}
-      rounded={boolean('Rounded', false)}
-      raised={boolean('Raised', false)}
-      pseudolink={boolean('Pseudolink', false)}
-      selected={boolean('Selected', false)}
-      disabled={boolean('Disabled', false)}
-      block={boolean('Block', false)}
-      wide={boolean('Wide', false)}
-      selectbox={boolean('Selectbox', false)}
-      tag={text('Tag', undefined)}
-    >
-      {text('Content', 'This is a button')}
-    </Button>
-  ))
+  .add('all effects', StoryButton)
 
 storiesOf('UI Components/Button/Color Options', module)
   .add('default red state', () => (
-    <Button>Normal state with default color</Button>
+    <StoryButton>Normal state with default color</StoryButton>
   ))
   .add('silver state', () => (
-    <Button color={'silver'}>Normal state with silver color</Button>
+    <StoryButton color={'silver'}>Normal state with silver color</StoryButton>
   ))
   .add('monochrome state', () => (
-    <Button color={'monochrome'}>Normal state with monochrome color</Button>
+    <StoryButton color={'monochrome'}>Normal state with monochrome color</StoryButton>
   ))
 
 storiesOf('UI Components/Button/Size Options', module)
   .add('small size', () => (
-    <Button size={'small'}>Small size</Button>
+    <StoryButton size={'small'}>Small size</StoryButton>
   ))
   .add('normal size', () => (
-    <Button>Normal size</Button>
+    <StoryButton>Normal size</StoryButton>
   ))
   .add('large size', () => (
-    <Button size={'large'}>Large size</Button>
+    <StoryButton size={'large'}>Large size</StoryButton>
   ))
   .add('block size', () => (
-    <Button block>Block size</Button>
+    <StoryButton block>Block size</StoryButton>
   ))
   .add('wide size', () => (
-    <Button wide>Wide size</Button>
+    <StoryButton wide>Wide size</StoryButton>
   ))
 
 storiesOf('UI Components/Button/Extra States', module)
   .add('disabled', () => (
-    <Button disabled>Disabled state</Button>
+    <StoryButton disabled>Disabled state</StoryButton>
   ))
   .add('rounded default', () => (
-    <Button rounded>Rounded default state</Button>
+    <StoryButton rounded>Rounded default state</StoryButton>
   ))
   .add('raised default', () => (
-    <Button raised>Raised default state</Button>
+    <StoryButton raised>Raised default state</StoryButton>
   ))
   .add('link-style default', () => (
-    <Button pseudolink>Link default state</Button>
+    <StoryButton pseudolink>Link default state</StoryButton>
   ))
   .add('outlined default', () => (
-    <Button outlined>Outlined default state</Button>
+    <StoryButton outlined>Outlined default state</StoryButton>
   ))
   .add('outlined monochorme', () => (
-    <Button outlined color={'monochrome'}>
+    <StoryButton outlined color={'monochrome'}>
       Outlined monochrome state
-    </Button>
+    </StoryButton>
   ))
   .add('outlined silver', () => (
-    <Button outlined color={'silver'}>
+    <StoryButton outlined color={'silver'}>
       Outlined silver state
-    </Button>
+    </StoryButton>
   ))
   .add('button generated with custom element (<a>)', () => (
-    <Button component='a' color={'monochrome'}>
+    <StoryButton component='a' color={'monochrome'}>
       custom default button state
-    </Button>
+    </StoryButton>
   ))
 
 storiesOf('UI Components/Button/Use Cases', module)
   .add('skill tag', () => (
-    <Button outlined rounded raised color={'silver'}>
+    <StoryButton outlined rounded raised color={'silver'}>
       Android
-    </Button>
+    </StoryButton>
   ))
   .add('selected skill tag', () => (
-    <Button selected outlined rounded raised color={'silver'}>
+    <StoryButton selected outlined rounded raised color={'silver'}>
       Android
-    </Button>
+    </StoryButton>
   ))
   .add('skill tag pro', () => (
-    <Button tag='pro' outlined rounded raised color={'silver'}>
+    <StoryButton tag='pro' outlined rounded raised color={'silver'}>
       Android
-    </Button>
+    </StoryButton>
   ))
   .add('selected skill tag pro', () => (
-    <Button tag='pro' selected outlined rounded raised color={'silver'}>
+    <StoryButton tag='pro' selected outlined rounded raised color={'silver'}>
       Android
-    </Button>
+    </StoryButton>
   ))
   .add('exclude applicant form buttons', () => (
     <div style={{ textAlign: 'right' }}>
-      <Button pseudolink>Cancel</Button>
-      <Button>
+      <StoryButton pseudolink>Cancel</StoryButton>
+      <StoryButton>
         <SvgIcon icon={'paperplane'} color={'inverted'} />
-      </Button>
+      </StoryButton>
     </div>
   ))
   .add('SelectBox option button', () => (
-    <Button selectbox size='large'>
+    <StoryButton selectbox size='large'>
       <SvgIcon icon='edit' /> Edit Lists
-    </Button>
+    </StoryButton>
   ))
   .add('disabled outlined', () => (
-    <Button disabled outlined>
+    <StoryButton disabled outlined>
       Disabled outlined state
-    </Button>
+    </StoryButton>
   ))
   .add('missing props (does component explode?):', () => (
-    <Button>Regular button with no props</Button>
+    <StoryButton>Regular button with no props</StoryButton>
   ))
