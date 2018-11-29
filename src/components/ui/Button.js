@@ -17,18 +17,19 @@ type Props = {
   className: string | CmzAtom,
   size: Size,
   color: Color,
-  outlined: ?boolean,
-  rounded: ?boolean,
-  raised: ?boolean,
-  pseudolink: ?boolean,
-  selected: ?boolean,
-  disabled: ?boolean,
-  block: ?boolean,
-  wide: ?boolean,
-  selectbox: ?boolean,
+  outlined: boolean,
+  rounded: boolean,
+  raised: boolean,
+  pseudolink: boolean,
+  selected: boolean,
+  disabled: boolean,
+  block: boolean,
+  wide: boolean,
+  selectbox: boolean,
   component: string,
   children?: Node,
-  tag?: string
+  tag?: string,
+  readOnly: boolean
 }
 
 const baseStyles = {
@@ -65,7 +66,7 @@ const colorStyles = {
       color: ${theme.baseDarker}
     }
 
-    &:hover {
+    &:not(.readOnly):hover {
       background-color: ${theme.baseDarker.lighten(0.5)}
       border-color: ${theme.baseDarker.lighten(0.5)}
       color: ${theme.baseBrighter}
@@ -84,7 +85,7 @@ const colorStyles = {
       color: ${theme.baseRed}
     }
 
-    &:hover {
+    &:not(.readOnly):hover {
       background-color: ${theme.baseRed.darken(0.2)}
       border-color: ${theme.baseRed.darken(0.2)}
       color: ${theme.baseBrighter}
@@ -103,12 +104,12 @@ const colorStyles = {
       color: ${theme.baseDark}
     }
 
-    &.outlined.raised:hover {
+    &.outlined.raised:not(.readOnly):hover {
       background-color: transparent
       border-color: transparent
     }
 
-    &:hover {
+    &:not(.readOnly):hover {
       background-color: ${theme.lineSilver2.darken(0.025)}
       border-color: ${theme.lineSilver2.darken(0.025)}
       color: ${theme.baseDark}
@@ -177,7 +178,7 @@ const extraStyles = {
   `),
 
   raised: cmz(`
-    &:hover {
+    &:not(.readOnly):hover {
       box-shadow: 0 2px 10px 1px rgba(0, 0, 0, .08)
     }
   `),
@@ -192,7 +193,7 @@ const extraStyles = {
       text-transform: initial
     }
 
-    &.pseudolink:hover {
+    &.pseudolink:not(.readOnly):hover {
       background-color: ${theme.baseBright}
       border-color: transparent
       color: ${theme.baseDark}
@@ -204,7 +205,7 @@ const extraStyles = {
       border-color: ${theme.baseRed}
     }
 
-    &.outlined.raised:hover {
+    &.outlined.raised:not(.readOnly):hover {
       box-shadow: none
       border-color: ${theme.baseRed}
     }
@@ -239,7 +240,7 @@ const extraStyles = {
       padding: 20px
     }
 
-    &:hover {
+    &:not(.readOnly):hover {
       background-color: ${theme.baseBright}
       border-color: transparent
       color: ${theme.baseRed.darken(0.025)}
@@ -254,6 +255,12 @@ const extraStyles = {
 
     & > span > svg {
       margin-right: 10px
+    }
+  `),
+
+  readOnly: cmz(`
+    &:hover {
+      cursor: initial
     }
   `)
 }
@@ -272,7 +279,8 @@ class Button extends PureComponent<Props> {
     selected: false,
     block: false,
     wide: false,
-    selectbox: false
+    selectbox: false,
+    readOnly: false
   }
 
   render () {
@@ -289,12 +297,14 @@ class Button extends PureComponent<Props> {
       block,
       wide,
       selectbox,
-      component: CustomComponent,
+      component,
       children,
       tag,
+      readOnly,
       ...rest
     } = this.props
 
+    const CustomComponent = readOnly ? 'span' : component
     const colorClassName = colorStyles[color] || ''
     const sizeClassName = sizeStyles[size] || ''
     const extraClassName = [
@@ -312,7 +322,9 @@ class Button extends PureComponent<Props> {
       wide && extraStyles.wide,
       selectbox && [extraStyles.wide, extraStyles.selectbox].join(' '),
       disabled && extraStyles.disabled,
-      tag && extraStyles.tag
+      tag && extraStyles.tag,
+      readOnly && extraStyles.readOnly,
+      readOnly && 'readOnly'
     ].filter(Boolean).join(' ')
     const buttonClassName = `${colorClassName} ${sizeClassName} ${extraClassName}`
 
