@@ -36,6 +36,18 @@ storiesOf('UI Components/AttachFiles', module)
       onDelete={firstArg.action('delete')}
     />
   ))
+  .add('same file name', () => (
+    <AttachFiles
+      files={[
+        {
+          filename: 'filename-01.zip'
+        },
+        {
+          filename: 'filename-01.zip'
+        }
+      ]}
+    />
+  ))
   .add('multiple files (preview)', () => (
     <AttachFiles
       files={[
