@@ -546,7 +546,7 @@ storiesOf('UI Components/SelectBox', module)
       />
     </div>
   ))
-  .add('"searching" and "creating" use cases with differents props', () => {
+  .add('"hasSearch", "expanded" and "placeholder" props use cases', () => {
     const itemsArray = [
       { id: 1, value: 'entry' },
       { id: 2, value: 'entry another entry' },
