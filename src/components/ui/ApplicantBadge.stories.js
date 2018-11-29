@@ -54,7 +54,7 @@ storiesOf('UI Components/ApplicantBadge', module)
   ))
   .add('active card', () => (
     <ApplicantBadge
-      status='pending'
+      status='accepted'
       active
       mode='card'
       id={123123}
