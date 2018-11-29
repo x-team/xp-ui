@@ -1,8 +1,43 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { text, boolean, select } from '@storybook/addon-knobs'
 
 import Button from './Button'
 import SvgIcon from './SvgIcon'
+
+const sizes = {
+  None: null,
+  Normal: 'normal',
+  Large: 'large',
+  Small: 'small'
+}
+const colours = {
+  None: null,
+  Normal: 'normal',
+  Monochrome: 'monochrome',
+  Silver: 'silver'
+}
+
+storiesOf('UI Components/Button/With Knobs', module)
+  .add('all effects', () => (
+    <Button
+      size={select('Size', sizes, null)}
+      color={select('Color', colours, null)}
+      readOnly={boolean('Ready-only', false)}
+      outlined={boolean('Outlined', false)}
+      rounded={boolean('Rounded', false)}
+      raised={boolean('Raised', false)}
+      pseudolink={boolean('Pseudolink', false)}
+      selected={boolean('Selected', false)}
+      disabled={boolean('Disabled', false)}
+      block={boolean('Block', false)}
+      wide={boolean('Wide', false)}
+      selectbox={boolean('Selectbox', false)}
+      tag={text('Tag', undefined)}
+    >
+      {text('Content', 'This is a button')}
+    </Button>
+  ))
 
 storiesOf('UI Components/Button/Color Options', module)
   .add('default red state', () => (
@@ -16,16 +51,32 @@ storiesOf('UI Components/Button/Color Options', module)
   ))
 
 storiesOf('UI Components/Button/Size Options', module)
-  .add('small size', () => <Button size={'small'}>Small size</Button>)
-  .add('normal size', () => <Button>Normal size</Button>)
-  .add('large size', () => <Button size={'large'}>Large size</Button>)
-  .add('block size', () => <Button block>Block size</Button>)
-  .add('wide size', () => <Button wide>Wide size</Button>)
+  .add('small size', () => (
+    <Button size={'small'}>Small size</Button>
+  ))
+  .add('normal size', () => (
+    <Button>Normal size</Button>
+  ))
+  .add('large size', () => (
+    <Button size={'large'}>Large size</Button>
+  ))
+  .add('block size', () => (
+    <Button block>Block size</Button>
+  ))
+  .add('wide size', () => (
+    <Button wide>Wide size</Button>
+  ))
 
 storiesOf('UI Components/Button/Extra States', module)
-  .add('disabled', () => <Button disabled>Disabled state</Button>)
-  .add('rounded default', () => <Button rounded>Rounded default state</Button>)
-  .add('raised default', () => <Button raised>Raised default state</Button>)
+  .add('disabled', () => (
+    <Button disabled>Disabled state</Button>
+  ))
+  .add('rounded default', () => (
+    <Button rounded>Rounded default state</Button>
+  ))
+  .add('raised default', () => (
+    <Button raised>Raised default state</Button>
+  ))
   .add('link-style default', () => (
     <Button pseudolink>Link default state</Button>
   ))
