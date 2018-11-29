@@ -139,7 +139,9 @@ class MediumEditorWrapper extends PureComponent<Props> {
   }
 
   componentWillUnmount = () => {
-    this.medium.destroy()
+    if (this.medium) {
+      this.medium.destroy()
+    }
   }
 
   setAutosize = () => {

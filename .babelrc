@@ -10,5 +10,10 @@
         ["src_styles", "AutoUI"]
       ]
     }]
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["require-context-hook"]
+    }
+  }
 }
