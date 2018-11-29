@@ -17,19 +17,19 @@ type Props = {
   className: string | CmzAtom,
   size: Size,
   color: Color,
-  outlined: ?boolean,
-  rounded: ?boolean,
-  raised: ?boolean,
-  pseudolink: ?boolean,
-  selected: ?boolean,
-  disabled: ?boolean,
-  block: ?boolean,
-  wide: ?boolean,
-  selectbox: ?boolean,
+  outlined: boolean,
+  rounded: boolean,
+  raised: boolean,
+  pseudolink: boolean,
+  selected: boolean,
+  disabled: boolean,
+  block: boolean,
+  wide: boolean,
+  selectbox: boolean,
   component: string,
   children?: Node,
   tag?: string,
-  readOnly: ?boolean
+  readOnly: boolean
 }
 
 const baseStyles = {
