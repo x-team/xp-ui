@@ -297,13 +297,14 @@ class Button extends PureComponent<Props> {
       block,
       wide,
       selectbox,
-      component: CustomComponent,
+      component,
       children,
       tag,
       readOnly,
       ...rest
     } = this.props
 
+    const CustomComponent = readOnly ? 'span' : component
     const colorClassName = colorStyles[color] || ''
     const sizeClassName = sizeStyles[size] || ''
     const extraClassName = [
