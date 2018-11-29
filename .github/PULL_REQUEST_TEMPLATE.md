@@ -31,6 +31,8 @@ Fixes https://x-team-internal.atlassian.net/browse/XP-[ISSUE_NUMBER]
 - [ ] move respective JIRA issue to the `IN REVIEW` column
 - [ ] make sure your code lints (`npm run lint`)
 - [ ] Flow typechecks passed (`npm run flow`)
+- [ ] Snapshots tests passed (`npm run jest`)
+- [ ] Check cleanup tasks (https://github.com/x-team/auto/labels/cleanup) and take a suitable small one (if exists) in a related area of the current changes
 - [ ] component's documentation (`.stories.js` file) is changed or added accordingly to reflect any new or updated use cases or variants usage.
 - [ ] if you've fixed a bug or added code that should be tested, add unit tests
 - [ ] if any snapshots have been changed, verify that component still works and looks as expected and update the changed snapshot
