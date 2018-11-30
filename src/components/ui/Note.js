@@ -195,6 +195,7 @@ class Note extends PureComponent<Props, State> {
       <TextareaEditor
         onChange={this.handleEditorValueChange(onValueChange)}
         text={text.replace(/(?:\r\n|\r|\n)/g, '<br>\n')}
+        charLimit={5000}
       />
     )
   }
