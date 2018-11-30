@@ -29,7 +29,7 @@ type Action = {
   tooltipClassName?: string
 }
 
-type Status = 'accepted' | 'pending' | 'excluded'
+type Status = 'accepted' | 'excluded'
 
 type Props = {
   id: number,
@@ -67,12 +67,6 @@ const statusDotStyles = {
     statusDotBaseStyle,
     `
       background-color: ${theme.statusAccepted}
-    `
-  ),
-  pending: cmz(
-    statusDotBaseStyle,
-    `
-      background-color: ${theme.statusPending}
     `
   ),
   excluded: cmz(
