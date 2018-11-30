@@ -24,7 +24,6 @@ const label = cmz(`
 
 type Props = {
   handleCheck(): void,
-  pending: number,
   accepted: number,
   excluded: number
 }
@@ -33,7 +32,6 @@ class ApplicantListFilter extends PureComponent<Props> {
   render () {
     const { handleCheck } = this.props
     const types = [
-      'pending',
       'accepted',
       'excluded'
     ]
