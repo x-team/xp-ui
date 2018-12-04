@@ -32,10 +32,12 @@ const cx = {
 
 const KEY_CODES = {
   ENTER: 13,
+  SHIFT: 16,
   ESCAPE: 27
 }
 
 const isKeyOfType = (keyCode: number, type: number) => keyCode === type
+
 
 export type EditorProps = {
   value: any,
@@ -83,6 +85,8 @@ class InlineEditor extends PureComponent<Props, State> {
     isValid: true,
     shouldSaveOnEnter: true
   }
+
+  pressedKeys: Array<number> = []
 
   state = {
     isInEditMode: false,
@@ -152,14 +156,28 @@ class InlineEditor extends PureComponent<Props, State> {
 
   handleKeyDown = (event: Object) => {
     const { keyCode } = event
-    const { shouldSaveOnEnter } = this.props
-    const { ENTER, ESCAPE } = KEY_CODES
 
-    if (isKeyOfType(keyCode, ENTER) && shouldSaveOnEnter) {
+    this.pressedKeys = { ...this.pressedKeys, [keyCode]: true }
+
+    const { shouldSaveOnEnter } = this.props
+    const { ENTER, ESCAPE, SHIFT } = KEY_CODES
+
+    const saveChanges = shouldSaveOnEnter
+      ? this.pressedKeys[ENTER]
+      : this.pressedKeys[SHIFT] && this.pressedKeys[ENTER]
+
+    if (saveChanges) {
+      this.pressedKeys = []
       this.saveChanges()
     } else if (isKeyOfType(keyCode, ESCAPE)) {
       this.abortChanges()
     }
+  }
+
+  handleKeyUp = (event: Object) => {
+    const { keyCode } = event
+
+    this.pressedKeys[keyCode] && delete this.pressedKeys[keyCode];
   }
 
   handleSaveClick = (event: Object) => {
@@ -237,6 +255,7 @@ class InlineEditor extends PureComponent<Props, State> {
       <div
         onClick={this.handleContainerClick}
         onKeyDown={this.handleKeyDown}
+        onKeyUp={this.handleKeyUp}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >
