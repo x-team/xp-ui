@@ -158,11 +158,11 @@ class AttachFiles extends PureComponent<Props> {
     const renderFiles = (files: Files) => {
       return files.length > 0 && (
         FilesList(
-          files.map(file => {
+          files.map((file, index) => {
             return (
               FileItem(
                 {
-                  key: file.id || file.filename,
+                  key: `${file.id || file.filename}_${index}`,
                   style: {
                     borderBottomColor: file.progress && file.progress !== 100 ? theme.baseSilver : 'transparent'
                   }
