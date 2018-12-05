@@ -18,7 +18,7 @@ const cx = cmz(
     border-radius: 50%;
     background-color: ${theme.baseRed};
     color: ${theme.baseBrighter};
-    box-shadow: 0px 6px 30px -7px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
     position: fixed;
     z-index: 9999;
     bottom: 15px;
