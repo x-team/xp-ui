@@ -38,7 +38,6 @@ const KEY_CODES = {
 
 const isKeyOfType = (keyCode: number, type: number) => keyCode === type
 
-
 export type EditorProps = {
   value: any,
   onValueChange(data: any): void
@@ -58,7 +57,7 @@ type Props = {
   isEditable: boolean,
   /** To control whether the component can be saved or not */
   isValid: boolean,
-  /** To control whether the component will save changes on Enter or not */
+  /** To control whether the component will save changes on Enter or not, the Shift+Enter combination works always */
   shouldSaveOnEnter: boolean,
   /** Editing mode render function */
   editor(props: EditorProps): any,
@@ -86,7 +85,7 @@ class InlineEditor extends PureComponent<Props, State> {
     shouldSaveOnEnter: true
   }
 
-  pressedKeys: Array<number> = []
+  pressedKeys: Object = {}
 
   state = {
     isInEditMode: false,
@@ -167,7 +166,7 @@ class InlineEditor extends PureComponent<Props, State> {
       : this.pressedKeys[SHIFT] && this.pressedKeys[ENTER]
 
     if (saveChanges) {
-      this.pressedKeys = []
+      this.pressedKeys = {}
       this.saveChanges()
     } else if (isKeyOfType(keyCode, ESCAPE)) {
       this.abortChanges()
@@ -177,7 +176,7 @@ class InlineEditor extends PureComponent<Props, State> {
   handleKeyUp = (event: Object) => {
     const { keyCode } = event
 
-    this.pressedKeys[keyCode] && delete this.pressedKeys[keyCode];
+    this.pressedKeys[keyCode] && delete this.pressedKeys[keyCode]
   }
 
   handleSaveClick = (event: Object) => {
