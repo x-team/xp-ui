@@ -2,13 +2,15 @@ import React from 'react'
 import faker from 'faker'
 import { storiesOf } from '@storybook/react'
 
-import ActivityLogsDisplay from './ActivityLogsDisplay'
+import ActivityLogsDisplay, { ActivityLog } from './ActivityLogsDisplay'
 
 const sampleData = Array(30)
   .fill({})
   .map((item, i) => ({
     date: `${faker.random.number(31)} ${faker.date.month().substring(0, 3)} 2018`,
-    activity: <span>{faker.random.words()}: <b>{faker.random.word()}</b></span>,
+    activity: Math.random() >= 0.7
+      ? <ActivityLog label={faker.random.words()} value={faker.random.word()} />
+      : <ActivityLog label={faker.random.words()} value={Array(faker.random.number(10)).fill('').map(() => faker.random.word())} />,
     author: `by ${faker.name.firstName()} ${faker.name.lastName()}`
   }))
 

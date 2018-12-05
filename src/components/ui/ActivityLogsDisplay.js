@@ -4,6 +4,7 @@ import React, { PureComponent, Fragment } from 'react'
 
 import Button from './Button'
 import TruncatedList from './TruncatedList'
+import CollapsibleSection from './CollapsibleSection'
 
 import typo from '../../styles/typo'
 
@@ -25,7 +26,7 @@ const cx = {
   date: cmz(`
     display: inline-block
     vertical-align: top
-    margin-right: 2em
+    margin-right: 2rem
     min-width: 80px
   `),
 
@@ -40,6 +41,15 @@ const cx = {
 
   button: cmz(`
     margin-top: 40px
+  `),
+
+  grouped: cmz(`
+    font-weight: bold
+    line-height: 1.2
+  `),
+
+  group: cmz(`
+    margin-bottom: .6rem
   `)
 }
 
@@ -49,24 +59,41 @@ type Activity = {
   author: string
 }
 
+type ActivityValue = {
+  label: string,
+  value: string | Array<string>
+}
+
 type Props = {
   logs: Array<Activity>
 }
 
-type ActivityValue = {
-  label: string,
-  children: Node
-}
+export const ActivityLog = ({ label, value }: ActivityValue) => Array.isArray(value) ? (
+  <div className={cx.group}>
+    <div>{label}</div>
+    <div>
+      {value.map((each, i) => (
+        <div className={cx.grouped} key={i}>{each}</div>
+      ))}
+    </div>
+  </div>
+) : (
+  <div>
+    {label}: <b>{value}</b>
+  </div>
+)
 
 class ActivityLogsDisplay extends PureComponent<Props, void> {
   static defaultProps = {
     logs: []
   }
 
+  static Log = ActivityLog
+
   render () {
     const { logs } = this.props
 
-    const renderItem = ({ date, activity, author }) => (
+    const renderItem = ({ date, activity, author }: Activity) => (
       <div className={cx.item}>
         <div className={cx.date}>{date}</div>
         <div className={cx.activity}>{activity}</div>
@@ -76,8 +103,8 @@ class ActivityLogsDisplay extends PureComponent<Props, void> {
 
     return (
       <TruncatedList
-        visible={3}
-        increment={3}
+        visible={4}
+        increment={4}
         items={logs.map(log => renderItem(log))}
         listClass={cx.list}
         viewMore={(amount, action) => (
