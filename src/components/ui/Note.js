@@ -228,6 +228,7 @@ class Note extends PureComponent<Props, State> {
               onSave={onNoteUpdate}
               presenter={this.renderPresenter}
               editor={this.renderEditor}
+              shouldSaveOnEnter={false}
             />
           ),
           FileLinksWrapper({}, <FileLinks files={files} />)
