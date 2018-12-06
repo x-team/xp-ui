@@ -4,9 +4,5 @@ import { storiesOf } from '@storybook/react'
 import IssueCollectorButton from './IssueCollectorButton'
 
 storiesOf('UI Components/IssueCollectorButton', module)
-  .add('basic usage', () => (
-    <IssueCollectorButton>?</IssueCollectorButton>
-  ))
-  .add('no props', () => (
-    <IssueCollectorButton />
-  ))
+  .add('basic usage', () => <IssueCollectorButton>?</IssueCollectorButton>)
+  .add('missing props (does component explode?)', () => <IssueCollectorButton />)
