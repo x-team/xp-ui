@@ -28,3 +28,20 @@ global.navigator = {
 }
 
 copyProps(window, global)
+
+jest.mock('faker', () => (
+  {
+    random: {
+      number: jest.fn(() => 42),
+      words: jest.fn(() => 'string'),
+      word: jest.fn(() => 'string')
+    },
+    name: {
+      firstName: jest.fn(() => 'string'),
+      lastName: jest.fn(() => 'string')
+    },
+    date: {
+      month: jest.fn(() => 'string')
+    }
+  }
+))
