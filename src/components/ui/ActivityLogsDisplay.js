@@ -53,22 +53,22 @@ const cx = {
   `)
 }
 
-type Activity = {
+type ActivityType = {
   date: string,
   activity: Node,
   author: string
 }
 
-type ActivityValue = {
+type ActivityLogType = {
   label: string,
   value: string | Array<string>
 }
 
 type Props = {
-  logs: Array<Activity>
+  logs: Array<ActivityType>
 }
 
-export const ActivityLog = ({ label, value }: ActivityValue) => Array.isArray(value) ? (
+export const ActivityLog = ({ label, value }: ActivityLogType) => Array.isArray(value) ? (
   <div className={cx.group}>
     <div>{label}</div>
     <div>
@@ -84,16 +84,15 @@ export const ActivityLog = ({ label, value }: ActivityValue) => Array.isArray(va
 )
 
 class ActivityLogsDisplay extends PureComponent<Props, void> {
+  static Log = ActivityLog
   static defaultProps = {
     logs: []
   }
 
-  static Log = ActivityLog
-
   render () {
     const { logs } = this.props
 
-    const renderItem = ({ date, activity, author }: Activity) => (
+    const renderItem = ({ date, activity, author }: ActivityType) => (
       <div className={cx.item}>
         <div className={cx.date}>{date}</div>
         <div className={cx.activity}>{activity}</div>
