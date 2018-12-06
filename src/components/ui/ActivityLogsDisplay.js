@@ -4,7 +4,6 @@ import React, { PureComponent, Fragment } from 'react'
 
 import Button from './Button'
 import TruncatedList from './TruncatedList'
-import CollapsibleSection from './CollapsibleSection'
 
 import typo from '../../styles/typo'
 
@@ -71,12 +70,12 @@ type Props = {
 export const ActivityLog = ({ label, value }: ActivityLogType) => (
   <div>
     <span>{label}</span>
-    {value && (
+    {value && label ? (
       <Fragment>
         <span>: </span>
         <b>{value}</b>
       </Fragment>
-    )}
+    ) : value}
   </div>
 )
 
