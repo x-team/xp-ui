@@ -20,6 +20,7 @@ import HorizontalRuler from './components/ui/HorizontalRuler'
 import InlineEditor from './components/ui/InlineEditor'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
+import IssueCollectorButton from './components/ui/IssueCollectorButton'
 import Keywords from './components/ui/Keywords'
 import ListsEditor from './components/ui/ListsEditor'
 import ListsScreen from './components/ui/ListsScreen'
@@ -72,6 +73,7 @@ export {
   InlineEditor,
   InputField,
   InputGroup,
+  IssueCollectorButton,
   Keywords,
   ListsEditor,
   ListsScreen,
