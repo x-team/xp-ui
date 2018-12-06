@@ -29,6 +29,8 @@ global.navigator = {
 
 copyProps(window, global)
 
+// Mocking faker methods
+/* global jest */
 jest.mock('faker', () => (
   {
     random: {
