@@ -34,7 +34,7 @@ const cx = {
     flex: 1
   `),
 
-  author: cmz(`
+  user: cmz(`
     min-width: 200px
     text-align: left
   `),
@@ -56,30 +56,27 @@ const cx = {
 type ActivityType = {
   date: string,
   activity: Node,
-  author: string
+  user: string
 }
 
 type ActivityLogType = {
   label: string,
-  value: string | Array<string>
+  value: string
 }
 
 type Props = {
   logs: Array<ActivityType>
 }
 
-export const ActivityLog = ({ label, value }: ActivityLogType) => Array.isArray(value) ? (
-  <div className={cx.group}>
-    <div>{label}</div>
-    <div>
-      {value.map((each, i) => (
-        <div className={cx.grouped} key={i}>{each}</div>
-      ))}
-    </div>
-  </div>
-) : (
+export const ActivityLog = ({ label, value }: ActivityLogType) => (
   <div>
-    {label}: <b>{value}</b>
+    <span>{label}</span>
+    {value && (
+      <Fragment>
+        <span>: </span>
+        <b>{value}</b>
+      </Fragment>
+    )}
   </div>
 )
 
@@ -92,11 +89,11 @@ class ActivityLogsDisplay extends PureComponent<Props, void> {
   render () {
     const { logs } = this.props
 
-    const renderItem = ({ date, activity, author }: ActivityType) => (
+    const renderItem = ({ date, activity, user }: ActivityType) => (
       <div className={cx.item}>
         <div className={cx.date}>{date}</div>
         <div className={cx.activity}>{activity}</div>
-        <div className={cx.author}>{author}</div>
+        <div className={cx.user}>{user}</div>
       </div>
     )
 
