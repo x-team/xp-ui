@@ -82,7 +82,7 @@ type Props = {
   logs: Array<ActivityType>
 }
 
-export const ActivityLog = ({ label, value }: ActivityLogType) => (
+const ActivityLog = ({ label, value }: ActivityLogType) => (
   <div>
     <span>{label}</span>
     {value && label ? (
@@ -94,6 +94,14 @@ export const ActivityLog = ({ label, value }: ActivityLogType) => (
   </div>
 )
 
+const RenderItem = ({ date, activity, user }: ActivityType) => (
+  <div className={cx.item}>
+    <div className={cx.date}>{date}</div>
+    <div className={cx.activity}>{activity}</div>
+    <div className={cx.user}>{user}</div>
+  </div>
+)
+
 class ActivityLogsDisplay extends PureComponent<Props, void> {
   static Log = ActivityLog
   static defaultProps = {
@@ -102,20 +110,11 @@ class ActivityLogsDisplay extends PureComponent<Props, void> {
 
   render () {
     const { logs } = this.props
-
-    const renderItem = ({ date, activity, user }: ActivityType) => (
-      <div className={cx.item}>
-        <div className={cx.date}>{date}</div>
-        <div className={cx.activity}>{activity}</div>
-        <div className={cx.user}>{user}</div>
-      </div>
-    )
-
     return (
       <TruncatedList
         visible={4}
         increment={4}
-        items={logs.map(log => renderItem(log))}
+        items={logs.map(log => <RenderItem {...log} />)}
         listClass={cx.list}
         viewMore={(amount, action) => (
           <Button
