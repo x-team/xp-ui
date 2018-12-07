@@ -6,6 +6,7 @@ import Button from './Button'
 import TruncatedList from './TruncatedList'
 
 import typo from '../../styles/typo'
+import theme from '../../styles/theme'
 
 import type { Node } from 'react'
 
@@ -15,11 +16,12 @@ const cx = {
   list: cmz(typo.baseText, `
     display: block
     font-size: 1rem
-    line-height: 2
+    line-height: 1.4
   `),
 
   item: cmz(`
     display: flex
+    margin-bottom: 0.6rem
   `),
 
   date: cmz(`
@@ -27,6 +29,7 @@ const cx = {
     vertical-align: top
     margin-right: 2rem
     min-width: 80px
+    color: ${theme.typoLabel}
   `),
 
   activity: cmz(`
@@ -34,12 +37,21 @@ const cx = {
   `),
 
   user: cmz(`
-    min-width: 200px
+    width: 250px
     text-align: left
+    white-space: nowrap
   `),
 
   button: cmz(`
-    margin-top: 40px
+    &.outlined {
+      margin-top: 40px
+      color: ${theme.typoLabel}
+      border: 1px solid ${theme.lineSilver2}
+    }
+
+    &.outlined:hover {
+      background: ${theme.baseBright}
+    }
   `),
 
   grouped: cmz(`

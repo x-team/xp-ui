@@ -35,7 +35,7 @@ jest.mock('faker', () => (
   {
     random: {
       number: jest.fn(() => 42),
-      words: jest.fn(() => 'string'),
+      words: jest.fn(() => 'string string'),
       word: jest.fn(() => 'string')
     },
     name: {
@@ -44,6 +44,9 @@ jest.mock('faker', () => (
     },
     date: {
       month: jest.fn(() => 'string')
+    },
+    internet: {
+      email: jest.fn(() => 'string@email.com')
     }
   }
 ))
