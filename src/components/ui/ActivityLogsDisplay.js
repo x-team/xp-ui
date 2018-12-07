@@ -102,34 +102,28 @@ const RenderItem = ({ date, activity, user }: ActivityType) => (
   </div>
 )
 
-class ActivityLogsDisplay extends PureComponent<Props, void> {
-  static Log = ActivityLog
-  static defaultProps = {
-    logs: []
-  }
+const ActivityLogsDisplay = (props: Props) =>
+  <TruncatedList
+    visible={4}
+    increment={4}
+    items={props.logs.map(log => <RenderItem {...log} />)}
+    listClass={cx.list}
+    viewMore={(amount, action) => (
+      <Button
+        wide
+        outlined
+        color='silver'
+        onClick={action}
+        className={cx.button}
+      >
+        View more
+      </Button>
+    )}
+  />
 
-  render () {
-    const { logs } = this.props
-    return (
-      <TruncatedList
-        visible={4}
-        increment={4}
-        items={logs.map(log => <RenderItem {...log} />)}
-        listClass={cx.list}
-        viewMore={(amount, action) => (
-          <Button
-            wide
-            outlined
-            color='silver'
-            onClick={action}
-            className={cx.button}
-          >
-            View more
-          </Button>
-        )}
-      />
-    )
-  }
+ActivityLogsDisplay.Log = ActivityLog
+ActivityLogsDisplay.defaultProps = {
+  logs: []
 }
 
 export default ActivityLogsDisplay
