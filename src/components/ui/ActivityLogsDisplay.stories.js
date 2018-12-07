@@ -4,20 +4,17 @@ import { storiesOf } from '@storybook/react'
 
 import ActivityLogsDisplay from './ActivityLogsDisplay'
 
-const randomNumber = (max = 10, min = 1) =>
-  Math.floor(Math.random() * Math.floor(max - min)) + min
-
 const sampleLogs = Array(30)
   .fill({})
   .map((item, i) => ({
     date: `${faker.random.number(31)} ${faker.date.month().substring(0, 3)} 2018`,
     activity: (
       <ActivityLogsDisplay.Log
-        label={faker.random.words(randomNumber(4, 1))}
-        value={faker.random.words(randomNumber(4, 0))}
+        label={faker.random.words(faker.random.number({ min: 1, max: 4, precision: 1 }))}
+        value={faker.random.words(faker.random.number({ min: 0, max: 4, precision: 1 }))}
       />
     ),
-    user: `by ${Math.random() >= 0.6
+    user: `by ${faker.random.number(10) >= 6
       ? faker.internet.email()
       : `${faker.name.firstName()} ${faker.name.lastName()}`
     }`

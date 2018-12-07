@@ -34,7 +34,7 @@ copyProps(window, global)
 jest.mock('faker', () => (
   {
     random: {
-      number: jest.fn(() => 42),
+      number: jest.fn(() => 2),
       words: jest.fn(() => 'string string'),
       word: jest.fn(() => 'string')
     },
