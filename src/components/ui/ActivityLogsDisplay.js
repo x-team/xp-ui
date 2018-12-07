@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent, Fragment } from 'react'
+import React, { Fragment } from 'react'
 
 import Button from './Button'
 import TruncatedList from './TruncatedList'
