@@ -34,10 +34,13 @@ const cx = {
 
   activity: cmz(`
     flex: 1
+    word-break: break-word
+    margin-right: 2rem
   `),
 
   user: cmz(`
-    width: 250px
+    width: 200px
+    max-width: 200px
     text-align: left
     white-space: nowrap
   `),
