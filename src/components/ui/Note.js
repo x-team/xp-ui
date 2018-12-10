@@ -17,6 +17,7 @@ import TextareaEditor from './TextareaEditor/TextareaEditor'
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
 import elem from '../../utils/elem'
+import { replaceBlankLinesForNewLines } from '../../utils/helpers'
 
 import type { EditorProps, PresenterProps } from './InlineEditor'
 
@@ -172,11 +173,13 @@ class Note extends PureComponent<Props, State> {
     this.activateEditingMode = activateEditingMode
     const { text } = this.props
 
+    const noteText = replaceBlankLinesForNewLines(text)
+
     const content = (() => {
       try {
-        return markdownCompiler(text)
+        return markdownCompiler(noteText)
       } catch (err) {
-        return text
+        return noteText
       }
     })()
 
@@ -194,7 +197,7 @@ class Note extends PureComponent<Props, State> {
     return (
       <TextareaEditor
         onChange={this.handleEditorValueChange(onValueChange)}
-        text={text.replace(/(?:\r\n|\r|\n)/g, '<br>\n')}
+        text={replaceBlankLinesForNewLines(text)}
         charLimit={5000}
       />
     )
