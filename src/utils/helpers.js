@@ -48,3 +48,5 @@ export function size (collection: ?string | ?Object | ?Array<*>): number {
 export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
   event && event.stopPropagation()
 }
+
+export const replaceBlankLinesForNewLines = (text: ?string) => text ? text.replace(/(?:\r\n|\r|\n)/g, '<br>\n') : ''
