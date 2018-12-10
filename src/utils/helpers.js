@@ -49,4 +49,4 @@ export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
   event && event.stopPropagation()
 }
 
-export const replaceBlankLinesForNewLines = (text: ?string) => text ? text.replace(/(?:\r\n|\r|\n)/g, '<br>\n') : ''
+export const replaceBlankLinesForNewLines = (text: ?string): string => text ? text.replace(/(?:\r\n|\r|\n)/g, '<br>\n') : ''
