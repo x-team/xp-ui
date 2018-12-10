@@ -171,15 +171,15 @@ class Note extends PureComponent<Props, State> {
 
   renderPresenter = ({ activateEditingMode }: PresenterProps) => {
     this.activateEditingMode = activateEditingMode
-    let { text } = this.props
+    const { text } = this.props
 
-    text = replaceBlankLinesForNewLines(text)
+    const noteText = replaceBlankLinesForNewLines(text)
 
     const content = (() => {
       try {
-        return markdownCompiler(text)
+        return markdownCompiler(noteText)
       } catch (err) {
-        return text
+        return noteText
       }
     })()
 
