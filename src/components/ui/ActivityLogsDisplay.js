@@ -75,22 +75,34 @@ type ActivityType = {
 
 type ActivityLogType = {
   label: string,
-  value: string
+  value: string,
+  details: Array<string>
 }
 
 type Props = {
   logs: Array<ActivityType>
 }
 
-const ActivityLog = ({ label, value }: ActivityLogType) => (
+const ActivityLog = ({ label, value, details }: ActivityLogType) => (
   <div>
-    <span>{label}</span>
-    {value && label ? (
-      <Fragment>
-        <span>: </span>
-        <b>{value}</b>
-      </Fragment>
-    ) : value}
+    <div>
+      <span>{label}</span>
+      {value && label ? (
+        <Fragment>
+          <span>: </span>
+          <b>{value}</b>
+        </Fragment>
+      ) : value}
+    </div>
+    {details && (
+      <div>
+        {details.map((detail, i) => (
+          <p key={i}>
+            {detail}
+          </p>
+        ))}
+      </div>
+    )}
   </div>
 )
 
