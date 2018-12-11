@@ -72,7 +72,7 @@ class ActivityLog extends PureComponent<Props, State> {
 
   toggleItem = () => this.setState((prevState: State) => ({ collapsed: !prevState.collapsed }))
 
-  render() {
+  render () {
     const { label, value } = this.props
     const logClasses = []
     if (size(value) > 0) {

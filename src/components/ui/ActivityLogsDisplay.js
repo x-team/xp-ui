@@ -1,11 +1,9 @@
 // @flow
 
-import React, { PureComponent, Fragment } from 'react'
+import React from 'react'
 
 import Button from './Button'
 import TruncatedList from './TruncatedList'
-
-import { size } from '../../utils/helpers'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
