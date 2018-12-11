@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Fragment } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 
 import Button from './Button'
 import TruncatedList from './TruncatedList'
@@ -57,11 +57,6 @@ const cx = {
     &.outlined:hover {
       background: ${theme.baseBright}
     }
-  `),
-
-  detail: cmz(`
-    margin-bottom: 0.5rem
-    line-height: 1.2
   `)
 }
 
@@ -71,52 +66,11 @@ type ActivityType = {
   user: string
 }
 
-type ActivityLogDetails = {
-  label: string,
-  value: string
-}
-
-type ActivityLogType = {
-  label: string,
-  value: string | Array<ActivityLogDetails>
-}
-
 type Props = {
   logs: Array<ActivityType>
 }
 
-const ActivityLog = ({ label, value }: ActivityLogType) => Array.isArray(value) ? (
-  <div>
-    <span>{label}</span>
-    <span>: </span>
-    {value && (
-      <b>
-        {value.map((detail, i) => detail.label).join(', ')}
-      </b>
-    )}
-    {size(value) > 0 && (
-      <div>
-        {value.map((detail, i) => (
-          <p className={cx.detail} key={i}>
-            {detail.label}: <b>{detail.value}</b>
-          </p>
-        ))}
-      </div>
-    )}
-  </div>
-) : (
-  <div>
-    <span>{label}</span>
-    {value && label ? (
-      <Fragment>
-        <span>: </span>
-        <b>{value}</b>
-      </Fragment>
-    ) : value}
-  </div>
-)
-
-const RenderItem = ({ date, activity, user }: ActivityType) => (
+const RenderItem = ({ date, activity, user }: ActivityType, i: number) => (
   <div className={cx.item}>
     <div className={cx.date}>{date}</div>
     <div className={cx.activity}>{activity}</div>
@@ -143,7 +97,6 @@ const ActivityLogsDisplay = (props: Props) =>
     )}
   />
 
-ActivityLogsDisplay.Log = ActivityLog
 ActivityLogsDisplay.defaultProps = {
   logs: []
 }

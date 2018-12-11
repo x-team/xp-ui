@@ -1,3 +1,4 @@
+import ActivityLog from './components/ui/ActivityLog'
 import ActivityLogsDisplay from './components/ui/ActivityLogsDisplay'
 import AdminScreen from './components/ui/AdminScreen'
 import ApplicantBadge from './components/ui/ApplicantBadge'
@@ -52,6 +53,7 @@ import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
 
 export {
+  ActivityLog,
   ActivityLogsDisplay,
   AdminScreen,
   ApplicantBadge,
