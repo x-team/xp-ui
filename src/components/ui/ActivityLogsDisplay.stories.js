@@ -8,16 +8,21 @@ const sampleLogs = Array(30)
   .fill({})
   .map((item, i) => ({
     date: `${faker.random.number(31)} ${faker.date.month().substring(0, 3)} 2018`,
-    activity: faker.random.number(10) >= 7 ? (
+    activity: faker.random.number(10) <= 5 ? (
       <ActivityLogsDisplay.Log
-        label={faker.random.words()}
-        value={faker.random.word()}
+        label={faker.random.words(2)}
+        value={faker.random.words(2)}
       />
     ) : (
       <ActivityLogsDisplay.Log
-        label={faker.random.words()}
-        value={faker.random.words()}
-        details={Array(faker.random.number(3)).fill('').map(() => faker.random.words())}
+        label={faker.random.words(2)}
+        value={Array(faker.random.number(3))
+          .fill({})
+          .map(() => ({
+            label: faker.random.words(2),
+            value: faker.random.words(2)
+          }))
+        }
       />
     ),
     user: `by ${faker.random.number(10) >= 6

@@ -5,6 +5,8 @@ import React, { Fragment } from 'react'
 import Button from './Button'
 import TruncatedList from './TruncatedList'
 
+import { size } from '../../utils/helpers'
+
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
 
@@ -57,13 +59,9 @@ const cx = {
     }
   `),
 
-  grouped: cmz(`
-    font-weight: bold
+  detail: cmz(`
+    margin-bottom: 0.5rem
     line-height: 1.2
-  `),
-
-  group: cmz(`
-    margin-bottom: .6rem
   `)
 }
 
@@ -73,36 +71,48 @@ type ActivityType = {
   user: string
 }
 
+type ActivityLogDetails = {
+  label: string,
+  value: string
+}
+
 type ActivityLogType = {
   label: string,
-  value: string,
-  details: Array<string>
+  value: string | Array<ActivityLogDetails>
 }
 
 type Props = {
   logs: Array<ActivityType>
 }
 
-const ActivityLog = ({ label, value, details }: ActivityLogType) => (
+const ActivityLog = ({ label, value }: ActivityLogType) => Array.isArray(value) ? (
   <div>
-    <div>
-      <span>{label}</span>
-      {value && label ? (
-        <Fragment>
-          <span>: </span>
-          <b>{value}</b>
-        </Fragment>
-      ) : value}
-    </div>
-    {details && (
+    <span>{label}</span>
+    <span>: </span>
+    {value && (
+      <b>
+        {value.map((detail, i) => detail.label).join(', ')}
+      </b>
+    )}
+    {size(value) > 0 && (
       <div>
-        {details.map((detail, i) => (
-          <p key={i}>
-            {detail}
+        {value.map((detail, i) => (
+          <p className={cx.detail} key={i}>
+            {detail.label}: <b>{detail.value}</b>
           </p>
         ))}
       </div>
     )}
+  </div>
+) : (
+  <div>
+    <span>{label}</span>
+    {value && label ? (
+      <Fragment>
+        <span>: </span>
+        <b>{value}</b>
+      </Fragment>
+    ) : value}
   </div>
 )
 
