@@ -123,8 +123,8 @@ class MediumEditorWrapper extends PureComponent<Props> {
       }
 
       this.medium.subscribe('editableInput', event => {
-        const { textContent, innerHTML } = this.input
-        onChange(textContent, innerHTML)
+        const { innerText, innerHTML } = this.input
+        onChange(innerText || '', innerHTML)
       })
 
       this.medium.subscribe('focus', subscribeFunction(onFocus))
