@@ -56,7 +56,7 @@ type Props = {
   isEditable: boolean,
   /** To control whether the component can be saved or not */
   isValid: boolean,
-  /** To control whether the component will save changes on Enter or not */
+  /** To control whether the component will save changes on Enter or not, the Shift+Enter combination works always */
   shouldSaveOnEnter: boolean,
   /** Editing mode render function */
   editor(props: EditorProps): any,
@@ -155,7 +155,11 @@ class InlineEditor extends PureComponent<Props, State> {
     const { shouldSaveOnEnter } = this.props
     const { ENTER, ESCAPE } = KEY_CODES
 
-    if (isKeyOfType(keyCode, ENTER) && shouldSaveOnEnter) {
+    const saveChanges = shouldSaveOnEnter
+      ? isKeyOfType(keyCode, ENTER)
+      : event.shiftKey && isKeyOfType(keyCode, ENTER)
+
+    if (saveChanges) {
       this.saveChanges()
     } else if (isKeyOfType(keyCode, ESCAPE)) {
       this.abortChanges()
