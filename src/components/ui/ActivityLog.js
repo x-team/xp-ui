@@ -82,19 +82,19 @@ class ActivityLog extends PureComponent<Props, State> {
     return Array.isArray(value) ? (
       <div
         className={logClasses.join(' ')}
-        onClick={() => this.toggleItem()}
+        onClick={this.toggleItem}
       >
         <span>{label}</span>
         {size(value) > 0 && (
           <Fragment>
             <span>: </span>
             <b>
-              {value.map((detail, i) => detail.label).join(', ')}
+              {value.map(detail => detail.label).join(', ')}
             </b>
             <ul className={[cx.details, this.state.collapsed ? cx.collapsed : ''].join(' ')}>
-              {value.map((detail, i) => (
+              {value.map(({ label, value }, i) => (
                 <li className={cx.detail} key={i}>
-                  {detail.label}: <b>{detail.value}</b>
+                  {label}: <b>{value}</b>
                 </li>
               ))}
             </ul>
@@ -102,7 +102,7 @@ class ActivityLog extends PureComponent<Props, State> {
         )}
       </div>
     ) : (
-      <div>
+      <Fragment>
         <span>{label}</span>
         {value && label ? (
           <Fragment>
@@ -110,7 +110,7 @@ class ActivityLog extends PureComponent<Props, State> {
             <b>{value}</b>
           </Fragment>
         ) : value}
-      </div>
+      </Fragment>
     )
   }
 }

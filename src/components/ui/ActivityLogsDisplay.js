@@ -69,7 +69,7 @@ type Props = {
 }
 
 const RenderItem = ({ date, activity, user }: ActivityType, i: number) => (
-  <div className={cx.item}>
+  <div className={cx.item} key={i}>
     <div className={cx.date}>{date}</div>
     <div className={cx.activity}>{activity}</div>
     <div className={cx.user}>{user}</div>
