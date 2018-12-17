@@ -99,4 +99,9 @@ storiesOf('UI Components/TruncatedList', module)
       <TruncatedList items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]} visible={8} />
     )
   )
+  .add('show all items numbers of 11 total', () =>
+    (
+      <TruncatedList showAll items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]} />
+    )
+  )
   .add('missing props (does component explode?)', () => <TruncatedList />)

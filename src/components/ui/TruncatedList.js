@@ -20,7 +20,8 @@ type Props = {
   isFetching?: boolean,
   hasMore?: boolean,
   listClass?: string,
-  itemClass?: string
+  itemClass?: string,
+  showAll?: boolean
 }
 
 type State = {
@@ -38,7 +39,8 @@ class TruncatedList extends PureComponent<Props, State> {
     increment: 0,
     inserted: false,
     isFetching: false,
-    hasMore: false
+    hasMore: false,
+    showAll: false
   }
 
   constructor (props: Props) {
@@ -84,7 +86,7 @@ class TruncatedList extends PureComponent<Props, State> {
   }
 
   render () {
-    const { items, visible, increment, inserted, viewMore, isFetching, hasMore, listClass, itemClass } = this.props
+    const { items, visible, increment, inserted, viewMore, isFetching, hasMore, listClass, itemClass, showAll } = this.props
     const { allVisible, hiddenItems, page, itemsLength } = this.state
 
     const realVisible = inserted
@@ -119,7 +121,7 @@ class TruncatedList extends PureComponent<Props, State> {
       <span className={listClass}>
         {items
           .map((item, i) => {
-            const visibilityClass = allVisible || i < realVisible || (increment && i < nextView)
+            const visibilityClass = allVisible || i < realVisible || (increment && i < nextView) || showAll
               ? itemClass
               : cx.hidden
             return (
@@ -129,7 +131,7 @@ class TruncatedList extends PureComponent<Props, State> {
             )
           })
         }
-        {(!allVisible || hasMore) && renderShowMore()}
+        {(!allVisible || hasMore) && !showAll && renderShowMore()}
       </span>
     ) : null
   }
