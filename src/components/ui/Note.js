@@ -1,4 +1,5 @@
 // @flow
+/* globals SyntheticEvent, HTMLTextAreaElement */
 
 import React, { PureComponent } from 'react'
 import differenceInSeconds from 'date-fns/difference_in_seconds'
@@ -189,17 +190,19 @@ class Note extends PureComponent<Props, State> {
     return TextWrapper({}, <Text content={content} isPureContent />)
   }
 
-  handleEditorValueChange = (onValueChange: Function) => (value: any) => {
+  handleEditorValueChange = (onValueChange: Function) => (event: SyntheticEvent<HTMLTextAreaElement>) => {
+    const { currentTarget: { value = '' } } = event
+
     this.setState({
-      newValueIsValid: !!value.target.value.trim(),
-      newValue: value.target.value
+      newValueIsValid: !!value.trim(),
+      newValue: value
     })
 
-    onValueChange(value.target.value)
+    onValueChange(value)
   }
 
   renderEditor = ({ onValueChange }: EditorProps) => {
-    const { newValue } = this.state
+    const { newValue = '' } = this.state
 
     return (
       <InputField
@@ -211,7 +214,7 @@ class Note extends PureComponent<Props, State> {
   }
 
   handleCancel = () => {
-    const { text } = this.props
+    const { text = '' } = this.props
 
     this.setState({ newValue: text })
   }
