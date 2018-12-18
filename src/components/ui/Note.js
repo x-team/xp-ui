@@ -177,7 +177,7 @@ class Note extends PureComponent<Props, State> {
 
     const content = (() => {
       try {
-        return markdownCompiler(noteText)
+        return markdownCompiler(noteText || '')
       } catch (err) {
         return noteText
       }
