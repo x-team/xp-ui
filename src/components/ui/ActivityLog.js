@@ -94,7 +94,10 @@ class ActivityLog extends PureComponent<Props, State> {
             <ul className={[cx.details, this.state.collapsed ? cx.collapsed : ''].join(' ')}>
               {value.map(({ label, value }, i) => (
                 <li className={cx.detail} key={i}>
-                  {label}: <b>{value}</b>
+                  {label && (
+                    <span>{label}: </span>
+                  )}
+                  <b>{value}</b>
                 </li>
               ))}
             </ul>
