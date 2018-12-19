@@ -23,7 +23,7 @@ type Props = {
   isInvalid?: boolean,
   defaultValue?: string,
   required?: boolean,
-  onChange?: () => mixed,
+  onChange?: (value: any) => void,
   type?: InputType,
   postText?: string,
   placeholder?: string | number,

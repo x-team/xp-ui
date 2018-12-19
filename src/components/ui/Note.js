@@ -1,4 +1,5 @@
 // @flow
+/* globals SyntheticEvent, HTMLTextAreaElement */
 
 import React, { PureComponent } from 'react'
 import differenceInSeconds from 'date-fns/difference_in_seconds'
@@ -12,7 +13,7 @@ import Text from './Text'
 import FileLinks from './FileLinks'
 import PencilButton from './PencilButton'
 import InlineEditor from './InlineEditor'
-import TextareaEditor from './TextareaEditor/TextareaEditor'
+import InputField from '../forms/InputField'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
@@ -36,6 +37,7 @@ const AvatarWrapper = elem.div(cmz(`
 const Body = elem.div(cmz(`
   display: flex
   flex-direction: column
+  flex-grow: 1
 `))
 
 const Options = elem.div(cmz(`
@@ -129,6 +131,7 @@ type Props = {
 
 type State = {
   newValueIsValid: boolean,
+  newValue: string,
   isHover: boolean
 }
 
@@ -138,6 +141,7 @@ class Note extends PureComponent<Props, State> {
 
   state = {
     newValueIsValid: true,
+    newValue: this.props.text || '',
     isHover: false
   }
 
@@ -186,21 +190,33 @@ class Note extends PureComponent<Props, State> {
     return TextWrapper({}, <Text content={content} isPureContent />)
   }
 
-  handleEditorValueChange = (onValueChange: Function) => (value: any) => {
-    this.setState({ newValueIsValid: !!value.trim() })
+  handleEditorValueChange = (onValueChange: (value: any) => mixed) => (event: SyntheticEvent<HTMLTextAreaElement>) => {
+    const { currentTarget: { value = '' } } = event
+
+    this.setState({
+      newValueIsValid: !!value.trim(),
+      newValue: value
+    })
+
     onValueChange(value)
   }
 
   renderEditor = ({ onValueChange }: EditorProps) => {
-    const { text = '' } = this.props
+    const { newValue = '' } = this.state
 
     return (
-      <TextareaEditor
+      <InputField
+        type='textarea'
+        value={newValue}
         onChange={this.handleEditorValueChange(onValueChange)}
-        text={replaceBlankLinesForNewLines(text)}
-        charLimit={5000}
       />
     )
+  }
+
+  handleCancel = () => {
+    const { text = '' } = this.props
+
+    this.setState({ newValue: text })
   }
 
   render () {
@@ -229,6 +245,7 @@ class Note extends PureComponent<Props, State> {
               value={text}
               isValid={newValueIsValid}
               onSave={onNoteUpdate}
+              onCancel={this.handleCancel}
               presenter={this.renderPresenter}
               editor={this.renderEditor}
               shouldSaveOnEnter={false}
