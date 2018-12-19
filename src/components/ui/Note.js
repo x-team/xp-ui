@@ -190,7 +190,7 @@ class Note extends PureComponent<Props, State> {
     return TextWrapper({}, <Text content={content} isPureContent />)
   }
 
-  handleEditorValueChange = (onValueChange: Function) => (event: SyntheticEvent<HTMLTextAreaElement>) => {
+  handleEditorValueChange = (onValueChange: (value: any) => mixed) => (event: SyntheticEvent<HTMLTextAreaElement>) => {
     const { currentTarget: { value = '' } } = event
 
     this.setState({
