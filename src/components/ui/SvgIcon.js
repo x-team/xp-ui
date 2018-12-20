@@ -620,8 +620,8 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     basecrm: (
-      <svg width='36' height='36' viewBox='0 0 36 36' fill='none'>
-        <rect width='36' height='36' fill='url(#pattern0)' />
+      <svg width='30' height='30' viewBox='0 0 30 30' fill='none'>
+        <rect width='30' height='30' fill='url(#pattern0)' />
         <defs>
           <pattern id='pattern0' patternContentUnits='objectBoundingBox' width='1' height='1'>
             <use href='#image0' transform='scale(0.00333333)' />
