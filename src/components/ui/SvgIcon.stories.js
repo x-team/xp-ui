@@ -43,6 +43,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' />
       <SvgIcon icon='filter' />
       <SvgIcon icon='link' />
+      <SvgIcon icon='basecrm' />
     </div>
   ))
   .add('inverted color', () => (
