@@ -307,7 +307,7 @@ storiesOf('UI Components/SelectBox', module)
       />
     )
   })
-  .add('example with auto-focus on search field', () => <SelectBox autoFocus size={select('Size', sizes, sizes.Default)} />)
+  .add('example with not auto-focus on search field', () => <SelectBox autoFocus={false} size={select('Size', sizes, sizes.Default)} />)
   .add('example of all items states', () => {
     const itemsArray = [
       {

@@ -527,7 +527,7 @@ class SelectBox extends Component<Props, State> {
     areItemsToggleable: true,
     inputType: 'checkbox',
     closeDropdown: false,
-    autoFocus: false
+    autoFocus: true
   }
 
   state: State = {
