@@ -93,3 +93,6 @@ storiesOf('UI Components/Text', module)
   .add('pure content with no wrappers around and Required', () => (
     <Text content='Just a required text' isPureContent required />
   ))
+  .add('content with HTML tags', () => (
+    <Text content={(<p>Bellow you'll find questions based on the skills you told us about in level 1. <br /> <strong>You only need to respond to questions for skills that you want to continue working </strong></p>)} />
+  ))
