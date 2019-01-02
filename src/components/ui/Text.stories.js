@@ -94,5 +94,25 @@ storiesOf('UI Components/Text', module)
     <Text content='Just a required text' isPureContent required />
   ))
   .add('content with HTML tags', () => (
-    <Text content={(<p>Bellow you'll find questions based on the skills you told us about in level 1. <br /> <strong>You only need to respond to questions for skills that you want to continue working </strong></p>)} />
+    <Text content={(
+      <div>
+        <h1>H1</h1>
+        <h2>H2</h2>
+        <h3>H3</h3>
+        <h4>H4</h4>
+        <h5>H5</h5>
+        <hr />
+        <em>Emphasized text</em><br />
+        <strong>Strong text</strong><br />
+        <code>A piece of computer code</code><br />
+        <samp>Sample output from a computer program</samp><br />
+        <kbd>Keyboard Text</kbd><br />
+        <var>Variable Code</var><br />
+        <mark>Mark</mark> <br />
+        <b>Bold Text</b> <br />
+        <i>italic Text</i> <br />
+        <a href='https://www.google.com' target='_blank'>Link</a>
+        <p><strong>Paragraph:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque vestibulum sem id cursus. Fusce nec consequat erat. Praesent convallis aliquet augue, vel lacinia urna pretium eu. Morbi accumsan neque sit amet feugiat molestie. Aliquam erat volutpat. Cras quis dapibus risus. Proin luctus hendrerit semper. Donec finibus hendrerit ante at egestas.</p>
+      </div>
+    )} />
   ))
