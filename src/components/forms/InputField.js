@@ -376,7 +376,6 @@ class InputField extends PureComponent<Props> {
         </div>
         <SvgIcon icon='calendar' color='monochrome' />
       </div>
-
     }
 
     return Tag({
