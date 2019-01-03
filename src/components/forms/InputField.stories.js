@@ -122,4 +122,10 @@ storiesOf('Form Components/InputField', module)
       isInvalid
     />
   ))
+  .add('Use date field', () => (
+    <InputField
+      name='date'
+      type='date'
+    />
+  ))
   .add('missing props (does component explode?)', () => <InputField />)
