@@ -342,7 +342,6 @@ class SearchForm extends PureComponent<Props> {
                 visibleItems={SELECTBOX_HEIGTH}
                 collectionLabel='Field'
                 onClick={onSelectField}
-                closeDropdown
               />
             </div>
             <div className={themeClasses.selectStatuses}>
