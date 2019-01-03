@@ -55,7 +55,7 @@ storiesOf('UI Components/SelectBox', module)
       />
     )
   })
-  .add('simple view for Search module', () => {
+  .add('simple view for Search module with close dropdown on item click (default behavior)', () => {
     const itemsArray = [
       {
         id: 2,
@@ -96,7 +96,7 @@ storiesOf('UI Components/SelectBox', module)
       />
     )
   })
-  .add('simple view for Search module with close dropdown on item click', () => {
+  .add('simple view for Search module without close dropdown on item click', () => {
     const itemsArray = [
       {
         id: 2,
@@ -133,7 +133,7 @@ storiesOf('UI Components/SelectBox', module)
           </Button>
         )}
         onClick={action('onClick')}
-        closeDropdown
+        closeDropdown={false}
         size={select('Size', sizes, sizes.Default)}
       />
     )
@@ -176,12 +176,11 @@ storiesOf('UI Components/SelectBox', module)
           </Button>
         )}
         onClick={action('onClick')}
-        closeDropdown
         size={select('Size', sizes, sizes.Default)}
       />
     )
   })
-  .add('simple view for Search module with one selected', () => {
+  .add('simple view for Search module without close dropdown one selected', () => {
     const itemsArray = [
       {
         id: 2,
@@ -219,6 +218,7 @@ storiesOf('UI Components/SelectBox', module)
           </Button>
         )}
         onClick={action('onClick')}
+        closeDropdown={false}
         size={select('Size', sizes, sizes.Default)}
       />
     )
