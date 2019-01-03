@@ -191,7 +191,12 @@ const dateInput = cmz(`
     padding-right: 40px
   }
 
+  &::-webkit-datetime-edit {
+    cursor: pointer
+  }
+
   &::-webkit-calendar-picker-indicator {
+    cursor: pointer
     position: absolute
     top: 0
     left: 0
