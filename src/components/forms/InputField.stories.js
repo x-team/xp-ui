@@ -128,4 +128,11 @@ storiesOf('Form Components/InputField', module)
       type='date'
     />
   ))
+  .add('Use date field with label', () => (
+    <InputField
+      label='Date Field'
+      name='date'
+      type='date'
+    />
+  ))
   .add('missing props (does component explode?)', () => <InputField />)
