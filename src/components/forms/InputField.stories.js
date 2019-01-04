@@ -126,6 +126,7 @@ storiesOf('Form Components/InputField', module)
     <InputField
       name='date'
       type='date'
+      placeholder='yyyy-mm-dd'
     />
   ))
   .add('Use date field with label', () => (
@@ -133,6 +134,7 @@ storiesOf('Form Components/InputField', module)
       label='Date Field'
       name='date'
       type='date'
+      placeholder='yyyy-mm-dd'
     />
   ))
   .add('missing props (does component explode?)', () => <InputField />)
