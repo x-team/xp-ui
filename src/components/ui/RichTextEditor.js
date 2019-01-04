@@ -2,7 +2,7 @@
 /* global HTMLDivElement */
 
 import React, { Component } from 'react'
-import TUIEditor from 'tui-editor'
+import Editor from 'tui-editor'
 
 import typo from '../../styles/typo'
 
@@ -37,7 +37,7 @@ type Props = {
   initialValue?: string,
   characterLimit: number,
   hideModeSwitch: boolean,
-  handleChange({ html: string, markdown: string, plainText: string}): void
+  handleChange({ html: string, markdown: string, plainText: string }): void
 }
 
 type State = {
@@ -55,8 +55,7 @@ class RichTextEditor extends Component<Props, State> {
     characterCount: 0
   }
 
-  // Local version of flow is out-dated and doesn't have definitions for createRef
-  // $FlowFixMe
+  // $FlowFixMe: Local version of flow is out-dated and doesn't have definitions for createRef
   editSection = React.createRef()
   editor: *
   editorContentsNode: HTMLDivElement
@@ -66,7 +65,7 @@ class RichTextEditor extends Component<Props, State> {
     const { initialValue, hideModeSwitch } = this.props
 
     if (this.editSection.current) {
-      this.editor = new TUIEditor({
+      this.editor = new Editor({
         el: this.editSection.current,
         initialValue,
         hideModeSwitch,
@@ -115,7 +114,6 @@ class RichTextEditor extends Component<Props, State> {
       this.editor.setValue(this.prevValue)
     } else {
       handleChange(values)
-
       this.prevValue = this.editor.getValue()
       this.setState({ characterCount })
     }
@@ -127,7 +125,6 @@ class RichTextEditor extends Component<Props, State> {
 
     return <div className={cx.root}>
       <div ref={this.editSection} />
-
       {characterLimit !== Infinity && (
         <div className={cx.characterCounter}>{characterCount}/{characterLimit}</div>
       )}
