@@ -28,8 +28,6 @@ storiesOf('UI Components/RichTextEditor', module)
       initialValue={text('initialValue', undefined)}
       characterLimit={number('characterLimit', 140)}
       hideModeSwitch={boolean('hideModeSwitch', true)}
-      handleHTMLChange={action('handleHTMLChange')}
-      handleMarkdownChange={action('handleMarkdownChange')}
-      handlePlainTextChange={action('handlePlainTextChange')}
+      handleChange={action('handleChange')}
     />
   ))

@@ -37,9 +37,7 @@ type Props = {
   initialValue?: string,
   characterLimit: number,
   hideModeSwitch: boolean,
-  handleHTMLChange(html: string): void,
-  handleMarkdownChange(markdown: string): void,
-  handlePlainTextChange(plainText: string): void,
+  handleChange({ html: string, markdown: string, plainText: string}): void
 }
 
 type State = {
@@ -50,9 +48,7 @@ class RichTextEditor extends Component<Props, State> {
   static defaultProps = {
     characterLimit: Infinity,
     hideModeSwitch: true,
-    handleMarkdownChange: () => {},
-    handleHTMLChange: () => {},
-    handlePlainTextChange: () => {}
+    handleChange: () => {}
   }
 
   state = {
@@ -106,7 +102,7 @@ class RichTextEditor extends Component<Props, State> {
   }
 
   onChange = () => {
-    const { handleMarkdownChange, handleHTMLChange, handlePlainTextChange } = this.props
+    const { characterLimit, handleChange } = this.props
     const values = {
       markdown: this.editor.getMarkdown(),
       html: this.editor.getHtml(),
@@ -115,12 +111,10 @@ class RichTextEditor extends Component<Props, State> {
 
     const characterCount = values.plainText.trim().length
 
-    if (characterCount > this.props.characterLimit && this.prevValue.length < this.editor.getValue().length) {
+    if (characterCount > characterLimit && this.prevValue.length < this.editor.getValue().length) {
       this.editor.setValue(this.prevValue)
     } else {
-      handleMarkdownChange(values.markdown)
-      handleHTMLChange(values.html)
-      handlePlainTextChange(values.plainText)
+      handleChange(values)
 
       this.prevValue = this.editor.getValue()
       this.setState({ characterCount })
