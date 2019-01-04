@@ -81,6 +81,7 @@
     "medium-editor": "^5.23.3",
     "react-click-outside": "github:tj/react-click-outside",
     "recompose": "^0.30.0",
+    "tui-editor": "^1.2.10",
     "uuid": "^3.3.2",
     "webfontloader": "^1.6.28"
   }
