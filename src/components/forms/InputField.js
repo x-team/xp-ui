@@ -363,7 +363,7 @@ class InputField extends PureComponent<Props> {
     }
 
     if (type === 'date') {
-      return <div className={`${dateInput}`} >
+      return <div className={dateInput}>
         <div>
           <div>
             {Tag({
