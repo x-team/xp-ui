@@ -5,6 +5,7 @@ import React, { PureComponent } from 'react'
 import withAutosize from '../hocs/withAutosize'
 
 import Text from '../ui/Text'
+import SvgIcon from '../ui/SvgIcon'
 
 import elem from '../../utils/elem'
 
@@ -118,6 +119,45 @@ const errorInput = cmz(`
   background: ${theme.formErrorShadow}
   border-color: ${theme.formError}
   color: ${theme.formError}
+`)
+
+const dateInput = cmz(`
+  & {
+    position: relative;
+  }
+
+  & input {
+    height: 50px;
+    background: transparent;
+  }
+
+  & input::-webkit-clear-button {
+    display: none;
+  }
+
+  & input::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  & input::-webkit-calendar-picker-indicator {
+    cursor: pointer
+    position: absolute
+    width: 100%
+    height: 100%
+    color: transparent
+    background: transparent
+    z-index: 2;
+  }
+
+  & > svg {
+    position: absolute;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    right: 10px;
+    top: 50%;
+    z-index: 1;
+  }
 `)
 
 const checkboxInputStyles = {
@@ -320,6 +360,20 @@ class InputField extends PureComponent<Props> {
         ...rest
       }
       return <TextareaWithAutosize {...props} />
+    }
+
+    if (type === 'date') {
+      return (
+        <div className={dateInput}>
+          {Tag({
+            ...baseProps,
+            className: `${errorClassName} ${spacingClassName}`,
+            type,
+            ...rest
+          })}
+          <SvgIcon icon='calendar' color='monochrome' />
+        </div>
+      )
     }
 
     return Tag({
