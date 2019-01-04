@@ -363,19 +363,17 @@ class InputField extends PureComponent<Props> {
     }
 
     if (type === 'date') {
-      return <div className={dateInput}>
-        <div>
-          <div>
-            {Tag({
-              ...baseProps,
-              className: `${errorClassName} ${spacingClassName}`,
-              type,
-              ...rest
-            })}
-          </div>
+      return (
+        <div className={dateInput}>
+          {Tag({
+            ...baseProps,
+            className: `${errorClassName} ${spacingClassName}`,
+            type,
+            ...rest
+          })}
+          <SvgIcon icon='calendar' color='monochrome' />
         </div>
-        <SvgIcon icon='calendar' color='monochrome' />
-      </div>
+      )
     }
 
     return Tag({
