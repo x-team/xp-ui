@@ -50,9 +50,12 @@ const FileName = elem.a(cmz(
     & {
       width: 100%
       font-size: 16px
-      line-height: 1
+      line-height: 20px
       text-align: left
       text-decoration: none
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
     }
 
     &:hover {
@@ -167,7 +170,7 @@ class AttachFiles extends PureComponent<Props> {
                     borderBottomColor: file.progress && file.progress !== 100 ? theme.baseSilver : 'transparent'
                   }
                 },
-                FileName({ href: file.path, target: '_blank' }, file.filename),
+                FileName({ href: file.path, target: '_blank', title: file.filename }, file.filename),
                 renderButton(file),
                 renderProgress(file.progress)
               )
