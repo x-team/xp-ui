@@ -1,5 +1,4 @@
 // @flow
-/* globals SyntheticEvent, HTMLTextAreaElement */
 
 import React, { PureComponent } from 'react'
 import differenceInSeconds from 'date-fns/difference_in_seconds'
@@ -13,7 +12,7 @@ import Text from './Text'
 import FileLinks from './FileLinks'
 import PencilButton from './PencilButton'
 import InlineEditor from './InlineEditor'
-import InputField from '../forms/InputField'
+import RichTextEditor from './RichTextEditor'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
@@ -190,25 +189,23 @@ class Note extends PureComponent<Props, State> {
     return TextWrapper({}, <Text content={content} isPureContent />)
   }
 
-  handleEditorValueChange = (onValueChange: (value: any) => mixed) => (event: SyntheticEvent<HTMLTextAreaElement>) => {
-    const { currentTarget: { value = '' } } = event
-
+  handleEditorValueChange = (onValueChange: (value: any) => mixed) => ({ markdown }: { markdown: string }) => {
     this.setState({
-      newValueIsValid: !!value.trim(),
-      newValue: value
+      newValueIsValid: !!markdown.trim(),
+      newValue: markdown
     })
 
-    onValueChange(value)
+    onValueChange(markdown)
   }
 
   renderEditor = ({ onValueChange }: EditorProps) => {
     const { newValue = '' } = this.state
 
     return (
-      <InputField
-        type='textarea'
-        value={newValue}
-        onChange={this.handleEditorValueChange(onValueChange)}
+      <RichTextEditor
+        initialValue={newValue}
+        handleChange={this.handleEditorValueChange(onValueChange)}
+        characterLimit={5000}
       />
     )
   }

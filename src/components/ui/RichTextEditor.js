@@ -17,11 +17,18 @@ const cx = {
   root: cmz(`
     & * {
       box-sizing: border-box;
+      line-height: 1;
     }
 
     & .CodeMirror-scroll {
       overflow-x: hidden !important;
     }
+  `),
+
+  disabledOverlay: cmz(`
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(233, 237, 238, 0.8);
   `),
 
   characterCounter: cmz(
@@ -34,10 +41,11 @@ const cx = {
 }
 
 type Props = {
+  disabled: boolean,
   initialValue?: string,
   characterLimit: number,
   hideModeSwitch: boolean,
-  handleChange({ html: string, markdown: string, plainText: string }): void
+  handleChange({ markdown: string, plainText: string }): void
 }
 
 type State = {
@@ -46,6 +54,7 @@ type State = {
 
 class RichTextEditor extends Component<Props, State> {
   static defaultProps = {
+    disabled: false,
     characterLimit: Infinity,
     hideModeSwitch: true,
     handleChange: () => {}
@@ -61,8 +70,18 @@ class RichTextEditor extends Component<Props, State> {
   editorContentsNode: HTMLDivElement
   prevValue: string = ''
 
+  shouldComponentUpdate (nextProps: Props, nextState: State) {
+    return (
+      this.props.disabled !== nextProps.disabled ||
+      this.props.characterLimit !== nextProps.characterLimit ||
+      this.props.hideModeSwitch !== nextProps.hideModeSwitch ||
+      this.props.handleChange !== nextProps.handleChange ||
+      this.state.characterCount !== nextState.characterCount
+    )
+  }
+
   componentDidMount () {
-    const { initialValue, hideModeSwitch } = this.props
+    const { initialValue, hideModeSwitch, disabled } = this.props
 
     if (this.editSection.current) {
       this.editor = new Editor({
@@ -84,6 +103,8 @@ class RichTextEditor extends Component<Props, State> {
         this.prevValue = this.editor.getValue()
         const characterCount = (this.editorContentsNode.innerText || '').trim().length
         this.setState({ characterCount })
+      } else if (disabled) {
+        this.forceUpdate()
       }
     }
   }
@@ -94,17 +115,12 @@ class RichTextEditor extends Component<Props, State> {
         ? this.editor.getUI().getModeSwitch().hide()
         : this.editor.getUI().getModeSwitch().show()
     }
-
-    if (prevProps.initialValue !== this.props.initialValue) {
-      this.editor.setValue(this.props.initialValue)
-    }
   }
 
   onChange = () => {
     const { characterLimit, handleChange } = this.props
     const values = {
       markdown: this.editor.getMarkdown(),
-      html: this.editor.getHtml(),
       plainText: this.editorContentsNode.innerText || ''
     }
 
@@ -121,14 +137,28 @@ class RichTextEditor extends Component<Props, State> {
 
   render () {
     const { characterCount } = this.state
-    const { characterLimit } = this.props
+    const { disabled, characterLimit } = this.props
 
-    return <div className={cx.root}>
-      <div ref={this.editSection} />
-      {characterLimit !== Infinity && (
-        <div className={cx.characterCounter}>{characterCount}/{characterLimit}</div>
-      )}
-    </div>
+    const { offsetWidth, offsetHeight } = this.editSection.current || {}
+
+    return (
+      <div className={cx.root}>
+
+        {disabled && <div
+          className={cx.disabledOverlay}
+          style={{
+            width: offsetWidth,
+            height: offsetHeight
+          }}
+        />}
+
+        <div ref={this.editSection} />
+
+        {characterLimit !== Infinity && (
+          <div className={cx.characterCounter}>{characterCount}/{characterLimit}</div>
+        )}
+      </div>
+    )
   }
 }
 
