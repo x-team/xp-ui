@@ -50,7 +50,7 @@ const FileName = elem.a(cmz(
     & {
       width: 100%
       font-size: 16px
-      line-height: 20px
+      line-height: 1.25
       text-align: left
       text-decoration: none
       overflow: hidden
