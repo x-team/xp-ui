@@ -189,13 +189,13 @@ class Note extends PureComponent<Props, State> {
     return TextWrapper({}, <Text content={content} isPureContent />)
   }
 
-  handleEditorValueChange = (onValueChange: (value: any) => mixed) => ({ markdown }: { markdown: string }) => {
+  handleEditorValueChange = (onValueChange: (value: any) => mixed) => ({ markdown: value }: { markdown: string }) => {
     this.setState({
-      newValueIsValid: !!markdown.trim(),
-      newValue: markdown
+      newValueIsValid: !!value.trim(),
+      newValue: value
     })
 
-    onValueChange(markdown)
+    onValueChange(value)
   }
 
   renderEditor = ({ onValueChange }: EditorProps) => {
