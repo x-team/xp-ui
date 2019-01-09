@@ -251,7 +251,9 @@ class ListsEditor extends Component<Props, State> {
 
   handleDismissDeletedMessage = (item: Item) => {
     const { onDismissDeletedMessages } = this.props
-    onDismissDeletedMessages && onDismissDeletedMessages([item])
+    if (item && item.id) {
+      onDismissDeletedMessages && onDismissDeletedMessages([item])
+    }
   }
 
   handleCreateNew = (name: string) => {
