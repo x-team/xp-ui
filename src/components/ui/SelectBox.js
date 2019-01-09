@@ -567,9 +567,18 @@ class SelectBox extends Component<Props, State> {
   }
 
   componentWillUnmount () {
+    const { items, onDismissDeletedMessage } = this.props
     this.timers.forEach(timer => {
       clearTimeout(timer)
     })
+    if (onDismissDeletedMessage) {
+      const deletedItems = (items && items.filter(item => item.status === STATUS.DELETED)) || []
+      deletedItems.forEach(item => {
+        onDismissDeletedMessage({
+          ...this.getUncachedItem(item)
+        })
+      })
+    }
   }
 
   setupDismissTimers = () => {
