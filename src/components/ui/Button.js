@@ -11,7 +11,7 @@ import typo from '../../styles/typo'
 const cmz = require('cmz')
 
 export type Size = 'normal' | 'large' | 'small'
-export type Color = 'normal' | 'monochrome' | 'silver'
+export type Color = 'normal' | 'monochrome' | 'silver' | 'gray' | 'grayPink'
 
 type Props = {
   className: string | CmzAtom,
@@ -19,6 +19,7 @@ type Props = {
   color: Color,
   outlined: boolean,
   rounded: boolean,
+  smallRounded: boolean,
   raised: boolean,
   pseudolink: boolean,
   selected: boolean,
@@ -114,7 +115,56 @@ const colorStyles = {
       border-color: ${theme.lineSilver2.darken(0.025)}
       color: ${theme.baseDark}
     }
+  `),
+
+  grayPink: cmz(
+    baseStyles.root, `
+    & {
+      background-color: ${theme.baseBright}
+      border-color: ${theme.baseBright}
+      color: ${theme.typoParagraphOnDarkBackground}
+    }
+
+    &.outlined {
+      color: ${theme.baseDark}
+    }
+
+    &.outlined.raised:not(.readOnly):hover {
+      background-color: transparent
+      border-color: transparent
+    }
+
+    &:not(.readOnly):hover {
+      background-color: ${theme.baseFairPink}
+      border-color: ${theme.baseFairPink}
+      color: ${theme.baseRed}
+    }
+  `),
+
+  gray: cmz(
+    baseStyles.root, `
+    & {
+      background-color: ${theme.baseBombay}
+      border-color: ${theme.baseBombay}
+      color: ${theme.baseBrighter}
+    }
+
+    &.outlined {
+      color: ${theme.baseDark}
+    }
+
+    &.outlined.raised:not(.readOnly):hover {
+      background-color: transparent
+      border-color: transparent
+    }
+
+    &:not(.readOnly):hover {
+      background-color: ${theme.baseBombay.darken(0.025)}
+      border-color: ${theme.baseBombay.darken(0.025)}
+      color: ${theme.baseBrighter}
+    }
   `)
+
 }
 
 // Size options
@@ -175,6 +225,10 @@ const extraStyles = {
 
   rounded: cmz(`
     border-radius: 4px
+  `),
+
+  smallRounded: cmz(`
+    border-radius: 2px
   `),
 
   raised: cmz(`
@@ -274,6 +328,7 @@ class Button extends PureComponent<Props> {
     outlined: false,
     disabled: false,
     rounded: false,
+    smallRounded: false,
     raised: false,
     pseudolink: false,
     selected: false,
@@ -291,6 +346,7 @@ class Button extends PureComponent<Props> {
       outlined,
       disabled,
       rounded,
+      smallRounded,
       raised,
       pseudolink,
       selected,
@@ -312,6 +368,8 @@ class Button extends PureComponent<Props> {
       outlined && 'outlined',
       rounded && extraStyles.rounded,
       rounded && 'rounded',
+      smallRounded && extraStyles.smallRounded,
+      smallRounded && 'smallRounded',
       raised && extraStyles.raised,
       raised && 'raised',
       pseudolink && [extraStyles.outlined, extraStyles.pseudolink].join(' '),

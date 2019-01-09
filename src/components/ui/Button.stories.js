@@ -15,7 +15,9 @@ const colours = {
   None: null,
   Normal: 'normal',
   Monochrome: 'monochrome',
-  Silver: 'silver'
+  Silver: 'silver',
+  Gray: 'gray',
+  GrayPink: 'grayPink'
 }
 
 const StoryButton = (props) => (
@@ -25,6 +27,7 @@ const StoryButton = (props) => (
     readOnly={boolean('Ready-only', props.readOnly || false)}
     outlined={boolean('Outlined', props.outlined || false)}
     rounded={boolean('Rounded', props.rounded || false)}
+    smallRounded={boolean('SmallRounded', props.smallRounded || false)}
     raised={boolean('Raised', props.raised || false)}
     pseudolink={boolean('Pseudolink', props.pseudolink || false)}
     selected={boolean('Selected', props.selected || false)}
@@ -42,14 +45,23 @@ storiesOf('UI Components/Button/With Knobs', module)
   .add('all effects', StoryButton)
 
 storiesOf('UI Components/Button/Color Options', module)
-  .add('default red state', () => (
+  .add('default state', () => (
     <StoryButton>Normal state with default color</StoryButton>
+  ))
+  .add('red state', () => (
+    <StoryButton color={'normal'}>Normal state with red color</StoryButton>
   ))
   .add('silver state', () => (
     <StoryButton color={'silver'}>Normal state with silver color</StoryButton>
   ))
   .add('monochrome state', () => (
     <StoryButton color={'monochrome'}>Normal state with monochrome color</StoryButton>
+  ))
+  .add('grayPink state', () => (
+    <StoryButton color={'grayPink'}>Normal state with grayPink color</StoryButton>
+  ))
+  .add('gray state', () => (
+    <StoryButton color={'gray'}>Normal state with gray color</StoryButton>
   ))
 
 storiesOf('UI Components/Button/Size Options', module)
@@ -75,6 +87,9 @@ storiesOf('UI Components/Button/Extra States', module)
   ))
   .add('rounded default', () => (
     <StoryButton rounded>Rounded default state</StoryButton>
+  ))
+  .add('smallRounded default', () => (
+    <StoryButton smallRounded>smallRounded default state</StoryButton>
   ))
   .add('raised default', () => (
     <StoryButton raised>Raised default state</StoryButton>
