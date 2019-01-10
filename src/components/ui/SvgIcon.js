@@ -6,7 +6,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'time'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray'
 
 type Props = {
@@ -632,9 +632,9 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     time: (
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle className={strokeClassName} cx="7" cy="7" r="6.5" />
-        <path className={strokeClassName} d="M7.53839 3.23077V7.53847H4.30762" />
+      <svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <circle className={strokeClassName} cx='7' cy='7' r='6.5' />
+        <path className={strokeClassName} d='M7.53839 3.23077V7.53847H4.30762' />
       </svg>
     )
   }

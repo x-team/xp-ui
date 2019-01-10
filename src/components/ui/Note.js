@@ -1,10 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import differenceInSeconds from 'date-fns/difference_in_seconds'
-import differenceInMinutes from 'date-fns/difference_in_minutes'
 import differenceInHours from 'date-fns/difference_in_hours'
-import formatDate from 'date-fns/format'
 import { compiler as markdownCompiler } from 'markdown-to-jsx'
 
 import Avatar from './Avatar'
@@ -17,7 +14,7 @@ import RichTextEditor from './RichTextEditor'
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
 import elem from '../../utils/elem'
-import { replaceBlankLinesForNewLines } from '../../utils/helpers'
+import { replaceBlankLinesForNewLines, timeSince } from '../../utils/helpers'
 
 import type { EditorProps, PresenterProps } from './InlineEditor'
 
@@ -95,27 +92,6 @@ const TextWrapper = elem.div(cmz(
 ))
 
 const FileLinksWrapper = elem.div()
-
-const timeFromNow = date => {
-  const now = new Date()
-  const hoursDelta = differenceInHours(now, date)
-
-  if (hoursDelta >= 24) {
-    return formatDate(date, 'DD MMM YY')
-  }
-
-  const minutesDelta = differenceInMinutes(now, date)
-
-  if (minutesDelta >= 60) {
-    return `${hoursDelta} h ago`
-  }
-
-  if (differenceInSeconds(now, date) >= 60) {
-    return `${minutesDelta} m ago`
-  }
-
-  return 'just now'
-}
 
 type Props = {
   avatar?: string,
@@ -234,7 +210,7 @@ class Note extends PureComponent<Props, State> {
         Body(
           name && Name(name),
           SubHeader(
-            date && timeFromNow(date),
+            date && timeSince(date),
             showNoteType && noteTypeText
           ),
           text && InlineEditorWrapper(

@@ -1,3 +1,4 @@
+import ActivityBar from './components/ui/ActivityBar'
 import ActivityLog from './components/ui/ActivityLog'
 import ActivityLogsDisplay from './components/ui/ActivityLogsDisplay'
 import AdminScreen from './components/ui/AdminScreen'
@@ -54,6 +55,7 @@ import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
 
 export {
+  ActivityBar,
   ActivityLog,
   ActivityLogsDisplay,
   AdminScreen,
