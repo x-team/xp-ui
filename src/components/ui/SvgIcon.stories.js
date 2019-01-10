@@ -44,6 +44,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='filter' />
       <SvgIcon icon='link' />
       <SvgIcon icon='basecrm' />
+      <SvgIcon icon='time' />
     </div>
   ))
   .add('inverted color', () => (
@@ -83,6 +84,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='inverted' />
       <SvgIcon icon='filter' color='inverted' />
       <SvgIcon icon='link' color='inverted' />
+      <SvgIcon icon='time' />
     </div>
   ))
 
@@ -123,6 +125,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='monochrome' />
       <SvgIcon icon='filter' color='monochrome' />
       <SvgIcon icon='link' color='monochrome' />
+      <SvgIcon icon='time' color='monochrome' />
     </div>
   ))
   .add('grayscale color', () => (
@@ -162,6 +165,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='grayscale' />
       <SvgIcon icon='filter' color='grayscale' />
       <SvgIcon icon='link' color='grayscale' />
+      <SvgIcon icon='time' color='grayscale' />
     </div>
   ))
   .add('text gray color', () => (
@@ -201,6 +205,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='text' />
       <SvgIcon icon='filter' color='text' />
       <SvgIcon icon='link' color='text' />
+      <SvgIcon icon='time' color='text' />
     </div>
   ))
   .add('muted gray color', () => (
@@ -240,6 +245,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='mutedgray' />
       <SvgIcon icon='filter' color='mutedgray' />
       <SvgIcon icon='link' color='mutedgray' />
+      <SvgIcon icon='time' color='mutedgray' />
     </div>
   ))
   .add('hover color', () => (
@@ -279,6 +285,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='text' hover='default' />
       <SvgIcon icon='filter' color='text' hover='default' />
       <SvgIcon icon='link' color='text' hover='default' />
+      <SvgIcon icon='time' color='text' hover='default' />
     </div>
   ))
   .add('missing props (does component explode?)', () => <SvgIcon />)
