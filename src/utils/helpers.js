@@ -55,7 +55,7 @@ export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
 
 export const replaceBlankLinesForNewLines = (text: ?string): string => text ? text.replace(/(?:\r\n|\r|\n)/g, '<br>\n') : ''
 
-export function timeSince (date: Date | string | number) {
+export function timeSince (date: Date | string | number | void | null) {
   if (!(date instanceof Date)) {
     date = new Date(date)
   }
