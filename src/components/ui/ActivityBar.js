@@ -29,7 +29,6 @@ const cx = {
   activity: cmz(`
     line-height: 1.57
     flex-shrink: 1
-    max-width: 300px
     padding: 0 8px
    
     white-space: nowrap
