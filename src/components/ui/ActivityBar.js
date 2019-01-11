@@ -8,7 +8,7 @@ const cmz = require('cmz')
 const cx = {
   container: cmz(`
     & {
-      flex: 1 0 auto
+      flex: 1 0 100%
       flex-flow: row
       display: flex
       align-items: center
