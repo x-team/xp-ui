@@ -17,7 +17,7 @@ const cx = {
       align-items: center
       font-family: Source Sans Pro
       font-weight: 400
-      font-size: 14px
+      font-size: 0.875rem
       line-height: 1
     }
     
