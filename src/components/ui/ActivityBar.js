@@ -19,7 +19,6 @@ const cx = {
       font-weight: 400
       font-size: 14px
       line-height: 1
-      min-width: 0
     }
     
     & > * {
@@ -28,8 +27,8 @@ const cx = {
   `),
 
   activity: cmz(`
+    line-height: 1.57
     flex-shrink: 1
-    min-width: 0
     max-width: 300px
     padding: 0 8px
    
@@ -54,6 +53,6 @@ export default function ActivityBar ({ text, datetime }: Props) {
   return <div className={cx.container}>
     <SvgIcon icon='time' color='grayscale' />
     <div className={cx.activity} title={text}>{text}</div>
-    <div className={cx.time}>{timeSince(datetime)}</div>
+    <div className={cx.time}>{timeSince(datetime, false)}</div>
   </div>
 }

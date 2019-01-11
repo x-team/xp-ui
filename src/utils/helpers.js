@@ -55,7 +55,7 @@ export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
 
 export const replaceBlankLinesForNewLines = (text: ?string): string => text ? text.replace(/(?:\r\n|\r|\n)/g, '<br>\n') : ''
 
-export function timeSince (date: Date | string | number | void | null) {
+export function timeSince (date: Date | string | number | void | null, addSpaceAfterNumber = true) {
   if (!(date instanceof Date)) {
     date = new Date(date)
   }
@@ -70,11 +70,11 @@ export function timeSince (date: Date | string | number | void | null) {
   const minutesDelta = differenceInMinutes(now, date)
 
   if (minutesDelta >= 60) {
-    return `${hoursDelta} h ago`
+    return addSpaceAfterNumber ? `${hoursDelta} h ago` : `${hoursDelta}h ago`
   }
 
   if (differenceInSeconds(now, date) >= 60) {
-    return `${minutesDelta} m ago`
+    return addSpaceAfterNumber ? `${minutesDelta} m ago` : `${minutesDelta}m ago`
   }
 
   return 'just now'
