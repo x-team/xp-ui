@@ -41,7 +41,8 @@ const palette = {
   frenchGray: '#c2c1c5',
   frenchGrayDarker: '#B8B7BC',
   scarpaFlow: '#5A5665',
-  fairPink: '#FFEBED'
+  fairPink: '#FFEBED',
+  grayScarpaFlow: '#5C5765'
 }
 
 export default wrap({
@@ -94,6 +95,7 @@ export default wrap({
   iconGray: palette.bombay,
   iconTextGray: palette.tuna,
   iconMutedGray: palette.athensGray,
+  iconGrayScarpaFlow: palette.grayScarpaFlow,
 
   logoGray: palette.nobel,
 

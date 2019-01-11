@@ -76,15 +76,23 @@ const contentStyles = {
   normal: cmz(typo.labelText, 'font-size: inherit'),
 
   openSans: cmz(baseStyles.content, `
-    text-transform: initial;
-    font-size: 0.8125rem;
-    font-family: Open Sans;
+    & span {
+      text-transform: initial;
+      font-size: 0.8125rem;
+      font-family: Open Sans;
+    }
   `),
 
   sourceSansPro: cmz(baseStyles.content, `
-    text-transform: initial;
-    font-size: 0.875rem;
-    font-family: Source Sans Pro;
+    & {
+      padding: 5px 10px;
+    }
+
+    & span {
+      text-transform: initial;
+      font-size: 0.875rem;
+      font-family: Source Sans Pro;
+    }
   `)
 }
 
@@ -430,7 +438,7 @@ class Button extends PureComponent<Props> {
       readOnly && extraStyles.readOnly,
       readOnly && 'readOnly'
     ].filter(Boolean).join(' ')
-    const buttonClassName = `${colorClassName} ${sizeClassName} ${extraClassName}`
+    const buttonClassName = `${colorClassName} ${sizeClassName} ${extraClassName} ${contentClassName}`
 
     return (
       <CustomComponent
@@ -439,7 +447,7 @@ class Button extends PureComponent<Props> {
         data-tag={tag}
       >
         {icon && <SvgIcon className={baseStyles.icon} icon={icon} color='' {...iconProps} />}
-        <span className={contentClassName}>{children}</span>
+        <span>{children}</span>
       </CustomComponent>
     )
   }

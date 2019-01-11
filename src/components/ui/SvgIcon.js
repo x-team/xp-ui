@@ -7,7 +7,7 @@ import theme from '../../styles/theme'
 const cmz = require('cmz')
 
 export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare'
-export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray'
+export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow'
 
 type Props = {
   icon: ?Icon,
@@ -35,6 +35,11 @@ const styles = {
     grayscale: cmz(`
       & {
         stroke: ${theme.iconGray}
+      }
+    `),
+    grayscarpaflow: cmz(`
+      & {
+        stroke: ${theme.iconGrayScarpaFlow}
       }
     `),
     text: cmz(`
@@ -69,6 +74,11 @@ const styles = {
         stroke: ${theme.iconGray}
       }
     `),
+    grayscarpaflow: cmz(`
+      svg:hover & {
+        stroke: ${theme.iconGrayScarpaFlow}
+      }
+    `),
     text: cmz(`
       svg:hover & {
         stroke: ${theme.iconTextGray}
@@ -101,6 +111,11 @@ const styles = {
         fill: ${theme.iconGray}
       }
     `),
+    grayscarpaflow: cmz(`
+      & {
+        fill: ${theme.iconGrayScarpaFlow}
+      }
+    `),
     text: cmz(`
       & {
         fill: ${theme.iconTextGray}
@@ -131,6 +146,11 @@ const styles = {
     grayscale: cmz(`
       svg:hover & {
         fill: ${theme.iconGray}
+      }
+    `),
+    grayscarpaflow: cmz(`
+      svg:hover & {
+        fill: ${theme.iconGrayScarpaFlow}
       }
     `),
     text: cmz(`
