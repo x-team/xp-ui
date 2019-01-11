@@ -20,10 +20,17 @@ const colours = {
   GrayPink: 'grayPink'
 }
 
+const contentStyles = {
+  None: null,
+  OpenSans: 'openSans',
+  SourceSansPro: 'sourceSansPro'
+}
+
 const StoryButton = (props) => (
   <Button
     size={select('Size', sizes, props.size || null)}
     color={select('Color', colours, props.color || null)}
+    contentStyle={select('ContentStyles', contentStyles, props.contentStyle || null)}
     readOnly={boolean('Ready-only', props.readOnly || false)}
     outlined={boolean('Outlined', props.outlined || false)}
     rounded={boolean('Rounded', props.rounded || false)}
@@ -36,6 +43,8 @@ const StoryButton = (props) => (
     wide={boolean('Wide', props.wide || false)}
     selectbox={boolean('Selectbox', props.selectbox || false)}
     tag={text('Tag', props.tag || undefined)}
+    icon={text('Icon', props.icon || '')}
+    iconProps={props.iconProps || {}}
   >
     {text('Content', props.children || 'This is a button')}
   </Button>
@@ -81,6 +90,17 @@ storiesOf('UI Components/Button/Size Options', module)
     <StoryButton wide>Wide size</StoryButton>
   ))
 
+storiesOf('UI Components/Button/contentStyle Options', module)
+  .add('normal content style', () => (
+    <StoryButton>Normal content style</StoryButton>
+  ))
+  .add('openSans content style', () => (
+    <StoryButton contentStyle='openSans'>openSans content style</StoryButton>
+  ))
+  .add('sourceSansPro content style', () => (
+    <StoryButton contentStyle='sourceSansPro'>sourceSansPro content style</StoryButton>
+  ))
+
 storiesOf('UI Components/Button/Extra States', module)
   .add('disabled', () => (
     <StoryButton disabled>Disabled state</StoryButton>
@@ -114,6 +134,15 @@ storiesOf('UI Components/Button/Extra States', module)
     <StoryButton component='a' color={'monochrome'}>
       custom default button state
     </StoryButton>
+  ))
+  .add('button generated with svg icon', () => (
+    <StoryButton icon='plusquare'>Button with icon</StoryButton>
+  ))
+  .add('button generated with svg icon and icon props modified', () => (
+    <StoryButton icon='plusquare' iconProps={{ color: 'default' }}>Button with icon</StoryButton>
+  ))
+  .add('button generated with svg icon and custom color on button', () => (
+    <StoryButton icon='plusquare' color='grayPink'>Button with icon and color</StoryButton>
   ))
 
 storiesOf('UI Components/Button/Use Cases', module)

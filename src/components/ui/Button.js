@@ -2,8 +2,11 @@
 
 import React, { PureComponent } from 'react'
 
+import SvgIcon from './SvgIcon'
+
 import type { CmzAtom } from 'cmz'
 import type { Node } from 'react'
+import type { Icon } from './SvgIcon'
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -12,6 +15,7 @@ const cmz = require('cmz')
 
 export type Size = 'normal' | 'large' | 'small'
 export type Color = 'normal' | 'monochrome' | 'silver' | 'gray' | 'grayPink'
+export type ContentStyle = 'normal' | 'openSans' | 'sourceSansPro'
 
 type Props = {
   className: string | CmzAtom,
@@ -30,7 +34,10 @@ type Props = {
   component: string,
   children?: Node,
   tag?: string,
-  readOnly: boolean
+  readOnly: boolean,
+  icon?: Icon | '',
+  iconProps: Object,
+  contentStyle: ContentStyle
 }
 
 const baseStyles = {
@@ -50,7 +57,35 @@ const baseStyles = {
     font-size: 1rem
   `),
 
-  content: cmz(typo.labelText, 'font-size: inherit')
+  content: cmz(typo.labelText, 'font-size: inherit'),
+
+  icon: cmz(`
+    & {
+      margin-right: 12px;
+      vertical-align: top;
+    }
+
+    & path {
+      transition: all .3s ease-out;
+    }
+  `)
+}
+
+// contentStyle options
+const contentStyles = {
+  normal: cmz(typo.labelText, 'font-size: inherit'),
+
+  openSans: cmz(baseStyles.content, `
+    text-transform: initial;
+    font-size: 0.8125rem;
+    font-family: Open Sans;
+  `),
+
+  sourceSansPro: cmz(baseStyles.content, `
+    text-transform: initial;
+    font-size: 0.875rem;
+    font-family: Source Sans Pro;
+  `)
 }
 
 // Color options
@@ -138,6 +173,10 @@ const colorStyles = {
       background-color: ${theme.baseFairPink}
       border-color: ${theme.baseFairPink}
       color: ${theme.baseRed}
+    }
+
+    &:not(.readOnly):hover svg path {
+      fill: ${theme.baseRed};
     }
   `),
 
@@ -321,10 +360,13 @@ const extraStyles = {
 
 class Button extends PureComponent<Props> {
   static defaultProps = {
+    iconProps: {},
     className: '',
+    icon: '',
     component: 'button',
     color: 'normal',
     size: 'normal',
+    contentStyle: 'normal',
     outlined: false,
     disabled: false,
     rounded: false,
@@ -357,12 +399,16 @@ class Button extends PureComponent<Props> {
       children,
       tag,
       readOnly,
+      icon,
+      iconProps,
+      contentStyle,
       ...rest
     } = this.props
 
     const CustomComponent = readOnly ? 'span' : component
     const colorClassName = colorStyles[color] || ''
     const sizeClassName = sizeStyles[size] || ''
+    const contentClassName = contentStyles[contentStyle] || ''
     const extraClassName = [
       outlined && extraStyles.outlined,
       outlined && 'outlined',
@@ -392,7 +438,8 @@ class Button extends PureComponent<Props> {
         className={`${String(customClassName)} ${buttonClassName}`}
         data-tag={tag}
       >
-        <span className={baseStyles.content}>{children}</span>
+        {icon && <SvgIcon className={baseStyles.icon} icon={icon} color='' {...iconProps} />}
+        <span className={contentClassName}>{children}</span>
       </CustomComponent>
     )
   }
