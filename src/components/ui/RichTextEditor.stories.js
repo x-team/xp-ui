@@ -11,6 +11,9 @@ storiesOf('UI Components/RichTextEditor', module)
   .add('basic usage', () => (
     <RichTextEditor />
   ))
+  .add('disabled', () => (
+    <RichTextEditor disabled />
+  ))
   .add('with initial value', () => (
     <RichTextEditor
       initialValue={`*Hello* <strong>world</strong>! <a href="https://www.google.com">HTML Link</a> and [Markdown Link](https://google.com)`}
@@ -25,6 +28,7 @@ storiesOf('UI Components/RichTextEditor', module)
   ))
   .add('with knobs', () => (
     <RichTextEditor
+      disabled={boolean('disabled', false)}
       initialValue={text('initialValue', undefined)}
       characterLimit={number('characterLimit', 140)}
       hideModeSwitch={boolean('hideModeSwitch', true)}
