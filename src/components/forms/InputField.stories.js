@@ -122,4 +122,19 @@ storiesOf('Form Components/InputField', module)
       isInvalid
     />
   ))
+  .add('Use date field', () => (
+    <InputField
+      name='date'
+      type='date'
+      placeholder='yyyy-mm-dd'
+    />
+  ))
+  .add('Use date field with label', () => (
+    <InputField
+      label='Date Field'
+      name='date'
+      type='date'
+      placeholder='yyyy-mm-dd'
+    />
+  ))
   .add('missing props (does component explode?)', () => <InputField />)

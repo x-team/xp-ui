@@ -527,7 +527,7 @@ class SelectBox extends Component<Props, State> {
     areItemsToggleable: true,
     inputType: 'checkbox',
     closeDropdown: false,
-    autoFocus: false
+    autoFocus: true
   }
 
   state: State = {
@@ -655,7 +655,7 @@ class SelectBox extends Component<Props, State> {
       })
       if (closeDropdown && typeof closeDropdown === 'function') {
         closeDropdown()
-      } else if (closeDropdown && internalCloseDropdown) {
+      } else if (internalCloseDropdown) {
         internalCloseDropdown()
       }
     } else {
