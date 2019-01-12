@@ -41,6 +41,7 @@ const palette = {
   frenchGray: '#c2c1c5',
   frenchGrayDarker: '#B8B7BC',
   scarpaFlow: '#5A5665',
+  silver: '#C4C4C4',
   fairPink: '#FFEBED',
   grayScarpaFlow: '#5C5765'
 }
@@ -101,7 +102,9 @@ export default wrap({
 
   statusAccepted: palette.lima,
   statusPending: palette.ripeLemon,
-  statusExluded: palette.radicalRed
+  statusExluded: palette.radicalRed,
+
+  silver: palette.silver
 })
 
 export const breakpoints = {

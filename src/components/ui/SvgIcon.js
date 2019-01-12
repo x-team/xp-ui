@@ -6,7 +6,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow'
 
 type Props = {
@@ -653,6 +653,13 @@ const getIcon = ({ icon, color, hover, ...rest }) => {
     plusquare: (
       <svg width='16' height='16' viewBox='0 0 16 16' fill='none' {...rest}>
         <path className={fillClassName} fillRule='evenodd' d='M14.2857 0C14.7619 0 15.1667 0.166665 15.5 0.5C15.8333 0.833335 16 1.23809 16 1.71429V14.2857C16 14.7619 15.8333 15.1667 15.5 15.5C15.1667 15.8333 14.7619 16 14.2857 16H1.71429C1.23809 16 0.833335 15.8333 0.5 15.5C0.166665 15.1667 0 14.7619 0 14.2857V1.71429C0 1.23809 0.166665 0.833335 0.5 0.5C0.833335 0.166665 1.23809 0 1.71429 0H14.2857ZM7 9V13H9V9H13V7H9V3H7V7H3V9H7Z' fill='#B2B6BC' />
+      </svg>
+    ),
+
+    time: (
+      <svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <circle className={strokeClassName} cx='7' cy='7' r='6.5' />
+        <path className={strokeClassName} d='M7.53839 3.23077V7.53847H4.30762' />
       </svg>
     )
   }

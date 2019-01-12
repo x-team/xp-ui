@@ -44,6 +44,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='filter' />
       <SvgIcon icon='link' />
       <SvgIcon icon='basecrm' />
+      <SvgIcon icon='time' />
       <SvgIcon icon='plusquare' />
     </div>
   ))
@@ -84,6 +85,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='inverted' />
       <SvgIcon icon='filter' color='inverted' />
       <SvgIcon icon='link' color='inverted' />
+      <SvgIcon icon='time' color='inverted' />
       <SvgIcon icon='plusquare' color='inverted' />
     </div>
   ))
@@ -125,6 +127,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='monochrome' />
       <SvgIcon icon='filter' color='monochrome' />
       <SvgIcon icon='link' color='monochrome' />
+      <SvgIcon icon='time' color='monochrome' />
       <SvgIcon icon='plusquare' color='monochrome' />
     </div>
   ))
@@ -165,6 +168,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='grayscale' />
       <SvgIcon icon='filter' color='grayscale' />
       <SvgIcon icon='link' color='grayscale' />
+      <SvgIcon icon='time' color='grayscale' />
       <SvgIcon icon='plusquare' color='grayscale' />
     </div>
   ))
@@ -205,6 +209,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='grayscarpaflow' />
       <SvgIcon icon='filter' color='grayscarpaflow' />
       <SvgIcon icon='link' color='grayscarpaflow' />
+      <SvgIcon icon='time' color='grayscarpaflow' />
       <SvgIcon icon='plusquare' color='grayscarpaflow' />
     </div>
   ))
@@ -245,6 +250,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='text' />
       <SvgIcon icon='filter' color='text' />
       <SvgIcon icon='link' color='text' />
+      <SvgIcon icon='time' color='text' />
       <SvgIcon icon='plusquare' color='text' />
     </div>
   ))
@@ -285,6 +291,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='mutedgray' />
       <SvgIcon icon='filter' color='mutedgray' />
       <SvgIcon icon='link' color='mutedgray' />
+      <SvgIcon icon='time' color='mutedgray' />
       <SvgIcon icon='plusquare' color='mutedgray' />
     </div>
   ))
@@ -325,6 +332,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='text' hover='default' />
       <SvgIcon icon='filter' color='text' hover='default' />
       <SvgIcon icon='link' color='text' hover='default' />
+      <SvgIcon icon='time' color='text' hover='default' />
       <SvgIcon icon='plusquare' color='text' hover='default' />
     </div>
   ))
@@ -365,6 +373,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' style={{ marginRight: '30px' }} />
       <SvgIcon icon='filter' style={{ marginRight: '30px' }} />
       <SvgIcon icon='link' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='time' style={{ marginRight: '30px' }} />
       <SvgIcon icon='plusquare' style={{ marginRight: '30px' }} />
     </div>
   ))
