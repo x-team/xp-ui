@@ -44,6 +44,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='filter' />
       <SvgIcon icon='link' />
       <SvgIcon icon='basecrm' />
+      <SvgIcon icon='plusquare' />
     </div>
   ))
   .add('inverted color', () => (
@@ -83,6 +84,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='inverted' />
       <SvgIcon icon='filter' color='inverted' />
       <SvgIcon icon='link' color='inverted' />
+      <SvgIcon icon='plusquare' color='inverted' />
     </div>
   ))
 
@@ -123,6 +125,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='monochrome' />
       <SvgIcon icon='filter' color='monochrome' />
       <SvgIcon icon='link' color='monochrome' />
+      <SvgIcon icon='plusquare' color='monochrome' />
     </div>
   ))
   .add('grayscale color', () => (
@@ -162,6 +165,47 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='grayscale' />
       <SvgIcon icon='filter' color='grayscale' />
       <SvgIcon icon='link' color='grayscale' />
+      <SvgIcon icon='plusquare' color='grayscale' />
+    </div>
+  ))
+  .add('grayscarpaflow color', () => (
+    <div>
+      <SvgIcon icon='cog' color='grayscarpaflow' />
+      <SvgIcon icon='head' color='grayscarpaflow' />
+      <SvgIcon icon='webcam' color='grayscarpaflow' />
+      <SvgIcon icon='message' color='grayscarpaflow' />
+      <SvgIcon icon='terminal' color='grayscarpaflow' />
+      <SvgIcon icon='diamond' color='grayscarpaflow' />
+      <SvgIcon icon='talking' color='grayscarpaflow' />
+      <SvgIcon icon='trophy' color='grayscarpaflow' />
+      <SvgIcon icon='calendar' color='grayscarpaflow' />
+      <SvgIcon icon='plus' color='grayscarpaflow' />
+      <SvgIcon icon='minus' color='grayscarpaflow' />
+      <SvgIcon icon='trashcan' color='grayscarpaflow' />
+      <SvgIcon icon='trashcanAlt' color='grayscarpaflow' />
+      <SvgIcon icon='x' color='grayscarpaflow' />
+      <SvgIcon icon='add' color='grayscarpaflow' />
+      <SvgIcon icon='triangleup' color='grayscarpaflow' />
+      <SvgIcon icon='triangledown' color='grayscarpaflow' />
+      <SvgIcon icon='hamburger' color='grayscarpaflow' />
+      <SvgIcon icon='magnifier' color='grayscarpaflow' />
+      <SvgIcon icon='edit' color='grayscarpaflow' />
+      <SvgIcon icon='check' color='grayscarpaflow' />
+      <SvgIcon icon='play' color='grayscarpaflow' />
+      <SvgIcon icon='pause' color='grayscarpaflow' />
+      <SvgIcon icon='paperplane' color='grayscarpaflow' />
+      <SvgIcon icon='archive' color='grayscarpaflow' />
+      <SvgIcon icon='list' color='grayscarpaflow' />
+      <SvgIcon icon='grid' color='grayscarpaflow' />
+      <SvgIcon icon='dock' color='grayscarpaflow' />
+      <SvgIcon icon='show' color='grayscarpaflow' />
+      <SvgIcon icon='github' color='grayscarpaflow' />
+      <SvgIcon icon='linkedin' color='grayscarpaflow' />
+      <SvgIcon icon='stackoverflow' color='grayscarpaflow' />
+      <SvgIcon icon='redirect' color='grayscarpaflow' />
+      <SvgIcon icon='filter' color='grayscarpaflow' />
+      <SvgIcon icon='link' color='grayscarpaflow' />
+      <SvgIcon icon='plusquare' color='grayscarpaflow' />
     </div>
   ))
   .add('text gray color', () => (
@@ -201,6 +245,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='text' />
       <SvgIcon icon='filter' color='text' />
       <SvgIcon icon='link' color='text' />
+      <SvgIcon icon='plusquare' color='text' />
     </div>
   ))
   .add('muted gray color', () => (
@@ -240,6 +285,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='mutedgray' />
       <SvgIcon icon='filter' color='mutedgray' />
       <SvgIcon icon='link' color='mutedgray' />
+      <SvgIcon icon='plusquare' color='mutedgray' />
     </div>
   ))
   .add('hover color', () => (
@@ -279,6 +325,47 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='redirect' color='text' hover='default' />
       <SvgIcon icon='filter' color='text' hover='default' />
       <SvgIcon icon='link' color='text' hover='default' />
+      <SvgIcon icon='plusquare' color='text' hover='default' />
+    </div>
+  ))
+  .add('rest of props', () => (
+    <div>
+      <SvgIcon icon='cog' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='head' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='webcam' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='message' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='terminal' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='diamond' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='talking' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='trophy' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='calendar' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='plus' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='minus' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='trashcan' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='trashcanAlt' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='x' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='add' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='triangleup' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='triangledown' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='hamburger' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='magnifier' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='edit' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='check' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='play' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='pause' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='paperplane' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='archive' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='list' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='grid' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='dock' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='show' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='github' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='linkedin' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='stackoverflow' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='redirect' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='filter' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='link' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='plusquare' style={{ marginRight: '30px' }} />
     </div>
   ))
   .add('missing props (does component explode?)', () => <SvgIcon />)
