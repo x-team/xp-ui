@@ -33,7 +33,8 @@ type Props = {
   onEdit: Function,
   onArchive: Function,
   onDelete: Function,
-  onCreateNew: Function
+  onCreateNew: Function,
+  onDismissDeletedMessages: Function
 }
 
 type DeleteConfirmation = {
@@ -248,6 +249,13 @@ class ListsEditor extends Component<Props, State> {
     }))
   }
 
+  handleDismissDeletedMessage = (item: Item) => {
+    const { onDismissDeletedMessages } = this.props
+    if (item && item.id) {
+      onDismissDeletedMessages && onDismissDeletedMessages([item])
+    }
+  }
+
   handleCreateNew = (name: string) => {
     const { onCreateNew } = this.props
     onCreateNew && onCreateNew(name)
@@ -274,6 +282,7 @@ class ListsEditor extends Component<Props, State> {
           onArchive={item => this.handleArchiveItem(item)}
           onDelete={item => this.handleDeleteItem(item)}
           onCreateNew={active ? listName => this.handleCreateNew(listName) : undefined}
+          onDismissDeletedMessage={this.handleDismissDeletedMessage}
         />
         {confirmDeletion[currentListName] ? (
           <div className={cx.control}>
