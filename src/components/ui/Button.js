@@ -85,7 +85,7 @@ const contentStyles = {
 
   sourceSansPro: cmz(baseStyles.content, `
     & {
-      padding: 5px 10px;
+      padding: 1px 10px;
     }
 
     & span {
