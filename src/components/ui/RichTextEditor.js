@@ -13,7 +13,7 @@ require('tui-editor/dist/tui-editor.css') // editor ui
 require('tui-editor/dist/tui-editor-contents.css') // editor content
 require('highlight.js/styles/github.css') // code block highlight
 
-const cx = ('RichTextEditor', {
+const cx = {
   root: cmz(`
     & * {
       box-sizing: border-box;
@@ -38,7 +38,7 @@ const cx = ('RichTextEditor', {
     font-size: 12px;
     line-height: 20px;
   `)
-})
+}
 
 const excludedFromDefaultItems = ['codeblock', 'task', 'indent', 'outdent', 'table', 'image']
 
