@@ -13,7 +13,7 @@ require('tui-editor/dist/tui-editor.css') // editor ui
 require('tui-editor/dist/tui-editor-contents.css') // editor content
 require('highlight.js/styles/github.css') // code block highlight
 
-const cx = ('RishTextEditor', {
+const cx = ('RichTextEditor', {
   root: cmz(`
     & * {
       box-sizing: border-box;
@@ -42,7 +42,7 @@ const cx = ('RishTextEditor', {
 
 const excludedFromDefaultItems = ['codeblock', 'task', 'indent', 'outdent', 'table', 'image']
 
-export const toolbarItems = [
+const toolbarItems = [
   'heading',
   'bold',
   'italic',
@@ -65,7 +65,7 @@ export const toolbarItems = [
   'codeblock'
 ]
 
-export const defaultToolBarItems = toolbarItems.filter(item => !excludedFromDefaultItems.includes(item))
+const defaultToolBarItems = toolbarItems.filter(item => !excludedFromDefaultItems.includes(item))
 
 type Props = {
   disabled: boolean,
