@@ -26,6 +26,11 @@ storiesOf('UI Components/RichTextEditor', module)
       characterLimit={10}
     />
   ))
+  .add('with custom toolbar items', () => (
+    <RichTextEditor
+      toolbarItems={['heading', 'bold', 'italic']}
+    />
+  ))
   .add('with knobs', () => (
     <RichTextEditor
       disabled={boolean('disabled', false)}

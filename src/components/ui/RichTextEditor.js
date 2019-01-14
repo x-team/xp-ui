@@ -13,7 +13,7 @@ require('tui-editor/dist/tui-editor.css') // editor ui
 require('tui-editor/dist/tui-editor-contents.css') // editor content
 require('highlight.js/styles/github.css') // code block highlight
 
-const cx = {
+const cx = ('RishTextEditor', {
   root: cmz(`
     & * {
       box-sizing: border-box;
@@ -38,13 +38,41 @@ const cx = {
     font-size: 12px;
     line-height: 20px;
   `)
-}
+})
+
+const excludedFromDefaultItems = ['codeblock', 'task', 'indent', 'outdent', 'table', 'image']
+
+export const toolbarItems = [
+  'heading',
+  'bold',
+  'italic',
+  'strike',
+  'divider',
+  'hr',
+  'quote',
+  'divider',
+  'ul',
+  'ol',
+  'task',
+  'indent',
+  'outdent',
+  'divider',
+  'table',
+  'image',
+  'link',
+  'divider',
+  'code',
+  'codeblock'
+]
+
+export const defaultToolBarItems = toolbarItems.filter(item => !excludedFromDefaultItems.includes(item))
 
 type Props = {
   disabled: boolean,
   initialValue?: string,
   characterLimit: number,
   hideModeSwitch: boolean,
+  toolbarItems: Array<string>,
   handleChange({ markdown: string, plainText: string }): void
 }
 
@@ -57,6 +85,7 @@ class RichTextEditor extends Component<Props, State> {
     disabled: false,
     characterLimit: Infinity,
     hideModeSwitch: true,
+    toolbarItems: defaultToolBarItems,
     handleChange: () => {}
   }
 
@@ -81,7 +110,7 @@ class RichTextEditor extends Component<Props, State> {
   }
 
   componentDidMount () {
-    const { initialValue, hideModeSwitch, disabled } = this.props
+    const { initialValue, hideModeSwitch, disabled, toolbarItems } = this.props
 
     if (this.editSection.current) {
       this.editor = new Editor({
@@ -92,7 +121,8 @@ class RichTextEditor extends Component<Props, State> {
         previewStyle: 'vertical',
         height: 'auto',
         usageStatistics: false,
-        events: { change: this.onChange }
+        events: { change: this.onChange },
+        toolbarItems
       })
 
       this.editorContentsNode = this.editSection.current.querySelector(
