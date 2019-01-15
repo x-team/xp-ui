@@ -40,9 +40,7 @@ const cx = {
   `)
 }
 
-const excludedFromDefaultItems = ['codeblock', 'task', 'indent', 'outdent', 'table', 'image']
-
-const toolbarItems = [
+const defaultToolbarItems = [
   'heading',
   'bold',
   'italic',
@@ -53,19 +51,11 @@ const toolbarItems = [
   'divider',
   'ul',
   'ol',
-  'task',
-  'indent',
-  'outdent',
   'divider',
-  'table',
-  'image',
   'link',
   'divider',
-  'code',
-  'codeblock'
+  'code'
 ]
-
-const defaultToolBarItems = toolbarItems.filter(item => !excludedFromDefaultItems.includes(item))
 
 type Props = {
   disabled: boolean,
@@ -85,7 +75,7 @@ class RichTextEditor extends Component<Props, State> {
     disabled: false,
     characterLimit: Infinity,
     hideModeSwitch: true,
-    toolbarItems: defaultToolBarItems,
+    toolbarItems: defaultToolbarItems,
     handleChange: () => {}
   }
 
