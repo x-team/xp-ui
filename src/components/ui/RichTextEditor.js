@@ -40,11 +40,29 @@ const cx = {
   `)
 }
 
+const defaultToolbarItems = [
+  'heading',
+  'bold',
+  'italic',
+  'strike',
+  'divider',
+  'hr',
+  'quote',
+  'divider',
+  'ul',
+  'ol',
+  'divider',
+  'link',
+  'divider',
+  'code'
+]
+
 type Props = {
   disabled: boolean,
   initialValue?: string,
   characterLimit: number,
   hideModeSwitch: boolean,
+  toolbarItems: Array<string>,
   handleChange({ markdown: string, plainText: string }): void
 }
 
@@ -57,6 +75,7 @@ class RichTextEditor extends Component<Props, State> {
     disabled: false,
     characterLimit: Infinity,
     hideModeSwitch: true,
+    toolbarItems: defaultToolbarItems,
     handleChange: () => {}
   }
 
@@ -81,7 +100,7 @@ class RichTextEditor extends Component<Props, State> {
   }
 
   componentDidMount () {
-    const { initialValue, hideModeSwitch, disabled } = this.props
+    const { initialValue, hideModeSwitch, disabled, toolbarItems } = this.props
 
     if (this.editSection.current) {
       this.editor = new Editor({
@@ -92,7 +111,8 @@ class RichTextEditor extends Component<Props, State> {
         previewStyle: 'vertical',
         height: 'auto',
         usageStatistics: false,
-        events: { change: this.onChange }
+        events: { change: this.onChange },
+        toolbarItems
       })
 
       this.editorContentsNode = this.editSection.current.querySelector(
