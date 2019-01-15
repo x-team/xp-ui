@@ -1,0 +1,3673 @@
+
+      .AutoUI_ui_SvgIcon-20 {
+        stroke: rgb(246, 57, 84);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-25 {
+        stroke: rgb(255, 255, 255);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-30 {
+        stroke: rgb(52, 50, 59);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-35 {
+        stroke: rgb(178, 182, 188);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-40 {
+        stroke: rgb(92, 87, 101);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-45 {
+        stroke: rgb(52, 50, 59);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-50 {
+        stroke: rgb(240, 241, 244);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-57 {
+        stroke: rgb(246, 57, 84);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-62 {
+        stroke: rgb(255, 255, 255);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-67 {
+        stroke: rgb(52, 50, 59);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-72 {
+        stroke: rgb(178, 182, 188);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-77 {
+        stroke: rgb(92, 87, 101);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-82 {
+        stroke: rgb(52, 50, 59);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-87 {
+        stroke: rgb(240, 241, 244);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-94 {
+        fill: rgb(246, 57, 84);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-99 {
+        fill: rgb(255, 255, 255);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-104 {
+        fill: rgb(52, 50, 59);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-109 {
+        fill: rgb(178, 182, 188);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-114 {
+        fill: rgb(92, 87, 101);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-119 {
+        fill: rgb(52, 50, 59);
+      }
+    
+
+      .AutoUI_ui_SvgIcon-124 {
+        fill: rgb(240, 241, 244);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-131 {
+        fill: rgb(246, 57, 84);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-136 {
+        fill: rgb(255, 255, 255);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-141 {
+        fill: rgb(52, 50, 59);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-146 {
+        fill: rgb(178, 182, 188);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-151 {
+        fill: rgb(92, 87, 101);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-156 {
+        fill: rgb(52, 50, 59);
+      }
+    
+
+      svg:hover .AutoUI_ui_SvgIcon-161 {
+        fill: rgb(240, 241, 244);
+      }
+    
+
+    .AutoUI_ui_ActivityBar-12 {
+      flex: 1 0 100%;
+      flex-flow: row;
+      display: flex;
+      align-items: center;
+      font-family: Source Sans Pro;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1;
+    }
+    
+    .AutoUI_ui_ActivityBar-12 > * {
+      flex-shrink: 0;
+    }
+  
+.AutoUI_ui_ActivityBar-29 {
+    line-height: 1.57;
+    flex-shrink: 1;
+    padding: 0 8px;
+   
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+  }
+.AutoUI_ui_ActivityBar-39 {
+    padding: 1px 8px;
+    color: rgb(178, 182, 188);
+    border-left: 1px solid rgb(196, 196, 196);
+  }
+
+    .AutoUI_ui_ActivityLog-10 {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .AutoUI_ui_ActivityLog-10::after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 10px;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+    }
+  
+
+    .AutoUI_ui_ActivityLog-28::after {
+      border-top: 4px solid currentColor;
+    }
+  
+
+    .AutoUI_ui_ActivityLog-34::after {
+      border-bottom: 4px solid currentColor;
+    }
+  
+.AutoUI_ui_ActivityLog-40 {
+    padding: 0 0 0 1.2em;
+    margin: 0.5em 0;
+  }
+.AutoUI_ui_ActivityLog-45 {
+    line-height: 1.5;
+  }
+.AutoUI_ui_ActivityLog-49 {
+    display: none;
+  }
+.AutoUI_typo-22 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+  }
+.AutoUI_typo-28 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+  }
+.AutoUI_typo-34 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+  }
+.AutoUI_typo-40 {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+  }
+.AutoUI_typo-46 {
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: 400;
+  }
+.AutoUI_typo-53 {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+      .AutoUI_typo-61 {
+        font-size: 55px;
+        text-transform: uppercase;
+        margin: 0;
+        color: rgb(52, 50, 59);
+        letter-spacing: -1px;
+        line-height: 51px;
+
+        -ms-word-break: keep-all;
+        word-break: keep-all;
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        hyphens: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        .AutoUI_typo-61 {;
+          font-size: 35px;
+          line-height: 32px;
+        }
+      }
+    
+.AutoUI_typo-91 {
+      font-size: 36px;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+      color: rgb(52, 50, 59);
+      letter-spacing: -1px;
+      line-height: 49px;
+    }
+.AutoUI_typo-105 {
+      font-size: 24px;
+      margin: 0 0 10px;
+      color: rgb(52, 50, 59);
+      letter-spacing: -1px;
+      line-height: 36px;
+    }
+.AutoUI_typo-118 {
+      font-size: 19px;
+      color: rgb(52, 50, 59);
+      letter-spacing: -.3px;
+      line-height: 19px;
+      margin: 0;
+      text-transform: uppercase;
+    }
+.AutoUI_typo-132 {
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: 0 0 .5rem;
+      color: rgb(52, 50, 59);
+      letter-spacing: -.61px;
+      line-height: 30px;
+    }
+.AutoUI_typo-146 {
+      font-size: 18px;
+      color: rgb(246, 57, 84);
+      margin: .625rem 0;
+      letter-spacing: -.15px;
+      line-height: 24px;
+    }
+.AutoUI_typo-159 {
+      font-size: 12px;
+      text-transform: uppercase;
+      line-height: 18px;
+    }
+.AutoUI_typo-170 {
+      font-size: 20px;
+      color: rgb(52, 50, 59);
+      line-height: 30px;
+    }
+.AutoUI_typo-181 {
+      font-size: 18px;
+      color: rgb(52, 50, 59);
+      line-height: 30px;
+    }
+
+    .AutoUI_typo-192 {
+      display: block;
+      position: relative;
+      width: 3.5rem;
+      height: 2px;
+      margin: 40px 0 35px;
+      background-color: rgb(246, 57, 84);
+    }
+
+    @media screen and (max-width: 768px) {
+      .AutoUI_typo-192 {;
+        width: 2rem;
+      }
+    }
+  
+.AutoUI_ui_Button-44 {
+    display: inline-block;
+    border: 2px solid transparent;
+    background: transparent;
+    text-align: center;
+    outline: none;
+    margin: 2px auto;
+    padding: 10px 19px;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .3s ease-out;
+    position: relative;
+    font-size: 1rem;
+  }
+.AutoUI_ui_Button-60 {font-size: inherit;}
+
+    .AutoUI_ui_Button-62 {
+      margin-right: 12px;
+      vertical-align: top;
+    }
+
+    .AutoUI_ui_Button-62 path {
+      transition: all .3s ease-out;
+    }
+  
+.AutoUI_ui_Button-76 {font-size: inherit;}
+
+    .AutoUI_ui_Button-78 span {
+      text-transform: initial;
+      font-size: 0.8125rem;
+      font-family: Open Sans;
+    }
+  
+
+    .AutoUI_ui_Button-86 {
+      padding: 1px 10px;
+    }
+
+    .AutoUI_ui_Button-86 span {
+      text-transform: initial;
+      font-size: 0.875rem;
+      font-family: Source Sans Pro;
+    }
+  
+
+    .AutoUI_ui_Button-101 {
+      background-color: rgb(19, 14, 46);
+      border-color: rgb(19, 14, 46);
+      color: rgb(255, 255, 255);
+    }
+
+    .AutoUI_ui_Button-101.outlined {
+      color: rgb(19, 14, 46);
+    }
+
+    .AutoUI_ui_Button-101:not(.readOnly):hover {
+      background-color: hsl(249.39999999999998, 53.3%, 17.6%);
+      border-color: hsl(249.39999999999998, 53.3%, 17.6%);
+      color: rgb(255, 255, 255);
+    }
+  
+
+    .AutoUI_ui_Button-120 {
+      background-color: rgb(246, 57, 84);
+      border-color: rgb(246, 57, 84);
+      color: rgb(255, 255, 255);
+    }
+
+    .AutoUI_ui_Button-120.outlined {
+      color: rgb(246, 57, 84);
+    }
+
+    .AutoUI_ui_Button-120:not(.readOnly):hover {
+      background-color: hsl(351.4, 91.3%, 47.5%);
+      border-color: hsl(351.4, 91.3%, 47.5%);
+      color: rgb(255, 255, 255);
+    }
+  
+
+    .AutoUI_ui_Button-139 {
+      background-color: rgb(233, 237, 238);
+      border-color: rgb(233, 237, 238);
+      color: rgb(0, 0, 0);
+    }
+
+    .AutoUI_ui_Button-139.outlined {
+      color: rgb(0, 0, 0);
+    }
+
+    .AutoUI_ui_Button-139.outlined.raised:not(.readOnly):hover {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    .AutoUI_ui_Button-139:not(.readOnly):hover {
+      background-color: hsl(192, 12.8%, 90%);
+      border-color: hsl(192, 12.8%, 90%);
+      color: rgb(0, 0, 0);
+    }
+  
+
+    .AutoUI_ui_Button-163 {
+      background-color: rgb(249, 250, 251);
+      border-color: rgb(249, 250, 251);
+      color: rgb(184, 183, 188);
+    }
+
+    .AutoUI_ui_Button-163.outlined {
+      color: rgb(0, 0, 0);
+    }
+
+    .AutoUI_ui_Button-163.outlined.raised:not(.readOnly):hover {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    .AutoUI_ui_Button-163:not(.readOnly):hover {
+      background-color: rgb(255, 235, 237);
+      border-color: rgb(255, 235, 237);
+      color: rgb(246, 57, 84);
+    }
+
+    .AutoUI_ui_Button-163:not(.readOnly):hover svg path {
+      fill: rgb(246, 57, 84);
+    }
+  
+
+    .AutoUI_ui_Button-191 {
+      background-color: rgb(178, 182, 188);
+      border-color: rgb(178, 182, 188);
+      color: rgb(255, 255, 255);
+    }
+
+    .AutoUI_ui_Button-191.outlined {
+      color: rgb(0, 0, 0);
+    }
+
+    .AutoUI_ui_Button-191.outlined.raised:not(.readOnly):hover {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    .AutoUI_ui_Button-191:not(.readOnly):hover {
+      background-color: hsl(216, 6.9%, 70%);
+      border-color: hsl(216, 6.9%, 70%);
+      color: rgb(255, 255, 255);
+    }
+  
+.AutoUI_ui_Button-219 {
+    font-size: 10px !important;
+    padding: 8px 16px;
+  }
+.AutoUI_ui_Button-224 {font-size: 12px !important;}
+.AutoUI_ui_Button-226 {
+    font-size: 16px !important;
+    padding: 14px 24px;
+  }
+
+    .AutoUI_ui_Button-234, .AutoUI_ui_Button-234:hover {
+      background: rgb(228, 228, 228);
+      border-color: transparent;
+      color: rgb(255, 255, 255);
+      pointer-events: none;
+    }
+  
+
+    .AutoUI_ui_Button-243 {
+      background-color: transparent;
+    }
+
+    .AutoUI_ui_Button-243.AutoUI_ui_Button-120 AutoUI_ui_Button-44 {
+      color: rgb(246, 57, 84);
+    }
+
+    .AutoUI_ui_Button-243.AutoUI_ui_Button-101 AutoUI_ui_Button-44 {
+      color: rgb(19, 14, 46);
+    }
+
+    .AutoUI_ui_Button-243.disabled {
+      color: rgb(178, 182, 188);
+    }
+  
+.AutoUI_ui_Button-261 {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+  }
+.AutoUI_ui_Button-267 {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+.AutoUI_ui_Button-273 {
+    border-radius: 4px;
+  }
+.AutoUI_ui_Button-277 {
+    border-radius: 2px;
+  }
+
+    .AutoUI_ui_Button-281:not(.readOnly):hover {
+      box-shadow: 0 2px 10px 1px rgba(0, 0, 0, .08);
+    }
+  
+
+    .AutoUI_ui_Button-287.pseudolink {
+      border-color: transparent;
+      color: rgb(178, 182, 188);
+    }
+
+    .AutoUI_ui_Button-287.pseudolink > span {
+      text-transform: initial;
+    }
+
+    .AutoUI_ui_Button-287.pseudolink:not(.readOnly):hover {
+      background-color: rgb(249, 250, 251);
+      border-color: transparent;
+      color: rgb(0, 0, 0);
+    }
+  
+
+    .AutoUI_ui_Button-304 {
+      border-color: rgb(246, 57, 84);
+    }
+
+    .AutoUI_ui_Button-304.outlined.raised:not(.readOnly):hover {
+      box-shadow: none;
+      border-color: rgb(246, 57, 84);
+    }
+  
+
+    .AutoUI_ui_Button-315 {
+      border-top-left-radius: 0;
+    }
+
+    .AutoUI_ui_Button-315::before {
+      position: absolute;
+      left: -2px;
+      bottom: calc(100% - 5px);
+      content: attr(data-tag);
+      padding: 0 .5rem;
+      background-color: rgb(246, 57, 84);
+      font-weight: bold;
+      line-height: 2;
+      color: rgb(255, 255, 255);
+      font-size: .5rem;
+      text-transform: uppercase;
+      transition: all .3s ease-out;
+    }
+  
+
+    .AutoUI_ui_Button-336 {
+      background-color: rgb(255, 255, 255);
+      border-color: transparent;
+      color: rgb(246, 57, 84);
+      padding: 20px;
+    }
+
+    .AutoUI_ui_Button-336:not(.readOnly):hover {
+      background-color: rgb(249, 250, 251);
+      border-color: transparent;
+      color: hsl(351.4, 91.3%, 57.9%);
+    }
+
+    .AutoUI_ui_Button-336 > span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: initial;
+    }
+
+    .AutoUI_ui_Button-336 > span > svg {
+      margin-right: 10px;
+    }
+  
+
+    .AutoUI_ui_Button-362:hover {
+      cursor: initial;
+    }
+  
+.AutoUI_ui_TruncatedList-8 {
+    display: none;
+  }
+.AutoUI_ui_ActivityLogsDisplay-17 {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+.AutoUI_ui_ActivityLogsDisplay-23 {
+    display: flex;
+    margin-bottom: 0.6rem;
+  }
+.AutoUI_ui_ActivityLogsDisplay-28 {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 2rem;
+    min-width: 80px;
+    color: rgb(178, 182, 188);
+  }
+.AutoUI_ui_ActivityLogsDisplay-36 {
+    flex: 1;
+    word-break: break-word;
+    margin-right: 2rem;
+  }
+.AutoUI_ui_ActivityLogsDisplay-42 {
+    width: 200px;
+    max-width: 200px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+    .AutoUI_ui_ActivityLogsDisplay-51.outlined {
+      margin-top: 40px;
+      color: rgb(178, 182, 188);
+      border: 1px solid rgb(233, 237, 238);
+    }
+
+    .AutoUI_ui_ActivityLogsDisplay-51.outlined:hover {
+      background: rgb(249, 250, 251);
+    }
+  
+
+    .AutoUI_ui_Modal-21 {
+      background: rgba(0, 0, 0, .3);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      display: flex;
+      overflow: auto;
+      padding: 30px;
+      box-sizing: border-box;
+      z-index: 99999;
+      opacity: 0;
+      visibility: hidden;
+      outline: none;
+    }
+
+    .AutoUI_ui_Modal-21.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+.AutoUI_ui_Modal-43 {
+    position: relative;
+    background: white;
+    margin: auto;
+    max-width: 100%;
+    min-width: 38px;
+    min-height: 40px;
+  }
+.AutoUI_ui_Modal-52 {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+  }
+.AutoUI_ui_AdminScreen-12 {
+    height: 100%;
+    position: relative;
+  }
+.AutoUI_ui_AdminScreen-17 {
+    height: 56px;
+    position: relative;
+    z-index: 10000;
+  }
+.AutoUI_ui_Avatar-15 {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.AutoUI_ui_Avatar-21 {
+  max-width: 100%;
+  display:block;
+  height: auto;
+}
+.AutoUI_ui_Dropdown-17 {
+      position: relative;
+      display: inline-block;
+    }
+
+    .AutoUI_ui_Dropdown-24 {
+      font-weight: normal;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 16px;
+    }
+    .AutoUI_ui_Dropdown-24 > * {
+      margin: 0 0 0 6px;
+    }
+    .AutoUI_ui_Dropdown-24 > :first-child {
+      margin: 0;
+    }
+  
+.AutoUI_ui_Dropdown-40 {
+    width: 100%;
+    white-space: nowrap;
+  }
+.AutoUI_ui_Dropdown-44 {
+    padding: 10px;
+  }
+.AutoUI_ui_Dropdown-47 {
+    transform: translateY(-3px);
+  }
+.AutoUI_ui_Dropdown-50 {
+    position: absolute;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0 linear 0.1s, opacity 0.1s linear;
+    width: inherit;
+    top: 100%;
+  }
+.AutoUI_ui_Dropdown-59 {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+.AutoUI_ui_Dropdown-64 {
+    right: 0;
+  }
+.AutoUI_ui_Dropdown-67 {
+    top: unset;
+    bottom: 100%;
+  }
+
+    .AutoUI_ui_Dropdown-71 {
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      min-width: 190px;
+      border: 1px solid rgb(233, 237, 238);
+      background: white;
+      padding: 0 10px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .AutoUI_ui_Dropdown-71:before, .AutoUI_ui_Dropdown-71:after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      display: block;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+    }
+    .AutoUI_ui_Dropdown-71:before {
+      border-bottom: 10px solid rgb(233, 237, 238);
+      bottom: 100%;
+    }
+    .AutoUI_ui_Dropdown-71:after {
+      border-bottom: 10px solid rgb(255, 255, 255);
+      bottom: calc(100% - 1px);
+    }
+  
+
+    .AutoUI_ui_Dropdown-99:before {
+      border-top: 10px solid rgb(233, 237, 238);
+      border-bottom: none;
+      bottom: -10px;
+    }
+    .AutoUI_ui_Dropdown-99:after {
+      border-top: 10px solid rgb(255, 255, 255);
+      border-bottom: none;
+      bottom: -9px;
+    }
+  
+.AutoUI_ui_Dropdown-111 {
+    padding-top: 10px;
+  }
+.AutoUI_ui_Dropdown-114 {
+    padding-top: unset;
+    padding-bottom: 10px;
+  }
+.AutoUI_ui_Text-29 {
+  white-space: pre-line;
+  margin: 0;
+  clear: both;
+}
+.AutoUI_ui_Text-43 {margin: 15px 0;}
+.AutoUI_ui_Text-50 {text-align: center;}
+.AutoUI_ui_Text-52 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .AutoUI_ui_Text-57::after {
+    content: '*';
+    margin-left: 5px;
+    font-weight: bold;
+    color: rgb(246, 57, 84);
+  }
+
+.AutoUI_forms_InputField-44 {
+    
+  content: ' ';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+    top: 6px;
+    border: 1px solid rgb(230, 230, 237);
+    box-sizing: border-box;
+    left: 0;
+  }
+
+    .AutoUI_forms_InputField-52 {
+      display: none !important;
+    }
+
+    .AutoUI_forms_InputField-52:checked ~ span:after {
+      
+  content: ' ';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+      top: -1px;
+      right: -1px;
+      margin: 4px;
+      background-color: rgb(246, 57, 84);
+    }
+  
+.AutoUI_forms_InputField-66 {
+    margin-left: 50px;
+  }
+.AutoUI_forms_InputField-71 {
+    margin-left: 30px;
+    display: inherit;
+  }
+.AutoUI_forms_InputField-80 {
+  display: inline-block;
+  position: relative;
+}
+
+    .AutoUI_forms_InputField-89 {
+      position: relative;
+      display: table-cell;
+      margin: 0;
+      outline: none;
+      width: 100%;
+      height: 70px;
+      padding: 8px 18px;
+      border: 1px solid rgb(230, 230, 237);
+      box-sizing: border-box;
+      z-index: 2;
+    }
+
+    .AutoUI_forms_InputField-89::-webkit-input-placeholder {
+      color: rgb(145, 140, 160);
+    }
+
+    .AutoUI_forms_InputField-89::-moz-placeholder {
+      color: rgb(145, 140, 160);
+    }
+  
+.AutoUI_forms_InputField-113 {
+  margin-right: 10px;
+  display: inline-block;
+}
+.AutoUI_forms_InputField-118 {
+  background: rgb(247, 217, 220);
+  border-color: rgb(211, 47, 59);
+  color: rgb(211, 47, 59);
+}
+
+  .AutoUI_forms_InputField-124 {
+    position: relative;
+  }
+
+  .AutoUI_forms_InputField-124 input {
+    height: 50px;
+    background: transparent;
+  }
+
+  .AutoUI_forms_InputField-124 input::-webkit-clear-button {
+    display: none;
+  }
+
+  .AutoUI_forms_InputField-124 input::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  .AutoUI_forms_InputField-124 input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    background: transparent;
+    z-index: 2;
+  }
+
+  .AutoUI_forms_InputField-124 > svg {
+    position: absolute;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    right: 10px;
+    top: 50%;
+    z-index: 1;
+  }
+
+
+    .AutoUI_forms_InputField-164 {
+      display: none !important;
+    }
+
+    .AutoUI_forms_InputField-164:checked ~ span {
+      background-color: rgb(246, 57, 84);
+    }
+    .AutoUI_forms_InputField-164:checked ~ span:after {
+      opacity: 1;
+    }
+  
+
+    .AutoUI_forms_InputField-177 {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 6px;
+      left: 0;
+      border: 1px solid rgb(230, 230, 237);
+      border-radius: 4px;
+    }
+
+    .AutoUI_forms_InputField-177:after {
+      opacity: 0;
+      content: ' ';
+      position: absolute;
+      width: 8px;
+      height: 4px;
+      top: 5px;
+      left: 4px;
+      border: 2px solid rgb(255, 255, 255);
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      transition: all 0.25s ease;
+    }
+  
+
+    .AutoUI_forms_InputField-208 {
+      display: none !important;
+    }
+
+    .AutoUI_forms_InputField-208:checked ~ span:before {
+      background-color: rgb(247, 217, 220);
+    }
+
+    .AutoUI_forms_InputField-208:checked ~ span:after {
+      background-color: rgb(246, 57, 84);
+      transform: translate(100%, -50%);
+    }
+  
+
+    .AutoUI_forms_InputField-223 {
+      margin-left: 26px;
+      cursor: pointer;
+    }
+
+    .AutoUI_forms_InputField-223:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 46px;
+      height: 12px;
+      border-radius: 12px;
+      background-color: rgb(240, 241, 244);
+      transform: translateY(-50%);
+      transition: background-color 200ms ease-in-out;
+    }
+
+    .AutoUI_forms_InputField-223:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: rgb(178, 182, 188);
+      transform: translateY(-50%);
+      transition: transform 300ms ease-in-out, background-color 200ms ease-in-out;
+    }
+  
+.AutoUI_forms_InputField-259 {
+  height: auto;
+  line-height: 30px;
+  resize: vertical;
+}
+
+  .AutoUI_ui_SelectBox-18 {
+    position: absolute;
+    top: calc(50% - 7px);
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .AutoUI_ui_SelectBox-18 svg {
+    position: absolute;
+  }
+
+.AutoUI_ui_SelectBox-32 {
+    position: relative;
+    width: 100%;
+    font-size: 20px;
+  }
+.AutoUI_ui_SelectBox-38 {
+    background: rgb(255, 255, 255);
+    width: 100%;
+  }
+
+      .AutoUI_ui_SelectBox-43 {
+        font-size: 16px;
+        border: 1px solid rgb(233, 237, 238);
+        padding: 0 14px;
+        height: 40px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 2px;
+      }
+
+      .AutoUI_ui_SelectBox-43 > div {
+        width: inherit;
+      }
+    
+.AutoUI_ui_SelectBox-65 {
+    height: 1px;
+    border: none;
+    border-top: 1px solid rgb(233, 237, 238);
+  }
+
+    .AutoUI_ui_SelectBox-71 {
+      width: 100%;
+    }
+    .AutoUI_ui_SelectBox-71 > div {
+      display: block;
+      line-height: 1.2;
+    }
+    .AutoUI_ui_SelectBox-71 > div:first-of-type {
+      font-size: 13px;
+      color: rgb(178, 182, 188);
+      padding: 0;
+      transition: color .10s ease-out, font-size .10s ease-out;
+      height: 13px;
+    }
+    .AutoUI_ui_SelectBox-71 > div:first-of-type:empty {
+      height: 0;
+    }
+    .AutoUI_ui_SelectBox-71 > div:last-of-type {
+      width: calc(100% - 20px);
+      height: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0;
+      transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out;
+      opacity: 1;
+    }
+  
+
+    .AutoUI_ui_SelectBox-101 > div:first-of-type {
+      transition: color .10s ease-out, font-size .10s ease-out;
+    }
+    .AutoUI_ui_SelectBox-101 > div:last-of-type {
+      transition: opacity .10s ease-out, padding .10s ease-out, height .10s ease-out;
+      opacity: 0;
+      height: 0;
+    }
+  
+.AutoUI_ui_SelectBox-112 {
+    position: relative;
+  }
+.AutoUI_ui_SelectBox-117 {
+    padding: 23px 30px 20px 52px !important;
+    height: 60px !important;
+    width: 100%;
+  }
+.AutoUI_ui_SelectBox-123 {
+    font-size: 1rem !important;
+    padding: 20px 30px 18px 40px !important;
+    height: 40px !important;
+  }
+
+    .AutoUI_ui_SelectBox-129 {
+      position: absolute;
+      z-index: 5;
+      top: 23px;
+      left: 22px;
+    }
+    .AutoUI_ui_SelectBox-129 svg {
+      position: absolute;
+    }
+  
+.AutoUI_ui_SelectBox-141 {
+    top: 12px;
+    left: 14px;
+  }
+
+    .AutoUI_ui_SelectBox-146 {
+      position: absolute;
+      z-index: 5;
+      top: 50%;
+      right: 24px;
+    }
+    .AutoUI_ui_SelectBox-146 svg {
+      position: absolute;
+    }
+  
+.AutoUI_ui_SelectBox-158 {
+      right: 34px;
+    }
+.AutoUI_ui_SelectBox-165 {
+      right: 49px;
+      transform: scale(0.9);
+      top: calc(50% - 5px);
+    }
+.AutoUI_ui_SelectBox-174 {
+    font-size: 20px;
+    border-bottom: 1px solid transparent;
+  }
+.AutoUI_ui_SelectBox-179 {
+    font-size: 1rem;
+  }
+.AutoUI_ui_SelectBox-183 {
+    font-size: 1.063rem !important;
+    color: rgb(52, 50, 59) !important;
+  }
+
+    .AutoUI_ui_SelectBox-188 {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border: 1px solid rgb(233, 237, 238);
+      border-top: none;
+      overflow-y: auto;
+      background: rgb(255, 255, 255);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .AutoUI_ui_SelectBox-188:not(.expanded):empty {
+      border: none;
+    }
+  
+.AutoUI_ui_SelectBox-205 {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .15);
+  }
+
+    .AutoUI_ui_SelectBox-209 {
+      font-size: 20px;
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+    }
+    .AutoUI_ui_SelectBox-209:hover {
+      background-color: rgb(249, 250, 251);
+    }
+    .AutoUI_ui_SelectBox-209:last-child::after {
+      background-color: transparent;
+    }
+    .AutoUI_ui_SelectBox-209:hover .editableButton {
+      display: flex;
+    }
+  
+.AutoUI_ui_SelectBox-227 {
+    font-size: 1rem;
+    min-height: 40px;
+  }
+.AutoUI_ui_SelectBox-232 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 22px;
+    flex: 1 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+    .AutoUI_ui_SelectBox-242 {
+      font-size: 1rem;
+      padding: 0 14px;
+    }
+
+    .AutoUI_ui_SelectBox-242 label {
+      font-size: 1rem;
+    }
+  
+.AutoUI_ui_SelectBox-253 {
+    cursor: pointer;
+  }
+
+    .AutoUI_ui_SelectBox-257 {
+      position: relative;
+    }
+    .AutoUI_ui_SelectBox-257::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: calc(100% - 30px);
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      background-color: rgb(233, 237, 238);
+    }
+  
+.AutoUI_ui_SelectBox-273 {
+    border-bottom: 1px solid rgb(246, 57, 84);
+  }
+.AutoUI_ui_SelectBox-277 {
+    font-style: italic;
+  }
+
+    .AutoUI_ui_SelectBox-282 input {
+      border-bottom: 1px solid rgb(246, 57, 84) !important;
+    }
+  
+.AutoUI_ui_SelectBox-288 {
+    display: flex;
+    flex: 0 0 auto;
+  }
+.AutoUI_ui_SelectBox-293 {
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+  }
+.AutoUI_ui_SelectBox-300 {
+    display: none;
+  }
+.AutoUI_ui_SelectBox-304 {
+      font-size: 20px;
+      position: relative;
+      padding-left: 30px;
+      flex: 1 0 auto;
+    }
+.AutoUI_ui_SelectBox-314 {
+    font-size: 1rem;
+  }
+
+    .AutoUI_ui_SelectBox-318 {
+      position: absolute;
+      top: calc(50% - 9px);
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-top-color: rgb(233, 237, 238);
+      border-left-color: rgb(233, 237, 238);
+      animation: spinner 400ms linear infinite;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    @keyframes spinner {
+      0% {;
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  
+
+      .AutoUI_ui_SelectBox-348 {
+        font-size: 20px;
+        height: 30px;
+        flex: 0 0 70%;
+      }
+      .AutoUI_ui_SelectBox-348 input {
+        height: 30px !important;
+        padding: 0 !important;
+        border-top: none !important;
+        border-right: none !important;
+        border-left: none !important;
+        transition: all .2s ease;
+      }
+    
+
+    .AutoUI_ui_SelectBox-367 input {
+      font-size: 1rem;
+    }
+  
+.AutoUI_ui_SelectBox-373 {
+      font-size: 20px;
+      display: block;
+      margin: 15px 22px;
+    }
+.AutoUI_ui_SelectBox-382 {
+    font-size: 1rem;
+    padding: 0 14px;
+  }
+
+      .AutoUI_ui_SelectBox-387 {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        margin: 15px 22px;
+        color: rgb(246, 57, 84);
+        cursor: pointer;
+      }
+      .AutoUI_ui_SelectBox-387 svg {
+        transform: scale(.7);
+        margin-right: 8px;
+      }
+    
+.AutoUI_ui_SelectBox-405 {
+    font-size: 1rem;
+    padding: 0 14px;
+  }
+.AutoUI_ui_SelectBox-410 {
+    border-right: 1px solid rgb(233, 237, 238);
+    border-left: 1px solid rgb(233, 237, 238);
+  }
+
+    .AutoUI_ui_SelectBox-415 {
+      border-color: transparent;
+      margin: 0;
+    }
+    .AutoUI_ui_SelectBox-415:hover {
+      border-color: transparent;
+    }
+  
+
+    .AutoUI_ui_SelectBox-425 {
+      display: block;
+      min-height: 30px;
+      margin: 0;
+      padding: 0;
+      width: 70%;
+      flex: 1 0 auto;
+    }
+    .AutoUI_ui_SelectBox-425 p {
+      margin: 0;
+    }
+  
+.AutoUI_ui_SelectBox-439 {
+  }
+.AutoUI_ui_ApplicantBadge-55 {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  margin: 3px 0 0;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.AutoUI_ui_ApplicantBadge-66 {
+      background-color: rgb(95, 207, 33);
+    }
+.AutoUI_ui_ApplicantBadge-72 {
+      background-color: rgb(246, 57, 84);
+    }
+
+      .AutoUI_ui_ApplicantBadge-81 {
+        font-size: 16px;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(233, 237, 238);
+        padding: 20px 20px 10px;
+        display: grid;
+        grid-template: 'avatar name status' 'avatar infos infos' 'tags tags tags';
+        grid-template-columns: 50px 1fr auto;
+        grid-template-rows: minmax(10px, auto) auto auto;
+        grid-gap: 15px;
+        margin: 0 10px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .AutoUI_ui_ApplicantBadge-81:hover {
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .AutoUI_ui_ApplicantBadge-81::after {
+        content: '';
+        display: block;
+        width: calc(100% - 105px);
+        height: 1px;
+        position: absolute;
+        top: 42px;
+        left: 85px;
+        background: rgb(233, 237, 238);
+      }
+    
+
+    .AutoUI_ui_ApplicantBadge-116 {
+      border: 1px solid rgb(246, 57, 84);
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+      margin: 0;
+      padding: 30px 30px 20px;
+    }
+
+    .AutoUI_ui_ApplicantBadge-116::after {
+      width: calc(100% - 125px);
+      top: 52px;
+      left: 95px;
+    }
+  
+.AutoUI_ui_ApplicantBadge-131 {
+      grid-area: name;
+      display: flex;
+      align-items: flex-start;
+      font-size: 15px;
+      line-height: 1;
+      position: relative;
+      overflow: hidden;
+    }
+.AutoUI_ui_ApplicantBadge-143 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 8px;
+  }
+
+    .AutoUI_ui_ApplicantBadge-150 {
+      grid-area: avatar;
+      width: 50px;
+      height: 50px;
+    }
+
+    .AutoUI_ui_ApplicantBadge-150 > * {
+      max-width: 50px;
+    }
+  
+.AutoUI_ui_ApplicantBadge-162 {
+    grid-area: status;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+  }
+
+    .AutoUI_ui_ApplicantBadge-169 {
+      display: flex;
+      padding: 0;
+      margin: 0 0 0 5px;
+      border: 0;
+      border-radius: 2px;
+      cursor: pointer;
+      width: 14px;
+      height: 14px;
+      text-align: center;
+      line-height: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .AutoUI_ui_ApplicantBadge-169 svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .AutoUI_ui_ApplicantBadge-169:hover {
+      background: rgb(246, 57, 84);
+    }
+
+    .AutoUI_ui_ApplicantBadge-169:hover svg g,
+    .AutoUI_ui_ApplicantBadge-169:hover svg polyline {
+      stroke: white;
+    }
+  
+
+    .AutoUI_ui_ApplicantBadge-200 {
+      position: absolute;
+      right: -15px;
+      top: -15px;
+      display: flex;
+      grid-area: status;
+      visibility: hidden;
+      justify-content: flex-end;
+    }
+
+    .AutoUI_ui_ApplicantBadge-200 > div {
+      display: flex;
+    }
+  
+
+    .AutoUI_ui_ApplicantBadge-216:hover .controls {
+      visibility: visible;
+    }
+  
+.AutoUI_ui_ApplicantBadge-222 {
+    grid-area: infos;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+    .AutoUI_ui_ApplicantBadge-231 {
+      margin: 0 10px 6px 0;
+      line-height: 1;
+    }
+
+    .AutoUI_ui_ApplicantBadge-231:last-of-type {
+      margin-right: 0;
+    }
+  
+
+    .AutoUI_ui_ApplicantBadge-242 {
+      color: rgb(178, 182, 188);
+      margin: 0 0 6px 0;
+      cursor: pointer;
+      align-self: flex-end;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .AutoUI_ui_ApplicantBadge-242:hover {
+      color: rgb(19, 14, 46);
+    }
+  
+.AutoUI_ui_ApplicantBadge-257 {
+    display: inline-block;
+    color: rgb(178, 182, 188);
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1;
+    margin-right: 4px;
+  }
+.AutoUI_ui_ApplicantBadge-266 {
+    display: inline-block;
+    color: rgb(52, 50, 59);
+    white-space: normal;
+    font-size: 14px;
+    line-height: 1;
+  }
+.AutoUI_ui_ApplicantBadge-274 {
+    font-size: 15px;
+    color: rgb(52, 50, 59);
+    line-height: 1.4;
+  }
+.AutoUI_ui_ApplicantBadge-280 {
+    font-size: 14px;
+    grid-area: tags;
+    width: 100%;
+    margin: -10px 0 0;
+  }
+.AutoUI_ui_ApplicantBadge-287 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+    .AutoUI_ui_ApplicantBadge-293 {
+      font-size: 14px;
+      border: 1px solid rgb(233, 237, 238);
+      border-radius: 3px;
+      padding: 4px 10px;
+      text-transform: uppercase;
+      margin: 0 10px 5px 0;
+      white-space: nowrap;
+      color: rgb(52, 50, 59);
+      line-height: 1.3;
+    }
+
+    .AutoUI_ui_ApplicantBadge-293:first-of-type {
+      margin-left: 0;
+    }
+
+    .AutoUI_ui_ApplicantBadge-293:last-of-type {
+      margin-right: 0;
+    }
+  
+
+    .AutoUI_ui_ApplicantBadge-315 {
+      border: none;
+      padding: 0;
+      text-transform: initial;
+      margin: 0 10px;
+      cursor: pointer;
+      text-align: right;
+      flex: 1;
+    }
+
+    .AutoUI_ui_ApplicantBadge-315:hover {
+      color: rgb(19, 14, 46);
+    }
+  
+.AutoUI_ui_ApplicantBadge-331 {
+    border: none;
+    color: rgb(178, 182, 188);
+    font-size: 16px;
+  }
+.AutoUI_ui_ApplicantBadge-337 {
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+  }
+
+      .AutoUI_ui_ApplicantBadge-344 {
+        font-size: 16px;
+        background: rgb(255, 255, 255);
+        display: flex;
+        cursor: pointer;
+        padding: 14px;
+        color: rgb(52, 50, 59);
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .AutoUI_ui_ApplicantBadge-344:hover {
+        background: rgb(249, 250, 251);
+      }
+
+      .AutoUI_ui_ApplicantBadge-344 > * {
+        margin-right: 14px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        text-transform: initial;
+        box-sizing: border-box;
+      }
+    
+.AutoUI_ui_ApplicantBadge-373 {
+      width: 300px;
+      white-space: normal;
+      order: 2;
+      font-weight: normal;
+      position: relative;
+    }
+.AutoUI_ui_ApplicantBadge-383 {
+    padding-right: 8px;
+  }
+.AutoUI_ui_ApplicantBadge-387 {
+    width: 42px;
+    order: 1;
+  }
+.AutoUI_ui_ApplicantBadge-392 {
+    display: none;
+  }
+.AutoUI_ui_ApplicantBadge-396 {
+    margin-left: 10px;
+  }
+.AutoUI_ui_ApplicantBadge-400 {
+    order: 4;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+.AutoUI_ui_ApplicantBadge-408 {
+    width: 100px;
+    font-size: 16px;
+    margin: 0 14px;
+    text-align: center;
+    display: block;
+  }
+
+    .AutoUI_ui_ApplicantBadge-416 {
+      cursor: pointer;
+    }
+
+    .AutoUI_ui_ApplicantBadge-416:hover {
+      color: rgb(19, 14, 46);
+    }
+  
+.AutoUI_ui_ApplicantBadge-426 {
+    display: none;
+  }
+.AutoUI_ui_ApplicantBadge-430 {
+    display: block;
+    color: rgb(52, 50, 59);
+    line-height: 1.2;
+    white-space: normal;
+    font-size: 16px;
+  }
+.AutoUI_ui_ApplicantBadge-438 {
+    font-size: 15px;
+    color: rgb(52, 50, 59);
+    line-height: 1.4;
+  }
+.AutoUI_ui_ApplicantBadge-444 {
+    width: 260px;
+    order: 3;
+  }
+.AutoUI_ui_ApplicantBadge-449 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+    .AutoUI_ui_ApplicantBadge-454 {
+      margin: 0 10px 0 0;
+      white-space: nowrap;
+      color: rgb(52, 50, 59);
+      font-size: 16px;
+    }
+
+    .AutoUI_ui_ApplicantBadge-454::after {
+      content: ',';
+    }
+
+    .AutoUI_ui_ApplicantBadge-454:last-of-type {
+      margin-right: 0;
+    }
+
+    .AutoUI_ui_ApplicantBadge-454:last-of-type::after {
+      content: '';
+    }
+  
+
+    .AutoUI_ui_ApplicantBadge-475 {
+      border: none;
+      text-transform: initial;
+      cursor: pointer;
+    }
+
+    .AutoUI_ui_ApplicantBadge-475:hover {
+      color: rgb(19, 14, 46);
+    }
+  
+.AutoUI_ui_ApplicantBadge-487 {
+    border: none;
+  }
+
+    .AutoUI_ui_ApplicantBadge-491:empty {
+      display: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .AutoUI_ui_ApplicantBadge-491:not(:empty) {
+      display: flex;
+      order: 7;
+    }
+  
+.AutoUI_ui_ApplicantBadge-504 {
+      width: 100px;
+      font-size: 16px;
+      order: 5;
+      justify-content: center;
+      margin: 0 14px;
+      text-align: center;
+    }
+
+      .AutoUI_ui_ApplicantBadge-515 {
+        font-size: 16px;
+        width: 100px;
+        order: 6;
+        justify-content: center;
+        margin: 0 14px;
+      }
+
+      .AutoUI_ui_ApplicantBadge-515 div, .AutoUI_ui_ApplicantBadge-515 span {
+        font-size: 1.063rem;
+      }
+    
+.AutoUI_ui_ApplicantBadge-532 {
+      font-size: 1.063rem;
+      width: 100%;
+      height: 40px;
+      color: rgb(179, 179, 179);
+      background: rgb(233, 237, 238);
+      border: 1px solid rgb(233, 237, 238);
+      border-radius: 2px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      padding: 0 1.25rem;
+    }
+.AutoUI_ui_ApplicantBadge-549 {
+    width: 100%;
+  }
+
+  .AutoUI_ui_ApplicantGridHeader-43:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+
+      .AutoUI_ui_ApplicantGridHeader-57:after {
+        border-bottom: 4px solid rgb(52, 50, 59);
+      }
+
+      .AutoUI_ui_ApplicantGridHeader-57.isFitering:after {
+        border-bottom: 4px solid rgb(246, 57, 84);
+      }
+    
+
+      .AutoUI_ui_ApplicantGridHeader-67:after {
+        border-top: 4px solid rgb(52, 50, 59);
+      }
+
+      .AutoUI_ui_ApplicantGridHeader-67.isFitering:after {
+        border-top: 4px solid rgb(246, 57, 84);
+      }
+    
+
+      .AutoUI_ui_ApplicantGridHeader-80 {
+        display: inline-flex;
+        min-width: 100%;
+        padding: 14px 30px 14px 14px;
+        font-size: 14px;
+        line-height: 1.2;
+        border-top: 1px solid rgb(228, 228, 228);
+        position: sticky;
+        box-sizing: border-box;
+        z-index: 999;
+        text-transform: uppercase;
+        font-weight: bold;
+        background: rgb(249, 250, 251);
+      }
+
+      .AutoUI_ui_ApplicantGridHeader-80 > span {
+        margin-right: 14px;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+      }
+
+      .AutoUI_ui_ApplicantGridHeader-80 > span:first-of-type {
+        padding-right: 56px;
+      }
+  
+.AutoUI_ui_ApplicantGridHeader-107 {
+    display: inline-flex;
+    align-items: center;
+  }
+
+    .AutoUI_ui_ApplicantGridHeader-111 {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .AutoUI_ui_ApplicantGridHeader-111 > span {
+      text-align: center;
+      position: relative;
+      white-space: nowrap;
+    }
+  
+
+    .AutoUI_ui_ApplicantGridHeader-124 {
+      width: 100px;
+      margin: 0 14px;
+      text-align: center;
+    }
+
+    .AutoUI_ui_ApplicantGridHeader-124 > span {
+      white-space: nowrap;
+    }
+  
+.AutoUI_ui_ApplicantGridHeader-135 {
+    width: 150px;
+  }
+.AutoUI_ui_ApplicantGridHeader-138 {
+    width: 260px;
+  }
+.AutoUI_ui_ApplicantGridHeader-141 {
+    width: 300px;
+  }
+
+    .AutoUI_ui_ApplicantGridHeader-144 {
+      cursor: pointer;
+    }
+
+    .AutoUI_ui_ApplicantGridHeader-144:hover {
+      color: rgb(0, 0, 0);
+    }
+  
+
+    .AutoUI_ui_ApplicantGridHeader-153 {
+      margin-right: 10px;
+    }
+
+    .AutoUI_ui_ApplicantGridHeader-153 svg {
+      width: 12px;
+    }
+  
+.AutoUI_ui_ApplicantGridHeader-162 {
+    background: rgb(255, 255, 255);
+    margin-top: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  }
+.AutoUI_ui_ApplicantGridHeader-167 {
+    text-align: right;
+    padding: 10px;
+  }
+.AutoUI_ui_ApplicantGrid-17 {
+    outline: none;
+  }
+.AutoUI_ui_ApplicantGrid-23 {
+    display: block;
+  }
+.AutoUI_ui_ApplicantGrid-27 {
+    display: block;
+    margin: 0 0 6px;
+  }
+
+    .AutoUI_ui_ApplicantGrid-32 button {
+      margin: 10px;
+      width: calc(100% - 20px);
+    }
+  
+.AutoUI_ui_ApplicantGrid-41 {
+    outline: none;
+    overflow-y: auto;
+    overflow-x: visible;
+    height: calc(100% - 60px);
+  }
+.AutoUI_ui_ApplicantGrid-48 {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: calc(100vh - 220px);
+    min-width: 100%;
+  }
+.AutoUI_ui_ApplicantGrid-56 {
+    display: block;
+  }
+.AutoUI_ui_ApplicantGrid-60 {
+    display: block;
+    border-bottom: 1px solid rgb(249, 250, 251);
+  }
+
+    .AutoUI_ui_ApplicantGrid-65 button {
+      width: 100%;
+    }
+  
+.AutoUI_forms_ApplicantListFilter-9 {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+}
+.AutoUI_forms_ApplicantListFilter-15 {
+  text-align: right;
+}
+.AutoUI_forms_ApplicantListFilter-21 {
+  text-transform: capitalize;
+}
+.AutoUI_ui_HeaderBar-12 {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .25);
+  height: 58px;
+  padding-top: 28px;
+  width: 100%;
+}
+.AutoUI_ui_ApplicantScreen-15 {
+  max-width: 1280px;
+  margin: 93px auto 0;
+}
+.AutoUI_ui_AttachFiles-34 {
+  margin-top: 30px;
+}
+.AutoUI_ui_AttachFiles-38 {
+  position: relative;
+  display: flex;
+  align-items: start;
+  height: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgb(216, 216, 216);
+}
+
+    .AutoUI_ui_AttachFiles-47 {
+      width: 100%;
+      font-size: 16px;
+      line-height: 1.25;
+      text-align: left;
+      text-decoration: none;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .AutoUI_ui_AttachFiles-47:hover {
+      color: rgb(52, 50, 59);
+    }
+
+    .AutoUI_ui_AttachFiles-47[href]:hover {
+      color: rgb(246, 57, 84);
+    }
+  
+.AutoUI_ui_AttachFiles-71 {
+  cursor: pointer;
+  line-height: normal;
+}
+.AutoUI_ui_AttachFiles-76 {
+  position: absolute;
+  bottom: -2px;
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: rgb(246, 57, 84);
+  transition: width 0.5s;
+}
+.AutoUI_ui_AttachFiles-86 {
+  padding: 0 20px;
+}
+.AutoUI_ui_AttachFiles-90 {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  zIndex: -1;
+}
+.AutoUI_ui_CollapsibleSection-29 {display: flex;}
+.AutoUI_ui_CollapsibleSection-30 {cursor: pointer;}
+.AutoUI_ui_CollapsibleSection-31 {display: inline-block;}
+
+  .AutoUI_ui_CollapsibleSection-34 {
+    margin: 0;
+    padding: 32px 16px;
+    border-top: 1px solid rgb(230, 230, 237);
+    position: relative;
+  }
+
+  .AutoUI_ui_CollapsibleSection-34.AutoUI_ui_CollapsibleSection-31 {
+    padding: 0;
+    border: none;
+    flex: 1;
+  }
+
+  .AutoUI_ui_CollapsibleSection-34:first-child {
+    border-top: 1px solid transparent;
+  }
+
+
+  .AutoUI_ui_CollapsibleSection-54 {
+    margin: 0;
+    padding-right: 24px;
+  }
+
+  .AutoUI_ui_CollapsibleSection-29 .AutoUI_ui_CollapsibleSection-54 {
+    width: 200px;
+  }
+
+  .AutoUI_ui_CollapsibleSection-54:hover {
+    color: rgb(19, 14, 46);
+  }
+
+
+  .AutoUI_ui_CollapsibleSection-69 {
+    position: absolute;
+    top: 34px;
+    right: 10px;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    display: block;
+  }
+
+  .AutoUI_ui_CollapsibleSection-31 .AutoUI_ui_CollapsibleSection-69 {
+    top: 0;
+  }
+
+  .AutoUI_ui_CollapsibleSection-69 > svg {
+    width: 12px;
+    height: 12px;
+    display: block;
+  }
+
+
+  .AutoUI_ui_CollapsibleSection-29 .AutoUI_ui_CollapsibleSection-91 {
+    width: calc(100% - 200px);
+  }
+
+  .AutoUI_ui_CollapsibleSection-91 p {
+    line-height: 36px;
+  }
+
+  .AutoUI_ui_CollapsibleSection-91 > :only-child,
+  .AutoUI_ui_CollapsibleSection-91 > :nth-child(2) {
+    margin-top: 16px;
+  }
+
+  .AutoUI_ui_CollapsibleSection-29 .AutoUI_ui_CollapsibleSection-91 > :only-child,
+  .AutoUI_ui_CollapsibleSection-31 .AutoUI_ui_CollapsibleSection-91 > :only-child,
+  .AutoUI_ui_CollapsibleSection-30 .AutoUI_ui_CollapsibleSection-91 > :only-child {
+    margin-top: 0;
+  }
+
+
+  .AutoUI_ui_CollapsibleSection-112 {
+    padding-top: 8px;
+  }
+
+  .AutoUI_ui_CollapsibleSection-29 .AutoUI_ui_CollapsibleSection-112 {
+    padding: 0 80px 0 0;
+  }
+
+  .AutoUI_ui_CollapsibleSection-112 > :first-child {
+    margin-top: 0;
+  }
+
+  .AutoUI_ui_CollapsibleSection-112 > :last-child {
+    margin-bottom: 0;
+  }
+
+
+  .AutoUI_ui_CollapsibleSection-130 {
+    padding: 0 80px 0 32px;
+  }
+
+  .AutoUI_ui_CollapsibleSection-29 .AutoUI_ui_CollapsibleSection-130 {
+    padding: 0 80px 0 0;
+  }
+
+  .AutoUI_ui_CollapsibleSection-130 > :first-child {
+    margin-top: 0;
+  }
+
+.AutoUI_ui_ColorPalette-14 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.AutoUI_ui_ColorPalette-20 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 170px;
+    height: 90px;
+    margin: 10px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+  }
+.AutoUI_ui_ColorPalette-34 {
+  background-color: rgb(255, 255, 255);
+  padding: 4px;
+  text-align: center;
+  border-radius: 0 0 6px 6px;
+}
+
+  .AutoUI_ui_ErrorBox-17 {
+    color: hsl(351.4, 91.3%, 41.6%);
+    border: 2px solid rgb(246, 57, 84);
+    border-radius: .175em;
+    background: hsl(351.4, 91.3%, 98%);
+    margin: 10px 0;
+  }
+
+  .AutoUI_ui_ErrorBox-17 a {
+    color: hsl(351.4, 91.3%, 41.6%);
+  }
+
+.AutoUI_ui_ErrorBox-33 {
+  list-style-type: none;
+  padding: 3px;
+  text-align: center;
+}
+
+    .AutoUI_ui_FilterTag-11 {
+      margin-right: 10px;
+      margin-top: 10px;
+      cursor: default;
+      padding: 10px 10px 10px 19px;
+    }
+
+    .AutoUI_ui_FilterTag-11 > span {
+      display: flex;
+      align-items: center;
+    }
+  
+.AutoUI_ui_FilterTag-25 {
+    color: rgb(246, 57, 84);
+    cursor: pointer;
+    margin-left: 10px;
+    line-height: 15px;
+    font-size: 1.75rem;
+  }
+
+    .AutoUI_ui_Footer_Footer-20 {
+      position: relative;
+      width: calc(100% - 2rem);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    undefined {
+      padding-bottom: 6.5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .AutoUI_ui_Footer_Footer-20 {;
+        width: calc(100% - 4rem);
+        padding: 6.5rem 0;
+      }
+    }
+  
+
+    @media screen and (max-width: 1024px) {
+      .AutoUI_ui_Footer_Footer-40 {;
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .AutoUI_ui_Footer_Footer-40 {;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  
+
+    .AutoUI_ui_Footer_Footer-55:last-child {
+      margin-left: auto;
+      width: 15%;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .AutoUI_ui_Footer_Footer-55 {;
+        flex-grow: 1;
+        max-width: 28%;
+      }
+
+      .AutoUI_ui_Footer_Footer-55:last-child {
+        max-width: 120px;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .AutoUI_ui_Footer_Footer-55 {;
+        display: none;
+      }
+    }
+  
+
+    .AutoUI_ui_Footer_Footer-79 {
+      font-family: 'Open Sans', sans-serif;
+      color: rgb(19, 14, 46);
+      font-size: 12px;
+      overflow: hidden;
+      margin-top: 3.125rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgb(233, 237, 238);
+    }
+
+    @media screen and (max-width: 1024px) {
+      .AutoUI_ui_Footer_Footer-79 {;
+        margin: auto;
+        text-align: center;
+        font-size: 14px;
+        position: relative;
+        margin-bottom: 4.5rem;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .AutoUI_ui_Footer_Footer-79 {;
+        width: 80%;
+        margin-left: 20%;
+      }
+    }
+  
+
+      .AutoUI_ui_Footer_Footer-108 {
+        font-size: 12px;
+        font-weight: 400;
+        opacity: .5;
+        color: rgb(19, 14, 46);
+      }
+
+      @media screen and (max-width: 1024px) {
+        .AutoUI_ui_Footer_Footer-108 {;
+          font-size: 14px;
+        }
+      }
+    
+
+    .AutoUI_ui_Footer_Footer-126 {
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .AutoUI_ui_Footer_Footer-126 {;
+        display: none;
+      }
+    }
+  
+
+    .AutoUI_ui_Footer_FooterBrands-20 {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .AutoUI_ui_Footer_FooterBrands-20 {;
+        display: block;
+      }
+    }
+  
+
+    .AutoUI_ui_Footer_FooterBrands-35 {
+      line-height: 3rem;
+      margin-right: 1rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .AutoUI_ui_Footer_FooterBrands-35:last-child {
+      margin-right: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .AutoUI_ui_Footer_FooterBrands-35 {;
+        line-height: 4rem;
+        margin-right: 3rem;
+      }
+    }
+  
+.AutoUI_ui_Footer_FooterBrands-55 {
+    max-height: 4rem;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    opacity: 1;
+    transition: all .3s ease-in;
+  }
+
+    @media screen and (max-width: 1024px) {
+      .AutoUI_ui_Footer_FooterBrands-64 {;
+        margin: 1.5rem auto;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .AutoUI_ui_Footer_FooterBrands-64 {;
+        margin: 1.25rem auto;
+      }
+    }
+  
+
+      .AutoUI_ui_Footer_FooterBrands-78 {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgb(19, 14, 46);
+        text-transform: uppercase;
+        opacity: .5;
+        margin: 0;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .AutoUI_ui_Footer_FooterBrands-78 {;
+          line-height: 1.715;
+        }
+      }
+    
+
+      .AutoUI_ui_Footer_FooterList-22 {
+        font-size: 16px;
+        color: rgb(19, 14, 46);
+        opacity: .7;
+        text-decoration: none;
+      }
+
+      .AutoUI_ui_Footer_FooterList-22:hover {
+        opacity: 1;
+      }
+    
+
+    .AutoUI_ui_Footer_FooterList-38 {
+      margin-bottom: 11px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .AutoUI_ui_Footer_FooterList-38 {;
+        margin-top: 11px;
+      }
+    }
+  
+.AutoUI_ui_Footer_FooterList-50 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+      .AutoUI_ui_Footer_FooterList-56 {
+        font-size: 19px;
+        text-transform: uppercase;
+        letter-spacing: normal;
+        margin: 0 0 30px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .AutoUI_ui_Footer_FooterList-56:not(:nth-child(2)) {;
+          display: none;
+        }
+      }
+    
+
+    @media screen and (min-width: 1024px) {
+      .AutoUI_ui_Footer_FooterList-74 {;
+        display: none;
+      }
+    }
+  
+.AutoUI_ui_HorizontalRuler-12 {
+  height: 1px;
+  background-color: rgb(230, 230, 237);
+  border: 0;
+}
+
+    .AutoUI_ui_InlineEditor-12 {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .AutoUI_ui_InlineEditor-12:hover {
+      text-decoration: underline;
+    }
+  
+.AutoUI_ui_InlineEditor-23 {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+.AutoUI_ui_InlineEditor-28 {
+    padding: 10px 0;
+  }
+.AutoUI_forms_InputGroup-22 {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  width: 100%;
+}
+
+    .AutoUI_forms_InputGroup-31 {
+      width: 40%;
+      padding: 6px 12px;
+      text-align: left;
+      white-space: nowrap;
+      vertical-align: middle;
+      display: table-cell;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    .AutoUI_forms_InputGroup-31:first-child {
+      border-right: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+      .AutoUI_forms_InputGroup-31 {;
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  
+.AutoUI_ui_IssueCollectorButton-11 {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(246, 57, 84);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 9999;
+    bottom: 15px;
+    right: 15px;
+  }
+
+    .AutoUI_ui_Keywords-15 {
+      font-size: 16px;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    .AutoUI_ui_Keywords-15 .Select-control {
+      display: flex;
+      padding-left: 14px;
+      border: 1px solid rgb(233, 237, 238);
+      border-radius: 2px;
+    }
+    .AutoUI_ui_Keywords-15 .Select-control,
+    .AutoUI_ui_Keywords-15 .Select-control .Select-placeholder {
+      height: 40px;
+    }
+    .AutoUI_ui_Keywords-15 .Select-control .Select-placeholder {
+      line-height: 38px !important;
+      color: rgb(52, 50, 59);
+      cursor: text;
+      padding-left: 14px !important;
+    }
+    .AutoUI_ui_Keywords-15 .Select-control .Select-value .Select-value-label {
+      color: rgb(52, 50, 59);
+    }
+    .AutoUI_ui_Keywords-15 .Select-input input {
+      max-width: 165px;
+      border: none;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-left: 0;
+    }
+    .AutoUI_ui_Keywords-15.Select--multi .Select-control .Select-value {
+      padding: 0 !important;
+      line-height: initial !important;
+      margin: 0 5px 0 0;
+      font-size: 16px;
+    }
+    .AutoUI_ui_Keywords-15.Select--multi .Select-control .Select-input {
+      margin: 0 5px 0 0;
+      line-height: 40px;
+      height: 40px;
+      padding: 0 !important;
+    }
+    .AutoUI_ui_Keywords-15.Select--multi .Select-multi-value-wrapper {
+      white-space: nowrap;
+      flex: 1;
+      overflow-x: auto;
+      overflow-y: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .AutoUI_ui_Keywords-15.Select--multi .Select-control .Select-arrow-zone {
+      display: none;
+    }
+    .AutoUI_ui_Keywords-15.Select--multi .Select-control .Select-clear-zone {
+      padding-right: 10px;
+      padding-left: 10px;
+      width: 45px;
+    }
+    .AutoUI_ui_Keywords-15.Select--multi .Select-control .Select-clear-zone span {
+      line-height: 40px;
+    }
+  
+.AutoUI_ui_Tabs_Tabs-15 {
+    position: relative;
+    margin: 1em 0 1.5em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+  }
+.AutoUI_ui_Tabs_Tabs-22 {
+    padding: .5em .625em 0 0;
+    background: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    position: relative;
+  }
+.AutoUI_ui_Tabs_Tabs-29 {
+    list-style: none;
+    margin: 0 0 -1px;
+    padding-left: 0;
+    border: 0 solid rgb(216, 216, 216);
+    border-bottom-width: 1px;
+  }
+
+    .AutoUI_ui_Tabs_Tabs-37 {
+      border: 0 solid rgb(246, 57, 84);
+      width: 100%;
+      position: absolute;
+      bottom: -1px;
+    }
+
+    .AutoUI_ui_Tabs_Tabs-37.active {
+      border-bottom-width: 2px;
+      width: 100%;
+    }
+  
+
+    .AutoUI_ui_Tabs_Tabs-51 {
+      position: relative;
+      display: inline-block;
+      border-color: rgb(216, 216, 216);
+      border-style: solid;
+      user-select: none;
+      border-width: 0;
+      padding: 0 0 .6rem 0;
+      margin-right: 1rem;
+    }
+
+    .AutoUI_ui_Tabs_Tabs-51 > a {
+      position: relative;
+      display: block;
+      color: rgb(178, 182, 188);
+      outline: none;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .AutoUI_ui_Tabs_Tabs-51 > a:hover,
+    .AutoUI_ui_Tabs_Tabs-51 > a:focus {
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    .AutoUI_ui_Tabs_Tabs-51 > a:hover {
+      color: rgb(52, 50, 59);
+    }
+
+    .AutoUI_ui_Tabs_Tabs-51:hover {
+      cursor: pointer;
+      transition: all 1s ease-out;
+      transition-property: background-color, color;
+    }
+
+    .AutoUI_ui_Tabs_Tabs-51.active {
+      cursor: default;
+      transition-property: none;
+    }
+
+    .AutoUI_ui_Tabs_Tabs-51.active > a,
+    .AutoUI_ui_Tabs_Tabs-51.active > a:hover,
+    .AutoUI_ui_Tabs_Tabs-51.active > a:focus {
+      cursor: default;
+    }
+
+    .AutoUI_ui_Tabs_Tabs-51.active > a {
+      background-color: transparent;
+      color: rgb(52, 50, 59);
+    }
+  
+.AutoUI_ui_Tabs_Tabs-107 {
+    background-color: rgb(255, 255, 255);
+  }
+.AutoUI_ui_Tabs_Tabs-111 {
+    margin: 0 .5em .5em 0;
+  }
+.AutoUI_ui_ListsEditor-53 {
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+  }
+.AutoUI_ui_ListsEditor-59 {
+      margin: 0;
+      padding: 20px;
+      line-height: 1;
+    }
+.AutoUI_ui_ListsEditor-68 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    margin: 0;
+    padding: 20px;
+  }
+
+    .AutoUI_ui_ListsEditor-77 {
+      border-color: transparent;
+      margin: 0;
+    }
+
+    .AutoUI_ui_ListsEditor-77:hover {
+      border-color: transparent;
+    }
+  
+.AutoUI_ui_ListsEditor-88 {
+    margin: 0;
+  }
+
+    .AutoUI_ui_ListsEditor-92 {
+      margin: 0;
+    }
+
+    .AutoUI_ui_ListsEditor-92 nav {
+      margin: 0;
+      padding: 0;
+    }
+
+    .AutoUI_ui_ListsEditor-92 nav ul {
+      display: flex;
+      justify-content: space-around;
+      background: silver;
+      background-color: rgb(249, 250, 251);
+      border-color: rgb(249, 250, 251);
+      margin: 0;
+    }
+
+    .AutoUI_ui_ListsEditor-92 nav ul li {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .AutoUI_ui_ListsEditor-92 nav ul li a {
+      padding: 10px 40px;
+    }
+
+    .AutoUI_ui_ListsEditor-92 > div > div {
+      margin: 0;
+    }
+  
+
+    .AutoUI_ui_ListsEditor-126 p {
+      margin: 0;
+    }
+  
+
+    .AutoUI_ui_ListsEditor-132 > * {
+      margin-left: 10px;
+    }
+  
+.AutoUI_ui_ListsScreen-37 {
+    position: relative;
+    height: calc(100vh - 56px);
+  }
+.AutoUI_ui_ListsScreen-42 {
+    position: relative;
+  }
+.AutoUI_ui_ListsScreen-46 {
+    box-sizing: border-box;
+  }
+.AutoUI_ui_ListsScreen-50 {
+    box-sizing: border-box;
+  }
+.AutoUI_ui_ListsScreen-56 {
+    overflow-y: auto;
+  }
+.AutoUI_ui_ListsScreen-60 {
+    width: 530px;
+    border-right: 2px solid rgb(228, 228, 228);
+    background-color: rgb(249, 250, 251);
+  }
+.AutoUI_ui_ListsScreen-66 {
+    width: 530px;
+    position: fixed;
+    z-index: 9999;
+    background-color: rgb(249, 250, 251);
+  }
+.AutoUI_ui_ListsScreen-73 {
+    width: 530px;
+    min-height: calc(100vh - 56px);
+    padding: 220px 40px 30px;
+  }
+.AutoUI_ui_ListsScreen-79 {
+    width: calc(100% - 530px);
+    position: fixed;
+    left: 530px;
+    height: 100%;
+    overflow: auto;
+  }
+.AutoUI_ui_ListsScreen-87 {
+    position: relative;
+    z-index: 9999;
+    height: 60px;
+  }
+.AutoUI_ui_ListsScreen-93 {
+    overflow-y: auto;
+    height: calc(100vh - 56px - 60px);
+    box-sizing: border-box;
+  }
+.AutoUI_ui_ListsScreen-103 {
+    min-width: 100%;
+    width: 1516px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+.AutoUI_ui_ListsScreen-111 {
+    z-index: 9999;
+    min-width: 100%;
+    width: 1516px;
+  }
+.AutoUI_ui_ListsScreen-117 {
+    min-width: 100%;
+    width: 1516px;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex: 1;
+    padding: 0 30px;
+  }
+.AutoUI_ui_ListsScreen-127 {
+    display: none;
+  }
+.AutoUI_ui_ListsScreen-131 {
+    display: none;
+  }
+.AutoUI_ui_ListsScreen-135 {
+    display: none;
+  }
+.AutoUI_ui_Milestones-27 {
+    margin: 0 auto;
+    padding: 0 0 25px;
+    max-width: 1158px;
+  }
+.AutoUI_ui_Milestones-33 {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+    .AutoUI_ui_Milestones-42 {
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .AutoUI_ui_Milestones-42:before {
+      content: '';
+      position: absolute;
+      height: .1em;
+      background-color: rgb(233, 237, 238);
+      width: 100%;
+      left: -50%;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .25s ease-out;
+      z-index: 1;
+    }
+
+    .AutoUI_ui_Milestones-42:after {
+      content: '';
+      position: absolute;
+      height: .1em;
+      background-color: rgb(246, 57, 84);
+      width: 0;
+      left: -50%;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .25s ease-out;
+      z-index: 2;
+    }
+
+    .AutoUI_ui_Milestones-42:first-child:before {
+      display: none;
+    }
+
+    .AutoUI_ui_Milestones-42:first-child:after {
+      display: none;
+    }
+
+    .AutoUI_ui_Milestones-42.isComplete + .AutoUI_ui_Milestones-42.isCurrent:after {
+      width: 100%;
+    }
+
+    .AutoUI_ui_Milestones-42.isComplete + .AutoUI_ui_Milestones-42.isComplete:after {
+      width: 100%;
+    }
+  
+
+    .AutoUI_ui_Milestones-92 {
+      position: relative;
+      display: inline-block;
+      width: 1.9em;
+      height: 1.9em;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid rgb(233, 237, 238);
+      border-radius: 50%;
+      padding: .5em;
+      max-width: 100%;
+      transition: all .25s ease-out;
+      z-index: 10;
+    }
+
+    .isCurrent .AutoUI_ui_Milestones-92 {
+      background-color: rgb(246, 57, 84);
+      border-color: transparent;
+    }
+
+    .isComplete .AutoUI_ui_Milestones-92 {
+      background-color: rgb(255, 255, 255);
+      border: 2px solid rgb(246, 57, 84);
+    }
+
+    .AutoUI_ui_Milestones-92 > svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 47%;
+      height: 47%;
+    }
+  
+.AutoUI_ui_Milestones-127 {
+      display: block;
+      color: rgb(52, 50, 59);
+      position: absolute;
+      padding-top: .5em;
+      width: 100%;
+      transition: all .25s ease-out;
+    }
+.AutoUI_ui_Milestones-139 {cursor: pointer;}
+
+  .AutoUI_ui_MilestonesScreen-22 {
+    max-width: 840px;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .AutoUI_ui_MilestonesScreen-22 {;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .AutoUI_ui_MilestonesScreen-22 {;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+
+  .AutoUI_ui_MilestonesScreen-45 > *:only-child,
+  .AutoUI_ui_MilestonesScreen-45 > *:first-child {
+    border-top: none !important;
+    padding-top: 0 !important;
+  }
+
+  .AutoUI_ui_MilestonesScreen-45 > *:only-child,
+  .AutoUI_ui_MilestonesScreen-45 > *:last-child {
+    padding-bottom: 27px;
+  }
+
+
+  .AutoUI_ui_MilestonesScreen-58:not(:empty) {
+    padding: 80px 0 84px;
+    border-top: 1px solid rgb(233, 237, 238);
+  }
+
+.AutoUI_ui_FileLink-16 {
+  display: flex;
+}
+ .AutoUI_ui_FileLink-20 a {
+      font-size: 16px;
+      color: rgb(246, 57, 84);
+      text-decoration: none;
+    }
+
+    .AutoUI_ui_FileLink-20 a:hover {
+      text-decoration: underline;
+    }
+  
+.AutoUI_ui_FileLinks-17 {
+  margin: 0 0 10px;
+}
+.AutoUI_ui_PencilButton-13 {
+    background: transparent;
+    border: none;
+    opacity: 0;
+    padding: 5px;
+    transition: opacity .25s linear;
+    cursor: pointer;
+  }
+.AutoUI_ui_PencilButton-22 {
+    opacity: 1;
+  }
+
+    .AutoUI_ui_RichTextEditor-17 * {
+      box-sizing: border-box;
+      line-height: 1;
+    }
+
+    .AutoUI_ui_RichTextEditor-17 .CodeMirror-scroll {
+      overflow-x: hidden !important;
+    }
+
+    .AutoUI_ui_RichTextEditor-17 .te-ww-container .tui-editor-contents:first-child {
+      padding-bottom: 16px;
+    }
+  
+.AutoUI_ui_RichTextEditor-32 {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(233, 237, 238, 0.8);
+  }
+.AutoUI_ui_RichTextEditor-38 {
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+.AutoUI_ui_Note-21 {
+  position: relative;
+  display: flex;
+}
+.AutoUI_ui_Note-26 {
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.AutoUI_ui_Note-31 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.AutoUI_ui_Note-37 {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding-top: 4px;
+  margin-left: auto;
+}
+.AutoUI_ui_Note-45 {
+    font-size: 16px;
+    line-height: normal;
+    margin: 0;
+    text-transform: uppercase;
+  }
+.AutoUI_ui_Note-55 {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+.AutoUI_ui_Note-65 {
+    margin-bottom: 24px;
+  }
+
+    .AutoUI_ui_Note-71 p:first-of-type {
+      margin-top: 0;
+    }
+
+    .AutoUI_ui_Note-71 p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .AutoUI_ui_Note-71 a {
+      color: rgb(246, 57, 84);
+      text-decoration: none;
+    }
+
+    .AutoUI_ui_Note-71 a:hover {
+      text-decoration: underline;
+    }
+  
+
+  .AutoUI_ui_Note-92 * {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    color: rgb(52, 50, 59);
+    line-height: 1.5;
+  }
+  
+.AutoUI_ui_NotesFeed-24 {
+  width: 100%;
+}
+.AutoUI_ui_ProfileHeaderLinks-12 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 10px;
+    background-color: rgb(249, 250, 251);
+    border-bottom: 1px solid rgb(228, 228, 228);
+    z-index: 3;
+  }
+.AutoUI_ui_ProfileHeaderLinks-25 {
+    margin: 0 0 10px;
+    list-style-type: none;
+  }
+
+    .AutoUI_ui_ProfileHeaderLinks-30 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgb(194, 193, 197);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color .5s ease;
+      cursor: pointer;
+      padding: 0 20px;
+    }
+
+    .AutoUI_ui_ProfileHeaderLinks-30:hover {
+      color: rgb(52, 50, 59);
+    }
+  
+.AutoUI_ui_ProfileHeaderLinks-48 {
+    display: inline-block;
+  }
+.AutoUI_ui_ProfileHeaderLinks-52 {
+    color: rgb(52, 50, 59);
+  }
+
+    .AutoUI_ui_RoadmapTimelineElement-14 {
+      position: relative;
+      height: 100%;
+      min-height: 20px;
+    }
+
+    .AutoUI_ui_RoadmapTimelineElement-14:before {
+      /* this is the vertical line */;
+      content: '';
+      position: absolute;
+      top: 17px;
+      left: 7px;
+      overflow: hidden;
+      width: 2px;
+      height: 100%;
+      background: rgb(240, 241, 244);
+      animation: process .6s linear forwards;
+    }
+  
+
+    .AutoUI_ui_RoadmapTimelineElement-34:before {
+      background: rgb(246, 57, 84);
+    }
+  
+.AutoUI_ui_RoadmapTimelineElement-39 {
+    width: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+.AutoUI_ui_RoadmapTimelineElement-45 {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 0;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke: rgb(228, 228, 228);
+  }
+
+    .AutoUI_ui_RoadmapTimelineElement-52 {
+      stroke: rgb(246, 57, 84);
+      fill: none;
+      animation: stroke .6s cubic-bezier(.65, 0, .45, 1) forwards;
+    }
+
+    @keyframes stroke {
+      100% {;
+        stroke-dashoffset: 0;
+      }
+    }
+  
+.AutoUI_ui_RoadmapTimelineElement-65 {
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: rgb(255, 255, 255);
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0 0 0 rgb(246, 57, 84);
+    transition: box-shadow ease-in-out .2s;
+  }
+.AutoUI_ui_RoadmapTimelineElement-75 {
+    box-shadow: inset 0 0 0 8px rgb(246, 57, 84);
+  }
+.AutoUI_ui_RoadmapTimelineElement-78 {
+    transform-origin: 50% 50%;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+.AutoUI_ui_RoadmapTimelineElement-83 {
+    opacity: 1;
+  }
+.AutoUI_ui_Roadmap-27 {
+  display: flex;
+  flex-direction: column;
+}
+
+    .AutoUI_ui_Roadmap-40 {
+      position: relative;
+      width: 100%;
+      margin-top: -300px;
+      min-height: 600px;
+      padding: 10px 0;
+    }
+
+    .AutoUI_ui_Roadmap-40:first-child {
+      margin-top: 0;
+    }
+
+    .AutoUI_ui_Roadmap-40:last-child {
+      align-items: center;
+      margin-top: 0;
+      padding-top: 80px;
+    }
+
+    .AutoUI_ui_Roadmap-40:nth-child(even) {
+      align-items: flex-end;
+    }
+
+    @media screen and (max-width: 768px) {
+      .AutoUI_ui_Roadmap-40 {;
+        min-height: auto;
+      }
+
+      .AutoUI_ui_Roadmap-40,
+      .AutoUI_ui_Roadmap-40:first-child {
+        margin: 40px 0 0 0;
+      }
+
+      .AutoUI_ui_Roadmap-40,
+      .AutoUI_ui_Roadmap-40:nth-child(even) {
+        align-items: center;
+      }
+    }
+  
+
+  .AutoUI_ui_Roadmap-83 {
+    width: 45%;
+    min-height: 2rem;
+    z-index: 2;
+  }
+
+  .isFinal .AutoUI_ui_Roadmap-83 {
+    width: auto;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .AutoUI_ui_Roadmap-83 {;
+      width: 90%;
+    }
+
+    .isFinal .AutoUI_ui_Roadmap-83 {
+      width: 90%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+
+  .AutoUI_ui_Roadmap-109 {
+    width: 1px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    bottom: 307px;
+    left: 50%;
+    margin-left: -8px;
+    z-index: 1;
+  }
+
+  .isSecondLast .AutoUI_ui_Roadmap-109 {
+    bottom: 0;
+  }
+
+  .isFinal .AutoUI_ui_Roadmap-109 {
+    top: 17px;
+    height: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .AutoUI_ui_Roadmap-109 {;
+      display: none;
+    }
+  }
+
+
+  .AutoUI_ui_RoadmapHero-25 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 768px) {
+    .AutoUI_ui_RoadmapHero-25 {;
+      margin: 0 0 35px 0;
+    }
+  }
+
+
+    .AutoUI_ui_RoadmapHero-39 {
+      width: 60%;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .AutoUI_ui_RoadmapHero-39 {;
+        margin: 35px 0 ;
+        width: 85%;
+      }
+    }
+
+
+  .AutoUI_ui_RoadmapLevel-31 {
+    border: 1px solid rgb(228, 228, 228);
+    padding: 2.5rem;
+  }
+
+  .AutoUI_ui_RoadmapLevel-31:first-child {
+    margin-top: 0;
+  }
+
+  .AutoUI_ui_RoadmapLevel-31:last-child {
+    margin-bottom: 0;
+  }
+
+.AutoUI_ui_RoadmapLevel-46 {border: 1px solid rgb(246, 57, 84);}
+.AutoUI_ui_RoadmapLevel-47 {
+  text-align: center;
+  border: none;
+}
+.AutoUI_ui_RoadmapLevel-51 {margin-top: 3rem;}
+.AutoUI_ui_SearchForm-20 {
+    background-color: rgb(249, 250, 251);
+  }
+.AutoUI_ui_SearchForm-24 {
+    width: 100%;
+  }
+.AutoUI_ui_SearchForm-28 {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px;
+    padding: 20px 40px 0;
+  }
+.AutoUI_ui_SearchForm-35 {
+    width: calc(100% - 82px);
+    max-width: calc(100% - 82px);
+  }
+.AutoUI_ui_SearchForm-40 {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+    .AutoUI_ui_SearchForm-48 svg {
+      display: block;
+      padding: 10px;
+    }
+  
+
+    .AutoUI_ui_SearchForm-55 {
+      display: block;
+      flex: 1;
+      padding: 0;
+      margin-right: 16px;
+      max-width: calc(100% - 116px);
+    }
+
+    .AutoUI_ui_SearchForm-55 .Select-menu-outer {
+      width: 100%;
+    }
+  
+.AutoUI_ui_SearchForm-69 {
+    align-items: flex-end;
+    display: flex;
+    margin: 10px 0;
+    padding: 0 40px;
+  }
+.AutoUI_ui_SearchForm-76 {
+    display: inline-block;
+    width: calc(50% - 8px);
+    max-width: calc(50% - 8px);
+    margin-right: 16px;
+  }
+.AutoUI_ui_SearchForm-83 {
+    display: inline-block;
+    width: calc(50% - 8px);
+    max-width: calc(50% - 8px);
+  }
+.AutoUI_ui_SearchForm-89 {
+    display: flex;
+    margin: 10px 0 0;
+    padding: 0 40px 10px;
+  }
+.AutoUI_ui_SearchForm-95 {
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition: none;
+  }
+.AutoUI_ui_SearchForm-105 {
+    width: 100%;
+    background-color: rgb(249, 250, 251);
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+.AutoUI_ui_SearchForm-112 {
+    padding: 14px;
+  }
+.AutoUI_ui_SearchForm-118 {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+.AutoUI_ui_SearchForm-125 {
+    align-items: flex-end;
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    background-color: rgb(249, 250, 251);
+  }
+.AutoUI_ui_SearchForm-135 {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    width: 100%;
+    max-width: 300px;
+    min-width: 200px;
+  }
+.AutoUI_ui_SearchForm-144 {
+    width: inherit;
+    max-width: inherit;
+    min-width: inherit;
+  }
+.AutoUI_ui_SearchForm-150 {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+    .AutoUI_ui_SearchForm-158 svg {
+      display: block;
+      padding: 10px;
+    }
+  
+.AutoUI_ui_SearchForm-165 {
+    margin: 0 10px;
+    height: 40px;
+    flex: 1;
+    flex-shrink: 0;
+    min-width: 200px;
+    max-width: 350px;
+  }
+.AutoUI_ui_SearchForm-174 {
+    display: inline-flex;
+    align-items: flex-end;
+  }
+.AutoUI_ui_SearchForm-179 {
+    flex-shrink: 0;
+    max-width: 300px;
+    min-width: 200px;
+    margin: 0 10px;
+  }
+.AutoUI_ui_SearchForm-186 {
+    margin: 0 10px;
+    max-width: 300px;
+    min-width: 200px;
+  }
+.AutoUI_ui_SearchForm-192 {
+    flex: 1;
+    display: flex;
+    max-width: 100%;
+  }
+.AutoUI_ui_SearchForm-198 {
+    margin: 0 10px;
+    height: 40px;
+    padding: 10px 40px;
+    transition: none;
+  }
+
+    .AutoUI_ui_SearchForm-205 {
+      width: 100%;
+      padding: 20px 30px 0;
+      box-sizing: border-box;
+    }
+
+    .AutoUI_ui_SearchForm-205 > form {
+      border: none;
+    }
+  
+.AutoUI_ui_SearchForm-217 {
+    padding: 14px;
+  }
+.AutoUI_ui_SettingsScreen-13 {
+    height: calc(100vh - 86px);
+    position: relative;
+    display: flex;
+  }
+.AutoUI_ui_SettingsScreen-19 {
+    box-sizing: border-box;
+    height: 100%;
+    width: 315px;
+    overflow: auto;
+    background-color: rgb(249, 250, 251);
+    border-right: 2px solid rgb(228, 228, 228);
+    padding: 51px 50px 65px 70px;
+  }
+.AutoUI_ui_SettingsScreen-29 {
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0 0 40px;
+    color: rgb(90, 86, 101);
+  }
+.AutoUI_ui_SettingsScreen-37 {
+      font-size: 16px;
+      line-height: 1.6;
+      text-transform: uppercase;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: rgb(184, 183, 188);
+    }
+
+      .AutoUI_ui_SettingsScreen-49 {
+        margin: 20px 0;
+      }
+
+      .AutoUI_ui_SettingsScreen-49 a {
+        text-decoration: none;
+        color: rgb(184, 183, 188);
+        font-size: 13px;
+        letter-spacing: 1px;
+      }
+
+      .AutoUI_ui_SettingsScreen-49 a:hover,
+      .AutoUI_ui_SettingsScreen-49 a.activeLink {
+        color: rgb(90, 86, 101);
+      }
+    
+.AutoUI_ui_SettingsScreen-69 {
+    box-sizing: border-box;
+    height: 100%;
+    flex: 1;
+    overflow: auto;
+    padding: 65px 100px;
+  }
+.AutoUI_forms_SolutionForm_Title-16 {
+  margin: 0 0 35px 0;
+  text-align: left;
+}
+.AutoUI_forms_SolutionForm_index-27 {max-width: 840px;}
+.AutoUI_forms_SolutionForm_index-28 {outline: none;}
+.AutoUI_forms_SolutionForm_index-29 {text-decoration: none;}
+.AutoUI_forms_SolutionForm_index-34 {
+    text-align: left;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+.AutoUI_forms_SolutionForm_index-43 {
+    margin: 30px auto;
+    position: relative;
+  }
+
+    .AutoUI_forms_SolutionForm_index-52 {
+      display: block;
+      width: 100%;
+      height: 156px;
+      padding: 10px 20px;
+      margin-bottom: 100px;
+      resize: vertical;
+      border: 1px solid rgb(240, 241, 244);
+      box-sizing: border-box;
+    }
+
+    .AutoUI_forms_SolutionForm_index-52::-webkit-input-placeholder {
+      color: rgb(145, 140, 160);
+    }
+
+    .AutoUI_forms_SolutionForm_index-52::-moz-placeholder {
+      color: rgb(145, 140, 160);
+    }
+  
+.AutoUI_forms_SolutionForm_index-74 {
+  background: rgb(247, 217, 220);
+  border-color: rgb(211, 47, 59);
+  color: rgb(211, 47, 59);
+}
+
+  .AutoUI_ui_TextareaEditor_TextareaEditor-13 {
+    text-align: right;
+    color: rgb(246, 57, 84);
+    height: 40px;
+  }
+
+  .AutoUI_ui_TextareaEditor_TextareaEditor-13 > .hidden {
+    visibility: hidden;
+  }
+
+.AutoUI_ui_TextareaEditor_TextareaEditor-26 {max-width: 840px;}
+
+  .AutoUI_ui_TextareaEditor_TextareaEditor-29 {
+    display: block;
+    width: 100%;
+    padding: 8px 18px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(240, 241, 244);
+    overflow: scroll;
+    box-sizing: border-box;
+    line-height: 30px;
+  }
+
+  .AutoUI_ui_TextareaEditor_TextareaEditor-29 .editable {
+    height: 100%;
+    outline: none;
+  }
+
+  .AutoUI_ui_TextareaEditor_TextareaEditor-29 :first-child {
+    margin-top: 0;
+  }
+
+  .AutoUI_ui_TextareaEditor_TextareaEditor-29 :last-child {
+    margin-bottom: 0;
+  }
+
+.AutoUI_ui_TextareaEditor_TextareaEditor-58 {
+    font-weight: 300;
+    font-size: 18px;
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+.AutoUI_ui_TextareaEditor_TextareaEditor-71 {
+  resize: vertical;
+}
+.AutoUI_ui_Typography-14 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.AutoUI_ui_Typography-20 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 170px;
+    max-width: 370px;
+    min-height: 90px;
+    margin: 30px 10px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+  }
+.AutoUI_ui_Typography-35 {
+  text-align: center;
+  padding: 10px;
+  flex-grow: 1;
+}
+.AutoUI_ui_Typography-41 {
+  background-color: rgb(228, 228, 228);
+  padding: 4px;
+  text-align: center;
+  border-top: 1px solid rgb(52, 50, 59);
+}
+.AutoUI_ui_VideoPlayer-20 {
+  border: 0;
+}
+.AutoUI_ui_VideoPlayer-24 {
+  text-align: center;
+  margin: 0 auto 20px;
+}
+.AutoUI_ui_XIcon-11 {
+  width: 55px;
+  margin: 0 0 56px 0;
+}

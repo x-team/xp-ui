@@ -9,7 +9,7 @@
   "scripts": {
     "jest": "jest --roots=src",
     "start": "start-storybook -p 9001 -c .storybook",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js && node cmz-to-file.js > ./lib/styles.css && cmz-min lib/auto-ui.js > ./lib/auto-ui.min.js && cp lib/auto-ui.min.js lib/auto-ui.js && rm -rf lib/auto-ui.min.js",
     "watch": "npm run build -- --watch",
     "flow": "flow check src",
     "lint": "standard \"src/**/*.js\" \".jest/**/*.js\" \"jest.config.js\" \"__mocks__/**/*.js\" | snazzy",
