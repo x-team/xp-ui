@@ -1,4 +1,8 @@
 /* globals SyntheticEvent, HTMLElement */
+import formatDate from 'date-fns/format'
+import differenceInSeconds from 'date-fns/difference_in_seconds'
+import differenceInMinutes from 'date-fns/difference_in_minutes'
+import differenceInHours from 'date-fns/difference_in_hours'
 
 export function throttle (callback, timeout) {
   let now = Date.now()
@@ -50,3 +54,28 @@ export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
 }
 
 export const replaceBlankLinesForNewLines = (text: ?string): string => text ? text.replace(/(?:\r\n|\r|\n)/g, '<br>\n') : ''
+
+export function timeSince (date: Date | string | number | void | null, addSpaceAfterNumber = true) {
+  if (!(date instanceof Date)) {
+    date = new Date(date)
+  }
+
+  const now = new Date()
+  const hoursDelta = differenceInHours(now, date)
+
+  if (hoursDelta >= 24) {
+    return formatDate(date, 'DD MMM YY')
+  }
+
+  const minutesDelta = differenceInMinutes(now, date)
+
+  if (minutesDelta >= 60) {
+    return addSpaceAfterNumber ? `${hoursDelta} h ago` : `${hoursDelta}h ago`
+  }
+
+  if (differenceInSeconds(now, date) >= 60) {
+    return addSpaceAfterNumber ? `${minutesDelta} m ago` : `${minutesDelta}m ago`
+  }
+
+  return 'just now'
+}
