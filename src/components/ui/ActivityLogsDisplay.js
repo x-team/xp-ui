@@ -10,7 +10,6 @@ import typo from '../../styles/typo'
 import theme from '../../styles/theme'
 
 import type { ActivityLogPropsType } from './ActivityLog'
-import type { Node } from 'react'
 
 const cmz = require('cmz')
 
