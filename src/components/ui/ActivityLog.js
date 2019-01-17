@@ -53,7 +53,8 @@ const cx = {
 
 export type ActivityLogType = {
   label: string,
-  value: string
+  value: string,
+  info?: string
 }
 
 export type ActivityLogPropsType = {
@@ -93,12 +94,15 @@ class ActivityLog extends PureComponent<Props, State> {
             <span>: </span>
             <b>{groupValues}</b>
             <ul className={[cx.details, this.state.collapsed ? cx.collapsed : ''].join(' ')}>
-              {value.map(({ label, value }, i) => (
+              {value.map(({ label, value, info }, i) => (
                 <li className={cx.detail} key={i}>
                   {label && (
                     <span>{label}: </span>
                   )}
                   <b>{value}</b>
+                  {info && (
+                    <span>: {info}</span>
+                  )}
                 </li>
               ))}
             </ul>

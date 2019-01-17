@@ -33,6 +33,19 @@ storiesOf('UI Components/ActivityLogsDisplay/ActivityLog', module)
       }
     />
   ))
+  .add('grouped activities with extra details on elements elements', () => (
+    <ActivityLog
+      label={faker.random.words(2)}
+      value={Array(faker.random.number(3))
+        .fill({})
+        .map(() => ({
+          label: faker.random.words(2),
+          value: faker.random.words(2),
+          details: faker.random.words(5)
+        }))
+      }
+    />
+  ))
   .add('grouped activities with customised group values', () => (
     <ActivityLog
       label={faker.random.words(2)}

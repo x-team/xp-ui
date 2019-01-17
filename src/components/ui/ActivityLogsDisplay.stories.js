@@ -18,7 +18,8 @@ const sampleLogs = Array(30)
         .fill({})
         .map(() => ({
           label: faker.random.words(2),
-          value: faker.random.words(2)
+          value: faker.random.words(2),
+          details: faker.random.number(10) <= 2 ? '' : faker.random.words(2)
         })),
       groupValues: faker.random.words(2)
     }),
