@@ -1,6 +1,7 @@
 import React from 'react'
 import faker from 'faker'
 import { storiesOf } from '@storybook/react'
+import { object } from '@storybook/addon-knobs'
 
 import ActivityLogsDisplay from './ActivityLogsDisplay'
 
@@ -28,9 +29,9 @@ const sampleLogs = Array(30)
   }))
 
 storiesOf('UI Components/ActivityLogsDisplay', module)
-  .add('complete', () => (
+  .add('complete with random data with knobs', () => (
     <ActivityLogsDisplay
-      logs={sampleLogs}
+      logs={object('logs', sampleLogs)}
     />
   ))
   .add('missing props (does component explode?)', () => (
