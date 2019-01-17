@@ -23,6 +23,10 @@ const cx = {
     & .CodeMirror-scroll {
       overflow-x: hidden !important;
     }
+
+    & .te-ww-container .tui-editor-contents:first-child {
+      padding-bottom: 16px;
+    }
   `),
 
   disabledOverlay: cmz(`
