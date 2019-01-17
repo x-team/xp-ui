@@ -2,12 +2,14 @@
 
 import React from 'react'
 
+import ActivityLog from './ActivityLog'
 import Button from './Button'
 import TruncatedList from './TruncatedList'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
 
+import type { ActivityLogPropsType } from './ActivityLog'
 import type { Node } from 'react'
 
 const cmz = require('cmz')
@@ -43,6 +45,8 @@ const cx = {
     max-width: 200px
     text-align: left
     white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
   `),
 
   button: cmz(`
@@ -60,7 +64,7 @@ const cx = {
 
 type ActivityType = {
   date: string,
-  activity: Node,
+  activity: ActivityLogPropsType,
   user: string
 }
 
@@ -71,7 +75,7 @@ type Props = {
 const RenderItem = ({ date, activity, user }: ActivityType, i: number) => (
   <div className={cx.item} key={i}>
     <div className={cx.date}>{date}</div>
-    <div className={cx.activity}>{activity}</div>
+    <div className={cx.activity}><ActivityLog {...activity} /></div>
     <div className={cx.user}>{user}</div>
   </div>
 )

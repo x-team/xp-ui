@@ -21,6 +21,7 @@ storiesOf('UI Components/ActivityLogsDisplay/ActivityLog', module)
           value: faker.random.words(2)
         }))
       }
+      groupValues={faker.random.words(2)}
     />
   ))
   .add('missing props (does component explode?)', () => (
