@@ -41,3 +41,33 @@ storiesOf('UI Components/RichTextEditor', module)
       toolbarItems={array('Toolbar Items', ['heading', 'bold', 'italic'])}
     />
   ))
+  .add('viewer', () => (
+    <RichTextEditor
+      mode='viewer'
+      initialValue={`# Heading
+
+*Hello* <strong>world</strong>! <a href="https://www.google.com">HTML Link</a> and [Markdown Link](https://google.com)
+
+\`\`\`js
+(() => {
+  const person {
+    name: 'John',
+    age: 25,
+    married: true,
+    getData: function getData() {
+      return \`\${this.name} \${this.age} \${this.married}\`
+    }
+  }
+
+  return person
+})()
+\`\`\`
+
+*Italic text*
+
+---
+
+### Heading 3
+      `}
+    />
+  ))
