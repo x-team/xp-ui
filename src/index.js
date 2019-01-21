@@ -1,3 +1,4 @@
+import ActivityBar from './components/ui/ActivityBar'
 import ActivityLog from './components/ui/ActivityLog'
 import ActivityLogsDisplay from './components/ui/ActivityLogsDisplay'
 import AdminScreen from './components/ui/AdminScreen'
@@ -34,6 +35,7 @@ import Note from './components/ui/Note'
 import NotesFeed from './components/ui/NotesFeed'
 import PencilButton from './components/ui/PencilButton'
 import ProfileHeaderLinks from './components/ui/ProfileHeaderLinks'
+import RichTextEditor from './components/ui/RichTextEditor'
 import Roadmap from './components/ui/Roadmap'
 import RoadmapHero from './components/ui/RoadmapHero'
 import RoadmapLevel from './components/ui/RoadmapLevel'
@@ -53,6 +55,7 @@ import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
 
 export {
+  ActivityBar,
   ActivityLog,
   ActivityLogsDisplay,
   AdminScreen,
@@ -89,6 +92,7 @@ export {
   NotesFeed,
   PencilButton,
   ProfileHeaderLinks,
+  RichTextEditor,
   Roadmap,
   RoadmapHero,
   RoadmapLevel,

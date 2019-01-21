@@ -235,6 +235,8 @@ const cx = {
     align-items: center
     padding: 15px 22px
     flex: 1 0 auto
+    max-width: 100%
+    box-sizing: border-box
   `),
 
   controllableSmall: cmz(`
@@ -274,7 +276,6 @@ const cx = {
 
   message: cmz(`
     font-style: italic
-    flex: 1 0 auto
   `),
 
   // !important is used to override global input values
@@ -471,6 +472,7 @@ type Props = {
   onEdit?: Function,
   onArchive?: Function,
   onDelete?: Function,
+  onDismissDeletedMessage?: Function,
   append?: Element<*>|string,
   dismissTimeout?: number,
   areItemsToggleable?: boolean,
@@ -566,20 +568,32 @@ class SelectBox extends Component<Props, State> {
   }
 
   componentWillUnmount () {
+    const { items, onDismissDeletedMessage } = this.props
     this.timers.forEach(timer => {
       clearTimeout(timer)
     })
+    if (onDismissDeletedMessage) {
+      const deletedItems = (items && items.filter(item => item.status === STATUS.DELETED)) || []
+      deletedItems.forEach(item => {
+        onDismissDeletedMessage({
+          ...this.getUncachedItem(item)
+        })
+      })
+    }
   }
 
   setupDismissTimers = () => {
-    const { items, dismissTimeout } = this.props
-    const deletedItems = (items && items.filter(item => item.status === STATUS.DELETED)) || []
-    deletedItems.forEach(item => {
-      this.timers.push(setTimeout(() => {
-        const updatedItem = { ...item, status: 'dismissed' }
-        this.updateItemsState(updatedItem)
-      }, dismissTimeout))
-    })
+    const { items, dismissTimeout, onDismissDeletedMessage } = this.props
+    if (onDismissDeletedMessage) {
+      const deletedItems = (items && items.filter(item => item.status === STATUS.DELETED)) || []
+      deletedItems.forEach(item => {
+        this.timers.push(setTimeout(() => {
+          onDismissDeletedMessage({
+            ...this.getUncachedItem(item)
+          })
+        }, dismissTimeout))
+      })
+    }
   }
 
   mapItemsInput = (items: Array<Item>, view: Array<Item>): Array<Item> =>
@@ -751,8 +765,12 @@ class SelectBox extends Component<Props, State> {
 
   handleDismissDeleteMessage = (item: Item) => (event: Object) => {
     event.stopPropagation && event.stopPropagation()
-    const updatedItem = { ...item, status: 'dismissed' }
-    this.updateItemsState(updatedItem)
+    const { onDismissDeletedMessage } = this.props
+    if (onDismissDeletedMessage) {
+      onDismissDeletedMessage({
+        ...this.getUncachedItem(item)
+      })
+    }
   }
 
   handleByStoppingPropagation = (event: Object) => event.stopPropagation && event.stopPropagation()

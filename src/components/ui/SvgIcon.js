@@ -6,8 +6,8 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm'
-export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time'
+export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow'
 
 type Props = {
   icon: ?Icon,
@@ -35,6 +35,11 @@ const styles = {
     grayscale: cmz(`
       & {
         stroke: ${theme.iconGray}
+      }
+    `),
+    grayscarpaflow: cmz(`
+      & {
+        stroke: ${theme.iconGrayScarpaFlow}
       }
     `),
     text: cmz(`
@@ -69,6 +74,11 @@ const styles = {
         stroke: ${theme.iconGray}
       }
     `),
+    grayscarpaflow: cmz(`
+      svg:hover & {
+        stroke: ${theme.iconGrayScarpaFlow}
+      }
+    `),
     text: cmz(`
       svg:hover & {
         stroke: ${theme.iconTextGray}
@@ -99,6 +109,11 @@ const styles = {
     grayscale: cmz(`
       & {
         fill: ${theme.iconGray}
+      }
+    `),
+    grayscarpaflow: cmz(`
+      & {
+        fill: ${theme.iconGrayScarpaFlow}
       }
     `),
     text: cmz(`
@@ -133,6 +148,11 @@ const styles = {
         fill: ${theme.iconGray}
       }
     `),
+    grayscarpaflow: cmz(`
+      svg:hover & {
+        fill: ${theme.iconGrayScarpaFlow}
+      }
+    `),
     text: cmz(`
       svg:hover & {
         fill: ${theme.iconTextGray}
@@ -146,16 +166,15 @@ const styles = {
   }
 }
 
-const getIcon = ({ icon, color, hover }) => {
+const getIcon = ({ icon, color, hover, ...rest }) => {
   if (!icon) {
     return null
   }
-
   const strokeClassName = [styles.stroke[color], styles.strokeHover[hover || color]].join(' ')
   const fillClassName = [styles.fill[color], styles.fillHover[hover || color]].join(' ')
   const icons = {
     cog: (
-      <svg width='26px' height='26px' viewBox='0 0 26 26'>
+      <svg width='26px' height='26px' viewBox='0 0 26 26' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
           <g className={strokeClassName} strokeWidth='2' transform='translate(-402.000000, -198.000000)'>
             <g transform='translate(392.000000, 186.000000)'>
@@ -170,7 +189,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     head: (
-      <svg width='37px' height='43px' viewBox='0 0 37 43'>
+      <svg width='37px' height='43px' viewBox='0 0 37 43' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
           <g className={strokeClassName} strokeWidth='2' transform='translate(-269.000000, -1104.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
@@ -187,7 +206,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     webcam: (
-      <svg width='30px' height='43px' viewBox='0 0 30 43'>
+      <svg width='30px' height='43px' viewBox='0 0 30 43' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
           <g className={strokeClassName} strokeWidth='2' transform='translate(-929.000000, -1363.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
@@ -205,7 +224,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     message: (
-      <svg width='37px' height='36px' viewBox='0 0 37 36'>
+      <svg width='37px' height='36px' viewBox='0 0 37 36' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
           <g className={strokeClassName} strokeWidth='2' transform='translate(-269.000000, -1671.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
@@ -223,7 +242,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     terminal: (
-      <svg width='42px' height='37px' viewBox='0 0 42 37'>
+      <svg width='42px' height='37px' viewBox='0 0 42 37' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
           <g className={strokeClassName} strokeWidth='2' transform='translate(-929.000000, -1925.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
@@ -246,7 +265,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     diamond: (
-      <svg width='42px' height='39px' viewBox='0 0 42 39'>
+      <svg width='42px' height='39px' viewBox='0 0 42 39' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
           <g className={strokeClassName} strokeWidth='2' transform='translate(-270.000000, -2228.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
@@ -267,7 +286,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     talking: (
-      <svg width='42px' height='42px' viewBox='0 0 42 42'>
+      <svg width='42px' height='42px' viewBox='0 0 42 42' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
           <g className={strokeClassName} strokeWidth='2' transform='translate(-929.000000, -2519.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
@@ -286,7 +305,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     trophy: (
-      <svg width='42px' height='44px' viewBox='0 0 42 44'>
+      <svg width='42px' height='44px' viewBox='0 0 42 44' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round' strokeLinejoin='round'>
           <g className={strokeClassName} strokeWidth='2' transform='translate(-779.000000, -3206.000000)'>
             <g transform='translate(0.000000, 823.000000)'>
@@ -308,7 +327,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     plus: (
-      <svg width='20px' height='20px' viewBox='0 0 20 20'>
+      <svg width='20px' height='20px' viewBox='0 0 20 20' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g className={fillClassName} transform='translate(-1191.000000, -1411.000000)'>
             <g transform='translate(387.000000, 933.000000)'>
@@ -322,7 +341,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     minus: (
-      <svg width='20px' height='2px' viewBox='0 0 20 2'>
+      <svg width='20px' height='2px' viewBox='0 0 20 2' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g className={fillClassName} transform='translate(-1161.000000, -1106.000000)'>
             <g transform='translate(357.000000, 933.000000)'>
@@ -336,7 +355,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     calendar: (
-      <svg width='40px' height='40px' viewBox='0 0 16 16'>
+      <svg width='40px' height='40px' viewBox='0 0 16 16' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g className={fillClassName} transform='translate(-560.000000, -479.000000)'>
             <g transform='translate(363.000000, 309.000000)'>
@@ -352,7 +371,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     trashcan: (
-      <svg width='15px' height='18px' viewBox='0 0 15 18'>
+      <svg width='15px' height='18px' viewBox='0 0 15 18' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g className={fillClassName} transform='translate(-1272.000000, -1013.000000)'>
             <g transform='translate(1272.000000, 1013.000000)'>
@@ -369,13 +388,13 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     trashcanAlt: (
-      <svg width='14px' height='14px' viewBox='0 0 24 24'>
+      <svg width='14px' height='14px' viewBox='0 0 24 24' {...rest}>
         <path className={fillClassName} transform='scale(1.333) translate(-3, -3)' d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z' />
       </svg>
     ),
 
     x: (
-      <svg width='14px' height='14px' viewBox='0 0 14 14'>
+      <svg width='14px' height='14px' viewBox='0 0 14 14' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='square'>
           <g className={strokeClassName} strokeWidth='2' transform='translate(-1294.000000, -1073.000000)'>
             <g transform='translate(1300.899495, 1079.899495) rotate(45.000000) translate(-1300.899495, -1079.899495) translate(1293.899495, 1072.899495)'>
@@ -388,7 +407,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     add: (
-      <svg width='16px' height='16px' viewBox='0 0 16 16'>
+      <svg width='16px' height='16px' viewBox='0 0 16 16' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g transform='translate(-539.000000, -162.000000)'>
             <g transform='translate(539.000000, 162.000000)'>
@@ -409,7 +428,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     triangleup: (
-      <svg width='9px' height='5px' viewBox='0 0 9 5'>
+      <svg width='9px' height='5px' viewBox='0 0 9 5' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <polygon className={fillClassName} transform='translate(4.242641, 4.242641) rotate(225.000000) translate(-4.242641, -4.242641) ' points='7.24264069 1.24264069 7.24264069 7.24264069 1.24264069 7.24264069' />
         </g>
@@ -417,7 +436,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     triangledown: (
-      <svg width='9px' height='5px' viewBox='0 0 9 5'>
+      <svg width='9px' height='5px' viewBox='0 0 9 5' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <polygon className={fillClassName} transform='translate(4.242641, 0.242641) scale(1, -1) rotate(225.000000) translate(-4.242641, -0.242641) ' points='7.24264069 -2.75735931 7.24264069 3.24264069 1.24264069 3.24264069' />
         </g>
@@ -425,7 +444,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     hamburger: (
-      <svg width='16px' height='12px' viewBox='0 0 16 12'>
+      <svg width='16px' height='12px' viewBox='0 0 16 12' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='square'>
           <g className={strokeClassName} transform='translate(1.000000, 0.000000)'>
             <path d='M0.184210526,1 L13.8157895,1' />
@@ -437,7 +456,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     magnifier: (
-      <svg width='16px' height='17px' viewBox='0 0 16 17'>
+      <svg width='16px' height='17px' viewBox='0 0 16 17' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <circle className={strokeClassName} cx='7.5' cy='7.5' r='6.5' />
           <path className={strokeClassName} strokeLinecap='square' d='M11.7538745,12.6062275 L15.5,16.5' />
@@ -446,7 +465,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     edit: (
-      <svg width='14px' height='14px' viewBox='0 0 14 14'>
+      <svg width='14px' height='14px' viewBox='0 0 14 14' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <path className={fillClassName} d='M0,11.0444749 L0,14.0000305 L2.95555556,14.0000305 L11.5111111,5.36669717 L8.55555556,2.41114161 L0,11.0444749 Z M13.7666667,3.11114161 C14.0777778,2.8000305 14.0777778,2.33336383 13.7666667,2.02225272 L11.9777778,0.233333333 C11.6666667,-0.0777777778 11.2,-0.0777777778 10.8888889,0.233333333 L9.48888889,1.63333333 L12.4444444,4.58888889 L13.7666667,3.11114161 Z' fillRule='nonzero' />
         </g>
@@ -454,7 +473,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     check: (
-      <svg width='17px' height='13px' viewBox='0 0 17 13'>
+      <svg width='17px' height='13px' viewBox='0 0 17 13' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <polyline className={strokeClassName} strokeWidth='2' transform='translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) ' points='15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872' />
         </g>
@@ -462,7 +481,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     play: (
-      <svg width='14px' height='16px' viewBox='0 0 14 16'>
+      <svg width='14px' height='16px' viewBox='0 0 14 16' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g className={fillClassName} transform='translate(-760.000000, -380.000000)'>
             <g transform='translate(685.000000, 216.000000)'>
@@ -476,7 +495,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     pause: (
-      <svg width='14px' height='16px' viewBox='0 0 14 16'>
+      <svg width='14px' height='16px' viewBox='0 0 14 16' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <rect className={fillClassName} x='0' y='0' width='5' height='16' />
           <rect className={fillClassName} x='9' y='0' width='5' height='16' />
@@ -485,7 +504,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     paperplane: (
-      <svg width='17px' height='13px' viewBox='0 0 17 17'>
+      <svg width='17px' height='13px' viewBox='0 0 17 17' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='round'>
           <g className={[fillClassName, strokeClassName].join(' ')} transform='translate(-756.000000, -1327.000000)'>
             <g transform='translate(516.000000, 684.000000)'>
@@ -501,13 +520,13 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     archive: (
-      <svg width='14px' height='14px' viewBox='0 0 24 24'>
+      <svg width='14px' height='14px' viewBox='0 0 24 24' {...rest}>
         <path className={fillClassName} transform='scale(1.333) translate(-3, -3)' d='M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z' />
       </svg>
     ),
 
     list: (
-      <svg width='15px' height='16px' viewBox='0 0 15 16'>
+      <svg width='15px' height='16px' viewBox='0 0 15 16' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <rect className={fillClassName} x='3' y='0' width='12' height='2' />
           <rect className={fillClassName} x='3' y='7' width='12' height='2' />
@@ -520,7 +539,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     grid: (
-      <svg width='17px' height='17px' viewBox='0 0 17 17'>
+      <svg width='17px' height='17px' viewBox='0 0 17 17' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <rect className={strokeClassName} strokeWidth='2' x='1' y='1' width='5' height='5' />
           <rect className={strokeClassName} strokeWidth='2' x='1' y='11' width='5' height='5' />
@@ -531,7 +550,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     dock: (
-      <svg width='12px' height='13px' viewBox='0 0 12 13'>
+      <svg width='12px' height='13px' viewBox='0 0 12 13' {...rest}>
         <g stroke='none' strokeWidth='10' fill='none' fillRule='evenodd'>
           <g className={fillClassName} transform='translate(-7.000000, -7.000000)'>
             <g transform='translate(10.365228, 10.944176) rotate(-135.000000) translate(-10.365228, -10.944176) translate(5.865228, 2.944176)'>
@@ -543,13 +562,13 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     show: (
-      <svg width='25' height='28' viewBox='0 0 25 28' fill='none'>
+      <svg width='25' height='28' viewBox='0 0 25 28' fill='none' {...rest}>
         <path className={fillClassName} fillRule='evenodd' clipRule='evenodd' d='M25 5.55556C25 2.48889 22.5153 0 19.4514 0H5.54861C2.48306 0.00382996 0 2.49002 0 5.55556H2.77777C2.77777 4.02414 4.01721 2.7816 5.54861 2.77777H19.4514C20.9792 2.77777 22.2222 4.02222 22.2222 5.55556H25ZM10.368 16.6667H14.6319C13.3748 14.4892 13.7368 11.7388 15.5146 9.96074C17.2924 8.18272 20.0428 7.82039 22.2204 9.07733C24.3981 10.3343 25.46 12.8971 24.8097 15.3259C24.1593 17.7547 21.9588 19.4439 19.4444 19.4445H5.55554C3.04117 19.4439 0.840637 17.7547 0.190308 15.3259C-0.460052 12.8971 0.601898 10.3343 2.77954 9.07733C4.95718 7.82039 7.70755 8.18272 9.48538 9.96074C11.2632 11.7388 11.6252 14.4892 10.368 16.6667ZM19.4514 27.7778C22.5169 27.774 25 25.2878 25 22.2222H22.2222C22.2222 23.7536 20.9828 24.9962 19.4514 25H5.54861C4.01944 25 2.77777 23.7556 2.77777 22.2222H0C-0.00152588 25.2884 2.48245 27.7755 5.54861 27.7778H19.4514ZM5.55554 11.1111C4.02142 11.1111 2.77777 12.3548 2.77777 13.8889C2.77777 15.423 4.02142 16.6667 5.55554 16.6667C7.08966 16.6667 8.33331 15.423 8.33331 13.8889C8.33331 12.3548 7.08966 11.1111 5.55554 11.1111ZM16.6667 13.8889C16.6667 12.3548 17.9103 11.1111 19.4444 11.1111C20.9785 11.1111 22.2222 12.3548 22.2222 13.8889C22.2222 15.423 20.9785 16.6667 19.4444 16.6667C17.9103 16.6667 16.6667 15.423 16.6667 13.8889Z' fill='#5A5665' />
       </svg>
     ),
 
     github: (
-      <svg width='24px' height='24px' viewBox='0 0 24 24'>
+      <svg width='24px' height='24px' viewBox='0 0 24 24' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g className={fillClassName} transform='translate(-928.000000, -364.000000)' fillRule='nonzero'>
             <g transform='translate(685.000000, 216.000000)'>
@@ -565,7 +584,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     linkedin: (
-      <svg width='23px' height='24px' viewBox='0 0 23 24'>
+      <svg width='23px' height='24px' viewBox='0 0 23 24' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g className={fillClassName} transform='translate(-886.000000, -364.000000)' fillRule='nonzero'>
             <g transform='translate(685.000000, 216.000000)'>
@@ -581,7 +600,7 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     stackoverflow: (
-      <svg width='24px' height='24px' viewBox='0 0 24 24'>
+      <svg width='24px' height='24px' viewBox='0 0 24 24' {...rest}>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g transform='translate(-972.000000, -364.000000)'>
             <g transform='translate(685.000000, 216.000000)'>
@@ -600,27 +619,27 @@ const getIcon = ({ icon, color, hover }) => {
     ),
 
     redirect: (
-      <svg width='16' height='15' viewBox='0 0 16 15' fill='none'>
+      <svg width='16' height='15' viewBox='0 0 16 15' fill='none' {...rest}>
         <path className={strokeClassName} fillRule='evenodd' clipRule='evenodd' d='M13 13H2.5V2.5H7.75V1H2.5C1.6675 1 1 1.675 1 2.5V13C1 13.825 1.6675 14.5 2.5 14.5H13C13.825 14.5 14.5 13.825 14.5 13V7.75H13V13Z' />
         <path className={strokeClassName} fillRule='evenodd' clipRule='evenodd' d='M9.68 1V2.5H12.3725L5 9.8725L6.0575 10.93L13.43 3.5575V6.25H14.93V1H9.68Z' />
       </svg>
     ),
 
     filter: (
-      <svg width='14' viewBox='0 0 512 512'>
+      <svg width='14' viewBox='0 0 512 512' {...rest}>
         <path className={fillClassName} d='M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z' />
       </svg>
     ),
 
     link: (
-      <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+      <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg' {...rest}>
         <path className={fillClassName} fillRule='evenodd' d='M7.64629 7.64652C7.79867 7.49405 8.00193 7.41018 8.21853 7.41018C8.43512 7.41018 8.63838 7.49414 8.79076 7.64652L10.3396 9.19533C10.3932 9.24889 10.4659 9.27907 10.5417 9.27907C10.6174 9.27907 10.6903 9.24895 10.7438 9.19533L12.2926 7.64652C12.3463 7.59295 12.3763 7.52014 12.3763 7.44441C12.3763 7.36864 12.3462 7.29583 12.2926 7.24229L10.7438 5.69349C10.069 5.01889 9.17209 4.64746 8.2184 4.64746C7.26471 4.64746 6.3678 5.01892 5.69301 5.69339L1.04643 10.34C0.371647 11.0148 0 11.9118 0 12.8658C0 13.8199 0.371647 14.7166 1.04652 15.3909L2.59524 16.9396C3.26946 17.6143 4.16625 17.986 5.12025 17.986C6.07425 17.986 6.97126 17.6143 7.64611 16.9396L10.2646 14.3211C10.3488 14.2369 10.372 14.1092 10.3228 14.0008C10.2762 13.8982 10.1741 13.8331 10.0626 13.8331C9.95129 13.8399 9.8579 13.843 9.76575 13.843C9.03846 13.843 8.32319 13.6496 7.6974 13.2838C7.65243 13.2575 7.60266 13.2447 7.55324 13.2447C7.47928 13.2447 7.4061 13.2734 7.35101 13.3285L5.69308 14.9864C5.54042 15.139 5.33725 15.2232 5.12094 15.2232C4.90453 15.2232 4.70118 15.1392 4.54852 14.9864L2.99971 13.4376C2.84687 13.2851 2.76272 13.0822 2.76253 12.8662C2.76244 12.6497 2.84658 12.4461 2.99971 12.293L7.64629 7.64652Z' />
         <path className={fillClassName} fillRule='evenodd' d='M16.9392 2.33435L15.3904 0.941037C14.7161 0.334252 13.8194 0 12.8654 0C11.9114 0 11.0144 0.334168 10.3397 0.940953L7.72109 3.29758C7.63685 3.37336 7.61371 3.48825 7.66295 3.5858C7.70957 3.67803 7.81171 3.73658 7.92311 3.73658C8.03547 3.73033 8.1297 3.7275 8.22272 3.7275C8.95144 3.7275 9.66509 3.90137 10.2866 4.2303C10.3318 4.25422 10.3818 4.26579 10.4314 4.26579C10.5054 4.26579 10.5786 4.23999 10.6337 4.19046L12.2927 2.69797C12.4451 2.5608 12.6484 2.48536 12.8649 2.48536C13.0815 2.48536 13.2848 2.56089 13.4372 2.69797L14.986 4.09128C15.3012 4.37522 15.3012 4.83745 14.9859 5.12155L10.3395 9.3015C10.1871 9.43892 9.98423 9.51453 9.76811 9.51453C9.55148 9.51453 9.34785 9.43883 9.19463 9.30133L7.64616 7.90827C7.5925 7.86008 7.51982 7.83291 7.44405 7.83291C7.36828 7.83291 7.29547 7.86 7.24194 7.90827L5.69313 9.30159C5.58146 9.40205 5.58146 9.56485 5.69313 9.66531L7.24194 11.0586C7.91672 11.6657 8.81364 12 9.76733 12C10.721 12 11.618 11.6657 12.2927 11.0586L16.9393 6.87856C17.6141 6.27181 17.9857 5.46485 17.9857 4.60646C17.9857 3.74807 17.614 2.94114 16.9392 2.33435Z' />
       </svg>
     ),
 
     basecrm: (
-      <svg width='30' height='30' viewBox='0 0 30 30' fill='none'>
+      <svg width='30' height='30' viewBox='0 0 30 30' fill='none' {...rest}>
         <rect width='30' height='30' fill='url(#pattern0)' />
         <defs>
           <pattern id='pattern0' patternContentUnits='objectBoundingBox' width='1' height='1'>
@@ -628,6 +647,19 @@ const getIcon = ({ icon, color, hover }) => {
           </pattern>
           <image id='image0' width='300' height='300' href='data:image/png;base64,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' />
         </defs>
+      </svg>
+    ),
+
+    plusquare: (
+      <svg width='16' height='16' viewBox='0 0 16 16' fill='none' {...rest}>
+        <path className={fillClassName} fillRule='evenodd' d='M14.2857 0C14.7619 0 15.1667 0.166665 15.5 0.5C15.8333 0.833335 16 1.23809 16 1.71429V14.2857C16 14.7619 15.8333 15.1667 15.5 15.5C15.1667 15.8333 14.7619 16 14.2857 16H1.71429C1.23809 16 0.833335 15.8333 0.5 15.5C0.166665 15.1667 0 14.7619 0 14.2857V1.71429C0 1.23809 0.166665 0.833335 0.5 0.5C0.833335 0.166665 1.23809 0 1.71429 0H14.2857ZM7 9V13H9V9H13V7H9V3H7V7H3V9H7Z' fill='#B2B6BC' />
+      </svg>
+    ),
+
+    time: (
+      <svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <circle className={strokeClassName} cx='7' cy='7' r='6.5' />
+        <path className={strokeClassName} d='M7.53839 3.23077V7.53847H4.30762' />
       </svg>
     )
   }
@@ -642,8 +674,8 @@ class SvgIcon extends PureComponent<Props> {
   }
 
   render () {
-    const { icon, color, hover } = this.props
-    return getIcon({ icon, color, hover }) || null
+    const { icon, color, hover, ...rest } = this.props
+    return getIcon({ icon, color, hover, ...rest }) || null
   }
 }
 

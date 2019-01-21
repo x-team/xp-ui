@@ -237,7 +237,7 @@ class Dropdown extends PureComponent<Props, State> {
             <span className={styles.triangle}>
               <SvgIcon
                 icon={open ? 'triangleup' : 'triangledown'}
-                color='grayscale'
+                color='grayscarpaflow'
               />
             </span>
           )}
