@@ -235,6 +235,8 @@ const cx = {
     align-items: center
     padding: 15px 22px
     flex: 1 0 auto
+    max-width: 100%
+    box-sizing: border-box
   `),
 
   controllableSmall: cmz(`
@@ -274,7 +276,6 @@ const cx = {
 
   message: cmz(`
     font-style: italic
-    flex: 1 0 auto
   `),
 
   // !important is used to override global input values
