@@ -51,15 +51,19 @@ const cx = {
   `)
 }
 
-type ActivityLogType = {
+export type ActivityLogType = {
   label: string,
-  value: string
+  value: string,
+  info?: string
 }
 
-type Props = {
+export type ActivityLogPropsType = {
   label: string,
-  value: string | Array<ActivityLogType>
+  value: string | Array<ActivityLogType>,
+  groupValues: string
 }
+
+type Props = ActivityLogPropsType
 
 type State = {
   collapsed: boolean
@@ -73,7 +77,7 @@ class ActivityLog extends PureComponent<Props, State> {
   toggleItem = () => this.setState((prevState: State) => ({ collapsed: !prevState.collapsed }))
 
   render () {
-    const { label, value } = this.props
+    const { label, value, groupValues } = this.props
     const logClasses = []
     if (size(value) > 0) {
       logClasses.push(cx.log)
@@ -88,16 +92,25 @@ class ActivityLog extends PureComponent<Props, State> {
         {size(value) > 0 && (
           <Fragment>
             <span>: </span>
-            <b>
-              {value.map(detail => detail.label).join(', ')}
-            </b>
+            <b>{groupValues}</b>
             <ul className={[cx.details, this.state.collapsed ? cx.collapsed : ''].join(' ')}>
-              {value.map(({ label, value }, i) => (
+              {value.map((item, i) => (
                 <li className={cx.detail} key={i}>
-                  {label && (
-                    <span>{label}: </span>
+                  {item.label && (
+                    <span>{item.label}</span>
                   )}
-                  <b>{value}</b>
+                  {item.label && item.value && (
+                    <span>: </span>
+                  )}
+                  {item.value && (
+                    <b>{item.value}</b>
+                  )}
+                  {item.value && item.info && (
+                    <span>: </span>
+                  )}
+                  {item.info && (
+                    <span>{item.info}</span>
+                  )}
                 </li>
               ))}
             </ul>
