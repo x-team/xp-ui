@@ -10,116 +10,116 @@ import { timeSince } from '../../utils/helpers'
 
 import { textRendering, typeface } from '../../styles/typo'
 import theme from '../../styles/theme'
-import elem from '../../utils/elem'
 
 const cmz = require('cmz')
 
-const Root = elem.div(cmz(`
-  box-sizing: border-box;
-  position: relative;
-  border: 1px solid ${theme.lineSilver2};
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -o-border-radius: 2px;
-`))
+const cx = {
+  root: cmz(`
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid ${theme.lineSilver2};
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+  `),
 
-const HeaderContainer = elem.div(cmz(`
-  cursor: pointer;
-  padding: 30px 30px 30px 50px;
-`))
+  headerContainer: cmz(`
+    cursor: pointer;
+    padding: 30px 30px 30px 50px;
+  `),
 
-const TriangleIcon = elem.div(cmz(`
-  left: 20px;
-  position: absolute;
-`))
+  triangleIcon: cmz(`
+    left: 20px;
+    position: absolute;
+  `),
 
-const Header = elem.div(cmz(`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-`))
+  header: cmz(`
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  `),
 
-const HeaderInfo = elem.div(cmz(
-  textRendering,
-  typeface.extraHeading,
-  `
-  & {
-    font-size: 1.0625rem;
-    font-weight: normal;
-    max-width: calc(100% - 190px);
-    min-width: 250px;
-  }
+  headerInfo: cmz(
+    textRendering,
+    typeface.extraHeading,
+    `
+      & {
+        font-size: 1.0625rem;
+        font-weight: normal;
+        max-width: calc(100% - 190px);
+        min-width: 250px;
+      }
 
-  & > div {
-    margin-bottom: 8px;
-  }
-`))
+      & > div {
+        margin-bottom: 8px;
+      }
+    `
+  ),
 
-const Subject = elem.div(cmz(
-  textRendering,
-  typeface.extraHeading,
-  `
-    text-transform: uppercase;
-  `
-))
+  subject: cmz(
+    textRendering,
+    typeface.extraHeading,
+    `
+      text-transform: uppercase;
+    `
+  ),
 
-const From = elem.div()
-
-const To = elem.div()
-
-const ToEmail = elem.span(cmz(`
-  color: ${theme.typoLabel};
-`))
-
-const EmailDate = elem.div(cmz(
-  textRendering,
-  typeface.text,
-  `
-    line-height: 1.35;
-    font-size: 0.9375rem;
+  toEmail: cmz(`
     color: ${theme.typoLabel};
-    text-align: right;
-    margin-left: auto;
-`))
+  `),
 
-const DateAgo = elem.div(cmz(`
-  font-weight: bold;
-  margin-top: 3px;
-`))
+  emailDate: cmz(
+    textRendering,
+    typeface.text,
+    `
+      line-height: 1.35;
+      font-size: 0.9375rem;
+      color: ${theme.typoLabel};
+      text-align: right;
+      margin-left: auto;
+    `
+  ),
 
-const Body = elem.div(cmz(
-  textRendering,
-  typeface.text,
-  `
-    padding-top: 30px;
-    margin: 0 30px 30px 50px;
-    font-size: 1.0625rem;
-    line-height: 1.59;
-    border-top: 1px solid ${theme.lineSilver2};
-    word-break: break-word;
-    white-space: pre-line;
-  `
-))
+  dateAgo: cmz(`
+    font-weight: bold;
+    margin-top: 3px;
+  `),
+
+  body: cmz(
+    textRendering,
+    typeface.text,
+    `
+      padding-top: 30px;
+      margin: 0 30px 30px 50px;
+      font-size: 1.0625rem;
+      line-height: 1.59;
+      border-top: 1px solid ${theme.lineSilver2};
+      word-break: break-word;
+      white-space: pre-line;
+    `
+  )
+}
 
 type Props = {
   subject?: string,
   from?: string,
-  to?: string | string[],
+  to: string | string[],
   body: string,
   createdAt?: number,
-  initialOpen: boolean
+  initialOpen: boolean,
 }
 
 type State = {
-  open: boolean
+  open: boolean,
 }
 
 class Email extends PureComponent<Props, State> {
   static defaultProps = {
+    to: [],
     body: '',
     initialOpen: false
   }
@@ -128,39 +128,14 @@ class Email extends PureComponent<Props, State> {
     open: this.props.initialOpen
   }
 
-  toggleBody = () => this.setState((prevState: State) => ({ open: !prevState.open }))
+  toggleBody = () =>
+    this.setState((prevState: State) => ({ open: !prevState.open }))
 
   render () {
     const { subject, from, to, body, createdAt } = this.props
     const { open } = this.state
     const date = createdAt ? new Date(createdAt) : new Date()
     const toText = Array.isArray(to) ? to.join(', ') : to
-
-    const renderHeaderInfo = () => (
-      HeaderInfo(
-        subject && Subject({ title: subject }, subject),
-        from && From({ title: `From: ${from}` }, 'From: ', from),
-        to && To(
-          { title: `To: ${to}` },
-          'To: ',
-          ToEmail(toText)
-        )
-      )
-    )
-
-    const renderHeaderDate = () => (
-      createdAt && EmailDate(
-        DateAgo(timeSince(createdAt, false, true)),
-        (date instanceof Date) && formatDate(date, 'Do MMM YYYY, HH:mm aa UTC')
-      )
-    )
-
-    const renderHeader = () => (
-      Header(
-        renderHeaderInfo(),
-        renderHeaderDate()
-      )
-    )
 
     const htmlBody = (() => {
       try {
@@ -171,19 +146,33 @@ class Email extends PureComponent<Props, State> {
     })()
 
     return (
-      Root(
-        HeaderContainer(
-          { onClick: this.toggleBody },
-          TriangleIcon(
+      <div className={cx.root} onClick={this.toggleBody}>
+        <div className={cx.headerContainer}>
+          <div className={cx.triangleIcon}>
             <SvgIcon
               icon={open ? 'triangleup' : 'triangledown'}
               color='grayscarpaflow'
             />
-          ),
-          renderHeader()
-        ),
-        open && Body(htmlBody)
-      )
+          </div>
+
+          <div className={cx.header}>
+            <div className={cx.headerInfo}>
+              {subject && <div className={cx.subject} title={subject}>{subject}</div>}
+              {from && <div title={`From ${from}`}>From: {from}</div>}
+              {to && <div title={`To: ${toText}`}>To: <span className={cx.toEmail}>{toText}</span></div>}
+            </div>
+
+            {createdAt && (
+              <div className={cx.emailDate}>
+                <div className={cx.dateAgo}>{timeSince(createdAt, false, true)}</div>
+                {date instanceof Date && formatDate(date, 'Do MMM YYYY, HH:mm aa UTC')}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {open && <div className={cx.body}>{htmlBody}</div>}
+      </div>
     )
   }
 }

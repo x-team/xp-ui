@@ -8,7 +8,7 @@ import Email from './Email'
 storiesOf('UI Components/Email', module)
   .add('basic usage', () => (
     <Email
-      subject='RE: oportunity'
+      subject='RE: opportunity'
       from='john@johnson.com'
       to={'talent@x-team.com'}
       createdAt={1547942400000}
@@ -17,7 +17,7 @@ storiesOf('UI Components/Email', module)
   ))
   .add('to several recipients', () => (
     <Email
-      subject='RE: oportunity'
+      subject='RE: opportunity'
       from='john@johnson.com'
       to={['talent@x-team.com', 'caleb.brown@x-team.com', 'paul.mccrodden@x-team.com', 'talent@x-team.com', 'caleb.brown@x-team.com', 'paul.mccrodden@x-team.com']}
       createdAt={1547942400000}
@@ -36,7 +36,7 @@ storiesOf('UI Components/Email', module)
   .add('parent element with fixed width at 800px', () => (
     <div style={{ width: 800 }}>
       <Email
-        subject='RE: oportunity'
+        subject='RE: opportunity'
         from='john@johnson.com'
         to={'talent@x-team.com'}
         createdAt={1547942400000}
@@ -58,7 +58,7 @@ storiesOf('UI Components/Email', module)
   .add('parent element with fixed width at 500px', () => (
     <div style={{ width: 500 }}>
       <Email
-        subject='RE: oportunity'
+        subject='RE: opportunity'
         from='john@johnson.com'
         to={'talent@x-team.com'}
         createdAt={1547942400000}
@@ -80,7 +80,7 @@ storiesOf('UI Components/Email', module)
   .add('parent element with fixed width at 200px', () => (
     <div style={{ width: 200 }}>
       <Email
-        subject='RE: oportunity'
+        subject='RE: opportunity'
         from='john@johnson.com'
         to={'talent@x-team.com'}
         createdAt={1547942400000}
@@ -101,7 +101,7 @@ storiesOf('UI Components/Email', module)
   ))
   .add('initial open body', () => (
     <Email
-      subject='RE: oportunity'
+      subject='RE: opportunity'
       from='john@johnson.com'
       to={'talent@x-team.com'}
       createdAt={1547942400000}
@@ -111,7 +111,7 @@ storiesOf('UI Components/Email', module)
   ))
   .add('initial open body and content with linebreaks', () => (
     <Email
-      subject='RE: oportunity'
+      subject='RE: opportunity'
       from='john@johnson.com'
       to={'talent@x-team.com'}
       createdAt={1547942400000}
