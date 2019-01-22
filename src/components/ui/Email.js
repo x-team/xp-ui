@@ -2,21 +2,22 @@
 
 import React, { PureComponent } from 'react'
 import formatDate from 'date-fns/format'
+import { compiler as markdownCompiler } from 'markdown-to-jsx'
 
 import SvgIcon from './SvgIcon'
 
 import { timeSince } from '../../utils/helpers'
 
-import { typeface } from '../../styles/typo'
-import theme, { mediaQueries } from '../../styles/theme'
+import { textRendering, typeface } from '../../styles/typo'
+import theme from '../../styles/theme'
 import elem from '../../utils/elem'
 
 const cmz = require('cmz')
 
 const Root = elem.div(cmz(`
+  box-sizing: border-box;
   position: relative;
-  padding: 28px 29px 26px 49px;
-  border: 1px solid  ${theme.lineSilver2};
+  border: 1px solid ${theme.lineSilver2};
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -24,31 +25,33 @@ const Root = elem.div(cmz(`
   -o-border-radius: 2px;
 `))
 
-const TrinagulateIndicator = elem.div(cmz(`
+const HeaderContainer = elem.div(cmz(`
+  cursor: pointer;
+  padding: 30px 30px 30px 50px;
+`))
+
+const TriangleIcon = elem.div(cmz(`
   left: 20px;
   position: absolute;
 `))
 
 const Header = elem.div(cmz(`
-  & {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  ${mediaQueries.mobile} {
-    & {
-      display: initial;
-    }
-  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 `))
 
 const HeaderInfo = elem.div(cmz(
+  textRendering,
   typeface.extraHeading,
   `
   & {
     font-size: 1.0625rem;
     font-weight: normal;
+    max-width: calc(100% - 190px);
+    min-width: 250px;
   }
 
   & > div {
@@ -57,6 +60,7 @@ const HeaderInfo = elem.div(cmz(
 `))
 
 const Subject = elem.div(cmz(
+  textRendering,
   typeface.extraHeading,
   `
     text-transform: uppercase;
@@ -72,39 +76,42 @@ const ToEmail = elem.span(cmz(`
 `))
 
 const EmailDate = elem.div(cmz(
+  textRendering,
   typeface.text,
   `
-  & {
+    line-height: 1.35;
     font-size: 0.9375rem;
     color: ${theme.typoLabel};
     text-align: right;
-
-  }
-  ${mediaQueries.mobile} {
-    & {
-      margin-top: 20px;
-    }
-  }
+    margin-left: auto;
 `))
 
 const DateAgo = elem.div(cmz(`
   font-weight: bold;
-  margin-top: 7px;
+  margin-top: 3px;
 `))
 
-const Body = elem.div(cmz(`
-  border-top: 1px solid ${theme.lineSilver2};
-  padding-top: 30px;
-  margin-top: 30px;
-`))
+const Body = elem.div(cmz(
+  textRendering,
+  typeface.text,
+  `
+    padding-top: 30px;
+    margin: 0 30px 30px 50px;
+    font-size: 1.0625rem;
+    line-height: 1.59;
+    border-top: 1px solid ${theme.lineSilver2};
+    word-break: break-word;
+    white-space: pre-line;
+  `
+))
 
 type Props = {
   subject?: string,
   from?: string,
-  to?: string,
-  body?: string,
+  to?: string | string[],
+  body: string,
   createdAt?: number,
-  initialOpen?: boolean
+  initialOpen: boolean
 }
 
 type State = {
@@ -113,32 +120,30 @@ type State = {
 
 class Email extends PureComponent<Props, State> {
   static defaultProps = {
-    initialOpen: false,
-    body: ''
+    body: '',
+    initialOpen: false
   }
 
   state = {
-    open: false
+    open: this.props.initialOpen
   }
 
-  componentDidMount () {
-    this.setState({ open: this.props.initialOpen || false })
-  }
-
-  handleOpenBody = () => this.setState((prevState: State) => ({ open: !prevState.open }))
+  toggleBody = () => this.setState((prevState: State) => ({ open: !prevState.open }))
 
   render () {
     const { subject, from, to, body, createdAt } = this.props
     const { open } = this.state
     const date = createdAt ? new Date(createdAt) : new Date()
+    const toText = Array.isArray(to) ? to.join(', ') : to
 
     const renderHeaderInfo = () => (
       HeaderInfo(
-        subject && Subject(subject),
-        from && From(from),
+        subject && Subject({ title: subject }, subject),
+        from && From({ title: `From: ${from}` }, 'From: ', from),
         to && To(
+          { title: `To: ${to}` },
           'To: ',
-          ToEmail(to)
+          ToEmail(toText)
         )
       )
     )
@@ -152,22 +157,32 @@ class Email extends PureComponent<Props, State> {
 
     const renderHeader = () => (
       Header(
-        { onClick: this.handleOpenBody },
         renderHeaderInfo(),
         renderHeaderDate()
       )
     )
 
+    const htmlBody = (() => {
+      try {
+        return markdownCompiler(body)
+      } catch (err) {
+        return body
+      }
+    })()
+
     return (
       Root(
-        TrinagulateIndicator(
-          <SvgIcon
-            icon={open ? 'triangleup' : 'triangledown'}
-            color='grayscarpaflow'
-          />
+        HeaderContainer(
+          { onClick: this.toggleBody },
+          TriangleIcon(
+            <SvgIcon
+              icon={open ? 'triangleup' : 'triangledown'}
+              color='grayscarpaflow'
+            />
+          ),
+          renderHeader()
         ),
-        renderHeader(),
-        open && Body(body)
+        open && Body(htmlBody)
       )
     )
   }
