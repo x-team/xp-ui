@@ -94,9 +94,9 @@ const RichContentWrapper = elem.div(cmz(
   & * {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
     font-weight: 300
-    font-size: 20px
+    font-size: 1.25rem
     color: ${theme.typoParagraph}
-    line-height: 30px
+    line-height: 1.5
   }
   `
 ))

@@ -44,7 +44,11 @@ storiesOf('UI Components/RichTextEditor', module)
   .add('viewer', () => (
     <RichTextEditor
       mode='viewer'
-      initialValue={`# Heading
+      initialValue={`# Heading 1
+
+## Heading 2
+
+### Heading 3
 
 *Hello* <strong>world</strong>! <a href="https://www.google.com">HTML Link</a> and [Markdown Link](https://google.com)
 
@@ -65,9 +69,26 @@ storiesOf('UI Components/RichTextEditor', module)
 
 *Italic text*
 
+This is **bold** text
+
 ---
 
-### Heading 3
+~Striked text~
+
+> This is a blockquote!
+> - Albert Einstein
+
+1. One
+1. Two
+1. Three
+
+* A
+* B
+* C
+
+- Monday
+- Tuesday
+- Wednesday
       `}
     />
   ))
