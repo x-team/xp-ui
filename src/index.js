@@ -53,6 +53,7 @@ import TruncatedList from './components/ui/TruncatedList'
 import Typography from './components/ui/Typography'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
+import Email from './components/ui/Email'
 
 export {
   ActivityBar,
@@ -109,5 +110,6 @@ export {
   TruncatedList,
   Typography,
   VideoPlayer,
-  XIcon
+  XIcon,
+  Email
 }

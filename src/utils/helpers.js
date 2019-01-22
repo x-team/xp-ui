@@ -3,6 +3,7 @@ import formatDate from 'date-fns/format'
 import differenceInSeconds from 'date-fns/difference_in_seconds'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
 import differenceInHours from 'date-fns/difference_in_hours'
+import differenceInDays from 'date-fns/difference_in_days'
 
 export function throttle (callback, timeout) {
   let now = Date.now()
@@ -55,7 +56,7 @@ export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
 
 export const replaceBlankLinesForNewLines = (text: ?string): string => text ? text.replace(/(?:\r\n|\r|\n)/g, '<br>\n') : ''
 
-export function timeSince (date: Date | string | number | void | null, addSpaceAfterNumber = true) {
+export function timeSince (date: Date | string | number | void | null, addSpaceAfterNumber: Boolean = true, addDifferenceInDays: Boolean = false) {
   if (!(date instanceof Date)) {
     date = new Date(date)
   }
@@ -64,7 +65,12 @@ export function timeSince (date: Date | string | number | void | null, addSpaceA
   const hoursDelta = differenceInHours(now, date)
 
   if (hoursDelta >= 24) {
-    return formatDate(date, 'DD MMM YY')
+    if (addDifferenceInDays) {
+      const days = differenceInDays(now, date)
+      return `${days} day${days > 1 ? 's' : ''} ago`
+    } else {
+      return formatDate(date, 'DD MMM YY')
+    }
   }
 
   const minutesDelta = differenceInMinutes(now, date)
