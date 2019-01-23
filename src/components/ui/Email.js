@@ -109,7 +109,7 @@ type Props = {
   from?: string,
   to: string | string[],
   body: string,
-  createdAt?: number,
+  createdAt?: Date,
   initialOpen: boolean,
 }
 
@@ -134,7 +134,6 @@ class Email extends PureComponent<Props, State> {
   render () {
     const { subject, from, to, body, createdAt } = this.props
     const { open } = this.state
-    const date = createdAt ? new Date(createdAt) : new Date()
     const toText = Array.isArray(to) ? to.join(', ') : to
 
     const htmlBody = (() => {
@@ -165,7 +164,7 @@ class Email extends PureComponent<Props, State> {
             {createdAt && (
               <div className={cx.emailDate}>
                 <div className={cx.dateAgo}>{timeSince(createdAt, false, true)}</div>
-                {date instanceof Date && formatDate(date, 'Do MMM YYYY, HH:mm aa UTC')}
+                {formatDate(createdAt, 'Do MMM YYYY, HH:mm aa UTC')}
               </div>
             )}
           </div>
