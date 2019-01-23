@@ -62,11 +62,13 @@ const defaultToolbarItems = [
 ]
 
 type Props = {
+  className: string,
   disabled: boolean,
   initialValue?: string,
   characterLimit: number,
   hideModeSwitch: boolean,
   toolbarItems: Array<string>,
+  mode: 'markdown' | 'wysiwyg' | 'viewer',
   handleChange({ markdown: string, plainText: string }): void
 }
 
@@ -76,10 +78,12 @@ type State = {
 
 class RichTextEditor extends Component<Props, State> {
   static defaultProps = {
+    className: '',
     disabled: false,
     characterLimit: Infinity,
     hideModeSwitch: true,
     toolbarItems: defaultToolbarItems,
+    mode: 'wysiwyg',
     handleChange: () => {}
   }
 
@@ -104,31 +108,34 @@ class RichTextEditor extends Component<Props, State> {
   }
 
   componentDidMount () {
-    const { initialValue, hideModeSwitch, disabled, toolbarItems } = this.props
+    const { initialValue, hideModeSwitch, disabled, mode, toolbarItems } = this.props
 
     if (this.editSection.current) {
-      this.editor = new Editor({
+      this.editor = Editor.factory({
         el: this.editSection.current,
         initialValue,
         hideModeSwitch,
-        initialEditType: 'wysiwyg',
+        initialEditType: mode,
         previewStyle: 'vertical',
         height: 'auto',
         usageStatistics: false,
         events: { change: this.onChange },
-        toolbarItems
+        toolbarItems,
+        viewer: mode === 'viewer'
       })
 
       this.editorContentsNode = this.editSection.current.querySelector(
         '.tui-editor-contents[contenteditable=true]'
       )
 
-      if (initialValue) {
-        this.prevValue = this.editor.getValue()
-        const characterCount = (this.editorContentsNode.innerText || '').trim().length
-        this.setState({ characterCount })
-      } else if (disabled) {
-        this.forceUpdate()
+      if (!this.editor.isViewer()) {
+        if (initialValue) {
+          this.prevValue = this.editor.getValue()
+          const characterCount = (this.editorContentsNode.innerText || '').trim().length
+          this.setState({ characterCount })
+        } else if (disabled) {
+          this.forceUpdate()
+        }
       }
     }
   }
@@ -161,12 +168,12 @@ class RichTextEditor extends Component<Props, State> {
 
   render () {
     const { characterCount } = this.state
-    const { disabled, characterLimit } = this.props
+    const { className, disabled, mode, characterLimit } = this.props
 
     const { offsetWidth, offsetHeight } = this.editSection.current || {}
 
     return (
-      <div className={cx.root}>
+      <div className={`${cx.root} ${className}`}>
 
         {disabled && <div
           className={cx.disabledOverlay}
@@ -178,7 +185,7 @@ class RichTextEditor extends Component<Props, State> {
 
         <div ref={this.editSection} />
 
-        {characterLimit !== Infinity && (
+        {characterLimit !== Infinity && mode !== 'viewer' && (
           <div className={cx.characterCounter}>{characterCount}/{characterLimit}</div>
         )}
       </div>
