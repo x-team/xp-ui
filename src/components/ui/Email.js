@@ -146,8 +146,8 @@ class Email extends PureComponent<Props, State> {
     })()
 
     return (
-      <div className={cx.root} onClick={this.toggleBody}>
-        <div className={cx.headerContainer}>
+      <div className={cx.root}>
+        <div className={cx.headerContainer} onClick={this.toggleBody}>
           <div className={cx.triangleIcon}>
             <SvgIcon
               icon={open ? 'triangleup' : 'triangledown'}
@@ -159,7 +159,7 @@ class Email extends PureComponent<Props, State> {
             <div className={cx.headerInfo}>
               {subject && <div className={cx.subject} title={subject}>{subject}</div>}
               {from && <div title={`From ${from}`}>From: {from}</div>}
-              {to && <div title={`To: ${toText}`}>To: <span className={cx.toEmail}>{toText}</span></div>}
+              {toText !== '' && <div title={`To: ${toText}`}>To: <span className={cx.toEmail}>{toText}</span></div>}
             </div>
 
             {createdAt && (

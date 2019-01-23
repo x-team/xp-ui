@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { text, array, boolean, number } from '@storybook/addon-knobs'
 
 import Email from './Email'
 
@@ -117,9 +118,9 @@ storiesOf('UI Components/Email', module)
       createdAt={1547942400000}
       body={`Greeting!
 
-Facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. Integer ac enim pellentesque, adipiscing metus id, pharetra odio. 
+Facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. Integer ac enim pellentesque, adipiscing metus id, pharetra odio.
 
-Best regards, 
+Best regards,
 X-Team`}
       initialOpen
     />
@@ -133,6 +134,97 @@ X-Team`}
       // eslint-disable-next-line no-irregular-whitespace
       body={`<div><div><font size="6">Sans Serif Huge Text</font><div><font size="4">Sans Serif Big Text</font></div><div>Sans Serif Normal Text</div><div><font size="1">Sans Serif Small Text</font></div><div><b><br /></b></div><div><b>Bold Text</b></div><div><i>Italics Text</i></div><div><u>Underlined Text</u></div><div><span style="background-color:rgb(255,255,255)"><font color="#0000ff">Blue Text</font></span></div><div><span style="background-color:rgb(255,255,0)"><font color="#ff0000"><b>Bold + Yellow bg + Red Text</b></font></span></div><div><span style="background-color:rgb(255,255,0)"><font color="#ff0000"><b><br /></b></font></span></div><div style="text-align:center">Center Aligned Text</div><div style="text-align:center"><br /></div><div style="text-align:right">Right Aligned Text</div><div style="text-align:right"><br /></div><div style="text-align:left"><ol><li>One</li><li>Two</li><li>Three</li></ol><div><br /></div><div><ul><li>A</li><li>B</li><li>C</li></ul><div>Quote:</div><div><br /></div></div><blockquote style="margin:0px 0px 0px 40px;border:none;padding:0px"><blockquote style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex" class="gmail_quote front-blockquote">“I’m a success today because I had a friend who believed in me and I didn’t have the heart to let him down.”<br />- Abraham Lincoln</blockquote><div><br /></div></blockquote>Emoji: 😀<br /><div><br /></div><div><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Link test: Click here to go to Google</a></div><div><br /></div><div>Good bye!</div><div><br /></div>\n`}
       initialOpen
+    />
+  ))
+  .add('just now', () => {
+    const emailDate = new Date()
+    emailDate.setMinutes(0)
+    emailDate.setHours(0)
+    emailDate.setSeconds(0)
+    return (
+      <Email
+        subject='Just Now '
+        from='test@x-team.com'
+        to={array('To', ['test1@x-team.com', 'test2@x-team.com'], ', ')}
+        body={text('Body', 'body text')}
+        createdAt={number('Created At', emailDate.getTime())}
+        initialOpen={boolean('Initial Open', false)}
+      />
+    )
+  })
+  .add('5 minutes ago', () => {
+    const emailDate = new Date()
+    emailDate.setMinutes(emailDate.getMinutes() - 5)
+    return (
+      <Email
+        subject='5 minutes ago'
+        from='test@x-team.com'
+        to={array('To', ['test1@x-team.com', 'test2@x-team.com'], ', ')}
+        body={text('Body', 'body text')}
+        createdAt={number('Created At', emailDate.getTime())}
+        initialOpen={boolean('Initial Open', false)}
+      />
+    )
+  })
+  .add('3 hours ago', () => {
+    const emailDate = new Date()
+    emailDate.setHours(emailDate.getHours() - 3)
+    emailDate.setMinutes(0)
+    emailDate.setSeconds(0)
+
+    return (
+      <Email
+        subject='3 hours ago '
+        from='test@x-team.com'
+        to={array('To', ['test1@x-team.com', 'test2@x-team.com'], ', ')}
+        body={text('Body', 'body text')}
+        createdAt={number('Created At', emailDate.getTime())}
+        initialOpen={boolean('Initial Open', false)}
+      />
+    )
+  })
+  .add('1 day ago', () => {
+    const emailDate = new Date()
+    emailDate.setDate(emailDate.getDate() - 1)
+    emailDate.setMinutes(0)
+    emailDate.setHours(0)
+    emailDate.setSeconds(0)
+    return (
+      <Email
+        subject='1 day ago '
+        from='test@x-team.com'
+        to={array('To', ['test1@x-team.com', 'test2@x-team.com'], ', ')}
+        body={text('Body', 'body text')}
+        createdAt={number('Created At', emailDate.getTime())}
+        initialOpen={boolean('Initial Open', false)}
+      />
+    )
+  })
+  .add('5 days ago', () => {
+    const emailDate = new Date()
+    emailDate.setDate(emailDate.getDate() - 5)
+    emailDate.setMinutes(0)
+    emailDate.setHours(0)
+    emailDate.setSeconds(0)
+    return (
+      <Email
+        subject='5 days ago '
+        from='test@x-team.com'
+        to={array('To', ['test1@x-team.com', 'test2@x-team.com'], ', ')}
+        body={text('Body', 'body text')}
+        createdAt={number('Created At', emailDate.getTime())}
+        initialOpen={boolean('Initial Open', false)}
+      />
+    )
+  })
+  .add('with knobs', () => (
+    <Email
+      subject={text('Subject', 'KNOBS Test')}
+      from={text('From', 'knobs@x-team.com')}
+      to={array('To', ['test1@x-team.com', 'test2@x-team.com'], ', ')}
+      body={text('Body', 'body text')}
+      createdAt={number('Created At', 1547942400000)}
+      initialOpen={boolean('Initial Open', false)}
     />
   ))
   .add('missing props (does component explode?)', () => <Email />)
