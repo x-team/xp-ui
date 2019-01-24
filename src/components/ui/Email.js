@@ -128,6 +128,12 @@ class Email extends PureComponent<Props, State> {
     open: this.props.initialOpen
   }
 
+  componentWillReceiveProps (nextProps: Props) {
+    if (nextProps.initialOpen !== this.props.initialOpen) {
+      this.setState({ open: nextProps.initialOpen })
+    }
+  }
+
   toggleBody = () =>
     this.setState((prevState: State) => ({ open: !prevState.open }))
 
