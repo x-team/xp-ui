@@ -33,7 +33,8 @@ Fixes https://x-team-internal.atlassian.net/browse/XP-[ISSUE_NUMBER]
 - [ ] Flow typechecks passed (`npm run flow`)
 - [ ] Snapshots tests passed (`npm run jest`)
 - [ ] check cleanup tasks (https://github.com/x-team/auto/labels/cleanup) and take a suitable small one (if exists) in a related area of the current changes
-- [ ] component's documentation (`.stories.js` file) is changed or added accordingly to reflect any new or updated use cases or variants usage.
+- [ ] component's documentation (`.stories.js` file) is changed or added accordingly to reflect any new or updated use cases or variants usage
+- [ ] if you've fixed a bug, make sure to also include a new story that will expose declarations with problematic data that caused the bug in the first place, so that we can assure that no regressions will pop up on future interactions
 - [ ] if you've fixed a bug or added code that should be tested, add unit tests
 - [ ] if any snapshots have been changed, verify that component still works and looks as expected and update the changed snapshot
 - [ ] **manually tested the component** by running it in the browser and checked nothing is broken and operates as expected!
