@@ -56,7 +56,7 @@ export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
 
 export const replaceBlankLinesForNewLines = (text: ?string): string => text ? text.replace(/(?:\r\n|\r|\n)/g, '<br>\n') : ''
 
-export function timeSince (date: Date | string | number | void | null, addSpaceAfterNumber: Boolean = true, addDifferenceInDays: Boolean = false) {
+export function timeSince (date: Date | string | number | void | null, addSpaceAfterNumber: boolean = true, addDifferenceInDays: boolean = false) {
   if (!(date instanceof Date)) {
     date = new Date(date)
   }
@@ -68,9 +68,9 @@ export function timeSince (date: Date | string | number | void | null, addSpaceA
     if (addDifferenceInDays) {
       const days = differenceInDays(now, date)
       return `${days} day${days > 1 ? 's' : ''} ago`
-    } else {
-      return formatDate(date, 'DD MMM YY')
     }
+
+    return formatDate(date, 'DD MMM YY')
   }
 
   const minutesDelta = differenceInMinutes(now, date)

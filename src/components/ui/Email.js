@@ -19,10 +19,6 @@ const cx = {
     position: relative;
     border: 1px solid ${theme.lineSilver2};
     border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
   `),
 
   headerContainer: cmz(`
@@ -110,11 +106,11 @@ type Props = {
   to: string | string[],
   body: string,
   createdAt?: Date,
-  initialOpen: boolean,
+  initialOpen: boolean
 }
 
 type State = {
-  open: boolean,
+  isOpen: boolean
 }
 
 class Email extends PureComponent<Props, State> {
@@ -125,21 +121,21 @@ class Email extends PureComponent<Props, State> {
   }
 
   state = {
-    open: this.props.initialOpen
+    isOpen: this.props.initialOpen
   }
 
   componentWillReceiveProps (nextProps: Props) {
     if (nextProps.initialOpen !== this.props.initialOpen) {
-      this.setState({ open: nextProps.initialOpen })
+      this.setState({ isOpen: nextProps.initialOpen })
     }
   }
 
   toggleBody = () =>
-    this.setState((prevState: State) => ({ open: !prevState.open }))
+    this.setState((prevState: State) => ({ isOpen: !prevState.isOpen }))
 
   render () {
     const { subject, from, to, body, createdAt } = this.props
-    const { open } = this.state
+    const { isOpen } = this.state
     const toText = Array.isArray(to) ? to.join(', ') : to
 
     const htmlBody = (() => {
@@ -155,7 +151,7 @@ class Email extends PureComponent<Props, State> {
         <div className={cx.headerContainer} onClick={this.toggleBody}>
           <div className={cx.triangleIcon}>
             <SvgIcon
-              icon={open ? 'triangleup' : 'triangledown'}
+              icon={isOpen ? 'triangleup' : 'triangledown'}
               color='grayscarpaflow'
             />
           </div>
@@ -176,7 +172,7 @@ class Email extends PureComponent<Props, State> {
           </div>
         </div>
 
-        {open && <div className={cx.body}>{htmlBody}</div>}
+        {isOpen && <div className={cx.body}>{htmlBody}</div>}
       </div>
     )
   }

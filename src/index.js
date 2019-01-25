@@ -14,6 +14,7 @@ import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
 import Dropdown from './components/ui/Dropdown'
 import ErrorBox from './components/ui/ErrorBox'
+import Email from './components/ui/Email'
 import FilterTag from './components/ui/FilterTag'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
@@ -53,7 +54,6 @@ import TruncatedList from './components/ui/TruncatedList'
 import Typography from './components/ui/Typography'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
-import Email from './components/ui/Email'
 
 export {
   ActivityBar,
@@ -72,6 +72,7 @@ export {
   ColorPalette,
   Dropdown,
   ErrorBox,
+  Email,
   FilterTag,
   Footer,
   FooterBrands,
@@ -110,6 +111,5 @@ export {
   TruncatedList,
   Typography,
   VideoPlayer,
-  XIcon,
-  Email
+  XIcon
 }
