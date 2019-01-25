@@ -130,7 +130,8 @@ class EmailFeed extends PureComponent<Props, State> {
   static defaultProps = {
     emails: [],
     initialExpandedAll: false,
-    isRefreshing: false
+    isRefreshing: false,
+    errorMessage: ''
   }
 
   firstShowMoreApplied = false
@@ -151,7 +152,7 @@ class EmailFeed extends PureComponent<Props, State> {
     const { expandAll, increment } = this.state
     const { emails, isRefreshing, lastSyncRefresh, endButtonUrl, errorMessage } = this.props
 
-    if (errorMessage) {
+    if (errorMessage !== '') {
       return (
         <Fragment>
           <span className={cx.headerTitle}>EMAIL HISTORY</span>
@@ -213,7 +214,7 @@ class EmailFeed extends PureComponent<Props, State> {
             </div>
           </div>
         </div>
-        <TruncatedList
+        { emails.length > 0 && <TruncatedList
           visible={3}
           increment={3}
           items={emails.map(renderEmail)}
@@ -238,19 +239,12 @@ class EmailFeed extends PureComponent<Props, State> {
               outlined
               color='silver'
               className={cx.viewMore}
-              onClick={() => {
-                action()
-                // if (isFirstShowMoreApplied) {
-                //   this.setState({increment: 10})
-                // }else {
-                //   this.firstShowMoreApplied = true
-                // }
-              }}
+              onClick={action}
             >
               {`View more ${amount}`}
             </Button>)
           }}
-        />
+        />}
       </Fragment>
     )
   }
