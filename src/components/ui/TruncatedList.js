@@ -16,7 +16,7 @@ type Props = {
   increment?: number,
   inserted?: boolean,
   viewMore?: Function | void,
-  endButton?: any,
+  endListElement?: any,
   page?: number,
   isFetching?: boolean,
   hasMore?: boolean,
@@ -85,7 +85,7 @@ class TruncatedList extends PureComponent<Props, State> {
   }
 
   render () {
-    const { items, visible, increment, inserted, viewMore, isFetching, hasMore, listClass, itemClass, endButton } = this.props
+    const { items, visible, increment, inserted, viewMore, isFetching, hasMore, listClass, itemClass, endListElement } = this.props
     const { allVisible, hiddenItems, page, itemsLength } = this.state
 
     const realVisible = inserted
@@ -115,8 +115,7 @@ class TruncatedList extends PureComponent<Props, State> {
           </span>
         )
     }
-    console.log('allVisible', allVisible)
-    console.log('hasMore', hasMore)
+
     return itemsLength > 0 ? (
       <span className={listClass}>
         {items
@@ -132,7 +131,7 @@ class TruncatedList extends PureComponent<Props, State> {
           })
         }
         {(!allVisible || hasMore) && renderShowMore()}
-        {allVisible && endButton }
+        {allVisible && endListElement }
       </span>
     ) : null
   }

@@ -140,10 +140,8 @@ class EmailFeed extends PureComponent<Props, State> {
     increment: 3
   }
 
-  onRefreshEmails = (e: any) => {
-    e && e.stopPropagation()
+  onRefreshEmails = () =>
     this.props.onRefreshEmails && this.props.onRefreshEmails()
-  }
 
   toggleExpandAll = () => {
     this.setState((prevState: State) => ({ expandAll: !prevState.expandAll }))
@@ -219,7 +217,7 @@ class EmailFeed extends PureComponent<Props, State> {
           visible={3}
           increment={3}
           items={emails.map(renderEmail)}
-          endButton={endButtonUrl && (
+          endListElement={endButtonUrl && (
             <a href={endButtonUrl} target="_blank" rel="noreferrer" className={cx.endButtonLink} >
               <Button
                 wide
@@ -242,14 +240,14 @@ class EmailFeed extends PureComponent<Props, State> {
               className={cx.viewMore}
               onClick={() => {
                 action()
-                if (isFirstShowMoreApplied) {
-                  this.setState({increment: 10})
-                }else {
-                  this.firstShowMoreApplied = true
-                }
+                // if (isFirstShowMoreApplied) {
+                //   this.setState({increment: 10})
+                // }else {
+                //   this.firstShowMoreApplied = true
+                // }
               }}
             >
-              {`View more ${viewMoreNumber}`}
+              {`View more ${amount}`}
             </Button>)
           }}
         />
