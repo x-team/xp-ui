@@ -8,7 +8,6 @@ import InputField from '../forms/InputField'
 import TruncatedList from './TruncatedList'
 import Text from './Text'
 
-import elem from '../../utils/elem'
 import { timeSince } from '../../utils/helpers'
 
 import type { EmailPropsType } from './Email'
@@ -121,12 +120,11 @@ type Props = {
 }
 
 type State = {
-  expandAll: false,
-  changeIncrease: boolean
+  expandAll: boolean,
+  numberItemsShowed: number
 }
 
 class EmailFeed extends PureComponent<Props, State> {
-
   static defaultProps = {
     emails: [],
     initialExpandedAll: false,
@@ -134,11 +132,12 @@ class EmailFeed extends PureComponent<Props, State> {
     errorMessage: ''
   }
 
-  firstShowMoreApplied = false
+  visibleItems = 3
+  incrementItems = 3
 
   state = {
     expandAll: this.props.initialExpandedAll,
-    increment: 3
+    numberItemsShowed: this.props.emails.length < this.visibleItems ? this.props.emails.length : this.visibleItems
   }
 
   onRefreshEmails = () =>
@@ -149,7 +148,7 @@ class EmailFeed extends PureComponent<Props, State> {
   }
 
   render () {
-    const { expandAll, increment } = this.state
+    const { expandAll, numberItemsShowed } = this.state
     const { emails, isRefreshing, lastSyncRefresh, endButtonUrl, errorMessage } = this.props
 
     if (errorMessage !== '') {
@@ -189,21 +188,20 @@ class EmailFeed extends PureComponent<Props, State> {
 
           <div className={`${cx.headerRow} ${cx.headerRefreshRow}`}>
             <div>
-            {lastSyncRefresh &&
+              {lastSyncRefresh &&
                 <span className={cx.lastestEmailSync}>
                   Lastest email sync: <span className={cx.syncDateAgo}>{timeSince(lastSyncRefresh, false)}</span>
                 </span>}
             </div>
             <div>
-              {emails.length > 0 && <span className={cx.loadIndicator}>1-3 of {emails.length}</span>}
+              {emails.length > 0 && <span className={cx.loadIndicator}>1-{numberItemsShowed} of {emails.length}</span>}
               <Button
                 wide
                 outlined
                 color='silver'
                 icon='spin'
-                iconProps={{color: isRefreshing ? 'grayscale' : ''}}
+                iconProps={{ color: isRefreshing ? 'grayscale' : '' }}
                 contentStyle='sourceSansPro'
-                size=''
                 smallRounded
                 disabled={isRefreshing}
                 className={isRefreshing ? cx.disabledButton : ''}
@@ -215,11 +213,11 @@ class EmailFeed extends PureComponent<Props, State> {
           </div>
         </div>
         { emails.length > 0 && <TruncatedList
-          visible={3}
-          increment={3}
+          visible={this.visibleItems}
+          increment={this.incrementItems}
           items={emails.map(renderEmail)}
           endListElement={endButtonUrl && (
-            <a href={endButtonUrl} target="_blank" rel="noreferrer" className={cx.endButtonLink} >
+            <a href={endButtonUrl} target='_blank' rel='noreferrer' className={cx.endButtonLink} >
               <Button
                 wide
                 outlined
@@ -230,16 +228,16 @@ class EmailFeed extends PureComponent<Props, State> {
               </Button>
             </a>
           )}
-          viewMore={(amount, action) => {
-            const isFirstShowMoreApplied = this.firstShowMoreApplied && increment !== 10
-            const viewMoreNumber = isFirstShowMoreApplied && amount < 10 ? 10 : amount
-
+          viewMore={(amount, action, isFetching) => {
             return (<Button
               wide
               outlined
               color='silver'
               className={cx.viewMore}
-              onClick={action}
+              onClick={() => {
+                action()
+                this.setState(prevState => ({ numberItemsShowed: prevState.numberItemsShowed + amount }))
+              }}
             >
               {`View more ${amount}`}
             </Button>)

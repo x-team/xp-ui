@@ -96,7 +96,6 @@ class TruncatedList extends PureComponent<Props, State> {
       ? hiddenItems
       : nextIncrement
     const nextView = increment ? realVisible + (page > 1 ? (page - 1) * increment : 0) : realVisible + nextRealIncrement
-
     const renderShowMore = () => {
       return viewMore
         ? viewMore(nextRealIncrement, this.handleViewMore, isFetching)

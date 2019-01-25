@@ -102,14 +102,14 @@ storiesOf('UI Components/TruncatedList', module)
   .add('with element at the end of list', () => (
     <TruncatedList
       endListElement={(
-      <Button
-        rounded
-        raised
-        outlined
-        color='silver'
-      >
+        <Button
+          rounded
+          raised
+          outlined
+          color='silver'
+        >
         End button
-      </Button>)}
+        </Button>)}
       items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
       visible={8} />
   ))
