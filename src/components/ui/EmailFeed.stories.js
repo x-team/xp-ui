@@ -25,6 +25,15 @@ const emailsSmall = [...Array(5).keys()].map(x => ({
   createdAt: new Date()
 }))
 
+const emailsExtraSmall = [...Array(1).keys()].map(x => ({
+  subject: `Welcomen Subject ${++x}`,
+  from: `from${x}@x-team.com`,
+  to: `to-${x}@x-team.com`,
+  body: `Welcome to x-team ${x}`,
+  createdAt: new Date()
+}))
+
+
 storiesOf('UI Components/EmailFeed', module)
 
   .add('initial expanded all', () => <EmailFeed initialExpandedAll emails={emailsLarge} lastSyncRefresh={new Date()} />)
@@ -37,5 +46,7 @@ storiesOf('UI Components/EmailFeed', module)
   ))
   .add('with refreshing state', () => <EmailFeed isRefreshing emails={emailsLarge} lastSyncRefresh={new Date()}/>)
   .add('with small list of emails', () => <EmailFeed emails={emailsSmall} lastSyncRefresh={new Date()}/>)
+  .add('with end button link', () => <EmailFeed emails={emailsSmall} endButtonUrl='http://www.fayerwayer.com' lastSyncRefresh={new Date()}/>)
+  .add('with error message', () => <EmailFeed errorMessage="Emails not found"/>)
 
   .add('missing props (does component explode?)', () => <EmailFeed />)

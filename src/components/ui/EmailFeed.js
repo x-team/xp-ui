@@ -6,6 +6,7 @@ import Button from './Button'
 import Email from './Email'
 import InputField from '../forms/InputField'
 import TruncatedList from './TruncatedList'
+import Text from './Text'
 
 import elem from '../../utils/elem'
 import { timeSince } from '../../utils/helpers'
@@ -60,8 +61,17 @@ const cx = {
 
   `),
 
+  headerRowExpandEmails: cmz(`
+    & label {
+      color: ${theme.typoLabel};
+    }
+  `),
+
   headerTitle: cmz(
-    typeface.extraHeading
+    typeface.extraHeading,
+    `
+    color: ${theme.typoHighlightOnDarkBackground};
+    `
   ),
 
   singleEmailContainer: cmz(`
@@ -78,7 +88,7 @@ const cx = {
   `),
 
   disabledButton: cmz(`
-    border: 1px solid #E9EDEE;
+    border: 1px solid ${theme.lineSilver2};
     background-color: ${theme.baseBright}
   `),
 
@@ -90,20 +100,24 @@ const cx = {
     font-weight: bold;
   `),
 
-  headerRowExpandEmails: cmz(`
-    & label {
-      color: ${theme.typoLabel};
-    }
-  `)
-
+  endButtonLink: cmz(
+    typeface.semiHeading,
+    `
+    text-decoration: none;
+    color: ${theme.typoLabel};
+    font-size: 0.875rem;
+    `
+  )
 }
 
 type Props = {
   emails: Array<EmailPropsType>,
   initialExpandedAll: boolean,
   lastSyncRefresh?: Date,
-  isRefreshing: Boolean,
-  onRefreshEmails?: () => void
+  isRefreshing: boolean,
+  onRefreshEmails?: () => void,
+  endButtonUrl?: string,
+  errorMessage?: string
 }
 
 type State = {
@@ -126,8 +140,10 @@ class EmailFeed extends PureComponent<Props, State> {
     increment: 3
   }
 
-  onRefreshEmails = () => this.props.onRefreshEmails && this.props.onRefreshEmails()
-
+  onRefreshEmails = (e: any) => {
+    e && e.stopPropagation()
+    this.props.onRefreshEmails && this.props.onRefreshEmails()
+  }
 
   toggleExpandAll = () => {
     this.setState((prevState: State) => ({ expandAll: !prevState.expandAll }))
@@ -135,7 +151,16 @@ class EmailFeed extends PureComponent<Props, State> {
 
   render () {
     const { expandAll, increment } = this.state
-    const { emails, isRefreshing, lastSyncRefresh } = this.props
+    const { emails, isRefreshing, lastSyncRefresh, endButtonUrl, errorMessage } = this.props
+
+    if (errorMessage) {
+      return (
+        <Fragment>
+          <span className={cx.headerTitle}>EMAIL HISTORY</span>
+          <Text hasDivider content={errorMessage} isCentered />
+        </Fragment>
+      )
+    }
 
     const renderEmail = email => (
       <div className={cx.singleEmailContainer}>
@@ -167,7 +192,7 @@ class EmailFeed extends PureComponent<Props, State> {
             <div>
             {lastSyncRefresh &&
                 <span className={cx.lastestEmailSync}>
-                  Lastest email sync: <span className={cx.syncDateAgo}>{timeSince(new Date('1-24-2019'), false)}</span>
+                  Lastest email sync: <span className={cx.syncDateAgo}>{timeSince(lastSyncRefresh, false)}</span>
                 </span>}
             </div>
             <div>
@@ -194,6 +219,18 @@ class EmailFeed extends PureComponent<Props, State> {
           visible={3}
           increment={3}
           items={emails.map(renderEmail)}
+          endButton={endButtonUrl && (
+            <a href={endButtonUrl} target="_blank" rel="noreferrer" className={cx.endButtonLink} >
+              <Button
+                wide
+                outlined
+                color='silver'
+                className={`${cx.viewMore}`}
+              >
+                GO TO FRONT FOR MORE DETAILS
+              </Button>
+            </a>
+          )}
           viewMore={(amount, action) => {
             const isFirstShowMoreApplied = this.firstShowMoreApplied && increment !== 10
             const viewMoreNumber = isFirstShowMoreApplied && amount < 10 ? 10 : amount
@@ -202,6 +239,7 @@ class EmailFeed extends PureComponent<Props, State> {
               wide
               outlined
               color='silver'
+              className={cx.viewMore}
               onClick={() => {
                 action()
                 if (isFirstShowMoreApplied) {
@@ -210,7 +248,6 @@ class EmailFeed extends PureComponent<Props, State> {
                   this.firstShowMoreApplied = true
                 }
               }}
-              className={cx.viewMore}
             >
               {`View more ${viewMoreNumber}`}
             </Button>)
