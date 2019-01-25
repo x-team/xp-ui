@@ -137,11 +137,21 @@ class EmailFeed extends PureComponent<Props, State> {
 
   state = {
     expandAll: this.props.initialExpandedAll,
-    numberItemsShowed: this.props.emails.length < this.visibleItems ? this.props.emails.length : this.visibleItems
+    numberItemsShowed: this.getInitialNumberItemsShowed()
   }
 
-  onRefreshEmails = () =>
-    this.props.onRefreshEmails && this.props.onRefreshEmails()
+  getInitialNumberItemsShowed () {
+    const { emails } = this.props
+    return emails.length > 0 && emails.length < this.visibleItems ? emails.length : this.visibleItems
+  }
+
+  onRefreshEmails = () => {
+    const { onRefreshEmails } = this.props
+    if (onRefreshEmails) {
+      onRefreshEmails()
+      this.setState({ numberItemsShowed: this.getInitialNumberItemsShowed() })
+    }
+  }
 
   toggleExpandAll = () => {
     this.setState((prevState: State) => ({ expandAll: !prevState.expandAll }))
@@ -236,7 +246,13 @@ class EmailFeed extends PureComponent<Props, State> {
               className={cx.viewMore}
               onClick={() => {
                 action()
-                this.setState(prevState => ({ numberItemsShowed: prevState.numberItemsShowed + amount }))
+                this.setState(prevState => {
+                  let newNumberItemsShowed = prevState.numberItemsShowed + amount
+                  newNumberItemsShowed = emails.length < newNumberItemsShowed ? emails.length : newNumberItemsShowed
+                  return {
+                    numberItemsShowed: newNumberItemsShowed
+                  }
+                })
               }}
             >
               {`View more ${amount}`}
