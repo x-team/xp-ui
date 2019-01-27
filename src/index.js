@@ -13,8 +13,8 @@ import Button from './components/ui/Button'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
 import Dropdown from './components/ui/Dropdown'
-import ErrorBox from './components/ui/ErrorBox'
 import Email from './components/ui/Email'
+import ErrorBox from './components/ui/ErrorBox'
 import FilterTag from './components/ui/FilterTag'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
@@ -71,8 +71,8 @@ export {
   CollapsibleSection,
   ColorPalette,
   Dropdown,
-  ErrorBox,
   Email,
+  ErrorBox,
   FilterTag,
   Footer,
   FooterBrands,
