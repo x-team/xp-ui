@@ -100,7 +100,7 @@ const cx = {
   )
 }
 
-export type EmailPropsType = {
+export type Props = {
   subject?: string,
   from?: string,
   to: string | string[],
@@ -108,8 +108,6 @@ export type EmailPropsType = {
   createdAt?: Date,
   initialOpen: boolean
 }
-
-type Props = EmailPropsType
 
 type State = {
   isOpen: boolean

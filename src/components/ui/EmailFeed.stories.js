@@ -68,7 +68,7 @@ storiesOf('UI Components/EmailFeed', module)
   ))
   .add('with error message', () => (
     <EmailFeed
-      errorMessage='Emails not found'
+      errorMessage='Emails not <a href="testing">found</a>'
     />
   ))
   .add('parent element with fixed width at 300px', () => (

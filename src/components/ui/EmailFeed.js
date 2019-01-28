@@ -1,6 +1,7 @@
 // @flow
 
 import React, { PureComponent, Fragment } from 'react'
+import { compiler as markdownCompiler } from 'markdown-to-jsx'
 
 import Button from './Button'
 import Email from './Email'
@@ -10,10 +11,10 @@ import Text from './Text'
 
 import { timeSince } from '../../utils/helpers'
 
-import type { EmailPropsType } from './Email'
+import type { Props as EmailPropsType } from './Email'
 
 import { textRendering, typeface } from '../../styles/typo'
-import theme from '../../styles/theme'
+import theme, { mediaQueries } from '../../styles/theme'
 
 const cmz = require('cmz')
 
@@ -22,18 +23,18 @@ const cx = {
     textRendering,
     typeface.text,
     `
-      margin-bottom: 20px;
-      font-size: 1.0625rem;
       color: ${theme.typoHighlightOnDarkBackground};
+      font-size: 1.0625rem;
+      margin-bottom: 20px;
     `
   ),
 
   headerRow: cmz(`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
   `),
 
   headerRefreshRow: cmz(`
@@ -41,13 +42,26 @@ const cx = {
       margin-top: 50px;
     }
 
+    ${mediaQueries.mobile} {
+      & {
+        margin-top: 15px;
+      }
+
+      & > div {
+        margin-bottom: 15px;
+      }
+
+      & > div:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     & button {
-      width: auto;
-      display: inline-block;
-      margin: initial;
-      margin-left: 20px;
-      padding: 5px 20px;
       border: 1px solid ${theme.lineSilver2};
+      display: inline-block;
+      margin-left: 20px;
+      padding: 8px 20px;
+      width: auto;
     }
 
     & button span {
@@ -63,13 +77,16 @@ const cx = {
   headerRowExpandEmails: cmz(`
     & label {
       color: ${theme.typoLabel};
+      text-transform: uppercase;
+      font-size: 1.0625rem
     }
   `),
 
   headerTitle: cmz(
     typeface.extraHeading,
     `
-    color: ${theme.typoHighlightOnDarkBackground};
+      color: ${theme.typoHighlightOnDarkBackground};
+      text-transform: uppercase;
     `
   ),
 
@@ -87,26 +104,45 @@ const cx = {
   `),
 
   disabledButton: cmz(`
+    background-color: ${theme.baseBright};
     border: 1px solid ${theme.lineSilver2};
-    background-color: ${theme.baseBright}
+    color: ${theme.typoLabel};
   `),
 
   viewMore: cmz(`
-    width: 100%;
+    & {
+      border: 1px solid ${theme.lineSilver2};
+    }
+
+    & span {
+      color: ${theme.typoLabel};
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+      font-size: 0.875rem;
+      font-weight: 700
+      text-transform: uppercase;
+      letter-spacing: 1.75px;
+    }
   `),
 
   loadIndicator: cmz(`
-    font-weight: bold;
+    font-weight: 600;
   `),
 
   endButtonLink: cmz(
     typeface.semiHeading,
     `
-    text-decoration: none;
-    color: ${theme.typoLabel};
-    font-size: 0.875rem;
+      color: ${theme.typoLabel};
+      font-size: 0.875rem;
+      text-decoration: none;
     `
   )
+}
+
+const visibleItems = 3
+const incrementItems = 3
+
+const getInitialNumberItemsShowed = emails => {
+  return emails.length > 0 && emails.length < visibleItems ? emails.length : visibleItems
 }
 
 type Props = {
@@ -132,24 +168,16 @@ class EmailFeed extends PureComponent<Props, State> {
     errorMessage: ''
   }
 
-  visibleItems = 3
-  incrementItems = 3
-
   state = {
     expandAll: this.props.initialExpandedAll,
-    numberItemsShowed: this.getInitialNumberItemsShowed()
-  }
-
-  getInitialNumberItemsShowed () {
-    const { emails } = this.props
-    return emails.length > 0 && emails.length < this.visibleItems ? emails.length : this.visibleItems
+    numberItemsShowed: getInitialNumberItemsShowed(this.props.emails)
   }
 
   onRefreshEmails = () => {
     const { onRefreshEmails } = this.props
     if (onRefreshEmails) {
       onRefreshEmails()
-      this.setState({ numberItemsShowed: this.getInitialNumberItemsShowed() })
+      this.setState({ numberItemsShowed: getInitialNumberItemsShowed(this.props.emails) })
     }
   }
 
@@ -157,20 +185,30 @@ class EmailFeed extends PureComponent<Props, State> {
     this.setState((prevState: State) => ({ expandAll: !prevState.expandAll }))
   }
 
+  getLoadIndicator = () => `1-${this.state.numberItemsShowed} of ${this.props.emails.length}`
+
   render () {
-    const { expandAll, numberItemsShowed } = this.state
+    const { expandAll } = this.state
     const { emails, isRefreshing, lastSyncRefresh, endButtonUrl, errorMessage } = this.props
+
+    const htmlErrorMessage = (() => {
+      try {
+        return markdownCompiler(errorMessage)
+      } catch (err) {
+        return errorMessage
+      }
+    })()
 
     if (errorMessage !== '') {
       return (
         <Fragment>
-          <span className={cx.headerTitle}>EMAIL HISTORY</span>
-          <Text hasDivider content={errorMessage} isCentered />
+          <span className={cx.headerTitle}>Email History</span>
+          <Text hasDivider content={htmlErrorMessage} isCentered />
         </Fragment>
       )
     }
 
-    const renderEmail = email => (
+    const renderEmail = (email: EmailPropsType) => (
       <div className={cx.singleEmailContainer}>
         <Email
           subject={email.subject}
@@ -187,10 +225,10 @@ class EmailFeed extends PureComponent<Props, State> {
       <Fragment>
         <div className={cx.header}>
           <div className={`${cx.headerRow} ${cx.headerRowExpandEmails}`}>
-            <span className={cx.headerTitle}>EMAIL HISTORY</span>
+            <span className={cx.headerTitle}>Email History</span>
             <InputField
               type='sliding-checkbox'
-              label='EXPAND ALL'
+              label='Expand All'
               checked={expandAll}
               onChange={this.toggleExpandAll}
             />
@@ -204,10 +242,9 @@ class EmailFeed extends PureComponent<Props, State> {
                 </span>}
             </div>
             <div>
-              {emails.length > 0 && <span className={cx.loadIndicator}>1-{numberItemsShowed} of {emails.length}</span>}
+              {emails.length > 0 && <span className={cx.loadIndicator}>{this.getLoadIndicator()}</span>}
               <Button
                 wide
-                outlined
                 color='silver'
                 icon='spin'
                 iconProps={{ color: isRefreshing ? 'grayscale' : '' }}
@@ -223,18 +260,18 @@ class EmailFeed extends PureComponent<Props, State> {
           </div>
         </div>
         { emails.length > 0 && <TruncatedList
-          visible={this.visibleItems}
-          increment={this.incrementItems}
+          visible={visibleItems}
+          increment={incrementItems}
           items={emails.map(renderEmail)}
           endListElement={endButtonUrl && (
-            <a href={endButtonUrl} target='_blank' rel='noreferrer' className={cx.endButtonLink} >
+            <a href={endButtonUrl} target='_blank' rel='noreferrer' className={cx.endButtonLink}>
               <Button
                 wide
                 outlined
                 color='silver'
-                className={`${cx.viewMore}`}
+                className={cx.viewMore}
               >
-                GO TO FRONT FOR MORE DETAILS
+                Go to front for more details
               </Button>
             </a>
           )}
