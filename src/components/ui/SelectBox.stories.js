@@ -597,7 +597,7 @@ storiesOf('UI Components/SelectBox', module)
   ))
   .add('width variations', () => {
     const longString = 'super long entry just for testing purpose I dont think anyone should use such a long text in here but just in case let see how it looks'
-    const longStringWithoutSpaces = longString.replace(/\s/g,'')
+    const longStringWithoutSpaces = longString.replace(/\s/g, '')
     const sampleListLongContents = [
       { id: 1, value: longString },
       { id: 2, value: longStringWithoutSpaces }
