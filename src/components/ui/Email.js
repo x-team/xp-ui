@@ -124,9 +124,9 @@ class Email extends PureComponent<Props, State> {
     isOpen: this.props.initialOpen
   }
 
-  componentWillReceiveProps (nextProps: Props) {
-    if (nextProps.initialOpen !== this.props.initialOpen) {
-      this.setState({ isOpen: nextProps.initialOpen })
+  componentDidUpdate (prevProps: Props) {
+    if (prevProps.initialOpen !== this.props.initialOpen) {
+      this.setState({ isOpen: this.props.initialOpen })
     }
   }
 
