@@ -48,7 +48,14 @@ class TruncatedList extends PureComponent<Props, State> {
   }
 
   componentDidUpdate (prevProps: Props) {
-    if (!Object.is(prevProps, this.props)) {
+    const { items, visible, increment, inserted, hasMore } = this.props
+    if (
+      prevProps.items.length !== items.length ||
+      prevProps.visible !== visible ||
+      prevProps.increment !== increment ||
+      prevProps.inserted !== inserted ||
+      prevProps.hasMore !== hasMore
+    ) {
       this.setState((prevState, props) =>
         this.getUpToDateState(prevState, props))
     }
@@ -84,18 +91,38 @@ class TruncatedList extends PureComponent<Props, State> {
     }))
   }
 
-  render () {
-    const { items, visible, increment, inserted, viewMore, isFetching, hasMore, listClass, itemClass, endListElement } = this.props
-    const { allVisible, hiddenItems, page, itemsLength } = this.state
+  getRealVisible = () => this.props.inserted ? this.props.visible - 1 : this.props.visible
 
-    const realVisible = inserted
-      ? visible - 1
-      : visible
+  getNextRealIncrement = () => {
+    const { increment, inserted } = this.props
+    const { hiddenItems, itemsLength } = this.state
+    const realVisible = this.getRealVisible()
     const nextIncrement = increment || itemsLength - realVisible
     const nextRealIncrement = hiddenItems < nextIncrement || (inserted && nextIncrement + 1 === hiddenItems)
       ? hiddenItems
       : nextIncrement
-    const nextView = increment ? realVisible + (page > 1 ? (page - 1) * increment : 0) : realVisible + nextRealIncrement
+
+    return nextRealIncrement
+  }
+
+  getNextIncrement = () => this.props.increment || this.state.itemsLength - this.getRealVisible()
+
+  getNextView = () => {
+    const { increment } = this.props
+    const { page } = this.state
+    const realVisible = this.getRealVisible()
+    const nextRealIncrement = this.getNextRealIncrement()
+    return increment ? realVisible + (page > 1 ? (page - 1) * increment : 0) : realVisible + nextRealIncrement
+  }
+
+  render () {
+    const { items, increment, viewMore, isFetching, hasMore, listClass, itemClass, endListElement } = this.props
+    const { allVisible, hiddenItems, itemsLength } = this.state
+
+    const realVisible = this.getRealVisible()
+    const nextRealIncrement = this.getNextRealIncrement()
+    const nextView = this.getNextView()
+
     const renderShowMore = () => {
       return viewMore
         ? viewMore(nextRealIncrement, this.handleViewMore, isFetching)

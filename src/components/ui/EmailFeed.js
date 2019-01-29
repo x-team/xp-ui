@@ -187,6 +187,18 @@ class EmailFeed extends PureComponent<Props, State> {
 
   getLoadIndicator = () => `1-${this.state.numberItemsShowed} of ${this.props.emails.length}`
 
+  handleViewMore = (action: Function, amount: number) => {
+    action()
+    this.setState(prevState => {
+      const emailLength = this.props.emails.length
+      let newNumberItemsShowed = prevState.numberItemsShowed + amount
+      newNumberItemsShowed = emailLength < newNumberItemsShowed ? emailLength : newNumberItemsShowed
+      return {
+        numberItemsShowed: newNumberItemsShowed
+      }
+    })
+  }
+
   render () {
     const { expandAll } = this.state
     const { emails, isRefreshing, lastSyncRefresh, endButtonUrl, errorMessage } = this.props
@@ -259,43 +271,36 @@ class EmailFeed extends PureComponent<Props, State> {
             </div>
           </div>
         </div>
-        { emails.length > 0 && <TruncatedList
-          visible={visibleItems}
-          increment={incrementItems}
-          items={emails.map(renderEmail)}
-          endListElement={endButtonUrl && (
-            <a href={endButtonUrl} target='_blank' rel='noreferrer' className={cx.endButtonLink}>
+        { emails.length > 0 && (
+          <TruncatedList
+            visible={visibleItems}
+            increment={incrementItems}
+            items={emails.map(renderEmail)}
+            endListElement={endButtonUrl && (
+              <a href={endButtonUrl} target='_blank' rel='noreferrer' className={cx.endButtonLink}>
+                <Button
+                  wide
+                  outlined
+                  color='silver'
+                  className={cx.viewMore}
+                >
+                  Go to front for more details
+                </Button>
+              </a>
+            )}
+            viewMore={(amount, action, isFetching) => (
               <Button
                 wide
                 outlined
                 color='silver'
                 className={cx.viewMore}
+                onClick={this.handleViewMore.bind(null, action, amount)}
               >
-                Go to front for more details
+                {`Load ${amount} more`}
               </Button>
-            </a>
-          )}
-          viewMore={(amount, action, isFetching) => {
-            return (<Button
-              wide
-              outlined
-              color='silver'
-              className={cx.viewMore}
-              onClick={() => {
-                action()
-                this.setState(prevState => {
-                  let newNumberItemsShowed = prevState.numberItemsShowed + amount
-                  newNumberItemsShowed = emails.length < newNumberItemsShowed ? emails.length : newNumberItemsShowed
-                  return {
-                    numberItemsShowed: newNumberItemsShowed
-                  }
-                })
-              }}
-            >
-              {`View more ${amount}`}
-            </Button>)
-          }}
-        />}
+            )}
+          />
+        )}
       </Fragment>
     )
   }

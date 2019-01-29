@@ -16,7 +16,7 @@ const getEmailObjectStructure = (index) => ({
   lastSyncRefresh: new Date()
 })
 
-const emailsLarge = [...Array(15).keys()].map(getEmailObjectStructure)
+const emailsLarge = [...Array(14).keys()].map(getEmailObjectStructure)
 const emailsSmall = [...Array(5).keys()].map(getEmailObjectStructure)
 const emailsExtraSmall = [...Array(1).keys()].map(getEmailObjectStructure)
 
