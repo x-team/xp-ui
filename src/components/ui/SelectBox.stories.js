@@ -595,4 +595,83 @@ storiesOf('UI Components/SelectBox', module)
       size={select('Size', sizes, sizes.Default)}
     />
   ))
+  .add('width variations', () => {
+    const longString = 'super long entry just for testing purpose I dont think anyone should use such a long text in here but just in case let see how it looks'
+    const longStringWithoutSpaces = longString.replace(/\s/g, '')
+    const sampleListLongContents = [
+      { id: 1, value: longString },
+      { id: 2, value: longStringWithoutSpaces }
+    ]
+    const sampleListShortContents = [
+      { id: 1, value: 'yo!' },
+      { id: 2, value: 'hey' },
+      { id: 3, value: 'ho!' }
+    ]
+    const sampleListWithAllStatesAndLongContents = [
+      { id: 2, value: longStringWithoutSpaces },
+      { id: 3, value: longStringWithoutSpaces, selected: true },
+      { id: 4, value: longStringWithoutSpaces, status: 'selecting' },
+      { id: 5, value: `${longStringWithoutSpaces} (no changes yet)`, editing: `${longStringWithoutSpaces} (no changes yet)`, status: 'editing' },
+      { id: 6, value: longStringWithoutSpaces, editing: `${longStringWithoutSpaces} (this is changed but not yet saved)`, status: 'editing' },
+      { id: 7, value: longStringWithoutSpaces, status: 'saving' },
+      { id: 8, value: longStringWithoutSpaces, status: 'edited' },
+      { id: 9, value: longStringWithoutSpaces, status: 'creating' },
+      { id: 10, value: longStringWithoutSpaces, status: 'created' },
+      { id: 11, value: longStringWithoutSpaces, status: 'confirm' },
+      { id: 12, value: longStringWithoutSpaces, status: 'deleting' },
+      { id: 13, value: longStringWithoutSpaces, status: 'deleted' },
+      { id: 14, value: longStringWithoutSpaces, status: 'dismissed' },
+      { id: 15, value: longStringWithoutSpaces, status: 'archiving' },
+      { id: 16, value: longStringWithoutSpaces, status: 'archived' },
+      { id: 17, value: longStringWithoutSpaces, status: 'unarchiving' },
+      { id: 18, value: longStringWithoutSpaces, status: 'unarchived' }
+    ]
+    return (
+      <div>
+        <p>With <b>long</b> content<br />Width = <b>undefined</b> (default to 100%)</p>
+        <SelectBox
+          items={sampleListLongContents}
+          expanded
+        />
+        <p>With <b>short</b> content<br />Width = <b>undefined</b> (default to 100%)</p>
+        <SelectBox
+          items={sampleListShortContents}
+          expanded
+        />
+        <p>With <b>long</b> content<br />Width = <b>250</b></p>
+        <SelectBox
+          items={sampleListLongContents}
+          width={250}
+          expanded
+        />
+        <p>With <b>short</b> content<br />Width = <b>250</b></p>
+        <SelectBox
+          items={sampleListShortContents}
+          width={250}
+          expanded
+        />
+        <p>With <b>long</b> content at all possible items statuses<br />Width = <b>400</b></p>
+        <SelectBox
+          items={sampleListWithAllStatesAndLongContents}
+          width={500}
+          expanded
+          onSelect={action('onSelect')}
+          onEdit={action('onEdit')}
+          onArchive={action('onArchive')}
+          onDelete={action('onDelete')}
+          onCreateNew={action('onCreateNew')}
+          dismissTimeout={99999}
+        />
+        <p>Creating <b>long</b> content<br />Width = <b>400</b></p>
+        <SelectBox
+          items={sampleListWithAllStatesAndLongContents}
+          search='asuperlongentryjustfortestingpurposeIdontthinkanyoneshouldusesuchalongtextinherebutjustincaseletseehowitlooks'
+          width={500}
+          expanded
+          onCreateNew={action('onCreateNew')}
+          dismissTimeout={99999}
+        />
+      </div>
+    )
+  })
   .add('missing props (does component explode?)', () => <SelectBox />)

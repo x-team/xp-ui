@@ -212,6 +212,7 @@ const cx = {
       min-height: 30px
       display: flex
       align-items: center
+      word-break: break-word
     }
     &:hover {
       background-color: ${theme.baseBright}
@@ -291,10 +292,16 @@ const cx = {
   `),
 
   controlButton: cmz(`
-    cursor: pointer
-    padding: 5px
-    display: flex
-    align-items: center
+    & {
+      cursor: pointer
+      padding: 5px
+      display: flex
+      align-items: center
+    }
+
+    &:first-of-type {
+      padding: 5px 5px 5px 10px
+    }
   `),
 
   editableButton: cmz('editableButton', `
@@ -307,7 +314,6 @@ const cx = {
       font-size: 20px
       position: relative
       padding-left: 30px
-      flex: 1 0 auto
     `
   ),
 
@@ -351,7 +357,7 @@ const cx = {
       & {
         font-size: 20px
         height: 30px
-        flex: 0 0 70%
+        flex: 1 0 auto
       }
       & input {
         height: 30px !important
@@ -376,6 +382,7 @@ const cx = {
       font-size: 20px
       display: block
       margin: 15px 22px
+      word-break: break-word
     `
   ),
 
@@ -394,10 +401,12 @@ const cx = {
         margin: 15px 22px
         color: ${theme.baseRed}
         cursor: pointer
+        word-break: break-word
       }
       & svg {
         transform: scale(.7)
         margin-right: 8px
+        flex-shrink: 0
       }
     `
   ),
@@ -1136,7 +1145,7 @@ class SelectBox extends Component<Props, State> {
         <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
           height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
           maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
-          width: width ? `${width}px` : '100%'
+          width: '100%'
         }}>
           {search && filteredItems && (
             <li key='search-result'>
