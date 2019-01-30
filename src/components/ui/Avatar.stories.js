@@ -28,6 +28,19 @@ storiesOf('UI Components/Avatar', module)
       size={128}
     />
   ))
+  .add('without image source', () => (
+    <Avatar
+      alt='X P'
+      size={32}
+    />
+  ))
+  .add('with not reachable image source', () => (
+    <Avatar
+      src='https://x-team.com/some-path-that-doesn-exists.png'
+      alt='X P'
+      size={32}
+    />
+  ))
   .add('missing props (does component explode?)', () => (
     <Avatar />
   ))

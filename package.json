@@ -79,6 +79,7 @@
     "lodash.isequal": "^4.5.0",
     "markdown-to-jsx": "^6.8.3",
     "medium-editor": "^5.23.3",
+    "react-avatar": "^3.5.0",
     "react-click-outside": "github:tj/react-click-outside",
     "recompose": "^0.30.0",
     "tui-editor": "^1.2.10",
