@@ -209,7 +209,7 @@ class Note extends PureComponent<Props, State> {
           onMouseLeave: this.handleMouseLeave
         },
         avatar && AvatarWrapper(
-          <Avatar alt={name} src={avatar} size={40} />
+          <Avatar alt={avatar || name} src={avatar} size={40} />
         ),
         Body(
           name && Name(name),
