@@ -20,7 +20,7 @@ type Props = {
 }
 
 const Avatar = (props: Props) => {
-  const { alt, ...restProps } = props
+  const { alt, ...rest } = props
 
   return <ReactAvatar
     className={cx.avatarSizeConstraint}
@@ -28,7 +28,7 @@ const Avatar = (props: Props) => {
     color={`${theme.baseRed}`}
     maxInitials={3}
     round
-    {...restProps}
+    {...rest}
   />
 }
 
