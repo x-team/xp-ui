@@ -669,7 +669,7 @@ class ApplicantBadge extends PureComponent<Props> {
           {avatar || (
             <Avatar
               src={`https://www.gravatar.com/avatar/${md5(email)}?s=65`}
-              email={name ? `${name}'s avatar` : 'avatar'}
+              alt={name || 'avatar'}
               size={65}
             />
           )}
