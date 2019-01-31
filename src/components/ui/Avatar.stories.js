@@ -5,7 +5,7 @@ import Avatar from './Avatar'
 
 storiesOf('UI Components/Avatar', module)
   .add('basic usage', () => (
-    <Avatar src='https://icon-icons.com/icons2/1371/PNG/128/batman_90804.png' />
+    <Avatar src='http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png' />
   ))
   .add('alt text, 32x32 size', () => (
     <Avatar
@@ -16,14 +16,14 @@ storiesOf('UI Components/Avatar', module)
   ))
   .add('64x64 size', () => (
     <Avatar
-      src='https://icon-icons.com/icons2/1371/PNG/128/batman_90804.png'
+      src='http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png'
       alt='I am Batman!'
       size={64}
     />
   ))
   .add('128x128 size', () => (
     <Avatar
-      src='https://icon-icons.com/icons2/1371/PNG/128/batman_90804.png'
+      src='http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png'
       alt='I am Batman!'
       size={128}
     />

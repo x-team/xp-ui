@@ -25,7 +25,7 @@ const Avatar = (props: Props) => {
   return <ReactAvatar
     className={cx.avatarSizeConstraint}
     name={alt}
-    color={`${theme.baseRed}`}
+    color={theme.baseRed.toString()}
     maxInitials={3}
     round
     {...rest}
