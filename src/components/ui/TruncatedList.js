@@ -157,7 +157,7 @@ class TruncatedList extends PureComponent<Props, State> {
           })
         }
         {(!allVisible || hasMore) && renderShowMore()}
-        {allVisible && endListElement }
+        {allVisible && endListElement}
       </span>
     ) : null
   }
