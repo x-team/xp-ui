@@ -50,7 +50,7 @@ export const typeface = {
 }
 
 // mixin for font smoothing
-const textRendering = cmz(`
+export const textRendering = cmz(`
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale

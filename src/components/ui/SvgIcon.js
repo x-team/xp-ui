@@ -6,7 +6,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow'
 
 type Props = {
@@ -657,9 +657,15 @@ const getIcon = ({ icon, color, hover, ...rest }) => {
     ),
 
     time: (
-      <svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'>
+      <svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg' {...rest}>
         <circle className={strokeClassName} cx='7' cy='7' r='6.5' />
         <path className={strokeClassName} d='M7.53839 3.23077V7.53847H4.30762' />
+      </svg>
+    ),
+
+    spin: (
+      <svg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg' {...rest}>
+        <path className={fillClassName} d='M11.3817 6.99021C11.3817 6.86216 11.2762 6.74917 11.1406 6.74917H9.6944C9.58141 6.74917 9.50609 6.81696 9.46842 6.92242C9.34037 7.22372 9.24998 7.50995 9.0692 7.80372C8.36867 8.94867 7.1258 9.64167 5.785 9.64167C4.8133 9.64167 3.87173 9.26504 3.16367 8.60217L4.19563 7.57021C4.28602 7.47982 4.33875 7.3593 4.33875 7.23125C4.33875 6.96761 4.12031 6.74917 3.85667 6.74917H0.482084C0.218444 6.74917 0 6.96761 0 7.23125V10.6058C0 10.8695 0.218444 11.0879 0.482084 11.0879C0.610137 11.0879 0.730658 11.0352 0.821049 10.9448L1.79275 9.9731C2.86237 10.99 4.28602 11.57 5.75487 11.57C8.53438 11.57 10.7339 9.70946 11.3742 7.04294C11.3817 7.02787 11.3817 7.00527 11.3817 6.99021ZM11.57 0.964167C11.57 0.700528 11.3516 0.482083 11.0879 0.482083C10.9599 0.482083 10.8393 0.534811 10.749 0.625202L9.76972 1.5969C8.7001 0.587539 7.26138 0 5.785 0C3.00549 0 0.783386 1.85301 0.135586 4.52706C0.135586 4.54213 0.135586 4.56473 0.135586 4.57979C0.135586 4.70785 0.241042 4.82083 0.376628 4.82083H1.87561C1.98859 4.82083 2.06392 4.75304 2.10158 4.64758C2.22964 4.34628 2.32003 4.06005 2.50081 3.76628C3.20134 2.62133 4.44421 1.92833 5.785 1.92833C6.7567 1.92833 7.69827 2.29743 8.41387 2.96029L7.37437 3.99979C7.28398 4.09018 7.23125 4.2107 7.23125 4.33875C7.23125 4.60239 7.4497 4.82083 7.71334 4.82083H11.0879C11.3516 4.82083 11.57 4.60239 11.57 4.33875V0.964167Z' fill='#5A5665' />
       </svg>
     )
   }
