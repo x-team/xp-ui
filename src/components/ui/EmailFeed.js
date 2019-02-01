@@ -167,7 +167,7 @@ type Props = {
 }
 
 type State = {
-  isExpandAll: boolean,
+  isExpandedAll: boolean,
   numberItemsShowed: number
 }
 
@@ -180,7 +180,7 @@ class EmailFeed extends PureComponent<Props, State> {
   }
 
   state = {
-    isExpandAll: this.props.initialExpandedAll,
+    isExpandedAll: this.props.initialExpandedAll,
     numberItemsShowed: getInitialNumberItemsShowed(this.props.emails)
   }
 
@@ -193,7 +193,7 @@ class EmailFeed extends PureComponent<Props, State> {
   }
 
   toggleExpandAll = () =>
-    this.setState((prevState: State) => ({ isExpandAll: !prevState.isExpandAll }))
+    this.setState((prevState: State) => ({ isExpandedAll: !prevState.isExpandedAll }))
 
   getLoadIndicator = () => `1-${this.state.numberItemsShowed} of ${this.props.emails.length}`
 
@@ -210,7 +210,7 @@ class EmailFeed extends PureComponent<Props, State> {
   }
 
   render () {
-    const { isExpandAll } = this.state
+    const { isExpandedAll } = this.state
     const { emails, isRefreshing, lastSyncRefresh, endButtonUrl, errorMessage, onRefreshEmails } = this.props
     const hasEmails = emails.length > 0
 
@@ -246,7 +246,7 @@ class EmailFeed extends PureComponent<Props, State> {
           to={email.to}
           body={email.body}
           createdAt={email.createdAt}
-          initialOpen={this.state.isExpandAll}
+          initialOpen={this.state.isExpandedAll}
         />
       </div>
     )
@@ -271,7 +271,7 @@ class EmailFeed extends PureComponent<Props, State> {
             <InputField
               type='sliding-checkbox'
               label='Expand All'
-              checked={isExpandAll}
+              checked={isExpandedAll}
               onChange={this.toggleExpandAll}
             />
           </div>
