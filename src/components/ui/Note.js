@@ -144,6 +144,12 @@ class Note extends PureComponent<Props, State> {
     }
   }
 
+  componentDidUpdate (prevProps: Props) {
+    if (prevProps.text !== this.props.text) {
+      this.setState({ newValue: this.props.text })
+    }
+  }
+
   componentWillUnmount () {
     if (this.interval) {
       window.clearInterval(this.interval)
@@ -160,11 +166,10 @@ class Note extends PureComponent<Props, State> {
 
   renderPresenter = ({ activateEditingMode }: PresenterProps) => {
     this.activateEditingMode = activateEditingMode
-    const { text } = this.props
-
+    const { newValue } = this.state
     return TextWrapper(
       RichContentWrapper(
-        <RichTextEditor initialValue={text} mode='viewer' />
+        <RichTextEditor initialValue={newValue} mode='viewer' />
       )
     )
   }
