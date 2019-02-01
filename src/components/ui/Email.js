@@ -100,7 +100,7 @@ const cx = {
   )
 }
 
-type Props = {
+export type Props = {
   subject?: string,
   from?: string,
   to: string | string[],
