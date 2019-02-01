@@ -74,6 +74,16 @@ const cx = {
 
   `),
 
+  headerError: cmz(`
+    & {
+      margin-top: 0
+    }
+
+    & button {
+      margin: 0
+    }
+  `),
+
   headerRowExpandEmails: cmz(`
     & label {
       color: ${theme.typoLabel};
@@ -87,6 +97,7 @@ const cx = {
     `
       color: ${theme.typoHighlightOnDarkBackground};
       text-transform: uppercase;
+      font-size: 1.0625rem;
     `
   ),
 
@@ -156,7 +167,7 @@ type Props = {
 }
 
 type State = {
-  expandAll: boolean,
+  isExpandAll: boolean,
   numberItemsShowed: number
 }
 
@@ -169,25 +180,24 @@ class EmailFeed extends PureComponent<Props, State> {
   }
 
   state = {
-    expandAll: this.props.initialExpandedAll,
+    isExpandAll: this.props.initialExpandedAll,
     numberItemsShowed: getInitialNumberItemsShowed(this.props.emails)
   }
 
   onRefreshEmails = () => {
-    const { onRefreshEmails } = this.props
+    const { onRefreshEmails, emails } = this.props
     if (onRefreshEmails) {
       onRefreshEmails()
-      this.setState({ numberItemsShowed: getInitialNumberItemsShowed(this.props.emails) })
+      this.setState({ numberItemsShowed: getInitialNumberItemsShowed(emails) })
     }
   }
 
-  toggleExpandAll = () => {
-    this.setState((prevState: State) => ({ expandAll: !prevState.expandAll }))
-  }
+  toggleExpandAll = () =>
+    this.setState((prevState: State) => ({ isExpandAll: !prevState.isExpandAll }))
 
   getLoadIndicator = () => `1-${this.state.numberItemsShowed} of ${this.props.emails.length}`
 
-  handleViewMore = (action: Function, amount: number) => {
+  handleViewMore = (action: (e: any) => void, amount: number) => {
     action()
     this.setState(prevState => {
       const emailLength = this.props.emails.length
@@ -200,8 +210,9 @@ class EmailFeed extends PureComponent<Props, State> {
   }
 
   render () {
-    const { expandAll } = this.state
-    const { emails, isRefreshing, lastSyncRefresh, endButtonUrl, errorMessage } = this.props
+    const { isExpandAll } = this.state
+    const { emails, isRefreshing, lastSyncRefresh, endButtonUrl, errorMessage, onRefreshEmails } = this.props
+    const hasEmails = emails.length > 0
 
     const htmlErrorMessage = (() => {
       try {
@@ -211,14 +222,21 @@ class EmailFeed extends PureComponent<Props, State> {
       }
     })()
 
-    if (errorMessage !== '') {
-      return (
-        <Fragment>
-          <span className={cx.headerTitle}>Email History</span>
-          <Text hasDivider content={htmlErrorMessage} isCentered />
-        </Fragment>
-      )
-    }
+    const renderRefreshButton = () => ((onRefreshEmails || isRefreshing) && (
+      <Button
+        wide
+        color='silver'
+        icon='spin'
+        iconProps={{ color: isRefreshing ? 'grayscale' : '' }}
+        contentStyle='sourceSansPro'
+        smallRounded
+        disabled={isRefreshing}
+        className={isRefreshing ? cx.disabledButton : ''}
+        onClick={this.onRefreshEmails}
+      >
+        {isRefreshing ? 'Loading...' : 'Refresh'}
+      </Button>
+    ))
 
     const renderEmail = (email: EmailPropsType) => (
       <div className={cx.singleEmailContainer}>
@@ -228,10 +246,22 @@ class EmailFeed extends PureComponent<Props, State> {
           to={email.to}
           body={email.body}
           createdAt={email.createdAt}
-          initialOpen={this.state.expandAll}
+          initialOpen={this.state.isExpandAll}
         />
       </div>
     )
+
+    if (errorMessage !== '') {
+      return (
+        <Fragment>
+          <div className={`${cx.headerRow} ${cx.headerRefreshRow} ${cx.headerError}`}>
+            <span className={cx.headerTitle}>Email History</span>
+            {renderRefreshButton()}
+          </div>
+          <Text hasDivider content={htmlErrorMessage} isCentered />
+        </Fragment>
+      )
+    }
 
     return (
       <Fragment>
@@ -241,7 +271,7 @@ class EmailFeed extends PureComponent<Props, State> {
             <InputField
               type='sliding-checkbox'
               label='Expand All'
-              checked={expandAll}
+              checked={isExpandAll}
               onChange={this.toggleExpandAll}
             />
           </div>
@@ -250,28 +280,16 @@ class EmailFeed extends PureComponent<Props, State> {
             <div>
               {lastSyncRefresh &&
                 <span className={cx.lastestEmailSync}>
-                  Lastest email sync: <span className={cx.syncDateAgo}>{timeSince(lastSyncRefresh, false)}</span>
+                  Latest email sync: <span className={cx.syncDateAgo}>{timeSince(lastSyncRefresh, false)}</span>
                 </span>}
             </div>
             <div>
-              {emails.length > 0 && <span className={cx.loadIndicator}>{this.getLoadIndicator()}</span>}
-              <Button
-                wide
-                color='silver'
-                icon='spin'
-                iconProps={{ color: isRefreshing ? 'grayscale' : '' }}
-                contentStyle='sourceSansPro'
-                smallRounded
-                disabled={isRefreshing}
-                className={isRefreshing ? cx.disabledButton : ''}
-                onClick={this.onRefreshEmails}
-              >
-                {isRefreshing ? 'Loading...' : 'Refresh'}
-              </Button>
+              {hasEmails && <span className={cx.loadIndicator}>{this.getLoadIndicator()}</span>}
+              {renderRefreshButton()}
             </div>
           </div>
         </div>
-        { emails.length > 0 && (
+        { hasEmails && (
           <TruncatedList
             visible={visibleItems}
             increment={incrementItems}
@@ -284,7 +302,7 @@ class EmailFeed extends PureComponent<Props, State> {
                   color='silver'
                   className={cx.viewMore}
                 >
-                  Go to front for more details
+                  Go to Front for more details
                 </Button>
               </a>
             )}

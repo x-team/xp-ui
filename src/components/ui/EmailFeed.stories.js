@@ -8,13 +8,16 @@ import EmailFeed from './EmailFeed'
 
 const currentData = new Date()
 
-const getEmailObjectStructure = (index) => ({
-  subject: `Welcomen Subject ${++index}`,
-  from: `from${index}@x-team.com`,
-  to: `to-${index}@x-team.com`,
-  body: `Welcome to x-team ${index}`,
-  lastSyncRefresh: new Date()
-})
+const getEmailObjectStructure = index => {
+  const emailNumber = index + 1
+  return {
+    subject: `Welcomen Subject ${emailNumber}`,
+    from: `from${emailNumber}@x-team.com`,
+    to: `to-${emailNumber}@x-team.com`,
+    body: `Welcome to x-team ${emailNumber}`,
+    createdAt: new Date()
+  }
+}
 
 const emailsLarge = [...Array(14).keys()].map(getEmailObjectStructure)
 const emailsSmall = [...Array(5).keys()].map(getEmailObjectStructure)
@@ -39,6 +42,7 @@ storiesOf('UI Components/EmailFeed', module)
       isRefreshing
       emails={emailsLarge}
       lastSyncRefresh={currentData}
+      onRefreshEmails={action('this can`t be trigger in refresh')}
     />
   ))
   .add('with extra small list of emails', () => (
@@ -62,13 +66,19 @@ storiesOf('UI Components/EmailFeed', module)
   .add('with end button link', () => (
     <EmailFeed
       emails={emailsSmall}
-      endButtonUrl='http://www.fayerwayer.com'
+      endButtonUrl='http://www.google.com'
       lastSyncRefresh={currentData}
     />
   ))
   .add('with error message', () => (
     <EmailFeed
       errorMessage='Emails not <a href="testing">found</a>'
+    />
+  ))
+  .add('with error message and refresh button', () => (
+    <EmailFeed
+      errorMessage='Emails not <a href="testing">found</a>'
+      onRefreshEmails={action('refresh email action')}
     />
   ))
   .add('parent element with fixed width at 300px', () => (
