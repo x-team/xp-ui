@@ -180,14 +180,14 @@ class RichTextEditor extends Component<Props, State> {
 
     const { offsetWidth, offsetHeight } = this.editSection.current || {}
 
-    const classes = [
+    const richTextClassNames = [
       cx.root,
       className,
       hideToolbar ? cx.hiddenToolbar : ''
     ].join(' ')
 
     return (
-      <div className={classes}>
+      <div className={richTextClassNames}>
 
         {disabled && <div
           className={cx.disabledOverlay}
