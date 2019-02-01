@@ -197,7 +197,7 @@ class EmailFeed extends PureComponent<Props, State> {
 
   getLoadIndicator = () => `1-${this.state.numberItemsShowed} of ${this.props.emails.length}`
 
-  handleViewMore = (action: (e: any) => void, amount: number) => {
+  handleViewMore = (action: () => void, amount: number) => () => {
     action()
     this.setState(prevState => {
       const emailLength = this.props.emails.length
@@ -312,7 +312,7 @@ class EmailFeed extends PureComponent<Props, State> {
                 outlined
                 color='silver'
                 className={cx.viewMore}
-                onClick={this.handleViewMore.bind(null, action, amount)}
+                onClick={this.handleViewMore(action, amount)}
               >
                 {`Load ${amount} more`}
               </Button>
