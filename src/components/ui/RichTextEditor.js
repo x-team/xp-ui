@@ -41,6 +41,12 @@ const cx = {
     margin-left: 10px;
     font-size: 12px;
     line-height: 20px;
+  `),
+
+  hiddenToolbar: cmz(`
+    & .te-toolbar-section {
+      display: none
+    }
   `)
 }
 
@@ -67,6 +73,7 @@ type Props = {
   initialValue?: string,
   characterLimit: number,
   hideModeSwitch: boolean,
+  hideToolbar: boolean,
   toolbarItems: Array<string>,
   mode: 'markdown' | 'wysiwyg' | 'viewer',
   handleChange({ markdown: string, plainText: string }): void
@@ -82,6 +89,7 @@ class RichTextEditor extends Component<Props, State> {
     disabled: false,
     characterLimit: Infinity,
     hideModeSwitch: true,
+    hideToolbar: false,
     toolbarItems: defaultToolbarItems,
     mode: 'wysiwyg',
     handleChange: () => {}
@@ -168,12 +176,18 @@ class RichTextEditor extends Component<Props, State> {
 
   render () {
     const { characterCount } = this.state
-    const { className, disabled, mode, characterLimit } = this.props
+    const { className, disabled, mode, characterLimit, hideToolbar } = this.props
 
     const { offsetWidth, offsetHeight } = this.editSection.current || {}
 
+    const classes = [
+      cx.root,
+      className,
+      hideToolbar ? cx.hiddenToolbar : ''
+    ].join(' ')
+
     return (
-      <div className={`${cx.root} ${className}`}>
+      <div className={classes}>
 
         {disabled && <div
           className={cx.disabledOverlay}

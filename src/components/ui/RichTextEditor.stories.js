@@ -31,6 +31,9 @@ storiesOf('UI Components/RichTextEditor', module)
       toolbarItems={['heading', 'bold', 'italic']}
     />
   ))
+  .add('with hidden toolbar', () => (
+    <RichTextEditor hideToolbar />
+  ))
   .add('with knobs', () => (
     <RichTextEditor
       disabled={boolean('disabled', false)}
