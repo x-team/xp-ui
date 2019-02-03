@@ -2,10 +2,8 @@
 
 import React, { PureComponent } from 'react'
 import differenceInHours from 'date-fns/difference_in_hours'
-import { compiler as markdownCompiler } from 'markdown-to-jsx'
 
 import Avatar from './Avatar'
-import Text from './Text'
 import FileLinks from './FileLinks'
 import PencilButton from './PencilButton'
 import InlineEditor from './InlineEditor'
@@ -14,7 +12,7 @@ import RichTextEditor from './RichTextEditor'
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
 import elem from '../../utils/elem'
-import { replaceBlankLinesForNewLines, timeSince } from '../../utils/helpers'
+import { timeSince } from '../../utils/helpers'
 
 import type { EditorProps, PresenterProps } from './InlineEditor'
 
@@ -91,6 +89,18 @@ const TextWrapper = elem.div(cmz(
   `
 ))
 
+const RichContentWrapper = elem.div(cmz(
+  `
+  & * {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 300
+    font-size: 1.25rem
+    color: ${theme.typoParagraph}
+    line-height: 1.5
+  }
+  `
+))
+
 const FileLinksWrapper = elem.div()
 
 type Props = {
@@ -134,6 +144,12 @@ class Note extends PureComponent<Props, State> {
     }
   }
 
+  componentDidUpdate (prevProps: Props) {
+    if (prevProps.text !== this.props.text) {
+      this.setState({ newValue: this.props.text })
+    }
+  }
+
   componentWillUnmount () {
     if (this.interval) {
       window.clearInterval(this.interval)
@@ -150,19 +166,12 @@ class Note extends PureComponent<Props, State> {
 
   renderPresenter = ({ activateEditingMode }: PresenterProps) => {
     this.activateEditingMode = activateEditingMode
-    const { text } = this.props
-
-    const noteText = replaceBlankLinesForNewLines(text)
-
-    const content = (() => {
-      try {
-        return markdownCompiler(noteText || '')
-      } catch (err) {
-        return noteText
-      }
-    })()
-
-    return TextWrapper({}, <Text content={content} isPureContent />)
+    const { newValue } = this.state
+    return TextWrapper(
+      RichContentWrapper(
+        <RichTextEditor initialValue={newValue} mode='viewer' />
+      )
+    )
   }
 
   handleEditorValueChange = (onValueChange: (value: any) => mixed) => ({ markdown: value }: { markdown: string }) => {
