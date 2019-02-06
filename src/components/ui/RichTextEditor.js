@@ -64,7 +64,8 @@ const defaultToolbarItems = [
   'divider',
   'link',
   'divider',
-  'code'
+  'code',
+  'codeblock'
 ]
 
 type Props = {
