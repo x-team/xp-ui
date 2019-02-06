@@ -1,10 +1,17 @@
 // @flow
+import React from 'react'
+import ReactAvatar from 'react-avatar'
 
-import { PureComponent } from 'react'
-
-import elem from '../../utils/elem'
+import theme from '../../styles/theme'
 
 const cmz = require('cmz')
+
+const cx = {
+  avatarSizeConstraint: cmz(`
+    max-width: 100%
+    max-height: 100%
+  `)
+}
 
 type Props = {
   alt?: string,
@@ -12,36 +19,22 @@ type Props = {
   size: number
 }
 
-const Root = elem.div(cmz(`
-  display: inline-block
-  border-radius: 50%
-  overflow: hidden
-`))
+const Avatar = (props: Props) => {
+  const { alt, ...rest } = props
 
-const Image = elem.img(cmz(`
-  max-width: 100%
-  display:block
-  height: auto
-`))
+  return <ReactAvatar
+    className={cx.avatarSizeConstraint}
+    name={alt}
+    color={theme.baseRed.toString()}
+    maxInitials={3}
+    round
+    {...rest}
+  />
+}
 
-class Avatar extends PureComponent<Props, void> {
-  static defaultProps = {
-    size: 64,
-    alt: ''
-  }
-
-  render () {
-    const { alt, src, size } = this.props
-
-    return Root(
-      Image({
-        alt,
-        src,
-        width: size,
-        height: size
-      })
-    )
-  }
+Avatar.defaultProps = {
+  size: 64,
+  alt: ''
 }
 
 export default Avatar

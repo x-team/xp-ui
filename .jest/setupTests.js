@@ -1,6 +1,7 @@
 // @flow
 
 import { JSDOM } from 'jsdom'
+import MockDate from 'mockdate'
 
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>')
 const { window } = jsdom
@@ -13,14 +14,7 @@ function copyProps (src: Object, target: Object) {
 }
 
 // Mock date for tests
-const constantDate = new Date('2018-06-13T04:41:20')
-/* eslint no-global-assign:off */
-Date = class extends Date {
-  constructor (date) {
-    super()
-    return constantDate
-  }
-}
+MockDate.set('2/2/2019')
 
 window.matchMedia = () => ({})
 global.navigator = {
