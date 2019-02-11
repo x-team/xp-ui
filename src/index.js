@@ -54,6 +54,7 @@ import Tabs from './components/ui/Tabs/Tabs'
 import Text from './components/ui/Text'
 import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 import TruncatedList from './components/ui/TruncatedList'
+import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
 import Typography from './components/ui/Typography'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
@@ -115,6 +116,7 @@ export {
   Text,
   TextareaEditor,
   TruncatedList,
+  TwoColumnsLayout,
   Typography,
   VideoPlayer,
   XIcon
