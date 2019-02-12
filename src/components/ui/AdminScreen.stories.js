@@ -4,29 +4,48 @@ import { action } from '@storybook/addon-actions'
 
 import AdminScreen from './AdminScreen'
 
-storiesOf('UI Components/AdminScreen', module)
+const sampleContent = Array(50).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
+
+const FakeXHeader = () => (
+  <div style={{ height: '100%', background: 'white', boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.15)', textAlign: 'center', fontStyle: 'italic' }}>
+    XHeader is not available at auto-ui, this is a fake representation
+  </div>
+)
+
+const Body = ({ children }) => (
+  <div style={{ minHeight: '100vh', overflow: 'hidden' }}>
+    <style dangerouslySetInnerHTML={{ __html: `
+      body { margin: 0; }
+    ` }} />
+    {children}
+  </div>
+)
+
+storiesOf('UI Components/Screens/AdminScreen', module)
   .add('complete', () => (
-    <div style={{ height: '500px' }}>
+    <Body>
       <AdminScreen
-        header={<div>Anything goes in the header</div>}
+        header={<FakeXHeader />}
       >
-        <div>Anything goes in the content</div>
+        {sampleContent}
       </AdminScreen>
-    </div>
+    </Body>
   ))
   .add('with modal', () => (
-    <div style={{ height: '500px' }}>
+    <Body>
       <AdminScreen
-        header={<div>Anything goes in the header</div>}
+        header={<FakeXHeader />}
         modal={{
           onClose: action('Close modal'),
-          content: <div>Anything goes in the modal</div>
+          content: sampleContent
         }}
       >
-        <div>Anything goes in the content</div>
+        {sampleContent}
       </AdminScreen>
-    </div>
+    </Body>
   ))
   .add('missing props (does component explode?)', () => (
-    <AdminScreen />
+    <Body>
+      <AdminScreen />
+    </Body>
   ))

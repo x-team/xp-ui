@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react'
 import SvgIcon from './SvgIcon'
 
 import theme from '../../styles/theme'
-import typo, { typeface } from '../../styles/typo'
+import { typeface } from '../../styles/typo'
 
 import type { Element } from 'react'
 
@@ -21,6 +21,7 @@ const dimensions = {
 const cx = {
   layout: cmz(`
     height: calc(${dimensions.screenHeight} - ${dimensions.screenHeaderHeight})
+    min-height: 100%
     position: relative
     display: flex
   `),
@@ -74,13 +75,13 @@ const cx = {
     background-color: ${theme.baseBright}
     display: flex
     align-items: center
-    padding: 0 0 0 63px
+    padding: 0 0 0 60px
   `),
 
   contentBody: cmz(`
     height: calc(100% - ${dimensions.mainHeadingHeight})
     overflow: auto
-    padding: 40px
+    padding: 40px 60px
     box-sizing: border-box
   `)
 }
