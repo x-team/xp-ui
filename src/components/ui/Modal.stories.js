@@ -11,9 +11,18 @@ const itemsArray = Array(18).fill({}).map((item, i) => ({
   archived: i > 12 && true
 }))
 
+const Body = ({ children }) => (
+  <div style={{ minHeight: '100vh', overflow: 'hidden' }}>
+    <style dangerouslySetInnerHTML={{ __html: `
+      body { margin: 0; }
+    ` }} />
+    {children}
+  </div>
+)
+
 storiesOf('UI Components/Modal', module)
   .add('basic modal', () => (
-    <div style={{ position: 'relative', minHeight: '500px' }}>
+    <Body>
       <Modal>
         <h1>Modal content goes here</h1>
         <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
@@ -24,10 +33,10 @@ storiesOf('UI Components/Modal', module)
         <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
         <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
       </Modal>
-    </div>
+    </Body>
   ))
   .add('modal with content bigger than viewport', () => (
-    <div style={{ position: 'relative', minHeight: '300px' }}>
+    <Body>
       <Modal>
         <h1>Modal content goes here</h1>
         <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
@@ -55,10 +64,10 @@ storiesOf('UI Components/Modal', module)
         <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
         <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
       </Modal>
-    </div>
+    </Body>
   ))
   .add('ListEditor use case', () => (
-    <div style={{ position: 'relative', minHeight: '800px' }}>
+    <Body>
       <Modal>
         <ListsEditor
           collectionLabel='List'
@@ -70,10 +79,10 @@ storiesOf('UI Components/Modal', module)
           onCreateNew={action('onCreateNew')}
         />
       </Modal>
-    </div>
+    </Body>
   ))
   .add('missing props (does component explode?)', () => (
-    <div style={{ position: 'relative', minHeight: '100px' }}>
+    <Body>
       <Modal />
-    </div>
+    </Body>
   ))
