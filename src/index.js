@@ -16,6 +16,7 @@ import Dropdown from './components/ui/Dropdown'
 import Email from './components/ui/Email'
 import EmailFeed from './components/ui/EmailFeed'
 import ErrorBox from './components/ui/ErrorBox'
+import Filters from './components/ui/Filters'
 import FilterTag from './components/ui/FilterTag'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
@@ -75,6 +76,7 @@ export {
   Email,
   EmailFeed,
   ErrorBox,
+  Filters,
   FilterTag,
   Footer,
   FooterBrands,
