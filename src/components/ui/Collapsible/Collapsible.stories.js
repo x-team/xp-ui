@@ -51,7 +51,7 @@ storiesOf('UI Components/Collapsible', module)
     </Collapsable.Container>
   ))
   .add('with onChange event', () => (
-    <Collapsable.Container onChange={action('onChange collapsed')}>
+    <Collapsable.Container onChange={action('onChange triggered')}>
       <Collapsable.Header>
         <ExampleHeader text='Collapsed Header' />
       </Collapsable.Header>
