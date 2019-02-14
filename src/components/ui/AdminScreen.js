@@ -68,9 +68,7 @@ class AdminScreen extends PureComponent<Props, State> {
   }
 
   componentDidUpdate (prevProps: Props) {
-    const { content: prevContent } = prevProps.modal
-    const { content } = this.props.modal
-    if (prevContent !== content) {
+    if (prevProps.modal.prevContent !== this.props.modal.content) {
       this.setState({ isModalOpen: !!this.props.modal.content })
     }
   }
@@ -84,7 +82,7 @@ class AdminScreen extends PureComponent<Props, State> {
   render () {
     const { header, children, modal } = this.props
     const { isModalOpen } = this.state
-    const adminClassNames = isModalOpen ? [cx.admin, cx.adminWidModal].join(' ') : cx.admin
+    const adminClassNames = isModalOpen ? `${cx.admin} ${cx.adminWidModal}` : cx.admin
     return (
       <div className={adminClassNames}>
         {modal && modal.content && (
