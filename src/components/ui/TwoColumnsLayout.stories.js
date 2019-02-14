@@ -48,7 +48,7 @@ storiesOf('UI Components/TwoColumnsLayout', module)
       </AdminScreen>
     </Body>
   ))
-  .add('composed in AdminScreen', () => (
+  .add('composed in AdminScreen with Modal', () => (
     <Body>
       <AdminScreen
         header={<FakeXHeader />}
