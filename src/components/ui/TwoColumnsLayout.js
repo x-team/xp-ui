@@ -8,6 +8,7 @@ import theme from '../../styles/theme'
 import { typeface } from '../../styles/typo'
 
 import type { Element } from 'react'
+import type { Icon } from './SvgIcon'
 
 const cmz = require('cmz')
 
@@ -93,12 +94,12 @@ const cx = {
 }
 
 type Props = {
-  sidebar?: Element<*>,
-  sidebarHeading?: string,
-  sidebarWidth?: number,
-  sidebarIcon?: string,
-  content?: Element<*>,
-  contentHeading?: string
+  sidebar: Element<*>,
+  sidebarHeading: string,
+  sidebarWidth: number,
+  sidebarIcon: Icon,
+  content: Element<*>,
+  contentHeading: string
 }
 
 class TwoColumnsLayout extends PureComponent<Props, void> {
