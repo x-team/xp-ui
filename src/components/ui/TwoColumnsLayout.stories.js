@@ -1,12 +1,14 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { text, number } from '@storybook/addon-knobs'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
 import AdminScreen from './AdminScreen'
 
-const sampleSidebar = Array(50).fill('Anything goes in the sidebar body').map((each, i) => <p key={`sidebar-${i}`}>{each}</p>)
-const sampleContent = Array(50).fill('Anything goes in the content body').map((each, i) => <p key={`content-${i}`}>{each}</p>)
+const sampleSidebar = Array(80).fill('Anything goes in the sidebar body').map((each, i) => <div key={`sidebar-${i}`}>{each}</div>)
+const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
+const sampleModalContent = Array(80).fill('Anything goes in the modal content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
 
 const FakeXHeader = () => (
   <div style={{ height: '100%', background: 'white', boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.15)', textAlign: 'center' }}>
@@ -15,35 +17,52 @@ const FakeXHeader = () => (
 )
 
 const Body = ({ children }) => (
-  <div style={{ minHeight: '100vh', overflow: 'hidden' }}>
+  <div style={{ height: '100vh' }}>
     <style dangerouslySetInnerHTML={{ __html: `
-      body { margin: 0; }
+      html, body { margin: 0; height: 100%; }
     ` }} />
     {children}
   </div>
 )
 
+const StoryTwoColumnsLayout = (props) => (
+  <TwoColumnsLayout
+    sidebar={props.sidebar || sampleSidebar}
+    sidebarHeading={text('Sidebar Heading', props.sidebarHeading || 'Filters')}
+    sidebarWidth={number('Sidebar Width', props.sidebarWidth || 385)}
+    sidebarIcon={text('Sidebar Icon', props.sidebarIcon || 'filters')}
+    content={props.content || sampleContent}
+    contentHeading={text('Content Heading', props.contentHeading || 'Search')}
+  />
+)
+
 storiesOf('UI Components/TwoColumnsLayout', module)
-  .add('standalone', () => (
+  .add('standalone default usage', () => (
     <Body>
-      <TwoColumnsLayout
-        sidebar={sampleSidebar}
-        sidebarHeading='Filters'
-        content={sampleContent}
-        contentHeading='Search'
+      <StoryTwoColumnsLayout />
+    </Body>
+  ))
+  .add('standalone short content', () => (
+    <Body>
+      <StoryTwoColumnsLayout
+        sidebar={<div>bump</div>}
+        content={<div>bump</div>}
       />
     </Body>
   ))
   .add('composed in AdminScreen', () => (
     <Body>
-      <AdminScreen
-        header={<FakeXHeader />}
-      >
-        <TwoColumnsLayout
-          sidebar={sampleSidebar}
-          sidebarHeading='Filters'
-          content={sampleContent}
-          contentHeading='Search'
+      <AdminScreen header={<FakeXHeader />}>
+        <StoryTwoColumnsLayout />
+      </AdminScreen>
+    </Body>
+  ))
+  .add('composed in AdminScreen with short content', () => (
+    <Body>
+      <AdminScreen header={<FakeXHeader />}>
+        <StoryTwoColumnsLayout
+          sidebar={<div>bump</div>}
+          content={<div>bump</div>}
         />
       </AdminScreen>
     </Body>
@@ -54,15 +73,23 @@ storiesOf('UI Components/TwoColumnsLayout', module)
         header={<FakeXHeader />}
         modal={{
           onClose: action('Close modal'),
-          content: sampleContent
+          content: sampleModalContent
         }}
       >
-        <TwoColumnsLayout
-          sidebar={sampleSidebar}
-          sidebarHeading='Filters'
-          content={sampleContent}
-          contentHeading='Search'
-        />
+        <StoryTwoColumnsLayout />
+      </AdminScreen>
+    </Body>
+  ))
+  .add('composed in AdminScreen with Modal with short content', () => (
+    <Body>
+      <AdminScreen
+        header={<FakeXHeader />}
+        modal={{
+          onClose: action('Close modal'),
+          content: (<div>bump</div>)
+        }}
+      >
+        <StoryTwoColumnsLayout />
       </AdminScreen>
     </Body>
   ))
