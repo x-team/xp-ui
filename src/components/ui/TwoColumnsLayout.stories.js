@@ -50,6 +50,16 @@ storiesOf('UI Components/TwoColumnsLayout', module)
       />
     </Body>
   ))
+  .add('standalone with very long headers and contents', () => (
+    <Body>
+      <StoryTwoColumnsLayout
+        sidebarHeading='verylongcontenttoseewhathappenverylongcontenttoseewhathappenverylongcontenttoseewhathappen'
+        sidebar={<div>verylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappear</div>}
+        contentHeading='verylongcontenttoseewhathappenverylongcontenttoseewhathappenverylongcontenttoseewhathappen'
+        content={<div>verylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappear</div>}
+      />
+    </Body>
+  ))
   .add('composed in AdminScreen', () => (
     <Body>
       <AdminScreen header={<FakeXHeader />}>

@@ -53,7 +53,9 @@ const cx = {
   `),
 
   sidebarHeadingText: cmz(`
-    margin: 0 0 0 15px
+    margin: 0 15px
+    overflow: hidden
+    text-overflow: ellipsis
   `),
 
   sidebarBody: cmz(`
@@ -82,6 +84,13 @@ const cx = {
     display: flex
     align-items: center
     padding: 0 0 0 60px
+    box-sizing: border-box
+  `),
+
+  contentHeadingText: cmz(typeface.extraHeading, `
+    margin: 0 20px 0 0
+    overflow: hidden
+    text-overflow: ellipsis
   `),
 
   contentBody: cmz(`
@@ -137,7 +146,9 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
         <div className={cx.content}>
           {contentHeading && (
             <div className={cx.contentHeading}>
-              {contentHeading}
+              <div className={cx.contentHeadingText}>
+                {contentHeading}
+              </div>
             </div>
           )}
           <div className={cx.contentBody}>
