@@ -11,45 +11,45 @@ import type { Props as HeaderProps } from './Header'
 import type { Props as BodyProps } from './Body'
 
 type Props = {
-  initialCollapsed: boolean,
+  initialExpanded: boolean,
   children?: Element<*>,
   bodyWrapper: ComponentType<*>,
   headerWrapper: ComponentType<*>,
-  onChange: (isCollapsed: boolean) => void
+  onChange: (isExpanded: boolean) => void
 }
 
 type State = {
-  isCollapsed: boolean
+  isExpanded: boolean
 }
 
 class Container extends Component<Props, State> {
   static defaultProps = {
-    initialCollapsed: false,
+    initialExpanded: false,
     headerWrapper: (props: { children: Element<*> }) => <Fragment>{props.children}</Fragment>,
     bodyWrapper: (props: { children: Element<*> }) => <Fragment>{props.children}</Fragment>,
     onChange: () => {}
   }
 
   state = {
-    isCollapsed: this.props.initialCollapsed
+    isExpanded: this.props.initialExpanded
   }
 
   componentDidUpdate (prevProps: Props) {
-    if (prevProps.initialCollapsed !== this.props.initialCollapsed) {
-      this.setState({ isCollapsed: this.props.initialCollapsed })
+    if (prevProps.initialExpanded !== this.props.initialExpanded) {
+      this.setState({ isExpanded: this.props.initialExpanded })
     }
   }
 
-  toggleCollapsed = (isCollapsed: boolean) => {
-    this.props.onChange(isCollapsed)
-    this.setState({ isCollapsed })
+  toggleCollapsed = (isExpanded: boolean) => {
+    this.props.onChange(isExpanded)
+    this.setState({ isExpanded })
   }
 
   handleHeaderChild = (child: Element<*>) =>
-    React.cloneElement(child, { isCollapsed: this.state.isCollapsed, onClick: this.toggleCollapsed })
+    React.cloneElement(child, { isExpanded: this.state.isExpanded, onClick: this.toggleCollapsed })
 
   handleBodyChild = (child: Element<*>) =>
-    React.cloneElement(child, { isCollapsed: this.state.isCollapsed })
+    React.cloneElement(child, { isExpanded: this.state.isExpanded })
 
   getChildrenByType = (
     children: ChildrenArray<*>,

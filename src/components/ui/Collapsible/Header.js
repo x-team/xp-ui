@@ -5,22 +5,28 @@ import React from 'react'
 import type { Element } from 'react'
 
 export type Props = {
-  isCollapsed: boolean,
+  isExpanded: boolean,
   children: Element<*>,
-  onClick: (isCollapsed: boolean) => void,
+  onClick: (isExpanded: boolean) => void,
 }
 
 const Header = (props: Props) => {
-  const { children, onClick, isCollapsed } = props
+  const { children, onClick, isExpanded } = props
+
+  if (!children) {
+    return null
+  }
 
   const handleOnClick = (event: Object) => {
     event.preventDefault()
-    onClick(!isCollapsed)
+    onClick(!isExpanded)
   }
+
+  const childrenProps = typeof children.type === 'function' ? { isExpanded } : {}
 
   return React.isValidElement(children) ? React.cloneElement(
     children,
-    { onClick: handleOnClick, isCollapsed }
+    { onClick: handleOnClick, ...childrenProps }
   ) : null
 }
 
