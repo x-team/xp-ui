@@ -12,7 +12,6 @@ const cmz = require('cmz')
 const cx = {
   main: cmz(`
     height: calc(100vh - 86px)
-    min-height: 100%
     position: relative
     display: flex
   `),

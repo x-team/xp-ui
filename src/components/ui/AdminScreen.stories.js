@@ -21,7 +21,7 @@ const Body = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components/Screens/AdminScreen', module)
+storiesOf('UI Components/AdminScreen', module)
   .add('complete', () => (
     <Body>
       <AdminScreen

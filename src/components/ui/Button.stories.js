@@ -11,7 +11,6 @@ const sizes = {
   Large: 'large',
   Small: 'small'
 }
-
 const colours = {
   None: null,
   Normal: 'normal',

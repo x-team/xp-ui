@@ -41,7 +41,7 @@ const Body = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components/Screens/ListsScreen', module)
+storiesOf('UI Components/ListsScreen', module)
   .add('full composition with AdminScreen', () => (
     <Body>
       <AdminScreen
