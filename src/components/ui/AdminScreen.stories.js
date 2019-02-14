@@ -4,7 +4,8 @@ import { action } from '@storybook/addon-actions'
 
 import AdminScreen from './AdminScreen'
 
-const sampleContent = Array(50).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
+const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
+const sampleModalContent = Array(80).fill('Anything goes in the modal content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
 
 const FakeXHeader = () => (
   <div style={{ height: '100%', background: 'white', boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.15)', textAlign: 'center', fontStyle: 'italic' }}>
@@ -13,16 +14,16 @@ const FakeXHeader = () => (
 )
 
 const Body = ({ children }) => (
-  <div style={{ minHeight: '100vh', overflow: 'hidden' }}>
+  <div style={{ height: '100vh' }}>
     <style dangerouslySetInnerHTML={{ __html: `
-      body { margin: 0; }
+      html, body { margin: 0; height: 100%; }
     ` }} />
     {children}
   </div>
 )
 
 storiesOf('UI Components/AdminScreen', module)
-  .add('complete', () => (
+  .add('default with tall content', () => (
     <Body>
       <AdminScreen
         header={<FakeXHeader />}
@@ -31,16 +32,51 @@ storiesOf('UI Components/AdminScreen', module)
       </AdminScreen>
     </Body>
   ))
-  .add('with modal', () => (
+  .add('default with short content', () => (
+    <Body>
+      <AdminScreen
+        header={<FakeXHeader />}
+      >
+        <div>bump</div>
+      </AdminScreen>
+    </Body>
+  ))
+  .add('tall content with Modal with tall content', () => (
     <Body>
       <AdminScreen
         header={<FakeXHeader />}
         modal={{
           onClose: action('Close modal'),
-          content: sampleContent
+          content: sampleModalContent
         }}
       >
         {sampleContent}
+      </AdminScreen>
+    </Body>
+  ))
+  .add('tall content with Modal with short content', () => (
+    <Body>
+      <AdminScreen
+        header={<FakeXHeader />}
+        modal={{
+          onClose: action('Close modal'),
+          content: (<div>bump</div>)
+        }}
+      >
+        {sampleContent}
+      </AdminScreen>
+    </Body>
+  ))
+  .add('short content with Modal with short content', () => (
+    <Body>
+      <AdminScreen
+        header={<FakeXHeader />}
+        modal={{
+          onClose: action('Close modal'),
+          content: (<div>bump</div>)
+        }}
+      >
+        <div>bump</div>
       </AdminScreen>
     </Body>
   ))
