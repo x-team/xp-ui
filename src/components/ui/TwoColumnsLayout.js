@@ -95,6 +95,8 @@ const cx = {
 type Props = {
   sidebar?: Element<*>,
   sidebarHeading?: string,
+  sidebarWidth?: number,
+  sidebarIcon?: string,
   content?: Element<*>,
   contentHeading?: string
 }
