@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { storiesOf } from '@storybook/react'
+
+import State from '../../../utils/State'
 
 import Filters from '.'
 import Tab from '../Tab'
@@ -32,8 +34,26 @@ storiesOf('UI Components/Filters', module)
             <SelectBoxFilterContainer placeholder='List' />
           </Filters.Filter>
           <Filters.Filter label='List Members'>
-            <InputFilterContainer type='checkbox' label='Accepted' />
-            <InputFilterContainer type='checkbox' label='Excluded' />
+            <State initialState={{ cb: true }}>
+              {({ setState, state }) => (
+                <InputFilterContainer
+                  type='checkbox'
+                  label='Accepted'
+                  checked={state.cb}
+                  onChange={() => setState(prev => ({ cb: !prev.cb }))}
+                />
+              )}
+            </State>
+            <State initialState={{ cb: true }}>
+              {({ setState, state }) => (
+                <InputFilterContainer
+                  type='checkbox'
+                  label='Excluded'
+                  checked={state.cb}
+                  onChange={() => setState(prev => ({ cb: !prev.cb }))}
+                />
+              )}
+            </State>
           </Filters.Filter>
         </Tab.Pane>
         <Tab.Pane tabKey="all">
