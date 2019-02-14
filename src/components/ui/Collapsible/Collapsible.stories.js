@@ -4,23 +4,23 @@ import { action } from '@storybook/addon-actions'
 
 import Button from '../Button'
 
-import Collapsable from './'
+import Collapsible from './'
 
 const exampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 
-const ExampleHeader = ({ isCollapsed, text, ...props }) => (
+const ExampleHeader = ({ isExpanded, text, ...props }) => (
   <span
     {...props}
-    className={`${isCollapsed ? 'isCollapsed' : ''}`}
+    className={`${isExpanded ? 'isExpanded' : ''}`}
   >
     {text}
   </span>
 )
 
-const ExampleHeaderButton = ({ isCollapsed, text, ...props }) => (
+const ExampleHeaderButton = ({ isExpanded, text, ...props }) => (
   <Button
     {...props}
-    color={`${isCollapsed ? 'gray' : 'normal'}`}
+    color={`${isExpanded ? 'gray' : 'normal'}`}
   >
     {text}
   </Button>
@@ -31,72 +31,96 @@ const BodyWrapper = props => <div style={{ backgroundColor: 'red' }}>{props.chil
 
 storiesOf('UI Components/Collapsible', module)
   .add('basic usage', () => (
-    <Collapsable.Container>
-      <Collapsable.Header>
+    <Collapsible.Container>
+      <Collapsible.Header>
         <ExampleHeader text='Collapsed Header' />
-      </Collapsable.Header>
-      <Collapsable.Body>
+      </Collapsible.Header>
+      <Collapsible.Body>
         <p>{exampleText}</p>
-      </Collapsable.Body>
-    </Collapsable.Container>
+      </Collapsible.Body>
+    </Collapsible.Container>
   ))
-  .add('with initial collapsed', () => (
-    <Collapsable.Container initialCollapsed>
-      <Collapsable.Header>
+  .add('with initial expanded', () => (
+    <Collapsible.Container initialCollapsed>
+      <Collapsible.Header>
         <ExampleHeader text='Collapsed Header' />
-      </Collapsable.Header>
-      <Collapsable.Body>
+      </Collapsible.Header>
+      <Collapsible.Body>
         <p>{exampleText}</p>
-      </Collapsable.Body>
-    </Collapsable.Container>
+      </Collapsible.Body>
+    </Collapsible.Container>
   ))
   .add('with onChange event', () => (
-    <Collapsable.Container onChange={action('onChange triggered')}>
-      <Collapsable.Header>
+    <Collapsible.Container onChange={action('onChange triggered')}>
+      <Collapsible.Header>
         <ExampleHeader text='Collapsed Header' />
-      </Collapsable.Header>
-      <Collapsable.Body>
+      </Collapsible.Header>
+      <Collapsible.Body>
         <p>{exampleText}</p>
-      </Collapsable.Body>
-    </Collapsable.Container>
+      </Collapsible.Body>
+    </Collapsible.Container>
   ))
   .add('with other UI components', () => (
-    <Collapsable.Container>
-      <Collapsable.Header>
+    <Collapsible.Container>
+      <Collapsible.Header>
         <ExampleHeaderButton text='Collapsed button' />
-      </Collapsable.Header>
-      <Collapsable.Body>
+      </Collapsible.Header>
+      <Collapsible.Body>
         <p>{exampleText}</p>
         <Button>Accept</Button>
-      </Collapsable.Body>
-    </Collapsable.Container>
+      </Collapsible.Body>
+    </Collapsible.Container>
   ))
   .add('with elements that not are child of Header or Body (These components should not appear)', () => (
-    <Collapsable.Container>
-      <Collapsable.Header>
+    <Collapsible.Container>
+      <Collapsible.Header>
         <ExampleHeader text='Collapsed Header' />
-      </Collapsable.Header>
+      </Collapsible.Header>
       <Button>Button outside the header</Button>
-      <Collapsable.Body>
+      <Collapsible.Body>
         <p>{exampleText}</p>
-      </Collapsable.Body>
+      </Collapsible.Body>
       <Button>Button outside the body content</Button>
-    </Collapsable.Container>
+    </Collapsible.Container>
   ))
-  .add('width custom wrappers for header and body', () => (
-    <Collapsable.Container headerWrapper={HeaderWrapper} bodyWrapper={BodyWrapper}>
-      <Collapsable.Header>
-        <p>test</p>
-      </Collapsable.Header>
-      <Collapsable.Body>
+  .add('with custom wrappers for header and body', () => (
+    <Collapsible.Container headerWrapper={HeaderWrapper} bodyWrapper={BodyWrapper}>
+      <Collapsible.Header>
+        <ExampleHeader text='Collapsed Header' />
+      </Collapsible.Header>
+      <Collapsible.Body>
         <p>{exampleText}</p>
-      </Collapsable.Body>
-    </Collapsable.Container>
+      </Collapsible.Body>
+    </Collapsible.Container>
+  ))
+  .add('with HTML tag for header', () => (
+    <Collapsible.Container>
+      <Collapsible.Header>
+        <h1>H1 header</h1>
+      </Collapsible.Header>
+      <Collapsible.Body>
+        <p>{exampleText}</p>
+      </Collapsible.Body>
+    </Collapsible.Container>
+  ))
+  .add('with several HTML tags for header', () => (
+    <Collapsible.Container>
+      <Collapsible.Header>
+        <div>
+          <h1>H1 header</h1>
+          <p>{exampleText}</p>
+          <hr />
+        </div>
+      </Collapsible.Header>
+      <Collapsible.Body>
+        <p>{exampleText}</p>
+      </Collapsible.Body>
+    </Collapsible.Container>
   ))
   .add('missing props and child (does component explode?)', () => (
     <div>
-      <Collapsable.Container />
-      <Collapsable.Header />
-      <Collapsable.Body />
+      <Collapsible.Container />
+      <Collapsible.Header />
+      <Collapsible.Body />
     </div>
   ))
