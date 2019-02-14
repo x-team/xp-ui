@@ -41,7 +41,7 @@ storiesOf('UI Components/Collapsible', module)
     </Collapsible.Container>
   ))
   .add('with initial expanded', () => (
-    <Collapsible.Container initialCollapsed>
+    <Collapsible.Container initialExpanded>
       <Collapsible.Header>
         <ExampleHeader text='Collapsed Header' />
       </Collapsible.Header>
@@ -114,6 +114,23 @@ storiesOf('UI Components/Collapsible', module)
       </Collapsible.Header>
       <Collapsible.Body>
         <p>{exampleText}</p>
+      </Collapsible.Body>
+    </Collapsible.Container>
+  ))
+  .add('with nested Collapsibles', () => (
+    <Collapsible.Container>
+      <Collapsible.Header>
+        <h1>First Level</h1>
+      </Collapsible.Header>
+      <Collapsible.Body>
+        <Collapsible.Container>
+          <Collapsible.Header>
+            <h2>Second Level</h2>
+          </Collapsible.Header>
+          <Collapsible.Body>
+            <p>{exampleText}</p>
+          </Collapsible.Body>
+        </Collapsible.Container>
       </Collapsible.Body>
     </Collapsible.Container>
   ))
