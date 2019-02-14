@@ -11,11 +11,6 @@ import type { Element } from 'react'
 
 const cmz = require('cmz')
 
-const dimensions = {
-  sidebarWidth: '385px',
-  mainHeadingHeight: '58px'
-}
-
 const cx = {
   layout: cmz(`
     position: relative
@@ -40,7 +35,7 @@ const cx = {
     text-transform: uppercase
     font-size: 1.0625rem
     width: 100%
-    height: ${dimensions.mainHeadingHeight}
+    height: 58px
     background-color: ${theme.baseBright}
     border-bottom: 1px solid ${theme.lineSilver2}
     display: flex
@@ -81,7 +76,7 @@ const cx = {
     color: ${theme.typoHeading}
     font-size: 1.5rem
     width: 100%
-    height: ${dimensions.mainHeadingHeight}
+    height: 58px
     background-color: ${theme.baseBright}
     display: flex
     align-items: center

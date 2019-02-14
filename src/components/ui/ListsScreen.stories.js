@@ -34,12 +34,6 @@ const FakeResultRender = () => (
   </div>
 )
 
-const FakeSearchFormRender = () => (
-  <div style={{ height: '220px', background: '#ededed', fontStyle: 'italic' }}>
-    SearchForm placeholder
-  </div>
-)
-
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
     <style dangerouslySetInnerHTML={{ __html: `
