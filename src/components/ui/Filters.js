@@ -40,6 +40,10 @@ const cx = {
 
   filter: cmz(`
     padding: 0 20px 20px
+  `),
+
+  tabHeads: cmz(`
+    padding: 0 20px 20px
   `)
 }
 
@@ -59,6 +63,10 @@ class Filters extends PureComponent<Props, void> {
       <div className={cx.label}>{props.label}</div>
       <div className={cx.filter}>{props.children}</div>
     </Fragment>
+  )
+
+  static TabHeads = (props) => (
+    <div className={cx.tabHeads}>{props.children}</div>
   )
 
   render () {

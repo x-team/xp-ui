@@ -14,8 +14,10 @@ storiesOf('UI Components/Filters', module)
     <Filters>
       <Filters.Heading>Context Filters</Filters.Heading>
       <Filters.Label>Show</Filters.Label>
-      <Button color='silver' outlined smallRounded>List</Button>
-      <Button color='silver' outlined smallRounded>All Applicants</Button>
+      <Filters.TabHeads>
+        <Button color='silver' outlined smallRounded>List</Button>
+        <Button color='silver' outlined smallRounded>All Applicants</Button>
+      </Filters.TabHeads>
       <Filters.Filter label='List'>
         <FilterInputContainer />
       </Filters.Filter>
