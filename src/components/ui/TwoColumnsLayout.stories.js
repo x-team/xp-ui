@@ -1,5 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
 import AdminScreen from './AdminScreen'
@@ -22,11 +23,39 @@ const Body = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components/Screens/TwoColumnsLayout', module)
+storiesOf('UI Components/TwoColumnsLayout', module)
+  .add('standalone', () => (
+    <Body>
+      <TwoColumnsLayout
+        sidebar={sampleSidebar}
+        sidebarHeading='Filters'
+        content={sampleContent}
+        contentHeading='Search'
+      />
+    </Body>
+  ))
   .add('composed in AdminScreen', () => (
     <Body>
       <AdminScreen
         header={<FakeXHeader />}
+      >
+        <TwoColumnsLayout
+          sidebar={sampleSidebar}
+          sidebarHeading='Filters'
+          content={sampleContent}
+          contentHeading='Search'
+        />
+      </AdminScreen>
+    </Body>
+  ))
+  .add('composed in AdminScreen', () => (
+    <Body>
+      <AdminScreen
+        header={<FakeXHeader />}
+        modal={{
+          onClose: action('Close modal'),
+          content: sampleContent
+        }}
       >
         <TwoColumnsLayout
           sidebar={sampleSidebar}

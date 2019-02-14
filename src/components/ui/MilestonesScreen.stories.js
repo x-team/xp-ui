@@ -5,7 +5,7 @@ import MilestonesScreen from './MilestonesScreen'
 import Button from './Button'
 import Text from './Text'
 
-storiesOf('UI Components/Screens/MilestonesScreen', module)
+storiesOf('UI Components/MilestonesScreen', module)
   .add('first step', () => (
     <MilestonesScreen
       cta={<Button>Go to the step 2</Button>}
