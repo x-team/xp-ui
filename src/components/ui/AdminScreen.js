@@ -68,8 +68,10 @@ class AdminScreen extends PureComponent<Props, State> {
   }
 
   componentDidUpdate (prevProps: Props) {
-    if (prevProps.modal.prevContent !== this.props.modal.content) {
-      this.setState({ isModalOpen: !!this.props.modal.content })
+    const { content: prevContent } = prevProps.modal
+    const { content } = this.props.modal
+    if (prevContent !== content) {
+      this.setState({ isModalOpen: !!content })
     }
   }
 

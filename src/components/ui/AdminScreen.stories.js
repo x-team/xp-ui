@@ -4,7 +4,11 @@ import { action } from '@storybook/addon-actions'
 
 import AdminScreen from './AdminScreen'
 
-const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
+const sampleContent = (
+  <div>
+    {Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)}
+  </div>
+)
 const sampleModalContent = Array(80).fill('Anything goes in the modal content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
 
 const FakeXHeader = () => (
