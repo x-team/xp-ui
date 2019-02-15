@@ -50,6 +50,7 @@ storiesOf('UI Components/Filters', module)
                       />
                     )}
                   </State>
+                  <br/>
                   <State initialState={{ cb: true }}>
                     {({ setState, state }) => (
                       <InputFilterContainer
