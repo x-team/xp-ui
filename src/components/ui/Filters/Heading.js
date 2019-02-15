@@ -28,7 +28,7 @@ const cx = {
       font-size: 1.0625rem
       padding: 24px 60px
       text-transform: uppercase
-      position: relative
+      display: flex
     }
 
     &:last-of-type {
@@ -36,23 +36,20 @@ const cx = {
     }
   `),
 
-  triangle: cmz(`
-    position: absolute
-    right: 15px
-    top: 20px
-    margin: 0 auto
+  text: cmz(`
+    width: 100%
   `)
 }
 
 const Heading = (props: Props) => (
   <div onClick={props.onClick} className={cx.heading}>
-    {props.children}
-    <span className={cx.triangle}>
-      <SvgIcon
-        icon={props.isExpanded ? 'triangleup' : 'triangledown'}
-        color='grayscarpaflow'
-      />
-    </span>
+    <div className={cx.text}>
+      {props.children}
+    </div>
+    <SvgIcon
+      icon={props.isExpanded ? 'triangleup' : 'triangledown'}
+      color='grayscarpaflow'
+    />
   </div>
 )
 

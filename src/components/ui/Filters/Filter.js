@@ -29,7 +29,7 @@ const cx = {
   `),
 
   triangle: cmz(`
-    padding: 0 60px 10px
+    padding: 0 60px 10px 0
   `)
 }
 
@@ -38,12 +38,12 @@ const Filter = (props: Props) => props.collapsible ? (
     <Collapsible.Header>
       <div className={cx.header}>
         <Label>{props.label}</Label>
-        <span className={cx.triangle}>
+        <div className={cx.triangle}>
           <SvgIcon
             icon={props.isExpanded ? 'triangleup' : 'triangledown'}
             color='grayscarpaflow'
           />
-        </span>
+        </div>
       </div>
     </Collapsible.Header>
     <Collapsible.Body>
