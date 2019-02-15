@@ -39,7 +39,7 @@ storiesOf('UI Components/Filters', module)
                 <Filters.Filter label='List'>
                   <SelectBoxFilterContainer placeholder='List' />
                 </Filters.Filter>
-                <Filters.Filter label='List Members'>
+                <Filters.Filter label='List Members' collapsible>
                   <State initialState={{ cb: true }}>
                     {({ setState, state }) => (
                       <InputFilterContainer

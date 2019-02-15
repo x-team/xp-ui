@@ -26,7 +26,7 @@ const cx = {
       cursor: pointer
       display: flex
       font-size: 1.0625rem
-      padding: 24px 20px
+      padding: 24px 60px
       text-transform: uppercase
       position: relative
     }

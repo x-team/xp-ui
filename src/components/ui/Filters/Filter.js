@@ -6,6 +6,8 @@ import Label from './Label'
 import Collapsible from '../Collapsible'
 import SvgIcon from '../SvgIcon'
 
+import theme from '../../../styles/theme'
+
 import type { Element } from 'react'
 
 export type Props = {
@@ -18,7 +20,7 @@ const cmz = require('cmz')
 
 const cx = {
   filter: cmz(`
-    padding: 0 20px 20px
+    padding: 0 60px 20px
   `),
 
   header: cmz(`
@@ -27,7 +29,7 @@ const cx = {
   `),
 
   triangle: cmz(`
-    padding: 0 20px 10px
+    padding: 0 60px 10px
   `)
 }
 
