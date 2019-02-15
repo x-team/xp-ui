@@ -119,40 +119,52 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
     contentHeading: ''
   }
 
-  render () {
-    const { sidebar, sidebarHeading, sidebarWidth, sidebarIcon, content, contentHeading } = this.props
+  renderSidebar = () => {
+    const { sidebar, sidebarHeading, sidebarWidth, sidebarIcon } = this.props
+    return (
+      <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
+        {sidebarHeading && (
+          <div className={cx.sidebarHeading}>
+            {sidebarIcon && (
+              <div className={cx.sidebarHeadingIcon}>
+                <SvgIcon icon={sidebarIcon} color='frenchGrayDarker' />
+              </div>
+            )}
+            <div className={cx.sidebarHeadingText}>
+              {sidebarHeading}
+            </div>
+          </div>
+        )}
+        <div className={cx.sidebarBody}>
+          {sidebar}
+        </div>
+      </div>
+    )
+  }
 
+  renderContent = () => {
+    const { content, contentHeading } = this.props
+    return (
+      <div className={cx.content}>
+        {contentHeading && (
+          <div className={cx.contentHeading}>
+            <div className={cx.contentHeadingText}>
+              {contentHeading}
+            </div>
+          </div>
+        )}
+        <div className={cx.contentBody}>
+          {content}
+        </div>
+      </div>
+    )
+  }
+
+  render () {
     return (
       <div className={cx.layout}>
-        <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
-          {sidebarHeading && (
-            <div className={cx.sidebarHeading}>
-              {sidebarIcon && (
-                <div className={cx.sidebarHeadingIcon}>
-                  <SvgIcon icon={sidebarIcon} color='frenchGrayDarker' />
-                </div>
-              )}
-              <div className={cx.sidebarHeadingText}>
-                {sidebarHeading}
-              </div>
-            </div>
-          )}
-          <div className={cx.sidebarBody}>
-            {sidebar}
-          </div>
-        </div>
-        <div className={cx.content}>
-          {contentHeading && (
-            <div className={cx.contentHeading}>
-              <div className={cx.contentHeadingText}>
-                {contentHeading}
-              </div>
-            </div>
-          )}
-          <div className={cx.contentBody}>
-            {content}
-          </div>
-        </div>
+        {this.renderSidebar()}
+        {this.renderContent()}
       </div>
     )
   }
