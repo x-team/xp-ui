@@ -111,13 +111,12 @@ storiesOf('UI Components/Tab', module)
       </Tab.Pane>
     </Tab.Container>
   ))
-  .add('missing props for Container (does component explose?)', () => (
+  .add('missing props for Container (does component explode?)', () => (
     <Tab.Container></Tab.Container>
   ))
-  .add('missing props for Head (does component explose?)', () => (
+  .add('missing props for Head (does component explode?)', () => (
     <Tab.Head></Tab.Head>
   ))
-
-  .add('missing props for Pane (does component explose?)', () => (
+  .add('missing props for Pane (does component explode?)', () => (
     <Tab.Pane></Tab.Pane>
   ))

@@ -10,12 +10,14 @@ import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
+import Collapsible from './components/ui/Collapsible'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
 import Dropdown from './components/ui/Dropdown'
 import Email from './components/ui/Email'
 import EmailFeed from './components/ui/EmailFeed'
 import ErrorBox from './components/ui/ErrorBox'
+import Filters from './components/ui/Filters'
 import FilterTag from './components/ui/FilterTag'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
@@ -69,12 +71,14 @@ export {
   AttachFiles,
   Avatar,
   Button,
+  Collapsible,
   CollapsibleSection,
   ColorPalette,
   Dropdown,
   Email,
   EmailFeed,
   ErrorBox,
+  Filters,
   FilterTag,
   Footer,
   FooterBrands,
