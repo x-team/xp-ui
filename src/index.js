@@ -10,6 +10,7 @@ import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
+import Collapsible from './components/ui/Collapsible'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
 import Dropdown from './components/ui/Dropdown'
@@ -70,6 +71,7 @@ export {
   AttachFiles,
   Avatar,
   Button,
+  Collapsible,
   CollapsibleSection,
   ColorPalette,
   Dropdown,
