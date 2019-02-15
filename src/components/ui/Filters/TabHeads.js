@@ -19,8 +19,6 @@ const cx = {
   `)
 }
 
-const TabHeads = (props) => (
-  <div className={cx.tabHeads}>{props.children}</div>
-)
+const TabHeads = (props: Props) => <div className={cx.tabHeads}>{props.children}</div>
 
 export default TabHeads

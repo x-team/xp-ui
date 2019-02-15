@@ -7,6 +7,7 @@ import Label from './Label'
 import type { Element } from 'react'
 
 export type Props = {
+  label: Element<*>,
   children: Element<*>
 }
 
@@ -18,7 +19,7 @@ const cx = {
   `)
 }
 
-const Filter = (props) => (
+const Filter = (props: Props) => (
   <Fragment>
     <Label>{props.label}</Label>
     <div className={cx.filter}>{props.children}</div>

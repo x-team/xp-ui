@@ -23,8 +23,6 @@ const cx = {
   `)
 }
 
-const Label = (props) => (
-  <div className={cx.label}>{props.children}</div>
-)
+const Label = (props: Props) => <div className={cx.label}>{props.children}</div>
 
 export default Label

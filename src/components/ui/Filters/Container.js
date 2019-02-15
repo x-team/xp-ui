@@ -19,8 +19,6 @@ const cx = {
   `)
 }
 
-const Container = (props: Props) => (
-  <div className={cx.filters}>{props.children}</div>
-)
+const Container = (props: Props) => <div className={cx.filters}>{props.children}</div>
 
 export default Container

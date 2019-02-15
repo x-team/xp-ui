@@ -40,13 +40,13 @@ class Container extends Component<Props, State> {
     }
   }
 
-  toggleCollapsed = (isExpanded: boolean) => {
+  toggleExpanded = (isExpanded: boolean) => {
     this.props.onChange(isExpanded)
     this.setState({ isExpanded })
   }
 
   handleHeaderChild = (child: Element<*>) =>
-    React.cloneElement(child, { isExpanded: this.state.isExpanded, onClick: this.toggleCollapsed })
+    React.cloneElement(child, { isExpanded: this.state.isExpanded, onClick: this.toggleExpanded })
 
   handleBodyChild = (child: Element<*>) =>
     React.cloneElement(child, { isExpanded: this.state.isExpanded })
