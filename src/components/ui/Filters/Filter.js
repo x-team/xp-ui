@@ -6,8 +6,6 @@ import Label from './Label'
 import Collapsible from '../Collapsible'
 import SvgIcon from '../SvgIcon'
 
-import theme from '../../../styles/theme'
-
 import type { Element } from 'react'
 
 export type Props = {
