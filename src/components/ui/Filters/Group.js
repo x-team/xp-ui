@@ -14,8 +14,14 @@ const cmz = require('cmz')
 
 const cx = {
   group: cmz(`
-    margin-top: 25px
-    border-bottom: 1px solid ${theme.lineSilver2}
+    & {
+      margin-top: 25px
+      border-bottom: 1px solid ${theme.lineSilver2}
+    }
+
+    &:last-of-type {
+      border-bottom: none
+    }
   `)
 }
 
