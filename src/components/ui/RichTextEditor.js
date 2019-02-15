@@ -27,6 +27,10 @@ const cx = {
     & .te-ww-container .tui-editor-contents:first-child {
       padding-bottom: 16px;
     }
+
+    & .te-ww-block-overlay.code-block-header button {
+      display: none;
+    }
   `),
 
   disabledOverlay: cmz(`
