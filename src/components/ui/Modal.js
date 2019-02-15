@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 
 import SvgIcon from './SvgIcon'
 
@@ -10,8 +10,7 @@ const cmz = require('cmz')
 
 type Props = {
   onClose: Function,
-  children?: Element<*>|string,
-  isOpen: boolean
+  children?: Element<*>|string
 }
 
 type State = {
@@ -58,19 +57,13 @@ const cx = {
   `)
 }
 
-class Modal extends PureComponent<Props, State> {
-  static defaultProps = {
-    isOpen: true
-  }
-
+class Modal extends Component<Props, State> {
   state = {
-    open: this.props.isOpen
+    open: false
   }
 
-  componentDidUpdate (prevProps: Props) {
-    if (prevProps.isOpen !== this.props.isOpen) {
-      this.setState({ open: this.props.isOpen })
-    }
+  componentDidMount () {
+    this.setState({ open: true })
   }
 
   noClick = (event: any) => {

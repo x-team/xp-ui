@@ -61,7 +61,6 @@ const cx = {
   sidebarBody: cmz(`
     max-height: 100%
     overflow: auto
-    padding: 40px
     box-sizing: border-box
     flex: 1 0 0
   `),
@@ -96,7 +95,6 @@ const cx = {
   contentBody: cmz(`
     max-height: 100%
     overflow: auto
-    padding: 40px 60px
     box-sizing: border-box
     flex: 1 0 0
   `)
