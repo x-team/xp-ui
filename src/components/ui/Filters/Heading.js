@@ -19,9 +19,9 @@ const cmz = require('cmz')
 
 const cx = {
   heading: cmz(typeface.extraHeading, `
+    & {
       align-items: center
       border-bottom: 1px solid ${theme.lineSilver2}
-      border-top: 1px solid ${theme.lineSilver2}
       color: ${theme.typoHighlightOnDarkBackground}
       cursor: pointer
       display: flex
@@ -29,11 +29,17 @@ const cx = {
       padding: 24px 20px
       text-transform: uppercase
       position: relative
+    }
+
+    &:last-of-type {
+      border-bottom: none
+    }
   `),
 
   triangle: cmz(`
     position: absolute
     right: 15px
+    top: 20px
     margin: 0 auto
   `)
 }

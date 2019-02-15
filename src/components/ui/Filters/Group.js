@@ -2,6 +2,8 @@
 
 import React from 'react'
 
+import theme from '../../../styles/theme'
+
 import type { Element } from 'react'
 
 export type Props = {
@@ -13,6 +15,7 @@ const cmz = require('cmz')
 const cx = {
   group: cmz(`
     margin-top: 25px
+    border-bottom: 1px solid ${theme.lineSilver2}
   `)
 }
 

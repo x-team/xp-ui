@@ -25,7 +25,6 @@ storiesOf('UI Components/Filters', module)
         <Collapsible.Header>
           <Filters.Heading>Context Filters</Filters.Heading>
         </Collapsible.Header>
-
         <Collapsible.Body>
           <Filters.Group>
             <Filters.Label>Show</Filters.Label>
@@ -74,11 +73,9 @@ storiesOf('UI Components/Filters', module)
       </Collapsible.Container>
 
       <Collapsible.Container initialExpanded>
-
         <Collapsible.Header>
           <Filters.Heading>Search Filters</Filters.Heading>
         </Collapsible.Header>
-
         <Collapsible.Body>
           <Filters.Group>
             <Filters.Filter label='Status'>
@@ -90,16 +87,33 @@ storiesOf('UI Components/Filters', module)
             <Filters.Filter label='Timezone'>
               <SelectBoxFilterContainer placeholder='Timezone' />
             </Filters.Filter>
-            <Filters.Filter label='Max Rate'>
+            <Filters.Filter label='Max Rate' collapsible>
               <InputFilterContainer type='number' />
             </Filters.Filter>
           </Filters.Group>
         </Collapsible.Body>
-
       </Collapsible.Container>
 
     </Filters.Container>
   ))
-  .add('missing props (does component explode?)', () => (
+  .add('missing props for Container (does components explode?)', () => (
     <Filters.Container />
+  ))
+  .add('missing props for Filter (does components explode?)', () => (
+    <Filters.Filter />
+  ))
+  .add('missing props for Group (does components explode?)', () => (
+    <Filters.Group />
+  ))
+  .add('missing props for Heading (does components explode?)', () => (
+    <Filters.Heading />
+  ))
+  .add('missing props for Label (does components explode?)', () => (
+    <Filters.Label />
+  ))
+  .add('missing props for TabButton (does components explode?)', () => (
+    <Filters.TabButton />
+  ))
+  .add('missing props for TabHeads (does components explode?)', () => (
+    <Filters.TabHeads />
   ))

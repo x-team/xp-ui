@@ -20,6 +20,7 @@ const cx = {
     display: flex
     align-items: center
     padding: 0 20px 10px
+    width: 100%
   `)
 }
 
