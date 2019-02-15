@@ -39,7 +39,7 @@ storiesOf('UI Components/Filters', module)
                 <Filters.Filter label='List'>
                   <SelectBoxFilterContainer placeholder='List' />
                 </Filters.Filter>
-                <Filters.Filter label='List Members' collapsible>
+                <Filters.Filter label='List Members' iscollapsible>
                   <State initialState={{ cb: true }}>
                     {({ setState, state }) => (
                       <InputFilterContainer
@@ -88,7 +88,7 @@ storiesOf('UI Components/Filters', module)
             <Filters.Filter label='Timezone'>
               <SelectBoxFilterContainer placeholder='Timezone' />
             </Filters.Filter>
-            <Filters.Filter label='Max Rate' collapsible>
+            <Filters.Filter label='Max Rate' iscollapsible>
               <InputFilterContainer type='number' />
             </Filters.Filter>
           </Filters.Group>

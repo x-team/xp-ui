@@ -11,11 +11,10 @@ export type Props = {
 const cmz = require('cmz')
 
 const cx = {
-  tabHeads: cmz(`
-    & {
+  tabHeads: cmz(
+    `
       padding: 0 60px 20px
       display: flex
-    }
   `)
 }
 

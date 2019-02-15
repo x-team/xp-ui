@@ -12,7 +12,7 @@ import type { Element } from 'react'
 export type Props = {
   children: Element<*>,
   isExpanded: boolean,
-  onClick: (event: any) => void,
+  onClick: (event: any) => void
 }
 
 const cmz = require('cmz')
