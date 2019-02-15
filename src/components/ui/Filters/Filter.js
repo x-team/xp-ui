@@ -11,7 +11,7 @@ import type { Element } from 'react'
 export type Props = {
   label: Element<*>,
   children: Element<*>,
-  iscollapsible: boolean
+  isCollapsible: boolean
 }
 
 const cmz = require('cmz')
@@ -31,7 +31,7 @@ const cx = {
   `)
 }
 
-const Filter = (props: Props) => props.iscollapsible ? (
+const Filter = (props: Props) => props.isCollapsible ? (
   <Collapsible.Container initialExpanded>
     <Collapsible.Header>
       <div className={cx.header}>
