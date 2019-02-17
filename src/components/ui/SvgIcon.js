@@ -6,8 +6,8 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin'
-export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin' | 'filters'
+export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow' | 'frenchGrayDarker'
 
 type Props = {
   icon: ?Icon,
@@ -51,6 +51,11 @@ const styles = {
       & {
         stroke: ${theme.iconMutedGray}
       }
+    `),
+    frenchGrayDarker: cmz(`
+      & {
+        stroke: ${theme.iconFrenchGrayDarker}
+      }
     `)
   },
   strokeHover: {
@@ -87,6 +92,11 @@ const styles = {
     mutedgray: cmz(`
       svg:hover & {
         stroke: ${theme.iconMutedGray}
+      }
+    `),
+    frenchGrayDarker: cmz(`
+      svg:hover & {
+        stroke: ${theme.iconFrenchGrayDarker}
       }
     `)
   },
@@ -125,6 +135,11 @@ const styles = {
       & {
         fill: ${theme.iconMutedGray}
       }
+    `),
+    frenchGrayDarker: cmz(`
+      & {
+        fill: ${theme.iconFrenchGrayDarker}
+      }
     `)
   },
   fillHover: {
@@ -161,6 +176,11 @@ const styles = {
     mutedgray: cmz(`
       svg:hover & {
         fill: ${theme.iconMutedGray}
+      }
+    `),
+    frenchGrayDarker: cmz(`
+      svg:hover & {
+        fill: ${theme.iconFrenchGrayDarker}
       }
     `)
   }
@@ -632,7 +652,7 @@ const getIcon = ({ icon, color, hover, ...rest }) => {
     ),
 
     link: (
-      <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg' {...rest}>
+      <svg width='18' height='18' viewBox='0 0 18 18' fill='none' {...rest}>
         <path className={fillClassName} fillRule='evenodd' d='M7.64629 7.64652C7.79867 7.49405 8.00193 7.41018 8.21853 7.41018C8.43512 7.41018 8.63838 7.49414 8.79076 7.64652L10.3396 9.19533C10.3932 9.24889 10.4659 9.27907 10.5417 9.27907C10.6174 9.27907 10.6903 9.24895 10.7438 9.19533L12.2926 7.64652C12.3463 7.59295 12.3763 7.52014 12.3763 7.44441C12.3763 7.36864 12.3462 7.29583 12.2926 7.24229L10.7438 5.69349C10.069 5.01889 9.17209 4.64746 8.2184 4.64746C7.26471 4.64746 6.3678 5.01892 5.69301 5.69339L1.04643 10.34C0.371647 11.0148 0 11.9118 0 12.8658C0 13.8199 0.371647 14.7166 1.04652 15.3909L2.59524 16.9396C3.26946 17.6143 4.16625 17.986 5.12025 17.986C6.07425 17.986 6.97126 17.6143 7.64611 16.9396L10.2646 14.3211C10.3488 14.2369 10.372 14.1092 10.3228 14.0008C10.2762 13.8982 10.1741 13.8331 10.0626 13.8331C9.95129 13.8399 9.8579 13.843 9.76575 13.843C9.03846 13.843 8.32319 13.6496 7.6974 13.2838C7.65243 13.2575 7.60266 13.2447 7.55324 13.2447C7.47928 13.2447 7.4061 13.2734 7.35101 13.3285L5.69308 14.9864C5.54042 15.139 5.33725 15.2232 5.12094 15.2232C4.90453 15.2232 4.70118 15.1392 4.54852 14.9864L2.99971 13.4376C2.84687 13.2851 2.76272 13.0822 2.76253 12.8662C2.76244 12.6497 2.84658 12.4461 2.99971 12.293L7.64629 7.64652Z' />
         <path className={fillClassName} fillRule='evenodd' d='M16.9392 2.33435L15.3904 0.941037C14.7161 0.334252 13.8194 0 12.8654 0C11.9114 0 11.0144 0.334168 10.3397 0.940953L7.72109 3.29758C7.63685 3.37336 7.61371 3.48825 7.66295 3.5858C7.70957 3.67803 7.81171 3.73658 7.92311 3.73658C8.03547 3.73033 8.1297 3.7275 8.22272 3.7275C8.95144 3.7275 9.66509 3.90137 10.2866 4.2303C10.3318 4.25422 10.3818 4.26579 10.4314 4.26579C10.5054 4.26579 10.5786 4.23999 10.6337 4.19046L12.2927 2.69797C12.4451 2.5608 12.6484 2.48536 12.8649 2.48536C13.0815 2.48536 13.2848 2.56089 13.4372 2.69797L14.986 4.09128C15.3012 4.37522 15.3012 4.83745 14.9859 5.12155L10.3395 9.3015C10.1871 9.43892 9.98423 9.51453 9.76811 9.51453C9.55148 9.51453 9.34785 9.43883 9.19463 9.30133L7.64616 7.90827C7.5925 7.86008 7.51982 7.83291 7.44405 7.83291C7.36828 7.83291 7.29547 7.86 7.24194 7.90827L5.69313 9.30159C5.58146 9.40205 5.58146 9.56485 5.69313 9.66531L7.24194 11.0586C7.91672 11.6657 8.81364 12 9.76733 12C10.721 12 11.618 11.6657 12.2927 11.0586L16.9393 6.87856C17.6141 6.27181 17.9857 5.46485 17.9857 4.60646C17.9857 3.74807 17.614 2.94114 16.9392 2.33435Z' />
       </svg>
@@ -657,15 +677,26 @@ const getIcon = ({ icon, color, hover, ...rest }) => {
     ),
 
     time: (
-      <svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg' {...rest}>
+      <svg width='14' height='14' viewBox='0 0 14 14' fill='none' {...rest}>
         <circle className={strokeClassName} cx='7' cy='7' r='6.5' />
         <path className={strokeClassName} d='M7.53839 3.23077V7.53847H4.30762' />
       </svg>
     ),
 
     spin: (
-      <svg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg' {...rest}>
+      <svg width='12' height='12' viewBox='0 0 12 12' fill='none' {...rest}>
         <path className={fillClassName} d='M11.3817 6.99021C11.3817 6.86216 11.2762 6.74917 11.1406 6.74917H9.6944C9.58141 6.74917 9.50609 6.81696 9.46842 6.92242C9.34037 7.22372 9.24998 7.50995 9.0692 7.80372C8.36867 8.94867 7.1258 9.64167 5.785 9.64167C4.8133 9.64167 3.87173 9.26504 3.16367 8.60217L4.19563 7.57021C4.28602 7.47982 4.33875 7.3593 4.33875 7.23125C4.33875 6.96761 4.12031 6.74917 3.85667 6.74917H0.482084C0.218444 6.74917 0 6.96761 0 7.23125V10.6058C0 10.8695 0.218444 11.0879 0.482084 11.0879C0.610137 11.0879 0.730658 11.0352 0.821049 10.9448L1.79275 9.9731C2.86237 10.99 4.28602 11.57 5.75487 11.57C8.53438 11.57 10.7339 9.70946 11.3742 7.04294C11.3817 7.02787 11.3817 7.00527 11.3817 6.99021ZM11.57 0.964167C11.57 0.700528 11.3516 0.482083 11.0879 0.482083C10.9599 0.482083 10.8393 0.534811 10.749 0.625202L9.76972 1.5969C8.7001 0.587539 7.26138 0 5.785 0C3.00549 0 0.783386 1.85301 0.135586 4.52706C0.135586 4.54213 0.135586 4.56473 0.135586 4.57979C0.135586 4.70785 0.241042 4.82083 0.376628 4.82083H1.87561C1.98859 4.82083 2.06392 4.75304 2.10158 4.64758C2.22964 4.34628 2.32003 4.06005 2.50081 3.76628C3.20134 2.62133 4.44421 1.92833 5.785 1.92833C6.7567 1.92833 7.69827 2.29743 8.41387 2.96029L7.37437 3.99979C7.28398 4.09018 7.23125 4.2107 7.23125 4.33875C7.23125 4.60239 7.4497 4.82083 7.71334 4.82083H11.0879C11.3516 4.82083 11.57 4.60239 11.57 4.33875V0.964167Z' fill='#5A5665' />
+      </svg>
+    ),
+
+    filters: (
+      <svg width='20' height='20' viewBox='0 0 20 20' fill='none' {...rest}>
+        <rect className={fillClassName} x='2' width='2' height='20' />
+        <path className={strokeClassName} fillRule='evenodd' clipRule='evenodd' d='M3 6C4.10457 6 5 5.10457 5 4C5 2.89543 4.10457 2 3 2C1.89543 2 1 2.89543 1 4C1 5.10457 1.89543 6 3 6Z' fill='white' />
+        <rect className={fillClassName} x='9' width='2' height='20' />
+        <path className={strokeClassName} fillRule='evenodd' clipRule='evenodd' d='M10 18C11.1046 18 12 17.1046 12 16C12 14.8954 11.1046 14 10 14C8.89543 14 8 14.8954 8 16C8 17.1046 8.89543 18 10 18Z' fill='white' />
+        <rect className={fillClassName} x='16' width='2' height='20' />
+        <path className={strokeClassName} fillRule='evenodd' clipRule='evenodd' d='M17 6C18.1046 6 19 5.10457 19 4C19 2.89543 18.1046 2 17 2C15.8954 2 15 2.89543 15 4C15 5.10457 15.8954 6 17 6Z' fill='white' />
       </svg>
     )
   }
