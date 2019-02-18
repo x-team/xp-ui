@@ -37,7 +37,7 @@ Fixes https://x-team-internal.atlassian.net/browse/XP-[ISSUE_NUMBER]
 - [ ] if you've fixed a bug, make sure to also include a new story that will expose declarations with problematic data that caused the bug in the first place, so that we can assure that no regressions will pop up on future interactions
 - [ ] if you've fixed a bug or added code that should be tested, add unit tests
 - [ ] if any snapshots have been changed, verify that component still works and looks as expected and update the changed snapshot
-- [ ] **manually tested the component** by running it in the browser and checked nothing is broken and operates as expected!
+- [ ] **manually tested the app** by running it in several different browsers (Firefox, Chrome, Opera, Safari, MS IE/Edge, etc.) and checked nothing is broken and operates as expected!
 
 ## Related PRs
 
