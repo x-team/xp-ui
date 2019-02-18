@@ -22,6 +22,7 @@ import FilterTag from './components/ui/FilterTag'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
+import GenericTabs from './components/ui/GenericTabs'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InlineEditor from './components/ui/InlineEditor'
@@ -84,6 +85,7 @@ export {
   Footer,
   FooterBrands,
   FooterList,
+  GenericTabs,
   HeaderBar,
   HorizontalRuler,
   InlineEditor,
