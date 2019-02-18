@@ -8,5 +8,5 @@ deploy:
   skip_cleanup: true
   github_token: "$GITHUB_TOKEN"
   on:
-    branch: master
+    branch: release-25
   local_dir: .storybook-static
