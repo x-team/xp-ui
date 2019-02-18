@@ -112,11 +112,11 @@ storiesOf('UI Components/GenericTabs', module)
     </GenericTabs.Container>
   ))
   .add('missing props for Container (does component explode?)', () => (
-    <GenericTabs.Container></GenericTabs.Container>
+    <GenericTabs.Container />
   ))
   .add('missing props for Head (does component explode?)', () => (
-    <GenericTabs.Head></GenericTabs.Head>
+    <GenericTabs.Head />
   ))
   .add('missing props for Pane (does component explode?)', () => (
-    <GenericTabs.Pane></GenericTabs.Pane>
+    <GenericTabs.Pane />
   ))

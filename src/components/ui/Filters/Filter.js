@@ -3,7 +3,7 @@
 import React, { Fragment } from 'react'
 
 import Label from './Label'
-import Collapsible from '../Collapsible'
+import GenericCollapsible from '../GenericCollapsible'
 import SvgIcon from '../SvgIcon'
 
 import type { Element } from 'react'
@@ -32,8 +32,8 @@ const cx = {
 }
 
 const Filter = (props: Props) => props.isCollapsible ? (
-  <Collapsible.Container initialExpanded>
-    <Collapsible.Header>
+  <GenericCollapsible.Container initialExpanded>
+    <GenericCollapsible.Header>
       <div className={cx.header}>
         <Label>{props.label}</Label>
         <div className={cx.triangle}>
@@ -43,11 +43,11 @@ const Filter = (props: Props) => props.isCollapsible ? (
           />
         </div>
       </div>
-    </Collapsible.Header>
-    <Collapsible.Body>
+    </GenericCollapsible.Header>
+    <GenericCollapsible.Body>
       <div className={cx.filter}>{props.children}</div>
-    </Collapsible.Body>
-  </Collapsible.Container>
+    </GenericCollapsible.Body>
+  </GenericCollapsible.Container>
 ) : (
   <Fragment>
     <Label>{props.label}</Label>
