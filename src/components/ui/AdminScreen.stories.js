@@ -1,14 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
+import State from '../../utils/State'
 
 import AdminScreen from './AdminScreen'
 
-const sampleContent = (
-  <div>
-    {Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)}
-  </div>
-)
+const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
 const sampleModalContent = Array(80).fill('Anything goes in the modal content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
 
 const FakeXHeader = () => (
@@ -26,62 +22,72 @@ const Body = ({ children }) => (
   </div>
 )
 
+export const StoryAdminScreen = ({ modal, ...props }) => (
+  <State initialState={{ isModalOpen: modal && !!modal.content }}>
+    {({ setState, state }) => state.isModalOpen ? (
+      <AdminScreen
+        header={<FakeXHeader />}
+        {...props}
+        modal={{
+          onClose: () => setState({ isModalOpen: false }),
+          content: modal.content || null
+        }}
+      />
+    ) : (
+      <AdminScreen
+        header={<FakeXHeader />}
+        {...props}
+      />
+    )}
+  </State>
+)
+
 storiesOf('UI Components/AdminScreen', module)
   .add('default with tall content', () => (
     <Body>
-      <AdminScreen
-        header={<FakeXHeader />}
-      >
+      <StoryAdminScreen>
         {sampleContent}
-      </AdminScreen>
+      </StoryAdminScreen>
     </Body>
   ))
   .add('default with short content', () => (
     <Body>
-      <AdminScreen
-        header={<FakeXHeader />}
-      >
+      <StoryAdminScreen>
         <div>bump</div>
-      </AdminScreen>
+      </StoryAdminScreen>
     </Body>
   ))
   .add('tall content with Modal with tall content', () => (
     <Body>
-      <AdminScreen
-        header={<FakeXHeader />}
+      <StoryAdminScreen
         modal={{
-          onClose: action('Close modal'),
           content: sampleModalContent
         }}
       >
         {sampleContent}
-      </AdminScreen>
+      </StoryAdminScreen>
     </Body>
   ))
   .add('tall content with Modal with short content', () => (
     <Body>
-      <AdminScreen
-        header={<FakeXHeader />}
+      <StoryAdminScreen
         modal={{
-          onClose: action('Close modal'),
           content: (<div>bump</div>)
         }}
       >
         {sampleContent}
-      </AdminScreen>
+      </StoryAdminScreen>
     </Body>
   ))
   .add('short content with Modal with short content', () => (
     <Body>
-      <AdminScreen
-        header={<FakeXHeader />}
+      <StoryAdminScreen
         modal={{
-          onClose: action('Close modal'),
           content: (<div>bump</div>)
         }}
       >
         <div>bump</div>
-      </AdminScreen>
+      </StoryAdminScreen>
     </Body>
   ))
   .add('missing props (does component explode?)', () => (

@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import State from '../../utils/State'
 
 import Modal from './Modal'
 import ListsEditor from './ListsEditor'
@@ -11,6 +12,21 @@ const itemsArray = Array(18).fill({}).map((item, i) => ({
   archived: i > 12 && true
 }))
 
+const sampleModalContent = [
+  <h1 key='h1'>Modal content goes here</h1>,
+  ...Array(5).fill('Anything goes in the modal content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
+]
+
+const sampleModalContentTall = [
+  <h1 key='h1'>Modal content goes here</h1>,
+  ...Array(80).fill('Anything goes in the modal content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
+]
+
+const sampleModalContentLong = [
+  <h1 key='h1'>Modal content goes here</h1>,
+  ...Array(5).fill('AnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbody').map((each, i) => <div key={`content-${i}`}>{each}</div>)
+]
+
 const Body = ({ children }) => (
   <div style={{ minHeight: '100vh', overflow: 'hidden' }}>
     <style dangerouslySetInnerHTML={{ __html: `
@@ -20,55 +36,54 @@ const Body = ({ children }) => (
   </div>
 )
 
+const StoryModal = props => (
+  <State initialState={{ isOpen: true }}>
+    {({ setState, state }) => state.isOpen ? (
+      <Modal
+        onClose={() => setState({ isOpen: false })}
+        {...props}
+      />
+    ) : null}
+  </State>
+)
+
 storiesOf('UI Components/Modal', module)
   .add('basic modal', () => (
     <Body>
-      <Modal>
-        <h1>Modal content goes here</h1>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-      </Modal>
+      <StoryModal>
+        {sampleModalContent}
+      </StoryModal>
     </Body>
   ))
-  .add('modal with content bigger than viewport', () => (
+  .add('modal with content taller than viewport', () => (
     <Body>
-      <Modal>
-        <h1>Modal content goes here</h1>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-      </Modal>
+      <StoryModal>
+        {sampleModalContentTall}
+      </StoryModal>
     </Body>
   ))
-  .add('ListEditor use case', () => (
+  .add('modal with content longer than viewport', () => (
     <Body>
-      <Modal>
+      <StoryModal>
+        {sampleModalContentLong}
+      </StoryModal>
+    </Body>
+  ))
+  .add('modal with no content', () => (
+    <Body>
+      <StoryModal />
+    </Body>
+  ))
+  .add('missing props (does component explode?)', () => (
+    <Body>
+      <Modal />
+    </Body>
+  ))
+
+storiesOf('UI Components/Modal/Use cases', module)
+  .add('with ListEditor', () => (
+    <Body>
+      <StoryModal>
         <ListsEditor
           collectionLabel='List'
           title='Lists'
@@ -78,11 +93,6 @@ storiesOf('UI Components/Modal', module)
           onDelete={action('onDelete')}
           onCreateNew={action('onCreateNew')}
         />
-      </Modal>
-    </Body>
-  ))
-  .add('missing props (does component explode?)', () => (
-    <Body>
-      <Modal />
+      </StoryModal>
     </Body>
   ))

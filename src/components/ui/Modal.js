@@ -4,50 +4,42 @@ import React, { PureComponent } from 'react'
 
 import SvgIcon from './SvgIcon'
 
+import theme from '../../styles/theme'
+
 import type { Element } from 'react'
 
 const cmz = require('cmz')
 
 type Props = {
   onClose: Function,
-  children?: Element<*>|string,
-  isOpen: boolean
-}
-
-type State = {
-  open: boolean
+  children?: Element<*>|string
 }
 
 const cx = {
   modal: cmz(`
-    & {
-      background: rgba(0, 0, 0, .3)
-      height: 100%
-      width: 100%
-      position: absolute
-      display: flex
-      overflow: auto
-      padding: 30px
-      box-sizing: border-box
-      z-index: 99999
-      opacity: 0
-      visibility: hidden
-      outline: none
-    }
-
-    &.open {
-      opacity: 1
-      visibility: visible
-    }
+    background: rgba(0, 0, 0, .3)
+    height: 100%
+    width: 100%
+    position: absolute
+    display: flex
+    overflow: auto
+    padding: 30px
+    box-sizing: border-box
+    z-index: 99999
+    outline: none
   `),
 
   frame: cmz(`
     position: relative
-    background: white
+    background: ${theme.baseBright}
     margin: auto
     max-width: 100%
     min-width: 38px
     min-height: 40px
+  `),
+
+  content: cmz(`
+    overflow-x: auto
   `),
 
   close: cmz('closemodal', `
@@ -55,33 +47,19 @@ const cx = {
     right: 12px
     top: 12px
     cursor: pointer
+    z-index: 1
+    displa
   `)
 }
 
-class Modal extends PureComponent<Props, State> {
-  static defaultProps = {
-    isOpen: true
-  }
-
-  state = {
-    open: this.props.isOpen
-  }
-
-  componentDidUpdate (prevProps: Props) {
-    if (prevProps.isOpen !== this.props.isOpen) {
-      this.setState({ open: this.props.isOpen })
-    }
-  }
-
+class Modal extends PureComponent<Props, void> {
   noClick = (event: any) => {
     event && event.stopPropagation()
   }
 
   handleClose = () => {
     const { onClose } = this.props
-    this.setState({ open: false }, () => {
-      onClose && onClose()
-    })
+    onClose && onClose()
   }
 
   handleKeyPress = (e: any) => {
@@ -96,20 +74,20 @@ class Modal extends PureComponent<Props, State> {
 
   render () {
     const { children } = this.props
-    const modalClassName = [cx.modal, this.state.open && 'open'].join(' ')
-
     return children ? (
       <div
-        className={modalClassName}
+        className={cx.modal}
         onClick={this.handleClose}
         onKeyDown={this.handleKeyPress}
         tabIndex={0}
       >
         <section className={cx.frame} onClick={this.noClick}>
-          {children}
           <a className={cx.close} onClick={this.handleClose}>
             <SvgIcon icon='x' color='grayscale' />
           </a>
+          <div className={cx.content}>
+            {children}
+          </div>
         </section>
       </div>
     ) : null

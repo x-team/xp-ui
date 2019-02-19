@@ -18,10 +18,6 @@ const cx = {
     flex-direction: column
   `),
 
-  adminWidModal: cmz(`
-    height: 100vh
-  `),
-
   header: cmz(`
     width: 100%
     height: 56px
@@ -29,32 +25,22 @@ const cx = {
   `),
 
   content: cmz(`
-    & {
-      flex: 1 0 0
-      overflow: auto
-      height: 100%
-    }
-
-    & > div {
-      height: inherit
-    }
+    flex: 1 0 0
+    overflow: auto
+    height: 100%
   `)
 }
 
 type Props = {
   header?: Element<*>,
   children?: Element<*>,
-  modal: {
-    onClose: Function,
-    content: Element<*>
+  modal?: {
+    onClose?: Function,
+    content?: Element<*>
   }
 }
 
-type State = {
-  isModalOpen: boolean
-}
-
-class AdminScreen extends PureComponent<Props, State> {
+class AdminScreen extends PureComponent<Props, void> {
   static defaultProps = {
     header: null,
     children: null,
@@ -63,32 +49,17 @@ class AdminScreen extends PureComponent<Props, State> {
     }
   }
 
-  state = {
-    isModalOpen: !!this.props.modal.content
-  }
-
-  componentDidUpdate (prevProps: Props) {
-    const { content: prevContent } = prevProps.modal
-    const { content } = this.props.modal
-    if (prevContent !== content) {
-      this.setState({ isModalOpen: !!content })
-    }
-  }
-
   handleModalClose = () => {
     const { modal } = this.props
-    this.setState(() => ({ isModalOpen: false }))
-    modal.onClose && modal.onClose()
+    modal && modal.onClose && modal.onClose()
   }
 
   render () {
     const { header, children, modal } = this.props
-    const { isModalOpen } = this.state
-    const adminClassNames = isModalOpen ? `${cx.admin} ${cx.adminWidModal}` : cx.admin
     return (
-      <div className={adminClassNames}>
+      <div className={cx.admin}>
         {modal && modal.content && (
-          <Modal onClose={this.handleModalClose} isOpen={isModalOpen}>
+          <Modal onClose={this.handleModalClose}>
             {modal.content}
           </Modal>
         )}
