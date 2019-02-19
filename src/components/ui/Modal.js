@@ -42,13 +42,12 @@ const cx = {
     overflow-x: auto
   `),
 
-  close: cmz('closemodal', `
+  close: cmz(`
     position: absolute
     right: 12px
     top: 12px
     cursor: pointer
     z-index: 1
-    displa
   `)
 }
 
