@@ -10,12 +10,14 @@ import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
+import Collapsible from './components/ui/Collapsible'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
 import Dropdown from './components/ui/Dropdown'
 import Email from './components/ui/Email'
 import EmailFeed from './components/ui/EmailFeed'
 import ErrorBox from './components/ui/ErrorBox'
+import Filters from './components/ui/Filters'
 import FilterTag from './components/ui/FilterTag'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
@@ -52,6 +54,7 @@ import Tabs from './components/ui/Tabs/Tabs'
 import Text from './components/ui/Text'
 import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 import TruncatedList from './components/ui/TruncatedList'
+import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
 import Typography from './components/ui/Typography'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
@@ -69,12 +72,14 @@ export {
   AttachFiles,
   Avatar,
   Button,
+  Collapsible,
   CollapsibleSection,
   ColorPalette,
   Dropdown,
   Email,
   EmailFeed,
   ErrorBox,
+  Filters,
   FilterTag,
   Footer,
   FooterBrands,
@@ -111,6 +116,7 @@ export {
   Text,
   TextareaEditor,
   TruncatedList,
+  TwoColumnsLayout,
   Typography,
   VideoPlayer,
   XIcon
