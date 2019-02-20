@@ -1,20 +1,13 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
 import { text, number } from '@storybook/addon-knobs'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
-import AdminScreen from './AdminScreen'
+import { StoryAdminScreen } from './AdminScreen.stories'
 
 const sampleSidebar = Array(80).fill('Anything goes in the sidebar body').map((each, i) => <div key={`sidebar-${i}`}>{each}</div>)
 const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
 const sampleModalContent = Array(80).fill('Anything goes in the modal content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
-
-const FakeXHeader = () => (
-  <div style={{ height: '100%', background: 'white', boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.15)', textAlign: 'center' }}>
-    XHeader is not available at auto-ui, this is a fake representation
-  </div>
-)
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -62,45 +55,41 @@ storiesOf('UI Components/TwoColumnsLayout', module)
   ))
   .add('composed in AdminScreen', () => (
     <Body>
-      <AdminScreen header={<FakeXHeader />}>
+      <StoryAdminScreen>
         <StoryTwoColumnsLayout />
-      </AdminScreen>
+      </StoryAdminScreen>
     </Body>
   ))
   .add('composed in AdminScreen with short content', () => (
     <Body>
-      <AdminScreen header={<FakeXHeader />}>
+      <StoryAdminScreen>
         <StoryTwoColumnsLayout
           sidebar={<div>bump</div>}
           content={<div>bump</div>}
         />
-      </AdminScreen>
+      </StoryAdminScreen>
     </Body>
   ))
   .add('composed in AdminScreen with Modal', () => (
     <Body>
-      <AdminScreen
-        header={<FakeXHeader />}
+      <StoryAdminScreen
         modal={{
-          onClose: action('Close modal'),
           content: sampleModalContent
         }}
       >
         <StoryTwoColumnsLayout />
-      </AdminScreen>
+      </StoryAdminScreen>
     </Body>
   ))
   .add('composed in AdminScreen with Modal with short content', () => (
     <Body>
-      <AdminScreen
-        header={<FakeXHeader />}
+      <StoryAdminScreen
         modal={{
-          onClose: action('Close modal'),
           content: (<div>bump</div>)
         }}
       >
         <StoryTwoColumnsLayout />
-      </AdminScreen>
+      </StoryAdminScreen>
     </Body>
   ))
   .add('missing props (does component explode?)', () => (

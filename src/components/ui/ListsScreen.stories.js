@@ -4,6 +4,38 @@ import { action } from '@storybook/addon-actions'
 
 import ListsScreen from './ListsScreen'
 import SearchForm from './SearchForm'
+import { StoryAdminScreen } from './AdminScreen.stories'
+
+const sampleSidebar = Array(80).fill('Anything goes in the sidebar body').map((each, i) => <div key={`sidebar-${i}`}>{each}</div>)
+const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
+const sampleModalContent = Array(80).fill('Anything goes in the modal content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
+
+const FakeApplicantProfileHeader = () => (
+  <div style={{ height: '100%', textAlign: 'center', fontStyle: 'italic', backgroundColor: 'rgb(249, 250, 251)', borderBottom: '1px solid rgb(228, 228, 228)' }}>
+    ApplicantProfileHeader is not available at auto-ui, this is a fake representation
+  </div>
+)
+
+const FakeApplicantRender = () => (
+  <div style={{ height: '100%', fontStyle: 'italic' }}>
+    {sampleSidebar}
+  </div>
+)
+
+const FakeResultRender = () => (
+  <div style={{ height: '100%', fontStyle: 'italic' }}>
+    {sampleContent}
+  </div>
+)
+
+const Body = ({ children }) => (
+  <div style={{ height: '100vh' }}>
+    <style dangerouslySetInnerHTML={{ __html: `
+      html, body { margin: 0; height: 100%; }
+    ` }} />
+    {children}
+  </div>
+)
 
 storiesOf('UI Components/ListsScreen', module)
   .add('lists view mode', () => (
@@ -102,4 +134,36 @@ storiesOf('UI Components/ListsScreen', module)
       }
     />
   ))
-  .add('missing props (does component explode?)', () => <ListsScreen />)
+  .add('lists view mode composed with AdminScreen', () => (
+    <Body>
+      <StoryAdminScreen>
+        <ListsScreen
+          mode='list'
+          header={<FakeApplicantProfileHeader />}
+          applicant={<FakeApplicantRender />}
+          result={<FakeResultRender />}
+          search={<SearchForm />}
+        />
+      </StoryAdminScreen>
+    </Body>
+  ))
+  .add('lists view mode composed with AdminScreen with Modal', () => (
+    <Body>
+      <StoryAdminScreen
+        modal={{
+          content: sampleModalContent
+        }}
+      >
+        <ListsScreen
+          mode='list'
+          header={<FakeApplicantProfileHeader />}
+          applicant={<FakeApplicantRender />}
+          result={<FakeResultRender />}
+          search={<SearchForm />}
+        />
+      </StoryAdminScreen>
+    </Body>
+  ))
+  .add('missing props (does component explode?)', () => (
+    <ListsScreen />
+  ))
