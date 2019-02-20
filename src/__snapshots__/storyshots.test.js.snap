@@ -15268,7 +15268,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Filter (does c
 <Fragment>
   <Label />
   <div
-    className="AutoUI_ui_Filters_Filter-17"
+    className="AutoUI_ui_Filters_Filter-19"
   />
 </Fragment>
 `;
