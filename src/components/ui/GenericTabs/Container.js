@@ -35,8 +35,8 @@ class Container extends Component<Props, State> {
   constructor (props: Props) {
     super(props)
 
-    this.paneChildren = this.getChildrenByType(this.props.children, Pane)
-    const [ firstPane ] = this.paneChildren
+    const paneChildren = this.getChildrenByType(this.props.children, Pane)
+    const [ firstPane ] = paneChildren
 
     this.state = {
       activeTab: props.defaultActiveKey || get(firstPane, 'props.tabKey', '')
@@ -76,7 +76,7 @@ class Container extends Component<Props, State> {
           {React.Children.map(this.getChildrenByType(children, Head), this.handleHeadChild)}
         </HeadWrapper>
         <ContentWrapper>
-          {React.Children.map(this.paneChildren, this.handlePaneChild)}
+          {React.Children.map(this.getChildrenByType(children, Pane), this.handlePaneChild)}
         </ContentWrapper>
       </Fragment>
     )
