@@ -10,11 +10,11 @@ import GenericTabs from '../GenericTabs'
 import InputField from '../../forms/InputField'
 import SelectBox from '../SelectBox'
 
-const InputFilterContainer = props => (
+export const InputFilterContainer = props => (
   <InputField {...props} />
 )
 
-const SelectBoxFilterContainer = props => (
+export const SelectBoxFilterContainer = props => (
   <SelectBox size='small' hasSearch={false} {...props} />
 )
 
@@ -106,6 +106,11 @@ storiesOf('UI Components/Filters', module)
       </GenericCollapsible.Container>
 
     </Filters.Container>
+  ))
+
+storiesOf('UI Components/Filters', module)
+  .add('default display', () => (
+    <StoryFilters />
   ))
 
 storiesOf('UI Components/Filters/Debug', module)

@@ -21,6 +21,9 @@ const cx = {
       border-color: ${theme.lineSilver2}
       border-width: 0
       border-radius: 2px
+      padding-left: 0.3rem
+      padding-right: 0.3rem
+      text-align: center
     }
 
     &:first-of-type {

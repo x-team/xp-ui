@@ -29,6 +29,7 @@ const cx = {
     display: flex
     flex-direction: column
     overflow: hidden
+    max-width: 385px
   `),
 
   sidebarHeading: cmz(typeface.extraHeading, `
@@ -122,7 +123,7 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
   static defaultProps = {
     sidebar: null,
     sidebarHeading: '',
-    sidebarWidth: 385,
+    sidebarWidth: 30,
     sidebarIcon: '',
     scrollableSidebar: true,
     content: null,
@@ -133,7 +134,7 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
   renderSidebar = () => {
     const { sidebar, sidebarHeading, sidebarWidth, sidebarIcon, scrollableSidebar } = this.props
     return (
-      <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
+      <div className={cx.sidebar} style={{ width: `${sidebarWidth}vw` }}>
         {sidebarHeading && (
           <div className={cx.sidebarHeading}>
             {sidebarIcon && (
