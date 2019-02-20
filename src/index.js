@@ -10,7 +10,6 @@ import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
-import Collapsible from './components/ui/Collapsible'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
 import Dropdown from './components/ui/Dropdown'
@@ -22,6 +21,8 @@ import FilterTag from './components/ui/FilterTag'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
+import GenericCollapsible from './components/ui/GenericCollapsible'
+import GenericTabs from './components/ui/GenericTabs'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InlineEditor from './components/ui/InlineEditor'
@@ -72,7 +73,6 @@ export {
   AttachFiles,
   Avatar,
   Button,
-  Collapsible,
   CollapsibleSection,
   ColorPalette,
   Dropdown,
@@ -84,6 +84,8 @@ export {
   Footer,
   FooterBrands,
   FooterList,
+  GenericCollapsible,
+  GenericTabs,
   HeaderBar,
   HorizontalRuler,
   InlineEditor,
