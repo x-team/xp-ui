@@ -124,7 +124,7 @@ storiesOf('UI Components/GenericTabs', module)
   ))
 
 storiesOf('UI Components/GenericTabs/Debug', module)
-  .add('Changing Pane body', () => (
+  .add('change Pane body', () => (
     <State initialState={{ value: 1 }}>
       {({ setState, state }) => state.value ? (
         <GenericTabs.Container>
