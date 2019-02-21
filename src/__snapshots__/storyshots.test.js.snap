@@ -37681,7 +37681,7 @@ exports[`Storyshots UI Components/TruncatedList with element at the end of list 
 </span>
 `;
 
-exports[`Storyshots UI Components/TwoColumnsLayout standalone default usage 1`] = `
+exports[`Storyshots UI Components/TwoColumnsLayout standalone example 1`] = `
 <div
   style={
     Object {
@@ -37702,7 +37702,67 @@ exports[`Storyshots UI Components/TwoColumnsLayout standalone default usage 1`] 
 </div>
 `;
 
-exports[`Storyshots UI Components/TwoColumnsLayout standalone short content 1`] = `
+exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen and with Modal with short content 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <StoryAdminScreen
+    modal={
+      Object {
+        "content": <div>
+          bump
+        </div>,
+      }
+    }
+  >
+    <StoryTwoColumnsLayout />
+  </StoryAdminScreen>
+</div>
+`;
+
+exports[`Storyshots UI Components/TwoColumnsLayout/Debug missing props (does component explode?) 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <TwoColumnsLayout
+    content={null}
+    contentHeading=""
+    contentId=""
+    scrollableSidebar={true}
+    sidebar={null}
+    sidebarHeading=""
+    sidebarIcon=""
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/TwoColumnsLayout/Debug standalone with short content 1`] = `
 <div
   style={
     Object {
@@ -37734,7 +37794,7 @@ exports[`Storyshots UI Components/TwoColumnsLayout standalone short content 1`] 
 </div>
 `;
 
-exports[`Storyshots UI Components/TwoColumnsLayout standalone with very long headers and contents 1`] = `
+exports[`Storyshots UI Components/TwoColumnsLayout/Debug standalone with very long headers and contents 1`] = `
 <div
   style={
     Object {
@@ -37765,6 +37825,40 @@ exports[`Storyshots UI Components/TwoColumnsLayout standalone with very long hea
     }
     sidebarHeading="verylongcontenttoseewhathappenverylongcontenttoseewhathappenverylongcontenttoseewhathappen"
   />
+</div>
+`;
+
+exports[`Storyshots UI Components/TwoColumnsLayout/Debug with short content and composed in AdminScreen 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <StoryAdminScreen>
+    <StoryTwoColumnsLayout
+      content={
+        <div>
+          bump
+        </div>
+      }
+      sidebar={
+        <div>
+          bump
+        </div>
+      }
+    />
+  </StoryAdminScreen>
 </div>
 `;
 
@@ -38083,100 +38177,6 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminSc
   >
     <StoryTwoColumnsLayout />
   </StoryAdminScreen>
-</div>
-`;
-
-exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminScreen with Modal with short content 1`] = `
-<div
-  style={
-    Object {
-      "height": "100vh",
-    }
-  }
->
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "
-      html, body { margin: 0; height: 100%; }
-    ",
-      }
-    }
-  />
-  <StoryAdminScreen
-    modal={
-      Object {
-        "content": <div>
-          bump
-        </div>,
-      }
-    }
-  >
-    <StoryTwoColumnsLayout />
-  </StoryAdminScreen>
-</div>
-`;
-
-exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminScreen with short content 1`] = `
-<div
-  style={
-    Object {
-      "height": "100vh",
-    }
-  }
->
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "
-      html, body { margin: 0; height: 100%; }
-    ",
-      }
-    }
-  />
-  <StoryAdminScreen>
-    <StoryTwoColumnsLayout
-      content={
-        <div>
-          bump
-        </div>
-      }
-      sidebar={
-        <div>
-          bump
-        </div>
-      }
-    />
-  </StoryAdminScreen>
-</div>
-`;
-
-exports[`Storyshots UI Components/TwoColumnsLayout/Use cases missing props (does component explode?) 1`] = `
-<div
-  style={
-    Object {
-      "height": "100vh",
-    }
-  }
->
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "
-      html, body { margin: 0; height: 100%; }
-    ",
-      }
-    }
-  />
-  <TwoColumnsLayout
-    content={null}
-    contentHeading=""
-    contentId=""
-    scrollableSidebar={true}
-    sidebar={null}
-    sidebarHeading=""
-    sidebarIcon=""
-  />
 </div>
 `;
 

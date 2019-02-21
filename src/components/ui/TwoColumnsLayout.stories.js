@@ -32,27 +32,9 @@ export const StoryTwoColumnsLayout = (props) => (
 )
 
 storiesOf('UI Components/TwoColumnsLayout', module)
-  .add('standalone default usage', () => (
+  .add('standalone example', () => (
     <Body>
       <StoryTwoColumnsLayout />
-    </Body>
-  ))
-  .add('standalone short content', () => (
-    <Body>
-      <StoryTwoColumnsLayout
-        sidebar={<div>bump</div>}
-        content={<div>bump</div>}
-      />
-    </Body>
-  ))
-  .add('standalone with very long headers and contents', () => (
-    <Body>
-      <StoryTwoColumnsLayout
-        sidebarHeading='verylongcontenttoseewhathappenverylongcontenttoseewhathappenverylongcontenttoseewhathappen'
-        sidebar={<div>verylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappear</div>}
-        contentHeading='verylongcontenttoseewhathappenverylongcontenttoseewhathappenverylongcontenttoseewhathappen'
-        content={<div>verylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappear</div>}
-      />
     </Body>
   ))
 
@@ -73,16 +55,6 @@ storiesOf('UI Components/TwoColumnsLayout/Use cases', module)
       </StoryAdminScreen>
     </Body>
   ))
-  .add('composed in AdminScreen with short content', () => (
-    <Body>
-      <StoryAdminScreen>
-        <StoryTwoColumnsLayout
-          sidebar={<div>bump</div>}
-          content={<div>bump</div>}
-        />
-      </StoryAdminScreen>
-    </Body>
-  ))
   .add('composed in AdminScreen with Modal', () => (
     <Body>
       <StoryAdminScreen
@@ -94,7 +66,37 @@ storiesOf('UI Components/TwoColumnsLayout/Use cases', module)
       </StoryAdminScreen>
     </Body>
   ))
-  .add('composed in AdminScreen with Modal with short content', () => (
+
+storiesOf('UI Components/TwoColumnsLayout/Debug', module)
+  .add('standalone with short content', () => (
+    <Body>
+      <StoryTwoColumnsLayout
+        sidebar={<div>bump</div>}
+        content={<div>bump</div>}
+      />
+    </Body>
+  ))
+  .add('standalone with very long headers and contents', () => (
+    <Body>
+      <StoryTwoColumnsLayout
+        sidebarHeading='verylongcontenttoseewhathappenverylongcontenttoseewhathappenverylongcontenttoseewhathappen'
+        sidebar={<div>verylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappear</div>}
+        contentHeading='verylongcontenttoseewhathappenverylongcontenttoseewhathappenverylongcontenttoseewhathappen'
+        content={<div>verylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappear</div>}
+      />
+    </Body>
+  ))
+  .add('with short content and composed in AdminScreen', () => (
+    <Body>
+      <StoryAdminScreen>
+        <StoryTwoColumnsLayout
+          sidebar={<div>bump</div>}
+          content={<div>bump</div>}
+        />
+      </StoryAdminScreen>
+    </Body>
+  ))
+  .add('composed in AdminScreen and with Modal with short content', () => (
     <Body>
       <StoryAdminScreen
         modal={{
