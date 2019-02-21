@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import GenericTabs from '.'
+import State from '../../../utils/State'
+import Button from '../Button'
 
 const ExampleButton = ({ isActive, text, ...props }) => {
   return (
@@ -119,4 +121,21 @@ storiesOf('UI Components/GenericTabs', module)
   ))
   .add('missing props for Pane (does component explode?)', () => (
     <GenericTabs.Pane />
+  ))
+
+storiesOf('UI Components/GenericTabs/Debug', module)
+  .add('Changing Pane body', () => (
+    <State initialState={{ value: 1 }}>
+      {({ setState, state }) => state.value ? (
+        <GenericTabs.Container>
+          <GenericTabs.Head tabKey='first'>
+            <ExampleButton text={`Tab ${state.value}`} className='foo' />
+          </GenericTabs.Head>
+          <GenericTabs.Pane tabKey='first'>
+            <div>Foo bar baz {state.value}</div>
+            <Button onClick={() => setState({ value: ++state.value })}>Increment</Button>
+          </GenericTabs.Pane>
+        </GenericTabs.Container>
+      ) : null}
+    </State>
   ))
