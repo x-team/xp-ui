@@ -1,11 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, number, boolean } from '@storybook/addon-knobs'
+import { text, boolean } from '@storybook/addon-knobs'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
 import { StoryAdminScreen } from './AdminScreen.stories'
-import GenericCollapsible from './GenericCollapsible'
-import { StoryFilters, InputFilterContainer, SelectBoxFilterContainer } from './Filters/Filters.stories'
+import { StoryFilters } from './Filters/Filters.stories'
 
 const sampleSidebar = Array(80).fill('Anything goes in the sidebar body').map((each, i) => <div key={`sidebar-${i}`}>{each}</div>)
 const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
@@ -24,7 +23,6 @@ export const StoryTwoColumnsLayout = (props) => (
   <TwoColumnsLayout
     sidebar={props.sidebar || sampleSidebar}
     sidebarHeading={text('Sidebar Heading', props.sidebarHeading || 'Filters')}
-    sidebarWidth={number('Sidebar Width', props.sidebarWidth || 30)}
     sidebarIcon={text('Sidebar Icon', props.sidebarIcon || 'filters')}
     scrollableSidebar={boolean('Scrollable Sidebar', props.scrollableSidebar !== undefined ? props.scrollableSidebar : true)}
     content={props.content || sampleContent}

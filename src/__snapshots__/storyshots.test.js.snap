@@ -15122,10 +15122,8 @@ exports[`Storyshots UI Components/FilterTag basic usage 1`] = `
 </Button>
 `;
 
-exports[`Storyshots UI Components/Filters example of complete composition 1`] = `
-<div
-  className="AutoUI_ui_Filters_Container-16"
->
+exports[`Storyshots UI Components/Filters default display 1`] = `
+<Container>
   <Container
     bodyWrapper={[Function]}
     headerWrapper={[Function]}
@@ -15173,6 +15171,7 @@ exports[`Storyshots UI Components/Filters example of complete composition 1`] = 
               />
             </Filter>
             <Filter
+              isCollapsible={true}
               label="List Members"
             >
               <State
@@ -15246,6 +15245,7 @@ exports[`Storyshots UI Components/Filters example of complete composition 1`] = 
           />
         </Filter>
         <Filter
+          isCollapsible={true}
           label="Max Rate"
         >
           <InputFilterContainer
@@ -15255,7 +15255,7 @@ exports[`Storyshots UI Components/Filters example of complete composition 1`] = 
       </Group>
     </Body>
   </Container>
-</div>
+</Container>
 `;
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Container (does components explode?) 1`] = `
@@ -37810,7 +37810,7 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminSc
   />
   <StoryAdminScreen>
     <StoryTwoColumnsLayout
-      sidebar={<UNDEFINED />}
+      sidebar={<StoryFilters />}
     />
   </StoryAdminScreen>
 </div>
@@ -38176,7 +38176,6 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Use cases missing props (does
     sidebar={null}
     sidebarHeading=""
     sidebarIcon=""
-    sidebarWidth={30}
   />
 </div>
 `;
