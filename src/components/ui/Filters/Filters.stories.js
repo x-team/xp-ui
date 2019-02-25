@@ -1,5 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { text, boolean } from '@storybook/addon-knobs'
 
 import State from '../../../utils/State'
 
@@ -17,8 +18,17 @@ const SelectBoxFilterContainer = props => (
   <SelectBox size='small' hasSearch={false} {...props} />
 )
 
+const Sandbox = props => (
+  <div style={{
+    width: '400px',
+    border: '1px dashed silver'
+  }}>
+    {props.children}
+  </div>
+)
+
 storiesOf('UI Components/Filters', module)
-  .add('default display', () => (
+  .add('example of complete composition', () => (
     <Filters.Container>
 
       <GenericCollapsible.Container initialExpanded>
@@ -97,6 +107,28 @@ storiesOf('UI Components/Filters', module)
 
     </Filters.Container>
   ))
+
+storiesOf('UI Components/Filters/Debug', module)
+  .add('standalone Filter', () => (
+    <Sandbox>
+      <Filters.Filter
+        label={text('Label', 'Standalone Filter')}
+        isCollapsible={boolean('Is collapsible?', true)}
+      >
+        <input type='text' placeholder='this is a regular HTML input' style={{ width: '100%' }} />
+      </Filters.Filter>
+    </Sandbox>
+  ), {
+    notes: {
+      markdown: `
+In this sotry the \`<Filter>\` component is wrapped with a \`<Sandbox>\` component with maximum width and dashed border in order to expose it's area.
+
+Check **KNOBS** to debug with different props.
+
+**Existing bug:** The \`<Filter>\` children aren't updating the triangle on collapsing/expand behaviour.
+      `
+    }
+  })
   .add('missing props for Container (does components explode?)', () => (
     <Filters.Container />
   ))
