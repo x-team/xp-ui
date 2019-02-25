@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react'
 import State from '../../../utils/State'
 
 import Filters from '.'
-import Collapsible from '../Collapsible'
-import Tab from '../Tab'
+import GenericCollapsible from '../GenericCollapsible'
+import GenericTabs from '../GenericTabs'
 import InputField from '../../forms/InputField'
 import SelectBox from '../SelectBox'
 
@@ -21,21 +21,21 @@ storiesOf('UI Components/Filters', module)
   .add('default display', () => (
     <Filters.Container>
 
-      <Collapsible.Container initialExpanded>
-        <Collapsible.Header>
+      <GenericCollapsible.Container initialExpanded>
+        <GenericCollapsible.Header>
           <Filters.Heading>Context Filters</Filters.Heading>
-        </Collapsible.Header>
-        <Collapsible.Body>
+        </GenericCollapsible.Header>
+        <GenericCollapsible.Body>
           <Filters.Group>
             <Filters.Label>Show</Filters.Label>
-            <Tab.Container defaultActiveKey='list' headWrapper={Filters.TabHeads}>
-              <Tab.Head tabKey='list'>
+            <GenericTabs.Container defaultActiveKey='list' headWrapper={Filters.TabHeads}>
+              <GenericTabs.Head tabKey='list'>
                 <Filters.TabButton text='list' />
-              </Tab.Head>
-              <Tab.Head tabKey='all'>
+              </GenericTabs.Head>
+              <GenericTabs.Head tabKey='all'>
                 <Filters.TabButton text='All Applicants' />
-              </Tab.Head>
-              <Tab.Pane tabKey='list'>
+              </GenericTabs.Head>
+              <GenericTabs.Pane tabKey='list'>
                 <Filters.Filter label='List'>
                   <SelectBoxFilterContainer placeholder='List' />
                 </Filters.Filter>
@@ -62,22 +62,22 @@ storiesOf('UI Components/Filters', module)
                     )}
                   </State>
                 </Filters.Filter>
-              </Tab.Pane>
-              <Tab.Pane tabKey='all'>
+              </GenericTabs.Pane>
+              <GenericTabs.Pane tabKey='all'>
                 <Filters.Filter label='Accept / Exclude To'>
                   <SelectBoxFilterContainer placeholder='List' />
                 </Filters.Filter>
-              </Tab.Pane>
-            </Tab.Container>
+              </GenericTabs.Pane>
+            </GenericTabs.Container>
           </Filters.Group>
-        </Collapsible.Body>
-      </Collapsible.Container>
+        </GenericCollapsible.Body>
+      </GenericCollapsible.Container>
 
-      <Collapsible.Container initialExpanded>
-        <Collapsible.Header>
+      <GenericCollapsible.Container initialExpanded>
+        <GenericCollapsible.Header>
           <Filters.Heading>Search Filters</Filters.Heading>
-        </Collapsible.Header>
-        <Collapsible.Body>
+        </GenericCollapsible.Header>
+        <GenericCollapsible.Body>
           <Filters.Group>
             <Filters.Filter label='Status'>
               <SelectBoxFilterContainer placeholder='Status' />
@@ -92,8 +92,8 @@ storiesOf('UI Components/Filters', module)
               <InputFilterContainer type='number' />
             </Filters.Filter>
           </Filters.Group>
-        </Collapsible.Body>
-      </Collapsible.Container>
+        </GenericCollapsible.Body>
+      </GenericCollapsible.Container>
 
     </Filters.Container>
   ))
