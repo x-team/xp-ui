@@ -43,7 +43,7 @@ class Container extends Component<Props, State> {
     }
   }
 
-  static getDerivedStateFromProps(props, state) {
+  static getDerivedStateFromProps (props: Props, state: State) {
     if (props.defaultActiveKey !== state.activeTab) {
       return {
         activeTab: props.defaultActiveKey

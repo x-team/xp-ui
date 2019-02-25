@@ -113,15 +113,6 @@ storiesOf('UI Components/GenericTabs', module)
       </GenericTabs.Pane>
     </GenericTabs.Container>
   ))
-  .add('missing props for Container (does component explode?)', () => (
-    <GenericTabs.Container />
-  ))
-  .add('missing props for Head (does component explode?)', () => (
-    <GenericTabs.Head />
-  ))
-  .add('missing props for Pane (does component explode?)', () => (
-    <GenericTabs.Pane />
-  ))
 
 storiesOf('UI Components/GenericTabs/Debug', module)
   .add('change Pane body', () => (
@@ -138,4 +129,45 @@ storiesOf('UI Components/GenericTabs/Debug', module)
         </GenericTabs.Container>
       ) : null}
     </State>
+  ))
+  .add('update activeTab from defaultActiveKey prop', () => (
+    <State initialState={{ selectedTab: 'first' }}>
+      {({ setState, state }) => (
+        <div>
+          <Button onClick={() => setState({ selectedTab: state.selectedTab !== 'first' ? 'first' : 'second' })}>Switch Tabs</Button>
+          <hr />
+          <GenericTabs.Container defaultActiveKey={state.selectedTab}>
+            <GenericTabs.Head tabKey='first'>
+              <ExampleButton text='First' />
+            </GenericTabs.Head>
+            <GenericTabs.Head tabKey='second'>
+              <ExampleButton text='Second' />
+            </GenericTabs.Head>
+            <GenericTabs.Pane tabKey='first'>
+              <div>First pane</div>
+            </GenericTabs.Pane>
+            <GenericTabs.Pane tabKey='second'>
+              <div>Second pane</div>
+            </GenericTabs.Pane>
+          </GenericTabs.Container>
+        </div>
+      )}
+    </State>
+  ), {
+    notes: {
+      markdown: `
+To test this story, click on **Switch Tabs**, it should switch tabs as expected.
+
+This showcase demonstrate that the selected tab is rendering correctly when *defaultActiveKey* prop is updated.
+      `
+    }
+  })
+  .add('missing props for Container (does component explode?)', () => (
+    <GenericTabs.Container />
+  ))
+  .add('missing props for Head (does component explode?)', () => (
+    <GenericTabs.Head />
+  ))
+  .add('missing props for Pane (does component explode?)', () => (
+    <GenericTabs.Pane />
   ))
