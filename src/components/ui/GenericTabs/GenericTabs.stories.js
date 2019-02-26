@@ -130,13 +130,13 @@ storiesOf('UI Components/GenericTabs/Debug', module)
       ) : null}
     </State>
   ))
-  .add('update activeTab from defaultActiveKey prop', () => (
+  .add('update activeTab from prop', () => (
     <State initialState={{ selectedTab: 'first' }}>
       {({ setState, state }) => (
         <div>
           <Button onClick={() => setState({ selectedTab: state.selectedTab !== 'first' ? 'first' : 'second' })}>Switch Tabs</Button>
           <hr />
-          <GenericTabs.Container defaultActiveKey={state.selectedTab}>
+          <GenericTabs.Container activeTab={state.selectedTab}>
             <GenericTabs.Head tabKey='first'>
               <ExampleButton text='First' />
             </GenericTabs.Head>
@@ -158,7 +158,7 @@ storiesOf('UI Components/GenericTabs/Debug', module)
       markdown: `
 To test this story, click on **Switch Tabs**, it should switch tabs as expected.
 
-This showcase demonstrate that the selected tab is rendering correctly when *defaultActiveKey* prop is updated.
+This showcase demonstrate that the selected tab is rendering correctly when *activeTab* prop is updated.
       `
     }
   })

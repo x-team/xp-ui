@@ -15,6 +15,7 @@ type Props = {
   children?: Element<*>,
   contentWrapper: ComponentType<*>,
   defaultActiveKey: string,
+  activeTab: string,
   headWrapper: ComponentType<*>,
   onChange: (activeTab: string) => void
 }
@@ -39,14 +40,14 @@ class Container extends Component<Props, State> {
     const [ firstPane ] = paneChildren
 
     this.state = {
-      activeTab: props.defaultActiveKey || get(firstPane, 'props.tabKey', '')
+      activeTab: props.activeTab || props.defaultActiveKey || get(firstPane, 'props.tabKey', '')
     }
   }
 
   static getDerivedStateFromProps (props: Props, state: State) {
-    if (props.defaultActiveKey !== state.activeTab) {
+    if (props.activeTab !== state.activeTab) {
       return {
-        activeTab: props.defaultActiveKey
+        activeTab: props.activeTab || state.activeTab
       }
     }
     return null
