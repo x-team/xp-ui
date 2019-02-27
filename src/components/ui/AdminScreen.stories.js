@@ -9,7 +9,7 @@ const sampleModalContent = Array(80).fill('Anything goes in the modal content bo
 
 const FakeXHeader = () => (
   <div style={{ height: '100%', background: 'white', boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.15)', textAlign: 'center', fontStyle: 'italic' }}>
-    XHeader is not available at auto-ui, this is a fake representation
+    XHeader is not available at xp-ui, this is a fake representation
   </div>
 )
 

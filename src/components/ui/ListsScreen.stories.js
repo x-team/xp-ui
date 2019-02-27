@@ -12,7 +12,7 @@ const sampleModalContent = Array(80).fill('Anything goes in the modal content bo
 
 const FakeApplicantProfileHeader = () => (
   <div style={{ height: '100%', textAlign: 'center', fontStyle: 'italic', backgroundColor: 'rgb(249, 250, 251)', borderBottom: '1px solid rgb(228, 228, 228)' }}>
-    ApplicantProfileHeader is not available at auto-ui, this is a fake representation
+    ApplicantProfileHeader is not available at xp-ui, this is a fake representation
   </div>
 )
 

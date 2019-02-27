@@ -1,7 +1,7 @@
 // @flow
 
 module.exports = {
-  name: 'auto-ui',
+  name: 'xp-ui',
   verbose: true,
   setupFiles: ['<rootDir>/.jest/registerContext.js'],
   setupTestFrameworkScriptFile: '<rootDir>/.jest/setupTests.js',
