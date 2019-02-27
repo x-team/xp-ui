@@ -1,8 +1,8 @@
 {
-  "name": "auto-ui",
+  "name": "xp-ui",
   "version": "2.0.0",
   "description": "UI component library for the XP platform.",
-  "main": "lib/auto-ui.js",
+  "main": "lib/xp-ui.js",
   "directories": {
     "doc": "docs"
   },

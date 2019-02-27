@@ -6,7 +6,7 @@ Use imperative, present tense: "Change" not "Changed" nor "Changes". This will b
 The imperative tells someone what merging the PR **will do**, rather than **what you did**.
 -->
 
-**Release Type:** *RELEASE_TYPE* <!-- Refer to the wiki https://github.com/x-team/auto/wiki/Release-Process#types-of-releases -->
+**Release Type:** *RELEASE_TYPE* <!-- Refer to the wiki https://github.com/x-team/xp/wiki/Release-Process#types-of-releases -->
 <!--
 Basic types are:
   - Bug fix (non-breaking change which fixes an issue)
@@ -32,7 +32,7 @@ Fixes https://x-team-internal.atlassian.net/browse/XP-[ISSUE_NUMBER]
 - [ ] make sure your code lints (`npm run lint`)
 - [ ] Flow typechecks passed (`npm run flow`)
 - [ ] Snapshots tests passed (`npm run jest`)
-- [ ] check cleanup tasks (https://github.com/x-team/auto/labels/cleanup) and take a suitable small one (if exists) in a related area of the current changes
+- [ ] check cleanup tasks (https://github.com/x-team/xp/labels/cleanup) and take a suitable small one (if exists) in a related area of the current changes
 - [ ] component's documentation (`.stories.js` file) is changed or added accordingly to reflect any new or updated use cases or variants usage
 - [ ] if you've fixed a bug, make sure to also include a new story that will expose declarations with problematic data that caused the bug in the first place, so that we can assure that no regressions will pop up on future interactions
 - [ ] if you've fixed a bug or added code that should be tested, add unit tests
@@ -41,12 +41,12 @@ Fixes https://x-team-internal.atlassian.net/browse/XP-[ISSUE_NUMBER]
 
 ## Related PRs
 
-<!-- List related PRs against other Auto repos if applicable: -->
+<!-- List related PRs against other XP repos if applicable: -->
 
 branch | PR
 ------ | ------
-auto_branch_name | [Auto](https://github.com/x-team/auto/pull/X)
-auto_api_branch_name | [Auto API](https://github.com/x-team/auto-api/pull/X)
+xp_branch_name | [XP](https://github.com/x-team/xp/pull/X)
+xp_api_branch_name | [XP API](https://github.com/x-team/xp-api/pull/X)
 
 ## Steps to Test or Reproduce
 
