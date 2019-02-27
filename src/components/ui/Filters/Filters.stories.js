@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text } from '@storybook/addon-knobs'
 
 import State from '../../../utils/State'
 
@@ -49,7 +49,7 @@ storiesOf('UI Components/Filters', module)
                 <Filters.Filter label='List'>
                   <SelectBoxFilterContainer placeholder='List' />
                 </Filters.Filter>
-                <Filters.Filter label='List Members' isCollapsible>
+                <Filters.Filter label='List Members'>
                   <State initialState={{ cb: true }}>
                     {({ setState, state }) => (
                       <InputFilterContainer
@@ -98,7 +98,7 @@ storiesOf('UI Components/Filters', module)
             <Filters.Filter label='Timezone'>
               <SelectBoxFilterContainer placeholder='Timezone' />
             </Filters.Filter>
-            <Filters.Filter label='Max Rate' isCollapsible>
+            <Filters.Filter label='Max Rate'>
               <InputFilterContainer type='number' />
             </Filters.Filter>
           </Filters.Group>
@@ -113,7 +113,6 @@ storiesOf('UI Components/Filters/Debug', module)
     <Sandbox>
       <Filters.Filter
         label={text('Label', 'Standalone Filter')}
-        isCollapsible={boolean('Is collapsible?', true)}
       >
         <input type='text' placeholder='this is a regular HTML input' style={{ width: '100%' }} />
       </Filters.Filter>
@@ -124,8 +123,6 @@ storiesOf('UI Components/Filters/Debug', module)
 In this sotry the \`<Filter>\` component is wrapped with a \`<Sandbox>\` component with maximum width and dashed border in order to expose it's area.
 
 Check **KNOBS** to debug with different props.
-
-**Existing bug:** The \`<Filter>\` children aren't updating the triangle on collapsing/expand behaviour.
       `
     }
   })
