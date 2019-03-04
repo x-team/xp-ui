@@ -33,6 +33,7 @@ import Keywords from './components/ui/Keywords'
 import ListsEditor from './components/ui/ListsEditor'
 import ListsScreen from './components/ui/ListsScreen'
 import Loader from './components/ui/Loader'
+import MetaGroup from './components/ui/MetaGroup'
 import Milestones from './components/ui/Milestones'
 import MilestonesScreen from './components/ui/MilestonesScreen'
 import Modal from './components/ui/Modal'
@@ -96,6 +97,7 @@ export {
   ListsEditor,
   ListsScreen,
   Loader,
+  MetaGroup,
   Milestones,
   MilestonesScreen,
   Modal,
