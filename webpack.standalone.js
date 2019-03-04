@@ -7,8 +7,8 @@ module.exports = {
   devtool: 'source-maps',
   output: {
     path: path.resolve('./lib'),
-    filename: 'auto-ui.js',
-    library: 'auto-ui',
+    filename: 'xp-ui.js',
+    library: 'xp-ui',
     libraryTarget: 'commonjs2',
     umdNamedDefine: true
   },

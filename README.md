@@ -1,8 +1,8 @@
-# Auto UI
+# XP UI
 
-[![Build Status](https://secure.travis-ci.org/x-team/auto-ui.png)](http://travis-ci.org/x-team/auto-ui)
+[![Build Status](https://secure.travis-ci.org/x-team/xp-ui.png)](https://travis-ci.org/x-team/xp-ui)
 
-_UI component library for the Auto platform._
+_UI component library for the XP platform._
 
 ## Requirements
 
@@ -18,7 +18,7 @@ You need to install:
 
 ## Live preview
 
-The latest Storybook spec page built out of `master` branch is available for preview [here](https://x-team.github.io/auto-ui/).
+The latest Storybook spec page built out of `master` branch is available for preview [here](https://x-team.github.io/xp-ui/).
 
 ## Contributing
 
