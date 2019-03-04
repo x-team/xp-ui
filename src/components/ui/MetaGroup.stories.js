@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import MetaGroup from './MetaGroup'
 
 const LeftSideElement = ({ children }) => (
-  <div style={{ padding: '10px', border: '1px dotted red', display: 'inline-block' }}>
+  <div style={{ padding: '10px', border: '1px dotted red' }}>
     {children}
   </div>
 )
@@ -15,10 +15,11 @@ const RightSideElement = ({ children }) => (
   </div>
 )
 
-const sampleLeftSideContent = Array(80).fill('Left-side').map((each, i) => (
-  <LeftSideElement key={`leftside-${i}`}>{each}</LeftSideElement>
+const sampleLeftSideContent = Array(150).fill('Left-side').map((each, i) => (
+  <span key={`leftside-${i}`}>{each}</span>
 ))
-const sampleRightSideContent = Array(30).fill('Right-side').map((each, i) => (
+
+const sampleRightSideElements = Array(20).fill('Right-side').map((each, i) => (
   <RightSideElement key={`rightside-${i}`}>{each}</RightSideElement>
 ))
 
@@ -49,11 +50,13 @@ Note: Dashed and dotted elements are for sandboxing purposes only, the real chil
   })
 
 storiesOf('UI Components/MetaGroup/Debug', module)
-  .add('responsive demonstration lots elements', () => (
+  .add('responsive demonstration with many elements', () => (
     <Sandbox>
       <MetaGroup
-        leftSideElement={sampleLeftSideContent}
-        rightSideElements={sampleRightSideContent}
+        leftSideElement={(
+          <LeftSideElement>{sampleLeftSideContent}</LeftSideElement>
+        )}
+        rightSideElements={sampleRightSideElements}
       />
     </Sandbox>
   ), {
