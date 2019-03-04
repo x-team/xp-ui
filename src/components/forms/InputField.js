@@ -132,7 +132,9 @@ const dateInput = cmz(`
   }
 
   & input::-webkit-clear-button {
-    display: none;
+    margin-right: 15px;
+    z-index: 5;
+    cursor: pointer;
   }
 
   & input::-webkit-inner-spin-button {
