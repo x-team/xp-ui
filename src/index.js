@@ -41,6 +41,7 @@ import Note from './components/ui/Note'
 import NotesFeed from './components/ui/NotesFeed'
 import PencilButton from './components/ui/PencilButton'
 import ProfileHeaderLinks from './components/ui/ProfileHeaderLinks'
+import ResultCount from './components/ui/ResultCount'
 import RichTextEditor from './components/ui/RichTextEditor'
 import Roadmap from './components/ui/Roadmap'
 import RoadmapHero from './components/ui/RoadmapHero'
@@ -105,6 +106,7 @@ export {
   NotesFeed,
   PencilButton,
   ProfileHeaderLinks,
+  ResultCount,
   RichTextEditor,
   Roadmap,
   RoadmapHero,
