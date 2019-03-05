@@ -53,8 +53,8 @@ class MetaGroup extends PureComponent<Props, void> {
           {leftSideElement}
         </div>
         <div className={cx.rightSideColumn}>
-          {rightSideElements.map((element, i) => (
-            <div className={cx.rightSideColumns} key={i}>
+          {rightSideElements.map(element => (
+            <div className={cx.rightSideColumns} key={element.key}>
               {element}
             </div>
           ))}
