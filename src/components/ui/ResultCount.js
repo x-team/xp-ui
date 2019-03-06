@@ -19,7 +19,7 @@ const cx = {
 }
 
 type Props = {
-  items?: number | Array<*> | Object
+  items?: number | Array<*>
 }
 
 const ResultCount = ({ items }: Props) => (
