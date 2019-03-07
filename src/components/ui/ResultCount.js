@@ -22,11 +22,16 @@ type Props = {
   items?: number | Array<*>
 }
 
-const ResultCount = ({ items }: Props) => (
-  <span className={cx.result}>
-    <span className={cx.resultNumber}>{isNumber(items) ? items : size(items)}</span>
-    Results
-  </span>
-)
+const ResultCount = ({ items }: Props) => {
+  const countItems = isNumber(items) ? items : size(items)
+  const resultText = parseInt(countItems, 10) > 1 ? 'results' : 'result'
+
+  return (
+    <span className={cx.result}>
+      <span className={cx.resultNumber}>{countItems}</span>
+      {resultText}
+    </span>
+  )
+}
 
 export default ResultCount
