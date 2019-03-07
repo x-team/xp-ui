@@ -3,8 +3,6 @@
 import React from 'react'
 import isNumber from 'lodash.isnumber'
 
-import { size } from '../../utils/helpers'
-
 const cmz = require('cmz')
 
 const cx = {
@@ -19,11 +17,11 @@ const cx = {
 }
 
 type Props = {
-  items?: number | Array<*>
+  items?: number
 }
 
 const ResultCount = ({ items }: Props) => {
-  const countItems = isNumber(items) ? items : size(items)
+  const countItems = isNumber(items) ? items : 0
   const resultText = parseInt(countItems, 10) > 1 ? 'results' : 'result'
 
   return (
