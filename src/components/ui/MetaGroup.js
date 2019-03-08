@@ -13,13 +13,13 @@ const cx = {
     height: inherit
   `),
 
-  leftSideColumn: cmz(`
+  mainBodyColumn: cmz(`
     box-sizing: border-box
     flex: 1
     min-width: 60%
   `),
 
-  rightSideColumn: cmz(`
+  secondaryColumns: cmz(`
     display: flex
     flex-wrap: wrap
     justify-content: flex-end
@@ -28,33 +28,33 @@ const cx = {
     width: 300px
   `),
 
-  rightSideColumns: cmz(`
+  secondaryColumn: cmz(`
     box-sizing: border-box
     flex-shrink: 0
   `)
 }
 
 type Props = {
-  leftSideElement: Element<*>,
-  rightSideElements: Array<Element<*>>,
+  mainBodyElement: Element<*>,
+  secondaryElements: Array<Element<*>>,
 }
 
 class MetaGroup extends PureComponent<Props, void> {
   static defaultProps = {
-    leftSideElement: null,
-    rightSideElements: []
+    mainBodyElement: null,
+    secondaryElements: []
   }
 
   render () {
-    const { leftSideElement, rightSideElements } = this.props
+    const { mainBodyElement, secondaryElements } = this.props
     return (
       <div className={cx.layout}>
-        <div className={cx.leftSideColumn}>
-          {leftSideElement}
+        <div className={cx.mainBodyColumn}>
+          {mainBodyElement}
         </div>
-        <div className={cx.rightSideColumn}>
-          {rightSideElements.map(element => (
-            <div className={cx.rightSideColumns} key={element.key}>
+        <div className={cx.secondaryColumns}>
+          {secondaryElements.map(element => (
+            <div className={cx.secondaryColumn} key={element.key}>
               {element}
             </div>
           ))}

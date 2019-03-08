@@ -3,24 +3,24 @@ import { storiesOf } from '@storybook/react'
 
 import MetaGroup from './MetaGroup'
 
-const LeftSideElement = ({ children }) => (
+const MainBodyElement = ({ children }) => (
   <div style={{ padding: '10px', border: '1px dotted red' }}>
     {children}
   </div>
 )
 
-const RightSideElement = ({ children }) => (
+const sampleMainBodyContent = Array(150).fill('Left-side').map((each, i) => (
+  <span key={`leftside-${i}`}>{each}</span>
+))
+
+const SecondaryElement = ({ children }) => (
   <div style={{ padding: '10px', border: '1px dotted orange' }}>
     {children}
   </div>
 )
 
-const sampleLeftSideContent = Array(150).fill('Left-side').map((each, i) => (
-  <span key={`leftside-${i}`}>{each}</span>
-))
-
-const sampleRightSideElements = Array(20).fill('Right-side').map((each, i) => (
-  <RightSideElement key={`rightside-${i}`}>{each}</RightSideElement>
+const sampleSecondaryElements = Array(20).fill('Right-side').map((each, i) => (
+  <SecondaryElement key={`rightside-${i}`}>{each}</SecondaryElement>
 ))
 
 const Sandbox = ({ children }) => (
@@ -30,14 +30,14 @@ const Sandbox = ({ children }) => (
 )
 
 storiesOf('UI Components/MetaGroup', module)
-  .add('standalone default usage', () => (
+  .add('standalone composed with children', () => (
     <Sandbox>
       <MetaGroup
-        leftSideElement={<LeftSideElement>Here would goes a bunch of filters definitions</LeftSideElement>}
-        rightSideElements={[
-          <RightSideElement key='Here-would-go-the-counter-component'>52 results</RightSideElement>,
-          <RightSideElement key='Here-would-go-the-reloader-component'>(R)</RightSideElement>,
-          <RightSideElement key='Here-would-go-the-columns-customizer-component'>Columns v</RightSideElement>
+        mainBodyElement={<MainBodyElement>Here would goes a bunch of filters definitions</MainBodyElement>}
+        secondaryElements={[
+          <SecondaryElement key='Here-would-go-the-counter-component'>52 results</SecondaryElement>,
+          <SecondaryElement key='Here-would-go-the-reloader-component'>(R)</SecondaryElement>,
+          <SecondaryElement key='Here-would-go-the-columns-customizer-component'>Columns v</SecondaryElement>
         ]}
       />
     </Sandbox>
@@ -53,10 +53,10 @@ storiesOf('UI Components/MetaGroup/Debug', module)
   .add('responsive demonstration with many elements', () => (
     <Sandbox>
       <MetaGroup
-        leftSideElement={(
-          <LeftSideElement>{sampleLeftSideContent}</LeftSideElement>
+        mainBodyElement={(
+          <MainBodyElement>{sampleMainBodyContent}</MainBodyElement>
         )}
-        rightSideElements={sampleRightSideElements}
+        secondaryElements={sampleSecondaryElements}
       />
     </Sandbox>
   ), {
