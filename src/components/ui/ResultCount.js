@@ -6,11 +6,11 @@ import isNumber from 'lodash.isnumber'
 const cmz = require('cmz')
 
 const cx = {
-  result: cmz(`
+  wrapper: cmz(`
     font-size: 1.0625rem;
   `),
 
-  resultNumber: cmz(`
+  content: cmz(`
     font-weight: 600;
     margin-right: 5px;
   `)
@@ -21,12 +21,12 @@ type Props = {
 }
 
 const ResultCount = ({ items }: Props) => {
-  const countItems = isNumber(items) ? items : 0
-  const resultText = parseInt(countItems, 10) > 1 ? 'results' : 'result'
+  const itemsCount = isNumber(items) ? items : 0
+  const resultText = parseInt(itemsCount, 10) !== 1 ? 'results' : 'result'
 
   return (
-    <span className={cx.result}>
-      <span className={cx.resultNumber}>{countItems}</span>
+    <span className={cx.wrapper}>
+      <span className={cx.content}>{itemsCount}</span>
       {resultText}
     </span>
   )
