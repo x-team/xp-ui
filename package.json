@@ -79,6 +79,7 @@
     "date-fns": "^1.29.0",
     "lodash.get": "^4.4.2",
     "lodash.isequal": "^4.5.0",
+    "lodash.isnumber": "^3.0.3",
     "markdown-to-jsx": "^6.8.3",
     "medium-editor": "^5.23.3",
     "react-avatar": "^3.5.0",
