@@ -27,12 +27,10 @@ const styles = {
       border-radius: 2px;
       padding-left: 10px;
       padding-right: 8px;
-      width: 110px;
     }
 
     & > :nth-child(2n) {
-      right: 140px;
-      top: 45px;
+      top: calc(100% + 10px)
     }
   `
   )
@@ -58,7 +56,7 @@ class ColumnsCustomizer extends PureComponent<Props> {
     const { items, onSelect, width, visibleItems, label } = this.props
 
     return (
-      <Dropdown className={styles.columnsDropdown} label={label} indicator padded>
+      <Dropdown className={styles.columnsDropdown} targetXOrigin='right' label={label} indicator padded>
         <SelectBox
           items={items}
           hasSearch={false}
