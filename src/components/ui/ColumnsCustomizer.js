@@ -1,16 +1,16 @@
 // @flow
 
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react'
 
-import Dropdown from './Dropdown';
-import SelectBox from './SelectBox';
+import Dropdown from './Dropdown'
+import SelectBox from './SelectBox'
 
-import theme from '../../styles/theme';
-import typo from '../../styles/typo';
+import theme from '../../styles/theme'
+import typo from '../../styles/typo'
 
-import type { Element } from 'react';
+import type { Element } from 'react'
 
-const cmz = require('cmz');
+const cmz = require('cmz')
 
 const styles = {
   columnsDropdown: cmz(
@@ -34,7 +34,19 @@ const styles = {
       top: 45px;
     }
   `
-  ),
+  )
+}
+
+type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm' | 'deleting' | 'deleted' | 'dismissed' | 'archiving' | 'archived' | 'unarchiving' | 'unarchived'
+
+type Item = {
+  id: number,
+  value: string,
+  selected?: boolean,
+  archived?: boolean,
+  editing?: string | null,
+  hidden?: boolean,
+  status?: ?Status
 };
 
 type Props = {
@@ -45,20 +57,14 @@ type Props = {
   label?: Element<*> | string
 };
 
-class ColumnsCustomizer extends PureComponent<Props, State> {
+class ColumnsCustomizer extends PureComponent<Props> {
   static defaultProps = {
     label: '',
     items: []
   };
 
-  render() {
-    const {
-      items,
-      onSelect,
-      width,
-      visibleItems,
-      label
-    } = this.props;
+  render () {
+    const { items, onSelect, width, visibleItems, label } = this.props
 
     return (
       <Dropdown className={styles.columnsDropdown} label={label} indicator padded>
@@ -73,8 +79,8 @@ class ColumnsCustomizer extends PureComponent<Props, State> {
           onSelect={onSelect}
         />
       </Dropdown>
-    );
+    )
   }
 }
 
-export default ColumnsCustomizer;
+export default ColumnsCustomizer
