@@ -18,9 +18,6 @@ storiesOf('UI Components/ColumnsCustomizer', module).add('basic usage', () => {
       <ColumnsCustomizer
         items={itemsArray}
         onSelect={action('onSelect')}
-        width={250}
-        visibleItems={8}
-        label='Columns'
       />
     </div>
   )

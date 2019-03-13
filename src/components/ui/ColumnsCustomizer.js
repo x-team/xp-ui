@@ -9,6 +9,7 @@ import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { Element } from 'react'
+import type { Item } from './SelectBox'
 
 const cmz = require('cmz')
 
@@ -37,18 +38,6 @@ const styles = {
   )
 }
 
-type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm' | 'deleting' | 'deleted' | 'dismissed' | 'archiving' | 'archived' | 'unarchiving' | 'unarchived'
-
-type Item = {
-  id: number,
-  value: string,
-  selected?: boolean,
-  archived?: boolean,
-  editing?: string | null,
-  hidden?: boolean,
-  status?: ?Status
-};
-
 type Props = {
   items?: Array<Item>,
   onSelect?: Function,
@@ -59,8 +48,10 @@ type Props = {
 
 class ColumnsCustomizer extends PureComponent<Props> {
   static defaultProps = {
-    label: '',
-    items: []
+    label: 'Columns',
+    items: [],
+    width: 250,
+    visibleItems: 8
   };
 
   render () {
