@@ -27,6 +27,7 @@ const styles = {
       border-radius: 2px;
       padding-left: 10px;
       padding-right: 8px;
+      margin-left: 22px;
     }
 
     & > :nth-child(2n) {
