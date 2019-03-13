@@ -22,7 +22,7 @@ type Props = {
 
 const ResultCount = ({ items }: Props) => {
   const itemsCount = isNumber(items) ? items : 0
-  const resultText = parseInt(itemsCount, 10) !== 1 ? 'results' : 'result'
+  const resultText = parseInt(itemsCount, 10) !== 1 ? 'items' : 'item'
 
   return (
     <span className={cx.wrapper}>
