@@ -151,22 +151,22 @@ const errorInput = cmz(`
 
 const dateInput = cmz(`
   & {
-    position: relative;
+    position: relative
   }
 
   & input {
-    height: 50px;
+    height: 50px
     background-color: ${theme.baseBrighter} !important
   }
 
   & input::-webkit-clear-button {
-    margin-right: 15px;
-    z-index: 5;
-    cursor: pointer;
+    margin-right: 15px
+    z-index: 5
+    cursor: pointer
   }
 
   & input::-webkit-inner-spin-button {
-    display: none;
+    display: none
   }
 
   & input::-webkit-calendar-picker-indicator {
@@ -176,39 +176,39 @@ const dateInput = cmz(`
     height: 100%
     color: transparent
     background: transparent
-    z-index: 2;
+    z-index: 2
   }
 
   & > svg {
-    position: absolute;
-    transform: translateY(-50%);
-    height: 15px;
-    width: 15px;
-    right: 10px;
-    top: 50%;
-    z-index: 1;
+    position: absolute
+    transform: translateY(-50%)
+    height: 15px
+    width: 15px
+    right: 10px
+    top: 50%
+    z-index: 1
   }
 `)
 
 const dateInputSmall = cmz(`
   & {
-    position: relative;
+    position: relative
   }
 
   & input {
-    height: 40px; !important
+    height: 40px !important
     font-size: 1rem !important
     background-color: ${theme.baseBrighter} !important
   }
 
   & input::-webkit-clear-button {
-    margin-right: 15px;
-    z-index: 5;
-    cursor: pointer;
+    margin-right: 15px
+    z-index: 5
+    cursor: pointer
   }
 
   & input::-webkit-inner-spin-button {
-    display: none;
+    display: none
   }
 
   & input::-webkit-calendar-picker-indicator {
@@ -222,13 +222,13 @@ const dateInputSmall = cmz(`
   }
 
   & > svg {
-    position: absolute;
-    transform: translateY(-50%);
-    height: 15px;
-    width: 15px;
-    right: 10px;
-    top: 50%;
-    z-index: 1;
+    position: absolute
+    transform: translateY(-50%)
+    height: 15px
+    width: 15px
+    right: 10px
+    top: 50%
+    z-index: 1
   }
 `)
 
@@ -326,6 +326,7 @@ const slidingCheckboxInputStyles = {
   `)
 }
 
+const defaultSize = 'normal'
 const SlidingCheckboxTick = elem.span(slidingCheckboxInputStyles.tick)
 
 const textareaStyles = cmz(`
@@ -344,9 +345,9 @@ const customTypesDefinitions: Object = {
 
 const getFinalType = type => customTypesDefinitions[type] || type
 
-const inputFactory = (type, size) => {
+const inputFactory = (type, size = defaultSize) => {
   const finalType = getFinalType(type)
-  return elem[getTagName(finalType)](size === 'normal' ? inputStyles : inputStylesSmall)
+  return elem[getTagName(finalType)](size === defaultSize ? inputStyles : inputStylesSmall)
 }
 
 const specialTypesDefinitions: Object = {
@@ -374,7 +375,7 @@ class InputField extends PureComponent<Props> {
     type: 'text',
     isInvalid: false,
     required: false,
-    size: 'normal'
+    size: defaultSize
   }
 
   renderField = () => {
@@ -428,7 +429,7 @@ class InputField extends PureComponent<Props> {
     if (type === 'textarea') {
       const props = {
         ...baseProps,
-        className: `${size === 'normal' ? inputStyles.join(' ') : inputStylesSmall.join(' ')} ${textareaStyles} ${errorClassName} ${spacingClassName}`,
+        className: `${size === defaultSize ? inputStyles.join(' ') : inputStylesSmall.join(' ')} ${textareaStyles} ${errorClassName} ${spacingClassName}`,
         type,
         linesLimit,
         ...rest
@@ -438,7 +439,7 @@ class InputField extends PureComponent<Props> {
 
     if (type === 'date') {
       return (
-        <div className={size === 'normal' ? dateInput : dateInputSmall}>
+        <div className={size === defaultSize ? dateInput : dateInputSmall}>
           {Tag({
             ...baseProps,
             className: `${errorClassName} ${spacingClassName}`,
