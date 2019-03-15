@@ -1143,8 +1143,8 @@ class SelectBox extends Component<Props, State> {
 
       return (
         <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
-          height: visibleItems && expanded ? `${visibleItems * 60}px` : 'auto',
-          maxHeight: visibleItems ? `${visibleItems * 60}px` : 'auto',
+          height: visibleItems && expanded ? (size === 'small') ? `${visibleItems * 60}px` : `${visibleItems * 40}px` : 'auto',
+          maxHeight: visibleItems ? (size === 'small') ? `${visibleItems * 60}px` : `${visibleItems * 40}px` : 'auto',
           width: '100%'
         }}>
           {search && filteredItems && (
