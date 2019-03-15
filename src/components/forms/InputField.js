@@ -186,7 +186,7 @@ const dateInput = cmz(`
     width: 15px
     right: 10px
     top: 50%
-    z-index: 1
+    z-index: 100
   }
 `)
 
@@ -228,7 +228,7 @@ const dateInputSmall = cmz(`
     width: 15px
     right: 10px
     top: 50%
-    z-index: 1
+    z-index: 100
   }
 `)
 
