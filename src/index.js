@@ -60,6 +60,7 @@ import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
 import Typography from './components/ui/Typography'
+import Tooltip from './components/ui/Tooltip'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
 
@@ -126,6 +127,7 @@ export {
   TruncatedList,
   TwoColumnsLayout,
   Typography,
+  Tooltip,
   VideoPlayer,
   XIcon
 }

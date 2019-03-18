@@ -18,7 +18,7 @@ const Body = ({ children }) => (
   </div>
 )
 
-const StoryTwoColumnsLayout = (props) => (
+export const StoryTwoColumnsLayout = (props) => (
   <TwoColumnsLayout
     sidebar={props.sidebar || sampleSidebar}
     sidebarHeading={text('Sidebar Heading', props.sidebarHeading || 'Filters')}
