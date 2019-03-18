@@ -17,7 +17,7 @@ const styles = {
   columnsDropdown: cmz(
     typo.formText,
     `
-    & { 
+    & {
       background-color: ${theme.baseBright};
       border: 1px solid ${theme.lineSilver2};
       border-radius: 2px;
@@ -41,9 +41,7 @@ type Props = {
   label?: Element<*> | string
 }
 
-const ColumnsCustomizer = (props: Props) => {
-  const { items, onSelect, width, visibleItems, label } = props
-
+const ColumnsCustomizer = ({ items, onSelect, width, visibleItems, label }: Props) => {
   return (
     <Dropdown className={styles.columnsDropdown} targetXOrigin='right' label={label} indicator padded>
       <SelectBox
