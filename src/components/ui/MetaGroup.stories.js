@@ -1,5 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import faker from 'faker'
 
 import MetaGroup from './MetaGroup'
 
@@ -19,8 +20,12 @@ const SecondaryElement = ({ children }) => (
   </div>
 )
 
-const sampleSecondaryElements = Array(20).fill('Right-side').map((each, i) => (
-  <SecondaryElement key={`rightside-${i}`}>{each}</SecondaryElement>
+const sampleSecondaryElements = Array(10).fill('').map((each, i) => (
+  <SecondaryElement key={`rightside-${i}`}>
+    {Array(faker.random.number(2) + 1).fill('').map((e, ind) => (
+      <span key={`rightside-string-${i}-${ind}`}>{faker.random.word()}<br /></span>
+    ))}
+  </SecondaryElement>
 ))
 
 const Sandbox = ({ children }) => (

@@ -23,7 +23,7 @@ const cx = {
     display: flex
     flex-wrap: wrap
     justify-content: flex-end
-    align-items: flex-start
+    align-items: center
     height: 100%
     width: 300px
   `),

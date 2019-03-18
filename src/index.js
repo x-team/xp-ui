@@ -12,6 +12,7 @@ import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
+import ColumnsCustomizer from './components/ui/ColumnsCustomizer'
 import Dropdown from './components/ui/Dropdown'
 import Email from './components/ui/Email'
 import EmailFeed from './components/ui/EmailFeed'
@@ -77,6 +78,7 @@ export {
   Button,
   CollapsibleSection,
   ColorPalette,
+  ColumnsCustomizer,
   Dropdown,
   Email,
   EmailFeed,
