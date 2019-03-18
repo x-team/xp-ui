@@ -7,12 +7,21 @@ import State from '../../utils/State'
 import InputField from './InputField'
 
 storiesOf('Form Components/InputField', module)
-  .add('standard use (text input element)', () => (
+  .add('standard use (text input element normal)', () => (
     <InputField
       label='First Name'
       name='name'
       placeholder='First name..'
       defaultValue='Simon'
+    />
+  ))
+  .add('standard use (text input element small)', () => (
+    <InputField
+      label='First Name'
+      name='name'
+      placeholder='First name..'
+      defaultValue='Simon'
+      size='small'
     />
   ))
   .add('standard use (with `label` and `postText` defined)', () => (
@@ -122,11 +131,19 @@ storiesOf('Form Components/InputField', module)
       isInvalid
     />
   ))
-  .add('Use date field', () => (
+  .add('Use date field (normal)', () => (
     <InputField
       name='date'
       type='date'
       placeholder='yyyy-mm-dd'
+    />
+  ))
+  .add('Use date field (small)', () => (
+    <InputField
+      name='date'
+      type='date'
+      placeholder='yyyy-mm-dd'
+      size='small'
     />
   ))
   .add('Use date field with label', () => (

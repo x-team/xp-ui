@@ -27,6 +27,7 @@ type Props = {
   onChange?: (value: any) => void,
   type?: InputType,
   postText?: string,
+  size?: string,
   placeholder?: string | number,
   linesLimit?: number,
   disabled?: boolean
@@ -110,6 +111,33 @@ const inputStyles = [
   `)
 ]
 
+const inputStylesSmall = [
+  typo.formText,
+  cmz(`
+    & {
+      position: relative
+      display: table-cell
+      margin: 0
+      outline: none
+      width: 100%
+      height: 40px !important
+      font-size: 1rem !important
+      padding: 8px 18px !important 
+      border: 1px solid ${theme.formBorder} !important 
+      box-sizing: border-box
+      z-index: 2
+    }
+
+    &::-webkit-input-placeholder {
+      color: ${theme.formPlaceholder}
+    }
+
+    &::-moz-placeholder {
+      color: ${theme.formPlaceholder}
+    }
+  `)
+]
+
 const inputWithPostText = cmz(`
   margin-right: 10px
   display: inline-block
@@ -123,22 +151,64 @@ const errorInput = cmz(`
 
 const dateInput = cmz(`
   & {
-    position: relative;
+    position: relative
   }
 
   & input {
-    height: 50px;
-    background: transparent;
+    height: 50px
+    background-color: ${theme.baseBrighter} !important
   }
 
   & input::-webkit-clear-button {
-    margin-right: 15px;
-    z-index: 5;
-    cursor: pointer;
+    margin-right: 15px
+    z-index: 5
+    cursor: pointer
   }
 
   & input::-webkit-inner-spin-button {
-    display: none;
+    display: none
+  }
+
+  & input::-webkit-calendar-picker-indicator {
+    cursor: pointer
+    position: absolute
+    width: 100%
+    height: 100%
+    color: transparent
+    background: transparent
+    z-index: 2
+  }
+
+  & > svg {
+    position: absolute
+    transform: translateY(-50%)
+    height: 15px
+    width: 15px
+    right: 10px
+    top: 50%
+    z-index: 100
+  }
+`)
+
+const dateInputSmall = cmz(`
+  & {
+    position: relative
+  }
+
+  & input {
+    height: 40px !important
+    font-size: 1rem !important
+    background-color: ${theme.baseBrighter} !important
+  }
+
+  & input::-webkit-clear-button {
+    margin-right: 15px
+    z-index: 5
+    cursor: pointer
+  }
+
+  & input::-webkit-inner-spin-button {
+    display: none
   }
 
   & input::-webkit-calendar-picker-indicator {
@@ -152,13 +222,13 @@ const dateInput = cmz(`
   }
 
   & > svg {
-    position: absolute;
-    transform: translateY(-50%);
-    height: 15px;
-    width: 15px;
-    right: 10px;
-    top: 50%;
-    z-index: 1;
+    position: absolute
+    transform: translateY(-50%)
+    height: 15px
+    width: 15px
+    right: 10px
+    top: 50%
+    z-index: 100
   }
 `)
 
@@ -256,6 +326,7 @@ const slidingCheckboxInputStyles = {
   `)
 }
 
+const defaultSize = 'normal'
 const SlidingCheckboxTick = elem.span(slidingCheckboxInputStyles.tick)
 
 const textareaStyles = cmz(`
@@ -274,9 +345,9 @@ const customTypesDefinitions: Object = {
 
 const getFinalType = type => customTypesDefinitions[type] || type
 
-const inputFactory = type => {
+const inputFactory = (type, size = defaultSize) => {
   const finalType = getFinalType(type)
-  return elem[getTagName(finalType)](inputStyles)
+  return elem[getTagName(finalType)](size === defaultSize ? inputStyles : inputStylesSmall)
 }
 
 const specialTypesDefinitions: Object = {
@@ -303,7 +374,8 @@ class InputField extends PureComponent<Props> {
   static defaultProps = {
     type: 'text',
     isInvalid: false,
-    required: false
+    required: false,
+    size: defaultSize
   }
 
   renderField = () => {
@@ -317,10 +389,11 @@ class InputField extends PureComponent<Props> {
       isInvalid,
       postText,
       linesLimit,
+      size,
       ...rest
     } = this.props
 
-    const Tag = inputFactory(type)
+    const Tag = inputFactory(type, size)
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
     const errorClassName = isInvalid ? errorInput : ''
@@ -356,7 +429,7 @@ class InputField extends PureComponent<Props> {
     if (type === 'textarea') {
       const props = {
         ...baseProps,
-        className: `${inputStyles.join(' ')} ${textareaStyles} ${errorClassName} ${spacingClassName}`,
+        className: `${size === defaultSize ? inputStyles.join(' ') : inputStylesSmall.join(' ')} ${textareaStyles} ${errorClassName} ${spacingClassName}`,
         type,
         linesLimit,
         ...rest
@@ -366,7 +439,7 @@ class InputField extends PureComponent<Props> {
 
     if (type === 'date') {
       return (
-        <div className={dateInput}>
+        <div className={size === defaultSize ? dateInput : dateInputSmall}>
           {Tag({
             ...baseProps,
             className: `${errorClassName} ${spacingClassName}`,
