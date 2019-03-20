@@ -12,6 +12,7 @@ import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
+import ColumnsCustomizer from './components/ui/ColumnsCustomizer'
 import Dropdown from './components/ui/Dropdown'
 import Email from './components/ui/Email'
 import EmailFeed from './components/ui/EmailFeed'
@@ -33,6 +34,7 @@ import Keywords from './components/ui/Keywords'
 import ListsEditor from './components/ui/ListsEditor'
 import ListsScreen from './components/ui/ListsScreen'
 import Loader from './components/ui/Loader'
+import MetaGroup from './components/ui/MetaGroup'
 import Milestones from './components/ui/Milestones'
 import MilestonesScreen from './components/ui/MilestonesScreen'
 import Modal from './components/ui/Modal'
@@ -40,6 +42,7 @@ import Note from './components/ui/Note'
 import NotesFeed from './components/ui/NotesFeed'
 import PencilButton from './components/ui/PencilButton'
 import ProfileHeaderLinks from './components/ui/ProfileHeaderLinks'
+import ResultCount from './components/ui/ResultCount'
 import RichTextEditor from './components/ui/RichTextEditor'
 import Roadmap from './components/ui/Roadmap'
 import RoadmapHero from './components/ui/RoadmapHero'
@@ -75,6 +78,7 @@ export {
   Button,
   CollapsibleSection,
   ColorPalette,
+  ColumnsCustomizer,
   Dropdown,
   Email,
   EmailFeed,
@@ -96,6 +100,7 @@ export {
   ListsEditor,
   ListsScreen,
   Loader,
+  MetaGroup,
   Milestones,
   MilestonesScreen,
   Modal,
@@ -103,6 +108,7 @@ export {
   NotesFeed,
   PencilButton,
   ProfileHeaderLinks,
+  ResultCount,
   RichTextEditor,
   Roadmap,
   RoadmapHero,
