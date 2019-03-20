@@ -10,8 +10,6 @@ import SvgIcon from './SvgIcon'
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
-import type { Element } from 'react'
-
 const cmz = require('cmz')
 
 const cx = {
@@ -24,7 +22,6 @@ const cx = {
       position: absolute
       z-index: 9999
       width: 300px
-      max-height: calc(100vh - 40px)
     }
 
     &::before,
@@ -169,34 +166,65 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     })
   }
 
-  updateDimensions() {
-    const { x = 0, y = 0, width = 0, height = 0, top = 0, right = 0, bottom = 0, left = 0 } = this.props.positioning
-    const { innerWidth, innerHeight } = window
+  updateDimensions = () => {
+    const { width = 0, height = 0, top = 0, bottom = 0, left = 0 } = this.props.positioning
+    const { innerHeight } = window
 
-    // console.log({innerWidth, innerHeight, x, y, width, height, top, right, bottom, left})
-    console.log({innerHeight, y, height, top, bottom})
+    const maxHeight = 400
+    const margin = 10
+    const margins = margin * 2
+    const triangleHeight = 20
+    const initialAnchor = (height / 2) - (triangleHeight / 2)
+
+    let anchor = initialAnchor > 0 ? initialAnchor : 0
+
+    const style = {
+      height: maxHeight,
+      maxHeight: `calc(100vh - ${margins}px)`,
+      top: top,
+      left: left + width + 12
+    }
+
+    // Small screens than popup max height
+    if (innerHeight <= maxHeight + margins) {
+      style.top = margin
+      anchor = bottom > innerHeight - margin
+        ? innerHeight - margins - triangleHeight
+        : (top < margin ? 0 : top + initialAnchor - margin)
+
+    // Bigger screens than popup max height
+    } else {
+      // Popup would appears out of top boundary
+      if (top < margin) {
+        style.top = margin
+        anchor = 0
+      }
+      // Popup would appears out of bottom boundary
+      if (top + maxHeight + margin > innerHeight) {
+        style.top = innerHeight - maxHeight - margin
+        anchor = bottom > innerHeight - margin
+          ? maxHeight - triangleHeight
+          : top - style.top + initialAnchor
+      }
+    }
 
     this.setState({
-      anchor: (height / 2) - 10,
-      style: {
-        height: 400,
-        top: top,
-        left: left + width + 12
-      }
+      anchor,
+      style
     })
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.updateDimensions()
-    window.addEventListener('resize', this.updateDimensions.bind(this));
+    window.addEventListener('resize', this.updateDimensions)
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions.bind(this));
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.updateDimensions)
   }
 
   render () {
-    const { applicant, reasons, positioning } = this.props
+    const { applicant, reasons } = this.props
     const { reasonIndex, reasonLabel, anchor, style } = this.state
     return (
       <ClickOutside onClickOutside={this.handleCancel}>

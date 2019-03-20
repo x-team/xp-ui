@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { number, text, array } from '@storybook/addon-knobs'
+import { text, array } from '@storybook/addon-knobs'
 import State from '../../utils/State'
 
 import ListExclusionFormPopup from './ListExclusionFormPopup'
@@ -33,21 +33,49 @@ const StoryListExclusionFormPopup = (props) => (
 )
 
 const Body = ({ children }) => (
-  <div style={{ height: '100vh' }}>
+  <div style={{ height: '100vh', position: 'relative' }}>
     <style dangerouslySetInnerHTML={{ __html: `
-      html, body { margin: 0; height: 100%; }
+      html, body { margin: 0; height: 100%; overflow: hidden; }
     ` }} />
     {children}
   </div>
 )
 
+const ScrollableContainer = ({ scrollable = true, children }) => (
+  <div style={{
+    height: '100%',
+    overflow: scrollable ? 'auto' : 'hidden'
+  }}>
+    {children}
+  </div>
+)
+
+const ButtonsList = ({ setState }) => Array(50)
+  .fill('')
+  .map((each, index) => (
+    <div key={`trigger-${index + 1}`}>
+      <Button
+        block
+        onClick={event => setState({
+          isOpen: true,
+          applicant: `Sample #${index + 1}`,
+          positioning: event.currentTarget.getBoundingClientRect()
+        })}
+      >
+        Click<br />here<br />#{index + 1}
+      </Button>
+    </div>
+  ))
+
 storiesOf('UI Components/ListExclusionFormPopup', module)
   .add('standalone', () => (
-    <StoryListExclusionFormPopup />
+    <Body>
+      <StoryListExclusionFormPopup />
+    </Body>
   ))
 
 storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
-  .add('stateful usage composed with TwoColumnsLayout', () => (
+  .add('stateful example composed with TwoColumnsLayout', () => (
     <State initialState={{ isOpen: false }}>
       {({ setState, state }) => (
         <Body>
@@ -61,24 +89,27 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
           ) : null}
           <StoryTwoColumnsLayout
             scrollableSidebar={!state.isOpen}
-            sidebar={Array(50)
-              .fill("Click here #")
-              .map((each, index) => (
-                <div key={`trigger-${index + 1}`}>
-                  <Button
-                    block
-                    onClick={event => setState({
-                      isOpen: true,
-                      applicant: `Sample #${index + 1}`,
-                      positioning: event.currentTarget.getBoundingClientRect()
-                    })}
-                  >
-                    {each}
-                    {index + 1}
-                  </Button>
-                </div>
-              ))}
+            sidebar={<ButtonsList setState={setState} />}
+          />
+        </Body>
+      )}
+    </State>
+  ))
+  .add('stateful example occupying the entire height of the screen', () => (
+    <State initialState={{ isOpen: false }}>
+      {({ setState, state }) => (
+        <Body>
+          {state.isOpen ? (
+            <StoryListExclusionFormPopup
+              applicant={state.applicant}
+              positioning={state.positioning}
+              onCancel={() => setState({ isOpen: false })}
+              onSubmit={() => setState({ isOpen: false })}
             />
+          ) : null}
+          <ScrollableContainer scrollable={!state.isOpen}>
+            <ButtonsList setState={setState} />
+          </ScrollableContainer>
         </Body>
       )}
     </State>
