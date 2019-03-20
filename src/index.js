@@ -31,6 +31,7 @@ import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
 import IssueCollectorButton from './components/ui/IssueCollectorButton'
 import Keywords from './components/ui/Keywords'
+import ListExclusionFormPopup from './components/ui/ListExclusionFormPopup'
 import ListsEditor from './components/ui/ListsEditor'
 import ListsScreen from './components/ui/ListsScreen'
 import Loader from './components/ui/Loader'
@@ -60,7 +61,6 @@ import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
 import Typography from './components/ui/Typography'
-import Tooltip from './components/ui/Tooltip'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
 
@@ -98,6 +98,7 @@ export {
   InputGroup,
   IssueCollectorButton,
   Keywords,
+  ListExclusionFormPopup,
   ListsEditor,
   ListsScreen,
   Loader,
@@ -127,7 +128,6 @@ export {
   TruncatedList,
   TwoColumnsLayout,
   Typography,
-  Tooltip,
   VideoPlayer,
   XIcon
 }
