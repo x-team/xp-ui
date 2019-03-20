@@ -6,6 +6,7 @@ import State from '../../utils/State'
 
 import ListExclusionFormPopup from './ListExclusionFormPopup'
 import Button from './Button'
+import { StoryTwoColumnsLayout } from './TwoColumnsLayout.stories'
 
 const StoryListExclusionFormPopup = (props) => (
   <ListExclusionFormPopup
@@ -32,21 +33,10 @@ const StoryListExclusionFormPopup = (props) => (
 )
 
 const Body = ({ children }) => (
-  <div style={{ height: '100vh', padding: '50px' }}>
+  <div style={{ height: '100vh' }}>
     <style dangerouslySetInnerHTML={{ __html: `
       html, body { margin: 0; height: 100%; }
     ` }} />
-    {children}
-  </div>
-)
-
-const ScrollableContainer = ({ scrollable = true, children }) => (
-  <div style={{
-    height: '50vh',
-    padding: '20px',
-    overflow: scrollable ? 'auto' : 'hidden',
-    border: '1px dashed silver'
-  }}>
     {children}
   </div>
 )
@@ -57,7 +47,7 @@ storiesOf('UI Components/ListExclusionFormPopup', module)
   ))
 
 storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
-  .add('stateful usage', () => (
+  .add('stateful usage composed with TwoColumnsLayout', () => (
     <State initialState={{ isOpen: false }}>
       {({ setState, state }) => (
         <Body>
@@ -69,12 +59,14 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
               onSubmit={() => setState({ isOpen: false })}
             />
           ) : null}
-          <ScrollableContainer scrollable={!state.isOpen}>
-            {Array(50)
-              .fill("Click here for sample #")
+          <StoryTwoColumnsLayout
+            scrollableSidebar={!state.isOpen}
+            sidebar={Array(50)
+              .fill("Click here #")
               .map((each, index) => (
                 <div key={`trigger-${index + 1}`}>
                   <Button
+                    block
                     onClick={event => setState({
                       isOpen: true,
                       applicant: `Sample #${index + 1}`,
@@ -86,7 +78,7 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
                   </Button>
                 </div>
               ))}
-            </ScrollableContainer>
+            />
         </Body>
       )}
     </State>

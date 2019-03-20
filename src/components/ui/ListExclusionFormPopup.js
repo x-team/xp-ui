@@ -22,9 +22,9 @@ const cx = {
       background: ${theme.baseBrighter}
       white-space: nowrap
       position: absolute
-      padding: 20px
-      width: 300px
       z-index: 9999
+      width: 300px
+      max-height: calc(100vh - 40px)
     }
 
     &::before,
@@ -49,11 +49,14 @@ const cx = {
 
   container: cmz(`
     overflow: auto
-    cursor: default
+    padding: 10px 20px 20px
+    height: calc(100% - 56px)
+    box-sizing: border-box
   `),
 
   applicant: cmz(typo.sectionHeading, `
-    margin-bottom: 20px
+    margin: 20px 20px 10px
+    line-height: 1
   `),
 
   input: cmz(`
@@ -99,7 +102,9 @@ type Props = {
 
 type State = {
   reasonIndex: number,
-  reasonLabel: string
+  reasonLabel: string,
+  anchor: number,
+  style: Object
 }
 
 const noneIndex = -1
@@ -122,7 +127,9 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
 
   state = {
     reasonIndex: noneIndex,
-    reasonLabel: ''
+    reasonLabel: '',
+    anchor: 4,
+    style: {}
   }
 
   handleCancel = (event: Object) => {
@@ -162,30 +169,46 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     })
   }
 
-  getPositioningValues = ({ x = 0, y = 0, width = 0, height = 0, top = 0, right = 0, bottom = 0, left = 0 }: Positioning) => {
-    // to do: still need better positioning and dimensioning handle
-    return {
+  updateDimensions() {
+    const { x = 0, y = 0, width = 0, height = 0, top = 0, right = 0, bottom = 0, left = 0 } = this.props.positioning
+    const { innerWidth, innerHeight } = window
+
+    // console.log({innerWidth, innerHeight, x, y, width, height, top, right, bottom, left})
+    console.log({innerHeight, y, height, top, bottom})
+
+    this.setState({
       anchor: (height / 2) - 10,
-      posY: top,
-      posX: left + width + 12
-    }
+      style: {
+        height: 400,
+        top: top,
+        left: left + width + 12
+      }
+    })
+  }
+
+  componentDidMount() {
+    this.updateDimensions()
+    window.addEventListener('resize', this.updateDimensions.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions.bind(this));
   }
 
   render () {
     const { applicant, reasons, positioning } = this.props
-    const { reasonIndex, reasonLabel } = this.state
-    const { anchor, posY, posX } = this.getPositioningValues(positioning)
+    const { reasonIndex, reasonLabel, anchor, style } = this.state
     return (
       <ClickOutside onClickOutside={this.handleCancel}>
-        <form className={cx.wrapper} style={{ top: posY, left: posX }}>
+        <form className={cx.wrapper} style={style}>
           <style dangerouslySetInnerHTML={{ __html: `
             .${cx.wrapper}::before,
             .${cx.wrapper}::after {
               top: ${anchor.toString()}px;
             }
           ` }} />
+          <h1 className={cx.applicant}>{applicant}</h1>
           <div className={cx.container}>
-            <h1 className={cx.applicant}>{applicant}</h1>
             {reasons.map((value, index) => (
               <div className={cx.input} key={index} data-testid='exclusion-reasons'>
                 <InputField
