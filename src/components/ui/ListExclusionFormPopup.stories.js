@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { text, array } from '@storybook/addon-knobs'
+import { number, text, array } from '@storybook/addon-knobs'
 import State from '../../utils/State'
 
 import ListExclusionFormPopup from './ListExclusionFormPopup'
@@ -27,6 +27,8 @@ const StoryListExclusionFormPopup = (props) => (
       bottom: 0,
       left: 0
     }}
+    marginTop={number('Margin Top', props.marginTop || 10)}
+    marginBottom={number('Margin Bottom', props.marginBottom || 10)}
     onCancel={props.onCancel || action('Cancelling form')}
     onSubmit={props.onSubmit || action('Submitting form')}
   />
@@ -83,6 +85,7 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
             <StoryListExclusionFormPopup
               applicant={state.applicant}
               positioning={state.positioning}
+              marginTop={70}
               onCancel={() => setState({ isOpen: false })}
               onSubmit={() => setState({ isOpen: false })}
             />

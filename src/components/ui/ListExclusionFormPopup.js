@@ -22,6 +22,8 @@ const cx = {
       position: absolute
       z-index: 9999
       width: 300px
+      display: flex
+      flex-direction: column
     }
 
     &::before,
@@ -47,13 +49,14 @@ const cx = {
   container: cmz(`
     overflow: auto
     padding: 10px 20px 20px
-    height: calc(100% - 56px)
+    height: 100%
     box-sizing: border-box
   `),
 
   applicant: cmz(typo.sectionHeading, `
     margin: 20px 20px 10px
-    line-height: 1
+    line-height: 1.2
+    white-space: pre-wrap
   `),
 
   input: cmz(`
@@ -93,6 +96,8 @@ type Props = {
   applicant: string,
   reasons: Array<string>,
   positioning: Positioning,
+  marginTop: number,
+  marginBottom: number,
   onSubmit?: Function,
   onCancel?: Function
 }
@@ -119,7 +124,9 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
       right: 0,
       bottom: 0,
       left: 0
-    }
+    },
+    marginTop: 10,
+    marginBottom: 10
   }
 
   state = {
@@ -167,12 +174,12 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
   }
 
   updateDimensions = () => {
+    const { marginTop, marginBottom } = this.props
     const { width = 0, height = 0, top = 0, bottom = 0, left = 0 } = this.props.positioning
     const { innerHeight } = window
 
     const maxHeight = 400
-    const margin = 10
-    const margins = margin * 2
+    const margins = marginTop + marginBottom
     const triangleHeight = 20
     const initialAnchor = (height / 2) - (triangleHeight / 2)
 
@@ -187,24 +194,25 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
 
     // Small screens than popup max height
     if (innerHeight <= maxHeight + margins) {
-      style.top = margin
-      anchor = bottom > innerHeight - margin
+      style.top = marginTop
+      anchor = bottom > innerHeight - marginBottom
         ? innerHeight - margins - triangleHeight
-        : (top < margin ? 0 : top + initialAnchor - margin)
+        : (top < marginTop ? 0 : top + initialAnchor - marginTop)
 
     // Bigger screens than popup max height
     } else {
       // Popup would appears out of top boundary
-      if (top < margin) {
-        style.top = margin
+      if (top < marginTop) {
+        style.top = marginTop
         anchor = 0
       }
       // Popup would appears out of bottom boundary
-      if (top + maxHeight + margin > innerHeight) {
-        style.top = innerHeight - maxHeight - margin
-        anchor = bottom > innerHeight - margin
+      if (top + maxHeight + marginTop > innerHeight) {
+        style.top = innerHeight - maxHeight - marginBottom
+        anchor = bottom > innerHeight - marginBottom
           ? maxHeight - triangleHeight
           : top - style.top + initialAnchor
+        anchor = anchor < 0 ? 0 : anchor
       }
     }
 
@@ -262,7 +270,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
               <Button size='normal' pseudolink onClick={this.handleCancel} data-testid='exclusion-cancel'>
                 Cancel
               </Button>
-              <Button size='normal' onClick={this.handleSubmit} data-testid='exclusion-submit' disabled={reasonIndex === noneIndex}>
+              <Button size='normal' onClick={this.handleSubmit} data-testid='exclusion-submit' disabled={reasonLabel === ''}>
                 <SvgIcon icon='paperplane' color='inverted' />
               </Button>
             </div>
