@@ -54,7 +54,7 @@ const cx = {
   `),
 
   applicant: cmz(typo.sectionHeading, `
-    margin: 20px 20px 10px
+    margin: 14px 20px 10px
     line-height: 1.2
     white-space: pre-wrap
   `),
@@ -76,8 +76,14 @@ const cx = {
   `),
 
   buttons: cmz(`
-    margin: 20px 0 0
-    text-align: right
+    & {
+      margin: 20px 0 0
+      text-align: right
+    }
+
+    & svg {
+      transform: translateY(2px)
+    }
   `)
 }
 
