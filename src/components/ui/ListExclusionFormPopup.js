@@ -1,4 +1,5 @@
 // @flow
+/* global SyntheticEvent, HTMLInputElement, SyntheticInputEvent */
 
 import React, { PureComponent } from 'react'
 import ClickOutside from 'react-click-outside'
@@ -104,8 +105,8 @@ type Props = {
   positioning: Positioning,
   marginTop: number,
   marginBottom: number,
-  onSubmit?: Function,
-  onCancel?: Function
+  onSubmit?: (reason: string) => void,
+  onCancel?: () => void
 }
 
 type State = {
@@ -142,7 +143,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     style: {}
   }
 
-  handleCancel = (event: Object) => {
+  handleCancel = (event: SyntheticEvent<HTMLInputElement>) => {
     event.preventDefault()
     const { onCancel } = this.props
     this.setState(
@@ -154,16 +155,16 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     )
   }
 
-  handleSubmit = (event: Object) => {
+  handleSubmit = (event: SyntheticEvent<HTMLInputElement>) => {
     event.preventDefault()
     const { onSubmit } = this.props
     const { reasonLabel } = this.state
     onSubmit && onSubmit(reasonLabel)
   }
 
-  handleReasonChange = (event: Object) => {
+  handleReasonChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
     const { reasons } = this.props
-    const reasonIndex = event.target.value
+    const reasonIndex = Number(event.target.value)
     const reasonLabel = reasons[reasonIndex]
     this.setState({
       reasonIndex,
@@ -171,7 +172,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     })
   }
 
-  handleCommentChange = (event: Object) => {
+  handleCommentChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
     const { reasons } = this.props
     this.setState({
       reasonIndex: reasons.length,
@@ -194,7 +195,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     const style = {
       height: maxHeight,
       maxHeight: `calc(100vh - ${margins}px)`,
-      top: top,
+      top,
       left: left + width + 12
     }
 
@@ -213,7 +214,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
         anchor = 0
       }
       // Popup would appears out of bottom boundary
-      if (top + maxHeight + marginTop > innerHeight) {
+      if (top + maxHeight + marginBottom > innerHeight) {
         style.top = innerHeight - maxHeight - marginBottom
         anchor = bottom > innerHeight - marginBottom
           ? maxHeight - triangleHeight
@@ -258,7 +259,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
                   type='radio'
                   label={value}
                   value={index}
-                  checked={Number(reasonIndex) === index}
+                  checked={reasonIndex === index}
                   onChange={this.handleReasonChange}
                 />
               </div>
@@ -273,10 +274,10 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
               data-testid='exclusion-comment'
             />
             <div className={cx.buttons}>
-              <Button size='normal' pseudolink onClick={this.handleCancel} data-testid='exclusion-cancel'>
+              <Button pseudolink onClick={this.handleCancel} data-testid='exclusion-cancel'>
                 Cancel
               </Button>
-              <Button size='normal' onClick={this.handleSubmit} data-testid='exclusion-submit' disabled={reasonLabel === ''}>
+              <Button onClick={this.handleSubmit} data-testid='exclusion-submit' disabled={reasonLabel === ''}>
                 <SvgIcon icon='paperplane' color='inverted' />
               </Button>
             </div>

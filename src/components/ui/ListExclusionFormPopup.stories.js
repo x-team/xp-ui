@@ -81,7 +81,7 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
     <State initialState={{ isOpen: false }}>
       {({ setState, state }) => (
         <Body>
-          {state.isOpen ? (
+          {state.isOpen && (
             <StoryListExclusionFormPopup
               applicant={state.applicant}
               positioning={state.positioning}
@@ -89,7 +89,7 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
               onCancel={() => setState({ isOpen: false })}
               onSubmit={() => setState({ isOpen: false })}
             />
-          ) : null}
+          )}
           <StoryTwoColumnsLayout
             scrollableSidebar={!state.isOpen}
             sidebar={<ButtonsList setState={setState} />}
@@ -102,14 +102,14 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
     <State initialState={{ isOpen: false }}>
       {({ setState, state }) => (
         <Body>
-          {state.isOpen ? (
+          {state.isOpen && (
             <StoryListExclusionFormPopup
               applicant={state.applicant}
               positioning={state.positioning}
               onCancel={() => setState({ isOpen: false })}
               onSubmit={() => setState({ isOpen: false })}
             />
-          ) : null}
+          )}
           <ScrollableContainer scrollable={!state.isOpen}>
             <ButtonsList setState={setState} />
           </ScrollableContainer>
