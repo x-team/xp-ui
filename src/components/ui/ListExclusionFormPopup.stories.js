@@ -29,6 +29,7 @@ const StoryListExclusionFormPopup = (props) => (
     }}
     marginTop={number('Margin Top', props.marginTop || 10)}
     marginBottom={number('Margin Bottom', props.marginBottom || 10)}
+    maxHeight={number('Popup Max Height', props.maxHeight || 400)}
     onCancel={props.onCancel || action('Cancelling form')}
     onSubmit={props.onSubmit || action('Submitting form')}
   />
@@ -85,7 +86,7 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
             <StoryListExclusionFormPopup
               applicant={state.applicant}
               positioning={state.positioning}
-              marginTop={70}
+              marginTop={60}
               onCancel={() => setState({ isOpen: false })}
               onSubmit={() => setState({ isOpen: false })}
             />
