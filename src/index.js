@@ -31,6 +31,7 @@ import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
 import IssueCollectorButton from './components/ui/IssueCollectorButton'
 import Keywords from './components/ui/Keywords'
+import ListExclusionFormPopup from './components/ui/ListExclusionFormPopup'
 import ListsEditor from './components/ui/ListsEditor'
 import ListsScreen from './components/ui/ListsScreen'
 import Loader from './components/ui/Loader'
@@ -97,6 +98,7 @@ export {
   InputGroup,
   IssueCollectorButton,
   Keywords,
+  ListExclusionFormPopup,
   ListsEditor,
   ListsScreen,
   Loader,
