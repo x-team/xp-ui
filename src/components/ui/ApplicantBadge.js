@@ -677,10 +677,13 @@ class ApplicantBadge extends PureComponent<Props> {
         <div className={cx.controls}>
           {!isTabular && actions.map(({ key, icon: Icon, onClick = null }) => (
             Icon && (
-              <span 
+              <span
                 key={key}
                 className={cx.control}
-                onClick={event => onClick(event.currentTarget.getBoundingClientRect())}
+                onClick={event => {
+                  event.stopPropagation()
+                  onClick(event.currentTarget.getBoundingClientRect())
+                }}
               >
                 <Icon />
               </span>
