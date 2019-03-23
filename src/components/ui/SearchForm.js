@@ -33,8 +33,8 @@ const listTheme = {
   `),
 
   listsSelector: cmz(`
-    width: calc(100% - 82px)
-    max-width: calc(100% - 82px)
+    width: 100%
+    max-width: 100%
   `),
 
   displayButtons: cmz(`
@@ -331,7 +331,6 @@ class SearchForm extends PureComponent<Props> {
                 }
               />
             </div>
-            {!isTabular && renderDisplaySwitchButtons()}
           </div>
           <div className={themeClasses.fieldsAndStatusesContainer}>
             <div className={themeClasses.selectFields}>
@@ -365,13 +364,12 @@ class SearchForm extends PureComponent<Props> {
             />
             <Button
               className={themeClasses.formButton}
-              type='submit'
               raised
+              onClick={onSubmit}
             >
               Show
             </Button>
           </div>
-          {isTabular && renderDisplaySwitchButtons()}
         </form>
         {isTabular && tabularFilterTags}
 
