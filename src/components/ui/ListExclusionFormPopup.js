@@ -241,6 +241,14 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
       style.top = marginTop
       anchor = this.getAnchorPositionForScreenSmallerThanPopupMaxHeight({ bottom, innerHeight, marginBottom, margins, triangleHeight, top, marginTop, initialAnchor })
     } else {
+      if (height < triangleHeight) {
+        if (this.isClickedElementTopAboveThePopupTop({ top: top - triangleHeight, marginTop })) {
+          style.top = marginTop
+        } else {
+          style.top = top - triangleHeight
+        }
+        anchor = triangleHeight - (height / 2)
+      }
       if (this.isClickedElementTopAboveThePopupTop({ top, marginTop })) {
         style.top = marginTop
         anchor = 0
