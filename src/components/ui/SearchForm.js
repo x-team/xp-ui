@@ -237,7 +237,7 @@ type Props = {
   switchDisplay: Function
 }
 
-const SELECTBOX_HEIGTH = 3
+const SELECTBOX_HEIGTH = 4
 
 class SearchForm extends PureComponent<Props> {
   static defaultProps = {
