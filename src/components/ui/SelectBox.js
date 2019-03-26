@@ -834,7 +834,7 @@ class SelectBox extends Component<Props, State> {
 
     const getItemClasses = (item) => ([
       cx.item,
-      (size === 'small') ? cx.itemSmall : '',
+      isSmall() ? cx.itemSmall : '',
       (lined || !expanded) ? cx.lined : '',
       ((item.editing || item.editing === '') && item.editing !== item.value) ? cx.editing : ''
     ].join(' '))
@@ -842,7 +842,7 @@ class SelectBox extends Component<Props, State> {
     const renderEditingStatus = (item: Item) => {
       const itemClasses = [
         cx.editInput,
-        (size === 'small') ? cx.editInputSmall : ''
+        isSmall() ? cx.editInputSmall : ''
       ].join(' ')
 
       return (
@@ -940,7 +940,7 @@ class SelectBox extends Component<Props, State> {
     const renderSelectingStatus = (item: Item) => {
       const itemClasses = [
         cx.selecting,
-        (size === 'small') ? cx.selectingSmall : ''
+        isSmall() ? cx.selectingSmall : ''
       ].join(' ')
 
       return onSelect ? (
@@ -967,7 +967,7 @@ class SelectBox extends Component<Props, State> {
       } else {
         const spanClassnames = [
           cx.label,
-          (size === 'small') ? cx.labelSmall : '',
+          isSmall() ? cx.labelSmall : '',
           item.selected ? cx.active : ''
         ].join(' ')
 
@@ -1003,7 +1003,7 @@ class SelectBox extends Component<Props, State> {
       if (method) {
         const controllableClass = [
           cx.controllable,
-          (size === 'small') ? cx.controllableSmall : ''
+          isSmall() ? cx.controllableSmall : ''
         ].join(' ')
 
         return (
@@ -1015,7 +1015,7 @@ class SelectBox extends Component<Props, State> {
       } else {
         const controllableClass = [
           cx.controllable,
-          (size === 'small') ? cx.controllableSmall : '',
+          isSmall() ? cx.controllableSmall : '',
           (onSelect || onClick) ? cx.clickable : ''
         ].join(' ')
 
@@ -1126,6 +1126,12 @@ class SelectBox extends Component<Props, State> {
       return data
     }
 
+    const isSmall = () => size === 'small'
+
+    const getHeightFromVisibleItems = () => isSmall()
+      ? `${(visibleItems || 1) * 40}px`
+      : `${(visibleItems || 1) * 60}px`
+
     const renderItems = (internalCloseDropdown?: Function) => {
       const items = shouldSortItems
         ? filteredItems.sort(sortById)
@@ -1133,18 +1139,18 @@ class SelectBox extends Component<Props, State> {
 
       const nothingClasses = [
         cx.nothingLabel,
-        (size === 'small') ? cx.nothingLabelSmall : ''
+        isSmall() ? cx.nothingLabelSmall : ''
       ].join(' ')
 
       const createNewClasses = [
         cx.createNew,
-        (size === 'small') ? cx.createNewSmall : ''
+        isSmall() ? cx.createNewSmall : ''
       ].join(' ')
 
       return (
         <ul className={[cx.list, expanded && 'expanded'].join(' ')} style={{
-          height: visibleItems && expanded ? (size === 'small') ? `${visibleItems * 60}px` : `${visibleItems * 40}px` : 'auto',
-          maxHeight: visibleItems ? (size === 'small') ? `${visibleItems * 60}px` : `${visibleItems * 40}px` : 'auto',
+          height: visibleItems && expanded ? getHeightFromVisibleItems() : 'auto',
+          maxHeight: visibleItems ? getHeightFromVisibleItems() : 'auto',
           width: '100%'
         }}>
           {search && filteredItems && (
