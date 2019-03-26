@@ -281,33 +281,6 @@ class SearchForm extends PureComponent<Props> {
     const isTabular = mode === DISPLAY_MODES.TABULAR
     const themeClasses: Object = isTabular ? tabularTheme : listTheme
 
-    const renderDisplaySwitchButtons = () => (
-      <div className={themeClasses.displayButtons}>
-        <a
-          className={themeClasses.displayButton}
-          onClick={this.handleSwitchDisplay('tabular')}
-          title='View in tabular mode'
-        >
-          <SvgIcon
-            icon='grid'
-            color={isTabular ? 'default' : 'grayscale'}
-            hover='default'
-          />
-        </a>
-        <a
-          className={themeClasses.displayButton}
-          onClick={this.handleSwitchDisplay('list')}
-          title='View in list mode'
-        >
-          <SvgIcon
-            icon='list'
-            color={!isTabular ? 'default' : 'grayscale'}
-            hover='default'
-          />
-        </a>
-      </div>
-    )
-
     return (
       <div className={themeClasses.searchFormContainer}>
         <form onSubmit={onSubmit} className={themeClasses.searchForm}>
