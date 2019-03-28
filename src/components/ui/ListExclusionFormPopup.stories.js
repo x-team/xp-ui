@@ -1,8 +1,8 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
-import { number, text, array } from '@storybook/addon-knobs'
-import State from '../../utils/State'
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { number, text, array } from '@storybook/addon-knobs';
+import State from '../../utils/State';
 
 import ListExclusionFormPopup from './ListExclusionFormPopup'
 import ApplicantGrid from './ApplicantGrid'
@@ -35,7 +35,7 @@ const StoryListExclusionFormPopup = props => (
     onCancel={props.onCancel || action('Cancelling form')}
     onSubmit={props.onSubmit || action('Submitting form')}
   />
-)
+);
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh', position: 'relative' }}>
@@ -48,7 +48,7 @@ const Body = ({ children }) => (
     />
     {children}
   </div>
-)
+);
 
 const ScrollableContainer = ({ scrollable = true, children }) => (
   <div
@@ -61,7 +61,7 @@ const ScrollableContainer = ({ scrollable = true, children }) => (
   >
     {children}
   </div>
-)
+);
 
 const ApplicantList = ({ setState }) => {
   const info = [
@@ -146,7 +146,6 @@ const ApplicantList = ({ setState }) => {
     </div>
   )
 }
-
 storiesOf('UI Components/ListExclusionFormPopup', module).add('standalone', () => (
   <Body>
     <StoryListExclusionFormPopup />
