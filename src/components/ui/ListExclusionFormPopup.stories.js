@@ -1,8 +1,8 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { number, text, array } from '@storybook/addon-knobs';
-import State from '../../utils/State';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
+import { number, text, array } from '@storybook/addon-knobs'
+import State from '../../utils/State'
 
 import ListExclusionFormPopup from './ListExclusionFormPopup'
 import ApplicantGrid from './ApplicantGrid'
@@ -24,7 +24,7 @@ const StoryListExclusionFormPopup = props => (
         top: 0,
         right: 0,
         bottom: 0,
-        left: 0,
+        left: 0
       }
     }
     marginTop={number('Margin Top', props.marginTop || 10)}
@@ -35,7 +35,7 @@ const StoryListExclusionFormPopup = props => (
     onCancel={props.onCancel || action('Cancelling form')}
     onSubmit={props.onSubmit || action('Submitting form')}
   />
-);
+)
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh', position: 'relative' }}>
@@ -43,12 +43,12 @@ const Body = ({ children }) => (
       dangerouslySetInnerHTML={{
         __html: `
       html, body { margin: 0; height: 100%; overflow: hidden; }
-    `,
+    `
       }}
     />
     {children}
   </div>
-);
+)
 
 const ScrollableContainer = ({ scrollable = true, children }) => (
   <div
@@ -56,28 +56,28 @@ const ScrollableContainer = ({ scrollable = true, children }) => (
       height: '100%',
       overflow: scrollable ? 'auto' : 'hidden',
       paddingRight: '30%',
-      paddingLeft: '10%',
+      paddingLeft: '10%'
     }}
   >
     {children}
   </div>
-);
+)
 
 const ApplicantList = ({ setState }) => {
   const info = [
     {
       label: 'Avail. date:',
       value: 'DD/MM/YYYY',
-      tip: 'Avail. date tooltip copy',
+      tip: 'Avail. date tooltip copy'
     },
     {
       label: 'Timezone:',
-      value: 'UTC+00',
+      value: 'UTC+00'
     },
     {
       label: 'Rate:',
-      value: '$100',
-    },
+      value: '$100'
+    }
   ]
 
   const tags = ['JavaScript', 'ES2015', 'Node', 'Express', 'React', 'Redux', 'Webpack']
@@ -86,21 +86,21 @@ const ApplicantList = ({ setState }) => {
   const items = Array(10).fill(
     <ApplicantBadge
       id={i++}
-      name="Applicant full name"
-      email="applicant@email.com"
+      name='Applicant full name'
+      email='applicant@email.com'
       info={info}
       tags={tags}
       actions={[
         {
           key: 'exclusion',
-          icon: () => <SvgIcon icon="x" />,
+          icon: () => <SvgIcon icon='x' />,
           onClick: positioning =>
             setState({
               isOpen: true,
               applicant: `Applicant full name`,
-              positioning: positioning,
-            }),
-        },
+              positioning: positioning
+            })
+        }
       ]}
     />
   )
@@ -108,28 +108,28 @@ const ApplicantList = ({ setState }) => {
     <ApplicantBadge
       active
       id={999}
-      name="Applicant full name"
-      email="applicant@email.com"
+      name='Applicant full name'
+      email='applicant@email.com'
       info={info}
       tags={tags}
       actions={[
         {
           key: 'exclusion',
-          icon: () => <SvgIcon icon="x" />,
+          icon: () => <SvgIcon icon='x' />,
           onClick: positioning =>
             setState({
               isOpen: true,
               applicant: `Applicant full name`,
-              positioning: positioning,
-            }),
-        },
+              positioning: positioning
+            })
+        }
       ]}
     />
   )
   return (
     <div style={{ paddingRight: 10, paddingLeft: 10 }}>
       <SearchForm
-        mode="card"
+        mode='card'
         lists={[{ id: 1, value: 'a selected list', selected: true }]}
         keywords={'a keyword,or,two,and,much more'}
         fields={[{ id: 1, value: 'an unselected field' }]}
@@ -139,7 +139,7 @@ const ApplicantList = ({ setState }) => {
           { id: 3, value: 'Internal' },
           { id: 4, value: 'Unqualified' },
           { id: 5, value: 'Lost' },
-          { id: 6, value: 'Left' },
+          { id: 6, value: 'Left' }
         ]}
       />
       <ApplicantGrid items={items} visible={3} increment={2} />
