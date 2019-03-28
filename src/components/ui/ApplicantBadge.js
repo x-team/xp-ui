@@ -569,7 +569,7 @@ class ApplicantBadge extends PureComponent<Props> {
     handleRankingChange && handleRankingChange(ranking)
   }
 
-  handleClick = (event: SyntheticEvent<>) => {
+  handleBadgeClick = (event: SyntheticEvent<>) => {
     event.stopPropagation()
     const { id, onClick } = this.props
     onClick && onClick(id)
@@ -665,7 +665,7 @@ class ApplicantBadge extends PureComponent<Props> {
     ].map(item => ({ ...item, selected: item.id === ranking }))
 
     return (
-      <div onClick={this.handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
+      <div onClick={this.handleBadgeClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         <div className={cx.name}>
           <div className={cx.nameInner} title={name || email}>{name || email}</div>
           {status && this.renderStatusIndicator()}
