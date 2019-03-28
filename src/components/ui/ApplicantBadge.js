@@ -633,10 +633,15 @@ class ApplicantBadge extends PureComponent<Props> {
       />
     )
 
-    const handleClick = (event: Object) => {
+    const handleClick = (event: SyntheticEvent) => {
       event.stopPropagation()
       const { id, onClick } = this.props
       onClick && onClick(id)
+    }
+
+    const actionEvent = (event: SyntheticEvent, actionOnClick: Function) => {
+      event.stopPropagation()
+      actionOnClick && actionOnClick(event.currentTarget.getBoundingClientRect())
     }
 
     if (!id) {
@@ -673,15 +678,12 @@ class ApplicantBadge extends PureComponent<Props> {
           )}
         </div>
         <div className={cx.controls}>
-          {!isTabular && actions.map(({ key, icon: Icon, onClick = null }) => (
+          {!isTabular && actions.map(({ key, icon: Icon, onClick: actionOnClick }) => (
             Icon && (
               <span
                 key={key}
                 className={cx.control}
-                onClick={event => {
-                  event.stopPropagation()
-                  onClick && onClick(event.currentTarget.getBoundingClientRect())
-                }}
+                onClick={event => actionEvent(event, actionOnClick)}
               >
                 <Icon />
               </span>
