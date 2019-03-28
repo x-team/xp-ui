@@ -22,11 +22,9 @@ type Info = {
 }
 
 type Action = {
+  key?: string,
   icon?: Function,
-  onClick?: Function,
-  render?: Function,
-  dropdownClassName?: string,
-  tooltipClassName?: string
+  onClick?: Function
 }
 
 type Status = 'accepted' | 'excluded'
@@ -682,7 +680,7 @@ class ApplicantBadge extends PureComponent<Props> {
                 className={cx.control}
                 onClick={event => {
                   event.stopPropagation()
-                  onClick(event.currentTarget.getBoundingClientRect())
+                  onClick && onClick(event.currentTarget.getBoundingClientRect())
                 }}
               >
                 <Icon />
