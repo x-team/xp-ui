@@ -1,3 +1,5 @@
+/* global SyntheticEvent */
+
 import React, { PureComponent } from 'react'
 import md5 from 'crypto-js/md5'
 
@@ -567,6 +569,17 @@ class ApplicantBadge extends PureComponent<Props> {
     handleRankingChange && handleRankingChange(ranking)
   }
 
+  handleClick = (event: SyntheticEvent<>) => {
+    event.stopPropagation()
+    const { id, onClick } = this.props
+    onClick && onClick(id)
+  }
+
+  handleActionClick = (onClick: () => mixed) => (event: SyntheticEvent<>) => {
+    event.stopPropagation()
+    onClick && onClick(event.currentTarget.getBoundingClientRect())
+  }
+
   render () {
     const {
       id,
@@ -633,17 +646,6 @@ class ApplicantBadge extends PureComponent<Props> {
       />
     )
 
-    const handleClick = (event: SyntheticEvent) => {
-      event.stopPropagation()
-      const { id, onClick } = this.props
-      onClick && onClick(id)
-    }
-
-    const actionEvent = (event: SyntheticEvent, actionOnClick: Function) => {
-      event.stopPropagation()
-      actionOnClick && actionOnClick(event.currentTarget.getBoundingClientRect())
-    }
-
     if (!id) {
       return null
     }
@@ -663,7 +665,7 @@ class ApplicantBadge extends PureComponent<Props> {
     ].map(item => ({ ...item, selected: item.id === ranking }))
 
     return (
-      <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
+      <div onClick={this.handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         <div className={cx.name}>
           <div className={cx.nameInner} title={name || email}>{name || email}</div>
           {status && this.renderStatusIndicator()}
@@ -678,12 +680,12 @@ class ApplicantBadge extends PureComponent<Props> {
           )}
         </div>
         <div className={cx.controls}>
-          {!isTabular && actions.map(({ key, icon: Icon, onClick: actionOnClick }) => (
+          {!isTabular && actions.map(({ key, icon: Icon, onClick }) => (
             Icon && (
               <span
                 key={key}
                 className={cx.control}
-                onClick={event => actionEvent(event, actionOnClick)}
+                onClick={this.handleActionClick(onClick)}
               >
                 <Icon />
               </span>
