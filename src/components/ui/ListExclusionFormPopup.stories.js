@@ -54,6 +54,9 @@ const ScrollableContainer = ({ scrollable = true, children }) => (
     style={{
       height: '100%',
       overflow: scrollable ? 'auto' : 'hidden',
+      paddingRight: '30%',
+      paddingLeft: '10%',
+
     }}
   >
     {children}
@@ -75,15 +78,14 @@ const ApplicantList = ({ setState }) => {
       label: 'Rate:',
       value: '$100',
     },
-  ];
+  ]
 
-  const tags = ['JavaScript', 'ES2015', 'Node', 'Express', 'React', 'Redux', 'Webpack'];
+  const tags = ['JavaScript', 'ES2015', 'Node', 'Express', 'React', 'Redux', 'Webpack']
 
-  let i = 1;
+  let i = 1
   const items = Array(10).fill(
     <ApplicantBadge
       id={i++}
-      onClick={action('Applicant selected')}
       name="Applicant full name"
       email="applicant@email.com"
       info={info}
@@ -91,47 +93,65 @@ const ApplicantList = ({ setState }) => {
       actions={[
         {
           key: 'exclusion',
-          icon: () => <SvgIcon icon='x' />,
-          onClick: positioning => setState({
-            isOpen: true,
-            applicant: `Applicant full name`,
-            positioning: positioning
-          })
-        }
+          icon: () => <SvgIcon icon="x" />,
+          onClick: positioning =>
+            setState({
+              isOpen: true,
+              applicant: `Applicant full name`,
+              positioning: positioning,
+            }),
+        },
       ]}
     />
-  );
+  )
   items[1] = (
     <ApplicantBadge
       active
       id={999}
-      onClick={action('Applicant selected')}
       name="Applicant full name"
       email="applicant@email.com"
       info={info}
       tags={tags}
       actions={[
         {
-          key: 'approval',
-          icon: () => <SvgIcon icon='check' />,
-          render: () => <form>A custom list of inputs with a submit button and a checkmark icon</form>
-        },
-        {
           key: 'exclusion',
-          icon: () => <SvgIcon icon='x' />,
-          render: () => <form>Another custom list of inputs with a submit button and an X icon</form>
-        }
+          icon: () => <SvgIcon icon="x" />,
+          onClick: positioning =>
+            setState({
+              isOpen: true,
+              applicant: `Applicant full name`,
+              positioning: positioning,
+            }),
+        },
       ]}
     />
-  );
-  return <ApplicantGrid items={items} visible={3} increment={2} />;
-};
+  )
+  return (
+    <div style={{ paddingRight: 10, paddingLeft: 10 }}>
+      <SearchForm
+        mode="card"
+        lists={[{ id: 1, value: 'a selected list', selected: true }]}
+        keywords={'a keyword,or,two,and,much more'}
+        fields={[{ id: 1, value: 'an unselected field' }]}
+        statuses={[
+          { id: 1, value: 'In Pipeline' },
+          { id: 2, value: 'Booked' },
+          { id: 3, value: 'Internal' },
+          { id: 4, value: 'Unqualified' },
+          { id: 5, value: 'Lost' },
+          { id: 6, value: 'Left' },
+        ]}
+      />
+      <ApplicantGrid items={items} visible={3} increment={2} />
+    </div>
+  )
+}
 
 storiesOf('UI Components/ListExclusionFormPopup', module).add('standalone', () => (
   <Body>
     <StoryListExclusionFormPopup />
   </Body>
-));
+))
 
 storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
   .add('stateful example composed with TwoColumnsLayout', () => (
@@ -147,7 +167,11 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
               onSubmit={() => setState({ isOpen: false })}
             />
           )}
-          <StoryTwoColumnsLayout scrollableSidebar={!state.isOpen} sidebar={<ApplicantList setState={setState} />} />
+          <StoryTwoColumnsLayout
+            scrollableSidebar={!state.isOpen}
+            sidebarWidth={500}
+            sidebar={<ApplicantList setState={setState} />}
+          />
         </Body>
       )}
     </State>
@@ -171,4 +195,4 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
       )}
     </State>
   ))
-  .add('missing props (does component explode?)', () => <ListExclusionFormPopup />);
+  .add('missing props (does component explode?)', () => <ListExclusionFormPopup />)
