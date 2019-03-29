@@ -59,6 +59,7 @@ const cx = {
     margin: 14px 20px 10px
     line-height: 1.2
     white-space: pre-wrap
+    word-break: break-all
   `),
 
   input: cmz(`
