@@ -4,10 +4,11 @@ import { action } from '@storybook/addon-actions'
 import { number, text, array } from '@storybook/addon-knobs'
 import State from '../../utils/State'
 
-import ListExclusionFormPopup from './ListExclusionFormPopup';
+import ListExclusionFormPopup from './ListExclusionFormPopup'
 import ApplicantGrid from './ApplicantGrid'
 import ApplicantBadge from './ApplicantBadge'
-import { StoryTwoColumnsLayout } from './TwoColumnsLayout.stories';
+import SearchForm from './SearchForm'
+import { StoryTwoColumnsLayout } from './TwoColumnsLayout.stories'
 import SvgIcon from './SvgIcon'
 
 const StoryListExclusionFormPopup = props => (
