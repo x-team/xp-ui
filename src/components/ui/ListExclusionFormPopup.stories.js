@@ -7,7 +7,7 @@ import State from '../../utils/State'
 import ListExclusionFormPopup from './ListExclusionFormPopup'
 import ApplicantGrid from './ApplicantGrid'
 import ApplicantBadge from './ApplicantBadge'
-import SearchForm from './SearchForm'
+import Button from './Button'
 import { StoryTwoColumnsLayout } from './TwoColumnsLayout.stories'
 import SvgIcon from './SvgIcon'
 
@@ -29,8 +29,6 @@ const StoryListExclusionFormPopup = props => (
     }
     marginTop={number('Margin Top', props.marginTop || 10)}
     marginBottom={number('Margin Bottom', props.marginBottom || 10)}
-    marginRight={number('Margin Right', props.marginRight || 10)}
-    marginLeft={number('Margin Left', props.marginLeft || 10)}
     maxHeight={number('Popup Max Height', props.maxHeight || 400)}
     onCancel={props.onCancel || action('Cancelling form')}
     onSubmit={props.onSubmit || action('Submitting form')}
@@ -55,13 +53,30 @@ const ScrollableContainer = ({ scrollable = true, children }) => (
     style={{
       height: '100%',
       overflow: scrollable ? 'auto' : 'hidden',
-      paddingRight: '30%',
-      paddingLeft: '10%'
+      paddingRight: '300px',
+      paddingLeft: '100px'
     }}
   >
     {children}
   </div>
 )
+
+const ButtonsList = ({ setState }) => Array(50)
+  .fill('')
+  .map((each, index) => (
+    <div key={`trigger-${index + 1}`}>
+      <Button
+        block
+        onClick={event => setState({
+          isOpen: true,
+          applicant: `Sample #${index + 1}`,
+          positioning: event.currentTarget.getBoundingClientRect()
+        })}
+      >
+        Click<br />here<br />#{index + 1}
+      </Button>
+    </div>
+  ))
 
 const ApplicantList = ({ setState }) => {
   const info = [
@@ -127,21 +142,7 @@ const ApplicantList = ({ setState }) => {
     />
   )
   return (
-    <div style={{ paddingRight: 10, paddingLeft: 10 }}>
-      <SearchForm
-        mode='card'
-        lists={[{ id: 1, value: 'a selected list', selected: true }]}
-        keywords={'a keyword,or,two,and,much more'}
-        fields={[{ id: 1, value: 'an unselected field' }]}
-        statuses={[
-          { id: 1, value: 'In Pipeline' },
-          { id: 2, value: 'Booked' },
-          { id: 3, value: 'Internal' },
-          { id: 4, value: 'Unqualified' },
-          { id: 5, value: 'Lost' },
-          { id: 6, value: 'Left' }
-        ]}
-      />
+    <div style={{ paddingRight: 40, paddingLeft: 40 }}>
       <ApplicantGrid items={items} visible={3} increment={2} />
     </div>
   )
@@ -153,7 +154,7 @@ storiesOf('UI Components/ListExclusionFormPopup', module).add('standalone', () =
   </Body>
 ))
 
-storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
+storiesOf('UI Components/ListExclusionFormPopup/Use Cases', module)
   .add('stateful example composed with TwoColumnsLayout', () => (
     <State initialState={{ isOpen: false }}>
       {({ setState, state }) => (
@@ -176,6 +177,8 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
       )}
     </State>
   ))
+
+storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
   .add('stateful example occupying the entire height of the screen', () => (
     <State initialState={{ isOpen: false }}>
       {({ setState, state }) => (
@@ -189,7 +192,7 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
             />
           )}
           <ScrollableContainer scrollable={!state.isOpen}>
-            <ApplicantList setState={setState} />
+            <ButtonsList setState={setState} />
           </ScrollableContainer>
         </Body>
       )}
