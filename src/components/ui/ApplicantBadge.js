@@ -575,7 +575,7 @@ class ApplicantBadge extends PureComponent<Props> {
     onClick && onClick(id)
   }
 
-  handleActionClick = (onClick: () => mixed) => (event: SyntheticEvent<>) => {
+  handleActionClick = (onClick: () => mixed) => (event: Element) => {
     event.stopPropagation()
     onClick && onClick(event.currentTarget)
   }
