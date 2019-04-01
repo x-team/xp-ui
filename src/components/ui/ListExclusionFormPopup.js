@@ -1,5 +1,5 @@
 // @flow
-/* global SyntheticEvent, HTMLInputElement, SyntheticInputEvent */
+/* global SyntheticEvent, HTMLInputElement, SyntheticInputEvent, ClientRect */
 
 import React, { PureComponent } from 'react'
 import ClickOutside from 'react-click-outside'
@@ -104,10 +104,10 @@ type Positioning = {
 type Props = {
   applicant: string,
   reasons: Array<string>,
-  positioning: Positioning,
   marginTop: number,
   marginBottom: number,
   maxHeight: number,
+  actionIdAttr: string,
   onSubmit?: (reason: string) => void,
   onCancel?: () => void
 }
@@ -116,7 +116,8 @@ type State = {
   reasonIndex: number,
   reasonLabel: string,
   anchor: number,
-  style: Object
+  style: Object,
+  positioning: ClientRect | Positioning
 }
 
 const noneIndex = -1
@@ -125,38 +126,31 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
   static defaultProps = {
     applicant: '',
     reasons: [],
-    positioning: {
-      x: 0,
-      y: 0,
-      width: 0,
-      height: 0,
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0
-    },
     marginTop: 10,
     marginBottom: 10,
     maxHeight: 400
   }
 
-  state = {
-    reasonIndex: noneIndex,
-    reasonLabel: '',
-    anchor: 4,
-    style: {}
+  constructor (props: Props) {
+    super(props)
+    this.state = {
+      reasonIndex: noneIndex,
+      reasonLabel: '',
+      anchor: 4,
+      style: {},
+      positioning: this.getActionElementPosition()
+    }
   }
 
   handleCancel = (event: SyntheticEvent<HTMLInputElement>) => {
     event.preventDefault()
     const { onCancel } = this.props
-    this.setState(
-      {
-        reasonIndex: noneIndex,
-        reasonLabel: ''
-      },
-      () => onCancel && onCancel()
-    )
+    this.setState(prevState => ({
+      ...prevState,
+      reasonIndex: noneIndex,
+      reasonLabel: ''
+    }),
+    () => onCancel && onCancel())
   }
 
   handleSubmit = (event: SyntheticEvent<HTMLInputElement>) => {
@@ -170,18 +164,20 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     const { reasons } = this.props
     const reasonIndex = Number(event.target.value)
     const reasonLabel = reasons[reasonIndex]
-    this.setState({
+    this.setState(prevState => ({
+      ...prevState,
       reasonIndex,
       reasonLabel
-    })
+    }))
   }
 
   handleCommentChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
     const { reasons } = this.props
-    this.setState({
+    this.setState(prevState => ({
+      ...prevState,
       reasonIndex: reasons.length,
       reasonLabel: event.target.value
-    })
+    }))
   }
 
   isScreenSmallerThanPopupMaxHeight = ({ innerHeight, maxHeight, margins }: { innerHeight: number, maxHeight: number, margins: number }) => innerHeight <= maxHeight + margins
@@ -224,9 +220,9 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
 
   getPointOfArrowPositionRelatedToClickedElement = ({ triangleHeight, height }: { triangleHeight: number, height: number }) => triangleHeight - (height / 2)
 
-  updateDimensions = throttle(() => {
+  setUpdatedDimensions = () => {
     const { marginTop, marginBottom, maxHeight } = this.props
-    const { width = 0, height = 0, top = 0, bottom = 0, left = 0 } = this.props.positioning
+    const { width = 0, height = 0, top = 0, bottom = 0, left = 0 } = this.state.positioning
     const { innerHeight } = window
 
     const margins = marginTop + marginBottom
@@ -268,7 +264,19 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
       anchor,
       style
     })
-  }, 1000)
+  }
+
+  updateDimensions = throttle(this.setUpdatedDimensions, 1000)
+
+  componentDidUpdate (prevProps: Props, prevState: State) {
+    const positioning = this.getActionElementPosition()
+    if (JSON.stringify(prevState.positioning) !== JSON.stringify(positioning)) {
+      this.setState(prevState => ({
+        ...prevState,
+        positioning
+      }), this.setUpdatedDimensions())
+    }
+  }
 
   componentDidMount () {
     this.updateDimensions()
@@ -279,9 +287,18 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     window.removeEventListener('resize', this.updateDimensions)
   }
 
+  getActionElementPosition = () => {
+    const { actionIdAttr } = this.props
+    const currentTarget = document.getElementById(actionIdAttr)
+    return currentTarget
+      ? currentTarget.getBoundingClientRect()
+      : { x: 0, y: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, left: 0 }
+  }
+
   render () {
     const { applicant, reasons } = this.props
     const { reasonIndex, reasonLabel, anchor, style } = this.state
+
     return (
       <ClickOutside onClickOutside={this.handleCancel}>
         <form className={cx.wrapper} style={style}>

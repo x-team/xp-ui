@@ -575,9 +575,8 @@ class ApplicantBadge extends PureComponent<Props> {
     onClick && onClick(id)
   }
 
-  handleActionClick = (onClick: () => mixed) => (event: SyntheticEvent<>) => {
-    event.stopPropagation()
-    onClick && onClick(event.currentTarget)
+  handleActionClick = (onClick: () => mixed, actionIdAttr: string) => () => {
+    onClick && onClick(actionIdAttr)
   }
 
   render () {
@@ -680,17 +679,21 @@ class ApplicantBadge extends PureComponent<Props> {
           )}
         </div>
         <div className={cx.controls}>
-          {!isTabular && actions.map(({ key, icon: Icon, onClick }) => (
-            Icon && (
-              <span
-                key={key}
-                className={cx.control}
-                onClick={this.handleActionClick(onClick)}
-              >
-                <Icon />
-              </span>
+          {!isTabular && actions.map(({ key, icon: Icon, onClick }) => {
+            const actionIdAttr = `applicant${id}-${key}`
+            return (
+              Icon && (
+                <span
+                  id={actionIdAttr}
+                  key={key}
+                  className={cx.control}
+                  onClick={this.handleActionClick(onClick, actionIdAttr)}
+                >
+                  <Icon />
+                </span>
+              )
             )
-          ))}
+          })}
         </div>
         <div className={cx.infos}>
           {size(info) > 0 && mapInfosToRender(info)}
