@@ -172,11 +172,10 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
   }
 
   handleCommentChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
-    const { reasons } = this.props
+    const value = event.target.value
     this.setState(prevState => ({
       ...prevState,
-      reasonIndex: reasons.length,
-      reasonLabel: event.target.value
+      reasonLabel: value
     }))
   }
 
