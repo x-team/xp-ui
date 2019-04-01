@@ -5,28 +5,28 @@ import { number, text, array } from '@storybook/addon-knobs'
 import State from '../../utils/State'
 
 import ListExclusionFormPopup from './ListExclusionFormPopup'
+import ApplicantGrid from './ApplicantGrid'
+import ApplicantBadge from './ApplicantBadge'
 import Button from './Button'
 import { StoryTwoColumnsLayout } from './TwoColumnsLayout.stories'
+import SvgIcon from './SvgIcon'
 
-const StoryListExclusionFormPopup = (props) => (
+const StoryListExclusionFormPopup = props => (
   <ListExclusionFormPopup
     applicant={text('Applicant', props.applicant || 'Lorem Ipsum')}
-    reasons={array('Reasons', props.reasons || [
-      'Not available',
-      'Not qualified',
-      'Rate too high',
-      'Other'
-    ])}
-    positioning={props.positioning || {
-      x: 0,
-      y: 0,
-      width: 0,
-      height: 0,
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0
-    }}
+    reasons={array('Reasons', props.reasons || ['Not available', 'Not qualified', 'Rate too high', 'Other'])}
+    positioning={
+      props.positioning || {
+        x: 0,
+        y: 0,
+        width: 0,
+        height: 0,
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0
+      }
+    }
     marginTop={number('Margin Top', props.marginTop || 10)}
     marginBottom={number('Margin Bottom', props.marginBottom || 10)}
     maxHeight={number('Popup Max Height', props.maxHeight || 400)}
@@ -37,18 +37,26 @@ const StoryListExclusionFormPopup = (props) => (
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh', position: 'relative' }}>
-    <style dangerouslySetInnerHTML={{ __html: `
+    <style
+      dangerouslySetInnerHTML={{
+        __html: `
       html, body { margin: 0; height: 100%; overflow: hidden; }
-    ` }} />
+    `
+      }}
+    />
     {children}
   </div>
 )
 
 const ScrollableContainer = ({ scrollable = true, children }) => (
-  <div style={{
-    height: '100%',
-    overflow: scrollable ? 'auto' : 'hidden'
-  }}>
+  <div
+    style={{
+      height: '100%',
+      overflow: scrollable ? 'auto' : 'hidden',
+      paddingRight: '300px',
+      paddingLeft: '100px'
+    }}
+  >
     {children}
   </div>
 )
@@ -70,14 +78,83 @@ const ButtonsList = ({ setState }) => Array(50)
     </div>
   ))
 
-storiesOf('UI Components/ListExclusionFormPopup', module)
-  .add('standalone', () => (
-    <Body>
-      <StoryListExclusionFormPopup />
-    </Body>
-  ))
+const ApplicantList = ({ setState }) => {
+  const info = [
+    {
+      label: 'Avail. date:',
+      value: 'DD/MM/YYYY',
+      tip: 'Avail. date tooltip copy'
+    },
+    {
+      label: 'Timezone:',
+      value: 'UTC+00'
+    },
+    {
+      label: 'Rate:',
+      value: '$100'
+    }
+  ]
 
-storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
+  const tags = ['JavaScript', 'ES2015', 'Node', 'Express', 'React', 'Redux', 'Webpack']
+
+  let i = 1
+  const items = Array(10).fill(
+    <ApplicantBadge
+      id={i++}
+      name='Applicant full name'
+      email='applicant@email.com'
+      info={info}
+      tags={tags}
+      actions={[
+        {
+          key: 'exclusion',
+          icon: () => <SvgIcon icon='x' />,
+          onClick: positioning =>
+            setState({
+              isOpen: true,
+              applicant: `Applicant full name`,
+              positioning: positioning
+            })
+        }
+      ]}
+    />
+  )
+  items[1] = (
+    <ApplicantBadge
+      active
+      id={999}
+      name='Applicant full name'
+      email='applicant@email.com'
+      info={info}
+      tags={tags}
+      actions={[
+        {
+          key: 'exclusion',
+          icon: () => <SvgIcon icon='x' />,
+          onClick: positioning =>
+            setState({
+              isOpen: true,
+              applicant: `Applicant full name`,
+              positioning: positioning
+            })
+        }
+      ]}
+    />
+  )
+  return (
+    <div style={{ paddingRight: 40, paddingLeft: 40 }}>
+      <ApplicantGrid items={items} visible={3} increment={2} />
+    </div>
+  )
+}
+
+storiesOf('UI Components/ListExclusionFormPopup', module).add('standalone', () => (
+  <Body>
+    <StoryListExclusionFormPopup />
+  </Body>
+))
+
+storiesOf('UI Components/ListExclusionFormPopup/Use Cases', module)
   .add('stateful example composed with TwoColumnsLayout', () => (
     <State initialState={{ isOpen: false }}>
       {({ setState, state }) => (
@@ -93,12 +170,15 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
           )}
           <StoryTwoColumnsLayout
             scrollableSidebar={!state.isOpen}
-            sidebar={<ButtonsList setState={setState} />}
+            sidebarWidth={500}
+            sidebar={<ApplicantList setState={setState} />}
           />
         </Body>
       )}
     </State>
   ))
+
+storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
   .add('stateful example occupying the entire height of the screen', () => (
     <State initialState={{ isOpen: false }}>
       {({ setState, state }) => (
@@ -118,6 +198,4 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
       )}
     </State>
   ))
-  .add('missing props (does component explode?)', () => (
-    <ListExclusionFormPopup />
-  ))
+  .add('missing props (does component explode?)', () => <ListExclusionFormPopup />)
