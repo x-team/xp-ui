@@ -219,6 +219,10 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     return anchor
   }
 
+  getDistanceBetweenTopOfScreenAndClickedElement = ({ top, triangleHeight }: { top: number, triangleHeight: number }) => top - triangleHeight
+
+  getPointOfArrowPositionRelatedToClickedElement = ({ triangleHeight, height }: { triangleHeight: number, height: number }) => triangleHeight - (height / 2)
+
   updateDimensions = throttle(() => {
     const { marginTop, marginBottom, maxHeight } = this.props
     const { width = 0, height = 0, top = 0, bottom = 0, left = 0 } = this.props.positioning
@@ -234,13 +238,21 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
       height: maxHeight,
       maxHeight: `calc(100vh - ${margins}px)`,
       top,
-      left: left + width + 12
+      left: left + width + 10
     }
 
     if (this.isScreenSmallerThanPopupMaxHeight({ innerHeight, maxHeight, margins })) {
       style.top = marginTop
       anchor = this.getAnchorPositionForScreenSmallerThanPopupMaxHeight({ bottom, innerHeight, marginBottom, margins, triangleHeight, top, marginTop, initialAnchor })
     } else {
+      if (height < triangleHeight) {
+        if (this.isClickedElementTopAboveThePopupTop({ top: this.getDistanceBetweenTopOfScreenAndClickedElement({ top, triangleHeight }), marginTop })) {
+          style.top = marginTop
+        } else {
+          style.top = this.getDistanceBetweenTopOfScreenAndClickedElement({ top, triangleHeight })
+          anchor = this.getPointOfArrowPositionRelatedToClickedElement({ triangleHeight, height })
+        }
+      }
       if (this.isClickedElementTopAboveThePopupTop({ top, marginTop })) {
         style.top = marginTop
         anchor = 0

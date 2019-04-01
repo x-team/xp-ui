@@ -675,22 +675,18 @@ class ApplicantBadge extends PureComponent<Props> {
           )}
         </div>
         <div className={cx.controls}>
-          {!isTabular && actions.map(({ key, icon: Icon, onClick = null, render, dropdownClassName, tooltipClassName }) => (
+          {!isTabular && actions.map(({ key, icon: Icon, onClick = null }) => (
             Icon && (
-              <Dropdown
+              <span
                 key={key}
-                tooltip
-                className={dropdownClassName}
-                tooltipClassName={tooltipClassName}
-                onClick={onClick}
-                label={(
-                  <span className={cx.control}>
-                    <Icon />
-                  </span>
-                )}
+                className={cx.control}
+                onClick={event => {
+                  event.stopPropagation()
+                  onClick(event.currentTarget.getBoundingClientRect())
+                }}
               >
-                {render && render()}
-              </Dropdown>
+                <Icon />
+              </span>
             )
           ))}
         </div>
