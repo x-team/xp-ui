@@ -27,6 +27,7 @@ export const StoryTwoColumnsLayout = (props) => (
     scrollableSidebar={boolean('Scrollable Sidebar', props.scrollableSidebar !== undefined ? props.scrollableSidebar : true)}
     content={props.content || sampleContent}
     contentHeading={text('Content Heading', props.contentHeading || 'Search')}
+    contentId='test'
   />
 )
 
