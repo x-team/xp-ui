@@ -211,9 +211,13 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     return anchor
   }
 
-  getDistanceBetweenTopOfScreenAndClickedElement = ({ top, triangleHeight }: { top: number, triangleHeight: number }) => top - triangleHeight
+  isClickedElementHeightSmallerThanTriangleHeight = ({ height, triangleHeight }: { height: number, triangleHeight: number }) => height < triangleHeight
 
-  getPointOfArrowPositionRelatedToClickedElement = ({ triangleHeight, height }: { triangleHeight: number, height: number }) => triangleHeight - (height / 2)
+  getPushedTopPopupPosition = ({ top, initialAnchor, pushUp }: { top: number, initialAnchor: number, pushUp: number }) => top + initialAnchor - pushUp
+
+  isPushedTopPopupPositionBiggerThanPopupMarginTop = ({ pushedTop, marginTop }: { pushedTop: number, marginTop: number }) => pushedTop > marginTop
+
+  getPushedAnchorPosition = ({ top, marginTop, initialAnchor }: { top: number, marginTop: number, initialAnchor: number }) => top - marginTop + initialAnchor
 
   setUpdatedDimensions = () => {
     const { marginTop, marginBottom, maxHeight } = this.props
@@ -223,6 +227,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     const margins = marginTop + marginBottom
     const triangleHeight = 20
     const initialAnchor = (height / 2) - (triangleHeight / 2)
+    const leftMargin = 14
 
     let anchor = initialAnchor > 0 ? initialAnchor : 0
 
@@ -230,28 +235,24 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
       height: maxHeight,
       maxHeight: `calc(100vh - ${margins}px)`,
       top,
-      left: left + width + 10
+      left: left + width + leftMargin
     }
 
     if (this.isScreenSmallerThanPopupMaxHeight({ innerHeight, maxHeight, margins })) {
       style.top = marginTop
       anchor = this.getAnchorPositionForScreenSmallerThanPopupMaxHeight({ bottom, innerHeight, marginBottom, margins, triangleHeight, top, marginTop, initialAnchor })
     } else {
-      if (height < triangleHeight) {
-        if (this.isClickedElementTopAboveThePopupTop({ top: this.getDistanceBetweenTopOfScreenAndClickedElement({ top, triangleHeight }), marginTop })) {
-          style.top = marginTop
-        } else {
-          style.top = this.getDistanceBetweenTopOfScreenAndClickedElement({ top, triangleHeight })
-          anchor = this.getPointOfArrowPositionRelatedToClickedElement({ triangleHeight, height })
-        }
-      }
-      if (this.isClickedElementTopAboveThePopupTop({ top, marginTop })) {
-        style.top = marginTop
-        anchor = 0
-      }
       if (this.doesPopupHeightGoesOutOfScreenBottomBoundary({ top, maxHeight, marginBottom, innerHeight })) {
         style.top = this.getPopupTopWhenDockedToTheScreenBottom({ innerHeight, maxHeight, marginBottom })
         anchor = this.getAnchorPositionWhenPopupIsDockedToTheScreenBottom({ bottom, innerHeight, marginBottom, maxHeight, triangleHeight, top, initialAnchor })
+      } else if (this.isClickedElementTopAboveThePopupTop({ top, marginTop })) {
+        style.top = marginTop
+        anchor = 0
+      } else if (this.isClickedElementHeightSmallerThanTriangleHeight({ height, triangleHeight })) {
+        const pushUp = 20
+        const pushedTop = this.getPushedTopPopupPosition({ top, initialAnchor, pushUp })
+        style.top = this.isPushedTopPopupPositionBiggerThanPopupMarginTop({ pushedTop, marginTop }) ? pushedTop : marginTop
+        anchor = this.isPushedTopPopupPositionBiggerThanPopupMarginTop({ pushedTop, marginTop }) ? pushUp : this.getPushedAnchorPosition({ top, marginTop, initialAnchor })
       }
     }
 
