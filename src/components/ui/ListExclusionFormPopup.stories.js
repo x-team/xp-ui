@@ -131,7 +131,7 @@ storiesOf('UI Components/ListExclusionFormPopup/Use Cases', module)
             <StoryListExclusionFormPopup
               applicant={state.applicant}
               actionIdAttr={state.actionIdAttr}
-              marginTop={60}
+              marginTop={70}
               onCancel={() => setState({ isOpen: false })}
               onSubmit={() => setState({ isOpen: false })}
             />
