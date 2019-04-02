@@ -1,9 +1,10 @@
 // @flow
-/* global SyntheticEvent, HTMLInputElement, SyntheticInputEvent, ClientRect */
+/* global SyntheticEvent, HTMLInputElement, SyntheticInputEvent */
 
 import React, { PureComponent } from 'react'
 import ClickOutside from 'react-click-outside'
 import throttle from 'lodash.throttle'
+import isEqual from 'lodash.isequal'
 
 import InputField from '../forms/InputField'
 import Button from './Button'
@@ -91,8 +92,6 @@ const cx = {
 }
 
 type Positioning = {
-  x: number,
-  y: number,
   width: number,
   height: number,
   top: number,
@@ -117,10 +116,23 @@ type State = {
   reasonLabel: string,
   anchor: number,
   style: Object,
-  positioning: ClientRect | Positioning
+  positioning: Positioning
 }
 
 const noneIndex = -1
+
+const getActionElementPosition = (actionIdAttr: string): Positioning => {
+  const currentTarget = document.getElementById(actionIdAttr)
+  const {
+    width = 0,
+    height = 0,
+    top = 0,
+    right = 0,
+    bottom = 0,
+    left = 0
+  } = currentTarget ? currentTarget.getBoundingClientRect() : {}
+  return { width, height, top, right, bottom, left }
+}
 
 class ListExclusionFormPopup extends PureComponent<Props, State> {
   static defaultProps = {
@@ -131,26 +143,18 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     maxHeight: 400
   }
 
-  constructor (props: Props) {
-    super(props)
-    this.state = {
-      reasonIndex: noneIndex,
-      reasonLabel: '',
-      anchor: 4,
-      style: {},
-      positioning: this.getActionElementPosition()
-    }
+  state = {
+    reasonIndex: noneIndex,
+    reasonLabel: '',
+    anchor: 4,
+    style: {},
+    positioning: getActionElementPosition(this.props.actionIdAttr)
   }
 
   handleCancel = (event: SyntheticEvent<HTMLInputElement>) => {
     event.preventDefault()
     const { onCancel } = this.props
-    this.setState(prevState => ({
-      ...prevState,
-      reasonIndex: noneIndex,
-      reasonLabel: ''
-    }),
-    () => onCancel && onCancel())
+    this.setState({ reasonIndex: noneIndex, reasonLabel: '' }, () => onCancel && onCancel())
   }
 
   handleSubmit = (event: SyntheticEvent<HTMLInputElement>) => {
@@ -164,19 +168,11 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     const { reasons } = this.props
     const reasonIndex = Number(event.target.value)
     const reasonLabel = reasons[reasonIndex]
-    this.setState(prevState => ({
-      ...prevState,
-      reasonIndex,
-      reasonLabel
-    }))
+    this.setState({ reasonIndex, reasonLabel })
   }
 
   handleCommentChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
-    const value = event.target.value
-    this.setState(prevState => ({
-      ...prevState,
-      reasonLabel: value
-    }))
+    this.setState({ reasonLabel: event.target.value })
   }
 
   isScreenSmallerThanPopupMaxHeight = ({ innerHeight, maxHeight, margins }: { innerHeight: number, maxHeight: number, margins: number }) => innerHeight <= maxHeight + margins
@@ -259,21 +255,15 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
       }
     }
 
-    this.setState({
-      anchor,
-      style
-    })
+    this.setState({ anchor, style })
   }
 
   updateDimensions = throttle(this.setUpdatedDimensions, 1000)
 
   componentDidUpdate (prevProps: Props, prevState: State) {
-    const positioning = this.getActionElementPosition()
-    if (JSON.stringify(prevState.positioning) !== JSON.stringify(positioning)) {
-      this.setState(prevState => ({
-        ...prevState,
-        positioning
-      }), this.setUpdatedDimensions())
+    const positioning = getActionElementPosition(this.props.actionIdAttr)
+    if (!isEqual(prevState.positioning, positioning)) {
+      this.setState({ positioning }, this.setUpdatedDimensions())
     }
   }
 
@@ -284,14 +274,6 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
 
   componentWillUnmount () {
     window.removeEventListener('resize', this.updateDimensions)
-  }
-
-  getActionElementPosition = () => {
-    const { actionIdAttr } = this.props
-    const currentTarget = document.getElementById(actionIdAttr)
-    return currentTarget
-      ? currentTarget.getBoundingClientRect()
-      : { x: 0, y: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, left: 0 }
   }
 
   render () {

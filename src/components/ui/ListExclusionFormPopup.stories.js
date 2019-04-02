@@ -1,4 +1,5 @@
 import React from 'react'
+import faker from 'faker'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { number, text, array } from '@storybook/addon-knobs'
@@ -71,34 +72,43 @@ const ButtonsList = ({ setState }) => {
   })
 }
 
-const ApplicantList = ({ setState }) => {
-  const hancleClick = actionIdAttr => {
-    setState({
-      isOpen: true,
-      applicant: `Applicant full name`,
-      actionIdAttr
-    })
+const applicants = Array(15).fill('').map((each, id) => {
+  const email = faker.internet.email()
+  const name = faker.random.number(10) >= 4
+    ? `${faker.name.firstName()} ${faker.name.lastName()}`
+    : email
+  return {
+    id,
+    name,
+    email
   }
+})
 
-  const items = Array(15).fill('').map((each, index) => ({
-    id: index,
-    name: 'Applicant full name',
-    email: 'applicant@email.com',
-    actions: [
-      {
-        key: 'exclusion',
-        icon: () => <SvgIcon icon='x' />,
-        onClick: hancleClick
-      }
-    ]
-  }))
-  items[2] = { ...items[2], active: true }
+const ApplicantList = ({ setState }) => {
+  const hancleClick = (applicant) => (actionIdAttr) => setState({
+    isOpen: true,
+    applicant,
+    actionIdAttr
+  })
+
+  const getApplicants = () => applicants.map(applicant => (
+    <ApplicantBadge
+      {...applicant}
+      active={applicant.id === 2}
+      actions={[
+        {
+          key: 'exclusion',
+          icon: () => <SvgIcon icon='x' />,
+          onClick: hancleClick(applicant.name)
+        }
+      ]}
+    />
+  ))
+
   return (
     <div style={{ padding: '10px 40px' }}>
       <ApplicantGrid
-        items={items.map(each => (
-          <ApplicantBadge {...each} />
-        ))}
+        items={getApplicants()}
         visible={8}
         increment={2}
       />
