@@ -1,4 +1,5 @@
 import React from 'react'
+import faker from 'faker'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { number, text, array } from '@storybook/addon-knobs'
@@ -15,18 +16,7 @@ const StoryListExclusionFormPopup = props => (
   <ListExclusionFormPopup
     applicant={text('Applicant', props.applicant || 'Lorem Ipsum')}
     reasons={array('Reasons', props.reasons || ['Not available', 'Not qualified', 'Rate too high', 'Other'])}
-    positioning={
-      props.positioning || {
-        x: 0,
-        y: 0,
-        width: 0,
-        height: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0
-      }
-    }
+    actionIdAttr={props.actionIdAttr}
     marginTop={number('Margin Top', props.marginTop || 10)}
     marginBottom={number('Margin Bottom', props.marginBottom || 10)}
     maxHeight={number('Popup Max Height', props.maxHeight || 400)}
@@ -38,11 +28,9 @@ const StoryListExclusionFormPopup = props => (
 const Body = ({ children }) => (
   <div style={{ height: '100vh', position: 'relative' }}>
     <style
-      dangerouslySetInnerHTML={{
-        __html: `
-      html, body { margin: 0; height: 100%; overflow: hidden; }
-    `
-      }}
+      dangerouslySetInnerHTML={{ __html: `
+        html, body { margin: 0; height: 100%; overflow: hidden; }
+      ` }}
     />
     {children}
   </div>
@@ -61,89 +49,69 @@ const ScrollableContainer = ({ scrollable = true, children }) => (
   </div>
 )
 
-const ButtonsList = ({ setState }) => Array(50)
-  .fill('')
-  .map((each, index) => (
-    <div key={`trigger-${index + 1}`}>
-      <Button
-        block
-        onClick={event => setState({
-          isOpen: true,
-          applicant: `Sample #${index + 1}`,
-          positioning: event.currentTarget.getBoundingClientRect()
-        })}
-      >
-        Click<br />here<br />#{index + 1}
-      </Button>
-    </div>
-  ))
+const ButtonsList = ({ setState }) => {
+  const handleClick = (index, actionIdAttr) => () => setState({
+    isOpen: true,
+    applicant: `Sample #${index}`,
+    actionIdAttr
+  })
+
+  return Array(50).fill('').map((each, index) => {
+    const id = `trigger-${index + 1}`
+    return (
+      <div key={id}>
+        <Button
+          id={id}
+          block
+          onClick={handleClick(index + 1, id)}
+        >
+          Click<br />here<br />#{index + 1}
+        </Button>
+      </div>
+    )
+  })
+}
+
+const applicants = Array(15).fill('').map((each, id) => {
+  const email = faker.internet.email()
+  const name = faker.random.number(10) >= 4
+    ? `${faker.name.firstName()} ${faker.name.lastName()}`
+    : email
+  return {
+    id,
+    name,
+    email
+  }
+})
 
 const ApplicantList = ({ setState }) => {
-  const info = [
-    {
-      label: 'Avail. date:',
-      value: 'DD/MM/YYYY',
-      tip: 'Avail. date tooltip copy'
-    },
-    {
-      label: 'Timezone:',
-      value: 'UTC+00'
-    },
-    {
-      label: 'Rate:',
-      value: '$100'
-    }
-  ]
+  const hancleClick = (applicant) => (actionIdAttr) => setState({
+    isOpen: true,
+    applicant,
+    actionIdAttr
+  })
 
-  const tags = ['JavaScript', 'ES2015', 'Node', 'Express', 'React', 'Redux', 'Webpack']
-
-  let i = 1
-  const items = Array(10).fill(
+  const getApplicants = () => applicants.map(applicant => (
     <ApplicantBadge
-      id={i++}
-      name='Applicant full name'
-      email='applicant@email.com'
-      info={info}
-      tags={tags}
+      {...applicant}
+      active={applicant.id === 2}
       actions={[
         {
           key: 'exclusion',
           icon: () => <SvgIcon icon='x' />,
-          onClick: positioning =>
-            setState({
-              isOpen: true,
-              applicant: `Applicant full name`,
-              positioning: positioning
-            })
+          onClick: hancleClick(applicant.name)
         }
       ]}
     />
-  )
-  items[1] = (
-    <ApplicantBadge
-      active
-      id={999}
-      name='Applicant full name'
-      email='applicant@email.com'
-      info={info}
-      tags={tags}
-      actions={[
-        {
-          key: 'exclusion',
-          icon: () => <SvgIcon icon='x' />,
-          onClick: positioning =>
-            setState({
-              isOpen: true,
-              applicant: `Applicant full name`,
-              positioning: positioning
-            })
-        }
-      ]}
-    />
-  )
+  ))
+
   return (
-    <div style={{ paddingRight: 40, paddingLeft: 40 }}>
-      <ApplicantGrid items={items} visible={3} increment={2} />
+    <div style={{ padding: '10px 40px' }}>
+      <ApplicantGrid
+        items={getApplicants()}
+        visible={8}
+        increment={2}
+      />
     </div>
   )
 }
@@ -162,7 +130,7 @@ storiesOf('UI Components/ListExclusionFormPopup/Use Cases', module)
           {state.isOpen && (
             <StoryListExclusionFormPopup
               applicant={state.applicant}
-              positioning={state.positioning}
+              actionIdAttr={state.actionIdAttr}
               marginTop={60}
               onCancel={() => setState({ isOpen: false })}
               onSubmit={() => setState({ isOpen: false })}
@@ -186,7 +154,7 @@ storiesOf('UI Components/ListExclusionFormPopup/Debug', module)
           {state.isOpen && (
             <StoryListExclusionFormPopup
               applicant={state.applicant}
-              positioning={state.positioning}
+              actionIdAttr={state.actionIdAttr}
               onCancel={() => setState({ isOpen: false })}
               onSubmit={() => setState({ isOpen: false })}
             />
