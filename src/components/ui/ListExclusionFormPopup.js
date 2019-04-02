@@ -211,7 +211,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     return anchor
   }
 
-  getDistanceBetweenTopOfScreenAndClickedElement = ({ top, triangleHeight }: { top: number, triangleHeight: number }) => top - triangleHeight
+  getDistanceBetweenTopOfScreenAndClickedElement = ({ top, triangleHeight }: { top: number, triangleHeight: number }) => top - (triangleHeight / 2)
 
   getPointOfArrowPositionRelatedToClickedElement = ({ triangleHeight, height }: { triangleHeight: number, height: number }) => triangleHeight - (height / 2)
 
@@ -223,6 +223,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     const margins = marginTop + marginBottom
     const triangleHeight = 20
     const initialAnchor = (height / 2) - (triangleHeight / 2)
+    const marginPointOfArrowAndClickedButton = 10
 
     let anchor = initialAnchor > 0 ? initialAnchor : 0
 
@@ -230,7 +231,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
       height: maxHeight,
       maxHeight: `calc(100vh - ${margins}px)`,
       top,
-      left: left + width + 10
+      left: left + width + marginPointOfArrowAndClickedButton
     }
 
     if (this.isScreenSmallerThanPopupMaxHeight({ innerHeight, maxHeight, margins })) {
