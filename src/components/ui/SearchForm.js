@@ -33,8 +33,8 @@ const listTheme = {
   `),
 
   listsSelector: cmz(`
-    width: calc(100% - 82px)
-    max-width: calc(100% - 82px)
+    width: 100%
+    max-width: 100%
   `),
 
   displayButtons: cmz(`
@@ -237,7 +237,7 @@ type Props = {
   switchDisplay: Function
 }
 
-const SELECTBOX_HEIGTH = 3
+const SELECTBOX_HEIGTH = 4
 
 class SearchForm extends PureComponent<Props> {
   static defaultProps = {
@@ -281,33 +281,6 @@ class SearchForm extends PureComponent<Props> {
     const isTabular = mode === DISPLAY_MODES.TABULAR
     const themeClasses: Object = isTabular ? tabularTheme : listTheme
 
-    const renderDisplaySwitchButtons = () => (
-      <div className={themeClasses.displayButtons}>
-        <a
-          className={themeClasses.displayButton}
-          onClick={this.handleSwitchDisplay('tabular')}
-          title='View in tabular mode'
-        >
-          <SvgIcon
-            icon='grid'
-            color={isTabular ? 'default' : 'grayscale'}
-            hover='default'
-          />
-        </a>
-        <a
-          className={themeClasses.displayButton}
-          onClick={this.handleSwitchDisplay('list')}
-          title='View in list mode'
-        >
-          <SvgIcon
-            icon='list'
-            color={!isTabular ? 'default' : 'grayscale'}
-            hover='default'
-          />
-        </a>
-      </div>
-    )
-
     return (
       <div className={themeClasses.searchFormContainer}>
         <form onSubmit={onSubmit} className={themeClasses.searchForm}>
@@ -331,7 +304,6 @@ class SearchForm extends PureComponent<Props> {
                 }
               />
             </div>
-            {!isTabular && renderDisplaySwitchButtons()}
           </div>
           <div className={themeClasses.fieldsAndStatusesContainer}>
             <div className={themeClasses.selectFields}>
@@ -365,13 +337,12 @@ class SearchForm extends PureComponent<Props> {
             />
             <Button
               className={themeClasses.formButton}
-              type='submit'
               raised
+              onClick={onSubmit}
             >
               Show
             </Button>
           </div>
-          {isTabular && renderDisplaySwitchButtons()}
         </form>
         {isTabular && tabularFilterTags}
 

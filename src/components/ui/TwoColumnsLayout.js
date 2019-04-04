@@ -60,9 +60,16 @@ const cx = {
 
   sidebarBody: cmz(`
     max-height: 100%
-    overflow: auto
     box-sizing: border-box
     flex: 1 0 0
+  `),
+
+  scrollableSidebar: cmz(`
+    overflow: auto
+  `),
+
+  nonScrollableSidebar: cmz(`
+    overflow: hidden
   `),
 
   content: cmz(`
@@ -105,8 +112,10 @@ type Props = {
   sidebarHeading: string,
   sidebarWidth: number,
   sidebarIcon: Icon,
+  scrollableSidebar: boolean,
   content: Element<*>,
-  contentHeading: string
+  contentHeading: string,
+  contentId: string
 }
 
 class TwoColumnsLayout extends PureComponent<Props, void> {
@@ -115,12 +124,14 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
     sidebarHeading: '',
     sidebarWidth: 385,
     sidebarIcon: '',
+    scrollableSidebar: true,
     content: null,
-    contentHeading: ''
+    contentHeading: '',
+    contentId: ''
   }
 
   renderSidebar = () => {
-    const { sidebar, sidebarHeading, sidebarWidth, sidebarIcon } = this.props
+    const { sidebar, sidebarHeading, sidebarWidth, sidebarIcon, scrollableSidebar } = this.props
     return (
       <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
         {sidebarHeading && (
@@ -135,7 +146,7 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
             </div>
           </div>
         )}
-        <div className={cx.sidebarBody}>
+        <div className={[cx.sidebarBody, scrollableSidebar ? cx.scrollableSidebar : cx.nonScrollableSidebar].join(' ')}>
           {sidebar}
         </div>
       </div>
@@ -143,7 +154,9 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
   }
 
   renderContent = () => {
-    const { content, contentHeading } = this.props
+    const { content, contentHeading, contentId } = this.props
+    const contentIdAttr = contentId !== '' ? { id: contentId } : {}
+
     return (
       <div className={cx.content}>
         {contentHeading && (
@@ -153,7 +166,7 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
             </div>
           </div>
         )}
-        <div className={cx.contentBody}>
+        <div className={cx.contentBody} {...contentIdAttr}>
           {content}
         </div>
       </div>

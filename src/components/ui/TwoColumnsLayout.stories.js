@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, number } from '@storybook/addon-knobs'
+import { text, number, boolean } from '@storybook/addon-knobs'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
 import { StoryAdminScreen } from './AdminScreen.stories'
@@ -18,14 +18,16 @@ const Body = ({ children }) => (
   </div>
 )
 
-const StoryTwoColumnsLayout = (props) => (
+export const StoryTwoColumnsLayout = (props) => (
   <TwoColumnsLayout
     sidebar={props.sidebar || sampleSidebar}
     sidebarHeading={text('Sidebar Heading', props.sidebarHeading || 'Filters')}
     sidebarWidth={number('Sidebar Width', props.sidebarWidth || 385)}
     sidebarIcon={text('Sidebar Icon', props.sidebarIcon || 'filters')}
+    scrollableSidebar={boolean('Scrollable Sidebar', props.scrollableSidebar !== undefined ? props.scrollableSidebar : true)}
     content={props.content || sampleContent}
     contentHeading={text('Content Heading', props.contentHeading || 'Search')}
+    contentId='test'
   />
 )
 

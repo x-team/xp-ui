@@ -1,3 +1,5 @@
+/* global SyntheticEvent */
+
 import React, { PureComponent } from 'react'
 import md5 from 'crypto-js/md5'
 
@@ -22,11 +24,9 @@ type Info = {
 }
 
 type Action = {
+  key?: string,
   icon?: Function,
-  onClick?: Function,
-  render?: Function,
-  dropdownClassName?: string,
-  tooltipClassName?: string
+  onClick?: Function
 }
 
 type Status = 'accepted' | 'excluded'
@@ -569,6 +569,16 @@ class ApplicantBadge extends PureComponent<Props> {
     handleRankingChange && handleRankingChange(ranking)
   }
 
+  handleBadgeClick = (event: SyntheticEvent<>) => {
+    event.stopPropagation()
+    const { id, onClick } = this.props
+    onClick && onClick(id)
+  }
+
+  handleActionClick = (onClick: () => mixed, actionIdAttr: string) => () => {
+    onClick && onClick(actionIdAttr)
+  }
+
   render () {
     const {
       id,
@@ -635,12 +645,6 @@ class ApplicantBadge extends PureComponent<Props> {
       />
     )
 
-    const handleClick = (event: Object) => {
-      event.stopPropagation()
-      const { id, onClick } = this.props
-      onClick && onClick(id)
-    }
-
     if (!id) {
       return null
     }
@@ -660,7 +664,7 @@ class ApplicantBadge extends PureComponent<Props> {
     ].map(item => ({ ...item, selected: item.id === ranking }))
 
     return (
-      <div onClick={handleClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
+      <div onClick={this.handleBadgeClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         <div className={cx.name}>
           <div className={cx.nameInner} title={name || email}>{name || email}</div>
           {status && this.renderStatusIndicator()}
@@ -675,24 +679,21 @@ class ApplicantBadge extends PureComponent<Props> {
           )}
         </div>
         <div className={cx.controls}>
-          {!isTabular && actions.map(({ key, icon: Icon, onClick = null, render, dropdownClassName, tooltipClassName }) => (
-            Icon && (
-              <Dropdown
-                key={key}
-                tooltip
-                className={dropdownClassName}
-                tooltipClassName={tooltipClassName}
-                onClick={onClick}
-                label={(
-                  <span className={cx.control}>
-                    <Icon />
-                  </span>
-                )}
-              >
-                {render && render()}
-              </Dropdown>
+          {!isTabular && actions.map(({ key, icon: Icon, onClick }) => {
+            const actionIdAttr = `applicant${id}-${key}`
+            return (
+              Icon && (
+                <span
+                  id={actionIdAttr}
+                  key={key}
+                  className={cx.control}
+                  onClick={this.handleActionClick(onClick, actionIdAttr)}
+                >
+                  <Icon />
+                </span>
+              )
             )
-          ))}
+          })}
         </div>
         <div className={cx.infos}>
           {size(info) > 0 && mapInfosToRender(info)}
