@@ -122,8 +122,8 @@ const inputStylesSmall = [
       width: 100%
       height: 40px !important
       font-size: 1rem !important
-      padding: 8px 18px !important 
-      border: 1px solid ${theme.formBorder} !important 
+      padding: 8px 18px !important
+      border: 1px solid ${theme.formBorder} !important
       box-sizing: border-box
       z-index: 2
     }

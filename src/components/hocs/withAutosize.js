@@ -21,23 +21,29 @@ const withAutosize = (Component: any) => {
       this.props.value !== prevProps.value && this.elem.oninput()
     }
 
+    getElementLineHeight = () => parseInt(window.getComputedStyle(this.elem).getPropertyValue('line-height'), 10) || 30
+
     setAutosize = (elem: any) => {
       if (!elem) return
 
       this.elem = elem
 
-      const value = this.elem.value
+      const savedValue = this.elem.value
       this.elem.value = ''
-      this.elem.baseScrollHeight = this.elem.scrollHeight
-      this.elem.value = value
+      let baseScrollHeight = this.elem.scrollHeight
+      this.elem.value = savedValue
 
-      const lineHeight = parseInt(window.getComputedStyle(this.elem).getPropertyValue('line-height'), 10) || 16
+      let lineHeight = this.getElementLineHeight()
       const minLines = 2
       const maxLines = this.props.linesLimit
 
       this.elem.oninput = () => {
+        if (baseScrollHeight === 0) {
+          baseScrollHeight = this.elem.scrollHeight
+          lineHeight = this.getElementLineHeight()
+        }
         this.elem.rows = minLines
-        const hiddenLines = Math.ceil((this.elem.scrollHeight - this.elem.baseScrollHeight) / lineHeight)
+        const hiddenLines = Math.ceil((this.elem.scrollHeight - baseScrollHeight) / lineHeight)
         const lines = minLines + hiddenLines
         this.elem.rows = maxLines && lines >= maxLines ? maxLines : lines
       }
