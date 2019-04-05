@@ -84,6 +84,20 @@ const applicants = Array(15).fill('').map((each, id) => {
   }
 })
 
+const getApplicants = (hancleClick) => applicants.map(applicant => (
+  <ApplicantBadge
+    {...applicant}
+    active={applicant.id === 2}
+    actions={[
+      {
+        key: 'exclusion',
+        icon: () => <SvgIcon icon='x' />,
+        onClick: hancleClick(applicant.name)
+      }
+    ]}
+  />
+))
+
 const ApplicantList = ({ setState }) => {
   const hancleClick = (applicant) => (actionIdAttr) => setState({
     isOpen: true,
@@ -91,24 +105,10 @@ const ApplicantList = ({ setState }) => {
     actionIdAttr
   })
 
-  const getApplicants = () => applicants.map(applicant => (
-    <ApplicantBadge
-      {...applicant}
-      active={applicant.id === 2}
-      actions={[
-        {
-          key: 'exclusion',
-          icon: () => <SvgIcon icon='x' />,
-          onClick: hancleClick(applicant.name)
-        }
-      ]}
-    />
-  ))
-
   return (
     <div style={{ padding: '10px 40px' }}>
       <ApplicantGrid
-        items={getApplicants()}
+        items={getApplicants(hancleClick)}
         visible={8}
         increment={2}
       />
