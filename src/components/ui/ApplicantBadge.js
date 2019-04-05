@@ -1,3 +1,4 @@
+// @flow
 /* global SyntheticEvent */
 
 import React, { PureComponent } from 'react'
@@ -6,16 +7,13 @@ import md5 from 'crypto-js/md5'
 import Avatar from './Avatar'
 import TruncatedList from './TruncatedList'
 import Dropdown from './Dropdown'
-import SelectBox from './SelectBox'
 
-import { size, stopPropagation } from '../../utils/helpers'
-import { DISPLAY_MODES } from '../../utils/constants'
+import { size } from '../../utils/helpers'
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { Element } from 'react'
-import type { DisplayModes } from '../../utils/types'
 
 type Info = {
   value: string,
@@ -24,16 +22,15 @@ type Info = {
 }
 
 type Action = {
-  key?: string,
-  icon?: Function,
-  onClick?: Function
+  key: string,
+  icon: () => Element<*>,
+  onClick: (?string) => void
 }
 
-type Status = 'accepted' | 'excluded'
+type Status = 'accepted' | 'excluded' | ''
 
 type Props = {
   id: number,
-  mode?: $Values<DisplayModes>, // eslint-disable-line no-undef
   active?: boolean,
   name?: string,
   email: string,
@@ -41,13 +38,10 @@ type Props = {
   tags: Array<string>,
   avatar?: Element<*>,
   children?: Element<*> | string,
-  onClick?: Function,
-  actions?: Array<Action>,
-  status?: Status,
-  applicantStatus?: string,
-  disableRankingDropdown?: boolean,
-  ranking?: number,
-  handleRankingChange?: (ranking: number | null) => void,
+  onClick?: (number) => void,
+  actions: Array<Action>,
+  status: Status,
+  applicantStatus?: string
 }
 
 const cmz = require('cmz')
@@ -77,8 +71,8 @@ const statusDotStyles = {
   )
 }
 
-const listTheme = {
-  mode: cmz(
+const cx = {
+  wrapper: cmz(
     typo.baseText,
     `
       & {
@@ -340,233 +334,20 @@ const listTheme = {
   `)
 }
 
-const tabularTheme = {
-  mode: cmz(
-    typo.baseText,
-    `
-      & {
-        font-size: 16px
-        background: ${theme.baseBrighter}
-        display: flex
-        cursor: pointer
-        padding: 14px
-        color: ${theme.typoParagraph}
-        min-width: 100%
-        box-sizing: border-box
-      }
-
-      &:hover {
-        background: ${theme.baseBright}
-      }
-
-      & > * {
-        margin-right: 14px
-        flex-shrink: 0
-        display: flex
-        align-items: center
-        text-transform: initial
-        box-sizing: border-box
-      }
-    `
-  ),
-
-  name: cmz(typo.badgeHeading,
-    `
-      width: 300px
-      white-space: normal
-      order: 2
-      font-weight: normal
-      position: relative
-    `
-  ),
-
-  nameInner: cmz(`
-    padding-right: 8px
-  `),
-
-  avatar: cmz(`
-    width: 42px
-    order: 1
-  `),
-
-  controls: cmz(`
-    display: none
-  `),
-
-  control: cmz(`
-    margin-left: 10px
-  `),
-
-  infos: cmz(`
-    order: 4
-    flex: 1
-    display: flex
-    justify-content: space-between
-    margin: 0
-  `),
-
-  info: cmz(typo.baseText, `
-    width: 100px
-    font-size: 16px
-    margin: 0 14px
-    text-align: center
-    display: block
-  `),
-
-  moreinfos: cmz(`
-    & {
-      cursor: pointer
-    }
-
-    &:hover {
-      color: ${theme.typoHighlight}
-    }
-  `),
-
-  label: cmz(`
-    display: none
-  `),
-
-  value: cmz(`
-    display: block
-    color: ${theme.typoParagraph}
-    line-height: 1.2
-    white-space: normal
-    font-size: 16px
-  `),
-
-  tip: cmz(`
-    font-size: 15px
-    color: ${theme.typoParagraph}
-    line-height: 1.4
-  `),
-
-  tags: cmz(`
-    width: 260px
-    order: 3
-  `),
-
-  tagsInner: cmz(`
-    display: flex
-    flex-wrap: wrap
-  `),
-
-  tag: cmz(`
-    & {
-      margin: 0 10px 0 0
-      white-space: nowrap
-      color: ${theme.typoParagraph}
-      font-size: 16px
-    }
-
-    &::after {
-      content: ','
-    }
-
-    &:last-of-type {
-      margin-right: 0
-    }
-
-    &:last-of-type::after {
-      content: ''
-    }
-  `),
-
-  moretags: cmz(`
-    & {
-      border: none
-      text-transform: initial
-      cursor: pointer
-    }
-
-    &:hover {
-      color: ${theme.typoHighlight}
-    }
-  `),
-
-  purelabel: cmz(`
-    border: none
-  `),
-
-  children: cmz(`
-    &:empty {
-      display: none
-      padding: 0
-      margin: 0
-    }
-
-    &:not(:empty) {
-      display: flex
-      order: 7
-    }
-  `),
-
-  applicantStatus: cmz(
-    `
-      width: 100px
-      font-size: 16px
-      order: 5
-      justify-content: center
-      margin: 0 14px
-      text-align: center
-    `
-  ),
-
-  ranking: cmz(
-    typo.baseText,
-    `
-      & {
-        font-size: 16px
-        width: 100px;
-        order: 6
-        justify-content: center
-        margin: 0 14px
-      }
-
-      & div, & span {
-        font-size: 1.063rem
-      }
-    `
-  ),
-
-  disabledRanking: cmz(
-    typo.baseText,
-    `
-      font-size: 1.063rem
-      width: 100%
-      height: 40px
-      color: ${theme.logoGray}
-      background: ${theme.lineSilver2}
-      border: 1px solid ${theme.lineSilver2}
-      border-radius: 2px
-      box-sizing: border-box
-      display: flex
-      align-items: center
-      padding: 0 1.25rem
-    `
-  ),
-
-  rankingSelector: cmz(`
-    width: 100%;
-  `)
-}
-
 class ApplicantBadge extends PureComponent<Props> {
   static defaultProps = {
-    mode: DISPLAY_MODES.LIST,
     active: false,
     actions: [],
     info: [],
-    disableRankingDropdown: false
+    status: ''
   }
 
-  renderStatusIndicator = () => (
-    <span className={statusDotStyles[this.props.status]} />
-  )
-
-  handleRankingChange = ({ id: ranking, value }: {id: number | null, value: string}) => {
-    const { handleRankingChange } = this.props
-    handleRankingChange && handleRankingChange(ranking)
+  renderStatusIndicator = () => {
+    const { status } = this.props
+    const style = status && statusDotStyles[status]
+    return style && (
+      <span className={style} />
+    )
   }
 
   handleBadgeClick = (event: SyntheticEvent<>) => {
@@ -575,99 +356,101 @@ class ApplicantBadge extends PureComponent<Props> {
     onClick && onClick(id)
   }
 
-  handleActionClick = (onClick: () => mixed, actionIdAttr: string) => () => {
+  handleActionClick = (onClick: (?string) => void, actionIdAttr: string) => () => {
     onClick && onClick(actionIdAttr)
   }
 
-  render () {
-    const {
-      id,
-      mode,
-      active,
-      name,
-      email,
-      info,
-      tags,
-      avatar,
-      children,
-      actions,
-      status,
-      applicantStatus,
-      disableRankingDropdown,
-      ranking
-    } = this.props
+  infoLabel = (info: Info) => (
+    <div>
+      <span className={cx.label}>{info.label}</span>
+      <span className={cx.value}>{info.value}</span>
+    </div>
+  )
 
-    const isTabular = mode === DISPLAY_MODES.TABULAR
-    const cx = isTabular ? tabularTheme : listTheme
-    const filteredInfos = isTabular ? info : info.filter(each => each.value)
+  renderInfoLabelDropdown = (key: number, info: Info) => (
+    <Dropdown
+      key={key}
+      tooltip
+      hover
+      label={this.infoLabel(info)}
+    >
+      {info.tip && <div className={cx.tip}>{info.tip}</div>}
+    </Dropdown>
+  )
 
-    const mapInfosToRender = (infos) => (
+  renderInfoItems = () => {
+    const filteredInfos = this.props.info.filter(each => each.value)
+    return filteredInfos.map((info, key) => info.tip
+      ? this.renderInfoLabelDropdown(key, info)
+      : this.infoLabel(info)
+    )
+  }
+
+  renderInfosViewMore = (amount: string, action: () => void) => (
+    <div className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
+      {`+ ${amount} info`}
+    </div>
+  )
+
+  mapInfosToRender = () => {
+    const { info } = this.props
+    return size(info) > 0 && (
       <TruncatedList
         inserted
-        visible={isTabular ? infos.length : 4}
+        visible={4}
         listClass={cx.infos}
         itemClass={cx.info}
-        items={filteredInfos.map((info, i) => (
-          <Dropdown
-            key={i}
-            tooltip
-            hover
-            label={(
-              <div>
-                <span className={cx.label}>{info.label}</span>
-                <span className={cx.value}>{info.value}</span>
-              </div>
-            )}
-          >
-            {info.tip && <div className={cx.tip}>{info.tip}</div>}
-          </Dropdown>
-        ))}
-        viewMore={(amount, action) => (
-          <div className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
-            {`+ ${amount} info`}
-          </div>
-        )}
+        items={this.renderInfoItems()}
+        viewMore={this.renderInfosViewMore}
       />
     )
+  }
 
-    const mapTagsToRender = (tags) => (
+  renderTagsViewMore = (amount: string, action: () => void) => (
+    <div className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
+      {`+ ${amount} more`}
+    </div>
+  )
+
+  mapTagsToRender = () => {
+    const { tags } = this.props
+    return size(tags) > 0 && (
       <TruncatedList
         inserted
         visible={4}
         items={tags}
         listClass={cx.tagsInner}
         itemClass={cx.tag}
-        viewMore={(amount, action) => (
-          <div className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
-            {`+ ${amount} more`}
-          </div>
-        )}
+        viewMore={this.renderTagsViewMore}
       />
     )
+  }
 
-    if (!id) {
-      return null
-    }
+  renderActions = () => {
+    const { id, actions } = this.props
+    return actions.map(({ key, icon: Icon, onClick }) => {
+      const actionIdAttr = `applicant${id}-${key}`
+      return Icon && (
+        <span
+          id={actionIdAttr}
+          key={key}
+          className={cx.control}
+          onClick={this.handleActionClick(onClick, actionIdAttr)}
+        >
+          <Icon />
+        </span>
+      )
+    })
+  }
 
-    const ranks = [
-      { id: 1, value: '1' },
-      { id: 2, value: '2' },
-      { id: 3, value: '3' },
-      { id: 4, value: '4' },
-      { id: 5, value: '5' },
-      { id: 6, value: '6' },
-      { id: 7, value: '7' },
-      { id: 8, value: '8' },
-      { id: 9, value: '9' },
-      { id: 10, value: '10' },
-      { id: null, value: '-' }
-    ].map(item => ({ ...item, selected: item.id === ranking }))
+  render () {
+    const { id, active, name, email, avatar, children, applicantStatus } = this.props
 
-    return (
-      <div onClick={this.handleBadgeClick} className={[cx.mode, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
+    return id ? (
+      <div onClick={this.handleBadgeClick} className={[cx.wrapper, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
         <div className={cx.name}>
           <div className={cx.nameInner} title={name || email}>{name || email}</div>
-          {status && this.renderStatusIndicator()}
+          {this.renderStatusIndicator()}
         </div>
         <div className={cx.avatar}>
           {avatar || (
@@ -679,51 +462,16 @@ class ApplicantBadge extends PureComponent<Props> {
           )}
         </div>
         <div className={cx.controls}>
-          {!isTabular && actions.map(({ key, icon: Icon, onClick }) => {
-            const actionIdAttr = `applicant${id}-${key}`
-            return (
-              Icon && (
-                <span
-                  id={actionIdAttr}
-                  key={key}
-                  className={cx.control}
-                  onClick={this.handleActionClick(onClick, actionIdAttr)}
-                >
-                  <Icon />
-                </span>
-              )
-            )
-          })}
+          {this.renderActions()}
         </div>
         <div className={cx.infos}>
-          {size(info) > 0 && mapInfosToRender(info)}
+          {this.mapInfosToRender()}
         </div>
         <div className={cx.applicantStatus}>
           {applicantStatus}
         </div>
-        {isTabular && (
-          <div className={cx.ranking}>
-            {disableRankingDropdown ? (
-              <div className={cx.disabledRanking}>
-                {ranking}
-              </div>
-            ) : (
-              <div className={cx.rankingSelector} onClick={stopPropagation}>
-                <SelectBox
-                  size='small'
-                  placeholder=' '
-                  visibleItems={4}
-                  hasSearch={false}
-                  shouldSortItems={false}
-                  onClick={this.handleRankingChange}
-                  items={ranks}
-                />
-              </div>
-            )}
-          </div>
-        )}
         <div className={cx.tags}>
-          {size(tags) > 0 && mapTagsToRender(tags)}
+          {this.mapTagsToRender()}
         </div>
         {children && (
           <div className={cx.children}>
@@ -731,7 +479,7 @@ class ApplicantBadge extends PureComponent<Props> {
           </div>
         )}
       </div>
-    )
+    ) : null
   }
 }
 
