@@ -11,6 +11,13 @@ storiesOf('UI Components/ActivityLogsDisplay/ActivityLog', module)
       value={faker.random.words(2)}
     />
   ))
+  .add('single activity with value, label and info', () => (
+    <ActivityLog
+      label={faker.random.words(2)}
+      value={faker.random.words(2)}
+      info={faker.random.words(2)}
+    />
+  ))
   .add('single activity with only value', () => (
     <ActivityLog
       value={faker.random.words(2)}
@@ -24,6 +31,7 @@ storiesOf('UI Components/ActivityLogsDisplay/ActivityLog', module)
   .add('grouped activities', () => (
     <ActivityLog
       label={faker.random.words(2)}
+      groupValues={faker.random.words(3)}
       value={Array(faker.random.number(3))
         .fill({})
         .map(() => ({
@@ -33,30 +41,18 @@ storiesOf('UI Components/ActivityLogsDisplay/ActivityLog', module)
       }
     />
   ))
-  .add('grouped activities with extra details on elements elements', () => (
+  .add('grouped activities with info', () => (
     <ActivityLog
       label={faker.random.words(2)}
+      groupValues={faker.random.words(3)}
       value={Array(faker.random.number(3))
         .fill({})
         .map(() => ({
           label: faker.random.words(2),
           value: faker.random.words(2),
-          details: faker.random.words(5)
+          info: faker.random.words(2)
         }))
       }
-    />
-  ))
-  .add('grouped activities with customised group values', () => (
-    <ActivityLog
-      label={faker.random.words(2)}
-      value={Array(faker.random.number(3))
-        .fill({})
-        .map(() => ({
-          label: faker.random.words(2),
-          value: faker.random.words(2)
-        }))
-      }
-      groupValues={faker.random.words(2)}
     />
   ))
   .add('missing props (does component explode?)', () => (
