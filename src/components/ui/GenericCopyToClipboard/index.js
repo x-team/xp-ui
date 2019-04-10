@@ -2,12 +2,15 @@
 
 import React, { Component } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+
 import Tooltip from './Tooltip'
+
 import type { Element } from 'react'
+
 const cmz = require('cmz')
 
 const container = cmz(`
-cursor: pointer
+  cursor: pointer
 `)
 
 type Props = {
