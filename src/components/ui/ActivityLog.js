@@ -107,7 +107,7 @@ class ActivityLog extends PureComponent<Props, State> {
                     <b>{item.value}</b>
                   )}
                   {item.value && item.info && (
-                    <span>: </span>
+                    <span> - </span>
                   )}
                   {item.info && (
                     <span>{item.info}</span>
@@ -126,7 +126,7 @@ class ActivityLog extends PureComponent<Props, State> {
             <span>: </span>
             <b>{value}</b>
             {info && (
-              <span>: {info}</span>
+              <span> - {info}</span>
             )}
           </Fragment>
         ) : value}
