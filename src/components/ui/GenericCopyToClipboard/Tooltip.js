@@ -42,7 +42,7 @@ type Props = {
   showTooltip: boolean
 }
 
-export default function Tooltip({ showTooltip }: Props) {
+export default function Tooltip ({ showTooltip }: Props) {
   return (
     showTooltip && (
       <span className={container}>

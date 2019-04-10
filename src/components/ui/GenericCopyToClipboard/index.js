@@ -1,13 +1,13 @@
 // @flow
-/* globals TimeoutID */
 
 import React, { Component } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-const cmz = require('cmz')
 import Tooltip from './Tooltip'
+import type { Element } from 'react'
+const cmz = require('cmz')
 
 const container = cmz(`
-  cursor: pointer
+cursor: pointer
 `)
 
 type Props = {
@@ -19,19 +19,16 @@ type State = {
 }
 
 class GenericCopyToClipboard extends Component<Props, State> {
-  timeout: TimeoutID
-
   state = {
     showTooltip: false
   }
 
   handleCopy = (value: string) => () => {
-    this.timeout && clearTimeout(this.timeout)
-    this.timeout = setTimeout(() => this.setState({ showTooltip: false }), 2500)
+    setTimeout(() => this.setState({ showTooltip: false }), 2500)
     this.setState({ showTooltip: true })
   }
 
-  render() {
+  render () {
     const { showTooltip } = this.state
     const { children } = this.props
     return children ? (
