@@ -45,13 +45,11 @@ type Props = {
 }
 
 export default function Tooltip ({ showTooltip }: Props) {
-  return (
-    showTooltip && (
-      <span className={container}>
-        <span className={bubble}>
-          <span className={message}>Copied to Clipboard</span>
-        </span>
+  return showTooltip ? (
+    <span className={container}>
+      <span className={bubble}>
+        <span className={message}>Copied to Clipboard</span>
       </span>
-    )
-  )
+    </span>
+  ) : null
 }
