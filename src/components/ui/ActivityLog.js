@@ -60,6 +60,7 @@ export type ActivityLogType = {
 export type ActivityLogPropsType = {
   label: string,
   value: string | Array<ActivityLogType>,
+  info: string,
   groupValues: string
 }
 
@@ -77,7 +78,7 @@ class ActivityLog extends PureComponent<Props, State> {
   toggleItem = () => this.setState((prevState: State) => ({ collapsed: !prevState.collapsed }))
 
   render () {
-    const { label, value, groupValues } = this.props
+    const { label, value, info, groupValues } = this.props
     const logClasses = []
     if (size(value) > 0) {
       logClasses.push(cx.log)
@@ -106,7 +107,7 @@ class ActivityLog extends PureComponent<Props, State> {
                     <b>{item.value}</b>
                   )}
                   {item.value && item.info && (
-                    <span>: </span>
+                    <span> - </span>
                   )}
                   {item.info && (
                     <span>{item.info}</span>
@@ -124,6 +125,9 @@ class ActivityLog extends PureComponent<Props, State> {
           <Fragment>
             <span>: </span>
             <b>{value}</b>
+            {info && (
+              <span> - {info}</span>
+            )}
           </Fragment>
         ) : value}
       </Fragment>
