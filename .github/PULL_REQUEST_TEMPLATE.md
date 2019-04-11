@@ -29,6 +29,7 @@ Fixes https://x-team-internal.atlassian.net/browse/XP-[ISSUE_NUMBER]
 - [ ] set yourself as an assignee
 - [ ] set appropriate labels for a PR (`In Review` or `In Progress` depending on its status)
 - [ ] move respective JIRA issue to the `IN REVIEW` column
+- [ ] fill out `Is a breaking change` and `Release Type Reason` (if required) fields for the ticket. This is accessible when editing an issue in JIRA <br /><img src="https://user-images.githubusercontent.com/579331/55951136-33125a00-5c5f-11e9-9d6a-1c159fc2c925.png" width="240" />
 - [ ] make sure your code lints (`npm run lint`)
 - [ ] Flow typechecks passed (`npm run flow`)
 - [ ] Snapshots tests passed (`npm run jest`)
