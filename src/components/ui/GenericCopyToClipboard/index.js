@@ -22,12 +22,23 @@ type State = {
 }
 
 class GenericCopyToClipboard extends Component<Props, State> {
+  timeOut: number
+
   state = {
     showTooltip: false
   }
 
+  componentWillUnmount () {
+    if (this.timeOut) {
+      window.clearTimeout(this.timeOut)
+    }
+  }
+
   handleCopy = (value: string) => () => {
-    setTimeout(() => this.setState({ showTooltip: false }), 2500)
+    if (this.timeOut) {
+      window.clearTimeout(this.timeOut)
+    }
+    this.timeOut = setTimeout(() => this.setState({ showTooltip: false }), 2500)
     this.setState({ showTooltip: true })
   }
 
