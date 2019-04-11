@@ -11,6 +11,7 @@ const cmz = require('cmz')
 
 const container = cmz(`
   cursor: pointer
+  display: inline-block
 `)
 
 type Props = {
