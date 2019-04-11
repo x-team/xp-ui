@@ -2,6 +2,8 @@
 
 import React from 'react'
 
+import theme from '../../../styles/theme'
+
 const cmz = require('cmz')
 
 const container = cmz(`
@@ -11,7 +13,7 @@ const container = cmz(`
 const bubble = cmz(`
   & {
     position: absolute
-    min-width: 135px
+    min-width: 150px
     bottom: 100%
     margin-left: 80px
     padding-bottom: 8px
@@ -26,12 +28,13 @@ const bubble = cmz(`
     margin-left: -10%
     border-width: 5px
     border-style: solid
-    border-color: rgba(0,0,0,0.8) transparent transparent transparent
+    border-color: ${theme.baseDark} transparent transparent transparent
   }
 `)
 
 const message = cmz(`
-  background: rgba(0,0,0,0.8)
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif
+  background: ${theme.baseDark}
   border-radius: 3px
   color: white
   font-size: .75rem

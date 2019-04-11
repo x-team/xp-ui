@@ -14,7 +14,7 @@ storiesOf('UI Components/GenericCopyToClipboard', module)
   ))
 
 storiesOf('UI Components/GenericCopyToClipboard/Debug', module)
-  .add('missing children (does GenericCopyToClipboard explode?)', () => (
+  .add('missing children or props (does GenericCopyToClipboard explode?)', () => (
     <GenericCopyToClipboard />
   ))
 
