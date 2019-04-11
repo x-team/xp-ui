@@ -5,7 +5,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import Tooltip from './Tooltip'
 
-import type { Element } from 'react'
+import type { Node } from 'react'
 
 const cmz = require('cmz')
 
@@ -14,7 +14,8 @@ const container = cmz(`
 `)
 
 type Props = {
-  children?: Element<*>
+  children?: Node,
+  text: string
 }
 
 type State = {
@@ -34,7 +35,7 @@ class GenericCopyToClipboard extends Component<Props, State> {
     }
   }
 
-  handleCopy = (value: string) => () => {
+  handleCopy = () => () => {
     if (this.timeOut) {
       window.clearTimeout(this.timeOut)
     }
@@ -44,15 +45,12 @@ class GenericCopyToClipboard extends Component<Props, State> {
 
   render () {
     const { showTooltip } = this.state
-    const { children } = this.props
-    return children ? (
+    const { children, text } = this.props
+    return text ? (
       <div className={container}>
         <Tooltip showTooltip={showTooltip} />
-        <CopyToClipboard
-          text={children.props.children}
-          onCopy={this.handleCopy(children.props.children)}
-        >
-          {children}
+        <CopyToClipboard text={text} onCopy={this.handleCopy()}>
+          {children && children}
         </CopyToClipboard>
       </div>
     ) : null

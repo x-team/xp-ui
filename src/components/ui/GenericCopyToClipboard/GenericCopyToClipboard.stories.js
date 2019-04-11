@@ -7,7 +7,7 @@ import Tooltip from './Tooltip'
 storiesOf('UI Components/GenericCopyToClipboard', module)
   .add('basic usage', () => (
     <div style={{ marginTop: 50 }}>
-      <GenericCopyToClipboard>
+      <GenericCopyToClipboard text={'example@email.com'}>
         <span>example@email.com</span>
       </GenericCopyToClipboard>
     </div>
