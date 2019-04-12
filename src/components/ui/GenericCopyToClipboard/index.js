@@ -15,7 +15,7 @@ const container = cmz(`
 `)
 
 type Props = {
-  children?: Node,
+  children: Node,
   text: string
 }
 
@@ -51,7 +51,7 @@ class GenericCopyToClipboard extends Component<Props, State> {
       <div className={container}>
         <Tooltip showTooltip={showTooltip} />
         <CopyToClipboard text={text} onCopy={this.handleCopy()}>
-          {children && children}
+          {children}
         </CopyToClipboard>
       </div>
     ) : null
