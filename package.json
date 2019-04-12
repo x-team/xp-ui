@@ -85,6 +85,7 @@
     "medium-editor": "^5.23.3",
     "react-avatar": "^3.5.0",
     "react-click-outside": "github:tj/react-click-outside",
+    "react-copy-to-clipboard": "^5.0.1",
     "recompose": "^0.30.0",
     "tui-editor": "^1.2.10",
     "uuid": "^3.3.2",
