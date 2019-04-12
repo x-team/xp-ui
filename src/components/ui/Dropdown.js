@@ -118,10 +118,11 @@ const styles = {
 }
 
 type Props = {
+  key?: number,
   icon?: Icon | '',
   iconColor?: Color,
   label?: Element<*> | string,
-  children?: Element<*> | string,
+  children?: Element<*> | string | null,
   targetXOrigin?: string,
   targetYOrigin?: string,
   hover?: boolean,
