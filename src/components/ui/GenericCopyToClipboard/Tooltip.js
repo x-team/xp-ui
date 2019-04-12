@@ -36,7 +36,7 @@ const message = cmz(`
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif
   background: ${theme.baseDark}
   border-radius: 3px
-  color: white
+  color: ${theme.baseBrighter}
   font-size: .75rem
   line-height: 1.4
   padding: .75em
