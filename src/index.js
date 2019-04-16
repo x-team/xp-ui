@@ -21,6 +21,7 @@ import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
 import GenericCollapsible from './components/ui/GenericCollapsible'
+import GenericCopyToClipboard from './components/ui/GenericCopyToClipboard'
 import GenericTabs from './components/ui/GenericTabs'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
@@ -85,6 +86,7 @@ export {
   FooterBrands,
   FooterList,
   GenericCollapsible,
+  GenericCopyToClipboard,
   GenericTabs,
   HeaderBar,
   HorizontalRuler,
