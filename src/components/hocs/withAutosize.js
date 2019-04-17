@@ -5,6 +5,7 @@ import React, { PureComponent } from 'react'
 import { getComponentDisplayName } from '../../utils/helpers'
 
 type Props = {
+  rows?: number,
   value?: boolean | number | string | Object,
   linesLimit?: number
 }
@@ -14,6 +15,7 @@ const withAutosize = (Component: any) => {
     elem: any
 
     static defaultProps = {
+      rows: 2,
       linesLimit: 0
     }
 
@@ -32,7 +34,7 @@ const withAutosize = (Component: any) => {
       this.elem.value = value
 
       const lineHeight = parseInt(window.getComputedStyle(this.elem).getPropertyValue('line-height'), 10) || 16
-      const minLines = 2
+      const minLines = this.props.rows
       const maxLines = this.props.linesLimit
 
       this.elem.oninput = () => {
