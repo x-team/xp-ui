@@ -64,8 +64,8 @@ email3@email.com`}
       status='IMPORTED'
       selectedList={{ id: 1, name: 'Selected list' }}
       response={{
-        valid: ['email1@email.com', 'email2@email.com'],
-        invalid: ['email3@email.com']
+        validProfileEmails: ['email1@email.com', 'email2@email.com'],
+        invalidProfileEmails: ['email3@email.com']
       }}
     >
       <ListSelector selected />

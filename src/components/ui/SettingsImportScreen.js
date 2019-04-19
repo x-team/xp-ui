@@ -47,8 +47,8 @@ type Props = {
   validEmails: Array<*>,
   invalidEmails: Array<*>,
   response: {
-    valid: Array<*>,
-    invalid: Array<*>
+    validProfileEmails: Array<*>,
+    invalidProfileEmails: Array<*>
   },
   error: string,
   handleListSelectionChange: Function,
@@ -123,22 +123,22 @@ const SettingsImportScreen = ({
 
   const getImportedRender = () => {
     const { name } = selectedList
-    const { valid, invalid } = response
+    const { validProfileEmails, invalidProfileEmails } = response
     return !error ? (
       <div>
         <h3>
           Imported to the List: <u>{name}</u>
         </h3>
-        {size(valid) > 0 && (
+        {size(validProfileEmails) > 0 && (
           <Fragment>
             <h4>Successufuly added to the list:</h4>
-            <ul>{valid.map(email => <li key={email}>{email}</li>)}</ul>
+            <ul>{validProfileEmails.map(email => <li key={email}>{email}</li>)}</ul>
           </Fragment>
         )}
-        {size(invalid) > 0 && (
+        {size(invalidProfileEmails) > 0 && (
           <Fragment>
             <h4>Failed to add to the list:</h4>
-            <ul>{invalid.map(email => <li key={email}>{email}</li>)}</ul>
+            <ul>{invalidProfileEmails.map(email => <li key={email}>{email}</li>)}</ul>
           </Fragment>
         )}
         <Button outlined onClick={handleNewImport} className={cx.button}>
