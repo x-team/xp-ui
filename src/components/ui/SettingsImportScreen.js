@@ -1,4 +1,5 @@
 // @flow
+/* global SyntheticEvent, HTMLInputElement */
 
 import React, { Fragment, Component } from 'react'
 
@@ -51,11 +52,17 @@ type Props = {
     invalidProfileEmails: Array<*>
   },
   error: string,
-  handleListSelectionChange: Function,
-  handleListOfEmailsChange: Function,
-  handleImport: Function,
-  handleNewImport: Function,
+  handleListOfEmailsChange: (event: SyntheticEvent<HTMLInputElement>) => void,
+  handleImport: () => void,
+  handleNewImport: () => void,
   children: Element<typeof Component>
+}
+
+const IMPORT_EMAILS_STATES = {
+  VALIDATING: 'VALIDATING',
+  VALIDATED: 'VALIDATED',
+  IMPORTING: 'IMPORTING',
+  IMPORTED: 'IMPORTED'
 }
 
 const SettingsImportScreen = ({
@@ -73,7 +80,7 @@ const SettingsImportScreen = ({
 }: Props) => {
   const getDefaultRender = () => {
     const { id } = selectedList
-    const disableImport = id === 0 || size(validEmails) === 0 || size(invalidEmails) > 0 || status === 'VALIDATING'
+    const disableImport = id === 0 || size(validEmails) === 0 || size(invalidEmails) > 0 || status === IMPORT_EMAILS_STATES.VALIDATING
     return (
       <Fragment>
         {ListsSelectorContainer}
@@ -85,7 +92,7 @@ const SettingsImportScreen = ({
           onChange={handleListOfEmailsChange}
           defaultValue={emailsList}
         />
-        {status === 'VALIDATED' && size(invalidEmails) > 0 && (
+        {status === IMPORT_EMAILS_STATES.VALIDATED && size(invalidEmails) > 0 && (
           <ErrorBox
             errors={{
               name: 'Please check the input, some emails might be invalid.',
@@ -157,9 +164,9 @@ const SettingsImportScreen = ({
 
   const switchRender = () => {
     switch (status) {
-      case 'IMPORTING':
+      case IMPORT_EMAILS_STATES.IMPORTING:
         return getImportingRender()
-      case 'IMPORTED':
+      case IMPORT_EMAILS_STATES.IMPORTED:
         return getImportedRender()
       default:
         return getDefaultRender()
