@@ -80,7 +80,7 @@ const SettingsImportScreen = ({
 }: Props) => {
   const getDefaultRender = () => {
     const { id } = selectedList
-    const disableImport = id === 0 || size(validEmails) === 0 || size(invalidEmails) > 0 || status === IMPORT_EMAILS_STATES.VALIDATING
+    const disableImport = !id || id === 0 || size(validEmails) === 0 || size(invalidEmails) > 0 || status === IMPORT_EMAILS_STATES.VALIDATING
     return (
       <Fragment>
         {ListsSelectorContainer}
