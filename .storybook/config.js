@@ -1,5 +1,4 @@
 import { configure, addDecorator } from '@storybook/react'
-import { configureViewport } from '@storybook/addon-viewport'
 import { withOptions } from '@storybook/addon-options'
 import { withBackgrounds } from '@storybook/addon-backgrounds'
 import { withInfo } from '@storybook/addon-info'
