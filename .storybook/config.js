@@ -1,6 +1,5 @@
-import { configure, addDecorator } from '@storybook/react'
-import { withOptions } from '@storybook/addon-options'
-import { withBackgrounds } from '@storybook/addon-backgrounds'
+import { configure, addDecorator, addParameters } from '@storybook/react'
+import { create } from '@storybook/theming'
 import { withInfo } from '@storybook/addon-info'
 import { withConsole } from '@storybook/addon-console'
 import { withNotes } from '@storybook/addon-notes'
@@ -28,29 +27,31 @@ addDecorator(withNotes)
 // Add the `withKnobs` decorator to add knobs support to all stories
 addDecorator(withKnobs)
 
-// Customize UI
-addDecorator(
-  withOptions({
-    /**
-     * name to display in the top left corner
-     * @type {String}
-     */
-    name: 'XP Components Library',
-    /**
-     * URL for name in top left corner to link to
-     * @type {String}
-     */
-    url: 'https://x-team.com/',
+addParameters({
+  options: {
+    theme: create({
+      base: 'light',
+      /**
+       * name to display in the top left corner
+       * @type {String}
+       */
+      brandTitle: 'XP Components Library',
+      /**
+       * URL for name in top left corner to link to
+       * @type {String}
+       */
+      brandUrl: 'https://x-team.com/'
+    }),
     /**
      * display panel that shows a list of stories
      * @type {Boolean}
      */
-    showStoriesPanel: true,
+    showNav: true,
     /**
      * display panel that shows addon configurations
      * @type {Boolean}
      */
-    showAddonPanel: true,
+    showPanel: true,
     /**
      * regex for finding the hierarchy separator
      * @example:
@@ -75,31 +76,25 @@ addDecorator(
      */
     sidebarAnimations: true,
     /**
-     * id to select an addon panel
-     * @type {String}
-     */
-    selectedAddonPanel: undefined, // The order of addons in the "Addon panel" is the same as you import them in 'addons.js'. The first panel will be opened by default as you run Storybook
-    /**
      * enable/disable shortcuts
      * @type {Boolean}
      */
     enableShortcuts: true, // true by default
-  })
-)
-
-// Add global background presets to all stories
-addDecorator(
-  withBackgrounds([
+    isFullscreen: false,
+    panelPosition: 'right',
+    isToolshown: true
+  },
+  backgrounds: [
     { name: 'white', value: '#fff', default: true },
     { name: 'black', value: '#000' },
     { name: 'instagram', value: '#00aced' },
     { name: 'facebook', value: '#3b5998' }
-  ])
-)
+  ]
+})
 
 // Load stories dynamically
 const req = require.context('../src/components', true, /\.stories\.js$/)
-function loadStories () {
+function loadStories() {
   req.keys().forEach(filename => req(filename))
 }
 
