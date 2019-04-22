@@ -49,6 +49,7 @@ import RoadmapLevel from './components/ui/RoadmapLevel'
 import RoadmapTimelineElement from './components/ui/RoadmapTimelineElement'
 import SearchForm from './components/ui/SearchForm'
 import SelectBox from './components/ui/SelectBox'
+import SettingsImportScreen from './components/ui/SettingsImportScreen'
 import SettingsScreen from './components/ui/SettingsScreen'
 import SolutionForm from './components/forms/SolutionForm'
 import SvgIcon from './components/ui/SvgIcon'
@@ -114,6 +115,7 @@ export {
   RoadmapTimelineElement,
   SearchForm,
   SelectBox,
+  SettingsImportScreen,
   SettingsScreen,
   SolutionForm,
   SvgIcon,
