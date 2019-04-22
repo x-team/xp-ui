@@ -11,7 +11,7 @@ const cmz = require('cmz')
 
 const cx = {
   main: cmz(`
-    height: calc(100vh - 86px)
+    height: calc(100vh - 56px)
     position: relative
     display: flex
   `),

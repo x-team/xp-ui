@@ -338,7 +338,6 @@ const extraStyles = {
       background-color: ${theme.baseBrighter}
       border-color: transparent
       color: ${theme.baseRed}
-      padding: 20px
     }
 
     &:not(.readOnly):hover {
