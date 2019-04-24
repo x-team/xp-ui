@@ -7,9 +7,11 @@ import elem from '../../utils/elem'
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
+import type { Element } from 'react'
+
 const cmz = require('cmz')
 
-type Err = {[key: string|number]: string}
+type Err = {[key: string|number]: string | Array<Element<*>>}
 type Props = {
   errors: Err
 }
