@@ -1,9 +1,6 @@
 // Displays data received by event handlers
 import '@storybook/addon-actions/register'
 
-// Allows stories to be displayed in different sizes and layouts
-import '@storybook/addon-viewport/register'
-
 // Changes background colors inside the preview
 import '@storybook/addon-backgrounds/register'
 
