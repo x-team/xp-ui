@@ -94,7 +94,7 @@ addParameters({
 
 // Load stories dynamically
 const req = require.context('../src/components', true, /\.stories\.js$/)
-function loadStories() {
+function loadStories () {
   req.keys().forEach(filename => req(filename))
 }
 
