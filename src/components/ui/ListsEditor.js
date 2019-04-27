@@ -137,6 +137,12 @@ const tabsStyles: Object = {
     }
   `),
 
+  link: cmz(`
+    padding: 15px 40px
+    font-family: Source Sans Pro
+    font-size: 18px
+  `),
+
   tabnavTab: cmz(`
     & {
       position: relative
@@ -145,7 +151,6 @@ const tabsStyles: Object = {
       border-style: solid
       user-select: none
       border-width: 0
-      padding: 0 0 .6rem 0
       margin: 0
       padding: 0
       text-align: center
@@ -158,8 +163,6 @@ const tabsStyles: Object = {
       outline: none
       font-weight: 600
       text-decoration: none
-      padding: 10px 40px
-      font-family: Source Sans Pro
     }
 
     & > a:hover,
@@ -212,7 +215,7 @@ const TabItem = ({ isActive, text, ...props }) => {
       {...props}
       className={`${tabsStyles.tabnavTab}${isActive ? ' active' : ''}`}
     >
-      <a>
+      <a className={tabsStyles.link}>
         {text}
       </a>
       <div className={`${tabsStyles.line}${isActive ? ' active' : ''}`} />
