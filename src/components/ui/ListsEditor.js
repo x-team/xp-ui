@@ -53,6 +53,7 @@ const cx = {
     position: relative
     width: 500px
     max-width: 100%
+    font-family: Source Sans Pro
   `),
 
   heading: cmz(
@@ -139,7 +140,6 @@ const tabsStyles: Object = {
 
   link: cmz(`
     padding: 15px 40px
-    font-family: Source Sans Pro
     font-size: 18px
   `),
 
@@ -420,20 +420,20 @@ class ListsEditor extends Component<Props, State> {
     return (
       <div className={cx.listseditor}>
         <h1 className={cx.heading}>Edit {title}</h1>
-          <Tabs.Container defaultActiveKey='active' headWrapper={HeadWrapper}>
-            <Tabs.Head tabKey='active'>
-              <TabItem text='Active' />
-            </Tabs.Head>
-            <Tabs.Head tabKey='archived'>
-              <TabItem text='Archived' />
-            </Tabs.Head>
-            <Tabs.Pane tabKey='active'>
-              {this.renderListing(true)}
-            </Tabs.Pane>
-            <Tabs.Pane tabKey='archived'>
-              {this.renderListing(false)}
-            </Tabs.Pane>
-          </Tabs.Container>
+        <Tabs.Container defaultActiveKey='active' headWrapper={HeadWrapper}>
+          <Tabs.Head tabKey='active'>
+            <TabItem text='Active' />
+          </Tabs.Head>
+          <Tabs.Head tabKey='archived'>
+            <TabItem text='Archived' />
+          </Tabs.Head>
+          <Tabs.Pane tabKey='active'>
+            {this.renderListing(true)}
+          </Tabs.Pane>
+          <Tabs.Pane tabKey='archived'>
+            {this.renderListing(false)}
+          </Tabs.Pane>
+        </Tabs.Container>
       </div>
     )
   }
