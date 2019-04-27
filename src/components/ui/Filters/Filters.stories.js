@@ -6,7 +6,7 @@ import State from '../../../utils/State'
 
 import Filters from '.'
 import GenericCollapsible from '../GenericCollapsible'
-import GenericTabs from '../GenericTabs'
+import Tabs from '../Tabs'
 import InputField from '../../forms/InputField'
 import SelectBox from '../SelectBox'
 
@@ -38,14 +38,14 @@ storiesOf('UI Components/Filters', module)
         <GenericCollapsible.Body>
           <Filters.Group>
             <Filters.Label>Show</Filters.Label>
-            <GenericTabs.Container defaultActiveKey='list' headWrapper={Filters.TabHeads}>
-              <GenericTabs.Head tabKey='list'>
+            <Tabs.Container defaultActiveKey='list' headWrapper={Filters.TabHeads}>
+              <Tabs.Head tabKey='list'>
                 <Filters.TabButton text='list' />
-              </GenericTabs.Head>
-              <GenericTabs.Head tabKey='all'>
+              </Tabs.Head>
+              <Tabs.Head tabKey='all'>
                 <Filters.TabButton text='All Applicants' />
-              </GenericTabs.Head>
-              <GenericTabs.Pane tabKey='list'>
+              </Tabs.Head>
+              <Tabs.Pane tabKey='list'>
                 <Filters.Filter label='List'>
                   <SelectBoxFilterContainer placeholder='List' />
                 </Filters.Filter>
@@ -72,13 +72,13 @@ storiesOf('UI Components/Filters', module)
                     )}
                   </State>
                 </Filters.Filter>
-              </GenericTabs.Pane>
-              <GenericTabs.Pane tabKey='all'>
+              </Tabs.Pane>
+              <Tabs.Pane tabKey='all'>
                 <Filters.Filter label='Accept / Exclude To'>
                   <SelectBoxFilterContainer placeholder='List' />
                 </Filters.Filter>
-              </GenericTabs.Pane>
-            </GenericTabs.Container>
+              </Tabs.Pane>
+            </Tabs.Container>
           </Filters.Group>
         </GenericCollapsible.Body>
       </GenericCollapsible.Container>

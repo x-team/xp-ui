@@ -23,7 +23,6 @@ import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
 import GenericCollapsible from './components/ui/GenericCollapsible'
 import GenericCopyToClipboard from './components/ui/GenericCopyToClipboard'
-import GenericTabs from './components/ui/GenericTabs'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InlineEditor from './components/ui/InlineEditor'
@@ -55,8 +54,7 @@ import SettingsImportScreen from './components/ui/SettingsImportScreen'
 import SettingsScreen from './components/ui/SettingsScreen'
 import SolutionForm from './components/forms/SolutionForm'
 import SvgIcon from './components/ui/SvgIcon'
-import Tab from './components/ui/Tabs/Tab'
-import Tabs from './components/ui/Tabs/Tabs'
+import Tabs from './components/ui/Tabs'
 import Text from './components/ui/Text'
 import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 import TruncatedList from './components/ui/TruncatedList'
@@ -91,7 +89,6 @@ export {
   FooterList,
   GenericCollapsible,
   GenericCopyToClipboard,
-  GenericTabs,
   HeaderBar,
   HorizontalRuler,
   InlineEditor,
@@ -123,7 +120,6 @@ export {
   SettingsScreen,
   SolutionForm,
   SvgIcon,
-  Tab,
   Tabs,
   Text,
   TextareaEditor,

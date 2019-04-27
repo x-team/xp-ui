@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 
 import SelectBox from './SelectBox'
 import Tabs from './Tabs'
-import Tab from './Tabs/Tab'
 import Button from './Button'
 
 import typo from '../../styles/typo'
@@ -89,40 +88,6 @@ const cx = {
     margin: 0
   `),
 
-  tabs: cmz(`
-    & {
-      margin: 0
-    }
-
-    & nav {
-      margin: 0
-      padding: 0
-    }
-
-    & nav ul {
-      display: flex
-      justify-content: space-around
-      background: silver
-      background-color: ${theme.baseBright}
-      border-color: ${theme.baseBright}
-      margin: 0
-    }
-
-    & nav ul li {
-      margin: 0
-      padding: 0
-      text-align: center
-    }
-
-    & nav ul li a {
-      padding: 10px 40px
-    }
-
-    & > div > div {
-      margin: 0
-    }
-  `),
-
   question: cmz(`
     & p {
       margin: 0
@@ -134,6 +99,125 @@ const cx = {
       margin-left: 10px
     }
   `)
+}
+
+const tabsStyles: Object = {
+  tabnav: cmz(`
+    background: ${theme.baseBrighter}
+    margin: 0
+    padding: 0
+    position: relative
+  `),
+
+  tabnavTabs: cmz(`
+    list-style: none
+    margin: 0 0 -1px
+    padding-left: 0
+    border: 0 solid ${theme.baseSilver}
+    border-bottom-width: 1px
+    display: flex
+    justify-content: space-around
+    background: silver
+    background-color: ${theme.baseBright}
+    border-color: ${theme.baseBright}
+    margin: 0
+  `),
+
+  line: cmz(`
+    & {
+      border: 0 solid ${theme.baseRed}
+      width: 100%
+      position: absolute
+      bottom: -1px
+    }
+
+    &.active {
+      border-bottom-width: 2px
+      width: 100%
+    }
+  `),
+
+  tabnavTab: cmz(`
+    & {
+      position: relative
+      display: inline-block
+      border-color: ${theme.baseSilver}
+      border-style: solid
+      user-select: none
+      border-width: 0
+      padding: 0 0 .6rem 0
+      margin: 0
+      padding: 0
+      text-align: center
+    }
+
+    & > a {
+      position: relative
+      display: block
+      color: ${theme.sliderToggle}
+      outline: none
+      font-weight: 600
+      text-decoration: none
+      padding: 10px 40px
+      font-family: Source Sans Pro
+    }
+
+    & > a:hover,
+    & > a:focus {
+      text-decoration: none
+      background-color: transparent
+    }
+
+    & > a:hover {
+      color: ${theme.formText}
+    }
+
+    &:hover {
+      cursor: pointer
+      transition: all 1s ease-out
+      transition-property: background-color, color
+    }
+
+    &.active {
+      cursor: default
+      transition-property: none
+    }
+
+    &.active > a,
+    &.active > a:hover,
+    &.active > a:focus {
+      cursor: default
+    }
+
+    &.active > a {
+      background-color: transparent
+      color: ${theme.formText}
+    }
+  `)
+}
+
+const HeadWrapper = props => {
+  return (
+    <nav className={tabsStyles.tabnav}>
+      <ul className={tabsStyles.tabnavTabs} role='tablist'>
+        {props.children}
+      </ul>
+    </nav>
+  )
+}
+
+const TabItem = ({ isActive, text, ...props }) => {
+  return (
+    <li
+      {...props}
+      className={`${tabsStyles.tabnavTab}${isActive ? ' active' : ''}`}
+    >
+      <a>
+        {text}
+      </a>
+      <div className={`${tabsStyles.line}${isActive ? ' active' : ''}`} />
+    </li>
+  )
 }
 
 class ListsEditor extends Component<Props, State> {
@@ -328,21 +412,25 @@ class ListsEditor extends Component<Props, State> {
       </div>
     )
   }
-
   render () {
     const { title } = this.props
-
     return (
       <div className={cx.listseditor}>
         <h1 className={cx.heading}>Edit {title}</h1>
-        <Tabs className={cx.tabs}>
-          <Tab title='Active'>
-            {this.renderListing(true)}
-          </Tab>
-          <Tab title='Archived'>
-            {this.renderListing(false)}
-          </Tab>
-        </Tabs>
+          <Tabs.Container defaultActiveKey='active' headWrapper={HeadWrapper}>
+            <Tabs.Head tabKey='active'>
+              <TabItem text='Active' />
+            </Tabs.Head>
+            <Tabs.Head tabKey='archived'>
+              <TabItem text='Archived' />
+            </Tabs.Head>
+            <Tabs.Pane tabKey='active'>
+              {this.renderListing(true)}
+            </Tabs.Pane>
+            <Tabs.Pane tabKey='archived'>
+              {this.renderListing(false)}
+            </Tabs.Pane>
+          </Tabs.Container>
       </div>
     )
   }
