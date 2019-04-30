@@ -11,6 +11,7 @@ import Button from './components/ui/Button'
 import CollapsibleSection from './components/ui/CollapsibleSection'
 import ColorPalette from './components/ui/ColorPalette'
 import ColumnsCustomizer from './components/ui/ColumnsCustomizer'
+import DataGrid from './components/ui/DataGrid'
 import Dropdown from './components/ui/Dropdown'
 import Email from './components/ui/Email'
 import EmailFeed from './components/ui/EmailFeed'
@@ -48,6 +49,7 @@ import RoadmapHero from './components/ui/RoadmapHero'
 import RoadmapLevel from './components/ui/RoadmapLevel'
 import RoadmapTimelineElement from './components/ui/RoadmapTimelineElement'
 import SearchForm from './components/ui/SearchForm'
+import SearchResult from './components/ui/SearchResult'
 import SelectBox from './components/ui/SelectBox'
 import SettingsImportScreen from './components/ui/SettingsImportScreen'
 import SettingsScreen from './components/ui/SettingsScreen'
@@ -77,6 +79,7 @@ export {
   CollapsibleSection,
   ColorPalette,
   ColumnsCustomizer,
+  DataGrid,
   Dropdown,
   Email,
   EmailFeed,
@@ -114,6 +117,7 @@ export {
   RoadmapLevel,
   RoadmapTimelineElement,
   SearchForm,
+  SearchResult,
   SelectBox,
   SettingsImportScreen,
   SettingsScreen,
