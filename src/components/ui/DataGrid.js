@@ -6,8 +6,6 @@ import { Data } from 'react-data-grid-addons'
 
 import Loader from './Loader'
 
-// import CustomToolbar from './CustomToolbar'
-
 import type { Applicant } from '../../utils/types'
 
 const cmz = require('cmz')

@@ -24,20 +24,23 @@ const cx = {
   `)
 }
 
+type SortDirection = 'ASC' | 'DESC' | 'NONE' | ''
+
+type GridColumnVisibility = {
+  id: string,
+  value: string,
+  selected: boolean,
+  hidden: boolean
+}
+
 type Props = {
   applicants: Array<Applicant>,
   isLoading: boolean,
   visibleColumnsDropdownItems: Array<*>,
   visibleColumns: Array<*>,
-  handleGridSort: () => void,
+  handleGridSort: (sortColumn: string, sortDirection: SortDirection) => void,
   queryFilters: Filters,
-  handleColumnVisibilityChange: () => void,
-
-  // getUpdatedURL: any, // (filters: Filters) => Filters,
-  // applicants: any, // ?Array<Doc>,
-  // columns: Array<*>,
-  // queryFilters: any,
-  // handleColumnVisibilityChange: any // (item: GridColumnVisibility) => void
+  handleColumnVisibilityChange: (item: GridColumnVisibility) => void
 }
 
 class SearchResult extends Component<Props, void> {
