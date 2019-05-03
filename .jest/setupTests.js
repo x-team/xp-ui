@@ -14,7 +14,7 @@ function copyProps (src: Object, target: Object) {
 }
 
 // Mock date for tests
-MockDate.set('2/2/2019', 120)
+MockDate.set('2019-02-02T00:00:00.000Z')
 
 window.matchMedia = () => ({})
 global.navigator = {

@@ -11946,7 +11946,7 @@ exports[`Storyshots UI Components/Email parent element with fixed width at 200px
 >
   <Email
     body="Body message"
-    createdAt={2019-02-02T02:00:00.000Z}
+    createdAt={2019-02-02T00:00:00.000Z}
     from="john@johnson.com"
     initialOpen={false}
     subject="RE: opportunity"
@@ -11965,7 +11965,7 @@ exports[`Storyshots UI Components/Email parent element with fixed width at 200px
 >
   <Email
     body="Body message"
-    createdAt={2019-02-02T02:00:00.000Z}
+    createdAt={2019-02-02T00:00:00.000Z}
     from="john@johnson.com"
     initialOpen={false}
     subject="Really really really really really really really really really really really really long subject"
@@ -11993,7 +11993,7 @@ exports[`Storyshots UI Components/Email parent element with fixed width at 500px
 >
   <Email
     body="Body message"
-    createdAt={2019-02-02T02:00:00.000Z}
+    createdAt={2019-02-02T00:00:00.000Z}
     from="john@johnson.com"
     initialOpen={false}
     subject="RE: opportunity"
@@ -12012,7 +12012,7 @@ exports[`Storyshots UI Components/Email parent element with fixed width at 500px
 >
   <Email
     body="Body message"
-    createdAt={2019-02-02T02:00:00.000Z}
+    createdAt={2019-02-02T00:00:00.000Z}
     from="john@johnson.com"
     initialOpen={false}
     subject="Really really really really really really really really really really really really long subject"
@@ -12040,7 +12040,7 @@ exports[`Storyshots UI Components/Email parent element with fixed width at 800px
 >
   <Email
     body="Body message"
-    createdAt={2019-02-02T02:00:00.000Z}
+    createdAt={2019-02-02T00:00:00.000Z}
     from="john@johnson.com"
     initialOpen={false}
     subject="RE: opportunity"
@@ -12059,7 +12059,7 @@ exports[`Storyshots UI Components/Email parent element with fixed width at 800px
 >
   <Email
     body="Body message"
-    createdAt={2019-02-02T02:00:00.000Z}
+    createdAt={2019-02-02T00:00:00.000Z}
     from="john@johnson.com"
     initialOpen={false}
     subject="Really really really really really really really really really really really really long subject"
@@ -12306,7 +12306,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 1"
@@ -12318,7 +12318,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 2"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from2@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 2"
@@ -12330,7 +12330,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 3"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from3@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 3"
@@ -12342,7 +12342,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 4"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from4@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 4"
@@ -12354,7 +12354,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 5"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from5@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 5"
@@ -12366,7 +12366,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 6"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from6@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 6"
@@ -12378,7 +12378,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 7"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from7@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 7"
@@ -12390,7 +12390,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 8"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from8@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 8"
@@ -12402,7 +12402,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 9"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from9@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 9"
@@ -12414,7 +12414,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 10"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from10@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 10"
@@ -12426,7 +12426,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 11"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from11@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 11"
@@ -12438,7 +12438,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 12"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from12@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 12"
@@ -12450,7 +12450,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 13"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from13@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 13"
@@ -12462,7 +12462,7 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
         >
           <Email
             body="Welcome to x-team 14"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from14@x-team.com"
             initialOpen={true}
             subject="Welcomen Subject 14"
@@ -12536,7 +12536,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 1"
@@ -12548,7 +12548,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 2"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from2@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 2"
@@ -12560,7 +12560,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 3"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from3@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 3"
@@ -12572,7 +12572,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 4"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from4@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 4"
@@ -12584,7 +12584,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 5"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from5@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 5"
@@ -12596,7 +12596,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 6"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from6@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 6"
@@ -12608,7 +12608,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 7"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from7@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 7"
@@ -12620,7 +12620,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 8"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from8@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 8"
@@ -12632,7 +12632,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 9"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from9@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 9"
@@ -12644,7 +12644,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 10"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from10@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 10"
@@ -12656,7 +12656,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 11"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from11@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 11"
@@ -12668,7 +12668,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 12"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from12@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 12"
@@ -12680,7 +12680,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 13"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from13@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 13"
@@ -12692,7 +12692,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
         >
           <Email
             body="Welcome to x-team 14"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from14@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 14"
@@ -12766,7 +12766,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 1"
@@ -12778,7 +12778,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 2"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from2@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 2"
@@ -12790,7 +12790,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 3"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from3@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 3"
@@ -12802,7 +12802,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 4"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from4@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 4"
@@ -12814,7 +12814,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 5"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from5@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 5"
@@ -12826,7 +12826,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 6"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from6@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 6"
@@ -12838,7 +12838,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 7"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from7@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 7"
@@ -12850,7 +12850,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 8"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from8@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 8"
@@ -12862,7 +12862,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 9"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from9@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 9"
@@ -12874,7 +12874,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 10"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from10@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 10"
@@ -12886,7 +12886,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 11"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from11@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 11"
@@ -12898,7 +12898,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 12"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from12@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 12"
@@ -12910,7 +12910,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 13"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from13@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 13"
@@ -12922,7 +12922,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
         >
           <Email
             body="Welcome to x-team 14"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from14@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 14"
@@ -12996,7 +12996,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 1"
@@ -13008,7 +13008,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 2"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from2@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 2"
@@ -13020,7 +13020,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 3"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from3@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 3"
@@ -13032,7 +13032,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 4"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from4@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 4"
@@ -13044,7 +13044,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 5"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from5@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 5"
@@ -13056,7 +13056,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 6"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from6@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 6"
@@ -13068,7 +13068,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 7"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from7@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 7"
@@ -13080,7 +13080,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 8"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from8@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 8"
@@ -13092,7 +13092,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 9"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from9@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 9"
@@ -13104,7 +13104,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 10"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from10@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 10"
@@ -13116,7 +13116,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 11"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from11@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 11"
@@ -13128,7 +13128,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 12"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from12@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 12"
@@ -13140,7 +13140,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 13"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from13@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 13"
@@ -13152,7 +13152,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
         >
           <Email
             body="Welcome to x-team 14"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from14@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 14"
@@ -13226,7 +13226,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 1"
@@ -13238,7 +13238,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 2"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from2@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 2"
@@ -13250,7 +13250,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 3"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from3@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 3"
@@ -13262,7 +13262,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 4"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from4@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 4"
@@ -13274,7 +13274,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 5"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from5@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 5"
@@ -13286,7 +13286,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 6"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from6@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 6"
@@ -13298,7 +13298,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 7"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from7@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 7"
@@ -13310,7 +13310,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 8"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from8@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 8"
@@ -13322,7 +13322,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 9"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from9@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 9"
@@ -13334,7 +13334,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 10"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from10@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 10"
@@ -13346,7 +13346,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 11"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from11@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 11"
@@ -13358,7 +13358,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 12"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from12@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 12"
@@ -13370,7 +13370,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 13"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from13@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 13"
@@ -13382,7 +13382,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
         >
           <Email
             body="Welcome to x-team 14"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from14@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 14"
@@ -13443,98 +13443,98 @@ exports[`Storyshots UI Components/EmailFeed parent element with fixed width at 3
       Array [
         Object {
           "body": "Welcome to x-team 1",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from1@x-team.com",
           "subject": "Welcomen Subject 1",
           "to": "to-1@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 2",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from2@x-team.com",
           "subject": "Welcomen Subject 2",
           "to": "to-2@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 3",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from3@x-team.com",
           "subject": "Welcomen Subject 3",
           "to": "to-3@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 4",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from4@x-team.com",
           "subject": "Welcomen Subject 4",
           "to": "to-4@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 5",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from5@x-team.com",
           "subject": "Welcomen Subject 5",
           "to": "to-5@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 6",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from6@x-team.com",
           "subject": "Welcomen Subject 6",
           "to": "to-6@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 7",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from7@x-team.com",
           "subject": "Welcomen Subject 7",
           "to": "to-7@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 8",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from8@x-team.com",
           "subject": "Welcomen Subject 8",
           "to": "to-8@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 9",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from9@x-team.com",
           "subject": "Welcomen Subject 9",
           "to": "to-9@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 10",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from10@x-team.com",
           "subject": "Welcomen Subject 10",
           "to": "to-10@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 11",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from11@x-team.com",
           "subject": "Welcomen Subject 11",
           "to": "to-11@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 12",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from12@x-team.com",
           "subject": "Welcomen Subject 12",
           "to": "to-12@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 13",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from13@x-team.com",
           "subject": "Welcomen Subject 13",
           "to": "to-13@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 14",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from14@x-team.com",
           "subject": "Welcomen Subject 14",
           "to": "to-14@x-team.com",
@@ -13561,98 +13561,98 @@ exports[`Storyshots UI Components/EmailFeed parent element with fixed width at 5
       Array [
         Object {
           "body": "Welcome to x-team 1",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from1@x-team.com",
           "subject": "Welcomen Subject 1",
           "to": "to-1@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 2",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from2@x-team.com",
           "subject": "Welcomen Subject 2",
           "to": "to-2@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 3",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from3@x-team.com",
           "subject": "Welcomen Subject 3",
           "to": "to-3@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 4",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from4@x-team.com",
           "subject": "Welcomen Subject 4",
           "to": "to-4@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 5",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from5@x-team.com",
           "subject": "Welcomen Subject 5",
           "to": "to-5@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 6",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from6@x-team.com",
           "subject": "Welcomen Subject 6",
           "to": "to-6@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 7",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from7@x-team.com",
           "subject": "Welcomen Subject 7",
           "to": "to-7@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 8",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from8@x-team.com",
           "subject": "Welcomen Subject 8",
           "to": "to-8@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 9",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from9@x-team.com",
           "subject": "Welcomen Subject 9",
           "to": "to-9@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 10",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from10@x-team.com",
           "subject": "Welcomen Subject 10",
           "to": "to-10@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 11",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from11@x-team.com",
           "subject": "Welcomen Subject 11",
           "to": "to-11@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 12",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from12@x-team.com",
           "subject": "Welcomen Subject 12",
           "to": "to-12@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 13",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from13@x-team.com",
           "subject": "Welcomen Subject 13",
           "to": "to-13@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 14",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from14@x-team.com",
           "subject": "Welcomen Subject 14",
           "to": "to-14@x-team.com",
@@ -13679,98 +13679,98 @@ exports[`Storyshots UI Components/EmailFeed parent element with fixed width at 7
       Array [
         Object {
           "body": "Welcome to x-team 1",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from1@x-team.com",
           "subject": "Welcomen Subject 1",
           "to": "to-1@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 2",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from2@x-team.com",
           "subject": "Welcomen Subject 2",
           "to": "to-2@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 3",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from3@x-team.com",
           "subject": "Welcomen Subject 3",
           "to": "to-3@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 4",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from4@x-team.com",
           "subject": "Welcomen Subject 4",
           "to": "to-4@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 5",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from5@x-team.com",
           "subject": "Welcomen Subject 5",
           "to": "to-5@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 6",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from6@x-team.com",
           "subject": "Welcomen Subject 6",
           "to": "to-6@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 7",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from7@x-team.com",
           "subject": "Welcomen Subject 7",
           "to": "to-7@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 8",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from8@x-team.com",
           "subject": "Welcomen Subject 8",
           "to": "to-8@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 9",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from9@x-team.com",
           "subject": "Welcomen Subject 9",
           "to": "to-9@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 10",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from10@x-team.com",
           "subject": "Welcomen Subject 10",
           "to": "to-10@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 11",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from11@x-team.com",
           "subject": "Welcomen Subject 11",
           "to": "to-11@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 12",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from12@x-team.com",
           "subject": "Welcomen Subject 12",
           "to": "to-12@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 13",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from13@x-team.com",
           "subject": "Welcomen Subject 13",
           "to": "to-13@x-team.com",
         },
         Object {
           "body": "Welcome to x-team 14",
-          "createdAt": 2019-02-02T02:00:00.000Z,
+          "createdAt": 2019-02-02T00:00:00.000Z,
           "from": "from14@x-team.com",
           "subject": "Welcomen Subject 14",
           "to": "to-14@x-team.com",
@@ -13874,7 +13874,7 @@ exports[`Storyshots UI Components/EmailFeed with end button link 1`] = `
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 1"
@@ -13886,7 +13886,7 @@ exports[`Storyshots UI Components/EmailFeed with end button link 1`] = `
         >
           <Email
             body="Welcome to x-team 2"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from2@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 2"
@@ -13898,7 +13898,7 @@ exports[`Storyshots UI Components/EmailFeed with end button link 1`] = `
         >
           <Email
             body="Welcome to x-team 3"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from3@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 3"
@@ -13910,7 +13910,7 @@ exports[`Storyshots UI Components/EmailFeed with end button link 1`] = `
         >
           <Email
             body="Welcome to x-team 4"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from4@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 4"
@@ -13922,7 +13922,7 @@ exports[`Storyshots UI Components/EmailFeed with end button link 1`] = `
         >
           <Email
             body="Welcome to x-team 5"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from5@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 5"
@@ -14083,7 +14083,7 @@ exports[`Storyshots UI Components/EmailFeed with extra small list of emails 1`] 
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 1"
@@ -14157,7 +14157,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 1"
@@ -14169,7 +14169,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 2"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from2@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 2"
@@ -14181,7 +14181,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 3"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from3@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 3"
@@ -14193,7 +14193,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 4"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from4@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 4"
@@ -14205,7 +14205,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 5"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from5@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 5"
@@ -14217,7 +14217,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 6"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from6@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 6"
@@ -14229,7 +14229,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 7"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from7@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 7"
@@ -14241,7 +14241,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 8"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from8@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 8"
@@ -14253,7 +14253,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 9"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from9@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 9"
@@ -14265,7 +14265,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 10"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from10@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 10"
@@ -14277,7 +14277,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 11"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from11@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 11"
@@ -14289,7 +14289,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 12"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from12@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 12"
@@ -14301,7 +14301,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 13"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from13@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 13"
@@ -14313,7 +14313,7 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 14"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from14@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 14"
@@ -14414,7 +14414,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 1"
@@ -14426,7 +14426,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 2"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from2@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 2"
@@ -14438,7 +14438,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 3"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from3@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 3"
@@ -14450,7 +14450,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 4"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from4@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 4"
@@ -14462,7 +14462,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 5"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from5@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 5"
@@ -14474,7 +14474,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 6"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from6@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 6"
@@ -14486,7 +14486,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 7"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from7@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 7"
@@ -14498,7 +14498,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 8"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from8@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 8"
@@ -14510,7 +14510,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 9"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from9@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 9"
@@ -14522,7 +14522,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 10"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from10@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 10"
@@ -14534,7 +14534,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 11"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from11@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 11"
@@ -14546,7 +14546,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 12"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from12@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 12"
@@ -14558,7 +14558,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 13"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from13@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 13"
@@ -14570,7 +14570,7 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
         >
           <Email
             body="Welcome to x-team 14"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from14@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 14"
@@ -14671,7 +14671,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 1"
@@ -14683,7 +14683,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 2"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from2@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 2"
@@ -14695,7 +14695,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 3"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from3@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 3"
@@ -14707,7 +14707,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 4"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from4@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 4"
@@ -14719,7 +14719,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 5"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from5@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 5"
@@ -14731,7 +14731,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 6"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from6@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 6"
@@ -14743,7 +14743,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 7"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from7@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 7"
@@ -14755,7 +14755,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 8"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from8@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 8"
@@ -14767,7 +14767,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 9"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from9@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 9"
@@ -14779,7 +14779,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 10"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from10@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 10"
@@ -14791,7 +14791,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 11"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from11@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 11"
@@ -14803,7 +14803,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 12"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from12@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 12"
@@ -14815,7 +14815,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 13"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from13@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 13"
@@ -14827,7 +14827,7 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
         >
           <Email
             body="Welcome to x-team 14"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from14@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 14"
@@ -14901,7 +14901,7 @@ exports[`Storyshots UI Components/EmailFeed with small list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 1"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from1@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 1"
@@ -14913,7 +14913,7 @@ exports[`Storyshots UI Components/EmailFeed with small list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 2"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from2@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 2"
@@ -14925,7 +14925,7 @@ exports[`Storyshots UI Components/EmailFeed with small list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 3"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from3@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 3"
@@ -14937,7 +14937,7 @@ exports[`Storyshots UI Components/EmailFeed with small list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 4"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from4@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 4"
@@ -14949,7 +14949,7 @@ exports[`Storyshots UI Components/EmailFeed with small list of emails 1`] = `
         >
           <Email
             body="Welcome to x-team 5"
-            createdAt={2019-02-02T02:00:00.000Z}
+            createdAt={2019-02-02T00:00:00.000Z}
             from="from5@x-team.com"
             initialOpen={false}
             subject="Welcomen Subject 5"
