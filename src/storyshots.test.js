@@ -11,7 +11,8 @@ configure({ adapter: new Adapter() })
 initStoryshots({
   test: ({ story, context }) => {
     const storyElement = story.render(context)
-    const shallowTree = shallow(storyElement)
+    const component = storyElement.props.story.props.children
+    const shallowTree = shallow(component)
     expect(toJson(shallowTree)).toMatchSnapshot()
   }
 })
