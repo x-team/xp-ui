@@ -46,3 +46,5 @@ jest.mock('faker', () => (
 ))
 
 jest.mock('uuid/v4', () => jest.fn(() => '00000000-0000-0000-0000-000000000000'))
+
+jest.mock('date-fns/format', () => jest.fn(() => '11-11-2019'))

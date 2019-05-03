@@ -688,7 +688,7 @@ exports[`Storyshots UI Components/ActivityBar basic usage 1`] = `
   <div
     className="AutoUI_ui_ActivityBar-39"
   >
-    09 Jan 19
+    11-11-2019
   </div>
 </div>
 `;
@@ -729,7 +729,7 @@ exports[`Storyshots UI Components/ActivityBar really long activity description 1
   <div
     className="AutoUI_ui_ActivityBar-39"
   >
-    09 Jan 19
+    11-11-2019
   </div>
 </div>
 `;
@@ -751,7 +751,7 @@ exports[`Storyshots UI Components/ActivityBar short activity description 1`] = `
   <div
     className="AutoUI_ui_ActivityBar-39"
   >
-    09 Jan 19
+    11-11-2019
   </div>
 </div>
 `;
@@ -11097,7 +11097,7 @@ exports[`Storyshots UI Components/Email 1 day ago 1`] = `
         >
           1 day ago
         </div>
-        1st Feb 2019, 00:00 a.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -11157,7 +11157,7 @@ exports[`Storyshots UI Components/Email 3 hours ago 1`] = `
         >
           3h ago
         </div>
-        1st Feb 2019, 21:00 p.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -11217,7 +11217,7 @@ exports[`Storyshots UI Components/Email 5 days ago 1`] = `
         >
           5 days ago
         </div>
-        28th Jan 2019, 00:00 a.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -11277,7 +11277,7 @@ exports[`Storyshots UI Components/Email 5 minutes ago 1`] = `
         >
           5m ago
         </div>
-        1st Feb 2019, 23:55 p.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -11337,7 +11337,7 @@ exports[`Storyshots UI Components/Email HTML body test 1`] = `
         >
           just now
         </div>
-        2nd Feb 2019, 00:00 a.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -11693,7 +11693,7 @@ exports[`Storyshots UI Components/Email basic usage 1`] = `
         >
           just now
         </div>
-        2nd Feb 2019, 00:00 a.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -11753,7 +11753,7 @@ exports[`Storyshots UI Components/Email initial open body 1`] = `
         >
           just now
         </div>
-        2nd Feb 2019, 00:00 a.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -11820,7 +11820,7 @@ exports[`Storyshots UI Components/Email initial open body and content with lineb
         >
           just now
         </div>
-        2nd Feb 2019, 00:00 a.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -11902,7 +11902,7 @@ exports[`Storyshots UI Components/Email just now 1`] = `
         >
           just now
         </div>
-        2nd Feb 2019, 00:00 a.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -12130,7 +12130,7 @@ exports[`Storyshots UI Components/Email really long subject 1`] = `
         >
           just now
         </div>
-        2nd Feb 2019, 00:00 a.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -12190,7 +12190,7 @@ exports[`Storyshots UI Components/Email to several recipients 1`] = `
         >
           just now
         </div>
-        2nd Feb 2019, 00:00 a.m. UTC
+        11-11-2019
       </div>
     </div>
   </div>
@@ -12511,7 +12511,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
           <span
             className="AutoUI_ui_EmailFeed-112"
           >
-            01 Feb 19
+            11-11-2019
           </span>
         </span>
       </div>
@@ -12971,7 +12971,7 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
           <span
             className="AutoUI_ui_EmailFeed-112"
           >
-            28 Jan 19
+            11-11-2019
           </span>
         </span>
       </div>
@@ -19728,7 +19728,7 @@ exports[`Storyshots UI Components/Note older than 1 day 1`] = `
     <div
       className="AutoUI_ui_Note-55 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     >
-      01 Feb 19
+      11-11-2019
     </div>
     <div
       className="AutoUI_ui_Note-65"
