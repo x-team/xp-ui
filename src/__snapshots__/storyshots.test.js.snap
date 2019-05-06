@@ -15122,7 +15122,7 @@ exports[`Storyshots UI Components/FilterTag basic usage 1`] = `
 </Button>
 `;
 
-exports[`Storyshots UI Components/Filters default display 1`] = `
+exports[`Storyshots UI Components/Filters example of complete composition 1`] = `
 <Container>
   <Container
     bodyWrapper={[Function]}
@@ -15171,7 +15171,6 @@ exports[`Storyshots UI Components/Filters default display 1`] = `
               />
             </Filter>
             <Filter
-              isCollapsible={true}
               label="List Members"
             >
               <State
@@ -15245,7 +15244,6 @@ exports[`Storyshots UI Components/Filters default display 1`] = `
           />
         </Filter>
         <Filter
-          isCollapsible={true}
           label="Max Rate"
         >
           <InputFilterContainer
@@ -15268,7 +15266,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Filter (does c
 <Fragment>
   <Label />
   <div
-    className="AutoUI_ui_Filters_Filter-19"
+    className="AutoUI_ui_Filters_Filter-17"
   />
 </Fragment>
 `;

@@ -48,7 +48,7 @@ export const StoryFilters = () => (
               <Filters.Filter label='List'>
                 <SelectBoxFilterContainer placeholder='List' />
               </Filters.Filter>
-              <Filters.Filter label='List Members' isCollapsible>
+              <Filters.Filter label='List Members'>
                 <State initialState={{ cb: true }}>
                   {({ setState, state }) => (
                     <InputFilterContainer
@@ -97,7 +97,7 @@ export const StoryFilters = () => (
           <Filters.Filter label='Timezone'>
             <SelectBoxFilterContainer placeholder='Timezone' />
           </Filters.Filter>
-          <Filters.Filter label='Max Rate' isCollapsible>
+          <Filters.Filter label='Max Rate'>
             <InputFilterContainer type='number' />
           </Filters.Filter>
         </Filters.Group>
@@ -108,7 +108,7 @@ export const StoryFilters = () => (
 )
 
 storiesOf('UI Components/Filters', module)
-  .add('default display', () => (
+  .add('example of complete composition', () => (
     <StoryFilters />
   ))
 
