@@ -23,6 +23,7 @@ export const StoryTwoColumnsLayout = (props) => (
   <TwoColumnsLayout
     sidebar={props.sidebar || sampleSidebar}
     sidebarHeading={text('Sidebar Heading', props.sidebarHeading || 'Filters')}
+    sidebarWidth={number('Sidebar Width', props.sidebarWidth || 385)}
     sidebarIcon={text('Sidebar Icon', props.sidebarIcon || 'filters')}
     scrollableSidebar={boolean('Scrollable Sidebar', props.scrollableSidebar !== undefined ? props.scrollableSidebar : true)}
     content={props.content || sampleContent}

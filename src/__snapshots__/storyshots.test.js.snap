@@ -37756,6 +37756,7 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Debug missing props (does com
     sidebar={null}
     sidebarHeading=""
     sidebarIcon=""
+    sidebarWidth={385}
   />
 </div>
 `;
