@@ -10,7 +10,6 @@ const cx = {
   layout: cmz(`
     position: relative
     display: flex
-    height: inherit
   `),
 
   mainBodyColumn: cmz(`
@@ -35,13 +34,12 @@ const cx = {
 }
 
 type Props = {
-  mainBodyElement: Element<*>,
+  mainBodyElement?: Element<*>,
   secondaryElements: Array<Element<*>>,
 }
 
 class MetaGroup extends PureComponent<Props, void> {
   static defaultProps = {
-    mainBodyElement: null,
     secondaryElements: []
   }
 
