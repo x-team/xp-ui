@@ -1,5 +1,7 @@
 sudo: false
 language: node_js
+script:
+  - npm test
 before_deploy:
   - npm run build
   - npm run storybook:build
