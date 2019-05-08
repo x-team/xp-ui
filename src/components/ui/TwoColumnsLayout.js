@@ -132,6 +132,7 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
 
   renderSidebar = () => {
     const { sidebar, sidebarHeading, sidebarWidth, sidebarIcon, scrollableSidebar } = this.props
+
     return (
       <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
         {sidebarHeading && (

@@ -1,9 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, number, boolean } from '@storybook/addon-knobs'
+import { text, boolean, number } from '@storybook/addon-knobs'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
 import { StoryAdminScreen } from './AdminScreen.stories'
+import { StoryFilters } from './Filters/Filters.stories'
 
 const sampleSidebar = Array(80).fill('Anything goes in the sidebar body').map((each, i) => <div key={`sidebar-${i}`}>{each}</div>)
 const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
@@ -32,12 +33,43 @@ export const StoryTwoColumnsLayout = (props) => (
 )
 
 storiesOf('UI Components/TwoColumnsLayout', module)
-  .add('standalone default usage', () => (
+  .add('standalone example', () => (
     <Body>
       <StoryTwoColumnsLayout />
     </Body>
   ))
-  .add('standalone short content', () => (
+
+storiesOf('UI Components/TwoColumnsLayout/Use cases', module)
+  .add('composed in AdminScreen', () => (
+    <Body>
+      <StoryAdminScreen>
+        <StoryTwoColumnsLayout />
+      </StoryAdminScreen>
+    </Body>
+  ))
+  .add('composed in AdminScreen with Filters', () => (
+    <Body>
+      <StoryAdminScreen>
+        <StoryTwoColumnsLayout
+          sidebar={<StoryFilters />}
+        />
+      </StoryAdminScreen>
+    </Body>
+  ))
+  .add('composed in AdminScreen with Modal', () => (
+    <Body>
+      <StoryAdminScreen
+        modal={{
+          content: sampleModalContent
+        }}
+      >
+        <StoryTwoColumnsLayout />
+      </StoryAdminScreen>
+    </Body>
+  ))
+
+storiesOf('UI Components/TwoColumnsLayout/Debug', module)
+  .add('standalone with short content', () => (
     <Body>
       <StoryTwoColumnsLayout
         sidebar={<div>bump</div>}
@@ -55,14 +87,7 @@ storiesOf('UI Components/TwoColumnsLayout', module)
       />
     </Body>
   ))
-  .add('composed in AdminScreen', () => (
-    <Body>
-      <StoryAdminScreen>
-        <StoryTwoColumnsLayout />
-      </StoryAdminScreen>
-    </Body>
-  ))
-  .add('composed in AdminScreen with short content', () => (
+  .add('with short content and composed in AdminScreen', () => (
     <Body>
       <StoryAdminScreen>
         <StoryTwoColumnsLayout
@@ -72,18 +97,7 @@ storiesOf('UI Components/TwoColumnsLayout', module)
       </StoryAdminScreen>
     </Body>
   ))
-  .add('composed in AdminScreen with Modal', () => (
-    <Body>
-      <StoryAdminScreen
-        modal={{
-          content: sampleModalContent
-        }}
-      >
-        <StoryTwoColumnsLayout />
-      </StoryAdminScreen>
-    </Body>
-  ))
-  .add('composed in AdminScreen with Modal with short content', () => (
+  .add('composed in AdminScreen and with Modal with short content', () => (
     <Body>
       <StoryAdminScreen
         modal={{
