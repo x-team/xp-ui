@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, number } from '@storybook/addon-knobs'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
 import { StoryAdminScreen } from './AdminScreen.stories'
