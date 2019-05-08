@@ -18,6 +18,7 @@ const cx = {
       margin-top: 25px
       padding-bottom: 20px
       border-bottom: 1px solid ${theme.lineSilver2}
+      box-sizing: border-box
     }
 
     &:last-of-type {

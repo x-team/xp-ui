@@ -21,6 +21,7 @@ const cx = {
     align-items: center
     padding: 0 60px 10px
     width: 100%
+    box-sizing: border-box
   `)
 }
 

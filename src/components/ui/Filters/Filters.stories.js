@@ -10,11 +10,11 @@ import GenericTabs from '../GenericTabs'
 import InputField from '../../forms/InputField'
 import SelectBox from '../SelectBox'
 
-const InputFilterContainer = props => (
+export const InputFilterContainer = props => (
   <InputField {...props} />
 )
 
-const SelectBoxFilterContainer = props => (
+export const SelectBoxFilterContainer = props => (
   <SelectBox size='small' hasSearch={false} {...props} />
 )
 
@@ -27,85 +27,89 @@ const Sandbox = props => (
   </div>
 )
 
+export const StoryFilters = () => (
+  <Filters.Container>
+
+    <GenericCollapsible.Container initialExpanded>
+      <GenericCollapsible.Header>
+        <Filters.Heading>Context Filters</Filters.Heading>
+      </GenericCollapsible.Header>
+      <GenericCollapsible.Body>
+        <Filters.Group>
+          <Filters.Label>Show</Filters.Label>
+          <GenericTabs.Container defaultActiveKey='list' headWrapper={Filters.TabHeads}>
+            <GenericTabs.Head tabKey='list'>
+              <Filters.TabButton text='list' />
+            </GenericTabs.Head>
+            <GenericTabs.Head tabKey='all'>
+              <Filters.TabButton text='All Applicants' />
+            </GenericTabs.Head>
+            <GenericTabs.Pane tabKey='list'>
+              <Filters.Filter label='List'>
+                <SelectBoxFilterContainer placeholder='List' />
+              </Filters.Filter>
+              <Filters.Filter label='List Members'>
+                <State initialState={{ cb: true }}>
+                  {({ setState, state }) => (
+                    <InputFilterContainer
+                      type='checkbox'
+                      label='Accepted'
+                      checked={state.cb}
+                      onChange={() => setState(prev => ({ cb: !prev.cb }))}
+                    />
+                  )}
+                </State>
+                <br />
+                <State initialState={{ cb: true }}>
+                  {({ setState, state }) => (
+                    <InputFilterContainer
+                      type='checkbox'
+                      label='Excluded'
+                      checked={state.cb}
+                      onChange={() => setState(prev => ({ cb: !prev.cb }))}
+                    />
+                  )}
+                </State>
+              </Filters.Filter>
+            </GenericTabs.Pane>
+            <GenericTabs.Pane tabKey='all'>
+              <Filters.Filter label='Accept / Exclude To'>
+                <SelectBoxFilterContainer placeholder='List' />
+              </Filters.Filter>
+            </GenericTabs.Pane>
+          </GenericTabs.Container>
+        </Filters.Group>
+      </GenericCollapsible.Body>
+    </GenericCollapsible.Container>
+
+    <GenericCollapsible.Container initialExpanded>
+      <GenericCollapsible.Header>
+        <Filters.Heading>Search Filters</Filters.Heading>
+      </GenericCollapsible.Header>
+      <GenericCollapsible.Body>
+        <Filters.Group>
+          <Filters.Filter label='Status'>
+            <SelectBoxFilterContainer placeholder='Status' />
+          </Filters.Filter>
+          <Filters.Filter label='Available Before'>
+            <InputFilterContainer type='date' />
+          </Filters.Filter>
+          <Filters.Filter label='Timezone'>
+            <SelectBoxFilterContainer placeholder='Timezone' />
+          </Filters.Filter>
+          <Filters.Filter label='Max Rate'>
+            <InputFilterContainer type='number' />
+          </Filters.Filter>
+        </Filters.Group>
+      </GenericCollapsible.Body>
+    </GenericCollapsible.Container>
+
+  </Filters.Container>
+)
+
 storiesOf('UI Components/Filters', module)
   .add('example of complete composition', () => (
-    <Filters.Container>
-
-      <GenericCollapsible.Container initialExpanded>
-        <GenericCollapsible.Header>
-          <Filters.Heading>Context Filters</Filters.Heading>
-        </GenericCollapsible.Header>
-        <GenericCollapsible.Body>
-          <Filters.Group>
-            <Filters.Label>Show</Filters.Label>
-            <GenericTabs.Container defaultActiveKey='list' headWrapper={Filters.TabHeads}>
-              <GenericTabs.Head tabKey='list'>
-                <Filters.TabButton text='list' />
-              </GenericTabs.Head>
-              <GenericTabs.Head tabKey='all'>
-                <Filters.TabButton text='All Applicants' />
-              </GenericTabs.Head>
-              <GenericTabs.Pane tabKey='list'>
-                <Filters.Filter label='List'>
-                  <SelectBoxFilterContainer placeholder='List' />
-                </Filters.Filter>
-                <Filters.Filter label='List Members'>
-                  <State initialState={{ cb: true }}>
-                    {({ setState, state }) => (
-                      <InputFilterContainer
-                        type='checkbox'
-                        label='Accepted'
-                        checked={state.cb}
-                        onChange={() => setState(prev => ({ cb: !prev.cb }))}
-                      />
-                    )}
-                  </State>
-                  <br />
-                  <State initialState={{ cb: true }}>
-                    {({ setState, state }) => (
-                      <InputFilterContainer
-                        type='checkbox'
-                        label='Excluded'
-                        checked={state.cb}
-                        onChange={() => setState(prev => ({ cb: !prev.cb }))}
-                      />
-                    )}
-                  </State>
-                </Filters.Filter>
-              </GenericTabs.Pane>
-              <GenericTabs.Pane tabKey='all'>
-                <Filters.Filter label='Accept / Exclude To'>
-                  <SelectBoxFilterContainer placeholder='List' />
-                </Filters.Filter>
-              </GenericTabs.Pane>
-            </GenericTabs.Container>
-          </Filters.Group>
-        </GenericCollapsible.Body>
-      </GenericCollapsible.Container>
-
-      <GenericCollapsible.Container initialExpanded>
-        <GenericCollapsible.Header>
-          <Filters.Heading>Search Filters</Filters.Heading>
-        </GenericCollapsible.Header>
-        <GenericCollapsible.Body>
-          <Filters.Group>
-            <Filters.Filter label='Status'>
-              <SelectBoxFilterContainer placeholder='Status' />
-            </Filters.Filter>
-            <Filters.Filter label='Available Before'>
-              <InputFilterContainer type='date' />
-            </Filters.Filter>
-            <Filters.Filter label='Timezone'>
-              <SelectBoxFilterContainer placeholder='Timezone' />
-            </Filters.Filter>
-            <Filters.Filter label='Max Rate'>
-              <InputFilterContainer type='number' />
-            </Filters.Filter>
-          </Filters.Group>
-        </GenericCollapsible.Body>
-      </GenericCollapsible.Container>
-
-    </Filters.Container>
+    <StoryFilters />
   ))
 
 storiesOf('UI Components/Filters/Debug', module)
