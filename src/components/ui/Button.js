@@ -55,6 +55,7 @@ const baseStyles = {
     transition: all .3s ease-out
     position: relative
     font-size: 1rem
+    border-radius: 50%
   `),
 
   content: cmz(typo.labelText, 'font-size: inherit'),
