@@ -29,6 +29,7 @@ const cx = {
       padding: 24px 60px
       text-transform: uppercase
       display: flex
+      box-sizing: border-box
     }
 
     &:last-of-type {

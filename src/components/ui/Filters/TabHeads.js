@@ -15,6 +15,7 @@ const cx = {
     `
       padding: 0 60px 20px
       display: flex
+      box-sizing: border-box
   `)
 }
 

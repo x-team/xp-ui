@@ -16,6 +16,7 @@ const cmz = require('cmz')
 const cx = {
   filter: cmz(`
     padding: 0 60px 20px
+    box-sizing: border-box
   `)
 }
 
