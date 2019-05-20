@@ -3,11 +3,9 @@ import { storiesOf } from '@storybook/react'
 import { text, number, boolean } from '@storybook/addon-knobs'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
-import { StoryAdminScreen } from './AdminScreen.stories'
 
 const sampleSidebar = Array(80).fill('Anything goes in the sidebar body').map((each, i) => <div key={`sidebar-${i}`}>{each}</div>)
 const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
-const sampleModalContent = Array(80).fill('Anything goes in the modal content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -53,45 +51,6 @@ storiesOf('UI Components/TwoColumnsLayout', module)
         contentHeading='verylongcontenttoseewhathappenverylongcontenttoseewhathappenverylongcontenttoseewhathappen'
         content={<div>verylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappearverylongcontenttoforcehorizontalscrollbarstoappear</div>}
       />
-    </Body>
-  ))
-  .add('composed in AdminScreen', () => (
-    <Body>
-      <StoryAdminScreen>
-        <StoryTwoColumnsLayout />
-      </StoryAdminScreen>
-    </Body>
-  ))
-  .add('composed in AdminScreen with short content', () => (
-    <Body>
-      <StoryAdminScreen>
-        <StoryTwoColumnsLayout
-          sidebar={<div>bump</div>}
-          content={<div>bump</div>}
-        />
-      </StoryAdminScreen>
-    </Body>
-  ))
-  .add('composed in AdminScreen with Modal', () => (
-    <Body>
-      <StoryAdminScreen
-        modal={{
-          content: sampleModalContent
-        }}
-      >
-        <StoryTwoColumnsLayout />
-      </StoryAdminScreen>
-    </Body>
-  ))
-  .add('composed in AdminScreen with Modal with short content', () => (
-    <Body>
-      <StoryAdminScreen
-        modal={{
-          content: (<div>bump</div>)
-        }}
-      >
-        <StoryTwoColumnsLayout />
-      </StoryAdminScreen>
     </Body>
   ))
   .add('missing props (does component explode?)', () => (
