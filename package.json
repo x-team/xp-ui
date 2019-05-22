@@ -2,7 +2,7 @@
   "name": "xp-ui",
   "version": "2.0.0",
   "description": "UI component library for the XP platform.",
-  "main": "lib/xp-ui.js",
+  "main": "lib/main.js",
   "directories": {
     "doc": "docs"
   },
