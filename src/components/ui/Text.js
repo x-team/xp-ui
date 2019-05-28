@@ -1,6 +1,7 @@
 // @flow
 
 import { PureComponent } from 'react'
+import { compiler as markdownCompiler } from 'markdown-to-jsx'
 
 import elem from '../../utils/elem'
 
@@ -13,11 +14,14 @@ const cmz = require('cmz')
 
 type Type = 'mainHeading' | 'headline' | 'heading' | 'subheading'
 
+type ContentType = Element<*>|string
+
 type Props = {
   heading?: Element<*>|string,
   subHeading?: Element<*>|string,
   level?: Element<*>|string,
-  content?: Element<*>|string,
+  content?: ContentType,
+  isMarkdown: ?boolean,
   isCentered: ?boolean,
   hasDivider: ?boolean,
   isPureContent: ?boolean,
@@ -42,7 +46,45 @@ const Divider = elem.span(cmz(typo.divider))
 
 const Content = elem.div(cmz(
   typo.baseText,
-  'margin: 15px 0'
+  `
+    & {
+      margin: 15px 0
+
+      box-sizing: content-box
+      text-rendering: optimizeLegibility
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+      font-weight: 300
+      font-size: 20px
+      color: rgb(52, 50, 59)
+      line-height: 30px
+    }
+
+    & h1,
+    & h2 {
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+      font-weight: 800
+      text-transform: uppercase
+      color: rgb(52, 50, 59)
+    }
+
+    & h1 {
+      font-size: 36px
+      margin: 0 0 16px
+      letter-spacing: -1px
+      line-height: 49px
+    }
+
+    & h2 {
+      font-size: 22px
+      margin: 0 0 .5rem
+      padding: 37px 0 0 0
+      letter-spacing: -.61px
+      line-height: 30px
+    }
+  `
 ))
 
 const PureContent = elem.span(cmz(typo.baseText))
@@ -65,10 +107,19 @@ const contentRequired = cmz(`
 
 class Text extends PureComponent<Props> {
   static defaultProps = {
+    isMarkdown: false,
     isCentered: false,
     hasDivider: false,
     isPureContent: false,
     required: false
+  }
+
+  htmlContent = (content?: ContentType) => {
+    try {
+      return markdownCompiler(content)
+    } catch (err) {
+      return content
+    }
   }
 
   render () {
@@ -79,15 +130,17 @@ class Text extends PureComponent<Props> {
       subHeadingType = 'heading',
       level,
       content,
+      isMarkdown,
       isCentered,
       hasDivider,
       isPureContent,
       required
     } = this.props
     const requiredProps = required ? { className: contentRequired } : {}
+    const contentRender = isMarkdown ? this.htmlContent(content) : content
 
     if (isPureContent) {
-      return PureContent(requiredProps, content)
+      return PureContent(requiredProps, contentRender)
     }
 
     return Root(isCentered ? { className: centerAlign } : {},
@@ -95,7 +148,7 @@ class Text extends PureComponent<Props> {
       subHeading && SubHeading({ className: typo[subHeadingType] }, subHeading),
       level && Level({ className: typo.subheading }, level),
       hasDivider && Divider(isCentered ? { className: contentDividerCenter } : {}),
-      Content(requiredProps, content)
+      Content(requiredProps, contentRender)
     )
   }
 }
