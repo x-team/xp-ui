@@ -84,6 +84,15 @@ const Content = elem.div(cmz(
       letter-spacing: -.61px
       line-height: 30px
     }
+
+    & a {
+      color: ${theme.typoAnchor}
+      text-decoration: none
+    }
+
+    & a:hover {
+      color: ${theme.typoAnchorHover}
+    }
   `
 ))
 
