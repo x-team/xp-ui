@@ -28,6 +28,7 @@ copyProps(window, global)
 jest.mock('faker', () => (
   {
     random: {
+      boolean: jest.fn(() => true),
       number: jest.fn(() => 2),
       words: jest.fn(() => 'string string'),
       word: jest.fn(() => 'string')
@@ -41,6 +42,10 @@ jest.mock('faker', () => (
     },
     internet: {
       email: jest.fn(() => 'string@email.com')
+    },
+    lorem: {
+      sentence: jest.fn(() => 'string'),
+      paragraphs: jest.fn(() => 'string')
     }
   }
 ))
