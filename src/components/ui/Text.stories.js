@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, boolean, select, withKnobsOptions } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import faker from 'faker'
 
 import Text from './Text'
