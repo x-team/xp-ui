@@ -232,6 +232,7 @@ Some things that will help you stand out:
 This is _**custom content**_ btw`} />
   ), {
     knobs: {
+      timestamps: true,
       escapeHTML: false
     }
   })
