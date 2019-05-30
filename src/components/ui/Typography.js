@@ -50,6 +50,7 @@ class Typography extends PureComponent<Props> {
     const typoBlocks = []
 
     Object.keys(typo)
+      .filter(key => key !== 'divider')
       .forEach((key, i) => {
         typoBlocks.push(
           Item(

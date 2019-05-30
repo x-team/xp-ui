@@ -16992,21 +16992,6 @@ exports[`Storyshots UI Components/Typography typography sets for development ref
       formText
     </div>
   </div>
-  <div
-    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="9"
-  >
-    <span
-      className="AutoUI_ui_Typography-35 AutoUI_typo-192"
-    >
-      The quick brown fox jumps over the lazy dog
-    </span>
-    <div
-      className="AutoUI_ui_Typography-41"
-    >
-      divider
-    </div>
-  </div>
 </section>
 `;
 
