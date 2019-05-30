@@ -49,17 +49,7 @@ const Content = elem.div(cmz(
   `
     & {
       margin: 15px 0
-
       box-sizing: content-box
-      text-rendering: optimizeLegibility
-      -webkit-font-smoothing: antialiased
-      -moz-osx-font-smoothing: grayscale
-
-      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
-      font-weight: 300
-      font-size: 20px
-      color: rgb(52, 50, 59)
-      line-height: 30px
     }
 
     & h1,
@@ -67,7 +57,7 @@ const Content = elem.div(cmz(
       font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
       font-weight: 800
       text-transform: uppercase
-      color: rgb(52, 50, 59)
+      color: ${theme.typoHeading}
     }
 
     & h1 {
@@ -80,7 +70,6 @@ const Content = elem.div(cmz(
     & h2 {
       font-size: 22px
       margin: 0 0 .5rem
-      padding: 37px 0 0 0
       letter-spacing: -.61px
       line-height: 30px
     }
@@ -123,7 +112,8 @@ class Text extends PureComponent<Props> {
     required: false
   }
 
-  htmlContent = (content?: ContentType) => {
+  get htmlContent(): ?ContentType {
+    const { content } = this.props
     try {
       return markdownCompiler(content)
     } catch (err) {
@@ -146,7 +136,7 @@ class Text extends PureComponent<Props> {
       required
     } = this.props
     const requiredProps = required ? { className: contentRequired } : {}
-    const contentRender = isMarkdown ? this.htmlContent(content) : content
+    const contentRender = isMarkdown ? this.htmlContent : content
 
     if (isPureContent) {
       return PureContent(requiredProps, contentRender)
