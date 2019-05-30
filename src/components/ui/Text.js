@@ -112,7 +112,7 @@ class Text extends PureComponent<Props> {
     required: false
   }
 
-  get htmlContent(): ?ContentType {
+  get htmlContent (): ?ContentType {
     const { content } = this.props
     try {
       return markdownCompiler(content)

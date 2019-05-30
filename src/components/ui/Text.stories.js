@@ -43,7 +43,7 @@ const typos = {
   labelText: 'labelText',
   mainHeading: 'mainHeading',
   sectionHeading: 'sectionHeading',
-  subheading: 'subheading',
+  subheading: 'subheading'
 }
 
 const typosLenght = Object.keys(typos)
@@ -216,7 +216,7 @@ storiesOf('UI Components/Text/Demos', module)
   .add('content with Markdown', () => (
     <StoryText isMarkdown content={`# Time to show off.
 
-It\'s great getting to know you! After you sign up, X-Teamers from our community review profiles and send invitations to those they see standing out.
+It's great getting to know you! After you sign up, X-Teamers from our community review profiles and send invitations to those they see standing out.
 
 ## Lorem Ipsum
 
