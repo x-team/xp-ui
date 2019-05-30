@@ -218,11 +218,13 @@ storiesOf('UI Components/Text/Demos', module)
 
 It\'s great getting to know you! After you sign up, X-Teamers from our community review profiles and send invitations to those they see standing out.
 
-### Lorem Ipsum
+## Lorem Ipsum
 
 Due to high demand, we send out a limited number of invites each month, meaning we can't guarantee you'll hear from us about an interview.
 
-Some things that will help you stand out:
+### Sit dolor amet
+
+Some things that [will help you stand out](http://google.com):
 
 - Experience working on large scale projects with a significant user base.
 - Strong written and spoken English.
