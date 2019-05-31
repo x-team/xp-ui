@@ -47,41 +47,8 @@ const Divider = elem.span(cmz(typo.divider))
 const Content = elem.div(cmz(
   typo.baseText,
   `
-    & {
-      margin: 15px 0
-      box-sizing: content-box
-    }
-
-    & h1,
-    & h2 {
-      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
-      font-weight: 800
-      text-transform: uppercase
-      color: ${theme.typoHeading}
-    }
-
-    & h1 {
-      font-size: 36px
-      margin: 0 0 16px
-      letter-spacing: -1px
-      line-height: 49px
-    }
-
-    & h2 {
-      font-size: 22px
-      margin: 0 0 .5rem
-      letter-spacing: -.61px
-      line-height: 30px
-    }
-
-    & a {
-      color: ${theme.typoAnchor}
-      text-decoration: none
-    }
-
-    & a:hover {
-      color: ${theme.typoAnchorHover}
-    }
+    margin: 15px 0
+    box-sizing: content-box
   `
 ))
 
@@ -109,12 +76,33 @@ class Text extends PureComponent<Props> {
     isCentered: false,
     hasDivider: false,
     isPureContent: false,
-    required: false
+    required: false,
+    headingType: 'headline',
+    subHeadingType: 'heading'
   }
 
-  htmlContent = (content: ?ContentType): ?ContentType => {
+  htmlContent = (): ?ContentType => {
+    const { content, headingType, subHeadingType } = this.props
     try {
-      return markdownCompiler(content)
+      return markdownCompiler(content, {
+        overrides: {
+          h1: {
+            props: {
+              className: typo[headingType]
+            }
+          },
+          h2: {
+            props: {
+              className: typo[subHeadingType]
+            }
+          },
+          a: {
+            props: {
+              className: typo.link
+            }
+          }
+        }
+      })
     } catch (err) {
       return content
     }
@@ -124,8 +112,8 @@ class Text extends PureComponent<Props> {
     const {
       heading,
       subHeading,
-      headingType = 'headline',
-      subHeadingType = 'heading',
+      headingType,
+      subHeadingType,
       level,
       content,
       isMarkdown,
@@ -135,7 +123,7 @@ class Text extends PureComponent<Props> {
       required
     } = this.props
     const requiredProps = required ? { className: contentRequired } : {}
-    const contentRender = isMarkdown ? this.htmlContent(content) : content
+    const contentRender = isMarkdown ? this.htmlContent() : content
 
     if (isPureContent) {
       return PureContent(requiredProps, contentRender)
