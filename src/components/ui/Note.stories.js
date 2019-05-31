@@ -64,7 +64,7 @@ storiesOf('UI Components/Note', module)
         date={noteDate}
         showNoteType
         name='Samwise Gamgee'
-        text={`Do you remember the Shire, Mr. Frodo? It'll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they'll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?`}
+        text={`Do you **remember** the Shire, Mr. Frodo? It'll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they'll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?`}
       />
     )
   })

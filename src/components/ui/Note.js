@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import TruncateMarkup from 'react-truncate-markup'
+import Truncate from 'react-truncate'
 import differenceInHours from 'date-fns/difference_in_hours'
 
 import Avatar from './Avatar'
@@ -225,13 +225,13 @@ class Note extends PureComponent<Props, State> {
 
     return shouldTruncate ? TextWrapper(
       RichContentWrapper(
-        <TruncateMarkup lines={3} ellipsis={readMore}>
-          <div>{newValue}</div>
-        </TruncateMarkup>
+        <Truncate lines={3} ellipsis={readMore}>
+          <RichTextEditor initialValue={newValue} mode='viewer' />
+        </Truncate>
       )) : TextWrapper(
       RichContentWrapper(
         <div>
-          <div>{newValue}</div>
+          <RichTextEditor initialValue={newValue} mode='viewer' />
           {readMore}
         </div>
       )
