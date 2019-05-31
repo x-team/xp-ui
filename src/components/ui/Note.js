@@ -209,24 +209,20 @@ class Note extends PureComponent<Props, State> {
       return str
     }
 
-    const readMore = (
-      <span>
-        {ReadMoreWrapper(
-          <div onClick={this.toggleTruncate}>
-            {shouldTruncate ? (
-              <Fragment>
-                <span>Read More</span>
-                <SvgIcon icon='triangledown' />
-              </Fragment>
-            ) : (
-              <Fragment>
-                <span>Show Less</span>
-                <SvgIcon icon='triangleup' />
-              </Fragment>
-            )}
-          </div>)
-        }
-      </span>
+    const readMore = ReadMoreWrapper(
+      <div onClick={this.toggleTruncate}>
+        {shouldTruncate ? (
+          <Fragment>
+            <span>Read More</span>
+            <SvgIcon icon='triangledown' />
+          </Fragment>
+        ) : (
+          <Fragment>
+            <span>Show Less</span>
+            <SvgIcon icon='triangleup' />
+          </Fragment>
+        )}
+      </div>
     )
 
     return TextWrapper(
