@@ -80,4 +80,18 @@ HR and *italic*
 `} />
   ))
 
+  .add('showing read more and show less', () => {
+    const noteDate = new Date()
+    return (
+      <Note
+        noteType='interview'
+        avatar='https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg'
+        date={noteDate}
+        showNoteType
+        name='Samwise Gamgee'
+        text={`Do you **remember** the Shire, Mr. **Frodo**? It'll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they'll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?`}
+      />
+    )
+  })
+
   .add('missing props (does component explode?)', () => <Note />)
