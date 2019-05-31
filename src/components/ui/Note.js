@@ -1,7 +1,6 @@
 // @flow
 
 import React, { PureComponent, Fragment } from 'react'
-import Truncate from 'react-truncate'
 import differenceInHours from 'date-fns/difference_in_hours'
 
 import Avatar from './Avatar'
@@ -70,32 +69,6 @@ const InlineEditorWrapper = elem.div(cmz(
   `
 ))
 
-const ReadMoreWrapper = elem.div(cmz(
-  `
-    & {
-      display: flex
-      flex-direction: column
-      align-items: flex-end
-      cursor: pointer
-    }
-
-    & div span{
-      color: ${theme.baseRed}
-      text-transform: uppercase
-    }
-
-    & div{
-      display: flex
-      flex-direction: row
-      align-items: center
-    }
-
-    & svg {
-      margin-left: 10px
-    }
-  `
-))
-
 const TextWrapper = elem.div(cmz(
   `
     & p:first-of-type {
@@ -113,6 +86,29 @@ const TextWrapper = elem.div(cmz(
 
     & a:hover {
       text-decoration: underline
+    }
+  `
+))
+
+const ReadMoreWrapper = elem.div(cmz(
+  `
+    & {
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      cursor: pointer
+    }
+    & div span{
+      color: ${theme.baseRed}
+      text-transform: uppercase
+    }
+    & div{
+      display: flex
+      flex-direction: row
+      align-items: center
+    }
+    & svg {
+      margin-left: 10px
     }
   `
 ))
@@ -203,9 +199,18 @@ class Note extends PureComponent<Props, State> {
   renderPresenter = ({ activateEditingMode }: PresenterProps) => {
     this.activateEditingMode = activateEditingMode
     const { newValue, shouldTruncate } = this.state
+
+    function truncate (str, maxLength = 255, suffix = '...') {
+      if (str.length > maxLength) {
+        let trimmedString = str.substring(0, maxLength + 1)
+        trimmedString = trimmedString.substring(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(' ')))
+        return trimmedString + suffix
+      }
+      return str
+    }
+
     const readMore = (
       <span>
-        {shouldTruncate && '...'}
         {ReadMoreWrapper(
           <div onClick={this.toggleTruncate}>
             {shouldTruncate ? (
@@ -224,17 +229,15 @@ class Note extends PureComponent<Props, State> {
       </span>
     )
 
-    return shouldTruncate ? TextWrapper(
+    return TextWrapper(
       RichContentWrapper(
-        <Truncate lines={3} ellipsis={readMore}>
-          <RichTextEditor initialValue={newValue} mode='viewer' />
-        </Truncate>
-      )) : TextWrapper(
-      RichContentWrapper(
-        <div>
-          <RichTextEditor initialValue={newValue} mode='viewer' />
+        <Fragment>
+          {shouldTruncate ? <Fragment>
+            <RichTextEditor initialValue={truncate(newValue)} mode='viewer' />
+          </Fragment> : <RichTextEditor initialValue={newValue} mode='viewer' />
+          }
           {readMore}
-        </div>
+        </Fragment>
       )
     )
   }
