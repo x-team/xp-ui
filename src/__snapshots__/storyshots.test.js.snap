@@ -19790,7 +19790,7 @@ exports[`Storyshots UI Components/Note showing note type in sub header 1`] = `
         onCancel={[Function]}
         presenter={[Function]}
         shouldSaveOnEnter={false}
-        value="Do you remember the Shire, Mr. Frodo? It'll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they'll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?"
+        value="Do you **remember** the Shire, Mr. Frodo? It'll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they'll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?"
       />
     </div>
     <div>
