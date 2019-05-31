@@ -56,10 +56,12 @@ exports[`Storyshots Form Components/InputField Use date field with label 1`] = `
     <Text
       content="Date Field"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <div
       className="AutoUI_forms_InputField-152"
@@ -102,10 +104,12 @@ exports[`Storyshots Form Components/InputField invalid element 1`] = `
     <Text
       content="Invalid Field"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <input
       aria-labelledby="label-invalid"
@@ -164,10 +168,12 @@ exports[`Storyshots Form Components/InputField required element 1`] = `
     <Text
       content="Required Field"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={false}
       required={true}
+      subHeadingType="heading"
     />
     <input
       aria-labelledby="label-required"
@@ -202,10 +208,12 @@ exports[`Storyshots Form Components/InputField standard use (text input element 
     <Text
       content="First Name"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <input
       aria-labelledby="label-name"
@@ -229,10 +237,12 @@ exports[`Storyshots Form Components/InputField standard use (text input element 
     <Text
       content="First Name"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <input
       aria-labelledby="label-name"
@@ -256,10 +266,12 @@ exports[`Storyshots Form Components/InputField standard use (with \`label\` and 
     <Text
       content="How many years of experience do you have?"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <input
       aria-labelledby="label-experience"
@@ -279,10 +291,12 @@ exports[`Storyshots Form Components/InputField standard use (with \`label\` and 
     <Text
       content="years"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={true}
       required={false}
+      subHeadingType="heading"
     />
   </label>
 </div>
@@ -309,10 +323,12 @@ exports[`Storyshots Form Components/InputField standard use (with only \`postTex
     <Text
       content="years"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={true}
       required={false}
+      subHeadingType="heading"
     />
   </div>
 </div>
@@ -326,10 +342,12 @@ exports[`Storyshots Form Components/InputField textarea element 1`] = `
     <Text
       content="What’s your availability like right now? If you’re employed and would need to give a notice, how long would that take?"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <WithAutosize(Component)
       aria-labelledby="label-availability"
@@ -354,10 +372,12 @@ exports[`Storyshots Form Components/InputField textarea element, lines limit set
     <Text
       content="Which skills have you used professionally?"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <WithAutosize(Component)
       aria-labelledby="label-skills"
@@ -440,10 +460,12 @@ exports[`Storyshots UI Components/ApplicantScreen standard use 1`] = `
     <Text
       content="We’d love to start to get to know more about you. Please fill out these quick questions so we can introduce you to an Ambassador who will work with you 1-on-1 to get qualified to become an X-Teamer."
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
       isMarkdown={false}
       isPureContent={true}
       required={false}
+      subHeadingType="heading"
     />
   </div>
 </div>
@@ -486,10 +508,12 @@ exports[`Storyshots UI Components/ApplicantScreen with milestones injected 1`] =
         content="Let’s kick things off with a warmup. To proceed, click the button below to download a short programming challenge. You can bookmark this page for later access."
         hasDivider={false}
         heading="So it begins."
+        headingType="headline"
         isCentered={false}
         isMarkdown={false}
         isPureContent={false}
         required={false}
+        subHeadingType="heading"
       />
     </MilestonesScreen>
   </div>
@@ -6258,10 +6282,12 @@ exports[`Storyshots UI Components/EmailFeed with error message 1`] = `
       </span>
     }
     hasDivider={true}
+    headingType="headline"
     isCentered={true}
     isMarkdown={false}
     isPureContent={false}
     required={false}
+    subHeadingType="heading"
   />
 </Fragment>
 `;
@@ -6316,10 +6342,12 @@ exports[`Storyshots UI Components/EmailFeed with error message and refresh butto
       </span>
     }
     hasDivider={true}
+    headingType="headline"
     isCentered={true}
     isMarkdown={false}
     isPureContent={false}
     required={false}
+    subHeadingType="heading"
   />
 </Fragment>
 `;
@@ -10231,10 +10259,12 @@ exports[`Storyshots UI Components/MilestonesScreen first step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo error hic, nemo nostrum iusto recusandae repudiandae eum doloremque necessitatibus doloribus? Provident perferendis illo totam ipsum ut sapiente, assumenda quasi!"
           hasDivider={false}
           heading="First step"
+          headingType="headline"
           isCentered={false}
           isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -10294,10 +10324,12 @@ exports[`Storyshots UI Components/MilestonesScreen n-th step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. At suscipit dicta aliquam sint libero minima officiis alias ducimus. Fugit praesentium itaque, iure molestias aut beatae odit facilis inventore doloremque eaque."
           hasDivider={false}
           heading="First subsection"
+          headingType="headline"
           isCentered={false}
           isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -10332,10 +10364,12 @@ exports[`Storyshots UI Components/MilestonesScreen n-th step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque iusto quisquam, sed eius optio. Obcaecati, hic! Possimus sit magnam vero laboriosam obcaecati nostrum a molestiae amet aut. Corrupti, voluptas."
           hasDivider={false}
           heading="Second subsection"
+          headingType="headline"
           isCentered={false}
           isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -10370,10 +10404,12 @@ exports[`Storyshots UI Components/MilestonesScreen n-th step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minima aperiam dolorem natus repudiandae reprehenderit neque laudantium quasi voluptates architecto, ratione asperiores odio hic rerum alias dolores quo sint culpa!"
           hasDivider={false}
           heading="Third subsection"
+          headingType="headline"
           isCentered={false}
           isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -10421,10 +10457,12 @@ exports[`Storyshots UI Components/MilestonesScreen second step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum numquam, beatae, distinctio fugiat eveniet harum, vel sint odit adipisci quos nam soluta pariatur, voluptatibus repudiandae hic mollitia ex iste rem."
           hasDivider={false}
           heading="First subsection"
+          headingType="headline"
           isCentered={false}
           isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -10459,10 +10497,12 @@ exports[`Storyshots UI Components/MilestonesScreen second step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ipsa illum placeat aliquid recusandae odio minus quisquam, corporis, sed consequuntur optio fugit eaque rerum, nihil mollitia. Sequi ad nulla facere."
           hasDivider={false}
           heading="Second subsection"
+          headingType="headline"
           isCentered={false}
           isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -11068,6 +11108,7 @@ exports[`Storyshots UI Components/RoadmapHero basic usage 1`] = `
       isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
   </div>
   <div>
@@ -11093,6 +11134,7 @@ exports[`Storyshots UI Components/RoadmapHero missing props (does component expl
       isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
   </div>
   <div>
@@ -11120,6 +11162,7 @@ exports[`Storyshots UI Components/RoadmapHero with image url in props 1`] = `
       isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
   </div>
   <div>
@@ -11142,6 +11185,7 @@ exports[`Storyshots UI Components/RoadmapLevel active state 1`] = `
   <Text
     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
     hasDivider={false}
+    headingType="headline"
     isCentered={false}
     isMarkdown={false}
     isPureContent={false}
@@ -11164,6 +11208,7 @@ exports[`Storyshots UI Components/RoadmapLevel basic usage 1`] = `
   <Text
     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
     hasDivider={false}
+    headingType="headline"
     isCentered={false}
     isMarkdown={false}
     isPureContent={false}
@@ -11186,6 +11231,7 @@ exports[`Storyshots UI Components/RoadmapLevel centered state with CTA button 1`
   <Text
     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
     hasDivider={false}
+    headingType="headline"
     isCentered={true}
     isMarkdown={false}
     isPureContent={false}
@@ -15569,10 +15615,12 @@ exports[`Storyshots UI Components/Text/Demos content with HTML tags 1`] = `
     </div>
   }
   hasDivider={false}
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={false}
   required={false}
+  subHeadingType="heading"
 />
 `;
 
@@ -15597,10 +15645,12 @@ Some things that [will help you stand out](http://google.com):
 
 This is _**custom content**_ btw"
   hasDivider={false}
+  headingType="headline"
   isCentered={false}
   isMarkdown={true}
   isPureContent={false}
   required={false}
+  subHeadingType="heading"
 />
 `;
 
@@ -15609,10 +15659,12 @@ exports[`Storyshots UI Components/Text/Demos heading 1`] = `
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={false}
   heading="Your roadmap to X-Team"
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={false}
   required={false}
+  subHeadingType="heading"
 />
 `;
 
@@ -15621,11 +15673,13 @@ exports[`Storyshots UI Components/Text/Demos heading and sub heading with divide
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={true}
   heading="Your roadmap to X-Team"
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={false}
   required={false}
   subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
 />
 `;
 
@@ -15634,10 +15688,12 @@ exports[`Storyshots UI Components/Text/Demos heading with center align 1`] = `
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={false}
   heading="Your roadmap to X-Team"
+  headingType="headline"
   isCentered={true}
   isMarkdown={false}
   isPureContent={false}
   required={false}
+  subHeadingType="heading"
 />
 `;
 
@@ -15646,10 +15702,12 @@ exports[`Storyshots UI Components/Text/Demos heading with center align and divid
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={true}
   heading="Your roadmap to X-Team"
+  headingType="headline"
   isCentered={true}
   isMarkdown={false}
   isPureContent={false}
   required={false}
+  subHeadingType="heading"
 />
 `;
 
@@ -15658,10 +15716,12 @@ exports[`Storyshots UI Components/Text/Demos heading with divider 1`] = `
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={true}
   heading="Your roadmap to X-Team"
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={false}
   required={false}
+  subHeadingType="heading"
 />
 `;
 
@@ -15669,10 +15729,12 @@ exports[`Storyshots UI Components/Text/Demos heading with divider and no content
 <Text
   hasDivider={true}
   heading="Your roadmap to X-Team"
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={false}
   required={false}
+  subHeadingType="heading"
 />
 `;
 
@@ -15680,10 +15742,12 @@ exports[`Storyshots UI Components/Text/Demos pure content with no wrappers aroun
 <Text
   content="Just a sample text"
   hasDivider={false}
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={true}
   required={false}
+  subHeadingType="heading"
 />
 `;
 
@@ -15691,10 +15755,12 @@ exports[`Storyshots UI Components/Text/Demos pure content with no wrappers aroun
 <Text
   content="Just a required text"
   hasDivider={false}
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={true}
   required={true}
+  subHeadingType="heading"
 />
 `;
 
@@ -15702,10 +15768,12 @@ exports[`Storyshots UI Components/Text/Demos required 1`] = `
 <Text
   content="Just a required text"
   hasDivider={false}
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={false}
   required={true}
+  subHeadingType="heading"
 />
 `;
 
@@ -15713,11 +15781,13 @@ exports[`Storyshots UI Components/Text/Demos sub Heading with center align 1`] =
 <Text
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={false}
+  headingType="headline"
   isCentered={true}
   isMarkdown={false}
   isPureContent={false}
   required={false}
   subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
 />
 `;
 
@@ -15725,11 +15795,13 @@ exports[`Storyshots UI Components/Text/Demos sub Heading with divider 1`] = `
 <Text
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={true}
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={false}
   required={false}
   subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
 />
 `;
 
@@ -15737,12 +15809,14 @@ exports[`Storyshots UI Components/Text/Demos sub Heading with level 1`] = `
 <Text
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={false}
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={false}
   level="Level 7"
   required={false}
   subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
 />
 `;
 
@@ -15750,12 +15824,14 @@ exports[`Storyshots UI Components/Text/Demos sub Heading with level and center a
 <Text
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={false}
+  headingType="headline"
   isCentered={true}
   isMarkdown={false}
   isPureContent={false}
   level="Level 7"
   required={false}
   subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
 />
 `;
 
@@ -15763,11 +15839,13 @@ exports[`Storyshots UI Components/Text/Demos sub heading 1`] = `
 <Text
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={false}
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={false}
   required={false}
   subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
 />
 `;
 
@@ -15775,10 +15853,12 @@ exports[`Storyshots UI Components/Text/Demos without Heading and Sub Heading wit
 <Text
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={true}
+  headingType="headline"
   isCentered={false}
   isMarkdown={false}
   isPureContent={false}
   required={false}
+  subHeadingType="heading"
 />
 `;
 
@@ -15786,10 +15866,12 @@ exports[`Storyshots UI Components/Text/Demos without Heading and Sub Heading wit
 <Text
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
   hasDivider={true}
+  headingType="headline"
   isCentered={true}
   isMarkdown={false}
   isPureContent={false}
   required={false}
+  subHeadingType="heading"
 />
 `;
 
@@ -16992,6 +17074,21 @@ exports[`Storyshots UI Components/Typography typography sets for development ref
       className="AutoUI_ui_Typography-41"
     >
       formText
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    key="9"
+  >
+    <span
+      className="AutoUI_ui_Typography-35 AutoUI_typo-192 AutoUI_typo-53 AutoUI_typo-40"
+    >
+      The quick brown fox jumps over the lazy dog
+    </span>
+    <div
+      className="AutoUI_ui_Typography-41"
+    >
+      link
     </div>
   </div>
 </section>
