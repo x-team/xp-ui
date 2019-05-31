@@ -1,9 +1,11 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+import TruncateMarkup from 'react-truncate-markup'
 import differenceInHours from 'date-fns/difference_in_hours'
 
 import Avatar from './Avatar'
+import SvgIcon from './SvgIcon'
 import FileLinks from './FileLinks'
 import PencilButton from './PencilButton'
 import InlineEditor from './InlineEditor'
@@ -68,6 +70,31 @@ const InlineEditorWrapper = elem.div(cmz(
   `
 ))
 
+const ReadMoreWrapper = elem.div(cmz(
+  `
+    & * {
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      cursor: pointer
+    }
+
+    & div span span{
+      color: ${theme.baseRed}
+    }
+
+    & div span {
+      display: flex
+      flex-direction: row
+      align-items: center
+    }
+
+    & svg {
+      margin-left: 10px
+    }
+  `
+))
+
 const TextWrapper = elem.div(cmz(
   `
     & p:first-of-type {
@@ -117,7 +144,8 @@ type Props = {
 type State = {
   newValueIsValid: boolean,
   newValue: string,
-  isHover: boolean
+  isHover: boolean,
+  shouldTruncate: boolean
 }
 
 class Note extends PureComponent<Props, State> {
@@ -127,7 +155,8 @@ class Note extends PureComponent<Props, State> {
   state = {
     newValueIsValid: true,
     newValue: this.props.text || '',
-    isHover: false
+    isHover: false,
+    shouldTruncate: true
   }
 
   componentDidMount () {
@@ -164,14 +193,48 @@ class Note extends PureComponent<Props, State> {
     this.setState({ isHover: false })
   }
 
+  toggleTruncate = () => {
+    this.setState(prevState => ({
+      shouldTruncate: !prevState.shouldTruncate
+    }));
+  }
+
   renderPresenter = ({ activateEditingMode }: PresenterProps) => {
     this.activateEditingMode = activateEditingMode
-    const { newValue } = this.state
-    return TextWrapper(
-      RichContentWrapper(
-        <RichTextEditor initialValue={newValue} mode='viewer' />
-      )
+    const { newValue, shouldTruncate } = this.state
+    const readMore = (
+      <span>
+        {shouldTruncate && '...'}
+        {ReadMoreWrapper(
+          <div onClick={this.toggleTruncate}>
+            {shouldTruncate ? (
+              <span>
+                <span>READ MORE</span>
+                <SvgIcon icon='triangledown'/>
+              </span>): (
+              <span>
+                <span>SHOW LESS</span>
+                <SvgIcon icon='triangleup'/>
+              </span>)
+            }
+          </div>)
+        }
+      </span>
     )
+
+    return shouldTruncate ? TextWrapper(
+      RichContentWrapper(
+        <TruncateMarkup lines={3}  ellipsis={readMore}>
+          <div>{newValue}</div>
+        </TruncateMarkup>
+      )) : TextWrapper(
+        RichContentWrapper(
+          <div>
+            <div>{newValue}</div>
+            {readMore}
+          </div>
+        )
+      )
   }
 
   handleEditorValueChange = (onValueChange: (value: any) => mixed) => ({ markdown: value }: { markdown: string }) => {
