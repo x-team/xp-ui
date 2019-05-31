@@ -196,7 +196,7 @@ class Note extends PureComponent<Props, State> {
   toggleTruncate = () => {
     this.setState(prevState => ({
       shouldTruncate: !prevState.shouldTruncate
-    }));
+    }))
   }
 
   renderPresenter = ({ activateEditingMode }: PresenterProps) => {
@@ -210,13 +210,14 @@ class Note extends PureComponent<Props, State> {
             {shouldTruncate ? (
               <span>
                 <span>READ MORE</span>
-                <SvgIcon icon='triangledown'/>
-              </span>): (
+                <SvgIcon icon='triangledown' />
+              </span>
+            ) : (
               <span>
                 <span>SHOW LESS</span>
-                <SvgIcon icon='triangleup'/>
-              </span>)
-            }
+                <SvgIcon icon='triangleup' />
+              </span>
+            )}
           </div>)
         }
       </span>
@@ -224,17 +225,17 @@ class Note extends PureComponent<Props, State> {
 
     return shouldTruncate ? TextWrapper(
       RichContentWrapper(
-        <TruncateMarkup lines={3}  ellipsis={readMore}>
+        <TruncateMarkup lines={3} ellipsis={readMore}>
           <div>{newValue}</div>
         </TruncateMarkup>
       )) : TextWrapper(
-        RichContentWrapper(
-          <div>
-            <div>{newValue}</div>
-            {readMore}
-          </div>
-        )
+      RichContentWrapper(
+        <div>
+          <div>{newValue}</div>
+          {readMore}
+        </div>
       )
+    )
   }
 
   handleEditorValueChange = (onValueChange: (value: any) => mixed) => ({ markdown: value }: { markdown: string }) => {
