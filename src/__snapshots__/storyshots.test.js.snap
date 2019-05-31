@@ -56,9 +56,12 @@ exports[`Storyshots Form Components/InputField Use date field with label 1`] = `
     <Text
       content="Date Field"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <div
       className="AutoUI_forms_InputField-152"
@@ -101,9 +104,12 @@ exports[`Storyshots Form Components/InputField invalid element 1`] = `
     <Text
       content="Invalid Field"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <input
       aria-labelledby="label-invalid"
@@ -162,9 +168,12 @@ exports[`Storyshots Form Components/InputField required element 1`] = `
     <Text
       content="Required Field"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={true}
+      subHeadingType="heading"
     />
     <input
       aria-labelledby="label-required"
@@ -199,9 +208,12 @@ exports[`Storyshots Form Components/InputField standard use (text input element 
     <Text
       content="First Name"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <input
       aria-labelledby="label-name"
@@ -225,9 +237,12 @@ exports[`Storyshots Form Components/InputField standard use (text input element 
     <Text
       content="First Name"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <input
       aria-labelledby="label-name"
@@ -251,9 +266,12 @@ exports[`Storyshots Form Components/InputField standard use (with \`label\` and 
     <Text
       content="How many years of experience do you have?"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <input
       aria-labelledby="label-experience"
@@ -273,9 +291,12 @@ exports[`Storyshots Form Components/InputField standard use (with \`label\` and 
     <Text
       content="years"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={true}
       required={false}
+      subHeadingType="heading"
     />
   </label>
 </div>
@@ -302,9 +323,12 @@ exports[`Storyshots Form Components/InputField standard use (with only \`postTex
     <Text
       content="years"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={true}
       required={false}
+      subHeadingType="heading"
     />
   </div>
 </div>
@@ -318,9 +342,12 @@ exports[`Storyshots Form Components/InputField textarea element 1`] = `
     <Text
       content="What’s your availability like right now? If you’re employed and would need to give a notice, how long would that take?"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <WithAutosize(Component)
       aria-labelledby="label-availability"
@@ -345,9 +372,12 @@ exports[`Storyshots Form Components/InputField textarea element, lines limit set
     <Text
       content="Which skills have you used professionally?"
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
     <WithAutosize(Component)
       aria-labelledby="label-skills"
@@ -3049,9 +3079,12 @@ exports[`Storyshots UI Components/ApplicantScreen standard use 1`] = `
     <Text
       content="We’d love to start to get to know more about you. Please fill out these quick questions so we can introduce you to an Ambassador who will work with you 1-on-1 to get qualified to become an X-Teamer."
       hasDivider={false}
+      headingType="headline"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={true}
       required={false}
+      subHeadingType="heading"
     />
   </div>
 </div>
@@ -3094,9 +3127,12 @@ exports[`Storyshots UI Components/ApplicantScreen with milestones injected 1`] =
         content="Let’s kick things off with a warmup. To proceed, click the button below to download a short programming challenge. You can bookmark this page for later access."
         hasDivider={false}
         heading="So it begins."
+        headingType="headline"
         isCentered={false}
+        isMarkdown={false}
         isPureContent={false}
         required={false}
+        subHeadingType="heading"
       />
     </MilestonesScreen>
   </div>
@@ -4977,6 +5013,36 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
     key="14"
     style={
       Object {
+        "backgroundColor": "rgb(246, 57, 84)",
+      }
+    }
+  >
+    <div
+      className="AutoUI_ui_ColorPalette-34"
+    >
+      typoAnchor
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    key="15"
+    style={
+      Object {
+        "backgroundColor": "rgb(242, 11, 44)",
+      }
+    }
+  >
+    <div
+      className="AutoUI_ui_ColorPalette-34"
+    >
+      typoAnchorHover
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    key="16"
+    style={
+      Object {
         "backgroundColor": "rgb(52, 50, 59)",
       }
     }
@@ -4989,7 +5055,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="15"
+    key="17"
     style={
       Object {
         "backgroundColor": "rgb(184, 183, 188)",
@@ -5004,7 +5070,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="16"
+    key="18"
     style={
       Object {
         "backgroundColor": "rgb(19, 14, 46)",
@@ -5019,7 +5085,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="17"
+    key="19"
     style={
       Object {
         "backgroundColor": "rgb(90, 86, 101)",
@@ -5034,7 +5100,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="18"
+    key="20"
     style={
       Object {
         "backgroundColor": "rgb(178, 182, 188)",
@@ -5049,7 +5115,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="19"
+    key="21"
     style={
       Object {
         "backgroundColor": "rgb(178, 182, 188)",
@@ -5064,7 +5130,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="20"
+    key="22"
     style={
       Object {
         "backgroundColor": "rgb(240, 241, 244)",
@@ -5079,7 +5145,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="21"
+    key="23"
     style={
       Object {
         "backgroundColor": "rgb(145, 140, 160)",
@@ -5094,7 +5160,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="22"
+    key="24"
     style={
       Object {
         "backgroundColor": "rgb(52, 50, 59)",
@@ -5109,7 +5175,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="23"
+    key="25"
     style={
       Object {
         "backgroundColor": "rgb(230, 230, 237)",
@@ -5124,7 +5190,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="24"
+    key="26"
     style={
       Object {
         "backgroundColor": "rgb(211, 47, 59)",
@@ -5139,7 +5205,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="25"
+    key="27"
     style={
       Object {
         "backgroundColor": "rgb(247, 217, 220)",
@@ -5154,7 +5220,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="26"
+    key="28"
     style={
       Object {
         "backgroundColor": "rgb(246, 57, 84)",
@@ -5169,7 +5235,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="27"
+    key="29"
     style={
       Object {
         "backgroundColor": "rgb(228, 228, 228)",
@@ -5184,7 +5250,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="28"
+    key="30"
     style={
       Object {
         "backgroundColor": "rgb(233, 237, 238)",
@@ -5199,7 +5265,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="29"
+    key="31"
     style={
       Object {
         "backgroundColor": "rgb(240, 241, 244)",
@@ -5214,7 +5280,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="30"
+    key="32"
     style={
       Object {
         "backgroundColor": "rgb(230, 230, 237)",
@@ -5229,7 +5295,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="31"
+    key="33"
     style={
       Object {
         "backgroundColor": "rgb(246, 57, 84)",
@@ -5244,7 +5310,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="32"
+    key="34"
     style={
       Object {
         "backgroundColor": "rgb(255, 255, 255)",
@@ -5259,7 +5325,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="33"
+    key="35"
     style={
       Object {
         "backgroundColor": "rgb(52, 50, 59)",
@@ -5274,7 +5340,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="34"
+    key="36"
     style={
       Object {
         "backgroundColor": "rgb(178, 182, 188)",
@@ -5289,7 +5355,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="35"
+    key="37"
     style={
       Object {
         "backgroundColor": "rgb(52, 50, 59)",
@@ -5304,7 +5370,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="36"
+    key="38"
     style={
       Object {
         "backgroundColor": "rgb(240, 241, 244)",
@@ -5319,7 +5385,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="37"
+    key="39"
     style={
       Object {
         "backgroundColor": "rgb(92, 87, 101)",
@@ -5334,7 +5400,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="38"
+    key="40"
     style={
       Object {
         "backgroundColor": "rgb(184, 183, 188)",
@@ -5349,7 +5415,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="39"
+    key="41"
     style={
       Object {
         "backgroundColor": "rgb(179, 179, 179)",
@@ -5364,7 +5430,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="40"
+    key="42"
     style={
       Object {
         "backgroundColor": "rgb(95, 207, 33)",
@@ -5379,7 +5445,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="41"
+    key="43"
     style={
       Object {
         "backgroundColor": "rgb(248, 231, 28)",
@@ -5394,7 +5460,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="42"
+    key="44"
     style={
       Object {
         "backgroundColor": "rgb(246, 57, 84)",
@@ -5409,7 +5475,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="43"
+    key="45"
     style={
       Object {
         "backgroundColor": "rgb(196, 196, 196)",
@@ -11344,7 +11410,9 @@ exports[`Storyshots UI Components/Email HTML body test 1`] = `
   <div
     className="AutoUI_ui_Email-88 AutoUI_typo-53 AutoUI_typo-40"
   >
-    <span>
+    <span
+      key="outer"
+    >
       <font
         key="0"
         size="6"
@@ -11760,7 +11828,9 @@ exports[`Storyshots UI Components/Email initial open body 1`] = `
   <div
     className="AutoUI_ui_Email-88 AutoUI_typo-53 AutoUI_typo-40"
   >
-    <span>
+    <span
+      key="outer"
+    >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus molestie purus sed suscipit. Duis non ultricies velit, eu laoreet augue. Nullam turpis massa, scelerisque at tempus eu, placerat vitae orci. Nam at sem pellentesque, viverra risus id, volutpat nisl. In hac habitasse platea dictumst. Integer et dignissim eros. Quisque vel sem vel magna congue consectetur ac vel ex. Pellentesque pulvinar congue lacinia. Sed finibus ex non lorem sodales, ac pulvinar urna placerat. Aenean vel sodales libero, ac egestas velit. Nulla turpis dolor, dapibus ut diam sed, aliquam vestibulum nibh. In a ullamcorper libero. Pellentesque mattis, dui in molestie cursus, est risus convallis ligula, nec hendrerit sem odio eu elit. Aliquam sapien lacus, tincidunt rhoncus malesuada at, finibus non dolor. Pellentesque interdum nibh eu tempor pretium.
     </span>
   </div>
@@ -11827,7 +11897,9 @@ exports[`Storyshots UI Components/Email initial open body and content with lineb
   <div
     className="AutoUI_ui_Email-88 AutoUI_typo-53 AutoUI_typo-40"
   >
-    <div>
+    <div
+      key="outer"
+    >
       <p
         key="0"
       >
@@ -13960,9 +14032,12 @@ exports[`Storyshots UI Components/EmailFeed with error message 1`] = `
       </span>
     }
     hasDivider={true}
+    headingType="headline"
     isCentered={true}
+    isMarkdown={false}
     isPureContent={false}
     required={false}
+    subHeadingType="heading"
   />
 </Fragment>
 `;
@@ -14017,9 +14092,12 @@ exports[`Storyshots UI Components/EmailFeed with error message and refresh butto
       </span>
     }
     hasDivider={true}
+    headingType="headline"
     isCentered={true}
+    isMarkdown={false}
     isPureContent={false}
     required={false}
+    subHeadingType="heading"
   />
 </Fragment>
 `;
@@ -18499,9 +18577,12 @@ exports[`Storyshots UI Components/MilestonesScreen first step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo error hic, nemo nostrum iusto recusandae repudiandae eum doloremque necessitatibus doloribus? Provident perferendis illo totam ipsum ut sapiente, assumenda quasi!"
           hasDivider={false}
           heading="First step"
+          headingType="headline"
           isCentered={false}
+          isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -18561,9 +18642,12 @@ exports[`Storyshots UI Components/MilestonesScreen n-th step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. At suscipit dicta aliquam sint libero minima officiis alias ducimus. Fugit praesentium itaque, iure molestias aut beatae odit facilis inventore doloremque eaque."
           hasDivider={false}
           heading="First subsection"
+          headingType="headline"
           isCentered={false}
+          isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -18598,9 +18682,12 @@ exports[`Storyshots UI Components/MilestonesScreen n-th step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque iusto quisquam, sed eius optio. Obcaecati, hic! Possimus sit magnam vero laboriosam obcaecati nostrum a molestiae amet aut. Corrupti, voluptas."
           hasDivider={false}
           heading="Second subsection"
+          headingType="headline"
           isCentered={false}
+          isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -18635,9 +18722,12 @@ exports[`Storyshots UI Components/MilestonesScreen n-th step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minima aperiam dolorem natus repudiandae reprehenderit neque laudantium quasi voluptates architecto, ratione asperiores odio hic rerum alias dolores quo sint culpa!"
           hasDivider={false}
           heading="Third subsection"
+          headingType="headline"
           isCentered={false}
+          isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -18685,9 +18775,12 @@ exports[`Storyshots UI Components/MilestonesScreen second step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum numquam, beatae, distinctio fugiat eveniet harum, vel sint odit adipisci quos nam soluta pariatur, voluptatibus repudiandae hic mollitia ex iste rem."
           hasDivider={false}
           heading="First subsection"
+          headingType="headline"
           isCentered={false}
+          isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -18722,9 +18815,12 @@ exports[`Storyshots UI Components/MilestonesScreen second step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ipsa illum placeat aliquid recusandae odio minus quisquam, corporis, sed consequuntur optio fugit eaque rerum, nihil mollitia. Sequi ad nulla facere."
           hasDivider={false}
           heading="Second subsection"
+          headingType="headline"
           isCentered={false}
+          isMarkdown={false}
           isPureContent={false}
           required={false}
+          subHeadingType="heading"
         />
         <div>
           <Button
@@ -20498,8 +20594,10 @@ exports[`Storyshots UI Components/RoadmapHero basic usage 1`] = `
       heading="Your roadmap to X‑Team"
       headingType="mainHeading"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
   </div>
   <div>
@@ -20522,8 +20620,10 @@ exports[`Storyshots UI Components/RoadmapHero missing props (does component expl
       hasDivider={true}
       headingType="mainHeading"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
   </div>
   <div>
@@ -20548,8 +20648,10 @@ exports[`Storyshots UI Components/RoadmapHero with image url in props 1`] = `
       heading="Next Steps"
       headingType="mainHeading"
       isCentered={false}
+      isMarkdown={false}
       isPureContent={false}
       required={false}
+      subHeadingType="heading"
     />
   </div>
   <div>
@@ -20572,7 +20674,9 @@ exports[`Storyshots UI Components/RoadmapLevel active state 1`] = `
   <Text
     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
     hasDivider={false}
+    headingType="headline"
     isCentered={false}
+    isMarkdown={false}
     isPureContent={false}
     level="Level 1"
     required={false}
@@ -20593,7 +20697,9 @@ exports[`Storyshots UI Components/RoadmapLevel basic usage 1`] = `
   <Text
     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
     hasDivider={false}
+    headingType="headline"
     isCentered={false}
+    isMarkdown={false}
     isPureContent={false}
     level="Level 1"
     required={false}
@@ -20614,7 +20720,9 @@ exports[`Storyshots UI Components/RoadmapLevel centered state with CTA button 1`
   <Text
     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
     hasDivider={false}
+    headingType="headline"
     isCentered={true}
+    isMarkdown={false}
     isPureContent={false}
     level="Level 1"
     required={false}
@@ -33683,9 +33791,12 @@ exports[`Storyshots UI Components/SettingsImportScreen default initial view 1`] 
     content="Import profiles to a List as \\"Accepted\\" via a newline separated list of emails."
     hasDivider={true}
     heading="Import"
+    headingType="headline"
     isCentered={true}
+    isMarkdown={false}
     isPureContent={false}
     required={false}
+    subHeadingType="heading"
   />
   <ListSelector />
   <InputField
@@ -33731,9 +33842,12 @@ exports[`Storyshots UI Components/SettingsImportScreen imported view 1`] = `
     content="Import profiles to a List as \\"Accepted\\" via a newline separated list of emails."
     hasDivider={true}
     heading="Import"
+    headingType="headline"
     isCentered={true}
+    isMarkdown={false}
     isPureContent={false}
     required={false}
+    subHeadingType="heading"
   />
   <div>
     <h3>
@@ -33801,9 +33915,12 @@ exports[`Storyshots UI Components/SettingsImportScreen imported view with server
     content="Import profiles to a List as \\"Accepted\\" via a newline separated list of emails."
     hasDivider={true}
     heading="Import"
+    headingType="headline"
     isCentered={true}
+    isMarkdown={false}
     isPureContent={false}
     required={false}
+    subHeadingType="heading"
   />
   <ErrorBox
     errors={
@@ -33824,9 +33941,12 @@ exports[`Storyshots UI Components/SettingsImportScreen importing view 1`] = `
     content="Import profiles to a List as \\"Accepted\\" via a newline separated list of emails."
     hasDivider={true}
     heading="Import"
+    headingType="headline"
     isCentered={true}
+    isMarkdown={false}
     isPureContent={false}
     required={false}
+    subHeadingType="heading"
   />
   <div>
     <h3>
@@ -33867,9 +33987,12 @@ exports[`Storyshots UI Components/SettingsImportScreen validated view containing
     content="Import profiles to a List as \\"Accepted\\" via a newline separated list of emails."
     hasDivider={true}
     heading="Import"
+    headingType="headline"
     isCentered={true}
+    isMarkdown={false}
     isPureContent={false}
     required={false}
+    subHeadingType="heading"
   />
   <ListSelector
     selected={true}
@@ -33946,9 +34069,12 @@ exports[`Storyshots UI Components/SettingsImportScreen validated view containing
     content="Import profiles to a List as \\"Accepted\\" via a newline separated list of emails."
     hasDivider={true}
     heading="Import"
+    headingType="headline"
     isCentered={true}
+    isMarkdown={false}
     isPureContent={false}
     required={false}
+    subHeadingType="heading"
   />
   <ListSelector
     selected={true}
@@ -36396,13 +36522,35 @@ exports[`Storyshots UI Components/Tabs one tab 1`] = `
 </section>
 `;
 
-exports[`Storyshots UI Components/Text content with HTML tags 1`] = `
+exports[`Storyshots UI Components/Text showcase (use knobs) 1`] = `
+<Text
+  content="string"
+  hasDivider={true}
+  heading="string"
+  headingType="divider"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  level="string"
+  required={true}
+  subHeading="string"
+  subHeadingType="divider"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Debug missing props (does component explode?) 1`] = `
 <section
-  className="AutoUI_ui_Text-29"
+  className="AutoUI_ui_Text-33"
 >
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
+    className="AutoUI_ui_Text-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+  />
+</section>
+`;
+
+exports[`Storyshots UI Components/Text/Demos content with HTML tags 1`] = `
+<Text
+  content={
     <div>
       <h1>
         H1
@@ -36472,266 +36620,266 @@ exports[`Storyshots UI Components/Text content with HTML tags 1`] = `
          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque vestibulum sem id cursus. Fusce nec consequat erat. Praesent convallis aliquet augue, vel lacinia urna pretium eu. Morbi accumsan neque sit amet feugiat molestie. Aliquam erat volutpat. Cras quis dapibus risus. Proin luctus hendrerit semper. Donec finibus hendrerit ante at egestas.
       </p>
     </div>
-  </div>
-</section>
+  }
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text empty text example  1`] = `
-<section
-  className="AutoUI_ui_Text-29"
->
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  />
-</section>
+exports[`Storyshots UI Components/Text/Demos content with Markdown 1`] = `
+<Text
+  content="# Time to show off.
+
+It's great getting to know you! After you sign up, X-Teamers from our community review profiles and send invitations to those they see standing out.
+
+## Lorem Ipsum
+
+Due to high demand, we send out a limited number of invites each month, meaning we can't guarantee you'll hear from us about an interview.
+
+### Sit dolor amet
+
+Some things that [will help you stand out](http://google.com):
+
+- Experience working on large scale projects with a significant user base.
+- Strong written and spoken English.
+- A LinkedIn profile that details the projects you've worked on.
+- Availability for long-term fulltime contracts (the average contract duration is 10 months).
+
+This is _**custom content**_ btw"
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={true}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text heading 1`] = `
-<section
-  className="AutoUI_ui_Text-29"
->
-  <h1
-    className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-  >
-    Your roadmap to X-Team
-  </h1>
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos heading 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text heading with center align 1`] = `
-<section
-  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
->
-  <h1
-    className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-  >
-    Your roadmap to X-Team
-  </h1>
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos heading and sub heading with divider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text heading with center align and divider 1`] = `
-<section
-  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
->
-  <h1
-    className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-  >
-    Your roadmap to X-Team
-  </h1>
-  <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192 AutoUI_ui_Text-52"
-  />
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos heading with center align 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text heading with divider 1`] = `
-<section
-  className="AutoUI_ui_Text-29"
->
-  <h1
-    className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-  >
-    Your roadmap to X-Team
-  </h1>
-  <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192"
-  />
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos heading with center align and divider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text heading with divider and no content 1`] = `
-<section
-  className="AutoUI_ui_Text-29"
->
-  <h1
-    className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-  >
-    Your roadmap to X-Team
-  </h1>
-  <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192"
-  />
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  />
-</section>
+exports[`Storyshots UI Components/Text/Demos heading with divider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text pure content with no wrappers around 1`] = `
-<span
-  className="AutoUI_ui_Text-48 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
->
-  Just a sample text
-</span>
+exports[`Storyshots UI Components/Text/Demos heading with divider and no content 1`] = `
+<Text
+  hasDivider={true}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text pure content with no wrappers around and Required 1`] = `
-<span
-  className="AutoUI_ui_Text-48 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_Text-57"
->
-  Just a required text
-</span>
+exports[`Storyshots UI Components/Text/Demos pure content with no wrappers around 1`] = `
+<Text
+  content="Just a sample text"
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={true}
+  required={false}
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text required 1`] = `
-<section
-  className="AutoUI_ui_Text-29"
->
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_Text-57"
-  >
-    Just a required text
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos pure content with no wrappers around and Required 1`] = `
+<Text
+  content="Just a required text"
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={true}
+  required={true}
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text sub Heading with center align 1`] = `
-<section
-  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
->
-  <h2
-    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
-  >
-    Your roadmap to X-Team
-  </h2>
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos required 1`] = `
+<Text
+  content="Just a required text"
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={true}
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text sub Heading with divider 1`] = `
-<section
-  className="AutoUI_ui_Text-29"
->
-  <h2
-    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
-  >
-    Your roadmap to X-Team
-  </h2>
-  <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192"
-  />
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos sub Heading with center align 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  headingType="headline"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text sub Heading with level 1`] = `
-<section
-  className="AutoUI_ui_Text-29"
->
-  <h2
-    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
-  >
-    Your roadmap to X-Team
-  </h2>
-  <p
-    className="undefined AutoUI_typo-146 AutoUI_typo-53 AutoUI_typo-28"
-  >
-    Level 7
-  </p>
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos sub Heading with divider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text sub Heading with level and center align 1`] = `
-<section
-  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
->
-  <h2
-    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
-  >
-    Your roadmap to X-Team
-  </h2>
-  <p
-    className="undefined AutoUI_typo-146 AutoUI_typo-53 AutoUI_typo-28"
-  >
-    Level 7
-  </p>
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos sub Heading with level 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  level="Level 7"
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text sub heading 1`] = `
-<section
-  className="AutoUI_ui_Text-29"
->
-  <h2
-    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
-  >
-    Your roadmap to X-Team
-  </h2>
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos sub Heading with level and center align 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  headingType="headline"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  level="Level 7"
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text without Heading and Sub Heading with divider 1`] = `
-<section
-  className="AutoUI_ui_Text-29"
->
-  <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192"
-  />
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos sub heading 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
 `;
 
-exports[`Storyshots UI Components/Text without Heading and Sub Heading with isCentered align 1`] = `
-<section
-  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
->
-  <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192 AutoUI_ui_Text-52"
-  />
-  <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-  >
-    Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
-  </div>
-</section>
+exports[`Storyshots UI Components/Text/Demos without Heading and Sub Heading with divider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos without Heading and Sub Heading with isCentered align 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  headingType="headline"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
 `;
 
 exports[`Storyshots UI Components/TextareaEditor basic usage 1`] = `
@@ -38316,6 +38464,21 @@ exports[`Storyshots UI Components/Typography typography sets for development ref
       className="AutoUI_ui_Typography-41"
     >
       formText
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    key="9"
+  >
+    <span
+      className="AutoUI_ui_Typography-35 AutoUI_typo-192 AutoUI_typo-53 AutoUI_typo-40"
+    >
+      The quick brown fox jumps over the lazy dog
+    </span>
+    <div
+      className="AutoUI_ui_Typography-41"
+    >
+      link
     </div>
   </div>
 </section>
