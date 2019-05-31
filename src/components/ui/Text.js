@@ -112,8 +112,7 @@ class Text extends PureComponent<Props> {
     required: false
   }
 
-  get htmlContent (): ?ContentType {
-    const { content } = this.props
+  htmlContent = (content: ?ContentType): ?ContentType => {
     try {
       return markdownCompiler(content)
     } catch (err) {
@@ -136,7 +135,7 @@ class Text extends PureComponent<Props> {
       required
     } = this.props
     const requiredProps = required ? { className: contentRequired } : {}
-    const contentRender = isMarkdown ? this.htmlContent : content
+    const contentRender = isMarkdown ? this.htmlContent(content) : content
 
     if (isPureContent) {
       return PureContent(requiredProps, contentRender)
