@@ -19461,12 +19461,12 @@ exports[`Storyshots UI Components/Modal/Use cases with ListEditor 1`] = `
 
 exports[`Storyshots UI Components/Note 6 minutes ago 1`] = `
 <div
-  className="AutoUI_ui_Note-23"
+  className="AutoUI_ui_Note-22"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="AutoUI_ui_Note-28"
+    className="AutoUI_ui_Note-27"
   >
     <Avatar
       alt="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
@@ -19475,20 +19475,20 @@ exports[`Storyshots UI Components/Note 6 minutes ago 1`] = `
     />
   </div>
   <div
-    className="AutoUI_ui_Note-33"
+    className="AutoUI_ui_Note-32"
   >
     <span
-      className="AutoUI_ui_Note-47 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+      className="AutoUI_ui_Note-46 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-57 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+      className="AutoUI_ui_Note-56 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     >
       6 m ago
     </div>
     <div
-      className="AutoUI_ui_Note-67"
+      className="AutoUI_ui_Note-66"
     >
       <InlineEditor
         editor={[Function]}
@@ -19505,19 +19505,19 @@ exports[`Storyshots UI Components/Note 6 minutes ago 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-39"
+    className="AutoUI_ui_Note-38"
   />
 </div>
 `;
 
 exports[`Storyshots UI Components/Note just now 1`] = `
 <div
-  className="AutoUI_ui_Note-23"
+  className="AutoUI_ui_Note-22"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="AutoUI_ui_Note-28"
+    className="AutoUI_ui_Note-27"
   >
     <Avatar
       alt="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
@@ -19526,20 +19526,20 @@ exports[`Storyshots UI Components/Note just now 1`] = `
     />
   </div>
   <div
-    className="AutoUI_ui_Note-33"
+    className="AutoUI_ui_Note-32"
   >
     <span
-      className="AutoUI_ui_Note-47 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+      className="AutoUI_ui_Note-46 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-57 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+      className="AutoUI_ui_Note-56 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     >
       just now
     </div>
     <div
-      className="AutoUI_ui_Note-67"
+      className="AutoUI_ui_Note-66"
     >
       <InlineEditor
         editor={[Function]}
@@ -19556,54 +19556,54 @@ exports[`Storyshots UI Components/Note just now 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-39"
+    className="AutoUI_ui_Note-38"
   />
 </div>
 `;
 
 exports[`Storyshots UI Components/Note missing props (does component explode?) 1`] = `
 <div
-  className="AutoUI_ui_Note-23"
+  className="AutoUI_ui_Note-22"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="AutoUI_ui_Note-33"
+    className="AutoUI_ui_Note-32"
   >
     <div
-      className="AutoUI_ui_Note-57 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+      className="AutoUI_ui_Note-56 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     />
     <div>
       <FileLinks />
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-39"
+    className="AutoUI_ui_Note-38"
   />
 </div>
 `;
 
 exports[`Storyshots UI Components/Note no avatar, 2 hours ago 1`] = `
 <div
-  className="AutoUI_ui_Note-23"
+  className="AutoUI_ui_Note-22"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="AutoUI_ui_Note-33"
+    className="AutoUI_ui_Note-32"
   >
     <span
-      className="AutoUI_ui_Note-47 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+      className="AutoUI_ui_Note-46 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-57 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+      className="AutoUI_ui_Note-56 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     >
       2 h ago
     </div>
     <div
-      className="AutoUI_ui_Note-67"
+      className="AutoUI_ui_Note-66"
     >
       <InlineEditor
         editor={[Function]}
@@ -19620,25 +19620,25 @@ exports[`Storyshots UI Components/Note no avatar, 2 hours ago 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-39"
+    className="AutoUI_ui_Note-38"
   />
 </div>
 `;
 
 exports[`Storyshots UI Components/Note note with markdown text with break lines 1`] = `
 <div
-  className="AutoUI_ui_Note-23"
+  className="AutoUI_ui_Note-22"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="AutoUI_ui_Note-33"
+    className="AutoUI_ui_Note-32"
   >
     <div
-      className="AutoUI_ui_Note-57 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+      className="AutoUI_ui_Note-56 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     />
     <div
-      className="AutoUI_ui_Note-67"
+      className="AutoUI_ui_Note-66"
     >
       <InlineEditor
         editor={[Function]}
@@ -19660,25 +19660,25 @@ HR and *italic*
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-39"
+    className="AutoUI_ui_Note-38"
   />
 </div>
 `;
 
 exports[`Storyshots UI Components/Note note with unparseable markdown text 1`] = `
 <div
-  className="AutoUI_ui_Note-23"
+  className="AutoUI_ui_Note-22"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="AutoUI_ui_Note-33"
+    className="AutoUI_ui_Note-32"
   >
     <div
-      className="AutoUI_ui_Note-57 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+      className="AutoUI_ui_Note-56 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     />
     <div
-      className="AutoUI_ui_Note-67"
+      className="AutoUI_ui_Note-66"
     >
       <InlineEditor
         editor={[Function]}
@@ -19695,19 +19695,19 @@ exports[`Storyshots UI Components/Note note with unparseable markdown text 1`] =
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-39"
+    className="AutoUI_ui_Note-38"
   />
 </div>
 `;
 
 exports[`Storyshots UI Components/Note older than 1 day 1`] = `
 <div
-  className="AutoUI_ui_Note-23"
+  className="AutoUI_ui_Note-22"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="AutoUI_ui_Note-28"
+    className="AutoUI_ui_Note-27"
   >
     <Avatar
       alt="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
@@ -19716,20 +19716,20 @@ exports[`Storyshots UI Components/Note older than 1 day 1`] = `
     />
   </div>
   <div
-    className="AutoUI_ui_Note-33"
+    className="AutoUI_ui_Note-32"
   >
     <span
-      className="AutoUI_ui_Note-47 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+      className="AutoUI_ui_Note-46 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-57 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+      className="AutoUI_ui_Note-56 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     >
       11-11-2019
     </div>
     <div
-      className="AutoUI_ui_Note-67"
+      className="AutoUI_ui_Note-66"
     >
       <InlineEditor
         editor={[Function]}
@@ -19746,19 +19746,19 @@ exports[`Storyshots UI Components/Note older than 1 day 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-39"
+    className="AutoUI_ui_Note-38"
   />
 </div>
 `;
 
 exports[`Storyshots UI Components/Note showing note type in sub header 1`] = `
 <div
-  className="AutoUI_ui_Note-23"
+  className="AutoUI_ui_Note-22"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="AutoUI_ui_Note-28"
+    className="AutoUI_ui_Note-27"
   >
     <Avatar
       alt="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
@@ -19767,21 +19767,21 @@ exports[`Storyshots UI Components/Note showing note type in sub header 1`] = `
     />
   </div>
   <div
-    className="AutoUI_ui_Note-33"
+    className="AutoUI_ui_Note-32"
   >
     <span
-      className="AutoUI_ui_Note-47 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+      className="AutoUI_ui_Note-46 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-57 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+      className="AutoUI_ui_Note-56 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     >
       just now
       , in Interview Notes
     </div>
     <div
-      className="AutoUI_ui_Note-67"
+      className="AutoUI_ui_Note-66"
     >
       <InlineEditor
         editor={[Function]}
@@ -19798,19 +19798,19 @@ exports[`Storyshots UI Components/Note showing note type in sub header 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-39"
+    className="AutoUI_ui_Note-38"
   />
 </div>
 `;
 
 exports[`Storyshots UI Components/Note showing read more and show less 1`] = `
 <div
-  className="AutoUI_ui_Note-23"
+  className="AutoUI_ui_Note-22"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <div
-    className="AutoUI_ui_Note-28"
+    className="AutoUI_ui_Note-27"
   >
     <Avatar
       alt="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
@@ -19819,21 +19819,21 @@ exports[`Storyshots UI Components/Note showing read more and show less 1`] = `
     />
   </div>
   <div
-    className="AutoUI_ui_Note-33"
+    className="AutoUI_ui_Note-32"
   >
     <span
-      className="AutoUI_ui_Note-47 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+      className="AutoUI_ui_Note-46 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-57 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+      className="AutoUI_ui_Note-56 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
     >
       just now
       , in Interview Notes
     </div>
     <div
-      className="AutoUI_ui_Note-67"
+      className="AutoUI_ui_Note-66"
     >
       <InlineEditor
         editor={[Function]}
@@ -19842,7 +19842,7 @@ exports[`Storyshots UI Components/Note showing read more and show less 1`] = `
         onCancel={[Function]}
         presenter={[Function]}
         shouldSaveOnEnter={false}
-        value="Do you **remember** the Shire, Mr. **Frodo**? It'll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they'll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries?"
+        value="Do you **remember** the Shire, Mr. **Frodo**? It'll be spring soon. And the orchards will be in blossom. And the birds will be nesting in the hazel thicket. And they'll be sowing the summer barley in the lower fields... and eating the first of the strawberries with cream. Do you remember the taste of strawberries? It'll be spring soon. And the orchards will be in blossom. It'll be spring soon. And the orchards will be in blossom. It'll be spring soon. And the orchards will be in blossom. It'll be spring soon. And the orchards will be in blossom. It'll be spring soon. And the orchards will be in blossom."
       />
     </div>
     <div>
@@ -19850,7 +19850,7 @@ exports[`Storyshots UI Components/Note showing read more and show less 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Note-39"
+    className="AutoUI_ui_Note-38"
   />
 </div>
 `;
