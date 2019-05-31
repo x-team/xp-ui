@@ -188,6 +188,22 @@ export default {
     `
   ),
 
+  // default links
+  link: cmz(
+    textRendering,
+    typeface.text,
+    `
+      & {
+        color: ${theme.typoAnchor}
+        text-decoration: none
+      }
+
+      &:hover {
+        color: ${theme.typoAnchorHover}
+      }
+    `
+  ),
+
   // text divider
   divider: cmz(`
     & {
