@@ -8,8 +8,8 @@ import Text from './Text'
 const StoryText = ({
   heading,
   subHeading,
-  headingType,
-  subHeadingType,
+  headingType = 'headline',
+  subHeadingType = 'heading',
   content,
   isMarkdown,
   isCentered,
