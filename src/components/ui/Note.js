@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import Truncate from 'react-truncate'
 import differenceInHours from 'date-fns/difference_in_hours'
 
@@ -209,15 +209,15 @@ class Note extends PureComponent<Props, State> {
         {ReadMoreWrapper(
           <div onClick={this.toggleTruncate}>
             {shouldTruncate ? (
-              <React.Fragment>
+              <Fragment>
                 <span>Read More</span>
                 <SvgIcon icon='triangledown' />
-              </React.Fragment>
+              </Fragment>
             ) : (
-              <React.Fragment>
+              <Fragment>
                 <span>Show Less</span>
                 <SvgIcon icon='triangleup' />
-              </React.Fragment>
+              </Fragment>
             )}
           </div>)
         }
