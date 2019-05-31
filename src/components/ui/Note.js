@@ -72,18 +72,19 @@ const InlineEditorWrapper = elem.div(cmz(
 
 const ReadMoreWrapper = elem.div(cmz(
   `
-    & * {
+    & {
       display: flex
       flex-direction: column
       align-items: flex-end
       cursor: pointer
     }
 
-    & div span span{
+    & div span{
       color: ${theme.baseRed}
+      text-transform: uppercase
     }
 
-    & div span {
+    & div{
       display: flex
       flex-direction: row
       align-items: center
@@ -208,15 +209,15 @@ class Note extends PureComponent<Props, State> {
         {ReadMoreWrapper(
           <div onClick={this.toggleTruncate}>
             {shouldTruncate ? (
-              <span>
-                <span>READ MORE</span>
+              <React.Fragment>
+                <span>Read More</span>
                 <SvgIcon icon='triangledown' />
-              </span>
+              </React.Fragment>
             ) : (
-              <span>
-                <span>SHOW LESS</span>
+              <React.Fragment>
+                <span>Show Less</span>
                 <SvgIcon icon='triangleup' />
-              </span>
+              </React.Fragment>
             )}
           </div>)
         }
