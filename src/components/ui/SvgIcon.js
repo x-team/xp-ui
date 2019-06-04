@@ -15,7 +15,7 @@ type Props = {
   hover?: Color
 }
 
-const styles = {
+const getStyles = () => ({
   stroke: {
     default: cmz(`
       & {
@@ -184,12 +184,10 @@ const styles = {
       }
     `)
   }
-}
+})
 
-const getIcon = ({ icon, color, hover, ...rest }) => {
-  if (!icon) {
-    return null
-  }
+export const getIcons = ({ color, hover, ...rest }: { [x: string]: any } = {}) => {
+  const styles = getStyles()
   const strokeClassName = [styles.stroke[color], styles.strokeHover[hover || color]].join(' ')
   const fillClassName = [styles.fill[color], styles.fillHover[hover || color]].join(' ')
   const icons = {
@@ -701,6 +699,14 @@ const getIcon = ({ icon, color, hover, ...rest }) => {
     )
   }
 
+  return icons
+}
+
+const getIcon = ({ icon, ...rest }) => {
+  if (!icon) {
+    return null
+  }
+  const icons = getIcons(rest)
   return icons[icon]
 }
 

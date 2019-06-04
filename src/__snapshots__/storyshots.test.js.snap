@@ -20157,47 +20157,47 @@ exports[`Storyshots UI Components/PencilButton/Hover Colors monochrome hover col
 
 exports[`Storyshots UI Components/ProfileHeaderLinks basic usage 1`] = `
 <ul
-  className="AutoUI_ui_ProfileHeaderLinks-12"
+  className="AutoUI_ui_ProfileHeaderLinks-12 AutoUI_ui_ProfileHeaderLinks-22"
 >
   <li
-    className="AutoUI_ui_ProfileHeaderLinks-25"
+    className="AutoUI_ui_ProfileHeaderLinks-32"
     key="#link1"
   >
     <span
-      className="AutoUI_ui_ProfileHeaderLinks-30"
+      className="AutoUI_ui_ProfileHeaderLinks-37"
       onClick={[Function]}
     >
       Link 1
     </span>
   </li>
   <li
-    className="AutoUI_ui_ProfileHeaderLinks-25"
+    className="AutoUI_ui_ProfileHeaderLinks-32"
     key="#link2"
   >
     <span
-      className="AutoUI_ui_ProfileHeaderLinks-30"
+      className="AutoUI_ui_ProfileHeaderLinks-37"
       onClick={[Function]}
     >
       Link 2
     </span>
   </li>
   <li
-    className="AutoUI_ui_ProfileHeaderLinks-25"
+    className="AutoUI_ui_ProfileHeaderLinks-32"
     key="http://localhost:8000/"
   >
     <span
-      className="AutoUI_ui_ProfileHeaderLinks-30"
+      className="AutoUI_ui_ProfileHeaderLinks-37"
       onClick={[Function]}
     >
       External Link
     </span>
   </li>
   <li
-    className="AutoUI_ui_ProfileHeaderLinks-25"
+    className="AutoUI_ui_ProfileHeaderLinks-32"
     key="0/.0"
   >
     <div
-      className="AutoUI_ui_ProfileHeaderLinks-48"
+      className="AutoUI_ui_ProfileHeaderLinks-55"
     >
       <button>
         any extra
@@ -20205,11 +20205,11 @@ exports[`Storyshots UI Components/ProfileHeaderLinks basic usage 1`] = `
     </div>
   </li>
   <li
-    className="AutoUI_ui_ProfileHeaderLinks-25"
+    className="AutoUI_ui_ProfileHeaderLinks-32"
     key="1/.1"
   >
     <div
-      className="AutoUI_ui_ProfileHeaderLinks-48"
+      className="AutoUI_ui_ProfileHeaderLinks-55"
     >
       <button>
         elements here
@@ -20221,7 +20221,7 @@ exports[`Storyshots UI Components/ProfileHeaderLinks basic usage 1`] = `
 
 exports[`Storyshots UI Components/ProfileHeaderLinks missing props (does component explode?) 1`] = `
 <ul
-  className="AutoUI_ui_ProfileHeaderLinks-12"
+  className="AutoUI_ui_ProfileHeaderLinks-12 AutoUI_ui_ProfileHeaderLinks-22"
 />
 `;
 
@@ -37875,6 +37875,59 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen
     }
   >
     <StoryTwoColumnsLayout />
+  </StoryAdminScreen>
+</div>
+`;
+
+exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen and with link in the sidebar heading 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <StoryAdminScreen>
+    <StoryTwoColumnsLayout
+      contentHeading={
+        <ProfileHeaderLinks
+          links={
+            Array [
+              Object {
+                "hash": "#link1",
+                "label": "Link 1",
+              },
+              Object {
+                "hash": "#link2",
+                "label": "Link 2",
+              },
+              Object {
+                "label": "External Link",
+                "url": "http://localhost:8000/",
+              },
+            ]
+          }
+          smaller={true}
+        />
+      }
+      sidebarHeading={
+        <a
+          href="#"
+        >
+          A link in the sidebar heading
+        </a>
+      }
+      sidebarWidth={425}
+    />
   </StoryAdminScreen>
 </div>
 `;

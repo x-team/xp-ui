@@ -53,9 +53,17 @@ const cx = {
   `),
 
   sidebarHeadingText: cmz(`
-    margin: 0 15px
-    overflow: hidden
-    text-overflow: ellipsis
+    & {
+      margin: 0 10px
+      overflow: hidden
+      text-overflow: ellipsis
+    }
+
+    & a,
+    & a:hover {
+      color: inherit
+      text-decoration: none
+    }
   `),
 
   sidebarBody: cmz(`
@@ -97,6 +105,12 @@ const cx = {
     margin: 0 20px 0 0
     overflow: hidden
     text-overflow: ellipsis
+  `),
+
+  contentHeadingElement: cmz(typeface.extraHeading, `
+    width: 100%
+    height: auto
+    background-color: ${theme.baseBright}
   `),
 
   contentBody: cmz(`
@@ -160,11 +174,15 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
 
     return (
       <div className={cx.content}>
-        {contentHeading && (
+        {contentHeading && typeof contentHeading === 'string' ? (
           <div className={cx.contentHeading}>
             <div className={cx.contentHeadingText}>
               {contentHeading}
             </div>
+          </div>
+        ) : (
+          <div className={cx.contentHeadingElement}>
+            {contentHeading}
           </div>
         )}
         <div className={cx.contentBody} {...contentIdAttr}>

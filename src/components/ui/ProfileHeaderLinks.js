@@ -16,10 +16,17 @@ const cx = {
     flex-wrap: wrap
     width: 100%
     margin: 0
+    z-index: 3
+  `),
+
+  normal: cmz(`
     padding: 20px 0 10px
     background-color: ${theme.baseBright}
     border-bottom: 1px solid ${theme.lineSilver1}
-    z-index: 3
+  `),
+
+  smaller: cmz(`
+    padding: 10px 0 0
   `),
 
   itemWrapper: cmz(`
@@ -126,8 +133,9 @@ class ProfileHeaderLinks extends PureComponent<Props, State> {
   }
 
   render () {
+    const classNames = [cx.header, this.props.smaller ? cx.smaller : cx.normal].join(' ')
     return (
-      <ul className={cx.header}>
+      <ul className={classNames}>
         {this.renderLinks()}
         {this.renderChildren()}
       </ul>
