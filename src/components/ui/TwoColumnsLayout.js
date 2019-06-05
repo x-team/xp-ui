@@ -34,7 +34,7 @@ const cx = {
   sidebarHeading: cmz(typeface.extraHeading, `
     color: ${theme.typoHighlightOnDarkBackground}
     text-transform: uppercase
-    font-size: 1.0625rem
+    font-size: 0.9375rem
     width: 100%
     height: 58px
     background-color: ${theme.baseBright}
@@ -47,6 +47,7 @@ const cx = {
     & {
       margin: 0 10px 0 15px
     }
+
     & svg {
       display: block
     }
@@ -57,6 +58,10 @@ const cx = {
       margin: 0 10px
       overflow: hidden
       text-overflow: ellipsis
+    }
+
+    &:only-of-type {
+      margin: 0 10px 0 30px
     }
 
     & a,

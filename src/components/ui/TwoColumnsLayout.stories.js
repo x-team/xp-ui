@@ -10,6 +10,7 @@ import { getIcons } from './SvgIcon.js'
 
 const icons = getIcons()
 const availableIcons = Object.keys(icons).reduce((acc, cur) => ({ ...acc, [cur]: cur }), {})
+availableIcons.none = ''
 
 const sampleSidebar = Array(80).fill('Anything goes in the sidebar body').map((each, i) => <div key={`sidebar-${i}`}>{each}</div>)
 const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
@@ -29,7 +30,6 @@ export const StoryTwoColumnsLayout = (props) => (
     sidebar={props.sidebar || sampleSidebar}
     sidebarHeading={text('Sidebar Heading', props.sidebarHeading || 'Filters')}
     sidebarWidth={number('Sidebar Width', props.sidebarWidth || 385)}
-    // sidebarIcon={text('Sidebar Icon', props.sidebarIcon || 'filters')}
     sidebarIcon={select('Sidebar Icon', availableIcons, 'filters')}
     scrollableSidebar={boolean('Scrollable Sidebar', props.scrollableSidebar !== undefined ? props.scrollableSidebar : true)}
     content={props.content || sampleContent}
@@ -114,10 +114,11 @@ storiesOf('UI Components/TwoColumnsLayout/Debug', module)
       </StoryAdminScreen>
     </Body>
   ))
-  .add('composed in AdminScreen and with link in the sidebar heading', () => (
+  .add('composed in AdminScreen and with no icon and with link in the sidebar heading', () => (
     <Body>
       <StoryAdminScreen>
         <StoryTwoColumnsLayout
+          sidebarIcon='none' // workaround for empty string using knobs
           sidebarWidth={425}
           sidebarHeading={(
             <a href='#'>A link in the sidebar heading</a>

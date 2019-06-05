@@ -37879,7 +37879,7 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen
 </div>
 `;
 
-exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen and with link in the sidebar heading 1`] = `
+exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen and with no icon and with link in the sidebar heading 1`] = `
 <div
   style={
     Object {
@@ -37926,6 +37926,7 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen
           A link in the sidebar heading
         </a>
       }
+      sidebarIcon="none"
       sidebarWidth={425}
     />
   </StoryAdminScreen>
