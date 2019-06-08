@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 
 import SvgIcon from './SvgIcon'
 
@@ -32,15 +32,22 @@ const cx = {
   `),
 
   sidebarHeading: cmz(typeface.extraHeading, `
-    color: ${theme.typoHighlightOnDarkBackground}
-    text-transform: uppercase
-    font-size: 0.9375rem
-    width: 100%
-    height: 58px
-    background-color: ${theme.baseBright}
-    border-bottom: 1px solid ${theme.lineSilver2}
-    display: flex
-    align-items: center
+    & {
+      text-transform: uppercase
+      font-size: 0.9375rem
+      width: 100%
+      height: 58px
+      background-color: ${theme.baseBright}
+      border-bottom: 1px solid ${theme.lineSilver2}
+      display: flex
+      align-items: center
+    }
+
+    &,
+    &:hover {
+      color: ${theme.typoHighlightOnDarkBackground}
+      text-decoration: none
+    }
   `),
 
   sidebarHeadingIcon: cmz(`
@@ -54,21 +61,9 @@ const cx = {
   `),
 
   sidebarHeadingText: cmz(`
-    & {
-      margin: 0 10px
-      overflow: hidden
-      text-overflow: ellipsis
-    }
-
-    &:only-of-type {
-      margin: 0 10px 0 30px
-    }
-
-    & a,
-    & a:hover {
-      color: inherit
-      text-decoration: none
-    }
+    margin: 0 10px
+    overflow: hidden
+    text-overflow: ellipsis
   `),
 
   sidebarBody: cmz(`
@@ -129,6 +124,7 @@ const cx = {
 type Props = {
   sidebar: Element<*>,
   sidebarHeading: string,
+  sidebarHeadingLink?: string,
   sidebarWidth: number,
   sidebarIcon: Icon,
   scrollableSidebar: boolean,
@@ -150,21 +146,33 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
   }
 
   renderSidebar = () => {
-    const { sidebar, sidebarHeading, sidebarWidth, sidebarIcon, scrollableSidebar } = this.props
+    const { sidebar, sidebarHeading, sidebarHeadingLink, sidebarWidth, sidebarIcon, scrollableSidebar } = this.props
+
+    const renderHeadingText = () => (
+      <Fragment>
+        {sidebarIcon && (
+          <div className={cx.sidebarHeadingIcon}>
+            <SvgIcon icon={sidebarIcon} color='frenchGrayDarker' />
+          </div>
+        )}
+        <div className={cx.sidebarHeadingText}>
+          {sidebarHeading}
+        </div>
+      </Fragment>
+    )
 
     return (
       <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
         {sidebarHeading && (
-          <div className={cx.sidebarHeading}>
-            {sidebarIcon && (
-              <div className={cx.sidebarHeadingIcon}>
-                <SvgIcon icon={sidebarIcon} color='frenchGrayDarker' />
-              </div>
-            )}
-            <div className={cx.sidebarHeadingText}>
-              {sidebarHeading}
+          sidebarHeadingLink ? (
+            <a href={sidebarHeadingLink} className={cx.sidebarHeading}>
+              {renderHeadingText()}
+            </a>
+          ) : (
+            <div className={cx.sidebarHeading}>
+              {renderHeadingText()}
             </div>
-          </div>
+          )
         )}
         <div className={[cx.sidebarBody, scrollableSidebar ? cx.scrollableSidebar : cx.nonScrollableSidebar].join(' ')}>
           {sidebar}

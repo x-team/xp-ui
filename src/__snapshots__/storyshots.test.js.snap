@@ -34732,6 +34732,10 @@ exports[`Storyshots UI Components/SvgIcon basic color 1`] = `
     color="default"
     icon="filters"
   />
+  <SvgIcon
+    color="default"
+    icon="arrowleft"
+  />
 </div>
 `;
 
@@ -34893,6 +34897,10 @@ exports[`Storyshots UI Components/SvgIcon grayscale color 1`] = `
     color="grayscale"
     icon="filters"
   />
+  <SvgIcon
+    color="grayscale"
+    icon="arrowleft"
+  />
 </div>
 `;
 
@@ -35053,6 +35061,10 @@ exports[`Storyshots UI Components/SvgIcon grayscarpaflow color 1`] = `
   <SvgIcon
     color="grayscarpaflow"
     icon="filters"
+  />
+  <SvgIcon
+    color="grayscarpaflow"
+    icon="arrowleft"
   />
 </div>
 `;
@@ -35254,6 +35266,11 @@ exports[`Storyshots UI Components/SvgIcon hover color 1`] = `
     hover="default"
     icon="filters"
   />
+  <SvgIcon
+    color="text"
+    hover="default"
+    icon="arrowleft"
+  />
 </div>
 `;
 
@@ -35421,6 +35438,10 @@ exports[`Storyshots UI Components/SvgIcon inverted color 1`] = `
     color="inverted"
     icon="filters"
   />
+  <SvgIcon
+    color="inverted"
+    icon="arrowleft"
+  />
 </div>
 `;
 
@@ -35584,6 +35605,10 @@ exports[`Storyshots UI Components/SvgIcon monochrome color 1`] = `
     color="monochrome"
     icon="filters"
   />
+  <SvgIcon
+    color="monochrome"
+    icon="arrowleft"
+  />
 </div>
 `;
 
@@ -35744,6 +35769,10 @@ exports[`Storyshots UI Components/SvgIcon muted gray color 1`] = `
   <SvgIcon
     color="mutedgray"
     icon="filters"
+  />
+  <SvgIcon
+    color="mutedgray"
+    icon="arrowleft"
   />
 </div>
 `;
@@ -36101,6 +36130,15 @@ exports[`Storyshots UI Components/SvgIcon rest of props 1`] = `
       }
     }
   />
+  <SvgIcon
+    color="default"
+    icon="arrowleft"
+    style={
+      Object {
+        "marginRight": "30px",
+      }
+    }
+  />
 </div>
 `;
 
@@ -36261,6 +36299,10 @@ exports[`Storyshots UI Components/SvgIcon text gray color 1`] = `
   <SvgIcon
     color="text"
     icon="filters"
+  />
+  <SvgIcon
+    color="text"
+    icon="arrowleft"
   />
 </div>
 `;
@@ -37879,7 +37921,7 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen
 </div>
 `;
 
-exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen and with no icon and with link in the sidebar heading 1`] = `
+exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen and with with link in the sidebar heading 1`] = `
 <div
   style={
     Object {
@@ -37919,14 +37961,9 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen
           smaller={true}
         />
       }
-      sidebarHeading={
-        <a
-          href="#"
-        >
-          A link in the sidebar heading
-        </a>
-      }
-      sidebarIcon="none"
+      sidebarHeading="A link in the sidebar heading"
+      sidebarHeadingLink="?anything"
+      sidebarIcon="arrowleft"
       sidebarWidth={425}
     />
   </StoryAdminScreen>

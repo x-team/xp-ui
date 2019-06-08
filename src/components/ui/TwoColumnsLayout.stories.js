@@ -10,7 +10,6 @@ import { getIcons } from './SvgIcon.js'
 
 const icons = getIcons()
 const availableIcons = Object.keys(icons).reduce((acc, cur) => ({ ...acc, [cur]: cur }), {})
-availableIcons.none = ''
 
 const sampleSidebar = Array(80).fill('Anything goes in the sidebar body').map((each, i) => <div key={`sidebar-${i}`}>{each}</div>)
 const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
@@ -29,8 +28,9 @@ export const StoryTwoColumnsLayout = (props) => (
   <TwoColumnsLayout
     sidebar={props.sidebar || sampleSidebar}
     sidebarHeading={text('Sidebar Heading', props.sidebarHeading || 'Filters')}
+    sidebarHeadingLink={text('Sidebar Heading Link', props.sidebarHeadingLink || '')}
     sidebarWidth={number('Sidebar Width', props.sidebarWidth || 385)}
-    sidebarIcon={select('Sidebar Icon', availableIcons, 'filters')}
+    sidebarIcon={select('Sidebar Icon', availableIcons, props.sidebarIcon || 'filters')}
     scrollableSidebar={boolean('Scrollable Sidebar', props.scrollableSidebar !== undefined ? props.scrollableSidebar : true)}
     content={props.content || sampleContent}
     contentHeading={text('Content Heading', props.contentHeading || 'Search')}
@@ -114,15 +114,14 @@ storiesOf('UI Components/TwoColumnsLayout/Debug', module)
       </StoryAdminScreen>
     </Body>
   ))
-  .add('composed in AdminScreen and with no icon and with link in the sidebar heading', () => (
+  .add('composed in AdminScreen and with with link in the sidebar heading', () => (
     <Body>
       <StoryAdminScreen>
         <StoryTwoColumnsLayout
-          sidebarIcon='none' // workaround for empty string using knobs
+          sidebarIcon='arrowleft'
           sidebarWidth={425}
-          sidebarHeading={(
-            <a href='#'>A link in the sidebar heading</a>
-          )}
+          sidebarHeading='A link in the sidebar heading'
+          sidebarHeadingLink='?anything'
           contentHeading={(
             <ProfileHeaderLinks
               smaller
