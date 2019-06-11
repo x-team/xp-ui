@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text, boolean, number, select } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
 import ProfileHeaderLinks from './ProfileHeaderLinks'
@@ -121,7 +122,7 @@ storiesOf('UI Components/TwoColumnsLayout/Debug', module)
           sidebarIcon='arrowleft'
           sidebarWidth={425}
           sidebarHeading='A link in the sidebar heading'
-          sidebarHeadingLink='?anything'
+          sidebarHeadingLink={action('Sidebar heading route redirection')}
           contentHeading={(
             <ProfileHeaderLinks
               smaller

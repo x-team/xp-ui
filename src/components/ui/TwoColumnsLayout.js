@@ -50,6 +50,10 @@ const cx = {
     }
   `),
 
+  sidebarHeadingLink: cmz(`
+    cursor: pointer
+  `),
+
   sidebarHeadingIcon: cmz(`
     & {
       margin: 0 10px 0 15px
@@ -165,7 +169,7 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
       <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
         {sidebarHeading && (
           sidebarHeadingLink ? (
-            <a href={sidebarHeadingLink} className={cx.sidebarHeading}>
+            <a onClick={sidebarHeadingLink} className={[cx.sidebarHeading, cx.sidebarHeadingLink].join(' ')}>
               {renderHeadingText()}
             </a>
           ) : (

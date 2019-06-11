@@ -37962,7 +37962,7 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen
         />
       }
       sidebarHeading="A link in the sidebar heading"
-      sidebarHeadingLink="?anything"
+      sidebarHeadingLink={[Function]}
       sidebarIcon="arrowleft"
       sidebarWidth={425}
     />
