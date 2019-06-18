@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import ApplicantGrid from './ApplicantGrid'
 import { StoryApplicantBadge } from './ApplicantBadge.stories'
 
-const getApplicantBadges = () => Array(25).fill('').map((each, index) => (
+export const getApplicantBadges = () => Array(25).fill('').map((each, index) => (
   <StoryApplicantBadge active={index === 1} />
 ))
 
