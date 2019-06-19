@@ -15201,142 +15201,50 @@ exports[`Storyshots UI Components/FilterTag basic usage 1`] = `
 `;
 
 exports[`Storyshots UI Components/Filters example of complete composition 1`] = `
-<Container>
-  <Container
-    bodyWrapper={[Function]}
-    headerWrapper={[Function]}
-    initialExpanded={true}
-    onChange={[Function]}
-  >
-    <Header>
-      <Heading>
-        Context Filters
-      </Heading>
-    </Header>
-    <Body>
-      <Group>
-        <Label>
-          Show
-        </Label>
-        <Container
-          contentWrapper={[Function]}
-          defaultActiveKey="list"
-          headWrapper={[Function]}
-          onChange={[Function]}
-        >
-          <Head
-            tabKey="list"
-          >
-            <TabButton
-              text="list"
-            />
-          </Head>
-          <Head
-            tabKey="all"
-          >
-            <TabButton
-              text="All Applicants"
-            />
-          </Head>
-          <Pane
-            tabKey="list"
-          >
-            <Filter
-              label="List"
-            >
-              <SelectBoxFilterContainer
-                placeholder="List"
-              />
-            </Filter>
-            <Filter
-              label="List Members"
-            >
-              <State
-                initialState={
-                  Object {
-                    "cb": true,
-                  }
-                }
-              >
-                <Component />
-              </State>
-              <br />
-              <State
-                initialState={
-                  Object {
-                    "cb": true,
-                  }
-                }
-              >
-                <Component />
-              </State>
-            </Filter>
-          </Pane>
-          <Pane
-            tabKey="all"
-          >
-            <Filter
-              label="Accept / Exclude To"
-            >
-              <SelectBoxFilterContainer
-                placeholder="List"
-              />
-            </Filter>
-          </Pane>
-        </Container>
-      </Group>
-    </Body>
-  </Container>
-  <Container
-    bodyWrapper={[Function]}
-    headerWrapper={[Function]}
-    initialExpanded={true}
-    onChange={[Function]}
-  >
-    <Header>
-      <Heading>
-        Search Filters
-      </Heading>
-    </Header>
-    <Body>
-      <Group>
-        <Filter
-          label="Status"
-        >
-          <SelectBoxFilterContainer
-            placeholder="Status"
-          />
-        </Filter>
-        <Filter
-          label="Available Before"
-        >
-          <InputFilterContainer
-            type="date"
-          />
-        </Filter>
-        <Filter
-          label="Timezone"
-        >
-          <SelectBoxFilterContainer
-            placeholder="Timezone"
-          />
-        </Filter>
-        <Filter
-          label="Max Rate"
-        >
-          <InputFilterContainer
-            type="number"
-          />
-        </Filter>
-      </Group>
-    </Body>
-  </Container>
-</Container>
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <StoryFilters />
+</div>
+`;
+
+exports[`Storyshots UI Components/Filters example of complete composition with accordion effect 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <StoryFiltersWithAccordion />
+</div>
 `;
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Container (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Container-16"
+  className="AutoUI_ui_Filters_Container-17 "
 />
 `;
 
@@ -15351,16 +15259,16 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Filter (does c
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Group (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Group-16"
+  className="AutoUI_ui_Filters_Group-14"
 />
 `;
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Heading-21 AutoUI_typo-22"
+  className="AutoUI_ui_Filters_Heading-21 AutoUI_typo-22 AutoUI_ui_Filters_Heading-44"
 >
   <div
-    className="AutoUI_ui_Filters_Heading-40"
+    className="AutoUI_ui_Filters_Heading-50"
   />
   <SvgIcon
     color="grayscarpaflow"
@@ -15373,6 +15281,16 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Label (does co
 <div
   className="AutoUI_ui_Filters_Label-17 AutoUI_typo-34"
 />
+`;
+
+exports[`Storyshots UI Components/Filters/Debug missing props for SubHeading (does components explode?) 1`] = `
+<div
+  className="AutoUI_ui_Filters_SubHeading-19 AutoUI_typo-22"
+>
+  <div
+    className="AutoUI_ui_Filters_SubHeading-41"
+  />
+</div>
 `;
 
 exports[`Storyshots UI Components/Filters/Debug missing props for TabButton (does components explode?) 1`] = `
@@ -16059,35 +15977,91 @@ exports[`Storyshots UI Components/GenericCollapsible basic usage 1`] = `
       onClick={[Function]}
     >
       <ExampleHeader
-        text="Collapsed Header"
+        text="Collapsed Header (click to toggle content visibility)"
       />
     </Header>
   </headerWrapper>
-  <bodyWrapper>
-    <Body
-      isExpanded={false}
-      key=".$.1"
-    >
+</Fragment>
+`;
+
+exports[`Storyshots UI Components/GenericCollapsible basic usage with accordion effect 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "100%",
+    }
+  }
+>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={true}
+    isAccordion={true}
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 1"
+      />
+    </Header>
+    <Body>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </Body>
-  </bodyWrapper>
-</Fragment>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 2"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 3"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+</div>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible missing props for Body (does component explode?) 1`] = `""`;
+exports[`Storyshots UI Components/GenericCollapsible/Debug missing props for Body (does component explode?) 1`] = `""`;
 
-exports[`Storyshots UI Components/GenericCollapsible missing props for Container (does component explode?) 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug missing props for Container (does component explode?) 1`] = `
 <Fragment>
   <headerWrapper />
-  <bodyWrapper />
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible missing props for Header (does component explode?) 1`] = `""`;
+exports[`Storyshots UI Components/GenericCollapsible/Debug missing props for Header (does component explode?) 1`] = `""`;
 
-exports[`Storyshots UI Components/GenericCollapsible with HTML tag for header 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with HTML tag for header 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16100,20 +16074,10 @@ exports[`Storyshots UI Components/GenericCollapsible with HTML tag for header 1`
       </h1>
     </Header>
   </headerWrapper>
-  <bodyWrapper>
-    <Body
-      isExpanded={false}
-      key=".$.1"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </Body>
-  </bodyWrapper>
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with custom wrappers for header and body 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with custom wrappers for header and body 1`] = `
 <Fragment>
   <HeaderWrapper>
     <Header
@@ -16126,20 +16090,10 @@ exports[`Storyshots UI Components/GenericCollapsible with custom wrappers for he
       />
     </Header>
   </HeaderWrapper>
-  <BodyWrapper>
-    <Body
-      isExpanded={false}
-      key=".$.1"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </Body>
-  </BodyWrapper>
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with elements that not are child of Header or Body (These components should not appear) 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with elements that not are child of Header or Body (these components should not appear) 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16152,20 +16106,10 @@ exports[`Storyshots UI Components/GenericCollapsible with elements that not are 
       />
     </Header>
   </headerWrapper>
-  <bodyWrapper>
-    <Body
-      isExpanded={false}
-      key=".$.2"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </Body>
-  </bodyWrapper>
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with initial expanded 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with initial expanded 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16174,7 +16118,7 @@ exports[`Storyshots UI Components/GenericCollapsible with initial expanded 1`] =
       onClick={[Function]}
     >
       <ExampleHeader
-        text="Collapsed Header"
+        text="Collapsed Header (click to toggle content visibility)"
       />
     </Header>
   </headerWrapper>
@@ -16191,7 +16135,7 @@ exports[`Storyshots UI Components/GenericCollapsible with initial expanded 1`] =
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with nested GenericCollapsibles 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with nested GenericCollapsibles 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16204,34 +16148,10 @@ exports[`Storyshots UI Components/GenericCollapsible with nested GenericCollapsi
       </h1>
     </Header>
   </headerWrapper>
-  <bodyWrapper>
-    <Body
-      isExpanded={false}
-      key=".$.1"
-    >
-      <Container
-        bodyWrapper={[Function]}
-        headerWrapper={[Function]}
-        initialExpanded={false}
-        onChange={[Function]}
-      >
-        <Header>
-          <h2>
-            Second Level
-          </h2>
-        </Header>
-        <Body>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </Body>
-      </Container>
-    </Body>
-  </bodyWrapper>
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with onChange event 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with onChange event 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16240,24 +16160,14 @@ exports[`Storyshots UI Components/GenericCollapsible with onChange event 1`] = `
       onClick={[Function]}
     >
       <ExampleHeader
-        text="Collapsed Header"
+        text="Collapsed Header (click to toggle content visibility)"
       />
     </Header>
   </headerWrapper>
-  <bodyWrapper>
-    <Body
-      isExpanded={false}
-      key=".$.1"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </Body>
-  </bodyWrapper>
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with other UI components 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with other UI components 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16270,42 +16180,10 @@ exports[`Storyshots UI Components/GenericCollapsible with other UI components 1`
       />
     </Header>
   </headerWrapper>
-  <bodyWrapper>
-    <Body
-      isExpanded={false}
-      key=".$.1"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <Button
-        block={false}
-        className=""
-        color="normal"
-        component="button"
-        contentStyle="normal"
-        disabled={false}
-        icon=""
-        iconProps={Object {}}
-        outlined={false}
-        pseudolink={false}
-        raised={false}
-        readOnly={false}
-        rounded={false}
-        selectbox={false}
-        selected={false}
-        size="normal"
-        smallRounded={false}
-        wide={false}
-      >
-        Accept
-      </Button>
-    </Body>
-  </bodyWrapper>
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with several HTML tags for header 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with several HTML tags for header 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16324,16 +16202,6 @@ exports[`Storyshots UI Components/GenericCollapsible with several HTML tags for 
       </div>
     </Header>
   </headerWrapper>
-  <bodyWrapper>
-    <Body
-      isExpanded={false}
-      key=".$.1"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </Body>
-  </bodyWrapper>
 </Fragment>
 `;
 

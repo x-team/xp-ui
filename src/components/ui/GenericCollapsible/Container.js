@@ -10,8 +10,17 @@ import Body from './Body'
 import type { Props as HeaderProps } from './Header'
 import type { Props as BodyProps } from './Body'
 
+const cmz = require('cmz')
+
+const cx = {
+  accordionBody: cmz(`
+    overflow-y: auto
+  `)
+}
+
 type Props = {
   initialExpanded: boolean,
+  isAccordion?: boolean,
   children?: Element<*>,
   bodyWrapper: ComponentType<*>,
   headerWrapper: ComponentType<*>,
@@ -21,10 +30,10 @@ type Props = {
 type State = {
   isExpanded: boolean
 }
-
 class Container extends Component<Props, State> {
   static defaultProps = {
     initialExpanded: false,
+    isAccordion: false,
     headerWrapper: (props: { children: Element<*> }) => <Fragment>{props.children}</Fragment>,
     bodyWrapper: (props: { children: Element<*> }) => <Fragment>{props.children}</Fragment>,
     onChange: () => {}
@@ -41,8 +50,11 @@ class Container extends Component<Props, State> {
   }
 
   toggleExpanded = (isExpanded: boolean) => {
-    this.props.onChange(isExpanded)
-    this.setState({ isExpanded })
+    const { isAccordion } = this.props
+    if (!isAccordion || (isAccordion && isExpanded)) {
+      this.props.onChange(isExpanded)
+      this.setState({ isExpanded })
+    }
   }
 
   handleHeaderChild = (child: Element<*>) =>
@@ -56,16 +68,29 @@ class Container extends Component<Props, State> {
     componentType: ComponentType<HeaderProps> | ComponentType<BodyProps>
   ) => React.Children.toArray(children).find((child: Element<*>) => child.type === componentType)
 
+  renderBody = () => {
+    const { children, bodyWrapper: BodyWrapper } = this.props
+    return (
+      <BodyWrapper>
+        {React.Children.map(this.getChildrenByType(children, Body), this.handleBodyChild)}
+      </BodyWrapper>
+    )
+  }
+
   render () {
-    const { children, bodyWrapper: BodyWrapper, headerWrapper: HeaderWrapper } = this.props
+    const { children, headerWrapper: HeaderWrapper } = this.props
     return (
       <Fragment>
         <HeaderWrapper>
           {React.Children.map(this.getChildrenByType(children, Header), this.handleHeaderChild)}
         </HeaderWrapper>
-        <BodyWrapper>
-          {React.Children.map(this.getChildrenByType(children, Body), this.handleBodyChild)}
-        </BodyWrapper>
+        {this.state.isExpanded && (
+          this.props.isAccordion ? (
+            <div className={cx.accordionBody}>
+              {this.renderBody()}
+            </div>
+          ) : this.renderBody()
+        )}
       </Fragment>
     )
   }

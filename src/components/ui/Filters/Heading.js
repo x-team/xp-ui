@@ -21,6 +21,7 @@ const cx = {
   heading: cmz(typeface.extraHeading, `
     & {
       align-items: center
+      border-top: 1px solid ${theme.lineSilver2}
       border-bottom: 1px solid ${theme.lineSilver2}
       color: ${theme.typoHighlightOnDarkBackground}
       cursor: pointer
@@ -28,11 +29,20 @@ const cx = {
       font-size: 1.0625rem
       padding: 24px 60px
       text-transform: uppercase
-      display: flex
       box-sizing: border-box
     }
 
+    &:first-of-type {
+      border-top: none
+    }
+
     &:last-of-type {
+      border-bottom: none
+    }
+  `),
+
+  headingCollapsed: cmz(`
+    &:first-of-type {
       border-bottom: none
     }
   `),
@@ -43,7 +53,7 @@ const cx = {
 }
 
 const Heading = (props: Props) => (
-  <div onClick={props.onClick} className={cx.heading}>
+  <div onClick={props.onClick} className={props.isExpanded ? cx.heading : `${cx.heading} ${cx.headingCollapsed}`}>
     <div className={cx.text}>
       {props.children}
     </div>
