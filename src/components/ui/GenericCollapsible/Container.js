@@ -10,14 +10,6 @@ import Body from './Body'
 import type { Props as HeaderProps } from './Header'
 import type { Props as BodyProps } from './Body'
 
-const cmz = require('cmz')
-
-const cx = {
-  accordionBody: cmz(`
-    overflow-y: auto
-  `)
-}
-
 type Props = {
   initialExpanded: boolean,
   isAccordion?: boolean,
@@ -61,36 +53,23 @@ class Container extends Component<Props, State> {
     React.cloneElement(child, { isExpanded: this.state.isExpanded, onClick: this.toggleExpanded })
 
   handleBodyChild = (child: Element<*>) =>
-    React.cloneElement(child, { isExpanded: this.state.isExpanded })
+    React.cloneElement(child, { isExpanded: this.state.isExpanded, isAccordion: this.props.isAccordion })
 
   getChildrenByType = (
     children: ChildrenArray<*>,
     componentType: ComponentType<HeaderProps> | ComponentType<BodyProps>
   ) => React.Children.toArray(children).find((child: Element<*>) => child.type === componentType)
 
-  renderBody = () => {
-    const { children, bodyWrapper: BodyWrapper } = this.props
-    return (
-      <BodyWrapper>
-        {React.Children.map(this.getChildrenByType(children, Body), this.handleBodyChild)}
-      </BodyWrapper>
-    )
-  }
-
   render () {
-    const { children, headerWrapper: HeaderWrapper } = this.props
+    const { children, headerWrapper: HeaderWrapper, bodyWrapper: BodyWrapper } = this.props
     return (
       <Fragment>
         <HeaderWrapper>
           {React.Children.map(this.getChildrenByType(children, Header), this.handleHeaderChild)}
         </HeaderWrapper>
-        {this.state.isExpanded && (
-          this.props.isAccordion ? (
-            <div className={cx.accordionBody}>
-              {this.renderBody()}
-            </div>
-          ) : this.renderBody()
-        )}
+        <BodyWrapper>
+          {React.Children.map(this.getChildrenByType(children, Body), this.handleBodyChild)}
+        </BodyWrapper>
       </Fragment>
     )
   }
