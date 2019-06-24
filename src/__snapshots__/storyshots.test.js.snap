@@ -15981,6 +15981,17 @@ exports[`Storyshots UI Components/GenericCollapsible basic usage 1`] = `
       />
     </Header>
   </headerWrapper>
+  <bodyWrapper>
+    <Body
+      isAccordion={false}
+      isExpanded={false}
+      key=".$.1"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </bodyWrapper>
 </Fragment>
 `;
 
@@ -16051,11 +16062,16 @@ exports[`Storyshots UI Components/GenericCollapsible basic usage with accordion 
 </div>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible/Debug missing props for Body (does component explode?) 1`] = `""`;
+exports[`Storyshots UI Components/GenericCollapsible/Debug missing props for Body (does component explode?) 1`] = `
+<div
+  className="AutoUI_ui_GenericCollapsible_Body-10 "
+/>
+`;
 
 exports[`Storyshots UI Components/GenericCollapsible/Debug missing props for Container (does component explode?) 1`] = `
 <Fragment>
   <headerWrapper />
+  <bodyWrapper />
 </Fragment>
 `;
 
@@ -16074,6 +16090,17 @@ exports[`Storyshots UI Components/GenericCollapsible/Debug with HTML tag for hea
       </h1>
     </Header>
   </headerWrapper>
+  <bodyWrapper>
+    <Body
+      isAccordion={false}
+      isExpanded={false}
+      key=".$.1"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </bodyWrapper>
 </Fragment>
 `;
 
@@ -16090,6 +16117,17 @@ exports[`Storyshots UI Components/GenericCollapsible/Debug with custom wrappers 
       />
     </Header>
   </HeaderWrapper>
+  <BodyWrapper>
+    <Body
+      isAccordion={false}
+      isExpanded={false}
+      key=".$.1"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </BodyWrapper>
 </Fragment>
 `;
 
@@ -16106,6 +16144,17 @@ exports[`Storyshots UI Components/GenericCollapsible/Debug with elements that no
       />
     </Header>
   </headerWrapper>
+  <bodyWrapper>
+    <Body
+      isAccordion={false}
+      isExpanded={false}
+      key=".$.2"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </bodyWrapper>
 </Fragment>
 `;
 
@@ -16124,6 +16173,7 @@ exports[`Storyshots UI Components/GenericCollapsible/Debug with initial expanded
   </headerWrapper>
   <bodyWrapper>
     <Body
+      isAccordion={false}
       isExpanded={true}
       key=".$.1"
     >
@@ -16148,6 +16198,32 @@ exports[`Storyshots UI Components/GenericCollapsible/Debug with nested GenericCo
       </h1>
     </Header>
   </headerWrapper>
+  <bodyWrapper>
+    <Body
+      isAccordion={false}
+      isExpanded={false}
+      key=".$.1"
+    >
+      <Container
+        bodyWrapper={[Function]}
+        headerWrapper={[Function]}
+        initialExpanded={false}
+        isAccordion={false}
+        onChange={[Function]}
+      >
+        <Header>
+          <h2>
+            Second Level
+          </h2>
+        </Header>
+        <Body>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </Body>
+      </Container>
+    </Body>
+  </bodyWrapper>
 </Fragment>
 `;
 
@@ -16164,6 +16240,17 @@ exports[`Storyshots UI Components/GenericCollapsible/Debug with onChange event 1
       />
     </Header>
   </headerWrapper>
+  <bodyWrapper>
+    <Body
+      isAccordion={false}
+      isExpanded={false}
+      key=".$.1"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </bodyWrapper>
 </Fragment>
 `;
 
@@ -16180,6 +16267,39 @@ exports[`Storyshots UI Components/GenericCollapsible/Debug with other UI compone
       />
     </Header>
   </headerWrapper>
+  <bodyWrapper>
+    <Body
+      isAccordion={false}
+      isExpanded={false}
+      key=".$.1"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <Button
+        block={false}
+        className=""
+        color="normal"
+        component="button"
+        contentStyle="normal"
+        disabled={false}
+        icon=""
+        iconProps={Object {}}
+        outlined={false}
+        pseudolink={false}
+        raised={false}
+        readOnly={false}
+        rounded={false}
+        selectbox={false}
+        selected={false}
+        size="normal"
+        smallRounded={false}
+        wide={false}
+      >
+        Accept
+      </Button>
+    </Body>
+  </bodyWrapper>
 </Fragment>
 `;
 
@@ -16202,6 +16322,17 @@ exports[`Storyshots UI Components/GenericCollapsible/Debug with several HTML tag
       </div>
     </Header>
   </headerWrapper>
+  <bodyWrapper>
+    <Body
+      isAccordion={false}
+      isExpanded={false}
+      key=".$.1"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </bodyWrapper>
 </Fragment>
 `;
 
