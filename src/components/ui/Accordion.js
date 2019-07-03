@@ -23,7 +23,7 @@ const cx = {
     display: flex
     flex-direction: column
     height: 100%
-  `),
+  `)
 }
 
 type State = {
@@ -49,10 +49,10 @@ class Accordion extends Component<Props, State> {
   ) => React.Children.toArray(children).filter((child: Element<*>) => child.type === componentType)
 
   handleGenericCollapsibleContainerChild = (child: Element<*>, index: number) =>
-    React.cloneElement(child, { 
+    React.cloneElement(child, {
       isAccordion: true,
       initialExpanded: this.state.currentExpandedChild === index,
-      onChange: () => this.handleExpandChild(index)  
+      onChange: () => this.handleExpandChild(index)
     })
 
   render () {
