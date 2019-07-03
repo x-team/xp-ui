@@ -11,6 +11,7 @@ import type { Element } from 'react'
 
 export type Props = {
   children: Element<*>,
+  extra: Element<*>,
   isExpanded: boolean,
   onClick: (event: any) => void
 }
@@ -49,6 +50,10 @@ const cx = {
 
   text: cmz(`
     width: 100%
+  `),
+
+  arrow: cmz(`
+    flex-shrink: 0
   `)
 }
 
@@ -57,10 +62,13 @@ const Heading = (props: Props) => (
     <div className={cx.text}>
       {props.children}
     </div>
-    <SvgIcon
-      icon={props.isExpanded ? 'triangleup' : 'triangledown'}
-      color='grayscarpaflow'
-    />
+    {props.extra}
+    <div className={cx.arrow}>
+      <SvgIcon
+        icon={props.isExpanded ? 'triangleup' : 'triangledown'}
+        color='grayscarpaflow'
+      />
+    </div>
   </div>
 )
 
