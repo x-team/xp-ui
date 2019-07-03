@@ -10,7 +10,7 @@ import Body from './Body'
 import type { Props as HeaderProps } from './Header'
 import type { Props as BodyProps } from './Body'
 
-type Props = {
+export type Props = {
   initialExpanded: boolean,
   isAccordion?: boolean,
   children?: Element<*>,
