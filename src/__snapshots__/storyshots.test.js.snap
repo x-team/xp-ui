@@ -16336,6 +16336,358 @@ exports[`Storyshots UI Components/GenericCollapsible/Debug with several HTML tag
 </Fragment>
 `;
 
+exports[`Storyshots UI Components/GenericCollapsibleAccordion basic usage 1`] = `
+<div
+  className="AutoUI_ui_GenericCollapsibleAccordion-20"
+>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={true}
+    isAccordion={true}
+    key=".$.0"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 1"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    key=".$.1"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 2"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    key=".$.2"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 3"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+</div>
+`;
+
+exports[`Storyshots UI Components/GenericCollapsibleAccordion usage with alternate default index 1`] = `
+<div
+  className="AutoUI_ui_GenericCollapsibleAccordion-20"
+>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    key=".$.0"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 1"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    key=".$.1"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 2"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={true}
+    isAccordion={true}
+    key=".$.2"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 3"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+</div>
+`;
+
+exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with children that are not GenericCollapsible Containers (these components should not appear) 1`] = `
+<div
+  className="AutoUI_ui_GenericCollapsibleAccordion-20"
+>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={true}
+    isAccordion={true}
+    key=".$.0"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header"
+      />
+    </Header>
+    <Button
+      block={false}
+      className=""
+      color="normal"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      outlined={false}
+      pseudolink={false}
+      raised={false}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="normal"
+      smallRounded={false}
+      wide={false}
+    >
+      Button outside the header
+    </Button>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    key=".$.2"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header"
+      />
+    </Header>
+    <Button
+      block={false}
+      className=""
+      color="normal"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      outlined={false}
+      pseudolink={false}
+      raised={false}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="normal"
+      smallRounded={false}
+      wide={false}
+    >
+      Button outside the header
+    </Button>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+</div>
+`;
+
+exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with out of bounds defaultActiveIndex (should default to 0) 1`] = `
+<div
+  className="AutoUI_ui_GenericCollapsibleAccordion-20"
+>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={true}
+    isAccordion={true}
+    key=".$.0"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header (click to toggle content visibility)"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    key=".$.1"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header (click to toggle content visibility)"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+</div>
+`;
+
+exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with valid defaultActiveIndex 1`] = `
+<div
+  className="AutoUI_ui_GenericCollapsibleAccordion-20"
+>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    key=".$.0"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header (click to toggle content visibility)"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={true}
+    isAccordion={true}
+    key=".$.1"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header (click to toggle content visibility)"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+</div>
+`;
+
+exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug without defaultActiveIndex 1`] = `
+<div
+  className="AutoUI_ui_GenericCollapsibleAccordion-20"
+>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={true}
+    isAccordion={true}
+    key=".$.0"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header (click to toggle content visibility)"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    key=".$.1"
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header (click to toggle content visibility)"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+</div>
+`;
+
 exports[`Storyshots UI Components/GenericCopyToClipboard basic usage 1`] = `
 <div
   style={
