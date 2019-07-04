@@ -1,18 +1,18 @@
 // @flow
-import React from 'react';
-import ReactAvatar from 'react-avatar';
-import VisibilitySensor from 'react-visibility-sensor';
+import React from 'react'
+import ReactAvatar from 'react-avatar'
+import VisibilitySensor from 'react-visibility-sensor'
 
-import theme from '../../styles/theme';
+import theme from '../../styles/theme'
 
-const cmz = require('cmz');
+const cmz = require('cmz')
 
 const cx = {
   avatarSizeConstraint: cmz(`
     max-width: 100%
     max-height: 100%
   `)
-};
+}
 
 type Props = {
   alt?: string,
@@ -21,13 +21,13 @@ type Props = {
 };
 
 const Avatar = (props: Props) => {
-  const { alt, src, size } = props;
-  let imgSrc = null;
+  const { alt, src, size } = props
+  let imgSrc = null
 
   return (
     <VisibilitySensor>
       {({ isVisible }) => {
-        if (isVisible) imgSrc = src;
+        if (isVisible) imgSrc = src
 
         return (
           <ReactAvatar
@@ -40,15 +40,15 @@ const Avatar = (props: Props) => {
             size={size}
             round
           />
-        );
+        )
       }}
     </VisibilitySensor>
-  );
-};
+  )
+}
 
 Avatar.defaultProps = {
   size: 64,
   alt: ''
-};
+}
 
-export default Avatar;
+export default Avatar
