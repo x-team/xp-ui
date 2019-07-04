@@ -11,7 +11,7 @@ import type { Props as GenericCollapsibleContainerProps } from './GenericCollaps
 
 export type Props = {
   children: Element<*>,
-  initialExpandedChild: number,
+  defaultActiveIndex: number,
 }
 
 const cmz = require('cmz')
@@ -30,13 +30,21 @@ type State = {
   currentExpandedChild: number
 }
 
-class Accordion extends Component<Props, State> {
+class GenericCollapsibleAccordion extends Component<Props, State> {
   static defaultProps = {
-    initialExpandedChild: 0
+    defaultActiveIndex: 0
   }
 
   state = {
-    currentExpandedChild: this.props.initialExpandedChild
+    currentExpandedChild: this.props.defaultActiveIndex
+  }
+
+  componentDidMount = () => {
+    let { children } = this.props
+    let childrenCount = React.Children.count(this.getChildrenByType(children, GenericCollapsible.Container))
+    if (this.state.currentExpandedChild >= childrenCount) {
+      this.setState({ currentExpandedChild: 0 })
+    }
   }
 
   handleExpandChild = (index: number) => {
@@ -65,4 +73,4 @@ class Accordion extends Component<Props, State> {
   }
 }
 
-export default Accordion
+export default GenericCollapsibleAccordion
