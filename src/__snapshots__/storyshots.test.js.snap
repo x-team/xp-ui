@@ -3658,85 +3658,150 @@ exports[`Storyshots UI Components/AttachFiles same file name 1`] = `
 `;
 
 exports[`Storyshots UI Components/Avatar 64x64 size 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name="I am Batman!"
-  round={true}
-  size={64}
-  src="http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png"
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar 128x128 size 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name="I am Batman!"
-  round={true}
-  size={128}
-  src="http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png"
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar alt text, 32x32 size 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name="I am Batman!"
-  round={true}
-  size={32}
-  src="https://www.gravatar.com/avatar/61a58e425da620d1f4839c6af03ce70f"
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar basic usage 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name=""
-  round={true}
-  size={64}
-  src="http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png"
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar missing props (does component explode?) 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name=""
-  round={true}
-  size={64}
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar with not reachable image source 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name="X P"
-  round={true}
-  size={32}
-  src="https://x-team.com/some-path-that-doesn-exists.png"
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar without image source 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name="X P"
-  round={true}
-  size={32}
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Button/Color Options default state 1`] = `
