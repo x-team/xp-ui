@@ -23,11 +23,15 @@ type Props = {
 const Avatar = (props: Props) => {
   const { alt, src, size } = props
   let imgSrc = null
+  let visibleCounter = 0
 
   return (
     <VisibilitySensor>
       {({ isVisible }) => {
-        if (isVisible) imgSrc = src
+        if (isVisible && visibleCounter === 0) {
+          imgSrc = src
+          visibleCounter++
+        }
 
         return (
           <ReactAvatar
