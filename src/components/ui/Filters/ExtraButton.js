@@ -1,4 +1,5 @@
 // @flow
+/* globals HTMLDivElement SyntheticMouseEvent */
 
 import React from 'react'
 
@@ -36,7 +37,7 @@ const cx = {
 }
 
 const ExtraButton = (props: Props) => {
-  const handleClick = (event) => {
+  const handleClick = (event: SyntheticMouseEvent<HTMLDivElement>) => {
     event.stopPropagation()
     props.onClick()
   }
