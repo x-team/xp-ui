@@ -16345,7 +16345,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion basic usage 1`] = 
     headerWrapper={[Function]}
     initialExpanded={true}
     isAccordion={true}
-    key=".$.0"
+    key=".0"
     onChange={[Function]}
   >
     <Header>
@@ -16364,7 +16364,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion basic usage 1`] = 
     headerWrapper={[Function]}
     initialExpanded={false}
     isAccordion={true}
-    key=".$.1"
+    key=".1"
     onChange={[Function]}
   >
     <Header>
@@ -16383,7 +16383,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion basic usage 1`] = 
     headerWrapper={[Function]}
     initialExpanded={false}
     isAccordion={true}
-    key=".$.2"
+    key=".2"
     onChange={[Function]}
   >
     <Header>
@@ -16409,7 +16409,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion usage with alterna
     headerWrapper={[Function]}
     initialExpanded={false}
     isAccordion={true}
-    key=".$.0"
+    key=".0"
     onChange={[Function]}
   >
     <Header>
@@ -16428,7 +16428,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion usage with alterna
     headerWrapper={[Function]}
     initialExpanded={false}
     isAccordion={true}
-    key=".$.1"
+    key=".1"
     onChange={[Function]}
   >
     <Header>
@@ -16447,7 +16447,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion usage with alterna
     headerWrapper={[Function]}
     initialExpanded={true}
     isAccordion={true}
-    key=".$.2"
+    key=".2"
     onChange={[Function]}
   >
     <Header>
@@ -16464,7 +16464,81 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion usage with alterna
 </div>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with children that are not GenericCollapsible Containers (these components should not appear) 1`] = `
+exports[`Storyshots UI Components/GenericCollapsibleAccordion usage with controlled prop 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "100%",
+    }
+  }
+>
+  <GenericCollapsibleAccordion
+    activeIndex={0}
+    controlled={true}
+    defaultActiveIndex={0}
+    onChange={[Function]}
+  >
+    <Container
+      bodyWrapper={[Function]}
+      headerWrapper={[Function]}
+      initialExpanded={false}
+      isAccordion={false}
+      onChange={[Function]}
+    >
+      <Header>
+        <ExampleHeader
+          text="Collapsed Header 1"
+        />
+      </Header>
+      <Body>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </Body>
+    </Container>
+    <Container
+      bodyWrapper={[Function]}
+      headerWrapper={[Function]}
+      initialExpanded={false}
+      isAccordion={false}
+      onChange={[Function]}
+    >
+      <Header>
+        <ExampleHeader
+          text="Collapsed Header 2"
+        />
+      </Header>
+      <Body>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </Body>
+    </Container>
+    <Container
+      bodyWrapper={[Function]}
+      headerWrapper={[Function]}
+      initialExpanded={false}
+      isAccordion={false}
+      onChange={[Function]}
+    >
+      <Header>
+        <ExampleHeader
+          text="Collapsed Header 3"
+        />
+      </Header>
+      <Body>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </Body>
+    </Container>
+  </GenericCollapsibleAccordion>
+</div>
+`;
+
+exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with children that are not GenericCollapsible Containers 1`] = `
 <div
   className="AutoUI_ui_GenericCollapsibleAccordion-20"
 >
@@ -16473,7 +16547,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with childre
     headerWrapper={[Function]}
     initialExpanded={true}
     isAccordion={true}
-    key=".$.0"
+    key=".0"
     onChange={[Function]}
   >
     <Header>
@@ -16514,7 +16588,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with childre
     headerWrapper={[Function]}
     initialExpanded={false}
     isAccordion={true}
-    key=".$.2"
+    key=".1"
     onChange={[Function]}
   >
     <Header>
@@ -16550,6 +16624,32 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with childre
       </p>
     </Body>
   </Container>
+  <Button
+    block={false}
+    className=""
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    initialExpanded={false}
+    isAccordion={true}
+    key=".2"
+    onChange={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
+  >
+    Button outside the body content
+  </Button>
 </div>
 `;
 
@@ -16562,7 +16662,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with out of 
     headerWrapper={[Function]}
     initialExpanded={true}
     isAccordion={true}
-    key=".$.0"
+    key=".0"
     onChange={[Function]}
   >
     <Header>
@@ -16581,7 +16681,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with out of 
     headerWrapper={[Function]}
     initialExpanded={false}
     isAccordion={true}
-    key=".$.1"
+    key=".1"
     onChange={[Function]}
   >
     <Header>
@@ -16607,7 +16707,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with valid d
     headerWrapper={[Function]}
     initialExpanded={false}
     isAccordion={true}
-    key=".$.0"
+    key=".0"
     onChange={[Function]}
   >
     <Header>
@@ -16626,7 +16726,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug with valid d
     headerWrapper={[Function]}
     initialExpanded={true}
     isAccordion={true}
-    key=".$.1"
+    key=".1"
     onChange={[Function]}
   >
     <Header>
@@ -16652,7 +16752,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug without defa
     headerWrapper={[Function]}
     initialExpanded={true}
     isAccordion={true}
-    key=".$.0"
+    key=".0"
     onChange={[Function]}
   >
     <Header>
@@ -16671,7 +16771,7 @@ exports[`Storyshots UI Components/GenericCollapsibleAccordion/Debug without defa
     headerWrapper={[Function]}
     initialExpanded={false}
     isAccordion={true}
-    key=".$.1"
+    key=".1"
     onChange={[Function]}
   >
     <Header>

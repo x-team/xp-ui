@@ -4,14 +4,14 @@ import React, { Component } from 'react'
 
 import theme from '../../styles/theme'
 
-import GenericCollapsible from './GenericCollapsible'
-
-import type { Element, ComponentType, ChildrenArray } from 'react'
-import type { Props as GenericCollapsibleContainerProps } from './GenericCollapsible/Container'
+import type { Element } from 'react'
 
 export type Props = {
   children: Element<*>,
-  defaultActiveIndex: number,
+  controlled?: boolean,
+  defaultActiveIndex?: number,
+  onChange?: (index?: number) => void,
+  activeIndex?: number
 }
 
 const cmz = require('cmz')
@@ -27,6 +27,7 @@ const cx = {
 }
 
 type State = {
+  isControlled: boolean,
   currentExpandedChild: number
 }
 
@@ -36,30 +37,32 @@ class GenericCollapsibleAccordion extends Component<Props, State> {
   }
 
   state = {
-    currentExpandedChild: this.props.defaultActiveIndex
+    isControlled: this.props.controlled || false,
+    currentExpandedChild: this.props.defaultActiveIndex || 0
   }
 
   componentDidMount = () => {
-    let { children } = this.props
-    let childrenCount = React.Children.count(this.getChildrenByType(children, GenericCollapsible.Container))
-    if (this.state.currentExpandedChild >= childrenCount) {
-      this.setState({ currentExpandedChild: 0 })
+    if (!this.state.isControlled) {
+      let { children } = this.props
+      let childrenCount = React.Children.count(children)
+      if (this.state.currentExpandedChild >= childrenCount) {
+        this.setState({ currentExpandedChild: 0 })
+      }
     }
   }
 
   handleExpandChild = (index: number) => {
-    this.setState({ currentExpandedChild: index })
+    if (this.state.isControlled && this.props.onChange) {
+      this.props.onChange(index)
+    } else {
+      this.setState({ currentExpandedChild: index })
+    }
   }
-
-  getChildrenByType = (
-    children: ChildrenArray<*>,
-    componentType: ComponentType<GenericCollapsibleContainerProps>
-  ) => React.Children.toArray(children).filter((child: Element<*>) => child.type === componentType)
 
   handleGenericCollapsibleContainerChild = (child: Element<*>, index: number) =>
     React.cloneElement(child, {
       isAccordion: true,
-      initialExpanded: this.state.currentExpandedChild === index,
+      initialExpanded: this.state.isControlled ? index === this.props.activeIndex : this.state.currentExpandedChild === index,
       onChange: () => this.handleExpandChild(index)
     })
 
@@ -67,7 +70,7 @@ class GenericCollapsibleAccordion extends Component<Props, State> {
     const { children } = this.props
     return (
       <div className={cx.accordion}>
-        {React.Children.map(this.getChildrenByType(children, GenericCollapsible.Container), this.handleGenericCollapsibleContainerChild)}
+        {React.Children.map(children, this.handleGenericCollapsibleContainerChild)}
       </div>
     )
   }
