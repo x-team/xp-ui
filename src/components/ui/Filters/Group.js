@@ -2,8 +2,6 @@
 
 import React from 'react'
 
-import theme from '../../../styles/theme'
-
 import type { Element } from 'react'
 
 export type Props = {
@@ -17,7 +15,6 @@ const cx = {
     & {
       margin-top: 25px
       padding-bottom: 20px
-      border-bottom: 1px solid ${theme.lineSilver2}
       box-sizing: border-box
     }
 

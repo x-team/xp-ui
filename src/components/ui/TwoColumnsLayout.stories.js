@@ -1,10 +1,16 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, boolean, number } from '@storybook/addon-knobs'
+import { text, boolean, number, select } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
+import ProfileHeaderLinks from './ProfileHeaderLinks'
 import { StoryAdminScreen } from './AdminScreen.stories'
 import { StoryFilters } from './Filters/Filters.stories'
+import { getIcons } from './SvgIcon.js'
+
+const icons = getIcons()
+const availableIcons = Object.keys(icons).reduce((acc, cur) => ({ ...acc, [cur]: cur }), {})
 
 const sampleSidebar = Array(80).fill('Anything goes in the sidebar body').map((each, i) => <div key={`sidebar-${i}`}>{each}</div>)
 const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
@@ -23,8 +29,9 @@ export const StoryTwoColumnsLayout = (props) => (
   <TwoColumnsLayout
     sidebar={props.sidebar || sampleSidebar}
     sidebarHeading={text('Sidebar Heading', props.sidebarHeading || 'Filters')}
+    sidebarHeadingLink={text('Sidebar Heading Link', props.sidebarHeadingLink || '')}
     sidebarWidth={number('Sidebar Width', props.sidebarWidth || 385)}
-    sidebarIcon={text('Sidebar Icon', props.sidebarIcon || 'filters')}
+    sidebarIcon={select('Sidebar Icon', availableIcons, props.sidebarIcon || 'filters')}
     scrollableSidebar={boolean('Scrollable Sidebar', props.scrollableSidebar !== undefined ? props.scrollableSidebar : true)}
     content={props.content || sampleContent}
     contentHeading={text('Content Heading', props.contentHeading || 'Search')}
@@ -105,6 +112,31 @@ storiesOf('UI Components/TwoColumnsLayout/Debug', module)
         }}
       >
         <StoryTwoColumnsLayout />
+      </StoryAdminScreen>
+    </Body>
+  ))
+  .add('composed in AdminScreen and with with link in the sidebar heading', () => (
+    <Body>
+      <StoryAdminScreen>
+        <StoryTwoColumnsLayout
+          sidebarIcon='arrowleft'
+          sidebarWidth={425}
+          sidebarHeading='A link in the sidebar heading'
+          sidebarHeadingLink={action('Sidebar heading route redirection')}
+          contentHeading={(
+            <ProfileHeaderLinks
+              smaller
+              links={[
+                { label: 'Link 1', hash: '#link1' },
+                { label: 'Link 2', hash: '#link2' },
+                {
+                  label: 'External Link',
+                  url: 'http://localhost:8000/'
+                }
+              ]}
+            />
+          )}
+        />
       </StoryAdminScreen>
     </Body>
   ))

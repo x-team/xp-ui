@@ -2,6 +2,8 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
+import State from '../../../utils/State'
+
 import Button from '../Button'
 
 import GenericCollapsible from '.'
@@ -33,17 +35,65 @@ storiesOf('UI Components/GenericCollapsible', module)
   .add('basic usage', () => (
     <GenericCollapsible.Container>
       <GenericCollapsible.Header>
-        <ExampleHeader text='Collapsed Header' />
+        <ExampleHeader text='Collapsed Header (click to toggle content visibility)' />
       </GenericCollapsible.Header>
       <GenericCollapsible.Body>
         <p>{exampleText}</p>
       </GenericCollapsible.Body>
     </GenericCollapsible.Container>
   ))
+  .add('basic usage with accordion effect', () => (
+    <State initialState={{ expanded: 'example1' }}>
+      {({ setState, state }) => (
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+          <GenericCollapsible.Container
+            isAccordion
+            initialExpanded={state.expanded === 'example1'}
+            onChange={() => setState(prev => ({ expanded: 'example1' }))}
+          >
+            <GenericCollapsible.Header>
+              <ExampleHeader text='Collapsed Header 1' />
+            </GenericCollapsible.Header>
+            <GenericCollapsible.Body>
+              <p>{exampleText}</p>
+            </GenericCollapsible.Body>
+          </GenericCollapsible.Container>
+
+          <GenericCollapsible.Container
+            isAccordion
+            initialExpanded={state.expanded === 'example2'}
+            onChange={() => setState(prev => ({ expanded: 'example2' }))}
+          >
+            <GenericCollapsible.Header>
+              <ExampleHeader text='Collapsed Header 2' />
+            </GenericCollapsible.Header>
+            <GenericCollapsible.Body>
+              <p>{exampleText}</p>
+            </GenericCollapsible.Body>
+          </GenericCollapsible.Container>
+
+          <GenericCollapsible.Container
+            isAccordion
+            initialExpanded={state.expanded === 'example3'}
+            onChange={() => setState(prev => ({ expanded: 'example3' }))}
+          >
+            <GenericCollapsible.Header>
+              <ExampleHeader text='Collapsed Header 3' />
+            </GenericCollapsible.Header>
+            <GenericCollapsible.Body>
+              <p>{exampleText}</p>
+            </GenericCollapsible.Body>
+          </GenericCollapsible.Container>
+        </div>
+      )}
+    </State>
+  ))
+
+storiesOf('UI Components/GenericCollapsible/Debug', module)
   .add('with initial expanded', () => (
     <GenericCollapsible.Container initialExpanded>
       <GenericCollapsible.Header>
-        <ExampleHeader text='Collapsed Header' />
+        <ExampleHeader text='Collapsed Header (click to toggle content visibility)' />
       </GenericCollapsible.Header>
       <GenericCollapsible.Body>
         <p>{exampleText}</p>
@@ -53,7 +103,7 @@ storiesOf('UI Components/GenericCollapsible', module)
   .add('with onChange event', () => (
     <GenericCollapsible.Container onChange={action('onChange triggered')}>
       <GenericCollapsible.Header>
-        <ExampleHeader text='Collapsed Header' />
+        <ExampleHeader text='Collapsed Header (click to toggle content visibility)' />
       </GenericCollapsible.Header>
       <GenericCollapsible.Body>
         <p>{exampleText}</p>
@@ -71,7 +121,7 @@ storiesOf('UI Components/GenericCollapsible', module)
       </GenericCollapsible.Body>
     </GenericCollapsible.Container>
   ))
-  .add('with elements that not are child of Header or Body (These components should not appear)', () => (
+  .add('with elements that not are child of Header or Body (these components should not appear)', () => (
     <GenericCollapsible.Container>
       <GenericCollapsible.Header>
         <ExampleHeader text='Collapsed Header' />
