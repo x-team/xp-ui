@@ -18,7 +18,7 @@ type Props = {
   alt?: string,
   src: string,
   size: number
-};
+}
 
 const Avatar = (props: Props) => {
   const { alt, src, size } = props
