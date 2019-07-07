@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import State from '../../../utils/State'
 
@@ -131,7 +132,11 @@ export const StoryFiltersWithAccordion = () => (
           onChange={() => setState(prev => ({ expanded: 'filters' }))}
         >
           <GenericCollapsible.Header>
-            <Filters.Heading>Filters</Filters.Heading>
+            <Filters.Heading
+              extra={<Filters.ExtraButton onClick={action('Reset')} text='Reset' />}
+            >
+              Filters
+            </Filters.Heading>
           </GenericCollapsible.Header>
           <GenericCollapsible.Body>
             <Filters.SubHeading>Context Filters</Filters.SubHeading>
