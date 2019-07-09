@@ -135,7 +135,7 @@ export const StoryFiltersWithAccordion = () => (
             <Filters.Heading
               extra={<Filters.ExtraButton onClick={action('Reset')} text='Reset' />}
             >
-              Filters
+              Filters <Filters.Counter color='red'>(0)</Filters.Counter>
             </Filters.Heading>
           </GenericCollapsible.Header>
           <GenericCollapsible.Body>
@@ -210,7 +210,7 @@ export const StoryFiltersWithAccordion = () => (
           onChange={() => setState(prev => ({ expanded: 'results' }))}
         >
           <GenericCollapsible.Header>
-            <Filters.Heading>Results</Filters.Heading>
+            <Filters.Heading>Results <Filters.Counter color='blue'>(0)</Filters.Counter></Filters.Heading>
           </GenericCollapsible.Header>
           <GenericCollapsible.Body>
             <ApplicantGrid

@@ -5183,6 +5183,21 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
     key="21"
     style={
       Object {
+        "backgroundColor": "rgb(47, 194, 255)",
+      }
+    }
+  >
+    <div
+      className="AutoUI_ui_ColorPalette-34"
+    >
+      typoCounter
+    </div>
+  </div>
+  <div
+    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    key="22"
+    style={
+      Object {
         "backgroundColor": "rgb(178, 182, 188)",
       }
     }
@@ -5195,7 +5210,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="22"
+    key="23"
     style={
       Object {
         "backgroundColor": "rgb(240, 241, 244)",
@@ -5210,7 +5225,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="23"
+    key="24"
     style={
       Object {
         "backgroundColor": "rgb(145, 140, 160)",
@@ -5225,7 +5240,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="24"
+    key="25"
     style={
       Object {
         "backgroundColor": "rgb(52, 50, 59)",
@@ -5240,7 +5255,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="25"
+    key="26"
     style={
       Object {
         "backgroundColor": "rgb(230, 230, 237)",
@@ -5255,7 +5270,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="26"
+    key="27"
     style={
       Object {
         "backgroundColor": "rgb(211, 47, 59)",
@@ -5270,7 +5285,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="27"
+    key="28"
     style={
       Object {
         "backgroundColor": "rgb(247, 217, 220)",
@@ -5285,7 +5300,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="28"
+    key="29"
     style={
       Object {
         "backgroundColor": "rgb(246, 57, 84)",
@@ -5300,7 +5315,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="29"
+    key="30"
     style={
       Object {
         "backgroundColor": "rgb(228, 228, 228)",
@@ -5315,7 +5330,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="30"
+    key="31"
     style={
       Object {
         "backgroundColor": "rgb(233, 237, 238)",
@@ -5330,7 +5345,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="31"
+    key="32"
     style={
       Object {
         "backgroundColor": "rgb(240, 241, 244)",
@@ -5345,7 +5360,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="32"
+    key="33"
     style={
       Object {
         "backgroundColor": "rgb(230, 230, 237)",
@@ -5360,7 +5375,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="33"
+    key="34"
     style={
       Object {
         "backgroundColor": "rgb(246, 57, 84)",
@@ -5375,7 +5390,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="34"
+    key="35"
     style={
       Object {
         "backgroundColor": "rgb(255, 255, 255)",
@@ -5390,7 +5405,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="35"
+    key="36"
     style={
       Object {
         "backgroundColor": "rgb(52, 50, 59)",
@@ -5405,7 +5420,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="36"
+    key="37"
     style={
       Object {
         "backgroundColor": "rgb(178, 182, 188)",
@@ -5420,7 +5435,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="37"
+    key="38"
     style={
       Object {
         "backgroundColor": "rgb(52, 50, 59)",
@@ -5435,7 +5450,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="38"
+    key="39"
     style={
       Object {
         "backgroundColor": "rgb(240, 241, 244)",
@@ -5450,7 +5465,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="39"
+    key="40"
     style={
       Object {
         "backgroundColor": "rgb(92, 87, 101)",
@@ -5465,7 +5480,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="40"
+    key="41"
     style={
       Object {
         "backgroundColor": "rgb(184, 183, 188)",
@@ -5480,7 +5495,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="41"
+    key="42"
     style={
       Object {
         "backgroundColor": "rgb(179, 179, 179)",
@@ -5495,7 +5510,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="42"
+    key="43"
     style={
       Object {
         "backgroundColor": "rgb(95, 207, 33)",
@@ -5510,7 +5525,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="43"
+    key="44"
     style={
       Object {
         "backgroundColor": "rgb(248, 231, 28)",
@@ -5525,7 +5540,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="44"
+    key="45"
     style={
       Object {
         "backgroundColor": "rgb(246, 57, 84)",
@@ -5540,7 +5555,7 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
   </div>
   <div
     className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="45"
+    key="46"
     style={
       Object {
         "backgroundColor": "rgb(196, 196, 196)",
