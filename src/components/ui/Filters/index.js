@@ -1,6 +1,7 @@
 // @flow
 
 import Container from './Container'
+import Counter from './Counter'
 import Filter from './Filter'
 import Group from './Group'
 import Heading from './Heading'
@@ -12,6 +13,7 @@ import TabHeads from './TabHeads'
 
 export default {
   Container,
+  Counter,
   Filter,
   Group,
   Heading,
