@@ -48,6 +48,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='plusquare' />
       <SvgIcon icon='spin' />
       <SvgIcon icon='filters' />
+      <SvgIcon icon='arrowleft' />
     </div>
   ))
   .add('inverted color', () => (
@@ -91,6 +92,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='plusquare' color='inverted' />
       <SvgIcon icon='spin' color='inverted' />
       <SvgIcon icon='filters' color='inverted' />
+      <SvgIcon icon='arrowleft' color='inverted' />
     </div>
   ))
 
@@ -135,6 +137,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='plusquare' color='monochrome' />
       <SvgIcon icon='spin' color='monochrome' />
       <SvgIcon icon='filters' color='monochrome' />
+      <SvgIcon icon='arrowleft' color='monochrome' />
     </div>
   ))
   .add('grayscale color', () => (
@@ -178,6 +181,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='plusquare' color='grayscale' />
       <SvgIcon icon='spin' color='grayscale' />
       <SvgIcon icon='filters' color='grayscale' />
+      <SvgIcon icon='arrowleft' color='grayscale' />
     </div>
   ))
   .add('grayscarpaflow color', () => (
@@ -221,6 +225,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='plusquare' color='grayscarpaflow' />
       <SvgIcon icon='spin' color='grayscarpaflow' />
       <SvgIcon icon='filters' color='grayscarpaflow' />
+      <SvgIcon icon='arrowleft' color='grayscarpaflow' />
     </div>
   ))
   .add('text gray color', () => (
@@ -264,6 +269,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='plusquare' color='text' />
       <SvgIcon icon='spin' color='text' />
       <SvgIcon icon='filters' color='text' />
+      <SvgIcon icon='arrowleft' color='text' />
     </div>
   ))
   .add('muted gray color', () => (
@@ -307,6 +313,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='plusquare' color='mutedgray' />
       <SvgIcon icon='spin' color='mutedgray' />
       <SvgIcon icon='filters' color='mutedgray' />
+      <SvgIcon icon='arrowleft' color='mutedgray' />
     </div>
   ))
   .add('hover color', () => (
@@ -350,6 +357,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='plusquare' color='text' hover='default' />
       <SvgIcon icon='spin' color='text' hover='default' />
       <SvgIcon icon='filters' color='text' hover='default' />
+      <SvgIcon icon='arrowleft' color='text' hover='default' />
     </div>
   ))
   .add('rest of props', () => (
@@ -393,6 +401,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='plusquare' style={{ marginRight: '30px' }} />
       <SvgIcon icon='spin' style={{ marginRight: '30px' }} />
       <SvgIcon icon='filters' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='arrowleft' style={{ marginRight: '30px' }} />
     </div>
   ))
   .add('missing props (does component explode?)', () => <SvgIcon />)
