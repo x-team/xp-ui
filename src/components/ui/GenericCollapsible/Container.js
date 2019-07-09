@@ -12,6 +12,7 @@ import type { Props as BodyProps } from './Body'
 
 type Props = {
   initialExpanded: boolean,
+  isAccordion?: boolean,
   children?: Element<*>,
   bodyWrapper: ComponentType<*>,
   headerWrapper: ComponentType<*>,
@@ -21,10 +22,10 @@ type Props = {
 type State = {
   isExpanded: boolean
 }
-
 class Container extends Component<Props, State> {
   static defaultProps = {
     initialExpanded: false,
+    isAccordion: false,
     headerWrapper: (props: { children: Element<*> }) => <Fragment>{props.children}</Fragment>,
     bodyWrapper: (props: { children: Element<*> }) => <Fragment>{props.children}</Fragment>,
     onChange: () => {}
@@ -41,15 +42,18 @@ class Container extends Component<Props, State> {
   }
 
   toggleExpanded = (isExpanded: boolean) => {
-    this.props.onChange(isExpanded)
-    this.setState({ isExpanded })
+    const { isAccordion } = this.props
+    if (!isAccordion || (isAccordion && isExpanded)) {
+      this.props.onChange(isExpanded)
+      this.setState({ isExpanded })
+    }
   }
 
   handleHeaderChild = (child: Element<*>) =>
     React.cloneElement(child, { isExpanded: this.state.isExpanded, onClick: this.toggleExpanded })
 
   handleBodyChild = (child: Element<*>) =>
-    React.cloneElement(child, { isExpanded: this.state.isExpanded })
+    React.cloneElement(child, { isExpanded: this.state.isExpanded, isAccordion: this.props.isAccordion })
 
   getChildrenByType = (
     children: ChildrenArray<*>,
@@ -57,7 +61,7 @@ class Container extends Component<Props, State> {
   ) => React.Children.toArray(children).find((child: Element<*>) => child.type === componentType)
 
   render () {
-    const { children, bodyWrapper: BodyWrapper, headerWrapper: HeaderWrapper } = this.props
+    const { children, headerWrapper: HeaderWrapper, bodyWrapper: BodyWrapper } = this.props
     return (
       <Fragment>
         <HeaderWrapper>

@@ -3658,85 +3658,150 @@ exports[`Storyshots UI Components/AttachFiles same file name 1`] = `
 `;
 
 exports[`Storyshots UI Components/Avatar 64x64 size 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name="I am Batman!"
-  round={true}
-  size={64}
-  src="http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png"
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar 128x128 size 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name="I am Batman!"
-  round={true}
-  size={128}
-  src="http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png"
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar alt text, 32x32 size 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name="I am Batman!"
-  round={true}
-  size={32}
-  src="https://www.gravatar.com/avatar/61a58e425da620d1f4839c6af03ce70f"
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar basic usage 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name=""
-  round={true}
-  size={64}
-  src="http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png"
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar missing props (does component explode?) 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name=""
-  round={true}
-  size={64}
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar with not reachable image source 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name="X P"
-  round={true}
-  size={32}
-  src="https://x-team.com/some-path-that-doesn-exists.png"
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Avatar without image source 1`] = `
-<withAvatarConfig
-  className="AutoUI_ui_Avatar-10"
-  color="rgb(246, 57, 84)"
-  maxInitials={3}
-  name="X P"
-  round={true}
-  size={32}
-/>
+<VisibilitySensor
+  active={true}
+  containment={null}
+  delayedCall={false}
+  intervalCheck={true}
+  intervalDelay={100}
+  minTopValue={0}
+  offset={Object {}}
+  partialVisibility={false}
+  resizeCheck={false}
+  resizeDelay={250}
+  resizeThrottle={-1}
+  scrollCheck={false}
+  scrollDelay={250}
+  scrollThrottle={-1}
+>
+  <Component />
+</VisibilitySensor>
 `;
 
 exports[`Storyshots UI Components/Button/Color Options default state 1`] = `
@@ -15201,142 +15266,50 @@ exports[`Storyshots UI Components/FilterTag basic usage 1`] = `
 `;
 
 exports[`Storyshots UI Components/Filters example of complete composition 1`] = `
-<Container>
-  <Container
-    bodyWrapper={[Function]}
-    headerWrapper={[Function]}
-    initialExpanded={true}
-    onChange={[Function]}
-  >
-    <Header>
-      <Heading>
-        Context Filters
-      </Heading>
-    </Header>
-    <Body>
-      <Group>
-        <Label>
-          Show
-        </Label>
-        <Container
-          contentWrapper={[Function]}
-          defaultActiveKey="list"
-          headWrapper={[Function]}
-          onChange={[Function]}
-        >
-          <Head
-            tabKey="list"
-          >
-            <TabButton
-              text="list"
-            />
-          </Head>
-          <Head
-            tabKey="all"
-          >
-            <TabButton
-              text="All Applicants"
-            />
-          </Head>
-          <Pane
-            tabKey="list"
-          >
-            <Filter
-              label="List"
-            >
-              <SelectBoxFilterContainer
-                placeholder="List"
-              />
-            </Filter>
-            <Filter
-              label="List Members"
-            >
-              <State
-                initialState={
-                  Object {
-                    "cb": true,
-                  }
-                }
-              >
-                <Component />
-              </State>
-              <br />
-              <State
-                initialState={
-                  Object {
-                    "cb": true,
-                  }
-                }
-              >
-                <Component />
-              </State>
-            </Filter>
-          </Pane>
-          <Pane
-            tabKey="all"
-          >
-            <Filter
-              label="Accept / Exclude To"
-            >
-              <SelectBoxFilterContainer
-                placeholder="List"
-              />
-            </Filter>
-          </Pane>
-        </Container>
-      </Group>
-    </Body>
-  </Container>
-  <Container
-    bodyWrapper={[Function]}
-    headerWrapper={[Function]}
-    initialExpanded={true}
-    onChange={[Function]}
-  >
-    <Header>
-      <Heading>
-        Search Filters
-      </Heading>
-    </Header>
-    <Body>
-      <Group>
-        <Filter
-          label="Status"
-        >
-          <SelectBoxFilterContainer
-            placeholder="Status"
-          />
-        </Filter>
-        <Filter
-          label="Available Before"
-        >
-          <InputFilterContainer
-            type="date"
-          />
-        </Filter>
-        <Filter
-          label="Timezone"
-        >
-          <SelectBoxFilterContainer
-            placeholder="Timezone"
-          />
-        </Filter>
-        <Filter
-          label="Max Rate"
-        >
-          <InputFilterContainer
-            type="number"
-          />
-        </Filter>
-      </Group>
-    </Body>
-  </Container>
-</Container>
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <StoryFilters />
+</div>
+`;
+
+exports[`Storyshots UI Components/Filters example of complete composition with accordion effect 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <StoryFiltersWithAccordion />
+</div>
 `;
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Container (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Container-16"
+  className="AutoUI_ui_Filters_Container-17 "
 />
 `;
 
@@ -15351,21 +15324,25 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Filter (does c
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Group (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Group-16"
+  className="AutoUI_ui_Filters_Group-14"
 />
 `;
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Heading-21 AutoUI_typo-22"
+  className="AutoUI_ui_Filters_Heading-22 AutoUI_typo-22 AutoUI_ui_Filters_Heading-45"
 >
   <div
-    className="AutoUI_ui_Filters_Heading-40"
+    className="AutoUI_ui_Filters_Heading-51"
   />
-  <SvgIcon
-    color="grayscarpaflow"
-    icon="triangledown"
-  />
+  <div
+    className="AutoUI_ui_Filters_Heading-55"
+  >
+    <SvgIcon
+      color="grayscarpaflow"
+      icon="triangledown"
+    />
+  </div>
 </div>
 `;
 
@@ -15373,6 +15350,16 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Label (does co
 <div
   className="AutoUI_ui_Filters_Label-17 AutoUI_typo-34"
 />
+`;
+
+exports[`Storyshots UI Components/Filters/Debug missing props for SubHeading (does components explode?) 1`] = `
+<div
+  className="AutoUI_ui_Filters_SubHeading-19 AutoUI_typo-22"
+>
+  <div
+    className="AutoUI_ui_Filters_SubHeading-41"
+  />
+</div>
 `;
 
 exports[`Storyshots UI Components/Filters/Debug missing props for TabButton (does components explode?) 1`] = `
@@ -16059,12 +16046,13 @@ exports[`Storyshots UI Components/GenericCollapsible basic usage 1`] = `
       onClick={[Function]}
     >
       <ExampleHeader
-        text="Collapsed Header"
+        text="Collapsed Header (click to toggle content visibility)"
       />
     </Header>
   </headerWrapper>
   <bodyWrapper>
     <Body
+      isAccordion={false}
       isExpanded={false}
       key=".$.1"
     >
@@ -16076,18 +16064,89 @@ exports[`Storyshots UI Components/GenericCollapsible basic usage 1`] = `
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible missing props for Body (does component explode?) 1`] = `""`;
+exports[`Storyshots UI Components/GenericCollapsible basic usage with accordion effect 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "100%",
+    }
+  }
+>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={true}
+    isAccordion={true}
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 1"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 2"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={false}
+    isAccordion={true}
+    onChange={[Function]}
+  >
+    <Header>
+      <ExampleHeader
+        text="Collapsed Header 3"
+      />
+    </Header>
+    <Body>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Body>
+  </Container>
+</div>
+`;
 
-exports[`Storyshots UI Components/GenericCollapsible missing props for Container (does component explode?) 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug missing props for Body (does component explode?) 1`] = `
+<div
+  className="AutoUI_ui_GenericCollapsible_Body-10 "
+/>
+`;
+
+exports[`Storyshots UI Components/GenericCollapsible/Debug missing props for Container (does component explode?) 1`] = `
 <Fragment>
   <headerWrapper />
   <bodyWrapper />
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible missing props for Header (does component explode?) 1`] = `""`;
+exports[`Storyshots UI Components/GenericCollapsible/Debug missing props for Header (does component explode?) 1`] = `""`;
 
-exports[`Storyshots UI Components/GenericCollapsible with HTML tag for header 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with HTML tag for header 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16102,6 +16161,7 @@ exports[`Storyshots UI Components/GenericCollapsible with HTML tag for header 1`
   </headerWrapper>
   <bodyWrapper>
     <Body
+      isAccordion={false}
       isExpanded={false}
       key=".$.1"
     >
@@ -16113,7 +16173,7 @@ exports[`Storyshots UI Components/GenericCollapsible with HTML tag for header 1`
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with custom wrappers for header and body 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with custom wrappers for header and body 1`] = `
 <Fragment>
   <HeaderWrapper>
     <Header
@@ -16128,6 +16188,7 @@ exports[`Storyshots UI Components/GenericCollapsible with custom wrappers for he
   </HeaderWrapper>
   <BodyWrapper>
     <Body
+      isAccordion={false}
       isExpanded={false}
       key=".$.1"
     >
@@ -16139,7 +16200,7 @@ exports[`Storyshots UI Components/GenericCollapsible with custom wrappers for he
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with elements that not are child of Header or Body (These components should not appear) 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with elements that not are child of Header or Body (these components should not appear) 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16154,6 +16215,7 @@ exports[`Storyshots UI Components/GenericCollapsible with elements that not are 
   </headerWrapper>
   <bodyWrapper>
     <Body
+      isAccordion={false}
       isExpanded={false}
       key=".$.2"
     >
@@ -16165,7 +16227,7 @@ exports[`Storyshots UI Components/GenericCollapsible with elements that not are 
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with initial expanded 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with initial expanded 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16174,12 +16236,13 @@ exports[`Storyshots UI Components/GenericCollapsible with initial expanded 1`] =
       onClick={[Function]}
     >
       <ExampleHeader
-        text="Collapsed Header"
+        text="Collapsed Header (click to toggle content visibility)"
       />
     </Header>
   </headerWrapper>
   <bodyWrapper>
     <Body
+      isAccordion={false}
       isExpanded={true}
       key=".$.1"
     >
@@ -16191,7 +16254,7 @@ exports[`Storyshots UI Components/GenericCollapsible with initial expanded 1`] =
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with nested GenericCollapsibles 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with nested GenericCollapsibles 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16206,6 +16269,7 @@ exports[`Storyshots UI Components/GenericCollapsible with nested GenericCollapsi
   </headerWrapper>
   <bodyWrapper>
     <Body
+      isAccordion={false}
       isExpanded={false}
       key=".$.1"
     >
@@ -16213,6 +16277,7 @@ exports[`Storyshots UI Components/GenericCollapsible with nested GenericCollapsi
         bodyWrapper={[Function]}
         headerWrapper={[Function]}
         initialExpanded={false}
+        isAccordion={false}
         onChange={[Function]}
       >
         <Header>
@@ -16231,7 +16296,7 @@ exports[`Storyshots UI Components/GenericCollapsible with nested GenericCollapsi
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with onChange event 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with onChange event 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16240,12 +16305,13 @@ exports[`Storyshots UI Components/GenericCollapsible with onChange event 1`] = `
       onClick={[Function]}
     >
       <ExampleHeader
-        text="Collapsed Header"
+        text="Collapsed Header (click to toggle content visibility)"
       />
     </Header>
   </headerWrapper>
   <bodyWrapper>
     <Body
+      isAccordion={false}
       isExpanded={false}
       key=".$.1"
     >
@@ -16257,7 +16323,7 @@ exports[`Storyshots UI Components/GenericCollapsible with onChange event 1`] = `
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with other UI components 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with other UI components 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16272,6 +16338,7 @@ exports[`Storyshots UI Components/GenericCollapsible with other UI components 1`
   </headerWrapper>
   <bodyWrapper>
     <Body
+      isAccordion={false}
       isExpanded={false}
       key=".$.1"
     >
@@ -16305,7 +16372,7 @@ exports[`Storyshots UI Components/GenericCollapsible with other UI components 1`
 </Fragment>
 `;
 
-exports[`Storyshots UI Components/GenericCollapsible with several HTML tags for header 1`] = `
+exports[`Storyshots UI Components/GenericCollapsible/Debug with several HTML tags for header 1`] = `
 <Fragment>
   <headerWrapper>
     <Header
@@ -16326,6 +16393,7 @@ exports[`Storyshots UI Components/GenericCollapsible with several HTML tags for 
   </headerWrapper>
   <bodyWrapper>
     <Body
+      isAccordion={false}
       isExpanded={false}
       key=".$.1"
     >
@@ -20157,47 +20225,47 @@ exports[`Storyshots UI Components/PencilButton/Hover Colors monochrome hover col
 
 exports[`Storyshots UI Components/ProfileHeaderLinks basic usage 1`] = `
 <ul
-  className="AutoUI_ui_ProfileHeaderLinks-12"
+  className="AutoUI_ui_ProfileHeaderLinks-12 AutoUI_ui_ProfileHeaderLinks-22"
 >
   <li
-    className="AutoUI_ui_ProfileHeaderLinks-25"
+    className="AutoUI_ui_ProfileHeaderLinks-32"
     key="#link1"
   >
     <span
-      className="AutoUI_ui_ProfileHeaderLinks-30"
+      className="AutoUI_ui_ProfileHeaderLinks-37"
       onClick={[Function]}
     >
       Link 1
     </span>
   </li>
   <li
-    className="AutoUI_ui_ProfileHeaderLinks-25"
+    className="AutoUI_ui_ProfileHeaderLinks-32"
     key="#link2"
   >
     <span
-      className="AutoUI_ui_ProfileHeaderLinks-30"
+      className="AutoUI_ui_ProfileHeaderLinks-37"
       onClick={[Function]}
     >
       Link 2
     </span>
   </li>
   <li
-    className="AutoUI_ui_ProfileHeaderLinks-25"
+    className="AutoUI_ui_ProfileHeaderLinks-32"
     key="http://localhost:8000/"
   >
     <span
-      className="AutoUI_ui_ProfileHeaderLinks-30"
+      className="AutoUI_ui_ProfileHeaderLinks-37"
       onClick={[Function]}
     >
       External Link
     </span>
   </li>
   <li
-    className="AutoUI_ui_ProfileHeaderLinks-25"
+    className="AutoUI_ui_ProfileHeaderLinks-32"
     key="0/.0"
   >
     <div
-      className="AutoUI_ui_ProfileHeaderLinks-48"
+      className="AutoUI_ui_ProfileHeaderLinks-55"
     >
       <button>
         any extra
@@ -20205,11 +20273,11 @@ exports[`Storyshots UI Components/ProfileHeaderLinks basic usage 1`] = `
     </div>
   </li>
   <li
-    className="AutoUI_ui_ProfileHeaderLinks-25"
+    className="AutoUI_ui_ProfileHeaderLinks-32"
     key="1/.1"
   >
     <div
-      className="AutoUI_ui_ProfileHeaderLinks-48"
+      className="AutoUI_ui_ProfileHeaderLinks-55"
     >
       <button>
         elements here
@@ -20221,7 +20289,7 @@ exports[`Storyshots UI Components/ProfileHeaderLinks basic usage 1`] = `
 
 exports[`Storyshots UI Components/ProfileHeaderLinks missing props (does component explode?) 1`] = `
 <ul
-  className="AutoUI_ui_ProfileHeaderLinks-12"
+  className="AutoUI_ui_ProfileHeaderLinks-12 AutoUI_ui_ProfileHeaderLinks-22"
 />
 `;
 
@@ -34732,6 +34800,10 @@ exports[`Storyshots UI Components/SvgIcon basic color 1`] = `
     color="default"
     icon="filters"
   />
+  <SvgIcon
+    color="default"
+    icon="arrowleft"
+  />
 </div>
 `;
 
@@ -34893,6 +34965,10 @@ exports[`Storyshots UI Components/SvgIcon grayscale color 1`] = `
     color="grayscale"
     icon="filters"
   />
+  <SvgIcon
+    color="grayscale"
+    icon="arrowleft"
+  />
 </div>
 `;
 
@@ -35053,6 +35129,10 @@ exports[`Storyshots UI Components/SvgIcon grayscarpaflow color 1`] = `
   <SvgIcon
     color="grayscarpaflow"
     icon="filters"
+  />
+  <SvgIcon
+    color="grayscarpaflow"
+    icon="arrowleft"
   />
 </div>
 `;
@@ -35254,6 +35334,11 @@ exports[`Storyshots UI Components/SvgIcon hover color 1`] = `
     hover="default"
     icon="filters"
   />
+  <SvgIcon
+    color="text"
+    hover="default"
+    icon="arrowleft"
+  />
 </div>
 `;
 
@@ -35421,6 +35506,10 @@ exports[`Storyshots UI Components/SvgIcon inverted color 1`] = `
     color="inverted"
     icon="filters"
   />
+  <SvgIcon
+    color="inverted"
+    icon="arrowleft"
+  />
 </div>
 `;
 
@@ -35584,6 +35673,10 @@ exports[`Storyshots UI Components/SvgIcon monochrome color 1`] = `
     color="monochrome"
     icon="filters"
   />
+  <SvgIcon
+    color="monochrome"
+    icon="arrowleft"
+  />
 </div>
 `;
 
@@ -35744,6 +35837,10 @@ exports[`Storyshots UI Components/SvgIcon muted gray color 1`] = `
   <SvgIcon
     color="mutedgray"
     icon="filters"
+  />
+  <SvgIcon
+    color="mutedgray"
+    icon="arrowleft"
   />
 </div>
 `;
@@ -36101,6 +36198,15 @@ exports[`Storyshots UI Components/SvgIcon rest of props 1`] = `
       }
     }
   />
+  <SvgIcon
+    color="default"
+    icon="arrowleft"
+    style={
+      Object {
+        "marginRight": "30px",
+      }
+    }
+  />
 </div>
 `;
 
@@ -36261,6 +36367,10 @@ exports[`Storyshots UI Components/SvgIcon text gray color 1`] = `
   <SvgIcon
     color="text"
     icon="filters"
+  />
+  <SvgIcon
+    color="text"
+    icon="arrowleft"
   />
 </div>
 `;
@@ -37875,6 +37985,55 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen
     }
   >
     <StoryTwoColumnsLayout />
+  </StoryAdminScreen>
+</div>
+`;
+
+exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen and with with link in the sidebar heading 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <StoryAdminScreen>
+    <StoryTwoColumnsLayout
+      contentHeading={
+        <ProfileHeaderLinks
+          links={
+            Array [
+              Object {
+                "hash": "#link1",
+                "label": "Link 1",
+              },
+              Object {
+                "hash": "#link2",
+                "label": "Link 2",
+              },
+              Object {
+                "label": "External Link",
+                "url": "http://localhost:8000/",
+              },
+            ]
+          }
+          smaller={true}
+        />
+      }
+      sidebarHeading="A link in the sidebar heading"
+      sidebarHeadingLink={[Function]}
+      sidebarIcon="arrowleft"
+      sidebarWidth={425}
+    />
   </StoryAdminScreen>
 </div>
 `;
