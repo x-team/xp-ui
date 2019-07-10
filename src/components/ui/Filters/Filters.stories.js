@@ -10,6 +10,7 @@ import GenericCollapsible from '../GenericCollapsible'
 import GenericTabs from '../GenericTabs'
 import InputField from '../../forms/InputField'
 import SelectBox from '../SelectBox'
+import Loader from '../Loader'
 import ApplicantGrid from '../ApplicantGrid'
 import { getApplicantBadges } from '../ApplicantGrid.stories'
 
@@ -213,11 +214,13 @@ export const StoryFiltersWithAccordion = () => (
             <Filters.Heading>Results</Filters.Heading>
           </GenericCollapsible.Header>
           <GenericCollapsible.Body>
-            <ApplicantGrid
-              items={applicantBadges}
-              visible={10}
-              increment={2}
-            />
+            <Filters.Group>
+              <ApplicantGrid
+                items={applicantBadges}
+                visible={10}
+                increment={2}
+              />
+            </Filters.Group>
           </GenericCollapsible.Body>
         </GenericCollapsible.Container>
 
@@ -239,6 +242,34 @@ storiesOf('UI Components/Filters', module)
   ))
 
 storiesOf('UI Components/Filters/Debug', module)
+  .add('centered Filter Groups', () => (
+    <Filters.Container>
+      <GenericCollapsible.Container initialExpanded>
+        <GenericCollapsible.Header>
+          <Filters.Heading>Filters Heading</Filters.Heading>
+        </GenericCollapsible.Header>
+        <GenericCollapsible.Body>
+          <Filters.Group isCentred>
+            <Loader />
+          </Filters.Group>
+        </GenericCollapsible.Body>
+      </GenericCollapsible.Container>
+      <GenericCollapsible.Container initialExpanded>
+        <GenericCollapsible.Header>
+          <Filters.Heading>Filters Heading</Filters.Heading>
+        </GenericCollapsible.Header>
+        <GenericCollapsible.Body>
+          <Filters.Group isCentred>
+            <ApplicantGrid
+              items={applicantBadges}
+              visible={10}
+              increment={2}
+            />
+          </Filters.Group>
+        </GenericCollapsible.Body>
+      </GenericCollapsible.Container>
+    </Filters.Container>
+  ))
   .add('standalone Filter', () => (
     <Sandbox>
       <Filters.Filter

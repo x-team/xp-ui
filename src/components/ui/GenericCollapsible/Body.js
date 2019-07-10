@@ -13,6 +13,7 @@ const cx = {
 
   accordion: cmz(`
     overflow-y: auto
+    overflow-x: hidden
   `)
 }
 
