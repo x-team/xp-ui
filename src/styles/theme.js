@@ -43,7 +43,8 @@ const palette = {
   scarpaFlow: '#5A5665',
   silver: '#C4C4C4',
   fairPink: '#FFEBED',
-  grayScarpaFlow: '#5C5765'
+  grayScarpaFlow: '#5C5765',
+  dodgerBlue: '#2FC2FF'
 }
 
 export default wrap({
@@ -67,6 +68,7 @@ export default wrap({
   typoHighlight: palette.haiti,
   typoHighlightOnDarkBackground: palette.scarpaFlow,
   typoLabel: palette.bombay,
+  typoCounter: palette.dodgerBlue,
 
   sliderToggle: palette.bombay,
   sliderBackground: palette.athensGray,
