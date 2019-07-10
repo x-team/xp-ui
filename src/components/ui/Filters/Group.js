@@ -20,7 +20,6 @@ const cx = {
       box-sizing: border-box
       border-bottom: 1px solid ${theme.lineSilver2}
     }
-
     &:last-of-type,
     &:last-child {
       border-bottom: none
@@ -33,7 +32,6 @@ const cx = {
       display: flex
       justify-content: center
     }
-
     & > * {
       align-self: center
     }
