@@ -24,9 +24,11 @@ const colorStyles = {
   `)
 }
 
-const Counter = (props: Props) => {
-  let colorClassName = colorStyles[props.color] || ''
-  return (<span className={colorClassName}>{props.children}</span>)
+const Counter = ({ color, children }: Props) => {
+  const colorClassName = colorStyles[color] || ''
+  return (
+    <span className={colorClassName}>{children}</span>
+  )
 }
 
 export default Counter
