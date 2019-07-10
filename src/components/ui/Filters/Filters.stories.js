@@ -249,7 +249,7 @@ storiesOf('UI Components/Filters/Debug', module)
           <Filters.Heading>Filters Heading</Filters.Heading>
         </GenericCollapsible.Header>
         <GenericCollapsible.Body>
-          <Filters.Group isCentred>
+          <Filters.Group isCentered>
             <Loader />
           </Filters.Group>
         </GenericCollapsible.Body>
@@ -259,7 +259,7 @@ storiesOf('UI Components/Filters/Debug', module)
           <Filters.Heading>Filters Heading</Filters.Heading>
         </GenericCollapsible.Header>
         <GenericCollapsible.Body>
-          <Filters.Group isCentred>
+          <Filters.Group isCentered>
             <ApplicantGrid
               items={applicantBadges}
               visible={10}

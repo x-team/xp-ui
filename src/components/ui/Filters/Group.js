@@ -8,7 +8,7 @@ import type { Element } from 'react'
 
 export type Props = {
   children: Element<*>,
-  isCentred: boolean
+  isCentered: boolean
 }
 
 const cmz = require('cmz')
@@ -27,7 +27,7 @@ const cx = {
     }
   `),
 
-  centred: cmz(`
+  centered: cmz(`
     & {
       padding: 14px 12px
       display: flex
@@ -41,7 +41,7 @@ const cx = {
 }
 
 const Group = (props: Props) => (
-  <div className={props.isCentred ? [cx.group, cx.centred].join(' ') : cx.group}>
+  <div className={props.isCentered ? [cx.group, cx.centered].join(' ') : cx.group}>
     {props.children}
   </div>
 )
