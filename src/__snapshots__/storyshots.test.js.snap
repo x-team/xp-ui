@@ -15307,6 +15307,135 @@ exports[`Storyshots UI Components/Filters example of complete composition with a
 </div>
 `;
 
+exports[`Storyshots UI Components/Filters/Debug centered Filter Groups 1`] = `
+<div
+  className="AutoUI_ui_Filters_Container-17 "
+>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={true}
+    isAccordion={false}
+    onChange={[Function]}
+  >
+    <Header>
+      <Heading>
+        Filters Heading
+      </Heading>
+    </Header>
+    <Body>
+      <Group
+        isCentered={true}
+      >
+        <Loader />
+      </Group>
+    </Body>
+  </Container>
+  <Container
+    bodyWrapper={[Function]}
+    headerWrapper={[Function]}
+    initialExpanded={true}
+    isAccordion={false}
+    onChange={[Function]}
+  >
+    <Header>
+      <Heading>
+        Filters Heading
+      </Heading>
+    </Header>
+    <Body>
+      <Group
+        isCentered={true}
+      >
+        <ApplicantGrid
+          increment={2}
+          items={
+            Array [
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={true}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+              <StoryApplicantBadge
+                active={false}
+              />,
+            ]
+          }
+          visible={10}
+        />
+      </Group>
+    </Body>
+  </Container>
+</div>
+`;
+
 exports[`Storyshots UI Components/Filters/Debug missing props for Container (does components explode?) 1`] = `
 <div
   className="AutoUI_ui_Filters_Container-17 "
@@ -15324,7 +15453,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Filter (does c
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Group (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Group-14"
+  className="AutoUI_ui_Filters_Group-17"
 />
 `;
 
@@ -15357,7 +15486,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for SubHeading (do
   className="AutoUI_ui_Filters_SubHeading-19 AutoUI_typo-22"
 >
   <div
-    className="AutoUI_ui_Filters_SubHeading-41"
+    className="AutoUI_ui_Filters_SubHeading-29"
   />
 </div>
 `;
