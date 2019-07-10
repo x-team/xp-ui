@@ -11,6 +11,7 @@ import type { Element } from 'react'
 
 export type Props = {
   children: Element<*>,
+  extra: Element<*>,
   isExpanded: boolean,
   onClick: (event: any) => void
 }
@@ -21,6 +22,7 @@ const cx = {
   heading: cmz(typeface.extraHeading, `
     & {
       align-items: center
+      border-top: 1px solid ${theme.lineSilver2}
       border-bottom: 1px solid ${theme.lineSilver2}
       color: ${theme.typoHighlightOnDarkBackground}
       cursor: pointer
@@ -28,8 +30,11 @@ const cx = {
       font-size: 1.0625rem
       padding: 24px 60px
       text-transform: uppercase
-      display: flex
       box-sizing: border-box
+    }
+
+    &:first-of-type {
+      border-top: none
     }
 
     &:last-of-type {
@@ -37,20 +42,33 @@ const cx = {
     }
   `),
 
+  headingCollapsed: cmz(`
+    &:first-of-type {
+      border-bottom: none
+    }
+  `),
+
   text: cmz(`
     width: 100%
+  `),
+
+  arrow: cmz(`
+    flex-shrink: 0
   `)
 }
 
 const Heading = (props: Props) => (
-  <div onClick={props.onClick} className={cx.heading}>
+  <div onClick={props.onClick} className={props.isExpanded ? cx.heading : `${cx.heading} ${cx.headingCollapsed}`}>
     <div className={cx.text}>
       {props.children}
     </div>
-    <SvgIcon
-      icon={props.isExpanded ? 'triangleup' : 'triangledown'}
-      color='grayscarpaflow'
-    />
+    {props.extra}
+    <div className={cx.arrow}>
+      <SvgIcon
+        icon={props.isExpanded ? 'triangleup' : 'triangledown'}
+        color='grayscarpaflow'
+      />
+    </div>
   </div>
 )
 
