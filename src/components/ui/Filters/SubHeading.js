@@ -17,25 +17,13 @@ const cmz = require('cmz')
 
 const cx = {
   heading: cmz(typeface.extraHeading, `
-    & {
-      align-items: center
-      border-top: 1px solid ${theme.lineSilver2}
-      border-bottom: 1px solid ${theme.lineSilver2}
-      color: ${theme.typoHighlightOnDarkBackground}
-      display: flex
-      font-size: 1.0625rem
-      padding: 24px 60px
-      display: flex
-      box-sizing: border-box
-    }
-
-    &:first-of-type {
-      border-top: none
-    }
-
-    &:last-of-type {
-      border-bottom: none
-    }
+    align-items: center
+    color: ${theme.typoHighlightOnDarkBackground}
+    display: flex
+    font-size: 1.0625rem
+    padding: 20px 40px 0
+    display: flex
+    box-sizing: border-box
   `),
 
   text: cmz(`
