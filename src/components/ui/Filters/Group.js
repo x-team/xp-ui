@@ -32,6 +32,7 @@ const cx = {
       display: flex
       justify-content: center
     }
+
     & > * {
       align-self: center
     }
