@@ -16,6 +16,7 @@ const cx = {
     display: flex
     flex: 1
     width: 100%
+    height: 100%
     align-items: center
     justify-content: stretch
   `),
@@ -42,9 +43,9 @@ const cx = {
     background-color: ${theme.baseBrighter}
   `),
   input: cmz(`
-    background-color: transparent
     align-self: stretch
     width: 100%
+    height: 100%
     border: 0px
     padding-left: 4px
     margin: 0 0 0 0
