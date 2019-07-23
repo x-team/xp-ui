@@ -10,6 +10,7 @@ import Label from './Label'
 import ExtraButton from './ExtraButton'
 import TabButton from './TabButton'
 import TabHeads from './TabHeads'
+import SidebarHeading from './SidebarHeading'
 
 export default {
   Container,
@@ -21,5 +22,6 @@ export default {
   Label,
   ExtraButton,
   TabButton,
-  TabHeads
+  TabHeads,
+  SidebarHeading
 }

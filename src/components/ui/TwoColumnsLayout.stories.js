@@ -7,6 +7,7 @@ import TwoColumnsLayout from './TwoColumnsLayout'
 import ProfileHeaderLinks from './ProfileHeaderLinks'
 import { StoryAdminScreen } from './AdminScreen.stories'
 import { StoryFilters } from './Filters/Filters.stories'
+import Filters from './Filters'
 import { getIcons } from './SvgIcon.js'
 
 const icons = getIcons()
@@ -58,6 +59,7 @@ storiesOf('UI Components/TwoColumnsLayout/Use cases', module)
     <Body>
       <StoryAdminScreen>
         <StoryTwoColumnsLayout
+          sidebarHeading={<Filters.SidebarHeading />}
           sidebar={<StoryFilters />}
         />
       </StoryAdminScreen>
