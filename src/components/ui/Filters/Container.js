@@ -8,7 +8,8 @@ import type { Element } from 'react'
 
 export type Props = {
   children: Element<*>,
-  isAccordion?: boolean
+  isAccordion?: boolean,
+  onKeyPress?: Function
 }
 
 const cmz = require('cmz')
@@ -27,7 +28,12 @@ const cx = {
 }
 
 const Container = (props: Props) => (
-  <div className={`${cx.filters} ${props.isAccordion ? cx.accordion : ''}`}>{props.children}</div>
+  <div
+    className={`${cx.filters} ${props.isAccordion ? cx.accordion : ''}`}
+    onKeyPress={props.onKeyPress}
+  >
+    {props.children}
+  </div>
 )
 
 export default Container
