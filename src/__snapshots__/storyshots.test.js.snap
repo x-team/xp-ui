@@ -38355,6 +38355,12 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminSc
   <StoryAdminScreen>
     <StoryTwoColumnsLayout
       sidebar={<StoryFilters />}
+      sidebarHeading={
+        <SidebarHeading
+          sidebarIcon="filters"
+          text="Filters"
+        />
+      }
     />
   </StoryAdminScreen>
 </div>

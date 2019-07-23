@@ -65,7 +65,7 @@ const cx = {
   `),
 
   sidebarHeadingText: cmz(`
-    margin: 0 10px
+    display: flex
     flex: 1
     overflow: hidden
     text-overflow: ellipsis
