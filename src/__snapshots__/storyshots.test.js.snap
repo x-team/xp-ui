@@ -10753,7 +10753,7 @@ exports[`Storyshots UI Components/DataGrid/Debug missing props (does component e
       enableRowSelect={false}
       headerFiltersHeight={0}
       minColumnWidth={80}
-      minHeight={536}
+      minHeight={613}
       onBeforeEdit={[Function]}
       overScan={
         Object {

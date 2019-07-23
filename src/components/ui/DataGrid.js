@@ -20,7 +20,7 @@ const selectors = Data.Selectors
 // The simplest workaround is to calculate the data grid height based on viewport and reducing the unavailable space
 // with fixed unit (pixel).
 const getTableMinHeightValues = () => {
-  const viewportHeightReduction = 232
+  const viewportHeightReduction = 155
   const minAcceptableHeight = 386 // amount of pixels needed to show 6 table rows
   const isViewportTooSmall = window.innerHeight - viewportHeightReduction < minAcceptableHeight
 
