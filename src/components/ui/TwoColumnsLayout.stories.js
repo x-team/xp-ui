@@ -32,7 +32,7 @@ export const StoryTwoColumnsLayout = (props) => (
     sidebarHeading={text('Sidebar Heading', props.sidebarHeading || 'Filters')}
     sidebarHeadingLink={text('Sidebar Heading Link', props.sidebarHeadingLink || '')}
     sidebarWidth={number('Sidebar Width', props.sidebarWidth || 385)}
-    sidebarIcon={select('Sidebar Icon', availableIcons, props.sidebarIcon || 'filters')}
+    sidebarIcon={select('Sidebar Icon', availableIcons, props.sidebarIcon || '')}
     scrollableSidebar={boolean('Scrollable Sidebar', props.scrollableSidebar !== undefined ? props.scrollableSidebar : true)}
     content={props.content || sampleContent}
     contentHeading={text('Content Heading', props.contentHeading || 'Search')}
@@ -59,7 +59,7 @@ storiesOf('UI Components/TwoColumnsLayout/Use cases', module)
     <Body>
       <StoryAdminScreen>
         <StoryTwoColumnsLayout
-          sidebarHeading={<Filters.SidebarHeading />}
+          sidebarHeading={<Filters.SidebarHeading sidebarIcon='filters' text='Filters' />}
           sidebar={<StoryFilters />}
         />
       </StoryAdminScreen>
