@@ -15560,6 +15560,38 @@ exports[`Storyshots UI Components/Filters/Debug standalone Filter 1`] = `
 </div>
 `;
 
+exports[`Storyshots UI Components/Filters/Sidebar Heading fully-controlled sidebar heading 1`] = `
+<Heading>
+  <SidebarHeading
+    isQuickSearching={false}
+    onQuickSearchChangeValue={[Function]}
+    onToggleQuickSearch={[Function]}
+    quickSearchValue=""
+    sidebarIcon="filters"
+    text="Filters"
+  />
+</Heading>
+`;
+
+exports[`Storyshots UI Components/Filters/Sidebar Heading self-controlled sidebar heading 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgb(249, 250, 251)",
+      "border": "1px solid rgb(233, 237, 238)",
+      "height": "58px",
+      "width": "400px",
+    }
+  }
+>
+  <SidebarHeading
+    onQuickSearchSubmit={[Function]}
+    sidebarIcon="filters"
+    text="Filters"
+  />
+</div>
+`;
+
 exports[`Storyshots UI Components/Footer basic usage 1`] = `
 <div
   className="AutoUI_ui_Footer_Footer-20"

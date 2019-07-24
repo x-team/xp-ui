@@ -8,11 +8,15 @@ import SvgIcon from '../SvgIcon'
 import InputField from '../../forms/InputField'
 import type { Icon } from '../SvgIcon'
 import theme from '../../../styles/theme'
+import { typeface } from '../../../styles/typo'
 
 const cmz = require('cmz')
 
 const cx = {
-  container: cmz(`
+  container: cmz(typeface.extraHeading, `
+    text-transform: uppercase
+    color: ${theme.typoHighlightOnDarkBackground}
+    font-size: 0.9375rem
     display: flex
     flex: 1
     width: 100%
@@ -74,22 +78,28 @@ export default class SidebarHeading extends PureComponent<Props, State> {
   }
 
   toggleQuickSearch = (isSearching: boolean): void => this.setState({ isSearching, inputValue: '' })
-  handleChangeValue = (input: Object): void => this.setState({ inputValue: input.target.value })
 
+  handleChangeValue = (input: Object): void => {
+    const newValue = input.target.value
+    if (this.props.onQuickSearchChangeValue) {
+      this.props.onQuickSearchChangeValue(newValue)
+    } else {
+      this.setState({ inputValue: input.target.value })
+    }
+  }
   handleQuickSearchSubmit = (event: SyntheticEvent<HTMLInputElement>): void => {
     event.preventDefault()
     const value = this.props.quickSearchValue || this.state.inputValue
-    this.props.onQuickSearchSubmit && this.props.onQuickSearchSubmit(value)
+    if (this.props.onQuickSearchSubmit) this.props.onQuickSearchSubmit(value)
   }
 
   render () {
     const { isSearching, inputValue } = this.state
-    const { isQuickSearching, onToggleQuickSearch, onQuickSearchChangeValue, quickSearchValue, sidebarIcon, text } = this.props
+    const { isQuickSearching, onToggleQuickSearch, quickSearchValue, sidebarIcon, text } = this.props
 
     // component can be either fully controlled or self-controlled
     const shouldRenderInput = isQuickSearching || isSearching
     const onToggleInput = onToggleQuickSearch || this.toggleQuickSearch
-    const onChangeValue = onQuickSearchChangeValue || this.handleChangeValue
     const value = quickSearchValue || inputValue || ''
 
     return shouldRenderInput ? (
@@ -101,10 +111,11 @@ export default class SidebarHeading extends PureComponent<Props, State> {
           <InputField
             autoFocus
             value={value}
-            onChange={onChangeValue}
+            onChange={this.handleChangeValue}
             name='input'
             className={cx.input}
-            placeholder='Search by Full name or Email Address' />
+            placeholder='Search by Full name or Email Address'
+          />
         </form>
         <div className={cx.sidebarHeadingIconRight} onClick={() => onToggleInput(false)} >
           <SvgIcon icon={'x'} color='grayscarpaflow' />
