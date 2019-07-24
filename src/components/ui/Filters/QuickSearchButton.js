@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react'
 import SvgIcon from '../SvgIcon'
+import theme from '../../../styles/theme'
 
 const cmz = require('cmz')
 
@@ -20,8 +21,8 @@ const Container = cmz(`
     margin-left: auto
     margin-right: 10px
 
-    background: #FFFFFF
-    border: 1px solid #E9EDEE
+    background: ${theme.baseBrighter}
+    border: 1px solid ${theme.lineSilver2}
     border-radius: 50%
   }
 
