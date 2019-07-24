@@ -65,6 +65,7 @@ const cx = {
   `),
 
   sidebarHeadingText: cmz(`
+    align-self: stretch
     display: flex
     flex: 1
     overflow: hidden

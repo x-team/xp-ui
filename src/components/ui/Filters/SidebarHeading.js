@@ -53,6 +53,9 @@ const cx = {
     border: 0px
     padding-left: 4px
     margin: 0 0 0 0
+  `),
+  inputParent: cmz(`
+    flex: 1
   `)
 }
 
@@ -107,7 +110,7 @@ export default class SidebarHeading extends PureComponent<Props, State> {
         <div className={cx.sidebarHeadingIcon}>
           <SvgIcon icon={'magnifier'} color='frenchGrayDarker' />
         </div>
-        <form style={{ flex: 1 }} onSubmit={this.handleQuickSearchSubmit}>
+        <form className={cx.inputParent} onSubmit={this.handleQuickSearchSubmit}>
           <InputField
             autoFocus
             value={value}
