@@ -20,7 +20,7 @@ const selectors = Data.Selectors
 // The simplest workaround is to calculate the data grid height based on viewport and reducing the unavailable space
 // with fixed unit (pixel).
 const getTableMinHeightValues = () => {
-  const viewportHeightReduction = 232
+  const viewportHeightReduction = 155
   const minAcceptableHeight = 386 // amount of pixels needed to show 6 table rows
   const isViewportTooSmall = window.innerHeight - viewportHeightReduction < minAcceptableHeight
 
@@ -39,6 +39,9 @@ const cx = {
     display: flex
     justify-content: center
     align-items: center
+    position: absolute
+    z-index: 99999
+    background: rgba(255, 2555, 255, .65)
   `),
 
   gridContainer: cmz(`
@@ -50,6 +53,7 @@ const cx = {
   grid: cmz(`
     & {
       flex: 1
+      position: relative
     }
 
     & .react-grid-Grid {
@@ -89,13 +93,14 @@ const DataGrid = ({
   applicants,
   isLoading
 }: Props) =>
-  isLoading ? (
-    <div className={cx.overlay}>
-      <Loader />
-    </div>
-  ) : (
+  (
     <div className={cx.gridContainer}>
       <div className={cx.grid}>
+        {isLoading && (
+          <div className={cx.overlay}>
+            <Loader />
+          </div>
+        )}
         <ReactDataGrid
           columns={visibleColumns}
           rowGetter={getRow(applicants)}
