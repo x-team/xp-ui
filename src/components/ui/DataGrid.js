@@ -39,6 +39,9 @@ const cx = {
     display: flex
     justify-content: center
     align-items: center
+    position: absolute
+    z-index: 99999
+    background: rgba(255, 2555, 255, .65)
   `),
 
   gridContainer: cmz(`
@@ -50,6 +53,7 @@ const cx = {
   grid: cmz(`
     & {
       flex: 1
+      position: relative
     }
 
     & .react-grid-Grid {
@@ -89,13 +93,14 @@ const DataGrid = ({
   applicants,
   isLoading
 }: Props) =>
-  isLoading ? (
-    <div className={cx.overlay}>
-      <Loader />
-    </div>
-  ) : (
+  (
     <div className={cx.gridContainer}>
       <div className={cx.grid}>
+        {isLoading && (
+          <div className={cx.overlay}>
+            <Loader />
+          </div>
+        )}
         <ReactDataGrid
           columns={visibleColumns}
           rowGetter={getRow(applicants)}
