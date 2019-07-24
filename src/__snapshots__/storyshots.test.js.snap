@@ -2953,7 +2953,7 @@ exports[`Storyshots UI Components/ApplicantGrid basic usage 1`] = `
     increment={2}
     inserted={false}
     isFetching={false}
-    itemClass="AutoUI_ui_ApplicantGrid-19"
+    itemClass="AutoUI_ui_ApplicantGrid-20"
     items={
       Array [
         <StoryApplicantBadge
@@ -3033,7 +3033,7 @@ exports[`Storyshots UI Components/ApplicantGrid basic usage 1`] = `
         />,
       ]
     }
-    listClass="AutoUI_ui_ApplicantGrid-15"
+    listClass="AutoUI_ui_ApplicantGrid-16"
     viewMore={[Function]}
     visible={3}
   />
@@ -3052,9 +3052,9 @@ exports[`Storyshots UI Components/ApplicantGrid/Debug missing props (does compon
     increment={50}
     inserted={false}
     isFetching={false}
-    itemClass="AutoUI_ui_ApplicantGrid-19"
+    itemClass="AutoUI_ui_ApplicantGrid-20"
     items={Array []}
-    listClass="AutoUI_ui_ApplicantGrid-15"
+    listClass="AutoUI_ui_ApplicantGrid-16"
     viewMore={[Function]}
     visible={50}
   />
