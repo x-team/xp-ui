@@ -60,6 +60,11 @@ storiesOf('UI Components/DataGrid', module)
     <Body>
       <DataGrid
         isLoading
+        applicants={applicants}
+        visibleColumns={visibleColumns}
+        sortColumn={'email'}
+        sortDirection={'DESC'}
+        handleGridSort={action('handleGridSort')}
       />
     </Body>
   ))
