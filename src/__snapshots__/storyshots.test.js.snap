@@ -10667,6 +10667,7 @@ exports[`Storyshots UI Components/DataGrid default 1`] = `
       ]
     }
     handleGridSort={[Function]}
+    rowsCount={1000}
     sortColumn="email"
     sortDirection="DESC"
     visibleColumns={
@@ -15721,6 +15722,7 @@ exports[`Storyshots UI Components/DataGrid loading 1`] = `
     }
     handleGridSort={[Function]}
     isLoading={true}
+    rowsCount={1000}
     sortColumn="email"
     sortDirection="DESC"
     visibleColumns={
@@ -15752,10 +15754,10 @@ exports[`Storyshots UI Components/DataGrid loading 1`] = `
 
 exports[`Storyshots UI Components/DataGrid/Debug missing props (does component explode?) 1`] = `
 <div
-  className="AutoUI_ui_DataGrid-47"
+  className="AutoUI_ui_DataGrid-45"
 >
   <div
-    className="AutoUI_ui_DataGrid-53"
+    className="AutoUI_ui_DataGrid-51"
   >
     <ReactDataGrid
       cellNavigationMode="none"
@@ -36950,6 +36952,7 @@ exports[`Storyshots UI Components/SearchResult/Debug missing props (does compone
   />
   <DataGrid
     applicants={Array []}
+    rowsCount={0}
     sortColumn=""
     sortDirection="NONE"
     visibleColumns={Array []}
