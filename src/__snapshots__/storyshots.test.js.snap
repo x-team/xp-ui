@@ -20346,7 +20346,7 @@ exports[`Storyshots UI Components/Filters example of complete composition with a
 
 exports[`Storyshots UI Components/Filters/Debug centered Filter Groups 1`] = `
 <div
-  className="AutoUI_ui_Filters_Container-18 "
+  className="AutoUI_ui_Filters_Container-19 "
 >
   <Container
     bodyWrapper={[Function]}
@@ -20475,7 +20475,7 @@ exports[`Storyshots UI Components/Filters/Debug centered Filter Groups 1`] = `
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Container (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Container-18 "
+  className="AutoUI_ui_Filters_Container-19 "
 />
 `;
 
