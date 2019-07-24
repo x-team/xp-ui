@@ -18,14 +18,14 @@ const cx = {
 
 type Props = {
   items?: number
-}
+};
 
 const ResultCount = ({ items }: Props) => {
   const itemsCount = isNumber(items) ? items : 0
   const resultText = parseInt(itemsCount, 10) !== 1 ? 'results' : 'result'
 
   return (
-    <span className={cx.wrapper}>
+    <span className={cx.wrapper} data-testid='xpui-result-counter'>
       <span className={cx.content}>{itemsCount}</span>
       {resultText}
     </span>
