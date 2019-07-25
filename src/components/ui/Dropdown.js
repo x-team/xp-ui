@@ -134,11 +134,11 @@ type Props = {
   tooltipClassName?: string,
   onClick?: Function,
   onClose?: Function
-};
+}
 
 type State = {
   open: boolean
-};
+}
 
 class Dropdown extends PureComponent<Props, State> {
   static defaultProps = {
@@ -152,21 +152,21 @@ class Dropdown extends PureComponent<Props, State> {
     indicator: false,
     padded: false,
     toggle: true
-  };
+  }
 
   state = {
     open: false
-  };
+  }
 
-  toggle = () => this.setState((prevState: State) => ({ open: !prevState.open }));
+  toggle = () => this.setState((prevState: State) => ({ open: !prevState.open }))
 
-  open = () => this.setState((prevState: State) => ({ open: true }));
+  open = () => this.setState((prevState: State) => ({ open: true }))
 
   close = () => {
     const { onClose } = this.props
     this.setState(() => ({ open: false }))
     onClose && onClose()
-  };
+  }
 
   render () {
     const {

@@ -36,12 +36,12 @@ const cx = {
 type Props = {
   mainBodyElement?: Element<*>,
   secondaryElements: Array<Element<*>>
-};
+}
 
 class MetaGroup extends PureComponent<Props, void> {
   static defaultProps = {
     secondaryElements: []
-  };
+  }
 
   render () {
     const { mainBodyElement, secondaryElements } = this.props
