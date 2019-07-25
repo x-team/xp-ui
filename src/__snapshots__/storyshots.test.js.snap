@@ -15805,9 +15805,11 @@ exports[`Storyshots UI Components/DataGrid/Debug missing props (does component e
 exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
 <div
   className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+  data-testid="xpui-dropdown"
 >
   <div
     className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44"
+    data-testid="xpui-dropdown__button"
     onClick={[Function]}
   >
     <SvgIcon
@@ -15816,6 +15818,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
     />
     <span
       className="AutoUI_ui_Dropdown-40"
+      data-testid="xpui-dropdown__button__label"
     >
       This is a Dropdown
     </span>
@@ -15830,6 +15833,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
+    data-testid="xpui-dropdown__children"
   >
     <SelectBox
       areItemsToggleable={true}
@@ -15885,13 +15889,16 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
 exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons 1`] = `
 <div
   className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+  data-testid="xpui-dropdown"
 >
   <div
     className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44"
+    data-testid="xpui-dropdown__button"
     onClick={[Function]}
   >
     <span
       className="AutoUI_ui_Dropdown-40"
+      data-testid="xpui-dropdown__button__label"
     >
       registered
     </span>
@@ -15906,6 +15913,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
+    data-testid="xpui-dropdown__children"
   >
     <SelectBox
       areItemsToggleable={true}
@@ -15961,13 +15969,16 @@ exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons
 exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
 <div
   className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+  data-testid="xpui-dropdown"
 >
   <div
     className="AutoUI_ui_Dropdown-24 "
+    data-testid="xpui-dropdown__button"
     onClick={[Function]}
   >
     <span
       className="AutoUI_ui_Dropdown-40"
+      data-testid="xpui-dropdown__button__label"
     >
       <h1>
         Click to open!
@@ -15976,9 +15987,11 @@ exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50    AutoUI_ui_Dropdown-111 "
+    data-testid="xpui-dropdown__children"
   >
     <div
       className="AutoUI_ui_Dropdown-71 "
+      data-testid="xpui-dropdown__children__tooltip"
     >
       <CloseButton
         closeDropdown={[Function]}
@@ -15992,9 +16005,11 @@ exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
 exports[`Storyshots UI Components/Dropdown icon only button 1`] = `
 <div
   className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+  data-testid="xpui-dropdown"
 >
   <div
     className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44"
+    data-testid="xpui-dropdown__button"
     onClick={[Function]}
   >
     <SvgIcon
@@ -16004,6 +16019,7 @@ exports[`Storyshots UI Components/Dropdown icon only button 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
+    data-testid="xpui-dropdown__children"
   >
     <div
       key=".0"
@@ -16089,9 +16105,11 @@ exports[`Storyshots UI Components/Dropdown label and indicator positioned on the
 exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
 <div
   className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+  data-testid="xpui-dropdown"
 >
   <div
     className="AutoUI_ui_Dropdown-24 "
+    data-testid="xpui-dropdown__button"
     onClick={[Function]}
   >
     <SvgIcon
@@ -16100,6 +16118,7 @@ exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
     />
     <span
       className="AutoUI_ui_Dropdown-40"
+      data-testid="xpui-dropdown__button__label"
     >
       Add to List
     </span>
@@ -16114,6 +16133,7 @@ exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
+    data-testid="xpui-dropdown__children"
   >
     <div
       key=".0"
@@ -16174,13 +16194,16 @@ exports[`Storyshots UI Components/Dropdown missing props (does component explode
 exports[`Storyshots UI Components/Dropdown tooltip display 1`] = `
 <div
   className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
+  data-testid="xpui-dropdown"
 >
   <div
     className="AutoUI_ui_Dropdown-24 "
+    data-testid="xpui-dropdown__button"
     onClick={[Function]}
   >
     <span
       className="AutoUI_ui_Dropdown-40"
+      data-testid="xpui-dropdown__button__label"
     >
       <Button
         block={false}
@@ -16208,9 +16231,11 @@ exports[`Storyshots UI Components/Dropdown tooltip display 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50    AutoUI_ui_Dropdown-111 "
+    data-testid="xpui-dropdown__children"
   >
     <div
       className="AutoUI_ui_Dropdown-71 "
+      data-testid="xpui-dropdown__children__tooltip"
     >
       Anything here
     </div>
@@ -22824,12 +22849,15 @@ exports[`Storyshots UI Components/MetaGroup standalone composed with children 1`
 exports[`Storyshots UI Components/MetaGroup/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_MetaGroup-10"
+  data-testid="xpui-metaGroup__layout"
 >
   <div
     className="AutoUI_ui_MetaGroup-15"
+    data-testid="xpui-metaGroup__mainBodyColumn"
   />
   <div
     className="AutoUI_ui_MetaGroup-21"
+    data-testid="xpui-metaGroup__secondaryColumns"
   />
 </div>
 `;
@@ -25578,6 +25606,7 @@ exports[`Storyshots UI Components/QuickSearchButton/Debug missing props (does co
 exports[`Storyshots UI Components/ResultCount basic usage 1`] = `
 <span
   className="AutoUI_ui_ResultCount-9"
+  data-testid="xpui-result-counter"
 >
   <span
     className="AutoUI_ui_ResultCount-13"
@@ -25591,6 +25620,7 @@ exports[`Storyshots UI Components/ResultCount basic usage 1`] = `
 exports[`Storyshots UI Components/ResultCount missing props (does component explode?) 1`] = `
 <span
   className="AutoUI_ui_ResultCount-9"
+  data-testid="xpui-result-counter"
 >
   <span
     className="AutoUI_ui_ResultCount-13"
@@ -25604,6 +25634,7 @@ exports[`Storyshots UI Components/ResultCount missing props (does component expl
 exports[`Storyshots UI Components/ResultCount usage with single item result 1`] = `
 <span
   className="AutoUI_ui_ResultCount-9"
+  data-testid="xpui-result-counter"
 >
   <span
     className="AutoUI_ui_ResultCount-13"
