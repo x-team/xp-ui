@@ -33,6 +33,9 @@ const cx = {
       display: block
     }
   `),
+  sidebarHeadingLink: cmz(`
+    cursor: pointer
+  `),
   sidebarHeadingIconRight: cmz(`
     & {
       margin: 0 25px 0 auto
@@ -50,7 +53,7 @@ const cx = {
     align-self: stretch
     width: 100%
     height: 100%
-    border: 0px
+    border: 0px !important
     padding-left: 4px
     margin: 0 0 0 0
   `),
@@ -66,7 +69,8 @@ type Props = {
   onToggleQuickSearch?: Function,
   onQuickSearchChangeValue?: Function,
   quickSearchValue?: string,
-  onQuickSearchSubmit?: Function
+  onQuickSearchSubmit?: Function,
+  sidebarHeadingLink?: string
 }
 
 type State = {
@@ -98,7 +102,7 @@ export default class SidebarHeading extends PureComponent<Props, State> {
 
   render () {
     const { isSearching, inputValue } = this.state
-    const { isQuickSearching, onToggleQuickSearch, quickSearchValue, sidebarIcon, text } = this.props
+    const { isQuickSearching, onToggleQuickSearch, quickSearchValue, sidebarIcon, sidebarHeadingLink, text } = this.props
 
     // component can be either fully controlled or self-controlled
     const shouldRenderInput = isQuickSearching || isSearching
@@ -113,6 +117,7 @@ export default class SidebarHeading extends PureComponent<Props, State> {
         <form className={cx.inputParent} onSubmit={this.handleQuickSearchSubmit}>
           <InputField
             autoFocus
+            onBlur={() => onToggleInput(false)}
             value={value}
             onChange={this.handleChangeValue}
             name='input'
@@ -126,11 +131,15 @@ export default class SidebarHeading extends PureComponent<Props, State> {
       </div>
     ) : (
       <div className={cx.container}>
-        {sidebarIcon && (
+        {sidebarIcon && (sidebarHeadingLink ? (
+          <a onClick={sidebarHeadingLink} className={[cx.sidebarHeadingIcon, cx.sidebarHeadingLink].join(' ')}>
+            <SvgIcon icon={sidebarIcon} color='frenchGrayDarker' />
+          </a>
+        ) : (
           <div className={cx.sidebarHeadingIcon}>
             <SvgIcon icon={sidebarIcon} color='frenchGrayDarker' />
           </div>
-        )}
+        ))}
         { text }
         <QuickSearchButton onClick={() => onToggleInput(true)} />
       </div>
