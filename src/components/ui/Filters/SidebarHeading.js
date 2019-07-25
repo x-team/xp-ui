@@ -117,7 +117,6 @@ export default class SidebarHeading extends PureComponent<Props, State> {
         <form className={cx.inputParent} onSubmit={this.handleQuickSearchSubmit}>
           <InputField
             autoFocus
-            onBlur={() => onToggleInput(false)}
             value={value}
             onChange={this.handleChangeValue}
             name='input'
