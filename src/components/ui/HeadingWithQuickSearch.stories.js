@@ -45,7 +45,7 @@ storiesOf('UI Components/HeadingWithQuickSearch/Debug', module)
       <HeadingWithQuickSearch
         text='Click this arrow'
         leftIcon='arrowleft'
-        leftIconAction={action('test')} />
+        leftIconAction={action('onClick')} />
     </Heading>
   ))
   .add('missing props (component does not explode)', () => (
