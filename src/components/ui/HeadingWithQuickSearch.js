@@ -62,7 +62,7 @@ const cx = {
     height: 100%
     border: 0 !important
     padding-left: 4px
-    margin: 0 0 0 0
+    margin: 0
   `),
 
   inputParent: cmz(`
