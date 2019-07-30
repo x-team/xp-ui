@@ -2,7 +2,7 @@
 /* global SyntheticEvent, HTMLInputElement */
 
 import React, { PureComponent } from 'react'
-import QuickSearchButton from './QuickSearchButton'
+import QuickSearchButton from '../QuickSearchButton'
 
 import SvgIcon from '../SvgIcon'
 import InputField from '../../forms/InputField'
@@ -24,6 +24,7 @@ const cx = {
     align-items: center
     justify-content: stretch
   `),
+
   sidebarHeadingIcon: cmz(`
     & {
       margin: 0 10px 0 15px
@@ -33,9 +34,11 @@ const cx = {
       display: block
     }
   `),
+
   sidebarHeadingLink: cmz(`
     cursor: pointer
   `),
+
   sidebarHeadingIconRight: cmz(`
     & {
       margin: 0 25px 0 auto
@@ -46,9 +49,11 @@ const cx = {
       display: block
     }
   `),
+
   inputContainer: cmz(`
     background-color: ${theme.baseBrighter}
   `),
+
   input: cmz(`
     align-self: stretch
     width: 100%
@@ -57,6 +62,7 @@ const cx = {
     padding-left: 4px
     margin: 0 0 0 0
   `),
+
   inputParent: cmz(`
     flex: 1
   `)
@@ -94,6 +100,7 @@ export default class SidebarHeading extends PureComponent<Props, State> {
       this.setState({ inputValue: input.target.value })
     }
   }
+
   handleQuickSearchSubmit = (event: SyntheticEvent<HTMLInputElement>): void => {
     event.preventDefault()
     const value = this.props.quickSearchValue || this.state.inputValue

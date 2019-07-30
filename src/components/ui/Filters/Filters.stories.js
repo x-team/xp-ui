@@ -40,12 +40,6 @@ const Body = ({ children }) => (
   </div>
 )
 
-const Heading = ({ children }) => (
-  <div style={{ height: '58px', width: '400px', border: '1px solid rgb(233, 237, 238)', backgroundColor: 'rgb(249, 250, 251)' }}>
-    { children }
-  </div>
-)
-
 const applicantBadges = getApplicantBadges()
 
 export const StoryFilters = () => (
@@ -245,33 +239,6 @@ storiesOf('UI Components/Filters', module)
     <Body>
       <StoryFiltersWithAccordion />
     </Body>
-  ))
-
-storiesOf('UI Components/Filters/Sidebar Heading', module)
-  .add('self-controlled sidebar heading', () => (
-    <Heading>
-      <Filters.SidebarHeading
-        text='Filters'
-        sidebarIcon='filters'
-        onQuickSearchSubmit={action('quickSearchSubmit')}
-      />
-    </Heading>
-  ))
-  .add('fully-controlled sidebar heading', () => (
-    <State initialState={{ isOpen: false, value: '' }}>
-      {({ setState, state }) => (
-        <Heading>
-          <Filters.SidebarHeading
-            text='Filters'
-            sidebarIcon='filters'
-            isQuickSearching={state.isOpen}
-            quickSearchValue={state.value}
-            onToggleQuickSearch={(isOpen) => setState({ isOpen })}
-            onQuickSearchChangeValue={(value) => setState({ value })}
-          />
-        </Heading>
-      )}
-    </State>
   ))
 
 storiesOf('UI Components/Filters/Debug', module)
