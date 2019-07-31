@@ -59,9 +59,9 @@ const cx = {
   input: cmz(`
     align-self: stretch
     width: 100%
-    height: 100%
+    height: 100% !important
     border: 0 !important
-    padding-left: 4px
+    padding: 0 !important
     margin: 0
   `),
 
