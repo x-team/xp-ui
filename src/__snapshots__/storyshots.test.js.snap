@@ -22155,6 +22155,26 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug with action handl
 </div>
 `;
 
+exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug without wrapper 1`] = `
+<div
+  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
+>
+  <a
+    className="AutoUI_ui_HeadingWithQuickSearch-30 AutoUI_ui_HeadingWithQuickSearch-40"
+    onClick={[Function]}
+  >
+    <SvgIcon
+      color="frenchGrayDarker"
+      icon="arrowleft"
+    />
+  </a>
+  Click this arrow
+  <QuickSearchButton
+    onClick={[Function]}
+  />
+</div>
+`;
+
 exports[`Storyshots UI Components/HorizontalRuler basic usage 1`] = `
 <hr
   className="AutoUI_ui_HorizontalRuler-12"
@@ -25535,9 +25555,8 @@ exports[`Storyshots UI Components/QuickSearchButton basic usage 1`] = `
 <div
   style={
     Object {
-      "border": "1px solid black",
       "padding": "10px 0",
-      "width": "200px",
+      "width": "64px",
     }
   }
 >
@@ -25547,18 +25566,15 @@ exports[`Storyshots UI Components/QuickSearchButton basic usage 1`] = `
 </div>
 `;
 
-exports[`Storyshots UI Components/QuickSearchButton missing props (does component explode?) 1`] = `
+exports[`Storyshots UI Components/QuickSearchButton/Debug missing props (does component explode?) 1`] = `
 <div
-  style={
-    Object {
-      "border": "1px solid black",
-      "padding": "10px 0",
-      "width": "200px",
-    }
-  }
+  className="AutoUI_ui_QuickSearchButton-15"
+  onClick={[Function]}
 >
-  <QuickSearchButton
-    onClick={[Function]}
+  <SvgIcon
+    color="grayscarpaflow"
+    hover="default"
+    icon="magnifier"
   />
 </div>
 `;

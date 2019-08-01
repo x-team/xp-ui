@@ -115,7 +115,13 @@ storiesOf('UI Components/TwoColumnsLayout/Debug', module)
         />
       </StoryAdminScreen>
     </Body>
-  ))
+  ), {
+    notes: {
+      markdown: `
+This story is useful to demonstrate how both heading parts behave by default when being passed a Component, instead of a string.
+      `
+    }
+  })
   .add('composed in AdminScreen and with Modal with short content', () => (
     <Body>
       <StoryAdminScreen

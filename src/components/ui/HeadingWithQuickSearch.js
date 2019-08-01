@@ -86,7 +86,7 @@ type State = {
   inputValue: string
 }
 
-export default class HeadingWithQuickSearch extends PureComponent<Props, State> {
+class HeadingWithQuickSearch extends PureComponent<Props, State> {
   state = {
     isSearching: false,
     inputValue: ''
@@ -169,3 +169,5 @@ export default class HeadingWithQuickSearch extends PureComponent<Props, State> 
     )
   }
 }
+
+export default HeadingWithQuickSearch
