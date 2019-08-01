@@ -10,6 +10,7 @@ const cmz = require('cmz')
 const cx = {
   wrapper: cmz(`
     outline: none
+    flex: 1
   `),
 
   list: cmz(`
