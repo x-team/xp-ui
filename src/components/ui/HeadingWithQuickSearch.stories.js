@@ -45,17 +45,17 @@ storiesOf('UI Components/HeadingWithQuickSearch/Debug', module)
       <HeadingWithQuickSearch
         text='Click this arrow'
         leftIcon='arrowleft'
-        leftIconAction={action('onClick')} />
+        leftIconAction={action('onClick')}
+      />
     </Heading>
   ))
   .add('without wrapper', () => (
     <HeadingWithQuickSearch
       text='Click this arrow'
       leftIcon='arrowleft'
-      leftIconAction={action('onClick')} />
+      leftIconAction={action('onClick')}
+    />
   ))
-  .add('missing props (component does not explode)', () => (
-    <Heading>
-      <HeadingWithQuickSearch />
-    </Heading>
+  .add('missing props (does component explode?)', () => (
+    <HeadingWithQuickSearch />
   ))

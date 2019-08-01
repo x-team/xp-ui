@@ -22121,18 +22121,13 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch self-controlled sidebar
 </div>
 `;
 
-exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug missing props (component does not explode) 1`] = `
+exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug missing props (does component explode?) 1`] = `
 <div
-  style={
-    Object {
-      "backgroundColor": "rgb(249, 250, 251)",
-      "border": "1px solid rgb(233, 237, 238)",
-      "height": "58px",
-      "width": "400px",
-    }
-  }
+  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
 >
-  <HeadingWithQuickSearch />
+  <QuickSearchButton
+    onClick={[Function]}
+  />
 </div>
 `;
 
