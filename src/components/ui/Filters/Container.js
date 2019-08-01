@@ -1,4 +1,5 @@
 // @flow
+/* globals SyntheticKeyboardEvent */
 
 import React from 'react'
 
@@ -8,7 +9,8 @@ import type { Element } from 'react'
 
 export type Props = {
   children: Element<*>,
-  isAccordion?: boolean
+  isAccordion?: boolean,
+  onKeyPress?: (event: SyntheticKeyboardEvent<>) => void
 }
 
 const cmz = require('cmz')
@@ -26,8 +28,13 @@ const cx = {
   `)
 }
 
-const Container = (props: Props) => (
-  <div className={`${cx.filters} ${props.isAccordion ? cx.accordion : ''}`}>{props.children}</div>
+const Container = ({ children, isAccordion, onKeyPress }: Props) => (
+  <div
+    className={`${cx.filters} ${isAccordion ? cx.accordion : ''}`}
+    onKeyPress={onKeyPress}
+  >
+    {children}
+  </div>
 )
 
 export default Container
