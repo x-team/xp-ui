@@ -25606,7 +25606,7 @@ exports[`Storyshots UI Components/QuickSearchButton/Debug missing props (does co
 exports[`Storyshots UI Components/ResultCount basic usage 1`] = `
 <span
   className="AutoUI_ui_ResultCount-9"
-  data-testid="xpui-result-counter"
+  data-testid="xpui-resultCount"
 >
   <span
     className="AutoUI_ui_ResultCount-13"
@@ -25620,7 +25620,7 @@ exports[`Storyshots UI Components/ResultCount basic usage 1`] = `
 exports[`Storyshots UI Components/ResultCount missing props (does component explode?) 1`] = `
 <span
   className="AutoUI_ui_ResultCount-9"
-  data-testid="xpui-result-counter"
+  data-testid="xpui-resultCount"
 >
   <span
     className="AutoUI_ui_ResultCount-13"
@@ -25634,7 +25634,7 @@ exports[`Storyshots UI Components/ResultCount missing props (does component expl
 exports[`Storyshots UI Components/ResultCount usage with single item result 1`] = `
 <span
   className="AutoUI_ui_ResultCount-9"
-  data-testid="xpui-result-counter"
+  data-testid="xpui-resultCount"
 >
   <span
     className="AutoUI_ui_ResultCount-13"
