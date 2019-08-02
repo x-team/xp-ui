@@ -22092,6 +22092,7 @@ exports[`Storyshots UI Components/HeaderBar basic usage 1`] = `
 exports[`Storyshots UI Components/HeadingWithQuickSearch fully-controlled sidebar heading 1`] = `
 <Heading>
   <HeadingWithQuickSearch
+    headingAction={[Function]}
     isQuickSearching={false}
     leftIcon="filters"
     onQuickSearchChangeValue={[Function]}
@@ -22114,6 +22115,7 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch self-controlled sidebar
   }
 >
   <HeadingWithQuickSearch
+    headingAction={[Function]}
     leftIcon="filters"
     onQuickSearchSubmit={[Function]}
     text="Filters"
@@ -22143,8 +22145,8 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug with action handl
   }
 >
   <HeadingWithQuickSearch
+    headingAction={[Function]}
     leftIcon="arrowleft"
-    leftIconAction={[Function]}
     text="Click this arrow"
   />
 </div>
@@ -22154,15 +22156,14 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug without wrapper 1
 <div
   className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
 >
-  <a
-    className="AutoUI_ui_HeadingWithQuickSearch-30 AutoUI_ui_HeadingWithQuickSearch-40"
-    onClick={[Function]}
+  <div
+    className="AutoUI_ui_HeadingWithQuickSearch-30"
   >
     <SvgIcon
       color="frenchGrayDarker"
       icon="arrowleft"
     />
-  </a>
+  </div>
   Click this arrow
   <QuickSearchButton
     onClick={[Function]}

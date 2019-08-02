@@ -19,6 +19,7 @@ storiesOf('UI Components/HeadingWithQuickSearch', module)
         text='Filters'
         leftIcon='filters'
         onQuickSearchSubmit={action('quickSearchSubmit')}
+        headingAction={action('headingAction')}
       />
     </Heading>
   ))
@@ -33,6 +34,7 @@ storiesOf('UI Components/HeadingWithQuickSearch', module)
             quickSearchValue={state.value}
             onToggleQuickSearch={(isOpen) => setState({ isOpen })}
             onQuickSearchChangeValue={(value) => setState({ value })}
+            headingAction={action('headingAction')}
           />
         </Heading>
       )}
@@ -45,7 +47,7 @@ storiesOf('UI Components/HeadingWithQuickSearch/Debug', module)
       <HeadingWithQuickSearch
         text='Click this arrow'
         leftIcon='arrowleft'
-        leftIconAction={action('onClick')}
+        headingAction={action('headingAction')}
       />
     </Heading>
   ))
@@ -53,7 +55,6 @@ storiesOf('UI Components/HeadingWithQuickSearch/Debug', module)
     <HeadingWithQuickSearch
       text='Click this arrow'
       leftIcon='arrowleft'
-      leftIconAction={action('onClick')}
     />
   ))
   .add('missing props (does component explode?)', () => (

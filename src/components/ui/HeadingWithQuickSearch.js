@@ -37,8 +37,12 @@ const cx = {
     }
   `),
 
-  leftIconAction: cmz(`
-    cursor: pointer
+  headingText: cmz(`
+    &,
+    &:hover {
+      color: ${theme.typoHighlightOnDarkBackground}
+      cursor: pointer
+    }
   `),
 
   sidebarHeadingIconRight: cmz(`
@@ -78,7 +82,7 @@ type Props = {
   onToggleQuickSearch?: (isEnabled: boolean) => void,
   onQuickSearchChangeValue?: (value: string) => void,
   onQuickSearchSubmit?: (value: string) => void,
-  leftIconAction?: () => void
+  headingAction?: () => void
 }
 
 type State = {
@@ -121,7 +125,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
 
   renderLeftIcon = (icon: Icon, action?: () => void) => {
     return icon && (action ? (
-      <a onClick={action} className={[cx.sidebarHeadingIcon, cx.leftIconAction].join(' ')}>
+      <a onClick={action} className={[cx.sidebarHeadingIcon, cx.headingText].join(' ')}>
         <SvgIcon icon={icon} color='frenchGrayDarker' />
       </a>
     ) : (
@@ -129,6 +133,14 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
         <SvgIcon icon={icon} color='frenchGrayDarker' />
       </div>
     ))
+  }
+
+  renderHeadingText = (text: string, action?: () => void) => {
+    return action ? (
+      <a onClick={action} className={cx.headingText}>
+        {text}
+      </a>
+    ) : text
   }
 
   renderInput = () => {
@@ -148,7 +160,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
   }
 
   render () {
-    const { isQuickSearching, leftIcon, leftIconAction, text } = this.props
+    const { isQuickSearching, leftIcon, headingAction, text } = this.props
 
     const isQuickSearchActive = isQuickSearching || this.state.isSearching
 
@@ -162,8 +174,8 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
       </div>
     ) : (
       <div className={cx.container}>
-        {this.renderLeftIcon(leftIcon, leftIconAction)}
-        {text}
+        {this.renderLeftIcon(leftIcon, headingAction)}
+        {this.renderHeadingText(text, headingAction)}
         <QuickSearchButton onClick={this.handleToggleQuickSearch(true)} />
       </div>
     )
