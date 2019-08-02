@@ -35,7 +35,7 @@ const cx = {
 
 type Props = {
   mainBodyElement?: Element<*>,
-  secondaryElements: Array<Element<*>>,
+  secondaryElements: Array<Element<*>>
 }
 
 class MetaGroup extends PureComponent<Props, void> {
@@ -46,13 +46,13 @@ class MetaGroup extends PureComponent<Props, void> {
   render () {
     const { mainBodyElement, secondaryElements } = this.props
     return (
-      <div className={cx.layout}>
-        <div className={cx.mainBodyColumn}>
+      <div className={cx.layout} data-testid='xpui-metaGroup__layout'>
+        <div className={cx.mainBodyColumn} data-testid='xpui-metaGroup__mainBodyColumn'>
           {mainBodyElement}
         </div>
-        <div className={cx.secondaryColumns}>
+        <div className={cx.secondaryColumns} data-testid='xpui-metaGroup__secondaryColumns'>
           {secondaryElements.map(element => (
-            <div className={cx.secondaryColumn} key={element.key}>
+            <div className={cx.secondaryColumn} key={element.key} data-testid='xpui-metaGroup__secondaryColumn'>
               {element}
             </div>
           ))}
