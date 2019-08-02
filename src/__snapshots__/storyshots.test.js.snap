@@ -22089,6 +22089,88 @@ exports[`Storyshots UI Components/HeaderBar basic usage 1`] = `
 </div>
 `;
 
+exports[`Storyshots UI Components/HeadingWithQuickSearch fully-controlled sidebar heading 1`] = `
+<Heading>
+  <HeadingWithQuickSearch
+    headingAction={[Function]}
+    isQuickSearching={false}
+    leftIcon="filters"
+    onQuickSearchChangeValue={[Function]}
+    onToggleQuickSearch={[Function]}
+    quickSearchValue=""
+    text="Filters"
+  />
+</Heading>
+`;
+
+exports[`Storyshots UI Components/HeadingWithQuickSearch self-controlled sidebar heading 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgb(249, 250, 251)",
+      "border": "1px solid rgb(233, 237, 238)",
+      "height": "58px",
+      "width": "400px",
+    }
+  }
+>
+  <HeadingWithQuickSearch
+    headingAction={[Function]}
+    leftIcon="filters"
+    onQuickSearchSubmit={[Function]}
+    text="Filters"
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug missing props (does component explode?) 1`] = `
+<div
+  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
+>
+  <QuickSearchButton
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug with action handler 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgb(249, 250, 251)",
+      "border": "1px solid rgb(233, 237, 238)",
+      "height": "58px",
+      "width": "400px",
+    }
+  }
+>
+  <HeadingWithQuickSearch
+    headingAction={[Function]}
+    leftIcon="arrowleft"
+    text="Click this arrow"
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug without wrapper 1`] = `
+<div
+  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
+>
+  <div
+    className="AutoUI_ui_HeadingWithQuickSearch-30"
+  >
+    <SvgIcon
+      color="frenchGrayDarker"
+      icon="arrowleft"
+    />
+  </div>
+  Click this arrow
+  <QuickSearchButton
+    onClick={[Function]}
+  />
+</div>
+`;
+
 exports[`Storyshots UI Components/HorizontalRuler basic usage 1`] = `
 <hr
   className="AutoUI_ui_HorizontalRuler-12"
@@ -25463,6 +25545,34 @@ exports[`Storyshots UI Components/ProfileHeaderLinks missing props (does compone
 <ul
   className="AutoUI_ui_ProfileHeaderLinks-12 AutoUI_ui_ProfileHeaderLinks-22"
 />
+`;
+
+exports[`Storyshots UI Components/QuickSearchButton basic usage 1`] = `
+<div
+  style={
+    Object {
+      "padding": "10px 0",
+      "width": "64px",
+    }
+  }
+>
+  <QuickSearchButton
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/QuickSearchButton/Debug missing props (does component explode?) 1`] = `
+<div
+  className="AutoUI_ui_QuickSearchButton-15"
+  onClick={[Function]}
+>
+  <SvgIcon
+    color="grayscarpaflow"
+    hover="default"
+    icon="magnifier"
+  />
+</div>
 `;
 
 exports[`Storyshots UI Components/ResultCount basic usage 1`] = `
@@ -43202,7 +43312,7 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Debug composed in AdminScreen
         />
       }
       sidebarHeading="A link in the sidebar heading"
-      sidebarHeadingLink={[Function]}
+      sidebarHeadingAction={[Function]}
       sidebarIcon="arrowleft"
       sidebarWidth={425}
     />
@@ -43306,6 +43416,54 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Debug standalone with very lo
 </div>
 `;
 
+exports[`Storyshots UI Components/TwoColumnsLayout/Debug with composed headings in AdminScreen 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <StoryAdminScreen>
+    <StoryTwoColumnsLayout
+      contentHeading={
+        <div
+          style={
+            Object {
+              "backgroundColor": "black",
+              "color": "white",
+            }
+          }
+        >
+          bump
+        </div>
+      }
+      sidebarHeading={
+        <div
+          style={
+            Object {
+              "backgroundColor": "black",
+              "color": "white",
+            }
+          }
+        >
+          bump
+        </div>
+      }
+    />
+  </StoryAdminScreen>
+</div>
+`;
+
 exports[`Storyshots UI Components/TwoColumnsLayout/Debug with short content and composed in AdminScreen 1`] = `
 <div
   style={
@@ -43363,7 +43521,7 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminSc
 </div>
 `;
 
-exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminScreen with Filters 1`] = `
+exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminScreen with Filters and sidebarHeading element 1`] = `
 <div
   style={
     Object {
@@ -43383,6 +43541,12 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminSc
   <StoryAdminScreen>
     <StoryTwoColumnsLayout
       sidebar={<StoryFilters />}
+      sidebarHeading={
+        <HeadingWithQuickSearch
+          leftIcon="filters"
+          text="Filters"
+        />
+      }
     />
   </StoryAdminScreen>
 </div>
