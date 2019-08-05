@@ -134,11 +134,11 @@ type Props = {
   tooltipClassName?: string,
   onClick?: Function,
   onClose?: Function
-}
+};
 
 type State = {
   open: boolean
-}
+};
 
 class Dropdown extends PureComponent<Props, State> {
   static defaultProps = {
@@ -152,21 +152,21 @@ class Dropdown extends PureComponent<Props, State> {
     indicator: false,
     padded: false,
     toggle: true
-  }
+  };
 
   state = {
     open: false
-  }
+  };
 
-  toggle = () => this.setState((prevState: State) => ({ open: !prevState.open }))
+  toggle = () => this.setState((prevState: State) => ({ open: !prevState.open }));
 
-  open = () => this.setState((prevState: State) => ({ open: true }))
+  open = () => this.setState((prevState: State) => ({ open: true }));
 
   close = () => {
     const { onClose } = this.props
     this.setState(() => ({ open: false }))
     onClose && onClose()
-  }
+  };
 
   render () {
     const {
@@ -219,10 +219,10 @@ class Dropdown extends PureComponent<Props, State> {
         onMouseLeave={hover ? this.close : undefined}
         data-testid='xpui-dropdown'
       >
-        <div className={labelClasses} onClick={handleClick} data-testid='xpui-dropdown__button'>
+        <div className={labelClasses} onClick={handleClick} data-testid='xpui-dropdown-button'>
           {icon && <SvgIcon icon={icon} color={iconColor} />}
           {label && (
-            <span className={styles.labelElement} data-testid='xpui-dropdown__button__label'>
+            <span className={styles.labelElement} data-testid='xpui-dropdown-button-label'>
               {label}
             </span>
           )}
@@ -233,9 +233,9 @@ class Dropdown extends PureComponent<Props, State> {
           )}
         </div>
         {children && (
-          <div className={contentClasses} data-testid='xpui-dropdown__children'>
+          <div className={contentClasses} data-testid='xpui-dropdown-children'>
             {tooltip ? (
-              <div className={tooltipClasses} data-testid='xpui-dropdown__children__tooltip'>
+              <div className={tooltipClasses} data-testid='xpui-dropdown-children-tooltip'>
                 {dropdownChildren()}
               </div>
             ) : (

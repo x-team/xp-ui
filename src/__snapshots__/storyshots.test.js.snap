@@ -464,7 +464,7 @@ exports[`Storyshots Form Components/SolutionForm 2 attempts are taken 1`] = `
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={false}
       icon=""
       iconProps={Object {}}
@@ -508,7 +508,7 @@ exports[`Storyshots Form Components/SolutionForm custom submit callback is passe
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={false}
       icon=""
       iconProps={Object {}}
@@ -551,7 +551,7 @@ exports[`Storyshots Form Components/SolutionForm max of 5 attempts allowed 1`] =
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={false}
       icon=""
       iconProps={Object {}}
@@ -594,7 +594,7 @@ exports[`Storyshots Form Components/SolutionForm missing props (does component e
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={false}
       icon=""
       iconProps={Object {}}
@@ -637,7 +637,7 @@ exports[`Storyshots Form Components/SolutionForm submitting is in progress 1`] =
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={true}
       icon=""
       iconProps={Object {}}
@@ -680,7 +680,7 @@ exports[`Storyshots Form Components/SolutionForm with disabled button 1`] = `
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={true}
       icon=""
       iconProps={Object {}}
@@ -2944,7 +2944,7 @@ exports[`Storyshots UI Components/ApplicantBadge/Debug missing props (does compo
 exports[`Storyshots UI Components/ApplicantGrid basic usage 1`] = `
 <div
   className="AutoUI_ui_ApplicantGrid-11"
-  data-test="applicants"
+  data-testid="xpui-applicantGrid"
   onKeyPress={[Function]}
   tabIndex={0}
 >
@@ -3043,7 +3043,7 @@ exports[`Storyshots UI Components/ApplicantGrid basic usage 1`] = `
 exports[`Storyshots UI Components/ApplicantGrid/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_ApplicantGrid-11"
-  data-test="applicants"
+  data-testid="xpui-applicantGrid"
   onKeyPress={[Function]}
   tabIndex={0}
 >
@@ -15811,7 +15811,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
 >
   <div
     className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44"
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <SvgIcon
@@ -15820,7 +15820,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
     />
     <span
       className="AutoUI_ui_Dropdown-40"
-      data-testid="xpui-dropdown__button__label"
+      data-testid="xpui-dropdown-button-label"
     >
       This is a Dropdown
     </span>
@@ -15835,7 +15835,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <SelectBox
       areItemsToggleable={true}
@@ -15895,12 +15895,12 @@ exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons
 >
   <div
     className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44"
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <span
       className="AutoUI_ui_Dropdown-40"
-      data-testid="xpui-dropdown__button__label"
+      data-testid="xpui-dropdown-button-label"
     >
       registered
     </span>
@@ -15915,7 +15915,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <SelectBox
       areItemsToggleable={true}
@@ -15975,12 +15975,12 @@ exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
 >
   <div
     className="AutoUI_ui_Dropdown-24 "
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <span
       className="AutoUI_ui_Dropdown-40"
-      data-testid="xpui-dropdown__button__label"
+      data-testid="xpui-dropdown-button-label"
     >
       <h1>
         Click to open!
@@ -15989,11 +15989,11 @@ exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50    AutoUI_ui_Dropdown-111 "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <div
       className="AutoUI_ui_Dropdown-71 "
-      data-testid="xpui-dropdown__children__tooltip"
+      data-testid="xpui-dropdown-children-tooltip"
     >
       <CloseButton
         closeDropdown={[Function]}
@@ -16011,7 +16011,7 @@ exports[`Storyshots UI Components/Dropdown icon only button 1`] = `
 >
   <div
     className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44"
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <SvgIcon
@@ -16021,7 +16021,7 @@ exports[`Storyshots UI Components/Dropdown icon only button 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <div
       key=".0"
@@ -16111,7 +16111,7 @@ exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
 >
   <div
     className="AutoUI_ui_Dropdown-24 "
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <SvgIcon
@@ -16120,7 +16120,7 @@ exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
     />
     <span
       className="AutoUI_ui_Dropdown-40"
-      data-testid="xpui-dropdown__button__label"
+      data-testid="xpui-dropdown-button-label"
     >
       Add to List
     </span>
@@ -16135,7 +16135,7 @@ exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <div
       key=".0"
@@ -16200,12 +16200,12 @@ exports[`Storyshots UI Components/Dropdown tooltip display 1`] = `
 >
   <div
     className="AutoUI_ui_Dropdown-24 "
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <span
       className="AutoUI_ui_Dropdown-40"
-      data-testid="xpui-dropdown__button__label"
+      data-testid="xpui-dropdown-button-label"
     >
       <Button
         block={false}
@@ -16233,11 +16233,11 @@ exports[`Storyshots UI Components/Dropdown tooltip display 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50    AutoUI_ui_Dropdown-111 "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <div
       className="AutoUI_ui_Dropdown-71 "
-      data-testid="xpui-dropdown__children__tooltip"
+      data-testid="xpui-dropdown-children-tooltip"
     >
       Anything here
     </div>
@@ -22424,7 +22424,7 @@ exports[`Storyshots UI Components/ListExclusionFormPopup/Debug missing props (do
       className="AutoUI_ui_ListExclusionFormPopup-52"
     >
       <InputField
-        data-testid="exclusion-comment"
+        data-testid="xpui-listExclusionFormPopup-input-comment"
         isInvalid={false}
         label="Add a comment"
         name="reason"
@@ -22436,7 +22436,7 @@ exports[`Storyshots UI Components/ListExclusionFormPopup/Debug missing props (do
         value=""
       />
       <div
-        className="AutoUI_ui_ListExclusionFormPopup-82"
+        className="AutoUI_ui_ListExclusionFormPopup-85"
       >
         <Button
           block={false}
@@ -22444,7 +22444,7 @@ exports[`Storyshots UI Components/ListExclusionFormPopup/Debug missing props (do
           color="normal"
           component="button"
           contentStyle="normal"
-          data-testid="exclusion-cancel"
+          data-testid="xpui-listExclusionFormPopup-button-cancel"
           disabled={false}
           icon=""
           iconProps={Object {}}
@@ -22468,7 +22468,7 @@ exports[`Storyshots UI Components/ListExclusionFormPopup/Debug missing props (do
           color="normal"
           component="button"
           contentStyle="normal"
-          data-testid="exclusion-submit"
+          data-testid="xpui-listExclusionFormPopup-button-submit"
           disabled={true}
           icon=""
           iconProps={Object {}}
@@ -22854,15 +22854,15 @@ exports[`Storyshots UI Components/MetaGroup standalone composed with children 1`
 exports[`Storyshots UI Components/MetaGroup/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_MetaGroup-10"
-  data-testid="xpui-metaGroup__layout"
+  data-testid="xpui-metaGroup-layout"
 >
   <div
     className="AutoUI_ui_MetaGroup-15"
-    data-testid="xpui-metaGroup__mainBodyColumn"
+    data-testid="xpui-metaGroup-mainBodyColumn"
   />
   <div
     className="AutoUI_ui_MetaGroup-21"
-    data-testid="xpui-metaGroup__secondaryColumns"
+    data-testid="xpui-metaGroup-secondaryColumns"
   />
 </div>
 `;
@@ -26121,7 +26121,7 @@ exports[`Storyshots UI Components/RoadmapLevel centered state with CTA button 1`
     color="normal"
     component="button"
     contentStyle="normal"
-    data-test="roadmapStart"
+    data-testid="xpui-roadmapLevel-button-cta"
     disabled={false}
     icon=""
     iconProps={Object {}}

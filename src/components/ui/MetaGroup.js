@@ -36,23 +36,23 @@ const cx = {
 type Props = {
   mainBodyElement?: Element<*>,
   secondaryElements: Array<Element<*>>
-}
+};
 
 class MetaGroup extends PureComponent<Props, void> {
   static defaultProps = {
     secondaryElements: []
-  }
+  };
 
   render () {
     const { mainBodyElement, secondaryElements } = this.props
     return (
-      <div className={cx.layout} data-testid='xpui-metaGroup__layout'>
-        <div className={cx.mainBodyColumn} data-testid='xpui-metaGroup__mainBodyColumn'>
+      <div className={cx.layout} data-testid='xpui-metaGroup-layout'>
+        <div className={cx.mainBodyColumn} data-testid='xpui-metaGroup-mainBodyColumn'>
           {mainBodyElement}
         </div>
-        <div className={cx.secondaryColumns} data-testid='xpui-metaGroup__secondaryColumns'>
+        <div className={cx.secondaryColumns} data-testid='xpui-metaGroup-secondaryColumns'>
           {secondaryElements.map(element => (
-            <div className={cx.secondaryColumn} key={element.key} data-testid='xpui-metaGroup__secondaryColumn'>
+            <div className={cx.secondaryColumn} key={element.key} data-testid='xpui-metaGroup-secondaryColumns-column'>
               {element}
             </div>
           ))}
