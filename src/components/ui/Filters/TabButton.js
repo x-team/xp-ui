@@ -8,8 +8,8 @@ import theme from '../../../styles/theme'
 
 export type Props = {
   text: string,
-  onClick: (event: any) => void,
-}
+  onClick: (event: any) => void
+};
 
 const cmz = require('cmz')
 

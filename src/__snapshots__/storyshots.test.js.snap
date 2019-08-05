@@ -4590,7 +4590,9 @@ exports[`Storyshots UI Components/Button/With Knobs all effects 1`] = `
 <button
   className="    "
 >
-  <span>
+  <span
+    data-testid="xpui-button"
+  >
     This is a button
   </span>
 </button>
@@ -20515,6 +20517,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Filter (does c
   <Label />
   <div
     className="AutoUI_ui_Filters_Filter-17"
+    data-testid="xpui-filters-filter"
   />
 </Fragment>
 `;
@@ -20522,6 +20525,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Filter (does c
 exports[`Storyshots UI Components/Filters/Debug missing props for Group (does components explode?) 1`] = `
 <div
   className="AutoUI_ui_Filters_Group-17"
+  data-testid="xpui-filters-group"
 />
 `;
 
@@ -20546,6 +20550,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does 
 exports[`Storyshots UI Components/Filters/Debug missing props for Label (does components explode?) 1`] = `
 <div
   className="AutoUI_ui_Filters_Label-17 AutoUI_typo-34"
+  data-testid="xpui-filters-label"
 />
 `;
 
