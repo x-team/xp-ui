@@ -71,7 +71,7 @@ const cx = {
   `)
 }
 
-type SortDirection = 'ASC' | 'DESC' | 'NONE' | ''
+type SortDirection = 'ASC' | 'DESC' | 'NONE' | '';
 
 type Props = {
   isLoading: boolean,
@@ -80,40 +80,32 @@ type Props = {
   sortDirection: SortDirection,
   sortColumn: string,
   handleGridSort: (sortColumn: string, sortDirection: SortDirection) => void
-}
+};
 
 const getRows = (applicants: Array<Applicant>) => selectors.getRows({ rows: applicants })
 const getRow = (applicants: Array<Applicant>) => (rowIdx: number) => getRows(applicants)[rowIdx]
 
-const DataGrid = ({
-  visibleColumns,
-  sortColumn,
-  sortDirection,
-  handleGridSort,
-  applicants,
-  isLoading
-}: Props) =>
-  (
-    <div className={cx.gridContainer}>
-      <div className={cx.grid}>
-        {isLoading && (
-          <div className={cx.overlay}>
-            <Loader />
-          </div>
-        )}
-        <ReactDataGrid
-          columns={visibleColumns}
-          rowGetter={getRow(applicants)}
-          rowsCount={RENDER_ROWS_COUNT}
-          headerFiltersHeight={0}
-          onGridSort={handleGridSort}
-          sortColumn={sortColumn}
-          sortDirection={sortDirection}
-          minHeight={tableMinHeightValues.dataGrid}
-        />
-      </div>
+const DataGrid = ({ visibleColumns, sortColumn, sortDirection, handleGridSort, applicants, isLoading }: Props) => (
+  <div className={cx.gridContainer} data-testid='xpui-dataGrid-container'>
+    <div className={cx.grid} data-testid='xpui-dataGrid-grid'>
+      {isLoading && (
+        <div className={cx.overlay}>
+          <Loader />
+        </div>
+      )}
+      <ReactDataGrid
+        columns={visibleColumns}
+        rowGetter={getRow(applicants)}
+        rowsCount={RENDER_ROWS_COUNT}
+        headerFiltersHeight={0}
+        onGridSort={handleGridSort}
+        sortColumn={sortColumn}
+        sortDirection={sortDirection}
+        minHeight={tableMinHeightValues.dataGrid}
+      />
     </div>
-  )
+  </div>
+)
 
 DataGrid.defaultProps = {
   applicants: [],

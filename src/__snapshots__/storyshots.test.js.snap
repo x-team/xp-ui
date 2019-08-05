@@ -15755,9 +15755,11 @@ exports[`Storyshots UI Components/DataGrid loading 1`] = `
 exports[`Storyshots UI Components/DataGrid/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_DataGrid-47"
+  data-testid="xpui-dataGrid-container"
 >
   <div
     className="AutoUI_ui_DataGrid-53"
+    data-testid="xpui-dataGrid-grid"
   >
     <ReactDataGrid
       cellNavigationMode="none"
@@ -22156,6 +22158,7 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch self-controlled sidebar
 exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
+  data-testid="xpui-headingWithQuickSearch-container"
 >
   <QuickSearchButton
     onClick={[Function]}
@@ -22185,9 +22188,10 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug with action handl
 exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug without wrapper 1`] = `
 <div
   className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
+  data-testid="xpui-headingWithQuickSearch-container"
 >
   <div
-    className="AutoUI_ui_HeadingWithQuickSearch-30"
+    className="AutoUI_ui_HeadingWithQuickSearch-33"
   >
     <SvgIcon
       color="frenchGrayDarker"
@@ -25598,6 +25602,7 @@ exports[`Storyshots UI Components/QuickSearchButton basic usage 1`] = `
 exports[`Storyshots UI Components/QuickSearchButton/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_QuickSearchButton-15"
+  data-testid="xpui-quickSearchButton"
   onClick={[Function]}
 >
   <SvgIcon
