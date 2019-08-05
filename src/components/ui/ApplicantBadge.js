@@ -19,15 +19,15 @@ type Info = {
   value: string,
   label: string,
   tip?: string
-}
+};
 
 type Action = {
   key: string,
   icon: () => Element<*>,
   onClick: (?string) => void
-}
+};
 
-type Status = 'accepted' | 'excluded' | ''
+type Status = 'accepted' | 'excluded' | '';
 
 type Props = {
   id: number,
@@ -38,11 +38,11 @@ type Props = {
   tags: Array<string>,
   avatar?: Element<*>,
   children?: Element<*> | string,
-  onClick?: (number) => void,
+  onClick?: number => void,
   actions: Array<Action>,
   status: Status,
   applicantStatus?: string
-}
+};
 
 const cmz = require('cmz')
 
@@ -122,7 +122,8 @@ const cx = {
     }
   `),
 
-  name: cmz(typo.badgeHeading,
+  name: cmz(
+    typo.badgeHeading,
     `
       grid-area: name
       display: flex
@@ -191,7 +192,9 @@ const cx = {
     }
   `),
 
-  controls: cmz('controls', `
+  controls: cmz(
+    'controls',
+    `
     & {
       position: absolute
       right: -15px
@@ -205,7 +208,8 @@ const cx = {
     & > div {
       display: flex
     }
-  `),
+  `
+  ),
 
   displayControlsOnHover: cmz(`
     &:hover .controls {
@@ -340,141 +344,141 @@ class ApplicantBadge extends PureComponent<Props> {
     actions: [],
     info: [],
     status: ''
-  }
+  };
 
   renderStatusIndicator = () => {
     const { status } = this.props
     const style = status && statusDotStyles[status]
-    return style && (
-      <span className={style} />
-    )
-  }
+    return style && <span className={style} />
+  };
 
   handleBadgeClick = (event: SyntheticEvent<>) => {
     event.stopPropagation()
     const { id, onClick } = this.props
     onClick && onClick(id)
-  }
+  };
 
   handleActionClick = (onClick: (?string) => void, actionIdAttr: string) => () => {
     onClick && onClick(actionIdAttr)
-  }
+  };
 
   infoLabel = (info: Info) => (
     <div>
       <span className={cx.label}>{info.label}</span>
       <span className={cx.value}>{info.value}</span>
     </div>
-  )
+  );
 
   renderInfoLabelDropdown = (key: number, info: Info) => (
-    <Dropdown
-      key={key}
-      tooltip
-      hover
-      label={this.infoLabel(info)}
-    >
+    <Dropdown key={key} tooltip hover label={this.infoLabel(info)}>
       {info.tip && <div className={cx.tip}>{info.tip}</div>}
     </Dropdown>
-  )
+  );
 
   renderInfoItems = () => {
     const filteredInfos = this.props.info.filter(each => each.value)
-    return filteredInfos.map((info, key) => info.tip
-      ? this.renderInfoLabelDropdown(key, info)
-      : this.infoLabel(info)
+    return filteredInfos.map((info, key) =>
+      info.tip ? this.renderInfoLabelDropdown(key, info) : this.infoLabel(info)
     )
-  }
+  };
 
   renderInfosViewMore = (amount: string, action: () => void) => (
     <div className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
       {`+ ${amount} info`}
     </div>
-  )
+  );
 
   mapInfosToRender = () => {
     const { info } = this.props
-    return size(info) > 0 && (
-      <TruncatedList
-        inserted
-        visible={4}
-        listClass={cx.infos}
-        itemClass={cx.info}
-        items={this.renderInfoItems()}
-        viewMore={this.renderInfosViewMore}
-      />
+    return (
+      size(info) > 0 && (
+        <TruncatedList
+          inserted
+          visible={4}
+          listClass={cx.infos}
+          itemClass={cx.info}
+          items={this.renderInfoItems()}
+          viewMore={this.renderInfosViewMore}
+        />
+      )
     )
-  }
+  };
 
   renderTagsViewMore = (amount: string, action: () => void) => (
     <div className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
       {`+ ${amount} more`}
     </div>
-  )
+  );
 
   mapTagsToRender = () => {
     const { tags } = this.props
-    return size(tags) > 0 && (
-      <TruncatedList
-        inserted
-        visible={4}
-        items={tags}
-        listClass={cx.tagsInner}
-        itemClass={cx.tag}
-        viewMore={this.renderTagsViewMore}
-      />
+    return (
+      size(tags) > 0 && (
+        <TruncatedList
+          inserted
+          visible={4}
+          items={tags}
+          listClass={cx.tagsInner}
+          itemClass={cx.tag}
+          viewMore={this.renderTagsViewMore}
+        />
+      )
     )
-  }
+  };
 
   renderActions = () => {
     const { id, actions } = this.props
     return actions.map(({ key, icon: Icon, onClick }) => {
       const actionIdAttr = `applicant${id}-${key}`
-      return Icon && (
-        <span
-          id={actionIdAttr}
-          key={key}
-          className={cx.control}
-          onClick={this.handleActionClick(onClick, actionIdAttr)}
-        >
-          <Icon />
-        </span>
+      return (
+        Icon && (
+          <span
+            id={actionIdAttr}
+            key={key}
+            className={cx.control}
+            onClick={this.handleActionClick(onClick, actionIdAttr)}
+          >
+            <Icon />
+          </span>
+        )
       )
     })
-  }
+  };
 
   render () {
     const { id, active, name, email, avatar, children, applicantStatus } = this.props
 
     return id ? (
-      <div onClick={this.handleBadgeClick} className={[cx.wrapper, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
-        <div className={cx.name}>
-          <div className={cx.nameInner} title={name || email}>{name || email}</div>
+      <div
+        onClick={this.handleBadgeClick}
+        className={[cx.wrapper, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}
+        data-testid='xp-ui-applicantBadge-container'
+      >
+        <div className={cx.name} data-testid='xp-ui-applicantBadge-name'>
+          <div className={cx.nameInner} title={name || email} data-testid='xp-ui-applicantBadge-name-inner'>
+            {name || email}
+          </div>
           {this.renderStatusIndicator()}
         </div>
-        <div className={cx.avatar}>
+        <div className={cx.avatar} data-testid='xp-ui-applicantBadge-avatar'>
           {avatar || (
-            <Avatar
-              src={`https://www.gravatar.com/avatar/${md5(email)}?s=65`}
-              alt={name || 'avatar'}
-              size={65}
-            />
+            <Avatar src={`https://www.gravatar.com/avatar/${md5(email)}?s=65`} alt={name || 'avatar'} size={65} />
           )}
         </div>
-        <div className={cx.controls}>
+        <div className={cx.controls} data-testid='xp-ui-applicantBadge-controls'>
           {this.renderActions()}
         </div>
-        <div className={cx.infos}>
+        <div className={cx.infos} data-testid='xp-ui-applicantBadge-infos'>
           {this.mapInfosToRender()}
         </div>
-        <div className={cx.applicantStatus}>
+        <div className={cx.applicantStatus} data-testid='xp-ui-applicantBadge-applicantStatus'>
           {applicantStatus}
         </div>
-        <div className={cx.tags}>
+        <div className={cx.tags} data-testid='xp-ui-applicantBadge-tags'>
           {this.mapTagsToRender()}
         </div>
         {children && (
-          <div className={cx.children}>
+          <div className={cx.children} data-testid='xp-ui-applicantBadge-children'>
             {children}
           </div>
         )}

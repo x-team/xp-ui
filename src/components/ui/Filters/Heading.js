@@ -14,12 +14,14 @@ export type Props = {
   extra: Element<*>,
   isExpanded: boolean,
   onClick: (event: any) => void
-}
+};
 
 const cmz = require('cmz')
 
 const cx = {
-  heading: cmz(typeface.extraHeading, `
+  heading: cmz(
+    typeface.extraHeading,
+    `
     & {
       align-items: center
       border-top: 1px solid ${theme.lineSilver2}
@@ -40,7 +42,8 @@ const cx = {
     &:last-of-type {
       border-bottom: none
     }
-  `),
+  `
+  ),
 
   headingCollapsed: cmz(`
     &:first-of-type {
@@ -58,16 +61,17 @@ const cx = {
 }
 
 const Heading = (props: Props) => (
-  <div onClick={props.onClick} className={props.isExpanded ? cx.heading : `${cx.heading} ${cx.headingCollapsed}`}>
-    <div className={cx.text}>
+  <div
+    onClick={props.onClick}
+    className={props.isExpanded ? cx.heading : `${cx.heading} ${cx.headingCollapsed}`}
+    data-testid='xpui-filters-heading'
+  >
+    <div className={cx.text} data-testid='xpui-filters-heading-children'>
       {props.children}
     </div>
     {props.extra}
-    <div className={cx.arrow}>
-      <SvgIcon
-        icon={props.isExpanded ? 'triangleup' : 'triangledown'}
-        color='grayscarpaflow'
-      />
+    <div className={cx.arrow} data-testid='xpui-filters-heading-arrow'>
+      <SvgIcon icon={props.isExpanded ? 'triangleup' : 'triangledown'} color='grayscarpaflow' />
     </div>
   </div>
 )

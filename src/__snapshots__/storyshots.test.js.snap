@@ -20533,13 +20533,16 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Group (does co
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Heading-22 AutoUI_typo-22 AutoUI_ui_Filters_Heading-45"
+  className="AutoUI_ui_Filters_Heading-22 AutoUI_typo-22 AutoUI_ui_Filters_Heading-48"
+  data-testid="xpui-filters-heading"
 >
   <div
-    className="AutoUI_ui_Filters_Heading-51"
+    className="AutoUI_ui_Filters_Heading-54"
+    data-testid="xpui-filters-heading-children"
   />
   <div
-    className="AutoUI_ui_Filters_Heading-55"
+    className="AutoUI_ui_Filters_Heading-58"
+    data-testid="xpui-filters-heading-arrow"
   >
     <SvgIcon
       color="grayscarpaflow"
