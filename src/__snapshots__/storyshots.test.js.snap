@@ -8,7 +8,7 @@ exports[`Storyshots Form Components/InputField Use date field (normal) 1`] = `
     >
       <input
         aria-labelledby="label-date"
-        className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  "
+        className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
         id="date"
         name="date"
         placeholder="yyyy-mm-dd"
@@ -32,7 +32,7 @@ exports[`Storyshots Form Components/InputField Use date field (small) 1`] = `
     >
       <input
         aria-labelledby="label-date"
-        className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-117  "
+        className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-117  "
         id="date"
         name="date"
         placeholder="yyyy-mm-dd"
@@ -68,7 +68,7 @@ exports[`Storyshots Form Components/InputField Use date field with label 1`] = `
     >
       <input
         aria-labelledby="label-date"
-        className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  "
+        className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
         id="date"
         name="date"
         placeholder="yyyy-mm-dd"
@@ -113,7 +113,7 @@ exports[`Storyshots Form Components/InputField invalid element 1`] = `
     />
     <input
       aria-labelledby="label-invalid"
-      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91 AutoUI_forms_InputField-147 "
+      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-147 "
       id="invalid"
       name="invalid"
       placeholder="Error Placeholder..."
@@ -129,7 +129,7 @@ exports[`Storyshots Form Components/InputField missing props (does component exp
   <div>
     <input
       aria-labelledby=""
-      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  "
+      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
       required={false}
       type="text"
     />
@@ -177,7 +177,7 @@ exports[`Storyshots Form Components/InputField required element 1`] = `
     />
     <input
       aria-labelledby="label-required"
-      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  "
+      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
       id="required"
       name="required"
       placeholder="Required Placeholder..."
@@ -217,7 +217,7 @@ exports[`Storyshots Form Components/InputField standard use (text input element 
     />
     <input
       aria-labelledby="label-name"
-      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  "
+      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
       defaultValue="Simon"
       id="name"
       name="name"
@@ -246,7 +246,7 @@ exports[`Storyshots Form Components/InputField standard use (text input element 
     />
     <input
       aria-labelledby="label-name"
-      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-117  "
+      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-117  "
       defaultValue="Simon"
       id="name"
       name="name"
@@ -275,7 +275,7 @@ exports[`Storyshots Form Components/InputField standard use (with \`label\` and 
     />
     <input
       aria-labelledby="label-experience"
-      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
+      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
       defaultValue="1"
       id="experience"
       name="experience"
@@ -307,7 +307,7 @@ exports[`Storyshots Form Components/InputField standard use (with only \`postTex
   <div>
     <input
       aria-labelledby="label-experience"
-      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
+      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
       defaultValue="1"
       id="experience"
       name="experience"
@@ -351,7 +351,7 @@ exports[`Storyshots Form Components/InputField textarea element 1`] = `
     />
     <WithAutosize(Component)
       aria-labelledby="label-availability"
-      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
+      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
       id="availability"
       linesLimit={0}
       name="availability"
@@ -381,7 +381,7 @@ exports[`Storyshots Form Components/InputField textarea element, lines limit set
     />
     <WithAutosize(Component)
       aria-labelledby="label-skills"
-      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
+      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
       defaultValue="1.
 2.
 3.
@@ -409,7 +409,7 @@ exports[`Storyshots Form Components/InputGroup basic usage 1`] = `
   className="AutoUI_forms_InputGroup-22 social-so"
 >
   <span
-    className="AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputGroup-31"
+    className="AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputGroup-31"
   >
     stackoverflow.com/users/
   </span>
@@ -431,7 +431,7 @@ exports[`Storyshots Form Components/InputGroup missing props (does component exp
   className="AutoUI_forms_InputGroup-22"
 >
   <span
-    className="AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputGroup-31"
+    className="AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputGroup-31"
   />
   <InputField
     isInvalid={false}
@@ -837,7 +837,7 @@ exports[`Storyshots UI Components/ActivityLogsDisplay complete with random data 
       />,
     ]
   }
-  listClass="AutoUI_ui_ActivityLogsDisplay-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+  listClass="AutoUI_ui_ActivityLogsDisplay-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
   viewMore={[Function]}
   visible={4}
 />
@@ -850,7 +850,7 @@ exports[`Storyshots UI Components/ActivityLogsDisplay missing props (does compon
   inserted={false}
   isFetching={false}
   items={Array []}
-  listClass="AutoUI_ui_ActivityLogsDisplay-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+  listClass="AutoUI_ui_ActivityLogsDisplay-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
   viewMore={[Function]}
   visible={4}
 />
@@ -2804,7 +2804,7 @@ exports[`Storyshots UI Components/ApplicantGrid/Debug missing props (does compon
 
 exports[`Storyshots UI Components/ApplicantProfile/ApplicantProfileContentDisplay basic usage 1`] = `
 <div
-  className="AutoUI_ui_ApplicantProfileContentDisplay-13 AutoUI_typo-167 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_ApplicantProfileContentDisplay-13 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   id="profile"
 >
   <form
@@ -2836,7 +2836,7 @@ exports[`Storyshots UI Components/ApplicantProfile/ApplicantProfileContentDispla
 
 exports[`Storyshots UI Components/ApplicantProfile/ApplicantProfileContentDisplay/Debug missing props (does component explode?) 1`] = `
 <div
-  className="AutoUI_ui_ApplicantProfileContentDisplay-13 AutoUI_typo-167 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_ApplicantProfileContentDisplay-13 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   id="profile"
 >
   <form
@@ -2868,7 +2868,7 @@ exports[`Storyshots UI Components/ApplicantProfile/ApplicantProfileContentDispla
 
 exports[`Storyshots UI Components/ApplicantProfile/ApplicantTopProfileDisplay basic usage 1`] = `
 <section
-  className="AutoUI_ui_ApplicantTopProfileDisplay-18 AutoUI_typo-167 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_ApplicantTopProfileDisplay-18 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
 >
   <section
     className="AutoUI_ui_ApplicantTopProfileDisplay-44"
@@ -2909,7 +2909,7 @@ exports[`Storyshots UI Components/ApplicantProfile/ApplicantTopProfileDisplay ba
 
 exports[`Storyshots UI Components/ApplicantProfile/ApplicantTopProfileDisplay/Debug missing props (does component explode?) 1`] = `
 <section
-  className="AutoUI_ui_ApplicantTopProfileDisplay-18 AutoUI_typo-167 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_ApplicantTopProfileDisplay-18 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
 >
   <section
     className="AutoUI_ui_ApplicantTopProfileDisplay-44"
@@ -3112,7 +3112,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files (preview) 1`] = `
       }
     >
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
         target="_blank"
         title="filename-01.zip"
       >
@@ -3147,7 +3147,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files (preview) 1`] = `
       }
     >
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
         target="_blank"
         title="filename-02.zip"
       >
@@ -3182,7 +3182,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files (preview) 1`] = `
       }
     >
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
         target="_blank"
         title="filename-03.zip"
       >
@@ -3217,7 +3217,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files (preview) 1`] = `
       }
     >
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
         target="_blank"
         title="filename-04.zip"
       >
@@ -3294,7 +3294,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files 1`] = `
       }
     >
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
         href="string"
         target="_blank"
         title="filename-01.zip"
@@ -3322,7 +3322,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files 1`] = `
       }
     >
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
         href="string"
         target="_blank"
         title="filename-02.zip"
@@ -3358,7 +3358,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files 1`] = `
       }
     >
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
         href="string"
         target="_blank"
         title="filename-03.zip"
@@ -3402,7 +3402,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files 1`] = `
       }
     >
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
         href="string"
         target="_blank"
         title="filename-04.zip"
@@ -3480,7 +3480,7 @@ exports[`Storyshots UI Components/AttachFiles same file name 1`] = `
       }
     >
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
         target="_blank"
         title="filename-01.zip"
       >
@@ -3515,7 +3515,7 @@ exports[`Storyshots UI Components/AttachFiles same file name 1`] = `
       }
     >
       <a
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
         target="_blank"
         title="filename-01.zip"
       >
@@ -14797,7 +14797,7 @@ exports[`Storyshots UI Components/DataGrid/Debug missing props (does component e
 
 exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
 <div
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -14881,7 +14881,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
 
 exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons 1`] = `
 <div
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -14961,7 +14961,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons
 
 exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
 <div
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -14997,7 +14997,7 @@ exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
 
 exports[`Storyshots UI Components/Dropdown icon only button 1`] = `
 <div
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -15097,7 +15097,7 @@ exports[`Storyshots UI Components/Dropdown label and indicator positioned on the
 
 exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
 <div
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -15186,7 +15186,7 @@ exports[`Storyshots UI Components/Dropdown missing props (does component explode
 
 exports[`Storyshots UI Components/Dropdown tooltip display 1`] = `
 <div
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -15256,10 +15256,10 @@ exports[`Storyshots UI Components/Email 1 day ago 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="1 day ago"
         >
           1 day ago
@@ -15282,7 +15282,7 @@ exports[`Storyshots UI Components/Email 1 day ago 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -15316,10 +15316,10 @@ exports[`Storyshots UI Components/Email 3 hours ago 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="3 hours ago"
         >
           3 hours ago
@@ -15342,7 +15342,7 @@ exports[`Storyshots UI Components/Email 3 hours ago 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -15376,10 +15376,10 @@ exports[`Storyshots UI Components/Email 5 days ago 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="5 days ago"
         >
           5 days ago
@@ -15402,7 +15402,7 @@ exports[`Storyshots UI Components/Email 5 days ago 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -15436,10 +15436,10 @@ exports[`Storyshots UI Components/Email 5 minutes ago 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="5 minutes ago"
         >
           5 minutes ago
@@ -15462,7 +15462,7 @@ exports[`Storyshots UI Components/Email 5 minutes ago 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -15496,10 +15496,10 @@ exports[`Storyshots UI Components/Email HTML body test 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="HTML E-mail test"
         >
           HTML E-mail test
@@ -15522,7 +15522,7 @@ exports[`Storyshots UI Components/Email HTML body test 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -15534,7 +15534,7 @@ exports[`Storyshots UI Components/Email HTML body test 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Email-88 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_Email-88 AutoUI_typo-36 AutoUI_typo-24"
   >
     <span
       key="outer"
@@ -15854,10 +15854,10 @@ exports[`Storyshots UI Components/Email basic usage 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="RE: opportunity"
         >
           RE: opportunity
@@ -15880,7 +15880,7 @@ exports[`Storyshots UI Components/Email basic usage 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -15914,10 +15914,10 @@ exports[`Storyshots UI Components/Email initial open body 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="RE: opportunity"
         >
           RE: opportunity
@@ -15940,7 +15940,7 @@ exports[`Storyshots UI Components/Email initial open body 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -15952,7 +15952,7 @@ exports[`Storyshots UI Components/Email initial open body 1`] = `
     </div>
   </div>
   <div
-    className="AutoUI_ui_Email-88 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_Email-88 AutoUI_typo-36 AutoUI_typo-24"
   >
     <span
       key="outer"
@@ -15983,10 +15983,10 @@ exports[`Storyshots UI Components/Email initial open body and content with lineb
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="RE: opportunity"
         >
           RE: opportunity
@@ -16009,7 +16009,7 @@ exports[`Storyshots UI Components/Email initial open body and content with lineb
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -16021,7 +16021,7 @@ exports[`Storyshots UI Components/Email initial open body and content with lineb
     </div>
   </div>
   <div
-    className="AutoUI_ui_Email-88 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_Email-88 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       key="outer"
@@ -16067,10 +16067,10 @@ exports[`Storyshots UI Components/Email just now 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="Just Now"
         >
           Just Now
@@ -16093,7 +16093,7 @@ exports[`Storyshots UI Components/Email just now 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -16127,7 +16127,7 @@ exports[`Storyshots UI Components/Email missing props (does component explode?) 
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       />
     </div>
   </div>
@@ -16295,10 +16295,10 @@ exports[`Storyshots UI Components/Email really long subject 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="Really really really really really really really really really really really really long subject"
         >
           Really really really really really really really really really really really really long subject
@@ -16321,7 +16321,7 @@ exports[`Storyshots UI Components/Email really long subject 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -16355,10 +16355,10 @@ exports[`Storyshots UI Components/Email to several recipients 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="RE: opportunity"
         >
           RE: opportunity
@@ -16381,7 +16381,7 @@ exports[`Storyshots UI Components/Email to several recipients 1`] = `
         </div>
       </div>
       <div
-        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
+        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -16415,10 +16415,10 @@ exports[`Storyshots UI Components/Email with knobs 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
+        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
+          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
           title="KNOBS Test"
         >
           KNOBS Test
@@ -16448,13 +16448,13 @@ exports[`Storyshots UI Components/Email with knobs 1`] = `
 exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -16678,13 +16678,13 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
 exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -16908,13 +16908,13 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
 exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -17138,13 +17138,13 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
 exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -17368,13 +17368,13 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
 exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -17598,13 +17598,13 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
 exports[`Storyshots UI Components/EmailFeed missing props (does component explode?) 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -17985,13 +17985,13 @@ exports[`Storyshots UI Components/EmailFeed parent element with fixed width at 7
 exports[`Storyshots UI Components/EmailFeed with end button link 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -18032,7 +18032,7 @@ exports[`Storyshots UI Components/EmailFeed with end button link 1`] = `
   <TruncatedList
     endListElement={
       <a
-        className="AutoUI_ui_EmailFeed-142 AutoUI_typo-31"
+        className="AutoUI_ui_EmailFeed-142 AutoUI_typo-19"
         href="http://www.google.com"
         rel="noreferrer"
         target="_blank"
@@ -18141,7 +18141,7 @@ exports[`Storyshots UI Components/EmailFeed with error message 1`] = `
     className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-40 AutoUI_ui_EmailFeed-77"
   >
     <span
-      className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+      className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
     >
       Email History
     </span>
@@ -18174,7 +18174,7 @@ exports[`Storyshots UI Components/EmailFeed with error message and refresh butto
     className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-40 AutoUI_ui_EmailFeed-77"
   >
     <span
-      className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+      className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
     >
       Email History
     </span>
@@ -18231,13 +18231,13 @@ exports[`Storyshots UI Components/EmailFeed with error message and refresh butto
 exports[`Storyshots UI Components/EmailFeed with extra small list of emails 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -18305,13 +18305,13 @@ exports[`Storyshots UI Components/EmailFeed with extra small list of emails 1`] 
 exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -18535,13 +18535,13 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
 exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -18792,13 +18792,13 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
 exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -19049,13 +19049,13 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
 exports[`Storyshots UI Components/EmailFeed with small list of emails 1`] = `
 <Fragment>
   <div
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
       >
         Email History
       </span>
@@ -19174,7 +19174,7 @@ exports[`Storyshots UI Components/ErrorBox no errors 1`] = `<div />`;
 
 exports[`Storyshots UI Components/ErrorBox with HTML content 1`] = `
 <div
-  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
 >
   <ul
     className="AutoUI_ui_ErrorBox-35"
@@ -19197,7 +19197,7 @@ exports[`Storyshots UI Components/ErrorBox with HTML content 1`] = `
 
 exports[`Storyshots UI Components/ErrorBox with one error 1`] = `
 <div
-  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
 >
   <ul
     className="AutoUI_ui_ErrorBox-35"
@@ -19213,7 +19213,7 @@ exports[`Storyshots UI Components/ErrorBox with one error 1`] = `
 
 exports[`Storyshots UI Components/ErrorBox with two errors 1`] = `
 <div
-  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
 >
   <ul
     className="AutoUI_ui_ErrorBox-35"
@@ -19242,7 +19242,7 @@ exports[`Storyshots UI Components/FileLink basic usage 1`] = `
   className="AutoUI_ui_FileLink-16"
 >
   <div
-    className="AutoUI_ui_FileLink-20 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_FileLink-20 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
   >
     <a
       href="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
@@ -19259,7 +19259,7 @@ exports[`Storyshots UI Components/FileLink missing props (does component explode
   className="AutoUI_ui_FileLink-16"
 >
   <div
-    className="AutoUI_ui_FileLink-20 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_FileLink-20 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
   >
     <a
       target="_blank"
@@ -19489,7 +19489,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Group (does co
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Heading-22 AutoUI_typo-21 AutoUI_ui_Filters_Heading-45"
+  className="AutoUI_ui_Filters_Heading-22 AutoUI_typo-9 AutoUI_ui_Filters_Heading-45"
   data-testid="xpui-filters-heading"
 >
   <div
@@ -19510,14 +19510,14 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does 
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Label (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_Label-17 AutoUI_typo-31"
+  className="AutoUI_ui_Filters_Label-17 AutoUI_typo-19"
   data-testid="xpui-filters-label"
 />
 `;
 
 exports[`Storyshots UI Components/Filters/Debug missing props for SubHeading (does components explode?) 1`] = `
 <div
-  className="AutoUI_ui_Filters_SubHeading-19 AutoUI_typo-21"
+  className="AutoUI_ui_Filters_SubHeading-19 AutoUI_typo-9"
 >
   <div
     className="AutoUI_ui_Filters_SubHeading-29"
@@ -19793,7 +19793,7 @@ exports[`Storyshots UI Components/Footer basic usage 1`] = `
       />
     </div>
     <div
-      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-31"
+      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-19"
     >
       2017 © All rights reserved. X-Company Pty Ltd.
     </div>
@@ -19948,7 +19948,7 @@ exports[`Storyshots UI Components/Footer missing props (does component explode?)
   >
     <div />
     <div
-      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-31"
+      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-19"
     />
     <div
       className="AutoUI_ui_Footer_Footer-126"
@@ -20024,7 +20024,7 @@ exports[`Storyshots UI Components/Footer missing props (does component explode?)
 exports[`Storyshots UI Components/FooterBrands basic usage 1`] = `
 <div>
   <h4
-    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-31"
+    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-19"
   >
     Trusted by the world's leading brands since 2006
   </h4>
@@ -20098,7 +20098,7 @@ exports[`Storyshots UI Components/FooterBrands basic usage 1`] = `
 exports[`Storyshots UI Components/FooterBrands missing props (does component explode?) 1`] = `
 <div>
   <h4
-    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-31"
+    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-19"
   />
   <div
     className="AutoUI_ui_Footer_FooterBrands-64"
@@ -20113,7 +20113,7 @@ exports[`Storyshots UI Components/FooterBrands missing props (does component exp
 exports[`Storyshots UI Components/FooterList basic usage 1`] = `
 <div>
   <h4
-    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-97 AutoUI_typo-48 AutoUI_typo-31"
+    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
   >
     List Example
   </h4>
@@ -20125,7 +20125,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="0"
     >
       <a
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
         href="/foo1"
       >
         Item 1 (hidden on desktop (&gt; 1024px))
@@ -20136,7 +20136,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="1"
     >
       <a
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
         href="/foo2"
       >
         Item 2 (hidden on desktop (&gt; 1024px))
@@ -20147,7 +20147,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="2"
     >
       <a
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
         href="/foo3"
       >
         Item 3
@@ -20158,7 +20158,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="3"
     >
       <a
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
         href="/foo4"
       >
         Item 4
@@ -20169,7 +20169,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="4"
     >
       <a
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
         href="/foo5"
       >
         Item 5
@@ -20180,7 +20180,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="5"
     >
       <a
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
         href="/foo6"
       >
         Item 6
@@ -20193,7 +20193,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
 exports[`Storyshots UI Components/FooterList missing props (does component explode?) 1`] = `
 <div>
   <h4
-    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-97 AutoUI_typo-48 AutoUI_typo-31"
+    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
   />
   <ul
     className="AutoUI_ui_Footer_FooterList-50"
@@ -21052,7 +21052,7 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch self-controlled sidebar
 
 exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug missing props (does component explode?) 1`] = `
 <div
-  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-21"
+  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-9"
   data-testid="xpui-headingWithQuickSearch-container"
 >
   <QuickSearchButton
@@ -21082,7 +21082,7 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug with action handl
 
 exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug without wrapper 1`] = `
 <div
-  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-21"
+  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-9"
   data-testid="xpui-headingWithQuickSearch-container"
 >
   <div
@@ -21173,7 +21173,7 @@ exports[`Storyshots UI Components/InlineEditor with shouldSaveOnEnter usage: 1`]
 
 exports[`Storyshots UI Components/IssueCollectorButton basic usage 1`] = `
 <button
-  className="AutoUI_ui_IssueCollectorButton-11 AutoUI_typo-135 AutoUI_typo-48 AutoUI_typo-26 "
+  className="AutoUI_ui_IssueCollectorButton-11 AutoUI_typo-123 AutoUI_typo-36 AutoUI_typo-14 "
 >
   ?
 </button>
@@ -21181,7 +21181,7 @@ exports[`Storyshots UI Components/IssueCollectorButton basic usage 1`] = `
 
 exports[`Storyshots UI Components/IssueCollectorButton missing props (does component explode?) 1`] = `
 <button
-  className="AutoUI_ui_IssueCollectorButton-11 AutoUI_typo-135 AutoUI_typo-48 AutoUI_typo-26 "
+  className="AutoUI_ui_IssueCollectorButton-11 AutoUI_typo-123 AutoUI_typo-36 AutoUI_typo-14 "
 />
 `;
 
@@ -21455,7 +21455,7 @@ exports[`Storyshots UI Components/ListsEditor missing props (does component expl
   data-testid="xpui-listsEditor"
 >
   <h1
-    className="AutoUI_ui_ListsEditor-59 AutoUI_typo-97 AutoUI_typo-48 AutoUI_typo-31"
+    className="AutoUI_ui_ListsEditor-59 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
   >
     Edit 
   </h1>
@@ -23307,12 +23307,12 @@ exports[`Storyshots UI Components/Note 6 minutes ago 1`] = `
     className="AutoUI_ui_Note-31"
   >
     <span
-      className="AutoUI_ui_Note-45 AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
+      className="AutoUI_ui_Note-45 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
     >
       6 m ago
     </div>
@@ -23358,12 +23358,12 @@ exports[`Storyshots UI Components/Note just now 1`] = `
     className="AutoUI_ui_Note-31"
   >
     <span
-      className="AutoUI_ui_Note-45 AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
+      className="AutoUI_ui_Note-45 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
     >
       just now
     </div>
@@ -23400,7 +23400,7 @@ exports[`Storyshots UI Components/Note missing props (does component explode?) 1
     className="AutoUI_ui_Note-31"
   >
     <div
-      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
     />
     <div>
       <FileLinks />
@@ -23422,12 +23422,12 @@ exports[`Storyshots UI Components/Note no avatar, 2 hours ago 1`] = `
     className="AutoUI_ui_Note-31"
   >
     <span
-      className="AutoUI_ui_Note-45 AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
+      className="AutoUI_ui_Note-45 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
     >
       2 h ago
     </div>
@@ -23464,7 +23464,7 @@ exports[`Storyshots UI Components/Note note with markdown text with break lines 
     className="AutoUI_ui_Note-31"
   >
     <div
-      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
     />
     <div
       className="AutoUI_ui_Note-65"
@@ -23504,7 +23504,7 @@ exports[`Storyshots UI Components/Note note with unparseable markdown text 1`] =
     className="AutoUI_ui_Note-31"
   >
     <div
-      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
     />
     <div
       className="AutoUI_ui_Note-65"
@@ -23548,12 +23548,12 @@ exports[`Storyshots UI Components/Note older than 1 day 1`] = `
     className="AutoUI_ui_Note-31"
   >
     <span
-      className="AutoUI_ui_Note-45 AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
+      className="AutoUI_ui_Note-45 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
     >
       11-11-2019
     </div>
@@ -23599,12 +23599,12 @@ exports[`Storyshots UI Components/Note showing note type in sub header 1`] = `
     className="AutoUI_ui_Note-31"
   >
     <span
-      className="AutoUI_ui_Note-45 AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
+      className="AutoUI_ui_Note-45 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
     >
       Samwise Gamgee
     </span>
     <div
-      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
     >
       just now
       , in Interview Notes
@@ -24145,7 +24145,7 @@ exports[`Storyshots UI Components/RichTextEditor with initial value 1`] = `
 >
   <div />
   <div
-    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
   >
     0
     /
@@ -24160,7 +24160,7 @@ exports[`Storyshots UI Components/RichTextEditor with initial value longer than 
 >
   <div />
   <div
-    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
   >
     0
     /
@@ -24175,7 +24175,7 @@ exports[`Storyshots UI Components/RichTextEditor with knobs 1`] = `
 >
   <div />
   <div
-    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
   >
     0
     /
@@ -35215,7 +35215,7 @@ exports[`Storyshots UI Components/SelectBox complete view for Edit Lists 1`] = `
       }
     >
       <li
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36   "
+        className="AutoUI_ui_SelectBox-209 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24   "
         key="2"
       >
         <div
@@ -35271,7 +35271,7 @@ exports[`Storyshots UI Components/SelectBox complete view for Edit Lists 1`] = `
         </div>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36   "
+        className="AutoUI_ui_SelectBox-209 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24   "
         key="3"
       >
         <div
@@ -35327,7 +35327,7 @@ exports[`Storyshots UI Components/SelectBox complete view for Edit Lists 1`] = `
         </div>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36   "
+        className="AutoUI_ui_SelectBox-209 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24   "
         key="4"
       >
         <div
@@ -35383,7 +35383,7 @@ exports[`Storyshots UI Components/SelectBox complete view for Edit Lists 1`] = `
         </div>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36   "
+        className="AutoUI_ui_SelectBox-209 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24   "
         key="5"
       >
         <div
@@ -35439,7 +35439,7 @@ exports[`Storyshots UI Components/SelectBox complete view for Edit Lists 1`] = `
         </div>
       </li>
       <li
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36   "
+        className="AutoUI_ui_SelectBox-209 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24   "
         key="6"
       >
         <div
@@ -35973,7 +35973,7 @@ exports[`Storyshots UI Components/SelectBox simple view for Search module with c
     indicator={false}
     label={
       <div
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+        className="AutoUI_ui_SelectBox-43 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
       >
         <div>
           <div
@@ -36031,7 +36031,7 @@ exports[`Storyshots UI Components/SelectBox simple view for Search module with c
     indicator={false}
     label={
       <div
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+        className="AutoUI_ui_SelectBox-43 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
       >
         <div>
           <div
@@ -36089,7 +36089,7 @@ exports[`Storyshots UI Components/SelectBox simple view for Search module withou
     indicator={false}
     label={
       <div
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+        className="AutoUI_ui_SelectBox-43 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
       >
         <div>
           <div
@@ -36147,7 +36147,7 @@ exports[`Storyshots UI Components/SelectBox simple view for Search module withou
     indicator={false}
     label={
       <div
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+        className="AutoUI_ui_SelectBox-43 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
       >
         <div>
           <div
@@ -36205,7 +36205,7 @@ exports[`Storyshots UI Components/SelectBox simple view, selectable with many se
     indicator={false}
     label={
       <div
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
+        className="AutoUI_ui_SelectBox-43 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
       >
         <div>
           <div
@@ -37429,12 +37429,12 @@ exports[`Storyshots UI Components/SettingsScreen missing props (does component e
     className="AutoUI_ui_SettingsScreen-19"
   >
     <h1
-      className="AutoUI_ui_SettingsScreen-29 AutoUI_typo-97 AutoUI_typo-48 AutoUI_typo-31"
+      className="AutoUI_ui_SettingsScreen-29 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
     >
       Settings
     </h1>
     <ul
-      className="AutoUI_ui_SettingsScreen-37 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+      className="AutoUI_ui_SettingsScreen-37 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
     />
   </div>
   <div
@@ -37493,7 +37493,7 @@ exports[`Storyshots UI Components/StatusFilter default 1`] = `
 exports[`Storyshots UI Components/StatusFilter disabled 1`] = `
 <Fragment>
   <label
-    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_ui_StatusFilter-26"
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_ui_StatusFilter-26"
     data-checked={false}
     data-testid="xpui-statusFilter-accepted"
     key="status-accepted"
@@ -37507,7 +37507,7 @@ exports[`Storyshots UI Components/StatusFilter disabled 1`] = `
     accepted
   </label>
   <label
-    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_ui_StatusFilter-26"
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_ui_StatusFilter-26"
     data-checked={false}
     data-testid="xpui-statusFilter-excluded"
     key="status-excluded"
@@ -37526,7 +37526,7 @@ exports[`Storyshots UI Components/StatusFilter disabled 1`] = `
 exports[`Storyshots UI Components/StatusFilter/Debug missing props (does component explode?) 1`] = `
 <Fragment>
   <label
-    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_ui_StatusFilter-26"
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_ui_StatusFilter-26"
     data-checked={false}
     data-testid="xpui-statusFilter-accepted"
     key="status-accepted"
@@ -37540,7 +37540,7 @@ exports[`Storyshots UI Components/StatusFilter/Debug missing props (does compone
     accepted
   </label>
   <label
-    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_ui_StatusFilter-26"
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_ui_StatusFilter-26"
     data-checked={false}
     data-testid="xpui-statusFilter-excluded"
     key="status-excluded"
@@ -39304,7 +39304,7 @@ exports[`Storyshots UI Components/SvgIcon text gray color 1`] = `
 
 exports[`Storyshots UI Components/Tabs basic usage 1`] = `
 <section
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
 >
   <nav
     className="AutoUI_ui_Tabs_Tabs-22"
@@ -39373,7 +39373,7 @@ exports[`Storyshots UI Components/Tabs basic usage 1`] = `
     </ul>
   </nav>
   <div
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       aria-hidden="false"
@@ -39394,7 +39394,7 @@ exports[`Storyshots UI Components/Tabs basic usage 1`] = `
 
 exports[`Storyshots UI Components/Tabs default active last tab 1`] = `
 <section
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
 >
   <nav
     className="AutoUI_ui_Tabs_Tabs-22"
@@ -39463,7 +39463,7 @@ exports[`Storyshots UI Components/Tabs default active last tab 1`] = `
     </ul>
   </nav>
   <div
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       aria-hidden="false"
@@ -39484,7 +39484,7 @@ exports[`Storyshots UI Components/Tabs default active last tab 1`] = `
 
 exports[`Storyshots UI Components/Tabs missing props (does component explode?) 1`] = `
 <section
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
 >
   <nav
     className="AutoUI_ui_Tabs_Tabs-22"
@@ -39495,7 +39495,7 @@ exports[`Storyshots UI Components/Tabs missing props (does component explode?) 1
     />
   </nav>
   <div
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       aria-hidden="false"
@@ -39509,7 +39509,7 @@ exports[`Storyshots UI Components/Tabs missing props (does component explode?) 1
 
 exports[`Storyshots UI Components/Tabs one tab 1`] = `
 <section
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
 >
   <nav
     className="AutoUI_ui_Tabs_Tabs-22"
@@ -39540,7 +39540,7 @@ exports[`Storyshots UI Components/Tabs one tab 1`] = `
     </ul>
   </nav>
   <div
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
       aria-hidden="false"
@@ -39580,7 +39580,7 @@ exports[`Storyshots UI Components/Text/Debug missing props (does component explo
   className="AutoUI_ui_Text-33"
 >
   <div
-    className="AutoUI_ui_Text-62 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
+    className="AutoUI_ui_Text-62 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
   />
 </section>
 `;
@@ -39921,7 +39921,7 @@ exports[`Storyshots UI Components/Text/Demos without Heading and Sub Heading wit
 
 exports[`Storyshots UI Components/TextareaEditor basic usage 1`] = `
 <div
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-36 AutoUI_ui_TextareaEditor_TextareaEditor-58"
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-24 AutoUI_ui_TextareaEditor_TextareaEditor-58"
 >
   <div>
     <div
@@ -39964,7 +39964,7 @@ exports[`Storyshots UI Components/TextareaEditor basic usage 1`] = `
 
 exports[`Storyshots UI Components/TextareaEditor basic usage, lines limit set 1`] = `
 <div
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-36 AutoUI_ui_TextareaEditor_TextareaEditor-58"
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-24 AutoUI_ui_TextareaEditor_TextareaEditor-58"
 >
   <div>
     <div
@@ -40007,7 +40007,7 @@ exports[`Storyshots UI Components/TextareaEditor basic usage, lines limit set 1`
 
 exports[`Storyshots UI Components/TextareaEditor missing props (does component explode?) 1`] = `
 <div
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-36 AutoUI_ui_TextareaEditor_TextareaEditor-58"
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-24 AutoUI_ui_TextareaEditor_TextareaEditor-58"
 >
   <div>
     <div
@@ -40050,7 +40050,7 @@ exports[`Storyshots UI Components/TextareaEditor missing props (does component e
 
 exports[`Storyshots UI Components/TextareaEditor read only mode 1`] = `
 <div
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-36 AutoUI_ui_TextareaEditor_TextareaEditor-58"
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-24 AutoUI_ui_TextareaEditor_TextareaEditor-58"
 >
   <div>
     <div
