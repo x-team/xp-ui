@@ -75,6 +75,7 @@ class SearchResult extends Component<Props, void> {
         <DataGrid
           isLoading={isLoading}
           applicants={applicants}
+          rowsCount={applicants.length}
           visibleColumns={visibleColumns}
           sortColumn={sort}
           sortDirection={order}

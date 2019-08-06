@@ -10,8 +10,6 @@ import type { Applicant } from '../../utils/types'
 
 const cmz = require('cmz')
 
-const RENDER_ROWS_COUNT = 1000
-
 const selectors = Data.Selectors
 
 // Given the design of React-Data-Grid, it relies on minHeight to calculate the visible area and show/hide
@@ -79,6 +77,7 @@ type Props = {
   visibleColumns: Array<Object>,
   sortDirection: SortDirection,
   sortColumn: string,
+  rowsCount: number,
   handleGridSort: (sortColumn: string, sortDirection: SortDirection) => void
 }
 
@@ -91,7 +90,8 @@ const DataGrid = ({
   sortDirection,
   handleGridSort,
   applicants,
-  isLoading
+  isLoading,
+  rowsCount
 }: Props) =>
   (
     <div className={cx.gridContainer}>
@@ -104,7 +104,7 @@ const DataGrid = ({
         <ReactDataGrid
           columns={visibleColumns}
           rowGetter={getRow(applicants)}
-          rowsCount={RENDER_ROWS_COUNT}
+          rowsCount={rowsCount}
           headerFiltersHeight={0}
           onGridSort={handleGridSort}
           sortColumn={sortColumn}
@@ -117,7 +117,8 @@ const DataGrid = ({
 
 DataGrid.defaultProps = {
   applicants: [],
-  visibleColumns: []
+  visibleColumns: [],
+  rowsCount: 1000
 }
 
 export default DataGrid
