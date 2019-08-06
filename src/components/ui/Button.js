@@ -13,9 +13,9 @@ import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 
-export type Size = 'normal' | 'large' | 'small'
-export type Color = 'normal' | 'monochrome' | 'silver' | 'gray' | 'grayPink'
-export type ContentStyle = 'normal' | 'openSans' | 'sourceSansPro'
+export type Size = 'normal' | 'large' | 'small';
+export type Color = 'normal' | 'monochrome' | 'silver' | 'gray' | 'grayPink';
+export type ContentStyle = 'normal' | 'openSans' | 'sourceSansPro';
 
 type Props = {
   className: string | CmzAtom,
@@ -38,7 +38,7 @@ type Props = {
   icon?: Icon | '',
   iconProps: Object,
   contentStyle: ContentStyle
-}
+};
 
 const baseStyles = {
   root: cmz(`
@@ -75,15 +75,20 @@ const baseStyles = {
 const contentStyles = {
   normal: cmz(typo.labelText, 'font-size: inherit'),
 
-  openSans: cmz(baseStyles.content, `
+  openSans: cmz(
+    baseStyles.content,
+    `
     & span {
       text-transform: initial;
       font-size: 0.8125rem;
       font-family: Open Sans;
     }
-  `),
+  `
+  ),
 
-  sourceSansPro: cmz(baseStyles.content, `
+  sourceSansPro: cmz(
+    baseStyles.content,
+    `
     & {
       padding: 1px 10px;
     }
@@ -93,13 +98,15 @@ const contentStyles = {
       font-size: 0.875rem;
       font-family: Source Sans Pro;
     }
-  `)
+  `
+  )
 }
 
 // Color options
 const colorStyles = {
   monochrome: cmz(
-    baseStyles.root, `
+    baseStyles.root,
+    `
     & {
       background-color: ${theme.baseDarker}
       border-color: ${theme.baseDarker}
@@ -115,10 +122,12 @@ const colorStyles = {
       border-color: ${theme.baseDarker.lighten(0.5)}
       color: ${theme.baseBrighter}
     }
-  `),
+  `
+  ),
 
   normal: cmz(
-    baseStyles.root, `
+    baseStyles.root,
+    `
     & {
       background-color: ${theme.baseRed}
       border-color: ${theme.baseRed}
@@ -134,10 +143,12 @@ const colorStyles = {
       border-color: ${theme.baseRed.darken(0.2)}
       color: ${theme.baseBrighter}
     }
-  `),
+  `
+  ),
 
   silver: cmz(
-    baseStyles.root, `
+    baseStyles.root,
+    `
     & {
       background-color: ${theme.lineSilver2}
       border-color: ${theme.lineSilver2}
@@ -158,10 +169,12 @@ const colorStyles = {
       border-color: ${theme.lineSilver2.darken(0.025)}
       color: ${theme.baseDark}
     }
-  `),
+  `
+  ),
 
   grayPink: cmz(
-    baseStyles.root, `
+    baseStyles.root,
+    `
     & {
       background-color: ${theme.baseBright}
       border-color: ${theme.baseBright}
@@ -186,10 +199,12 @@ const colorStyles = {
     &:not(.readOnly):hover svg path {
       fill: ${theme.baseRed};
     }
-  `),
+  `
+  ),
 
   gray: cmz(
-    baseStyles.root, `
+    baseStyles.root,
+    `
     & {
       background-color: ${theme.baseBombay}
       border-color: ${theme.baseBombay}
@@ -210,8 +225,8 @@ const colorStyles = {
       border-color: ${theme.baseBombay.darken(0.025)}
       color: ${theme.baseBrighter}
     }
-  `)
-
+  `
+  )
 }
 
 // Size options
@@ -231,14 +246,17 @@ const sizeStyles = {
 
 // Button variations
 const extraStyles = {
-  disabled: cmz('disabled', `
+  disabled: cmz(
+    'disabled',
+    `
     &, &:hover {
       background: ${theme.baseHighlight}
       border-color: transparent
       color: ${theme.baseBrighter}
       pointer-events: none
     }
-  `),
+  `
+  ),
 
   outlined: cmz(`
     & {
@@ -333,7 +351,9 @@ const extraStyles = {
     }
   `),
 
-  selectbox: cmz(sizeStyles.large, `
+  selectbox: cmz(
+    sizeStyles.large,
+    `
     & {
       background-color: ${theme.baseBrighter}
       border-color: transparent
@@ -356,7 +376,8 @@ const extraStyles = {
     & > span > svg {
       margin-right: 10px
     }
-  `),
+  `
+  ),
 
   readOnly: cmz(`
     &:hover {
@@ -385,7 +406,7 @@ class Button extends PureComponent<Props> {
     wide: false,
     selectbox: false,
     readOnly: false
-  }
+  };
 
   render () {
     const {
@@ -436,17 +457,15 @@ class Button extends PureComponent<Props> {
       tag && extraStyles.tag,
       readOnly && extraStyles.readOnly,
       readOnly && 'readOnly'
-    ].filter(Boolean).join(' ')
+    ]
+      .filter(Boolean)
+      .join(' ')
     const buttonClassName = `${colorClassName} ${sizeClassName} ${extraClassName} ${contentClassName}`
 
     return (
-      <CustomComponent
-        {...rest}
-        className={`${String(customClassName)} ${buttonClassName}`}
-        data-tag={tag}
-      >
+      <CustomComponent {...rest} className={`${String(customClassName)} ${buttonClassName}`} data-tag={tag}>
         {icon && <SvgIcon className={baseStyles.icon} icon={icon} color='' {...iconProps} />}
-        <span>{children}</span>
+        <span data-testid='xpui-button'>{children}</span>
       </CustomComponent>
     )
   }

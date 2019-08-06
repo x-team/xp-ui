@@ -69,7 +69,7 @@ const cx = {
   `)
 }
 
-type SortDirection = 'ASC' | 'DESC' | 'NONE' | ''
+type SortDirection = 'ASC' | 'DESC' | 'NONE' | '';
 
 type Props = {
   isLoading: boolean,
@@ -79,7 +79,7 @@ type Props = {
   sortColumn: string,
   rowsCount: number,
   handleGridSort: (sortColumn: string, sortDirection: SortDirection) => void
-}
+};
 
 const getRows = (applicants: Array<Applicant>) => selectors.getRows({ rows: applicants })
 const getRow = (applicants: Array<Applicant>) => (rowIdx: number) => getRows(applicants)[rowIdx]
@@ -94,8 +94,8 @@ const DataGrid = ({
   rowsCount
 }: Props) =>
   (
-    <div className={cx.gridContainer}>
-      <div className={cx.grid}>
+    <div className={cx.gridContainer} data-testid='xpui-dataGrid-container'>
+      <div className={cx.grid} data-testid='xpui-dataGrid-grid'>
         {isLoading && (
           <div className={cx.overlay}>
             <Loader />
@@ -113,7 +113,8 @@ const DataGrid = ({
         />
       </div>
     </div>
-  )
+  </div>
+)
 
 DataGrid.defaultProps = {
   applicants: [],

@@ -56,12 +56,15 @@ const cx = {
     box-sizing: border-box
   `),
 
-  applicant: cmz(typo.sectionHeading, `
+  applicant: cmz(
+    typo.sectionHeading,
+    `
     margin: 14px 20px 10px
     line-height: 1.2
     white-space: pre-wrap
     word-break: break-all
-  `),
+  `
+  ),
 
   input: cmz(`
     & {
@@ -98,7 +101,7 @@ type Positioning = {
   right: number,
   bottom: number,
   left: number
-}
+};
 
 type Props = {
   applicant: string,
@@ -109,7 +112,7 @@ type Props = {
   actionIdAttr: string,
   onSubmit?: (reason: string) => void,
   onCancel?: () => void
-}
+};
 
 type State = {
   reasonIndex: number,
@@ -117,20 +120,15 @@ type State = {
   anchor: number,
   style: Object,
   positioning: Positioning
-}
+};
 
 const noneIndex = -1
 
 const getActionElementPosition = (actionIdAttr: string): Positioning => {
   const currentTarget = document.getElementById(actionIdAttr)
-  const {
-    width = 0,
-    height = 0,
-    top = 0,
-    right = 0,
-    bottom = 0,
-    left = 0
-  } = currentTarget ? currentTarget.getBoundingClientRect() : {}
+  const { width = 0, height = 0, top = 0, right = 0, bottom = 0, left = 0 } = currentTarget
+    ? currentTarget.getBoundingClientRect()
+    : {}
   return { width, height, top, right, bottom, left }
 }
 
@@ -141,7 +139,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     marginTop: 10,
     marginBottom: 10,
     maxHeight: 400
-  }
+  };
 
   state = {
     reasonIndex: noneIndex,
@@ -149,45 +147,105 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     anchor: 4,
     style: {},
     positioning: getActionElementPosition(this.props.actionIdAttr)
-  }
+  };
 
   handleCancel = (event: SyntheticEvent<HTMLInputElement>) => {
     event.preventDefault()
     const { onCancel } = this.props
     this.setState({ reasonIndex: noneIndex, reasonLabel: '' }, () => onCancel && onCancel())
-  }
+  };
 
   handleSubmit = (event: SyntheticEvent<HTMLInputElement>) => {
     event.preventDefault()
     const { onSubmit } = this.props
     const { reasonLabel } = this.state
     onSubmit && onSubmit(reasonLabel)
-  }
+  };
 
   handleReasonChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
     const { reasons } = this.props
     const reasonIndex = Number(event.target.value)
     const reasonLabel = reasons[reasonIndex]
     this.setState({ reasonIndex, reasonLabel })
-  }
+  };
 
   handleCommentChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
     this.setState({ reasonLabel: event.target.value })
-  }
+  };
 
-  isScreenSmallerThanPopupMaxHeight = ({ innerHeight, maxHeight, margins }: { innerHeight: number, maxHeight: number, margins: number }) => innerHeight <= maxHeight + margins
+  isScreenSmallerThanPopupMaxHeight = ({
+    innerHeight,
+    maxHeight,
+    margins
+  }: {
+    innerHeight: number,
+    maxHeight: number,
+    margins: number
+  }) => innerHeight <= maxHeight + margins;
 
-  isClickedElementTopAboveThePopupTop = ({ top, marginTop }: { top: number, marginTop: number }) => top < marginTop
+  isClickedElementTopAboveThePopupTop = ({ top, marginTop }: { top: number, marginTop: number }) => top < marginTop;
 
-  doesPopupHeightGoesOutOfScreenBottomBoundary = ({ top, maxHeight, marginBottom, innerHeight }: { top: number, maxHeight: number, marginBottom: number, innerHeight: number }) => top + maxHeight + marginBottom > innerHeight
+  doesPopupHeightGoesOutOfScreenBottomBoundary = ({
+    top,
+    maxHeight,
+    marginBottom,
+    innerHeight
+  }: {
+    top: number,
+    maxHeight: number,
+    marginBottom: number,
+    innerHeight: number
+  }) => top + maxHeight + marginBottom > innerHeight;
 
-  isClickedElementBottomBelowThePopupBottom = ({ bottom, innerHeight, marginBottom }: { bottom: number, innerHeight: number, marginBottom: number }) => bottom > innerHeight - marginBottom
+  isClickedElementBottomBelowThePopupBottom = ({
+    bottom,
+    innerHeight,
+    marginBottom
+  }: {
+    bottom: number,
+    innerHeight: number,
+    marginBottom: number
+  }) => bottom > innerHeight - marginBottom;
 
-  getAnchorPositionedAtMiddleOfClickedElement = ({ top, initialAnchor, marginTop }: { top: number, initialAnchor: number, marginTop: number }) => top + initialAnchor - marginTop
+  getAnchorPositionedAtMiddleOfClickedElement = ({
+    top,
+    initialAnchor,
+    marginTop
+  }: {
+    top: number,
+    initialAnchor: number,
+    marginTop: number
+  }) => top + initialAnchor - marginTop;
 
-  getAnchorPositionedAtBottomEdgeOfThePopup = ({ innerHeight, margins, triangleHeight }: { innerHeight: number, margins: number, triangleHeight: number }) => innerHeight - margins - triangleHeight
+  getAnchorPositionedAtBottomEdgeOfThePopup = ({
+    innerHeight,
+    margins,
+    triangleHeight
+  }: {
+    innerHeight: number,
+    margins: number,
+    triangleHeight: number
+  }) => innerHeight - margins - triangleHeight;
 
-  getAnchorPositionForScreenSmallerThanPopupMaxHeight = ({ bottom, innerHeight, marginBottom, margins, triangleHeight, top, marginTop, initialAnchor }: { bottom: number, innerHeight: number, marginBottom: number, margins: number, triangleHeight: number, top: number, marginTop: number, initialAnchor: number }) => {
+  getAnchorPositionForScreenSmallerThanPopupMaxHeight = ({
+    bottom,
+    innerHeight,
+    marginBottom,
+    margins,
+    triangleHeight,
+    top,
+    marginTop,
+    initialAnchor
+  }: {
+    bottom: number,
+    innerHeight: number,
+    marginBottom: number,
+    margins: number,
+    triangleHeight: number,
+    top: number,
+    marginTop: number,
+    initialAnchor: number
+  }) => {
     if (this.isClickedElementBottomBelowThePopupBottom({ bottom, innerHeight, marginBottom })) {
       return this.getAnchorPositionedAtBottomEdgeOfThePopup({ innerHeight, margins, triangleHeight })
     }
@@ -195,29 +253,105 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
       return 0
     }
     return this.getAnchorPositionedAtMiddleOfClickedElement({ top, initialAnchor, marginTop })
-  }
+  };
 
-  getPopupTopWhenDockedToTheScreenBottom = ({ innerHeight, maxHeight, marginBottom }: { innerHeight: number, maxHeight: number, marginBottom: number }) => innerHeight - maxHeight - marginBottom
+  getPopupTopWhenDockedToTheScreenBottom = ({
+    innerHeight,
+    maxHeight,
+    marginBottom
+  }: {
+    innerHeight: number,
+    maxHeight: number,
+    marginBottom: number
+  }) => innerHeight - maxHeight - marginBottom;
 
-  getAnchorPositionedAtBottomEdgeOfThePopupWhenPopupIsDockedToTheScreenBottom = ({ maxHeight, triangleHeight }: { maxHeight: number, triangleHeight: number }) => maxHeight - triangleHeight
+  getAnchorPositionedAtBottomEdgeOfThePopupWhenPopupIsDockedToTheScreenBottom = ({
+    maxHeight,
+    triangleHeight
+  }: {
+    maxHeight: number,
+    triangleHeight: number
+  }) => maxHeight - triangleHeight;
 
-  getAnchorPositionedAtMiddleOfClickedElementWhenPopupIsDockedToTheScreenBottom = ({ innerHeight, maxHeight, marginBottom, top, initialAnchor }: { innerHeight: number, maxHeight: number, marginBottom: number, top: number, initialAnchor: number }) => top - this.getPopupTopWhenDockedToTheScreenBottom({ innerHeight, maxHeight, marginBottom }) + initialAnchor
+  getAnchorPositionedAtMiddleOfClickedElementWhenPopupIsDockedToTheScreenBottom = ({
+    innerHeight,
+    maxHeight,
+    marginBottom,
+    top,
+    initialAnchor
+  }: {
+    innerHeight: number,
+    maxHeight: number,
+    marginBottom: number,
+    top: number,
+    initialAnchor: number
+  }) => top - this.getPopupTopWhenDockedToTheScreenBottom({ innerHeight, maxHeight, marginBottom }) + initialAnchor;
 
-  getAnchorPositionWhenPopupIsDockedToTheScreenBottom = ({ bottom, innerHeight, marginBottom, maxHeight, triangleHeight, top, initialAnchor }: { bottom: number, innerHeight: number, marginBottom: number, maxHeight: number, triangleHeight: number, top: number, initialAnchor: number }) => {
+  getAnchorPositionWhenPopupIsDockedToTheScreenBottom = ({
+    bottom,
+    innerHeight,
+    marginBottom,
+    maxHeight,
+    triangleHeight,
+    top,
+    initialAnchor
+  }: {
+    bottom: number,
+    innerHeight: number,
+    marginBottom: number,
+    maxHeight: number,
+    triangleHeight: number,
+    top: number,
+    initialAnchor: number
+  }) => {
     let anchor = this.isClickedElementBottomBelowThePopupBottom({ bottom, innerHeight, marginBottom })
       ? this.getAnchorPositionedAtBottomEdgeOfThePopupWhenPopupIsDockedToTheScreenBottom({ maxHeight, triangleHeight })
-      : this.getAnchorPositionedAtMiddleOfClickedElementWhenPopupIsDockedToTheScreenBottom({ innerHeight, maxHeight, marginBottom, top, initialAnchor })
+      : this.getAnchorPositionedAtMiddleOfClickedElementWhenPopupIsDockedToTheScreenBottom({
+        innerHeight,
+        maxHeight,
+        marginBottom,
+        top,
+        initialAnchor
+      })
     anchor = anchor < 0 ? 0 : anchor
     return anchor
-  }
+  };
 
-  isClickedElementHeightSmallerThanTriangleHeight = ({ height, triangleHeight }: { height: number, triangleHeight: number }) => height < triangleHeight
+  isClickedElementHeightSmallerThanTriangleHeight = ({
+    height,
+    triangleHeight
+  }: {
+    height: number,
+    triangleHeight: number
+  }) => height < triangleHeight;
 
-  getPushedTopPopupPosition = ({ top, initialAnchor, pushUp }: { top: number, initialAnchor: number, pushUp: number }) => top + initialAnchor - pushUp
+  getPushedTopPopupPosition = ({
+    top,
+    initialAnchor,
+    pushUp
+  }: {
+    top: number,
+    initialAnchor: number,
+    pushUp: number
+  }) => top + initialAnchor - pushUp;
 
-  isPushedTopPopupPositionBiggerThanPopupMarginTop = ({ pushedTop, marginTop }: { pushedTop: number, marginTop: number }) => pushedTop > marginTop
+  isPushedTopPopupPositionBiggerThanPopupMarginTop = ({
+    pushedTop,
+    marginTop
+  }: {
+    pushedTop: number,
+    marginTop: number
+  }) => pushedTop > marginTop;
 
-  getPushedAnchorPosition = ({ top, marginTop, initialAnchor }: { top: number, marginTop: number, initialAnchor: number }) => top - marginTop + initialAnchor
+  getPushedAnchorPosition = ({
+    top,
+    marginTop,
+    initialAnchor
+  }: {
+    top: number,
+    marginTop: number,
+    initialAnchor: number
+  }) => top - marginTop + initialAnchor;
 
   setUpdatedDimensions = () => {
     const { marginTop, marginBottom, maxHeight } = this.props
@@ -226,7 +360,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
 
     const margins = marginTop + marginBottom
     const triangleHeight = 20
-    const initialAnchor = (height / 2) - (triangleHeight / 2)
+    const initialAnchor = height / 2 - triangleHeight / 2
     const leftMargin = 14
 
     let anchor = initialAnchor > 0 ? initialAnchor : 0
@@ -240,26 +374,47 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
 
     if (this.isScreenSmallerThanPopupMaxHeight({ innerHeight, maxHeight, margins })) {
       style.top = marginTop
-      anchor = this.getAnchorPositionForScreenSmallerThanPopupMaxHeight({ bottom, innerHeight, marginBottom, margins, triangleHeight, top, marginTop, initialAnchor })
+      anchor = this.getAnchorPositionForScreenSmallerThanPopupMaxHeight({
+        bottom,
+        innerHeight,
+        marginBottom,
+        margins,
+        triangleHeight,
+        top,
+        marginTop,
+        initialAnchor
+      })
     } else {
       if (this.doesPopupHeightGoesOutOfScreenBottomBoundary({ top, maxHeight, marginBottom, innerHeight })) {
         style.top = this.getPopupTopWhenDockedToTheScreenBottom({ innerHeight, maxHeight, marginBottom })
-        anchor = this.getAnchorPositionWhenPopupIsDockedToTheScreenBottom({ bottom, innerHeight, marginBottom, maxHeight, triangleHeight, top, initialAnchor })
+        anchor = this.getAnchorPositionWhenPopupIsDockedToTheScreenBottom({
+          bottom,
+          innerHeight,
+          marginBottom,
+          maxHeight,
+          triangleHeight,
+          top,
+          initialAnchor
+        })
       } else if (this.isClickedElementTopAboveThePopupTop({ top, marginTop })) {
         style.top = marginTop
         anchor = 0
       } else if (this.isClickedElementHeightSmallerThanTriangleHeight({ height, triangleHeight })) {
         const pushUp = 20
         const pushedTop = this.getPushedTopPopupPosition({ top, initialAnchor, pushUp })
-        style.top = this.isPushedTopPopupPositionBiggerThanPopupMarginTop({ pushedTop, marginTop }) ? pushedTop : marginTop
-        anchor = this.isPushedTopPopupPositionBiggerThanPopupMarginTop({ pushedTop, marginTop }) ? pushUp : this.getPushedAnchorPosition({ top, marginTop, initialAnchor })
+        style.top = this.isPushedTopPopupPositionBiggerThanPopupMarginTop({ pushedTop, marginTop })
+          ? pushedTop
+          : marginTop
+        anchor = this.isPushedTopPopupPositionBiggerThanPopupMarginTop({ pushedTop, marginTop })
+          ? pushUp
+          : this.getPushedAnchorPosition({ top, marginTop, initialAnchor })
       }
     }
 
     this.setState({ anchor, style })
-  }
+  };
 
-  updateDimensions = throttle(this.setUpdatedDimensions, 1000)
+  updateDimensions = throttle(this.setUpdatedDimensions, 1000);
 
   componentDidUpdate (prevProps: Props, prevState: State) {
     const positioning = getActionElementPosition(this.props.actionIdAttr)
@@ -284,16 +439,20 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
     return (
       <ClickOutside onClickOutside={this.handleCancel}>
         <form className={cx.wrapper} style={style}>
-          <style dangerouslySetInnerHTML={{ __html: `
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
             .${cx.wrapper}::before,
             .${cx.wrapper}::after {
               top: ${anchor.toString()}px;
             }
-          ` }} />
+          `
+            }}
+          />
           {applicant && <h1 className={cx.applicant}>{applicant}</h1>}
           <div className={cx.container}>
             {reasons.map((value, index) => (
-              <div className={cx.input} key={index} data-testid='exclusion-reasons'>
+              <div className={cx.input} key={index} data-testid='xpui-listExclusionFormPopup-input-reasons'>
                 <InputField
                   name='reasons'
                   type='radio'
@@ -311,13 +470,17 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
               placeholder='Provide a reason'
               value={reasonLabel}
               onChange={this.handleCommentChange}
-              data-testid='exclusion-comment'
+              data-testid='xpui-listExclusionFormPopup-input-comment'
             />
             <div className={cx.buttons}>
-              <Button pseudolink onClick={this.handleCancel} data-testid='exclusion-cancel'>
+              <Button pseudolink onClick={this.handleCancel} data-testid='xpui-listExclusionFormPopup-button-cancel'>
                 Cancel
               </Button>
-              <Button onClick={this.handleSubmit} data-testid='exclusion-submit' disabled={reasonLabel === ''}>
+              <Button
+                onClick={this.handleSubmit}
+                data-testid='xpui-listExclusionFormPopup-button-submit'
+                disabled={reasonLabel === ''}
+              >
                 <SvgIcon icon='paperplane' color='inverted' />
               </Button>
             </div>

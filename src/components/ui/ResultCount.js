@@ -18,7 +18,7 @@ const cx = {
 
 type Props = {
   items?: number
-}
+};
 
 const ResultCount = ({ items }: Props) => {
   const itemsCount = isNumber(items) ? items : 0
