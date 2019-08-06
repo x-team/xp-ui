@@ -113,8 +113,7 @@ const DataGrid = ({
         />
       </div>
     </div>
-  </div>
-)
+  )
 
 DataGrid.defaultProps = {
   applicants: [],
