@@ -25,7 +25,6 @@ import GenericCollapsible from './components/ui/GenericCollapsible'
 import GenericCopyToClipboard from './components/ui/GenericCopyToClipboard'
 import GenericTabs from './components/ui/GenericTabs'
 import HeaderBar from './components/ui/HeaderBar'
-import HeadingWithQuickSearch from './components/ui/HeadingWithQuickSearch'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InlineEditor from './components/ui/InlineEditor'
 import InputField from './components/forms/InputField'
@@ -94,7 +93,6 @@ export {
   GenericCopyToClipboard,
   GenericTabs,
   HeaderBar,
-  HeadingWithQuickSearch,
   HorizontalRuler,
   InlineEditor,
   InputField,

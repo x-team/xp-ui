@@ -50,7 +50,7 @@ const cx = {
     }
   `),
 
-  sidebarHeadingAction: cmz(`
+  sidebarHeadingLink: cmz(`
     cursor: pointer
   `),
 
@@ -128,7 +128,7 @@ const cx = {
 type Props = {
   sidebar: Element<*>,
   sidebarHeading: string,
-  sidebarHeadingAction?: () => void,
+  sidebarHeadingLink?: string,
   sidebarWidth: number,
   sidebarIcon: Icon,
   scrollableSidebar: boolean,
@@ -150,7 +150,7 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
   }
 
   renderSidebar = () => {
-    const { sidebar, sidebarHeading, sidebarHeadingAction, sidebarWidth, sidebarIcon, scrollableSidebar } = this.props
+    const { sidebar, sidebarHeading, sidebarHeadingLink, sidebarWidth, sidebarIcon, scrollableSidebar } = this.props
 
     const renderHeadingText = () => (
       <Fragment>
@@ -165,23 +165,19 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
       </Fragment>
     )
 
-    const renderHeadingTextComponent = () => sidebarHeadingAction ? (
-      <a onClick={sidebarHeadingAction} className={[cx.sidebarHeading, cx.sidebarHeadingAction].join(' ')}>
-        {renderHeadingText()}
-      </a>
-    ) : (
-      <div className={cx.sidebarHeading}>
-        {renderHeadingText()}
-      </div>
-    )
-
     return (
       <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
-        {sidebarHeading && (typeof sidebarHeading === 'string' ? renderHeadingTextComponent() : (
-          <div className={cx.sidebarHeading}>
-            {sidebarHeading}
-          </div>
-        )) }
+        {sidebarHeading && (
+          sidebarHeadingLink ? (
+            <a onClick={sidebarHeadingLink} className={[cx.sidebarHeading, cx.sidebarHeadingLink].join(' ')}>
+              {renderHeadingText()}
+            </a>
+          ) : (
+            <div className={cx.sidebarHeading}>
+              {renderHeadingText()}
+            </div>
+          )
+        )}
         <div className={[cx.sidebarBody, scrollableSidebar ? cx.scrollableSidebar : cx.nonScrollableSidebar].join(' ')}>
           {sidebar}
         </div>
