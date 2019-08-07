@@ -22646,15 +22646,16 @@ exports[`Storyshots UI Components/ListsEditor basic 1`] = `
 
 exports[`Storyshots UI Components/ListsEditor missing props (does component explode?) 1`] = `
 <div
-  className="AutoUI_ui_ListsEditor-53"
+  className="AutoUI_ui_ListsEditor-68"
+  data-testid="xpui-listsEditor"
 >
   <h1
-    className="AutoUI_ui_ListsEditor-59 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34"
+    className="AutoUI_ui_ListsEditor-74 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34"
   >
     Edit 
   </h1>
   <Tabs
-    className="AutoUI_ui_ListsEditor-92"
+    className="AutoUI_ui_ListsEditor-107"
     defaultActiveTabKey={0}
   >
     <Tab
@@ -22686,11 +22687,11 @@ exports[`Storyshots UI Components/ListsEditor missing props (does component expl
           visibleItems={7}
         />
         <div
-          className="AutoUI_ui_ListsEditor-68"
+          className="AutoUI_ui_ListsEditor-83"
         >
           <Button
             block={false}
-            className="AutoUI_ui_ListsEditor-77"
+            className="AutoUI_ui_ListsEditor-92"
             color="normal"
             component="button"
             contentStyle="normal"
@@ -22713,7 +22714,7 @@ exports[`Storyshots UI Components/ListsEditor missing props (does component expl
           </Button>
           <Button
             block={false}
-            className="AutoUI_ui_ListsEditor-77 AutoUI_ui_ListsEditor-88"
+            className="AutoUI_ui_ListsEditor-92 AutoUI_ui_ListsEditor-103"
             color="normal"
             component="button"
             contentStyle="normal"
@@ -22765,11 +22766,11 @@ exports[`Storyshots UI Components/ListsEditor missing props (does component expl
           visibleItems={7}
         />
         <div
-          className="AutoUI_ui_ListsEditor-68"
+          className="AutoUI_ui_ListsEditor-83"
         >
           <Button
             block={false}
-            className="AutoUI_ui_ListsEditor-77"
+            className="AutoUI_ui_ListsEditor-92"
             color="normal"
             component="button"
             contentStyle="normal"
@@ -22792,7 +22793,7 @@ exports[`Storyshots UI Components/ListsEditor missing props (does component expl
           </Button>
           <Button
             block={false}
-            className="AutoUI_ui_ListsEditor-77 AutoUI_ui_ListsEditor-88"
+            className="AutoUI_ui_ListsEditor-92 AutoUI_ui_ListsEditor-103"
             color="normal"
             component="button"
             contentStyle="normal"

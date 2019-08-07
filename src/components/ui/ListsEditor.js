@@ -14,7 +14,22 @@ import { pluralize } from '../../utils/helpers'
 
 const cmz = require('cmz')
 
-type Status = '' | 'selecting' | 'editing' | 'saving' | 'edited' | 'creating' | 'created' | 'confirm' | 'deleting' | 'deleted' | 'dismissed' | 'archiving' | 'archived' | 'unarchiving' | 'unarchived'
+type Status =
+  | ''
+  | 'selecting'
+  | 'editing'
+  | 'saving'
+  | 'edited'
+  | 'creating'
+  | 'created'
+  | 'confirm'
+  | 'deleting'
+  | 'deleted'
+  | 'dismissed'
+  | 'archiving'
+  | 'archived'
+  | 'unarchiving'
+  | 'unarchived';
 
 type Item = {
   id: number,
@@ -24,7 +39,7 @@ type Item = {
   editing?: string | null,
   hidden?: boolean,
   status?: ?Status
-}
+};
 
 type Props = {
   collectionLabel?: string,
@@ -35,19 +50,19 @@ type Props = {
   onDelete: Function,
   onCreateNew: Function,
   onDismissDeletedMessages: Function
-}
+};
 
 type DeleteConfirmation = {
   activeList: boolean,
   archiveList: boolean
-}
+};
 
 type State = {
   search: string,
   confirmDeletion: DeleteConfirmation,
   activeList: Array<Item>,
   archiveList: Array<Item>
-}
+};
 
 const cx = {
   listseditor: cmz(`
@@ -141,7 +156,7 @@ class ListsEditor extends Component<Props, State> {
     collectionLabel: 'Collection',
     title: '',
     list: []
-  }
+  };
 
   state = {
     search: '',
@@ -151,7 +166,7 @@ class ListsEditor extends Component<Props, State> {
     },
     activeList: this.props.list.filter(item => !item.archived),
     archiveList: this.props.list.filter(item => item.archived)
-  }
+  };
 
   componentDidUpdate (prevProps: Props) {
     if (!Object.is(prevProps, this.props)) {
@@ -166,21 +181,21 @@ class ListsEditor extends Component<Props, State> {
     }
   }
 
-  getCurrentListName = (active: boolean = true) => active ? 'activeList' : 'archiveList'
+  getCurrentListName = (active: boolean = true) => (active ? 'activeList' : 'archiveList');
 
   getSelection = (active: boolean = true) => {
     const currentList = this.state[this.getCurrentListName(active)] || []
     return currentList.filter(each => each.selected)
-  }
+  };
 
   handleSearch = (search: string) => {
     this.setState({ search })
-  }
+  };
 
   handleSelect = (item: Item, active: boolean = true) => {
     const currentListName = this.getCurrentListName(active)
     const currentList = this.state[currentListName] || []
-    const updatedList = currentList.map(each => each.id === item.id ? { ...item } : each)
+    const updatedList = currentList.map(each => (each.id === item.id ? { ...item } : each))
     const selection = updatedList.filter(each => each.selected)
     this.setState(preState => ({
       ...preState,
@@ -190,28 +205,28 @@ class ListsEditor extends Component<Props, State> {
         ...{ [currentListName]: preState.confirmDeletion[currentListName] && selection.length > 0 }
       }
     }))
-  }
+  };
 
   handleEdit = (item: Item) => {
     const { onEdit } = this.props
     onEdit && onEdit(item)
-  }
+  };
 
   handleArchiveItem = (item: Item) => {
     const { onArchive } = this.props
     onArchive && onArchive([item])
-  }
+  };
 
   handleArchive = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
     const { onArchive } = this.props
     onArchive && onArchive(this.getSelection(active))
-  }
+  };
 
   handleDeleteItem = (item: Item) => {
     const { onDelete } = this.props
     onDelete && onDelete([item])
-  }
+  };
 
   handleDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
@@ -222,21 +237,24 @@ class ListsEditor extends Component<Props, State> {
         ...{ [currentListName]: true }
       }
     }))
-  }
+  };
 
   confirmDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
     const currentListName = this.getCurrentListName(active)
     const { onDelete } = this.props
-    this.setState(preState => ({
-      confirmDeletion: {
-        ...preState.confirmDeletion,
-        ...{ [currentListName]: false }
+    this.setState(
+      preState => ({
+        confirmDeletion: {
+          ...preState.confirmDeletion,
+          ...{ [currentListName]: false }
+        }
+      }),
+      () => {
+        onDelete && onDelete(this.getSelection(active))
       }
-    }), () => {
-      onDelete && onDelete(this.getSelection(active))
-    })
-  }
+    )
+  };
 
   cancelDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
@@ -247,19 +265,19 @@ class ListsEditor extends Component<Props, State> {
         ...{ [currentListName]: false }
       }
     }))
-  }
+  };
 
   handleDismissDeletedMessage = (item: Item) => {
     const { onDismissDeletedMessages } = this.props
     if (item && item.id) {
       onDismissDeletedMessages && onDismissDeletedMessages([item])
     }
-  }
+  };
 
   handleCreateNew = (name: string) => {
     const { onCreateNew } = this.props
     onCreateNew && onCreateNew(name)
-  }
+  };
 
   renderListing = (active: boolean = true) => {
     const currentListName = this.getCurrentListName(active)
@@ -287,21 +305,18 @@ class ListsEditor extends Component<Props, State> {
         {confirmDeletion[currentListName] ? (
           <div className={cx.control}>
             <div className={cx.question}>
-              <p>Delete <strong>{selection.length}</strong> {pluralize(selection.length, 'list', true)}</p>
-              <p><strong>Are you sure?</strong></p>
+              <p>
+                Delete <strong>{selection.length}</strong> {pluralize(selection.length, 'list', true)}
+              </p>
+              <p>
+                <strong>Are you sure?</strong>
+              </p>
             </div>
             <div className={cx.answer}>
-              <Button
-                onClick={e => this.cancelDelete(e, active)}
-                pseudolink
-                className={cx.button}
-              >
+              <Button onClick={e => this.cancelDelete(e, active)} pseudolink className={cx.button}>
                 CANCEL
               </Button>
-              <Button
-                onClick={e => this.confirmDelete(e, active)}
-                className={[cx.button, cx.archive].join(' ')}
-              >
+              <Button onClick={e => this.confirmDelete(e, active)} className={[cx.button, cx.archive].join(' ')}>
                 Yes
               </Button>
             </div>
@@ -321,27 +336,23 @@ class ListsEditor extends Component<Props, State> {
               onClick={e => this.handleArchive(e, active)}
               className={[cx.button, cx.archive].join(' ')}
             >
-              {active ? 'Archive' : 'Unarchive' }
+              {active ? 'Archive' : 'Unarchive'}
             </Button>
           </div>
         )}
       </div>
     )
-  }
+  };
 
   render () {
     const { title } = this.props
 
     return (
-      <div className={cx.listseditor}>
+      <div className={cx.listseditor} data-testid='xpui-listsEditor'>
         <h1 className={cx.heading}>Edit {title}</h1>
         <Tabs className={cx.tabs}>
-          <Tab title='Active'>
-            {this.renderListing(true)}
-          </Tab>
-          <Tab title='Archived'>
-            {this.renderListing(false)}
-          </Tab>
+          <Tab title='Active'>{this.renderListing(true)}</Tab>
+          <Tab title='Archived'>{this.renderListing(false)}</Tab>
         </Tabs>
       </div>
     )
