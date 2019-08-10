@@ -452,33 +452,33 @@ class ApplicantBadge extends PureComponent<Props> {
       <div
         onClick={this.handleBadgeClick}
         className={[cx.wrapper, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}
-        data-testid='xp-ui-applicantBadge-container'
+        data-testid='xpui-applicantBadge-container'
       >
-        <div className={cx.name} data-testid='xp-ui-applicantBadge-name'>
-          <div className={cx.nameInner} title={name || email} data-testid='xp-ui-applicantBadge-name-inner'>
+        <div className={cx.name} data-testid='xpui-applicantBadge-name'>
+          <div className={cx.nameInner} title={name || email} data-testid='xpui-applicantBadge-name-inner'>
             {name || email}
           </div>
           {this.renderStatusIndicator()}
         </div>
-        <div className={cx.avatar} data-testid='xp-ui-applicantBadge-avatar'>
+        <div className={cx.avatar} data-testid='xpui-applicantBadge-avatar'>
           {avatar || (
             <Avatar src={`https://www.gravatar.com/avatar/${md5(email)}?s=65`} alt={name || 'avatar'} size={65} />
           )}
         </div>
-        <div className={cx.controls} data-testid='xp-ui-applicantBadge-controls'>
+        <div className={cx.controls} data-testid='xpui-applicantBadge-controls'>
           {this.renderActions()}
         </div>
-        <div className={cx.infos} data-testid='xp-ui-applicantBadge-infos'>
+        <div className={cx.infos} data-testid='xpui-applicantBadge-infos'>
           {this.mapInfosToRender()}
         </div>
-        <div className={cx.applicantStatus} data-testid='xp-ui-applicantBadge-applicantStatus'>
+        <div className={cx.applicantStatus} data-testid='xpui-applicantBadge-applicantStatus'>
           {applicantStatus}
         </div>
-        <div className={cx.tags} data-testid='xp-ui-applicantBadge-tags'>
+        <div className={cx.tags} data-testid='xpui-applicantBadge-tags'>
           {this.mapTagsToRender()}
         </div>
         {children && (
-          <div className={cx.children} data-testid='xp-ui-applicantBadge-children'>
+          <div className={cx.children} data-testid='xpui-applicantBadge-children'>
             {children}
           </div>
         )}
