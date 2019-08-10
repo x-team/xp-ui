@@ -13,9 +13,9 @@ import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 
-export type Size = 'normal' | 'large' | 'small';
-export type Color = 'normal' | 'monochrome' | 'silver' | 'gray' | 'grayPink';
-export type ContentStyle = 'normal' | 'openSans' | 'sourceSansPro';
+export type Size = 'normal' | 'large' | 'small'
+export type Color = 'normal' | 'monochrome' | 'silver' | 'gray' | 'grayPink'
+export type ContentStyle = 'normal' | 'openSans' | 'sourceSansPro'
 
 type Props = {
   className: string | CmzAtom,
@@ -38,7 +38,7 @@ type Props = {
   icon?: Icon | '',
   iconProps: Object,
   contentStyle: ContentStyle
-};
+}
 
 const baseStyles = {
   root: cmz(`
@@ -406,7 +406,7 @@ class Button extends PureComponent<Props> {
     wide: false,
     selectbox: false,
     readOnly: false
-  };
+  }
 
   render () {
     const {

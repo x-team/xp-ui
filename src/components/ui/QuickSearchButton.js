@@ -10,7 +10,7 @@ const cmz = require('cmz')
 
 type Props = {
   onClick: () => void
-};
+}
 
 const container = cmz(`
   & {

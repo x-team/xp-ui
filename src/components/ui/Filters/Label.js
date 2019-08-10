@@ -9,7 +9,7 @@ import type { Element } from 'react'
 
 export type Props = {
   children: Element<*>
-};
+}
 
 const cmz = require('cmz')
 

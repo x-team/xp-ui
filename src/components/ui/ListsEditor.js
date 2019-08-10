@@ -29,7 +29,7 @@ type Status =
   | 'archiving'
   | 'archived'
   | 'unarchiving'
-  | 'unarchived';
+  | 'unarchived'
 
 type Item = {
   id: number,
@@ -39,7 +39,7 @@ type Item = {
   editing?: string | null,
   hidden?: boolean,
   status?: ?Status
-};
+}
 
 type Props = {
   collectionLabel?: string,
@@ -50,19 +50,19 @@ type Props = {
   onDelete: Function,
   onCreateNew: Function,
   onDismissDeletedMessages: Function
-};
+}
 
 type DeleteConfirmation = {
   activeList: boolean,
   archiveList: boolean
-};
+}
 
 type State = {
   search: string,
   confirmDeletion: DeleteConfirmation,
   activeList: Array<Item>,
   archiveList: Array<Item>
-};
+}
 
 const cx = {
   listseditor: cmz(`
@@ -156,7 +156,7 @@ class ListsEditor extends Component<Props, State> {
     collectionLabel: 'Collection',
     title: '',
     list: []
-  };
+  }
 
   state = {
     search: '',
@@ -166,7 +166,7 @@ class ListsEditor extends Component<Props, State> {
     },
     activeList: this.props.list.filter(item => !item.archived),
     archiveList: this.props.list.filter(item => item.archived)
-  };
+  }
 
   componentDidUpdate (prevProps: Props) {
     if (!Object.is(prevProps, this.props)) {
@@ -181,16 +181,16 @@ class ListsEditor extends Component<Props, State> {
     }
   }
 
-  getCurrentListName = (active: boolean = true) => (active ? 'activeList' : 'archiveList');
+  getCurrentListName = (active: boolean = true) => (active ? 'activeList' : 'archiveList')
 
   getSelection = (active: boolean = true) => {
     const currentList = this.state[this.getCurrentListName(active)] || []
     return currentList.filter(each => each.selected)
-  };
+  }
 
   handleSearch = (search: string) => {
     this.setState({ search })
-  };
+  }
 
   handleSelect = (item: Item, active: boolean = true) => {
     const currentListName = this.getCurrentListName(active)
@@ -205,28 +205,28 @@ class ListsEditor extends Component<Props, State> {
         ...{ [currentListName]: preState.confirmDeletion[currentListName] && selection.length > 0 }
       }
     }))
-  };
+  }
 
   handleEdit = (item: Item) => {
     const { onEdit } = this.props
     onEdit && onEdit(item)
-  };
+  }
 
   handleArchiveItem = (item: Item) => {
     const { onArchive } = this.props
     onArchive && onArchive([item])
-  };
+  }
 
   handleArchive = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
     const { onArchive } = this.props
     onArchive && onArchive(this.getSelection(active))
-  };
+  }
 
   handleDeleteItem = (item: Item) => {
     const { onDelete } = this.props
     onDelete && onDelete([item])
-  };
+  }
 
   handleDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
@@ -237,7 +237,7 @@ class ListsEditor extends Component<Props, State> {
         ...{ [currentListName]: true }
       }
     }))
-  };
+  }
 
   confirmDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
@@ -254,7 +254,7 @@ class ListsEditor extends Component<Props, State> {
         onDelete && onDelete(this.getSelection(active))
       }
     )
-  };
+  }
 
   cancelDelete = (event: any, active: boolean = true) => {
     event && event.stopPropagation()
@@ -265,19 +265,19 @@ class ListsEditor extends Component<Props, State> {
         ...{ [currentListName]: false }
       }
     }))
-  };
+  }
 
   handleDismissDeletedMessage = (item: Item) => {
     const { onDismissDeletedMessages } = this.props
     if (item && item.id) {
       onDismissDeletedMessages && onDismissDeletedMessages([item])
     }
-  };
+  }
 
   handleCreateNew = (name: string) => {
     const { onCreateNew } = this.props
     onCreateNew && onCreateNew(name)
-  };
+  }
 
   renderListing = (active: boolean = true) => {
     const currentListName = this.getCurrentListName(active)
@@ -342,7 +342,7 @@ class ListsEditor extends Component<Props, State> {
         )}
       </div>
     )
-  };
+  }
 
   render () {
     const { title } = this.props

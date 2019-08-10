@@ -19,15 +19,15 @@ type Info = {
   value: string,
   label: string,
   tip?: string
-};
+}
 
 type Action = {
   key: string,
   icon: () => Element<*>,
   onClick: (?string) => void
-};
+}
 
-type Status = 'accepted' | 'excluded' | '';
+type Status = 'accepted' | 'excluded' | ''
 
 type Props = {
   id: number,
@@ -42,7 +42,7 @@ type Props = {
   actions: Array<Action>,
   status: Status,
   applicantStatus?: string
-};
+}
 
 const cmz = require('cmz')
 
@@ -344,49 +344,49 @@ class ApplicantBadge extends PureComponent<Props> {
     actions: [],
     info: [],
     status: ''
-  };
+  }
 
   renderStatusIndicator = () => {
     const { status } = this.props
     const style = status && statusDotStyles[status]
     return style && <span className={style} />
-  };
+  }
 
   handleBadgeClick = (event: SyntheticEvent<>) => {
     event.stopPropagation()
     const { id, onClick } = this.props
     onClick && onClick(id)
-  };
+  }
 
   handleActionClick = (onClick: (?string) => void, actionIdAttr: string) => () => {
     onClick && onClick(actionIdAttr)
-  };
+  }
 
   infoLabel = (info: Info) => (
     <div>
       <span className={cx.label}>{info.label}</span>
       <span className={cx.value}>{info.value}</span>
     </div>
-  );
+  )
 
   renderInfoLabelDropdown = (key: number, info: Info) => (
     <Dropdown key={key} tooltip hover label={this.infoLabel(info)}>
       {info.tip && <div className={cx.tip}>{info.tip}</div>}
     </Dropdown>
-  );
+  )
 
   renderInfoItems = () => {
     const filteredInfos = this.props.info.filter(each => each.value)
     return filteredInfos.map((info, key) =>
       info.tip ? this.renderInfoLabelDropdown(key, info) : this.infoLabel(info)
     )
-  };
+  }
 
   renderInfosViewMore = (amount: string, action: () => void) => (
     <div className={[cx.info, cx.moreinfos].join(' ')} onClick={action}>
       {`+ ${amount} info`}
     </div>
-  );
+  )
 
   mapInfosToRender = () => {
     const { info } = this.props
@@ -402,13 +402,13 @@ class ApplicantBadge extends PureComponent<Props> {
         />
       )
     )
-  };
+  }
 
   renderTagsViewMore = (amount: string, action: () => void) => (
     <div className={[cx.tag, cx.moretags, cx.purelabel].join(' ')} onClick={action}>
       {`+ ${amount} more`}
     </div>
-  );
+  )
 
   mapTagsToRender = () => {
     const { tags } = this.props
@@ -424,7 +424,7 @@ class ApplicantBadge extends PureComponent<Props> {
         />
       )
     )
-  };
+  }
 
   renderActions = () => {
     const { id, actions } = this.props
@@ -443,7 +443,7 @@ class ApplicantBadge extends PureComponent<Props> {
         )
       )
     })
-  };
+  }
 
   render () {
     const { id, active, name, email, avatar, children, applicantStatus } = this.props

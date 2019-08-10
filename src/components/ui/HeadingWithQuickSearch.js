@@ -86,20 +86,20 @@ type Props = {
   onQuickSearchChangeValue?: (value: string) => void,
   onQuickSearchSubmit?: (value: string) => void,
   headingAction?: () => void
-};
+}
 
 type State = {
   isSearching: boolean,
   inputValue: string
-};
+}
 
 class HeadingWithQuickSearch extends PureComponent<Props, State> {
   state = {
     isSearching: false,
     inputValue: ''
-  };
+  }
 
-  toggleQuickSearch = (isSearching: boolean): void => this.setState({ isSearching, inputValue: '' });
+  toggleQuickSearch = (isSearching: boolean): void => this.setState({ isSearching, inputValue: '' })
 
   handleChangeValue = (input: Object): void => {
     const newValue = input.target.value
@@ -108,13 +108,13 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
     } else {
       this.setState({ inputValue: input.target.value })
     }
-  };
+  }
 
   handleQuickSearchSubmit = (event: SyntheticEvent<HTMLInputElement>): void => {
     event.preventDefault()
     const value = this.props.quickSearchValue || this.state.inputValue
     if (this.props.onQuickSearchSubmit) this.props.onQuickSearchSubmit(value)
-  };
+  }
 
   handleToggleQuickSearch = (isSearching: boolean): (() => void) => {
     return () => {
@@ -124,7 +124,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
         this.setState({ isSearching, inputValue: '' })
       }
     }
-  };
+  }
 
   renderLeftIcon = (icon: Icon, action?: () => void) => {
     return (
@@ -139,7 +139,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
         </div>
       ))
     )
-  };
+  }
 
   renderHeadingText = (text: string, action?: () => void) => {
     return action ? (
@@ -149,7 +149,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
     ) : (
       text
     )
-  };
+  }
 
   renderInput = () => {
     const value = this.props.quickSearchValue || this.state.inputValue || ''
@@ -165,7 +165,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
         />
       </form>
     )
-  };
+  }
 
   render () {
     const { isQuickSearching, leftIcon, headingAction, text } = this.props

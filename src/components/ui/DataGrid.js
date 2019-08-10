@@ -69,7 +69,7 @@ const cx = {
   `)
 }
 
-type SortDirection = 'ASC' | 'DESC' | 'NONE' | '';
+type SortDirection = 'ASC' | 'DESC' | 'NONE' | ''
 
 type Props = {
   isLoading: boolean,
@@ -79,7 +79,7 @@ type Props = {
   sortColumn: string,
   rowsCount: number,
   handleGridSort: (sortColumn: string, sortDirection: SortDirection) => void
-};
+}
 
 const getRows = (applicants: Array<Applicant>) => selectors.getRows({ rows: applicants })
 const getRow = (applicants: Array<Applicant>) => (rowIdx: number) => getRows(applicants)[rowIdx]
