@@ -94,8 +94,8 @@ const DataGrid = ({
   rowsCount
 }: Props) =>
   (
-    <div className={cx.gridContainer}>
-      <div className={cx.grid}>
+    <div className={cx.gridContainer} data-testid='xpui-dataGrid-container'>
+      <div className={cx.grid} data-testid='xpui-dataGrid-grid'>
         {isLoading && (
           <div className={cx.overlay}>
             <Loader />
