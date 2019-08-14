@@ -58,7 +58,8 @@ const cx = {
 }
 
 const Heading = (props: Props) => (
-  <div onClick={props.onClick} className={props.isExpanded ? cx.heading : `${cx.heading} ${cx.headingCollapsed}`}>
+  <div onClick={props.onClick} className={props.isExpanded ? cx.heading : `${cx.heading} ${cx.headingCollapsed}`}
+    data-testid='xpui-filters-heading'>
     <div className={cx.text} data-testid='xpui-filters-heading-children'>
       {props.children}
     </div>
