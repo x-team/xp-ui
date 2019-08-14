@@ -23,9 +23,7 @@ const cx = {
 const Filter = (props: Props) => (
   <Fragment>
     <Label>{props.label}</Label>
-    <div className={cx.filter} data-testid='xpui-filters-filter'>
-      {props.children}
-    </div>
+    <div className={cx.filter} data-testid='xpui-filters-filter'>{props.children}</div>
   </Fragment>
 )
 

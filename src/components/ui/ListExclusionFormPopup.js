@@ -476,11 +476,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
               <Button pseudolink onClick={this.handleCancel} data-testid='xpui-listExclusionFormPopup-button-cancel'>
                 Cancel
               </Button>
-              <Button
-                onClick={this.handleSubmit}
-                data-testid='xpui-listExclusionFormPopup-button-submit'
-                disabled={reasonLabel === ''}
-              >
+              <Button onClick={this.handleSubmit} data-testid='xpui-listExclusionFormPopup-button-submit' disabled={reasonLabel === ''}>
                 <SvgIcon icon='paperplane' color='inverted' />
               </Button>
             </div>

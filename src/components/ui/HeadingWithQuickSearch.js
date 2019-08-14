@@ -176,11 +176,8 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
       <div className={[cx.container, cx.inputContainer].join(' ')} data-testid='xpui-headingWithQuickSearch-container'>
         {this.renderLeftIcon('magnifier')}
         {this.renderInput()}
-        <div
-          className={cx.sidebarHeadingIconRight}
-          onClick={this.handleToggleQuickSearch(false)}
-          data-testid='xpui-headingWithQuickSearch-iconRight-button'
-        >
+        <div className={cx.sidebarHeadingIconRight} onClick={this.handleToggleQuickSearch(false)}
+          data-testid='xpui-headingWithQuickSearch-iconRight-button'>
           <SvgIcon icon={'x'} color='grayscarpaflow' />
         </div>
       </div>

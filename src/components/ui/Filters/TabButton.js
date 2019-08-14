@@ -53,6 +53,7 @@ const TabButton = (props: Props) => (
     smallRounded
     onClick={props.onClick}
     className={props.isActive ? `${cx.button} ${cx.active}` : cx.button}
+    data-testid='xpui-filters-tabButton'
   >
     {props.text}
   </Button>

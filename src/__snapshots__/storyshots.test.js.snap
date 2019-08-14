@@ -20578,6 +20578,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for TabButton (doe
   color="silver"
   component="button"
   contentStyle="normal"
+  data-testid="xpui-filters-tabButton"
   disabled={false}
   icon=""
   iconProps={Object {}}
