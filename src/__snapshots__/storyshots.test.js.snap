@@ -464,7 +464,7 @@ exports[`Storyshots Form Components/SolutionForm 2 attempts are taken 1`] = `
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={false}
       icon=""
       iconProps={Object {}}
@@ -508,7 +508,7 @@ exports[`Storyshots Form Components/SolutionForm custom submit callback is passe
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={false}
       icon=""
       iconProps={Object {}}
@@ -551,7 +551,7 @@ exports[`Storyshots Form Components/SolutionForm max of 5 attempts allowed 1`] =
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={false}
       icon=""
       iconProps={Object {}}
@@ -594,7 +594,7 @@ exports[`Storyshots Form Components/SolutionForm missing props (does component e
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={false}
       icon=""
       iconProps={Object {}}
@@ -637,7 +637,7 @@ exports[`Storyshots Form Components/SolutionForm submitting is in progress 1`] =
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={true}
       icon=""
       iconProps={Object {}}
@@ -680,7 +680,7 @@ exports[`Storyshots Form Components/SolutionForm with disabled button 1`] = `
       color="normal"
       component="button"
       contentStyle="normal"
-      data-test="solutionSubmit"
+      data-testid="xpui-solutionForm-button-submit"
       disabled={true}
       icon=""
       iconProps={Object {}}
@@ -2944,7 +2944,7 @@ exports[`Storyshots UI Components/ApplicantBadge/Debug missing props (does compo
 exports[`Storyshots UI Components/ApplicantGrid basic usage 1`] = `
 <div
   className="AutoUI_ui_ApplicantGrid-11"
-  data-test="applicants"
+  data-testid="xpui-applicantGrid"
   onKeyPress={[Function]}
   tabIndex={0}
 >
@@ -3043,7 +3043,7 @@ exports[`Storyshots UI Components/ApplicantGrid basic usage 1`] = `
 exports[`Storyshots UI Components/ApplicantGrid/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_ApplicantGrid-11"
-  data-test="applicants"
+  data-testid="xpui-applicantGrid"
   onKeyPress={[Function]}
   tabIndex={0}
 >
@@ -4590,7 +4590,9 @@ exports[`Storyshots UI Components/Button/With Knobs all effects 1`] = `
 <button
   className="    "
 >
-  <span>
+  <span
+    data-testid="xpui-button"
+  >
     This is a button
   </span>
 </button>
@@ -15755,9 +15757,11 @@ exports[`Storyshots UI Components/DataGrid loading 1`] = `
 exports[`Storyshots UI Components/DataGrid/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_DataGrid-45"
+  data-testid="xpui-dataGrid-container"
 >
   <div
     className="AutoUI_ui_DataGrid-51"
+    data-testid="xpui-dataGrid-grid"
   >
     <ReactDataGrid
       cellNavigationMode="none"
@@ -15811,7 +15815,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
 >
   <div
     className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44"
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <SvgIcon
@@ -15820,7 +15824,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
     />
     <span
       className="AutoUI_ui_Dropdown-40"
-      data-testid="xpui-dropdown__button__label"
+      data-testid="xpui-dropdown-button-label"
     >
       This is a Dropdown
     </span>
@@ -15835,7 +15839,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <SelectBox
       areItemsToggleable={true}
@@ -15895,12 +15899,12 @@ exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons
 >
   <div
     className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44"
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <span
       className="AutoUI_ui_Dropdown-40"
-      data-testid="xpui-dropdown__button__label"
+      data-testid="xpui-dropdown-button-label"
     >
       registered
     </span>
@@ -15915,7 +15919,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <SelectBox
       areItemsToggleable={true}
@@ -15975,12 +15979,12 @@ exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
 >
   <div
     className="AutoUI_ui_Dropdown-24 "
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <span
       className="AutoUI_ui_Dropdown-40"
-      data-testid="xpui-dropdown__button__label"
+      data-testid="xpui-dropdown-button-label"
     >
       <h1>
         Click to open!
@@ -15989,11 +15993,11 @@ exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50    AutoUI_ui_Dropdown-111 "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <div
       className="AutoUI_ui_Dropdown-71 "
-      data-testid="xpui-dropdown__children__tooltip"
+      data-testid="xpui-dropdown-children-tooltip"
     >
       <CloseButton
         closeDropdown={[Function]}
@@ -16011,7 +16015,7 @@ exports[`Storyshots UI Components/Dropdown icon only button 1`] = `
 >
   <div
     className="AutoUI_ui_Dropdown-24 AutoUI_ui_Dropdown-44"
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <SvgIcon
@@ -16021,7 +16025,7 @@ exports[`Storyshots UI Components/Dropdown icon only button 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <div
       key=".0"
@@ -16111,7 +16115,7 @@ exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
 >
   <div
     className="AutoUI_ui_Dropdown-24 "
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <SvgIcon
@@ -16120,7 +16124,7 @@ exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
     />
     <span
       className="AutoUI_ui_Dropdown-40"
-      data-testid="xpui-dropdown__button__label"
+      data-testid="xpui-dropdown-button-label"
     >
       Add to List
     </span>
@@ -16135,7 +16139,7 @@ exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50     "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <div
       key=".0"
@@ -16200,12 +16204,12 @@ exports[`Storyshots UI Components/Dropdown tooltip display 1`] = `
 >
   <div
     className="AutoUI_ui_Dropdown-24 "
-    data-testid="xpui-dropdown__button"
+    data-testid="xpui-dropdown-button"
     onClick={[Function]}
   >
     <span
       className="AutoUI_ui_Dropdown-40"
-      data-testid="xpui-dropdown__button__label"
+      data-testid="xpui-dropdown-button-label"
     >
       <Button
         block={false}
@@ -16233,11 +16237,11 @@ exports[`Storyshots UI Components/Dropdown tooltip display 1`] = `
   </div>
   <div
     className="AutoUI_ui_Dropdown-50    AutoUI_ui_Dropdown-111 "
-    data-testid="xpui-dropdown__children"
+    data-testid="xpui-dropdown-children"
   >
     <div
       className="AutoUI_ui_Dropdown-71 "
-      data-testid="xpui-dropdown__children__tooltip"
+      data-testid="xpui-dropdown-children-tooltip"
     >
       Anything here
     </div>
@@ -20517,6 +20521,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Filter (does c
   <Label />
   <div
     className="AutoUI_ui_Filters_Filter-17"
+    data-testid="xpui-filters-filter"
   />
 </Fragment>
 `;
@@ -20524,6 +20529,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Filter (does c
 exports[`Storyshots UI Components/Filters/Debug missing props for Group (does components explode?) 1`] = `
 <div
   className="AutoUI_ui_Filters_Group-17"
+  data-testid="xpui-filters-group"
 />
 `;
 
@@ -20533,9 +20539,11 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does 
 >
   <div
     className="AutoUI_ui_Filters_Heading-51"
+    data-testid="xpui-filters-heading-children"
   />
   <div
     className="AutoUI_ui_Filters_Heading-55"
+    data-testid="xpui-filters-heading-arrow"
   >
     <SvgIcon
       color="grayscarpaflow"
@@ -20548,6 +20556,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does 
 exports[`Storyshots UI Components/Filters/Debug missing props for Label (does components explode?) 1`] = `
 <div
   className="AutoUI_ui_Filters_Label-17 AutoUI_typo-34"
+  data-testid="xpui-filters-label"
 />
 `;
 
@@ -20568,6 +20577,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for TabButton (doe
   color="silver"
   component="button"
   contentStyle="normal"
+  data-testid="xpui-filters-tabButton"
   disabled={false}
   icon=""
   iconProps={Object {}}
@@ -22153,6 +22163,7 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch self-controlled sidebar
 exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
+  data-testid="xpui-headingWithQuickSearch-container"
 >
   <QuickSearchButton
     onClick={[Function]}
@@ -22182,6 +22193,7 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug with action handl
 exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug without wrapper 1`] = `
 <div
   className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
+  data-testid="xpui-headingWithQuickSearch-container"
 >
   <div
     className="AutoUI_ui_HeadingWithQuickSearch-30"
@@ -22421,7 +22433,7 @@ exports[`Storyshots UI Components/ListExclusionFormPopup/Debug missing props (do
       className="AutoUI_ui_ListExclusionFormPopup-52"
     >
       <InputField
-        data-testid="exclusion-comment"
+        data-testid="xpui-listExclusionFormPopup-input-comment"
         isInvalid={false}
         label="Add a comment"
         name="reason"
@@ -22441,7 +22453,7 @@ exports[`Storyshots UI Components/ListExclusionFormPopup/Debug missing props (do
           color="normal"
           component="button"
           contentStyle="normal"
-          data-testid="exclusion-cancel"
+          data-testid="xpui-listExclusionFormPopup-button-cancel"
           disabled={false}
           icon=""
           iconProps={Object {}}
@@ -22465,7 +22477,7 @@ exports[`Storyshots UI Components/ListExclusionFormPopup/Debug missing props (do
           color="normal"
           component="button"
           contentStyle="normal"
-          data-testid="exclusion-submit"
+          data-testid="xpui-listExclusionFormPopup-button-submit"
           disabled={true}
           icon=""
           iconProps={Object {}}
@@ -22635,6 +22647,7 @@ exports[`Storyshots UI Components/ListsEditor basic 1`] = `
 exports[`Storyshots UI Components/ListsEditor missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_ListsEditor-53"
+  data-testid="xpui-listsEditor"
 >
   <h1
     className="AutoUI_ui_ListsEditor-59 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34"
@@ -22851,15 +22864,15 @@ exports[`Storyshots UI Components/MetaGroup standalone composed with children 1`
 exports[`Storyshots UI Components/MetaGroup/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_MetaGroup-10"
-  data-testid="xpui-metaGroup__layout"
+  data-testid="xpui-metaGroup-layout"
 >
   <div
     className="AutoUI_ui_MetaGroup-15"
-    data-testid="xpui-metaGroup__mainBodyColumn"
+    data-testid="xpui-metaGroup-mainBodyColumn"
   />
   <div
     className="AutoUI_ui_MetaGroup-21"
-    data-testid="xpui-metaGroup__secondaryColumns"
+    data-testid="xpui-metaGroup-secondaryColumns"
   />
 </div>
 `;
@@ -25595,6 +25608,7 @@ exports[`Storyshots UI Components/QuickSearchButton basic usage 1`] = `
 exports[`Storyshots UI Components/QuickSearchButton/Debug missing props (does component explode?) 1`] = `
 <div
   className="AutoUI_ui_QuickSearchButton-15"
+  data-testid="xpui-quickSearchButton"
   onClick={[Function]}
 >
   <SvgIcon
@@ -26118,7 +26132,7 @@ exports[`Storyshots UI Components/RoadmapLevel centered state with CTA button 1`
     color="normal"
     component="button"
     contentStyle="normal"
-    data-test="roadmapStart"
+    data-testid="xpui-roadmapLevel-button-cta"
     disabled={false}
     icon=""
     iconProps={Object {}}
