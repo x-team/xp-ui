@@ -447,9 +447,9 @@ class ApplicantBadge extends PureComponent<Props> {
     const { id, active, name, email, avatar, children, applicantStatus } = this.props
 
     return id ? (
-      <div onClick={this.handleBadgeClick} className={[cx.wrapper, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
-        <div className={cx.name}>
-          <div className={cx.nameInner} title={name || email}>{name || email}</div>
+      <div onClick={this.handleBadgeClick} className={[cx.wrapper, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')} data-testid='xpui-applicantBadge-container'>
+        <div className={cx.name} data-testid='xpui-applicantBadge-name'>
+          <div className={cx.nameInner} title={name || email} data-testid='xpui-applicantBadge-name-inner'>{name || email}</div>
           {this.renderStatusIndicator()}
         </div>
         <div className={cx.avatar} data-testid='xpui-applicantBadge-avatar'>
