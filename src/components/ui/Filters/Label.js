@@ -25,6 +25,6 @@ const cx = {
   `)
 }
 
-const Label = (props: Props) => <div className={cx.label}>{props.children}</div>
+const Label = (props: Props) => <div className={cx.label} data-testid='xpui-filters-label'>{props.children}</div>
 
 export default Label

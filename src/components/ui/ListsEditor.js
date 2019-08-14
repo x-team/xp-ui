@@ -333,7 +333,7 @@ class ListsEditor extends Component<Props, State> {
     const { title } = this.props
 
     return (
-      <div className={cx.listseditor}>
+      <div className={cx.listseditor} data-testid='xpui-listsEditor'>
         <h1 className={cx.heading}>Edit {title}</h1>
         <Tabs className={cx.tabs}>
           <Tab title='Active'>
