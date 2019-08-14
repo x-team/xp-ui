@@ -20536,6 +20536,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Group (does co
 exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does components explode?) 1`] = `
 <div
   className="AutoUI_ui_Filters_Heading-22 AutoUI_typo-22 AutoUI_ui_Filters_Heading-45"
+  data-testid="xpui-filters-heading"
 >
   <div
     className="AutoUI_ui_Filters_Heading-51"
