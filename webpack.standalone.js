@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     all: './src/index.js',
     editor: './src/components/ui/TextareaEditor/TextareaEditor',
+    registration: './src/registration.js',
   },
   devtool: 'source-maps',
   output: {
