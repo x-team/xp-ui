@@ -447,12 +447,12 @@ class ApplicantBadge extends PureComponent<Props> {
     const { id, active, name, email, avatar, children, applicantStatus } = this.props
 
     return id ? (
-      <div onClick={this.handleBadgeClick} className={[cx.wrapper, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')}>
-        <div className={cx.name}>
-          <div className={cx.nameInner} title={name || email}>{name || email}</div>
+      <div onClick={this.handleBadgeClick} className={[cx.wrapper, cx.displayControlsOnHover, active ? cx.active : ''].join(' ')} data-testid='xpui-applicantBadge-container'>
+        <div className={cx.name} data-testid='xpui-applicantBadge-name'>
+          <div className={cx.nameInner} title={name || email} data-testid='xpui-applicantBadge-name-inner'>{name || email}</div>
           {this.renderStatusIndicator()}
         </div>
-        <div className={cx.avatar}>
+        <div className={cx.avatar} data-testid='xpui-applicantBadge-avatar'>
           {avatar || (
             <Avatar
               src={`https://www.gravatar.com/avatar/${md5(email)}?s=65`}
@@ -461,20 +461,20 @@ class ApplicantBadge extends PureComponent<Props> {
             />
           )}
         </div>
-        <div className={cx.controls}>
+        <div className={cx.controls} data-testid='xpui-applicantBadge-controls'>
           {this.renderActions()}
         </div>
-        <div className={cx.infos}>
+        <div className={cx.infos} data-testid='xpui-applicantBadge-infos'>
           {this.mapInfosToRender()}
         </div>
-        <div className={cx.applicantStatus}>
+        <div className={cx.applicantStatus} data-testid='xpui-applicantBadge-applicantStatus'>
           {applicantStatus}
         </div>
-        <div className={cx.tags}>
+        <div className={cx.tags} data-testid='xpui-applicantBadge-tags'>
           {this.mapTagsToRender()}
         </div>
         {children && (
-          <div className={cx.children}>
+          <div className={cx.children} data-testid='xpui-applicantBadge-children'>
             {children}
           </div>
         )}
