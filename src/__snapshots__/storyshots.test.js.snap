@@ -41823,6 +41823,22 @@ exports[`Storyshots UI Components/Text required 1`] = `
 </section>
 `;
 
+exports[`Storyshots UI Components/Text showcase (use knobs) 1`] = `
+<Text
+  content="string"
+  hasDivider={true}
+  heading="string"
+  headingType="divider"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  level="string"
+  required={true}
+  subHeading="string"
+  subHeadingType="divider"
+/>
+`;
+
 exports[`Storyshots UI Components/Text sub Heading with center align 1`] = `
 <section
   className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
@@ -41949,6 +41965,350 @@ exports[`Storyshots UI Components/Text without Heading and Sub Heading with isCe
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
 </section>
+`;
+
+exports[`Storyshots UI Components/Text/Debug missing props (does component explode?) 1`] = `
+<section
+  className="AutoUI_ui_Text-33"
+>
+  <div
+    className="AutoUI_ui_Text-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+  />
+</section>
+`;
+
+exports[`Storyshots UI Components/Text/Demos content with HTML tags 1`] = `
+<Text
+  content={
+    <div>
+      <h1>
+        H1
+      </h1>
+      <h2>
+        H2
+      </h2>
+      <h3>
+        H3
+      </h3>
+      <h4>
+        H4
+      </h4>
+      <h5>
+        H5
+      </h5>
+      <hr />
+      <em>
+        Emphasized text
+      </em>
+      <br />
+      <strong>
+        Strong text
+      </strong>
+      <br />
+      <code>
+        A piece of computer code
+      </code>
+      <br />
+      <samp>
+        Sample output from a computer program
+      </samp>
+      <br />
+      <kbd>
+        Keyboard Text
+      </kbd>
+      <br />
+      <var>
+        Variable Code
+      </var>
+      <br />
+      <mark>
+        Mark
+      </mark>
+       
+      <br />
+      <b>
+        Bold Text
+      </b>
+       
+      <br />
+      <i>
+        italic Text
+      </i>
+       
+      <br />
+      <a
+        href="https://www.google.com"
+        target="_blank"
+      >
+        Link
+      </a>
+      <p>
+        <strong>
+          Paragraph:
+        </strong>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque vestibulum sem id cursus. Fusce nec consequat erat. Praesent convallis aliquet augue, vel lacinia urna pretium eu. Morbi accumsan neque sit amet feugiat molestie. Aliquam erat volutpat. Cras quis dapibus risus. Proin luctus hendrerit semper. Donec finibus hendrerit ante at egestas.
+      </p>
+    </div>
+  }
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos content with Markdown 1`] = `
+<Text
+  content="# Time to show off.
+
+It's great getting to know you! After you sign up, X-Teamers from our community review profiles and send invitations to those they see standing out.
+
+## Lorem Ipsum
+
+Due to high demand, we send out a limited number of invites each month, meaning we can't guarantee you'll hear from us about an interview.
+
+### Sit dolor amet
+
+Some things that [will help you stand out](http://google.com):
+
+- Experience working on large scale projects with a significant user base.
+- Strong written and spoken English.
+- A LinkedIn profile that details the projects you've worked on.
+- Availability for long-term fulltime contracts (the average contract duration is 10 months).
+
+This is _**custom content**_ btw"
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={true}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos heading 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos heading and sub heading with divider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos heading with center align 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos heading with center align and divider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos heading with divider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos heading with divider and no content 1`] = `
+<Text
+  hasDivider={true}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos pure content with no wrappers around 1`] = `
+<Text
+  content="Just a sample text"
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={true}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos pure content with no wrappers around and Required 1`] = `
+<Text
+  content="Just a required text"
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={true}
+  required={true}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos required 1`] = `
+<Text
+  content="Just a required text"
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={true}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos sub Heading with center align 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  headingType="headline"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos sub Heading with divider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos sub Heading with level 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  level="Level 7"
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos sub Heading with level and center align 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  headingType="headline"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  level="Level 7"
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos sub heading 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={false}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeading="Your roadmap to X-Team"
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos without Heading and Sub Heading with divider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  headingType="headline"
+  isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots UI Components/Text/Demos without Heading and Sub Heading with isCentered align 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  headingType="headline"
+  isCentered={true}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
 `;
 
 exports[`Storyshots UI Components/TextareaEditor basic usage 1`] = `
