@@ -41,7 +41,7 @@ const cx = {
 }
 
 const Group = (props: Props) => (
-  <div className={props.isCentered ? [cx.group, cx.centered].join(' ') : cx.group}>
+  <div className={props.isCentered ? [cx.group, cx.centered].join(' ') : cx.group} data-testid='xpui-filters-group'>
     {props.children}
   </div>
 )
