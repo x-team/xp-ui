@@ -43,7 +43,7 @@ const Body = ({ children }) => (
 const applicantBadges = getApplicantBadges()
 
 export const StoryFilters = () => (
-  <Filters.Container>
+  <Filters.Container onKeyPress={action('onKeyPress')}>
 
     <GenericCollapsible.Container initialExpanded>
       <GenericCollapsible.Header>
@@ -125,7 +125,7 @@ export const StoryFilters = () => (
 export const StoryFiltersWithAccordion = () => (
   <State initialState={{ expanded: 'filters' }}>
     {({ setState, state }) => (
-      <Filters.Container isAccordion>
+      <Filters.Container isAccordion onKeyPress={action('onKeyPress')}>
 
         <GenericCollapsible.Container
           isAccordion
