@@ -3,11 +3,16 @@ const path = require('path')
 const base = require('./webpack.config')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    all: './src/index.js',
+    editor: './src/components/ui/TextareaEditor/TextareaEditor',
+    fonts: './src/styles/fonts.js',
+    registration: './src/registration.js',
+  },
   devtool: 'source-maps',
   output: {
     path: path.resolve('./lib'),
-    filename: 'xp-ui.js',
+    filename: '[name].js',
     library: 'xp-ui',
     libraryTarget: 'commonjs2',
     umdNamedDefine: true

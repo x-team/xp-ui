@@ -1,3 +1,5 @@
+import './styles/fonts.js'
+
 import ActivityBar from './components/ui/ActivityBar'
 import ActivityLog from './components/ui/ActivityLog'
 import ActivityLogsDisplay from './components/ui/ActivityLogsDisplay'
