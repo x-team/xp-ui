@@ -79,7 +79,7 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "cmz": "^3.12.1",
+    "cmz": "^3.13.0",
     "color": "^3.1.0",
     "crypto-js": "^3.1.9-1",
     "date-fns": "^1.29.0",

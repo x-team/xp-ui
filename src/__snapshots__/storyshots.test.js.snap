@@ -20697,7 +20697,7 @@ exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing children 
 
 exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing props (does Tooltip explode?) 1`] = `
 <span
-  className="AutoUI_ui_GenericCopyToClipboard_Tooltip-13 AutoUI_typo-167 AutoUI_typo-48 AutoUI_typo-36"
+  className="AutoUI_ui_GenericCopyToClipboard_Tooltip-13 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   style={
     Object {
       "left": "0px",
