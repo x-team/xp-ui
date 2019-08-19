@@ -219,10 +219,10 @@ class Dropdown extends PureComponent<Props, State> {
         onMouseLeave={hover ? this.close : undefined}
         data-testid='xpui-dropdown'
       >
-        <div className={labelClasses} onClick={handleClick} data-testid='xpui-dropdown__button'>
+        <div className={labelClasses} onClick={handleClick} data-testid='xpui-dropdown-button'>
           {icon && <SvgIcon icon={icon} color={iconColor} />}
           {label && (
-            <span className={styles.labelElement} data-testid='xpui-dropdown__button__label'>
+            <span className={styles.labelElement} data-testid='xpui-dropdown-button-label'>
               {label}
             </span>
           )}
@@ -233,9 +233,9 @@ class Dropdown extends PureComponent<Props, State> {
           )}
         </div>
         {children && (
-          <div className={contentClasses} data-testid='xpui-dropdown__children'>
+          <div className={contentClasses} data-testid='xpui-dropdown-children'>
             {tooltip ? (
-              <div className={tooltipClasses} data-testid='xpui-dropdown__children__tooltip'>
+              <div className={tooltipClasses} data-testid='xpui-dropdown-children-tooltip'>
                 {dropdownChildren()}
               </div>
             ) : (

@@ -446,7 +446,7 @@ class Button extends PureComponent<Props> {
         data-tag={tag}
       >
         {icon && <SvgIcon className={baseStyles.icon} icon={icon} color='' {...iconProps} />}
-        <span>{children}</span>
+        <span data-testid='xpui-button'>{children}</span>
       </CustomComponent>
     )
   }

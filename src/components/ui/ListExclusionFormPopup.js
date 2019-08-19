@@ -293,7 +293,7 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
           {applicant && <h1 className={cx.applicant}>{applicant}</h1>}
           <div className={cx.container}>
             {reasons.map((value, index) => (
-              <div className={cx.input} key={index} data-testid='exclusion-reasons'>
+              <div className={cx.input} key={index} data-testid='xpui-listExclusionFormPopup-input-reasons'>
                 <InputField
                   name='reasons'
                   type='radio'
@@ -311,13 +311,13 @@ class ListExclusionFormPopup extends PureComponent<Props, State> {
               placeholder='Provide a reason'
               value={reasonLabel}
               onChange={this.handleCommentChange}
-              data-testid='exclusion-comment'
+              data-testid='xpui-listExclusionFormPopup-input-comment'
             />
             <div className={cx.buttons}>
-              <Button pseudolink onClick={this.handleCancel} data-testid='exclusion-cancel'>
+              <Button pseudolink onClick={this.handleCancel} data-testid='xpui-listExclusionFormPopup-button-cancel'>
                 Cancel
               </Button>
-              <Button onClick={this.handleSubmit} data-testid='exclusion-submit' disabled={reasonLabel === ''}>
+              <Button onClick={this.handleSubmit} data-testid='xpui-listExclusionFormPopup-button-submit' disabled={reasonLabel === ''}>
                 <SvgIcon icon='paperplane' color='inverted' />
               </Button>
             </div>
