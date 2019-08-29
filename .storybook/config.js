@@ -81,7 +81,7 @@ addParameters({
      */
     enableShortcuts: true, // true by default
     isFullscreen: false,
-    panelPosition: 'right',
+    panelPosition: 'bottom',
     isToolshown: true
   },
   backgrounds: [
