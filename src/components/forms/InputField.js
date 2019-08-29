@@ -1,4 +1,5 @@
 // @flow
+/* global HTMLInputElement */
 
 import React, { PureComponent } from 'react'
 
@@ -122,8 +123,8 @@ const inputStylesSmall = [
       width: 100%
       height: 40px !important
       font-size: 1rem !important
-      padding: 8px 18px !important 
-      border: 1px solid ${theme.formBorder} !important 
+      padding: 8px 18px !important
+      border: 1px solid ${theme.formBorder} !important
       box-sizing: border-box
       z-index: 2
     }
@@ -371,6 +372,9 @@ const specialTypesDefinitions: Object = {
 const isSpecialType = type => Boolean(specialTypesDefinitions[type])
 
 class InputField extends PureComponent<Props> {
+  // $FlowFixMe: Local version of flow is out-dated and doesn't have definitions for createRef
+  inputElement: { current: ?HTMLInputElement } = React.createRef()
+
   static defaultProps = {
     type: 'text',
     isInvalid: false,
@@ -455,8 +459,15 @@ class InputField extends PureComponent<Props> {
       ...baseProps,
       className: `${errorClassName} ${spacingClassName}`,
       type,
-      ...rest
+      ...rest,
+      ref: input => (this.inputElement = input)
     })
+  }
+
+  focusInput () {
+    if (this.inputElement && this.inputElement.current) {
+      this.inputElement.current.focus()
+    }
   }
 
   render () {

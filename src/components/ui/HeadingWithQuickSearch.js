@@ -91,6 +91,9 @@ type State = {
 }
 
 class HeadingWithQuickSearch extends PureComponent<Props, State> {
+  // $FlowFixMe: Local version of flow is out-dated and doesn't have definitions for createRef
+  searchInput: any = React.createRef()
+
   state = {
     isSearching: false,
     inputValue: ''
@@ -104,6 +107,17 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
       this.props.onQuickSearchChangeValue(newValue)
     } else {
       this.setState({ inputValue: input.target.value })
+    }
+  }
+
+  handleClearValue = (): void => {
+    if (this.props.onQuickSearchChangeValue) {
+      this.props.onQuickSearchChangeValue('')
+    } else {
+      this.setState({ inputValue: '' })
+    }
+    if (this.searchInput.current) {
+      this.searchInput.current.focusInput()
     }
   }
 
@@ -154,6 +168,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
           name='input'
           className={cx.input}
           placeholder='Search by Full name or Email Address'
+          ref={this.searchInput}
         />
       </form>
     )
@@ -168,8 +183,12 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
       <div className={[cx.container, cx.inputContainer].join(' ')} data-testid='xpui-headingWithQuickSearch-container'>
         {this.renderLeftIcon('magnifier')}
         {this.renderInput()}
-        <div className={cx.sidebarHeadingIconRight} onClick={this.handleToggleQuickSearch(false)}
-          data-testid='xpui-headingWithQuickSearch-iconRight-button'>
+        <div
+          className={cx.sidebarHeadingIconRight}
+          onClick={this.handleClearValue}
+          data-testid='xpui-headingWithQuickSearch-iconRight-button'
+          title='Clear quick search'
+        >
           <SvgIcon icon={'x'} color='grayscarpaflow' />
         </div>
       </div>
