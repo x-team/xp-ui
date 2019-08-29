@@ -187,28 +187,17 @@ class Dropdown extends PureComponent<Props, State> {
     } = this.props
     const { open } = this.state
 
-    const rootClasses = [
-      styles.dropdown,
-      className || ''
-    ].join(' ')
-    const labelClasses = [
-      styles.label,
-      padded ? styles.padded : ''
-    ].join(' ')
+    const rootClasses = [styles.dropdown, className || ''].join(' ')
+    const labelClasses = [styles.label, padded ? styles.padded : ''].join(' ')
     const contentClasses = [
       styles.content,
       open ? styles.contentVisible : '',
       targetXOrigin === 'right' ? styles.contentRight : '',
       targetYOrigin === 'top' ? styles.contentTop : '',
-      tooltip && children ? (
-        targetYOrigin === 'top' ? styles.contentTooltipTop : styles.contentTooltip
-      ) : '',
+      tooltip && children ? (targetYOrigin === 'top' ? styles.contentTooltipTop : styles.contentTooltip) : '',
       tooltipClassName || ''
     ].join(' ')
-    const tooltipClasses = [
-      styles.tooltip,
-      targetYOrigin === 'top' ? styles.tooltipTop : ''
-    ].join(' ')
+    const tooltipClasses = [styles.tooltip, targetYOrigin === 'top' ? styles.tooltipTop : ''].join(' ')
 
     const handleClick = (e: Object) => {
       e.preventDefault() && e.stopPropagation()
@@ -220,9 +209,7 @@ class Dropdown extends PureComponent<Props, State> {
       React.Children.map(children, child => {
         const { props } = child
         const closeDropdown = props ? props.closeDropdown : false
-        return closeDropdown
-          ? React.cloneElement(child, { closeDropdown: this.close })
-          : child
+        return closeDropdown ? React.cloneElement(child, { closeDropdown: this.close }) : child
       })
 
     const renderContent = () => (
@@ -230,39 +217,39 @@ class Dropdown extends PureComponent<Props, State> {
         className={rootClasses}
         onMouseEnter={hover ? this.open : undefined}
         onMouseLeave={hover ? this.close : undefined}
+        data-testid='xpui-dropdown'
       >
-        <div className={labelClasses} onClick={handleClick}>
+        <div className={labelClasses} onClick={handleClick} data-testid='xpui-dropdown-button'>
           {icon && <SvgIcon icon={icon} color={iconColor} />}
-          {label && <span className={styles.labelElement}>{label}</span>}
+          {label && (
+            <span className={styles.labelElement} data-testid='xpui-dropdown-button-label'>
+              {label}
+            </span>
+          )}
           {indicator && (
             <span className={styles.triangle}>
-              <SvgIcon
-                icon={open ? 'triangleup' : 'triangledown'}
-                color='grayscarpaflow'
-              />
+              <SvgIcon icon={open ? 'triangleup' : 'triangledown'} color='grayscarpaflow' />
             </span>
           )}
         </div>
         {children && (
-          <div className={contentClasses}>
+          <div className={contentClasses} data-testid='xpui-dropdown-children'>
             {tooltip ? (
-              <div className={tooltipClasses}>
+              <div className={tooltipClasses} data-testid='xpui-dropdown-children-tooltip'>
                 {dropdownChildren()}
               </div>
-            ) : dropdownChildren()}
+            ) : (
+              dropdownChildren()
+            )}
           </div>
         )}
       </div>
     )
 
-    const renderContentWrapper = () => open
-      ? (
-        <ClickOutside onClickOutside={this.close}>
-          {renderContent()}
-        </ClickOutside>
-      ) : renderContent()
+    const renderContentWrapper = () =>
+      open ? <ClickOutside onClickOutside={this.close}>{renderContent()}</ClickOutside> : renderContent()
 
-    return (children || label || icon) ? renderContentWrapper() : null
+    return children || label || icon ? renderContentWrapper() : null
   }
 }
 

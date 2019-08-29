@@ -10,6 +10,7 @@ const cmz = require('cmz')
 const cx = {
   wrapper: cmz(`
     outline: none
+    flex: 1
   `),
 
   list: cmz(`
@@ -86,7 +87,7 @@ class ApplicantGrid extends PureComponent<Props, State> {
     return items && (
       <div
         className={cx.wrapper}
-        data-test='applicants'
+        data-testid='xpui-applicantGrid'
         tabIndex={0}
         onKeyPress={this.handleKeyPress}
       >

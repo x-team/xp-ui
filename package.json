@@ -2,7 +2,7 @@
   "name": "xp-ui",
   "version": "2.0.0",
   "description": "UI component library for the XP platform.",
-  "main": "lib/xp-ui.js",
+  "main": "lib/all.js",
   "directories": {
     "doc": "docs"
   },
@@ -79,7 +79,7 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "cmz": "^3.12.1",
+    "cmz": "^3.13.0",
     "color": "^3.1.0",
     "crypto-js": "^3.1.9-1",
     "date-fns": "^1.29.0",
@@ -87,13 +87,14 @@
     "lodash.isequal": "^4.5.0",
     "lodash.isnumber": "^3.0.3",
     "lodash.throttle": "^4.1.1",
-    "markdown-to-jsx": "^6.8.3",
+    "markdown-to-jsx": "^6.9.4",
     "medium-editor": "^5.23.3",
     "react-avatar": "^3.5.0",
     "react-click-outside": "github:tj/react-click-outside",
     "react-copy-to-clipboard": "^5.0.1",
     "react-data-grid": "^6.1.0",
     "react-data-grid-addons": "^6.1.0",
+    "react-visibility-sensor": "^5.1.0",
     "recompose": "^0.30.0",
     "tui-editor": "^1.2.10",
     "uuid": "^3.3.2",

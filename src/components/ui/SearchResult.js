@@ -16,7 +16,7 @@ const cmz = require('cmz')
 const cx = {
   searchResultContent: cmz(`
     box-sizing: border-box
-    padding: 40px 60px 20px
+    padding: 20px 60px
     display: flex
     flex-direction: column
     width: 100%
@@ -75,6 +75,7 @@ class SearchResult extends Component<Props, void> {
         <DataGrid
           isLoading={isLoading}
           applicants={applicants}
+          rowsCount={applicants.length}
           visibleColumns={visibleColumns}
           sortColumn={sort}
           sortDirection={order}

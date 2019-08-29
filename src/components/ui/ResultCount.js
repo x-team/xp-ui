@@ -25,7 +25,7 @@ const ResultCount = ({ items }: Props) => {
   const resultText = parseInt(itemsCount, 10) !== 1 ? 'results' : 'result'
 
   return (
-    <span className={cx.wrapper}>
+    <span className={cx.wrapper} data-testid='xpui-resultCount'>
       <span className={cx.content}>{itemsCount}</span>
       {resultText}
     </span>

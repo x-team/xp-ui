@@ -10,8 +10,6 @@ import type { Applicant } from '../../utils/types'
 
 const cmz = require('cmz')
 
-const RENDER_ROWS_COUNT = 1000
-
 const selectors = Data.Selectors
 
 // Given the design of React-Data-Grid, it relies on minHeight to calculate the visible area and show/hide
@@ -20,7 +18,7 @@ const selectors = Data.Selectors
 // The simplest workaround is to calculate the data grid height based on viewport and reducing the unavailable space
 // with fixed unit (pixel).
 const getTableMinHeightValues = () => {
-  const viewportHeightReduction = 232
+  const viewportHeightReduction = 155
   const minAcceptableHeight = 386 // amount of pixels needed to show 6 table rows
   const isViewportTooSmall = window.innerHeight - viewportHeightReduction < minAcceptableHeight
 
@@ -39,6 +37,9 @@ const cx = {
     display: flex
     justify-content: center
     align-items: center
+    position: absolute
+    z-index: 99999
+    background: rgba(255, 2555, 255, .65)
   `),
 
   gridContainer: cmz(`
@@ -50,6 +51,7 @@ const cx = {
   grid: cmz(`
     & {
       flex: 1
+      position: relative
     }
 
     & .react-grid-Grid {
@@ -75,6 +77,7 @@ type Props = {
   visibleColumns: Array<Object>,
   sortDirection: SortDirection,
   sortColumn: string,
+  rowsCount: number,
   handleGridSort: (sortColumn: string, sortDirection: SortDirection) => void
 }
 
@@ -87,19 +90,21 @@ const DataGrid = ({
   sortDirection,
   handleGridSort,
   applicants,
-  isLoading
+  isLoading,
+  rowsCount
 }: Props) =>
-  isLoading ? (
-    <div className={cx.overlay}>
-      <Loader />
-    </div>
-  ) : (
-    <div className={cx.gridContainer}>
-      <div className={cx.grid}>
+  (
+    <div className={cx.gridContainer} data-testid='xpui-dataGrid-container'>
+      <div className={cx.grid} data-testid='xpui-dataGrid-grid'>
+        {isLoading && (
+          <div className={cx.overlay}>
+            <Loader />
+          </div>
+        )}
         <ReactDataGrid
           columns={visibleColumns}
           rowGetter={getRow(applicants)}
-          rowsCount={RENDER_ROWS_COUNT}
+          rowsCount={rowsCount}
           headerFiltersHeight={0}
           onGridSort={handleGridSort}
           sortColumn={sortColumn}
@@ -112,7 +117,8 @@ const DataGrid = ({
 
 DataGrid.defaultProps = {
   applicants: [],
-  visibleColumns: []
+  visibleColumns: [],
+  rowsCount: 1000
 }
 
 export default DataGrid

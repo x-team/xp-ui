@@ -1,9 +1,17 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, number, boolean } from '@storybook/addon-knobs'
+import { text, boolean, number, select } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import TwoColumnsLayout from './TwoColumnsLayout'
+import ProfileHeaderLinks from './ProfileHeaderLinks'
 import { StoryAdminScreen } from './AdminScreen.stories'
+import { StoryFilters } from './Filters/Filters.stories'
+import HeadingWithQuickSearch from './HeadingWithQuickSearch'
+import { getIcons } from './SvgIcon.js'
+
+const icons = getIcons()
+const availableIcons = Object.keys(icons).reduce((acc, cur) => ({ ...acc, [cur]: cur }), {})
 
 const sampleSidebar = Array(80).fill('Anything goes in the sidebar body').map((each, i) => <div key={`sidebar-${i}`}>{each}</div>)
 const sampleContent = Array(80).fill('Anything goes in the content body').map((each, i) => <div key={`content-${i}`}>{each}</div>)
@@ -22,8 +30,9 @@ export const StoryTwoColumnsLayout = (props) => (
   <TwoColumnsLayout
     sidebar={props.sidebar || sampleSidebar}
     sidebarHeading={text('Sidebar Heading', props.sidebarHeading || 'Filters')}
+    sidebarHeadingAction={props.sidebarHeadingAction}
     sidebarWidth={number('Sidebar Width', props.sidebarWidth || 385)}
-    sidebarIcon={text('Sidebar Icon', props.sidebarIcon || 'filters')}
+    sidebarIcon={select('Sidebar Icon', availableIcons, props.sidebarIcon || '')}
     scrollableSidebar={boolean('Scrollable Sidebar', props.scrollableSidebar !== undefined ? props.scrollableSidebar : true)}
     content={props.content || sampleContent}
     contentHeading={text('Content Heading', props.contentHeading || 'Search')}
@@ -32,12 +41,44 @@ export const StoryTwoColumnsLayout = (props) => (
 )
 
 storiesOf('UI Components/TwoColumnsLayout', module)
-  .add('standalone default usage', () => (
+  .add('standalone example', () => (
     <Body>
       <StoryTwoColumnsLayout />
     </Body>
   ))
-  .add('standalone short content', () => (
+
+storiesOf('UI Components/TwoColumnsLayout/Use cases', module)
+  .add('composed in AdminScreen', () => (
+    <Body>
+      <StoryAdminScreen>
+        <StoryTwoColumnsLayout />
+      </StoryAdminScreen>
+    </Body>
+  ))
+  .add('composed in AdminScreen with Filters and sidebarHeading element', () => (
+    <Body>
+      <StoryAdminScreen>
+        <StoryTwoColumnsLayout
+          sidebarHeading={<HeadingWithQuickSearch leftIcon='filters' text='Filters' />}
+          sidebar={<StoryFilters />}
+        />
+      </StoryAdminScreen>
+    </Body>
+  ))
+  .add('composed in AdminScreen with Modal', () => (
+    <Body>
+      <StoryAdminScreen
+        modal={{
+          content: sampleModalContent
+        }}
+      >
+        <StoryTwoColumnsLayout />
+      </StoryAdminScreen>
+    </Body>
+  ))
+
+storiesOf('UI Components/TwoColumnsLayout/Debug', module)
+  .add('standalone with short content', () => (
     <Body>
       <StoryTwoColumnsLayout
         sidebar={<div>bump</div>}
@@ -55,14 +96,7 @@ storiesOf('UI Components/TwoColumnsLayout', module)
       />
     </Body>
   ))
-  .add('composed in AdminScreen', () => (
-    <Body>
-      <StoryAdminScreen>
-        <StoryTwoColumnsLayout />
-      </StoryAdminScreen>
-    </Body>
-  ))
-  .add('composed in AdminScreen with short content', () => (
+  .add('with short content and composed in AdminScreen', () => (
     <Body>
       <StoryAdminScreen>
         <StoryTwoColumnsLayout
@@ -72,18 +106,23 @@ storiesOf('UI Components/TwoColumnsLayout', module)
       </StoryAdminScreen>
     </Body>
   ))
-  .add('composed in AdminScreen with Modal', () => (
+  .add('with composed headings in AdminScreen', () => (
     <Body>
-      <StoryAdminScreen
-        modal={{
-          content: sampleModalContent
-        }}
-      >
-        <StoryTwoColumnsLayout />
+      <StoryAdminScreen>
+        <StoryTwoColumnsLayout
+          sidebarHeading={<div style={{ backgroundColor: 'black', color: 'white' }}>bump</div>}
+          contentHeading={<div style={{ backgroundColor: 'black', color: 'white' }}>bump</div>}
+        />
       </StoryAdminScreen>
     </Body>
-  ))
-  .add('composed in AdminScreen with Modal with short content', () => (
+  ), {
+    notes: {
+      markdown: `
+This story is useful to demonstrate how both heading parts behave by default when being passed a Component, instead of a string.
+      `
+    }
+  })
+  .add('composed in AdminScreen and with Modal with short content', () => (
     <Body>
       <StoryAdminScreen
         modal={{
@@ -91,6 +130,31 @@ storiesOf('UI Components/TwoColumnsLayout', module)
         }}
       >
         <StoryTwoColumnsLayout />
+      </StoryAdminScreen>
+    </Body>
+  ))
+  .add('composed in AdminScreen and with with link in the sidebar heading', () => (
+    <Body>
+      <StoryAdminScreen>
+        <StoryTwoColumnsLayout
+          sidebarIcon='arrowleft'
+          sidebarWidth={425}
+          sidebarHeading='A link in the sidebar heading'
+          sidebarHeadingAction={action('Sidebar heading route redirection')}
+          contentHeading={(
+            <ProfileHeaderLinks
+              smaller
+              links={[
+                { label: 'Link 1', hash: '#link1' },
+                { label: 'Link 2', hash: '#link2' },
+                {
+                  label: 'External Link',
+                  url: 'http://localhost:8000/'
+                }
+              ]}
+            />
+          )}
+        />
       </StoryAdminScreen>
     </Body>
   ))

@@ -24,6 +24,7 @@ const palette = {
   haiti: '#130E2E',
   fern: '#5CB85C',
   radicalRed: '#F63954',
+  redRibbon: '#F20B2C',
   alto: '#D8D8D8',
   nobel: '#B3B3B3',
   tuna: '#34323B',
@@ -43,7 +44,8 @@ const palette = {
   scarpaFlow: '#5A5665',
   silver: '#C4C4C4',
   fairPink: '#FFEBED',
-  grayScarpaFlow: '#5C5765'
+  grayScarpaFlow: '#5C5765',
+  dodgerBlue: '#2FC2FF'
 }
 
 export default wrap({
@@ -62,11 +64,14 @@ export default wrap({
 
   typoHeading: palette.tuna,
   typoSubheading: palette.radicalRed,
+  typoAnchor: palette.radicalRed,
+  typoAnchorHover: palette.redRibbon,
   typoParagraph: palette.tuna,
   typoParagraphOnDarkBackground: palette.frenchGrayDarker,
   typoHighlight: palette.haiti,
   typoHighlightOnDarkBackground: palette.scarpaFlow,
   typoLabel: palette.bombay,
+  typoCounter: palette.dodgerBlue,
 
   sliderToggle: palette.bombay,
   sliderBackground: palette.athensGray,

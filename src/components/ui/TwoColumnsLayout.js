@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 
 import SvgIcon from './SvgIcon'
 
@@ -32,28 +32,40 @@ const cx = {
   `),
 
   sidebarHeading: cmz(typeface.extraHeading, `
-    color: ${theme.typoHighlightOnDarkBackground}
-    text-transform: uppercase
-    font-size: 1.0625rem
-    width: 100%
-    height: 58px
-    background-color: ${theme.baseBright}
-    border-bottom: 1px solid ${theme.lineSilver2}
-    display: flex
-    align-items: center
+    & {
+      text-transform: uppercase
+      font-size: 0.9375rem
+      width: 100%
+      height: 58px
+      background-color: ${theme.baseBright}
+      border-bottom: 1px solid ${theme.lineSilver2}
+      display: flex
+      align-items: center
+    }
+
+    &,
+    &:hover {
+      color: ${theme.typoHighlightOnDarkBackground}
+      text-decoration: none
+    }
+  `),
+
+  sidebarHeadingAction: cmz(`
+    cursor: pointer
   `),
 
   sidebarHeadingIcon: cmz(`
     & {
       margin: 0 10px 0 15px
     }
+
     & svg {
       display: block
     }
   `),
 
   sidebarHeadingText: cmz(`
-    margin: 0 15px
+    margin: 0 10px
     overflow: hidden
     text-overflow: ellipsis
   `),
@@ -99,6 +111,12 @@ const cx = {
     text-overflow: ellipsis
   `),
 
+  contentHeadingElement: cmz(typeface.extraHeading, `
+    width: 100%
+    height: auto
+    background-color: ${theme.baseBright}
+  `),
+
   contentBody: cmz(`
     max-height: 100%
     overflow: auto
@@ -110,6 +128,7 @@ const cx = {
 type Props = {
   sidebar: Element<*>,
   sidebarHeading: string,
+  sidebarHeadingAction?: () => void,
   sidebarWidth: number,
   sidebarIcon: Icon,
   scrollableSidebar: boolean,
@@ -131,21 +150,38 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
   }
 
   renderSidebar = () => {
-    const { sidebar, sidebarHeading, sidebarWidth, sidebarIcon, scrollableSidebar } = this.props
-    return (
-      <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
-        {sidebarHeading && (
-          <div className={cx.sidebarHeading}>
-            {sidebarIcon && (
-              <div className={cx.sidebarHeadingIcon}>
-                <SvgIcon icon={sidebarIcon} color='frenchGrayDarker' />
-              </div>
-            )}
-            <div className={cx.sidebarHeadingText}>
-              {sidebarHeading}
-            </div>
+    const { sidebar, sidebarHeading, sidebarHeadingAction, sidebarWidth, sidebarIcon, scrollableSidebar } = this.props
+
+    const renderHeadingText = () => (
+      <Fragment>
+        {sidebarIcon && (
+          <div className={cx.sidebarHeadingIcon}>
+            <SvgIcon icon={sidebarIcon} color='frenchGrayDarker' />
           </div>
         )}
+        <div className={cx.sidebarHeadingText}>
+          {sidebarHeading}
+        </div>
+      </Fragment>
+    )
+
+    const renderHeadingTextComponent = () => sidebarHeadingAction ? (
+      <a onClick={sidebarHeadingAction} className={[cx.sidebarHeading, cx.sidebarHeadingAction].join(' ')}>
+        {renderHeadingText()}
+      </a>
+    ) : (
+      <div className={cx.sidebarHeading}>
+        {renderHeadingText()}
+      </div>
+    )
+
+    return (
+      <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
+        {sidebarHeading && (typeof sidebarHeading === 'string' ? renderHeadingTextComponent() : (
+          <div className={cx.sidebarHeading}>
+            {sidebarHeading}
+          </div>
+        )) }
         <div className={[cx.sidebarBody, scrollableSidebar ? cx.scrollableSidebar : cx.nonScrollableSidebar].join(' ')}>
           {sidebar}
         </div>
@@ -159,11 +195,15 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
 
     return (
       <div className={cx.content}>
-        {contentHeading && (
+        {contentHeading && typeof contentHeading === 'string' ? (
           <div className={cx.contentHeading}>
             <div className={cx.contentHeadingText}>
               {contentHeading}
             </div>
+          </div>
+        ) : (
+          <div className={cx.contentHeadingElement}>
+            {contentHeading}
           </div>
         )}
         <div className={cx.contentBody} {...contentIdAttr}>

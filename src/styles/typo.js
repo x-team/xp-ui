@@ -1,18 +1,6 @@
-import WebFont from 'webfontloader'
-
 import theme, { breakpoints } from './theme'
 
 const cmz = require('cmz')
-
-WebFont.load({
-  google: {
-    families: [
-      'Open Sans:400,600,700,800',
-      'Source Sans Pro:300,700',
-      'Montserrat:400'
-    ]
-  }
-})
 
 /**
  * Using named typefaces according to their meaning
@@ -185,6 +173,22 @@ export default {
       font-size: 18px
       color: ${theme.formText}
       line-height: 30px
+    `
+  ),
+
+  // default links
+  link: cmz(
+    textRendering,
+    typeface.text,
+    `
+      & {
+        color: ${theme.typoAnchor}
+        text-decoration: none
+      }
+
+      &:hover {
+        color: ${theme.typoAnchorHover}
+      }
     `
   ),
 

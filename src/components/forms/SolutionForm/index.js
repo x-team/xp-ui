@@ -111,7 +111,7 @@ class SolutionForm extends PureComponent<Props> {
           onChange: onValueChange,
           placeholder: 'Paste your solution here.'
         }),
-        <Button disabled={isSubmitting || disableButton} data-test='solutionSubmit'>
+        <Button disabled={isSubmitting || disableButton} data-testid='xpui-solutionForm-button-submit'>
           {isSubmitting ? 'Checking...' : `Submit (${takenAttempts + 1} of ${maxAttempts})`}
         </Button>
       )
