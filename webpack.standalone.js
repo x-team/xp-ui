@@ -10,6 +10,7 @@ module.exports = {
     registration: './src/registration.js',
   },
   devtool: 'source-maps',
+  mode: 'production',
   output: {
     path: path.resolve('./lib'),
     filename: '[name].js',
