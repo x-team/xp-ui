@@ -1,18 +1,16 @@
 // @flow
-/* global SyntheticEvent, HTMLButtonElement */
+/* global SyntheticEvent, HTMLButtonElement, React$Node */
 
 import React from 'react'
 
 import Button from './Button'
 
-import type { Element } from 'react'
-
 const cmz = require('cmz')
 
 type Props = {
-  onClick: (event: SyntheticEvent<HTMLButtonElement>) => void,
-  children: Element<*>,
-  centralized: boolean
+  onClick?: (event: SyntheticEvent<HTMLButtonElement>) => void,
+  children?: React$Node,
+  centralized?: boolean
 }
 
 const cx = {
@@ -51,7 +49,6 @@ const QuickSearchCloseButton = ({ onClick, children, centralized }: Props) => {
 }
 
 QuickSearchCloseButton.defaultProps = {
-  onClick: () => {},
   centralized: false
 }
 

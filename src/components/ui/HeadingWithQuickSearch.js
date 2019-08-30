@@ -101,6 +101,12 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
 
   toggleQuickSearch = (isSearching: boolean): void => this.setState({ isSearching, inputValue: '' })
 
+  focusOnSearchInput = () => {
+    if (this.searchInput.current) {
+      this.searchInput.current.focusInput()
+    }
+  }
+
   handleChangeValue = (input: Object): void => {
     const newValue = input.target.value
     if (this.props.onQuickSearchChangeValue) {
@@ -116,9 +122,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
     } else {
       this.setState({ inputValue: '' })
     }
-    if (this.searchInput.current) {
-      this.searchInput.current.focusInput()
-    }
+    this.focusOnSearchInput()
   }
 
   handleQuickSearchSubmit = (event: SyntheticEvent<HTMLInputElement>): void => {

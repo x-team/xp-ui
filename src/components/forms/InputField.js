@@ -460,7 +460,7 @@ class InputField extends PureComponent<Props> {
       className: `${errorClassName} ${spacingClassName}`,
       type,
       ...rest,
-      ref: input => (this.inputElement = input)
+      ref: this.inputElement
     })
   }
 
