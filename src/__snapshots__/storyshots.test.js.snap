@@ -25656,18 +25656,17 @@ exports[`Storyshots UI Components/QuickSearchCloseButton centralized usage 1`] =
 
 exports[`Storyshots UI Components/QuickSearchCloseButton/Debug missing props (does component explode?) 1`] = `
 <div
-  className="AutoUI_ui_QuickSearchCloseButton-19"
+  className="AutoUI_ui_QuickSearchCloseButton-17"
 >
   <Button
     block={false}
-    className="AutoUI_ui_QuickSearchCloseButton-26"
+    className="AutoUI_ui_QuickSearchCloseButton-24"
     color="normal"
     component="button"
     contentStyle="normal"
     disabled={false}
     icon=""
     iconProps={Object {}}
-    onClick={[Function]}
     outlined={true}
     pseudolink={false}
     raised={false}
