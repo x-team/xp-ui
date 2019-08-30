@@ -107,6 +107,14 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
     }
   }
 
+  clearValue = (): void => {
+    if (this.props.onQuickSearchChangeValue) {
+      this.props.onQuickSearchChangeValue('')
+    } else {
+      this.setState({ inputValue: '' })
+    }
+  }
+
   handleChangeValue = (input: Object): void => {
     const newValue = input.target.value
     if (this.props.onQuickSearchChangeValue) {
@@ -116,12 +124,8 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
     }
   }
 
-  handleClearValue = (): void => {
-    if (this.props.onQuickSearchChangeValue) {
-      this.props.onQuickSearchChangeValue('')
-    } else {
-      this.setState({ inputValue: '' })
-    }
+  handleClearValueClick = (): void => {
+    this.clearValue()
     this.focusOnSearchInput()
   }
 
@@ -189,7 +193,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
         {this.renderInput()}
         <div
           className={cx.sidebarHeadingIconRight}
-          onClick={this.handleClearValue}
+          onClick={this.handleClearValueClick}
           data-testid='xpui-headingWithQuickSearch-iconRight-button'
           title='Clear quick search'
         >
