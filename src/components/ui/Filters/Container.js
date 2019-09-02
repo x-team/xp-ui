@@ -25,6 +25,7 @@ const cx = {
     display: flex
     flex-direction: column
     height: 100%
+    place-content: center
   `)
 }
 
