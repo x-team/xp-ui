@@ -4,11 +4,11 @@ exports[`Storyshots Form Components/InputField Use date field (normal) 1`] = `
 <div>
   <div>
     <div
-      className="AutoUI_forms_InputField-152"
+      className="AutoUI_forms_InputField-153"
     >
       <input
         aria-labelledby="label-date"
-        className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-90  "
+        className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-91  "
         id="date"
         name="date"
         placeholder="yyyy-mm-dd"
@@ -28,11 +28,11 @@ exports[`Storyshots Form Components/InputField Use date field (small) 1`] = `
 <div>
   <div>
     <div
-      className="AutoUI_forms_InputField-193"
+      className="AutoUI_forms_InputField-194"
     >
       <input
         aria-labelledby="label-date"
-        className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-116  "
+        className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-117  "
         id="date"
         name="date"
         placeholder="yyyy-mm-dd"
@@ -64,11 +64,11 @@ exports[`Storyshots Form Components/InputField Use date field with label 1`] = `
       subHeadingType="heading"
     />
     <div
-      className="AutoUI_forms_InputField-152"
+      className="AutoUI_forms_InputField-153"
     >
       <input
         aria-labelledby="label-date"
-        className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-90  "
+        className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-91  "
         id="date"
         name="date"
         placeholder="yyyy-mm-dd"
@@ -113,7 +113,7 @@ exports[`Storyshots Form Components/InputField invalid element 1`] = `
     />
     <input
       aria-labelledby="label-invalid"
-      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-90 AutoUI_forms_InputField-146 "
+      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-91 AutoUI_forms_InputField-147 "
       id="invalid"
       name="invalid"
       placeholder="Error Placeholder..."
@@ -129,7 +129,7 @@ exports[`Storyshots Form Components/InputField missing props (does component exp
   <div>
     <input
       aria-labelledby=""
-      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-90  "
+      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-91  "
       required={false}
       type="text"
     />
@@ -177,7 +177,7 @@ exports[`Storyshots Form Components/InputField required element 1`] = `
     />
     <input
       aria-labelledby="label-required"
-      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-90  "
+      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-91  "
       id="required"
       name="required"
       placeholder="Required Placeholder..."
@@ -217,7 +217,7 @@ exports[`Storyshots Form Components/InputField standard use (text input element 
     />
     <input
       aria-labelledby="label-name"
-      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-90  "
+      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-91  "
       defaultValue="Simon"
       id="name"
       name="name"
@@ -246,7 +246,7 @@ exports[`Storyshots Form Components/InputField standard use (text input element 
     />
     <input
       aria-labelledby="label-name"
-      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-116  "
+      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-117  "
       defaultValue="Simon"
       id="name"
       name="name"
@@ -275,7 +275,7 @@ exports[`Storyshots Form Components/InputField standard use (with \`label\` and 
     />
     <input
       aria-labelledby="label-experience"
-      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-90  AutoUI_forms_InputField-141"
+      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
       defaultValue="1"
       id="experience"
       name="experience"
@@ -307,7 +307,7 @@ exports[`Storyshots Form Components/InputField standard use (with only \`postTex
   <div>
     <input
       aria-labelledby="label-experience"
-      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-90  AutoUI_forms_InputField-141"
+      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
       defaultValue="1"
       id="experience"
       name="experience"
@@ -351,7 +351,7 @@ exports[`Storyshots Form Components/InputField textarea element 1`] = `
     />
     <WithAutosize(Component)
       aria-labelledby="label-availability"
-      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-90 AutoUI_forms_InputField-332  "
+      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
       id="availability"
       linesLimit={0}
       name="availability"
@@ -381,7 +381,7 @@ exports[`Storyshots Form Components/InputField textarea element, lines limit set
     />
     <WithAutosize(Component)
       aria-labelledby="label-skills"
-      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-90 AutoUI_forms_InputField-332  "
+      className="AutoUI_typo-169 AutoUI_typo-41 AutoUI_typo-28 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
       defaultValue="1.
 2.
 3.
@@ -25616,6 +25616,67 @@ exports[`Storyshots UI Components/QuickSearchButton/Debug missing props (does co
     color="grayscarpaflow"
     hover="default"
     icon="magnifier"
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/QuickSearchCloseButton basic usage 1`] = `
+<div
+  style={
+    Object {
+      "height": "500px",
+    }
+  }
+>
+  <QuickSearchCloseButton
+    centralized={false}
+    onClick={[Function]}
+  >
+    Example of QuickSearchCloseButton
+  </QuickSearchCloseButton>
+</div>
+`;
+
+exports[`Storyshots UI Components/QuickSearchCloseButton centralized usage 1`] = `
+<div
+  style={
+    Object {
+      "height": "500px",
+    }
+  }
+>
+  <QuickSearchCloseButton
+    centralized={true}
+    onClick={[Function]}
+  >
+    Example of QuickSearchCloseButton
+  </QuickSearchCloseButton>
+</div>
+`;
+
+exports[`Storyshots UI Components/QuickSearchCloseButton/Debug missing props (does component explode?) 1`] = `
+<div
+  className="AutoUI_ui_QuickSearchCloseButton-17"
+>
+  <Button
+    block={false}
+    className="AutoUI_ui_QuickSearchCloseButton-24"
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    outlined={true}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={true}
   />
 </div>
 `;
