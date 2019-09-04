@@ -34,7 +34,11 @@ const container = cmz(`
 `)
 
 const QuickSearchButton = ({ onClick }: Props) => (
-  <div className={container} onClick={onClick} data-testid='xpui-quickSearchButton'>
+  <div
+    className={container}
+    onClick={onClick}
+    data-testid='xpui-quickSearchButton'
+  >
     <SvgIcon color='grayscarpaflow' icon='magnifier' hover='default' />
   </div>
 )

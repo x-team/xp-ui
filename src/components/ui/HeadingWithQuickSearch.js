@@ -91,12 +91,29 @@ type State = {
 }
 
 class HeadingWithQuickSearch extends PureComponent<Props, State> {
+  // $FlowFixMe: Local version of flow is out-dated and doesn't have definitions for createRef
+  searchInput: any = React.createRef()
+
   state = {
     isSearching: false,
     inputValue: ''
   }
 
   toggleQuickSearch = (isSearching: boolean): void => this.setState({ isSearching, inputValue: '' })
+
+  focusOnSearchInput = () => {
+    if (this.searchInput.current) {
+      this.searchInput.current.focusInput()
+    }
+  }
+
+  clearValue = (): void => {
+    if (this.props.onQuickSearchChangeValue) {
+      this.props.onQuickSearchChangeValue('')
+    } else {
+      this.setState({ inputValue: '' })
+    }
+  }
 
   handleChangeValue = (input: Object): void => {
     const newValue = input.target.value
@@ -105,6 +122,11 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
     } else {
       this.setState({ inputValue: input.target.value })
     }
+  }
+
+  handleClearValueClick = (): void => {
+    this.clearValue()
+    this.focusOnSearchInput()
   }
 
   handleQuickSearchSubmit = (event: SyntheticEvent<HTMLInputElement>): void => {
@@ -154,8 +176,23 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
           name='input'
           className={cx.input}
           placeholder='Search by Full name or Email Address'
+          ref={this.searchInput}
         />
       </form>
+    )
+  }
+
+  renderClearButton = () => {
+    const { quickSearchValue } = this.props
+    return quickSearchValue && quickSearchValue.length && (
+      <div
+        className={cx.sidebarHeadingIconRight}
+        onClick={this.handleClearValueClick}
+        data-testid='xpui-headingWithQuickSearch-iconRight-button'
+        title='Clear quick search'
+      >
+        <SvgIcon icon={'x'} color='grayscarpaflow' />
+      </div>
     )
   }
 
@@ -168,10 +205,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
       <div className={[cx.container, cx.inputContainer].join(' ')} data-testid='xpui-headingWithQuickSearch-container'>
         {this.renderLeftIcon('magnifier')}
         {this.renderInput()}
-        <div className={cx.sidebarHeadingIconRight} onClick={this.handleToggleQuickSearch(false)}
-          data-testid='xpui-headingWithQuickSearch-iconRight-button'>
-          <SvgIcon icon={'x'} color='grayscarpaflow' />
-        </div>
+        {this.renderClearButton()}
       </div>
     ) : (
       <div className={cx.container} data-testid='xpui-headingWithQuickSearch-container'>

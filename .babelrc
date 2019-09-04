@@ -1,9 +1,9 @@
 {
-  "presets": ["stage-2", "react", "env"],
-  "passPerPreset": true,
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins" : [
-    "syntax-flow",
-    "transform-flow-strip-types",
+    "@babel/plugin-syntax-flow",
+    "@babel/plugin-transform-flow-strip-types",
+    "@babel/plugin-proposal-class-properties",
     ["cmz-names", {
       "replace": [
         ["src_components", "AutoUI"],

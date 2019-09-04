@@ -5,6 +5,7 @@ const base = require('./webpack.config')
 module.exports = {
   entry: './src/index.js',
   devtool: 'source-maps',
+  mode: 'production',
   output: {
     path: path.resolve('./lib'),
     filename: 'xp-ui.js',
