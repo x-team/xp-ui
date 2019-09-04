@@ -182,6 +182,20 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
     )
   }
 
+  renderClearButton = () => {
+    const { quickSearchValue } = this.props
+    return quickSearchValue && quickSearchValue.length && (
+      <div
+        className={cx.sidebarHeadingIconRight}
+        onClick={this.handleClearValueClick}
+        data-testid='xpui-headingWithQuickSearch-iconRight-button'
+        title='Clear quick search'
+      >
+        <SvgIcon icon={'x'} color='grayscarpaflow' />
+      </div>
+    )
+  }
+
   render () {
     const { isQuickSearching, leftIcon, headingAction, text } = this.props
 
@@ -191,14 +205,7 @@ class HeadingWithQuickSearch extends PureComponent<Props, State> {
       <div className={[cx.container, cx.inputContainer].join(' ')} data-testid='xpui-headingWithQuickSearch-container'>
         {this.renderLeftIcon('magnifier')}
         {this.renderInput()}
-        <div
-          className={cx.sidebarHeadingIconRight}
-          onClick={this.handleClearValueClick}
-          data-testid='xpui-headingWithQuickSearch-iconRight-button'
-          title='Clear quick search'
-        >
-          <SvgIcon icon={'x'} color='grayscarpaflow' />
-        </div>
+        {this.renderClearButton()}
       </div>
     ) : (
       <div className={cx.container} data-testid='xpui-headingWithQuickSearch-container'>
