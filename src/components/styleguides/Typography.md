@@ -1,5 +1,9 @@
 # Typography
 
+Ideally a typography set should be enough for a typographic element.
+
+Margins and paddings, for instance, are acceptable to be modified because those type of styles depends and vary a lot based on context. But `font-weight`, `font-size`, `line-height` and other similar properties, whenever needed, it might indicate a problem in the design communication.
+
 ## How to Use
 
 Example:

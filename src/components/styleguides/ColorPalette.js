@@ -73,7 +73,7 @@ const cx = {
 }
 
 const COLOR_SETS = {
-  'hex palette': palette,
+  'original colors': palette,
   'base colors': baseColors,
   'typography colors': typoColors,
   'form colors': formColors,
