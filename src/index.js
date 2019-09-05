@@ -10,7 +10,6 @@ import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
-import ColorPalette from './components/ui/ColorPalette'
 import ColumnsCustomizer from './components/ui/ColumnsCustomizer'
 import DataGrid from './components/ui/DataGrid'
 import Dropdown from './components/ui/Dropdown'
@@ -56,7 +55,6 @@ import Text from './components/ui/Text'
 import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
-import Typography from './components/ui/Typography'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
 
@@ -71,7 +69,6 @@ export {
   AttachFiles,
   Avatar,
   Button,
-  ColorPalette,
   ColumnsCustomizer,
   DataGrid,
   Dropdown,
@@ -117,7 +114,6 @@ export {
   TextareaEditor,
   TruncatedList,
   TwoColumnsLayout,
-  Typography,
   VideoPlayer,
   XIcon
 }

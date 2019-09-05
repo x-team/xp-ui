@@ -190,23 +190,5 @@ export default {
         color: ${theme.typoAnchorHover}
       }
     `
-  ),
-
-  // text divider
-  divider: cmz(`
-    & {
-      display: block
-      position: relative
-      width: 3.5rem
-      height: 2px
-      margin: 40px 0 35px
-      background-color: ${theme.lineRed}
-    }
-
-    @media screen and (max-width: ${breakpoints.sm}) {
-      & {
-        width: 2rem
-      }
-    }
-  `)
+  )
 }
