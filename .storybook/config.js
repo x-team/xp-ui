@@ -83,13 +83,9 @@ addParameters({
 })
 
 // Load stories dynamically
-const styleguides = require.context('../src/components/styleguides', true, /\.stories\.js$/)
-const components = require.context('../src/components/ui', true, /\.stories\.js$/)
-const forms = require.context('../src/components/forms', true, /\.stories\.js$/)
+const req = require.context('../src/components', true, /\.stories\.js$/)
 function loadStories () {
-  styleguides.keys().forEach(filename => styleguides(filename))
-  components.keys().forEach(filename => components(filename))
-  forms.keys().forEach(filename => forms(filename))
+  req.keys().forEach(filename => req(filename))
 }
 
 configure(loadStories, module)
