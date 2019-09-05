@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 
 import elem from '../../utils/elem'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { Element } from 'react'
@@ -38,7 +38,22 @@ const SubHeading = elem.h2()
 
 const Level = elem.p()
 
-const Divider = elem.span(cmz(typo.divider))
+const Divider = elem.span(cmz(`
+  & {
+    display: block
+    position: relative
+    width: 3.5rem
+    height: 2px
+    margin: 40px 0 35px
+    background-color: ${theme.lineRed}
+  }
+
+  @media screen and (max-width: ${breakpoints.sm}) {
+    & {
+      width: 2rem
+    }
+  }
+`))
 
 const Content = elem.div(cmz(
   typo.baseText,

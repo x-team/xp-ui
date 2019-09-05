@@ -4640,6 +4640,7 @@ exports[`Storyshots UI Components/Button/contentStyle Options sourceSansPro cont
 </Button>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots UI Components/ColorPalette color variables for development reference 1`] = `
 <section
   className="AutoUI_ui_ColorPalette-14"
@@ -5322,6 +5323,8 @@ exports[`Storyshots UI Components/ColorPalette color variables for development r
 </section>
 `;
 
+=======
+>>>>>>> 0530a9bebe5b... Organise Styleguides in the Storybook (#433)
 exports[`Storyshots UI Components/ColumnsCustomizer basic usage 1`] = `
 <div
   style={
@@ -41695,6 +41698,7 @@ exports[`Storyshots UI Components/Tabs missing props (does component explode?) 1
     />
   </nav>
   <div
+<<<<<<< HEAD
     className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40"
   >
     <div
@@ -41704,6 +41708,10 @@ exports[`Storyshots UI Components/Tabs missing props (does component explode?) 1
       role="tabpanel"
     />
   </div>
+=======
+    className="AutoUI_ui_Text-62 AutoUI_typo-158 AutoUI_typo-41 AutoUI_typo-28"
+  />
+>>>>>>> 0530a9bebe5b... Organise Styleguides in the Storybook (#433)
 </section>
 `;
 
@@ -43645,6 +43653,7 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminSc
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots UI Components/Typography typography sets for development reference 1`] = `
 <section
   className="AutoUI_ui_Typography-14"
@@ -43787,6 +43796,8 @@ exports[`Storyshots UI Components/Typography typography sets for development ref
 </section>
 `;
 
+=======
+>>>>>>> 0530a9bebe5b... Organise Styleguides in the Storybook (#433)
 exports[`Storyshots UI Components/VideoPlayer embedded video, hidden controls 1`] = `
 <iframe
   className="AutoUI_ui_VideoPlayer-20"

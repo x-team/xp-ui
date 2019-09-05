@@ -9,6 +9,7 @@ import initStoryshots from '@storybook/addon-storyshots'
 configure({ adapter: new Adapter() })
 
 initStoryshots({
+  storyKindRegex: /^((?!.*?Styleguides).)*$/,
   test: ({ story, context }) => {
     const storyElement = story.render(context)
     const component = storyElement.props.story.props.children

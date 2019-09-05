@@ -2,7 +2,6 @@ import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
-import ColorPalette from './components/ui/ColorPalette'
 import ColumnsCustomizer from './components/ui/ColumnsCustomizer'
 import Dropdown from './components/ui/Dropdown'
 import Email from './components/ui/Email'
@@ -33,7 +32,6 @@ import Tabs from './components/ui/Tabs/Tabs'
 import Text from './components/ui/Text'
 import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
-import Typography from './components/ui/Typography'
 import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
 
@@ -42,7 +40,6 @@ export {
   AttachFiles,
   Avatar,
   Button,
-  ColorPalette,
   ColumnsCustomizer,
   Dropdown,
   Email,
@@ -73,7 +70,6 @@ export {
   Text,
   TruncatedList,
   TwoColumnsLayout,
-  Typography,
   VideoPlayer,
   XIcon
 }
