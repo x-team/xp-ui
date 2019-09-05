@@ -412,6 +412,7 @@ exports[`Storyshots Form Components/InputGroup missing props (does component exp
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Form Components/SolutionForm 2 attempts are taken 1`] = `
 <div
   className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-34"
@@ -671,6 +672,8 @@ exports[`Storyshots Form Components/SolutionForm with disabled button 1`] = `
 </div>
 `;
 
+=======
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
 exports[`Storyshots UI Components/ActivityBar basic usage 1`] = `
 <div
   className="AutoUI_ui_ActivityBar-12"
@@ -4635,194 +4638,6 @@ exports[`Storyshots UI Components/Button/contentStyle Options sourceSansPro cont
 >
   sourceSansPro content style
 </Button>
-`;
-
-exports[`Storyshots UI Components/CollapsibleSection basic 1`] = `
-<onlyUpdateForKeys(CollapsibleSection)
-  handleToggleCollapse={[Function]}
-  title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
-  visible={
-    <p>
-      This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.
-    </p>
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-</onlyUpdateForKeys(CollapsibleSection)>
-`;
-
-exports[`Storyshots UI Components/CollapsibleSection basic with many items 1`] = `
-<div>
-  <withState(onlyUpdateForKeys(CollapsibleSection))
-    title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?"
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-    </p>
-  </withState(onlyUpdateForKeys(CollapsibleSection))>
-  <withState(onlyUpdateForKeys(CollapsibleSection))
-    title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?"
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-    </p>
-  </withState(onlyUpdateForKeys(CollapsibleSection))>
-  <withState(onlyUpdateForKeys(CollapsibleSection))
-    title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?"
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-    </p>
-  </withState(onlyUpdateForKeys(CollapsibleSection))>
-  <withState(onlyUpdateForKeys(CollapsibleSection))
-    title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?"
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-    </p>
-  </withState(onlyUpdateForKeys(CollapsibleSection))>
-  <withState(onlyUpdateForKeys(CollapsibleSection))
-    title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?"
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-    </p>
-  </withState(onlyUpdateForKeys(CollapsibleSection))>
-</div>
-`;
-
-exports[`Storyshots UI Components/CollapsibleSection basic without visible element 1`] = `
-<onlyUpdateForKeys(CollapsibleSection)
-  handleToggleCollapse={[Function]}
-  title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-</onlyUpdateForKeys(CollapsibleSection)>
-`;
-
-exports[`Storyshots UI Components/CollapsibleSection expanded 1`] = `
-<onlyUpdateForKeys(CollapsibleSection)
-  handleToggleCollapse={[Function]}
-  isCollapsed={false}
-  title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
-  visible={
-    <p>
-      This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.
-    </p>
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-</onlyUpdateForKeys(CollapsibleSection)>
-`;
-
-exports[`Storyshots UI Components/CollapsibleSection hide visible element on expand 1`] = `
-<onlyUpdateForKeys(CollapsibleSection)
-  handleToggleCollapse={[Function]}
-  isTwoColumns={true}
-  title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
-  toggleVisible={true}
-  visible={
-    <p>
-      This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.
-    </p>
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-</onlyUpdateForKeys(CollapsibleSection)>
-`;
-
-exports[`Storyshots UI Components/CollapsibleSection missing props (does component explode?) 1`] = `
-<onlyUpdateForKeys(CollapsibleSection)
-  handleToggleCollapse={[Function]}
-/>
-`;
-
-exports[`Storyshots UI Components/CollapsibleSection small display with content 1`] = `
-<onlyUpdateForKeys(CollapsibleSection)
-  handleToggleCollapse={[Function]}
-  small={true}
-  title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
-  visible={
-    <p>
-      This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.
-    </p>
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-</onlyUpdateForKeys(CollapsibleSection)>
-`;
-
-exports[`Storyshots UI Components/CollapsibleSection small display without content 1`] = `
-<onlyUpdateForKeys(CollapsibleSection)
-  handleToggleCollapse={[Function]}
-  small={true}
-  title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
-  visible={
-    <p>
-      This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.
-    </p>
-  }
-/>
-`;
-
-exports[`Storyshots UI Components/CollapsibleSection two columns 1`] = `
-<onlyUpdateForKeys(CollapsibleSection)
-  handleToggleCollapse={[Function]}
-  isTwoColumns={true}
-  title="Consectetur suscipit alias velit magni tenetur veritatis sed fuga"
-  visible={
-    <p>
-      This paragraph is always visible. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat.
-    </p>
-  }
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa recusandae sequi, dicta laboriosam rerum ad ex voluptatibus nostrum fugiat, quae voluptates consectetur suscipit alias velit magni tenetur veritatis sed fuga.
-  </p>
-</onlyUpdateForKeys(CollapsibleSection)>
 `;
 
 exports[`Storyshots UI Components/ColorPalette color variables for development reference 1`] = `
@@ -20228,39 +20043,6 @@ exports[`Storyshots UI Components/FileLinks basic usage 1`] = `
 
 exports[`Storyshots UI Components/FileLinks missing props (does component explode?) 1`] = `<div />`;
 
-exports[`Storyshots UI Components/FilterTag basic usage 1`] = `
-<Button
-  block={false}
-  className="AutoUI_ui_FilterTag-11"
-  color="silver"
-  component="span"
-  contentStyle="normal"
-  disabled={false}
-  icon=""
-  iconProps={Object {}}
-  outlined={true}
-  pseudolink={false}
-  raised={true}
-  readOnly={false}
-  rounded={true}
-  selectbox={false}
-  selected={true}
-  size="normal"
-  smallRounded={false}
-  wide={false}
->
-  <span>
-    &lt;= 2018-01-01
-  </span>
-  <span
-    className="AutoUI_ui_FilterTag-25"
-    onClick={[Function]}
-  >
-    ×
-  </span>
-</Button>
-`;
-
 exports[`Storyshots UI Components/Filters example of complete composition 1`] = `
 <div
   style={
@@ -22153,6 +21935,7 @@ exports[`Storyshots UI Components/IssueCollectorButton missing props (does compo
 />
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots UI Components/Keywords basic 1`] = `
 <CreatableSelect
   className="AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
@@ -22238,6 +22021,8 @@ exports[`Storyshots UI Components/Keywords missing props (does component explode
 />
 `;
 
+=======
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
 exports[`Storyshots UI Components/ListExclusionFormPopup standalone 1`] = `
 <div
   style={
@@ -23347,26 +23132,55 @@ exports[`Storyshots UI Components/MetaGroup/Debug responsive demonstration with 
 </div>
 `;
 
-exports[`Storyshots UI Components/Milestones basic usage 1`] = `
-<div
-  className="AutoUI_ui_Milestones-27"
->
-  <ul
-    className="AutoUI_ui_Milestones-33"
+exports[`Storyshots UI Components/MilestonesScreen first step 1`] = `
+<div>
+  <div
+    className="AutoUI_ui_MilestonesScreen-22"
   >
-    <li
-      className="AutoUI_ui_Milestones-42 isCurrent"
-      key="1"
+    <div
+      className="AutoUI_ui_MilestonesScreen-45"
     >
       <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
+        className="AutoUI_ui_MilestonesScreen-58"
+        key="0/.0"
       >
-        <SvgIcon
-          color="inverted"
-          icon="webcam"
+        <Text
+          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo error hic, nemo nostrum iusto recusandae repudiandae eum doloremque necessitatibus doloribus? Provident perferendis illo totam ipsum ut sapiente, assumenda quasi!"
+          hasDivider={false}
+          heading="First step"
+          headingType="headline"
+          isCentered={false}
+          isMarkdown={false}
+          isPureContent={false}
+          required={false}
+          subHeadingType="heading"
         />
+        <div>
+          <Button
+            block={false}
+            className=""
+            color="normal"
+            component="button"
+            contentStyle="normal"
+            disabled={false}
+            icon=""
+            iconProps={Object {}}
+            outlined={false}
+            pseudolink={false}
+            raised={false}
+            readOnly={false}
+            rounded={false}
+            selectbox={false}
+            selected={false}
+            size="normal"
+            smallRounded={false}
+            wide={false}
+          >
+            Go to the step 2
+          </Button>
+        </div>
       </div>
+<<<<<<< HEAD
       <span
         className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
       >
@@ -23376,16 +23190,74 @@ exports[`Storyshots UI Components/Milestones basic usage 1`] = `
     <li
       className="AutoUI_ui_Milestones-42 "
       key="2"
+=======
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components/MilestonesScreen missing props (does component explode?) 1`] = `
+<div>
+  <div
+    className="AutoUI_ui_MilestonesScreen-22"
+  >
+    <div
+      className="AutoUI_ui_MilestonesScreen-45"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components/MilestonesScreen n-th step 1`] = `
+<div>
+  <div
+    className="AutoUI_ui_MilestonesScreen-22"
+  >
+    <div
+      className="AutoUI_ui_MilestonesScreen-45"
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
     >
       <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
+        className="AutoUI_ui_MilestonesScreen-58"
+        key="0/.0"
       >
-        <SvgIcon
-          color="monochrome"
-          icon="message"
+        <Text
+          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. At suscipit dicta aliquam sint libero minima officiis alias ducimus. Fugit praesentium itaque, iure molestias aut beatae odit facilis inventore doloremque eaque."
+          hasDivider={false}
+          heading="First subsection"
+          headingType="headline"
+          isCentered={false}
+          isMarkdown={false}
+          isPureContent={false}
+          required={false}
+          subHeadingType="heading"
         />
+        <div>
+          <Button
+            block={false}
+            className=""
+            color="normal"
+            component="button"
+            contentStyle="normal"
+            disabled={false}
+            icon=""
+            iconProps={Object {}}
+            outlined={false}
+            pseudolink={false}
+            raised={false}
+            readOnly={false}
+            rounded={false}
+            selectbox={false}
+            selected={false}
+            size="normal"
+            smallRounded={false}
+            wide={false}
+          >
+            Go to the step N+1
+          </Button>
+        </div>
       </div>
+<<<<<<< HEAD
       <span
         className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
       >
@@ -23396,15 +23268,49 @@ exports[`Storyshots UI Components/Milestones basic usage 1`] = `
       className="AutoUI_ui_Milestones-42 "
       key="3"
     >
+=======
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
       <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
+        className="AutoUI_ui_MilestonesScreen-58"
+        key="1/.1"
       >
-        <SvgIcon
-          color="monochrome"
-          icon="head"
+        <Text
+          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque iusto quisquam, sed eius optio. Obcaecati, hic! Possimus sit magnam vero laboriosam obcaecati nostrum a molestiae amet aut. Corrupti, voluptas."
+          hasDivider={false}
+          heading="Second subsection"
+          headingType="headline"
+          isCentered={false}
+          isMarkdown={false}
+          isPureContent={false}
+          required={false}
+          subHeadingType="heading"
         />
+        <div>
+          <Button
+            block={false}
+            className=""
+            color="normal"
+            component="button"
+            contentStyle="normal"
+            disabled={false}
+            icon=""
+            iconProps={Object {}}
+            outlined={false}
+            pseudolink={false}
+            raised={false}
+            readOnly={false}
+            rounded={false}
+            selectbox={false}
+            selected={false}
+            size="normal"
+            smallRounded={false}
+            wide={false}
+          >
+            Go to the step N+1
+          </Button>
+        </div>
       </div>
+<<<<<<< HEAD
       <span
         className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
       >
@@ -23415,15 +23321,49 @@ exports[`Storyshots UI Components/Milestones basic usage 1`] = `
       className="AutoUI_ui_Milestones-42 "
       key="4"
     >
+=======
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
       <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
+        className="AutoUI_ui_MilestonesScreen-58"
+        key="2/.2"
       >
-        <SvgIcon
-          color="monochrome"
-          icon="diamond"
+        <Text
+          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minima aperiam dolorem natus repudiandae reprehenderit neque laudantium quasi voluptates architecto, ratione asperiores odio hic rerum alias dolores quo sint culpa!"
+          hasDivider={false}
+          heading="Third subsection"
+          headingType="headline"
+          isCentered={false}
+          isMarkdown={false}
+          isPureContent={false}
+          required={false}
+          subHeadingType="heading"
         />
+        <div>
+          <Button
+            block={false}
+            className=""
+            color="normal"
+            component="button"
+            contentStyle="normal"
+            disabled={false}
+            icon=""
+            iconProps={Object {}}
+            outlined={false}
+            pseudolink={false}
+            raised={false}
+            readOnly={false}
+            rounded={false}
+            selectbox={false}
+            selected={false}
+            size="normal"
+            smallRounded={false}
+            wide={false}
+          >
+            Go to the step N+1
+          </Button>
+        </div>
       </div>
+<<<<<<< HEAD
       <span
         className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
       >
@@ -23431,21 +23371,23 @@ exports[`Storyshots UI Components/Milestones basic usage 1`] = `
       </span>
     </li>
   </ul>
+=======
+    </div>
+  </div>
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
 </div>
 `;
 
-exports[`Storyshots UI Components/Milestones last step is in progress 1`] = `
-<div
-  className="AutoUI_ui_Milestones-27"
->
-  <ul
-    className="AutoUI_ui_Milestones-33"
+exports[`Storyshots UI Components/MilestonesScreen second step 1`] = `
+<div>
+  <div
+    className="AutoUI_ui_MilestonesScreen-22"
   >
-    <li
-      className="AutoUI_ui_Milestones-42 isComplete"
-      key="1"
+    <div
+      className="AutoUI_ui_MilestonesScreen-45"
     >
       <div
+<<<<<<< HEAD
         className="AutoUI_ui_Milestones-92 "
         onClick={[Function]}
       >
@@ -23793,13 +23735,20 @@ exports[`Storyshots UI Components/MilestonesScreen first step 1`] = `
       className="AutoUI_ui_MilestonesScreen-45"
     >
       <div
+=======
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
         className="AutoUI_ui_MilestonesScreen-58"
         key="0/.0"
       >
         <Text
-          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo error hic, nemo nostrum iusto recusandae repudiandae eum doloremque necessitatibus doloribus? Provident perferendis illo totam ipsum ut sapiente, assumenda quasi!"
+          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum numquam, beatae, distinctio fugiat eveniet harum, vel sint odit adipisci quos nam soluta pariatur, voluptatibus repudiandae hic mollitia ex iste rem."
           hasDivider={false}
+<<<<<<< HEAD
           heading="First step"
+=======
+          heading="First subsection"
+          headingType="headline"
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
           isCentered={false}
           isPureContent={false}
           required={false}
@@ -23825,6 +23774,7 @@ exports[`Storyshots UI Components/MilestonesScreen first step 1`] = `
             smallRounded={false}
             wide={false}
           >
+<<<<<<< HEAD
             Go to the step 2
           </Button>
         </div>
@@ -24011,6 +23961,8 @@ exports[`Storyshots UI Components/MilestonesScreen second step 1`] = `
             smallRounded={false}
             wide={false}
           >
+=======
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
             Go to the step 3
           </Button>
         </div>
@@ -25656,71 +25608,40 @@ exports[`Storyshots UI Components/RichTextEditor with knobs 1`] = `
 </div>
 `;
 
-exports[`Storyshots UI Components/Roadmap basic usage 1`] = `
+exports[`Storyshots UI Components/RoadmapHero basic usage 1`] = `
 <div
-  className="AutoUI_ui_Roadmap-36 AutoUI_ui_Roadmap-27"
+  className="AutoUI_ui_RoadmapHero-25"
 >
   <div
-    className="AutoUI_ui_Roadmap-40 AutoUI_ui_Roadmap-27 "
-    key=".0"
+    className="AutoUI_ui_RoadmapHero-39"
   >
-    <div
-      className="AutoUI_ui_Roadmap-83"
-    >
-      <RoadmapLevel
-        body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
-        cta={
-          Object {
-            "handle": [Function],
-            "label": "",
-          }
-        }
-        heading="The challenge"
-        icon="head"
-        isActive={true}
-        isCentered={false}
-        level={1}
-      />
-    </div>
-    <div
-      className="AutoUI_ui_Roadmap-109"
-    >
-      <RoadmapTimelineElement
-        isDone={true}
-      />
-    </div>
+    <Text
+      content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+      hasDivider={true}
+      heading="Your roadmap to X‑Team"
+      headingType="mainHeading"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={false}
+      required={false}
+      subHeadingType="heading"
+    />
   </div>
-  <div
-    className="AutoUI_ui_Roadmap-40 AutoUI_ui_Roadmap-27 "
-    key=".1"
-  >
-    <div
-      className="AutoUI_ui_Roadmap-83"
-    >
-      <RoadmapLevel
-        body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
-        cta={
-          Object {
-            "handle": [Function],
-            "label": "",
-          }
-        }
-        heading="Take the stage"
-        icon="webcam"
-        isActive={false}
-        isCentered={false}
-        level={2}
-      />
-    </div>
-    <div
-      className="AutoUI_ui_Roadmap-109"
-    >
-      <RoadmapTimelineElement
-        isDone={false}
-      />
-    </div>
+  <div>
+    <img
+      alt="X-Team Roadmap"
+      src="test-file-stub"
+    />
   </div>
+</div>
+`;
+
+exports[`Storyshots UI Components/RoadmapHero missing props (does component explode?) 1`] = `
+<div
+  className="AutoUI_ui_RoadmapHero-25"
+>
   <div
+<<<<<<< HEAD
     className="AutoUI_ui_Roadmap-40 AutoUI_ui_Roadmap-27 "
     key=".2"
   >
@@ -25910,6 +25831,8 @@ exports[`Storyshots UI Components/RoadmapHero missing props (does component expl
   className="AutoUI_ui_RoadmapHero-25"
 >
   <div
+=======
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
     className="AutoUI_ui_RoadmapHero-39"
   >
     <Text
@@ -25955,6 +25878,7 @@ exports[`Storyshots UI Components/RoadmapHero with image url in props 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots UI Components/RoadmapLevel active state 1`] = `
 <section
   className="AutoUI_ui_RoadmapLevel-31 AutoUI_ui_RoadmapLevel-46"
@@ -26680,6 +26604,8 @@ exports[`Storyshots UI Components/SearchForm tabular view mode 1`] = `
 </div>
 `;
 
+=======
+>>>>>>> 1ad8533a349e... Remove unused UI components (#430)
 exports[`Storyshots UI Components/SearchResult default 1`] = `
 <div
   style={
