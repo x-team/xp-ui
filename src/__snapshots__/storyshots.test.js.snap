@@ -37362,6 +37362,99 @@ exports[`Storyshots UI Components/SettingsScreen missing props (does component e
 </div>
 `;
 
+exports[`Storyshots UI Components/StatusFilter default 1`] = `
+<State
+  initialState={
+    Object {
+      "accepted": true,
+      "excluded": false,
+    }
+  }
+>
+  <Component />
+</State>
+`;
+
+exports[`Storyshots UI Components/StatusFilter disabled 1`] = `
+<Fragment>
+  <label
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-158 AutoUI_typo-41 AutoUI_typo-28 AutoUI_ui_StatusFilter-26"
+    data-checked={false}
+    data-testid="xpui-statusFilter-accepted"
+    key="accepted"
+    onClick={[Function]}
+  >
+    <StatusMarker
+      disabled={true}
+      filled={false}
+      status="accepted"
+    />
+    accepted
+  </label>
+  <label
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-158 AutoUI_typo-41 AutoUI_typo-28 AutoUI_ui_StatusFilter-26"
+    data-checked={false}
+    data-testid="xpui-statusFilter-excluded"
+    key="excluded"
+    onClick={[Function]}
+  >
+    <StatusMarker
+      disabled={true}
+      filled={false}
+      status="excluded"
+    />
+    excluded
+  </label>
+</Fragment>
+`;
+
+exports[`Storyshots UI Components/StatusFilter/Debug missing props (does component explode?) 1`] = `
+<Fragment>
+  <label
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-158 AutoUI_typo-41 AutoUI_typo-28 AutoUI_ui_StatusFilter-26"
+    data-checked={false}
+    data-testid="xpui-statusFilter-accepted"
+    key="accepted"
+    onClick={[Function]}
+  >
+    <StatusMarker
+      disabled={true}
+      filled={false}
+      status="accepted"
+    />
+    accepted
+  </label>
+  <label
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-158 AutoUI_typo-41 AutoUI_typo-28 AutoUI_ui_StatusFilter-26"
+    data-checked={false}
+    data-testid="xpui-statusFilter-excluded"
+    key="excluded"
+    onClick={[Function]}
+  >
+    <StatusMarker
+      disabled={true}
+      filled={false}
+      status="excluded"
+    />
+    excluded
+  </label>
+</Fragment>
+`;
+
+exports[`Storyshots UI Components/StatusMarker basic usage (see knobs) 1`] = `
+<i
+  className="AutoUI_ui_StatusMarker-10 AutoUI_ui_StatusMarker-19"
+  data-filled={true}
+/>
+`;
+
+exports[`Storyshots UI Components/StatusMarker/Debug missing props (does component explode?) 1`] = `
+<i
+  className="AutoUI_ui_StatusMarker-10 "
+  data-filled={true}
+/>
+`;
+
 exports[`Storyshots UI Components/SvgIcon basic color 1`] = `
 <div>
   <SvgIcon

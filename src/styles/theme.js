@@ -45,7 +45,8 @@ export const palette = {
   silver: '#C4C4C4',
   fairPink: '#FFEBED',
   grayScarpaFlow: '#5C5765',
-  dodgerBlue: '#2FC2FF'
+  dodgerBlue: '#2FC2FF',
+  gray: '#8E8E8E'
 }
 
 export const baseColors = {
@@ -56,7 +57,9 @@ export const baseColors = {
   baseRed: palette.radicalRed,
   baseLightRed: palette.wePeep,
   baseGreen: palette.fern,
+  baseBrightGreen: palette.lima,
   baseSilver: palette.alto,
+  baseGray: palette.gray,
   baseHighlight: palette.mercury,
   baseHighlightBright: palette.frenchGray,
   baseFairPink: palette.fairPink,
@@ -100,7 +103,9 @@ export const iconColors = {
   iconTextGray: palette.tuna,
   iconMutedGray: palette.athensGray,
   iconGrayScarpaFlow: palette.grayScarpaFlow,
-  iconFrenchGrayDarker: palette.frenchGrayDarker
+  iconFrenchGrayDarker: palette.frenchGrayDarker,
+  iconGreen: palette.lima,
+  iconDarkerGray: palette.gray
 }
 
 export const miscColors = {
@@ -108,10 +113,6 @@ export const miscColors = {
   sliderBackground: palette.athensGray,
 
   logoGray: palette.nobel,
-
-  statusAccepted: palette.lima,
-  statusPending: palette.ripeLemon,
-  statusExluded: palette.radicalRed,
 
   silver: palette.silver
 }

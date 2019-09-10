@@ -60,13 +60,13 @@ const statusDotStyles = {
   accepted: cmz(
     statusDotBaseStyle,
     `
-      background-color: ${theme.statusAccepted}
+      background-color: ${theme.baseBrightGreen}
     `
   ),
   excluded: cmz(
     statusDotBaseStyle,
     `
-      background-color: ${theme.statusExluded}
+      background-color: ${theme.baseRed}
     `
   )
 }
