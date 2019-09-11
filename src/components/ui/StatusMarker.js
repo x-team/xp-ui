@@ -18,11 +18,11 @@ const cx = {
 
   accepted: cmz(`
     & {
-      border: 2px solid ${theme.iconGreen}
+      border: 2px solid ${theme.iconBrightGreen}
     }
 
     &[data-filled=true] {
-      background: ${theme.iconGreen}
+      background: ${theme.iconBrightGreen}
     }
   `),
 
@@ -57,7 +57,7 @@ const cx = {
   `)
 }
 
-type ApplicantStatusType = 'accepted' | 'excluded'
+export type ApplicantStatusType = 'accepted' | 'excluded' | null
 
 type Props = {
   filled: boolean,
@@ -68,12 +68,19 @@ type Props = {
 class StatusMarker extends PureComponent<Props, void> {
   static defaultProps = {
     filled: true,
+    status: null,
     disabled: false
   }
 
   render () {
     const { filled, status, disabled } = this.props
+
+    if (!status) {
+      return null
+    }
+
     const iconClassName = disabled ? cx[`${status}-disabled`] : cx[status]
+
     return (
       <i
         data-filled={disabled || filled}

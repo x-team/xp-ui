@@ -70,7 +70,7 @@ class StatusFilter extends PureComponent<Props, void> {
       <Fragment>
         {types.map(status => (
           <label
-            key={status}
+            key={`status-${status}`}
             className={labelClassName}
             onClick={this.handleClick(status)}
             data-checked={Boolean(checked[status])}

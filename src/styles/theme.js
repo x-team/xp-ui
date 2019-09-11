@@ -104,7 +104,8 @@ export const iconColors = {
   iconMutedGray: palette.athensGray,
   iconGrayScarpaFlow: palette.grayScarpaFlow,
   iconFrenchGrayDarker: palette.frenchGrayDarker,
-  iconGreen: palette.lima,
+  iconGreen: palette.fern,
+  iconBrightGreen: palette.lima,
   iconDarkerGray: palette.gray
 }
 

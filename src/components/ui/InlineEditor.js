@@ -9,6 +9,10 @@ import Button from './Button'
 const cmz = require('cmz')
 
 const cx = {
+  editor: cmz(`
+    width: 100%
+  `),
+
   link: cmz(`
     & {
       text-decoration: none
@@ -255,9 +259,11 @@ class InlineEditor extends PureComponent<Props, State> {
   render () {
     return this.state.isInEditMode
       ? (
-        <ClickOutside onClickOutside={this.handleClickOutside}>
-          {this.renderContent()}
-        </ClickOutside>
+        <div className={cx.editor}>
+          <ClickOutside onClickOutside={this.handleClickOutside}>
+            {this.renderContent()}
+          </ClickOutside>
+        </div>
       ) : this.renderContent()
   }
 }

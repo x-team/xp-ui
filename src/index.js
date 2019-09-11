@@ -6,7 +6,9 @@ import ActivityLogsDisplay from './components/ui/ActivityLogsDisplay'
 import AdminScreen from './components/ui/AdminScreen'
 import ApplicantBadge from './components/ui/ApplicantBadge'
 import ApplicantGrid from './components/ui/ApplicantGrid'
+import ApplicantProfileContentDisplay from './components/ui/ApplicantProfileContentDisplay'
 import ApplicantScreen from './components/ui/ApplicantScreen'
+import ApplicantTopProfileDisplay from './components/ui/ApplicantTopProfileDisplay'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
@@ -67,7 +69,9 @@ export {
   AdminScreen,
   ApplicantBadge,
   ApplicantGrid,
+  ApplicantProfileContentDisplay,
   ApplicantScreen,
+  ApplicantTopProfileDisplay,
   AttachFiles,
   Avatar,
   Button,
