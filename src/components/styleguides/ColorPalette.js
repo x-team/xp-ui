@@ -61,6 +61,7 @@ const cx = {
       width: 100%
       height: 90px
       border-radius: 2px
+      position: relative
     `
   ),
 
@@ -69,6 +70,19 @@ const cx = {
     padding: 4px 2px
     text-align: center
     border-radius: 0 0 2px 2px
+  `),
+
+  colorHex: cmz(`
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    font-size: .6em
+    background-color: ${theme.baseBrighter}
+    padding: 2px 4px
+    line-height: 1
+    border-radius: 0 2px 0 2px
+    text-transform: uppercase
   `)
 }
 
@@ -86,9 +100,8 @@ class ColorPalette extends PureComponent<Props> {
   renderColor = (name: string, set: string) => (
     <GenericCopyToClipboard text={name} key={`${set}-${name}`}>
       <div className={cx.color} style={{ backgroundColor: COLOR_SETS[set][name] }}>
-        <div className={cx.colorName}>
-          {name}
-        </div>
+        <div className={cx.colorName}>{name}</div>
+        <div className={cx.colorHex}>{COLOR_SETS[set][name]}</div>
       </div>
     </GenericCopyToClipboard>
   )
