@@ -20,6 +20,10 @@ You need to install:
 
 The latest Storybook spec page built out of `master` branch is available for preview [here](https://x-team.github.io/xp-ui/).
 
+## Styleguide
+
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://standardjs.com/rules.html)
+
 ## Contributing
 
 Read [design principles](./design-principles.md) to get an understanding of the principles we're aiming for.
