@@ -36,8 +36,8 @@ type MembersStatus = {
 }
 
 type Props = {
-  handleCheck?: (name: string) => void,
-  checked?: MembersStatus,
+  handleCheck: (name: string) => void,
+  checked: MembersStatus,
   disabled?: boolean
 }
 
@@ -57,7 +57,7 @@ class StatusFilter extends PureComponent<Props, void> {
 
   handleClick = (status: ApplicantStatusType) => () => {
     const { handleCheck, disabled } = this.props
-    if (!disabled && handleCheck) {
+    if (!disabled) {
       handleCheck(status)
     }
   }
@@ -73,13 +73,13 @@ class StatusFilter extends PureComponent<Props, void> {
             key={`status-${status}`}
             className={labelClassName}
             onClick={this.handleClick(status)}
-            data-checked={Boolean(checked && checked[status])}
+            data-checked={Boolean(checked[status])}
             data-testid={`xpui-statusFilter-${status}`}
           >
             <StatusMarker
               disabled={disabled}
               status={status}
-              filled={Boolean(checked && checked[status])}
+              filled={Boolean(checked[status])}
             />
             {status}
           </label>
