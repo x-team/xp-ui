@@ -178,7 +178,7 @@ class ApplicantTopProfileDisplay extends PureComponent<Props, void> {
             <div
               key={`profile-top-${section}`}
               className={cx.row}
-              data-testid={`xp-applicantTopProfile-${section}`}
+              data-testid={`xpui-applicantTopProfile-${section}`}
               title={sections[section].title}
             >
               <div className={cx.label}>{sections[section].label}:</div>
