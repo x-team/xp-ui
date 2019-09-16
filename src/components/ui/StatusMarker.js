@@ -60,9 +60,9 @@ const cx = {
 export type ApplicantStatusType = 'accepted' | 'excluded' | null
 
 type Props = {
-  filled: boolean,
-  status: ApplicantStatusType,
-  disabled: boolean
+  filled?: boolean,
+  status?: ApplicantStatusType,
+  disabled?: boolean
 }
 
 class StatusMarker extends PureComponent<Props, void> {

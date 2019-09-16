@@ -31,13 +31,13 @@ const cx = {
 type ApplicantStatusType = 'accepted' | 'excluded'
 
 type MembersStatus = {
-  accepted: ?boolean,
-  excluded: ?boolean
+  accepted: boolean,
+  excluded: boolean
 }
 
 type Props = {
-  handleCheck(name: string): void,
-  checked: MembersStatus,
+  handleCheck?: (name: string) => void,
+  checked?: MembersStatus,
   disabled?: boolean
 }
 
@@ -73,10 +73,14 @@ class StatusFilter extends PureComponent<Props, void> {
             key={`status-${status}`}
             className={labelClassName}
             onClick={this.handleClick(status)}
-            data-checked={Boolean(checked[status])}
+            data-checked={Boolean(checked && checked[status])}
             data-testid={`xpui-statusFilter-${status}`}
           >
-            <StatusMarker disabled={disabled} status={status} filled={Boolean(checked[status])} />
+            <StatusMarker
+              disabled={disabled}
+              status={status}
+              filled={Boolean(checked && checked[status])}
+            />
             {status}
           </label>
         ))}
