@@ -4,7 +4,9 @@ import ActivityLogsDisplay from './components/ui/ActivityLogsDisplay'
 import AdminScreen from './components/ui/AdminScreen'
 import ApplicantBadge from './components/ui/ApplicantBadge'
 import ApplicantGrid from './components/ui/ApplicantGrid'
+import ApplicantProfileContentDisplay from './components/ui/ApplicantProfileContentDisplay'
 import ApplicantScreen from './components/ui/ApplicantScreen'
+import ApplicantTopProfileDisplay from './components/ui/ApplicantTopProfileDisplay'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
@@ -46,6 +48,8 @@ import SearchResult from './components/ui/SearchResult'
 import SelectBox from './components/ui/SelectBox'
 import SettingsImportScreen from './components/ui/SettingsImportScreen'
 import SettingsScreen from './components/ui/SettingsScreen'
+import StatusFilter from './components/ui/StatusFilter'
+import StatusMarker from './components/ui/StatusMarker'
 import SvgIcon from './components/ui/SvgIcon'
 import Tab from './components/ui/Tabs/Tab'
 import Tabs from './components/ui/Tabs/Tabs'
@@ -63,7 +67,9 @@ export {
   AdminScreen,
   ApplicantBadge,
   ApplicantGrid,
+  ApplicantProfileContentDisplay,
   ApplicantScreen,
+  ApplicantTopProfileDisplay,
   AttachFiles,
   Avatar,
   Button,
@@ -105,6 +111,8 @@ export {
   SelectBox,
   SettingsImportScreen,
   SettingsScreen,
+  StatusFilter,
+  StatusMarker,
   SvgIcon,
   Tab,
   Tabs,
