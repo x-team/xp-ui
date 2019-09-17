@@ -31,8 +31,8 @@ const cx = {
 type ApplicantStatusType = 'accepted' | 'excluded'
 
 type MembersStatus = {
-  accepted: boolean,
-  excluded: boolean
+  accepted: ?boolean,
+  excluded: ?boolean
 }
 
 type Props = {
