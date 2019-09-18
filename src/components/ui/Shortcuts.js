@@ -3,7 +3,6 @@
 
 import React, { Component } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import isEqual from 'lodash.isequal'
 
 import { size } from '../../utils/helpers'
 
@@ -112,15 +111,6 @@ class Shortcuts extends Component<Props, State> {
   state = {
     shortcut: '',
     copied: false
-  }
-
-  componentWillReceiveProps (nextProps: Props) {
-    if (isEqual(nextProps, this.props)) {
-      this.setState({
-        shortcut: '',
-        copied: false
-      })
-    }
   }
 
   handleCopy = (value: string) => () => {
