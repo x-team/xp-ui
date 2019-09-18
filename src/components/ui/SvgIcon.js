@@ -491,10 +491,8 @@ export const getIcons = ({ color, hover, ...rest }: { [x: string]: any } = {}) =
     ),
 
     check: (
-      <svg width='17px' height='13px' viewBox='0 0 17 13' {...rest}>
-        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <polyline className={strokeClassName} strokeWidth='2' transform='translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) ' points='15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872' />
-        </g>
+      <svg width="13" height="10" viewBox="0 0 13 10" fill="none" {...rest}>
+        <path className={fillClassName} fill-rule="evenodd" clip-rule="evenodd" d="M2.76122 7.85387L0 5.09264L1.41421 3.67843L4.17544 6.43965L10.6149 0.000167847L12.0291 1.41438L4.17544 9.26808L4.14194 9.23459L2.76122 7.85387Z" />
       </svg>
     ),
 
