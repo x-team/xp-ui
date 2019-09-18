@@ -20627,7 +20627,9 @@ exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip default 1`] = `
     }
   }
 >
-  <Tooltip />
+  <Tooltip
+    copied={false}
+  />
 </div>
 `;
 

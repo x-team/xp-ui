@@ -47,8 +47,9 @@ const cx = {
   message: cmz(`
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif
     font-size: .95rem
+    line-height: 1
     display: flex
-    place-content: center
+    align-items: center
     border-radius: 2px
     padding: 10px 15px
   `),
@@ -59,10 +60,10 @@ const cx = {
 }
 
 type Props = {
-  copied?: boolean
+  copied: boolean
 }
 
-export default function Tooltip ({ copied }: Props) {
+const Tooltip = ({ copied }: Props) => {
   return (
     <span className={cx.container}>
       <span className={cx.bubble}>
@@ -80,3 +81,9 @@ export default function Tooltip ({ copied }: Props) {
     </span>
   )
 }
+
+Tooltip.defaultProps = {
+  copied: false
+}
+
+export default Tooltip

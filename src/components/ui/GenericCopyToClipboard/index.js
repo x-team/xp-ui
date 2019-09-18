@@ -15,8 +15,8 @@ const container = cmz(`
 `)
 
 type Props = {
-  children?: Node,
-  text?: string
+  children: Node,
+  text: string
 }
 
 type State = {
@@ -26,6 +26,11 @@ type State = {
 
 class GenericCopyToClipboard extends Component<Props, State> {
   timeOut: number
+
+  static defaultProps = {
+    children: null,
+    text: ''
+  }
 
   state = {
     isHover: false,
@@ -38,8 +43,15 @@ class GenericCopyToClipboard extends Component<Props, State> {
     }
   }
 
+  hideWithTimeout = () => {
+    if (this.timeOut) {
+      window.clearTimeout(this.timeOut)
+    }
+    this.timeOut = setTimeout(() => this.setState({ copied: false }), 2500)
+  }
+
   handleCopy = () => {
-    this.setState({ copied: true })
+    this.setState({ copied: true }, this.hideWithTimeout)
   }
 
   handleMouseEnter = () => {
@@ -47,11 +59,7 @@ class GenericCopyToClipboard extends Component<Props, State> {
   }
 
   handleMouseLeave = () => {
-    if (this.timeOut) {
-      window.clearTimeout(this.timeOut)
-    }
-    this.timeOut = setTimeout(() => this.setState({ copied: false }), 2500)
-    this.setState({ isHover: false })
+    this.setState({ isHover: false }, this.hideWithTimeout)
   }
 
   render () {
