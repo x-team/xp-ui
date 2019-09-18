@@ -20573,37 +20573,63 @@ exports[`Storyshots UI Components/GenericCopyToClipboard basic usage 1`] = `
 <div
   style={
     Object {
-      "marginTop": 50,
+      "padding": "50px 10px 0",
     }
   }
 >
   <GenericCopyToClipboard
     text="example@email.com"
   >
-    <span>
-      example@email.com
-    </span>
+    <p>
+      Try hovering this element and click to copy
+    </p>
   </GenericCopyToClipboard>
 </div>
 `;
 
 exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing children or props (does GenericCopyToClipboard explode?) 1`] = `""`;
 
-exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip basic usage 1`] = `
+exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing props (does Tooltip explode?) 1`] = `
+<span
+  className="AutoUI_ui_GenericCopyToClipboard_Tooltip-12"
+>
+  <span
+    className="AutoUI_ui_GenericCopyToClipboard_Tooltip-17"
+  >
+    <span
+      className="AutoUI_ui_GenericCopyToClipboard_Tooltip-47"
+    >
+      Copy to clipboard
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip copied 1`] = `
 <div
   style={
     Object {
-      "marginTop": 50,
+      "padding": "50px 10px 0",
     }
   }
 >
   <Tooltip
-    showTooltip={true}
+    copied={true}
   />
 </div>
 `;
 
-exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip/Debug missing props (does Tooltip explode?) 1`] = `""`;
+exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "50px 10px 0",
+    }
+  }
+>
+  <Tooltip />
+</div>
+`;
 
 exports[`Storyshots UI Components/GenericTabs basic usage 1`] = `
 <Fragment>

@@ -1,58 +1,82 @@
 // @flow
 
-import React from 'react'
+import React, { Fragment } from 'react'
+
+import SvgIcon from '../SvgIcon'
 
 import theme from '../../../styles/theme'
 
 const cmz = require('cmz')
 
-const container = cmz(`
-  position: relative
-`)
+const cx = {
+  container: cmz(`
+    position: relative
+    color: ${theme.typoHighlightOnDarkBackground}
+  `),
 
-const bubble = cmz(`
-  & {
-    position: absolute
-    min-width: 150px
-    bottom: 100%
-    margin-left: 80px
-    padding-bottom: 8px
-    transform: translateX(-50%)
-  }
+  bubble: cmz(`
+    & {
+      position: absolute
+      white-space: nowrap
+      bottom: 100%
+      box-shadow: 0px 2px 17px rgba(171, 183, 193, 0.25)
+      background: ${theme.baseBrighter}
+      border: 1px solid ${theme.lineSilver2}
+    }
 
-  &:after {
-    content: ' '
-    position: absolute
-    top: 100%
-    left: 50%
-    margin-left: -10%
-    border-width: 5px
-    border-style: solid
-    border-color: ${theme.baseDark} transparent transparent transparent
-  }
-`)
+    &:before, &:after {
+      content: ''
+      position: absolute
+      left: 40px
+      display: block
+      border-left: 10px solid transparent
+      border-right: 10px solid transparent
+    }
 
-const message = cmz(`
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif
-  background: ${theme.baseDark}
-  border-radius: 3px
-  color: ${theme.baseBrighter}
-  font-size: .75rem
-  line-height: 1.4
-  padding: .75em
-  text-align: center
-`)
+    &:before {
+      border-top: 10px solid ${theme.lineSilver2}
+      top: 100%
+    }
 
-type Props = {
-  showTooltip: boolean
+    &:after {
+      border-top: 10px solid ${theme.baseBrighter}
+      top: calc(100% - 1px)
+    }
+  `),
+
+  message: cmz(`
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif
+    font-size: .95rem
+    display: flex
+    place-content: center
+    border-radius: 2px
+    padding: 10px 15px
+  `),
+
+  copied: cmz(`
+    padding: 0 0 0 5px
+  `)
 }
 
-export default function Tooltip ({ showTooltip }: Props) {
-  return showTooltip ? (
-    <span className={container}>
-      <span className={bubble}>
-        <span className={message}>Copied to Clipboard</span>
+type Props = {
+  copied: boolean
+}
+
+export default function Tooltip ({ copied }: Props) {
+  return (
+    <span className={cx.container}>
+      <span className={cx.bubble}>
+        <span className={cx.message}>
+          {copied
+            ? (
+              <Fragment>
+                <SvgIcon icon='check' />
+                <span className={cx.copied}>Copied to Clipboard</span>
+              </Fragment>
+            ) : 'Copy to clipboard'
+          }
+        </span>
       </span>
     </span>
-  ) : null
+  )
 }

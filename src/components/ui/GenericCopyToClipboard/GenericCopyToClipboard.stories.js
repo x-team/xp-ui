@@ -4,28 +4,37 @@ import { storiesOf } from '@storybook/react'
 import GenericCopyToClipboard from '.'
 import Tooltip from './Tooltip'
 
+const Body = ({ children }) => (
+  <div style={{ padding: '50px 10px 0' }}>
+    {children}
+  </div>
+)
+
 storiesOf('UI Components/GenericCopyToClipboard', module)
   .add('basic usage', () => (
-    <div style={{ marginTop: 50 }}>
+    <Body>
       <GenericCopyToClipboard text={'example@email.com'}>
-        <span>example@email.com</span>
+        <p>Try hovering this element and click to copy</p>
       </GenericCopyToClipboard>
-    </div>
+    </Body>
+  ))
+
+storiesOf('UI Components/GenericCopyToClipboard/Tooltip', module)
+  .add('default', () => (
+    <Body>
+      <Tooltip />
+    </Body>
+  ))
+  .add('copied', () => (
+    <Body>
+      <Tooltip copied />
+    </Body>
   ))
 
 storiesOf('UI Components/GenericCopyToClipboard/Debug', module)
   .add('missing children or props (does GenericCopyToClipboard explode?)', () => (
     <GenericCopyToClipboard />
   ))
-
-storiesOf('UI Components/GenericCopyToClipboard/Tooltip', module)
-  .add('basic usage', () => (
-    <div style={{ marginTop: 50 }}>
-      <Tooltip showTooltip />
-    </div>
-  ))
-
-storiesOf('UI Components/GenericCopyToClipboard/Tooltip/Debug', module)
   .add('missing props (does Tooltip explode?)', () => (
     <Tooltip />
   ))

@@ -20,14 +20,16 @@ type Props = {
 }
 
 type State = {
-  showTooltip: boolean
+  isHover: boolean,
+  copied: boolean
 }
 
 class GenericCopyToClipboard extends Component<Props, State> {
   timeOut: number
 
   state = {
-    showTooltip: false
+    isHover: false,
+    copied: false
   }
 
   componentWillUnmount () {
@@ -37,19 +39,31 @@ class GenericCopyToClipboard extends Component<Props, State> {
   }
 
   handleCopy = () => () => {
+    this.setState({ copied: true })
+  }
+
+  handleMouseEnter = () => {
+    this.setState({ isHover: true })
+  }
+
+  handleMouseLeave = () => {
     if (this.timeOut) {
       window.clearTimeout(this.timeOut)
     }
-    this.timeOut = setTimeout(() => this.setState({ showTooltip: false }), 2500)
-    this.setState({ showTooltip: true })
+    this.timeOut = setTimeout(() => this.setState({ copied: false }), 2500)
+    this.setState({ isHover: false })
   }
 
   render () {
-    const { showTooltip } = this.state
+    const { isHover, copied } = this.state
     const { children, text } = this.props
     return text ? (
-      <div className={container}>
-        <Tooltip showTooltip={showTooltip} />
+      <div
+        className={container}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+      >
+        {isHover || copied ? <Tooltip copied={copied} /> : null}
         <CopyToClipboard text={text} onCopy={this.handleCopy()}>
           {children}
         </CopyToClipboard>
