@@ -15,8 +15,8 @@ const container = cmz(`
 `)
 
 type Props = {
-  children: Node,
-  text: string
+  children?: Node,
+  text?: string
 }
 
 type State = {
@@ -38,7 +38,7 @@ class GenericCopyToClipboard extends Component<Props, State> {
     }
   }
 
-  handleCopy = () => () => {
+  handleCopy = () => {
     this.setState({ copied: true })
   }
 
@@ -64,7 +64,7 @@ class GenericCopyToClipboard extends Component<Props, State> {
         onMouseLeave={this.handleMouseLeave}
       >
         {isHover || copied ? <Tooltip copied={copied} /> : null}
-        <CopyToClipboard text={text} onCopy={this.handleCopy()}>
+        <CopyToClipboard text={text} onCopy={this.handleCopy}>
           {children}
         </CopyToClipboard>
       </div>

@@ -19,7 +19,7 @@ const cx = {
       position: absolute
       white-space: nowrap
       bottom: 100%
-      box-shadow: 0px 2px 17px rgba(171, 183, 193, 0.25)
+      box-shadow: 0 2px 17px rgba(171, 183, 193, 0.25)
       background: ${theme.baseBrighter}
       border: 1px solid ${theme.lineSilver2}
     }
@@ -59,7 +59,7 @@ const cx = {
 }
 
 type Props = {
-  copied: boolean
+  copied?: boolean
 }
 
 export default function Tooltip ({ copied }: Props) {
@@ -71,7 +71,7 @@ export default function Tooltip ({ copied }: Props) {
             ? (
               <Fragment>
                 <SvgIcon icon='check' />
-                <span className={cx.copied}>Copied to Clipboard</span>
+                <span className={cx.copied}>Copied to clipboard</span>
               </Fragment>
             ) : 'Copy to clipboard'
           }
