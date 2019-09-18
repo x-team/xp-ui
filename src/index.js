@@ -48,6 +48,7 @@ import SearchResult from './components/ui/SearchResult'
 import SelectBox from './components/ui/SelectBox'
 import SettingsImportScreen from './components/ui/SettingsImportScreen'
 import SettingsScreen from './components/ui/SettingsScreen'
+import Shortcuts from './components/ui/Shortcuts'
 import StatusFilter from './components/ui/StatusFilter'
 import StatusMarker from './components/ui/StatusMarker'
 import SvgIcon from './components/ui/SvgIcon'
@@ -111,6 +112,7 @@ export {
   SelectBox,
   SettingsImportScreen,
   SettingsScreen,
+  Shortcuts,
   StatusFilter,
   StatusMarker,
   SvgIcon,

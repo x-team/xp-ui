@@ -40506,6 +40506,40 @@ exports[`Storyshots UI Components/SettingsScreen missing props (does component e
 </div>
 `;
 
+exports[`Storyshots UI Components/Shortcuts basic usage 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+      "padding": "20px 0 0 210px",
+      "widht": "100%",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <Shortcuts
+    links={
+      Object {
+        "string string": Object {
+          "label": "string string",
+          "value": "string string",
+        },
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/Shortcuts missing props (does component explode?) 1`] = `""`;
+
 exports[`Storyshots UI Components/StatusFilter default 1`] = `
 <State
   initialState={
