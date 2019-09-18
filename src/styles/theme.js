@@ -97,6 +97,7 @@ export const lineColors = {
 
 export const iconColors = {
   iconRed: palette.radicalRed,
+  iconGreen: palette.fern,
   iconBright: palette.white,
   iconDark: palette.tuna,
   iconGray: palette.bombay,

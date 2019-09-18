@@ -323,6 +323,51 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='copy' color='mutedgray' />
     </div>
   ))
+  .add('base green color', () => (
+    <div>
+      <SvgIcon icon='cog' color='baseGreen' />
+      <SvgIcon icon='head' color='baseGreen' />
+      <SvgIcon icon='webcam' color='baseGreen' />
+      <SvgIcon icon='message' color='baseGreen' />
+      <SvgIcon icon='terminal' color='baseGreen' />
+      <SvgIcon icon='diamond' color='baseGreen' />
+      <SvgIcon icon='talking' color='baseGreen' />
+      <SvgIcon icon='trophy' color='baseGreen' />
+      <SvgIcon icon='calendar' color='baseGreen' />
+      <SvgIcon icon='plus' color='baseGreen' />
+      <SvgIcon icon='minus' color='baseGreen' />
+      <SvgIcon icon='trashcan' color='baseGreen' />
+      <SvgIcon icon='trashcanAlt' color='baseGreen' />
+      <SvgIcon icon='x' color='baseGreen' />
+      <SvgIcon icon='add' color='baseGreen' />
+      <SvgIcon icon='triangleup' color='baseGreen' />
+      <SvgIcon icon='triangledown' color='baseGreen' />
+      <SvgIcon icon='hamburger' color='baseGreen' />
+      <SvgIcon icon='magnifier' color='baseGreen' />
+      <SvgIcon icon='edit' color='baseGreen' />
+      <SvgIcon icon='check' color='baseGreen' />
+      <SvgIcon icon='play' color='baseGreen' />
+      <SvgIcon icon='pause' color='baseGreen' />
+      <SvgIcon icon='paperplane' color='baseGreen' />
+      <SvgIcon icon='archive' color='baseGreen' />
+      <SvgIcon icon='list' color='baseGreen' />
+      <SvgIcon icon='grid' color='baseGreen' />
+      <SvgIcon icon='dock' color='baseGreen' />
+      <SvgIcon icon='show' color='baseGreen' />
+      <SvgIcon icon='github' color='baseGreen' />
+      <SvgIcon icon='linkedin' color='baseGreen' />
+      <SvgIcon icon='stackoverflow' color='baseGreen' />
+      <SvgIcon icon='redirect' color='baseGreen' />
+      <SvgIcon icon='filter' color='baseGreen' />
+      <SvgIcon icon='link' color='baseGreen' />
+      <SvgIcon icon='time' color='baseGreen' />
+      <SvgIcon icon='plusquare' color='baseGreen' />
+      <SvgIcon icon='spin' color='baseGreen' />
+      <SvgIcon icon='filters' color='baseGreen' />
+      <SvgIcon icon='arrowleft' color='baseGreen' />
+      <SvgIcon icon='copy' color='baseGreen' />
+    </div>
+  ))
   .add('hover color', () => (
     <div>
       <SvgIcon icon='cog' color='text' hover='default' />

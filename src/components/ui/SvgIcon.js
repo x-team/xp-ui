@@ -7,7 +7,7 @@ import theme from '../../styles/theme'
 const cmz = require('cmz')
 
 export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin' | 'filters' | 'arrowleft' | 'copy'
-export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow' | 'frenchGrayDarker'
+export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow' | 'frenchGrayDarker' | 'baseGreen'
 
 type Props = {
   icon: ?Icon,
@@ -56,6 +56,11 @@ const getStyles = () => ({
       & {
         stroke: ${theme.iconFrenchGrayDarker}
       }
+    `),
+    baseGreen: cmz(`
+      & {
+        stroke: ${theme.iconGreen}
+      }
     `)
   },
   strokeHover: {
@@ -97,6 +102,11 @@ const getStyles = () => ({
     frenchGrayDarker: cmz(`
       svg:hover & {
         stroke: ${theme.iconFrenchGrayDarker}
+      }
+    `),
+    baseGreen: cmz(`
+      svg:hover & {
+        stroke: ${theme.iconGreen}
       }
     `)
   },
@@ -140,6 +150,11 @@ const getStyles = () => ({
       & {
         fill: ${theme.iconFrenchGrayDarker}
       }
+    `),
+    baseGreen: cmz(`
+      & {
+        fill: ${theme.iconGreen}
+      }
     `)
   },
   fillHover: {
@@ -181,6 +196,11 @@ const getStyles = () => ({
     frenchGrayDarker: cmz(`
       svg:hover & {
         fill: ${theme.iconFrenchGrayDarker}
+      }
+    `),
+    baseGreen: cmz(`
+      svg:hover & {
+        fill: ${theme.iconGreen}
       }
     `)
   }
