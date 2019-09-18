@@ -92,7 +92,7 @@ const cx = {
 }
 
 type Props = {
-  links: { [key: string]: { label: string, value: string } }
+  links?: { [key: string]: { label: string, value: string } }
 }
 
 type State = {
@@ -103,10 +103,6 @@ type State = {
 class Shortcuts extends Component<Props, State> {
   // $FlowFixMe
   timeout: TimeoutID
-
-  static defaultProps = {
-    links: {}
-  }
 
   state = {
     shortcut: '',
@@ -120,12 +116,11 @@ class Shortcuts extends Component<Props, State> {
   }
 
   renderLinks = () => {
-    const { links } = this.props
+    const { links = {} } = this.props
     return Object.keys(links).map(key => this.renderItemState(links[key]))
   }
 
-  renderItemState = (item: { label: string, value: string }) => {
-    const { value, label } = item
+  renderItemState = ({ value, label }: { label: string, value: string }) => {
     const { copied, shortcut } = this.state
     const copiedState = copied && value === shortcut
 
