@@ -10,8 +10,11 @@ const cmz = require('cmz')
 
 const cx = {
   container: cmz(`
-    position: relative
+    position: absolute
     color: ${theme.typoHighlightOnDarkBackground}
+    top: -13px
+    left: 0
+    z-index: 99999
   `),
 
   bubble: cmz(`
@@ -60,12 +63,13 @@ const cx = {
 }
 
 type Props = {
-  copied: boolean
+  copied: boolean,
+  tooltipXOffset: number
 }
 
-const Tooltip = ({ copied }: Props) => {
+const Tooltip = ({ copied, tooltipXOffset }: Props) => {
   return (
-    <span className={cx.container}>
+    <span className={cx.container} style={{ left: `${tooltipXOffset}px` }}>
       <span className={cx.bubble}>
         <span className={cx.message}>
           {copied
@@ -83,7 +87,8 @@ const Tooltip = ({ copied }: Props) => {
 }
 
 Tooltip.defaultProps = {
-  copied: false
+  copied: false,
+  tooltipXOffset: 0
 }
 
 export default Tooltip
