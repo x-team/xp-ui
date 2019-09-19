@@ -138,14 +138,16 @@ class Shortcuts extends PureComponent<Props, void> {
         )}
         {label}
       </a>
-      <GenericCopyToClipboard
-        key={value}
-        text={value}
-        className={cx.showCopy}
-        tooltipXOffset={-30}
-      >
-        <SvgIcon icon='copy' color='text' className={cx.copy} />
-      </GenericCopyToClipboard>
+      {!external && (
+        <GenericCopyToClipboard
+          key={value}
+          text={value}
+          className={cx.showCopy}
+          tooltipXOffset={-30}
+        >
+          <SvgIcon icon='copy' color='text' className={cx.copy} />
+        </GenericCopyToClipboard>
+      )}
     </div>
   )
 
