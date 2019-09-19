@@ -323,7 +323,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='copy' color='mutedgray' />
     </div>
   ))
-  .add('base green color', () => (
+  .add('green color', () => (
     <div>
       <SvgIcon icon='cog' color='green' />
       <SvgIcon icon='head' color='green' />
