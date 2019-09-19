@@ -7,7 +7,7 @@ import theme from '../../styles/theme'
 const cmz = require('cmz')
 
 export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin' | 'filters' | 'arrowleft' | 'copy'
-export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow' | 'frenchGrayDarker' | 'baseGreen'
+export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow' | 'frenchGrayDarker' | 'green'
 
 type Props = {
   icon: ?Icon,
@@ -57,7 +57,7 @@ const getStyles = () => ({
         stroke: ${theme.iconFrenchGrayDarker}
       }
     `),
-    baseGreen: cmz(`
+    green: cmz(`
       & {
         stroke: ${theme.iconGreen}
       }
@@ -104,7 +104,7 @@ const getStyles = () => ({
         stroke: ${theme.iconFrenchGrayDarker}
       }
     `),
-    baseGreen: cmz(`
+    green: cmz(`
       svg:hover & {
         stroke: ${theme.iconGreen}
       }
@@ -151,7 +151,7 @@ const getStyles = () => ({
         fill: ${theme.iconFrenchGrayDarker}
       }
     `),
-    baseGreen: cmz(`
+    green: cmz(`
       & {
         fill: ${theme.iconGreen}
       }
@@ -198,7 +198,7 @@ const getStyles = () => ({
         fill: ${theme.iconFrenchGrayDarker}
       }
     `),
-    baseGreen: cmz(`
+    green: cmz(`
       svg:hover & {
         fill: ${theme.iconGreen}
       }
@@ -512,7 +512,7 @@ export const getIcons = ({ color, hover, ...rest }: { [x: string]: any } = {}) =
 
     check: (
       <svg width='13' height='10' viewBox='0 0 13 10' fill='none' {...rest}>
-        <path className={fillClassName} fill-rule='evenodd' clip-rule='evenodd' d='M2.76122 7.85387L0 5.09264L1.41421 3.67843L4.17544 6.43965L10.6149 0.000167847L12.0291 1.41438L4.17544 9.26808L4.14194 9.23459L2.76122 7.85387Z' />
+        <path className={fillClassName} fillRule='evenodd' clipRule='evenodd' d='M2.76122 7.85387L0 5.09264L1.41421 3.67843L4.17544 6.43965L10.6149 0.000167847L12.0291 1.41438L4.17544 9.26808L4.14194 9.23459L2.76122 7.85387Z' />
       </svg>
     ),
 
