@@ -8,11 +8,7 @@ exports[`Storyshots Form Components/InputField Use date field (normal) 1`] = `
     >
       <input
         aria-labelledby="label-date"
-<<<<<<< HEAD
-        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-91  "
-=======
-        className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  "
         id="date"
         name="date"
         placeholder="yyyy-mm-dd"
@@ -36,11 +32,7 @@ exports[`Storyshots Form Components/InputField Use date field (small) 1`] = `
     >
       <input
         aria-labelledby="label-date"
-<<<<<<< HEAD
-        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-117  "
-=======
-        className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-117  "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-117  "
         id="date"
         name="date"
         placeholder="yyyy-mm-dd"
@@ -73,11 +65,7 @@ exports[`Storyshots Form Components/InputField Use date field with label 1`] = `
     >
       <input
         aria-labelledby="label-date"
-<<<<<<< HEAD
-        className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-91  "
-=======
-        className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  "
         id="date"
         name="date"
         placeholder="yyyy-mm-dd"
@@ -119,11 +107,7 @@ exports[`Storyshots Form Components/InputField invalid element 1`] = `
     />
     <input
       aria-labelledby="label-invalid"
-<<<<<<< HEAD
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-91 AutoUI_forms_InputField-147 "
-=======
-      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-147 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91 AutoUI_forms_InputField-147 "
       id="invalid"
       name="invalid"
       placeholder="Error Placeholder..."
@@ -139,11 +123,7 @@ exports[`Storyshots Form Components/InputField missing props (does component exp
   <div>
     <input
       aria-labelledby=""
-<<<<<<< HEAD
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-91  "
-=======
-      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  "
       required={false}
       type="text"
     />
@@ -188,11 +168,7 @@ exports[`Storyshots Form Components/InputField required element 1`] = `
     />
     <input
       aria-labelledby="label-required"
-<<<<<<< HEAD
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-91  "
-=======
-      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  "
       id="required"
       name="required"
       placeholder="Required Placeholder..."
@@ -229,11 +205,7 @@ exports[`Storyshots Form Components/InputField standard use (text input element 
     />
     <input
       aria-labelledby="label-name"
-<<<<<<< HEAD
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-91  "
-=======
-      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  "
       defaultValue="Simon"
       id="name"
       name="name"
@@ -259,11 +231,7 @@ exports[`Storyshots Form Components/InputField standard use (text input element 
     />
     <input
       aria-labelledby="label-name"
-<<<<<<< HEAD
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-117  "
-=======
-      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-117  "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-117  "
       defaultValue="Simon"
       id="name"
       name="name"
@@ -289,11 +257,7 @@ exports[`Storyshots Form Components/InputField standard use (with \`label\` and 
     />
     <input
       aria-labelledby="label-experience"
-<<<<<<< HEAD
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
-=======
-      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
       defaultValue="1"
       id="experience"
       name="experience"
@@ -322,11 +286,7 @@ exports[`Storyshots Form Components/InputField standard use (with only \`postTex
   <div>
     <input
       aria-labelledby="label-experience"
-<<<<<<< HEAD
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
-=======
-      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
       defaultValue="1"
       id="experience"
       name="experience"
@@ -364,11 +324,7 @@ exports[`Storyshots Form Components/InputField textarea element 1`] = `
     />
     <WithAutosize(Component)
       aria-labelledby="label-availability"
-<<<<<<< HEAD
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
-=======
-      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
       id="availability"
       linesLimit={0}
       name="availability"
@@ -395,11 +351,7 @@ exports[`Storyshots Form Components/InputField textarea element, lines limit set
     />
     <WithAutosize(Component)
       aria-labelledby="label-skills"
-<<<<<<< HEAD
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
-=======
-      className="AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
       defaultValue="1.
 2.
 3.
@@ -427,11 +379,7 @@ exports[`Storyshots Form Components/InputGroup basic usage 1`] = `
   className="AutoUI_forms_InputGroup-22 social-so"
 >
   <span
-<<<<<<< HEAD
-    className="AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputGroup-31"
-=======
-    className="AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputGroup-31"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputGroup-31"
   >
     stackoverflow.com/users/
   </span>
@@ -453,11 +401,7 @@ exports[`Storyshots Form Components/InputGroup missing props (does component exp
   className="AutoUI_forms_InputGroup-22"
 >
   <span
-<<<<<<< HEAD
-    className="AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_InputGroup-31"
-=======
-    className="AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputGroup-31"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_forms_InputGroup-31"
   />
   <InputField
     isInvalid={false}
@@ -468,268 +412,6 @@ exports[`Storyshots Form Components/InputGroup missing props (does component exp
 </div>
 `;
 
-<<<<<<< HEAD
-exports[`Storyshots Form Components/SolutionForm 2 attempts are taken 1`] = `
-<div
-  className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-34"
->
-  <SolutionFormTitle
-    hasAttempted={true}
-    maxAttempts={3}
-  />
-  <form
-    className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-43"
-  >
-    <textarea
-      className="AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-52 AutoUI_forms_SolutionForm_index-74"
-      name="solution"
-      placeholder="Paste your solution here."
-    />
-    <Button
-      block={false}
-      className=""
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      data-testid="xpui-solutionForm-button-submit"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      outlined={false}
-      pseudolink={false}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
-    >
-      Submit (3 of 3)
-    </Button>
-  </form>
-</div>
-`;
-
-exports[`Storyshots Form Components/SolutionForm custom submit callback is passed 1`] = `
-<div
-  className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-34"
->
-  <SolutionFormTitle
-    hasAttempted={false}
-    maxAttempts={3}
-  />
-  <form
-    className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-43"
-    onSubmit={[Function]}
-  >
-    <textarea
-      className="AutoUI_forms_SolutionForm_index-28 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-52"
-      name="solution"
-      placeholder="Paste your solution here."
-    />
-    <Button
-      block={false}
-      className=""
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      data-testid="xpui-solutionForm-button-submit"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      outlined={false}
-      pseudolink={false}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
-    >
-      Submit (1 of 3)
-    </Button>
-  </form>
-</div>
-`;
-
-exports[`Storyshots Form Components/SolutionForm max of 5 attempts allowed 1`] = `
-<div
-  className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-34"
->
-  <SolutionFormTitle
-    hasAttempted={false}
-    maxAttempts={5}
-  />
-  <form
-    className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-43"
-  >
-    <textarea
-      className="AutoUI_forms_SolutionForm_index-28 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-52"
-      name="solution"
-      placeholder="Paste your solution here."
-    />
-    <Button
-      block={false}
-      className=""
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      data-testid="xpui-solutionForm-button-submit"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      outlined={false}
-      pseudolink={false}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
-    >
-      Submit (1 of 5)
-    </Button>
-  </form>
-</div>
-`;
-
-exports[`Storyshots Form Components/SolutionForm missing props (does component explode?) 1`] = `
-<div
-  className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-34"
->
-  <SolutionFormTitle
-    hasAttempted={false}
-    maxAttempts={3}
-  />
-  <form
-    className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-43"
-  >
-    <textarea
-      className="AutoUI_forms_SolutionForm_index-28 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-52"
-      name="solution"
-      placeholder="Paste your solution here."
-    />
-    <Button
-      block={false}
-      className=""
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      data-testid="xpui-solutionForm-button-submit"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      outlined={false}
-      pseudolink={false}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
-    >
-      Submit (1 of 3)
-    </Button>
-  </form>
-</div>
-`;
-
-exports[`Storyshots Form Components/SolutionForm submitting is in progress 1`] = `
-<div
-  className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-34"
->
-  <SolutionFormTitle
-    hasAttempted={false}
-    maxAttempts={3}
-  />
-  <form
-    className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-43"
-  >
-    <textarea
-      className="AutoUI_forms_SolutionForm_index-28 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-52"
-      name="solution"
-      placeholder="Paste your solution here."
-    />
-    <Button
-      block={false}
-      className=""
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      data-testid="xpui-solutionForm-button-submit"
-      disabled={true}
-      icon=""
-      iconProps={Object {}}
-      outlined={false}
-      pseudolink={false}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
-    >
-      Checking...
-    </Button>
-  </form>
-</div>
-`;
-
-exports[`Storyshots Form Components/SolutionForm with disabled button 1`] = `
-<div
-  className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-34"
->
-  <SolutionFormTitle
-    hasAttempted={false}
-    maxAttempts={3}
-  />
-  <form
-    className="AutoUI_forms_SolutionForm_index-27 AutoUI_forms_SolutionForm_index-43"
-  >
-    <textarea
-      className="AutoUI_forms_SolutionForm_index-28 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40 AutoUI_forms_SolutionForm_index-52"
-      name="solution"
-      placeholder="Paste your solution here."
-    />
-    <Button
-      block={false}
-      className=""
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      data-testid="xpui-solutionForm-button-submit"
-      disabled={true}
-      icon=""
-      iconProps={Object {}}
-      outlined={false}
-      pseudolink={false}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
-    >
-      Submit (1 of 3)
-    </Button>
-  </form>
-</div>
-`;
-
-=======
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
 exports[`Storyshots UI Components/ActivityBar basic usage 1`] = `
 <div
   className="AutoUI_ui_ActivityBar-12"
@@ -1125,11 +807,7 @@ exports[`Storyshots UI Components/ActivityLogsDisplay complete with random data 
       />,
     ]
   }
-<<<<<<< HEAD
-  listClass="AutoUI_ui_ActivityLogsDisplay-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-  listClass="AutoUI_ui_ActivityLogsDisplay-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  listClass="AutoUI_ui_ActivityLogsDisplay-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   viewMore={[Function]}
   visible={4}
 />
@@ -1142,11 +820,7 @@ exports[`Storyshots UI Components/ActivityLogsDisplay missing props (does compon
   inserted={false}
   isFetching={false}
   items={Array []}
-<<<<<<< HEAD
-  listClass="AutoUI_ui_ActivityLogsDisplay-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-  listClass="AutoUI_ui_ActivityLogsDisplay-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  listClass="AutoUI_ui_ActivityLogsDisplay-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   viewMore={[Function]}
   visible={4}
 />
@@ -3100,7 +2774,7 @@ exports[`Storyshots UI Components/ApplicantGrid/Debug missing props (does compon
 
 exports[`Storyshots UI Components/ApplicantProfile/ApplicantProfileContentDisplay basic usage 1`] = `
 <div
-  className="AutoUI_ui_ApplicantProfileContentDisplay-13 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  className="AutoUI_ui_ApplicantProfileContentDisplay-13 AutoUI_typo-167 AutoUI_typo-48 AutoUI_typo-36"
   id="profile"
 >
   <form
@@ -3132,7 +2806,7 @@ exports[`Storyshots UI Components/ApplicantProfile/ApplicantProfileContentDispla
 
 exports[`Storyshots UI Components/ApplicantProfile/ApplicantProfileContentDisplay/Debug missing props (does component explode?) 1`] = `
 <div
-  className="AutoUI_ui_ApplicantProfileContentDisplay-13 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  className="AutoUI_ui_ApplicantProfileContentDisplay-13 AutoUI_typo-167 AutoUI_typo-48 AutoUI_typo-36"
   id="profile"
 >
   <form
@@ -3164,7 +2838,7 @@ exports[`Storyshots UI Components/ApplicantProfile/ApplicantProfileContentDispla
 
 exports[`Storyshots UI Components/ApplicantProfile/ApplicantTopProfileDisplay basic usage 1`] = `
 <section
-  className="AutoUI_ui_ApplicantTopProfileDisplay-18 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  className="AutoUI_ui_ApplicantTopProfileDisplay-18 AutoUI_typo-167 AutoUI_typo-48 AutoUI_typo-36"
 >
   <section
     className="AutoUI_ui_ApplicantTopProfileDisplay-44"
@@ -3205,7 +2879,7 @@ exports[`Storyshots UI Components/ApplicantProfile/ApplicantTopProfileDisplay ba
 
 exports[`Storyshots UI Components/ApplicantProfile/ApplicantTopProfileDisplay/Debug missing props (does component explode?) 1`] = `
 <section
-  className="AutoUI_ui_ApplicantTopProfileDisplay-18 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  className="AutoUI_ui_ApplicantTopProfileDisplay-18 AutoUI_typo-167 AutoUI_typo-48 AutoUI_typo-36"
 >
   <section
     className="AutoUI_ui_ApplicantTopProfileDisplay-44"
@@ -3402,11 +3076,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files (preview) 1`] = `
       }
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
         target="_blank"
         title="filename-01.zip"
       >
@@ -3441,11 +3111,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files (preview) 1`] = `
       }
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
         target="_blank"
         title="filename-02.zip"
       >
@@ -3480,11 +3146,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files (preview) 1`] = `
       }
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
         target="_blank"
         title="filename-03.zip"
       >
@@ -3519,11 +3181,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files (preview) 1`] = `
       }
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
         target="_blank"
         title="filename-04.zip"
       >
@@ -3600,11 +3258,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files 1`] = `
       }
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
         href="string"
         target="_blank"
         title="filename-01.zip"
@@ -3632,11 +3286,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files 1`] = `
       }
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
         href="string"
         target="_blank"
         title="filename-02.zip"
@@ -3672,11 +3322,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files 1`] = `
       }
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
         href="string"
         target="_blank"
         title="filename-03.zip"
@@ -3720,11 +3366,7 @@ exports[`Storyshots UI Components/AttachFiles multiple files 1`] = `
       }
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
         href="string"
         target="_blank"
         title="filename-04.zip"
@@ -3802,11 +3444,7 @@ exports[`Storyshots UI Components/AttachFiles same file name 1`] = `
       }
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
         target="_blank"
         title="filename-01.zip"
       >
@@ -3841,11 +3479,7 @@ exports[`Storyshots UI Components/AttachFiles same file name 1`] = `
       }
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_AttachFiles-47 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
         target="_blank"
         title="filename-01.zip"
       >
@@ -4890,691 +4524,6 @@ exports[`Storyshots UI Components/Button/contentStyle Options sourceSansPro cont
 </Button>
 `;
 
-<<<<<<< HEAD
-exports[`Storyshots UI Components/ColorPalette color variables for development reference 1`] = `
-<section
-  className="AutoUI_ui_ColorPalette-14"
->
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="0"
-    style={
-      Object {
-        "backgroundColor": "rgb(255, 255, 255)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseBrighter
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="1"
-    style={
-      Object {
-        "backgroundColor": "rgb(249, 250, 251)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseBright
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="2"
-    style={
-      Object {
-        "backgroundColor": "rgb(19, 14, 46)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseDarker
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="3"
-    style={
-      Object {
-        "backgroundColor": "rgb(0, 0, 0)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseDark
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="4"
-    style={
-      Object {
-        "backgroundColor": "rgb(246, 57, 84)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseRed
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="5"
-    style={
-      Object {
-        "backgroundColor": "rgb(247, 217, 220)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseLightRed
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="6"
-    style={
-      Object {
-        "backgroundColor": "rgb(92, 184, 92)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseGreen
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="7"
-    style={
-      Object {
-        "backgroundColor": "rgb(216, 216, 216)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseSilver
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="8"
-    style={
-      Object {
-        "backgroundColor": "rgb(228, 228, 228)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseHighlight
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="9"
-    style={
-      Object {
-        "backgroundColor": "rgb(194, 193, 197)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseHighlightBright
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="10"
-    style={
-      Object {
-        "backgroundColor": "rgb(255, 235, 237)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseFairPink
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="11"
-    style={
-      Object {
-        "backgroundColor": "rgb(178, 182, 188)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      baseBombay
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="12"
-    style={
-      Object {
-        "backgroundColor": "rgb(52, 50, 59)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      typoHeading
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="13"
-    style={
-      Object {
-        "backgroundColor": "rgb(246, 57, 84)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      typoSubheading
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="14"
-    style={
-      Object {
-        "backgroundColor": "rgb(52, 50, 59)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      typoParagraph
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="15"
-    style={
-      Object {
-        "backgroundColor": "rgb(184, 183, 188)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      typoParagraphOnDarkBackground
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="16"
-    style={
-      Object {
-        "backgroundColor": "rgb(19, 14, 46)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      typoHighlight
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="17"
-    style={
-      Object {
-        "backgroundColor": "rgb(90, 86, 101)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      typoHighlightOnDarkBackground
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="18"
-    style={
-      Object {
-        "backgroundColor": "rgb(178, 182, 188)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      typoLabel
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="19"
-    style={
-      Object {
-        "backgroundColor": "rgb(47, 194, 255)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      typoCounter
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="20"
-    style={
-      Object {
-        "backgroundColor": "rgb(178, 182, 188)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      sliderToggle
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="21"
-    style={
-      Object {
-        "backgroundColor": "rgb(240, 241, 244)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      sliderBackground
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="22"
-    style={
-      Object {
-        "backgroundColor": "rgb(145, 140, 160)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      formPlaceholder
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="23"
-    style={
-      Object {
-        "backgroundColor": "rgb(52, 50, 59)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      formText
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="24"
-    style={
-      Object {
-        "backgroundColor": "rgb(230, 230, 237)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      formBorder
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="25"
-    style={
-      Object {
-        "backgroundColor": "rgb(211, 47, 59)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      formError
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="26"
-    style={
-      Object {
-        "backgroundColor": "rgb(247, 217, 220)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      formErrorShadow
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="27"
-    style={
-      Object {
-        "backgroundColor": "rgb(246, 57, 84)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      lineRed
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="28"
-    style={
-      Object {
-        "backgroundColor": "rgb(228, 228, 228)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      lineSilver1
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="29"
-    style={
-      Object {
-        "backgroundColor": "rgb(233, 237, 238)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      lineSilver2
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="30"
-    style={
-      Object {
-        "backgroundColor": "rgb(240, 241, 244)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      lineSilver3
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="31"
-    style={
-      Object {
-        "backgroundColor": "rgb(230, 230, 237)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      lineSilver4
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="32"
-    style={
-      Object {
-        "backgroundColor": "rgb(246, 57, 84)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      iconRed
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="33"
-    style={
-      Object {
-        "backgroundColor": "rgb(255, 255, 255)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      iconBright
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="34"
-    style={
-      Object {
-        "backgroundColor": "rgb(52, 50, 59)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      iconDark
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="35"
-    style={
-      Object {
-        "backgroundColor": "rgb(178, 182, 188)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      iconGray
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="36"
-    style={
-      Object {
-        "backgroundColor": "rgb(52, 50, 59)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      iconTextGray
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="37"
-    style={
-      Object {
-        "backgroundColor": "rgb(240, 241, 244)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      iconMutedGray
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="38"
-    style={
-      Object {
-        "backgroundColor": "rgb(92, 87, 101)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      iconGrayScarpaFlow
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="39"
-    style={
-      Object {
-        "backgroundColor": "rgb(184, 183, 188)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      iconFrenchGrayDarker
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="40"
-    style={
-      Object {
-        "backgroundColor": "rgb(179, 179, 179)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      logoGray
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="41"
-    style={
-      Object {
-        "backgroundColor": "rgb(95, 207, 33)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      statusAccepted
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="42"
-    style={
-      Object {
-        "backgroundColor": "rgb(248, 231, 28)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      statusPending
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="43"
-    style={
-      Object {
-        "backgroundColor": "rgb(246, 57, 84)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      statusExluded
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_ColorPalette-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="44"
-    style={
-      Object {
-        "backgroundColor": "rgb(196, 196, 196)",
-      }
-    }
-  >
-    <div
-      className="AutoUI_ui_ColorPalette-34"
-    >
-      silver
-    </div>
-  </div>
-</section>
-`;
-
-=======
->>>>>>> 0530a9bebe5b... Organise Styleguides in the Storybook (#433)
 exports[`Storyshots UI Components/ColumnsCustomizer basic usage 1`] = `
 <div
   style={
@@ -15812,11 +14761,7 @@ exports[`Storyshots UI Components/DataGrid/Debug missing props (does component e
 
 exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -15900,11 +14845,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example 1`] = `
 
 exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -15984,11 +14925,7 @@ exports[`Storyshots UI Components/Dropdown SelectBox example using radio buttons
 
 exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -16024,11 +14961,7 @@ exports[`Storyshots UI Components/Dropdown close Dropdown from children 1`] = `
 
 exports[`Storyshots UI Components/Dropdown icon only button 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -16128,11 +15061,7 @@ exports[`Storyshots UI Components/Dropdown label and indicator positioned on the
 
 exports[`Storyshots UI Components/Dropdown labeled button 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -16221,11 +15150,7 @@ exports[`Storyshots UI Components/Dropdown missing props (does component explode
 
 exports[`Storyshots UI Components/Dropdown tooltip display 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-  className="AutoUI_ui_Dropdown-17 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Dropdown-17 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
   data-testid="xpui-dropdown"
 >
   <div
@@ -16295,17 +15220,10 @@ exports[`Storyshots UI Components/Email 1 day ago 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="1 day ago"
         >
           1 day ago
@@ -16328,11 +15246,7 @@ exports[`Storyshots UI Components/Email 1 day ago 1`] = `
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -16366,17 +15280,10 @@ exports[`Storyshots UI Components/Email 3 hours ago 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="3 hours ago"
         >
           3 hours ago
@@ -16399,11 +15306,7 @@ exports[`Storyshots UI Components/Email 3 hours ago 1`] = `
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -16437,17 +15340,10 @@ exports[`Storyshots UI Components/Email 5 days ago 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="5 days ago"
         >
           5 days ago
@@ -16470,11 +15366,7 @@ exports[`Storyshots UI Components/Email 5 days ago 1`] = `
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -16508,17 +15400,10 @@ exports[`Storyshots UI Components/Email 5 minutes ago 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="5 minutes ago"
         >
           5 minutes ago
@@ -16541,11 +15426,7 @@ exports[`Storyshots UI Components/Email 5 minutes ago 1`] = `
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -16579,17 +15460,10 @@ exports[`Storyshots UI Components/Email HTML body test 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="HTML E-mail test"
         >
           HTML E-mail test
@@ -16612,11 +15486,7 @@ exports[`Storyshots UI Components/Email HTML body test 1`] = `
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -16628,13 +15498,11 @@ exports[`Storyshots UI Components/Email HTML body test 1`] = `
     </div>
   </div>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_Email-88 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_Email-88 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Email-88 AutoUI_typo-48 AutoUI_typo-36"
   >
-    <span>
+    <span
+      key="outer"
+    >
       <font
         key="0"
         size="6"
@@ -16950,17 +15818,10 @@ exports[`Storyshots UI Components/Email basic usage 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="RE: opportunity"
         >
           RE: opportunity
@@ -16983,11 +15844,7 @@ exports[`Storyshots UI Components/Email basic usage 1`] = `
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -17021,17 +15878,10 @@ exports[`Storyshots UI Components/Email initial open body 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="RE: opportunity"
         >
           RE: opportunity
@@ -17054,11 +15904,7 @@ exports[`Storyshots UI Components/Email initial open body 1`] = `
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -17070,13 +15916,11 @@ exports[`Storyshots UI Components/Email initial open body 1`] = `
     </div>
   </div>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_Email-88 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_Email-88 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Email-88 AutoUI_typo-48 AutoUI_typo-36"
   >
-    <span>
+    <span
+      key="outer"
+    >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus molestie purus sed suscipit. Duis non ultricies velit, eu laoreet augue. Nullam turpis massa, scelerisque at tempus eu, placerat vitae orci. Nam at sem pellentesque, viverra risus id, volutpat nisl. In hac habitasse platea dictumst. Integer et dignissim eros. Quisque vel sem vel magna congue consectetur ac vel ex. Pellentesque pulvinar congue lacinia. Sed finibus ex non lorem sodales, ac pulvinar urna placerat. Aenean vel sodales libero, ac egestas velit. Nulla turpis dolor, dapibus ut diam sed, aliquam vestibulum nibh. In a ullamcorper libero. Pellentesque mattis, dui in molestie cursus, est risus convallis ligula, nec hendrerit sem odio eu elit. Aliquam sapien lacus, tincidunt rhoncus malesuada at, finibus non dolor. Pellentesque interdum nibh eu tempor pretium.
     </span>
   </div>
@@ -17103,17 +15947,10 @@ exports[`Storyshots UI Components/Email initial open body and content with lineb
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="RE: opportunity"
         >
           RE: opportunity
@@ -17136,11 +15973,7 @@ exports[`Storyshots UI Components/Email initial open body and content with lineb
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -17152,13 +15985,11 @@ exports[`Storyshots UI Components/Email initial open body and content with lineb
     </div>
   </div>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_Email-88 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_Email-88 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Email-88 AutoUI_typo-48 AutoUI_typo-36"
   >
-    <div>
+    <div
+      key="outer"
+    >
       <p
         key="0"
       >
@@ -17200,17 +16031,10 @@ exports[`Storyshots UI Components/Email just now 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="Just Now"
         >
           Just Now
@@ -17233,11 +16057,7 @@ exports[`Storyshots UI Components/Email just now 1`] = `
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -17271,11 +16091,7 @@ exports[`Storyshots UI Components/Email missing props (does component explode?) 
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       />
     </div>
   </div>
@@ -17443,17 +16259,10 @@ exports[`Storyshots UI Components/Email really long subject 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="Really really really really really really really really really really really really long subject"
         >
           Really really really really really really really really really really really really long subject
@@ -17476,11 +16285,7 @@ exports[`Storyshots UI Components/Email really long subject 1`] = `
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -17514,17 +16319,10 @@ exports[`Storyshots UI Components/Email to several recipients 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="RE: opportunity"
         >
           RE: opportunity
@@ -17547,11 +16345,7 @@ exports[`Storyshots UI Components/Email to several recipients 1`] = `
         </div>
       </div>
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-71 AutoUI_typo-53 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Email-71 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Email-71 AutoUI_typo-48 AutoUI_typo-36"
       >
         <div
           className="AutoUI_ui_Email-83"
@@ -17585,17 +16379,10 @@ exports[`Storyshots UI Components/Email with knobs 1`] = `
       className="AutoUI_ui_Email-34"
     >
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Email-42 AutoUI_typo-53 AutoUI_typo-22"
+        className="AutoUI_ui_Email-42 AutoUI_typo-48 AutoUI_typo-21"
       >
         <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-53 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_Email-42 AutoUI_typo-36 AutoUI_typo-9"
-      >
-        <div
-          className="AutoUI_ui_Email-59 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+          className="AutoUI_ui_Email-59 AutoUI_typo-48 AutoUI_typo-21"
           title="KNOBS Test"
         >
           KNOBS Test
@@ -17625,21 +16412,13 @@ exports[`Storyshots UI Components/Email with knobs 1`] = `
 exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -17863,21 +16642,13 @@ exports[`Storyshots UI Components/EmailFeed initial expanded all 1`] = `
 exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -18101,21 +16872,13 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 1 day ago 1`] = `
 exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -18339,21 +17102,13 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 3 hours ago 1`] = 
 exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -18577,21 +17332,13 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 days ago 1`] = `
 exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -18815,21 +17562,13 @@ exports[`Storyshots UI Components/EmailFeed last sync refresh 5 minutes ago 1`] 
 exports[`Storyshots UI Components/EmailFeed missing props (does component explode?) 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -19210,21 +17949,13 @@ exports[`Storyshots UI Components/EmailFeed parent element with fixed width at 7
 exports[`Storyshots UI Components/EmailFeed with end button link 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -19265,11 +17996,7 @@ exports[`Storyshots UI Components/EmailFeed with end button link 1`] = `
   <TruncatedList
     endListElement={
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-142 AutoUI_typo-34"
-=======
-        className="AutoUI_ui_EmailFeed-142 AutoUI_typo-19"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-142 AutoUI_typo-31"
         href="http://www.google.com"
         rel="noreferrer"
         target="_blank"
@@ -19378,11 +18105,7 @@ exports[`Storyshots UI Components/EmailFeed with error message 1`] = `
     className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-40 AutoUI_ui_EmailFeed-77"
   >
     <span
-<<<<<<< HEAD
-      className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-      className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
     >
       Email History
     </span>
@@ -19412,11 +18135,7 @@ exports[`Storyshots UI Components/EmailFeed with error message and refresh butto
     className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-40 AutoUI_ui_EmailFeed-77"
   >
     <span
-<<<<<<< HEAD
-      className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-      className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
     >
       Email History
     </span>
@@ -19470,21 +18189,13 @@ exports[`Storyshots UI Components/EmailFeed with error message and refresh butto
 exports[`Storyshots UI Components/EmailFeed with extra small list of emails 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -19552,21 +18263,13 @@ exports[`Storyshots UI Components/EmailFeed with extra small list of emails 1`] 
 exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -19790,21 +18493,13 @@ exports[`Storyshots UI Components/EmailFeed with large list of emails 1`] = `
 exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -20055,21 +18750,13 @@ exports[`Storyshots UI Components/EmailFeed with refresh email action 1`] = `
 exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -20320,21 +19007,13 @@ exports[`Storyshots UI Components/EmailFeed with refreshing state 1`] = `
 exports[`Storyshots UI Components/EmailFeed with small list of emails 1`] = `
 <Fragment>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_EmailFeed-22 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       className="AutoUI_ui_EmailFeed-32 AutoUI_ui_EmailFeed-87"
     >
       <span
-<<<<<<< HEAD
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-22"
-=======
-        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_EmailFeed-95 AutoUI_typo-21"
       >
         Email History
       </span>
@@ -20453,11 +19132,7 @@ exports[`Storyshots UI Components/ErrorBox no errors 1`] = `<div />`;
 
 exports[`Storyshots UI Components/ErrorBox with HTML content 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
 >
   <ul
     className="AutoUI_ui_ErrorBox-35"
@@ -20480,11 +19155,7 @@ exports[`Storyshots UI Components/ErrorBox with HTML content 1`] = `
 
 exports[`Storyshots UI Components/ErrorBox with one error 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
 >
   <ul
     className="AutoUI_ui_ErrorBox-35"
@@ -20500,11 +19171,7 @@ exports[`Storyshots UI Components/ErrorBox with one error 1`] = `
 
 exports[`Storyshots UI Components/ErrorBox with two errors 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_ErrorBox-19 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
 >
   <ul
     className="AutoUI_ui_ErrorBox-35"
@@ -20533,11 +19200,7 @@ exports[`Storyshots UI Components/FileLink basic usage 1`] = `
   className="AutoUI_ui_FileLink-16"
 >
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_FileLink-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_FileLink-20 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_FileLink-20 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     <a
       href="https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg"
@@ -20554,11 +19217,7 @@ exports[`Storyshots UI Components/FileLink missing props (does component explode
   className="AutoUI_ui_FileLink-16"
 >
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_FileLink-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_FileLink-20 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_FileLink-20 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     <a
       target="_blank"
@@ -20788,11 +19447,7 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Group (does co
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does components explode?) 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_Filters_Heading-22 AutoUI_typo-22 AutoUI_ui_Filters_Heading-45"
-=======
-  className="AutoUI_ui_Filters_Heading-22 AutoUI_typo-9 AutoUI_ui_Filters_Heading-45"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Filters_Heading-22 AutoUI_typo-21 AutoUI_ui_Filters_Heading-45"
   data-testid="xpui-filters-heading"
 >
   <div
@@ -20813,22 +19468,14 @@ exports[`Storyshots UI Components/Filters/Debug missing props for Heading (does 
 
 exports[`Storyshots UI Components/Filters/Debug missing props for Label (does components explode?) 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_Filters_Label-17 AutoUI_typo-34"
-=======
-  className="AutoUI_ui_Filters_Label-17 AutoUI_typo-19"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Filters_Label-17 AutoUI_typo-31"
   data-testid="xpui-filters-label"
 />
 `;
 
 exports[`Storyshots UI Components/Filters/Debug missing props for SubHeading (does components explode?) 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_Filters_SubHeading-19 AutoUI_typo-22"
-=======
-  className="AutoUI_ui_Filters_SubHeading-19 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Filters_SubHeading-19 AutoUI_typo-21"
 >
   <div
     className="AutoUI_ui_Filters_SubHeading-29"
@@ -21104,11 +19751,7 @@ exports[`Storyshots UI Components/Footer basic usage 1`] = `
       />
     </div>
     <div
-<<<<<<< HEAD
-      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-34"
-=======
-      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-19"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-31"
     >
       2017 © All rights reserved. X-Company Pty Ltd.
     </div>
@@ -21263,11 +19906,7 @@ exports[`Storyshots UI Components/Footer missing props (does component explode?)
   >
     <div />
     <div
-<<<<<<< HEAD
-      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-34"
-=======
-      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-19"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Footer_Footer-108 AutoUI_typo-31"
     />
     <div
       className="AutoUI_ui_Footer_Footer-126"
@@ -21343,11 +19982,7 @@ exports[`Storyshots UI Components/Footer missing props (does component explode?)
 exports[`Storyshots UI Components/FooterBrands basic usage 1`] = `
 <div>
   <h4
-<<<<<<< HEAD
-    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-34"
-=======
-    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-19"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-31"
   >
     Trusted by the world's leading brands since 2006
   </h4>
@@ -21421,11 +20056,7 @@ exports[`Storyshots UI Components/FooterBrands basic usage 1`] = `
 exports[`Storyshots UI Components/FooterBrands missing props (does component explode?) 1`] = `
 <div>
   <h4
-<<<<<<< HEAD
-    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-34"
-=======
-    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-19"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Footer_FooterBrands-78 AutoUI_typo-31"
   />
   <div
     className="AutoUI_ui_Footer_FooterBrands-64"
@@ -21440,11 +20071,7 @@ exports[`Storyshots UI Components/FooterBrands missing props (does component exp
 exports[`Storyshots UI Components/FooterList basic usage 1`] = `
 <div>
   <h4
-<<<<<<< HEAD
-    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34"
-=======
-    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-97 AutoUI_typo-48 AutoUI_typo-31"
   >
     List Example
   </h4>
@@ -21456,11 +20083,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="0"
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
         href="/foo1"
       >
         Item 1 (hidden on desktop (&gt; 1024px))
@@ -21471,11 +20094,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="1"
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
         href="/foo2"
       >
         Item 2 (hidden on desktop (&gt; 1024px))
@@ -21486,11 +20105,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="2"
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
         href="/foo3"
       >
         Item 3
@@ -21501,11 +20116,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="3"
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
         href="/foo4"
       >
         Item 4
@@ -21516,11 +20127,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="4"
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
         href="/foo5"
       >
         Item 5
@@ -21531,11 +20138,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
       key="5"
     >
       <a
-<<<<<<< HEAD
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-40"
-=======
-        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_Footer_FooterList-22 AutoUI_typo-36"
         href="/foo6"
       >
         Item 6
@@ -21548,11 +20151,7 @@ exports[`Storyshots UI Components/FooterList basic usage 1`] = `
 exports[`Storyshots UI Components/FooterList missing props (does component explode?) 1`] = `
 <div>
   <h4
-<<<<<<< HEAD
-    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34"
-=======
-    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Footer_FooterList-56 AutoUI_typo-97 AutoUI_typo-48 AutoUI_typo-31"
   />
   <ul
     className="AutoUI_ui_Footer_FooterList-50"
@@ -22411,11 +21010,7 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch self-controlled sidebar
 
 exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug missing props (does component explode?) 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
-=======
-  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-21"
   data-testid="xpui-headingWithQuickSearch-container"
 >
   <QuickSearchButton
@@ -22445,11 +21040,7 @@ exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug with action handl
 
 exports[`Storyshots UI Components/HeadingWithQuickSearch/Debug without wrapper 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-22"
-=======
-  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_HeadingWithQuickSearch-18 AutoUI_typo-21"
   data-testid="xpui-headingWithQuickSearch-container"
 >
   <div
@@ -22540,11 +21131,7 @@ exports[`Storyshots UI Components/InlineEditor with shouldSaveOnEnter usage: 1`]
 
 exports[`Storyshots UI Components/IssueCollectorButton basic usage 1`] = `
 <button
-<<<<<<< HEAD
-  className="AutoUI_ui_IssueCollectorButton-11 AutoUI_typo-146 AutoUI_typo-53 AutoUI_typo-28 "
-=======
-  className="AutoUI_ui_IssueCollectorButton-11 AutoUI_typo-123 AutoUI_typo-36 AutoUI_typo-14 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_IssueCollectorButton-11 AutoUI_typo-135 AutoUI_typo-48 AutoUI_typo-26 "
 >
   ?
 </button>
@@ -22552,102 +21139,10 @@ exports[`Storyshots UI Components/IssueCollectorButton basic usage 1`] = `
 
 exports[`Storyshots UI Components/IssueCollectorButton missing props (does component explode?) 1`] = `
 <button
-<<<<<<< HEAD
-  className="AutoUI_ui_IssueCollectorButton-11 AutoUI_typo-146 AutoUI_typo-53 AutoUI_typo-28 "
-=======
-  className="AutoUI_ui_IssueCollectorButton-11 AutoUI_typo-123 AutoUI_typo-36 AutoUI_typo-14 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_IssueCollectorButton-11 AutoUI_typo-135 AutoUI_typo-48 AutoUI_typo-26 "
 />
 `;
 
-<<<<<<< HEAD
-exports[`Storyshots UI Components/Keywords basic 1`] = `
-<CreatableSelect
-  className="AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-  clearable={true}
-  filterOptions={[Function]}
-  isOptionUnique={[Function]}
-  isValidNewOption={[Function]}
-  menuRenderer={[Function]}
-  multi={true}
-  name="keywords"
-  newOptionCreator={[Function]}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onInputKeyDown={[Function]}
-  placeholder="Type keywords"
-  promptTextCreator={[Function]}
-  shouldKeyDownEventCreateNewOption={[Function]}
-  value={
-    Array [
-      Object {
-        "label": "a",
-        "value": 0,
-      },
-      Object {
-        "label": "simple",
-        "value": 1,
-      },
-      Object {
-        "label": "string",
-        "value": 2,
-      },
-      Object {
-        "label": "separated",
-        "value": 3,
-      },
-      Object {
-        "label": "by",
-        "value": 4,
-      },
-      Object {
-        "label": "commas",
-        "value": 5,
-      },
-      Object {
-        "label": "with",
-        "value": 6,
-      },
-      Object {
-        "label": "operators",
-        "value": 7,
-      },
-      Object {
-        "label": "AND",
-        "value": 8,
-      },
-      Object {
-        "label": "OR",
-        "value": 9,
-      },
-    ]
-  }
-/>
-`;
-
-exports[`Storyshots UI Components/Keywords missing props (does component explode?) 1`] = `
-<CreatableSelect
-  className="AutoUI_ui_Keywords-15 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-  clearable={true}
-  filterOptions={[Function]}
-  isOptionUnique={[Function]}
-  isValidNewOption={[Function]}
-  menuRenderer={[Function]}
-  multi={true}
-  name="keywords"
-  newOptionCreator={[Function]}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onInputKeyDown={[Function]}
-  placeholder="Type keywords"
-  promptTextCreator={[Function]}
-  shouldKeyDownEventCreateNewOption={[Function]}
-  value={Array []}
-/>
-`;
-
-=======
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
 exports[`Storyshots UI Components/ListExclusionFormPopup standalone 1`] = `
 <div
   style={
@@ -22918,11 +21413,7 @@ exports[`Storyshots UI Components/ListsEditor missing props (does component expl
   data-testid="xpui-listsEditor"
 >
   <h1
-<<<<<<< HEAD
-    className="AutoUI_ui_ListsEditor-59 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34"
-=======
-    className="AutoUI_ui_ListsEditor-59 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_ListsEditor-59 AutoUI_typo-97 AutoUI_typo-48 AutoUI_typo-31"
   >
     Edit 
   </h1>
@@ -23777,607 +22268,6 @@ exports[`Storyshots UI Components/MilestonesScreen first step 1`] = `
           content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo error hic, nemo nostrum iusto recusandae repudiandae eum doloremque necessitatibus doloribus? Provident perferendis illo totam ipsum ut sapiente, assumenda quasi!"
           hasDivider={false}
           heading="First step"
-          headingType="headline"
-          isCentered={false}
-          isMarkdown={false}
-          isPureContent={false}
-          required={false}
-          subHeadingType="heading"
-        />
-        <div>
-          <Button
-            block={false}
-            className=""
-            color="normal"
-            component="button"
-            contentStyle="normal"
-            disabled={false}
-            icon=""
-            iconProps={Object {}}
-            outlined={false}
-            pseudolink={false}
-            raised={false}
-            readOnly={false}
-            rounded={false}
-            selectbox={false}
-            selected={false}
-            size="normal"
-            smallRounded={false}
-            wide={false}
-          >
-            Go to the step 2
-          </Button>
-        </div>
-      </div>
-<<<<<<< HEAD
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Webcam
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="2"
-=======
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots UI Components/MilestonesScreen missing props (does component explode?) 1`] = `
-<div>
-  <div
-    className="AutoUI_ui_MilestonesScreen-22"
-  >
-    <div
-      className="AutoUI_ui_MilestonesScreen-45"
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots UI Components/MilestonesScreen n-th step 1`] = `
-<div>
-  <div
-    className="AutoUI_ui_MilestonesScreen-22"
-  >
-    <div
-      className="AutoUI_ui_MilestonesScreen-45"
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
-    >
-      <div
-        className="AutoUI_ui_MilestonesScreen-58"
-        key="0/.0"
-      >
-        <Text
-          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. At suscipit dicta aliquam sint libero minima officiis alias ducimus. Fugit praesentium itaque, iure molestias aut beatae odit facilis inventore doloremque eaque."
-          hasDivider={false}
-          heading="First subsection"
-          headingType="headline"
-          isCentered={false}
-          isMarkdown={false}
-          isPureContent={false}
-          required={false}
-          subHeadingType="heading"
-        />
-        <div>
-          <Button
-            block={false}
-            className=""
-            color="normal"
-            component="button"
-            contentStyle="normal"
-            disabled={false}
-            icon=""
-            iconProps={Object {}}
-            outlined={false}
-            pseudolink={false}
-            raised={false}
-            readOnly={false}
-            rounded={false}
-            selectbox={false}
-            selected={false}
-            size="normal"
-            smallRounded={false}
-            wide={false}
-          >
-            Go to the step N+1
-          </Button>
-        </div>
-      </div>
-<<<<<<< HEAD
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Message
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="3"
-    >
-=======
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
-      <div
-        className="AutoUI_ui_MilestonesScreen-58"
-        key="1/.1"
-      >
-        <Text
-          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque iusto quisquam, sed eius optio. Obcaecati, hic! Possimus sit magnam vero laboriosam obcaecati nostrum a molestiae amet aut. Corrupti, voluptas."
-          hasDivider={false}
-          heading="Second subsection"
-          headingType="headline"
-          isCentered={false}
-          isMarkdown={false}
-          isPureContent={false}
-          required={false}
-          subHeadingType="heading"
-        />
-        <div>
-          <Button
-            block={false}
-            className=""
-            color="normal"
-            component="button"
-            contentStyle="normal"
-            disabled={false}
-            icon=""
-            iconProps={Object {}}
-            outlined={false}
-            pseudolink={false}
-            raised={false}
-            readOnly={false}
-            rounded={false}
-            selectbox={false}
-            selected={false}
-            size="normal"
-            smallRounded={false}
-            wide={false}
-          >
-            Go to the step N+1
-          </Button>
-        </div>
-      </div>
-<<<<<<< HEAD
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Head
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="4"
-    >
-=======
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
-      <div
-        className="AutoUI_ui_MilestonesScreen-58"
-        key="2/.2"
-      >
-        <Text
-          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minima aperiam dolorem natus repudiandae reprehenderit neque laudantium quasi voluptates architecto, ratione asperiores odio hic rerum alias dolores quo sint culpa!"
-          hasDivider={false}
-          heading="Third subsection"
-          headingType="headline"
-          isCentered={false}
-          isMarkdown={false}
-          isPureContent={false}
-          required={false}
-          subHeadingType="heading"
-        />
-        <div>
-          <Button
-            block={false}
-            className=""
-            color="normal"
-            component="button"
-            contentStyle="normal"
-            disabled={false}
-            icon=""
-            iconProps={Object {}}
-            outlined={false}
-            pseudolink={false}
-            raised={false}
-            readOnly={false}
-            rounded={false}
-            selectbox={false}
-            selected={false}
-            size="normal"
-            smallRounded={false}
-            wide={false}
-          >
-            Go to the step N+1
-          </Button>
-        </div>
-      </div>
-<<<<<<< HEAD
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Diamond
-      </span>
-    </li>
-  </ul>
-=======
-    </div>
-  </div>
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
-</div>
-`;
-
-exports[`Storyshots UI Components/MilestonesScreen second step 1`] = `
-<div>
-  <div
-    className="AutoUI_ui_MilestonesScreen-22"
-  >
-    <div
-      className="AutoUI_ui_MilestonesScreen-45"
-    >
-      <div
-<<<<<<< HEAD
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="default"
-          icon="webcam"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 1
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 isComplete"
-      key="2"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="default"
-          icon="message"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 2
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 isComplete"
-      key="3"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="default"
-          icon="head"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 3
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 isCurrent"
-      key="4"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="inverted"
-          icon="diamond"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 4
-      </span>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Storyshots UI Components/Milestones missing label prop 1`] = `
-<div
-  className="AutoUI_ui_Milestones-27"
->
-  <ul
-    className="AutoUI_ui_Milestones-33"
-  >
-    <li
-      className="AutoUI_ui_Milestones-42 isCurrent"
-      key="1"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="inverted"
-          icon="webcam"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 1
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="2"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="monochrome"
-          icon="message"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 2
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="3"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="monochrome"
-          icon="head"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 3
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="4"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="monochrome"
-          icon="diamond"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 4
-      </span>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Storyshots UI Components/Milestones missing props (does component explode?) 1`] = `""`;
-
-exports[`Storyshots UI Components/Milestones second step is in progress 1`] = `
-<div
-  className="AutoUI_ui_Milestones-27"
->
-  <ul
-    className="AutoUI_ui_Milestones-33"
-  >
-    <li
-      className="AutoUI_ui_Milestones-42 isComplete"
-      key="1"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="default"
-          icon="webcam"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 1
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 isCurrent"
-      key="2"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="inverted"
-          icon="message"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 2
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="3"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="monochrome"
-          icon="head"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 3
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="4"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 "
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="monochrome"
-          icon="diamond"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Level 4
-      </span>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Storyshots UI Components/Milestones with click handlers 1`] = `
-<div
-  className="AutoUI_ui_Milestones-27"
->
-  <ul
-    className="AutoUI_ui_Milestones-33"
-  >
-    <li
-      className="AutoUI_ui_Milestones-42 isCurrent"
-      key="1"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 AutoUI_ui_Milestones-139"
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="inverted"
-          icon="webcam"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Webcam
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="2"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 AutoUI_ui_Milestones-139"
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="monochrome"
-          icon="message"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Message
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="3"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 AutoUI_ui_Milestones-139"
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="monochrome"
-          icon="head"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Head
-      </span>
-    </li>
-    <li
-      className="AutoUI_ui_Milestones-42 "
-      key="4"
-    >
-      <div
-        className="AutoUI_ui_Milestones-92 AutoUI_ui_Milestones-139"
-        onClick={[Function]}
-      >
-        <SvgIcon
-          color="monochrome"
-          icon="diamond"
-        />
-      </div>
-      <span
-        className="AutoUI_ui_Milestones-127 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-      >
-        Diamond
-      </span>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Storyshots UI Components/MilestonesScreen first step 1`] = `
-<div>
-  <div
-    className="AutoUI_ui_MilestonesScreen-22"
-  >
-    <div
-      className="AutoUI_ui_MilestonesScreen-45"
-    >
-      <div
-=======
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
-        className="AutoUI_ui_MilestonesScreen-58"
-        key="0/.0"
-      >
-        <Text
-          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum numquam, beatae, distinctio fugiat eveniet harum, vel sint odit adipisci quos nam soluta pariatur, voluptatibus repudiandae hic mollitia ex iste rem."
-          hasDivider={false}
-<<<<<<< HEAD
-          heading="First step"
-=======
-          heading="First subsection"
-          headingType="headline"
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
           isCentered={false}
           isPureContent={false}
           required={false}
@@ -24403,7 +22293,6 @@ exports[`Storyshots UI Components/MilestonesScreen first step 1`] = `
             smallRounded={false}
             wide={false}
           >
-<<<<<<< HEAD
             Go to the step 2
           </Button>
         </div>
@@ -24590,8 +22479,6 @@ exports[`Storyshots UI Components/MilestonesScreen second step 1`] = `
             smallRounded={false}
             wide={false}
           >
-=======
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
             Go to the step 3
           </Button>
         </div>
@@ -25360,20 +23247,12 @@ exports[`Storyshots UI Components/Note 6 minutes ago 1`] = `
     className="AutoUI_ui_Note-31"
   >
     <span
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-45 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-=======
-      className="AutoUI_ui_Note-45 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-45 AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
     >
       Samwise Gamgee
     </span>
     <div
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-55 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
     >
       6 m ago
     </div>
@@ -25419,20 +23298,12 @@ exports[`Storyshots UI Components/Note just now 1`] = `
     className="AutoUI_ui_Note-31"
   >
     <span
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-45 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-=======
-      className="AutoUI_ui_Note-45 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-45 AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
     >
       Samwise Gamgee
     </span>
     <div
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-55 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
     >
       just now
     </div>
@@ -25469,11 +23340,7 @@ exports[`Storyshots UI Components/Note missing props (does component explode?) 1
     className="AutoUI_ui_Note-31"
   >
     <div
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-55 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
     />
     <div>
       <FileLinks />
@@ -25495,20 +23362,12 @@ exports[`Storyshots UI Components/Note no avatar, 2 hours ago 1`] = `
     className="AutoUI_ui_Note-31"
   >
     <span
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-45 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-=======
-      className="AutoUI_ui_Note-45 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-45 AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
     >
       Samwise Gamgee
     </span>
     <div
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-55 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
     >
       2 h ago
     </div>
@@ -25545,11 +23404,7 @@ exports[`Storyshots UI Components/Note note with markdown text with break lines 
     className="AutoUI_ui_Note-31"
   >
     <div
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-55 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
     />
     <div
       className="AutoUI_ui_Note-65"
@@ -25589,11 +23444,7 @@ exports[`Storyshots UI Components/Note note with unparseable markdown text 1`] =
     className="AutoUI_ui_Note-31"
   >
     <div
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-55 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
     />
     <div
       className="AutoUI_ui_Note-65"
@@ -25637,20 +23488,12 @@ exports[`Storyshots UI Components/Note older than 1 day 1`] = `
     className="AutoUI_ui_Note-31"
   >
     <span
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-45 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-=======
-      className="AutoUI_ui_Note-45 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-45 AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
     >
       Samwise Gamgee
     </span>
     <div
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-55 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
     >
       11-11-2019
     </div>
@@ -25696,20 +23539,12 @@ exports[`Storyshots UI Components/Note showing note type in sub header 1`] = `
     className="AutoUI_ui_Note-31"
   >
     <span
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-45 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-=======
-      className="AutoUI_ui_Note-45 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-45 AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
     >
       Samwise Gamgee
     </span>
     <div
-<<<<<<< HEAD
-      className="AutoUI_ui_Note-55 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-      className="AutoUI_ui_Note-55 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_Note-55 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
     >
       just now
       , in Interview Notes
@@ -26250,11 +24085,7 @@ exports[`Storyshots UI Components/RichTextEditor with initial value 1`] = `
 >
   <div />
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     0
     /
@@ -26269,11 +24100,7 @@ exports[`Storyshots UI Components/RichTextEditor with initial value longer than 
 >
   <div />
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     0
     /
@@ -26288,11 +24115,7 @@ exports[`Storyshots UI Components/RichTextEditor with knobs 1`] = `
 >
   <div />
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_RichTextEditor-42 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     0
     /
@@ -26314,198 +24137,6 @@ exports[`Storyshots UI Components/RoadmapHero basic usage 1`] = `
       heading="Your roadmap to X‑Team"
       headingType="mainHeading"
       isCentered={false}
-      isMarkdown={false}
-      isPureContent={false}
-      required={false}
-      subHeadingType="heading"
-    />
-  </div>
-  <div>
-    <img
-      alt="X-Team Roadmap"
-      src="test-file-stub"
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots UI Components/RoadmapHero missing props (does component explode?) 1`] = `
-<div
-  className="AutoUI_ui_RoadmapHero-25"
->
-  <div
-<<<<<<< HEAD
-    className="AutoUI_ui_Roadmap-40 AutoUI_ui_Roadmap-27 "
-    key=".2"
-  >
-    <div
-      className="AutoUI_ui_Roadmap-83"
-    >
-      <RoadmapLevel
-        body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
-        cta={
-          Object {
-            "handle": [Function],
-            "label": "",
-          }
-        }
-        heading="Time to show off"
-        icon="message"
-        isActive={false}
-        isCentered={false}
-        level={3}
-      />
-    </div>
-    <div
-      className="AutoUI_ui_Roadmap-109"
-    >
-      <RoadmapTimelineElement
-        isDone={false}
-      />
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Roadmap-40 AutoUI_ui_Roadmap-27 "
-    key=".3"
-  >
-    <div
-      className="AutoUI_ui_Roadmap-83"
-    >
-      <RoadmapLevel
-        body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
-        cta={
-          Object {
-            "handle": [Function],
-            "label": "",
-          }
-        }
-        heading="Show us the code!"
-        icon="terminal"
-        isActive={false}
-        isCentered={false}
-        level={4}
-      />
-    </div>
-    <div
-      className="AutoUI_ui_Roadmap-109"
-    >
-      <RoadmapTimelineElement
-        isDone={false}
-      />
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Roadmap-40 AutoUI_ui_Roadmap-27 "
-    key=".4"
-  >
-    <div
-      className="AutoUI_ui_Roadmap-83"
-    >
-      <RoadmapLevel
-        body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
-        cta={
-          Object {
-            "handle": [Function],
-            "label": "",
-          }
-        }
-        heading="Being shortlisted"
-        icon="diamond"
-        isActive={false}
-        isCentered={false}
-        level={5}
-      />
-    </div>
-    <div
-      className="AutoUI_ui_Roadmap-109"
-    >
-      <RoadmapTimelineElement
-        isDone={false}
-      />
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Roadmap-40 AutoUI_ui_Roadmap-27 isSecondLast"
-    key=".5"
-  >
-    <div
-      className="AutoUI_ui_Roadmap-83"
-    >
-      <RoadmapLevel
-        body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
-        cta={
-          Object {
-            "handle": [Function],
-            "label": "",
-          }
-        }
-        heading="Partner match-up and interviews"
-        icon="talking"
-        isActive={false}
-        isCentered={false}
-        level={6}
-      />
-    </div>
-    <div
-      className="AutoUI_ui_Roadmap-109"
-    >
-      <RoadmapTimelineElement
-        isDone={false}
-      />
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Roadmap-40 AutoUI_ui_Roadmap-27 isFinal"
-    key=".6"
-  >
-    <div
-      className="AutoUI_ui_Roadmap-83"
-    >
-      <RoadmapLevel
-        body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
-        cta={
-          Object {
-            "handle": [Function],
-            "label": "Let's do this.",
-          }
-        }
-        heading="Final level: you're in."
-        icon="trophy"
-        isActive={false}
-        isCentered={true}
-        level={7}
-      />
-    </div>
-    <div
-      className="AutoUI_ui_Roadmap-109"
-    >
-      <RoadmapTimelineElement
-        isDone={false}
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots UI Components/Roadmap missing props (does component explode?) 1`] = `
-<div
-  className="AutoUI_ui_Roadmap-36 AutoUI_ui_Roadmap-27"
-/>
-`;
-
-exports[`Storyshots UI Components/RoadmapHero basic usage 1`] = `
-<div
-  className="AutoUI_ui_RoadmapHero-25"
->
-  <div
-    className="AutoUI_ui_RoadmapHero-39"
-  >
-    <Text
-      content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
-      hasDivider={true}
-      heading="Your roadmap to X‑Team"
-      headingType="mainHeading"
-      isCentered={false}
       isPureContent={false}
       required={false}
     />
@@ -26524,8 +24155,6 @@ exports[`Storyshots UI Components/RoadmapHero missing props (does component expl
   className="AutoUI_ui_RoadmapHero-25"
 >
   <div
-=======
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
     className="AutoUI_ui_RoadmapHero-39"
   >
     <Text
@@ -26571,734 +24200,6 @@ exports[`Storyshots UI Components/RoadmapHero with image url in props 1`] = `
 </div>
 `;
 
-<<<<<<< HEAD
-exports[`Storyshots UI Components/RoadmapLevel active state 1`] = `
-<section
-  className="AutoUI_ui_RoadmapLevel-31 AutoUI_ui_RoadmapLevel-46"
->
-  <SvgIcon
-    color="default"
-    icon="webcam"
-  />
-  <Text
-    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
-    hasDivider={false}
-    isCentered={false}
-    isPureContent={false}
-    level="Level 1"
-    required={false}
-    subHeading="Take the stage"
-    subHeadingType="heading"
-  />
-</section>
-`;
-
-exports[`Storyshots UI Components/RoadmapLevel basic usage 1`] = `
-<section
-  className="AutoUI_ui_RoadmapLevel-31 "
->
-  <SvgIcon
-    color="default"
-    icon="head"
-  />
-  <Text
-    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
-    hasDivider={false}
-    isCentered={false}
-    isPureContent={false}
-    level="Level 1"
-    required={false}
-    subHeading="The challenge"
-    subHeadingType="heading"
-  />
-</section>
-`;
-
-exports[`Storyshots UI Components/RoadmapLevel centered state with CTA button 1`] = `
-<section
-  className="AutoUI_ui_RoadmapLevel-31 AutoUI_ui_RoadmapLevel-47"
->
-  <SvgIcon
-    color="default"
-    icon="message"
-  />
-  <Text
-    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, fuga suscipit rem voluptatibus sunt sapiente. Molestiae aliquam at libero repellat, asperiores, recusandae, praesentium ratione officia molestias nobis temporibus ipsam, repudiandae!"
-    hasDivider={false}
-    isCentered={true}
-    isPureContent={false}
-    level="Level 1"
-    required={false}
-    subHeading="Time to show off"
-    subHeadingType="heading"
-  />
-  <Button
-    block={true}
-    className="AutoUI_ui_RoadmapLevel-51"
-    color="normal"
-    component="button"
-    contentStyle="normal"
-    data-testid="xpui-roadmapLevel-button-cta"
-    disabled={false}
-    icon=""
-    iconProps={Object {}}
-    onClick={[Function]}
-    outlined={false}
-    pseudolink={false}
-    raised={false}
-    readOnly={false}
-    rounded={false}
-    selectbox={false}
-    selected={false}
-    size="normal"
-    smallRounded={false}
-    wide={false}
-  >
-    Let's do this.
-  </Button>
-</section>
-`;
-
-exports[`Storyshots UI Components/RoadmapLevel missing props (does component explode?) 1`] = `""`;
-
-exports[`Storyshots UI Components/RoadmapTimelineElement active state 1`] = `
-<div
-  className="AutoUI_ui_RoadmapTimelineElement-14 AutoUI_ui_RoadmapTimelineElement-34"
->
-  <div
-    className="AutoUI_ui_RoadmapTimelineElement-39"
-  >
-    <svg
-      className="AutoUI_ui_RoadmapTimelineElement-65 AutoUI_ui_RoadmapTimelineElement-75"
-      viewBox="0 0 52 52"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        className="AutoUI_ui_RoadmapTimelineElement-45 AutoUI_ui_RoadmapTimelineElement-52"
-        cx="26"
-        cy="26"
-        fill="none"
-        r="25"
-      />
-      <path
-        className="AutoUI_ui_RoadmapTimelineElement-78 AutoUI_ui_RoadmapTimelineElement-83"
-        d="M14.1 27.2l7.1 7.2 16.7-16.8"
-        fill="none"
-      />
-    </svg>
-  </div>
-</div>
-`;
-
-exports[`Storyshots UI Components/RoadmapTimelineElement basic usage 1`] = `
-<div
-  className="AutoUI_ui_RoadmapTimelineElement-14 "
->
-  <div
-    className="AutoUI_ui_RoadmapTimelineElement-39"
-  >
-    <svg
-      className="AutoUI_ui_RoadmapTimelineElement-65 "
-      viewBox="0 0 52 52"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        className="AutoUI_ui_RoadmapTimelineElement-45 "
-        cx="26"
-        cy="26"
-        fill="none"
-        r="25"
-      />
-      <path
-        className="AutoUI_ui_RoadmapTimelineElement-78 "
-        d="M14.1 27.2l7.1 7.2 16.7-16.8"
-        fill="none"
-      />
-    </svg>
-  </div>
-</div>
-`;
-
-exports[`Storyshots UI Components/RoadmapTimelineElement missing props (does component explode?) 1`] = `
-<div
-  className="AutoUI_ui_RoadmapTimelineElement-14 "
->
-  <div
-    className="AutoUI_ui_RoadmapTimelineElement-39"
-  >
-    <svg
-      className="AutoUI_ui_RoadmapTimelineElement-65 "
-      viewBox="0 0 52 52"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        className="AutoUI_ui_RoadmapTimelineElement-45 "
-        cx="26"
-        cy="26"
-        fill="none"
-        r="25"
-      />
-      <path
-        className="AutoUI_ui_RoadmapTimelineElement-78 "
-        d="M14.1 27.2l7.1 7.2 16.7-16.8"
-        fill="none"
-      />
-    </svg>
-  </div>
-</div>
-`;
-
-exports[`Storyshots UI Components/SearchForm card view mode 1`] = `
-<div
-  className="AutoUI_ui_SearchForm-20"
->
-  <form
-    className="AutoUI_ui_SearchForm-24"
-    onSubmit={[Function]}
-  >
-    <div
-      className="AutoUI_ui_SearchForm-28"
-    >
-      <div
-        className="AutoUI_ui_SearchForm-35"
-      >
-        <SelectBox
-          append={
-            <Button
-              block={false}
-              className="AutoUI_ui_SearchForm-112"
-              color="normal"
-              component="button"
-              contentStyle="normal"
-              disabled={false}
-              icon=""
-              iconProps={Object {}}
-              onClick={[Function]}
-              outlined={false}
-              pseudolink={false}
-              raised={false}
-              readOnly={false}
-              rounded={false}
-              selectbox={true}
-              selected={false}
-              size="small"
-              smallRounded={false}
-              type="button"
-              wide={false}
-            >
-              <span>
-                <SvgIcon
-                  color="default"
-                  icon="edit"
-                />
-                 Edit lists
-              </span>
-            </Button>
-          }
-          areItemsToggleable={false}
-          autoFocus={true}
-          closeDropdown={false}
-          collectionLabel="List"
-          dismissTimeout={2500}
-          expanded={false}
-          hasClear={true}
-          hasSearch={true}
-          inputType="checkbox"
-          items={
-            Array [
-              Object {
-                "id": 1,
-                "selected": true,
-                "value": "a selected list",
-              },
-            ]
-          }
-          lined={false}
-          onClick={[Function]}
-          placeholder="Select List"
-          shouldSortItems={false}
-          size="small"
-          visibleItems={4}
-        />
-      </div>
-    </div>
-    <div
-      className="AutoUI_ui_SearchForm-69"
-    >
-      <div
-        className="AutoUI_ui_SearchForm-76"
-      >
-        <SelectBox
-          areItemsToggleable={true}
-          autoFocus={true}
-          closeDropdown={false}
-          collectionLabel="Field"
-          dismissTimeout={2500}
-          expanded={false}
-          hasClear={false}
-          hasSearch={true}
-          inputType="checkbox"
-          items={
-            Array [
-              Object {
-                "id": 1,
-                "value": "an unselected field",
-              },
-            ]
-          }
-          lined={false}
-          onClick={[Function]}
-          placeholder="Select Field"
-          shouldSortItems={true}
-          size="small"
-          visibleItems={4}
-        />
-      </div>
-      <div
-        className="AutoUI_ui_SearchForm-83"
-      >
-        <SelectBox
-          areItemsToggleable={true}
-          autoFocus={true}
-          closeDropdown={false}
-          collectionLabel="Status"
-          dismissTimeout={2500}
-          expanded={false}
-          hasClear={false}
-          hasSearch={false}
-          inputType="checkbox"
-          items={
-            Array [
-              Object {
-                "id": 1,
-                "value": "Waitlist",
-              },
-              Object {
-                "id": 2,
-                "value": "Shortlisted",
-              },
-              Object {
-                "id": 3,
-                "value": "Booked",
-              },
-              Object {
-                "id": 4,
-                "value": "Booked (Available Soon)",
-              },
-              Object {
-                "id": 5,
-                "value": "Runway",
-              },
-              Object {
-                "id": 6,
-                "value": "Out",
-              },
-              Object {
-                "id": 7,
-                "value": "In Review",
-              },
-            ]
-          }
-          lined={false}
-          onSelect={[Function]}
-          placeholder="Status"
-          shouldSortItems={true}
-          size="small"
-          visibleItems={4}
-        />
-      </div>
-    </div>
-    <div
-      className="AutoUI_ui_SearchForm-89"
-    >
-      <Keywords
-        className="AutoUI_ui_SearchForm-55"
-        onChange={[Function]}
-        onSubmit={[Function]}
-        values="a keyword,or,two,and,much more"
-      />
-      <Button
-        block={false}
-        className="AutoUI_ui_SearchForm-95"
-        color="normal"
-        component="button"
-        contentStyle="normal"
-        disabled={false}
-        icon=""
-        iconProps={Object {}}
-        onClick={[Function]}
-        outlined={false}
-        pseudolink={false}
-        raised={true}
-        readOnly={false}
-        rounded={false}
-        selectbox={false}
-        selected={false}
-        size="normal"
-        smallRounded={false}
-        wide={false}
-      >
-        Show
-      </Button>
-    </div>
-  </form>
-  <div
-    className="AutoUI_ui_SearchForm-105"
-  >
-    Here it goes ApplicantsStatusFilter component
-  </div>
-</div>
-`;
-
-exports[`Storyshots UI Components/SearchForm missing props (does component explode?) 1`] = `
-<div
-  className="AutoUI_ui_SearchForm-20"
->
-  <form
-    className="AutoUI_ui_SearchForm-24"
-  >
-    <div
-      className="AutoUI_ui_SearchForm-28"
-    >
-      <div
-        className="AutoUI_ui_SearchForm-35"
-      >
-        <SelectBox
-          append={
-            <Button
-              block={false}
-              className="AutoUI_ui_SearchForm-112"
-              color="normal"
-              component="button"
-              contentStyle="normal"
-              disabled={false}
-              icon=""
-              iconProps={Object {}}
-              onClick={[Function]}
-              outlined={false}
-              pseudolink={false}
-              raised={false}
-              readOnly={false}
-              rounded={false}
-              selectbox={true}
-              selected={false}
-              size="small"
-              smallRounded={false}
-              type="button"
-              wide={false}
-            >
-              <span>
-                <SvgIcon
-                  color="default"
-                  icon="edit"
-                />
-                 Edit lists
-              </span>
-            </Button>
-          }
-          areItemsToggleable={false}
-          autoFocus={true}
-          closeDropdown={false}
-          collectionLabel="List"
-          dismissTimeout={2500}
-          expanded={false}
-          hasClear={true}
-          hasSearch={true}
-          inputType="checkbox"
-          items={Array []}
-          lined={false}
-          placeholder="Select List"
-          shouldSortItems={false}
-          size="small"
-          visibleItems={4}
-        />
-      </div>
-    </div>
-    <div
-      className="AutoUI_ui_SearchForm-69"
-    >
-      <div
-        className="AutoUI_ui_SearchForm-76"
-      >
-        <SelectBox
-          areItemsToggleable={true}
-          autoFocus={true}
-          closeDropdown={false}
-          collectionLabel="Field"
-          dismissTimeout={2500}
-          expanded={false}
-          hasClear={false}
-          hasSearch={true}
-          inputType="checkbox"
-          items={Array []}
-          lined={false}
-          placeholder="Select Field"
-          shouldSortItems={true}
-          size="small"
-          visibleItems={4}
-        />
-      </div>
-      <div
-        className="AutoUI_ui_SearchForm-83"
-      >
-        <SelectBox
-          areItemsToggleable={true}
-          autoFocus={true}
-          closeDropdown={false}
-          collectionLabel="Status"
-          dismissTimeout={2500}
-          expanded={false}
-          hasClear={false}
-          hasSearch={false}
-          inputType="checkbox"
-          items={Array []}
-          lined={false}
-          placeholder="Status"
-          shouldSortItems={true}
-          size="small"
-          visibleItems={4}
-        />
-      </div>
-    </div>
-    <div
-      className="AutoUI_ui_SearchForm-89"
-    >
-      <Keywords
-        className="AutoUI_ui_SearchForm-55"
-        values=""
-      />
-      <Button
-        block={false}
-        className="AutoUI_ui_SearchForm-95"
-        color="normal"
-        component="button"
-        contentStyle="normal"
-        disabled={false}
-        icon=""
-        iconProps={Object {}}
-        outlined={false}
-        pseudolink={false}
-        raised={true}
-        readOnly={false}
-        rounded={false}
-        selectbox={false}
-        selected={false}
-        size="normal"
-        smallRounded={false}
-        wide={false}
-      >
-        Show
-      </Button>
-    </div>
-  </form>
-</div>
-`;
-
-exports[`Storyshots UI Components/SearchForm tabular view mode 1`] = `
-<div
-  className="AutoUI_ui_SearchForm-118"
->
-  <form
-    className="AutoUI_ui_SearchForm-125"
-    onSubmit={[Function]}
-  >
-    <div
-      className="AutoUI_ui_SearchForm-135"
-    >
-      <div
-        className="AutoUI_ui_SearchForm-144"
-      >
-        <SelectBox
-          append={
-            <Button
-              block={false}
-              className="AutoUI_ui_SearchForm-217"
-              color="normal"
-              component="button"
-              contentStyle="normal"
-              disabled={false}
-              icon=""
-              iconProps={Object {}}
-              onClick={[Function]}
-              outlined={false}
-              pseudolink={false}
-              raised={false}
-              readOnly={false}
-              rounded={false}
-              selectbox={true}
-              selected={false}
-              size="small"
-              smallRounded={false}
-              type="button"
-              wide={false}
-            >
-              <span>
-                <SvgIcon
-                  color="default"
-                  icon="edit"
-                />
-                 Edit lists
-              </span>
-            </Button>
-          }
-          areItemsToggleable={false}
-          autoFocus={true}
-          closeDropdown={false}
-          collectionLabel="List"
-          dismissTimeout={2500}
-          expanded={false}
-          hasClear={true}
-          hasSearch={true}
-          inputType="checkbox"
-          items={
-            Array [
-              Object {
-                "id": 1,
-                "selected": true,
-                "value": "a selected list",
-              },
-            ]
-          }
-          lined={false}
-          onClick={[Function]}
-          placeholder="Select List"
-          shouldSortItems={false}
-          size="small"
-          visibleItems={4}
-        />
-      </div>
-    </div>
-    <div
-      className="AutoUI_ui_SearchForm-174"
-    >
-      <div
-        className="AutoUI_ui_SearchForm-179"
-      >
-        <SelectBox
-          areItemsToggleable={true}
-          autoFocus={true}
-          closeDropdown={false}
-          collectionLabel="Field"
-          dismissTimeout={2500}
-          expanded={false}
-          hasClear={false}
-          hasSearch={true}
-          inputType="checkbox"
-          items={
-            Array [
-              Object {
-                "id": 1,
-                "value": "an unselected field",
-              },
-            ]
-          }
-          lined={false}
-          onClick={[Function]}
-          placeholder="Select Field"
-          shouldSortItems={true}
-          size="small"
-          visibleItems={4}
-        />
-      </div>
-      <div
-        className="AutoUI_ui_SearchForm-186"
-      >
-        <SelectBox
-          areItemsToggleable={true}
-          autoFocus={true}
-          closeDropdown={false}
-          collectionLabel="Status"
-          dismissTimeout={2500}
-          expanded={false}
-          hasClear={false}
-          hasSearch={false}
-          inputType="checkbox"
-          items={
-            Array [
-              Object {
-                "id": 1,
-                "value": "Waitlist",
-              },
-              Object {
-                "id": 2,
-                "value": "Shortlisted",
-              },
-              Object {
-                "id": 3,
-                "value": "Booked",
-              },
-              Object {
-                "id": 4,
-                "value": "Booked (Available Soon)",
-              },
-              Object {
-                "id": 5,
-                "value": "Runway",
-              },
-              Object {
-                "id": 6,
-                "value": "Out",
-              },
-              Object {
-                "id": 7,
-                "value": "In Review",
-              },
-            ]
-          }
-          lined={false}
-          onSelect={[Function]}
-          placeholder="Status"
-          shouldSortItems={true}
-          size="small"
-          visibleItems={4}
-        />
-      </div>
-    </div>
-    <div
-      className="AutoUI_ui_SearchForm-192"
-    >
-      <Keywords
-        className="AutoUI_ui_SearchForm-165"
-        onChange={[Function]}
-        onSubmit={[Function]}
-        values="a keyword,or,two,and,much more"
-      />
-      <Button
-        block={false}
-        className="AutoUI_ui_SearchForm-198"
-        color="normal"
-        component="button"
-        contentStyle="normal"
-        disabled={false}
-        icon=""
-        iconProps={Object {}}
-        onClick={[Function]}
-        outlined={false}
-        pseudolink={false}
-        raised={true}
-        readOnly={false}
-        rounded={false}
-        selectbox={false}
-        selected={false}
-        size="normal"
-        smallRounded={false}
-        wide={false}
-      >
-        Show
-      </Button>
-    </div>
-  </form>
-  Here it goes the tabular filters
-  <div
-    className="AutoUI_ui_SearchForm-205"
-  >
-    Here it goes ApplicantsStatusFilter component
-  </div>
-</div>
-`;
-
-=======
->>>>>>> 1ad8533a349e... Remove unused UI components (#430)
 exports[`Storyshots UI Components/SearchResult default 1`] = `
 <div
   style={
@@ -38248,11 +35149,7 @@ exports[`Storyshots UI Components/SelectBox complete view for Edit Lists 1`] = `
       }
     >
       <li
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   "
-=======
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24   "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_SelectBox-209 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36   "
         key="2"
       >
         <div
@@ -38308,11 +35205,7 @@ exports[`Storyshots UI Components/SelectBox complete view for Edit Lists 1`] = `
         </div>
       </li>
       <li
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   "
-=======
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24   "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_SelectBox-209 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36   "
         key="3"
       >
         <div
@@ -38368,11 +35261,7 @@ exports[`Storyshots UI Components/SelectBox complete view for Edit Lists 1`] = `
         </div>
       </li>
       <li
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   "
-=======
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24   "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_SelectBox-209 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36   "
         key="4"
       >
         <div
@@ -38428,11 +35317,7 @@ exports[`Storyshots UI Components/SelectBox complete view for Edit Lists 1`] = `
         </div>
       </li>
       <li
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   "
-=======
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24   "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_SelectBox-209 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36   "
         key="5"
       >
         <div
@@ -38488,11 +35373,7 @@ exports[`Storyshots UI Components/SelectBox complete view for Edit Lists 1`] = `
         </div>
       </li>
       <li
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40   "
-=======
-        className="AutoUI_ui_SelectBox-209 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24   "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_SelectBox-209 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36   "
         key="6"
       >
         <div
@@ -39026,11 +35907,7 @@ exports[`Storyshots UI Components/SelectBox simple view for Search module with c
     indicator={false}
     label={
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_SelectBox-43 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
       >
         <div>
           <div
@@ -39088,11 +35965,7 @@ exports[`Storyshots UI Components/SelectBox simple view for Search module with c
     indicator={false}
     label={
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_SelectBox-43 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
       >
         <div>
           <div
@@ -39150,11 +36023,7 @@ exports[`Storyshots UI Components/SelectBox simple view for Search module withou
     indicator={false}
     label={
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_SelectBox-43 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
       >
         <div>
           <div
@@ -39212,11 +36081,7 @@ exports[`Storyshots UI Components/SelectBox simple view for Search module withou
     indicator={false}
     label={
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_SelectBox-43 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
       >
         <div>
           <div
@@ -39274,11 +36139,7 @@ exports[`Storyshots UI Components/SelectBox simple view, selectable with many se
     indicator={false}
     label={
       <div
-<<<<<<< HEAD
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 "
-=======
-        className="AutoUI_ui_SelectBox-43 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 "
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+        className="AutoUI_ui_SelectBox-43 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 "
       >
         <div>
           <div
@@ -40484,20 +37345,12 @@ exports[`Storyshots UI Components/SettingsScreen missing props (does component e
     className="AutoUI_ui_SettingsScreen-19"
   >
     <h1
-<<<<<<< HEAD
-      className="AutoUI_ui_SettingsScreen-29 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34"
-=======
-      className="AutoUI_ui_SettingsScreen-29 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_SettingsScreen-29 AutoUI_typo-97 AutoUI_typo-48 AutoUI_typo-31"
     >
       Settings
     </h1>
     <ul
-<<<<<<< HEAD
-      className="AutoUI_ui_SettingsScreen-37 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-=======
-      className="AutoUI_ui_SettingsScreen-37 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+      className="AutoUI_ui_SettingsScreen-37 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
     />
   </div>
   <div
@@ -40556,7 +37409,7 @@ exports[`Storyshots UI Components/StatusFilter default 1`] = `
 exports[`Storyshots UI Components/StatusFilter disabled 1`] = `
 <Fragment>
   <label
-    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_ui_StatusFilter-26"
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_ui_StatusFilter-26"
     data-checked={false}
     data-testid="xpui-statusFilter-accepted"
     key="status-accepted"
@@ -40570,7 +37423,7 @@ exports[`Storyshots UI Components/StatusFilter disabled 1`] = `
     accepted
   </label>
   <label
-    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_ui_StatusFilter-26"
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_ui_StatusFilter-26"
     data-checked={false}
     data-testid="xpui-statusFilter-excluded"
     key="status-excluded"
@@ -40589,7 +37442,7 @@ exports[`Storyshots UI Components/StatusFilter disabled 1`] = `
 exports[`Storyshots UI Components/StatusFilter/Debug missing props (does component explode?) 1`] = `
 <Fragment>
   <label
-    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_ui_StatusFilter-26"
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_ui_StatusFilter-26"
     data-checked={false}
     data-testid="xpui-statusFilter-accepted"
     key="status-accepted"
@@ -40603,7 +37456,7 @@ exports[`Storyshots UI Components/StatusFilter/Debug missing props (does compone
     accepted
   </label>
   <label
-    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24 AutoUI_ui_StatusFilter-26"
+    className="AutoUI_ui_StatusFilter-13 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_ui_StatusFilter-26"
     data-checked={false}
     data-testid="xpui-statusFilter-excluded"
     key="status-excluded"
@@ -42367,11 +39220,7 @@ exports[`Storyshots UI Components/SvgIcon text gray color 1`] = `
 
 exports[`Storyshots UI Components/Tabs basic usage 1`] = `
 <section
-<<<<<<< HEAD
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40"
-=======
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
 >
   <nav
     className="AutoUI_ui_Tabs_Tabs-22"
@@ -42440,11 +39289,7 @@ exports[`Storyshots UI Components/Tabs basic usage 1`] = `
     </ul>
   </nav>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       aria-hidden="false"
@@ -42465,11 +39310,7 @@ exports[`Storyshots UI Components/Tabs basic usage 1`] = `
 
 exports[`Storyshots UI Components/Tabs default active last tab 1`] = `
 <section
-<<<<<<< HEAD
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40"
-=======
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
 >
   <nav
     className="AutoUI_ui_Tabs_Tabs-22"
@@ -42538,11 +39379,7 @@ exports[`Storyshots UI Components/Tabs default active last tab 1`] = `
     </ul>
   </nav>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       aria-hidden="false"
@@ -42563,11 +39400,7 @@ exports[`Storyshots UI Components/Tabs default active last tab 1`] = `
 
 exports[`Storyshots UI Components/Tabs missing props (does component explode?) 1`] = `
 <section
-<<<<<<< HEAD
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40"
-=======
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
 >
   <nav
     className="AutoUI_ui_Tabs_Tabs-22"
@@ -42578,12 +39411,7 @@ exports[`Storyshots UI Components/Tabs missing props (does component explode?) 1
     />
   </nav>
   <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       aria-hidden="false"
@@ -42592,20 +39420,12 @@ exports[`Storyshots UI Components/Tabs missing props (does component explode?) 1
       role="tabpanel"
     />
   </div>
-=======
-    className="AutoUI_ui_Text-62 AutoUI_typo-158 AutoUI_typo-41 AutoUI_typo-28"
-  />
->>>>>>> 0530a9bebe5b... Organise Styleguides in the Storybook (#433)
 </section>
 `;
 
 exports[`Storyshots UI Components/Tabs one tab 1`] = `
 <section
-<<<<<<< HEAD
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40"
-=======
-  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_Tabs_Tabs-15 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
 >
   <nav
     className="AutoUI_ui_Tabs_Tabs-22"
@@ -42636,11 +39456,7 @@ exports[`Storyshots UI Components/Tabs one tab 1`] = `
     </ul>
   </nav>
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40"
-=======
-    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+    className="AutoUI_ui_Tabs_Tabs-107 AutoUI_typo-177 AutoUI_typo-48 AutoUI_typo-36"
   >
     <div
       aria-hidden="false"
@@ -42664,19 +39480,8 @@ exports[`Storyshots UI Components/Text content with HTML tags 1`] = `
   className="AutoUI_ui_Text-29"
 >
   <div
-<<<<<<< HEAD
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
-=======
-    className="AutoUI_ui_Text-62 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
-  />
-</section>
-`;
-
-exports[`Storyshots UI Components/Text/Demos content with HTML tags 1`] = `
-<Text
-  content={
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
     <div>
       <h1>
         H1
@@ -42755,7 +39560,7 @@ exports[`Storyshots UI Components/Text empty text example  1`] = `
   className="AutoUI_ui_Text-29"
 >
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   />
 </section>
 `;
@@ -42765,12 +39570,12 @@ exports[`Storyshots UI Components/Text heading 1`] = `
   className="AutoUI_ui_Text-29"
 >
   <h1
-    className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+    className="undefined AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
   >
     Your roadmap to X-Team
   </h1>
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -42779,15 +39584,15 @@ exports[`Storyshots UI Components/Text heading 1`] = `
 
 exports[`Storyshots UI Components/Text heading with center align 1`] = `
 <section
-  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
+  className="AutoUI_ui_Text-29 AutoUI_ui_Text-65"
 >
   <h1
-    className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+    className="undefined AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
   >
     Your roadmap to X-Team
   </h1>
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -42796,18 +39601,18 @@ exports[`Storyshots UI Components/Text heading with center align 1`] = `
 
 exports[`Storyshots UI Components/Text heading with center align and divider 1`] = `
 <section
-  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
+  className="AutoUI_ui_Text-29 AutoUI_ui_Text-65"
 >
   <h1
-    className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+    className="undefined AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
   >
     Your roadmap to X-Team
   </h1>
   <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192 AutoUI_ui_Text-52"
+    className="AutoUI_ui_Text-41 AutoUI_ui_Text-67"
   />
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -42819,15 +39624,15 @@ exports[`Storyshots UI Components/Text heading with divider 1`] = `
   className="AutoUI_ui_Text-29"
 >
   <h1
-    className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+    className="undefined AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
   >
     Your roadmap to X-Team
   </h1>
   <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192"
+    className="AutoUI_ui_Text-41"
   />
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -42839,22 +39644,22 @@ exports[`Storyshots UI Components/Text heading with divider and no content 1`] =
   className="AutoUI_ui_Text-29"
 >
   <h1
-    className="undefined AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
+    className="undefined AutoUI_typo-84 AutoUI_typo-48 AutoUI_typo-21"
   >
     Your roadmap to X-Team
   </h1>
   <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192"
+    className="AutoUI_ui_Text-41"
   />
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   />
 </section>
 `;
 
 exports[`Storyshots UI Components/Text pure content with no wrappers around 1`] = `
 <span
-  className="AutoUI_ui_Text-48 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+  className="AutoUI_ui_Text-63 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
 >
   Just a sample text
 </span>
@@ -42862,7 +39667,7 @@ exports[`Storyshots UI Components/Text pure content with no wrappers around 1`] 
 
 exports[`Storyshots UI Components/Text pure content with no wrappers around and Required 1`] = `
 <span
-  className="AutoUI_ui_Text-48 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_Text-57"
+  className="AutoUI_ui_Text-63 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_ui_Text-72"
 >
   Just a required text
 </span>
@@ -42873,7 +39678,7 @@ exports[`Storyshots UI Components/Text required 1`] = `
   className="AutoUI_ui_Text-29"
 >
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40 AutoUI_ui_Text-57"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36 AutoUI_ui_Text-72"
   >
     Just a required text
   </div>
@@ -42882,15 +39687,15 @@ exports[`Storyshots UI Components/Text required 1`] = `
 
 exports[`Storyshots UI Components/Text sub Heading with center align 1`] = `
 <section
-  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
+  className="AutoUI_ui_Text-29 AutoUI_ui_Text-65"
 >
   <h2
-    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
+    className="undefined AutoUI_typo-122 AutoUI_typo-48 AutoUI_typo-21"
   >
     Your roadmap to X-Team
   </h2>
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -42902,15 +39707,15 @@ exports[`Storyshots UI Components/Text sub Heading with divider 1`] = `
   className="AutoUI_ui_Text-29"
 >
   <h2
-    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
+    className="undefined AutoUI_typo-122 AutoUI_typo-48 AutoUI_typo-21"
   >
     Your roadmap to X-Team
   </h2>
   <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192"
+    className="AutoUI_ui_Text-41"
   />
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -42922,17 +39727,17 @@ exports[`Storyshots UI Components/Text sub Heading with level 1`] = `
   className="AutoUI_ui_Text-29"
 >
   <h2
-    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
+    className="undefined AutoUI_typo-122 AutoUI_typo-48 AutoUI_typo-21"
   >
     Your roadmap to X-Team
   </h2>
   <p
-    className="undefined AutoUI_typo-146 AutoUI_typo-53 AutoUI_typo-28"
+    className="undefined AutoUI_typo-135 AutoUI_typo-48 AutoUI_typo-26"
   >
     Level 7
   </p>
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -42941,20 +39746,20 @@ exports[`Storyshots UI Components/Text sub Heading with level 1`] = `
 
 exports[`Storyshots UI Components/Text sub Heading with level and center align 1`] = `
 <section
-  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
+  className="AutoUI_ui_Text-29 AutoUI_ui_Text-65"
 >
   <h2
-    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
+    className="undefined AutoUI_typo-122 AutoUI_typo-48 AutoUI_typo-21"
   >
     Your roadmap to X-Team
   </h2>
   <p
-    className="undefined AutoUI_typo-146 AutoUI_typo-53 AutoUI_typo-28"
+    className="undefined AutoUI_typo-135 AutoUI_typo-48 AutoUI_typo-26"
   >
     Level 7
   </p>
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -42966,12 +39771,12 @@ exports[`Storyshots UI Components/Text sub heading 1`] = `
   className="AutoUI_ui_Text-29"
 >
   <h2
-    className="undefined AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
+    className="undefined AutoUI_typo-122 AutoUI_typo-48 AutoUI_typo-21"
   >
     Your roadmap to X-Team
   </h2>
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -42983,10 +39788,10 @@ exports[`Storyshots UI Components/Text without Heading and Sub Heading with divi
   className="AutoUI_ui_Text-29"
 >
   <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192"
+    className="AutoUI_ui_Text-41"
   />
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -42995,13 +39800,13 @@ exports[`Storyshots UI Components/Text without Heading and Sub Heading with divi
 
 exports[`Storyshots UI Components/Text without Heading and Sub Heading with isCentered align 1`] = `
 <section
-  className="AutoUI_ui_Text-29 AutoUI_ui_Text-50"
+  className="AutoUI_ui_Text-29 AutoUI_ui_Text-65"
 >
   <span
-    className="AutoUI_ui_Text-41 AutoUI_typo-192 AutoUI_ui_Text-52"
+    className="AutoUI_ui_Text-41 AutoUI_ui_Text-67"
   />
   <div
-    className="AutoUI_ui_Text-43 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
+    className="AutoUI_ui_Text-58 AutoUI_typo-157 AutoUI_typo-48 AutoUI_typo-36"
   >
     Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.
   </div>
@@ -43010,11 +39815,7 @@ exports[`Storyshots UI Components/Text without Heading and Sub Heading with isCe
 
 exports[`Storyshots UI Components/TextareaEditor basic usage 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-58"
-=======
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-24 AutoUI_ui_TextareaEditor_TextareaEditor-58"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-36 AutoUI_ui_TextareaEditor_TextareaEditor-58"
 >
   <div>
     <div
@@ -43057,11 +39858,7 @@ exports[`Storyshots UI Components/TextareaEditor basic usage 1`] = `
 
 exports[`Storyshots UI Components/TextareaEditor basic usage, lines limit set 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-58"
-=======
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-24 AutoUI_ui_TextareaEditor_TextareaEditor-58"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-36 AutoUI_ui_TextareaEditor_TextareaEditor-58"
 >
   <div>
     <div
@@ -43104,11 +39901,7 @@ exports[`Storyshots UI Components/TextareaEditor basic usage, lines limit set 1`
 
 exports[`Storyshots UI Components/TextareaEditor missing props (does component explode?) 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-58"
-=======
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-24 AutoUI_ui_TextareaEditor_TextareaEditor-58"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-36 AutoUI_ui_TextareaEditor_TextareaEditor-58"
 >
   <div>
     <div
@@ -43151,11 +39944,7 @@ exports[`Storyshots UI Components/TextareaEditor missing props (does component e
 
 exports[`Storyshots UI Components/TextareaEditor read only mode 1`] = `
 <div
-<<<<<<< HEAD
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-40 AutoUI_ui_TextareaEditor_TextareaEditor-58"
-=======
-  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-24 AutoUI_ui_TextareaEditor_TextareaEditor-58"
->>>>>>> 6384d627419c... Refactor and cleanup react components related to the old search (#436)
+  className="AutoUI_ui_TextareaEditor_TextareaEditor-26 AutoUI_typo-36 AutoUI_ui_TextareaEditor_TextareaEditor-58"
 >
   <div>
     <div
@@ -44572,151 +41361,6 @@ exports[`Storyshots UI Components/TwoColumnsLayout/Use cases composed in AdminSc
 </div>
 `;
 
-<<<<<<< HEAD
-exports[`Storyshots UI Components/Typography typography sets for development reference 1`] = `
-<section
-  className="AutoUI_ui_Typography-14"
->
-  <div
-    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="0"
-  >
-    <span
-      className="AutoUI_ui_Typography-35 AutoUI_typo-61 AutoUI_typo-53 AutoUI_typo-22"
-    >
-      The quick brown fox jumps over the lazy dog
-    </span>
-    <div
-      className="AutoUI_ui_Typography-41"
-    >
-      mainHeading
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="1"
-  >
-    <span
-      className="AutoUI_ui_Typography-35 AutoUI_typo-91 AutoUI_typo-53 AutoUI_typo-22"
-    >
-      The quick brown fox jumps over the lazy dog
-    </span>
-    <div
-      className="AutoUI_ui_Typography-41"
-    >
-      headline
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="2"
-  >
-    <span
-      className="AutoUI_ui_Typography-35 AutoUI_typo-105 AutoUI_typo-53 AutoUI_typo-34"
-    >
-      The quick brown fox jumps over the lazy dog
-    </span>
-    <div
-      className="AutoUI_ui_Typography-41"
-    >
-      sectionHeading
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="3"
-  >
-    <span
-      className="AutoUI_ui_Typography-35 AutoUI_typo-118 AutoUI_typo-53 AutoUI_typo-34"
-    >
-      The quick brown fox jumps over the lazy dog
-    </span>
-    <div
-      className="AutoUI_ui_Typography-41"
-    >
-      badgeHeading
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="4"
-  >
-    <span
-      className="AutoUI_ui_Typography-35 AutoUI_typo-132 AutoUI_typo-53 AutoUI_typo-22"
-    >
-      The quick brown fox jumps over the lazy dog
-    </span>
-    <div
-      className="AutoUI_ui_Typography-41"
-    >
-      heading
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="5"
-  >
-    <span
-      className="AutoUI_ui_Typography-35 AutoUI_typo-146 AutoUI_typo-53 AutoUI_typo-28"
-    >
-      The quick brown fox jumps over the lazy dog
-    </span>
-    <div
-      className="AutoUI_ui_Typography-41"
-    >
-      subheading
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="6"
-  >
-    <span
-      className="AutoUI_ui_Typography-35 AutoUI_typo-159 AutoUI_typo-53 AutoUI_typo-46"
-    >
-      The quick brown fox jumps over the lazy dog
-    </span>
-    <div
-      className="AutoUI_ui_Typography-41"
-    >
-      labelText
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="7"
-  >
-    <span
-      className="AutoUI_ui_Typography-35 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    >
-      The quick brown fox jumps over the lazy dog
-    </span>
-    <div
-      className="AutoUI_ui_Typography-41"
-    >
-      baseText
-    </div>
-  </div>
-  <div
-    className="AutoUI_ui_Typography-20 AutoUI_typo-170 AutoUI_typo-53 AutoUI_typo-40"
-    key="8"
-  >
-    <span
-      className="AutoUI_ui_Typography-35 AutoUI_typo-181 AutoUI_typo-53 AutoUI_typo-40"
-    >
-      The quick brown fox jumps over the lazy dog
-    </span>
-    <div
-      className="AutoUI_ui_Typography-41"
-    >
-      formText
-    </div>
-  </div>
-</section>
-`;
-
-=======
->>>>>>> 0530a9bebe5b... Organise Styleguides in the Storybook (#433)
 exports[`Storyshots UI Components/VideoPlayer embedded video, hidden controls 1`] = `
 <iframe
   className="AutoUI_ui_VideoPlayer-20"
