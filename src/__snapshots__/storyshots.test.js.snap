@@ -37503,6 +37503,175 @@ exports[`Storyshots UI Components/StatusMarker basic usage (see knobs) 1`] = `
 
 exports[`Storyshots UI Components/StatusMarker/Debug missing props (does component explode?) 1`] = `""`;
 
+exports[`Storyshots UI Components/SvgIcon base green color 1`] = `
+<div>
+  <SvgIcon
+    color="baseGreen"
+    icon="cog"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="head"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="webcam"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="message"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="terminal"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="diamond"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="talking"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="trophy"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="calendar"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="plus"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="minus"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="trashcan"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="trashcanAlt"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="x"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="add"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="triangleup"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="triangledown"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="hamburger"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="magnifier"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="edit"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="check"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="play"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="pause"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="paperplane"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="archive"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="list"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="grid"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="dock"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="show"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="github"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="linkedin"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="stackoverflow"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="redirect"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="filter"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="link"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="time"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="plusquare"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="spin"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="filters"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="arrowleft"
+  />
+  <SvgIcon
+    color="baseGreen"
+    icon="copy"
+  />
+</div>
+`;
+
 exports[`Storyshots UI Components/SvgIcon basic color 1`] = `
 <div>
   <SvgIcon
@@ -37669,6 +37838,10 @@ exports[`Storyshots UI Components/SvgIcon basic color 1`] = `
     color="default"
     icon="arrowleft"
   />
+  <SvgIcon
+    color="default"
+    icon="copy"
+  />
 </div>
 `;
 
@@ -37834,6 +38007,10 @@ exports[`Storyshots UI Components/SvgIcon grayscale color 1`] = `
     color="grayscale"
     icon="arrowleft"
   />
+  <SvgIcon
+    color="grayscale"
+    icon="copy"
+  />
 </div>
 `;
 
@@ -37998,6 +38175,10 @@ exports[`Storyshots UI Components/SvgIcon grayscarpaflow color 1`] = `
   <SvgIcon
     color="grayscarpaflow"
     icon="arrowleft"
+  />
+  <SvgIcon
+    color="grayscarpaflow"
+    icon="copy"
   />
 </div>
 `;
@@ -38204,6 +38385,11 @@ exports[`Storyshots UI Components/SvgIcon hover color 1`] = `
     hover="default"
     icon="arrowleft"
   />
+  <SvgIcon
+    color="text"
+    hover="default"
+    icon="copy"
+  />
 </div>
 `;
 
@@ -38375,6 +38561,10 @@ exports[`Storyshots UI Components/SvgIcon inverted color 1`] = `
     color="inverted"
     icon="arrowleft"
   />
+  <SvgIcon
+    color="inverted"
+    icon="copy"
+  />
 </div>
 `;
 
@@ -38542,6 +38732,10 @@ exports[`Storyshots UI Components/SvgIcon monochrome color 1`] = `
     color="monochrome"
     icon="arrowleft"
   />
+  <SvgIcon
+    color="monochrome"
+    icon="copy"
+  />
 </div>
 `;
 
@@ -38706,6 +38900,10 @@ exports[`Storyshots UI Components/SvgIcon muted gray color 1`] = `
   <SvgIcon
     color="mutedgray"
     icon="arrowleft"
+  />
+  <SvgIcon
+    color="mutedgray"
+    icon="copy"
   />
 </div>
 `;
@@ -39072,6 +39270,15 @@ exports[`Storyshots UI Components/SvgIcon rest of props 1`] = `
       }
     }
   />
+  <SvgIcon
+    color="default"
+    icon="copy"
+    style={
+      Object {
+        "marginRight": "30px",
+      }
+    }
+  />
 </div>
 `;
 
@@ -39236,6 +39443,10 @@ exports[`Storyshots UI Components/SvgIcon text gray color 1`] = `
   <SvgIcon
     color="text"
     icon="arrowleft"
+  />
+  <SvgIcon
+    color="text"
+    icon="copy"
   />
 </div>
 `;
