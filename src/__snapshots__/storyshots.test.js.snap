@@ -4632,6 +4632,62 @@ exports[`Storyshots UI Components/ColumnsCustomizer missing props (does componen
 </div>
 `;
 
+exports[`Storyshots UI Components/CopyToClipboardButton basic usage 1`] = `
+<div
+  style={
+    Object {
+      "background": undefined,
+      "padding": "70px",
+    }
+  }
+>
+  <CopyToClipboardButton
+    color="default"
+    hover="default"
+    text="text to be copied"
+    visible={true}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/CopyToClipboardButton/Colors inverted color with hover variation 1`] = `
+<div
+  style={
+    Object {
+      "background": "#F63A55",
+      "padding": "70px",
+    }
+  }
+>
+  <CopyToClipboardButton
+    color="inverted"
+    hover="text"
+    text="text to be copied"
+    visible={true}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/CopyToClipboardButton/Colors monochrome color with hover variation 1`] = `
+<div
+  style={
+    Object {
+      "background": undefined,
+      "padding": "70px",
+    }
+  }
+>
+  <CopyToClipboardButton
+    color="monochrome"
+    hover="default"
+    text="text to be copied"
+    visible={true}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/CopyToClipboardButton/Debug missing props (does component explode?) 1`] = `""`;
+
 exports[`Storyshots UI Components/DataGrid default 1`] = `
 <div
   style={
@@ -20641,7 +20697,7 @@ exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing children 
 
 exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing props (does Tooltip explode?) 1`] = `
 <span
-  className="AutoUI_ui_GenericCopyToClipboard_Tooltip-12"
+  className="AutoUI_ui_GenericCopyToClipboard_Tooltip-13 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   style={
     Object {
       "left": "0px",
@@ -20649,10 +20705,10 @@ exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing props (do
   }
 >
   <span
-    className="AutoUI_ui_GenericCopyToClipboard_Tooltip-20"
+    className="AutoUI_ui_GenericCopyToClipboard_Tooltip-25"
   >
     <span
-      className="AutoUI_ui_GenericCopyToClipboard_Tooltip-50"
+      className="AutoUI_ui_GenericCopyToClipboard_Tooltip-55"
     >
       Copy to clipboard
     </span>
