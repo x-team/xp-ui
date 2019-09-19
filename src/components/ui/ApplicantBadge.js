@@ -187,7 +187,11 @@ const cx = {
 
     &:hover svg g,
     &:hover svg polyline {
-      stroke: white
+      stroke: ${theme.iconBright}
+    }
+
+    &:hover svg path {
+      fill: ${theme.iconBright}
     }
   `),
 
