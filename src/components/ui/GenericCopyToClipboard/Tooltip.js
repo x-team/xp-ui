@@ -71,7 +71,7 @@ const Tooltip = ({ copied }: Props) => {
           {copied
             ? (
               <Fragment>
-                <SvgIcon icon='check' />
+                <SvgIcon icon='check' color='green' />
                 <span className={cx.copied}>Copied to clipboard</span>
               </Fragment>
             ) : 'Copy to clipboard'
