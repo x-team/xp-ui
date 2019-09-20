@@ -20573,16 +20573,66 @@ exports[`Storyshots UI Components/GenericCopyToClipboard basic usage 1`] = `
 <div
   style={
     Object {
-      "padding": "50px 10px 0",
+      "margin": "100px 0 0",
+      "position": "relative",
+      "textAlign": "center",
+      "width": "100%",
     }
   }
 >
   <GenericCopyToClipboard
+    className=""
     text="example@email.com"
+    tooltipXOffset={0}
   >
-    <p>
+    <div>
       Try hovering this element and click to copy
-    </p>
+    </div>
+  </GenericCopyToClipboard>
+</div>
+`;
+
+exports[`Storyshots UI Components/GenericCopyToClipboard with custom X offset 1`] = `
+<div
+  style={
+    Object {
+      "margin": "100px 0 0",
+      "position": "relative",
+      "textAlign": "center",
+      "width": "100%",
+    }
+  }
+>
+  <GenericCopyToClipboard
+    className=""
+    text="example@email.com"
+    tooltipXOffset={-25}
+  >
+    <Button
+      block={false}
+      className=""
+      color="normal"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      outlined={false}
+      pseudolink={false}
+      raised={false}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="small"
+      smallRounded={false}
+      wide={false}
+    >
+      <SvgIcon
+        color="inverted"
+        icon="copy"
+      />
+    </Button>
   </GenericCopyToClipboard>
 </div>
 `;
@@ -20592,12 +20642,17 @@ exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing children 
 exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing props (does Tooltip explode?) 1`] = `
 <span
   className="AutoUI_ui_GenericCopyToClipboard_Tooltip-12"
+  style={
+    Object {
+      "left": "0px",
+    }
+  }
 >
   <span
-    className="AutoUI_ui_GenericCopyToClipboard_Tooltip-17"
+    className="AutoUI_ui_GenericCopyToClipboard_Tooltip-20"
   >
     <span
-      className="AutoUI_ui_GenericCopyToClipboard_Tooltip-47"
+      className="AutoUI_ui_GenericCopyToClipboard_Tooltip-50"
     >
       Copy to clipboard
     </span>
@@ -20609,12 +20664,16 @@ exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip copied 1`] = `
 <div
   style={
     Object {
-      "padding": "50px 10px 0",
+      "margin": "100px 0 0",
+      "position": "relative",
+      "textAlign": "center",
+      "width": "100%",
     }
   }
 >
   <Tooltip
     copied={true}
+    tooltipXOffset={0}
   />
 </div>
 `;
@@ -20623,12 +20682,16 @@ exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip default 1`] = `
 <div
   style={
     Object {
-      "padding": "50px 10px 0",
+      "margin": "100px 0 0",
+      "position": "relative",
+      "textAlign": "center",
+      "width": "100%",
     }
   }
 >
   <Tooltip
     copied={false}
+    tooltipXOffset={0}
   />
 </div>
 `;
@@ -37541,7 +37604,8 @@ exports[`Storyshots UI Components/Shortcuts basic usage 1`] = `
   style={
     Object {
       "height": "100vh",
-      "padding": "20px 0 0 210px",
+      "padding": "50px 150px 0 0",
+      "textAlign": "right",
       "widht": "100%",
     }
   }
@@ -37559,6 +37623,7 @@ exports[`Storyshots UI Components/Shortcuts basic usage 1`] = `
     links={
       Object {
         "string string": Object {
+          "external": false,
           "label": "string string",
           "value": "string string",
         },
