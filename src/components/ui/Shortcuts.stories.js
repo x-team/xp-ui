@@ -18,7 +18,7 @@ const Body = ({ children }) => (
 
 const seedCount = 7
 const links = Array(seedCount).fill({}).reduce((acc, cur) => {
-  const keyword = faker.random.words(1)
+  const keyword = faker.random.words(2)
   return {
     ...acc,
     [keyword]: {
