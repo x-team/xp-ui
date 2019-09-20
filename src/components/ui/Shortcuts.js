@@ -9,7 +9,7 @@ import Dropdown from './Dropdown'
 import GenericCopyToClipboard from './GenericCopyToClipboard'
 
 import theme from '../../styles/theme'
-import typo from '../../styles/typo'
+import { typeface } from '../../styles/typo'
 
 const cmz = require('cmz')
 
@@ -55,7 +55,7 @@ const cx = {
       display: flex
       align-items: center
       border-bottom: 1px solid ${theme.lineSilver1}
-      padding: 20px 0
+      padding: 14px 0
     }
 
     &:last-child {
@@ -68,7 +68,7 @@ const cx = {
   `),
 
   anchor: cmz(
-    typo.regularText,
+    typeface.strongHeading,
     `
       & {
         display: flex
@@ -78,8 +78,8 @@ const cx = {
         color: ${theme.typoParagraphOnDarkBackground}
         letter-spacing: 1px
         font-size: 0.8125rem
-        font-weight: 600
         white-space: nowrap
+        line-height: 30px
       }
 
       &:hover {
