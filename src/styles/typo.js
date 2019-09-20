@@ -18,31 +18,26 @@ WebFont.load({
  * Using named typefaces according to their meaning
  */
 export const typeface = {
-  // headers, subheaders
   extraHeading: cmz(`
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
     font-weight: 800
   `),
 
-  // roadmap level's subheader
   strongHeading: cmz(`
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
     font-weight: 700
   `),
 
-  // collapsible section's title
   semiHeading: cmz(`
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
     font-weight: 600
   `),
 
-  // regular text, form controls values/placeholders
   text: cmz(`
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
     font-weight: 300
   `),
 
-  // buttons, milestone levels' labels
   extra: cmz(`
     font-family: Montserrat, Arial, sans-serif
     font-weight: 400
@@ -57,7 +52,6 @@ export const textRendering = cmz(`
 `)
 
 export default {
-  // RoadmapHero title
   mainHeading: cmz(
     textRendering,
     typeface.extraHeading,
@@ -87,7 +81,6 @@ export default {
     `
   ),
 
-  // in-page top-level headers
   headline: cmz(
     textRendering,
     typeface.extraHeading,
@@ -101,7 +94,6 @@ export default {
     `
   ),
 
-  // CollapsibleSection title
   sectionHeading: cmz(
     textRendering,
     typeface.semiHeading,
@@ -114,7 +106,6 @@ export default {
     `
   ),
 
-  // ApplicantBadge title
   badgeHeading: cmz(
     textRendering,
     typeface.semiHeading,
@@ -128,7 +119,6 @@ export default {
     `
   ),
 
-  // RoadmapLevel's heading
   heading: cmz(
     textRendering,
     typeface.extraHeading,
@@ -142,7 +132,6 @@ export default {
     `
   ),
 
-  // RoadmapLevel's level text, applicant's badge name
   subheading: cmz(
     textRendering,
     typeface.strongHeading,
@@ -155,7 +144,6 @@ export default {
     `
   ),
 
-  // milestone levelN text, button value
   labelText: cmz(
     textRendering,
     typeface.extra,
@@ -166,7 +154,6 @@ export default {
     `
   ),
 
-  // regular text
   baseText: cmz(
     textRendering,
     typeface.text,
@@ -177,7 +164,16 @@ export default {
     `
   ),
 
-  // form input values
+  regularText: cmz(
+    textRendering,
+    typeface.text,
+    `
+      font-size: 16px
+      color: ${theme.typoParagraph}
+      line-height: normal
+    `
+  ),
+
   formText: cmz(
     textRendering,
     typeface.text,
@@ -188,21 +184,18 @@ export default {
     `
   ),
 
-  // text divider
-  divider: cmz(`
-    & {
-      display: block
-      position: relative
-      width: 3.5rem
-      height: 2px
-      margin: 40px 0 35px
-      background-color: ${theme.lineRed}
-    }
-
-    @media screen and (max-width: ${breakpoints.sm}) {
+  link: cmz(
+    textRendering,
+    typeface.text,
+    `
       & {
-        width: 2rem
+        color: ${theme.typoAnchor}
+        text-decoration: none
       }
-    }
-  `)
+
+      &:hover {
+        color: ${theme.typoAnchorHover}
+      }
+    `
+  )
 }

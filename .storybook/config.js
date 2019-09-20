@@ -2,7 +2,6 @@ import { configure, addDecorator, addParameters } from '@storybook/react'
 import { create } from '@storybook/theming'
 import { withInfo } from '@storybook/addon-info'
 import { withConsole } from '@storybook/addon-console'
-import { withNotes } from '@storybook/addon-notes'
 import { withKnobs } from '@storybook/addon-knobs'
 
 // Show additional information for stories: usage or other types of documentation alongside the story
@@ -14,15 +13,6 @@ addDecorator(
 
 // Redirect console output into Action Logger Panel
 addDecorator((storyFn, context) => withConsole()(storyFn)(context))
-
-// Add the withNotes decorator to all stories
-/**
-storiesOf('Component', module)
-  .add('With Markdown', () => <Component />, {
-    notes: { markdown: someMarkdownText }
-  })
-*/
-addDecorator(withNotes)
 
 // Add the `withKnobs` decorator to add knobs support to all stories
 addDecorator(withKnobs)

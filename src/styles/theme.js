@@ -18,7 +18,7 @@ function wrap (theme) {
  * Using named colors from http://chir.ag/projects/name-that-color/
  * Treat color hex values as constants and use theme colors with purpose
  */
-const palette = {
+export const palette = {
   white: '#FFF',
   black: '#000',
   haiti: '#130E2E',
@@ -44,10 +44,11 @@ const palette = {
   silver: '#C4C4C4',
   fairPink: '#FFEBED',
   grayScarpaFlow: '#5C5765',
-  dodgerBlue: '#2FC2FF'
+  dodgerBlue: '#2FC2FF',
+  gray: '#8E8E8E'
 }
 
-export default wrap({
+export const baseColors = {
   baseBrighter: palette.white,
   baseBright: palette.athensGrayBright,
   baseDarker: palette.haiti,
@@ -55,12 +56,16 @@ export default wrap({
   baseRed: palette.radicalRed,
   baseLightRed: palette.wePeep,
   baseGreen: palette.fern,
+  baseBrightGreen: palette.lima,
   baseSilver: palette.alto,
+  baseGray: palette.gray,
   baseHighlight: palette.mercury,
   baseHighlightBright: palette.frenchGray,
   baseFairPink: palette.fairPink,
-  baseBombay: palette.bombay,
+  baseBombay: palette.bombay
+}
 
+export const typoColors = {
   typoHeading: palette.tuna,
   typoSubheading: palette.radicalRed,
   typoParagraph: palette.tuna,
@@ -68,30 +73,26 @@ export default wrap({
   typoHighlight: palette.haiti,
   typoHighlightOnDarkBackground: palette.scarpaFlow,
   typoLabel: palette.bombay,
-  typoCounter: palette.dodgerBlue,
+  typoCounter: palette.dodgerBlue
+}
 
-  sliderToggle: palette.bombay,
-  sliderBackground: palette.athensGray,
-
+export const formColors = {
   formPlaceholder: palette.manatee,
   formText: palette.tuna,
   formBorder: palette.athensGrayAlt,
   formError: palette.brickRed,
-  formErrorShadow: palette.wePeep,
+  formErrorShadow: palette.wePeep
+}
 
+export const lineColors = {
   lineRed: palette.radicalRed,
-  // roadmap timeline circle
-  // rodamap level border
   lineSilver1: palette.mercury,
-  // milestones circle and line
-  // screen sections dividers
   lineSilver2: palette.porcelain,
-  // roadmap timeline line
   lineSilver3: palette.athensGray,
-  // horizontal ruler
-  // collapsible section dividers
-  lineSilver4: palette.athensGrayAlt,
+  lineSilver4: palette.athensGrayAlt
+}
 
+export const iconColors = {
   iconRed: palette.radicalRed,
   iconBright: palette.white,
   iconDark: palette.tuna,
@@ -100,14 +101,27 @@ export default wrap({
   iconMutedGray: palette.athensGray,
   iconGrayScarpaFlow: palette.grayScarpaFlow,
   iconFrenchGrayDarker: palette.frenchGrayDarker,
+  iconGreen: palette.fern,
+  iconBrightGreen: palette.lima,
+  iconDarkerGray: palette.gray
+}
+
+export const miscColors = {
+  sliderToggle: palette.bombay,
+  sliderBackground: palette.athensGray,
 
   logoGray: palette.nobel,
 
-  statusAccepted: palette.lima,
-  statusPending: palette.ripeLemon,
-  statusExluded: palette.radicalRed,
-
   silver: palette.silver
+}
+
+export default wrap({
+  ...baseColors,
+  ...typoColors,
+  ...formColors,
+  ...lineColors,
+  ...iconColors,
+  ...miscColors
 })
 
 export const breakpoints = {

@@ -8,14 +8,14 @@
   },
   "scripts": {
     "jest": "jest --roots=src",
-    "start": "start-storybook -p 9001 -c .storybook",
+    "start": "start-storybook -p 9001 -c .storybook -s public",
     "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
     "watch": "npm run build -- --watch",
     "flow": "flow check src",
     "lint": "standard \"src/**/*.js\" \".jest/**/*.js\" \"jest.config.js\" \"__mocks__/**/*.js\" | snazzy",
     "lint-fix": "standard \"src/**/*.js\" \".jest/**/*.js\" \"jest.config.js\" \"__mocks__/**/*.js\" --fix | snazzy",
     "test": "npm run lint && npm run flow && npm run jest",
-    "storybook:build": "build-storybook -c .storybook -o .storybook-static"
+    "storybook:build": "build-storybook -c .storybook -o .storybook-static -s public"
   },
   "keywords": [],
   "author": "joshwnj",
