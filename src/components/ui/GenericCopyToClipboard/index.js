@@ -12,11 +12,14 @@ const cmz = require('cmz')
 const container = cmz(`
   cursor: pointer
   display: inline-block
+  position: relative
 `)
 
 type Props = {
   children: Node,
-  text: string
+  text: string,
+  className: string,
+  tooltipXOffset: number
 }
 
 type State = {
@@ -29,7 +32,9 @@ class GenericCopyToClipboard extends Component<Props, State> {
 
   static defaultProps = {
     children: null,
-    text: ''
+    text: '',
+    className: '',
+    tooltipXOffset: 0
   }
 
   state = {
@@ -59,19 +64,21 @@ class GenericCopyToClipboard extends Component<Props, State> {
   }
 
   handleMouseLeave = () => {
-    this.setState({ isHover: false }, this.hideWithTimeout)
+    this.setState({ isHover: false, copied: false })
   }
 
   render () {
     const { isHover, copied } = this.state
-    const { children, text } = this.props
+    const { children, text, className, tooltipXOffset } = this.props
     return text ? (
       <div
-        className={container}
+        className={[container, className].join(' ')}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >
-        {isHover || copied ? <Tooltip copied={copied} /> : null}
+        {isHover || copied ? (
+          <Tooltip copied={copied} tooltipXOffset={tooltipXOffset} />
+        ) : null}
         <CopyToClipboard text={text} onCopy={this.handleCopy}>
           {children}
         </CopyToClipboard>

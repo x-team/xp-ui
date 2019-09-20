@@ -5,9 +5,11 @@ import { storiesOf } from '@storybook/react'
 
 import GenericCopyToClipboard from '.'
 import Tooltip from './Tooltip'
+import Button from '../Button'
+import SvgIcon from '../SvgIcon'
 
 const Body = ({ children }) => (
-  <div style={{ padding: '50px 10px 0' }}>
+  <div style={{ width: '100%', textAlign: 'center', margin: '100px 0 0', position: 'relative' }}>
     {children}
   </div>
 )
@@ -16,7 +18,16 @@ storiesOf('UI Components/GenericCopyToClipboard', module)
   .add('basic usage', () => (
     <Body>
       <GenericCopyToClipboard text={'example@email.com'}>
-        <p>Try hovering this element and click to copy</p>
+        <div>Try hovering this element and click to copy</div>
+      </GenericCopyToClipboard>
+    </Body>
+  ))
+  .add('with custom X offset', () => (
+    <Body>
+      <GenericCopyToClipboard text={'example@email.com'} tooltipXOffset={-25}>
+        <Button size='small'>
+          <SvgIcon icon='copy' color='inverted' />
+        </Button>
       </GenericCopyToClipboard>
     </Body>
   ))
