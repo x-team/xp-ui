@@ -68,8 +68,9 @@ type Props = {
 }
 
 const Tooltip = ({ copied, tooltipXOffset }: Props) => {
+  const containerStyle = { left: `${tooltipXOffset}px` }
   return (
-    <span className={cx.container} style={{ left: `${tooltipXOffset}px` }}>
+    <span className={cx.container} style={containerStyle}>
       <span className={cx.bubble}>
         <span className={cx.message}>
           {copied

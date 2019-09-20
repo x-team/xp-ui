@@ -77,6 +77,7 @@ const cx = {
         text-decoration: none
         color: ${theme.typoParagraphOnDarkBackground}
         letter-spacing: 1px
+        font-size: 0.8125rem
         font-weight: 600
         white-space: nowrap
       }

@@ -64,7 +64,7 @@ class GenericCopyToClipboard extends Component<Props, State> {
   }
 
   handleMouseLeave = () => {
-    this.setState({ isHover: false }, this.hideWithTimeout)
+    this.setState({ isHover: false, copied: false })
   }
 
   render () {
