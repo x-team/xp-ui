@@ -21790,6 +21790,57 @@ exports[`Storyshots UI Components/Loader basic usage 1`] = `
 />
 `;
 
+exports[`Storyshots UI Components/LoginButton basic usage 1`] = `
+<Button
+  block={false}
+  className="AutoUI_ui_LoginButton-16"
+  color="normal"
+  component="button"
+  contentStyle="normal"
+  disabled={false}
+  icon=""
+  iconProps={Object {}}
+  id="google-callback-id"
+  outlined={false}
+  pseudolink={false}
+  raised={false}
+  readOnly={false}
+  rounded={false}
+  selectbox={false}
+  selected={false}
+  size="large"
+  smallRounded={false}
+  wide={false}
+>
+  Login With Google
+</Button>
+`;
+
+exports[`Storyshots UI Components/LoginButton missing props (does component explode?) 1`] = `
+<Button
+  block={false}
+  className="AutoUI_ui_LoginButton-16"
+  color="normal"
+  component="button"
+  contentStyle="normal"
+  disabled={false}
+  icon=""
+  iconProps={Object {}}
+  outlined={false}
+  pseudolink={false}
+  raised={false}
+  readOnly={false}
+  rounded={false}
+  selectbox={false}
+  selected={false}
+  size="large"
+  smallRounded={false}
+  wide={false}
+>
+  Login
+</Button>
+`;
+
 exports[`Storyshots UI Components/MetaGroup standalone composed with children 1`] = `
 <div
   style={

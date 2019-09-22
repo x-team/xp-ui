@@ -1,22 +1,19 @@
 // @flow
-/* global SyntheticEvent, HTMLButtonElement, React$Node */
+/* global React$Node */
 
 import React from 'react'
 
 import Button from './Button'
-import theme, { palette } from '../../styles/theme'
 
 const cmz = require('cmz')
 
 type Props = {
-  id: String,
+  id?: String,
   children?: React$Node
 }
 
 const cx = {
   button: cmz(`
-
-    background: transparent;
     border-radius: 3px;
     border: 2px solid transparent;
     cursor: pointer;
@@ -34,15 +31,13 @@ const cx = {
     border-width: 2px;
     font-size: 1rem;
     padding: .75em 2.4em;
-
   `)
 }
-
 
 const LoginButton = ({ children, id, ...rest }: Props) => {
   return (
     <Button className={cx.button} id={id} size='large' {...rest}>
-      {children}
+      {children == null ? 'Login' : children}
     </Button>
   )
 }
