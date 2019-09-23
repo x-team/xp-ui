@@ -21816,7 +21816,7 @@ exports[`Storyshots UI Components/LoginButton basic usage 1`] = `
 </Button>
 `;
 
-exports[`Storyshots UI Components/LoginButton missing props (does component explode?) 1`] = `
+exports[`Storyshots UI Components/LoginButton/Debug missing props (does component explode?) 1`] = `
 <Button
   block={false}
   className="AutoUI_ui_LoginButton-16"
