@@ -5,6 +5,8 @@ import React from 'react'
 
 import Button from './Button'
 
+import { typeface } from '../../styles/typo'
+
 const cmz = require('cmz')
 
 type Props = {
@@ -13,25 +15,26 @@ type Props = {
 }
 
 const cx = {
-  button: cmz(`
-    border-radius: 3px
-    border: 2px solid transparent
-    cursor: pointer
-    display: inline-block
-    font-weight: 700
-    line-height: 1.5
-    outline: none
-    min-width: 290px
-    margin: .15em auto
-    text-decoration: none
-    text-transform: uppercase
-    transition: all .3s ease-out
-    white-space: nowrap
-    font-family: 'Raleway', sans-serif
-    border-width: 2px
-    font-size: 1rem
-    padding: .75em 2.4em
-  `)
+  button: cmz(
+    typeface.strongHeading,
+    `
+      border-radius: 3px
+      border: 2px solid transparent
+      cursor: pointer
+      display: inline-block
+      line-height: 1.5
+      outline: none
+      min-width: 290px
+      margin: .15em auto
+      text-decoration: none
+      text-transform: uppercase
+      transition: all .3s ease-out
+      white-space: nowrap
+      border-width: 2px
+      font-size: 1rem
+      padding: .75em 2.4em
+    `
+  )
 }
 
 const LoginButton = ({ children, id, ...rest }: Props) => {

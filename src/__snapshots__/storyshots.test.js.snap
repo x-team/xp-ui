@@ -21793,7 +21793,7 @@ exports[`Storyshots UI Components/Loader basic usage 1`] = `
 exports[`Storyshots UI Components/LoginButton basic usage 1`] = `
 <Button
   block={false}
-  className="AutoUI_ui_LoginButton-16"
+  className="AutoUI_ui_LoginButton-18 AutoUI_typo-14"
   color="normal"
   component="button"
   contentStyle="normal"
@@ -21819,7 +21819,7 @@ exports[`Storyshots UI Components/LoginButton basic usage 1`] = `
 exports[`Storyshots UI Components/LoginButton/Debug missing props (does component explode?) 1`] = `
 <Button
   block={false}
-  className="AutoUI_ui_LoginButton-16"
+  className="AutoUI_ui_LoginButton-18 AutoUI_typo-14"
   color="normal"
   component="button"
   contentStyle="normal"
