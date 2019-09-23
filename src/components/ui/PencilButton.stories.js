@@ -1,9 +1,12 @@
+// @flow
+/* global React$Node */
+
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import PencilButton from './PencilButton'
 
-const Body = ({ children, background }) => (
+const Body = ({ children, background }: { children?: React$Node, background?: string }) => (
   <div style={{ padding: '20px', background }}>
     {children}
   </div>

@@ -1,9 +1,12 @@
+// @flow
+/* global React$Node */
+
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import CopyToClipboardButton from './CopyToClipboardButton'
 
-const Body = ({ children, background }) => (
+const Body = ({ children, background }: { children?: React$Node, background?: string }) => (
   <div style={{ padding: '70px 60px', background }}>
     {children}
   </div>
