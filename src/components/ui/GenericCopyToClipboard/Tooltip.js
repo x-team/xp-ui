@@ -5,17 +5,22 @@ import React, { Fragment } from 'react'
 import SvgIcon from '../SvgIcon'
 
 import theme from '../../../styles/theme'
+import typo from '../../../styles/typo'
 
 const cmz = require('cmz')
 
 const cx = {
-  container: cmz(`
-    position: absolute
-    color: ${theme.typoHighlightOnDarkBackground}
-    top: -13px
-    left: 0
-    z-index: 99999
-  `),
+  container: cmz(
+    typo.regularText,
+    `
+      position: absolute
+      color: ${theme.typoHighlightOnDarkBackground}
+      font-weight: normal
+      top: -13px
+      left: 0
+      z-index: 99999
+    `
+  ),
 
   bubble: cmz(`
     & {

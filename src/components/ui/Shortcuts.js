@@ -6,7 +6,7 @@ import { size } from '../../utils/helpers'
 
 import SvgIcon from './SvgIcon'
 import Dropdown from './Dropdown'
-import GenericCopyToClipboard from './GenericCopyToClipboard'
+import CopyToClipboardButton from './CopyToClipboardButton'
 
 import theme from '../../styles/theme'
 import { typeface } from '../../styles/typo'
@@ -100,11 +100,6 @@ const cx = {
     `
   ),
 
-  copy: cmz(`
-    width: 16px
-    margin-left: 10px
-  `),
-
   showCopy: cmz(
     'shortcuts__showCopy',
     `
@@ -140,14 +135,9 @@ class Shortcuts extends PureComponent<Props, void> {
         {label}
       </a>
       {!external && (
-        <GenericCopyToClipboard
-          key={value}
-          text={value}
-          className={cx.showCopy}
-          tooltipXOffset={-30}
-        >
-          <SvgIcon icon='copy' color='text' className={cx.copy} />
-        </GenericCopyToClipboard>
+        <div className={cx.showCopy}>
+          <CopyToClipboardButton key={value} text={value} color='text' />
+        </div>
       )}
     </div>
   )
