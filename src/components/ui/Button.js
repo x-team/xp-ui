@@ -15,7 +15,7 @@ const cmz = require('cmz')
 
 export type Size = 'normal' | 'large' | 'small'
 export type Color = 'normal' | 'monochrome' | 'silver' | 'gray' | 'grayPink'
-export type ContentStyle = 'normal' | 'openSans' | 'sourceSansPro'
+export type ContentStyle = 'normal' | 'openSans' | 'sourceSansPro' | 'emphasized'
 
 type Props = {
   className: string | CmzAtom,
@@ -74,6 +74,8 @@ const baseStyles = {
 // contentStyle options
 const contentStyles = {
   normal: cmz(typo.labelText, 'font-size: inherit'),
+
+  emphasized: cmz(typo.emphasizedLabelText, 'font-size: inherit'),
 
   openSans: cmz(baseStyles.content, `
     & span {

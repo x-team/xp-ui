@@ -33,13 +33,14 @@ const cx = {
       border-width: 2px
       font-size: 1rem
       padding: .75em 2.4em
+      
     `
   )
 }
 
 const LoginButton = ({ children, id, ...rest }: Props) => {
   return (
-    <Button className={cx.button} id={id} size='large' {...rest}>
+    <Button className={cx.button} contentStyle='emphasized' id={id} size='large' {...rest}>
       {children == null ? 'Login' : children}
     </Button>
   )

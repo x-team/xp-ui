@@ -142,6 +142,16 @@ export default {
     `
   ),
 
+  emphasizedLabelText: cmz(
+    textRendering,
+    typeface.strongHeading,
+    `
+      font-size: 12px
+      text-transform: uppercase
+      line-height: 18px
+    `
+  ),
+
   baseText: cmz(
     textRendering,
     typeface.text,
