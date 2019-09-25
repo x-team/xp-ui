@@ -44,6 +44,7 @@ const LoginButton = ({ children, id, ...rest }: Props) => {
       contentStyle='emphasized'
       id={id}
       size='large'
+      color='lighter'
       {...rest}
     >
       {children == null ? 'Login' : children}
