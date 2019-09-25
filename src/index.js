@@ -34,6 +34,7 @@ import IssueCollectorButton from './components/ui/IssueCollectorButton'
 import ListExclusionFormPopup from './components/ui/ListExclusionFormPopup'
 import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
+import LoginButton from './components/ui/LoginButton'
 import MetaGroup from './components/ui/MetaGroup'
 import MilestonesScreen from './components/ui/MilestonesScreen'
 import Modal from './components/ui/Modal'
@@ -99,6 +100,7 @@ export {
   ListExclusionFormPopup,
   ListsEditor,
   Loader,
+  LoginButton,
   MetaGroup,
   MilestonesScreen,
   Modal,
