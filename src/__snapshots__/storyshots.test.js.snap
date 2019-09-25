@@ -4596,6 +4596,62 @@ exports[`Storyshots UI Components/ColumnsCustomizer missing props (does componen
 </div>
 `;
 
+exports[`Storyshots UI Components/CopyToClipboardButton basic usage 1`] = `
+<div
+  style={
+    Object {
+      "background": undefined,
+      "padding": "70px 60px",
+    }
+  }
+>
+  <CopyToClipboardButton
+    color="default"
+    hover="default"
+    text="text to be copied"
+    visible={true}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/CopyToClipboardButton/Colors inverted color with hover variation 1`] = `
+<div
+  style={
+    Object {
+      "background": "#F63A55",
+      "padding": "70px 60px",
+    }
+  }
+>
+  <CopyToClipboardButton
+    color="inverted"
+    hover="text"
+    text="text to be copied"
+    visible={true}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/CopyToClipboardButton/Colors monochrome color with hover variation 1`] = `
+<div
+  style={
+    Object {
+      "background": undefined,
+      "padding": "70px 60px",
+    }
+  }
+>
+  <CopyToClipboardButton
+    color="monochrome"
+    hover="default"
+    text="text to be copied"
+    visible={true}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/CopyToClipboardButton/Debug missing props (does component explode?) 1`] = `""`;
+
 exports[`Storyshots UI Components/DataGrid default 1`] = `
 <div
   style={
@@ -20525,37 +20581,128 @@ exports[`Storyshots UI Components/GenericCopyToClipboard basic usage 1`] = `
 <div
   style={
     Object {
-      "marginTop": 50,
+      "margin": "100px 0 0",
+      "position": "relative",
+      "textAlign": "center",
+      "width": "100%",
     }
   }
 >
   <GenericCopyToClipboard
+    className=""
     text="example@email.com"
+    tooltipXOffset={0}
   >
-    <span>
-      example@email.com
-    </span>
+    <div>
+      Try hovering this element and click to copy
+    </div>
+  </GenericCopyToClipboard>
+</div>
+`;
+
+exports[`Storyshots UI Components/GenericCopyToClipboard with custom X offset 1`] = `
+<div
+  style={
+    Object {
+      "margin": "100px 0 0",
+      "position": "relative",
+      "textAlign": "center",
+      "width": "100%",
+    }
+  }
+>
+  <GenericCopyToClipboard
+    className=""
+    text="example@email.com"
+    tooltipXOffset={-25}
+  >
+    <Button
+      block={false}
+      className=""
+      color="normal"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      outlined={false}
+      pseudolink={false}
+      raised={false}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="small"
+      smallRounded={false}
+      wide={false}
+    >
+      <SvgIcon
+        color="inverted"
+        icon="copy"
+      />
+    </Button>
   </GenericCopyToClipboard>
 </div>
 `;
 
 exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing children or props (does GenericCopyToClipboard explode?) 1`] = `""`;
 
-exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip basic usage 1`] = `
+exports[`Storyshots UI Components/GenericCopyToClipboard/Debug missing props (does Tooltip explode?) 1`] = `
+<span
+  className="AutoUI_ui_GenericCopyToClipboard_Tooltip-13 AutoUI_typo-167 AutoUI_typo-48 AutoUI_typo-36"
+  style={
+    Object {
+      "left": "0px",
+    }
+  }
+>
+  <span
+    className="AutoUI_ui_GenericCopyToClipboard_Tooltip-25"
+  >
+    <span
+      className="AutoUI_ui_GenericCopyToClipboard_Tooltip-55"
+    >
+      Copy to clipboard
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip copied 1`] = `
 <div
   style={
     Object {
-      "marginTop": 50,
+      "margin": "100px 0 0",
+      "position": "relative",
+      "textAlign": "center",
+      "width": "100%",
     }
   }
 >
   <Tooltip
-    showTooltip={true}
+    copied={true}
+    tooltipXOffset={0}
   />
 </div>
 `;
 
-exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip/Debug missing props (does Tooltip explode?) 1`] = `""`;
+exports[`Storyshots UI Components/GenericCopyToClipboard/Tooltip default 1`] = `
+<div
+  style={
+    Object {
+      "margin": "100px 0 0",
+      "position": "relative",
+      "textAlign": "center",
+      "width": "100%",
+    }
+  }
+>
+  <Tooltip
+    copied={false}
+    tooltipXOffset={0}
+  />
+</div>
+`;
 
 exports[`Storyshots UI Components/GenericTabs basic usage 1`] = `
 <Fragment>
@@ -23691,53 +23838,28 @@ exports[`Storyshots UI Components/NotesFeed showing note type in the sub header 
 `;
 
 exports[`Storyshots UI Components/PencilButton basic usage 1`] = `
-<span
-  className="AutoUI_ui_PencilButton-13 AutoUI_ui_PencilButton-22"
-  onClick={[Function]}
-  role="button"
+<div
+  style={
+    Object {
+      "background": undefined,
+      "padding": "20px",
+    }
+  }
 >
-  <SvgIcon
+  <PencilButton
     color="default"
     hover="default"
-    icon="edit"
+    visible={true}
   />
-</span>
+</div>
 `;
 
-exports[`Storyshots UI Components/PencilButton missing props (does component explode?) 1`] = `
-<span
-  className="AutoUI_ui_PencilButton-13 AutoUI_ui_PencilButton-22"
-  onClick={[Function]}
-  role="button"
->
-  <SvgIcon
-    color="default"
-    hover="default"
-    icon="edit"
-  />
-</span>
-`;
-
-exports[`Storyshots UI Components/PencilButton/Colors grayscale color 1`] = `
-<span
-  className="AutoUI_ui_PencilButton-13 AutoUI_ui_PencilButton-22"
-  onClick={[Function]}
-  role="button"
->
-  <SvgIcon
-    color="grayscale"
-    hover="default"
-    icon="edit"
-  />
-</span>
-`;
-
-exports[`Storyshots UI Components/PencilButton/Colors inverted color 1`] = `
-<span
+exports[`Storyshots UI Components/PencilButton/Colors inverted color with hover variation 1`] = `
+<div
   style={
     Object {
       "background": "#F63A55",
-      "padding": "10px",
+      "padding": "20px",
     }
   }
 >
@@ -23746,69 +23868,27 @@ exports[`Storyshots UI Components/PencilButton/Colors inverted color 1`] = `
     hover="text"
     visible={true}
   />
-</span>
+</div>
 `;
 
-exports[`Storyshots UI Components/PencilButton/Colors monochrome color 1`] = `
-<span
-  className="AutoUI_ui_PencilButton-13 AutoUI_ui_PencilButton-22"
-  onClick={[Function]}
-  role="button"
->
-  <SvgIcon
-    color="monochrome"
-    hover="default"
-    icon="edit"
-  />
-</span>
-`;
-
-exports[`Storyshots UI Components/PencilButton/Hover Colors default hover color 1`] = `
-<span
-  className="AutoUI_ui_PencilButton-13 AutoUI_ui_PencilButton-22"
-  onClick={[Function]}
-  role="button"
->
-  <SvgIcon
-    color="default"
-    hover="default"
-    icon="edit"
-  />
-</span>
-`;
-
-exports[`Storyshots UI Components/PencilButton/Hover Colors grayscale hover color 1`] = `
-<span
-  className="AutoUI_ui_PencilButton-13 AutoUI_ui_PencilButton-22"
-  onClick={[Function]}
-  role="button"
->
-  <SvgIcon
-    color="default"
-    hover="grayscale"
-    icon="edit"
-  />
-</span>
-`;
-
-exports[`Storyshots UI Components/PencilButton/Hover Colors inverted hover color 1`] = `
-<span
+exports[`Storyshots UI Components/PencilButton/Colors monochrome color with hover variation 1`] = `
+<div
   style={
     Object {
-      "background": "#000000",
-      "padding": "10px",
+      "background": undefined,
+      "padding": "20px",
     }
   }
 >
   <PencilButton
-    color="default"
-    hover="inverted"
+    color="monochrome"
+    hover="default"
     visible={true}
   />
-</span>
+</div>
 `;
 
-exports[`Storyshots UI Components/PencilButton/Hover Colors monochrome hover color 1`] = `
+exports[`Storyshots UI Components/PencilButton/Debug missing props (does component explode?) 1`] = `
 <span
   className="AutoUI_ui_PencilButton-13 AutoUI_ui_PencilButton-22"
   onClick={[Function]}
@@ -23816,7 +23896,7 @@ exports[`Storyshots UI Components/PencilButton/Hover Colors monochrome hover col
 >
   <SvgIcon
     color="default"
-    hover="monochrome"
+    hover="default"
     icon="edit"
   />
 </span>
@@ -37358,7 +37438,8 @@ exports[`Storyshots UI Components/Shortcuts basic usage 1`] = `
   style={
     Object {
       "height": "100vh",
-      "padding": "20px 0 0 210px",
+      "padding": "50px 150px 0 0",
+      "textAlign": "right",
       "widht": "100%",
     }
   }
@@ -37376,6 +37457,7 @@ exports[`Storyshots UI Components/Shortcuts basic usage 1`] = `
     links={
       Object {
         "string string": Object {
+          "external": false,
           "label": "string string",
           "value": "string string",
         },
@@ -37641,6 +37723,10 @@ exports[`Storyshots UI Components/SvgIcon basic color 1`] = `
     color="default"
     icon="arrowleft"
   />
+  <SvgIcon
+    color="default"
+    icon="copy"
+  />
 </div>
 `;
 
@@ -37806,6 +37892,10 @@ exports[`Storyshots UI Components/SvgIcon grayscale color 1`] = `
     color="grayscale"
     icon="arrowleft"
   />
+  <SvgIcon
+    color="grayscale"
+    icon="copy"
+  />
 </div>
 `;
 
@@ -37970,6 +38060,179 @@ exports[`Storyshots UI Components/SvgIcon grayscarpaflow color 1`] = `
   <SvgIcon
     color="grayscarpaflow"
     icon="arrowleft"
+  />
+  <SvgIcon
+    color="grayscarpaflow"
+    icon="copy"
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/SvgIcon green color 1`] = `
+<div>
+  <SvgIcon
+    color="green"
+    icon="cog"
+  />
+  <SvgIcon
+    color="green"
+    icon="head"
+  />
+  <SvgIcon
+    color="green"
+    icon="webcam"
+  />
+  <SvgIcon
+    color="green"
+    icon="message"
+  />
+  <SvgIcon
+    color="green"
+    icon="terminal"
+  />
+  <SvgIcon
+    color="green"
+    icon="diamond"
+  />
+  <SvgIcon
+    color="green"
+    icon="talking"
+  />
+  <SvgIcon
+    color="green"
+    icon="trophy"
+  />
+  <SvgIcon
+    color="green"
+    icon="calendar"
+  />
+  <SvgIcon
+    color="green"
+    icon="plus"
+  />
+  <SvgIcon
+    color="green"
+    icon="minus"
+  />
+  <SvgIcon
+    color="green"
+    icon="trashcan"
+  />
+  <SvgIcon
+    color="green"
+    icon="trashcanAlt"
+  />
+  <SvgIcon
+    color="green"
+    icon="x"
+  />
+  <SvgIcon
+    color="green"
+    icon="add"
+  />
+  <SvgIcon
+    color="green"
+    icon="triangleup"
+  />
+  <SvgIcon
+    color="green"
+    icon="triangledown"
+  />
+  <SvgIcon
+    color="green"
+    icon="hamburger"
+  />
+  <SvgIcon
+    color="green"
+    icon="magnifier"
+  />
+  <SvgIcon
+    color="green"
+    icon="edit"
+  />
+  <SvgIcon
+    color="green"
+    icon="check"
+  />
+  <SvgIcon
+    color="green"
+    icon="play"
+  />
+  <SvgIcon
+    color="green"
+    icon="pause"
+  />
+  <SvgIcon
+    color="green"
+    icon="paperplane"
+  />
+  <SvgIcon
+    color="green"
+    icon="archive"
+  />
+  <SvgIcon
+    color="green"
+    icon="list"
+  />
+  <SvgIcon
+    color="green"
+    icon="grid"
+  />
+  <SvgIcon
+    color="green"
+    icon="dock"
+  />
+  <SvgIcon
+    color="green"
+    icon="show"
+  />
+  <SvgIcon
+    color="green"
+    icon="github"
+  />
+  <SvgIcon
+    color="green"
+    icon="linkedin"
+  />
+  <SvgIcon
+    color="green"
+    icon="stackoverflow"
+  />
+  <SvgIcon
+    color="green"
+    icon="redirect"
+  />
+  <SvgIcon
+    color="green"
+    icon="filter"
+  />
+  <SvgIcon
+    color="green"
+    icon="link"
+  />
+  <SvgIcon
+    color="green"
+    icon="time"
+  />
+  <SvgIcon
+    color="green"
+    icon="plusquare"
+  />
+  <SvgIcon
+    color="green"
+    icon="spin"
+  />
+  <SvgIcon
+    color="green"
+    icon="filters"
+  />
+  <SvgIcon
+    color="green"
+    icon="arrowleft"
+  />
+  <SvgIcon
+    color="green"
+    icon="copy"
   />
 </div>
 `;
@@ -38176,6 +38439,11 @@ exports[`Storyshots UI Components/SvgIcon hover color 1`] = `
     hover="default"
     icon="arrowleft"
   />
+  <SvgIcon
+    color="text"
+    hover="default"
+    icon="copy"
+  />
 </div>
 `;
 
@@ -38347,6 +38615,10 @@ exports[`Storyshots UI Components/SvgIcon inverted color 1`] = `
     color="inverted"
     icon="arrowleft"
   />
+  <SvgIcon
+    color="inverted"
+    icon="copy"
+  />
 </div>
 `;
 
@@ -38514,6 +38786,10 @@ exports[`Storyshots UI Components/SvgIcon monochrome color 1`] = `
     color="monochrome"
     icon="arrowleft"
   />
+  <SvgIcon
+    color="monochrome"
+    icon="copy"
+  />
 </div>
 `;
 
@@ -38678,6 +38954,10 @@ exports[`Storyshots UI Components/SvgIcon muted gray color 1`] = `
   <SvgIcon
     color="mutedgray"
     icon="arrowleft"
+  />
+  <SvgIcon
+    color="mutedgray"
+    icon="copy"
   />
 </div>
 `;
@@ -39044,6 +39324,15 @@ exports[`Storyshots UI Components/SvgIcon rest of props 1`] = `
       }
     }
   />
+  <SvgIcon
+    color="default"
+    icon="copy"
+    style={
+      Object {
+        "marginRight": "30px",
+      }
+    }
+  />
 </div>
 `;
 
@@ -39208,6 +39497,10 @@ exports[`Storyshots UI Components/SvgIcon text gray color 1`] = `
   <SvgIcon
     color="text"
     icon="arrowleft"
+  />
+  <SvgIcon
+    color="text"
+    icon="copy"
   />
 </div>
 `;

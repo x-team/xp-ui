@@ -6,8 +6,8 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin' | 'filters' | 'arrowleft'
-export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow' | 'frenchGrayDarker'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin' | 'filters' | 'arrowleft' | 'copy'
+export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow' | 'frenchGrayDarker' | 'green'
 
 type Props = {
   icon: ?Icon,
@@ -56,6 +56,11 @@ const getStyles = () => ({
       & {
         stroke: ${theme.iconFrenchGrayDarker}
       }
+    `),
+    green: cmz(`
+      & {
+        stroke: ${theme.iconGreen}
+      }
     `)
   },
   strokeHover: {
@@ -97,6 +102,11 @@ const getStyles = () => ({
     frenchGrayDarker: cmz(`
       svg:hover & {
         stroke: ${theme.iconFrenchGrayDarker}
+      }
+    `),
+    green: cmz(`
+      svg:hover & {
+        stroke: ${theme.iconGreen}
       }
     `)
   },
@@ -140,6 +150,11 @@ const getStyles = () => ({
       & {
         fill: ${theme.iconFrenchGrayDarker}
       }
+    `),
+    green: cmz(`
+      & {
+        fill: ${theme.iconGreen}
+      }
     `)
   },
   fillHover: {
@@ -181,6 +196,11 @@ const getStyles = () => ({
     frenchGrayDarker: cmz(`
       svg:hover & {
         fill: ${theme.iconFrenchGrayDarker}
+      }
+    `),
+    green: cmz(`
+      svg:hover & {
+        fill: ${theme.iconGreen}
       }
     `)
   }
@@ -491,10 +511,8 @@ export const getIcons = ({ color, hover, ...rest }: { [x: string]: any } = {}) =
     ),
 
     check: (
-      <svg width='17px' height='13px' viewBox='0 0 17 13' {...rest}>
-        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-          <polyline className={strokeClassName} strokeWidth='2' transform='translate(8.484296, 5.704309) rotate(6.000000) translate(-8.484296, -5.704309) ' points='15.4842956 0.70430872 8.48429558 10.7043087 8.48429558 10.7043087 1.48429558 5.70430872' />
-        </g>
+      <svg width='13' height='10' viewBox='0 0 13 10' fill='none' {...rest}>
+        <path className={fillClassName} fillRule='evenodd' clipRule='evenodd' d='M2.76122 7.85387L0 5.09264L1.41421 3.67843L4.17544 6.43965L10.6149 0.000167847L12.0291 1.41438L4.17544 9.26808L4.14194 9.23459L2.76122 7.85387Z' />
       </svg>
     ),
 
@@ -637,9 +655,8 @@ export const getIcons = ({ color, hover, ...rest }: { [x: string]: any } = {}) =
     ),
 
     redirect: (
-      <svg width='16' height='15' viewBox='0 0 16 15' fill='none' {...rest}>
-        <path className={strokeClassName} fillRule='evenodd' clipRule='evenodd' d='M13 13H2.5V2.5H7.75V1H2.5C1.6675 1 1 1.675 1 2.5V13C1 13.825 1.6675 14.5 2.5 14.5H13C13.825 14.5 14.5 13.825 14.5 13V7.75H13V13Z' />
-        <path className={strokeClassName} fillRule='evenodd' clipRule='evenodd' d='M9.68 1V2.5H12.3725L5 9.8725L6.0575 10.93L13.43 3.5575V6.25H14.93V1H9.68Z' />
+      <svg width='13' height='14' viewBox='0 0 13 14' fill='none' {...rest}>
+        <path className={fillClassName} d='M12.1818 2.1875V11.8125C12.1818 12.5374 11.5975 13.125 10.8766 13.125H1.30519C0.584347 13.125 0 12.5374 0 11.8125V2.1875C0 1.46262 0.584347 0.875 1.30519 0.875H10.8766C11.5975 0.875 12.1818 1.46262 12.1818 2.1875ZM9.78896 2.625H6.7443C6.16476 2.625 5.87199 3.33214 6.28283 3.7453C6.76394 4.22915 6.76392 5.01072 6.28279 5.49455L1.83584 9.96639C1.70842 10.0945 1.70842 10.3023 1.83584 10.4304L2.67956 11.2789C2.80701 11.407 3.01361 11.407 3.14103 11.2789L7.58785 6.80719C8.06745 6.32489 8.84791 6.32491 9.32749 6.80723C9.73615 7.21812 10.4416 6.92959 10.4416 6.34318V3.28125C10.4416 2.91881 10.1494 2.625 9.78896 2.625Z' />
       </svg>
     ),
 
@@ -701,6 +718,13 @@ export const getIcons = ({ color, hover, ...rest }: { [x: string]: any } = {}) =
     arrowleft: (
       <svg width='7' height='10' viewBox='0 0 7 10' fill='none' {...rest}>
         <path className={fillClassName} d='M6.8075 9.065L5.775 9.95L4.32743e-07 5L5.775 0.0499959L6.8075 0.934996L2.065 5L6.8075 9.065Z' />
+      </svg>
+    ),
+
+    copy: (
+      <svg width='16' height='16' viewBox='0 0 16 16' fill='none' {...rest}>
+        <path className={fillClassName} d='M14.3576 0H5.63049C5.19495 0 4.77724 0.173018 4.46927 0.48099C4.1613 0.788963 3.98828 1.20666 3.98828 1.6422V10.3693C3.98828 10.8049 4.1613 11.2226 4.46927 11.5306C4.77724 11.8385 5.19495 12.0115 5.63049 12.0115H14.3576C14.7932 12.0115 15.2109 11.8385 15.5188 11.5306C15.8268 11.2226 15.9998 10.8049 15.9998 10.3693V1.6422C15.9998 1.20666 15.8268 0.788963 15.5188 0.48099C15.2109 0.173018 14.7932 0 14.3576 0ZM14.5922 10.3693C14.5922 10.4316 14.5675 10.4912 14.5235 10.5352C14.4795 10.5792 14.4198 10.6039 14.3576 10.6039H5.63049C5.56827 10.6039 5.50859 10.5792 5.4646 10.5352C5.4206 10.4912 5.39588 10.4316 5.39588 10.3693V1.6422C5.39588 1.57998 5.4206 1.52031 5.4646 1.47632C5.50859 1.43232 5.56827 1.4076 5.63049 1.4076H14.3576C14.4198 1.4076 14.4795 1.43232 14.5235 1.47632C14.5675 1.52031 14.5922 1.57998 14.5922 1.6422V10.3693Z' />
+        <path className={fillClassName} d='M1.6422 5.39588H2.15833C2.34499 5.39588 2.524 5.32173 2.65599 5.18975C2.78798 5.05776 2.86213 4.87874 2.86213 4.69208C2.86213 4.50542 2.78798 4.32641 2.65599 4.19442C2.524 4.06243 2.34499 3.98828 2.15833 3.98828H1.6422C1.20666 3.98828 0.788963 4.1613 0.48099 4.46927C0.173018 4.77724 0 5.19495 0 5.63049V14.3576C0 14.7932 0.173018 15.2109 0.48099 15.5188C0.788963 15.8268 1.20666 15.9998 1.6422 15.9998H10.3693C10.8049 15.9998 11.2226 15.8268 11.5306 15.5188C11.8385 15.2109 12.0115 14.7932 12.0115 14.3576V13.7946C12.0115 13.6079 11.9374 13.4289 11.8054 13.2969C11.6734 13.1649 11.4944 13.0908 11.3077 13.0908C11.1211 13.0908 10.9421 13.1649 10.8101 13.2969C10.6781 13.4289 10.6039 13.6079 10.6039 13.7946V14.3576C10.6039 14.4198 10.5792 14.4795 10.5352 14.5235C10.4912 14.5675 10.4316 14.5922 10.3693 14.5922H1.6422C1.57998 14.5922 1.52031 14.5675 1.47632 14.5235C1.43232 14.4795 1.4076 14.4198 1.4076 14.3576V5.63049C1.4076 5.56827 1.43232 5.50859 1.47632 5.4646C1.52031 5.4206 1.57998 5.39588 1.6422 5.39588Z' />
       </svg>
     )
   }

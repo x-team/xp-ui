@@ -49,6 +49,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='spin' />
       <SvgIcon icon='filters' />
       <SvgIcon icon='arrowleft' />
+      <SvgIcon icon='copy' />
     </div>
   ))
   .add('inverted color', () => (
@@ -93,6 +94,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='spin' color='inverted' />
       <SvgIcon icon='filters' color='inverted' />
       <SvgIcon icon='arrowleft' color='inverted' />
+      <SvgIcon icon='copy' color='inverted' />
     </div>
   ))
 
@@ -138,6 +140,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='spin' color='monochrome' />
       <SvgIcon icon='filters' color='monochrome' />
       <SvgIcon icon='arrowleft' color='monochrome' />
+      <SvgIcon icon='copy' color='monochrome' />
     </div>
   ))
   .add('grayscale color', () => (
@@ -182,6 +185,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='spin' color='grayscale' />
       <SvgIcon icon='filters' color='grayscale' />
       <SvgIcon icon='arrowleft' color='grayscale' />
+      <SvgIcon icon='copy' color='grayscale' />
     </div>
   ))
   .add('grayscarpaflow color', () => (
@@ -226,6 +230,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='spin' color='grayscarpaflow' />
       <SvgIcon icon='filters' color='grayscarpaflow' />
       <SvgIcon icon='arrowleft' color='grayscarpaflow' />
+      <SvgIcon icon='copy' color='grayscarpaflow' />
     </div>
   ))
   .add('text gray color', () => (
@@ -270,6 +275,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='spin' color='text' />
       <SvgIcon icon='filters' color='text' />
       <SvgIcon icon='arrowleft' color='text' />
+      <SvgIcon icon='copy' color='text' />
     </div>
   ))
   .add('muted gray color', () => (
@@ -314,6 +320,52 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='spin' color='mutedgray' />
       <SvgIcon icon='filters' color='mutedgray' />
       <SvgIcon icon='arrowleft' color='mutedgray' />
+      <SvgIcon icon='copy' color='mutedgray' />
+    </div>
+  ))
+  .add('green color', () => (
+    <div>
+      <SvgIcon icon='cog' color='green' />
+      <SvgIcon icon='head' color='green' />
+      <SvgIcon icon='webcam' color='green' />
+      <SvgIcon icon='message' color='green' />
+      <SvgIcon icon='terminal' color='green' />
+      <SvgIcon icon='diamond' color='green' />
+      <SvgIcon icon='talking' color='green' />
+      <SvgIcon icon='trophy' color='green' />
+      <SvgIcon icon='calendar' color='green' />
+      <SvgIcon icon='plus' color='green' />
+      <SvgIcon icon='minus' color='green' />
+      <SvgIcon icon='trashcan' color='green' />
+      <SvgIcon icon='trashcanAlt' color='green' />
+      <SvgIcon icon='x' color='green' />
+      <SvgIcon icon='add' color='green' />
+      <SvgIcon icon='triangleup' color='green' />
+      <SvgIcon icon='triangledown' color='green' />
+      <SvgIcon icon='hamburger' color='green' />
+      <SvgIcon icon='magnifier' color='green' />
+      <SvgIcon icon='edit' color='green' />
+      <SvgIcon icon='check' color='green' />
+      <SvgIcon icon='play' color='green' />
+      <SvgIcon icon='pause' color='green' />
+      <SvgIcon icon='paperplane' color='green' />
+      <SvgIcon icon='archive' color='green' />
+      <SvgIcon icon='list' color='green' />
+      <SvgIcon icon='grid' color='green' />
+      <SvgIcon icon='dock' color='green' />
+      <SvgIcon icon='show' color='green' />
+      <SvgIcon icon='github' color='green' />
+      <SvgIcon icon='linkedin' color='green' />
+      <SvgIcon icon='stackoverflow' color='green' />
+      <SvgIcon icon='redirect' color='green' />
+      <SvgIcon icon='filter' color='green' />
+      <SvgIcon icon='link' color='green' />
+      <SvgIcon icon='time' color='green' />
+      <SvgIcon icon='plusquare' color='green' />
+      <SvgIcon icon='spin' color='green' />
+      <SvgIcon icon='filters' color='green' />
+      <SvgIcon icon='arrowleft' color='green' />
+      <SvgIcon icon='copy' color='green' />
     </div>
   ))
   .add('hover color', () => (
@@ -358,6 +410,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='spin' color='text' hover='default' />
       <SvgIcon icon='filters' color='text' hover='default' />
       <SvgIcon icon='arrowleft' color='text' hover='default' />
+      <SvgIcon icon='copy' color='text' hover='default' />
     </div>
   ))
   .add('rest of props', () => (
@@ -402,6 +455,7 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='spin' style={{ marginRight: '30px' }} />
       <SvgIcon icon='filters' style={{ marginRight: '30px' }} />
       <SvgIcon icon='arrowleft' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='copy' style={{ marginRight: '30px' }} />
     </div>
   ))
   .add('missing props (does component explode?)', () => <SvgIcon />)
