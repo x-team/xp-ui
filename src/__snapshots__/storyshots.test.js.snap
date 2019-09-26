@@ -41656,3 +41656,202 @@ exports[`Storyshots UI Components/XIcon basic usage 1`] = `
   src="test-file-stub"
 />
 `;
+
+exports[`Storyshots UI Components/XP-Registration/JobCard default 1`] = `
+<div
+  className="AutoUI_ui_JobCard-13 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
+>
+  <h3
+    className="AutoUI_ui_JobCard-22 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+  >
+    string string
+  </h3>
+  <div
+    className="AutoUI_ui_JobCard-29 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    string
+  </div>
+  <div
+    className="AutoUI_ui_JobCard-36"
+  >
+    <Button
+      block={false}
+      className=""
+      color="normal"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      onClick={[Function]}
+      outlined={false}
+      pseudolink={false}
+      raised={false}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="small"
+      smallRounded={false}
+      wide={false}
+    >
+      Apply for this position
+    </Button>
+  </div>
+  <div
+    className="AutoUI_ui_JobCard-40 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    string string
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobCard/Debug missing props (does component explode?) 1`] = `""`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsGrid default 1`] = `
+<div
+  className="AutoUI_ui_JobsGrid-9"
+>
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-0"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-1"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-2"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-3"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-4"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-5"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-6"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-7"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-8"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-9"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-10"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-11"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-12"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-13"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+  <JobCard
+    applied={true}
+    description="string"
+    key="jobcard-14"
+    message="string string"
+    name="string string"
+    onApply={[Function]}
+    onWithdraw={[Function]}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsGrid/Debug missing props (does component explode?) 1`] = `
+<div
+  className="AutoUI_ui_JobsGrid-9"
+/>
+`;

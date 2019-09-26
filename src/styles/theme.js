@@ -46,7 +46,8 @@ export const palette = {
   fairPink: '#FFEBED',
   grayScarpaFlow: '#5C5765',
   dodgerBlue: '#2FC2FF',
-  gray: '#8E8E8E'
+  gray: '#8E8E8E',
+  iron: '#D6D6D8'
 }
 
 export const baseColors = {
@@ -60,6 +61,7 @@ export const baseColors = {
   baseBrightGreen: palette.lima,
   baseSilver: palette.alto,
   baseGray: palette.gray,
+  baseBrightSilver: palette.athensGray,
   baseHighlight: palette.mercury,
   baseHighlightBright: palette.frenchGray,
   baseFairPink: palette.fairPink,
@@ -92,7 +94,8 @@ export const lineColors = {
   lineSilver1: palette.mercury,
   lineSilver2: palette.porcelain,
   lineSilver3: palette.athensGray,
-  lineSilver4: palette.athensGrayAlt
+  lineSilver4: palette.athensGrayAlt,
+  lineSilver5: palette.iron
 }
 
 export const iconColors = {
@@ -111,7 +114,6 @@ export const iconColors = {
 
 export const miscColors = {
   sliderToggle: palette.bombay,
-  sliderBackground: palette.athensGray,
 
   logoGray: palette.nobel,
 
