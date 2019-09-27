@@ -13,6 +13,8 @@ const cx = {
   card: cmz(
     typo.baseText,
     `
+      display: flex
+      flex-direction: column
       background: ${theme.baseBrighter}
       border: 1px solid ${theme.lineSilver5}
       box-shadow: 4px 4px 0px ${theme.baseBrightSilver}
@@ -30,6 +32,7 @@ const cx = {
     typo.baseText,
     `
       margin: 10px 25px
+      height: 100%
     `
   ),
 
@@ -41,7 +44,7 @@ const cx = {
     typo.regularText,
     `
       background: ${theme.baseBrightSilver}
-      margin: 15px 0 0
+      margin: 0
       padding: 10px 25px
     `
   )
@@ -71,9 +74,9 @@ class JobCard extends PureComponent<Props, void> {
         )}
         <div className={cx.actions}>
           {applied ? (
-            <Button size='small' onClick={onApply}>Withdraw application</Button>
+            <Button size='small' onClick={onWithdraw}>Withdraw application</Button>
           ) : (
-            <Button size='small' onClick={onWithdraw}>Apply for this position</Button>
+            <Button size='small' onClick={onApply}>Apply for this position</Button>
           )}
         </div>
         {message && (

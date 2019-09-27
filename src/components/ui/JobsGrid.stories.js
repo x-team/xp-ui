@@ -3,7 +3,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { text, boolean } from '@storybook/addon-knobs'
 import faker from 'faker'
 
 import JobsGrid from './JobsGrid'
@@ -16,10 +15,10 @@ const jobCards = Array(15)
     return (
       <JobCard
         key={`jobcard-${i}`}
-        applied={boolean('Applied', applied)}
-        name={text('Name', faker.random.words())}
-        description={text('Description', faker.lorem.paragraph())}
-        message={text('Message', applied ? faker.random.words() : null)}
+        applied={applied}
+        name={faker.random.words()}
+        description={faker.lorem.words(10)}
+        message={applied ? faker.random.words() : ''}
         onApply={action('onApply')}
         onWithdraw={action('onWithdraw')}
       />

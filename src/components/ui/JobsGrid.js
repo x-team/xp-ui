@@ -9,7 +9,7 @@ const cx = {
   card: cmz(`
     display: grid
     grid-gap: 30px
-    margin-bottom: 50px
+    grid-template-columns: repeat(3, 1fr)
   `)
 }
 

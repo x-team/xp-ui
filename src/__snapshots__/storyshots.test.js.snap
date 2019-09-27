@@ -41662,17 +41662,17 @@ exports[`Storyshots UI Components/XP-Registration/JobCard default 1`] = `
   className="AutoUI_ui_JobCard-13 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
 >
   <h3
-    className="AutoUI_ui_JobCard-22 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    className="AutoUI_ui_JobCard-24 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
   >
     string string
   </h3>
   <div
-    className="AutoUI_ui_JobCard-29 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobCard-31 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-24"
   >
     string
   </div>
   <div
-    className="AutoUI_ui_JobCard-36"
+    className="AutoUI_ui_JobCard-39"
   >
     <Button
       block={false}
@@ -41699,7 +41699,7 @@ exports[`Storyshots UI Components/XP-Registration/JobCard default 1`] = `
     </Button>
   </div>
   <div
-    className="AutoUI_ui_JobCard-40 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobCard-43 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     string string
   </div>
