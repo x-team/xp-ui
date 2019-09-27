@@ -45,7 +45,9 @@ jest.mock('faker', () => (
     },
     lorem: {
       sentence: jest.fn(() => 'string'),
-      paragraphs: jest.fn(() => 'string')
+      paragraph: jest.fn(() => 'string'),
+      paragraphs: jest.fn(() => 'string'),
+      words: jest.fn(() => 'string')
     }
   }
 ))
