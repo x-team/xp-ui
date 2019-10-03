@@ -30,6 +30,7 @@ import SvgIcon from './components/ui/SvgIcon'
 import Tab from './components/ui/Tabs/Tab'
 import Tabs from './components/ui/Tabs/Tabs'
 import Text from './components/ui/Text'
+import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
 import VideoPlayer from './components/ui/VideoPlayer'
@@ -68,6 +69,7 @@ export {
   Tab,
   Tabs,
   Text,
+  TextareaEditor,
   TruncatedList,
   TwoColumnsLayout,
   VideoPlayer,
