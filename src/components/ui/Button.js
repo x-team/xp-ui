@@ -14,8 +14,8 @@ import typo from '../../styles/typo'
 const cmz = require('cmz')
 
 export type Size = 'normal' | 'large' | 'small'
-export type Color = 'normal' | 'monochrome' | 'silver' | 'gray' | 'grayPink'
-export type ContentStyle = 'normal' | 'openSans' | 'sourceSansPro'
+export type Color = 'normal' | 'lighter' | 'monochrome' | 'silver' | 'gray' | 'grayPink'
+export type ContentStyle = 'normal' | 'openSans' | 'sourceSansPro' | 'emphasized'
 
 type Props = {
   className: string | CmzAtom,
@@ -75,6 +75,8 @@ const baseStyles = {
 const contentStyles = {
   normal: cmz(typo.labelText, 'font-size: inherit'),
 
+  emphasized: cmz(typo.emphasizedLabelText, 'font-size: inherit'),
+
   openSans: cmz(baseStyles.content, `
     & span {
       text-transform: initial;
@@ -113,6 +115,25 @@ const colorStyles = {
     &:not(.readOnly):hover {
       background-color: ${theme.baseDarker.lighten(0.5)}
       border-color: ${theme.baseDarker.lighten(0.5)}
+      color: ${theme.baseBrighter}
+    }
+  `),
+
+  lighter: cmz(
+    baseStyles.root, `
+    & {
+      background-color: ${theme.baseRed}
+      border-color: ${theme.baseRed}
+      color: ${theme.baseBrighter}
+    }
+
+    &.outlined {
+      color: ${theme.baseRed}
+    }
+
+    &:not(.readOnly):hover {
+      background-color: ${theme.baseRed.lighten(0.1)}
+      border-color: ${theme.baseRed.lighten(0.1)}
       color: ${theme.baseBrighter}
     }
   `),
