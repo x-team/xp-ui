@@ -9,6 +9,9 @@ import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
+import IssueCollectorButton from './components/ui/IssueCollectorButton'
+import JobCard from './components/ui/JobCard'
+import JobsGrid from './components/ui/JobsGrid'
 import Loader from './components/ui/Loader'
 import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
@@ -27,6 +30,9 @@ export {
   HorizontalRuler,
   InputField,
   InputGroup,
+  IssueCollectorButton,
+  JobCard,
+  JobsGrid,
   Loader,
   Modal,
   RoadmapHero,
