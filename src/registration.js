@@ -19,6 +19,8 @@ import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
 import IssueCollectorButton from './components/ui/IssueCollectorButton'
+import JobCard from './components/ui/JobCard'
+import JobsGrid from './components/ui/JobsGrid'
 import Loader from './components/ui/Loader'
 import MetaGroup from './components/ui/MetaGroup'
 import MilestonesScreen from './components/ui/MilestonesScreen'
@@ -58,6 +60,8 @@ export {
   InputField,
   InputGroup,
   IssueCollectorButton,
+  JobCard,
+  JobsGrid,
   Loader,
   MetaGroup,
   MilestonesScreen,
