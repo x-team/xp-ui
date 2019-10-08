@@ -45,11 +45,12 @@
     "@storybook/addon-knobs": "^5.0.10",
     "@storybook/addon-notes": "^5.0.10",
     "@storybook/addon-storyshots": "^5.0.10",
+    "@storybook/addon-viewport": "^5.0.10",
     "@storybook/react": "^5.0.10",
-    "babel-eslint": "10.0.1",
-    "babel-loader": "^8.0.0-beta.6",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "10.0.1",
     "babel-jest": "^23.4.0",
+    "babel-loader": "^8.0.0-beta.6",
     "babel-plugin-cmz-names": "^1.5.0",
     "babel-plugin-require-context-hook": "^1.0.0",
     "cross-env": "^5.2.0",
@@ -76,7 +77,8 @@
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.0"
+    "webpack-cli": "^3.3.0",
+    "prop-types": "^15.7.2"
   },
   "dependencies": {
     "cmz": "^3.13.0",

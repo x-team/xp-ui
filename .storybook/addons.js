@@ -9,3 +9,6 @@ import '@storybook/addon-notes/register'
 
 // Allow to edit React props dynamically using the Storybook UI
 import '@storybook/addon-knobs/register'
+
+// Allows your stories to be displayed in different sizes and layouts
+import '@storybook/addon-viewport/register'
