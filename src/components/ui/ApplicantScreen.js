@@ -21,7 +21,7 @@ type Props = {
 }
 
 const ApplicantScreen = (props: Props) => {
-  const { children, contentWrapper } = props
+  const { children, contentWrapper = true } = props
   return (
     <div>
       <HeaderBar />
@@ -30,10 +30,6 @@ const ApplicantScreen = (props: Props) => {
       ) : children}
     </div>
   )
-}
-
-ApplicantScreen.defaultProps = {
-  contentWrapper: true
 }
 
 ApplicantScreen.propTypes = {
