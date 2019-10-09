@@ -60,6 +60,18 @@ storiesOf('UI Components/XP-Registration/JobsPageLayout/Debug', module)
       </ApplicantScreen>
     </Body>
   ))
+  .add('error content', () => (
+    <Body>
+      <ApplicantScreen contentWrapper={false}>
+        <JobsPageLayout
+          hero={<SampleHero />}
+          heading='Jobs'
+          error='An error has occurred.'
+          sidebar={<SampleSidebar />}
+        />
+      </ApplicantScreen>
+    </Body>
+  ))
   .add('using debug components', () => (
     <Body>
       <JobsPageLayout

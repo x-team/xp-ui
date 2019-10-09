@@ -5,6 +5,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Loader from './Loader'
+import ErrorBox from './ErrorBox'
 
 import { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -12,16 +13,19 @@ import typo from '../../styles/typo'
 const cmz = require('cmz')
 
 const gap = '32px'
+const wrapper = '1100px'
 
 const cx = {
   wrapper: cmz(`
     & {
-      max-width: 1100px
+      max-width: calc(${wrapper} - 2 * ${gap})
+      padding: 0 ${gap}
       margin: 0 auto 100px
     }
 
     @media screen and (max-width: ${breakpoints.sm}) {
       & {
+        padding: 0
         margin: 0 ${gap} 100px
       }
     }
@@ -77,7 +81,7 @@ const cx = {
     }
   `),
 
-  loading: cmz(`
+  centered: cmz(`
     text-align: center
   `)
 }
@@ -87,12 +91,36 @@ type Props = {
   heading?: React$Node,
   content?: React$Node,
   sidebar?: React$Node,
-  isLoading?: boolean
+  isLoading?: boolean,
+  error?: string
 }
 
 const JobsPageLayout = (props: Props) => {
-  const { hero, heading, content, sidebar, isLoading } = props
+  const { hero, heading, content, sidebar, isLoading, error } = props
   const headingClassName = typeof heading === 'string' ? cx.heading : ''
+
+  const renderContent = () => {
+    if (error) {
+      return (
+        <div className={cx.content}>
+          <ErrorBox errors={{ name: error }} />
+        </div>
+      )
+    }
+
+    if (isLoading) {
+      return (
+        <div className={[cx.content, cx.centered].join(' ')}>
+          <Loader />
+        </div>
+      )
+    }
+
+    return (
+      <div className={cx.content}>{content}</div>
+    )
+  }
+
   return (
     <div>
       {hero}
@@ -104,13 +132,7 @@ const JobsPageLayout = (props: Props) => {
           {sidebar && (
             <div className={cx.sidebar}>{sidebar}</div>
           )}
-          {isLoading ? (
-            <div className={[cx.content, cx.loading].join(' ')}>
-              <Loader />
-            </div>
-          ) : (
-            <div className={cx.content}>{content}</div>
-          )}
+          {renderContent()}
         </div>
       </div>
     </div>
