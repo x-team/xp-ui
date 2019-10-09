@@ -42422,6 +42422,36 @@ exports[`Storyshots UI Components/XP-Registration/JobsPageLayout default usage (
 </div>
 `;
 
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug error content 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <ApplicantScreen
+    contentWrapper={false}
+  >
+    <JobsPageLayout
+      error="An error has occurred."
+      heading="Jobs"
+      hero={<SampleHero />}
+      sidebar={<SampleSidebar />}
+    />
+  </ApplicantScreen>
+</div>
+`;
+
 exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug loading content 1`] = `
 <div
   style={
@@ -42455,13 +42485,13 @@ exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug loading c
 exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug missing props (does component explode?) 1`] = `
 <div>
   <div
-    className="AutoUI_ui_JobsPageLayout-17"
+    className="AutoUI_ui_JobsPageLayout-19"
   >
     <div
-      className="AutoUI_ui_JobsPageLayout-38"
+      className="AutoUI_ui_JobsPageLayout-42"
     >
       <div
-        className="AutoUI_ui_JobsPageLayout-51"
+        className="AutoUI_ui_JobsPageLayout-55"
       />
     </div>
   </div>
