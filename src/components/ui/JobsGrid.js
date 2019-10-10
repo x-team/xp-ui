@@ -8,8 +8,8 @@ const cmz = require('cmz')
 const cx = {
   card: cmz(`
     display: grid
-    grid-gap: 30px
-    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 32px
+    grid-template-columns: repeat(1, 1fr)
   `)
 }
 

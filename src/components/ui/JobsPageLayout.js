@@ -44,7 +44,7 @@ const cx = {
       display: flex
     }
 
-    @media screen and (max-width: ${breakpoints.sm}) {
+    @media screen and (max-width: calc(${breakpoints.sm} - 1px)) {
       & {
         flex-wrap: nowrap
         flex-direction: column
@@ -58,7 +58,7 @@ const cx = {
       order: 2
     }
 
-    @media screen and (min-width: ${breakpoints.md}) {
+    @media screen and (min-width: ${breakpoints.sm}) {
       &:not(:only-child) {
         margin-right: ${gap}
         max-width: 760px
@@ -73,10 +73,16 @@ const cx = {
       order: 1
     }
 
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        max-width: 200px
+        order: 2
+      }
+    }
+
     @media screen and (min-width: ${breakpoints.md}) {
       & {
         max-width: 308px
-        order: 2
       }
     }
   `),
