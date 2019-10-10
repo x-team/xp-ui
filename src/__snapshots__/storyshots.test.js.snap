@@ -2952,7 +2952,7 @@ exports[`Storyshots UI Components/ApplicantScreen missing props (does component 
 <div>
   <HeaderBar />
   <div
-    className="AutoUI_ui_ApplicantScreen-15"
+    className="AutoUI_ui_ApplicantScreen-12"
   />
 </div>
 `;
@@ -2961,7 +2961,7 @@ exports[`Storyshots UI Components/ApplicantScreen standard use 1`] = `
 <div>
   <HeaderBar />
   <div
-    className="AutoUI_ui_ApplicantScreen-15"
+    className="AutoUI_ui_ApplicantScreen-12"
   >
     <Text
       content="We’d love to start to get to know more about you. Please fill out these quick questions so we can introduce you to an Ambassador who will work with you 1-on-1 to get qualified to become an X-Teamer."
@@ -2981,7 +2981,7 @@ exports[`Storyshots UI Components/ApplicantScreen with milestones injected 1`] =
 <div>
   <HeaderBar />
   <div
-    className="AutoUI_ui_ApplicantScreen-15"
+    className="AutoUI_ui_ApplicantScreen-12"
   >
     <MilestonesScreen
       cta={
@@ -42263,4 +42263,363 @@ exports[`Storyshots UI Components/XP-Registration/JobsGrid/Debug missing props (
 <div
   className="AutoUI_ui_JobsGrid-9"
 />
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout default usage (full composition) 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <ApplicantScreen
+    contentWrapper={false}
+  >
+    <JobsPageLayout
+      content={
+        <JobsGrid
+          jobCards={
+            Array [
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+            ]
+          }
+        />
+      }
+      heading="Jobs"
+      hero={<SampleHero />}
+      sidebar={<SampleSidebar />}
+    />
+  </ApplicantScreen>
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug error content 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <ApplicantScreen
+    contentWrapper={false}
+  >
+    <JobsPageLayout
+      error="An error has occurred."
+      heading="Jobs"
+      hero={<SampleHero />}
+      sidebar={<SampleSidebar />}
+    />
+  </ApplicantScreen>
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug loading content 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <ApplicantScreen
+    contentWrapper={false}
+  >
+    <JobsPageLayout
+      heading="Jobs"
+      hero={<SampleHero />}
+      isLoading={true}
+      sidebar={<SampleSidebar />}
+    />
+  </ApplicantScreen>
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug missing props (does component explode?) 1`] = `
+<div>
+  <div
+    className="AutoUI_ui_JobsPageLayout-19"
+  >
+    <div
+      className="AutoUI_ui_JobsPageLayout-42"
+    >
+      <div
+        className="AutoUI_ui_JobsPageLayout-55"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug using debug components (without content) 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <JobsPageLayout
+    heading={<SampleHeading />}
+    hero={<SampleHero />}
+    sidebar={<SampleSidebar />}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug using debug components (without heading) 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <JobsPageLayout
+    content={<SampleContent />}
+    hero={<SampleHero />}
+    sidebar={<SampleSidebar />}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug using debug components (without hero) 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <JobsPageLayout
+    content={<SampleContent />}
+    heading={<SampleHeading />}
+    sidebar={<SampleSidebar />}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug using debug components (without sidebar) 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <JobsPageLayout
+    content={<SampleContent />}
+    heading={<SampleHeading />}
+    hero={<SampleHero />}
+  />
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug using debug components 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <JobsPageLayout
+    content={<SampleContent />}
+    heading={<SampleHeading />}
+    hero={<SampleHero />}
+    sidebar={<SampleSidebar />}
+  />
+</div>
 `;

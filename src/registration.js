@@ -21,6 +21,7 @@ import InputGroup from './components/forms/InputGroup'
 import IssueCollectorButton from './components/ui/IssueCollectorButton'
 import JobCard from './components/ui/JobCard'
 import JobsGrid from './components/ui/JobsGrid'
+import JobsPageLayout from './components/ui/JobsPageLayout'
 import Loader from './components/ui/Loader'
 import MetaGroup from './components/ui/MetaGroup'
 import MilestonesScreen from './components/ui/MilestonesScreen'
@@ -62,6 +63,7 @@ export {
   IssueCollectorButton,
   JobCard,
   JobsGrid,
+  JobsPageLayout,
   Loader,
   MetaGroup,
   MilestonesScreen,

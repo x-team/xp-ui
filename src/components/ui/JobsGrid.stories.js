@@ -8,7 +8,7 @@ import faker from 'faker'
 import JobsGrid from './JobsGrid'
 import JobCard from './JobCard'
 
-const jobCards = Array(15)
+export const jobCards = Array(15)
   .fill('')
   .map((item, i) => {
     const applied = faker.random.boolean()
