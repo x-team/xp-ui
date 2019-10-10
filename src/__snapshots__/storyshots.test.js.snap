@@ -42266,7 +42266,7 @@ exports[`Storyshots UI Components/XP-Registration/JobsGrid/Debug missing props (
 `;
 
 exports[`Storyshots UI Components/XP-Registration/JobsPageBreadcrumbs default 1`] = `
-<Link>
+<JobsPageBreadcrumbsLink>
   <div
     className="AutoUI_ui_JobsPageBreadcrumbs-14 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
@@ -42280,7 +42280,7 @@ exports[`Storyshots UI Components/XP-Registration/JobsPageBreadcrumbs default 1`
       Browse all jobs
     </span>
   </div>
-</Link>
+</JobsPageBreadcrumbsLink>
 `;
 
 exports[`Storyshots UI Components/XP-Registration/JobsPageBreadcrumbs/Debug missing props (does component explode?) 1`] = `""`;
@@ -42435,6 +42435,168 @@ exports[`Storyshots UI Components/XP-Registration/JobsPageLayout default usage (
         />
       }
       heading="Jobs"
+      hero={<SampleHero />}
+      sidebar={<SampleSidebar />}
+    />
+  </ApplicantScreen>
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug breadcrumbs heading 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <ApplicantScreen
+    contentWrapper={false}
+  >
+    <JobsPageLayout
+      content={
+        <JobsGrid
+          jobCards={
+            Array [
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+            ]
+          }
+        />
+      }
+      heading={
+        <JobsPageBreadcrumbs
+          label="Browse all jobs"
+          link={[Function]}
+        />
+      }
       hero={<SampleHero />}
       sidebar={<SampleSidebar />}
     />
