@@ -1,30 +1,40 @@
 // @flow
+/* global React$Node */
 
-import React, { PureComponent } from 'react'
-
-import elem from '../../utils/elem'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 import HeaderBar from './HeaderBar'
 
-import type { Element } from 'react'
-
 const cmz = require('cmz')
 
-const Root = elem.div()
-
-const Content = elem.div(cmz(`
-  max-width: 1280px
-  margin: 93px auto 0
-`))
-
-type Props = {
-  children?: Element<*>
+const cx = {
+  content: cmz(`
+    max-width: 1280px
+    margin: 93px auto 0
+  `)
 }
 
-class ApplicantScreen extends PureComponent<Props> {
-  render () {
-    return Root(<HeaderBar />, Content(this.props.children))
-  }
+type Props = {
+  children?: React$Node,
+  contentWrapper?: boolean
+}
+
+const ApplicantScreen = (props: Props) => {
+  const { children, contentWrapper = true } = props
+  return (
+    <div>
+      <HeaderBar />
+      {contentWrapper ? (
+        <div className={cx.content}>{children}</div>
+      ) : children}
+    </div>
+  )
+}
+
+ApplicantScreen.propTypes = {
+  children: PropTypes.node,
+  contentWrapper: PropTypes.bool
 }
 
 export default ApplicantScreen

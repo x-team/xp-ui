@@ -12,6 +12,7 @@ import InputGroup from './components/forms/InputGroup'
 import IssueCollectorButton from './components/ui/IssueCollectorButton'
 import JobCard from './components/ui/JobCard'
 import JobsGrid from './components/ui/JobsGrid'
+import JobsPageLayout from './components/ui/JobsPageLayout'
 import Loader from './components/ui/Loader'
 import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
@@ -33,6 +34,7 @@ export {
   IssueCollectorButton,
   JobCard,
   JobsGrid,
+  JobsPageLayout,
   Loader,
   Modal,
   RoadmapHero,
