@@ -3,9 +3,6 @@ import { create } from '@storybook/theming'
 import { withInfo } from '@storybook/addon-info'
 import { withConsole } from '@storybook/addon-console'
 import { withKnobs } from '@storybook/addon-knobs'
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-
-import { breakpoints } from '../src/styles/theme'
 
 // Show additional information for stories: usage or other types of documentation alongside the story
 addDecorator(
@@ -82,24 +79,7 @@ addParameters({
     { name: 'black', value: '#000' },
     { name: 'instagram', value: '#00aced' },
     { name: 'facebook', value: '#3b5998' }
-  ],
-  viewport: {
-    viewports: {
-      ...Object.keys(breakpoints).reduce((bps, bp) => ({
-        ...bps,
-        [`XP-UI_${bp}`]: {
-          name: `XP-UI Breakpoint: ${bp.toUpperCase()}`,
-          styles: {
-            height: '90%',
-            width: breakpoints[bp],
-          },
-          type: 'desktop'
-        }
-      }), {}),
-      ...INITIAL_VIEWPORTS
-    },
-    defaultViewport: 'responsive',
-  }
+  ]
 })
 
 // Load stories dynamically
