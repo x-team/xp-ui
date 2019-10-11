@@ -42,12 +42,13 @@ const cx = {
   container: cmz(`
     & {
       display: flex
+      flex-wrap: nowrap
+      flex-direction: column
     }
 
-    @media screen and (max-width: calc(${breakpoints.sm} - 1px)) {
+    @media screen and (min-width: ${breakpoints.sm}) {
       & {
-        flex-wrap: nowrap
-        flex-direction: column
+        flex-direction: row
       }
     }
   `),
@@ -71,12 +72,14 @@ const cx = {
     & {
       width: 100%
       order: 1
+      margin-bottom: ${gap}
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
       & {
         max-width: 200px
         order: 2
+        margin-bottom: 0
       }
     }
 

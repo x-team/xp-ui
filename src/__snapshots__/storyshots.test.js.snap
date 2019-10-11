@@ -42265,6 +42265,44 @@ exports[`Storyshots UI Components/XP-Registration/JobsGrid/Debug missing props (
 />
 `;
 
+exports[`Storyshots UI Components/XP-Registration/JobsPageBreadcrumbs default 1`] = `
+<JobsPageBreadcrumbsLink>
+  <div
+    className="AutoUI_ui_JobsPageBreadcrumbs-14 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    <SvgIcon
+      color="default"
+      icon="arrowleft"
+    />
+    <span
+      className="AutoUI_ui_JobsPageBreadcrumbs-24"
+    >
+      Browse all jobs
+    </span>
+  </div>
+</JobsPageBreadcrumbsLink>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageBreadcrumbs/Debug custom label 1`] = `
+<JobsPageBreadcrumbsLink>
+  <div
+    className="AutoUI_ui_JobsPageBreadcrumbs-14 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    <SvgIcon
+      color="default"
+      icon="arrowleft"
+    />
+    <span
+      className="AutoUI_ui_JobsPageBreadcrumbs-24"
+    >
+      Back to previous page
+    </span>
+  </div>
+</JobsPageBreadcrumbsLink>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobsPageBreadcrumbs/Debug missing props (does component explode?) 1`] = `""`;
+
 exports[`Storyshots UI Components/XP-Registration/JobsPageLayout default usage (full composition) 1`] = `
 <div
   style={
@@ -42422,6 +42460,168 @@ exports[`Storyshots UI Components/XP-Registration/JobsPageLayout default usage (
 </div>
 `;
 
+exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug breadcrumbs heading 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <ApplicantScreen
+    contentWrapper={false}
+  >
+    <JobsPageLayout
+      content={
+        <JobsGrid
+          jobCards={
+            Array [
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+              <JobCard
+                applied={true}
+                description="string"
+                message="string string"
+                name="string string"
+                onApply={[Function]}
+                onWithdraw={[Function]}
+              />,
+            ]
+          }
+        />
+      }
+      heading={
+        <JobsPageBreadcrumbs
+          label="Browse all jobs"
+          link={[Function]}
+        />
+      }
+      hero={<SampleHero />}
+      sidebar={<SampleSidebar />}
+    />
+  </ApplicantScreen>
+</div>
+`;
+
 exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug error content 1`] = `
 <div
   style={
@@ -42491,7 +42691,7 @@ exports[`Storyshots UI Components/XP-Registration/JobsPageLayout/Debug missing p
       className="AutoUI_ui_JobsPageLayout-42"
     >
       <div
-        className="AutoUI_ui_JobsPageLayout-55"
+        className="AutoUI_ui_JobsPageLayout-56"
       />
     </div>
   </div>
