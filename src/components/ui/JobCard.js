@@ -28,7 +28,7 @@ const cx = {
     `
   ),
 
-  description: cmz(
+  summary: cmz(
     typo.baseText,
     `
       margin: 10px 25px
@@ -47,16 +47,39 @@ const cx = {
       margin: 0
       padding: 10px 25px
     `
-  )
+  ),
+
+  link: cmz(
+    // typo.baseText,
+    `
+      & {
+        color: ${theme.baseRed}
+        text-decoration: none
+        display: inline-flex
+        align-items: center
+      }
+
+      &:hover {
+        text-decoration: underline
+        cursor: pointer
+      }
+    `
+  ),
+
+  tinyArrows: cmz(`
+    font-size: 0.5em
+    margin-left: 5px
+  `)
 }
 
 type Props = {
   applied: boolean,
   name?: string,
-  description?: string,
+  summary?: string,
   message?: string,
   onApply?: () => void,
-  onWithdraw?: () => void
+  onWithdraw?: () => void,
+  onLearnMore?: () => void
 }
 
 class JobCard extends PureComponent<Props, void> {
@@ -65,12 +88,12 @@ class JobCard extends PureComponent<Props, void> {
   }
 
   render () {
-    const { applied, name, description, message, onApply, onWithdraw } = this.props
+    const { applied, name, summary, message, onApply, onWithdraw, onLearnMore } = this.props
     return name ? (
       <div className={cx.card}>
         <h3 className={cx.name}>{name}</h3>
-        {description && (
-          <div className={cx.description}>{description}</div>
+        {summary && (
+          <div className={cx.summary}>{summary}... <span className={cx.link} onClick={onLearnMore}>Learn more <small className={cx.tinyArrows}>>></small></span></div>
         )}
         <div className={cx.actions}>
           {applied ? (

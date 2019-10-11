@@ -13,10 +13,11 @@ storiesOf('UI Components/XP-Registration/JobCard', module)
     <JobCard
       applied={boolean('Applied', false)}
       name={text('Name', faker.random.words())}
-      description={text('Description', faker.lorem.paragraph())}
+      summary={text('Description', faker.lorem.paragraph())}
       message={text('Message', faker.random.words())}
       onApply={action('onApply')}
       onWithdraw={action('onWithdraw')}
+      onLearnMore={action('onLearnMore')}
     />
   ))
 
