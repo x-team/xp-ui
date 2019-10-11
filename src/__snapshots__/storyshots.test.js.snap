@@ -42073,6 +42073,18 @@ exports[`Storyshots UI Components/XP-Registration/JobCard default 1`] = `
     className="AutoUI_ui_JobCard-31 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     string
+    ... 
+    <span
+      className="AutoUI_ui_JobCard-52"
+      onClick={[Function]}
+    >
+      Learn more 
+      <small
+        className="AutoUI_ui_JobCard-69"
+      >
+        &gt;&gt;
+      </small>
+    </span>
   </div>
   <div
     className="AutoUI_ui_JobCard-39"
