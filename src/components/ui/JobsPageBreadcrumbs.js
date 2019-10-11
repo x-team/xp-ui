@@ -31,7 +31,7 @@ type Props = {
   link?: React$StatelessFunctionalComponent<*>
 }
 
-const JobsPageBreadcrumbs = ({ label, link: Link }: Props) => label && Link ? (
+const JobsPageBreadcrumbs = ({ label = 'Browse all jobs', link: Link }: Props) => Link ? (
   <Link>
     <div className={cx.breadcrumb}>
       <SvgIcon icon='arrowleft' />

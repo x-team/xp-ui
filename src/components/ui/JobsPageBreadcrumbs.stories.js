@@ -16,12 +16,17 @@ export const JobsPageBreadcrumbsLink = ({ children }: { children: React$Node }) 
 storiesOf('UI Components/XP-Registration/JobsPageBreadcrumbs', module)
   .add('default', () => (
     <JobsPageBreadcrumbs
-      label='Browse all jobs'
       link={JobsPageBreadcrumbsLink}
     />
   ))
 
 storiesOf('UI Components/XP-Registration/JobsPageBreadcrumbs/Debug', module)
+  .add('custom label', () => (
+    <JobsPageBreadcrumbs
+      label='Back to previous page'
+      link={JobsPageBreadcrumbsLink}
+    />
+  ))
   .add('missing props (does component explode?)', () => (
     <JobsPageBreadcrumbs />
   ))
