@@ -7,6 +7,8 @@ import JobsPageLayout from './JobsPageLayout'
 import ApplicantScreen from './ApplicantScreen'
 import JobsGrid from './JobsGrid'
 import { jobCards } from './JobsGrid.stories'
+import JobsPageBreadcrumbs from './JobsPageBreadcrumbs'
+import { JobsPageBreadcrumbsLink } from './JobsPageBreadcrumbs.stories'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -48,6 +50,23 @@ storiesOf('UI Components/XP-Registration/JobsPageLayout', module)
   ))
 
 storiesOf('UI Components/XP-Registration/JobsPageLayout/Debug', module)
+  .add('breadcrumbs heading', () => (
+    <Body>
+      <ApplicantScreen contentWrapper={false}>
+        <JobsPageLayout
+          hero={<SampleHero />}
+          heading={
+            <JobsPageBreadcrumbs
+              label='Browse all jobs'
+              link={JobsPageBreadcrumbsLink}
+            />
+          }
+          content={<JobsGrid jobCards={jobCards} />}
+          sidebar={<SampleSidebar />}
+        />
+      </ApplicantScreen>
+    </Body>
+  ))
   .add('loading content', () => (
     <Body>
       <ApplicantScreen contentWrapper={false}>
