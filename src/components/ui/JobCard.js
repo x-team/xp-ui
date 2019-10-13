@@ -24,7 +24,15 @@ const cx = {
   name: cmz(
     typo.sectionHeading,
     `
-      margin: 25px 25px 10px
+      & {
+        margin: 25px 25px 10px
+        text-decoration: none
+      }
+
+      &:hover {
+        text-decoration: underline
+        cursor: pointer
+      }
     `
   ),
 
@@ -64,12 +72,7 @@ const cx = {
         cursor: pointer
       }
     `
-  ),
-
-  tinyArrows: cmz(`
-    font-size: 0.5em
-    margin-left: 5px
-  `)
+  )
 }
 
 type Props = {
@@ -77,9 +80,9 @@ type Props = {
   name?: string,
   summary?: string,
   message?: string,
+  link?: string,
   onApply?: () => void,
-  onWithdraw?: () => void,
-  onLearnMore?: () => void
+  onWithdraw?: () => void
 }
 
 class JobCard extends PureComponent<Props, void> {
@@ -88,12 +91,16 @@ class JobCard extends PureComponent<Props, void> {
   }
 
   render () {
-    const { applied, name, summary, message, onApply, onWithdraw, onLearnMore } = this.props
+    const { applied, name, summary, message, link, onApply, onWithdraw } = this.props
     return name ? (
       <div className={cx.card}>
-        <h3 className={cx.name}>{name}</h3>
+        {
+          link
+            ? <a href={link} className={cx.name}><h3>{name}</h3></a>
+            : <h3 className={cx.name}>{name}</h3>
+        }
         {summary && (
-          <div className={cx.summary}>{summary}... <span className={cx.link} onClick={onLearnMore}>Learn more <small className={cx.tinyArrows}>>></small></span></div>
+          <div className={cx.summary}>{summary} { link && <a className={cx.link} href={link}>Learn more »</a> } </div>
         )}
         <div className={cx.actions}>
           {applied ? (

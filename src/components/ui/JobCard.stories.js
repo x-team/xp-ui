@@ -15,9 +15,9 @@ storiesOf('UI Components/XP-Registration/JobCard', module)
       name={text('Name', faker.random.words())}
       summary={text('Description', faker.lorem.paragraph())}
       message={text('Message', faker.random.words())}
+      link='#link'
       onApply={action('onApply')}
       onWithdraw={action('onWithdraw')}
-      onLearnMore={action('onLearnMore')}
     />
   ))
 
