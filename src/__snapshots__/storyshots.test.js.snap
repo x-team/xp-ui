@@ -42064,30 +42064,29 @@ exports[`Storyshots UI Components/XP-Registration/JobCard default 1`] = `
 <div
   className="AutoUI_ui_JobCard-13 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
 >
-  <h3
+  <a
     className="AutoUI_ui_JobCard-24 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    href="#link"
   >
-    string string
-  </h3>
+    <h3>
+      string string
+    </h3>
+  </a>
   <div
-    className="AutoUI_ui_JobCard-31 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobCard-39 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     string
-    ... 
-    <span
-      className="AutoUI_ui_JobCard-52"
-      onClick={[Function]}
+     
+    <a
+      className="AutoUI_ui_JobCard-60"
+      href="#link"
     >
-      Learn more 
-      <small
-        className="AutoUI_ui_JobCard-69"
-      >
-        &gt;&gt;
-      </small>
-    </span>
+      Learn more »
+    </a>
+     
   </div>
   <div
-    className="AutoUI_ui_JobCard-39"
+    className="AutoUI_ui_JobCard-47"
   >
     <Button
       block={false}
@@ -42114,7 +42113,7 @@ exports[`Storyshots UI Components/XP-Registration/JobCard default 1`] = `
     </Button>
   </div>
   <div
-    className="AutoUI_ui_JobCard-43 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobCard-51 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     string string
   </div>
