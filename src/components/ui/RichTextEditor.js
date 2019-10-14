@@ -81,7 +81,8 @@ type Props = {
   hideToolbar: boolean,
   toolbarItems: Array<string>,
   mode: 'markdown' | 'wysiwyg' | 'viewer',
-  handleChange({ markdown: string, plainText: string }): void
+  forceRerender: boolean,
+  handleChange({ html: string, markdown: string, plainText: string }): void
 }
 
 type State = {
@@ -92,6 +93,7 @@ class RichTextEditor extends Component<Props, State> {
   static defaultProps = {
     className: '',
     disabled: false,
+    forceRerender: false,
     characterLimit: Infinity,
     hideModeSwitch: true,
     hideToolbar: false,
@@ -132,7 +134,9 @@ class RichTextEditor extends Component<Props, State> {
         previewStyle: 'vertical',
         height: 'auto',
         usageStatistics: false,
-        events: { change: this.onChange },
+        events: {
+          change: this.onChange
+        },
         toolbarItems,
         viewer: mode === 'viewer'
       })
@@ -154,16 +158,23 @@ class RichTextEditor extends Component<Props, State> {
   }
 
   componentDidUpdate (prevProps: Props) {
-    if (prevProps.hideModeSwitch !== this.props.hideModeSwitch) {
-      this.props.hideModeSwitch
+    const { forceRerender, initialValue, hideModeSwitch } = this.props
+    if (prevProps.hideModeSwitch !== hideModeSwitch) {
+      hideModeSwitch
         ? this.editor.getUI().getModeSwitch().hide()
         : this.editor.getUI().getModeSwitch().show()
+    }
+
+    // Whether an Editor should be force updated with a new value
+    if (forceRerender && prevProps.initialValue !== initialValue) {
+      this.editor.setValue(initialValue)
     }
   }
 
   onChange = () => {
     const { characterLimit, handleChange } = this.props
     const values = {
+      html: this.editor.getHtml(),
       markdown: this.editor.getMarkdown(),
       plainText: this.editorContentsNode.innerText || ''
     }
