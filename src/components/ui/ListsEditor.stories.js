@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 
 import ListsEditor from './ListsEditor'
 
-storiesOf('UI Components|ListsEditor', module)
+storiesOf('UI Components|Applicant Lists/Editor', module)
   .add('basic', () => {
     const itemsArray = Array(18)
       .fill({})
@@ -28,5 +28,5 @@ storiesOf('UI Components|ListsEditor', module)
     )
   })
 
-storiesOf('UI Components|ListsEditor/Debug', module)
+storiesOf('UI Components|Applicant Lists/Editor/Debug', module)
   .add('missing props (does component explode?)', () => <ListsEditor />)

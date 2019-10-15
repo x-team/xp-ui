@@ -47,7 +47,7 @@ const StoryModal = props => (
   </State>
 )
 
-storiesOf('UI Components|Modal', module)
+storiesOf('Core|Modal', module)
   .add('basic modal', () => (
     <Body>
       <StoryModal>
@@ -75,7 +75,7 @@ storiesOf('UI Components|Modal', module)
     </Body>
   ))
 
-storiesOf('UI Components|Modal/Use cases', module)
+storiesOf('Core|Modal/Use cases', module)
   .add('with ListEditor', () => (
     <Body>
       <StoryModal>
@@ -92,7 +92,7 @@ storiesOf('UI Components|Modal/Use cases', module)
     </Body>
   ))
 
-storiesOf('UI Components|Modal/Debug', module)
+storiesOf('Core|Modal/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Body>
       <Modal />

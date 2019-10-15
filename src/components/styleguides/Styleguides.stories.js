@@ -28,7 +28,7 @@ const textOptions = {
   'Paragraphs': 'paragraphs'
 }
 
-storiesOf('Styleguide|Default', module)
+storiesOf('Styleguide|XP', module)
   .add('ColorPalette', () => (
     <ColorPalette />
   ), {

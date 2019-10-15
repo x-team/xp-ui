@@ -34,7 +34,7 @@ const Sandbox = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components|MetaGroup', module)
+storiesOf('Core|Layouts/MetaGroup', module)
   .add('standalone composed with children', () => (
     <Sandbox>
       <MetaGroup
@@ -54,7 +54,7 @@ Note: Dashed and dotted elements are for sandboxing purposes only, the real chil
     }
   })
 
-storiesOf('UI Components|MetaGroup/Debug', module)
+storiesOf('Core|Layouts/MetaGroup/Debug', module)
   .add('responsive demonstration with many elements', () => (
     <Sandbox>
       <MetaGroup

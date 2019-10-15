@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 
 import TextareaEditor from './TextareaEditor'
 
-storiesOf('UI Components|TextareaEditor', module)
+storiesOf('Form Components|TextareaEditor', module)
   .add('basic usage', () => (
     <TextareaEditor
       charLimit={30}
@@ -56,5 +56,5 @@ storiesOf('UI Components|TextareaEditor', module)
     />
   ))
 
-storiesOf('UI Components|TextareaEditor/Debug', module)
+storiesOf('Form Components|TextareaEditor/Debug', module)
   .add('missing props (does component explode?)', () => <TextareaEditor />)

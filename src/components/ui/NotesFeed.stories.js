@@ -186,7 +186,7 @@ const sampleWithTypes = [
   }
 ]
 
-storiesOf('UI Components|NotesFeed', module)
+storiesOf('UI Components|Notes/Feed', module)
   .add('basic usage', () => (
     <NotesFeed notes={sample} onNoteUpdate={action('Updated note')} />
   ))
@@ -194,5 +194,5 @@ storiesOf('UI Components|NotesFeed', module)
     <NotesFeed notes={sampleWithTypes} showNoteType onNoteUpdate={action('Updated note')} />
   ))
 
-storiesOf('UI Components|NotesFeed/Debug', module)
+storiesOf('UI Components|Notes/Feed/Debug', module)
   .add('missing props (does component explode?)', () => <NotesFeed />)

@@ -23,7 +23,7 @@ const emailsLarge = [...Array(14).keys()].map(getEmailObjectStructure)
 const emailsSmall = [...Array(5).keys()].map(getEmailObjectStructure)
 const emailsExtraSmall = [...Array(1).keys()].map(getEmailObjectStructure)
 
-storiesOf('UI Components|EmailFeed', module)
+storiesOf('UI Components|Email/Feed', module)
   .add('initial expanded all', () => (
     <EmailFeed
       initialExpandedAll
@@ -144,5 +144,5 @@ storiesOf('UI Components|EmailFeed', module)
     )
   })
 
-storiesOf('UI Components|EmailFeed/Debug', module)
+storiesOf('UI Components|Email/Feed/Debug', module)
   .add('missing props (does component explode?)', () => <EmailFeed />)

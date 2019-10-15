@@ -7,7 +7,7 @@ import { boolean, number, text, array } from '@storybook/addon-knobs'
 
 import RichTextEditor from './RichTextEditor'
 
-storiesOf('UI Components|RichTextEditor', module)
+storiesOf('Form Components|Rich Text Editor', module)
   .add('basic usage', () => (
     <RichTextEditor />
   ))
@@ -94,4 +94,9 @@ This is **bold** text
 - Wednesday
       `}
     />
+  ))
+
+storiesOf('Form Components|Rich Text Editor/Debug', module)
+  .add('missing props (does component explode?)', () => (
+    <RichTextEditor />
   ))

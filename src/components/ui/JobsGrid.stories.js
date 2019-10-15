@@ -27,14 +27,14 @@ export const jobCards = Array(15)
     )
   })
 
-storiesOf('UI Components|XP-Registration/JobsGrid', module)
+storiesOf('UI Components|Jobs/List', module)
   .add('default', () => (
     <JobsGrid
       jobCards={jobCards}
     />
   ))
 
-storiesOf('UI Components|XP-Registration/JobsGrid/Debug', module)
+storiesOf('UI Components|Jobs/List/Debug', module)
   .add('missing props (does component explode?)', () => (
     <JobsGrid />
   ))

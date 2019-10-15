@@ -13,27 +13,27 @@ const ExampleButton = ({ isActive, text, ...props }) => {
       style={{ padding: '0 10px 10px 0' }}
       className={`${props.className ? `${props.className}` : ''}${isActive ? ' active' : ''}`}
     >
-      {`${text}${isActive ? ' - I\'m active' : ''}`}
+      {`${text}${isActive ? ' *' : ''}`}
     </span>
   )
 }
 const HeadWrapper = props => <div className='header'>{props.children}</div>
 const ContentWrapper = props => <div className='content'>{props.children}</div>
 
-storiesOf('UI Components|GenericTabs', module)
+storiesOf('Core|Tabs', module)
   .add('basic usage', () => (
     <GenericTabs.Container>
       <GenericTabs.Head tabKey='first'>
-        <ExampleButton text='Tab 1' className='foo' />
+        <ExampleButton text='Blue Tab' className='foo' />
       </GenericTabs.Head>
       <GenericTabs.Head tabKey='second'>
-        <ExampleButton text='Tab 2' className='foo' />
+        <ExampleButton text='Yellow Tab' className='foo' />
       </GenericTabs.Head>
       <GenericTabs.Pane tabKey='first'>
-        <div>Foo bar baz 1</div>
+        <div style={{ backgroundColor: 'blue', padding: '20px', width: '100px', height: '100px' }}>Now you see the blue tab contents</div>
       </GenericTabs.Pane>
       <GenericTabs.Pane tabKey='second'>
-        <div>Foo bar baz 2</div>
+        <div style={{ backgroundColor: 'yellow', padding: '20px', width: '100px', height: '100px' }}>Now you see the yellow tab content</div>
       </GenericTabs.Pane>
     </GenericTabs.Container>
   ))
@@ -114,7 +114,7 @@ storiesOf('UI Components|GenericTabs', module)
     </GenericTabs.Container>
   ))
 
-storiesOf('UI Components|GenericTabs/Debug', module)
+storiesOf('Core|Tabs/Debug', module)
   .add('change Pane body', () => (
     <State initialState={{ value: 1 }}>
       {({ setState, state }) => state.value ? (
