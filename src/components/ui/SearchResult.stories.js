@@ -50,7 +50,7 @@ const visibleColumnsDropdownItems = [...visibleColumns].map(each => ({
   selected: true
 }))
 
-storiesOf('UI Components/SearchResult', module)
+storiesOf('UI Components|SearchResult', module)
   .add('default', () => (
     <Body>
       <SearchResult
@@ -78,7 +78,7 @@ storiesOf('UI Components/SearchResult', module)
     </Body>
   ))
 
-storiesOf('UI Components/SearchResult/Debug', module)
+storiesOf('UI Components|SearchResult/Debug', module)
   .add('missing props (does component explode?)', () => (
     <SearchResult />
   ))

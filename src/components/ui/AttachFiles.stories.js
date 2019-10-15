@@ -6,7 +6,7 @@ import AttachFiles from './AttachFiles'
 
 const firstArg = decorate([args => args.slice(0, 1)])
 
-storiesOf('UI Components/AttachFiles', module)
+storiesOf('UI Components|AttachFiles', module)
   .add('multiple files', () => (
     <AttachFiles
       files={[
@@ -70,7 +70,7 @@ storiesOf('UI Components/AttachFiles', module)
     />
   ))
 
-storiesOf('UI Components/AttachFiles/Debug', module)
+storiesOf('UI Components|AttachFiles/Debug', module)
   .add('missing props (does component explode?)', () => (
     <AttachFiles />
   ))

@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react'
 
 import VideoPlayer from './VideoPlayer'
 
-storiesOf('UI Components/VideoPlayer', module)
+storiesOf('UI Components|VideoPlayer', module)
   .add('regular video, source is provided only, video is set to its original sizes', () => (
     <VideoPlayer src={'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'} />
   ))
@@ -75,5 +75,5 @@ storiesOf('UI Components/VideoPlayer', module)
     />
   ))
 
-storiesOf('UI Components/VideoPlayer/Debug', module)
+storiesOf('UI Components|VideoPlayer/Debug', module)
   .add('missing props (does component explodes?)', () => <VideoPlayer />)

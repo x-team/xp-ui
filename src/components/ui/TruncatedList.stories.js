@@ -7,7 +7,7 @@ import TruncatedList from './TruncatedList'
 import Button from './Button'
 import XIcon from './XIcon'
 
-storiesOf('UI Components/TruncatedList', module)
+storiesOf('UI Components|TruncatedList', module)
   .addParameters({
     info: {
       header: true,
@@ -114,5 +114,5 @@ storiesOf('UI Components/TruncatedList', module)
       visible={8} />
   ))
 
-storiesOf('UI Components/TruncatedList/Debug', module)
+storiesOf('UI Components|TruncatedList/Debug', module)
   .add('missing props (does component explode?)', () => <TruncatedList />)

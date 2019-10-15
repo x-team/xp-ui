@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import ErrorBox from './ErrorBox'
 
-storiesOf('UI Components/ErrorBox', module)
+storiesOf('UI Components|ErrorBox', module)
   .add('no errors', () => <ErrorBox errors={{}} />)
   .add('with one error', () => <ErrorBox errors={{ name: 'Something went wrong' }} />)
   .add('with two errors', () => (
@@ -16,5 +16,5 @@ storiesOf('UI Components/ErrorBox', module)
     <ErrorBox errors={{ name: <span>Something went <a href='#'>wrong</a></span> }} />
   ))
 
-storiesOf('UI Components/ErrorBox/Debug', module)
+storiesOf('UI Components|ErrorBox/Debug', module)
   .add('missing props (does component explode?)', () => <ErrorBox />)

@@ -28,7 +28,7 @@ const textOptions = {
   'Paragraphs': 'paragraphs'
 }
 
-storiesOf('Styleguides', module)
+storiesOf('Styleguide|Default', module)
   .add('ColorPalette', () => (
     <ColorPalette />
   ), {
@@ -52,3 +52,8 @@ Sed non dapibus turpis, sed pulvinar nibh. Nam quis libero dapibus, vestibulum i
   ), {
     notes: { markdown: layoutInfo }
   })
+
+storiesOf('Styleguide|Default/Debug', module)
+  .add('missing props (does component explode?)', () => (
+    <Typography />
+  ))

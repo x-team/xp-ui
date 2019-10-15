@@ -8,7 +8,7 @@ import faker from 'faker'
 
 import JobCard from './JobCard'
 
-storiesOf('UI Components/XP-Registration/JobCard', module)
+storiesOf('UI Components|XP-Registration/JobCard', module)
   .add('default', () => (
     <JobCard
       applied={boolean('Applied', false)}
@@ -20,7 +20,7 @@ storiesOf('UI Components/XP-Registration/JobCard', module)
     />
   ))
 
-storiesOf('UI Components/XP-Registration/JobCard/Debug', module)
+storiesOf('UI Components|XP-Registration/JobCard/Debug', module)
   .add('missing props (does component explode?)', () => (
     <JobCard />
   ))

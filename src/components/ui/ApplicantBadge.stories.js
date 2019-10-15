@@ -72,7 +72,7 @@ const Sandbox = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components/ApplicantBadge', module)
+storiesOf('UI Components|ApplicantBadge', module)
   .add('basic usage', () => (
     <Sandbox>
       <StoryApplicantBadge />
@@ -94,7 +94,7 @@ storiesOf('UI Components/ApplicantBadge', module)
     </Sandbox>
   ))
 
-storiesOf('UI Components/ApplicantBadge/Debug', module)
+storiesOf('UI Components|ApplicantBadge/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ApplicantBadge />
   ))

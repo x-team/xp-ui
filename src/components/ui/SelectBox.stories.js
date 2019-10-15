@@ -12,7 +12,7 @@ const sizes = {
   Small: 'small'
 }
 
-storiesOf('UI Components/SelectBox', module)
+storiesOf('UI Components|SelectBox', module)
   .add('simple view for Add to List', () => {
     const itemsArray = [
       {
@@ -675,5 +675,5 @@ storiesOf('UI Components/SelectBox', module)
     )
   })
 
-storiesOf('UI Components/SelectBox/Debug', module)
+storiesOf('UI Components|SelectBox/Debug', module)
   .add('missing props (does component explode?)', () => <SelectBox />)

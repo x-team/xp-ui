@@ -16,7 +16,7 @@ const ListSelector = ({ selected = false }) => (
   />
 )
 
-storiesOf('UI Components/SettingsImportScreen', module)
+storiesOf('UI Components|SettingsImportScreen', module)
   .add('default initial view', () => (
     <SettingsImportScreen>
       <ListSelector />
@@ -81,7 +81,7 @@ email3@email.com`}
     </SettingsImportScreen>
   ))
 
-storiesOf('UI Components/SettingsImportScreen/Debug', module)
+storiesOf('UI Components|SettingsImportScreen/Debug', module)
   .add('missing props (does component explode?)', () => (
     <SettingsImportScreen />
   ))

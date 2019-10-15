@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import RoadmapHero from './RoadmapHero'
 
-storiesOf('UI Components/RoadmapHero', module)
+storiesOf('UI Components|RoadmapHero', module)
   .add('basic usage', () => (
     <RoadmapHero
       heading={`Your roadmap to X${String.fromCharCode(8209)}Team`}
@@ -19,5 +19,5 @@ storiesOf('UI Components/RoadmapHero', module)
     />
   ))
 
-storiesOf('UI Components/RoadmapHero/Debug', module)
+storiesOf('UI Components|RoadmapHero/Debug', module)
   .add('missing props (does component explode?)', () => <RoadmapHero />)

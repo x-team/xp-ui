@@ -7,7 +7,7 @@ import Loader from './Loader'
 import SelectBox from './SelectBox'
 import Button from './Button'
 
-storiesOf('UI Components/Dropdown', module)
+storiesOf('UI Components|Dropdown', module)
   .add('labeled button', () => (
     <Dropdown icon='add' label='Add to List' indicator>
       <div style={{ background: '#e9e9e9' }}>
@@ -122,5 +122,5 @@ storiesOf('UI Components/Dropdown', module)
     )
   })
 
-storiesOf('UI Components/Dropdown/Debug', module)
+storiesOf('UI Components|Dropdown/Debug', module)
   .add('missing props (does component explode?)', () => <Dropdown />)

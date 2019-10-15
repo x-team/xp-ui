@@ -24,7 +24,7 @@ export const StoryStatusFilter = (props) => (
   </State>
 )
 
-storiesOf('UI Components/StatusFilter', module)
+storiesOf('UI Components|StatusFilter', module)
   .add('default', () => (
     <StoryStatusFilter
       checked={{ accepted: true, excluded: false }}
@@ -35,7 +35,7 @@ storiesOf('UI Components/StatusFilter', module)
     <StatusFilter disabled />
   ))
 
-storiesOf('UI Components/StatusFilter/Debug', module)
+storiesOf('UI Components|StatusFilter/Debug', module)
   .add('missing props (does component explode?)', () => (
     <StatusFilter />
   ))

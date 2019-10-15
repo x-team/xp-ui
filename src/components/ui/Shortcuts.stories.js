@@ -29,14 +29,14 @@ const links = Array(seedCount).fill({}).reduce((acc, cur) => {
   }
 }, {})
 
-storiesOf('UI Components/Shortcuts', module)
+storiesOf('UI Components|Shortcuts', module)
   .add('basic usage', () => (
     <Body>
       <Shortcuts links={links} />
     </Body>
   ))
 
-storiesOf('UI Components/Shortcuts/Debug', module)
+storiesOf('UI Components|Shortcuts/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Shortcuts />
   ))
