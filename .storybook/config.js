@@ -83,9 +83,17 @@ addParameters({
 })
 
 // Load stories dynamically
-const req = require.context('../src/components', true, /\.stories\.js$/)
+const reqStyleguides = require.context('../src/components/styleguides', true, /\.stories\.js$/)
+const reqUI = require.context('../src/components/ui', true, /\.stories\.js$/)
+const reqForm = require.context('../src/components/forms', true, /\.stories\.js$/)
+
 function loadStories () {
-  req.keys().forEach(filename => req(filename))
+  // Order matters here - the order components are displayed
+  // in the menu is the same as they are required here
+  const req = ctx => ctx.keys().forEach(filename => ctx(filename))
+  req(reqStyleguides)
+  req(reqUI)
+  req(reqForm)
 }
 
 configure(loadStories, module)
