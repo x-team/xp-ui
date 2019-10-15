@@ -15592,7 +15592,9 @@ exports[`Storyshots UI Components/Email HTML body test 1`] = `
   <div
     className="AutoUI_ui_Email-88 AutoUI_typo-36 AutoUI_typo-24"
   >
-    <span>
+    <span
+      key="outer"
+    >
       <font
         key="0"
         size="6"
@@ -16008,7 +16010,9 @@ exports[`Storyshots UI Components/Email initial open body 1`] = `
   <div
     className="AutoUI_ui_Email-88 AutoUI_typo-36 AutoUI_typo-24"
   >
-    <span>
+    <span
+      key="outer"
+    >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus molestie purus sed suscipit. Duis non ultricies velit, eu laoreet augue. Nullam turpis massa, scelerisque at tempus eu, placerat vitae orci. Nam at sem pellentesque, viverra risus id, volutpat nisl. In hac habitasse platea dictumst. Integer et dignissim eros. Quisque vel sem vel magna congue consectetur ac vel ex. Pellentesque pulvinar congue lacinia. Sed finibus ex non lorem sodales, ac pulvinar urna placerat. Aenean vel sodales libero, ac egestas velit. Nulla turpis dolor, dapibus ut diam sed, aliquam vestibulum nibh. In a ullamcorper libero. Pellentesque mattis, dui in molestie cursus, est risus convallis ligula, nec hendrerit sem odio eu elit. Aliquam sapien lacus, tincidunt rhoncus malesuada at, finibus non dolor. Pellentesque interdum nibh eu tempor pretium.
     </span>
   </div>
@@ -16075,7 +16079,9 @@ exports[`Storyshots UI Components/Email initial open body and content with lineb
   <div
     className="AutoUI_ui_Email-88 AutoUI_typo-36 AutoUI_typo-24"
   >
-    <div>
+    <div
+      key="outer"
+    >
       <p
         key="0"
       >
@@ -42062,31 +42068,30 @@ exports[`Storyshots UI Components/XIcon basic usage 1`] = `
 
 exports[`Storyshots UI Components/XP-Registration/JobCard default 1`] = `
 <div
-  className="AutoUI_ui_JobCard-13 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  className="AutoUI_ui_JobCard-14 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
 >
-  <a
-    className="AutoUI_ui_JobCard-24 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
-    href="#link"
-  >
-    <h3>
+  <JobCardLink>
+    <h3
+      className="AutoUI_ui_JobCard-25 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    >
       string string
     </h3>
-  </a>
+  </JobCardLink>
   <div
-    className="AutoUI_ui_JobCard-39 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobCard-40 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     string
      
-    <a
-      className="AutoUI_ui_JobCard-60"
-      href="#link"
-    >
-      Learn more »
-    </a>
-     
+    <JobCardLink>
+      <span
+        className="AutoUI_ui_JobCard-61"
+      >
+        Learn more »
+      </span>
+    </JobCardLink>
   </div>
   <div
-    className="AutoUI_ui_JobCard-47"
+    className="AutoUI_ui_JobCard-48"
   >
     <Button
       block={false}
@@ -42113,7 +42118,7 @@ exports[`Storyshots UI Components/XP-Registration/JobCard default 1`] = `
     </Button>
   </div>
   <div
-    className="AutoUI_ui_JobCard-51 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobCard-52 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     string string
   </div>

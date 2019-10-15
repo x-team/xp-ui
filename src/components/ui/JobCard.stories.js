@@ -1,4 +1,5 @@
 // @flow
+/* global React$Node */
 
 import React from 'react'
 import { storiesOf } from '@storybook/react'

@@ -81,7 +81,7 @@ type Props = {
   name?: string,
   summary?: string,
   message?: string,
-  link: React$StatelessFunctionalComponent<*>,
+  link?: React$StatelessFunctionalComponent<*>,
   onApply?: () => void,
   onWithdraw?: () => void
 }
@@ -91,7 +91,7 @@ class JobCard extends PureComponent<Props, void> {
     applied: false
   }
 
-  render() {
+  render () {
     const { applied, name, summary, message, link: Link, onApply, onWithdraw } = this.props
     return name ? (
       <div className={cx.card}>
@@ -111,13 +111,13 @@ class JobCard extends PureComponent<Props, void> {
     ) : null
   }
 
-  makeTitle(name: string, Link: React$StatelessFunctionalComponent<*>) {
+  makeTitle (name: string, Link?: React$StatelessFunctionalComponent<*>) {
     return Link
       ? <Link><h3 className={cx.name}>{name}</h3></Link>
       : <h3 className={cx.name}>{name}</h3>
   }
 
-  makeSummary(summary: ?string, Link: React$StatelessFunctionalComponent<*>) {
+  makeSummary (summary: ?string, Link?: React$StatelessFunctionalComponent<*>) {
     return summary && (
       <div className={cx.summary}>{summary} { Link && <Link><span className={cx.link}>Learn more »</span></Link> }</div>
     )
