@@ -55,6 +55,8 @@ storiesOf('UI Components/ActivityLogsDisplay/ActivityLog', module)
       }
     />
   ))
+
+storiesOf('UI Components/ActivityLogsDisplay/ActivityLog/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ActivityLog />
   ))

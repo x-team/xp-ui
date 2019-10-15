@@ -211,4 +211,6 @@ X-Team`}
       initialOpen={boolean('Initial Open', false)}
     />
   ))
+
+storiesOf('UI Components/Email/Debug', module)
   .add('missing props (does component explode?)', () => <Email />)

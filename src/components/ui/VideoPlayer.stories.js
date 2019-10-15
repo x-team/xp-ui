@@ -74,4 +74,6 @@ storiesOf('UI Components/VideoPlayer', module)
       showControls={false}
     />
   ))
+
+storiesOf('UI Components/VideoPlayer/Debug', module)
   .add('missing props (does component explodes?)', () => <VideoPlayer />)

@@ -158,6 +158,8 @@ This story is useful to demonstrate how both heading parts behave by default whe
       </StoryAdminScreen>
     </Body>
   ))
+
+storiesOf('UI Components/TwoColumnsLayout/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Body>
       <TwoColumnsLayout />

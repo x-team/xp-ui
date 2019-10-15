@@ -19,4 +19,5 @@ storiesOf('UI Components/RoadmapHero', module)
     />
   ))
 
+storiesOf('UI Components/RoadmapHero/Debug', module)
   .add('missing props (does component explode?)', () => <RoadmapHero />)

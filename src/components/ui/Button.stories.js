@@ -184,6 +184,8 @@ storiesOf('UI Components/Button/Use Cases', module)
       Disabled outlined state
     </StoryButton>
   ))
+
+storiesOf('UI Components/Button/Debug', module)
   .add('missing props (does component explode?):', () => (
     <StoryButton>Regular button with no props</StoryButton>
   ))

@@ -18,4 +18,6 @@ storiesOf('UI Components/FileLinks', module)
       }
     ]} />
   ))
+
+storiesOf('UI Components/FileLinks/Debug', module)
   .add('missing props (does component explode?)', () => <FileLinks />)

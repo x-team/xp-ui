@@ -24,6 +24,8 @@ storiesOf('UI Components/ActivityBar', module)
       datetime='2019-01-09 11:11:11'
     />
   ))
+
+storiesOf('UI Components/ActivityBar/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ActivityBar />
   ))

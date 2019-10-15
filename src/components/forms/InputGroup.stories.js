@@ -14,4 +14,6 @@ storiesOf('Form Components/InputGroup', module)
       defaultValue='so_account'
     />
   ))
+
+storiesOf('Form Components/InputGroup/Debug', module)
   .add('missing props (does component explode?)', () => <InputGroup />)

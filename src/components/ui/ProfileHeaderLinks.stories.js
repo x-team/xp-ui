@@ -20,4 +20,5 @@ storiesOf('UI Components/ProfileHeaderLinks', module)
     </ProfileHeaderLinks>
   ))
 
+storiesOf('UI Components/ProfileHeaderLinks/Debug', module)
   .add('missing props (does component explode?)', () => <ProfileHeaderLinks />)

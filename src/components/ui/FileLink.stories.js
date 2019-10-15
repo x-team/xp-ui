@@ -9,4 +9,6 @@ storiesOf('UI Components/FileLink', module)
       path='https://pbs.twimg.com/profile_images/416334680598659072/-_RxK6dH_200x200.jpeg'
     />
   ))
+
+storiesOf('UI Components/FileLink/Debug', module)
   .add('missing props (does component explode?)', () => <FileLink />)

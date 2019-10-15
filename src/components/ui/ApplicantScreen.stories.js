@@ -28,6 +28,8 @@ storiesOf('UI Components/ApplicantScreen', module)
       </MilestonesScreen>
     </ApplicantScreen>
   ))
+
+storiesOf('UI Components/ApplicantScreen/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ApplicantScreen />
   ))

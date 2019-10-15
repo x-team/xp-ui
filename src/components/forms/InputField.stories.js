@@ -154,4 +154,6 @@ storiesOf('Form Components/InputField', module)
       placeholder='yyyy-mm-dd'
     />
   ))
+
+storiesOf('Form Components/InputField/Debug', module)
   .add('missing props (does component explode?)', () => <InputField />)

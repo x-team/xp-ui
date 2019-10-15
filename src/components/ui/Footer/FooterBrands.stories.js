@@ -31,4 +31,6 @@ storiesOf('UI Components/FooterBrands', module)
       ]}
     />
   ))
+
+storiesOf('UI Components/FooterBrands/Debug', module)
   .add('missing props (does component explode?)', () => <FooterBrands />)

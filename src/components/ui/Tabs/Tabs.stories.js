@@ -24,4 +24,6 @@ storiesOf('UI Components/Tabs', module)
       <Tab title='Tab 3'>Tab 3 Content</Tab>
     </Tabs>
   ))
+
+storiesOf('UI Components/Tabs/Debug', module)
   .add('missing props (does component explode?)', () => <Tabs />)

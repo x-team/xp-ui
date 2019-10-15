@@ -15,4 +15,6 @@ storiesOf('UI Components/ErrorBox', module)
   .add('with HTML content', () => (
     <ErrorBox errors={{ name: <span>Something went <a href='#'>wrong</a></span> }} />
   ))
+
+storiesOf('UI Components/ErrorBox/Debug', module)
   .add('missing props (does component explode?)', () => <ErrorBox />)

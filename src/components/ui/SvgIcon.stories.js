@@ -458,4 +458,6 @@ storiesOf('UI Components/SvgIcon', module)
       <SvgIcon icon='copy' style={{ marginRight: '30px' }} />
     </div>
   ))
+
+storiesOf('UI Components/SvgIcon/Debug', module)
   .add('missing props (does component explode?)', () => <SvgIcon />)

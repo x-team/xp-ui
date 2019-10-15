@@ -50,6 +50,7 @@ storiesOf('UI Components/InlineEditor', module)
     />
   ))
 
+storiesOf('UI Components/InlineEditor/Debug', module)
   .add('missing props (does component explode?)', () => (
     <InlineEditor />
   ))

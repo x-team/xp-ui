@@ -51,4 +51,6 @@ storiesOf('UI Components/MilestonesScreen', module)
       />
     </MilestonesScreen>
   ))
+
+storiesOf('UI Components/MilestonesScreen/Debug', module)
   .add('missing props (does component explode?)', () => <MilestonesScreen />)
