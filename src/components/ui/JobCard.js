@@ -1,4 +1,5 @@
 // @flow
+/* global React$StatelessFunctionalComponent */
 
 import React, { PureComponent } from 'react'
 
@@ -80,7 +81,7 @@ type Props = {
   name?: string,
   summary?: string,
   message?: string,
-  link?: string,
+  link: React$StatelessFunctionalComponent<*>,
   onApply?: () => void,
   onWithdraw?: () => void
 }
@@ -90,18 +91,12 @@ class JobCard extends PureComponent<Props, void> {
     applied: false
   }
 
-  render () {
-    const { applied, name, summary, message, link, onApply, onWithdraw } = this.props
+  render() {
+    const { applied, name, summary, message, link: Link, onApply, onWithdraw } = this.props
     return name ? (
       <div className={cx.card}>
-        {
-          link
-            ? <a href={link} className={cx.name}><h3>{name}</h3></a>
-            : <h3 className={cx.name}>{name}</h3>
-        }
-        {summary && (
-          <div className={cx.summary}>{summary} { link && <a className={cx.link} href={link}>Learn more »</a> } </div>
-        )}
+        { this.makeTitle(name, Link) }
+        { this.makeSummary(summary, Link) }
         <div className={cx.actions}>
           {applied ? (
             <Button size='small' onClick={onWithdraw}>Withdraw application</Button>
@@ -114,6 +109,18 @@ class JobCard extends PureComponent<Props, void> {
         )}
       </div>
     ) : null
+  }
+
+  makeTitle(name: string, Link: React$StatelessFunctionalComponent<*>) {
+    return Link
+      ? <Link><h3 className={cx.name}>{name}</h3></Link>
+      : <h3 className={cx.name}>{name}</h3>
+  }
+
+  makeSummary(summary: ?string, Link: React$StatelessFunctionalComponent<*>) {
+    return summary && (
+      <div className={cx.summary}>{summary} { Link && <Link><span className={cx.link}>Learn more »</span></Link> }</div>
+    )
   }
 }
 

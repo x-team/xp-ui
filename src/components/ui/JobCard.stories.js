@@ -8,6 +8,12 @@ import faker from 'faker'
 
 import JobCard from './JobCard'
 
+export const JobCardLink = ({ children }: { children: React$Node }) => (
+  <a onClick={action('This should be react-router/gasby Link')}>
+    {children}
+  </a>
+)
+
 storiesOf('UI Components/XP-Registration/JobCard', module)
   .add('default', () => (
     <JobCard
@@ -15,7 +21,7 @@ storiesOf('UI Components/XP-Registration/JobCard', module)
       name={text('Name', faker.random.words())}
       summary={text('Description', faker.lorem.paragraph())}
       message={text('Message', faker.random.words())}
-      link='#link'
+      link={JobCardLink}
       onApply={action('onApply')}
       onWithdraw={action('onWithdraw')}
     />
