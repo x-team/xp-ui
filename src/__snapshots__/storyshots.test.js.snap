@@ -17116,6 +17116,262 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
 </div>
 `;
 
+exports[`Storyshots UI Components/XP-Registration/JobDetails default 1`] = `
+<div
+  className="AutoUI_ui_JobDetails-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+>
+  <h1
+    className="AutoUI_ui_JobDetails-20"
+  >
+    string
+  </h1>
+  <div
+    className="AutoUI_ui_JobDetails-28"
+  >
+    <div
+      className="AutoUI_ui_JobDetails-34 AutoUI_typo-29"
+      key="jobskill-0"
+    >
+      string
+    </div>
+    <div
+      className="AutoUI_ui_JobDetails-34 AutoUI_typo-29"
+      key="jobskill-1"
+    >
+      string
+    </div>
+  </div>
+  <div
+    key="outer"
+  >
+    <p
+      className="AutoUI_ui_JobDetails-72"
+      key="0"
+    >
+      string
+    </p>
+    <Heading2
+      className="AutoUI_ui_JobDetails-50"
+      id="heading-1-converted-to-h2"
+      key="1"
+    >
+      Heading 1 (converted to h2)
+    </Heading2>
+    <p
+      className="AutoUI_ui_JobDetails-72"
+      key="2"
+    >
+      string
+    </p>
+    <p
+      className="AutoUI_ui_JobDetails-72"
+      key="3"
+    >
+      string
+    </p>
+    <Heading3
+      className="AutoUI_ui_JobDetails-56"
+      id="heading-2-converted-to-h3"
+      key="4"
+    >
+      Heading 2 (converted to h3)
+    </Heading3>
+    <p
+      className="AutoUI_ui_JobDetails-72"
+      key="5"
+    >
+      Unordered list:
+    </p>
+    <ul
+      className="AutoUI_ui_JobDetails-79"
+      key="6"
+    >
+      <li
+        className="AutoUI_ui_JobDetails-92"
+        key="0"
+      >
+        string
+      </li>
+      <li
+        className="AutoUI_ui_JobDetails-92"
+        key="1"
+      >
+        string
+      </li>
+      <li
+        className="AutoUI_ui_JobDetails-92"
+        key="2"
+      >
+        string
+      </li>
+      <li
+        className="AutoUI_ui_JobDetails-92"
+        key="3"
+      >
+        string
+      </li>
+      <li
+        className="AutoUI_ui_JobDetails-92"
+        key="4"
+      >
+        string
+      </li>
+    </ul>
+    <p
+      className="AutoUI_ui_JobDetails-72"
+      key="7"
+    >
+      Ordered list:
+    </p>
+    <ol
+      className="AutoUI_ui_JobDetails-85"
+      key="8"
+      start={1}
+    >
+      <li
+        className="AutoUI_ui_JobDetails-92"
+        key="0"
+      >
+        string
+      </li>
+      <li
+        className="AutoUI_ui_JobDetails-92"
+        key="1"
+      >
+        string
+      </li>
+      <li
+        className="AutoUI_ui_JobDetails-92"
+        key="2"
+      >
+        string
+      </li>
+      <li
+        className="AutoUI_ui_JobDetails-92"
+        key="3"
+      >
+        string
+      </li>
+      <li
+        className="AutoUI_ui_JobDetails-92"
+        key="4"
+      >
+        string
+      </li>
+    </ol>
+    <p
+      className="AutoUI_ui_JobDetails-72"
+      key="9"
+    >
+      Span elements:
+    </p>
+    <p
+      className="AutoUI_ui_JobDetails-72"
+      key="10"
+    >
+      <a
+        className="AutoUI_ui_JobDetails-62"
+        href="string.com"
+        key="0"
+      >
+        This is an anchor text
+      </a>
+      , 
+      <code
+        className="AutoUI_ui_JobDetails-113"
+        key="2"
+      >
+        This is a span of code
+      </code>
+       
+      <strong
+        key="4"
+      >
+        Strong text using double asterisk
+      </strong>
+      , 
+      <strong
+        key="6"
+      >
+        Strong text using double underscore
+      </strong>
+      , 
+      <em
+        key="8"
+      >
+        Italic text using single asterisk
+      </em>
+      , 
+      <em
+        key="10"
+      >
+        Italic text using single underscore
+      </em>
+      , 
+      <del
+        key="12"
+      >
+        Strikethrough text using double tilde
+      </del>
+    </p>
+    <p
+      className="AutoUI_ui_JobDetails-72"
+      key="11"
+    >
+      Code block:
+    </p>
+    <pre
+      className="AutoUI_ui_JobDetails-120"
+      key="12"
+    >
+      <code
+        className="AutoUI_ui_JobDetails-113"
+      >
+        true +
+  true(
+    // -&gt; 2
+    true + true
+  ) *
+    (true + true) -
+  true; // -&gt; 3
+
+// This is a very long piece of text inside the code block just to demonstrate how code blocks doesn&#39;t wraps text and instead creates horizontal scrolling
+      </code>
+    </pre>
+    <p
+      className="AutoUI_ui_JobDetails-72"
+      key="13"
+    >
+      Blockquote:
+    </p>
+    <p
+      className="AutoUI_ui_JobDetails-72"
+      key="14"
+    >
+      &gt; ## This is a header.
+&gt;
+&gt; 1.   This is the first list item.
+&gt; 2.   This is the second list item.
+&gt;
+&gt; Here&#39;s some example code:
+&gt;
+&gt;     return shell
+      <em
+        key="7"
+      >
+        exec(“echo $input | $markdown
+      </em>
+      script“);
+&gt;
+&gt; string
+&gt; string
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components/XP-Registration/JobDetails/Debug missing props (does component explode?) 1`] = `""`;
+
 exports[`Storyshots UI Components|ActivityBar basic usage 1`] = `
 <div
   className="AutoUI_ui_ActivityBar-12"
