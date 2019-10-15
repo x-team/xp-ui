@@ -12,22 +12,46 @@ const cx = {
   content: cmz(`
     max-width: 1280px
     margin: 93px auto 0
+  `),
+
+  narrower: cmz(`
+    max-width: 840px
+    margin: 93px auto
+    padding: 0 60px 80px 60px
+  `),
+
+  wider: cmz(`
+    max-width: 964px
+    margin: 0 auto
+    padding: 0 60px
+    padding-top: 118px
   `)
 }
 
 type Props = {
   children?: React$Node,
-  contentWrapper?: boolean
+  noWrapper?: boolean,
+  wrapper?: 'narrower' | 'wider'
 }
 
 const ApplicantScreen = (props: Props) => {
-  const { children, contentWrapper = true } = props
+  const { children, noWrapper = false, wrapper } = props
+  const getWrapperClass = () => {
+    switch (wrapper) {
+      case 'narrower':
+        return cx.narrower
+      case 'wider':
+        return cx.wider
+      default:
+        return cx.content
+    }
+  }
   return (
     <div>
       <HeaderBar />
-      {contentWrapper ? (
-        <div className={cx.content}>{children}</div>
-      ) : children}
+      {noWrapper ? children : (
+        <div className={getWrapperClass()}>{children}</div>
+      )}
     </div>
   )
 }
