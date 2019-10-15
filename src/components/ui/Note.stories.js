@@ -69,7 +69,6 @@ storiesOf('UI Components|Note', module)
     )
   })
 
-
 storiesOf('UI Components|Note/Debug', module)
   .add('note with unparseable markdown text', () => <Note text='[one] [two]' />)
 
