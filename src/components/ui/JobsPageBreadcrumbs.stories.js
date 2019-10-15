@@ -13,14 +13,14 @@ export const JobsPageBreadcrumbsLink = ({ children }: { children: React$Node }) 
   </a>
 )
 
-storiesOf('UI Components/XP-Registration/JobsPageBreadcrumbs', module)
+storiesOf('UI Components|XP-Registration/JobsPageBreadcrumbs', module)
   .add('default', () => (
     <JobsPageBreadcrumbs
       link={JobsPageBreadcrumbsLink}
     />
   ))
 
-storiesOf('UI Components/XP-Registration/JobsPageBreadcrumbs/Debug', module)
+storiesOf('UI Components|XP-Registration/JobsPageBreadcrumbs/Debug', module)
   .add('custom label', () => (
     <JobsPageBreadcrumbs
       label='Back to previous page'

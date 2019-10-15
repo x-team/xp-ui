@@ -20,7 +20,7 @@ const ExampleButton = ({ isActive, text, ...props }) => {
 const HeadWrapper = props => <div className='header'>{props.children}</div>
 const ContentWrapper = props => <div className='content'>{props.children}</div>
 
-storiesOf('UI Components/GenericTabs', module)
+storiesOf('UI Components|GenericTabs', module)
   .add('basic usage', () => (
     <GenericTabs.Container>
       <GenericTabs.Head tabKey='first'>
@@ -114,7 +114,7 @@ storiesOf('UI Components/GenericTabs', module)
     </GenericTabs.Container>
   ))
 
-storiesOf('UI Components/GenericTabs/Debug', module)
+storiesOf('UI Components|GenericTabs/Debug', module)
   .add('change Pane body', () => (
     <State initialState={{ value: 1 }}>
       {({ setState, state }) => state.value ? (

@@ -229,7 +229,7 @@ export const StoryFiltersWithAccordion = () => (
   </State>
 )
 
-storiesOf('UI Components/Filters', module)
+storiesOf('UI Components|Filters', module)
   .add('example of complete composition', () => (
     <Body>
       <StoryFilters />
@@ -241,7 +241,7 @@ storiesOf('UI Components/Filters', module)
     </Body>
   ))
 
-storiesOf('UI Components/Filters/Debug', module)
+storiesOf('UI Components|Filters/Debug', module)
   .add('centered Filter Groups', () => (
     <Filters.Container>
       <GenericCollapsible.Container initialExpanded>

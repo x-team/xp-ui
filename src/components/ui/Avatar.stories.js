@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import Avatar from './Avatar'
 
-storiesOf('UI Components/Avatar', module)
+storiesOf('UI Components|Avatar', module)
   .add('basic usage', () => (
     <Avatar src='http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png' />
   ))
@@ -42,7 +42,7 @@ storiesOf('UI Components/Avatar', module)
     />
   ))
 
-storiesOf('UI Components/Avatar/Debug', module)
+storiesOf('UI Components|Avatar/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Avatar />
   ))

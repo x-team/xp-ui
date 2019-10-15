@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react'
 
 import FileLinks from './FileLinks'
 
-storiesOf('UI Components/FileLinks', module)
+storiesOf('UI Components|FileLinks', module)
   .add('basic usage', () => (
     <FileLinks files={[
       {
@@ -19,5 +19,5 @@ storiesOf('UI Components/FileLinks', module)
     ]} />
   ))
 
-storiesOf('UI Components/FileLinks/Debug', module)
+storiesOf('UI Components|FileLinks/Debug', module)
   .add('missing props (does component explode?)', () => <FileLinks />)

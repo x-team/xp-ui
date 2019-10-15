@@ -61,7 +61,7 @@ const fakeHasDivider = faker.random.boolean()
 const fakeRequired = faker.random.boolean()
 const fakeIsPureContent = false
 
-storiesOf('UI Components/Text', module)
+storiesOf('UI Components|Text', module)
   .add('showcase (use knobs)', () => (
     <StoryText
       heading={fakeHeading}
@@ -95,7 +95,7 @@ See here: [Typography](http://localhost:9001/?selectedKind=UI%20Components%2FTyp
     }
   })
 
-storiesOf('UI Components/Text/Demos', module)
+storiesOf('UI Components|Text/Demos', module)
   .add('heading', () => (
     <StoryText
       heading='Your roadmap to X-Team'
@@ -239,7 +239,7 @@ This is _**custom content**_ btw`} />
     }
   })
 
-storiesOf('UI Components/Text/Debug', module)
+storiesOf('UI Components|Text/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Text />
   ))

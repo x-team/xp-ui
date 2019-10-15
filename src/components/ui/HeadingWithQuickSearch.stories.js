@@ -12,7 +12,7 @@ const Heading = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components/HeadingWithQuickSearch', module)
+storiesOf('UI Components|HeadingWithQuickSearch', module)
   .add('self-controlled sidebar heading', () => (
     <Heading>
       <HeadingWithQuickSearch
@@ -41,7 +41,7 @@ storiesOf('UI Components/HeadingWithQuickSearch', module)
     </State>
   ))
 
-storiesOf('UI Components/HeadingWithQuickSearch/Debug', module)
+storiesOf('UI Components|HeadingWithQuickSearch/Debug', module)
   .add('with action handler', () => (
     <Heading>
       <HeadingWithQuickSearch

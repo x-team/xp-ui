@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import FooterList from './FooterList'
 
-storiesOf('UI Components/FooterList', module)
+storiesOf('UI Components|FooterList', module)
   .add('basic usage', () => (
     <FooterList
       title='List Example'
@@ -38,5 +38,5 @@ storiesOf('UI Components/FooterList', module)
     />
   ))
 
-storiesOf('UI Components/FooterList/Debug', module)
+storiesOf('UI Components|FooterList/Debug', module)
   .add('missing props (does component explode?)', () => <FooterList />)

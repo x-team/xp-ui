@@ -59,7 +59,7 @@ addParameters({
      *   /\|/ - split by `|`
      * @type {Regex}
      */
-    hierarchyRootSeparator: null,
+    hierarchyRootSeparator: /\|/,
     /**
      * sidebar tree animations
      * @type {Boolean}

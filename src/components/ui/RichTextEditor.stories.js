@@ -7,7 +7,7 @@ import { boolean, number, text, array } from '@storybook/addon-knobs'
 
 import RichTextEditor from './RichTextEditor'
 
-storiesOf('UI Components/RichTextEditor', module)
+storiesOf('UI Components|RichTextEditor', module)
   .add('basic usage', () => (
     <RichTextEditor />
   ))

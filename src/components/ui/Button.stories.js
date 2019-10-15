@@ -50,10 +50,10 @@ const StoryButton = (props) => (
   </Button>
 )
 
-storiesOf('UI Components/Button/With Knobs', module)
+storiesOf('UI Components|Button/With Knobs', module)
   .add('all effects', StoryButton)
 
-storiesOf('UI Components/Button/Color Options', module)
+storiesOf('UI Components|Button/Color Options', module)
   .add('default state', () => (
     <StoryButton>Normal state with default color</StoryButton>
   ))
@@ -73,7 +73,7 @@ storiesOf('UI Components/Button/Color Options', module)
     <StoryButton color={'gray'}>Normal state with gray color</StoryButton>
   ))
 
-storiesOf('UI Components/Button/Size Options', module)
+storiesOf('UI Components|Button/Size Options', module)
   .add('small size', () => (
     <StoryButton size={'small'}>Small size</StoryButton>
   ))
@@ -90,7 +90,7 @@ storiesOf('UI Components/Button/Size Options', module)
     <StoryButton wide>Wide size</StoryButton>
   ))
 
-storiesOf('UI Components/Button/contentStyle Options', module)
+storiesOf('UI Components|Button/contentStyle Options', module)
   .add('normal content style', () => (
     <StoryButton>Normal content style</StoryButton>
   ))
@@ -101,7 +101,7 @@ storiesOf('UI Components/Button/contentStyle Options', module)
     <StoryButton contentStyle='sourceSansPro'>sourceSansPro content style</StoryButton>
   ))
 
-storiesOf('UI Components/Button/Extra States', module)
+storiesOf('UI Components|Button/Extra States', module)
   .add('disabled', () => (
     <StoryButton disabled>Disabled state</StoryButton>
   ))
@@ -145,7 +145,7 @@ storiesOf('UI Components/Button/Extra States', module)
     <StoryButton icon='plusquare' color='grayPink'>Button with icon and color</StoryButton>
   ))
 
-storiesOf('UI Components/Button/Use Cases', module)
+storiesOf('UI Components|Button/Use Cases', module)
   .add('skill tag', () => (
     <StoryButton outlined rounded raised color={'silver'}>
       Android
@@ -185,7 +185,7 @@ storiesOf('UI Components/Button/Use Cases', module)
     </StoryButton>
   ))
 
-storiesOf('UI Components/Button/Debug', module)
+storiesOf('UI Components|Button/Debug', module)
   .add('missing props (does component explode?):', () => (
     <StoryButton>Regular button with no props</StoryButton>
   ))

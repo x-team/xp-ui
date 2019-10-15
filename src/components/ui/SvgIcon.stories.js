@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react'
 
 import SvgIcon from './SvgIcon'
 
-storiesOf('UI Components/SvgIcon', module)
+storiesOf('UI Components|SvgIcon', module)
   .add('basic color', () => (
     <div>
       <SvgIcon icon='cog' />
@@ -459,5 +459,5 @@ storiesOf('UI Components/SvgIcon', module)
     </div>
   ))
 
-storiesOf('UI Components/SvgIcon/Debug', module)
+storiesOf('UI Components|SvgIcon/Debug', module)
   .add('missing props (does component explode?)', () => <SvgIcon />)

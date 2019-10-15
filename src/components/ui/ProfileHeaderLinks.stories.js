@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import ProfileHeaderLinks from './ProfileHeaderLinks'
 
-storiesOf('UI Components/ProfileHeaderLinks', module)
+storiesOf('UI Components|ProfileHeaderLinks', module)
   .add('basic usage', () => (
     <ProfileHeaderLinks
       links={[
@@ -20,5 +20,5 @@ storiesOf('UI Components/ProfileHeaderLinks', module)
     </ProfileHeaderLinks>
   ))
 
-storiesOf('UI Components/ProfileHeaderLinks/Debug', module)
+storiesOf('UI Components|ProfileHeaderLinks/Debug', module)
   .add('missing props (does component explode?)', () => <ProfileHeaderLinks />)

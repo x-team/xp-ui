@@ -6,7 +6,7 @@ import State from '../../utils/State'
 
 import InputField from './InputField'
 
-storiesOf('Form Components/InputField', module)
+storiesOf('Form Components|/InputField', module)
   .add('standard use (text input element normal)', () => (
     <InputField
       label='First Name'
@@ -155,5 +155,5 @@ storiesOf('Form Components/InputField', module)
     />
   ))
 
-storiesOf('Form Components/InputField/Debug', module)
+storiesOf('Form Components|/InputField/Debug', module)
   .add('missing props (does component explode?)', () => <InputField />)

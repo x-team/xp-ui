@@ -10,8 +10,8 @@ const Body = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components/QuickSearchButton', module)
+storiesOf('UI Components|QuickSearchButton', module)
   .add('basic usage', () => <Body><QuickSearchButton onClick={action('onClick')} /></Body>)
 
-storiesOf('UI Components/QuickSearchButton/Debug', module)
+storiesOf('UI Components|QuickSearchButton/Debug', module)
   .add('missing props (does component explode?)', () => <QuickSearchButton />)

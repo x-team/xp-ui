@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 
 import Note from './Note'
 
-storiesOf('UI Components/Note', module)
+storiesOf('UI Components|Note', module)
   .add('just now', () => {
     const noteDate = new Date()
     return (
@@ -70,7 +70,7 @@ storiesOf('UI Components/Note', module)
   })
 
 
-storiesOf('UI Components/Note/Debug', module)
+storiesOf('UI Components|Note/Debug', module)
   .add('note with unparseable markdown text', () => <Note text='[one] [two]' />)
 
   .add('note with markdown text with break lines', () => (

@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 
 import ActivityLog from './ActivityLog'
 
-storiesOf('UI Components/ActivityLogsDisplay/ActivityLog', module)
+storiesOf('UI Components|ActivityLogsDisplay/ActivityLog', module)
   .add('single activity with value and label', () => (
     <ActivityLog
       label={faker.random.words(2)}
@@ -56,7 +56,7 @@ storiesOf('UI Components/ActivityLogsDisplay/ActivityLog', module)
     />
   ))
 
-storiesOf('UI Components/ActivityLogsDisplay/ActivityLog/Debug', module)
+storiesOf('UI Components|ActivityLogsDisplay/ActivityLog/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ActivityLog />
   ))

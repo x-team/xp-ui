@@ -15,7 +15,7 @@ export const JobCardLink = ({ children, ...props }: { children: React$Node }) =>
   </a>
 )
 
-storiesOf('UI Components/XP-Registration/JobCard', module)
+storiesOf('UI Components|XP-Registration/JobCard', module)
   .add('default', () => (
     <JobCard
       applied={boolean('Applied', false)}
@@ -28,7 +28,7 @@ storiesOf('UI Components/XP-Registration/JobCard', module)
     />
   ))
 
-storiesOf('UI Components/XP-Registration/JobCard/Debug', module)
+storiesOf('UI Components|XP-Registration/JobCard/Debug', module)
   .add('missing props (does component explode?)', () => (
     <JobCard />
   ))
