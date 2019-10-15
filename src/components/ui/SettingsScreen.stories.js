@@ -16,4 +16,6 @@ storiesOf('UI Components/SettingsScreen', module)
       </SettingsScreen>
     </div>
   ))
+
+storiesOf('UI Components/SettingsScreen/Debug', module)
   .add('missing props (does component explode?)', () => <SettingsScreen />)

@@ -69,6 +69,8 @@ storiesOf('UI Components/AttachFiles', module)
       onDelete={firstArg.action('delete')}
     />
   ))
+
+storiesOf('UI Components/AttachFiles/Debug', module)
   .add('missing props (does component explode?)', () => (
     <AttachFiles />
   ))

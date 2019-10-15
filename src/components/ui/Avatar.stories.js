@@ -41,6 +41,8 @@ storiesOf('UI Components/Avatar', module)
       size={32}
     />
   ))
+
+storiesOf('UI Components/Avatar/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Avatar />
   ))

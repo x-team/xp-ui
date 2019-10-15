@@ -23,6 +23,8 @@ storiesOf('UI Components/ColumnsCustomizer', module)
       </div>
     )
   })
+
+storiesOf('UI Components/ColumnsCustomizer/Debug', module)
   .add('missing props (does component explode?)', () => {
     return (
       <div style={{ right: 0, position: 'absolute', top: 50 }}>

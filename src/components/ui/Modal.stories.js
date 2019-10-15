@@ -74,11 +74,6 @@ storiesOf('UI Components/Modal', module)
       <StoryModal />
     </Body>
   ))
-  .add('missing props (does component explode?)', () => (
-    <Body>
-      <Modal />
-    </Body>
-  ))
 
 storiesOf('UI Components/Modal/Use cases', module)
   .add('with ListEditor', () => (
@@ -94,5 +89,12 @@ storiesOf('UI Components/Modal/Use cases', module)
           onCreateNew={action('onCreateNew')}
         />
       </StoryModal>
+    </Body>
+  ))
+
+storiesOf('UI Components/Modal/Debug', module)
+  .add('missing props (does component explode?)', () => (
+    <Body>
+      <Modal />
     </Body>
   ))

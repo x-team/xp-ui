@@ -55,4 +55,6 @@ storiesOf('UI Components/TextareaEditor', module)
       html='<p>Text Area #1 <b>With Formatted Text</b></p>'
     />
   ))
+
+storiesOf('UI Components/TextareaEditor/Debug', module)
   .add('missing props (does component explode?)', () => <TextareaEditor />)

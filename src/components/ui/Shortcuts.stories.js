@@ -35,6 +35,8 @@ storiesOf('UI Components/Shortcuts', module)
       <Shortcuts links={links} />
     </Body>
   ))
+
+storiesOf('UI Components/Shortcuts/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Shortcuts />
   ))

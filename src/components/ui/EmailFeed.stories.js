@@ -143,4 +143,6 @@ storiesOf('UI Components/EmailFeed', module)
       />
     )
   })
+
+storiesOf('UI Components/EmailFeed/Debug', module)
   .add('missing props (does component explode?)', () => <EmailFeed />)

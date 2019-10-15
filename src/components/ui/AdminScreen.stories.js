@@ -90,6 +90,8 @@ storiesOf('UI Components/AdminScreen', module)
       </StoryAdminScreen>
     </Body>
   ))
+
+storiesOf('UI Components/AdminScreen/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Body>
       <AdminScreen />

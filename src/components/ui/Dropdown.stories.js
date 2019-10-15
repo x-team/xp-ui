@@ -121,4 +121,6 @@ storiesOf('UI Components/Dropdown', module)
       </Dropdown>
     )
   })
+
+storiesOf('UI Components/Dropdown/Debug', module)
   .add('missing props (does component explode?)', () => <Dropdown />)

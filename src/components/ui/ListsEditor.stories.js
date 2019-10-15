@@ -27,4 +27,6 @@ storiesOf('UI Components/ListsEditor', module)
       </div>
     )
   })
+
+storiesOf('UI Components/ListsEditor/Debug', module)
   .add('missing props (does component explode?)', () => <ListsEditor />)

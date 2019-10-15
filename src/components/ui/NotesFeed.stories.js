@@ -193,4 +193,6 @@ storiesOf('UI Components/NotesFeed', module)
   .add('showing note type in the sub header', () => (
     <NotesFeed notes={sampleWithTypes} showNoteType onNoteUpdate={action('Updated note')} />
   ))
+
+storiesOf('UI Components/NotesFeed/Debug', module)
   .add('missing props (does component explode?)', () => <NotesFeed />)

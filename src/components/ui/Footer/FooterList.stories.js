@@ -37,4 +37,6 @@ storiesOf('UI Components/FooterList', module)
       ]}
     />
   ))
+
+storiesOf('UI Components/FooterList/Debug', module)
   .add('missing props (does component explode?)', () => <FooterList />)

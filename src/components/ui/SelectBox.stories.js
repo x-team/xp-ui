@@ -674,4 +674,6 @@ storiesOf('UI Components/SelectBox', module)
       </div>
     )
   })
+
+storiesOf('UI Components/SelectBox/Debug', module)
   .add('missing props (does component explode?)', () => <SelectBox />)
