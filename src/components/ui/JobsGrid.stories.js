@@ -7,6 +7,7 @@ import faker from 'faker'
 
 import JobsGrid from './JobsGrid'
 import JobCard from './JobCard'
+import { JobCardLink } from './JobCard.stories'
 
 export const jobCards = Array(15)
   .fill('')
@@ -17,8 +18,9 @@ export const jobCards = Array(15)
         key={`jobcard-${i}`}
         applied={applied}
         name={faker.random.words()}
-        description={faker.lorem.words(30)}
+        summary={faker.lorem.words(30)}
         message={applied ? faker.random.words() : ''}
+        link={JobCardLink}
         onApply={action('onApply')}
         onWithdraw={action('onWithdraw')}
       />
