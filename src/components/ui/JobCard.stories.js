@@ -9,8 +9,8 @@ import faker from 'faker'
 
 import JobCard from './JobCard'
 
-export const JobCardLink = ({ children }: { children: React$Node }) => (
-  <a onClick={action('This should be react-router/gasby Link')}>
+export const JobCardLink = ({ children, ...props }: { children: React$Node }) => (
+  <a onClick={action('This should be react-router/gasby Link')} {...props}>
     {children}
   </a>
 )

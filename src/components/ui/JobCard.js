@@ -25,8 +25,14 @@ const cx = {
   name: cmz(
     typo.sectionHeading,
     `
+      margin: 25px 25px 10px
+    `
+  ),
+
+  nameLink: cmz(
+    typo.sectionHeading,
+    `
       & {
-        margin: 25px 25px 10px
         text-decoration: none
       }
 
@@ -93,7 +99,7 @@ class JobCard extends PureComponent<Props, void> {
   makeTitle () {
     const { name, link: JobLink } = this.props
     return JobLink
-      ? <JobLink><h3 className={cx.name}>{name}</h3></JobLink>
+      ? <JobLink className={cx.nameLink}><h3 className={cx.name}>{name}</h3></JobLink>
       : <h3 className={cx.name}>{name}</h3>
   }
 
@@ -103,7 +109,7 @@ class JobCard extends PureComponent<Props, void> {
       <div
         className={cx.summary}
       >
-        {summary} {JobLink && <JobLink><span className={cx.link}>Learn more »</span></JobLink>}
+        {summary} {JobLink && <JobLink className={cx.link}>Learn more »</JobLink>}
       </div>
     )
   }
