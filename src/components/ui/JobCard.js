@@ -95,7 +95,7 @@ class JobCard extends PureComponent<Props, void> {
     const { applied, name, summary, message, link: Link, onApply, onWithdraw } = this.props
     return name ? (
       <div className={cx.card}>
-        { this.makeTitle(name, Link) }
+        {this.makeTitle(name, Link)}
         { this.makeSummary(summary, Link) }
         <div className={cx.actions}>
           {applied ? (
