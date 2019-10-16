@@ -90,12 +90,30 @@ class JobCard extends PureComponent<Props, void> {
     applied: false
   }
 
+  makeTitle () {
+    const { name, link: JobLink } = this.props
+    return JobLink
+      ? <JobLink><h3 className={cx.name}>{name}</h3></JobLink>
+      : <h3 className={cx.name}>{name}</h3>
+  }
+
+  makeSummary () {
+    const { summary, link: JobLink } = this.props
+    return summary && (
+      <div
+        className={cx.summary}
+      >
+        {summary} {JobLink && <JobLink><span className={cx.link}>Learn more »</span></JobLink>}
+      </div>
+    )
+  }
+
   render () {
-    const { applied, name, summary, message, link: JobLink, onApply, onWithdraw } = this.props
+    const { applied, name, message, onApply, onWithdraw } = this.props
     return name ? (
       <div className={cx.card}>
-        {this.makeTitle(name, JobLink)}
-        {this.makeSummary(summary, JobLink)}
+        {this.makeTitle()}
+        {this.makeSummary()}
         <div className={cx.actions}>
           {applied ? (
             <Button size='small' onClick={onWithdraw}>Withdraw application</Button>
@@ -108,18 +126,6 @@ class JobCard extends PureComponent<Props, void> {
         )}
       </div>
     ) : null
-  }
-
-  makeTitle (name: string, JobLink?: React$StatelessFunctionalComponent<*>) {
-    return JobLink
-      ? <JobLink><h3 className={cx.name}>{name}</h3></JobLink>
-      : <h3 className={cx.name}>{name}</h3>
-  }
-
-  makeSummary (summary?: string, JobLink?: React$StatelessFunctionalComponent<*>) {
-    return summary && (
-      <div className={cx.summary}>{summary} { JobLink && <JobLink><span className={cx.link}>Learn more »</span></JobLink> }</div>
-    )
   }
 }
 
