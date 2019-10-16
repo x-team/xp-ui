@@ -20,7 +20,7 @@ storiesOf('UI Components/XP-Registration/JobCard', module)
     <JobCard
       applied={boolean('Applied', false)}
       name={text('Name', faker.random.words())}
-      summary={text('Description', faker.lorem.paragraph())}
+      summary={text('Summary', faker.lorem.paragraph())}
       message={text('Message', faker.random.words())}
       link={JobCardLink}
       onApply={action('onApply')}

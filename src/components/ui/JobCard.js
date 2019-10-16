@@ -34,6 +34,7 @@ const cx = {
     `
       & {
         text-decoration: none
+        margin: 0
       }
 
       &:hover {
@@ -46,13 +47,13 @@ const cx = {
   summary: cmz(
     typo.baseText,
     `
-      margin: 10px 25px
+      margin: 0 25px 25px
       height: 100%
     `
   ),
 
   actions: cmz(`
-    margin: 10px 25px 25px
+    margin: 0 25px 25px
   `),
 
   message: cmz(
