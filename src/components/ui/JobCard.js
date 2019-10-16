@@ -59,7 +59,6 @@ const cx = {
   ),
 
   link: cmz(
-    // typo.baseText,
     `
       & {
         color: ${theme.baseRed}
@@ -92,11 +91,11 @@ class JobCard extends PureComponent<Props, void> {
   }
 
   render () {
-    const { applied, name, summary, message, link: Link, onApply, onWithdraw } = this.props
+    const { applied, name, summary, message, link: JobLink, onApply, onWithdraw } = this.props
     return name ? (
       <div className={cx.card}>
-        {this.makeTitle(name, Link)}
-        { this.makeSummary(summary, Link) }
+        {this.makeTitle(name, JobLink)}
+        {this.makeSummary(summary, JobLink)}
         <div className={cx.actions}>
           {applied ? (
             <Button size='small' onClick={onWithdraw}>Withdraw application</Button>
@@ -111,15 +110,15 @@ class JobCard extends PureComponent<Props, void> {
     ) : null
   }
 
-  makeTitle (name: string, Link?: React$StatelessFunctionalComponent<*>) {
-    return Link
-      ? <Link><h3 className={cx.name}>{name}</h3></Link>
+  makeTitle (name: string, JobLink?: React$StatelessFunctionalComponent<*>) {
+    return JobLink
+      ? <JobLink><h3 className={cx.name}>{name}</h3></JobLink>
       : <h3 className={cx.name}>{name}</h3>
   }
 
-  makeSummary (summary: ?string, Link?: React$StatelessFunctionalComponent<*>) {
+  makeSummary (summary?: string, JobLink?: React$StatelessFunctionalComponent<*>) {
     return summary && (
-      <div className={cx.summary}>{summary} { Link && <Link><span className={cx.link}>Learn more »</span></Link> }</div>
+      <div className={cx.summary}>{summary} { JobLink && <JobLink><span className={cx.link}>Learn more »</span></JobLink> }</div>
     )
   }
 }
