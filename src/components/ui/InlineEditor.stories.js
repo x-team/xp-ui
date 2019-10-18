@@ -5,7 +5,7 @@ import InlineEditor from './InlineEditor'
 import InputField from '../forms/InputField'
 
 storiesOf('UI Components|InlineEditor', module)
-  .add('with InputField usage:', () => (
+  .add('basic usage', () => (
     <InlineEditor
       editor={({ onValueChange, value }) => (
         <InputField
@@ -27,7 +27,8 @@ storiesOf('UI Components|InlineEditor', module)
     />
   ))
 
-  .add('with shouldSaveOnEnter usage:', () => (
+storiesOf('UI Components|InlineEditor/Use Cases', module)
+  .add('auto saves when user hits enter', () => (
     <InlineEditor
       shouldSaveOnEnter={false}
       editor={({ onValueChange, value }) => (

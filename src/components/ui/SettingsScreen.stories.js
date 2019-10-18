@@ -8,7 +8,7 @@ const menu = Array(50).fill(<a href='#'>Menu link</a>)
 
 menu.push(<p>A strangely wide menu item just to make it more difficult and breakable, also this is not a link (<a href='#'>this is a link</a>), this is just text...</p>)
 
-storiesOf('Screens|Settings', module)
+storiesOf('UI Components|SettingsScreen', module)
   .add('basic usage', () => (
     <div style={{ height: '500px', overflow: 'hidden' }}>
       <SettingsScreen menu={menu}>
@@ -17,5 +17,5 @@ storiesOf('Screens|Settings', module)
     </div>
   ))
 
-storiesOf('Screens|Settings/Debug', module)
+storiesOf('UI Components|SettingsScreen/Debug', module)
   .add('missing props (does component explode?)', () => <SettingsScreen />)

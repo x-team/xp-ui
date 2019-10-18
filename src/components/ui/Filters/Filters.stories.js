@@ -230,12 +230,14 @@ export const StoryFiltersWithAccordion = () => (
 )
 
 storiesOf('UI Components|Applicant Lists/Filters', module)
-  .add('example of complete composition', () => (
+  .add('basic composition usage', () => (
     <Body>
       <StoryFilters />
     </Body>
   ))
-  .add('example of complete composition with accordion effect', () => (
+
+storiesOf('UI Components|Applicant Lists/Filters/Use Cases', module)
+  .add('accordion effect', () => (
     <Body>
       <StoryFiltersWithAccordion />
     </Body>

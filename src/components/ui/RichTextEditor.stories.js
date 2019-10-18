@@ -7,12 +7,19 @@ import { boolean, number, text, array } from '@storybook/addon-knobs'
 
 import RichTextEditor from './RichTextEditor'
 
-storiesOf('Form Components|Rich Text Editor', module)
+storiesOf('Core|RichTextEditor', module)
   .add('basic usage', () => (
     <RichTextEditor />
   ))
+
+storiesOf('Core|RichTextEditor/States', module)
   .add('disabled', () => (
     <RichTextEditor disabled />
+  ))
+
+storiesOf('Core|RichTextEditor/Debug', module)
+  .add('missing props (does component explode?)', () => (
+    <RichTextEditor />
   ))
   .add('with initial value', () => (
     <RichTextEditor
@@ -94,9 +101,4 @@ This is **bold** text
 - Wednesday
       `}
     />
-  ))
-
-storiesOf('Form Components|Rich Text Editor/Debug', module)
-  .add('missing props (does component explode?)', () => (
-    <RichTextEditor />
   ))

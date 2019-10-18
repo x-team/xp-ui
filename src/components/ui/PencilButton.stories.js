@@ -19,7 +19,7 @@ storiesOf('UI Components|Buttons/PencilButton', module)
     </Body>
   ))
 
-storiesOf('UI Components|Buttons/PencilButton/Colors', module)
+storiesOf('UI Components|Buttons/PencilButton/States', module)
   .add('inverted color with hover variation', () => (
     <Body background='#F63A55'>
       <PencilButton color='inverted' hover='text' />

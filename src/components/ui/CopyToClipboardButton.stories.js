@@ -19,7 +19,7 @@ storiesOf('UI Components|Buttons/CopyToClipboardButton', module)
     </Body>
   ))
 
-storiesOf('UI Components|Buttons/CopyToClipboardButton/Colors', module)
+storiesOf('UI Components|Buttons/CopyToClipboardButton/States', module)
   .add('inverted color with hover variation', () => (
     <Body background='#F63A55'>
       <CopyToClipboardButton text='text to be copied' color='inverted' hover='text' />

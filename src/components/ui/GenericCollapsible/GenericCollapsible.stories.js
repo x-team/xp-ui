@@ -42,7 +42,9 @@ storiesOf('UI Components|GenericCollapsible', module)
       </GenericCollapsible.Body>
     </GenericCollapsible.Container>
   ))
-  .add('basic usage with accordion effect', () => (
+
+storiesOf('UI Components|GenericCollapsible/Use Cases', module)
+  .add('accordion effect', () => (
     <State initialState={{ expanded: 'example1' }}>
       {({ setState, state }) => (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>

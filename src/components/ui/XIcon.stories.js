@@ -6,6 +6,6 @@ import { storiesOf } from '@storybook/react'
 import XIcon from './XIcon'
 
 storiesOf('UI Components|Icons', module)
-  .add('The X', () => (
+  .add('XIcon', () => (
     <XIcon />
   ))

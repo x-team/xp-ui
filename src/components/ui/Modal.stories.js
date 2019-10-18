@@ -48,34 +48,15 @@ const StoryModal = props => (
 )
 
 storiesOf('Core|Modal', module)
-  .add('basic modal', () => (
+  .add('basic usage', () => (
     <Body>
       <StoryModal>
         {sampleModalContent}
       </StoryModal>
     </Body>
   ))
-  .add('modal with content taller than viewport', () => (
-    <Body>
-      <StoryModal>
-        {sampleModalContentTall}
-      </StoryModal>
-    </Body>
-  ))
-  .add('modal with content longer than viewport', () => (
-    <Body>
-      <StoryModal>
-        {sampleModalContentLong}
-      </StoryModal>
-    </Body>
-  ))
-  .add('modal with no content', () => (
-    <Body>
-      <StoryModal />
-    </Body>
-  ))
 
-storiesOf('Core|Modal/Use cases', module)
+storiesOf('Core|Modal/Use Cases', module)
   .add('with ListEditor', () => (
     <Body>
       <StoryModal>
@@ -96,5 +77,24 @@ storiesOf('Core|Modal/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Body>
       <Modal />
+    </Body>
+  ))
+  .add('modal with content taller than viewport', () => (
+    <Body>
+      <StoryModal>
+        {sampleModalContentTall}
+      </StoryModal>
+    </Body>
+  ))
+  .add('modal with content longer than viewport', () => (
+    <Body>
+      <StoryModal>
+        {sampleModalContentLong}
+      </StoryModal>
+    </Body>
+  ))
+  .add('modal with no content', () => (
+    <Body>
+      <StoryModal />
     </Body>
   ))

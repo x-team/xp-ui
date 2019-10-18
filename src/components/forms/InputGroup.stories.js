@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import InputGroup from './InputGroup'
 
-storiesOf('Form Components|/InputGroup', module)
+storiesOf('Core|/InputGroup', module)
   .add('basic usage', () => (
     <InputGroup
       maxLength={20}
@@ -15,5 +15,5 @@ storiesOf('Form Components|/InputGroup', module)
     />
   ))
 
-storiesOf('Form Components|/InputGroup/Debug', module)
+storiesOf('Core|/InputGroup/Debug', module)
   .add('missing props (does component explode?)', () => <InputGroup />)

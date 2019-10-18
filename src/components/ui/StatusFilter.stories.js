@@ -25,12 +25,14 @@ export const StoryStatusFilter = (props) => (
 )
 
 storiesOf('UI Components|StatusFilter', module)
-  .add('default', () => (
+  .add('basic usage', () => (
     <StoryStatusFilter
       checked={{ accepted: true, excluded: false }}
       disabled={false}
     />
   ))
+
+storiesOf('UI Components|StatusFilter/States', module)
   .add('disabled', () => (
     <StatusFilter disabled />
   ))

@@ -8,7 +8,7 @@ export const getApplicantBadges = () => Array(25).fill('').map((each, index) => 
   <StoryApplicantBadge active={index === 1} />
 ))
 
-storiesOf('UI Components|Applicants/List', module)
+storiesOf('UI Components|Applicants/ApplicantGrid', module)
   .add('basic usage', () => (
     <ApplicantGrid
       items={getApplicantBadges()}
@@ -17,7 +17,7 @@ storiesOf('UI Components|Applicants/List', module)
     />
   ))
 
-storiesOf('UI Components|Applicants/List/Debug', module)
+storiesOf('UI Components|Applicants/ApplicantGrid/Debug', module)
   .add('missing props (does component explode?)', () =>
     <ApplicantGrid />
   )

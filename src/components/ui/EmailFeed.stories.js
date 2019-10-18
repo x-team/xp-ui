@@ -23,7 +23,61 @@ const emailsLarge = [...Array(14).keys()].map(getEmailObjectStructure)
 const emailsSmall = [...Array(5).keys()].map(getEmailObjectStructure)
 const emailsExtraSmall = [...Array(1).keys()].map(getEmailObjectStructure)
 
-storiesOf('UI Components|Email/Feed', module)
+storiesOf('UI Components|Email/EmailFeed', module)
+  .add('basic usage', () => (
+    <EmailFeed
+      emails={emailsSmall}
+      lastSyncRefresh={currentData
+      } />
+  ))
+
+storiesOf('UI Components|Email/EmailFeed/States', module)
+  .add('refreshing', () => (
+    <EmailFeed
+      isRefreshing
+      emails={emailsSmall}
+      lastSyncRefresh={currentData}
+      onRefreshEmails={action('this can`t be trigger in refresh')}
+    />
+  ))
+  .add('error', () => (
+    <EmailFeed
+      errorMessage='Emails not <a href="testing">found</a>'
+    />
+  ))
+  .add('expanded', () => (
+    <EmailFeed
+      initialExpandedAll
+      emails={emailsSmall}
+      lastSyncRefresh={currentData}
+    />
+  ))
+
+storiesOf('UI Components|Email/EmailFeed/Use Cases', module)
+  .add('responsive sizing at 300px', () => (
+    <div style={{ width: '300px' }}>
+      <EmailFeed
+        emails={emailsLarge}
+      />
+    </div>
+  ))
+  .add('responsive sizing at 500px', () => (
+    <div style={{ width: '500px' }}>
+      <EmailFeed
+        emails={emailsLarge}
+      />
+    </div>
+  ))
+  .add('responsive sizing at 700px', () => (
+    <div style={{ width: '700px' }}>
+      <EmailFeed
+        emails={emailsLarge}
+      />
+    </div>
+  ))
+
+storiesOf('UI Components|Email/EmailFeed/Debug', module)
+  .add('missing props (does component explode?)', () => <EmailFeed />)
   .add('initial expanded all', () => (
     <EmailFeed
       initialExpandedAll
@@ -36,26 +90,6 @@ storiesOf('UI Components|Email/Feed', module)
       onRefreshEmails={action('refresh emails action')}
       lastSyncRefresh={currentData}
     />
-  ))
-  .add('with refreshing state', () => (
-    <EmailFeed
-      isRefreshing
-      emails={emailsLarge}
-      lastSyncRefresh={currentData}
-      onRefreshEmails={action('this can`t be trigger in refresh')}
-    />
-  ))
-  .add('with extra small list of emails', () => (
-    <EmailFeed
-      emails={emailsExtraSmall}
-      lastSyncRefresh={currentData}
-    />
-  ))
-  .add('with small list of emails', () => (
-    <EmailFeed
-      emails={emailsSmall}
-      lastSyncRefresh={currentData
-      } />
   ))
   .add('with large list of emails', () => (
     <EmailFeed
@@ -70,37 +104,11 @@ storiesOf('UI Components|Email/Feed', module)
       lastSyncRefresh={currentData}
     />
   ))
-  .add('with error message', () => (
-    <EmailFeed
-      errorMessage='Emails not <a href="testing">found</a>'
-    />
-  ))
   .add('with error message and refresh button', () => (
     <EmailFeed
       errorMessage='Emails not <a href="testing">found</a>'
       onRefreshEmails={action('refresh email action')}
     />
-  ))
-  .add('parent element with fixed width at 300px', () => (
-    <div style={{ width: '300px' }}>
-      <EmailFeed
-        emails={emailsLarge}
-      />
-    </div>
-  ))
-  .add('parent element with fixed width at 500px', () => (
-    <div style={{ width: '500px' }}>
-      <EmailFeed
-        emails={emailsLarge}
-      />
-    </div>
-  ))
-  .add('parent element with fixed width at 700px', () => (
-    <div style={{ width: '700px' }}>
-      <EmailFeed
-        emails={emailsLarge}
-      />
-    </div>
   ))
   .add('last sync refresh 5 minutes ago', () => {
     const lastSyncRefresh = new Date()
@@ -143,6 +151,3 @@ storiesOf('UI Components|Email/Feed', module)
       />
     )
   })
-
-storiesOf('UI Components|Email/Feed/Debug', module)
-  .add('missing props (does component explode?)', () => <EmailFeed />)

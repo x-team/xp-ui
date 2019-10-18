@@ -17,9 +17,7 @@ storiesOf('UI Components|TruncatedList', module)
         `
     }
   })
-  .add(
-    'show 4 visible `XIcon`s components of 13 total, with increments of 2, custom view more item, not inserted',
-    () => {
+  .add('basic usage (see Show info for more details)', () => {
       const items = Array(13).fill(<XIcon />)
       return (
         <TruncatedList
@@ -41,6 +39,9 @@ storiesOf('UI Components|TruncatedList', module)
       )
     }
   )
+
+storiesOf('UI Components|TruncatedList/Debug', module)
+  .add('missing props (does component explode?)', () => <TruncatedList />)
   .add(
     'show 6 visible `XIcon`s components of 30 total, with increments of 6, with inserted custom view more item',
     () => {
@@ -113,6 +114,3 @@ storiesOf('UI Components|TruncatedList', module)
       items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
       visible={8} />
   ))
-
-storiesOf('UI Components|TruncatedList/Debug', module)
-  .add('missing props (does component explode?)', () => <TruncatedList />)

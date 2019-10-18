@@ -95,37 +95,40 @@ See here: [Typography](http://localhost:9001/?selectedKind=UI%20Components%2FTyp
     }
   })
 
-storiesOf('UI Components|Text/Demos', module)
+storiesOf('UI Components|Text/States', module)
+  .add('required', () => <StoryText content='Just a required text' required />)
+  .add('hasDivider', () => (
+    <StoryText
+      heading='Your roadmap to X-Team'
+      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
+      hasDivider
+    />
+  ))
+  .add('isCentered', () => (
+    <StoryText
+      heading='Your roadmap to X-Team'
+      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
+      isCentered
+    />
+  ))
+  .add('hasDivider & hasDivider', () => (
+    <StoryText
+      heading='Your roadmap to X-Team'
+      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
+      isCentered
+      hasDivider
+    />
+  ))
+
+storiesOf('UI Components|Text/Use Cases', module)
   .add('heading', () => (
     <StoryText
       heading='Your roadmap to X-Team'
       content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
     />
   ))
-  .add('heading with divider', () => (
-    <StoryText
-      heading='Your roadmap to X-Team'
-      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
-      hasDivider
-    />
-  ))
   .add('heading with divider and no content', () => (
     <StoryText heading='Your roadmap to X-Team' hasDivider />
-  ))
-  .add('heading with center align', () => (
-    <StoryText
-      heading='Your roadmap to X-Team'
-      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
-      isCentered
-    />
-  ))
-  .add('heading with center align and divider', () => (
-    <StoryText
-      heading='Your roadmap to X-Team'
-      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
-      isCentered
-      hasDivider
-    />
   ))
   .add('heading and sub heading with divider', () => (
     <StoryText
@@ -170,25 +173,11 @@ storiesOf('UI Components|Text/Demos', module)
       isCentered
     />
   ))
-  .add('without Heading and Sub Heading with divider', () => (
-    <StoryText
-      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
-      hasDivider
-    />
-  ))
-  .add('without Heading and Sub Heading with isCentered align', () => (
-    <StoryText
-      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
-      isCentered
-      hasDivider
-    />
-  ))
-  .add('pure content with no wrappers around', () => (
-    <StoryText content='Just a sample text' isPureContent />
-  ))
-  .add('required', () => <StoryText content='Just a required text' required />)
-  .add('pure content with no wrappers around and Required', () => (
-    <StoryText content='Just a required text' isPureContent required />
+
+
+storiesOf('UI Components|Text/Debug', module)
+  .add('missing props (does component explode?)', () => (
+    <Text />
   ))
   .add('content with HTML tags', () => (
     <StoryText content={(
@@ -238,8 +227,22 @@ This is _**custom content**_ btw`} />
       escapeHTML: false
     }
   })
-
-storiesOf('UI Components|Text/Debug', module)
-  .add('missing props (does component explode?)', () => (
-    <Text />
+  .add('without Heading and Sub Heading with divider', () => (
+    <StoryText
+      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
+      hasDivider
+    />
+  ))
+  .add('without Heading and Sub Heading with isCentered align', () => (
+    <StoryText
+      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
+      isCentered
+      hasDivider
+    />
+  ))
+  .add('pure content with no wrappers around', () => (
+    <StoryText content='Just a sample text' isPureContent />
+  ))
+  .add('pure content with no wrappers around and Required', () => (
+    <StoryText content='Just a required text' isPureContent required />
   ))

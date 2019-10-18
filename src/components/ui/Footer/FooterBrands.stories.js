@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import FooterBrands from './FooterBrands'
 
-storiesOf('UI Components|Footer/Brands', module)
+storiesOf('UI Components|Footer/FooterBrands', module)
   .add('basic usage', () => (
     <FooterBrands
       message="Trusted by the world's leading brands since 2006"
@@ -32,5 +32,5 @@ storiesOf('UI Components|Footer/Brands', module)
     />
   ))
 
-storiesOf('UI Components|Footer/Brands/Debug', module)
+storiesOf('UI Components|Footer/FooterBrands/Debug', module)
   .add('missing props (does component explode?)', () => <FooterBrands />)

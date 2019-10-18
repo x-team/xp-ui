@@ -116,14 +116,15 @@ const ApplicantList = ({ setState }) => {
   )
 }
 
-storiesOf('UI Components|Applicant Lists/Exclusion Popup Form', module).add('standalone', () => (
-  <Body>
-    <StoryListExclusionFormPopup />
-  </Body>
-))
+storiesOf('UI Components|Applicant Lists/ListExclusionFormPopup', module)
+  .add('basic usage', () => (
+    <Body>
+      <StoryListExclusionFormPopup />
+    </Body>
+  ))
 
-storiesOf('UI Components|Applicant Lists/Exclusion Popup Form/Use Cases', module)
-  .add('stateful example composed with TwoColumnsLayout', () => (
+storiesOf('UI Components|Applicant Lists/ListExclusionFormPopup/Use Cases', module)
+  .add('composed in two columns layout', () => (
     <State initialState={{ isOpen: false }}>
       {({ setState, state }) => (
         <Body>
@@ -146,7 +147,7 @@ storiesOf('UI Components|Applicant Lists/Exclusion Popup Form/Use Cases', module
     </State>
   ))
 
-storiesOf('UI Components|Applicant Lists/Exclusion Popup Form/Debug', module)
+storiesOf('UI Components|Applicant Lists/ListExclusionFormPopup/Debug', module)
   .add('stateful example occupying the entire height of the screen', () => (
     <State initialState={{ isOpen: false }}>
       {({ setState, state }) => (

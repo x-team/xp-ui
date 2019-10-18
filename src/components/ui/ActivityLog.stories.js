@@ -4,30 +4,34 @@ import { storiesOf } from '@storybook/react'
 
 import ActivityLog from './ActivityLog'
 
-storiesOf('UI Components|Activity/Log', module)
-  .add('single activity with value and label', () => (
-    <ActivityLog
-      label={faker.random.words(2)}
-      value={faker.random.words(2)}
-    />
-  ))
-  .add('single activity with value, label and info', () => (
+storiesOf('UI Components|Activity/ActivityLog', module)
+  .add('basic usage', () => (
     <ActivityLog
       label={faker.random.words(2)}
       value={faker.random.words(2)}
       info={faker.random.words(2)}
     />
   ))
-  .add('single activity with only value', () => (
+
+storiesOf('UI Components|Activity/ActivityLog/States', module)
+  .add('label & value', () => (
+    <ActivityLog
+      label={faker.random.words(2)}
+      value={faker.random.words(2)}
+    />
+  ))
+  .add('value only', () => (
     <ActivityLog
       value={faker.random.words(2)}
     />
   ))
-  .add('single activity with only label', () => (
+  .add('label only', () => (
     <ActivityLog
       label={faker.random.words(2)}
     />
   ))
+
+storiesOf('UI Components|Activity/ActivityLog/Use Cases', module)
   .add('grouped activities', () => (
     <ActivityLog
       label={faker.random.words(2)}
@@ -56,7 +60,7 @@ storiesOf('UI Components|Activity/Log', module)
     />
   ))
 
-storiesOf('UI Components|Activity/Log/Debug', module)
+storiesOf('UI Components|Activity/ActivityLog/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ActivityLog />
   ))
