@@ -174,7 +174,6 @@ storiesOf('UI Components|Text/Use Cases', module)
     />
   ))
 
-
 storiesOf('UI Components|Text/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Text />

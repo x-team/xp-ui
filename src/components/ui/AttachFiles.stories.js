@@ -53,7 +53,6 @@ storiesOf('UI Components|AttachFiles/Use Cases', module)
     />
   ))
 
-
 storiesOf('UI Components|AttachFiles/Debug', module)
   .add('missing props (does component explode?)', () => (
     <AttachFiles />

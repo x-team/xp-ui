@@ -50,7 +50,6 @@ const StoryButton = (props) => (
   </Button>
 )
 
-
 storiesOf('UI Components|Buttons/Button', module)
   .add('basic usage', () => (
     <StoryButton color={'normal'}>Submit</StoryButton>
@@ -104,7 +103,6 @@ storiesOf('UI Components|Buttons/Button/States/Content Style', module)
     <StoryButton contentStyle='sourceSansPro'>sourceSansPro content style</StoryButton>
   ))
 
-
 storiesOf('UI Components|Buttons/Button/States/Outlines', module)
   .add('outlined monochorme', () => (
     <StoryButton outlined color={'monochrome'}>
@@ -142,7 +140,6 @@ storiesOf('UI Components|Buttons/Button/States', module)
     </StoryButton>
   ))
 
-
 storiesOf('UI Components|Buttons/Button/Use Cases', module)
   .add('with icon', () => (
     <StoryButton icon='plusquare' color='grayPink'>Button with icon and color</StoryButton>
@@ -167,7 +164,6 @@ storiesOf('UI Components|Buttons/Button/Use Cases', module)
       Android
     </StoryButton>
   ))
-
 
 storiesOf('UI Components|Buttons/Button/Debug', module)
   .add('missing props (does component explode?):', () => (

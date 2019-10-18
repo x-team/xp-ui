@@ -18,26 +18,26 @@ storiesOf('UI Components|TruncatedList', module)
     }
   })
   .add('basic usage (see Show info for more details)', () => {
-      const items = Array(13).fill(<XIcon />)
-      return (
-        <TruncatedList
-          items={items}
-          visible={4}
-          increment={2}
-          viewMore={(amount, action) => (
-            <Button
-              rounded
-              raised
-              outlined
-              color='silver'
-              onClick={action}
-            >
-              {`+${amount} more of ${items.length}`}
-            </Button>
-          )}
-        />
-      )
-    }
+    const items = Array(13).fill(<XIcon />)
+    return (
+      <TruncatedList
+        items={items}
+        visible={4}
+        increment={2}
+        viewMore={(amount, action) => (
+          <Button
+            rounded
+            raised
+            outlined
+            color='silver'
+            onClick={action}
+          >
+            {`+${amount} more of ${items.length}`}
+          </Button>
+        )}
+      />
+    )
+  }
   )
 
 storiesOf('UI Components|TruncatedList/Debug', module)

@@ -35,7 +35,7 @@ storiesOf('UI Components|Email/EmailFeed/States', module)
   .add('refreshing', () => (
     <EmailFeed
       isRefreshing
-      emails={emailsSmall}
+      emails={emailsExtraSmall}
       lastSyncRefresh={currentData}
       onRefreshEmails={action('this can`t be trigger in refresh')}
     />

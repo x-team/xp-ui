@@ -17,7 +17,6 @@ storiesOf('UI Components|Notes/Note', module)
     )
   })
 
-
 storiesOf('UI Components|Notes/Note/Use Cases', module)
   .add('no avatar, 2 hours ago', () => {
     const noteDate = new Date()
