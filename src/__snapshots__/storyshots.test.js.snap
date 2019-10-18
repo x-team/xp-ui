@@ -39484,20 +39484,30 @@ exports[`Storyshots UI Components|InlineEditor/Use Cases auto saves when user hi
 
 exports[`Storyshots UI Components|Jobs/JobCard basic usage 1`] = `
 <div
-  className="AutoUI_ui_JobCard-13 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  className="AutoUI_ui_JobCard-14 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
 >
-  <h3
-    className="AutoUI_ui_JobCard-24 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+  <JobCardLink
+    className="AutoUI_ui_JobCard-32 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
   >
-    string string
-  </h3>
+    <h3
+      className="AutoUI_ui_JobCard-25 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    >
+      string string
+    </h3>
+  </JobCardLink>
   <div
-    className="AutoUI_ui_JobCard-31 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobCard-47 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     string
+     
+    <JobCardLink
+      className="AutoUI_ui_JobCard-68"
+    >
+      Learn more »
+    </JobCardLink>
   </div>
   <div
-    className="AutoUI_ui_JobCard-39"
+    className="AutoUI_ui_JobCard-55"
   >
     <Button
       block={false}
@@ -39524,7 +39534,7 @@ exports[`Storyshots UI Components|Jobs/JobCard basic usage 1`] = `
     </Button>
   </div>
   <div
-    className="AutoUI_ui_JobCard-43 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobCard-59 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     string string
   </div>
@@ -39539,138 +39549,153 @@ exports[`Storyshots UI Components|Jobs/JobsGrid basic usage 1`] = `
 >
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-0"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-1"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-2"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-3"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-4"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-5"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-6"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-7"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-8"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-9"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-10"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-11"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-12"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-13"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
   <JobCard
     applied={true}
-    description="string"
     key="jobcard-14"
+    link={[Function]}
     message="string string"
     name="string string"
     onApply={[Function]}
     onWithdraw={[Function]}
+    summary="string"
   />
 </div>
 `;
@@ -39746,123 +39771,138 @@ exports[`Storyshots UI Components|Jobs/JobsPageLayout basic usage (full composit
             Array [
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
             ]
           }
@@ -39903,123 +39943,138 @@ exports[`Storyshots UI Components|Jobs/JobsPageLayout/Debug breadcrumbs heading 
             Array [
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
               <JobCard
                 applied={true}
-                description="string"
+                link={[Function]}
                 message="string string"
                 name="string string"
                 onApply={[Function]}
                 onWithdraw={[Function]}
+                summary="string"
               />,
             ]
           }
