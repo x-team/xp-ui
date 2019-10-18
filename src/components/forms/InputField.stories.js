@@ -6,7 +6,7 @@ import State from '../../utils/State'
 
 import InputField from './InputField'
 
-storiesOf('Core|/InputField', module)
+storiesOf('Core|InputField', module)
   .add('text ', () => (
     <InputField
       label='First Name'
@@ -76,7 +76,7 @@ storiesOf('Core|/InputField', module)
     />
   ))
 
-storiesOf('Core|/InputField/States', module)
+storiesOf('Core|InputField/States', module)
   .add('invalid', () => (
     <InputField
       label='Invalid Field'
@@ -94,7 +94,7 @@ storiesOf('Core|/InputField/States', module)
     />
   ))
 
-storiesOf('Core|/InputField/Debug', module)
+storiesOf('Core|InputField/Debug', module)
   .add('missing props (does component explode?)', () => <InputField />)
   .add('standard use (small)', () => (
     <InputField

@@ -1,447 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Core|/InputField checkbox 1`] = `
-<InputField
-  checked={true}
-  isInvalid={false}
-  label="Checkbox"
-  onChange={[Function]}
-  required={false}
-  size="normal"
-  type="checkbox"
-/>
-`;
-
-exports[`Storyshots Core|/InputField date 1`] = `
-<div>
-  <div>
-    <div
-      className="AutoUI_forms_InputField-153"
-    >
-      <input
-        aria-labelledby="label-date"
-        className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
-        id="date"
-        name="date"
-        placeholder="yyyy-mm-dd"
-        required={false}
-        type="date"
-      />
-      <SvgIcon
-        color="monochrome"
-        icon="calendar"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField radio 1`] = `
-<section>
-  <InputField
-    checked={false}
-    isInvalid={false}
-    label="Value 1"
-    onChange={[Function]}
-    required={false}
-    size="normal"
-    type="radio"
-  />
-  <InputField
-    checked={false}
-    isInvalid={false}
-    label="Value 2"
-    onChange={[Function]}
-    required={false}
-    size="normal"
-    type="radio"
-  />
-</section>
-`;
-
-exports[`Storyshots Core|/InputField sliding checkbox 1`] = `
-<InputField
-  checked={true}
-  isInvalid={false}
-  label="Sliding Checkbox"
-  onChange={[Function]}
-  required={false}
-  size="normal"
-  type="sliding-checkbox"
-/>
-`;
-
-exports[`Storyshots Core|/InputField text  1`] = `
-<div>
-  <label
-    id="label-name"
-  >
-    <Text
-      content="First Name"
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={false}
-      required={false}
-      subHeadingType="heading"
-    />
-    <input
-      aria-labelledby="label-name"
-      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
-      defaultValue="Simon"
-      id="name"
-      name="name"
-      placeholder="First name.."
-      required={false}
-      type="text"
-    />
-  </label>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField textarea 1`] = `
-<div>
-  <label
-    id="label-availability"
-  >
-    <Text
-      content="What’s your availability like right now? If you’re employed and would need to give a notice, how long would that take?"
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={false}
-      required={false}
-      subHeadingType="heading"
-    />
-    <WithAutosize(Component)
-      aria-labelledby="label-availability"
-      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
-      id="availability"
-      linesLimit={0}
-      name="availability"
-      placeholder="I am currrently…"
-      required={false}
-      rows={2}
-      type="textarea"
-    />
-  </label>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField/Debug Use date field (small) 1`] = `
-<div>
-  <div>
-    <div
-      className="AutoUI_forms_InputField-194"
-    >
-      <input
-        aria-labelledby="label-date"
-        className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-117  "
-        id="date"
-        name="date"
-        placeholder="yyyy-mm-dd"
-        required={false}
-        type="date"
-      />
-      <SvgIcon
-        color="monochrome"
-        icon="calendar"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField/Debug Use date field with label 1`] = `
-<div>
-  <label
-    id="label-date"
-  >
-    <Text
-      content="Date Field"
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={false}
-      required={false}
-      subHeadingType="heading"
-    />
-    <div
-      className="AutoUI_forms_InputField-153"
-    >
-      <input
-        aria-labelledby="label-date"
-        className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
-        id="date"
-        name="date"
-        placeholder="yyyy-mm-dd"
-        required={false}
-        type="date"
-      />
-      <SvgIcon
-        color="monochrome"
-        icon="calendar"
-      />
-    </div>
-  </label>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField/Debug missing props (does component explode?) 1`] = `
-<div>
-  <div>
-    <input
-      aria-labelledby=""
-      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
-      required={false}
-      type="text"
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField/Debug standard use (small) 1`] = `
-<div>
-  <label
-    id="label-name"
-  >
-    <Text
-      content="First Name"
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={false}
-      required={false}
-      subHeadingType="heading"
-    />
-    <input
-      aria-labelledby="label-name"
-      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-117  "
-      defaultValue="Simon"
-      id="name"
-      name="name"
-      placeholder="First name.."
-      required={false}
-      type="text"
-    />
-  </label>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField/Debug standard use (with only \`postText\` defined) 1`] = `
-<div>
-  <div>
-    <input
-      aria-labelledby="label-experience"
-      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
-      defaultValue="1"
-      id="experience"
-      name="experience"
-      placeholder="Years of experience.."
-      required={false}
-      style={
-        Object {
-          "width": "10%",
-        }
-      }
-      type="text"
-    />
-    <Text
-      content="years"
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={true}
-      required={false}
-      subHeadingType="heading"
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField/Debug standard use (with postText) 1`] = `
-<div>
-  <label
-    id="label-experience"
-  >
-    <Text
-      content="How many years of experience do you have?"
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={false}
-      required={false}
-      subHeadingType="heading"
-    />
-    <input
-      aria-labelledby="label-experience"
-      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
-      defaultValue="1"
-      id="experience"
-      name="experience"
-      placeholder="Years of experience.."
-      required={false}
-      style={
-        Object {
-          "width": "10%",
-        }
-      }
-      type="text"
-    />
-    <Text
-      content="years"
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={true}
-      required={false}
-      subHeadingType="heading"
-    />
-  </label>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField/Debug textarea element, lines limit set 1`] = `
-<div>
-  <label
-    id="label-skills"
-  >
-    <Text
-      content="Which skills have you used professionally?"
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={false}
-      required={false}
-      subHeadingType="heading"
-    />
-    <WithAutosize(Component)
-      aria-labelledby="label-skills"
-      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
-      defaultValue="1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10."
-      id="skills"
-      linesLimit={5}
-      name="skills"
-      placeholder="These are my…"
-      required={false}
-      rows={2}
-      type="textarea"
-    />
-  </label>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField/States invalid 1`] = `
-<div>
-  <label
-    id="label-invalid"
-  >
-    <Text
-      content="Invalid Field"
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={false}
-      required={false}
-      subHeadingType="heading"
-    />
-    <input
-      aria-labelledby="label-invalid"
-      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-147 "
-      id="invalid"
-      name="invalid"
-      placeholder="Error Placeholder..."
-      required={false}
-      type="text"
-    />
-  </label>
-</div>
-`;
-
-exports[`Storyshots Core|/InputField/States required 1`] = `
-<div>
-  <label
-    id="label-required"
-  >
-    <Text
-      content="Required Field"
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={false}
-      required={true}
-      subHeadingType="heading"
-    />
-    <input
-      aria-labelledby="label-required"
-      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
-      id="required"
-      name="required"
-      placeholder="Required Placeholder..."
-      required={true}
-      type="text"
-    />
-  </label>
-</div>
-`;
-
-exports[`Storyshots Core|/InputGroup basic usage 1`] = `
-<div
-  className="AutoUI_forms_InputGroup-22 social-so"
->
-  <span
-    className="AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputGroup-31"
-  >
-    stackoverflow.com/users/
-  </span>
-  <InputField
-    defaultValue="so_account"
-    isInvalid={false}
-    maxLength={20}
-    name="soAccount"
-    placeholder="stackoverflow account.."
-    required={false}
-    size="normal"
-    type="text"
-  />
-</div>
-`;
-
-exports[`Storyshots Core|/InputGroup/Debug missing props (does component explode?) 1`] = `
-<div
-  className="AutoUI_forms_InputGroup-22"
->
-  <span
-    className="AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputGroup-31"
-  />
-  <InputField
-    isInvalid={false}
-    required={false}
-    size="normal"
-    type="text"
-  />
-</div>
-`;
-
 exports[`Storyshots Core|GenericTabs basic usage 1`] = `
 <Fragment>
   <headWrapper>
@@ -864,6 +422,448 @@ exports[`Storyshots Core|GenericTabs/Debug width onChange callback passed as pro
     </Pane>
   </contentWrapper>
 </Fragment>
+`;
+
+exports[`Storyshots Core|InputField checkbox 1`] = `
+<InputField
+  checked={true}
+  isInvalid={false}
+  label="Checkbox"
+  onChange={[Function]}
+  required={false}
+  size="normal"
+  type="checkbox"
+/>
+`;
+
+exports[`Storyshots Core|InputField date 1`] = `
+<div>
+  <div>
+    <div
+      className="AutoUI_forms_InputField-153"
+    >
+      <input
+        aria-labelledby="label-date"
+        className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
+        id="date"
+        name="date"
+        placeholder="yyyy-mm-dd"
+        required={false}
+        type="date"
+      />
+      <SvgIcon
+        color="monochrome"
+        icon="calendar"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core|InputField radio 1`] = `
+<section>
+  <InputField
+    checked={false}
+    isInvalid={false}
+    label="Value 1"
+    onChange={[Function]}
+    required={false}
+    size="normal"
+    type="radio"
+  />
+  <InputField
+    checked={false}
+    isInvalid={false}
+    label="Value 2"
+    onChange={[Function]}
+    required={false}
+    size="normal"
+    type="radio"
+  />
+</section>
+`;
+
+exports[`Storyshots Core|InputField sliding checkbox 1`] = `
+<InputField
+  checked={true}
+  isInvalid={false}
+  label="Sliding Checkbox"
+  onChange={[Function]}
+  required={false}
+  size="normal"
+  type="sliding-checkbox"
+/>
+`;
+
+exports[`Storyshots Core|InputField text  1`] = `
+<div>
+  <label
+    id="label-name"
+  >
+    <Text
+      content="First Name"
+      hasDivider={false}
+      headingType="headline"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={false}
+      required={false}
+      subHeadingType="heading"
+    />
+    <input
+      aria-labelledby="label-name"
+      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
+      defaultValue="Simon"
+      id="name"
+      name="name"
+      placeholder="First name.."
+      required={false}
+      type="text"
+    />
+  </label>
+</div>
+`;
+
+exports[`Storyshots Core|InputField textarea 1`] = `
+<div>
+  <label
+    id="label-availability"
+  >
+    <Text
+      content="What’s your availability like right now? If you’re employed and would need to give a notice, how long would that take?"
+      hasDivider={false}
+      headingType="headline"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={false}
+      required={false}
+      subHeadingType="heading"
+    />
+    <WithAutosize(Component)
+      aria-labelledby="label-availability"
+      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
+      id="availability"
+      linesLimit={0}
+      name="availability"
+      placeholder="I am currrently…"
+      required={false}
+      rows={2}
+      type="textarea"
+    />
+  </label>
+</div>
+`;
+
+exports[`Storyshots Core|InputField/Debug Use date field (small) 1`] = `
+<div>
+  <div>
+    <div
+      className="AutoUI_forms_InputField-194"
+    >
+      <input
+        aria-labelledby="label-date"
+        className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-117  "
+        id="date"
+        name="date"
+        placeholder="yyyy-mm-dd"
+        required={false}
+        type="date"
+      />
+      <SvgIcon
+        color="monochrome"
+        icon="calendar"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core|InputField/Debug Use date field with label 1`] = `
+<div>
+  <label
+    id="label-date"
+  >
+    <Text
+      content="Date Field"
+      hasDivider={false}
+      headingType="headline"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={false}
+      required={false}
+      subHeadingType="heading"
+    />
+    <div
+      className="AutoUI_forms_InputField-153"
+    >
+      <input
+        aria-labelledby="label-date"
+        className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
+        id="date"
+        name="date"
+        placeholder="yyyy-mm-dd"
+        required={false}
+        type="date"
+      />
+      <SvgIcon
+        color="monochrome"
+        icon="calendar"
+      />
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Core|InputField/Debug missing props (does component explode?) 1`] = `
+<div>
+  <div>
+    <input
+      aria-labelledby=""
+      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
+      required={false}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core|InputField/Debug standard use (small) 1`] = `
+<div>
+  <label
+    id="label-name"
+  >
+    <Text
+      content="First Name"
+      hasDivider={false}
+      headingType="headline"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={false}
+      required={false}
+      subHeadingType="heading"
+    />
+    <input
+      aria-labelledby="label-name"
+      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-117  "
+      defaultValue="Simon"
+      id="name"
+      name="name"
+      placeholder="First name.."
+      required={false}
+      type="text"
+    />
+  </label>
+</div>
+`;
+
+exports[`Storyshots Core|InputField/Debug standard use (with only \`postText\` defined) 1`] = `
+<div>
+  <div>
+    <input
+      aria-labelledby="label-experience"
+      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
+      defaultValue="1"
+      id="experience"
+      name="experience"
+      placeholder="Years of experience.."
+      required={false}
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+      type="text"
+    />
+    <Text
+      content="years"
+      hasDivider={false}
+      headingType="headline"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={true}
+      required={false}
+      subHeadingType="heading"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core|InputField/Debug standard use (with postText) 1`] = `
+<div>
+  <label
+    id="label-experience"
+  >
+    <Text
+      content="How many years of experience do you have?"
+      hasDivider={false}
+      headingType="headline"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={false}
+      required={false}
+      subHeadingType="heading"
+    />
+    <input
+      aria-labelledby="label-experience"
+      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  AutoUI_forms_InputField-142"
+      defaultValue="1"
+      id="experience"
+      name="experience"
+      placeholder="Years of experience.."
+      required={false}
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+      type="text"
+    />
+    <Text
+      content="years"
+      hasDivider={false}
+      headingType="headline"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={true}
+      required={false}
+      subHeadingType="heading"
+    />
+  </label>
+</div>
+`;
+
+exports[`Storyshots Core|InputField/Debug textarea element, lines limit set 1`] = `
+<div>
+  <label
+    id="label-skills"
+  >
+    <Text
+      content="Which skills have you used professionally?"
+      hasDivider={false}
+      headingType="headline"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={false}
+      required={false}
+      subHeadingType="heading"
+    />
+    <WithAutosize(Component)
+      aria-labelledby="label-skills"
+      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-333  "
+      defaultValue="1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10."
+      id="skills"
+      linesLimit={5}
+      name="skills"
+      placeholder="These are my…"
+      required={false}
+      rows={2}
+      type="textarea"
+    />
+  </label>
+</div>
+`;
+
+exports[`Storyshots Core|InputField/States invalid 1`] = `
+<div>
+  <label
+    id="label-invalid"
+  >
+    <Text
+      content="Invalid Field"
+      hasDivider={false}
+      headingType="headline"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={false}
+      required={false}
+      subHeadingType="heading"
+    />
+    <input
+      aria-labelledby="label-invalid"
+      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91 AutoUI_forms_InputField-147 "
+      id="invalid"
+      name="invalid"
+      placeholder="Error Placeholder..."
+      required={false}
+      type="text"
+    />
+  </label>
+</div>
+`;
+
+exports[`Storyshots Core|InputField/States required 1`] = `
+<div>
+  <label
+    id="label-required"
+  >
+    <Text
+      content="Required Field"
+      hasDivider={false}
+      headingType="headline"
+      isCentered={false}
+      isMarkdown={false}
+      isPureContent={false}
+      required={true}
+      subHeadingType="heading"
+    />
+    <input
+      aria-labelledby="label-required"
+      className="AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputField-91  "
+      id="required"
+      name="required"
+      placeholder="Required Placeholder..."
+      required={true}
+      type="text"
+    />
+  </label>
+</div>
+`;
+
+exports[`Storyshots Core|InputGroup basic usage 1`] = `
+<div
+  className="AutoUI_forms_InputGroup-22 social-so"
+>
+  <span
+    className="AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputGroup-31"
+  >
+    stackoverflow.com/users/
+  </span>
+  <InputField
+    defaultValue="so_account"
+    isInvalid={false}
+    maxLength={20}
+    name="soAccount"
+    placeholder="stackoverflow account.."
+    required={false}
+    size="normal"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots Core|InputGroup/Debug missing props (does component explode?) 1`] = `
+<div
+  className="AutoUI_forms_InputGroup-22"
+>
+  <span
+    className="AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24 AutoUI_forms_InputGroup-31"
+  />
+  <InputField
+    isInvalid={false}
+    required={false}
+    size="normal"
+    type="text"
+  />
+</div>
 `;
 
 exports[`Storyshots Core|Layouts/MetaGroup standalone composed with children 1`] = `
@@ -2182,27 +2182,7 @@ exports[`Storyshots Core|Modal basic usage 1`] = `
 </div>
 `;
 
-exports[`Storyshots Core|Modal/Debug missing props (does component explode?) 1`] = `
-<div
-  style={
-    Object {
-      "minHeight": "100vh",
-      "overflow": "hidden",
-    }
-  }
->
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "
-      body { margin: 0; }
-    ",
-      }
-    }
-  />
-  <Modal />
-</div>
-`;
+exports[`Storyshots Core|Modal/Debug missing props (does component explode?) 1`] = `""`;
 
 exports[`Storyshots Core|Modal/Debug modal with content longer than viewport 1`] = `
 <div

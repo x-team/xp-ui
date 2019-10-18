@@ -75,9 +75,7 @@ storiesOf('Core|Modal/Use Cases', module)
 
 storiesOf('Core|Modal/Debug', module)
   .add('missing props (does component explode?)', () => (
-    <Body>
-      <Modal />
-    </Body>
+    <Modal />
   ))
   .add('modal with content taller than viewport', () => (
     <Body>
