@@ -12,8 +12,8 @@ const sizes = {
   Small: 'small'
 }
 
-storiesOf('UI Components/SelectBox', module)
-  .add('simple view for Add to List', () => {
+storiesOf('Core Components|Form Components/SelectBox', module)
+  .add('basic usage', () => {
     const itemsArray = [
       {
         id: 2,
@@ -55,259 +55,8 @@ storiesOf('UI Components/SelectBox', module)
       />
     )
   })
-  .add('simple view for Search module with close dropdown on item click (default behavior)', () => {
-    const itemsArray = [
-      {
-        id: 2,
-        value: 'registered'
-      },
-      {
-        id: 3,
-        value: 'portfolio-building'
-      },
-      {
-        id: 4,
-        value: 'portfolio-review'
-      },
-      {
-        id: 5,
-        value: 'social-media-screen'
-      },
-      {
-        id: 6,
-        value: 'react-shortlist'
-      }
-    ]
 
-    return (
-      <SelectBox
-        placeholder='Select Lists'
-        collectionLabel='list'
-        items={itemsArray}
-        width={330}
-        visibleItems={4}
-        append={(
-          <Button selectbox>
-            <SvgIcon icon='edit' /> Edit Lists
-          </Button>
-        )}
-        onClick={action('onClick')}
-        size={select('Size', sizes, sizes.Default)}
-      />
-    )
-  })
-  .add('simple view for Search module without close dropdown on item click', () => {
-    const itemsArray = [
-      {
-        id: 2,
-        value: 'registered'
-      },
-      {
-        id: 3,
-        value: 'portfolio-building'
-      },
-      {
-        id: 4,
-        value: 'portfolio-review'
-      },
-      {
-        id: 5,
-        value: 'social-media-screen'
-      },
-      {
-        id: 6,
-        value: 'react-shortlist'
-      }
-    ]
-
-    return (
-      <SelectBox
-        placeholder='Select Lists'
-        collectionLabel='list'
-        items={itemsArray}
-        width={330}
-        visibleItems={4}
-        append={(
-          <Button selectbox>
-            <SvgIcon icon='edit' /> Edit Lists
-          </Button>
-        )}
-        onClick={action('onClick')}
-        closeDropdown={false}
-        size={select('Size', sizes, sizes.Default)}
-      />
-    )
-  })
-  .add('simple view for Search module with close dropdown on item click and one selected', () => {
-    const itemsArray = [
-      {
-        id: 2,
-        value: 'registered'
-      },
-      {
-        id: 3,
-        value: 'portfolio-building',
-        selected: true
-      },
-      {
-        id: 4,
-        value: 'portfolio-review'
-      },
-      {
-        id: 5,
-        value: 'social-media-screen'
-      },
-      {
-        id: 6,
-        value: 'react-shortlist'
-      }
-    ]
-
-    return (
-      <SelectBox
-        placeholder='Select Lists'
-        collectionLabel='list'
-        items={itemsArray}
-        width={330}
-        visibleItems={4}
-        append={(
-          <Button selectbox>
-            <SvgIcon icon='edit' /> Edit Lists
-          </Button>
-        )}
-        onClick={action('onClick')}
-        size={select('Size', sizes, sizes.Default)}
-      />
-    )
-  })
-  .add('simple view for Search module without close dropdown one selected', () => {
-    const itemsArray = [
-      {
-        id: 2,
-        value: 'registered',
-        selected: true
-      },
-      {
-        id: 3,
-        value: 'portfolio-building'
-      },
-      {
-        id: 4,
-        value: 'portfolio-review'
-      },
-      {
-        id: 5,
-        value: 'social-media-screen'
-      },
-      {
-        id: 6,
-        value: 'react-shortlist'
-      }
-    ]
-
-    return (
-      <SelectBox
-        placeholder='Select Lists'
-        collectionLabel='list'
-        items={itemsArray}
-        width={330}
-        visibleItems={4}
-        append={(
-          <Button selectbox>
-            <SvgIcon icon='edit' /> Edit Lists
-          </Button>
-        )}
-        onClick={action('onClick')}
-        closeDropdown={false}
-        size={select('Size', sizes, sizes.Default)}
-      />
-    )
-  })
-  .add('simple view, selectable with many selected', () => {
-    const itemsArray = [
-      {
-        id: 2,
-        value: 'registered',
-        selected: true
-      },
-      {
-        id: 3,
-        value: 'portfolio-building',
-        selected: true
-      },
-      {
-        id: 4,
-        value: 'portfolio-review',
-        selected: true
-      },
-      {
-        id: 5,
-        value: 'social-media-screen',
-        selected: true
-      },
-      {
-        id: 6,
-        value: 'react-shortlist',
-        selected: true
-      }
-    ]
-
-    return (
-      <SelectBox
-        placeholder='Select Lists'
-        collectionLabel='list'
-        items={itemsArray}
-        width={330}
-        visibleItems={4}
-        append={(
-          <Button selectbox>
-            <SvgIcon icon='edit' /> Edit Lists
-          </Button>
-        )}
-        onSelect={action('onSelect')}
-        size={select('Size', sizes, sizes.Default)}
-      />
-    )
-  })
-  .add('complete view for Edit Lists', () => {
-    const itemsArray = [
-      {
-        id: 2,
-        value: 'registered'
-      },
-      {
-        id: 3,
-        value: 'portfolio-building'
-      },
-      {
-        id: 4,
-        value: 'portfolio-review'
-      },
-      {
-        id: 5,
-        value: 'social-media-screen'
-      },
-      {
-        id: 6,
-        value: 'react-shortlist'
-      }
-    ]
-
-    return (
-      <SelectBox
-        collectionLabel='list'
-        items={itemsArray}
-        expanded
-        onSelect={action('onSelect')}
-        onEdit={action('onEdit')}
-        onArchive={action('onArchive')}
-        onDelete={action('onDelete')}
-        onCreateNew={action('onCreateNew')}
-        size={select('Size', sizes, sizes.Default)}
-      />
-    )
-  })
-  .add('example without auto-focus on search field', () => <SelectBox autoFocus={false} size={select('Size', sizes, sizes.Default)} />)
+storiesOf('Core Components|Form Components/SelectBox/States', module)
   .add('example of all items states', () => {
     const itemsArray = [
       {
@@ -425,6 +174,87 @@ storiesOf('UI Components/SelectBox', module)
           size={select('Size', sizes, sizes.Default)}
         />
       </div>
+    )
+  })
+
+storiesOf('Core Components|Form Components/SelectBox/Use Cases', module)
+  .add('with search field', () => {
+    const itemsArray = [
+      {
+        id: 2,
+        value: 'registered'
+      },
+      {
+        id: 3,
+        value: 'portfolio-building'
+      },
+      {
+        id: 4,
+        value: 'portfolio-review'
+      },
+      {
+        id: 5,
+        value: 'social-media-screen'
+      },
+      {
+        id: 6,
+        value: 'react-shortlist'
+      }
+    ]
+
+    return (
+      <SelectBox
+        placeholder='Select Lists'
+        collectionLabel='list'
+        items={itemsArray}
+        width={330}
+        visibleItems={4}
+        append={(
+          <Button selectbox>
+            <SvgIcon icon='edit' /> Edit Lists
+          </Button>
+        )}
+        onClick={action('onClick')}
+        size={select('Size', sizes, sizes.Default)}
+      />
+    )
+  })
+  .add('expanded view', () => {
+    const itemsArray = [
+      {
+        id: 2,
+        value: 'registered'
+      },
+      {
+        id: 3,
+        value: 'portfolio-building'
+      },
+      {
+        id: 4,
+        value: 'portfolio-review'
+      },
+      {
+        id: 5,
+        value: 'social-media-screen'
+      },
+      {
+        id: 6,
+        value: 'react-shortlist'
+      }
+    ]
+
+    return (
+      <SelectBox
+        collectionLabel='list'
+        items={itemsArray}
+        expanded
+        onSelect={action('onSelect')}
+        onEdit={action('onEdit')}
+        onArchive={action('onArchive')}
+        onDelete={action('onDelete')}
+        onCreateNew={action('onCreateNew')}
+        size={select('Size', sizes, sizes.Default)}
+      />
     )
   })
   .add('"searching" and "creating" use cases', () => (
@@ -546,7 +376,7 @@ storiesOf('UI Components/SelectBox', module)
       />
     </div>
   ))
-  .add('"hasSearch", "expanded" and "placeholder" props use cases', () => {
+  .add('"hasSearch", "expanded" and "placeholder" use cases', () => {
     const itemsArray = [
       { id: 1, value: 'entry' },
       { id: 2, value: 'entry another entry' },
@@ -588,6 +418,141 @@ storiesOf('UI Components/SelectBox', module)
       </div>
     )
   })
+
+storiesOf('Core Components|Form Components/SelectBox/Debug', module)
+  .add('missing props (does component explode?)', () => <SelectBox />)
+  .add('simple view for Search module without close dropdown on item click', () => {
+    const itemsArray = [
+      {
+        id: 2,
+        value: 'registered'
+      },
+      {
+        id: 3,
+        value: 'portfolio-building'
+      },
+      {
+        id: 4,
+        value: 'portfolio-review'
+      },
+      {
+        id: 5,
+        value: 'social-media-screen'
+      },
+      {
+        id: 6,
+        value: 'react-shortlist'
+      }
+    ]
+
+    return (
+      <SelectBox
+        placeholder='Select Lists'
+        collectionLabel='list'
+        items={itemsArray}
+        width={330}
+        visibleItems={4}
+        append={(
+          <Button selectbox>
+            <SvgIcon icon='edit' /> Edit Lists
+          </Button>
+        )}
+        onClick={action('onClick')}
+        closeDropdown={false}
+        size={select('Size', sizes, sizes.Default)}
+      />
+    )
+  })
+  .add('simple view for Search module without close dropdown one selected', () => {
+    const itemsArray = [
+      {
+        id: 2,
+        value: 'registered',
+        selected: true
+      },
+      {
+        id: 3,
+        value: 'portfolio-building'
+      },
+      {
+        id: 4,
+        value: 'portfolio-review'
+      },
+      {
+        id: 5,
+        value: 'social-media-screen'
+      },
+      {
+        id: 6,
+        value: 'react-shortlist'
+      }
+    ]
+
+    return (
+      <SelectBox
+        placeholder='Select Lists'
+        collectionLabel='list'
+        items={itemsArray}
+        width={330}
+        visibleItems={4}
+        append={(
+          <Button selectbox>
+            <SvgIcon icon='edit' /> Edit Lists
+          </Button>
+        )}
+        onClick={action('onClick')}
+        closeDropdown={false}
+        size={select('Size', sizes, sizes.Default)}
+      />
+    )
+  })
+  .add('simple view, selectable with many selected', () => {
+    const itemsArray = [
+      {
+        id: 2,
+        value: 'registered',
+        selected: true
+      },
+      {
+        id: 3,
+        value: 'portfolio-building',
+        selected: true
+      },
+      {
+        id: 4,
+        value: 'portfolio-review',
+        selected: true
+      },
+      {
+        id: 5,
+        value: 'social-media-screen',
+        selected: true
+      },
+      {
+        id: 6,
+        value: 'react-shortlist',
+        selected: true
+      }
+    ]
+
+    return (
+      <SelectBox
+        placeholder='Select Lists'
+        collectionLabel='list'
+        items={itemsArray}
+        width={330}
+        visibleItems={4}
+        append={(
+          <Button selectbox>
+            <SvgIcon icon='edit' /> Edit Lists
+          </Button>
+        )}
+        onSelect={action('onSelect')}
+        size={select('Size', sizes, sizes.Default)}
+      />
+    )
+  })
+  .add('example without auto-focus on search field', () => <SelectBox autoFocus={false} size={select('Size', sizes, sizes.Default)} />)
   .add('fixed height', () => (
     <SelectBox
       expanded
@@ -674,4 +639,45 @@ storiesOf('UI Components/SelectBox', module)
       </div>
     )
   })
-  .add('missing props (does component explode?)', () => <SelectBox />)
+  .add('list item active', () => {
+    const itemsArray = [
+      {
+        id: 2,
+        value: 'registered'
+      },
+      {
+        id: 3,
+        value: 'portfolio-building',
+        selected: true
+      },
+      {
+        id: 4,
+        value: 'portfolio-review'
+      },
+      {
+        id: 5,
+        value: 'social-media-screen'
+      },
+      {
+        id: 6,
+        value: 'react-shortlist'
+      }
+    ]
+
+    return (
+      <SelectBox
+        placeholder='Select Lists'
+        collectionLabel='list'
+        items={itemsArray}
+        width={330}
+        visibleItems={4}
+        append={(
+          <Button selectbox>
+            <SvgIcon icon='edit' /> Edit Lists
+          </Button>
+        )}
+        onClick={action('onClick')}
+        size={select('Size', sizes, sizes.Default)}
+      />
+    )
+  })

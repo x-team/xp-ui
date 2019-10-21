@@ -6,7 +6,23 @@ import AttachFiles from './AttachFiles'
 
 const firstArg = decorate([args => args.slice(0, 1)])
 
-storiesOf('UI Components/AttachFiles', module)
+storiesOf('Core Components|Form Components/AttachFiles', module)
+  .add('basic usage', () => (
+    <AttachFiles
+      files={[
+        {
+          filename: 'filename-01.zip',
+          path: 'string',
+          progress: 100
+        }
+      ]}
+      onFileUpload={action('upload new file')}
+      onCancel={firstArg.action('cancel upload')}
+      onDelete={firstArg.action('delete')}
+    />
+  ))
+
+storiesOf('Core Components|Form Components/AttachFiles/Use Cases', module)
   .add('multiple files', () => (
     <AttachFiles
       files={[
@@ -36,17 +52,10 @@ storiesOf('UI Components/AttachFiles', module)
       onDelete={firstArg.action('delete')}
     />
   ))
-  .add('same file name', () => (
-    <AttachFiles
-      files={[
-        {
-          filename: 'filename-01.zip'
-        },
-        {
-          filename: 'filename-01.zip'
-        }
-      ]}
-    />
+
+storiesOf('Core Components|Form Components/AttachFiles/Debug', module)
+  .add('missing props (does component explode?)', () => (
+    <AttachFiles />
   ))
   .add('multiple files (preview)', () => (
     <AttachFiles
@@ -69,6 +78,15 @@ storiesOf('UI Components/AttachFiles', module)
       onDelete={firstArg.action('delete')}
     />
   ))
-  .add('missing props (does component explode?)', () => (
-    <AttachFiles />
+  .add('same file name', () => (
+    <AttachFiles
+      files={[
+        {
+          filename: 'filename-01.zip'
+        },
+        {
+          filename: 'filename-01.zip'
+        }
+      ]}
+    />
   ))

@@ -3,10 +3,13 @@ import { storiesOf } from '@storybook/react'
 
 import ErrorBox from './ErrorBox'
 
-storiesOf('UI Components/ErrorBox', module)
+storiesOf('Core Components|ErrorBox', module)
+  .add('basic usage', () => <ErrorBox errors={{ name: 'Something went wrong' }} />)
+
+storiesOf('Core Components|ErrorBox/Debug', module)
+  .add('missing props (does component explode?)', () => <ErrorBox />)
   .add('no errors', () => <ErrorBox errors={{}} />)
-  .add('with one error', () => <ErrorBox errors={{ name: 'Something went wrong' }} />)
-  .add('with two errors', () => (
+  .add('with failed', () => (
     <ErrorBox errors={{
       name: 'Something went wrong',
       failed: <span>The operation <b>failed</b></span>
@@ -15,4 +18,3 @@ storiesOf('UI Components/ErrorBox', module)
   .add('with HTML content', () => (
     <ErrorBox errors={{ name: <span>Something went <a href='#'>wrong</a></span> }} />
   ))
-  .add('missing props (does component explode?)', () => <ErrorBox />)

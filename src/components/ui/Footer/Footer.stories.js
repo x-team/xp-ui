@@ -5,7 +5,7 @@ import Footer from './Footer'
 import FooterList from './FooterList'
 import FooterBrands from './FooterBrands'
 
-storiesOf('UI Components/Footer', module)
+storiesOf('UI Components|Footer', module)
   .add('basic usage', () => (
     <Footer
       copyright='2017 © All rights reserved. X-Company Pty Ltd.'
@@ -105,4 +105,6 @@ storiesOf('UI Components/Footer', module)
       }
     />
   ))
+
+storiesOf('UI Components|Footer/Debug', module)
   .add('missing props (does component explode?)', () => <Footer />)

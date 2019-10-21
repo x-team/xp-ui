@@ -42,18 +42,25 @@ export const StoryAdminScreen = ({ modal, ...props }) => (
   </State>
 )
 
-storiesOf('UI Components/AdminScreen', module)
-  .add('default with tall content', () => (
-    <Body>
-      <StoryAdminScreen>
-        {sampleContent}
-      </StoryAdminScreen>
-    </Body>
-  ))
-  .add('default with short content', () => (
+storiesOf('Screens and Layouts|AdminScreen', module)
+  .add('basic usage', () => (
     <Body>
       <StoryAdminScreen>
         <div>bump</div>
+      </StoryAdminScreen>
+    </Body>
+  ))
+
+storiesOf('Screens and Layouts|AdminScreen/Debug', module)
+  .add('missing props (does component explode?)', () => (
+    <Body>
+      <AdminScreen />
+    </Body>
+  ))
+  .add('basic usage with tall content', () => (
+    <Body>
+      <StoryAdminScreen>
+        {sampleContent}
       </StoryAdminScreen>
     </Body>
   ))
@@ -88,10 +95,5 @@ storiesOf('UI Components/AdminScreen', module)
       >
         <div>bump</div>
       </StoryAdminScreen>
-    </Body>
-  ))
-  .add('missing props (does component explode?)', () => (
-    <Body>
-      <AdminScreen />
     </Body>
   ))
