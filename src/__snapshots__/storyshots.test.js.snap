@@ -739,6 +739,56 @@ exports[`Storyshots Core Components|Button/States/Content Style sourceSansPro 1`
 </Button>
 `;
 
+exports[`Storyshots Core Components|Button/States/Outlines outlined monochorme 1`] = `
+<Button
+  block={false}
+  className=""
+  color="monochrome"
+  component="button"
+  contentStyle={null}
+  disabled={false}
+  icon=""
+  iconProps={Object {}}
+  outlined={true}
+  pseudolink={false}
+  raised={false}
+  readOnly={false}
+  rounded={false}
+  selectbox={false}
+  selected={false}
+  size={null}
+  smallRounded={false}
+  wide={false}
+>
+  Outlined monochrome state
+</Button>
+`;
+
+exports[`Storyshots Core Components|Button/States/Outlines outlined silver 1`] = `
+<Button
+  block={false}
+  className=""
+  color="silver"
+  component="button"
+  contentStyle={null}
+  disabled={false}
+  icon=""
+  iconProps={Object {}}
+  outlined={true}
+  pseudolink={false}
+  raised={false}
+  readOnly={false}
+  rounded={false}
+  selectbox={false}
+  selected={false}
+  size={null}
+  smallRounded={false}
+  wide={false}
+>
+  Outlined silver state
+</Button>
+`;
+
 exports[`Storyshots Core Components|Button/States/Size block 1`] = `
 <Button
   block={true}
@@ -17882,56 +17932,6 @@ exports[`Storyshots UI Components|ApplicantTopProfileDisplay/Debug missing props
     className="AutoUI_ui_ApplicantTopProfileDisplay-81"
   />
 </section>
-`;
-
-exports[`Storyshots UI Components|Button/States/Outlines outlined monochorme 1`] = `
-<Button
-  block={false}
-  className=""
-  color="monochrome"
-  component="button"
-  contentStyle={null}
-  disabled={false}
-  icon=""
-  iconProps={Object {}}
-  outlined={true}
-  pseudolink={false}
-  raised={false}
-  readOnly={false}
-  rounded={false}
-  selectbox={false}
-  selected={false}
-  size={null}
-  smallRounded={false}
-  wide={false}
->
-  Outlined monochrome state
-</Button>
-`;
-
-exports[`Storyshots UI Components|Button/States/Outlines outlined silver 1`] = `
-<Button
-  block={false}
-  className=""
-  color="silver"
-  component="button"
-  contentStyle={null}
-  disabled={false}
-  icon=""
-  iconProps={Object {}}
-  outlined={true}
-  pseudolink={false}
-  raised={false}
-  readOnly={false}
-  rounded={false}
-  selectbox={false}
-  selected={false}
-  size={null}
-  smallRounded={false}
-  wide={false}
->
-  Outlined silver state
-</Button>
 `;
 
 exports[`Storyshots UI Components|ColumnsCustomizer basic usage 1`] = `
