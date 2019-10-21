@@ -103,7 +103,7 @@ storiesOf('Core Components|Button/States/Content Style', module)
     <StoryButton contentStyle='sourceSansPro'>sourceSansPro content style</StoryButton>
   ))
 
-storiesOf('UI Components|Button/States/Outlines', module)
+storiesOf('Core Components|Button/States/Outlines', module)
   .add('outlined monochorme', () => (
     <StoryButton outlined color={'monochrome'}>
       Outlined monochrome state
