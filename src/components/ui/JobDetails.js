@@ -216,7 +216,7 @@ const JobDetails = ({ name = '', description = '', skills = '' }: Props) => {
     }
   }
 
-  const renderSkillTags = () => skills.split(',').map((skill, i) => (
+  const renderSkillTags = () => skills.split(',').filter(Boolean).map((skill, i) => (
     <div key={`jobskill-${i}`} className={cx.skill}>{skill}</div>
   ))
 
