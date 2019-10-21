@@ -12,14 +12,14 @@ const Body = ({ children, background }: { children?: React$Node, background?: st
   </div>
 )
 
-storiesOf('UI Components|Buttons/PencilButton', module)
+storiesOf('UI Components|PencilButton', module)
   .add('basic usage', () => (
     <Body>
       <PencilButton />
     </Body>
   ))
 
-storiesOf('UI Components|Buttons/PencilButton/States', module)
+storiesOf('UI Components|PencilButton/States', module)
   .add('inverted color with hover variation', () => (
     <Body background='#F63A55'>
       <PencilButton color='inverted' hover='text' />
@@ -31,7 +31,7 @@ storiesOf('UI Components|Buttons/PencilButton/States', module)
     </Body>
   ))
 
-storiesOf('UI Components|Buttons/PencilButton/Debug', module)
+storiesOf('UI Components|PencilButton/Debug', module)
   .add('missing props (does component explode?)', () => (
     <PencilButton />
   ))

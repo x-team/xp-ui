@@ -23,7 +23,7 @@ const emailsLarge = [...Array(14).keys()].map(getEmailObjectStructure)
 const emailsSmall = [...Array(5).keys()].map(getEmailObjectStructure)
 const emailsExtraSmall = [...Array(1).keys()].map(getEmailObjectStructure)
 
-storiesOf('UI Components|Email/EmailFeed', module)
+storiesOf('UI Components|EmailFeed', module)
   .add('basic usage', () => (
     <EmailFeed
       emails={emailsSmall}
@@ -31,7 +31,7 @@ storiesOf('UI Components|Email/EmailFeed', module)
       } />
   ))
 
-storiesOf('UI Components|Email/EmailFeed/States', module)
+storiesOf('UI Components|EmailFeed/States', module)
   .add('refreshing', () => (
     <EmailFeed
       isRefreshing
@@ -53,7 +53,7 @@ storiesOf('UI Components|Email/EmailFeed/States', module)
     />
   ))
 
-storiesOf('UI Components|Email/EmailFeed/Use Cases', module)
+storiesOf('UI Components|EmailFeed/Use Cases', module)
   .add('responsive sizing at 300px', () => (
     <div style={{ width: '300px' }}>
       <EmailFeed
@@ -76,7 +76,7 @@ storiesOf('UI Components|Email/EmailFeed/Use Cases', module)
     </div>
   ))
 
-storiesOf('UI Components|Email/EmailFeed/Debug', module)
+storiesOf('UI Components|EmailFeed/Debug', module)
   .add('missing props (does component explode?)', () => <EmailFeed />)
   .add('initial expanded all', () => (
     <EmailFeed

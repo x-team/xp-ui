@@ -12,7 +12,7 @@ const sizes = {
   Small: 'small'
 }
 
-storiesOf('UI Components|SelectBox', module)
+storiesOf('Core Components|Form Components/SelectBox', module)
   .add('basic usage', () => {
     const itemsArray = [
       {
@@ -56,7 +56,7 @@ storiesOf('UI Components|SelectBox', module)
     )
   })
 
-storiesOf('UI Components|SelectBox/States', module)
+storiesOf('Core Components|Form Components/SelectBox/States', module)
   .add('example of all items states', () => {
     const itemsArray = [
       {
@@ -177,7 +177,7 @@ storiesOf('UI Components|SelectBox/States', module)
     )
   })
 
-storiesOf('UI Components|SelectBox/Use Cases', module)
+storiesOf('Core Components|Form Components/SelectBox/Use Cases', module)
   .add('with search field', () => {
     const itemsArray = [
       {
@@ -419,7 +419,7 @@ storiesOf('UI Components|SelectBox/Use Cases', module)
     )
   })
 
-storiesOf('UI Components|SelectBox/Debug', module)
+storiesOf('Core Components|Form Components/SelectBox/Debug', module)
   .add('missing props (does component explode?)', () => <SelectBox />)
   .add('simple view for Search module without close dropdown on item click', () => {
     const itemsArray = [

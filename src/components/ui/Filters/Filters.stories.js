@@ -229,21 +229,21 @@ export const StoryFiltersWithAccordion = () => (
   </State>
 )
 
-storiesOf('UI Components|Applicant Lists/Filters', module)
+storiesOf('UI Components|Filters', module)
   .add('basic composition usage', () => (
     <Body>
       <StoryFilters />
     </Body>
   ))
 
-storiesOf('UI Components|Applicant Lists/Filters/Use Cases', module)
+storiesOf('UI Components|Filters/Use Cases', module)
   .add('accordion effect', () => (
     <Body>
       <StoryFiltersWithAccordion />
     </Body>
   ))
 
-storiesOf('UI Components|Applicant Lists/Filters/Debug', module)
+storiesOf('UI Components|Filters/Debug', module)
   .add('centered Filter Groups', () => (
     <Filters.Container>
       <GenericCollapsible.Container initialExpanded>

@@ -7,17 +7,17 @@ import VideoPlayer from './VideoPlayer'
 
 const VIDEO_SOURCE = 'https://files.slack.com/files-pri/T0257R0RP-F7SGYKZ5F/refactor.mp4'
 
-storiesOf('UI Components|VideoPlayer', module)
+storiesOf('Core Components|VideoPlayer', module)
   .add('basic usage', () => (
     <VideoPlayer src={VIDEO_SOURCE} />
   ))
 
-storiesOf('UI Components|VideoPlayer/Use Cases', module)
+storiesOf('Core Components|VideoPlayer/Use Cases', module)
   .add('embedded video', () => (
     <VideoPlayer src={'https://www.youtube.com/embed/R6NUFRNEai4'} embedded width={640} height={360} />
   ))
 
-storiesOf('UI Components|VideoPlayer/States', module)
+storiesOf('Core Components|VideoPlayer/States', module)
   .add('loop', () => (
     <VideoPlayer
       src={VIDEO_SOURCE}
@@ -43,7 +43,7 @@ storiesOf('UI Components|VideoPlayer/States', module)
     />
   ))
 
-storiesOf('UI Components|VideoPlayer/Debug', module)
+storiesOf('Core Components|VideoPlayer/Debug', module)
   .add('missing props (does component explodes?)', () => <VideoPlayer />)
   .add('custom height and width', () => (
     <VideoPlayer

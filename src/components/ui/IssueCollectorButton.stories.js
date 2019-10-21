@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react'
 
 import IssueCollectorButton from './IssueCollectorButton'
 
-storiesOf('UI Components|Buttons/IssueCollectorButton', module)
+storiesOf('UI Components|IssueCollectorButton', module)
   .add('basic usage', () => <IssueCollectorButton>?</IssueCollectorButton>)
 
-storiesOf('UI Components|Buttons/IssueCollectorButton/Debug', module)
+storiesOf('UI Components|IssueCollectorButton/Debug', module)
   .add('missing props (does component explode?)', () => <IssueCollectorButton />)

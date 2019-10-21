@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react'
 
 import ApplicantTopProfileDisplay from './ApplicantTopProfileDisplay'
 
-storiesOf('UI Components|Applicants/ApplicantTopProfileDisplay', module)
+storiesOf('UI Components|ApplicantTopProfileDisplay', module)
   .add('basic usage', () => (
     <ApplicantTopProfileDisplay />
   ))
 
-storiesOf('UI Components|Applicants/ApplicantTopProfileDisplay/Debug', module)
+storiesOf('UI Components|ApplicantTopProfileDisplay/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ApplicantTopProfileDisplay />
   ))

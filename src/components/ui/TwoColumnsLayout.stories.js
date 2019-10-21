@@ -40,14 +40,14 @@ export const StoryTwoColumnsLayout = (props) => (
   />
 )
 
-storiesOf('Core|Layouts/StoryTwoColumnsLayout', module)
+storiesOf('Screens and Layouts|StoryTwoColumnsLayout', module)
   .add('standalone example', () => (
     <Body>
       <StoryTwoColumnsLayout />
     </Body>
   ))
 
-storiesOf('Core|Layouts/StoryTwoColumnsLayout/Use Cases', module)
+storiesOf('Screens and Layouts|StoryTwoColumnsLayout/Use Cases', module)
   .add('composed in AdminScreen', () => (
     <Body>
       <StoryAdminScreen>
@@ -77,7 +77,7 @@ storiesOf('Core|Layouts/StoryTwoColumnsLayout/Use Cases', module)
     </Body>
   ))
 
-storiesOf('Core|Layouts/StoryTwoColumnsLayout/Debug', module)
+storiesOf('Screens and Layouts|StoryTwoColumnsLayout/Debug', module)
   .add('standalone with short content', () => (
     <Body>
       <StoryTwoColumnsLayout
@@ -159,7 +159,7 @@ This story is useful to demonstrate how both heading parts behave by default whe
     </Body>
   ))
 
-storiesOf('Core|Layouts/StoryTwoColumnsLayout/Debug', module)
+storiesOf('Screens and Layouts|StoryTwoColumnsLayout/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Body>
       <TwoColumnsLayout />

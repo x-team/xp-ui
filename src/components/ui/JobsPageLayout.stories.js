@@ -35,7 +35,7 @@ const SampleSidebar = () => (
   <div style={{ border: '2px dashed green' }}>Sample Sidebar component</div>
 )
 
-storiesOf('UI Components|Jobs/JobsPageLayout', module)
+storiesOf('Screens and Layouts|JobsPageLayout', module)
   .add('basic usage (full composition)', () => (
     <Body>
       <ApplicantScreen contentWrapper={false}>
@@ -49,7 +49,7 @@ storiesOf('UI Components|Jobs/JobsPageLayout', module)
     </Body>
   ))
 
-storiesOf('UI Components|Jobs/JobsPageLayout/Debug', module)
+storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
   .add('breadcrumbs heading', () => (
     <Body>
       <ApplicantScreen contentWrapper={false}>

@@ -7,17 +7,17 @@ import { boolean, number, text, array } from '@storybook/addon-knobs'
 
 import RichTextEditor from './RichTextEditor'
 
-storiesOf('Core|RichTextEditor', module)
+storiesOf('Core Components|Form Components/RichTextEditor', module)
   .add('basic usage', () => (
     <RichTextEditor />
   ))
 
-storiesOf('Core|RichTextEditor/States', module)
+storiesOf('Core Components|Form Components/RichTextEditor/States', module)
   .add('disabled', () => (
     <RichTextEditor disabled />
   ))
 
-storiesOf('Core|RichTextEditor/Debug', module)
+storiesOf('Core Components|Form Components/RichTextEditor/Debug', module)
   .add('missing props (does component explode?)', () => (
     <RichTextEditor />
   ))

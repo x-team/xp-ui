@@ -44,7 +44,7 @@ const visibleColumns = [
   }
 ]
 
-storiesOf('UI Components|Applicants/DataGrid', module)
+storiesOf('UI Components|DataGrid', module)
   .add('basic usage', () => (
     <Body>
       <DataGrid
@@ -57,7 +57,7 @@ storiesOf('UI Components|Applicants/DataGrid', module)
     </Body>
   ))
 
-storiesOf('UI Components|Applicants/DataGrid/States', module)
+storiesOf('UI Components|DataGrid/States', module)
   .add('loading', () => (
     <Body>
       <DataGrid
@@ -71,7 +71,7 @@ storiesOf('UI Components|Applicants/DataGrid/States', module)
     </Body>
   ))
 
-storiesOf('UI Components|Applicants/DataGrid/Debug', module)
+storiesOf('UI Components|DataGrid/Debug', module)
   .add('missing props (does component explode?)', () => (
     <DataGrid />
   ))

@@ -6,7 +6,7 @@ import ApplicantScreen from './ApplicantScreen'
 import MilestonesScreen from './MilestonesScreen'
 import Button from './Button'
 
-storiesOf('UI Components|ApplicantScreen', module)
+storiesOf('Screens and Layouts|ApplicantScreen', module)
   .add('standard use', () => (
     <ApplicantScreen>
       <Text
@@ -16,7 +16,7 @@ storiesOf('UI Components|ApplicantScreen', module)
     </ApplicantScreen>
   ))
 
-storiesOf('UI Components|ApplicantScreen/Use Cases', module)
+storiesOf('Screens and Layouts|ApplicantScreen/Use Cases', module)
   .add('with milestones', () => (
     <ApplicantScreen>
       <MilestonesScreen
@@ -31,7 +31,7 @@ storiesOf('UI Components|ApplicantScreen/Use Cases', module)
     </ApplicantScreen>
   ))
 
-storiesOf('UI Components|ApplicantScreen/Debug', module)
+storiesOf('Screens and Layouts|ApplicantScreen/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ApplicantScreen />
   ))

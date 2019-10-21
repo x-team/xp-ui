@@ -14,7 +14,7 @@ const Body = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components|GenericCopyToClipboard', module)
+storiesOf('Core Components|GenericCopyToClipboard', module)
   .add('basic usage', () => (
     <Body>
       <GenericCopyToClipboard text={'example@email.com'}>
@@ -23,21 +23,21 @@ storiesOf('UI Components|GenericCopyToClipboard', module)
     </Body>
   ))
 
-storiesOf('UI Components|GenericCopyToClipboard/Tooltip', module)
+storiesOf('Core Components|GenericCopyToClipboard/Tooltip', module)
   .add('default', () => (
     <Body>
       <Tooltip />
     </Body>
   ))
 
-storiesOf('UI Components|GenericCopyToClipboard/Tooltip/States', module)
+storiesOf('Core Components|GenericCopyToClipboard/Tooltip/States', module)
   .add('copied', () => (
     <Body>
       <Tooltip copied />
     </Body>
   ))
 
-storiesOf('UI Components|GenericCopyToClipboard/Debug', module)
+storiesOf('Core Components|GenericCopyToClipboard/Debug', module)
   .add('missing children or props (does GenericCopyToClipboard explode?)', () => (
     <GenericCopyToClipboard />
   ))

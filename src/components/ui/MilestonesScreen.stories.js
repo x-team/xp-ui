@@ -5,7 +5,7 @@ import MilestonesScreen from './MilestonesScreen'
 import Button from './Button'
 import Text from './Text'
 
-storiesOf('UI Components|MilestonesScreen', module)
+storiesOf('Screens and Layouts|MilestonesScreen', module)
   .add('basic usage', () => (
     <MilestonesScreen
       cta={<Button>Go to the step 2</Button>}
@@ -17,7 +17,7 @@ storiesOf('UI Components|MilestonesScreen', module)
     </MilestonesScreen>
   ))
 
-storiesOf('UI Components|MilestonesScreen/Debug', module)
+storiesOf('Screens and Layouts|MilestonesScreen/Debug', module)
   .add('missing props (does component explode?)', () => <MilestonesScreen />)
   .add('second step', () => (
     <MilestonesScreen

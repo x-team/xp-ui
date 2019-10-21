@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react'
 
 import ActivityBar from './ActivityBar'
 
-storiesOf('UI Components|Activity/ActivityBar', module)
+storiesOf('UI Components|ActivityBar', module)
   .add('basic usage', () => (
     <ActivityBar
       text='Added to List: Registered'
@@ -25,7 +25,7 @@ storiesOf('UI Components|Activity/ActivityBar', module)
     />
   ))
 
-storiesOf('UI Components|Activity/ActivityBar/Debug', module)
+storiesOf('UI Components|ActivityBar/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ActivityBar />
   ))

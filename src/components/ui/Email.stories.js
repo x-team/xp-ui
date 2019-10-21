@@ -8,7 +8,7 @@ import Email from './Email'
 
 const currentData = new Date()
 
-storiesOf('UI Components|Email/Email', module)
+storiesOf('UI Components|Email', module)
   .add('basic usage', () => (
     <Email
       subject='RE: opportunity'
@@ -19,7 +19,7 @@ storiesOf('UI Components|Email/Email', module)
     />
   ))
 
-storiesOf('UI Components|Email/Email/Use Cases', module)
+storiesOf('UI Components|Email/Use Cases', module)
   .add('several recipients', () => (
     <Email
       subject='RE: opportunity'
@@ -63,7 +63,7 @@ storiesOf('UI Components|Email/Email/Use Cases', module)
     </div>
   ))
 
-storiesOf('UI Components|Email/Email/Debug', module)
+storiesOf('UI Components|Email/Debug', module)
   .add('missing props (does component explode?)', () => <Email />)
   .add('really long subject', () => (
     <Email

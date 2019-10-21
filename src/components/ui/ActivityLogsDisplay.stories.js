@@ -29,14 +29,14 @@ const sampleLogs = Array(30)
     }`
   }))
 
-storiesOf('UI Components|Activity/ActivityLogsDisplay', module)
+storiesOf('UI Components|ActivityLogsDisplay', module)
   .add('basic usage', () => (
     <ActivityLogsDisplay
       logs={object('logs', sampleLogs)}
     />
   ))
 
-storiesOf('UI Components|Activity/ActivityLogsDisplay/Debug', module)
+storiesOf('UI Components|ActivityLogsDisplay/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ActivityLogsDisplay />
   ))

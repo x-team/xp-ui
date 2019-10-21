@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 
 import Note from './Note'
 
-storiesOf('UI Components|Notes/Note', module)
+storiesOf('UI Components|Note', module)
   .add('basic usage', () => {
     const noteDate = new Date()
     return (
@@ -17,7 +17,7 @@ storiesOf('UI Components|Notes/Note', module)
     )
   })
 
-storiesOf('UI Components|Notes/Note/Use Cases', module)
+storiesOf('UI Components|Note/Use Cases', module)
   .add('no avatar, 2 hours ago', () => {
     const noteDate = new Date()
     noteDate.setHours(noteDate.getHours() - 2)
@@ -43,7 +43,7 @@ storiesOf('UI Components|Notes/Note/Use Cases', module)
     )
   })
 
-storiesOf('UI Components|Notes/Note/Debug', module)
+storiesOf('UI Components|Note/Debug', module)
   .add('missing props (does component explode?)', () => <Note />)
   .add('note with unparseable markdown text', () => <Note text='[one] [two]' />)
   .add('note with markdown text with break lines', () => (

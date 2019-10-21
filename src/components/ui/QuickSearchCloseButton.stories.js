@@ -10,7 +10,7 @@ const Body = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components|Buttons/QuickSearchCloseButton', module)
+storiesOf('UI Components|QuickSearchCloseButton', module)
   .add('basic usage', () => (
     <Body>
       <QuickSearchCloseButton onClick={action('onClick')}>Example of QuickSearchCloseButton</QuickSearchCloseButton>
@@ -22,7 +22,7 @@ storiesOf('UI Components|Buttons/QuickSearchCloseButton', module)
     </Body>
   ))
 
-storiesOf('UI Components|Buttons/QuickSearchCloseButton/Debug', module)
+storiesOf('UI Components|QuickSearchCloseButton/Debug', module)
   .add('missing props (does component explode?)', () => (
     <QuickSearchCloseButton />
   ))

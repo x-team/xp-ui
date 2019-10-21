@@ -42,7 +42,7 @@ export const StoryAdminScreen = ({ modal, ...props }) => (
   </State>
 )
 
-storiesOf('UI Components|AdminScreen', module)
+storiesOf('Screens and Layouts|AdminScreen', module)
   .add('basic usage', () => (
     <Body>
       <StoryAdminScreen>
@@ -51,7 +51,7 @@ storiesOf('UI Components|AdminScreen', module)
     </Body>
   ))
 
-storiesOf('UI Components|AdminScreen/Debug', module)
+storiesOf('Screens and Layouts|AdminScreen/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Body>
       <AdminScreen />

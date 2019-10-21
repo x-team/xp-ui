@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react'
 
 import Avatar from './Avatar'
 
-storiesOf('UI Components|Avatar', module)
+storiesOf('Core Components|Avatar', module)
   .add('basic usage', () => (
     <Avatar src='http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png' />
   ))
 
-storiesOf('UI Components|Avatar/Use Cases', module)
+storiesOf('Core Components|Avatar/Use Cases', module)
   .add('32x32 size', () => (
     <Avatar
       src='http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png'
@@ -37,7 +37,7 @@ storiesOf('UI Components|Avatar/Use Cases', module)
     />
   ))
 
-storiesOf('UI Components|Avatar/Debug', module)
+storiesOf('Core Components|Avatar/Debug', module)
   .add('missing props (does component explode?)', () => (
     <Avatar />
   ))
