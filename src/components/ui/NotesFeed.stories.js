@@ -186,11 +186,15 @@ const sampleWithTypes = [
   }
 ]
 
-storiesOf('UI Components/NotesFeed', module)
+storiesOf('UI Components|NotesFeed', module)
   .add('basic usage', () => (
     <NotesFeed notes={sample} onNoteUpdate={action('Updated note')} />
   ))
-  .add('showing note type in the sub header', () => (
+
+storiesOf('UI Components|NotesFeed/Use Cases', module)
+  .add('includes note type in the sub header', () => (
     <NotesFeed notes={sampleWithTypes} showNoteType onNoteUpdate={action('Updated note')} />
   ))
+
+storiesOf('UI Components|NotesFeed/Debug', module)
   .add('missing props (does component explode?)', () => <NotesFeed />)

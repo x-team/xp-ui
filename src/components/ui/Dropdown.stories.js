@@ -7,8 +7,8 @@ import Loader from './Loader'
 import SelectBox from './SelectBox'
 import Button from './Button'
 
-storiesOf('UI Components/Dropdown', module)
-  .add('labeled button', () => (
+storiesOf('UI Components|Dropdown', module)
+  .add('basic usage', () => (
     <Dropdown icon='add' label='Add to List' indicator>
       <div style={{ background: '#e9e9e9' }}>
         <Dropdown label='Add to List'>
@@ -29,7 +29,9 @@ storiesOf('UI Components/Dropdown', module)
       </div>
     </Dropdown>
   ))
-  .add('label and indicator positioned on the right', () => {
+
+storiesOf('UI Components|Dropdown/Use Cases', module)
+  .add('dropdown to pick list with search', () => {
     const itemsArray = [
       { id: 1, value: 'item-1' },
       { id: 2, value: 'item-2' },
@@ -52,14 +54,14 @@ storiesOf('UI Components/Dropdown', module)
       </div>
     )
   })
-  .add('icon only button', () => (
+  .add('icon based dropdown', () => (
     <Dropdown icon='hamburger' padded>
       <div style={{ background: '#e9e9e9' }}>
         <Loader />
       </div>
     </Dropdown>
   ))
-  .add('SelectBox example', () => {
+  .add('dropdown to select list', () => {
     const itemsArray = [
       { id: 2, value: 'registered', selected: true },
       { id: 3, value: 'portfolio-building', selected: true },
@@ -80,7 +82,7 @@ storiesOf('UI Components/Dropdown', module)
       </Dropdown>
     )
   })
-  .add('SelectBox example using radio buttons', () => {
+  .add('dropdown to radio buttons', () => {
     const itemsArray = [
       { id: 2, value: 'registered', selected: true },
       { id: 3, value: 'portfolio-building', selected: false },
@@ -104,11 +106,14 @@ storiesOf('UI Components/Dropdown', module)
       </Dropdown>
     )
   })
-  .add('tooltip display', () => (
+  .add('dropdown to tooltip', () => (
     <Dropdown tooltip label={<Button>x</Button>}>
       Anything here
     </Dropdown>
   ))
+
+storiesOf('UI Components|Dropdown/Debug', module)
+  .add('missing props (does component explode?)', () => <Dropdown />)
   .add('close Dropdown from children', () => {
     const CloseButton = ({ closeDropdown }) => (
       <h1 onClick={closeDropdown}>Click to close!</h1>
@@ -121,4 +126,3 @@ storiesOf('UI Components/Dropdown', module)
       </Dropdown>
     )
   })
-  .add('missing props (does component explode?)', () => <Dropdown />)

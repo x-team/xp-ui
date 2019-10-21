@@ -3,13 +3,15 @@ import { storiesOf } from '@storybook/react'
 
 import Avatar from './Avatar'
 
-storiesOf('UI Components/Avatar', module)
+storiesOf('Core Components|Avatar', module)
   .add('basic usage', () => (
     <Avatar src='http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png' />
   ))
-  .add('alt text, 32x32 size', () => (
+
+storiesOf('Core Components|Avatar/Use Cases', module)
+  .add('32x32 size', () => (
     <Avatar
-      src='https://www.gravatar.com/avatar/61a58e425da620d1f4839c6af03ce70f'
+      src='http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/batman-icon.png'
       alt='I am Batman!'
       size={32}
     />
@@ -28,11 +30,16 @@ storiesOf('UI Components/Avatar', module)
       size={128}
     />
   ))
-  .add('without image source', () => (
+  .add('without image', () => (
     <Avatar
       alt='X P'
       size={32}
     />
+  ))
+
+storiesOf('Core Components|Avatar/Debug', module)
+  .add('missing props (does component explode?)', () => (
+    <Avatar />
   ))
   .add('with not reachable image source', () => (
     <Avatar
@@ -40,7 +47,4 @@ storiesOf('UI Components/Avatar', module)
       alt='X P'
       size={32}
     />
-  ))
-  .add('missing props (does component explode?)', () => (
-    <Avatar />
   ))

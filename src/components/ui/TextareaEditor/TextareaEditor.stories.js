@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 
 import TextareaEditor from './TextareaEditor'
 
-storiesOf('UI Components/TextareaEditor', module)
+storiesOf('Core Components|Form Components/TextareaEditor', module)
   .add('basic usage', () => (
     <TextareaEditor
       charLimit={30}
@@ -14,6 +14,18 @@ storiesOf('UI Components/TextareaEditor', module)
       onBlur={action('Fired when textarea is blured')}
     />
   ))
+
+storiesOf('Core Components|Form Components/TextareaEditor/States', module)
+  .add('read only', () => (
+    <TextareaEditor
+      disableEditing
+      text='Text Area #1 With Formatted Text'
+      html='<p>Text Area #1 <b>With Formatted Text</b></p>'
+    />
+  ))
+
+storiesOf('Core Components|Form Components/TextareaEditor/Debug', module)
+  .add('missing props (does component explode?)', () => <TextareaEditor />)
   .add('basic usage, lines limit set', () => (
     <TextareaEditor
       charLimit={200}
@@ -48,11 +60,3 @@ storiesOf('UI Components/TextareaEditor', module)
       />
     </div>
   ))
-  .add('read only mode', () => (
-    <TextareaEditor
-      disableEditing
-      text='Text Area #1 With Formatted Text'
-      html='<p>Text Area #1 <b>With Formatted Text</b></p>'
-    />
-  ))
-  .add('missing props (does component explode?)', () => <TextareaEditor />)

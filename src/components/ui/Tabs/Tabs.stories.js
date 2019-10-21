@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import Tab from './Tab'
 import Tabs from './Tabs'
 
-storiesOf('UI Components/Tabs', module)
+storiesOf('Core Components|Tabs', module)
   .add('basic usage', () => (
     <Tabs>
       <Tab title='Tab 1'>Tab 1 Content</Tab>
@@ -24,4 +24,6 @@ storiesOf('UI Components/Tabs', module)
       <Tab title='Tab 3'>Tab 3 Content</Tab>
     </Tabs>
   ))
+
+storiesOf('Core Components|Tabs/Debug', module)
   .add('missing props (does component explode?)', () => <Tabs />)

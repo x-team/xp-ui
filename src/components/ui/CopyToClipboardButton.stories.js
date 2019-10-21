@@ -12,14 +12,14 @@ const Body = ({ children, background }: { children?: React$Node, background?: st
   </div>
 )
 
-storiesOf('UI Components/CopyToClipboardButton', module)
+storiesOf('UI Components|CopyToClipboardButton', module)
   .add('basic usage', () => (
     <Body>
       <CopyToClipboardButton text='text to be copied' />
     </Body>
   ))
 
-storiesOf('UI Components/CopyToClipboardButton/Colors', module)
+storiesOf('UI Components|CopyToClipboardButton/States', module)
   .add('inverted color with hover variation', () => (
     <Body background='#F63A55'>
       <CopyToClipboardButton text='text to be copied' color='inverted' hover='text' />
@@ -31,7 +31,7 @@ storiesOf('UI Components/CopyToClipboardButton/Colors', module)
     </Body>
   ))
 
-storiesOf('UI Components/CopyToClipboardButton/Debug', module)
+storiesOf('UI Components|CopyToClipboardButton/Debug', module)
   .add('missing props (does component explode?)', () => (
     <CopyToClipboardButton />
   ))

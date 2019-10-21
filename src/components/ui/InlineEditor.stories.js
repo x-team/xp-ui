@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react'
 import InlineEditor from './InlineEditor'
 import InputField from '../forms/InputField'
 
-storiesOf('UI Components/InlineEditor', module)
-  .add('with InputField usage:', () => (
+storiesOf('UI Components|InlineEditor', module)
+  .add('basic usage', () => (
     <InlineEditor
       editor={({ onValueChange, value }) => (
         <InputField
@@ -27,7 +27,8 @@ storiesOf('UI Components/InlineEditor', module)
     />
   ))
 
-  .add('with shouldSaveOnEnter usage:', () => (
+storiesOf('UI Components|InlineEditor/Use Cases', module)
+  .add('auto saves when user hits enter', () => (
     <InlineEditor
       shouldSaveOnEnter={false}
       editor={({ onValueChange, value }) => (
@@ -50,6 +51,7 @@ storiesOf('UI Components/InlineEditor', module)
     />
   ))
 
+storiesOf('UI Components|InlineEditor/Debug', module)
   .add('missing props (does component explode?)', () => (
     <InlineEditor />
   ))

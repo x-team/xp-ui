@@ -50,76 +50,60 @@ const StoryButton = (props) => (
   </Button>
 )
 
-storiesOf('UI Components/Button/With Knobs', module)
-  .add('all effects', StoryButton)
+storiesOf('Core Components|Button', module)
+  .add('basic usage', () => (
+    <StoryButton color={'normal'}>Submit</StoryButton>
+  ))
 
-storiesOf('UI Components/Button/Color Options', module)
-  .add('default state', () => (
+storiesOf('Core Components|Button/States/Color', module)
+  .add('none (default)', () => (
     <StoryButton>Normal state with default color</StoryButton>
   ))
-  .add('red state', () => (
+  .add('red', () => (
     <StoryButton color={'normal'}>Normal state with red color</StoryButton>
   ))
-  .add('silver state', () => (
+  .add('silver', () => (
     <StoryButton color={'silver'}>Normal state with silver color</StoryButton>
   ))
-  .add('monochrome state', () => (
+  .add('monochrome', () => (
     <StoryButton color={'monochrome'}>Normal state with monochrome color</StoryButton>
   ))
-  .add('grayPink state', () => (
+  .add('grayPink', () => (
     <StoryButton color={'grayPink'}>Normal state with grayPink color</StoryButton>
   ))
-  .add('gray state', () => (
+  .add('gray', () => (
     <StoryButton color={'gray'}>Normal state with gray color</StoryButton>
   ))
 
-storiesOf('UI Components/Button/Size Options', module)
-  .add('small size', () => (
+storiesOf('Core Components|Button/States/Size', module)
+  .add('small', () => (
     <StoryButton size={'small'}>Small size</StoryButton>
   ))
-  .add('normal size', () => (
+  .add('normal', () => (
     <StoryButton>Normal size</StoryButton>
   ))
-  .add('large size', () => (
+  .add('large', () => (
     <StoryButton size={'large'}>Large size</StoryButton>
   ))
-  .add('block size', () => (
+  .add('block', () => (
     <StoryButton block>Block size</StoryButton>
   ))
-  .add('wide size', () => (
+  .add('wide', () => (
     <StoryButton wide>Wide size</StoryButton>
   ))
 
-storiesOf('UI Components/Button/contentStyle Options', module)
-  .add('normal content style', () => (
+storiesOf('Core Components|Button/States/Content Style', module)
+  .add('normal', () => (
     <StoryButton>Normal content style</StoryButton>
   ))
-  .add('openSans content style', () => (
+  .add('openSans', () => (
     <StoryButton contentStyle='openSans'>openSans content style</StoryButton>
   ))
-  .add('sourceSansPro content style', () => (
+  .add('sourceSansPro', () => (
     <StoryButton contentStyle='sourceSansPro'>sourceSansPro content style</StoryButton>
   ))
 
-storiesOf('UI Components/Button/Extra States', module)
-  .add('disabled', () => (
-    <StoryButton disabled>Disabled state</StoryButton>
-  ))
-  .add('rounded default', () => (
-    <StoryButton rounded>Rounded default state</StoryButton>
-  ))
-  .add('smallRounded default', () => (
-    <StoryButton smallRounded>smallRounded default state</StoryButton>
-  ))
-  .add('raised default', () => (
-    <StoryButton raised>Raised default state</StoryButton>
-  ))
-  .add('link-style default', () => (
-    <StoryButton pseudolink>Link default state</StoryButton>
-  ))
-  .add('outlined default', () => (
-    <StoryButton outlined>Outlined default state</StoryButton>
-  ))
+storiesOf('Core Components|Button/States/Outlines', module)
   .add('outlined monochorme', () => (
     <StoryButton outlined color={'monochrome'}>
       Outlined monochrome state
@@ -130,22 +114,36 @@ storiesOf('UI Components/Button/Extra States', module)
       Outlined silver state
     </StoryButton>
   ))
-  .add('button generated with custom element (<a>)', () => (
-    <StoryButton component='a' color={'monochrome'}>
-      custom default button state
+
+storiesOf('Core Components|Button/States', module)
+  .add('disabled', () => (
+    <StoryButton disabled>Disabled state</StoryButton>
+  ))
+  .add('rounded', () => (
+    <StoryButton rounded>Rounded default state</StoryButton>
+  ))
+  .add('smallRounded (default)', () => (
+    <StoryButton smallRounded>smallRounded default state</StoryButton>
+  ))
+  .add('raised (default)', () => (
+    <StoryButton raised>Raised default state</StoryButton>
+  ))
+  .add('link-style (default)', () => (
+    <StoryButton pseudolink>Link default state</StoryButton>
+  ))
+  .add('outlined (default)', () => (
+    <StoryButton outlined>Outlined default state</StoryButton>
+  ))
+  .add('disabled & outlined', () => (
+    <StoryButton disabled outlined>
+      Disabled outlined state
     </StoryButton>
   ))
-  .add('button generated with svg icon', () => (
-    <StoryButton icon='plusquare'>Button with icon</StoryButton>
-  ))
-  .add('button generated with svg icon and icon props modified', () => (
-    <StoryButton icon='plusquare' iconProps={{ color: 'default' }}>Button with icon</StoryButton>
-  ))
-  .add('button generated with svg icon and custom color on button', () => (
+
+storiesOf('Core Components|Button/Use Cases', module)
+  .add('with icon', () => (
     <StoryButton icon='plusquare' color='grayPink'>Button with icon and color</StoryButton>
   ))
-
-storiesOf('UI Components/Button/Use Cases', module)
   .add('skill tag', () => (
     <StoryButton outlined rounded raised color={'silver'}>
       Android
@@ -166,6 +164,22 @@ storiesOf('UI Components/Button/Use Cases', module)
       Android
     </StoryButton>
   ))
+
+storiesOf('Core Components|Button/Debug', module)
+  .add('missing props (does component explode?):', () => (
+    <StoryButton>Regular button with no props</StoryButton>
+  ))
+  .add('button generated with custom element (<a>)', () => (
+    <StoryButton component='a' color={'monochrome'}>
+      custom default button state
+    </StoryButton>
+  ))
+  .add('with icon', () => (
+    <StoryButton icon='plusquare'>Button with icon</StoryButton>
+  ))
+  .add('with icon basic', () => (
+    <StoryButton icon='plusquare' iconProps={{ color: 'default' }}>Button with icon</StoryButton>
+  ))
   .add('exclude applicant form buttons', () => (
     <div style={{ textAlign: 'right' }}>
       <StoryButton pseudolink>Cancel</StoryButton>
@@ -179,11 +193,4 @@ storiesOf('UI Components/Button/Use Cases', module)
       <SvgIcon icon='edit' /> Edit Lists
     </StoryButton>
   ))
-  .add('disabled outlined', () => (
-    <StoryButton disabled outlined>
-      Disabled outlined state
-    </StoryButton>
-  ))
-  .add('missing props (does component explode?):', () => (
-    <StoryButton>Regular button with no props</StoryButton>
-  ))
+  .add('all effects', StoryButton)

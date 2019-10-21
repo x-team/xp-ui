@@ -31,7 +31,7 @@ const ExampleHeaderButton = ({ isExpanded, text, ...props }) => (
 const HeaderWrapper = props => <div style={{ backgroundColor: 'orange' }}>{props.children}</div>
 const BodyWrapper = props => <div style={{ backgroundColor: 'red' }}>{props.children}</div>
 
-storiesOf('UI Components/GenericCollapsible', module)
+storiesOf('Core Components|GenericCollapsible', module)
   .add('basic usage', () => (
     <GenericCollapsible.Container>
       <GenericCollapsible.Header>
@@ -42,7 +42,9 @@ storiesOf('UI Components/GenericCollapsible', module)
       </GenericCollapsible.Body>
     </GenericCollapsible.Container>
   ))
-  .add('basic usage with accordion effect', () => (
+
+storiesOf('Core Components|GenericCollapsible/Use Cases', module)
+  .add('accordion effect', () => (
     <State initialState={{ expanded: 'example1' }}>
       {({ setState, state }) => (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -89,7 +91,7 @@ storiesOf('UI Components/GenericCollapsible', module)
     </State>
   ))
 
-storiesOf('UI Components/GenericCollapsible/Debug', module)
+storiesOf('Core Components|GenericCollapsible/Debug', module)
   .add('with initial expanded', () => (
     <GenericCollapsible.Container initialExpanded>
       <GenericCollapsible.Header>

@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 
 import ColumnsCustomizer from './ColumnsCustomizer'
 
-storiesOf('UI Components/ColumnsCustomizer', module)
+storiesOf('UI Components|ColumnsCustomizer', module)
   .add('basic usage', () => {
     const itemsArray = [
       { id: 1, value: 'item-1', selected: true },
@@ -23,6 +23,8 @@ storiesOf('UI Components/ColumnsCustomizer', module)
       </div>
     )
   })
+
+storiesOf('UI Components|ColumnsCustomizer/Debug', module)
   .add('missing props (does component explode?)', () => {
     return (
       <div style={{ right: 0, position: 'absolute', top: 50 }}>
