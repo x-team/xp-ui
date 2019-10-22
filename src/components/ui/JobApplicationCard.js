@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react'
+import React, { Fragment } from 'react'
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 import Button from './Button'
@@ -42,7 +42,7 @@ type Props = {
 
 const JobApplicationCard = ({
   hasApplied = false,
-  applicationDate = null,
+  applicationDate,
   onApply = () => {},
   onWithdraw = () => {}
 }: Props) => {
@@ -55,13 +55,13 @@ const JobApplicationCard = ({
     <Button className={cx.button} onClick={onApply}>Apply For This Position</Button>
   )
   const withdrawCard = () => (
-    <>
+    <Fragment>
       <Button className={cx.button} color='monochrome' onClick={onWithdraw}>Widthdraw Application</Button>
       <p className={cx.paragraph}>
         You've already applied for this position{ applicationDate && ` on ${date()}` }.
         <b> Check your email for next steps.</b>
       </p>
-    </>
+    </Fragment>
   )
   return (
     <div className={cx.card}>

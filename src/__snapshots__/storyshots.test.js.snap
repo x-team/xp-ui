@@ -33835,6 +33835,184 @@ exports[`Storyshots UI Components|IssueCollectorButton/Debug missing props (does
 />
 `;
 
+exports[`Storyshots UI Components|JobApplicationCard basic usage 1`] = `
+<div
+  className="AutoUI_ui_JobApplicationCard-13"
+>
+  <Button
+    block={false}
+    className="AutoUI_ui_JobApplicationCard-31"
+    color="monochrome"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
+  >
+    Widthdraw Application
+  </Button>
+  <p
+    className="AutoUI_ui_JobApplicationCard-22 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    You've already applied for this position
+    .
+    <b>
+       Check your email for next steps.
+    </b>
+  </p>
+</div>
+`;
+
+exports[`Storyshots UI Components|JobApplicationCard/Debug missing date 1`] = `
+<div
+  className="AutoUI_ui_JobApplicationCard-13"
+>
+  <Button
+    block={false}
+    className="AutoUI_ui_JobApplicationCard-31"
+    color="monochrome"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
+  >
+    Widthdraw Application
+  </Button>
+  <p
+    className="AutoUI_ui_JobApplicationCard-22 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    You've already applied for this position
+    .
+    <b>
+       Check your email for next steps.
+    </b>
+  </p>
+</div>
+`;
+
+exports[`Storyshots UI Components|JobApplicationCard/Debug missing props (does component explode?) 1`] = `
+<div
+  className="AutoUI_ui_JobApplicationCard-13"
+>
+  <Button
+    block={false}
+    className="AutoUI_ui_JobApplicationCard-31"
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
+  >
+    Apply For This Position
+  </Button>
+</div>
+`;
+
+exports[`Storyshots UI Components|JobApplicationCard/States apply 1`] = `
+<div
+  className="AutoUI_ui_JobApplicationCard-13"
+>
+  <Button
+    block={false}
+    className="AutoUI_ui_JobApplicationCard-31"
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
+  >
+    Apply For This Position
+  </Button>
+</div>
+`;
+
+exports[`Storyshots UI Components|JobApplicationCard/States withdraw 1`] = `
+<div
+  className="AutoUI_ui_JobApplicationCard-13"
+>
+  <Button
+    block={false}
+    className="AutoUI_ui_JobApplicationCard-31"
+    color="monochrome"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
+  >
+    Widthdraw Application
+  </Button>
+  <p
+    className="AutoUI_ui_JobApplicationCard-22 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    You've already applied for this position
+     on February 1st
+    .
+    <b>
+       Check your email for next steps.
+    </b>
+  </p>
+</div>
+`;
+
 exports[`Storyshots UI Components|JobCard basic usage 1`] = `
 <div
   className="AutoUI_ui_JobCard-14 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
