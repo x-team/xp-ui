@@ -18,6 +18,10 @@ import Layout from './Layout'
 // $FlowFixMe
 import layoutInfo from './Layout.md'
 
+import Reset from './Reset'
+// $FlowFixMe
+import resetInfo from './Reset.md'
+
 const colorOptions = Object.keys(typoColors).reduce((acc, cur) => ({ ...acc, [cur]: cur }), {})
 const breakpointsOptions = {
   '100%': '100%',
@@ -26,6 +30,11 @@ const breakpointsOptions = {
 const textOptions = {
   'One line': 'oneLine',
   'Paragraphs': 'paragraphs'
+}
+const themeOptions = {
+  'none': '',
+  'XP Admin': 'admin',
+  'XP Registration': 'applicant'
 }
 
 storiesOf('Styleguide|General', module)
@@ -51,4 +60,11 @@ Sed non dapibus turpis, sed pulvinar nibh. Nam quis libero dapibus, vestibulum i
     <Layout />
   ), {
     notes: { markdown: layoutInfo }
+  })
+  .add('Reset', () => (
+    <Reset
+      theme={select('Theme', themeOptions, 'none')}
+    />
+  ), {
+    notes: { markdown: resetInfo }
   })
