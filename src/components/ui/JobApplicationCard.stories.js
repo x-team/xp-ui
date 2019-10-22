@@ -8,6 +8,7 @@ import JobApplicationCard from './JobApplicationCard'
 
 const onApply = action('Applying for job')
 const onWithdraw = action('Withdrawing from job')
+const date = new Date("Tue, 22 Oct 2019 20:35:15 GMT")
 const yes = true
 
 // storiesOf('UI Components|JobApplicationCard', module)
@@ -29,7 +30,7 @@ storiesOf('UI Components|JobApplicationCard/States', module)
   .add('withdraw', () => (
     <JobApplicationCard
       hasApplied={yes}
-      applicationDate={new Date()}
+      applicationDate={date}
       onWithdraw={onWithdraw}
     />
   ))
