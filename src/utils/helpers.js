@@ -97,7 +97,7 @@ export function getMonthName (date: Date) {
   return months[date.getMonth()] || null
 }
 
-export function getMonthDayWithOrdinal (date: Date) {
+export function getDayWithOrdinal (date: Date) {
   const day = date.getDate()
   if (day > 3 && day < 21) return `${day}th`
   switch (day % 10) {

@@ -33841,7 +33841,7 @@ exports[`Storyshots UI Components|JobApplicationCard basic usage 1`] = `
 >
   <Button
     block={false}
-    className="AutoUI_ui_JobApplicationCard-31"
+    className=""
     color="monochrome"
     component="button"
     contentStyle="normal"
@@ -33858,7 +33858,7 @@ exports[`Storyshots UI Components|JobApplicationCard basic usage 1`] = `
     selected={false}
     size="normal"
     smallRounded={false}
-    wide={false}
+    wide={true}
   >
     Widthdraw Application
   </Button>
@@ -33880,7 +33880,7 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing date 1`] = `
 >
   <Button
     block={false}
-    className="AutoUI_ui_JobApplicationCard-31"
+    className=""
     color="monochrome"
     component="button"
     contentStyle="normal"
@@ -33897,7 +33897,7 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing date 1`] = `
     selected={false}
     size="normal"
     smallRounded={false}
-    wide={false}
+    wide={true}
   >
     Widthdraw Application
   </Button>
@@ -33919,7 +33919,7 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing props (does c
 >
   <Button
     block={false}
-    className="AutoUI_ui_JobApplicationCard-31"
+    className=""
     color="normal"
     component="button"
     contentStyle="normal"
@@ -33936,7 +33936,7 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing props (does c
     selected={false}
     size="normal"
     smallRounded={false}
-    wide={false}
+    wide={true}
   >
     Apply For This Position
   </Button>
@@ -33949,7 +33949,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States apply 1`] = `
 >
   <Button
     block={false}
-    className="AutoUI_ui_JobApplicationCard-31"
+    className=""
     color="normal"
     component="button"
     contentStyle="normal"
@@ -33966,7 +33966,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States apply 1`] = `
     selected={false}
     size="normal"
     smallRounded={false}
-    wide={false}
+    wide={true}
   >
     Apply For This Position
   </Button>
@@ -33979,7 +33979,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States withdraw 1`] = `
 >
   <Button
     block={false}
-    className="AutoUI_ui_JobApplicationCard-31"
+    className=""
     color="monochrome"
     component="button"
     contentStyle="normal"
@@ -33996,7 +33996,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States withdraw 1`] = `
     selected={false}
     size="normal"
     smallRounded={false}
-    wide={false}
+    wide={true}
   >
     Widthdraw Application
   </Button>

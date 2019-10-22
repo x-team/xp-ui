@@ -5,7 +5,7 @@ import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 import Button from './Button'
 
-import { getMonthName, getMonthDayWithOrdinal } from '../../utils/helpers'
+import { getMonthName, getDayWithOrdinal } from '../../utils/helpers'
 
 const cmz = require('cmz')
 
@@ -26,11 +26,7 @@ const cx = {
       font-size: 14px
       margin: 18px 0 0 0
     `
-  ),
-
-  button: cmz(`
-    width: 100%
-  `)
+  )
 }
 
 type Props = {
@@ -48,15 +44,15 @@ const JobApplicationCard = ({
 }: Props) => {
   const date = () => {
     const month = getMonthName(applicationDate)
-    const day = getMonthDayWithOrdinal(applicationDate)
+    const day = getDayWithOrdinal(applicationDate)
     return `${month} ${day}`
   }
   const applyCard = () => (
-    <Button className={cx.button} onClick={onApply}>Apply For This Position</Button>
+    <Button wide onClick={onApply}>Apply For This Position</Button>
   )
   const withdrawCard = () => (
     <Fragment>
-      <Button className={cx.button} color='monochrome' onClick={onWithdraw}>Widthdraw Application</Button>
+      <Button wide color='monochrome' onClick={onWithdraw}>Widthdraw Application</Button>
       <p className={cx.paragraph}>
         You've already applied for this position{ applicationDate && ` on ${date()}` }.
         <b> Check your email for next steps.</b>
