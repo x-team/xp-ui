@@ -68,8 +68,8 @@ Blockquote:
 > ${faker.lorem.paragraph()}
 `
 
-storiesOf('UI Components/XP-Registration/JobDetails', module)
-  .add('default', () => (
+storiesOf('UI Components|JobDetails', module)
+  .add('basic usage', () => (
     <JobDetails
       name={text('Name', nameSample)}
       skills={text('Skills', skillsSample)}
@@ -77,7 +77,7 @@ storiesOf('UI Components/XP-Registration/JobDetails', module)
     />
   ))
 
-storiesOf('UI Components/XP-Registration/JobDetails/Debug', module)
-  .add('missing props (does component explode?)', () => (
+storiesOf('UI Components|JobDetails/Debug', module)
+  .add('missing props', () => (
     <JobDetails />
   ))
