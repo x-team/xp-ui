@@ -36,16 +36,7 @@ type Props = {
 
 const ApplicantScreen = (props: Props) => {
   const { children, noWrapper = false, wrapper } = props
-  const getWrapperClass = () => {
-    switch (wrapper) {
-      case 'narrower':
-        return cx.narrower
-      case 'wider':
-        return cx.wider
-      default:
-        return cx.content
-    }
-  }
+  const getWrapperClass = () => (wrapper && cx[wrapper]) || cx.content
   return (
     <div>
       <HeaderBar />
