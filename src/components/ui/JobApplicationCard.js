@@ -39,8 +39,8 @@ type Props = {
 const JobApplicationCard = ({
   hasApplied = false,
   applicationDate,
-  onApply = () => {},
-  onWithdraw = () => {}
+  onApply,
+  onWithdraw
 }: Props) => {
   const date = () => {
     const month = getMonthName(applicationDate)
