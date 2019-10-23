@@ -33559,7 +33559,7 @@ exports[`Storyshots UI Components|HeaderBar basic usage 1`] = `
 
 exports[`Storyshots UI Components|HeaderBar/Debug missing props 1`] = `
 <div
-  className="AutoUI_ui_HeaderBar-28 AutoUI_typo-24"
+  className="AutoUI_ui_HeaderBar-29 AutoUI_typo-24"
 >
   <svg
     height={32}

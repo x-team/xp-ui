@@ -4,12 +4,13 @@
 import React, { PureComponent } from 'react'
 
 import { size } from '../../utils/helpers'
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import { typeface } from '../../styles/typo'
 import { xTeamLogo } from '../../styles/logo'
 
 const cmz = require('cmz')
 
+const gap = '32px'
 const wrapper = '1100px'
 
 type Link = {
@@ -40,12 +41,27 @@ const cx = {
   ),
 
   innerWrapper: cmz(`
+    & {
+      display: inherit
+      justify-content: space-between
+      align-items: inherit
+      height: inherit
+      width: inherit
+      max-width: calc(${wrapper} - 2 * ${gap})
+      padding: 0 ${gap}
+    }
+
+    @media screen and (min-width: ${breakpoints.lg}) {
+      & {
+        max-width: ${wrapper}
+        padding: 0
+      }
+    }
+  `),
+
+  logo: cmz(`
     display: inherit
-    justify-content: space-between
-    align-items: inherit
-    height: inherit
-    width: inherit
-    max-width: ${wrapper}
+    flex-shrink: unset
   `),
 
   nav: cmz(`
@@ -56,11 +72,20 @@ const cx = {
   `),
 
   menu: cmz(`
-    display: inherit
-    justify-content: center
-    width: inherit
-    padding: 0
-    margin: 0
+    & {
+      display: inherit
+      justify-content: space-around
+      width: inherit
+      padding: 0
+      margin: 0 12px
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        justify-content: center
+        margin: 0
+      }
+    }
   `),
 
   profile: cmz(`
@@ -78,12 +103,21 @@ const cx = {
   `),
 
   link: cmz(`
-    list-style: none
-    margin: 0 24px
+    & {
+      list-style: none
+      margin: 0 6px
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        margin: 0 24px
+      }
+    }
   `),
 
   anchor: cmz(`
     & {
+      white-space: nowrap
       text-decoration: none
       text-transform: uppercase
       cursor: pointer
@@ -91,7 +125,7 @@ const cx = {
     }
 
     &:hover {
-      color: ${theme.typoHeaderAnchor}
+      color: ${theme.typoAnchorHover}
     }
   `),
 
@@ -133,7 +167,9 @@ class HeaderBar extends PureComponent<Props> {
       <div className={cx.wrapper}>
         {size(links) ? (
           <div className={cx.innerWrapper}>
-            {xTeamLogo(78, 32, theme.typoHeading)}
+            <div className={cx.logo}>
+              {xTeamLogo(78, 32, theme.typoHeading)}
+            </div>
             <nav className={cx.nav}>
               <ul className={cx.menu}>
                 {this.renderLinks()}
