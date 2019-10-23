@@ -47,7 +47,8 @@ export const palette = {
   grayScarpaFlow: '#5C5765',
   dodgerBlue: '#2FC2FF',
   gray: '#8E8E8E',
-  iron: '#D6D6D8'
+  iron: '#D6D6D8',
+  jumbo: '#858489'
 }
 
 export const baseColors = {
@@ -73,6 +74,7 @@ export const typoColors = {
   typoSubheading: palette.radicalRed,
   typoAnchor: palette.radicalRed,
   typoAnchorHover: palette.redRibbon,
+  typoHeaderAnchor: palette.jumbo,
   typoParagraph: palette.tuna,
   typoParagraphOnDarkBackground: palette.frenchGrayDarker,
   typoHighlight: palette.haiti,

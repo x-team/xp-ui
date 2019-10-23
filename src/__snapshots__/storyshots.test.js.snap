@@ -14853,6 +14853,32 @@ exports[`Storyshots Styleguide|General ColorPalette 1`] = `
           </div>
         </div>
       </GenericCopyToClipboard>
+      <GenericCopyToClipboard
+        className=""
+        key="original colors-jumbo"
+        text="jumbo"
+        tooltipXOffset={0}
+      >
+        <div
+          className="AutoUI_styleguides_ColorPalette-55 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          style={
+            Object {
+              "backgroundColor": "#858489",
+            }
+          }
+        >
+          <div
+            className="AutoUI_styleguides_ColorPalette-68"
+          >
+            jumbo
+          </div>
+          <div
+            className="AutoUI_styleguides_ColorPalette-75"
+          >
+            #858489
+          </div>
+        </div>
+      </GenericCopyToClipboard>
     </div>
   </details>
   <details
@@ -15372,6 +15398,32 @@ exports[`Storyshots Styleguide|General ColorPalette 1`] = `
             className="AutoUI_styleguides_ColorPalette-75"
           >
             #F20B2C
+          </div>
+        </div>
+      </GenericCopyToClipboard>
+      <GenericCopyToClipboard
+        className=""
+        key="typography colors-typoHeaderAnchor"
+        text="typoHeaderAnchor"
+        tooltipXOffset={0}
+      >
+        <div
+          className="AutoUI_styleguides_ColorPalette-55 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          style={
+            Object {
+              "backgroundColor": "#858489",
+            }
+          }
+        >
+          <div
+            className="AutoUI_styleguides_ColorPalette-68"
+          >
+            typoHeaderAnchor
+          </div>
+          <div
+            className="AutoUI_styleguides_ColorPalette-75"
+          >
+            #858489
           </div>
         </div>
       </GenericCopyToClipboard>
@@ -33485,12 +33537,34 @@ exports[`Storyshots UI Components|FooterList/Debug missing props (does component
 
 exports[`Storyshots UI Components|HeaderBar basic usage 1`] = `
 <div
-  className="AutoUI_ui_HeaderBar-12"
+  style={
+    Object {
+      "height": "100vh",
+      "widht": "100%",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <HeaderBar />
+</div>
+`;
+
+exports[`Storyshots UI Components|HeaderBar/Debug missing props 1`] = `
+<div
+  className="AutoUI_ui_HeaderBar-29 AutoUI_typo-24"
 >
   <svg
-    height={30}
+    height={32}
     viewBox="0 0 960 328"
-    width={84}
+    width={78}
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -33550,6 +33624,51 @@ exports[`Storyshots UI Components|HeaderBar basic usage 1`] = `
       }
     />
   </svg>
+</div>
+`;
+
+exports[`Storyshots UI Components|HeaderBar/Use Cases with links 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+      "widht": "100%",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <HeaderBar
+    appLink={[Function]}
+    links={
+      Array [
+        Object {
+          "active": true,
+          "label": "Browse Jobs",
+          "to": "/jobs",
+        },
+        Object {
+          "label": "My Applications",
+          "to": "/jobs/my-applications",
+        },
+        Object {
+          "href": "https://x-team.com/blog/",
+          "label": "Blog",
+        },
+        Object {
+          "href": "https://x-team.com/unleash/",
+          "label": "Unleash+",
+        },
+      ]
+    }
+  />
 </div>
 `;
 
