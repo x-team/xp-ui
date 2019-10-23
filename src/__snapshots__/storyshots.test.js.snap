@@ -12081,27 +12081,30 @@ exports[`Storyshots Screens and Layouts|AdminScreen/Debug tall content with Moda
 </div>
 `;
 
-exports[`Storyshots Screens and Layouts|ApplicantScreen standard use 1`] = `
-<div>
-  <HeaderBar />
-  <div
-    className="AutoUI_ui_ApplicantScreen-12"
-  >
-    <Text
-      content="We’d love to start to get to know more about you. Please fill out these quick questions so we can introduce you to an Ambassador who will work with you 1-on-1 to get qualified to become an X-Teamer."
-      hasDivider={false}
-      headingType="headline"
-      isCentered={false}
-      isMarkdown={false}
-      isPureContent={true}
-      required={false}
-      subHeadingType="heading"
-    />
-  </div>
+exports[`Storyshots Screens and Layouts|ApplicantScreen basic usage 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <ApplicantScreen>
+    string
+  </ApplicantScreen>
 </div>
 `;
 
-exports[`Storyshots Screens and Layouts|ApplicantScreen/Debug missing props (does component explode?) 1`] = `
+exports[`Storyshots Screens and Layouts|ApplicantScreen/Debug missing props 1`] = `
 <div>
   <HeaderBar />
   <div
@@ -12110,52 +12113,78 @@ exports[`Storyshots Screens and Layouts|ApplicantScreen/Debug missing props (doe
 </div>
 `;
 
-exports[`Storyshots Screens and Layouts|ApplicantScreen/Use Cases with milestones 1`] = `
-<div>
-  <HeaderBar />
-  <div
-    className="AutoUI_ui_ApplicantScreen-12"
-  >
-    <MilestonesScreen
-      cta={
-        <Button
-          block={false}
-          className=""
-          color="normal"
-          component="button"
-          contentStyle="normal"
-          disabled={false}
-          icon=""
-          iconProps={Object {}}
-          outlined={false}
-          pseudolink={false}
-          raised={false}
-          readOnly={false}
-          rounded={false}
-          selectbox={false}
-          selected={false}
-          size="normal"
-          smallRounded={false}
-          wide={false}
-        >
-          Click here to go to next step
-        </Button>
+exports[`Storyshots Screens and Layouts|ApplicantScreen/Debug with narrower wrapper 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
       }
-      level={1}
-    >
-      <Text
-        content="Let’s kick things off with a warmup. To proceed, click the button below to download a short programming challenge. You can bookmark this page for later access."
-        hasDivider={false}
-        heading="So it begins."
-        headingType="headline"
-        isCentered={false}
-        isMarkdown={false}
-        isPureContent={false}
-        required={false}
-        subHeadingType="heading"
-      />
-    </MilestonesScreen>
-  </div>
+    }
+  />
+  <ApplicantScreen
+    wrapper="narrower"
+  >
+    string
+  </ApplicantScreen>
+</div>
+`;
+
+exports[`Storyshots Screens and Layouts|ApplicantScreen/Debug with wider wrapper 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <ApplicantScreen
+    wrapper="wider"
+  >
+    string
+  </ApplicantScreen>
+</div>
+`;
+
+exports[`Storyshots Screens and Layouts|ApplicantScreen/Debug without wrapper 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <ApplicantScreen
+    noWrapper={true}
+  >
+    string
+  </ApplicantScreen>
 </div>
 `;
 
