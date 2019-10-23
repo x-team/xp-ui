@@ -16,7 +16,7 @@ const cx = {
 
   narrower: cmz(`
     max-width: 840px
-    margin: 93px auto
+    margin: 93px auto 0
     padding: 0 60px 80px 60px
   `),
 
