@@ -12098,7 +12098,9 @@ exports[`Storyshots Screens and Layouts|ApplicantScreen basic usage 1`] = `
       }
     }
   />
-  <ApplicantScreen>
+  <ApplicantScreen
+    showApplicationSuccessNotification={true}
+  >
     string
   </ApplicantScreen>
 </div>
@@ -12107,8 +12109,11 @@ exports[`Storyshots Screens and Layouts|ApplicantScreen basic usage 1`] = `
 exports[`Storyshots Screens and Layouts|ApplicantScreen/Debug missing props 1`] = `
 <div>
   <HeaderBar />
+  <ApplicationSuccessNotification
+    display={false}
+  />
   <div
-    className="AutoUI_ui_ApplicantScreen-12"
+    className="AutoUI_ui_ApplicantScreen-13"
   />
 </div>
 `;
@@ -12183,6 +12188,29 @@ exports[`Storyshots Screens and Layouts|ApplicantScreen/Debug without wrapper 1`
   <ApplicantScreen
     noWrapper={true}
   >
+    string
+  </ApplicantScreen>
+</div>
+`;
+
+exports[`Storyshots Screens and Layouts|ApplicantScreen/States basic usage 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      html, body { margin: 0; height: 100%; }
+    ",
+      }
+    }
+  />
+  <ApplicantScreen>
     string
   </ApplicantScreen>
 </div>
@@ -15283,6 +15311,32 @@ exports[`Storyshots Styleguide|General ColorPalette 1`] = `
           </div>
         </div>
       </GenericCopyToClipboard>
+      <GenericCopyToClipboard
+        className=""
+        key="base colors-baseWarning"
+        text="baseWarning"
+        tooltipXOffset={0}
+      >
+        <div
+          className="AutoUI_styleguides_ColorPalette-55 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          style={
+            Object {
+              "backgroundColor": "#f8e71c",
+            }
+          }
+        >
+          <div
+            className="AutoUI_styleguides_ColorPalette-68"
+          >
+            baseWarning
+          </div>
+          <div
+            className="AutoUI_styleguides_ColorPalette-75"
+          >
+            #f8e71c
+          </div>
+        </div>
+      </GenericCopyToClipboard>
     </div>
   </details>
   <details
@@ -18013,6 +18067,106 @@ exports[`Storyshots UI Components|ApplicantTopProfileDisplay/Debug missing props
     className="AutoUI_ui_ApplicantTopProfileDisplay-81"
   />
 </section>
+`;
+
+exports[`Storyshots UI Components|ApplicationSuccessNotification default 1`] = `
+<NotificationBar
+  display={true}
+  isStatic={true}
+  type="success"
+>
+  <div
+    className="AutoUI_ui_ApplicationSuccessNotification-17"
+  >
+    <SvgIcon
+      color="inverted"
+      icon="check"
+    />
+    <span
+      className="AutoUI_ui_ApplicationSuccessNotification-30 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    >
+      You've successfully applied for this position. 
+      <b>
+        Check your email for next steps
+      </b>
+    </span>
+  </div>
+</NotificationBar>
+`;
+
+exports[`Storyshots UI Components|ApplicationSuccessNotification/Debug missing props 1`] = `
+<NotificationBar
+  display={false}
+  isStatic={true}
+  type="success"
+>
+  <div
+    className="AutoUI_ui_ApplicationSuccessNotification-17"
+  >
+    <SvgIcon
+      color="inverted"
+      icon="check"
+    />
+    <span
+      className="AutoUI_ui_ApplicationSuccessNotification-30 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    >
+      You've successfully applied for this position. 
+      <b>
+        Check your email for next steps
+      </b>
+    </span>
+  </div>
+</NotificationBar>
+`;
+
+exports[`Storyshots UI Components|ApplicationSuccessNotification/States closed 1`] = `
+<NotificationBar
+  display={false}
+  isStatic={true}
+  type="success"
+>
+  <div
+    className="AutoUI_ui_ApplicationSuccessNotification-17"
+  >
+    <SvgIcon
+      color="inverted"
+      icon="check"
+    />
+    <span
+      className="AutoUI_ui_ApplicationSuccessNotification-30 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    >
+      You've successfully applied for this position. 
+      <b>
+        Check your email for next steps
+      </b>
+    </span>
+  </div>
+</NotificationBar>
+`;
+
+exports[`Storyshots UI Components|ApplicationSuccessNotification/States open 1`] = `
+<NotificationBar
+  display={true}
+  isStatic={true}
+  type="success"
+>
+  <div
+    className="AutoUI_ui_ApplicationSuccessNotification-17"
+  >
+    <SvgIcon
+      color="inverted"
+      icon="check"
+    />
+    <span
+      className="AutoUI_ui_ApplicationSuccessNotification-30 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    >
+      You've successfully applied for this position. 
+      <b>
+        Check your email for next steps
+      </b>
+    </span>
+  </div>
+</NotificationBar>
 `;
 
 exports[`Storyshots UI Components|ColumnsCustomizer basic usage 1`] = `
@@ -35560,6 +35714,271 @@ exports[`Storyshots UI Components|NotesFeed/Use Cases includes note type in the 
     View more
   </Button>
 </div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar default 1`] = `
+<div
+  className=""
+>
+  <div
+    className="AutoUI_ui_NotificationBar-13 AutoUI_ui_NotificationBar-37 AutoUI_ui_NotificationBar-55"
+  >
+    <div
+      className="AutoUI_ui_NotificationBar-21 AutoUI_ui_NotificationBar-73"
+    >
+      <span>
+        Hello this is a notification
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/Debug missing props 1`] = `
+<div
+  className=""
+>
+  <div
+    className="AutoUI_ui_NotificationBar-13 AutoUI_ui_NotificationBar-49 AutoUI_ui_NotificationBar-55"
+  >
+    <div
+      className="AutoUI_ui_NotificationBar-21 AutoUI_ui_NotificationBar-69"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/Debug static closed 1`] = `
+<div
+  className="AutoUI_ui_NotificationBar-37"
+>
+  <div
+    className="AutoUI_ui_NotificationBar-13 AutoUI_ui_NotificationBar-49 AutoUI_ui_NotificationBar-55"
+  >
+    <div
+      className="AutoUI_ui_NotificationBar-21 AutoUI_ui_NotificationBar-69"
+    >
+      <span>
+        Hello this is a notification
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/Debug static open 1`] = `
+<div
+  className="AutoUI_ui_NotificationBar-37"
+>
+  <div
+    className="AutoUI_ui_NotificationBar-13 AutoUI_ui_NotificationBar-37 AutoUI_ui_NotificationBar-55"
+  >
+    <div
+      className="AutoUI_ui_NotificationBar-21 AutoUI_ui_NotificationBar-69"
+    >
+      <span>
+        Hello this is a notification
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/States align center 1`] = `
+<div
+  className=""
+>
+  <div
+    className="AutoUI_ui_NotificationBar-13 AutoUI_ui_NotificationBar-49 AutoUI_ui_NotificationBar-55"
+  >
+    <div
+      className="AutoUI_ui_NotificationBar-21 AutoUI_ui_NotificationBar-73"
+    >
+      <span>
+        Hello this is a notification
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/States closed 1`] = `
+<div
+  className=""
+>
+  <div
+    className="AutoUI_ui_NotificationBar-13 AutoUI_ui_NotificationBar-49 AutoUI_ui_NotificationBar-55"
+  >
+    <div
+      className="AutoUI_ui_NotificationBar-21 AutoUI_ui_NotificationBar-69"
+    >
+      <span>
+        Hello this is a notification
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/States error 1`] = `
+<div
+  className=""
+>
+  <div
+    className="AutoUI_ui_NotificationBar-13 AutoUI_ui_NotificationBar-37 AutoUI_ui_NotificationBar-63"
+  >
+    <div
+      className="AutoUI_ui_NotificationBar-21 AutoUI_ui_NotificationBar-69"
+    >
+      <span>
+        Hello this is a notification
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/States open 1`] = `
+<div
+  className=""
+>
+  <div
+    className="AutoUI_ui_NotificationBar-13 AutoUI_ui_NotificationBar-37 AutoUI_ui_NotificationBar-55"
+  >
+    <div
+      className="AutoUI_ui_NotificationBar-21 AutoUI_ui_NotificationBar-69"
+    >
+      <span>
+        Hello this is a notification
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/States success 1`] = `
+<div
+  className=""
+>
+  <div
+    className="AutoUI_ui_NotificationBar-13 AutoUI_ui_NotificationBar-37 AutoUI_ui_NotificationBar-55"
+  >
+    <div
+      className="AutoUI_ui_NotificationBar-21 AutoUI_ui_NotificationBar-69"
+    >
+      <span>
+        Hello this is a notification
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/States warning 1`] = `
+<div
+  className=""
+>
+  <div
+    className="AutoUI_ui_NotificationBar-13 AutoUI_ui_NotificationBar-37 AutoUI_ui_NotificationBar-59"
+  >
+    <div
+      className="AutoUI_ui_NotificationBar-21 AutoUI_ui_NotificationBar-69"
+    >
+      <span>
+        Hello this is a notification
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/Use Cases Applicant screen's application success notification 1`] = `
+<NotificationBar
+  display={true}
+  isStatic={true}
+  type="success"
+>
+  <div
+    className="AutoUI_ui_ApplicationSuccessNotification-17"
+  >
+    <SvgIcon
+      color="inverted"
+      icon="check"
+    />
+    <span
+      className="AutoUI_ui_ApplicationSuccessNotification-30 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    >
+      You've successfully applied for this position. 
+      <b>
+        Check your email for next steps
+      </b>
+    </span>
+  </div>
+</NotificationBar>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/Use Cases Generic connection issue notification 1`] = `
+<NotificationBar
+  align="center"
+  display={true}
+  type="warning"
+>
+  <div
+    style={
+      Object {
+        "marginLeft": "10px",
+      }
+    }
+  >
+    <SvgIcon
+      color="inverted"
+      icon="time"
+    />
+    <span
+      style={
+        Object {
+          "color": "white",
+          "fontFamily": "\\"Source Sans Pro\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "marginLeft": "10px",
+        }
+      }
+    >
+      Internet connectivity issues detected. Waiting for stability...
+    </span>
+  </div>
+</NotificationBar>
+`;
+
+exports[`Storyshots UI Components|NotificationBar/Use Cases XP list error notification 1`] = `
+<NotificationBar
+  align="default"
+  display={true}
+  type="error"
+>
+  <div
+    style={
+      Object {
+        "marginLeft": "10px",
+      }
+    }
+  >
+    <SvgIcon
+      color="inverted"
+      icon="x"
+    />
+    <span
+      style={
+        Object {
+          "color": "white",
+          "fontFamily": "\\"Source Sans Pro\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "marginLeft": "10px",
+        }
+      }
+    >
+      Error adding new list. Please try again.
+    </span>
+  </div>
+</NotificationBar>
 `;
 
 exports[`Storyshots UI Components|PencilButton basic usage 1`] = `

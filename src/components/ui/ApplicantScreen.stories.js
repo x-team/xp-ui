@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import faker from 'faker'
+import { boolean } from '@storybook/addon-knobs'
 
 import ApplicantScreen from './ApplicantScreen'
 
@@ -14,6 +15,17 @@ const Body = ({ children }) => (
 )
 
 storiesOf('Screens and Layouts|ApplicantScreen', module)
+  .add('basic usage', () => (
+    <Body>
+      <ApplicantScreen
+        showApplicationSuccessNotification={boolean('Display application success notification', true)}
+      >
+        {faker.lorem.paragraphs(50)}
+      </ApplicantScreen>
+    </Body>
+  ))
+
+storiesOf('Screens and Layouts|ApplicantScreen/States', module)
   .add('basic usage', () => (
     <Body>
       <ApplicantScreen>

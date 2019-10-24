@@ -66,7 +66,8 @@ export const baseColors = {
   baseHighlight: palette.mercury,
   baseHighlightBright: palette.frenchGray,
   baseFairPink: palette.fairPink,
-  baseBombay: palette.bombay
+  baseBombay: palette.bombay,
+  baseWarning: palette.ripeLemon
 }
 
 export const typoColors = {
