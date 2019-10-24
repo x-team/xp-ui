@@ -11,6 +11,7 @@ import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
 import IssueCollectorButton from './components/ui/IssueCollectorButton'
 import JobCard from './components/ui/JobCard'
+import JobDetails from './components/ui/JobDetails'
 import JobsGrid from './components/ui/JobsGrid'
 import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
 import JobsPageLayout from './components/ui/JobsPageLayout'
@@ -34,6 +35,7 @@ export {
   InputGroup,
   IssueCollectorButton,
   JobCard,
+  JobDetails,
   JobsGrid,
   JobsPageBreadcrumbs,
   JobsPageLayout,

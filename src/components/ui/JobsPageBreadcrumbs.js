@@ -14,10 +14,18 @@ const cx = {
   breadcrumb: cmz(
     typo.regularText,
     `
-      color: ${theme.typoAnchor}
-      font-weight: normal
-      cursor: pointer
-      margin: 25px 0
+      & {
+        color: ${theme.typoAnchor}
+        font-weight: normal
+        cursor: pointer
+        margin: 25px 0
+        text-decoration: none
+        display: block
+      }
+
+      &:hover {
+        color: ${theme.typoAnchorHover}
+      }
     `
   ),
 
@@ -32,11 +40,9 @@ type Props = {
 }
 
 const JobsPageBreadcrumbs = ({ label = 'Browse all jobs', link: Link }: Props) => Link ? (
-  <Link>
-    <div className={cx.breadcrumb}>
-      <SvgIcon icon='arrowleft' />
-      <span className={cx.label}>{label}</span>
-    </div>
+  <Link className={cx.breadcrumb}>
+    <SvgIcon icon='arrowleft' />
+    <span className={cx.label}>{label}</span>
   </Link>
 ) : null
 

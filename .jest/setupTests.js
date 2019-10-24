@@ -35,13 +35,15 @@ jest.mock('faker', () => (
     },
     name: {
       firstName: jest.fn(() => 'string'),
-      lastName: jest.fn(() => 'string')
+      lastName: jest.fn(() => 'string'),
+      jobTitle: jest.fn(() => 'string')
     },
     date: {
       month: jest.fn(() => 'string')
     },
     internet: {
-      email: jest.fn(() => 'string@email.com')
+      email: jest.fn(() => 'string@email.com'),
+      url: jest.fn(() => 'string.com')
     },
     lorem: {
       sentence: jest.fn(() => 'string'),
