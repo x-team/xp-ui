@@ -34316,38 +34316,34 @@ exports[`Storyshots UI Components|JobsGrid/Debug missing props (does component e
 `;
 
 exports[`Storyshots UI Components|JobsPageBreadcrumbs default 1`] = `
-<JobsPageBreadcrumbsLink>
-  <div
-    className="AutoUI_ui_JobsPageBreadcrumbs-14 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+<JobsPageBreadcrumbsLink
+  className="AutoUI_ui_JobsPageBreadcrumbs-14 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+>
+  <SvgIcon
+    color="default"
+    icon="arrowleft"
+  />
+  <span
+    className="AutoUI_ui_JobsPageBreadcrumbs-32"
   >
-    <SvgIcon
-      color="default"
-      icon="arrowleft"
-    />
-    <span
-      className="AutoUI_ui_JobsPageBreadcrumbs-24"
-    >
-      Browse all jobs
-    </span>
-  </div>
+    Browse all jobs
+  </span>
 </JobsPageBreadcrumbsLink>
 `;
 
 exports[`Storyshots UI Components|JobsPageBreadcrumbs/Debug custom label 1`] = `
-<JobsPageBreadcrumbsLink>
-  <div
-    className="AutoUI_ui_JobsPageBreadcrumbs-14 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+<JobsPageBreadcrumbsLink
+  className="AutoUI_ui_JobsPageBreadcrumbs-14 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+>
+  <SvgIcon
+    color="default"
+    icon="arrowleft"
+  />
+  <span
+    className="AutoUI_ui_JobsPageBreadcrumbs-32"
   >
-    <SvgIcon
-      color="default"
-      icon="arrowleft"
-    />
-    <span
-      className="AutoUI_ui_JobsPageBreadcrumbs-24"
-    >
-      Back to previous page
-    </span>
-  </div>
+    Back to previous page
+  </span>
 </JobsPageBreadcrumbsLink>
 `;
 
