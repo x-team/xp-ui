@@ -39,7 +39,7 @@ const cx = {
       background: ${theme.baseBrighter}
       border: 2px solid ${theme.lineSilver2}
       border-radius: 4px
-      padding: 1.25em .5em
+      padding: 1.25em 1em
       display: inline-block
       margin: 0 .66666em .66666em 0
       line-height: 1
