@@ -33941,6 +33941,36 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing props 1`] = `
 </div>
 `;
 
+exports[`Storyshots UI Components|JobApplicationCard/States apply + is saving 1`] = `
+<div
+  className="AutoUI_ui_JobApplicationCard-15"
+>
+  <Button
+    block={false}
+    className=""
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={true}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={true}
+  >
+    Apply For This Position
+  </Button>
+</div>
+`;
+
 exports[`Storyshots UI Components|JobApplicationCard/States apply 1`] = `
 <div
   className="AutoUI_ui_JobApplicationCard-15"
@@ -33968,6 +33998,46 @@ exports[`Storyshots UI Components|JobApplicationCard/States apply 1`] = `
   >
     Apply For This Position
   </Button>
+</div>
+`;
+
+exports[`Storyshots UI Components|JobApplicationCard/States withdraw + is saving 1`] = `
+<div
+  className="AutoUI_ui_JobApplicationCard-15"
+>
+  <Button
+    block={false}
+    className=""
+    color="monochrome"
+    component="button"
+    contentStyle="normal"
+    disabled={true}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={true}
+  >
+    Widthdraw Application
+  </Button>
+  <p
+    className="AutoUI_ui_JobApplicationCard-24 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    You've already applied for this position
+     on October 22nd
+    .
+    <b>
+       Check your email for next steps.
+    </b>
+  </p>
 </div>
 `;
 

@@ -34,6 +34,7 @@ const cx = {
 type Props = {
   hasApplied?: boolean,
   applicationDate?: Date,
+  isSaving?: boolean,
   onApply?: () => void,
   onWithdraw?: () => void
 }
@@ -41,6 +42,7 @@ type Props = {
 const JobApplicationCard = ({
   hasApplied = false,
   applicationDate,
+  isSaving,
   onApply,
   onWithdraw
 }: Props) => {
@@ -51,12 +53,12 @@ const JobApplicationCard = ({
   }
 
   const renderApplyCard = () => (
-    <Button wide onClick={onApply}>Apply For This Position</Button>
+    <Button wide disabled={isSaving} onClick={onApply}>Apply For This Position</Button>
   )
 
   const renderWithdrawCard = () => (
     <Fragment>
-      <Button wide color='monochrome' onClick={onWithdraw}>Widthdraw Application</Button>
+      <Button wide color='monochrome' disabled={isSaving} onClick={onWithdraw}>Widthdraw Application</Button>
       <p className={cx.paragraph}>
         You've already applied for this position{ applicationDate && ` on ${date()}` }.
         <b> Check your email for next steps.</b>

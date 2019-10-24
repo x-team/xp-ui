@@ -28,6 +28,21 @@ storiesOf('UI Components|JobApplicationCard/States', module)
       onWithdraw={action('Withdrawing from job...')}
     />
   ))
+  .add('apply + is saving', () => (
+    <JobApplicationCard
+      hasApplied={false}
+      isSaving
+      onApply={action('Applying for job...')}
+    />
+  ))
+  .add('withdraw + is saving', () => (
+    <JobApplicationCard
+      hasApplied
+      isSaving
+      applicationDate={new Date('Tue, 22 Oct 2019 20:35:15 GMT')}
+      onWithdraw={action('Withdrawing from job...')}
+    />
+  ))
 
 storiesOf('UI Components|JobApplicationCard/Debug', module)
   .add('missing date', () => (
