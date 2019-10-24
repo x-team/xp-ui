@@ -7,8 +7,8 @@ import { action } from '@storybook/addon-actions'
 
 import JobsPageBreadcrumbs from './JobsPageBreadcrumbs'
 
-export const JobsPageBreadcrumbsLink = ({ children }: { children: React$Node }) => (
-  <a onClick={action('This should be react-router/gasby Link')}>
+export const JobsPageBreadcrumbsLink = ({ children, ...props }: { children: React$Node }) => (
+  <a onClick={action('This should be react-router/gasby Link')} {...props}>
     {children}
   </a>
 )
