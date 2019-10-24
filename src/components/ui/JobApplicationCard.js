@@ -1,9 +1,11 @@
 // @flow
 
 import React, { Fragment } from 'react'
+
+import Button from './Button'
+
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
-import Button from './Button'
 
 import { getMonthName, getDayWithOrdinal } from '../../utils/helpers'
 
@@ -16,7 +18,7 @@ const cx = {
     display: inline-block
     background: ${theme.baseBrighter}
     border: 1px solid ${theme.lineSilver5}
-    box-shadow: 4px 4px 0px ${theme.baseBrightSilver}
+    box-shadow: 4px 4px 0 ${theme.baseBrightSilver}
   `),
 
   paragraph: cmz(
@@ -47,10 +49,12 @@ const JobApplicationCard = ({
     const day = getDayWithOrdinal(applicationDate)
     return `${month} ${day}`
   }
-  const applyCard = () => (
+
+  const renderApplyCard = () => (
     <Button wide onClick={onApply}>Apply For This Position</Button>
   )
-  const withdrawCard = () => (
+
+  const renderWithdrawCard = () => (
     <Fragment>
       <Button wide color='monochrome' onClick={onWithdraw}>Widthdraw Application</Button>
       <p className={cx.paragraph}>
@@ -59,9 +63,10 @@ const JobApplicationCard = ({
       </p>
     </Fragment>
   )
+
   return (
     <div className={cx.card}>
-      { hasApplied ? withdrawCard() : applyCard() }
+      {hasApplied ? renderWithdrawCard() : renderApplyCard()}
     </div>
   )
 }

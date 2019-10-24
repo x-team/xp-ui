@@ -33837,7 +33837,7 @@ exports[`Storyshots UI Components|IssueCollectorButton/Debug missing props (does
 
 exports[`Storyshots UI Components|JobApplicationCard basic usage 1`] = `
 <div
-  className="AutoUI_ui_JobApplicationCard-13"
+  className="AutoUI_ui_JobApplicationCard-15"
 >
   <Button
     block={false}
@@ -33862,7 +33862,7 @@ exports[`Storyshots UI Components|JobApplicationCard basic usage 1`] = `
     Widthdraw Application
   </Button>
   <p
-    className="AutoUI_ui_JobApplicationCard-22 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobApplicationCard-24 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     You've already applied for this position
     .
@@ -33875,7 +33875,7 @@ exports[`Storyshots UI Components|JobApplicationCard basic usage 1`] = `
 
 exports[`Storyshots UI Components|JobApplicationCard/Debug missing date 1`] = `
 <div
-  className="AutoUI_ui_JobApplicationCard-13"
+  className="AutoUI_ui_JobApplicationCard-15"
 >
   <Button
     block={false}
@@ -33900,7 +33900,7 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing date 1`] = `
     Widthdraw Application
   </Button>
   <p
-    className="AutoUI_ui_JobApplicationCard-22 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobApplicationCard-24 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     You've already applied for this position
     .
@@ -33911,9 +33911,9 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing date 1`] = `
 </div>
 `;
 
-exports[`Storyshots UI Components|JobApplicationCard/Debug missing props (does component explode?) 1`] = `
+exports[`Storyshots UI Components|JobApplicationCard/Debug missing props 1`] = `
 <div
-  className="AutoUI_ui_JobApplicationCard-13"
+  className="AutoUI_ui_JobApplicationCard-15"
 >
   <Button
     block={false}
@@ -33943,7 +33943,7 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing props (does c
 
 exports[`Storyshots UI Components|JobApplicationCard/States apply 1`] = `
 <div
-  className="AutoUI_ui_JobApplicationCard-13"
+  className="AutoUI_ui_JobApplicationCard-15"
 >
   <Button
     block={false}
@@ -33973,7 +33973,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States apply 1`] = `
 
 exports[`Storyshots UI Components|JobApplicationCard/States withdraw 1`] = `
 <div
-  className="AutoUI_ui_JobApplicationCard-13"
+  className="AutoUI_ui_JobApplicationCard-15"
 >
   <Button
     block={false}
@@ -33999,7 +33999,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States withdraw 1`] = `
     Widthdraw Application
   </Button>
   <p
-    className="AutoUI_ui_JobApplicationCard-22 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobApplicationCard-24 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     You've already applied for this position
      on October 22nd

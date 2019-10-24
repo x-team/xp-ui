@@ -36,6 +36,6 @@ storiesOf('UI Components|JobApplicationCard/Debug', module)
       onWithdraw={action('Withdrawing from job...')}
     />
   ))
-  .add('missing props (does component explode?)', () => (
+  .add('missing props', () => (
     <JobApplicationCard />
   ))
