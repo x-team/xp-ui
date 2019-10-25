@@ -7,11 +7,20 @@ import { action } from '@storybook/addon-actions'
 import JobApplicationCard from './JobApplicationCard'
 
 storiesOf('UI Components|JobApplicationCard', module)
-  .add('basic usage', () => (
+  .add('default', () => (
     <JobApplicationCard
-      hasApplied
       onApply={action('Applying for job...')}
     />
+  ))
+
+storiesOf('UI Components|JobApplicationCard/Use Cases', module)
+  .add('contained in column - like it is in the job page layout', () => (
+    <div style={{ width: '220px' }}>
+      <JobApplicationCard
+        hasApplied
+        onApply={action('Applying for job...')}
+      />
+    </div>
   ))
 
 storiesOf('UI Components|JobApplicationCard/States', module)

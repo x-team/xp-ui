@@ -13,7 +13,8 @@ const cmz = require('cmz')
 
 const cx = {
   card: cmz(`
-    max-width: 220px
+    width: 100%
+    box-sizing: border-box
     padding: 20px
     display: inline-block
     background: ${theme.baseBrighter}
