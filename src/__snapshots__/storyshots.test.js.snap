@@ -33841,7 +33841,7 @@ exports[`Storyshots UI Components|JobApplicationCard default 1`] = `
 >
   <Button
     block={false}
-    className=""
+    className="AutoUI_ui_JobApplicationCard-34"
     color="normal"
     component="button"
     contentStyle="normal"
@@ -33871,7 +33871,7 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing date 1`] = `
 >
   <Button
     block={false}
-    className=""
+    className="AutoUI_ui_JobApplicationCard-34"
     color="monochrome"
     component="button"
     contentStyle="normal"
@@ -33890,10 +33890,10 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing date 1`] = `
     smallRounded={false}
     wide={true}
   >
-    Widthdraw Application
+    Withdraw Application
   </Button>
   <p
-    className="AutoUI_ui_JobApplicationCard-25 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobApplicationCard-25 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     You've already applied for this position
     .
@@ -33910,7 +33910,7 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing props 1`] = `
 >
   <Button
     block={false}
-    className=""
+    className="AutoUI_ui_JobApplicationCard-34"
     color="normal"
     component="button"
     contentStyle="normal"
@@ -33939,7 +33939,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States apply + is saving 1`
 >
   <Button
     block={false}
-    className=""
+    className="AutoUI_ui_JobApplicationCard-34"
     color="normal"
     component="button"
     contentStyle="normal"
@@ -33969,7 +33969,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States apply 1`] = `
 >
   <Button
     block={false}
-    className=""
+    className="AutoUI_ui_JobApplicationCard-34"
     color="normal"
     component="button"
     contentStyle="normal"
@@ -33999,7 +33999,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States withdraw + is saving
 >
   <Button
     block={false}
-    className=""
+    className="AutoUI_ui_JobApplicationCard-34"
     color="monochrome"
     component="button"
     contentStyle="normal"
@@ -34018,10 +34018,10 @@ exports[`Storyshots UI Components|JobApplicationCard/States withdraw + is saving
     smallRounded={false}
     wide={true}
   >
-    Widthdraw Application
+    Withdraw Application
   </Button>
   <p
-    className="AutoUI_ui_JobApplicationCard-25 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobApplicationCard-25 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     You've already applied for this position
      on October 22nd
@@ -34039,7 +34039,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States withdraw 1`] = `
 >
   <Button
     block={false}
-    className=""
+    className="AutoUI_ui_JobApplicationCard-34"
     color="monochrome"
     component="button"
     contentStyle="normal"
@@ -34058,10 +34058,10 @@ exports[`Storyshots UI Components|JobApplicationCard/States withdraw 1`] = `
     smallRounded={false}
     wide={true}
   >
-    Widthdraw Application
+    Withdraw Application
   </Button>
   <p
-    className="AutoUI_ui_JobApplicationCard-25 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobApplicationCard-25 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     You've already applied for this position
      on October 22nd

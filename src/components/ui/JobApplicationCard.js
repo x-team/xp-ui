@@ -23,13 +23,17 @@ const cx = {
   `),
 
   paragraph: cmz(
-    typo.regularText,
+    typo.baseText,
     `
       line-height: 22px
-      font-size: 14px
+      font-size: 16px
       margin: 18px 0 0 0
     `
-  )
+  ),
+
+  button: cmz(`
+    white-space: normal
+  `)
 }
 
 type Props = {
@@ -54,12 +58,12 @@ const JobApplicationCard = ({
   }
 
   const renderApplyCard = () => (
-    <Button wide disabled={isSaving} onClick={onApply}>Apply For This Position</Button>
+    <Button wide disabled={isSaving} onClick={onApply} className={cx.button}>Apply For This Position</Button>
   )
 
   const renderWithdrawCard = () => (
     <Fragment>
-      <Button wide color='monochrome' disabled={isSaving} onClick={onWithdraw}>Withdraw Application</Button>
+      <Button wide color='monochrome' disabled={isSaving} onClick={onWithdraw} className={cx.button}>Withdraw Application</Button>
       <p className={cx.paragraph}>
         You've already applied for this position{ applicationDate && ` on ${date()}` }.
         <b> Check your email for next steps.</b>
