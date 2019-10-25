@@ -59,7 +59,7 @@ const JobApplicationCard = ({
 
   const renderWithdrawCard = () => (
     <Fragment>
-      <Button wide color='monochrome' disabled={isSaving} onClick={onWithdraw}>Widthdraw Application</Button>
+      <Button wide color='monochrome' disabled={isSaving} onClick={onWithdraw}>Withdraw Application</Button>
       <p className={cx.paragraph}>
         You've already applied for this position{ applicationDate && ` on ${date()}` }.
         <b> Check your email for next steps.</b>
