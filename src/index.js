@@ -33,6 +33,7 @@ import InlineEditor from './components/ui/InlineEditor'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
 import IssueCollectorButton from './components/ui/IssueCollectorButton'
+import JobApplicationCard from './components/ui/JobApplicationCard'
 import ListExclusionFormPopup from './components/ui/ListExclusionFormPopup'
 import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
@@ -99,6 +100,7 @@ export {
   InputField,
   InputGroup,
   IssueCollectorButton,
+  JobApplicationCard,
   ListExclusionFormPopup,
   ListsEditor,
   Loader,
