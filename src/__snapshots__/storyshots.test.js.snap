@@ -33835,19 +33835,20 @@ exports[`Storyshots UI Components|IssueCollectorButton/Debug missing props (does
 />
 `;
 
-exports[`Storyshots UI Components|JobApplicationCard basic usage 1`] = `
+exports[`Storyshots UI Components|JobApplicationCard default 1`] = `
 <div
   className="AutoUI_ui_JobApplicationCard-15"
 >
   <Button
     block={false}
     className=""
-    color="monochrome"
+    color="normal"
     component="button"
     contentStyle="normal"
     disabled={false}
     icon=""
     iconProps={Object {}}
+    onClick={[Function]}
     outlined={false}
     pseudolink={false}
     raised={false}
@@ -33859,17 +33860,8 @@ exports[`Storyshots UI Components|JobApplicationCard basic usage 1`] = `
     smallRounded={false}
     wide={true}
   >
-    Widthdraw Application
+    Apply For This Position
   </Button>
-  <p
-    className="AutoUI_ui_JobApplicationCard-24 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
-  >
-    You've already applied for this position
-    .
-    <b>
-       Check your email for next steps.
-    </b>
-  </p>
 </div>
 `;
 
@@ -33901,7 +33893,7 @@ exports[`Storyshots UI Components|JobApplicationCard/Debug missing date 1`] = `
     Widthdraw Application
   </Button>
   <p
-    className="AutoUI_ui_JobApplicationCard-24 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobApplicationCard-25 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     You've already applied for this position
     .
@@ -34029,7 +34021,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States withdraw + is saving
     Widthdraw Application
   </Button>
   <p
-    className="AutoUI_ui_JobApplicationCard-24 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobApplicationCard-25 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     You've already applied for this position
      on October 22nd
@@ -34069,7 +34061,7 @@ exports[`Storyshots UI Components|JobApplicationCard/States withdraw 1`] = `
     Widthdraw Application
   </Button>
   <p
-    className="AutoUI_ui_JobApplicationCard-24 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobApplicationCard-25 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     You've already applied for this position
      on October 22nd
@@ -34078,6 +34070,21 @@ exports[`Storyshots UI Components|JobApplicationCard/States withdraw 1`] = `
        Check your email for next steps.
     </b>
   </p>
+</div>
+`;
+
+exports[`Storyshots UI Components|JobApplicationCard/Use Cases contained in column - like it is in the job page layout 1`] = `
+<div
+  style={
+    Object {
+      "width": "220px",
+    }
+  }
+>
+  <JobApplicationCard
+    hasApplied={true}
+    onApply={[Function]}
+  />
 </div>
 `;
 
