@@ -18,7 +18,8 @@ You need to install:
 
 ## Live preview
 
-The latest Storybook spec page built out of `master` branch is available for preview [here](https://x-team.github.io/xp-ui/).
+- The latest Storybook spec page built out of `master` branch is available for preview [here](https://x-team.github.io/xp-ui/)
+- The latest Storybook spec page built out of `develop` branch is available for preview [here](https://xpui-develop.netlify.com/)
 
 ## Styleguide
 
