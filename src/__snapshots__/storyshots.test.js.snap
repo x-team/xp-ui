@@ -16496,9 +16496,7 @@ exports[`Storyshots Styleguide|General Layout 1`] = `
 `;
 
 exports[`Storyshots Styleguide|General Reset 1`] = `
-<div
-  className=""
->
+<div>
   <h1>
     Heading H1
   </h1>
@@ -16574,12 +16572,12 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
     open={true}
   >
     <summary
-      className="AutoUI_styleguides_Typography-21 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+      className="AutoUI_styleguides_Typography-22 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
     >
       typography sets
     </summary>
     <div
-      className="AutoUI_styleguides_Typography-37"
+      className="AutoUI_styleguides_Typography-38"
       style={
         Object {
           "width": undefined,
@@ -16593,10 +16591,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-43 AutoUI_typo-36 AutoUI_typo-9"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-43 AutoUI_typo-36 AutoUI_typo-9"
             style={
               Object {
                 "color": Object {
@@ -16614,7 +16612,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             mainHeading
           </div>
@@ -16627,10 +16625,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-72 AutoUI_typo-36 AutoUI_typo-9"
             style={
               Object {
                 "color": Object {
@@ -16648,7 +16646,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             headline
           </div>
@@ -16661,10 +16659,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
             style={
               Object {
                 "color": Object {
@@ -16682,7 +16680,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             sectionHeading
           </div>
@@ -16695,10 +16693,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
             style={
               Object {
                 "color": Object {
@@ -16716,7 +16714,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             badgeHeading
           </div>
@@ -16729,10 +16727,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-110 AutoUI_typo-36 AutoUI_typo-9"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-110 AutoUI_typo-36 AutoUI_typo-9"
             style={
               Object {
                 "color": Object {
@@ -16750,7 +16748,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             heading
           </div>
@@ -16763,10 +16761,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-123 AutoUI_typo-36 AutoUI_typo-14"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-123 AutoUI_typo-36 AutoUI_typo-14"
             style={
               Object {
                 "color": Object {
@@ -16784,7 +16782,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             subheading
           </div>
@@ -16797,10 +16795,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-135 AutoUI_typo-36 AutoUI_typo-29"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-135 AutoUI_typo-36 AutoUI_typo-29"
             style={
               Object {
                 "color": Object {
@@ -16818,7 +16816,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             labelText
           </div>
@@ -16831,10 +16829,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-14"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-145 AutoUI_typo-36 AutoUI_typo-14"
             style={
               Object {
                 "color": Object {
@@ -16852,7 +16850,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             emphasizedLabelText
           </div>
@@ -16865,10 +16863,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
             style={
               Object {
                 "color": Object {
@@ -16886,7 +16884,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             baseText
           </div>
@@ -16899,10 +16897,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
             style={
               Object {
                 "color": Object {
@@ -16920,7 +16918,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             regularText
           </div>
@@ -16933,10 +16931,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-175 AutoUI_typo-36 AutoUI_typo-24"
             style={
               Object {
                 "color": Object {
@@ -16954,7 +16952,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             formText
           </div>
@@ -16967,10 +16965,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-185 AutoUI_typo-36 AutoUI_typo-24"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-185 AutoUI_typo-36 AutoUI_typo-24"
             style={
               Object {
                 "color": Object {
@@ -16988,7 +16986,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             link
           </div>
@@ -17001,12 +16999,12 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
     open={true}
   >
     <summary
-      className="AutoUI_styleguides_Typography-21 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+      className="AutoUI_styleguides_Typography-22 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
     >
       typeface sets
     </summary>
     <div
-      className="AutoUI_styleguides_Typography-37"
+      className="AutoUI_styleguides_Typography-38"
       style={
         Object {
           "width": undefined,
@@ -17020,10 +17018,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-9"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-9"
             style={
               Object {
                 "color": Object {
@@ -17041,7 +17039,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             extraHeading
           </div>
@@ -17054,10 +17052,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-14"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-14"
             style={
               Object {
                 "color": Object {
@@ -17075,7 +17073,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             strongHeading
           </div>
@@ -17088,10 +17086,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-19"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-19"
             style={
               Object {
                 "color": Object {
@@ -17109,7 +17107,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             semiHeading
           </div>
@@ -17122,10 +17120,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-24"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-24"
             style={
               Object {
                 "color": Object {
@@ -17143,7 +17141,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             text
           </div>
@@ -17156,10 +17154,10 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
         tooltipXOffset={0}
       >
         <div
-          className="AutoUI_styleguides_Typography-53 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          className="AutoUI_styleguides_Typography-54 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
         >
           <div
-            className="AutoUI_styleguides_Typography-64 AutoUI_typo-29"
+            className="AutoUI_styleguides_Typography-65 AutoUI_typo-29"
             style={
               Object {
                 "color": Object {
@@ -17177,7 +17175,7 @@ exports[`Storyshots Styleguide|General Typography 1`] = `
             The quick brown fox jumps over the lazy dog
           </div>
           <div
-            className="AutoUI_styleguides_Typography-69"
+            className="AutoUI_styleguides_Typography-70"
           >
             extra
           </div>

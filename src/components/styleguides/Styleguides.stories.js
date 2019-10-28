@@ -31,11 +31,6 @@ const textOptions = {
   'One line': 'oneLine',
   'Paragraphs': 'paragraphs'
 }
-const themeOptions = {
-  'none': '',
-  'XP Admin': 'admin',
-  'XP Registration': 'applicant'
-}
 
 storiesOf('Styleguide|General', module)
   .add('ColorPalette', () => (
@@ -62,9 +57,7 @@ Sed non dapibus turpis, sed pulvinar nibh. Nam quis libero dapibus, vestibulum i
     notes: { markdown: layoutInfo }
   })
   .add('Reset', () => (
-    <Reset
-      theme={select('Theme', themeOptions, 'none')}
-    />
+    <Reset />
   ), {
     notes: { markdown: resetInfo }
   })
