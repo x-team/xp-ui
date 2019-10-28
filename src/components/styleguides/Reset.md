@@ -1,21 +1,20 @@
 # Reset
 
-The isolation of styles works by reseting styles on a component level.
+The style isolation works by reseting pure HTML elements styles from a component level.
 
 ## How to Use
 
 Example:
 
 ```jsx
-import reset from '../../styles/reset'
+import '../../styles/reset'
 
 const cmz = require('cmz')
 
 const cx = {
   wrapper: cmz(
-    reset.admin,
     `
-      /* Other CSS properties here */
+      /* CSS properties here */
     `
   )
 }
