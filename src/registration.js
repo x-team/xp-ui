@@ -32,7 +32,6 @@ import Tabs from './components/ui/Tabs/Tabs'
 import Text from './components/ui/Text'
 import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
-import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
 
 export {
@@ -70,6 +69,5 @@ export {
   Text,
   TruncatedList,
   TwoColumnsLayout,
-  VideoPlayer,
   XIcon
 }

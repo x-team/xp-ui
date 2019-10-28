@@ -24,6 +24,7 @@ export const palette = {
   haiti: '#130E2E',
   fern: '#5CB85C',
   radicalRed: '#F63954',
+  redRibbon: '#F20B2C',
   alto: '#D8D8D8',
   nobel: '#B3B3B3',
   tuna: '#34323B',
@@ -68,6 +69,8 @@ export const baseColors = {
 export const typoColors = {
   typoHeading: palette.tuna,
   typoSubheading: palette.radicalRed,
+  typoAnchor: palette.radicalRed,
+  typoAnchorHover: palette.redRibbon,
   typoParagraph: palette.tuna,
   typoParagraphOnDarkBackground: palette.frenchGrayDarker,
   typoHighlight: palette.haiti,
