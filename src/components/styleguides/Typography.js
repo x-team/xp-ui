@@ -6,7 +6,6 @@ import GenericCopyToClipboard from '../ui/GenericCopyToClipboard'
 
 import theme, { breakpoints } from '../../styles/theme'
 import typo, { typeface } from '../../styles/typo'
-import '../../styles/reset'
 
 const cmz = require('cmz')
 
