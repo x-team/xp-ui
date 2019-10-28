@@ -39,7 +39,6 @@ import Text from './components/ui/Text'
 import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
-import VideoPlayer from './components/ui/VideoPlayer'
 import XIcon from './components/ui/XIcon'
 
 export {
@@ -84,6 +83,5 @@ export {
   TextareaEditor,
   TruncatedList,
   TwoColumnsLayout,
-  VideoPlayer,
   XIcon
 }

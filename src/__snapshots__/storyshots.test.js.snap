@@ -9342,20 +9342,6 @@ exports[`Storyshots Core Components|Text/Debug without Heading and Sub Heading w
 />
 `;
 
-exports[`Storyshots Core Components|Text/States hasDivider & hasDivider 1`] = `
-<Text
-  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
-  hasDivider={true}
-  heading="Your roadmap to X-Team"
-  headingType="headline"
-  isCentered={true}
-  isMarkdown={false}
-  isPureContent={false}
-  required={false}
-  subHeadingType="heading"
-/>
-`;
-
 exports[`Storyshots Core Components|Text/States hasDivider 1`] = `
 <Text
   content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
@@ -9363,6 +9349,20 @@ exports[`Storyshots Core Components|Text/States hasDivider 1`] = `
   heading="Your roadmap to X-Team"
   headingType="headline"
   isCentered={false}
+  isMarkdown={false}
+  isPureContent={false}
+  required={false}
+  subHeadingType="heading"
+/>
+`;
+
+exports[`Storyshots Core Components|Text/States isCentered & hasDivider 1`] = `
+<Text
+  content="Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you."
+  hasDivider={true}
+  heading="Your roadmap to X-Team"
+  headingType="headline"
+  isCentered={true}
   isMarkdown={false}
   isPureContent={false}
   required={false}
