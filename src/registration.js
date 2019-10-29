@@ -1,5 +1,6 @@
 import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
+import ConfirmationBox from './components/ui/ConfirmationBox'
 import Button from './components/ui/Button'
 import ErrorBox from './components/ui/ErrorBox'
 import Footer from './components/ui/Footer/Footer'
@@ -24,6 +25,7 @@ import TruncatedList from './components/ui/TruncatedList'
 export {
   ApplicantScreen,
   AttachFiles,
+  ConfirmationBox,
   Button,
   ErrorBox,
   Footer,

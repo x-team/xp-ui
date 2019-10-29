@@ -12,6 +12,7 @@ import ApplicantScreenNotification from './components/ui/ApplicantScreenNotifica
 import ApplicantTopProfileDisplay from './components/ui/ApplicantTopProfileDisplay'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
+import ConfirmationBox from './components/ui/ConfirmationBox'
 import Button from './components/ui/Button'
 import ColumnsCustomizer from './components/ui/ColumnsCustomizer'
 import CopyToClipboardButton from './components/ui/CopyToClipboardButton'
@@ -80,6 +81,7 @@ export {
   ApplicantTopProfileDisplay,
   AttachFiles,
   Avatar,
+  ConfirmationBox,
   Button,
   ColumnsCustomizer,
   CopyToClipboardButton,
