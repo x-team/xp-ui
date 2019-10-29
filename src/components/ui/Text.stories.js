@@ -138,14 +138,6 @@ storiesOf('Core Components|Text/Use Cases', module)
       hasDivider
     />
   ))
-  .add('heading and sub heading with divider', () => (
-    <StoryText
-      heading='Your roadmap to X-Team'
-      subHeading='Your roadmap to X-Team'
-      content='Many developers who came before you started right here and went on to do some of the best work of their career. That same opportunity begins now for you.'
-      hasDivider
-    />
-  ))
   .add('sub heading', () => (
     <StoryText
       subHeading='Your roadmap to X-Team'

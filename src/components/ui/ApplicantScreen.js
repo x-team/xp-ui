@@ -5,11 +5,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import HeaderBar from './HeaderBar'
-import ApplicationSuccessNotification from './ApplicationSuccessNotification'
+import ApplicantScreenNotification from './ApplicantScreenNotification'
 
 const cmz = require('cmz')
 
 const cx = {
+  header: cmz(`
+    z-index: 2
+    position: relative
+  `),
+
+  notification: cmz(`
+    z-index: 1
+  `),
+
   content: cmz(`
     max-width: 1280px
     margin: 93px auto 0
@@ -33,20 +42,28 @@ type Props = {
   children?: React$Node,
   noWrapper?: boolean,
   wrapper?: 'narrower' | 'wider',
-  showApplicationSuccessNotification?: boolean
+  notification?: React$Node
 }
 
 const ApplicantScreen = ({
   children,
   wrapper,
   noWrapper = false,
-  showApplicationSuccessNotification = false
+  notification
 }: Props) => {
   const getWrapperClass = () => (wrapper && cx[wrapper]) || cx.content
   return (
     <div>
-      <HeaderBar />
-      <ApplicationSuccessNotification display={showApplicationSuccessNotification} />
+      <div className={cx.header}>
+        <HeaderBar />
+      </div>
+      {notification && (
+        <div className={cx.notification}>
+          <ApplicantScreenNotification>
+            {notification}
+          </ApplicantScreenNotification>
+        </div>
+      )}
       {noWrapper ? children : (
         <div className={getWrapperClass()}>{children}</div>
       )}

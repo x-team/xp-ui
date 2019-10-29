@@ -1,4 +1,5 @@
 import ApplicantScreen from './components/ui/ApplicantScreen'
+import ApplicantScreenNotification from './components/ui/ApplicantScreenNotification'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
@@ -43,6 +44,7 @@ import XIcon from './components/ui/XIcon'
 
 export {
   ApplicantScreen,
+  ApplicantScreenNotification,
   AttachFiles,
   Avatar,
   Button,
