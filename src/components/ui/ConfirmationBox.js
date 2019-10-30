@@ -21,23 +21,23 @@ const wrapperPadding = '24px'
 const cx = {
   wrapper: cmz(`
     display: flex
-    flex-direction: column
-    justify-content: center
     align-items: center
-    width: calc(500px - ${wrapperPadding})
+    flex-direction: column
     font-size: 14px
+    justify-content: center
     padding: ${wrapperPadding}
+    width: calc(500px - ${wrapperPadding})
   `),
 
   title: cmz(
     typeface.semiHeading, `
-    height: 33px
+    color: #000
     font-size: 24px
     font-weight: 500
+    height: 33px
     line-height: 33px
-    width: 100%
     margin: 0
-    color: #000
+    width: 100%
   `),
 
   content: cmz(
@@ -50,9 +50,9 @@ const cx = {
 
   ctaContainer: cmz(`
     display: flex
-    ustify-content: space-between;
-    width: 100%
+    justify-content: space-between;
     height: 46px
+    width: 100%
   `),
 
   actionButton: cmz(`

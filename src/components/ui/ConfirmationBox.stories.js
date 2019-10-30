@@ -20,17 +20,6 @@ const Body = ({ children }) => (
   </div>
 )
 
-const StoryModal = props => (
-  <State initialState={{ isOpen: true }}>
-    {({ setState, state }) => state.isOpen ? (
-      <Modal
-        onClose={() => setState({ isOpen: false })}
-        {...props}
-      />
-    ) : null}
-  </State>
-)
-
 storiesOf('Core Components|ConfirmationBox', module)
   .add('basic usage', () => (
     <ConfirmationBox

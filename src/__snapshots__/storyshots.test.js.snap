@@ -1084,7 +1084,7 @@ exports[`Storyshots Core Components|ConfirmationBox basic usage 1`] = `
     <Button
       block={false}
       className="AutoUI_ui_ConfirmationBox-63"
-      color="grayPink"
+      color="normal"
       component="button"
       contentStyle="normal"
       disabled={false}
@@ -1092,8 +1092,8 @@ exports[`Storyshots Core Components|ConfirmationBox basic usage 1`] = `
       iconProps={Object {}}
       onClick={[Function]}
       outlined={false}
-      pseudolink={false}
-      raised={true}
+      pseudolink={true}
+      raised={false}
       readOnly={false}
       rounded={false}
       selectbox={false}
@@ -1102,13 +1102,28 @@ exports[`Storyshots Core Components|ConfirmationBox basic usage 1`] = `
       smallRounded={false}
       wide={false}
     >
-      Dismiss
+      DISMISS
     </Button>
   </div>
 </div>
 `;
 
-exports[`Storyshots Core Components|ConfirmationBox/Debug difficult data 1`] = `
+exports[`Storyshots Core Components|ConfirmationBox/Debug missing props (does this component explode?) 1`] = `
+<div
+  className="AutoUI_ui_ConfirmationBox-22"
+>
+  <h2
+    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+  >
+    Are you sure?
+  </h2>
+  <p
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+  />
+</div>
+`;
+
+exports[`Storyshots Core Components|ConfirmationBox/Debug random data 1`] = `
 <div
   className="AutoUI_ui_ConfirmationBox-22"
 >
@@ -1146,12 +1161,12 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug difficult data 1`] = `
       smallRounded={false}
       wide={false}
     >
-      WIDTHDRAW APPLICATION
+      string
     </Button>
     <Button
       block={false}
       className="AutoUI_ui_ConfirmationBox-63"
-      color="grayPink"
+      color="normal"
       component="button"
       contentStyle="normal"
       disabled={false}
@@ -1159,8 +1174,8 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug difficult data 1`] = `
       iconProps={Object {}}
       onClick={[Function]}
       outlined={false}
-      pseudolink={false}
-      raised={true}
+      pseudolink={true}
+      raised={false}
       readOnly={false}
       rounded={false}
       selectbox={false}
@@ -1169,24 +1184,9 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug difficult data 1`] = `
       smallRounded={false}
       wide={false}
     >
-      Dismiss
+      DISMISS
     </Button>
   </div>
-</div>
-`;
-
-exports[`Storyshots Core Components|ConfirmationBox/Debug missing props (does component explode?) 1`] = `
-<div
-  className="AutoUI_ui_ConfirmationBox-22"
->
-  <h2
-    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
-  >
-    Are you sure?
-  </h2>
-  <p
-    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
-  />
 </div>
 `;
 
@@ -1208,17 +1208,15 @@ exports[`Storyshots Core Components|ConfirmationBox/Use Cases with Modal 1`] = `
       }
     }
   />
-  <Modal
-    onClose={[Function]}
+  <State
+    initialState={
+      Object {
+        "isOpen": true,
+      }
+    }
   >
-    <ConfirmationBox
-      action={[Function]}
-      actionLabel="WIDTHDRAW APPLICATION"
-      content="This will cancel your application and you will no longer be considered for this role."
-      dismissAction={[Function]}
-      title="Are you sure?"
-    />
-  </Modal>
+    <Component />
+  </State>
 </div>
 `;
 
@@ -1240,17 +1238,15 @@ exports[`Storyshots Core Components|ConfirmationBox/Use Cases with Modal and ran
       }
     }
   />
-  <Modal
-    onClose={[Function]}
+  <State
+    initialState={
+      Object {
+        "isOpen": true,
+      }
+    }
   >
-    <ConfirmationBox
-      action={[Function]}
-      actionLabel="WIDTHDRAW APPLICATION"
-      content="string"
-      dismissAction={[Function]}
-      title="string"
-    />
-  </Modal>
+    <Component />
+  </State>
 </div>
 `;
 
