@@ -17,7 +17,12 @@ import JobsGrid from './components/ui/JobsGrid'
 import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
 import JobsPageLayout from './components/ui/JobsPageLayout'
 import Loader from './components/ui/Loader'
+import MetaGroup from './components/ui/MetaGroup'
+import MilestonesScreen from './components/ui/MilestonesScreen'
 import Modal from './components/ui/Modal'
+import PencilButton from './components/ui/PencilButton'
+import ProfileHeaderLinks from './components/ui/ProfileHeaderLinks'
+import ResultCount from './components/ui/ResultCount'
 import RoadmapHero from './components/ui/RoadmapHero'
 import Text from './components/ui/Text'
 import TruncatedList from './components/ui/TruncatedList'
@@ -42,7 +47,12 @@ export {
   JobsPageBreadcrumbs,
   JobsPageLayout,
   Loader,
+  MetaGroup,
+  MilestonesScreen,
   Modal,
+  PencilButton,
+  ProfileHeaderLinks,
+  ResultCount,
   RoadmapHero,
   Text,
   TruncatedList
