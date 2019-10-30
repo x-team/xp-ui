@@ -1041,6 +1041,219 @@ exports[`Storyshots Core Components|Button/Use Cases with icon 1`] = `
 </Button>
 `;
 
+exports[`Storyshots Core Components|ConfirmationBox basic usage 1`] = `
+<div
+  className="AutoUI_ui_ConfirmationBox-22"
+>
+  <h2
+    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+  >
+    Are you sure?
+  </h2>
+  <p
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+  >
+    This will cancel your application and you will no longer be considered for this role.
+  </p>
+  <div
+    className="AutoUI_ui_ConfirmationBox-51"
+  >
+    <Button
+      block={false}
+      className="AutoUI_ui_ConfirmationBox-58"
+      color="normal"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      onClick={[Function]}
+      outlined={false}
+      pseudolink={false}
+      raised={false}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="normal"
+      smallRounded={false}
+      wide={false}
+    >
+      WITHDRAW MY APPLICATION
+    </Button>
+    <Button
+      block={false}
+      className="AutoUI_ui_ConfirmationBox-63"
+      color="grayPink"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      onClick={[Function]}
+      outlined={false}
+      pseudolink={false}
+      raised={true}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="normal"
+      smallRounded={false}
+      wide={false}
+    >
+      Dismiss
+    </Button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core Components|ConfirmationBox/Debug difficult data 1`] = `
+<div
+  className="AutoUI_ui_ConfirmationBox-22"
+>
+  <h2
+    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+  >
+    string
+  </h2>
+  <p
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+  >
+    string
+  </p>
+  <div
+    className="AutoUI_ui_ConfirmationBox-51"
+  >
+    <Button
+      block={false}
+      className="AutoUI_ui_ConfirmationBox-58"
+      color="normal"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      onClick={[Function]}
+      outlined={false}
+      pseudolink={false}
+      raised={false}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="normal"
+      smallRounded={false}
+      wide={false}
+    >
+      WIDTHDRAW APPLICATION
+    </Button>
+    <Button
+      block={false}
+      className="AutoUI_ui_ConfirmationBox-63"
+      color="grayPink"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      onClick={[Function]}
+      outlined={false}
+      pseudolink={false}
+      raised={true}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="normal"
+      smallRounded={false}
+      wide={false}
+    >
+      Dismiss
+    </Button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core Components|ConfirmationBox/Debug missing props (does component explode?) 1`] = `
+<div
+  className="AutoUI_ui_ConfirmationBox-22"
+>
+  <h2
+    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+  >
+    Are you sure?
+  </h2>
+  <p
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+  />
+</div>
+`;
+
+exports[`Storyshots Core Components|ConfirmationBox/Use Cases with Modal 1`] = `
+<div
+  style={
+    Object {
+      "minHeight": "100vh",
+      "overflow": "hidden",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      body { margin: 0; }
+    ",
+      }
+    }
+  />
+  <Modal
+    onClose={[Function]}
+  >
+    <ConfirmationBox
+      action={[Function]}
+      actionLabel="WIDTHDRAW APPLICATION"
+      content="This will cancel your application and you will no longer be considered for this role."
+      dismissAction={[Function]}
+      title="Are you sure?"
+    />
+  </Modal>
+</div>
+`;
+
+exports[`Storyshots Core Components|ConfirmationBox/Use Cases with Modal and random data 1`] = `
+<div
+  style={
+    Object {
+      "minHeight": "100vh",
+      "overflow": "hidden",
+    }
+  }
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+      body { margin: 0; }
+    ",
+      }
+    }
+  />
+  <Modal
+    onClose={[Function]}
+  >
+    <ConfirmationBox
+      action={[Function]}
+      actionLabel="WIDTHDRAW APPLICATION"
+      content="string"
+      dismissAction={[Function]}
+      title="string"
+    />
+  </Modal>
+</div>
+`;
+
 exports[`Storyshots Core Components|ErrorBox basic usage 1`] = `
 <div
   className="AutoUI_ui_ErrorBox-19 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"

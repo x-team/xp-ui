@@ -10,11 +10,11 @@ import { typeface } from '../../styles/typo'
 const cmz = require('cmz')
 
 type Props = {
-  title: string,
-  content: string,
-  action: () => void,
-  actionLabel: string,
-  dismissAction: () => void
+  title?: string,
+  content?: string,
+  action?: () => void,
+  actionLabel?: string,
+  dismissAction?: () => void
 }
 
 const wrapperPadding = '24px'
@@ -61,12 +61,9 @@ const cx = {
   `),
 
   dismissButton: cmz(`
-    text-transform: uppercase
-    background-color: transparent
-    border: none
     color: #8E8D93
-    margin-right: auto;
-    margin-left: 10px;
+    margin-right: auto
+    margin-left: 10px
   `)
 }
 
@@ -74,7 +71,6 @@ const ConfirmationBox = ({ title = 'Are you sure?', content, action, actionLabel
   <div className={cx.wrapper}>
     <h2 className={cx.title}>{title}</h2>
     <p className={cx.content}>{content}</p>
-    {/* // if the childs are not defined don't show the container */}
     {dismissAction && action && (
       <div className={cx.ctaContainer}>
         <Button
@@ -86,12 +82,11 @@ const ConfirmationBox = ({ title = 'Are you sure?', content, action, actionLabel
 
         {dismissAction && (
           <Button
-            raised
-            color='grayPink'
+            pseudolink
             className={cx.dismissButton}
             onClick={dismissAction}
           >
-            Dismiss
+            DISMISS
           </Button>
         )}
       </div>
@@ -100,5 +95,3 @@ const ConfirmationBox = ({ title = 'Are you sure?', content, action, actionLabel
 )
 
 export default ConfirmationBox
-// TODO: reflect about the default
-// guard content and action as well

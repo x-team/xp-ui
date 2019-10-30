@@ -9,6 +9,8 @@ import faker from 'faker'
 import ConfirmationBox from './ConfirmationBox'
 import Modal from './Modal'
 
+import State from '../../utils/State'
+
 const Body = ({ children }) => (
   <div style={{ minHeight: '100vh', overflow: 'hidden' }}>
     <style dangerouslySetInnerHTML={{ __html: `
@@ -16,6 +18,17 @@ const Body = ({ children }) => (
     ` }} />
     {children}
   </div>
+)
+
+const StoryModal = props => (
+  <State initialState={{ isOpen: true }}>
+    {({ setState, state }) => state.isOpen ? (
+      <Modal
+        onClose={() => setState({ isOpen: false })}
+        {...props}
+      />
+    ) : null}
+  </State>
 )
 
 storiesOf('Core Components|ConfirmationBox', module)
@@ -29,50 +42,62 @@ storiesOf('Core Components|ConfirmationBox', module)
     />
   ))
 
-const closeAction = () => null
-
 storiesOf('Core Components|ConfirmationBox/Use Cases', module)
   .add('with Modal', () => (
     <Body>
-      <Modal
-        onClose={closeAction}
-      >
-        <ConfirmationBox
-          title={'Are you sure?'}
-          content={'This will cancel your application and you will no longer be considered for this role.'}
-          action={action('CTA Action: WIDTHDRAW APPLICATION')}
-          actionLabel={'WIDTHDRAW APPLICATION'}
-          dismissAction={action('Dismiss action')}
-        />
-      </Modal>
+      <State initialState={{ isOpen: true }}>
+        { ({ setState, state }) => {
+          const closeModal = () => setState({ isOpen: false })
+          return state.isOpen ? (
+            <Modal
+              onClose={closeModal}
+            >
+              <ConfirmationBox
+                title={'Are you sure?'}
+                content={'This will cancel your application and you will no longer be considered for this role.'}
+                action={action('CTA Action: WIDTHDRAW APPLICATION')}
+                actionLabel={'WIDTHDRAW APPLICATION'}
+                dismissAction={closeModal}
+              />
+            </Modal>
+          ) : null
+        }}
+      </State>
     </Body>
   ))
   .add('with Modal and random data', () => (
     <Body>
-      <Modal
-        onClose={closeAction}
-      >
-        <ConfirmationBox
-          title={text('Title', faker.lorem.sentence())}
-          content={text('Content', faker.lorem.paragraph())}
-          action={action('CTA Action: WIDTHDRAW APPLICATION')}
-          actionLabel={'WIDTHDRAW APPLICATION'}
-          dismissAction={action('Dismiss action')}
-        />
-      </Modal>
+      <State initialState={{ isOpen: true }}>
+        { ({ setState, state }) => {
+          const closeModal = () => setState({ isOpen: false })
+          return state.isOpen ? (
+            <Modal
+              onClose={closeModal}
+            >
+              <ConfirmationBox
+                title={text('Title', faker.lorem.sentence())}
+                content={text('Content', faker.lorem.paragraph())}
+                action={action('CTA Action: WIDTHDRAW APPLICATION')}
+                actionLabel={'WIDTHDRAW APPLICATION'}
+                dismissAction={closeModal}
+              />
+            </Modal>
+          ) : null
+        }}
+      </State>
     </Body>
   ))
 
 storiesOf('Core Components|ConfirmationBox/Debug', module)
-  .add('difficult data', () => (
+  .add('random data', () => (
     <ConfirmationBox
       title={text('Title', faker.lorem.sentence())}
-      content={text('Title', faker.lorem.paragraph())}
+      content={text('Content', faker.lorem.paragraph())}
       action={action('CTA Action: WIDTHDRAW APPLICATION')}
-      actionLabel={'WIDTHDRAW APPLICATION'}
+      actionLabel={text('Action', faker.lorem.sentence())}
       dismissAction={action('Dismiss action')}
     />
   ))
-  .add('missing props (does component explode?)', () => (
+  .add('missing props (does this component explode?)', () => (
     <ConfirmationBox />
   ))
