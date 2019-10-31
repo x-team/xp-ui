@@ -1,4 +1,5 @@
 import ApplicantScreen from './components/ui/ApplicantScreen'
+import ApplicantScreenNotification from './components/ui/ApplicantScreenNotification'
 import AttachFiles from './components/ui/AttachFiles'
 import Button from './components/ui/Button'
 import ErrorBox from './components/ui/ErrorBox'
@@ -29,6 +30,7 @@ import TruncatedList from './components/ui/TruncatedList'
 
 export {
   ApplicantScreen,
+  ApplicantScreenNotification,
   AttachFiles,
   Button,
   ErrorBox,

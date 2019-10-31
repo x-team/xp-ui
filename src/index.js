@@ -8,6 +8,7 @@ import ApplicantBadge from './components/ui/ApplicantBadge'
 import ApplicantGrid from './components/ui/ApplicantGrid'
 import ApplicantProfileContentDisplay from './components/ui/ApplicantProfileContentDisplay'
 import ApplicantScreen from './components/ui/ApplicantScreen'
+import ApplicantScreenNotification from './components/ui/ApplicantScreenNotification'
 import ApplicantTopProfileDisplay from './components/ui/ApplicantTopProfileDisplay'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
@@ -75,6 +76,7 @@ export {
   ApplicantGrid,
   ApplicantProfileContentDisplay,
   ApplicantScreen,
+  ApplicantScreenNotification,
   ApplicantTopProfileDisplay,
   AttachFiles,
   Avatar,
