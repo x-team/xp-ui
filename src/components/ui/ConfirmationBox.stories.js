@@ -87,6 +87,21 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
       dismissAction={action('Dismiss action')}
     />
   ))
+  .add('random data and action button only', () => (
+    <ConfirmationBox
+      title={text('Title', faker.lorem.sentence())}
+      content={text('Content', faker.lorem.paragraph())}
+      action={action('CTA Action: WIDTHDRAW APPLICATION')}
+      actionLabel={text('Action', faker.lorem.sentence())}
+    />
+  ))
+  .add('random data and dismiss button only', () => (
+    <ConfirmationBox
+      title={text('Title', faker.lorem.sentence())}
+      content={text('Content', faker.lorem.paragraph())}
+      dismissAction={action('Dismiss action')}
+    />
+  ))
   .add('missing props (does this component explode?)', () => (
     <ConfirmationBox />
   ))
