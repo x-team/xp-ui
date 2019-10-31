@@ -50,7 +50,7 @@ const cx = {
 
   ctaContainer: cmz(`
     display: flex
-    justify-content: space-between;
+    justify-content: space-between
     height: 46px
     width: 100%
   `),
