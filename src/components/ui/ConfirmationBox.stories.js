@@ -102,6 +102,6 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
       dismissAction={action('Dismiss action')}
     />
   ))
-  .add('missing props (does this component explode?)', () => (
+  .add('missing props', () => (
     <ConfirmationBox />
   ))
