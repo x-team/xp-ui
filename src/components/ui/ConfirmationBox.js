@@ -64,6 +64,10 @@ const cx = {
     color: ${theme.baeBrightGray}
     margin-right: auto
     margin-left: 10px
+  `),
+
+  dismissButtonLabel: cmz(`
+    text-transform: uppercase
   `)
 }
 
@@ -87,7 +91,9 @@ const ConfirmationBox = ({ title = 'Are you sure?', content, action, actionLabel
             className={cx.dismissButton}
             onClick={dismissAction}
           >
-            DISMISS
+            <span className={cx.dismissButtonLabel}>
+              Dismiss
+            </span>
           </Button>
         )}
       </div>
