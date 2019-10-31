@@ -22,6 +22,19 @@ storiesOf('Screens and Layouts|ApplicantScreen', module)
     </Body>
   ))
 
+storiesOf('Screens and Layouts|ApplicantScreen/States', module)
+  .add('with notification', () => (
+    <Body>
+      <ApplicantScreen
+        notification={
+          <span>You've successfully applied for this position. <b>Check your email for next steps</b></span>
+        }
+      >
+        {faker.lorem.paragraphs(50)}
+      </ApplicantScreen>
+    </Body>
+  ))
+
 storiesOf('Screens and Layouts|ApplicantScreen/Debug', module)
   .add('with narrower wrapper', () => (
     <Body>

@@ -37,6 +37,7 @@ const cx = {
       width: 100%
       font-size: 13px
       font-weight: 600
+      background: ${theme.baseBrighter}
     `
   ),
 
