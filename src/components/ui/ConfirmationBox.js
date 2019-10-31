@@ -17,7 +17,7 @@ type Props = {
   dismissAction?: () => void
 }
 
-const wrapperPadding = '24px'
+const WRAPPER_PADDING = '24px'
 const cx = {
   wrapper: cmz(`
     display: flex
@@ -25,13 +25,13 @@ const cx = {
     flex-direction: column
     font-size: 14px
     justify-content: center
-    padding: ${wrapperPadding}
-    width: calc(500px - ${wrapperPadding})
+    padding: ${WRAPPER_PADDING}
+    width: calc(500px - ${WRAPPER_PADDING})
   `),
 
   title: cmz(
     typeface.semiHeading, `
-    color: #000
+    color: ${theme.baseDark}
     font-size: 24px
     font-weight: 500
     height: 33px
@@ -61,7 +61,7 @@ const cx = {
   `),
 
   dismissButton: cmz(`
-    color: #8E8D93
+    color: ${theme.baeBrightGray}
     margin-right: auto
     margin-left: 10px
   `)
