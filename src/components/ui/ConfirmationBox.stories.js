@@ -26,7 +26,7 @@ storiesOf('Core Components|ConfirmationBox', module)
       title={text('Title', 'Are you sure?')}
       content={'This will cancel your application and you will no longer be considered for this role.'}
       action={action('CTA Action')}
-      actionLabel={'WITHDRAW MY APPLICATION'}
+      actionLabel={'WIthdraw my application'}
       dismissAction={action('Dismiss action')}
     />
   ))
@@ -44,8 +44,8 @@ storiesOf('Core Components|ConfirmationBox/Use Cases', module)
               <ConfirmationBox
                 title={'Are you sure?'}
                 content={'This will cancel your application and you will no longer be considered for this role.'}
-                action={action('CTA Action: WIDTHDRAW APPLICATION')}
-                actionLabel={'WIDTHDRAW APPLICATION'}
+                action={action('CTA Action: Withdraw application')}
+                actionLabel={'Withdraw application'}
                 dismissAction={closeModal}
               />
             </Modal>
@@ -66,8 +66,8 @@ storiesOf('Core Components|ConfirmationBox/Use Cases', module)
               <ConfirmationBox
                 title={text('Title', faker.lorem.sentence())}
                 content={text('Content', faker.lorem.paragraph())}
-                action={action('CTA Action: WIDTHDRAW APPLICATION')}
-                actionLabel={'WIDTHDRAW APPLICATION'}
+                action={action('CTA Action: Withdraw application')}
+                actionLabel={'Withdraw application'}
                 dismissAction={closeModal}
               />
             </Modal>
@@ -82,7 +82,7 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
     <ConfirmationBox
       title={text('Title', faker.lorem.sentence())}
       content={text('Content', faker.lorem.paragraph())}
-      action={action('CTA Action: WIDTHDRAW APPLICATION')}
+      action={action('CTA Action: Withdraw application')}
       actionLabel={text('Action', faker.lorem.sentence())}
       dismissAction={action('Dismiss action')}
     />
@@ -91,7 +91,7 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
     <ConfirmationBox
       title={text('Title', faker.lorem.sentence())}
       content={text('Content', faker.lorem.paragraph())}
-      action={action('CTA Action: WIDTHDRAW APPLICATION')}
+      action={action('CTA Action: Withdraw application')}
       actionLabel={text('Action', faker.lorem.sentence())}
     />
   ))
