@@ -1079,7 +1079,7 @@ exports[`Storyshots Core Components|ConfirmationBox basic usage 1`] = `
       smallRounded={false}
       wide={false}
     >
-      WITHDRAW MY APPLICATION
+      WIthdraw my application
     </Button>
     <Button
       block={false}
@@ -1102,13 +1102,17 @@ exports[`Storyshots Core Components|ConfirmationBox basic usage 1`] = `
       smallRounded={false}
       wide={false}
     >
-      DISMISS
+      <span
+        className="AutoUI_ui_ConfirmationBox-69"
+      >
+        Dismiss
+      </span>
     </Button>
   </div>
 </div>
 `;
 
-exports[`Storyshots Core Components|ConfirmationBox/Debug missing props (does this component explode?) 1`] = `
+exports[`Storyshots Core Components|ConfirmationBox/Debug missing props 1`] = `
 <div
   className="AutoUI_ui_ConfirmationBox-22"
 >
@@ -1119,6 +1123,9 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug missing props (does th
   </h2>
   <p
     className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+  />
+  <div
+    className="AutoUI_ui_ConfirmationBox-51"
   />
 </div>
 `;
@@ -1184,7 +1191,103 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug random data 1`] = `
       smallRounded={false}
       wide={false}
     >
-      DISMISS
+      <span
+        className="AutoUI_ui_ConfirmationBox-69"
+      >
+        Dismiss
+      </span>
+    </Button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core Components|ConfirmationBox/Debug random data and action button only 1`] = `
+<div
+  className="AutoUI_ui_ConfirmationBox-22"
+>
+  <h2
+    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+  >
+    string
+  </h2>
+  <p
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+  >
+    string
+  </p>
+  <div
+    className="AutoUI_ui_ConfirmationBox-51"
+  >
+    <Button
+      block={false}
+      className="AutoUI_ui_ConfirmationBox-58"
+      color="normal"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      onClick={[Function]}
+      outlined={false}
+      pseudolink={false}
+      raised={false}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="normal"
+      smallRounded={false}
+      wide={false}
+    >
+      string
+    </Button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core Components|ConfirmationBox/Debug random data and dismiss button only 1`] = `
+<div
+  className="AutoUI_ui_ConfirmationBox-22"
+>
+  <h2
+    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+  >
+    string
+  </h2>
+  <p
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+  >
+    string
+  </p>
+  <div
+    className="AutoUI_ui_ConfirmationBox-51"
+  >
+    <Button
+      block={false}
+      className="AutoUI_ui_ConfirmationBox-63"
+      color="normal"
+      component="button"
+      contentStyle="normal"
+      disabled={false}
+      icon=""
+      iconProps={Object {}}
+      onClick={[Function]}
+      outlined={false}
+      pseudolink={true}
+      raised={false}
+      readOnly={false}
+      rounded={false}
+      selectbox={false}
+      selected={false}
+      size="normal"
+      smallRounded={false}
+      wide={false}
+    >
+      <span
+        className="AutoUI_ui_ConfirmationBox-69"
+      >
+        Dismiss
+      </span>
     </Button>
   </div>
 </div>
@@ -15074,6 +15177,32 @@ exports[`Storyshots Styleguide|General ColorPalette 1`] = `
       </GenericCopyToClipboard>
       <GenericCopyToClipboard
         className=""
+        key="original colors-mountainMistGray"
+        text="mountainMistGray"
+        tooltipXOffset={0}
+      >
+        <div
+          className="AutoUI_styleguides_ColorPalette-55 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          style={
+            Object {
+              "backgroundColor": "#8E8D93",
+            }
+          }
+        >
+          <div
+            className="AutoUI_styleguides_ColorPalette-68"
+          >
+            mountainMistGray
+          </div>
+          <div
+            className="AutoUI_styleguides_ColorPalette-75"
+          >
+            #8E8D93
+          </div>
+        </div>
+      </GenericCopyToClipboard>
+      <GenericCopyToClipboard
+        className=""
         key="original colors-iron"
         text="iron"
         tooltipXOffset={0}
@@ -15395,6 +15524,32 @@ exports[`Storyshots Styleguide|General ColorPalette 1`] = `
             className="AutoUI_styleguides_ColorPalette-75"
           >
             #8E8E8E
+          </div>
+        </div>
+      </GenericCopyToClipboard>
+      <GenericCopyToClipboard
+        className=""
+        key="base colors-baseBrightGray"
+        text="baseBrightGray"
+        tooltipXOffset={0}
+      >
+        <div
+          className="AutoUI_styleguides_ColorPalette-55 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          style={
+            Object {
+              "backgroundColor": "#8E8D93",
+            }
+          }
+        >
+          <div
+            className="AutoUI_styleguides_ColorPalette-68"
+          >
+            baseBrightGray
+          </div>
+          <div
+            className="AutoUI_styleguides_ColorPalette-75"
+          >
+            #8E8D93
           </div>
         </div>
       </GenericCopyToClipboard>
