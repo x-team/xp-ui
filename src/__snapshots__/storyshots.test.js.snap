@@ -15373,6 +15373,32 @@ exports[`Storyshots Styleguide|General ColorPalette 1`] = `
       </GenericCopyToClipboard>
       <GenericCopyToClipboard
         className=""
+        key="base colors-baseTuna"
+        text="baseTuna"
+        tooltipXOffset={0}
+      >
+        <div
+          className="AutoUI_styleguides_ColorPalette-55 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          style={
+            Object {
+              "backgroundColor": "#34323B",
+            }
+          }
+        >
+          <div
+            className="AutoUI_styleguides_ColorPalette-68"
+          >
+            baseTuna
+          </div>
+          <div
+            className="AutoUI_styleguides_ColorPalette-75"
+          >
+            #34323B
+          </div>
+        </div>
+      </GenericCopyToClipboard>
+      <GenericCopyToClipboard
+        className=""
         key="base colors-baseRed"
         text="baseRed"
         tooltipXOffset={0}
