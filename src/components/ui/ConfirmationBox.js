@@ -34,14 +34,14 @@ const cx = {
     color: ${theme.baseDark}
     font-size: 24px
     font-weight: 500
-    height: 33px
-    line-height: 33px
     margin: 0
     width: 100%
   `),
 
   content: cmz(
-    typeface.text, `
+    typeface.text,
+    `
+    color: ${theme.baseTuna}
     font-weight: normal
     font-size: 20px
     line-height: 140%
@@ -51,19 +51,24 @@ const cx = {
   ctaContainer: cmz(`
     display: flex
     justify-content: space-between
-    height: 46px
     width: 100%
   `),
 
   actionButton: cmz(`
     background-color: ${theme.baseRed}
-    margin: 0
+    margin-right: auto
   `),
 
   dismissButton: cmz(`
-    color: ${theme.baeBrightGray}
-    margin-right: auto
-    margin-left: 10px
+    & {
+      color: ${theme.baeBrightGray}
+      margin-right: auto
+      margin-left: 10px
+    }
+
+    &:only-child {
+      margin: 0
+    }
   `),
 
   dismissButtonLabel: cmz(`

@@ -57,6 +57,7 @@ export const baseColors = {
   baseBright: palette.athensGrayBright,
   baseDarker: palette.haiti,
   baseDark: palette.black,
+  baseTuna: palette.tuna,
   baseRed: palette.radicalRed,
   baseLightRed: palette.wePeep,
   baseGreen: palette.fern,

@@ -54,6 +54,8 @@ storiesOf('Core Components|ConfirmationBox/Use Cases', module)
       </State>
     </Body>
   ))
+
+storiesOf('Core Components|ConfirmationBox/Debug', module)
   .add('with Modal and random data', () => (
     <Body>
       <State initialState={{ isOpen: true }}>
@@ -76,8 +78,6 @@ storiesOf('Core Components|ConfirmationBox/Use Cases', module)
       </State>
     </Body>
   ))
-
-storiesOf('Core Components|ConfirmationBox/Debug', module)
   .add('random data', () => (
     <ConfirmationBox
       title={text('Title', faker.lorem.sentence())}
