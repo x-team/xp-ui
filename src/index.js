@@ -12,9 +12,9 @@ import ApplicantScreenNotification from './components/ui/ApplicantScreenNotifica
 import ApplicantTopProfileDisplay from './components/ui/ApplicantTopProfileDisplay'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
-import ConfirmationBox from './components/ui/ConfirmationBox'
 import Button from './components/ui/Button'
 import ColumnsCustomizer from './components/ui/ColumnsCustomizer'
+import ConfirmationBox from './components/ui/ConfirmationBox'
 import CopyToClipboardButton from './components/ui/CopyToClipboardButton'
 import DataGrid from './components/ui/DataGrid'
 import Dropdown from './components/ui/Dropdown'
@@ -81,9 +81,9 @@ export {
   ApplicantTopProfileDisplay,
   AttachFiles,
   Avatar,
-  ConfirmationBox,
   Button,
   ColumnsCustomizer,
+  ConfirmationBox,
   CopyToClipboardButton,
   DataGrid,
   Dropdown,
