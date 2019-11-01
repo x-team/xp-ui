@@ -75,28 +75,28 @@ const ConfirmationBox = ({ title = 'Are you sure?', content, action, actionLabel
   <div className={cx.wrapper}>
     <h2 className={cx.title}>{title}</h2>
     <p className={cx.content}>{content}</p>
-      <div className={cx.ctaContainer}>
-        {action && (
-          <Button
-            className={cx.actionButton}
-            onClick={action}
-          >
-            {actionLabel}
-          </Button>
-        )}
+    <div className={cx.ctaContainer}>
+      {action && (
+        <Button
+          className={cx.actionButton}
+          onClick={action}
+        >
+          {actionLabel}
+        </Button>
+      )}
 
-        {dismissAction && (
-          <Button
-            pseudolink
-            className={cx.dismissButton}
-            onClick={dismissAction}
-          >
-            <span className={cx.dismissButtonLabel}>
+      {dismissAction && (
+        <Button
+          pseudolink
+          className={cx.dismissButton}
+          onClick={dismissAction}
+        >
+          <span className={cx.dismissButtonLabel}>
               Dismiss
-            </span>
-          </Button>
-        )}
-      </div>
+          </span>
+        </Button>
+      )}
+    </div>
   </div>
 )
 
