@@ -1046,69 +1046,65 @@ exports[`Storyshots Core Components|ConfirmationBox basic usage 1`] = `
   className="AutoUI_ui_ConfirmationBox-22"
 >
   <h2
-    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+    className="AutoUI_ui_ConfirmationBox-35 AutoUI_typo-19"
   >
     Are you sure?
   </h2>
   <p
-    className="AutoUI_ui_ConfirmationBox-41 AutoUI_typo-24"
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
   >
     This will cancel your application and you will no longer be considered for this role.
   </p>
-  <div
-    className="AutoUI_ui_ConfirmationBox-51"
+  <Button
+    block={false}
+    className=""
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
   >
-    <Button
-      block={false}
-      className="AutoUI_ui_ConfirmationBox-57"
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      onClick={[Function]}
-      outlined={false}
-      pseudolink={false}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
+    WIthdraw my application
+  </Button>
+  <Button
+    block={false}
+    className="AutoUI_ui_ConfirmationBox-53"
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={true}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
+  >
+    <span
+      className="AutoUI_ui_ConfirmationBox-64"
     >
-      WIthdraw my application
-    </Button>
-    <Button
-      block={false}
-      className="AutoUI_ui_ConfirmationBox-62"
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      onClick={[Function]}
-      outlined={false}
-      pseudolink={true}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
-    >
-      <span
-        className="AutoUI_ui_ConfirmationBox-74"
-      >
-        Dismiss
-      </span>
-    </Button>
-  </div>
+      Dismiss
+    </span>
+  </Button>
 </div>
 `;
 
@@ -1117,15 +1113,12 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug missing props 1`] = `
   className="AutoUI_ui_ConfirmationBox-22"
 >
   <h2
-    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+    className="AutoUI_ui_ConfirmationBox-35 AutoUI_typo-19"
   >
     Are you sure?
   </h2>
   <p
-    className="AutoUI_ui_ConfirmationBox-41 AutoUI_typo-24"
-  />
-  <div
-    className="AutoUI_ui_ConfirmationBox-51"
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
   />
 </div>
 `;
@@ -1135,69 +1128,65 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug random data 1`] = `
   className="AutoUI_ui_ConfirmationBox-22"
 >
   <h2
-    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+    className="AutoUI_ui_ConfirmationBox-35 AutoUI_typo-19"
   >
     string
   </h2>
   <p
-    className="AutoUI_ui_ConfirmationBox-41 AutoUI_typo-24"
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
   >
     string
   </p>
-  <div
-    className="AutoUI_ui_ConfirmationBox-51"
+  <Button
+    block={false}
+    className=""
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
   >
-    <Button
-      block={false}
-      className="AutoUI_ui_ConfirmationBox-57"
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      onClick={[Function]}
-      outlined={false}
-      pseudolink={false}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
+    string
+  </Button>
+  <Button
+    block={false}
+    className="AutoUI_ui_ConfirmationBox-53"
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={true}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
+  >
+    <span
+      className="AutoUI_ui_ConfirmationBox-64"
     >
-      string
-    </Button>
-    <Button
-      block={false}
-      className="AutoUI_ui_ConfirmationBox-62"
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      onClick={[Function]}
-      outlined={false}
-      pseudolink={true}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
-    >
-      <span
-        className="AutoUI_ui_ConfirmationBox-74"
-      >
-        Dismiss
-      </span>
-    </Button>
-  </div>
+      Dismiss
+    </span>
+  </Button>
 </div>
 `;
 
@@ -1206,42 +1195,38 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug random data and action
   className="AutoUI_ui_ConfirmationBox-22"
 >
   <h2
-    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+    className="AutoUI_ui_ConfirmationBox-35 AutoUI_typo-19"
   >
     string
   </h2>
   <p
-    className="AutoUI_ui_ConfirmationBox-41 AutoUI_typo-24"
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
   >
     string
   </p>
-  <div
-    className="AutoUI_ui_ConfirmationBox-51"
+  <Button
+    block={false}
+    className=""
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={false}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
   >
-    <Button
-      block={false}
-      className="AutoUI_ui_ConfirmationBox-57"
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      onClick={[Function]}
-      outlined={false}
-      pseudolink={false}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
-    >
-      string
-    </Button>
-  </div>
+    string
+  </Button>
 </div>
 `;
 
@@ -1250,46 +1235,42 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug random data and dismis
   className="AutoUI_ui_ConfirmationBox-22"
 >
   <h2
-    className="AutoUI_ui_ConfirmationBox-32 AutoUI_typo-19"
+    className="AutoUI_ui_ConfirmationBox-35 AutoUI_typo-19"
   >
     string
   </h2>
   <p
-    className="AutoUI_ui_ConfirmationBox-41 AutoUI_typo-24"
+    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
   >
     string
   </p>
-  <div
-    className="AutoUI_ui_ConfirmationBox-51"
+  <Button
+    block={false}
+    className="AutoUI_ui_ConfirmationBox-53"
+    color="normal"
+    component="button"
+    contentStyle="normal"
+    disabled={false}
+    icon=""
+    iconProps={Object {}}
+    onClick={[Function]}
+    outlined={false}
+    pseudolink={true}
+    raised={false}
+    readOnly={false}
+    rounded={false}
+    selectbox={false}
+    selected={false}
+    size="normal"
+    smallRounded={false}
+    wide={false}
   >
-    <Button
-      block={false}
-      className="AutoUI_ui_ConfirmationBox-62"
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      onClick={[Function]}
-      outlined={false}
-      pseudolink={true}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="normal"
-      smallRounded={false}
-      wide={false}
+    <span
+      className="AutoUI_ui_ConfirmationBox-64"
     >
-      <span
-        className="AutoUI_ui_ConfirmationBox-74"
-      >
-        Dismiss
-      </span>
-    </Button>
-  </div>
+      Dismiss
+    </span>
+  </Button>
 </div>
 `;
 

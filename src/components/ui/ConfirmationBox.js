@@ -72,7 +72,6 @@ const ConfirmationBox = ({ title = 'Are you sure?', content, action, actionLabel
     <p className={cx.content}>{content}</p>
     {action && (
       <Button
-        className={cx.actionButton}
         onClick={action}
       >
         {actionLabel}
