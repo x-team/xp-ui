@@ -20,49 +20,39 @@ type Props = {
 const WRAPPER_PADDING = '24px'
 const cx = {
   wrapper: cmz(`
-    display: flex
-    align-items: center
-    flex-direction: column
-    font-size: 14px
-    justify-content: center
-    padding: ${WRAPPER_PADDING}
-    width: calc(500px - ${WRAPPER_PADDING})
+    & {
+      padding: ${WRAPPER_PADDING}
+      width: calc(500px - ${WRAPPER_PADDING} * 2)
+    }
+
+    @media screen and (max-width: 600px) {
+      & {
+        width: calc(100% - ${WRAPPER_PADDING} * 2)
+      }
+    }
   `),
 
   title: cmz(
     typeface.semiHeading, `
-    color: ${theme.baseDark}
+    color: ${theme.typoHeading}
     font-size: 24px
     font-weight: 500
     margin: 0
-    width: 100%
   `),
 
   content: cmz(
     typeface.text,
     `
-    color: ${theme.baseTuna}
+    color: ${theme.typoParagraph}
     font-weight: normal
     font-size: 20px
     line-height: 140%
     margin: 24px 0
   `),
 
-  ctaContainer: cmz(`
-    display: flex
-    justify-content: space-between
-    width: 100%
-  `),
-
-  actionButton: cmz(`
-    background-color: ${theme.baseRed}
-    margin-right: auto
-  `),
-
   dismissButton: cmz(`
     & {
-      color: ${theme.baeBrightGray}
-      margin-right: auto
+      color: ${theme.typoLabel}
       margin-left: 10px
     }
 
@@ -80,28 +70,26 @@ const ConfirmationBox = ({ title = 'Are you sure?', content, action, actionLabel
   <div className={cx.wrapper}>
     <h2 className={cx.title}>{title}</h2>
     <p className={cx.content}>{content}</p>
-    <div className={cx.ctaContainer}>
-      {action && (
-        <Button
-          className={cx.actionButton}
-          onClick={action}
-        >
-          {actionLabel}
-        </Button>
-      )}
+    {action && (
+      <Button
+        className={cx.actionButton}
+        onClick={action}
+      >
+        {actionLabel}
+      </Button>
+    )}
 
-      {dismissAction && (
-        <Button
-          pseudolink
-          className={cx.dismissButton}
-          onClick={dismissAction}
-        >
-          <span className={cx.dismissButtonLabel}>
-              Dismiss
-          </span>
-        </Button>
-      )}
-    </div>
+    {dismissAction && (
+      <Button
+        pseudolink
+        className={cx.dismissButton}
+        onClick={dismissAction}
+      >
+        <span className={cx.dismissButtonLabel}>
+          Dismiss
+        </span>
+      </Button>
+    )}
   </div>
 )
 
