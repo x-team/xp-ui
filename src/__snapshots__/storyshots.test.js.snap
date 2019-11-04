@@ -14664,6 +14664,32 @@ exports[`Storyshots Styleguide|General ColorPalette 1`] = `
       </GenericCopyToClipboard>
       <GenericCopyToClipboard
         className=""
+        key="original colors-lightTuna"
+        text="lightTuna"
+        tooltipXOffset={0}
+      >
+        <div
+          className="AutoUI_styleguides_ColorPalette-55 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          style={
+            Object {
+              "backgroundColor": "#34323BBF",
+            }
+          }
+        >
+          <div
+            className="AutoUI_styleguides_ColorPalette-68"
+          >
+            lightTuna
+          </div>
+          <div
+            className="AutoUI_styleguides_ColorPalette-75"
+          >
+            #34323BBF
+          </div>
+        </div>
+      </GenericCopyToClipboard>
+      <GenericCopyToClipboard
+        className=""
         key="original colors-manatee"
         text="manatee"
         tooltipXOffset={0}
@@ -15883,6 +15909,32 @@ exports[`Storyshots Styleguide|General ColorPalette 1`] = `
             className="AutoUI_styleguides_ColorPalette-75"
           >
             #34323B
+          </div>
+        </div>
+      </GenericCopyToClipboard>
+      <GenericCopyToClipboard
+        className=""
+        key="typography colors-typoGrayTitle"
+        text="typoGrayTitle"
+        tooltipXOffset={0}
+      >
+        <div
+          className="AutoUI_styleguides_ColorPalette-55 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+          style={
+            Object {
+              "backgroundColor": "#34323BBF",
+            }
+          }
+        >
+          <div
+            className="AutoUI_styleguides_ColorPalette-68"
+          >
+            typoGrayTitle
+          </div>
+          <div
+            className="AutoUI_styleguides_ColorPalette-75"
+          >
+            #34323BBF
           </div>
         </div>
       </GenericCopyToClipboard>
@@ -18573,6 +18625,79 @@ exports[`Storyshots UI Components|ApplicantTopProfileDisplay/Debug missing props
     className="AutoUI_ui_ApplicantTopProfileDisplay-81"
   />
 </section>
+`;
+
+exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
+<Fragment>
+  <h2
+    className="AutoUI_ui_ClosedJobs-28 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+  >
+    CLOSED
+  </h2>
+  <ul
+    className="AutoUI_ui_ClosedJobs-21"
+  >
+    <li
+      key="Web Developer with Ruby on Rails experience"
+    >
+      <h3
+        className="AutoUI_ui_ClosedJobs-40 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+      >
+        Web Developer with Ruby on Rails experience
+      </h3>
+      <p
+        className="AutoUI_ui_ClosedJobs-9 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+      >
+        Closed on 
+        April 17th, 2019
+        , applied on 
+        March 28th, 2019
+      </p>
+    </li>
+    <li
+      key="Senior Full Stack Engineer"
+    >
+      <h3
+        className="AutoUI_ui_ClosedJobs-40 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+      >
+        Senior Full Stack Engineer
+      </h3>
+      <p
+        className="AutoUI_ui_ClosedJobs-9 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+      >
+        Closed on 
+        February 17th, 2019
+        , applied on 
+        March 28th, 2019
+      </p>
+    </li>
+    <li
+      key="UX Content Writer"
+    >
+      <h3
+        className="AutoUI_ui_ClosedJobs-40 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+      >
+        UX Content Writer
+      </h3>
+      <p
+        className="AutoUI_ui_ClosedJobs-9 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+      >
+        Closed on 
+        April 17th, 2019
+        , applied on 
+        March 28th, 2019
+      </p>
+    </li>
+  </ul>
+  <div
+    className="AutoUI_ui_ClosedJobs-51"
+  />
+  <p
+    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-9 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    Apllications older than 3 months are archived
+  </p>
+</Fragment>
 `;
 
 exports[`Storyshots UI Components|ColumnsCustomizer basic usage 1`] = `

@@ -2,6 +2,7 @@ import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
 import ConfirmationBox from './components/ui/ConfirmationBox'
 import Button from './components/ui/Button'
+import ClosedJobs from './components/ui/ClosedJobs'
 import ErrorBox from './components/ui/ErrorBox'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
@@ -27,6 +28,7 @@ export {
   AttachFiles,
   ConfirmationBox,
   Button,
+  ClosedJobs,
   ErrorBox,
   Footer,
   FooterBrands,
