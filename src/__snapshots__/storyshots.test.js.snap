@@ -12639,10 +12639,10 @@ exports[`Storyshots Screens and Layouts|JobsPageLayout/Debug missing props (does
     className="AutoUI_ui_JobsPageLayout-19"
   >
     <div
-      className="AutoUI_ui_JobsPageLayout-42"
+      className="AutoUI_ui_JobsPageLayout-33"
     >
       <div
-        className="AutoUI_ui_JobsPageLayout-56"
+        className="AutoUI_ui_JobsPageLayout-47"
       />
     </div>
   </div>
