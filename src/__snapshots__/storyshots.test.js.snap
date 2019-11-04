@@ -1046,12 +1046,12 @@ exports[`Storyshots Core Components|ConfirmationBox basic usage 1`] = `
   className="AutoUI_ui_ConfirmationBox-22"
 >
   <h2
-    className="AutoUI_ui_ConfirmationBox-35 AutoUI_typo-19"
+    className="AutoUI_ui_ConfirmationBox-28 AutoUI_typo-19"
   >
     Are you sure?
   </h2>
   <p
-    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+    className="AutoUI_ui_ConfirmationBox-36 AutoUI_typo-24"
   >
     This will cancel your application and you will no longer be considered for this role.
   </p>
@@ -1080,7 +1080,7 @@ exports[`Storyshots Core Components|ConfirmationBox basic usage 1`] = `
   </Button>
   <Button
     block={false}
-    className="AutoUI_ui_ConfirmationBox-53"
+    className="AutoUI_ui_ConfirmationBox-46"
     color="normal"
     component="button"
     contentStyle="normal"
@@ -1100,7 +1100,7 @@ exports[`Storyshots Core Components|ConfirmationBox basic usage 1`] = `
     wide={false}
   >
     <span
-      className="AutoUI_ui_ConfirmationBox-64"
+      className="AutoUI_ui_ConfirmationBox-57"
     >
       Dismiss
     </span>
@@ -1113,12 +1113,12 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug missing props 1`] = `
   className="AutoUI_ui_ConfirmationBox-22"
 >
   <h2
-    className="AutoUI_ui_ConfirmationBox-35 AutoUI_typo-19"
+    className="AutoUI_ui_ConfirmationBox-28 AutoUI_typo-19"
   >
     Are you sure?
   </h2>
   <p
-    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+    className="AutoUI_ui_ConfirmationBox-36 AutoUI_typo-24"
   />
 </div>
 `;
@@ -1128,12 +1128,12 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug random data 1`] = `
   className="AutoUI_ui_ConfirmationBox-22"
 >
   <h2
-    className="AutoUI_ui_ConfirmationBox-35 AutoUI_typo-19"
+    className="AutoUI_ui_ConfirmationBox-28 AutoUI_typo-19"
   >
     string
   </h2>
   <p
-    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+    className="AutoUI_ui_ConfirmationBox-36 AutoUI_typo-24"
   >
     string
   </p>
@@ -1162,7 +1162,7 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug random data 1`] = `
   </Button>
   <Button
     block={false}
-    className="AutoUI_ui_ConfirmationBox-53"
+    className="AutoUI_ui_ConfirmationBox-46"
     color="normal"
     component="button"
     contentStyle="normal"
@@ -1182,7 +1182,7 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug random data 1`] = `
     wide={false}
   >
     <span
-      className="AutoUI_ui_ConfirmationBox-64"
+      className="AutoUI_ui_ConfirmationBox-57"
     >
       Dismiss
     </span>
@@ -1195,12 +1195,12 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug random data and action
   className="AutoUI_ui_ConfirmationBox-22"
 >
   <h2
-    className="AutoUI_ui_ConfirmationBox-35 AutoUI_typo-19"
+    className="AutoUI_ui_ConfirmationBox-28 AutoUI_typo-19"
   >
     string
   </h2>
   <p
-    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+    className="AutoUI_ui_ConfirmationBox-36 AutoUI_typo-24"
   >
     string
   </p>
@@ -1235,18 +1235,18 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug random data and dismis
   className="AutoUI_ui_ConfirmationBox-22"
 >
   <h2
-    className="AutoUI_ui_ConfirmationBox-35 AutoUI_typo-19"
+    className="AutoUI_ui_ConfirmationBox-28 AutoUI_typo-19"
   >
     string
   </h2>
   <p
-    className="AutoUI_ui_ConfirmationBox-43 AutoUI_typo-24"
+    className="AutoUI_ui_ConfirmationBox-36 AutoUI_typo-24"
   >
     string
   </p>
   <Button
     block={false}
-    className="AutoUI_ui_ConfirmationBox-53"
+    className="AutoUI_ui_ConfirmationBox-46"
     color="normal"
     component="button"
     contentStyle="normal"
@@ -1266,7 +1266,7 @@ exports[`Storyshots Core Components|ConfirmationBox/Debug random data and dismis
     wide={false}
   >
     <span
-      className="AutoUI_ui_ConfirmationBox-64"
+      className="AutoUI_ui_ConfirmationBox-57"
     >
       Dismiss
     </span>
