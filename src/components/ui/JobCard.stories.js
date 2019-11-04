@@ -4,7 +4,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text } from '@storybook/addon-knobs'
 import faker from 'faker'
 
 import JobCard from './JobCard'
@@ -15,20 +15,53 @@ export const JobCardLink = ({ children, ...props }: { children: React$Node }) =>
   </a>
 )
 
+const nameSample = faker.random.words()
+const summarySample = faker.lorem.paragraph()
+const messageSample = faker.random.words()
+
 storiesOf('UI Components|JobCard', module)
   .add('basic usage', () => (
     <JobCard
-      applied={boolean('Applied', false)}
-      name={text('Name', faker.random.words())}
-      summary={text('Summary', faker.lorem.paragraph())}
-      message={text('Message', faker.random.words())}
+      name={text('Name', nameSample)}
+      summary={text('Summary', summarySample)}
+      message={text('Message', messageSample)}
       link={JobCardLink}
-      onApply={action('onApply')}
-      onWithdraw={action('onWithdraw')}
     />
   ))
 
 storiesOf('UI Components|JobCard/Debug', module)
+  .add('without message', () => (
+    <JobCard
+      name={text('Name', nameSample)}
+      summary={text('Summary', summarySample)}
+      link={JobCardLink}
+    />
+  ))
+  .add('without summary', () => (
+    <JobCard
+      name={text('Name', nameSample)}
+      link={JobCardLink}
+      message={text('Message', messageSample)}
+    />
+  ))
+  .add('without link', () => (
+    <JobCard
+      name={text('Name', nameSample)}
+      summary={text('Summary', summarySample)}
+      message={text('Message', messageSample)}
+    />
+  ))
+  .add('without link and message', () => (
+    <JobCard
+      name={text('Name', nameSample)}
+      summary={text('Summary', summarySample)}
+    />
+  ))
+  .add('only name', () => (
+    <JobCard
+      name={text('Name', nameSample)}
+    />
+  ))
   .add('missing props (does component explode?)', () => (
     <JobCard />
   ))

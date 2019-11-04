@@ -12639,10 +12639,10 @@ exports[`Storyshots Screens and Layouts|JobsPageLayout/Debug missing props (does
     className="AutoUI_ui_JobsPageLayout-19"
   >
     <div
-      className="AutoUI_ui_JobsPageLayout-42"
+      className="AutoUI_ui_JobsPageLayout-33"
     >
       <div
-        className="AutoUI_ui_JobsPageLayout-56"
+        className="AutoUI_ui_JobsPageLayout-47"
       />
     </div>
   </div>
@@ -34415,57 +34415,30 @@ exports[`Storyshots UI Components|JobApplicationCard/Use Cases contained in colu
 
 exports[`Storyshots UI Components|JobCard basic usage 1`] = `
 <div
-  className="AutoUI_ui_JobCard-14 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  className="AutoUI_ui_JobCard-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
 >
   <JobCardLink
-    className="AutoUI_ui_JobCard-32 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    className="AutoUI_ui_JobCard-30 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
   >
     <h3
-      className="AutoUI_ui_JobCard-25 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+      className="AutoUI_ui_JobCard-23 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
     >
       string string
     </h3>
   </JobCardLink>
   <div
-    className="AutoUI_ui_JobCard-47 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobCard-45 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     string
      
     <JobCardLink
-      className="AutoUI_ui_JobCard-68"
+      className="AutoUI_ui_JobCard-62"
     >
       Learn more »
     </JobCardLink>
   </div>
   <div
-    className="AutoUI_ui_JobCard-55"
-  >
-    <Button
-      block={false}
-      className=""
-      color="normal"
-      component="button"
-      contentStyle="normal"
-      disabled={false}
-      icon=""
-      iconProps={Object {}}
-      onClick={[Function]}
-      outlined={false}
-      pseudolink={false}
-      raised={false}
-      readOnly={false}
-      rounded={false}
-      selectbox={false}
-      selected={false}
-      size="small"
-      smallRounded={false}
-      wide={false}
-    >
-      Apply for this position
-    </Button>
-  </div>
-  <div
-    className="AutoUI_ui_JobCard-59 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_JobCard-53 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
   >
     string string
   </div>
@@ -34473,6 +34446,107 @@ exports[`Storyshots UI Components|JobCard basic usage 1`] = `
 `;
 
 exports[`Storyshots UI Components|JobCard/Debug missing props (does component explode?) 1`] = `""`;
+
+exports[`Storyshots UI Components|JobCard/Debug only name 1`] = `
+<div
+  className="AutoUI_ui_JobCard-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+>
+  <h3
+    className="AutoUI_ui_JobCard-30 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+  >
+    string string
+  </h3>
+</div>
+`;
+
+exports[`Storyshots UI Components|JobCard/Debug without link 1`] = `
+<div
+  className="AutoUI_ui_JobCard-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+>
+  <h3
+    className="AutoUI_ui_JobCard-30 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+  >
+    string string
+  </h3>
+  <div
+    className="AutoUI_ui_JobCard-45 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    string
+     
+  </div>
+  <div
+    className="AutoUI_ui_JobCard-53 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    string string
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|JobCard/Debug without link and message 1`] = `
+<div
+  className="AutoUI_ui_JobCard-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+>
+  <h3
+    className="AutoUI_ui_JobCard-30 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+  >
+    string string
+  </h3>
+  <div
+    className="AutoUI_ui_JobCard-45 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    string
+     
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|JobCard/Debug without message 1`] = `
+<div
+  className="AutoUI_ui_JobCard-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+>
+  <JobCardLink
+    className="AutoUI_ui_JobCard-30 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+  >
+    <h3
+      className="AutoUI_ui_JobCard-23 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    >
+      string string
+    </h3>
+  </JobCardLink>
+  <div
+    className="AutoUI_ui_JobCard-45 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    string
+     
+    <JobCardLink
+      className="AutoUI_ui_JobCard-62"
+    >
+      Learn more »
+    </JobCardLink>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Components|JobCard/Debug without summary 1`] = `
+<div
+  className="AutoUI_ui_JobCard-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+>
+  <JobCardLink
+    className="AutoUI_ui_JobCard-30 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+  >
+    <h3
+      className="AutoUI_ui_JobCard-23 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    >
+      string string
+    </h3>
+  </JobCardLink>
+  <div
+    className="AutoUI_ui_JobCard-53 AutoUI_typo-165 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    string string
+  </div>
+</div>
+`;
 
 exports[`Storyshots UI Components|JobDetails basic usage 1`] = `
 <div

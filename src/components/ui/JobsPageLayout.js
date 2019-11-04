@@ -12,30 +12,21 @@ import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 
-const gap = '32px'
-const wrapper = '1100px'
+const GAP = '32px'
+const WRAPPER_WIDTH = '1100px'
 
 const cx = {
   wrapper: cmz(`
-    & {
-      max-width: calc(${wrapper} - 2 * ${gap})
-      padding: 0 ${gap}
-      margin: 0 auto 100px
-    }
-
-    @media screen and (max-width: ${breakpoints.sm}) {
-      & {
-        padding: 0
-        margin: 0 ${gap} 100px
-      }
-    }
+    max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
+    padding: 0 ${GAP}
+    margin: 0 auto 100px
   `),
 
   heading: cmz(
     typo.heading,
     `
-      font-size: ${gap}
-      margin: ${gap} 0
+      font-size: ${GAP}
+      margin: ${GAP} 0
     `
   ),
 
@@ -46,7 +37,7 @@ const cx = {
       flex-direction: column
     }
 
-    @media screen and (min-width: ${breakpoints.sm}) {
+    @media screen and (min-width: ${breakpoints.md}) {
       & {
         flex-direction: row
       }
@@ -59,9 +50,9 @@ const cx = {
       order: 2
     }
 
-    @media screen and (min-width: ${breakpoints.sm}) {
+    @media screen and (min-width: ${breakpoints.md}) {
       &:not(:only-child) {
-        margin-right: ${gap}
+        margin-right: ${GAP}
         max-width: 760px
         order: 1
       }
@@ -72,20 +63,14 @@ const cx = {
     & {
       width: 100%
       order: 1
-      margin-bottom: ${gap}
-    }
-
-    @media screen and (min-width: ${breakpoints.sm}) {
-      & {
-        max-width: 200px
-        order: 2
-        margin-bottom: 0
-      }
+      margin-bottom: ${GAP}
     }
 
     @media screen and (min-width: ${breakpoints.md}) {
       & {
         max-width: 308px
+        order: 2
+        margin-bottom: 0
       }
     }
   `),
