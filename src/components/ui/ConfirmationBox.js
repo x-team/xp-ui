@@ -20,16 +20,9 @@ type Props = {
 const WRAPPER_PADDING = '24px'
 const cx = {
   wrapper: cmz(`
-    & {
-      padding: ${WRAPPER_PADDING}
-      width: calc(500px - ${WRAPPER_PADDING} * 2)
-    }
-
-    @media screen and (max-width: 600px) {
-      & {
-        width: calc(100% - ${WRAPPER_PADDING} * 2)
-      }
-    }
+    padding: ${WRAPPER_PADDING}
+    width: calc(100% - ${WRAPPER_PADDING} * 2)
+    max-width: calc(500px - ${WRAPPER_PADDING} * 2)
   `),
 
   title: cmz(
