@@ -18630,12 +18630,12 @@ exports[`Storyshots UI Components|ApplicantTopProfileDisplay/Debug missing props
 exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
 <Fragment>
   <h2
-    className="AutoUI_ui_ClosedJobs-28 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    className="AutoUI_ui_ClosedJobs-29 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
   >
-    CLOSED
+    Closed
   </h2>
   <ul
-    className="AutoUI_ui_ClosedJobs-21"
+    className="AutoUI_ui_ClosedJobs-22"
   >
     <li
       key="Web Developer with Ruby on Rails experience"
@@ -18643,15 +18643,14 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
       <h3
         className="AutoUI_ui_ClosedJobs-40 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       >
-        Web Developer with Ruby on Rails experience
+        <JobsLink>
+          Web Developer with Ruby on Rails experience
+        </JobsLink>
       </h3>
       <p
-        className="AutoUI_ui_ClosedJobs-9 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
       >
-        Closed on 
-        April 17th, 2019
-        , applied on 
-        March 28th, 2019
+        Closed on April 17th, 2019, applied on March 28th, 2019
       </p>
     </li>
     <li
@@ -18660,15 +18659,14 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
       <h3
         className="AutoUI_ui_ClosedJobs-40 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       >
-        Senior Full Stack Engineer
+        <JobsLink>
+          Senior Full Stack Engineer
+        </JobsLink>
       </h3>
       <p
-        className="AutoUI_ui_ClosedJobs-9 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
       >
-        Closed on 
-        February 17th, 2019
-        , applied on 
-        March 28th, 2019
+        Closed on February 17th, 2019, applied on March 28th, 2019
       </p>
     </li>
     <li
@@ -18677,15 +18675,14 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
       <h3
         className="AutoUI_ui_ClosedJobs-40 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       >
-        UX Content Writer
+        <JobsLink>
+          UX Content Writer
+        </JobsLink>
       </h3>
       <p
-        className="AutoUI_ui_ClosedJobs-9 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
       >
-        Closed on 
-        April 17th, 2019
-        , applied on 
-        March 28th, 2019
+        Closed on April 17th, 2019, applied on March 28th, 2019
       </p>
     </li>
   </ul>
@@ -18693,7 +18690,98 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
     className="AutoUI_ui_ClosedJobs-51"
   />
   <p
-    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-9 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    Apllications older than 3 months are archived
+  </p>
+</Fragment>
+`;
+
+exports[`Storyshots UI Components|ClosedJobs/Debug with random data 1`] = `
+<Fragment>
+  <h2
+    className="AutoUI_ui_ClosedJobs-29 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+  >
+    Closed
+  </h2>
+  <ul
+    className="AutoUI_ui_ClosedJobs-22"
+  >
+    <li
+      key="string"
+    >
+      <h3
+        className="AutoUI_ui_ClosedJobs-40 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+      >
+        <JobsLink>
+          string
+        </JobsLink>
+      </h3>
+      <p
+        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+      >
+        string
+      </p>
+    </li>
+    <li
+      key="string"
+    >
+      <h3
+        className="AutoUI_ui_ClosedJobs-40 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+      >
+        <JobsLink>
+          string
+        </JobsLink>
+      </h3>
+      <p
+        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+      >
+        string
+      </p>
+    </li>
+    <li
+      key="string"
+    >
+      <h3
+        className="AutoUI_ui_ClosedJobs-40 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+      >
+        <JobsLink>
+          string
+        </JobsLink>
+      </h3>
+      <p
+        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+      >
+        string
+      </p>
+    </li>
+  </ul>
+  <div
+    className="AutoUI_ui_ClosedJobs-51"
+  />
+  <p
+    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  >
+    Apllications older than 3 months are archived
+  </p>
+</Fragment>
+`;
+
+exports[`Storyshots UI Components|ClosedJobs/Debug without data 1`] = `
+<Fragment>
+  <h2
+    className="AutoUI_ui_ClosedJobs-29 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+  >
+    Closed
+  </h2>
+  <ul
+    className="AutoUI_ui_ClosedJobs-22"
+  />
+  <div
+    className="AutoUI_ui_ClosedJobs-51"
+  />
+  <p
+    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     Apllications older than 3 months are archived
   </p>

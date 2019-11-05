@@ -1,4 +1,5 @@
 // @flow
+/* global React$StatelessFunctionalComponent */
 
 import React, { Fragment } from 'react'
 import typo from '../../styles/typo'
@@ -34,7 +35,7 @@ const cx = {
     font-size: 24px
     line-height: 33px
     letter-spacing: -0.02em
-    text-transform: none
+    text-transform: uppercase
   `),
 
   jobTitle: cmz(
@@ -64,26 +65,26 @@ const cx = {
 
 type Job = {
   title?: string,
-  description?: string,
-  path?: string
+  description?: string
 }
 
 type Props = {
-  jobs?: Array<Job>
+  jobs?: Array<Job>,
+  link?: React$StatelessFunctionalComponent<*>
 }
 
-const ClosedJobs = ({ jobs, link: AppLink }: Props) => (
+const ClosedJobs = ({ jobs = [], link: AppLink }: Props) => (
   <Fragment>
-    <h2 className={cx.title}>CLOSED</h2>
+    <h2 className={cx.title}>Closed</h2>
     <ul className={cx.closedJobsContainer}>
       {
-        jobs && jobs.map(item => (
-          <li key={item.title}>
+        jobs.map(job => (
+          <li key={job.title}>
             <h3 className={cx.jobTitle}>
-              <AppLink>{item.title}</AppLink>
+              {AppLink && <AppLink>{job.title}</AppLink>}
             </h3>
             <p className={description}>
-              {item.description}
+              {job.description}
             </p>
           </li>
         ))
