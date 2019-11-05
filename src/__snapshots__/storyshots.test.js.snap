@@ -18368,45 +18368,21 @@ exports[`Storyshots UI Components|ApplicantProfileContentDisplay/Debug missing p
 
 exports[`Storyshots UI Components|ApplicantScreenNotification basic usage 1`] = `
 <div
-  className="AutoUI_ui_ApplicantScreenNotification-21"
+  className="AutoUI_ui_ApplicantScreenNotification-47"
 >
-  <CSSTransitionGroup
-    transitionAppear={true}
-    transitionAppearTimeout={1000}
-    transitionEnter={true}
-    transitionEnterTimeout={1000}
-    transitionLeave={true}
-    transitionLeaveTimeout={300}
-    transitionName={
-      Object {
-        "appear": "AutoUI_ui_ApplicantScreenNotification-87",
-        "appearActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "enter": "AutoUI_ui_ApplicantScreenNotification-87",
-        "enterActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "leave": "AutoUI_ui_ApplicantScreenNotification-96",
-        "leaveActive": "AutoUI_ui_ApplicantScreenNotification-100",
-      }
-    }
+  <div
+    className="AutoUI_ui_ApplicantScreenNotification-17 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
-      className="AutoUI_ui_ApplicantScreenNotification-28 AutoUI_ui_ApplicantScreenNotification-73"
-      key="animate"
+      className="AutoUI_ui_ApplicantScreenNotification-32"
     >
-      <div
-        className="AutoUI_ui_ApplicantScreenNotification-34 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
-      >
-        <div
-          className="AutoUI_ui_ApplicantScreenNotification-58"
-        >
-          <SvgIcon
-            color="inverted"
-            icon="check"
-          />
-        </div>
-        Hello this is a notification
-      </div>
+      <SvgIcon
+        color="inverted"
+        icon="check"
+      />
     </div>
-  </CSSTransitionGroup>
+    Hello this is a notification
+  </div>
 </div>
 `;
 
@@ -18414,218 +18390,106 @@ exports[`Storyshots UI Components|ApplicantScreenNotification/Debug missing prop
 
 exports[`Storyshots UI Components|ApplicantScreenNotification/Debug with HTML content 1`] = `
 <div
-  className="AutoUI_ui_ApplicantScreenNotification-21"
+  className="AutoUI_ui_ApplicantScreenNotification-47"
 >
-  <CSSTransitionGroup
-    transitionAppear={true}
-    transitionAppearTimeout={1000}
-    transitionEnter={true}
-    transitionEnterTimeout={1000}
-    transitionLeave={true}
-    transitionLeaveTimeout={300}
-    transitionName={
-      Object {
-        "appear": "AutoUI_ui_ApplicantScreenNotification-87",
-        "appearActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "enter": "AutoUI_ui_ApplicantScreenNotification-87",
-        "enterActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "leave": "AutoUI_ui_ApplicantScreenNotification-96",
-        "leaveActive": "AutoUI_ui_ApplicantScreenNotification-100",
-      }
-    }
+  <div
+    className="AutoUI_ui_ApplicantScreenNotification-17 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
-      className="AutoUI_ui_ApplicantScreenNotification-28 AutoUI_ui_ApplicantScreenNotification-73"
-      key="animate"
+      className="AutoUI_ui_ApplicantScreenNotification-32"
     >
-      <div
-        className="AutoUI_ui_ApplicantScreenNotification-34 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
-      >
-        <div
-          className="AutoUI_ui_ApplicantScreenNotification-58"
-        >
-          <SvgIcon
-            color="inverted"
-            icon="check"
-          />
-        </div>
-        <span>
-          Hello this is a 
-          <strong>
-            notification
-          </strong>
-        </span>
-      </div>
+      <SvgIcon
+        color="inverted"
+        icon="check"
+      />
     </div>
-  </CSSTransitionGroup>
+    <span>
+      Hello this is a 
+      <strong>
+        notification
+      </strong>
+       with 
+      <u>
+        typography
+      </u>
+       
+      <em>
+        HTML elements
+      </em>
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Storyshots UI Components|ApplicantScreenNotification/Debug with long content 1`] = `
 <div
-  className="AutoUI_ui_ApplicantScreenNotification-21"
+  className="AutoUI_ui_ApplicantScreenNotification-47"
 >
-  <CSSTransitionGroup
-    transitionAppear={true}
-    transitionAppearTimeout={1000}
-    transitionEnter={true}
-    transitionEnterTimeout={1000}
-    transitionLeave={true}
-    transitionLeaveTimeout={300}
-    transitionName={
-      Object {
-        "appear": "AutoUI_ui_ApplicantScreenNotification-87",
-        "appearActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "enter": "AutoUI_ui_ApplicantScreenNotification-87",
-        "enterActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "leave": "AutoUI_ui_ApplicantScreenNotification-96",
-        "leaveActive": "AutoUI_ui_ApplicantScreenNotification-100",
-      }
-    }
+  <div
+    className="AutoUI_ui_ApplicantScreenNotification-17 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
-      className="AutoUI_ui_ApplicantScreenNotification-28 AutoUI_ui_ApplicantScreenNotification-73"
-      key="animate"
+      className="AutoUI_ui_ApplicantScreenNotification-32"
     >
-      <div
-        className="AutoUI_ui_ApplicantScreenNotification-34 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
-      >
-        <div
-          className="AutoUI_ui_ApplicantScreenNotification-58"
-        >
-          <SvgIcon
-            color="inverted"
-            icon="check"
-          />
-        </div>
-        string
-      </div>
+      <SvgIcon
+        color="inverted"
+        icon="check"
+      />
     </div>
-  </CSSTransitionGroup>
+    string
+  </div>
 </div>
 `;
 
 exports[`Storyshots UI Components|ApplicantScreenNotification/States error 1`] = `
 <div
-  className="AutoUI_ui_ApplicantScreenNotification-21"
+  className="AutoUI_ui_ApplicantScreenNotification-55"
 >
-  <CSSTransitionGroup
-    transitionAppear={true}
-    transitionAppearTimeout={1000}
-    transitionEnter={true}
-    transitionEnterTimeout={1000}
-    transitionLeave={true}
-    transitionLeaveTimeout={300}
-    transitionName={
-      Object {
-        "appear": "AutoUI_ui_ApplicantScreenNotification-87",
-        "appearActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "enter": "AutoUI_ui_ApplicantScreenNotification-87",
-        "enterActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "leave": "AutoUI_ui_ApplicantScreenNotification-96",
-        "leaveActive": "AutoUI_ui_ApplicantScreenNotification-100",
-      }
-    }
+  <div
+    className="AutoUI_ui_ApplicantScreenNotification-17 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
-      className="AutoUI_ui_ApplicantScreenNotification-28 AutoUI_ui_ApplicantScreenNotification-81"
-      key="animate"
+      className="AutoUI_ui_ApplicantScreenNotification-32"
     >
-      <div
-        className="AutoUI_ui_ApplicantScreenNotification-34 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
-      >
-        <div
-          className="AutoUI_ui_ApplicantScreenNotification-58"
-        >
-          <SvgIcon
-            color="inverted"
-            icon="x"
-          />
-        </div>
-        Hello this is a notification
-      </div>
+      <SvgIcon
+        color="inverted"
+        icon="x"
+      />
     </div>
-  </CSSTransitionGroup>
+    Hello this is a notification
+  </div>
 </div>
 `;
 
 exports[`Storyshots UI Components|ApplicantScreenNotification/States success 1`] = `
 <div
-  className="AutoUI_ui_ApplicantScreenNotification-21"
+  className="AutoUI_ui_ApplicantScreenNotification-47"
 >
-  <CSSTransitionGroup
-    transitionAppear={true}
-    transitionAppearTimeout={1000}
-    transitionEnter={true}
-    transitionEnterTimeout={1000}
-    transitionLeave={true}
-    transitionLeaveTimeout={300}
-    transitionName={
-      Object {
-        "appear": "AutoUI_ui_ApplicantScreenNotification-87",
-        "appearActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "enter": "AutoUI_ui_ApplicantScreenNotification-87",
-        "enterActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "leave": "AutoUI_ui_ApplicantScreenNotification-96",
-        "leaveActive": "AutoUI_ui_ApplicantScreenNotification-100",
-      }
-    }
+  <div
+    className="AutoUI_ui_ApplicantScreenNotification-17 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     <div
-      className="AutoUI_ui_ApplicantScreenNotification-28 AutoUI_ui_ApplicantScreenNotification-73"
-      key="animate"
+      className="AutoUI_ui_ApplicantScreenNotification-32"
     >
-      <div
-        className="AutoUI_ui_ApplicantScreenNotification-34 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
-      >
-        <div
-          className="AutoUI_ui_ApplicantScreenNotification-58"
-        >
-          <SvgIcon
-            color="inverted"
-            icon="check"
-          />
-        </div>
-        Hello this is a notification
-      </div>
+      <SvgIcon
+        color="inverted"
+        icon="check"
+      />
     </div>
-  </CSSTransitionGroup>
+    Hello this is a notification
+  </div>
 </div>
 `;
 
 exports[`Storyshots UI Components|ApplicantScreenNotification/States warning 1`] = `
 <div
-  className="AutoUI_ui_ApplicantScreenNotification-21"
+  className="AutoUI_ui_ApplicantScreenNotification-51"
 >
-  <CSSTransitionGroup
-    transitionAppear={true}
-    transitionAppearTimeout={1000}
-    transitionEnter={true}
-    transitionEnterTimeout={1000}
-    transitionLeave={true}
-    transitionLeaveTimeout={300}
-    transitionName={
-      Object {
-        "appear": "AutoUI_ui_ApplicantScreenNotification-87",
-        "appearActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "enter": "AutoUI_ui_ApplicantScreenNotification-87",
-        "enterActive": "AutoUI_ui_ApplicantScreenNotification-91",
-        "leave": "AutoUI_ui_ApplicantScreenNotification-96",
-        "leaveActive": "AutoUI_ui_ApplicantScreenNotification-100",
-      }
-    }
+  <div
+    className="AutoUI_ui_ApplicantScreenNotification-17 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
-    <div
-      className="AutoUI_ui_ApplicantScreenNotification-28 AutoUI_ui_ApplicantScreenNotification-77"
-      key="animate"
-    >
-      <div
-        className="AutoUI_ui_ApplicantScreenNotification-34 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
-      >
-        Hello this is a notification
-      </div>
-    </div>
-  </CSSTransitionGroup>
+    Hello this is a notification
+  </div>
 </div>
 `;
 
