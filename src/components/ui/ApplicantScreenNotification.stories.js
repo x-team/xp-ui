@@ -50,7 +50,7 @@ storiesOf('UI Components|ApplicantScreenNotification/States', module)
 storiesOf('UI Components|ApplicantScreenNotification/Debug', module)
   .add('with HTML content', () => (
     <ApplicantScreenNotification>
-      <span>Hello this is a <strong>notification</strong></span>
+      <span>Hello this is a <strong>notification</strong> with <u>typography</u> <em>HTML elements</em></span>
     </ApplicantScreenNotification>
   ))
   .add('with long content', () => (
