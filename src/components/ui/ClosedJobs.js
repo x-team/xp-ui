@@ -29,7 +29,7 @@ const cx = {
   title: cmz(
     typo.sectionHeading,
     `
-    color: ${theme.typoGrayTitle}
+    color: ${theme.typoParagraph.lighten(0.7)}
     font-style: normal
     font-weight: bold
     font-size: 24px
