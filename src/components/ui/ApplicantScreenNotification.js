@@ -21,7 +21,7 @@ const cx = {
       align-items: center
       color: ${theme.baseBrighter}
       font-weight: 400
-      font-size: 16px
+      font-size: 1rem
       line-height: 1
       max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
       padding: 15px ${GAP}
