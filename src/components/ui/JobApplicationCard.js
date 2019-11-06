@@ -1,4 +1,5 @@
 // @flow
+/* global React$Node */
 
 import React, { Fragment } from 'react'
 
@@ -6,8 +7,6 @@ import Button from './Button'
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
-
-import { getMonthName, getDayWithOrdinal } from '../../utils/helpers'
 
 const cmz = require('cmz')
 
@@ -38,7 +37,7 @@ const cx = {
 
 type Props = {
   isApplied?: boolean,
-  applicationDate?: Date,
+  message?: React$Node,
   isSaving?: boolean,
   onApply?: () => void,
   onWithdraw?: () => void
@@ -46,17 +45,11 @@ type Props = {
 
 const JobApplicationCard = ({
   isApplied = false,
-  applicationDate,
+  message,
   isSaving,
   onApply,
   onWithdraw
 }: Props) => {
-  const date = () => {
-    const month = getMonthName(applicationDate)
-    const day = getDayWithOrdinal(applicationDate)
-    return `${month} ${day}`
-  }
-
   const renderApplyCard = () => (
     <Button wide disabled={isSaving} onClick={onApply} className={cx.button}>Apply For This Position</Button>
   )
@@ -64,10 +57,11 @@ const JobApplicationCard = ({
   const renderWithdrawCard = () => (
     <Fragment>
       <Button wide color='monochrome' disabled={isSaving} onClick={onWithdraw} className={cx.button}>Withdraw Application</Button>
-      <p className={cx.paragraph}>
-        You've already applied for this position{ applicationDate && ` on ${date()}` }.
-        <b> Check your email for next steps.</b>
-      </p>
+      {message && (
+        <p className={cx.paragraph}>
+          {message}
+        </p>
+      )}
     </Fragment>
   )
 

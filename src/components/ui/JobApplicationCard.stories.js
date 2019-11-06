@@ -6,21 +6,15 @@ import { action } from '@storybook/addon-actions'
 
 import JobApplicationCard from './JobApplicationCard'
 
+const messageSample = (
+  <span>You've already applied for this position March 27th. <b> Check your email for next steps.</b></span>
+)
+
 storiesOf('UI Components|JobApplicationCard', module)
   .add('default', () => (
     <JobApplicationCard
       onApply={action('Applying for job...')}
     />
-  ))
-
-storiesOf('UI Components|JobApplicationCard/Use Cases', module)
-  .add('contained in column - like it is in the job page layout', () => (
-    <div style={{ width: '220px' }}>
-      <JobApplicationCard
-        isApplied
-        onApply={action('Applying for job...')}
-      />
-    </div>
   ))
 
 storiesOf('UI Components|JobApplicationCard/States', module)
@@ -33,7 +27,7 @@ storiesOf('UI Components|JobApplicationCard/States', module)
   .add('withdraw', () => (
     <JobApplicationCard
       isApplied
-      applicationDate={new Date('Tue, 22 Oct 2019 20:35:15 GMT')}
+      message={messageSample}
       onWithdraw={action('Withdrawing from job...')}
     />
   ))
@@ -48,18 +42,12 @@ storiesOf('UI Components|JobApplicationCard/States', module)
     <JobApplicationCard
       isApplied
       isSaving
-      applicationDate={new Date('Tue, 22 Oct 2019 20:35:15 GMT')}
+      message={messageSample}
       onWithdraw={action('Withdrawing from job...')}
     />
   ))
 
 storiesOf('UI Components|JobApplicationCard/Debug', module)
-  .add('missing date', () => (
-    <JobApplicationCard
-      isApplied
-      onWithdraw={action('Withdrawing from job...')}
-    />
-  ))
   .add('missing props', () => (
     <JobApplicationCard />
   ))
