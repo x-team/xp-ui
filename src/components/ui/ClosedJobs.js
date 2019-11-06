@@ -2,7 +2,9 @@
 /* global React$StatelessFunctionalComponent */
 
 import React, { Fragment } from 'react'
+
 import typo from '../../styles/typo'
+
 import theme from '../../styles/theme'
 
 const cmz = require('cmz')
@@ -10,11 +12,10 @@ const cmz = require('cmz')
 const description = cmz(
   typo.baseText,
   `
-    color: #34323B
-    font-style: normal
+    color: ${theme.typoParagraph}
     font-weight: 300
     font-size: 16px
-    line-height: 140%
+    line-height: 1.4
     margin: 4px 0 24px 0
 `)
 
@@ -30,7 +31,6 @@ const cx = {
     typo.sectionHeading,
     `
     color: ${theme.typoParagraph.lighten(0.7)}
-    font-style: normal
     font-weight: bold
     font-size: 24px
     line-height: 33px
@@ -41,9 +41,9 @@ const cx = {
   jobTitle: cmz(
     typo.badgeHeading,
     `
-    color: #34323B
+    color: ${theme.typoParagraph}
     font-style: italic
-    font-weight: normal
+    font-weight: 400
     font-size: 18px
     line-height: 25px
     text-transform: none
@@ -51,7 +51,8 @@ const cx = {
 
   divider: cmz(`
     height: 1px
-    background: #D6D6D8
+    border: none
+    background: ${theme.lineSilver5}
     opacity: 0.5
     width: 100%
   `),
@@ -65,15 +66,17 @@ const cx = {
 
 type Job = {
   title?: string,
-  description?: string
+  description?: string,
+  link?: string
 }
 
 type Props = {
   jobs?: Array<Job>,
-  link?: React$StatelessFunctionalComponent<*>
+  link?: React$StatelessFunctionalComponent<*>,
+  arquivedMessage?: string
 }
 
-const ClosedJobs = ({ jobs = [], link: AppLink }: Props) => (
+const ClosedJobs = ({ jobs = [], link: AppLink, arquivedMessage }: Props) => (
   <Fragment>
     <h2 className={cx.title}>Closed</h2>
     <ul className={cx.closedJobsContainer}>
@@ -81,7 +84,7 @@ const ClosedJobs = ({ jobs = [], link: AppLink }: Props) => (
         jobs.map(job => (
           <li key={job.title}>
             <h3 className={cx.jobTitle}>
-              {AppLink && <AppLink>{job.title}</AppLink>}
+              {AppLink && <AppLink to={job.link}>{job.title}</AppLink>}
             </h3>
             <p className={description}>
               {job.description}
@@ -90,8 +93,8 @@ const ClosedJobs = ({ jobs = [], link: AppLink }: Props) => (
         ))
       }
     </ul>
-    <div className={cx.divider} />
-    <p className={cx.archivedMessage}>Apllications older than 3 months are archived</p>
+    <hr className={cx.divider} />
+    <p className={cx.archivedMessage}>{arquivedMessage}</p>
   </Fragment>
 )
 

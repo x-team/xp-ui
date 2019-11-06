@@ -47,13 +47,13 @@ const randomData = [
 
 storiesOf('UI Components|ClosedJobs', module)
   .add('basic usage', () => (
-    <ClosedJobs jobs={jobsList} link={JobsLink} />
+    <ClosedJobs jobs={jobsList} link={JobsLink} arquivedMessage={'Applications older than 3 months are archived'} />
   ))
 
 storiesOf('UI Components|ClosedJobs/Debug', module)
   .add('without data', () => (
-    <ClosedJobs link={JobsLink} />
+    <ClosedJobs />
   ))
   .add('with random data', () => (
-    <ClosedJobs jobs={randomData} link={JobsLink} />
+    <ClosedJobs jobs={randomData} link={JobsLink} arquivedMessage={text('arquivedMessage', faker.lorem.sentence())} />
   ))

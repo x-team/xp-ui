@@ -18578,12 +18578,12 @@ exports[`Storyshots UI Components|ApplicantTopProfileDisplay/Debug missing props
 exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
 <Fragment>
   <h2
-    className="AutoUI_ui_ClosedJobs-29 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    className="AutoUI_ui_ClosedJobs-30 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
   >
     Closed
   </h2>
   <ul
-    className="AutoUI_ui_ClosedJobs-22"
+    className="AutoUI_ui_ClosedJobs-23"
   >
     <li
       key="Web Developer with Ruby on Rails experience"
@@ -18596,7 +18596,7 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
         </JobsLink>
       </h3>
       <p
-        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+        className="AutoUI_ui_ClosedJobs-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
       >
         Closed on April 17th, 2019, applied on March 28th, 2019
       </p>
@@ -18612,7 +18612,7 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
         </JobsLink>
       </h3>
       <p
-        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+        className="AutoUI_ui_ClosedJobs-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
       >
         Closed on February 17th, 2019, applied on March 28th, 2019
       </p>
@@ -18628,19 +18628,19 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
         </JobsLink>
       </h3>
       <p
-        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+        className="AutoUI_ui_ClosedJobs-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
       >
         Closed on April 17th, 2019, applied on March 28th, 2019
       </p>
     </li>
   </ul>
-  <div
+  <hr
     className="AutoUI_ui_ClosedJobs-52"
   />
   <p
-    className="AutoUI_ui_ClosedJobs-59 AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_ClosedJobs-60 AutoUI_ui_ClosedJobs-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
-    Apllications older than 3 months are archived
+    Applications older than 3 months are archived
   </p>
 </Fragment>
 `;
@@ -18648,12 +18648,12 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
 exports[`Storyshots UI Components|ClosedJobs/Debug with random data 1`] = `
 <Fragment>
   <h2
-    className="AutoUI_ui_ClosedJobs-29 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    className="AutoUI_ui_ClosedJobs-30 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
   >
     Closed
   </h2>
   <ul
-    className="AutoUI_ui_ClosedJobs-22"
+    className="AutoUI_ui_ClosedJobs-23"
   >
     <li
       key="string"
@@ -18666,7 +18666,7 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with random data 1`] = `
         </JobsLink>
       </h3>
       <p
-        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+        className="AutoUI_ui_ClosedJobs-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
       >
         string
       </p>
@@ -18682,7 +18682,7 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with random data 1`] = `
         </JobsLink>
       </h3>
       <p
-        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+        className="AutoUI_ui_ClosedJobs-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
       >
         string
       </p>
@@ -18698,19 +18698,19 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with random data 1`] = `
         </JobsLink>
       </h3>
       <p
-        className="AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+        className="AutoUI_ui_ClosedJobs-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
       >
         string
       </p>
     </li>
   </ul>
-  <div
+  <hr
     className="AutoUI_ui_ClosedJobs-52"
   />
   <p
-    className="AutoUI_ui_ClosedJobs-59 AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_ClosedJobs-60 AutoUI_ui_ClosedJobs-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
-    Apllications older than 3 months are archived
+    string
   </p>
 </Fragment>
 `;
@@ -18718,21 +18718,19 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with random data 1`] = `
 exports[`Storyshots UI Components|ClosedJobs/Debug without data 1`] = `
 <Fragment>
   <h2
-    className="AutoUI_ui_ClosedJobs-29 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
+    className="AutoUI_ui_ClosedJobs-30 AutoUI_typo-85 AutoUI_typo-36 AutoUI_typo-19"
   >
     Closed
   </h2>
   <ul
-    className="AutoUI_ui_ClosedJobs-22"
+    className="AutoUI_ui_ClosedJobs-23"
   />
-  <div
+  <hr
     className="AutoUI_ui_ClosedJobs-52"
   />
   <p
-    className="AutoUI_ui_ClosedJobs-59 AutoUI_ui_ClosedJobs-10 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
-  >
-    Apllications older than 3 months are archived
-  </p>
+    className="AutoUI_ui_ClosedJobs-60 AutoUI_ui_ClosedJobs-12 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+  />
 </Fragment>
 `;
 
