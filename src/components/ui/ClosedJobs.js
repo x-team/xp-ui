@@ -14,7 +14,7 @@ const description = cmz(
   `
     color: ${theme.typoParagraph}
     font-weight: 300
-    font-size: 16px
+    font-size: 1rem
     line-height: 1.4
     margin: 4px 0 24px 0
 `)
@@ -31,10 +31,9 @@ const cx = {
     typo.sectionHeading,
     `
     color: ${theme.typoParagraph.lighten(0.7)}
-    font-weight: bold
-    font-size: 24px
-    line-height: 33px
-    letter-spacing: -0.02em
+    font-weight: 700
+    font-size: 1.5rem
+    letter-spacing: 0.48px
     text-transform: uppercase
   `),
 
@@ -44,8 +43,8 @@ const cx = {
     color: ${theme.typoParagraph}
     font-style: italic
     font-weight: 400
-    font-size: 18px
-    line-height: 25px
+    font-size: 1.125rem
+    line-height: 1.4
     text-transform: none
   `),
 
