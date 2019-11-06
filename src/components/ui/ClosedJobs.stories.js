@@ -33,7 +33,7 @@ const jobsList = [
 const randomData = [
   {
     title: text('Title', faker.name.jobTitle()),
-    description: text('Description', faker.lorem.paragraph())
+    description: text('Description', faker.lorem.sentence())
   },
   {
     title: text('Title', faker.name.jobTitle()),
@@ -51,9 +51,18 @@ storiesOf('UI Components|ClosedJobs', module)
   ))
 
 storiesOf('UI Components|ClosedJobs/Debug', module)
-  .add('without data', () => (
-    <ClosedJobs />
-  ))
   .add('with random data', () => (
     <ClosedJobs jobs={randomData} link={JobsLink} arquivedMessage={text('arquivedMessage', faker.lorem.sentence())} />
+  ))
+  .add('with jobs only', () => (
+    <ClosedJobs jobs={jobsList} />
+  ))
+  .add('with archived message only', () => (
+    <ClosedJobs arquivedMessage={'Applications older than 3 months are archived'} />
+  ))
+  .add('with link only', () => (
+    <ClosedJobs link={JobsLink} />
+  ))
+  .add('missing props (does component explode?)', () => (
+    <ClosedJobs />
   ))
