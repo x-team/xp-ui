@@ -4,7 +4,6 @@
 import React, { Fragment } from 'react'
 
 import typo from '../../styles/typo'
-
 import theme from '../../styles/theme'
 
 const cmz = require('cmz')
@@ -14,7 +13,7 @@ const description = cmz(
   `
     color: ${theme.typoParagraph}
     font-weight: 300
-    font-size: 1rem
+    font-size: 16px
     line-height: 1.4
     margin: 4px 0 24px 0
 `)
@@ -32,7 +31,7 @@ const cx = {
     `
     color: ${theme.typoParagraph.lighten(0.7)}
     font-weight: 700
-    font-size: 1.5rem
+    font-size: 24px
     letter-spacing: 0.48px
     text-transform: uppercase
   `),
@@ -43,7 +42,7 @@ const cx = {
     color: ${theme.typoParagraph}
     font-style: italic
     font-weight: 400
-    font-size: 1.125rem
+    font-size: 18px
     line-height: 1.4
     text-transform: none
   `),
@@ -72,10 +71,10 @@ type Job = {
 type Props = {
   jobs?: Array<Job>,
   link?: React$StatelessFunctionalComponent<*>,
-  arquivedMessage?: string
+  message?: string
 }
 
-const ClosedJobs = ({ jobs = [], link: AppLink, arquivedMessage }: Props) => (
+const ClosedJobs = ({ jobs = [], link: AppLink, message }: Props) => (
   <Fragment>
     <h2 className={cx.title}>Closed</h2>
     <ul className={cx.closedJobsContainer}>
@@ -93,7 +92,7 @@ const ClosedJobs = ({ jobs = [], link: AppLink, arquivedMessage }: Props) => (
       }
     </ul>
     <hr className={cx.divider} />
-    <p className={cx.archivedMessage}>{arquivedMessage}</p>
+    <p className={cx.archivedMessage}>{message}</p>
   </Fragment>
 )
 
