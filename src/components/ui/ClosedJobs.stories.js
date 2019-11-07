@@ -3,11 +3,11 @@
 
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-
-import ClosedJobs from './ClosedJobs'
 import { text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import faker from 'faker'
+
+import ClosedJobs from './ClosedJobs'
 
 export const JobsLink = ({ children, ...props }: { children: React$Node }) => (
   <a onClick={action('This should be react-router/gasby Link')} {...props}>

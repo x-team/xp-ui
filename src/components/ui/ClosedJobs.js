@@ -15,7 +15,7 @@ const description = cmz(
     font-weight: 300
     font-size: 16px
     line-height: 1.4
-    margin: 4px 0 24px 0
+    margin: 4px 0 0
 `)
 
 const cx = {
@@ -26,7 +26,7 @@ const cx = {
     padding: 0
   `),
 
-  title: cmz(
+  heading: cmz(
     typo.sectionHeading,
     `
     color: ${theme.typoParagraph.lighten(0.7)}
@@ -34,6 +34,16 @@ const cx = {
     font-size: 24px
     letter-spacing: 0.48px
     text-transform: uppercase
+  `),
+
+  jobItem: cmz(`
+    & {
+      margin-bottom: 24px
+    }
+
+    &:last-child {
+      margin-bottom: 14px
+    }
   `),
 
   jobTitle: cmz(
@@ -55,7 +65,7 @@ const cx = {
     width: 100%
   `),
 
-  archivedMessage: cmz(
+  message: cmz(
     description,
     `
       margin-top: 24px
@@ -76,11 +86,11 @@ type Props = {
 
 const ClosedJobs = ({ jobs = [], link: AppLink, message }: Props) => (
   <Fragment>
-    <h2 className={cx.title}>Closed</h2>
+    <h2 className={cx.heading}>Closed</h2>
     <ul className={cx.closedJobsContainer}>
       {
         jobs.map(job => (
-          <li key={job.title}>
+          <li key={job.title} className={cx.jobItem}>
             <h3 className={cx.jobTitle}>
               {AppLink && <AppLink to={job.link}>{job.title}</AppLink>}
             </h3>
@@ -92,7 +102,7 @@ const ClosedJobs = ({ jobs = [], link: AppLink, message }: Props) => (
       }
     </ul>
     <hr className={cx.divider} />
-    <p className={cx.archivedMessage}>{message}</p>
+    <p className={cx.message}>{message}</p>
   </Fragment>
 )
 

@@ -18586,10 +18586,11 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
     className="AutoUI_ui_ClosedJobs-22"
   >
     <li
+      className="AutoUI_ui_ClosedJobs-39"
       key="Web Developer with Ruby on Rails experience"
     >
       <h3
-        className="AutoUI_ui_ClosedJobs-39 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+        className="AutoUI_ui_ClosedJobs-49 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       >
         <JobsLink>
           Web Developer with Ruby on Rails experience
@@ -18602,10 +18603,11 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
       </p>
     </li>
     <li
+      className="AutoUI_ui_ClosedJobs-39"
       key="Senior Full Stack Engineer"
     >
       <h3
-        className="AutoUI_ui_ClosedJobs-39 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+        className="AutoUI_ui_ClosedJobs-49 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       >
         <JobsLink>
           Senior Full Stack Engineer
@@ -18618,10 +18620,11 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
       </p>
     </li>
     <li
+      className="AutoUI_ui_ClosedJobs-39"
       key="UX Content Writer"
     >
       <h3
-        className="AutoUI_ui_ClosedJobs-39 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+        className="AutoUI_ui_ClosedJobs-49 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       >
         <JobsLink>
           UX Content Writer
@@ -18635,10 +18638,10 @@ exports[`Storyshots UI Components|ClosedJobs basic usage 1`] = `
     </li>
   </ul>
   <hr
-    className="AutoUI_ui_ClosedJobs-50"
+    className="AutoUI_ui_ClosedJobs-60"
   />
   <p
-    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_ClosedJobs-68 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     Applications older than 3 months are archived
   </p>
@@ -18656,10 +18659,10 @@ exports[`Storyshots UI Components|ClosedJobs/Debug missing props 1`] = `
     className="AutoUI_ui_ClosedJobs-22"
   />
   <hr
-    className="AutoUI_ui_ClosedJobs-50"
+    className="AutoUI_ui_ClosedJobs-60"
   />
   <p
-    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_ClosedJobs-68 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   />
 </Fragment>
 `;
@@ -18675,10 +18678,10 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with archived message only 1`
     className="AutoUI_ui_ClosedJobs-22"
   />
   <hr
-    className="AutoUI_ui_ClosedJobs-50"
+    className="AutoUI_ui_ClosedJobs-60"
   />
   <p
-    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_ClosedJobs-68 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     Applications older than 3 months are archived
   </p>
@@ -18696,10 +18699,11 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with jobs only 1`] = `
     className="AutoUI_ui_ClosedJobs-22"
   >
     <li
+      className="AutoUI_ui_ClosedJobs-39"
       key="Web Developer with Ruby on Rails experience"
     >
       <h3
-        className="AutoUI_ui_ClosedJobs-39 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+        className="AutoUI_ui_ClosedJobs-49 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       />
       <p
         className="AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
@@ -18708,10 +18712,11 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with jobs only 1`] = `
       </p>
     </li>
     <li
+      className="AutoUI_ui_ClosedJobs-39"
       key="Senior Full Stack Engineer"
     >
       <h3
-        className="AutoUI_ui_ClosedJobs-39 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+        className="AutoUI_ui_ClosedJobs-49 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       />
       <p
         className="AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
@@ -18720,10 +18725,11 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with jobs only 1`] = `
       </p>
     </li>
     <li
+      className="AutoUI_ui_ClosedJobs-39"
       key="UX Content Writer"
     >
       <h3
-        className="AutoUI_ui_ClosedJobs-39 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+        className="AutoUI_ui_ClosedJobs-49 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       />
       <p
         className="AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
@@ -18733,10 +18739,10 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with jobs only 1`] = `
     </li>
   </ul>
   <hr
-    className="AutoUI_ui_ClosedJobs-50"
+    className="AutoUI_ui_ClosedJobs-60"
   />
   <p
-    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_ClosedJobs-68 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   />
 </Fragment>
 `;
@@ -18752,10 +18758,10 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with link only 1`] = `
     className="AutoUI_ui_ClosedJobs-22"
   />
   <hr
-    className="AutoUI_ui_ClosedJobs-50"
+    className="AutoUI_ui_ClosedJobs-60"
   />
   <p
-    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_ClosedJobs-68 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   />
 </Fragment>
 `;
@@ -18771,10 +18777,11 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with random data 1`] = `
     className="AutoUI_ui_ClosedJobs-22"
   >
     <li
+      className="AutoUI_ui_ClosedJobs-39"
       key="string"
     >
       <h3
-        className="AutoUI_ui_ClosedJobs-39 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+        className="AutoUI_ui_ClosedJobs-49 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       >
         <JobsLink>
           string
@@ -18787,10 +18794,11 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with random data 1`] = `
       </p>
     </li>
     <li
+      className="AutoUI_ui_ClosedJobs-39"
       key="string"
     >
       <h3
-        className="AutoUI_ui_ClosedJobs-39 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+        className="AutoUI_ui_ClosedJobs-49 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       >
         <JobsLink>
           string
@@ -18803,10 +18811,11 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with random data 1`] = `
       </p>
     </li>
     <li
+      className="AutoUI_ui_ClosedJobs-39"
       key="string"
     >
       <h3
-        className="AutoUI_ui_ClosedJobs-39 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
+        className="AutoUI_ui_ClosedJobs-49 AutoUI_typo-97 AutoUI_typo-36 AutoUI_typo-19"
       >
         <JobsLink>
           string
@@ -18820,10 +18829,10 @@ exports[`Storyshots UI Components|ClosedJobs/Debug with random data 1`] = `
     </li>
   </ul>
   <hr
-    className="AutoUI_ui_ClosedJobs-50"
+    className="AutoUI_ui_ClosedJobs-60"
   />
   <p
-    className="AutoUI_ui_ClosedJobs-58 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
+    className="AutoUI_ui_ClosedJobs-68 AutoUI_ui_ClosedJobs-11 AutoUI_typo-155 AutoUI_typo-36 AutoUI_typo-24"
   >
     string
   </p>
