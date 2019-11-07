@@ -63,6 +63,6 @@ storiesOf('UI Components|ClosedJobs/Debug', module)
   .add('with link only', () => (
     <ClosedJobs link={JobsLink} />
   ))
-  .add('missing props (does component explode?)', () => (
+  .add('missing props', () => (
     <ClosedJobs />
   ))
