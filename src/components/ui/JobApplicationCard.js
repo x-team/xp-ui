@@ -37,7 +37,7 @@ const cx = {
 }
 
 type Props = {
-  hasApplied?: boolean,
+  isApplied?: boolean,
   applicationDate?: Date,
   isSaving?: boolean,
   onApply?: () => void,
@@ -45,7 +45,7 @@ type Props = {
 }
 
 const JobApplicationCard = ({
-  hasApplied = false,
+  isApplied = false,
   applicationDate,
   isSaving,
   onApply,
@@ -73,7 +73,7 @@ const JobApplicationCard = ({
 
   return (
     <div className={cx.card}>
-      {hasApplied ? renderWithdrawCard() : renderApplyCard()}
+      {isApplied ? renderWithdrawCard() : renderApplyCard()}
     </div>
   )
 }

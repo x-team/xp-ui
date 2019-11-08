@@ -17,7 +17,7 @@ storiesOf('UI Components|JobApplicationCard/Use Cases', module)
   .add('contained in column - like it is in the job page layout', () => (
     <div style={{ width: '220px' }}>
       <JobApplicationCard
-        hasApplied
+        isApplied
         onApply={action('Applying for job...')}
       />
     </div>
@@ -26,27 +26,27 @@ storiesOf('UI Components|JobApplicationCard/Use Cases', module)
 storiesOf('UI Components|JobApplicationCard/States', module)
   .add('apply', () => (
     <JobApplicationCard
-      hasApplied={false}
+      isApplied={false}
       onApply={action('Applying for job...')}
     />
   ))
   .add('withdraw', () => (
     <JobApplicationCard
-      hasApplied
+      isApplied
       applicationDate={new Date('Tue, 22 Oct 2019 20:35:15 GMT')}
       onWithdraw={action('Withdrawing from job...')}
     />
   ))
   .add('apply + is saving', () => (
     <JobApplicationCard
-      hasApplied={false}
+      isApplied={false}
       isSaving
       onApply={action('Applying for job...')}
     />
   ))
   .add('withdraw + is saving', () => (
     <JobApplicationCard
-      hasApplied
+      isApplied
       isSaving
       applicationDate={new Date('Tue, 22 Oct 2019 20:35:15 GMT')}
       onWithdraw={action('Withdrawing from job...')}
@@ -56,7 +56,7 @@ storiesOf('UI Components|JobApplicationCard/States', module)
 storiesOf('UI Components|JobApplicationCard/Debug', module)
   .add('missing date', () => (
     <JobApplicationCard
-      hasApplied
+      isApplied
       onWithdraw={action('Withdrawing from job...')}
     />
   ))
