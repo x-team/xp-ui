@@ -24,7 +24,7 @@ storiesOf('Core Components|GenericCopyToClipboard', module)
   ))
 
 storiesOf('Core Components|GenericCopyToClipboard/Tooltip', module)
-  .add('default', () => (
+  .add('basic usage', () => (
     <Body>
       <Tooltip />
     </Body>

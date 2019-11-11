@@ -11,7 +11,7 @@ const messageSample = (
 )
 
 storiesOf('UI Components|JobApplicationCard', module)
-  .add('default', () => (
+  .add('basic usage', () => (
     <JobApplicationCard
       onApply={action('Applying for job...')}
     />

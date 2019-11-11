@@ -9,7 +9,7 @@ import JobsGrid from './JobsGrid'
 import JobCard from './JobCard'
 import { JobCardLink } from './JobCard.stories'
 
-export const jobCards = Array(15)
+export const jobCards = (amount: number = 15) => Array(amount)
   .fill('')
   .map((item, i) => {
     const applied = faker.random.boolean()
@@ -30,7 +30,7 @@ export const jobCards = Array(15)
 storiesOf('UI Components|JobsGrid', module)
   .add('basic usage', () => (
     <JobsGrid
-      jobCards={jobCards}
+      jobCards={jobCards()}
     />
   ))
 
