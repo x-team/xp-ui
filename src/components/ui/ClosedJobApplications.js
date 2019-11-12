@@ -75,7 +75,7 @@ const ClosedJobApplications = ({ applications = [], message }: Props) => (
   <div className={cx.wrapper}>
     <h2 className={cx.heading}>Closed</h2>
     <ul className={cx.list}>
-      {applications.map(application => (
+      {applications.map(application => application.title && (
         <li key={application.title} className={cx.item}>
           <h3 className={cx.title}>
             {application.title}

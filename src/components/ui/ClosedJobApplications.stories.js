@@ -58,6 +58,12 @@ storiesOf('UI Components|ClosedJobApplications/Debug', module)
   .add('without applications', () => (
     <ClosedJobApplications message={closedJobApplicationsMessageSample} />
   ))
+  .add('broken data', () => (
+    <ClosedJobApplications applications={[{
+      invalidDataStructure: 'for testing purposes',
+      description: 'this is valid'
+    }]} />
+  ))
   .add('missing props', () => (
     <ClosedJobApplications />
   ))

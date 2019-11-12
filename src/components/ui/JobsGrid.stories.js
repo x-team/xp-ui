@@ -9,8 +9,7 @@ import JobsGrid from './JobsGrid'
 import JobCard from './JobCard'
 import { JobCardLink } from './JobCard.stories'
 
-export const jobCards = (amount: number = 15) => Array(amount)
-  .fill('')
+export const jobCards = (amount: number = 15) => [...Array(amount).keys()]
   .map((item, i) => {
     const applied = faker.random.boolean()
     return (
