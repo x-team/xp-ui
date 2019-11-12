@@ -7,9 +7,15 @@ const cmz = require('cmz')
 
 const cx = {
   card: cmz(`
-    display: grid
-    grid-gap: 32px
-    grid-template-columns: repeat(1, 1fr)
+    & {
+      display: grid
+      grid-gap: 32px
+      grid-template-columns: repeat(1, 1fr)
+    }
+
+    &:not(:only-child) {
+      margin: 0 0 38px
+    }
   `)
 }
 

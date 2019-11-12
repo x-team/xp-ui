@@ -14,7 +14,7 @@ export const JobsPageBreadcrumbsLink = ({ children, ...props }: { children: Reac
 )
 
 storiesOf('UI Components|JobsPageBreadcrumbs', module)
-  .add('default', () => (
+  .add('basic usage', () => (
     <JobsPageBreadcrumbs
       link={JobsPageBreadcrumbsLink}
     />

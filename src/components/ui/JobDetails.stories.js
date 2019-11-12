@@ -7,9 +7,9 @@ import faker from 'faker'
 
 import JobDetails from './JobDetails'
 
-const nameSample = faker.name.jobTitle()
-const skillsSample = faker.random.words(faker.random.number(10)).split(' ').join(',')
-const descriptionSample = `${faker.lorem.paragraph()}
+export const jobDetailsName = faker.name.jobTitle()
+export const jobDetailsSkills = faker.random.words(faker.random.number(10)).split(' ').join(',')
+export const jobDetailsDescription = `${faker.lorem.paragraph()}
 
 # Heading 1 (converted to h2)
 
@@ -71,9 +71,9 @@ Blockquote:
 storiesOf('UI Components|JobDetails', module)
   .add('basic usage', () => (
     <JobDetails
-      name={text('Name', nameSample)}
-      skills={text('Skills', skillsSample)}
-      description={text('Description', descriptionSample)}
+      name={text('Name', jobDetailsName)}
+      skills={text('Skills', jobDetailsSkills)}
+      description={text('Description', jobDetailsDescription)}
     />
   ))
 
