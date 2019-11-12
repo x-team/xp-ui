@@ -9,20 +9,20 @@ import ClosedJobApplications from './ClosedJobApplications'
 
 export const closedJobApplicationsJobsSample = [
   {
-    title: 'Web Developer with Ruby on Rails experience',
-    description: 'Closed on April 17th, 2019, applied on March 28th, 2019'
+    name: 'Web Developer with Ruby on Rails experience',
+    info: 'Closed on April 17th, 2019, applied on March 28th, 2019'
   },
   {
-    title: 'Senior Full Stack Engineer',
-    description: 'Closed on February 17th, 2019, applied on March 28th, 2019'
+    name: 'Senior Full Stack Engineer',
+    info: 'Closed on February 17th, 2019, applied on March 28th, 2019'
   },
   {
-    title: 'UX Content Writer',
-    description: 'Closed on April 17th, 2019, applied on March 28th, 2019'
+    name: 'UX Content Writer',
+    info: 'Closed on April 17th, 2019, applied on March 28th, 2019'
   },
   {
-    title: 'Senior Developer (node, react, aws)',
-    description: 'Closed on January 17th, 2019, applied on March 28th, 2019, 10:11pm.'
+    name: 'Senior Developer (node, react, aws)',
+    info: 'Closed on January 17th, 2019, applied on March 28th, 2019, 10:11pm.'
   }
 ]
 
@@ -31,8 +31,8 @@ export const closedJobApplicationsMessageSample = 'Applications older than 3 mon
 const randomJobs = (amount = 4) => Array(amount)
   .fill('')
   .map((item, i) => ({
-    title: faker.name.jobTitle(),
-    description: faker.lorem.sentence()
+    name: faker.name.jobTitle(),
+    info: faker.lorem.sentence()
   }))
 
 const randomMessage = faker.lorem.sentence()
@@ -60,14 +60,14 @@ storiesOf('UI Components|ClosedJobApplications/Debug', module)
   ))
   .add(`an application with missing title isn't rendered`, () => (
     <ClosedJobApplications applications={[
-      { description: 'this is valid' },
-      { title: 'Angular Black Ninja', description: 'Closed on March 1st, 2019, applied on March 28th, 2019' }
+      { info: 'this is valid' },
+      { title: 'Angular Black Ninja', info: 'Closed on March 1st, 2019, applied on March 28th, 2019' }
     ]} />
   ))
   .add('broken data', () => (
     <ClosedJobApplications applications={[{
       invalidDataStructure: 'for testing purposes',
-      description: 'this is valid'
+      info: 'this is valid'
     }]} />
   ))
   .add('missing props', () => (
