@@ -1,6 +1,7 @@
 // @flow
 
-import React from 'react'
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import { storiesOf } from '@storybook/react'
 
 import JobsPageLayout from './JobsPageLayout'
@@ -9,6 +10,11 @@ import JobsGrid from './JobsGrid'
 import { jobCards } from './JobsGrid.stories'
 import JobsPageBreadcrumbs from './JobsPageBreadcrumbs'
 import { JobsPageBreadcrumbsLink } from './JobsPageBreadcrumbs.stories'
+import JobApplicationCard from './JobApplicationCard'
+import JobDetails from './JobDetails'
+import { jobDetailsName, jobDetailsSkills, jobDetailsDescription } from './JobDetails.stories'
+import ClosedJobApplications from './ClosedJobApplications'
+import { closedJobApplicationsJobsSample, closedJobApplicationsMessageSample } from './ClosedJobApplications.stories'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -36,13 +42,56 @@ const SampleSidebar = () => (
 )
 
 storiesOf('Screens and Layouts|JobsPageLayout', module)
-  .add('basic usage (full composition)', () => (
+  .add('basic usage', () => (
     <Body>
-      <ApplicantScreen contentWrapper={false}>
+      <ApplicantScreen noWrapper>
         <JobsPageLayout
           hero={<SampleHero />}
           heading='Jobs'
-          content={<JobsGrid jobCards={jobCards} />}
+          content={<JobsGrid jobCards={jobCards(5)} />}
+          sidebar={<SampleSidebar />}
+        />
+      </ApplicantScreen>
+    </Body>
+  ))
+
+storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
+  .add('job details page', () => (
+    <Body>
+      <ApplicantScreen noWrapper>
+        <JobsPageLayout
+          heading={
+            <JobsPageBreadcrumbs
+              label='Browse all jobs'
+              link={JobsPageBreadcrumbsLink}
+            />
+          }
+          content={
+            <JobDetails
+              name={jobDetailsName}
+              skills={jobDetailsSkills}
+              description={jobDetailsDescription}
+            />
+          }
+          sidebar={<JobApplicationCard />}
+        />
+      </ApplicantScreen>
+    </Body>
+  ))
+  .add('my applications page', () => (
+    <Body>
+      <ApplicantScreen noWrapper>
+        <JobsPageLayout
+          heading='Pending applications'
+          content={
+            <Fragment>
+              <JobsGrid jobCards={jobCards(3)} />
+              <ClosedJobApplications
+                applications={closedJobApplicationsJobsSample}
+                message={closedJobApplicationsMessageSample}
+              />
+            </Fragment>
+          }
           sidebar={<SampleSidebar />}
         />
       </ApplicantScreen>
@@ -50,45 +99,24 @@ storiesOf('Screens and Layouts|JobsPageLayout', module)
   ))
 
 storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
-  .add('breadcrumbs heading', () => (
-    <Body>
-      <ApplicantScreen contentWrapper={false}>
-        <JobsPageLayout
-          hero={<SampleHero />}
-          heading={
-            <JobsPageBreadcrumbs
-              label='Browse all jobs'
-              link={JobsPageBreadcrumbsLink}
-            />
-          }
-          content={<JobsGrid jobCards={jobCards} />}
-          sidebar={<SampleSidebar />}
-        />
-      </ApplicantScreen>
-    </Body>
-  ))
   .add('loading content', () => (
     <Body>
-      <ApplicantScreen contentWrapper={false}>
-        <JobsPageLayout
-          hero={<SampleHero />}
-          heading='Jobs'
-          isLoading
-          sidebar={<SampleSidebar />}
-        />
-      </ApplicantScreen>
+      <JobsPageLayout
+        hero={<SampleHero />}
+        heading='Jobs'
+        isLoading
+        sidebar={<SampleSidebar />}
+      />
     </Body>
   ))
   .add('error content', () => (
     <Body>
-      <ApplicantScreen contentWrapper={false}>
-        <JobsPageLayout
-          hero={<SampleHero />}
-          heading='Jobs'
-          error='An error has occurred.'
-          sidebar={<SampleSidebar />}
-        />
-      </ApplicantScreen>
+      <JobsPageLayout
+        hero={<SampleHero />}
+        heading='Jobs'
+        error='An error has occurred.'
+        sidebar={<SampleSidebar />}
+      />
     </Body>
   ))
   .add('using debug components', () => (
@@ -140,3 +168,12 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
   .add('missing props (does component explode?)', () => (
     <JobsPageLayout />
   ))
+
+// This is a remporaty hack for a known issue with Fragment and Storybook's addon-info
+// https://github.com/storybookjs/addon-jsx/issues/34#issuecomment-377270299
+// $FlowFixMe
+React.Fragment = ({ children }) => children
+React.Fragment.propTypes = {
+  children: PropTypes.node.isRequired
+}
+React.Fragment.displayName = 'React.Fragment'

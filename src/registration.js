@@ -1,9 +1,9 @@
 import ApplicantScreen from './components/ui/ApplicantScreen'
 import ApplicantScreenNotification from './components/ui/ApplicantScreenNotification'
 import AttachFiles from './components/ui/AttachFiles'
-import ConfirmationBox from './components/ui/ConfirmationBox'
 import Button from './components/ui/Button'
-import ClosedJobs from './components/ui/ClosedJobs'
+import ClosedJobApplications from './components/ui/ClosedJobApplications'
+import ConfirmationBox from './components/ui/ConfirmationBox'
 import ErrorBox from './components/ui/ErrorBox'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
@@ -34,9 +34,9 @@ export {
   ApplicantScreen,
   ApplicantScreenNotification,
   AttachFiles,
-  ConfirmationBox,
   Button,
-  ClosedJobs,
+  ClosedJobApplications,
+  ConfirmationBox,
   ErrorBox,
   Footer,
   FooterBrands,
