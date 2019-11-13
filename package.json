@@ -91,6 +91,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-data-grid": "^6.1.0",
     "react-data-grid-addons": "^6.1.0",
+    "react-tooltip": "^3.11.1",
     "react-visibility-sensor": "^5.1.0",
     "recompose": "^0.30.0",
     "tui-editor": "^1.2.10",
