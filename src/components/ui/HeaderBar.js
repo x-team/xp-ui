@@ -165,7 +165,9 @@ class HeaderBar extends PureComponent<Props> {
   }
 
   render () {
+    console.log('###props', this.props)
     const { links } = this.props
+    console.log('###links', links, size(links))
     return (
       <div className={cx.wrapper}>
         {size(links) ? (

@@ -1,5 +1,6 @@
 // @flow
 /* global React$Node */
+/* global React$StatelessFunctionalComponent */
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -38,24 +39,38 @@ const cx = {
   `)
 }
 
+type Link = {
+  label: string,
+  href?: string,
+  to?: string,
+  active?: boolean
+}
+
 type Props = {
   children?: React$Node,
   noWrapper?: boolean,
   wrapper?: 'narrower' | 'wider',
-  notification?: React$Node
+  notification?: React$Node,
+  menuLinks: Array<Link>,
+  appLink?: React$StatelessFunctionalComponent<*>
 }
 
 const ApplicantScreen = ({
   children,
   wrapper,
   noWrapper = false,
-  notification
+  notification,
+  menuLinks,
+  appLink
 }: Props) => {
   const getWrapperClass = () => (wrapper && cx[wrapper]) || cx.content
   return (
     <div>
       <div className={cx.header}>
-        <HeaderBar />
+        <HeaderBar
+          links={menuLinks}
+          appLink={appLink}
+        />
       </div>
       {notification && (
         <div className={cx.notification}>
