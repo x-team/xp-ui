@@ -18,6 +18,7 @@ const cx = {
       font-size: 12px
       line-height: 16px
       font-weight: 400
+      padding: 12px
     `
   ),
 
@@ -26,8 +27,20 @@ const cx = {
       background: ${theme.baseDark} !important
     }
 
+    &.place-top:after {
+      border-top-color: ${theme.baseDark} !important
+    }
+
+    &.place-right:after {
+      border-right-color: ${theme.baseDark} !important
+    }
+
     &.place-bottom:after {
       border-bottom-color: ${theme.baseDark} !important
+    }
+
+    &.place-left:after {
+      border-left-color: ${theme.baseDark} !important
     }
   `)
 }

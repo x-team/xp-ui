@@ -178,9 +178,24 @@ class HeaderBar extends PureComponent<Props> {
                 {this.renderLinks()}
               </ul>
               <GenericTooltip
-                message={<span>We currently heavily rely on LinkedIn<br />Profiles to match candiates with<br />potential roles.</span>}
+                message={
+                  <span>
+                    We currently heavily rely on LinkedIn
+                    <br />
+                    Profiles to match candidates with
+                    <br />
+                    potential roles.
+                  </span>
+                }
               >
-                <a className={cx.profile} href='https://www.linkedin.com/in/' target='_blank'>Update your profile</a>
+                <a
+                  className={cx.profile}
+                  href='https://www.linkedin.com/in/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Update your profile
+                </a>
               </GenericTooltip>
             </nav>
           </div>

@@ -60,6 +60,15 @@ storiesOf('Core Components|GenericTooltip/Debug', module)
       >
         Hover this text to see a tooltip demonstration
       </GenericTooltip>
+      <br /><br />
+      <GenericTooltip
+        message='This is the tooltip message'
+        options={{
+          place: 'right'
+        }}
+      >
+        Hover this text to see a tooltip demonstration
+      </GenericTooltip>
     </div>
   ))
   .add('missing message', () => (
