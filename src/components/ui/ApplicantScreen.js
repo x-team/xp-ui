@@ -73,7 +73,9 @@ const ApplicantScreen = ({
 
 ApplicantScreen.propTypes = {
   children: PropTypes.node,
-  contentWrapper: PropTypes.bool
+  noWrapper: PropTypes.bool,
+  wrapper: PropTypes.string,
+  notification: PropTypes.node
 }
 
 export default ApplicantScreen

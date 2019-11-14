@@ -7,6 +7,7 @@ import ErrorBox from './components/ui/ErrorBox'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
 import FooterList from './components/ui/Footer/FooterList'
+import GenericTooltip from './components/ui/GenericTooltip'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
@@ -33,6 +34,7 @@ export {
   Footer,
   FooterBrands,
   FooterList,
+  GenericTooltip,
   HeaderBar,
   HorizontalRuler,
   InputField,
