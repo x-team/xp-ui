@@ -26,8 +26,7 @@ const HeaderLink = ({ children, ...props }: { children: React$Node }) => (
 const links = [
   {
     label: 'Browse Jobs',
-    to: '/jobs',
-    active: true
+    to: '/jobs'
   },
   {
     label: 'My Applications',

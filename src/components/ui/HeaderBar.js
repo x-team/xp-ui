@@ -18,8 +18,7 @@ const wrapper = '1100px'
 type Link = {
   label: string,
   href?: string,
-  to?: string,
-  active?: boolean
+  to?: string
 }
 
 type Props = {
@@ -143,14 +142,13 @@ class HeaderBar extends PureComponent<Props> {
     return links.map(link => this.renderLink(link))
   }
 
-  renderLink = ({ label, href, to, active }: Link) => {
+  renderLink = ({ label, href, to }: Link) => {
     const { appLink: AppLink } = this.props
-    const anchorClass = active ? [cx.anchor, cx.active].join(' ') : cx.anchor
 
     if (href) {
       return (
         <li key={label} className={cx.link}>
-          <a href={href} className={anchorClass}>{label}</a>
+          <a href={href} className={cx.anchor}>{label}</a>
         </li>
       )
     }
@@ -158,16 +156,14 @@ class HeaderBar extends PureComponent<Props> {
     if (to && AppLink) {
       return (
         <li key={label} className={cx.link}>
-          <AppLink to={to} className={anchorClass}>{label}</AppLink>
+          <AppLink to={to} className={cx.anchor} activeClassName={cx.active}>{label}</AppLink>
         </li>
       )
     }
   }
 
   render () {
-    console.log('###props', this.props)
     const { links } = this.props
-    console.log('###links', links, size(links))
     return (
       <div className={cx.wrapper}>
         {size(links) ? (

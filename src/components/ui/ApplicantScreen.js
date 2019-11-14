@@ -42,8 +42,7 @@ const cx = {
 type Link = {
   label: string,
   href?: string,
-  to?: string,
-  active?: boolean
+  to?: string
 }
 
 type Props = {
@@ -51,7 +50,7 @@ type Props = {
   noWrapper?: boolean,
   wrapper?: 'narrower' | 'wider',
   notification?: React$Node,
-  menuLinks: Array<Link>,
+  menuLinks?: Array<Link>,
   appLink?: React$StatelessFunctionalComponent<*>
 }
 
