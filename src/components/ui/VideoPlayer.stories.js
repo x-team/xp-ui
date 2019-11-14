@@ -16,6 +16,9 @@ storiesOf('Core Components|VideoPlayer/Use Cases', module)
   .add('embedded video', () => (
     <VideoPlayer src={'https://www.youtube.com/embed/R6NUFRNEai4'} embedded width={640} height={360} />
   ))
+  .add('embedded video with clickable overlay', () => (
+    <VideoPlayer src={'https://www.youtube.com/embed/R6NUFRNEai4'} embedded overlay width={640} height={360} />
+  ))
 
 storiesOf('Core Components|VideoPlayer/States', module)
   .add('loop', () => (

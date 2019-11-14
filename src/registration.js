@@ -25,6 +25,7 @@ import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
 import Text from './components/ui/Text'
 import TruncatedList from './components/ui/TruncatedList'
+import WelcomeHero from './components/ui/WelcomeHero'
 
 export {
   ApplicantScreen,
@@ -53,5 +54,6 @@ export {
   Modal,
   RoadmapHero,
   Text,
-  TruncatedList
+  TruncatedList,
+  WelcomeHero
 }

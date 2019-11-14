@@ -18,9 +18,11 @@ type ContentType = Element<*>|string
 
 type Props = {
   heading?: Element<*>|string,
+  headingClass?: string,
   subHeading?: Element<*>|string,
   level?: Element<*>|string,
   content?: ContentType,
+  contentClass?: string,
   isMarkdown: ?boolean,
   isCentered: ?boolean,
   hasDivider: ?boolean,
@@ -93,7 +95,8 @@ class Text extends PureComponent<Props> {
     isPureContent: false,
     required: false,
     headingType: 'headline',
-    subHeadingType: 'heading'
+    subHeadingType: 'heading',
+    contentClass: ''
   }
 
   htmlContent = (): ?ContentType => {
@@ -128,28 +131,33 @@ class Text extends PureComponent<Props> {
       heading,
       subHeading,
       headingType,
+      headingClass,
       subHeadingType,
       level,
       content,
+      contentClass,
       isMarkdown,
       isCentered,
       hasDivider,
       isPureContent,
       required
     } = this.props
-    const requiredProps = required ? { className: contentRequired } : {}
+    const contentClassNames = [
+      required ? contentRequired : '',
+      contentClass
+    ].join(' ')
     const contentRender = isMarkdown ? this.htmlContent() : content
 
     if (isPureContent) {
-      return PureContent(requiredProps, contentRender)
+      return PureContent({ className: contentClassNames }, contentRender)
     }
 
     return Root(isCentered ? { className: centerAlign } : {},
-      heading && Heading({ className: typo[headingType] }, heading),
+      heading && Heading({ className: headingClass || typo[headingType] }, heading),
       subHeading && SubHeading({ className: typo[subHeadingType] }, subHeading),
       level && Level({ className: typo.subheading }, level),
       hasDivider && Divider(isCentered ? { className: contentDividerCenter } : {}),
-      Content(requiredProps, contentRender)
+      Content({ className: contentClassNames }, contentRender)
     )
   }
 }
