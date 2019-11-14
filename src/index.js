@@ -29,6 +29,7 @@ import FooterList from './components/ui/Footer/FooterList'
 import GenericCollapsible from './components/ui/GenericCollapsible'
 import GenericCopyToClipboard from './components/ui/GenericCopyToClipboard'
 import GenericTabs from './components/ui/GenericTabs'
+import GenericTooltip from './components/ui/GenericTooltip'
 import HeaderBar from './components/ui/HeaderBar'
 import HeadingWithQuickSearch from './components/ui/HeadingWithQuickSearch'
 import HorizontalRuler from './components/ui/HorizontalRuler'
@@ -99,6 +100,7 @@ export {
   GenericCollapsible,
   GenericCopyToClipboard,
   GenericTabs,
+  GenericTooltip,
   HeaderBar,
   HeadingWithQuickSearch,
   HorizontalRuler,
