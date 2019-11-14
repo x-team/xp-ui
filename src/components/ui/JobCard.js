@@ -3,6 +3,8 @@
 
 import React from 'react'
 
+import TagsList from './TagsList'
+
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
@@ -80,10 +82,11 @@ type Props = {
   name?: string,
   summary?: string,
   message?: string,
-  link?: React$StatelessFunctionalComponent<*>
+  link?: React$StatelessFunctionalComponent<*>,
+  skills?: string
 }
 
-const JobCard = ({ name, summary, message, link: JobLink }: Props) => {
+const JobCard = ({ name, summary, message, link: JobLink, skills }: Props) => {
   const renderTitle = () => JobLink
     ? (
       <JobLink className={cx.nameLink}>
@@ -106,6 +109,7 @@ const JobCard = ({ name, summary, message, link: JobLink }: Props) => {
   return name ? (
     <div className={cx.card}>
       {renderTitle()}
+      <TagsList skills={skills} />
       {renderSummary()}
       {renderMessage()}
     </div>

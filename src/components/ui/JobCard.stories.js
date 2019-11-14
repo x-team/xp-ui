@@ -15,6 +15,7 @@ export const JobCardLink = ({ children, ...props }: { children: React$Node }) =>
   </a>
 )
 
+const skills = faker.random.words(faker.random.number(10)).split(' ').join(',')
 const nameSample = faker.random.words()
 const summarySample = faker.lorem.paragraph()
 const messageSample = faker.random.words()
@@ -23,6 +24,7 @@ storiesOf('UI Components|JobCard', module)
   .add('basic usage', () => (
     <JobCard
       name={text('Name', nameSample)}
+      skills={skills}
       summary={text('Summary', summarySample)}
       message={text('Message', messageSample)}
       link={JobCardLink}
@@ -33,6 +35,7 @@ storiesOf('UI Components|JobCard/Debug', module)
   .add('without message', () => (
     <JobCard
       name={text('Name', nameSample)}
+      skills={skills}
       summary={text('Summary', summarySample)}
       link={JobCardLink}
     />
@@ -40,6 +43,7 @@ storiesOf('UI Components|JobCard/Debug', module)
   .add('without summary', () => (
     <JobCard
       name={text('Name', nameSample)}
+      skills={skills}
       link={JobCardLink}
       message={text('Message', messageSample)}
     />
@@ -47,6 +51,7 @@ storiesOf('UI Components|JobCard/Debug', module)
   .add('without link', () => (
     <JobCard
       name={text('Name', nameSample)}
+      skills={skills}
       summary={text('Summary', summarySample)}
       message={text('Message', messageSample)}
     />
@@ -54,6 +59,7 @@ storiesOf('UI Components|JobCard/Debug', module)
   .add('without link and message', () => (
     <JobCard
       name={text('Name', nameSample)}
+      skills={skills}
       summary={text('Summary', summarySample)}
     />
   ))

@@ -3,8 +3,10 @@
 import React from 'react'
 import { compiler as markdownCompiler } from 'markdown-to-jsx'
 
+import TagsList from './TagsList'
+
 import theme from '../../styles/theme'
-import typo, { typeface } from '../../styles/typo'
+import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 
@@ -24,28 +26,6 @@ const cx = {
     letter-spacing: -.05em
     margin: 0 0 .57144em
   `),
-
-  skills: cmz(`
-    display: flex
-    margin: 0 0 1em
-    flex-wrap: wrap
-  `),
-
-  skill: cmz(
-    typeface.extra,
-    `
-      font-size: .5em
-      text-transform: uppercase
-      background: ${theme.baseBrighter}
-      border: 2px solid ${theme.lineSilver2}
-      border-radius: 4px
-      padding: 1.25em 1em
-      display: inline-block
-      margin: 0 .66666em .66666em 0
-      line-height: 1
-      font-weight: 300
-    `
-  ),
 
   h2: cmz(`
     margin: 1.33333em 0 1em
@@ -216,17 +196,11 @@ const JobDetails = ({ name = '', description = '', skills = '' }: Props) => {
     }
   }
 
-  const renderSkillTags = () => skills.split(',').filter(Boolean).map((skill, i) => (
-    <div key={`jobskill-${i}`} className={cx.skill}>{skill}</div>
-  ))
-
   return name ? (
     <div className={cx.wrapper}>
       <h1 className={cx.name}>{name}</h1>
       {skills && (
-        <div className={cx.skills}>
-          {renderSkillTags()}
-        </div>
+        <TagsList skills={skills} />
       )}
       {htmlContent()}
     </div>
