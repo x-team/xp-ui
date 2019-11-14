@@ -47,13 +47,35 @@ const StoryModal = props => (
   </State>
 )
 
-storiesOf('UI Components/Modal', module)
-  .add('basic modal', () => (
+storiesOf('Core Components|Modal', module)
+  .add('basic usage', () => (
     <Body>
       <StoryModal>
         {sampleModalContent}
       </StoryModal>
     </Body>
+  ))
+
+storiesOf('Core Components|Modal/Use Cases', module)
+  .add('with ListEditor', () => (
+    <Body>
+      <StoryModal>
+        <ListsEditor
+          collectionLabel='List'
+          title='Lists'
+          list={itemsArray}
+          onEdit={action('onEdit')}
+          onArchive={action('onArchive')}
+          onDelete={action('onDelete')}
+          onCreateNew={action('onCreateNew')}
+        />
+      </StoryModal>
+    </Body>
+  ))
+
+storiesOf('Core Components|Modal/Debug', module)
+  .add('missing props (does component explode?)', () => (
+    <Modal />
   ))
   .add('modal with content taller than viewport', () => (
     <Body>
@@ -72,27 +94,5 @@ storiesOf('UI Components/Modal', module)
   .add('modal with no content', () => (
     <Body>
       <StoryModal />
-    </Body>
-  ))
-  .add('missing props (does component explode?)', () => (
-    <Body>
-      <Modal />
-    </Body>
-  ))
-
-storiesOf('UI Components/Modal/Use cases', module)
-  .add('with ListEditor', () => (
-    <Body>
-      <StoryModal>
-        <ListsEditor
-          collectionLabel='List'
-          title='Lists'
-          list={itemsArray}
-          onEdit={action('onEdit')}
-          onArchive={action('onArchive')}
-          onDelete={action('onDelete')}
-          onCreateNew={action('onCreateNew')}
-        />
-      </StoryModal>
     </Body>
   ))

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import RoadmapHero from './RoadmapHero'
 
-storiesOf('UI Components/RoadmapHero', module)
+storiesOf('UI Components|RoadmapHero', module)
   .add('basic usage', () => (
     <RoadmapHero
       heading={`Your roadmap to X${String.fromCharCode(8209)}Team`}
@@ -11,12 +11,12 @@ storiesOf('UI Components/RoadmapHero', module)
     />
   ))
 
-  .add('with image url in props', () => (
+storiesOf('UI Components|RoadmapHero/Debug', module)
+  .add('missing props (does component explode?)', () => <RoadmapHero />)
+  .add('custom image url', () => (
     <RoadmapHero
       heading='Next Steps'
       content='Thanks for completing the challenge and telling us a bit about yourself. Next, you will soon receive an e-mail from an X-Team Ambassador who will help us determine if you are a good fit for X-Team.'
       imgUrl={require('../../assets/next-steps.png')}
     />
   ))
-
-  .add('missing props (does component explode?)', () => <RoadmapHero />)

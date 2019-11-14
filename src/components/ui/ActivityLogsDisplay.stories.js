@@ -29,12 +29,14 @@ const sampleLogs = Array(30)
     }`
   }))
 
-storiesOf('UI Components/ActivityLogsDisplay', module)
-  .add('complete with random data with knobs', () => (
+storiesOf('UI Components|ActivityLogsDisplay', module)
+  .add('basic usage', () => (
     <ActivityLogsDisplay
       logs={object('logs', sampleLogs)}
     />
   ))
+
+storiesOf('UI Components|ActivityLogsDisplay/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ActivityLogsDisplay />
   ))

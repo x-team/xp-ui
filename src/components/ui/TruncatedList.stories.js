@@ -7,7 +7,7 @@ import TruncatedList from './TruncatedList'
 import Button from './Button'
 import XIcon from './XIcon'
 
-storiesOf('UI Components/TruncatedList', module)
+storiesOf('Core Components|TruncatedList', module)
   .addParameters({
     info: {
       header: true,
@@ -17,30 +17,31 @@ storiesOf('UI Components/TruncatedList', module)
         `
     }
   })
-  .add(
-    'show 4 visible `XIcon`s components of 13 total, with increments of 2, custom view more item, not inserted',
-    () => {
-      const items = Array(13).fill(<XIcon />)
-      return (
-        <TruncatedList
-          items={items}
-          visible={4}
-          increment={2}
-          viewMore={(amount, action) => (
-            <Button
-              rounded
-              raised
-              outlined
-              color='silver'
-              onClick={action}
-            >
-              {`+${amount} more of ${items.length}`}
-            </Button>
-          )}
-        />
-      )
-    }
+  .add('basic usage (see Show info for more details)', () => {
+    const items = Array(13).fill(<XIcon />)
+    return (
+      <TruncatedList
+        items={items}
+        visible={4}
+        increment={2}
+        viewMore={(amount, action) => (
+          <Button
+            rounded
+            raised
+            outlined
+            color='silver'
+            onClick={action}
+          >
+            {`+${amount} more of ${items.length}`}
+          </Button>
+        )}
+      />
+    )
+  }
   )
+
+storiesOf('Core Components|TruncatedList/Debug', module)
+  .add('missing props (does component explode?)', () => <TruncatedList />)
   .add(
     'show 6 visible `XIcon`s components of 30 total, with increments of 6, with inserted custom view more item',
     () => {
@@ -113,4 +114,3 @@ storiesOf('UI Components/TruncatedList', module)
       items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
       visible={8} />
   ))
-  .add('missing props (does component explode?)', () => <TruncatedList />)

@@ -16,41 +16,52 @@ const ListSelector = ({ selected = false }) => (
   />
 )
 
-storiesOf('UI Components/SettingsImportScreen', module)
+storiesOf('UI Components|SettingsImportScreen', module)
   .add('default initial view', () => (
     <SettingsImportScreen>
       <ListSelector />
     </SettingsImportScreen>
   ))
-  .add('validated view containing invalid records', () => (
+
+storiesOf('UI Components|SettingsImportScreen/States', module)
+  .add('invalid', () => (
     <SettingsImportScreen
       status='VALIDATED'
       selectedList={{ id: 1, name: 'Selected list' }}
       validEmails={['email1@email.com', 'email2@email.com', 'email3@email.com']}
       invalidEmails={['not-an-email', '@this.is.invalid', '/\\!@#$%ˆ&*()_+-=;\'']}
       emailsList={`email1@email.com
-email2@email.com
-email3@email.com
-not-an-email
-@this.is.invalid
-/\\!@#$%ˆ&*()_+-=;'`}
+  email2@email.com
+  email3@email.com
+  not-an-email
+  @this.is.invalid
+  /\\!@#$%ˆ&*()_+-=;'`}
     >
       <ListSelector selected />
     </SettingsImportScreen>
   ))
-  .add('validated view containing only valid records', () => (
+  .add('valid', () => (
     <SettingsImportScreen
       status='VALIDATED'
       selectedList={{ id: 1, name: 'Selected list' }}
       validEmails={['email1@email.com', 'email2@email.com', 'email3@email.com']}
       emailsList={`email1@email.com
-email2@email.com
-email3@email.com`}
+  email2@email.com
+  email3@email.com`}
     >
       <ListSelector selected />
     </SettingsImportScreen>
   ))
-  .add('importing view', () => (
+  .add('server error', () => (
+    <SettingsImportScreen
+      status='IMPORTED'
+      selectedList={{ id: 1, name: 'Selected list' }}
+      error={'The server is down!'}
+    >
+      <ListSelector selected />
+    </SettingsImportScreen>
+  ))
+  .add('import in progress', () => (
     <SettingsImportScreen
       status='IMPORTING'
       selectedList={{ id: 1, name: 'Selected list' }}
@@ -59,7 +70,7 @@ email3@email.com`}
       <ListSelector selected />
     </SettingsImportScreen>
   ))
-  .add('imported view', () => (
+  .add('import complete', () => (
     <SettingsImportScreen
       status='IMPORTED'
       selectedList={{ id: 1, name: 'Selected list' }}
@@ -71,17 +82,8 @@ email3@email.com`}
       <ListSelector selected />
     </SettingsImportScreen>
   ))
-  .add('imported view with server error', () => (
-    <SettingsImportScreen
-      status='IMPORTED'
-      selectedList={{ id: 1, name: 'Selected list' }}
-      error={'The server is down!'}
-    >
-      <ListSelector selected />
-    </SettingsImportScreen>
-  ))
 
-storiesOf('UI Components/SettingsImportScreen/Debug', module)
+storiesOf('UI Components|SettingsImportScreen/Debug', module)
   .add('missing props (does component explode?)', () => (
     <SettingsImportScreen />
   ))

@@ -14,13 +14,35 @@ const Body = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components/GenericCopyToClipboard', module)
+storiesOf('Core Components|GenericCopyToClipboard', module)
   .add('basic usage', () => (
     <Body>
       <GenericCopyToClipboard text={'example@email.com'}>
         <div>Try hovering this element and click to copy</div>
       </GenericCopyToClipboard>
     </Body>
+  ))
+
+storiesOf('Core Components|GenericCopyToClipboard/Tooltip', module)
+  .add('default', () => (
+    <Body>
+      <Tooltip />
+    </Body>
+  ))
+
+storiesOf('Core Components|GenericCopyToClipboard/Tooltip/States', module)
+  .add('copied', () => (
+    <Body>
+      <Tooltip copied />
+    </Body>
+  ))
+
+storiesOf('Core Components|GenericCopyToClipboard/Debug', module)
+  .add('missing children or props (does GenericCopyToClipboard explode?)', () => (
+    <GenericCopyToClipboard />
+  ))
+  .add('missing props (does Tooltip explode?)', () => (
+    <Tooltip />
   ))
   .add('with custom X offset', () => (
     <Body>
@@ -30,24 +52,4 @@ storiesOf('UI Components/GenericCopyToClipboard', module)
         </Button>
       </GenericCopyToClipboard>
     </Body>
-  ))
-
-storiesOf('UI Components/GenericCopyToClipboard/Tooltip', module)
-  .add('default', () => (
-    <Body>
-      <Tooltip />
-    </Body>
-  ))
-  .add('copied', () => (
-    <Body>
-      <Tooltip copied />
-    </Body>
-  ))
-
-storiesOf('UI Components/GenericCopyToClipboard/Debug', module)
-  .add('missing children or props (does GenericCopyToClipboard explode?)', () => (
-    <GenericCopyToClipboard />
-  ))
-  .add('missing props (does Tooltip explode?)', () => (
-    <Tooltip />
   ))

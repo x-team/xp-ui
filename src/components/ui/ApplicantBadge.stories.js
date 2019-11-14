@@ -72,29 +72,31 @@ const Sandbox = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components/ApplicantBadge', module)
+storiesOf('UI Components|ApplicantBadge', module)
   .add('basic usage', () => (
     <Sandbox>
       <StoryApplicantBadge />
     </Sandbox>
   ))
-  .add('active card', () => (
+
+storiesOf('UI Components|ApplicantBadge/States', module)
+  .add('active', () => (
     <Sandbox>
       <StoryApplicantBadge active />
     </Sandbox>
   ))
-  .add('width status', () => (
+  .add('accepted', () => (
     <Sandbox>
       <StoryApplicantBadge status='accepted' />
     </Sandbox>
   ))
-  .add('with applicant status', () => (
+  .add('booked', () => (
     <Sandbox>
       <StoryApplicantBadge applicantStatus='Booked' />
     </Sandbox>
   ))
 
-storiesOf('UI Components/ApplicantBadge/Debug', module)
+storiesOf('UI Components|ApplicantBadge/Debug', module)
   .add('missing props (does component explode?)', () => (
     <ApplicantBadge />
   ))

@@ -20,7 +20,7 @@ const ExampleButton = ({ isActive, text, ...props }) => {
 const HeadWrapper = props => <div className='header'>{props.children}</div>
 const ContentWrapper = props => <div className='content'>{props.children}</div>
 
-storiesOf('UI Components/GenericTabs', module)
+storiesOf('Core Components|GenericTabs', module)
   .add('basic usage', () => (
     <GenericTabs.Container>
       <GenericTabs.Head tabKey='first'>
@@ -36,6 +36,67 @@ storiesOf('UI Components/GenericTabs', module)
         <div>Foo bar baz 2</div>
       </GenericTabs.Pane>
     </GenericTabs.Container>
+  ))
+
+storiesOf('Core Components|GenericTabs/Debug', module)
+  .add('change Pane body', () => (
+    <State initialState={{ value: 1 }}>
+      {({ setState, state }) => state.value ? (
+        <GenericTabs.Container>
+          <GenericTabs.Head tabKey='first'>
+            <ExampleButton text={`Tab ${state.value}`} className='foo' />
+          </GenericTabs.Head>
+          <GenericTabs.Pane tabKey='first'>
+            <div>Foo bar baz {state.value}</div>
+            <Button onClick={() => setState({ value: ++state.value })}>Increment</Button>
+          </GenericTabs.Pane>
+        </GenericTabs.Container>
+      ) : null}
+    </State>
+  ))
+  .add('update activeTab from prop', () => (
+    <State initialState={{ selectedTab: 'first' }}>
+      {({ setState, state }) => (
+        <div>
+          <Button onClick={() => setState({ selectedTab: state.selectedTab !== 'first' ? 'first' : 'second' })}>Switch Tabs</Button>
+          <hr />
+          <GenericTabs.Container
+            defaultActiveKey={state.selectedTab}
+            key={state.selectedTab}
+          >
+            <GenericTabs.Head tabKey='first'>
+              <ExampleButton text='First' />
+            </GenericTabs.Head>
+            <GenericTabs.Head tabKey='second'>
+              <ExampleButton text='Second' />
+            </GenericTabs.Head>
+            <GenericTabs.Pane tabKey='first'>
+              <div>First pane</div>
+            </GenericTabs.Pane>
+            <GenericTabs.Pane tabKey='second'>
+              <div>Second pane</div>
+            </GenericTabs.Pane>
+          </GenericTabs.Container>
+        </div>
+      )}
+    </State>
+  ), {
+    notes: {
+      markdown: `
+To test this story, click on **Switch Tabs**, it should switch tabs as expected.
+
+This showcase demonstrate that the selected tab is rendering correctly when *defaultActiveKey* prop is updated.
+      `
+    }
+  })
+  .add('missing props for Container (does component explode?)', () => (
+    <GenericTabs.Container />
+  ))
+  .add('missing props for Head (does component explode?)', () => (
+    <GenericTabs.Head />
+  ))
+  .add('missing props for Pane (does component explode?)', () => (
+    <GenericTabs.Pane />
   ))
   .add('one tab', () => (
     <GenericTabs.Container>
@@ -112,30 +173,4 @@ storiesOf('UI Components/GenericTabs', module)
         <div>Foo bar baz 3</div>
       </GenericTabs.Pane>
     </GenericTabs.Container>
-  ))
-  .add('missing props for Container (does component explode?)', () => (
-    <GenericTabs.Container />
-  ))
-  .add('missing props for Head (does component explode?)', () => (
-    <GenericTabs.Head />
-  ))
-  .add('missing props for Pane (does component explode?)', () => (
-    <GenericTabs.Pane />
-  ))
-
-storiesOf('UI Components/GenericTabs/Debug', module)
-  .add('change Pane body', () => (
-    <State initialState={{ value: 1 }}>
-      {({ setState, state }) => state.value ? (
-        <GenericTabs.Container>
-          <GenericTabs.Head tabKey='first'>
-            <ExampleButton text={`Tab ${state.value}`} className='foo' />
-          </GenericTabs.Head>
-          <GenericTabs.Pane tabKey='first'>
-            <div>Foo bar baz {state.value}</div>
-            <Button onClick={() => setState({ value: ++state.value })}>Increment</Button>
-          </GenericTabs.Pane>
-        </GenericTabs.Container>
-      ) : null}
-    </State>
   ))

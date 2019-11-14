@@ -12,8 +12,8 @@ const Heading = ({ children }) => (
   </div>
 )
 
-storiesOf('UI Components/HeadingWithQuickSearch', module)
-  .add('self-controlled sidebar heading', () => (
+storiesOf('UI Components|HeadingWithQuickSearch', module)
+  .add('basic usage', () => (
     <Heading>
       <HeadingWithQuickSearch
         text='Filters'
@@ -23,7 +23,18 @@ storiesOf('UI Components/HeadingWithQuickSearch', module)
       />
     </Heading>
   ))
-  .add('fully-controlled sidebar heading', () => (
+
+storiesOf('UI Components|HeadingWithQuickSearch/Debug', module)
+  .add('with action handler', () => (
+    <Heading>
+      <HeadingWithQuickSearch
+        text='Click this arrow'
+        leftIcon='arrowleft'
+        headingAction={action('headingAction')}
+      />
+    </Heading>
+  ))
+  .add('fully-controlled', () => (
     <State initialState={{ isOpen: false, value: '' }}>
       {({ setState, state }) => (
         <Heading>
@@ -39,17 +50,6 @@ storiesOf('UI Components/HeadingWithQuickSearch', module)
         </Heading>
       )}
     </State>
-  ))
-
-storiesOf('UI Components/HeadingWithQuickSearch/Debug', module)
-  .add('with action handler', () => (
-    <Heading>
-      <HeadingWithQuickSearch
-        text='Click this arrow'
-        leftIcon='arrowleft'
-        headingAction={action('headingAction')}
-      />
-    </Heading>
   ))
   .add('without wrapper', () => (
     <HeadingWithQuickSearch
