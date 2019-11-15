@@ -23,6 +23,7 @@ import Loader from './components/ui/Loader'
 import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
 import Text from './components/ui/Text'
+import TagsList from './components/ui/TagsList'
 import TruncatedList from './components/ui/TruncatedList'
 
 export {
@@ -51,5 +52,6 @@ export {
   Modal,
   RoadmapHero,
   Text,
+  TagsList,
   TruncatedList
 }

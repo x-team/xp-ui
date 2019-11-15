@@ -35,6 +35,7 @@ storiesOf('UI Components|JobCard/Debug', module)
   .add('without message', () => (
     <JobCard
       name={text('Name', nameSample)}
+      hasMarginLeft
       skills={skills}
       summary={text('Summary', summarySample)}
       link={JobCardLink}
@@ -43,14 +44,25 @@ storiesOf('UI Components|JobCard/Debug', module)
   .add('without summary', () => (
     <JobCard
       name={text('Name', nameSample)}
+      hasMarginLeft
       skills={skills}
       link={JobCardLink}
       message={text('Message', messageSample)}
     />
   ))
+  .add('without hasMarginLeft', () => (
+    <JobCard
+      name={text('Name', nameSample)}
+      skills={skills}
+      summary={text('Summary', summarySample)}
+      message={text('Message', messageSample)}
+      link={JobCardLink}
+    />
+  ))
   .add('without link', () => (
     <JobCard
       name={text('Name', nameSample)}
+      hasMarginLeft
       skills={skills}
       summary={text('Summary', summarySample)}
       message={text('Message', messageSample)}
@@ -59,6 +71,7 @@ storiesOf('UI Components|JobCard/Debug', module)
   .add('without link and message', () => (
     <JobCard
       name={text('Name', nameSample)}
+      hasMarginLeft
       skills={skills}
       summary={text('Summary', summarySample)}
     />

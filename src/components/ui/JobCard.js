@@ -75,6 +75,12 @@ const cx = {
         cursor: pointer
       }
     `
+  ),
+
+  hasMarginLeft: cmz(
+    `
+      margin-left: 25px;
+    `
   )
 }
 
@@ -83,10 +89,11 @@ type Props = {
   summary?: string,
   message?: string,
   link?: React$StatelessFunctionalComponent<*>,
-  skills?: string
+  skills?: string,
+  hasMarginLeft?: boolean
 }
 
-const JobCard = ({ name, summary, message, link: JobLink, skills }: Props) => {
+const JobCard = ({ name, summary, message, link: JobLink, skills, hasMarginLeft }: Props) => {
   const renderTitle = () => JobLink
     ? (
       <JobLink className={cx.nameLink}>
@@ -109,7 +116,9 @@ const JobCard = ({ name, summary, message, link: JobLink, skills }: Props) => {
   return name ? (
     <div className={cx.card}>
       {renderTitle()}
-      <TagsList skills={skills} />
+      <div className={hasMarginLeft && (cx.hasMarginLeft)}>
+        <TagsList skills={skills} />
+      </div>
       {renderSummary()}
       {renderMessage()}
     </div>
