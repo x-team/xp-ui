@@ -50,15 +50,6 @@ storiesOf('UI Components|JobCard/Debug', module)
       message={text('Message', messageSample)}
     />
   ))
-  .add('without hasMarginLeft', () => (
-    <JobCard
-      name={text('Name', nameSample)}
-      skills={skills}
-      summary={text('Summary', summarySample)}
-      message={text('Message', messageSample)}
-      link={JobCardLink}
-    />
-  ))
   .add('without link', () => (
     <JobCard
       name={text('Name', nameSample)}
