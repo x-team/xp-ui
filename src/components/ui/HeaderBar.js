@@ -18,7 +18,8 @@ const wrapper = '1100px'
 type Link = {
   label: string,
   href?: string,
-  to?: string
+  to?: string,
+  target?: string
 }
 
 type Props = {
@@ -142,13 +143,13 @@ class HeaderBar extends PureComponent<Props> {
     return links.map(link => this.renderLink(link))
   }
 
-  renderLink = ({ label, href, to }: Link) => {
+  renderLink = ({ label, href, to, target }: Link) => {
     const { appLink: AppLink } = this.props
 
-    if (href) {
+    if (href && target) {
       return (
         <li key={label} className={cx.link}>
-          <a href={href} className={cx.anchor}>{label}</a>
+          <a href={href} target={target} className={cx.anchor}>{label}</a>
         </li>
       )
     }
