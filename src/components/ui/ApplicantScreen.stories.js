@@ -71,6 +71,19 @@ storiesOf('Screens and Layouts|ApplicantScreen/States', module)
       </ApplicantScreen>
     </Body>
   ))
+  .add('with menu links and notification', () => (
+    <Body>
+      <ApplicantScreen
+        menuLinks={object('Link', links)}
+        appLink={HeaderLink}
+        notification={
+          <span>You've successfully applied for this position. <b>Check your email for next steps</b></span>
+        }
+      >
+        {faker.lorem.paragraphs(50)}
+      </ApplicantScreen>
+    </Body>
+  ))
 
 storiesOf('Screens and Layouts|ApplicantScreen/Debug', module)
   .add('with narrower wrapper', () => (
