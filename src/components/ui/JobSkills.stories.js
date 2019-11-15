@@ -15,6 +15,8 @@ storiesOf('Core Components|JobSkills', module)
       skills={text('Skills', jobSkills)}
     />
   ))
+
+  storiesOf('Core Components|JobSkills/Debug', module)
   .add('missing props', () => (
     <JobSkills />
   ))

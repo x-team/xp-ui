@@ -71,7 +71,7 @@ import Tab from './components/ui/Tabs/Tab'
 import Tabs from './components/ui/Tabs/Tabs'
 import Text from './components/ui/Text'
 import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
-import TagsList from './components/ui/TagsList'
+import JobSkills from './components/ui/JobSkills'
 import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
 import VideoPlayer from './components/ui/VideoPlayer'
@@ -149,7 +149,7 @@ export {
   Tabs,
   Text,
   TextareaEditor,
-  TagsList,
+  JobSkills,
   TruncatedList,
   TwoColumnsLayout,
   VideoPlayer,
