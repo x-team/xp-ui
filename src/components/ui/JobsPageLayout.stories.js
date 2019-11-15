@@ -15,7 +15,7 @@ import JobDetails from './JobDetails'
 import { jobDetailsName, jobDetailsSkills, jobDetailsDescription } from './JobDetails.stories'
 import ClosedJobApplications from './ClosedJobApplications'
 import { closedJobApplicationsJobsSample, closedJobApplicationsMessageSample } from './ClosedJobApplications.stories'
-import JobsPageProTipCard from './JobsPageProTipCard'
+import ProTipCard from './ProTipCard'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -51,11 +51,11 @@ storiesOf('Screens and Layouts|JobsPageLayout', module)
           heading='Jobs'
           content={<JobsGrid jobCards={jobCards(5)} />}
           sidebar={
-            <JobsPageProTipCard heading='How to Stand Out'>
+            <ProTipCard heading='How to Stand Out'>
               <span>
                 To be selected for an interview among thousands of applicants, <a href='#'>ensure your LinkedIn profile is up-to-date</a>. It should clearly show your years of experience working on large scale projects relevant to the job you’re applying for. Remember to showcase the impact of your role on each team!
               </span>
-            </JobsPageProTipCard>
+            </ProTipCard>
           }
         />
       </ApplicantScreen>
@@ -82,11 +82,11 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
           }
           sidebar={
             <Fragment>
-              <JobsPageProTipCard heading='How to Stand Out'>
+              <ProTipCard heading='How to Stand Out'>
                 <span>
                   To be selected for an interview among thousands of applicants, <a href='#'>ensure your LinkedIn profile is up-to-date</a>. It should clearly show your years of experience working on large scale projects relevant to the job you’re applying for. Remember to showcase the impact of your role on each team!
                 </span>
-              </JobsPageProTipCard>
+              </ProTipCard>
               <JobApplicationCard />
             </Fragment>
           }
@@ -109,11 +109,11 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
             </Fragment>
           }
           sidebar={
-            <JobsPageProTipCard heading='How to Stand Out'>
+            <ProTipCard heading='How to Stand Out'>
               <span>
                 To be selected for an interview among thousands of applicants, <a href='#'>ensure your LinkedIn profile is up-to-date</a>. It should clearly show your years of experience working on large scale projects relevant to the job you’re applying for. Remember to showcase the impact of your role on each team!
               </span>
-            </JobsPageProTipCard>
+            </ProTipCard>
           }
         />
       </ApplicantScreen>
