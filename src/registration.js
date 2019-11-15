@@ -18,6 +18,7 @@ import JobDetails from './components/ui/JobDetails'
 import JobsGrid from './components/ui/JobsGrid'
 import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
 import JobsPageLayout from './components/ui/JobsPageLayout'
+import ProTipCard from './components/ui/ProTipCard'
 import Loader from './components/ui/Loader'
 import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
@@ -45,6 +46,7 @@ export {
   JobsGrid,
   JobsPageBreadcrumbs,
   JobsPageLayout,
+  ProTipCard,
   Loader,
   Modal,
   RoadmapHero,

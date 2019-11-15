@@ -1,7 +1,6 @@
 // @flow
 
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import JobsPageLayout from './JobsPageLayout'
@@ -15,6 +14,7 @@ import JobDetails from './JobDetails'
 import { jobDetailsName, jobDetailsSkills, jobDetailsDescription } from './JobDetails.stories'
 import ClosedJobApplications from './ClosedJobApplications'
 import { closedJobApplicationsJobsSample, closedJobApplicationsMessageSample } from './ClosedJobApplications.stories'
+import ProTipCard from './ProTipCard'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -41,6 +41,24 @@ const SampleSidebar = () => (
   <div style={{ border: '2px dashed green' }}>Sample Sidebar component</div>
 )
 
+const JobsPageProTipCard = () => (
+  <ProTipCard heading='How to Stand Out'>
+    <span>
+      To be selected for an interview among thousands of applicants,{' '}
+      <a
+        href='https://www.linkedin.com/in/'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        ensure your LinkedIn profile is up-to-date
+      </a>
+      . It should clearly show your years of experience working on large scale
+      projects relevant to the job you’re applying for. Remember to showcase the
+      impact of your role on each team!
+    </span>
+  </ProTipCard>
+)
+
 storiesOf('Screens and Layouts|JobsPageLayout', module)
   .add('basic usage', () => (
     <Body>
@@ -49,7 +67,7 @@ storiesOf('Screens and Layouts|JobsPageLayout', module)
           hero={<SampleHero />}
           heading='Jobs'
           content={<JobsGrid jobCards={jobCards(5)} />}
-          sidebar={<SampleSidebar />}
+          sidebar={<JobsPageProTipCard />}
         />
       </ApplicantScreen>
     </Body>
@@ -73,7 +91,12 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
               description={jobDetailsDescription}
             />
           }
-          sidebar={<JobApplicationCard />}
+          sidebar={
+            <div>
+              <JobsPageProTipCard />
+              <JobApplicationCard />
+            </div>
+          }
         />
       </ApplicantScreen>
     </Body>
@@ -84,15 +107,15 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
         <JobsPageLayout
           heading='Pending applications'
           content={
-            <Fragment>
+            <div>
               <JobsGrid jobCards={jobCards(3)} />
               <ClosedJobApplications
                 applications={closedJobApplicationsJobsSample}
                 message={closedJobApplicationsMessageSample}
               />
-            </Fragment>
+            </div>
           }
-          sidebar={<SampleSidebar />}
+          sidebar={<JobsPageProTipCard />}
         />
       </ApplicantScreen>
     </Body>
@@ -168,12 +191,3 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
   .add('missing props (does component explode?)', () => (
     <JobsPageLayout />
   ))
-
-// This is a remporaty hack for a known issue with Fragment and Storybook's addon-info
-// https://github.com/storybookjs/addon-jsx/issues/34#issuecomment-377270299
-// $FlowFixMe
-React.Fragment = ({ children }) => children
-React.Fragment.propTypes = {
-  children: PropTypes.node.isRequired
-}
-React.Fragment.displayName = 'React.Fragment'

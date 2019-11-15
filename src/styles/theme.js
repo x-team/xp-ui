@@ -49,7 +49,10 @@ export const palette = {
   gray: '#8E8E8E',
   mountainMistGray: '#8E8D93',
   iron: '#D6D6D8',
-  jumbo: '#858489'
+  jumbo: '#858489',
+  islandSpice: '#FFFAEE',
+  sapling: '#E1CFA1',
+  butteredRum: '#997009'
 }
 
 export const baseColors = {
@@ -70,7 +73,9 @@ export const baseColors = {
   baseHighlightBright: palette.frenchGray,
   baseFairPink: palette.fairPink,
   baseBombay: palette.bombay,
-  baseWarning: palette.ripeLemon
+  baseWarning: palette.ripeLemon,
+  baseYellow: palette.islandSpice,
+  baseYellowDark: palette.butteredRum
 }
 
 export const typoColors = {
@@ -101,7 +106,8 @@ export const lineColors = {
   lineSilver2: palette.porcelain,
   lineSilver3: palette.athensGray,
   lineSilver4: palette.athensGrayAlt,
-  lineSilver5: palette.iron
+  lineSilver5: palette.iron,
+  lineYellow: palette.sapling
 }
 
 export const iconColors = {

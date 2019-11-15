@@ -38,6 +38,12 @@ import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
 import IssueCollectorButton from './components/ui/IssueCollectorButton'
 import JobApplicationCard from './components/ui/JobApplicationCard'
+import JobCard from './components/ui/JobCard'
+import JobDetails from './components/ui/JobDetails'
+import JobsGrid from './components/ui/JobsGrid'
+import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
+import JobsPageLayout from './components/ui/JobsPageLayout'
+import ProTipCard from './components/ui/ProTipCard'
 import ListExclusionFormPopup from './components/ui/ListExclusionFormPopup'
 import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
@@ -109,6 +115,12 @@ export {
   InputGroup,
   IssueCollectorButton,
   JobApplicationCard,
+  JobCard,
+  JobDetails,
+  JobsGrid,
+  JobsPageBreadcrumbs,
+  JobsPageLayout,
+  ProTipCard,
   ListExclusionFormPopup,
   ListsEditor,
   Loader,
