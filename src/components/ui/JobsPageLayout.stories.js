@@ -41,7 +41,7 @@ const SampleSidebar = () => (
   <div style={{ border: '2px dashed green' }}>Sample Sidebar component</div>
 )
 
-const renderProTipCard = () => (
+const JobsPageProTipCard = () => (
   <ProTipCard heading='How to Stand Out'>
     <span>
       To be selected for an interview among thousands of applicants,{' '}
@@ -67,7 +67,7 @@ storiesOf('Screens and Layouts|JobsPageLayout', module)
           hero={<SampleHero />}
           heading='Jobs'
           content={<JobsGrid jobCards={jobCards(5)} />}
-          sidebar={renderProTipCard()}
+          sidebar={<JobsPageProTipCard />}
         />
       </ApplicantScreen>
     </Body>
@@ -93,7 +93,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
           }
           sidebar={
             <div>
-              {renderProTipCard()}
+              <JobsPageProTipCard />
               <JobApplicationCard />
             </div>
           }
@@ -115,7 +115,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
               />
             </div>
           }
-          sidebar={renderProTipCard()}
+          sidebar={<JobsPageProTipCard />}
         />
       </ApplicantScreen>
     </Body>
