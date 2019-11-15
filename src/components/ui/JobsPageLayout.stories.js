@@ -1,7 +1,6 @@
 // @flow
 
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import JobsPageLayout from './JobsPageLayout'
@@ -81,14 +80,14 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
             />
           }
           sidebar={
-            <Fragment>
+            <div>
               <ProTipCard heading='How to Stand Out'>
                 <span>
                   To be selected for an interview among thousands of applicants, <a href='#'>ensure your LinkedIn profile is up-to-date</a>. It should clearly show your years of experience working on large scale projects relevant to the job you’re applying for. Remember to showcase the impact of your role on each team!
                 </span>
               </ProTipCard>
               <JobApplicationCard />
-            </Fragment>
+            </div>
           }
         />
       </ApplicantScreen>
@@ -100,13 +99,13 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
         <JobsPageLayout
           heading='Pending applications'
           content={
-            <Fragment>
+            <div>
               <JobsGrid jobCards={jobCards(3)} />
               <ClosedJobApplications
                 applications={closedJobApplicationsJobsSample}
                 message={closedJobApplicationsMessageSample}
               />
-            </Fragment>
+            </div>
           }
           sidebar={
             <ProTipCard heading='How to Stand Out'>
@@ -190,12 +189,3 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
   .add('missing props (does component explode?)', () => (
     <JobsPageLayout />
   ))
-
-// This is a remporaty hack for a known issue with Fragment and Storybook's addon-info
-// https://github.com/storybookjs/addon-jsx/issues/34#issuecomment-377270299
-// $FlowFixMe
-React.Fragment = ({ children }) => children
-React.Fragment.propTypes = {
-  children: PropTypes.node.isRequired
-}
-React.Fragment.displayName = 'React.Fragment'
