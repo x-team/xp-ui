@@ -24,6 +24,7 @@ storiesOf('UI Components|JobCard', module)
   .add('basic usage', () => (
     <JobCard
       name={text('Name', nameSample)}
+      hasMarginLeft
       skills={skills}
       summary={text('Summary', summarySample)}
       message={text('Message', messageSample)}

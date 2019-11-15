@@ -3,7 +3,7 @@
 
 import React from 'react'
 
-import TagsList from './TagsList'
+import JobSkills from './JobSkills'
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -117,7 +117,7 @@ const JobCard = ({ name, summary, message, link: JobLink, skills, hasMarginLeft 
     <div className={cx.card}>
       {renderTitle()}
       <div className={hasMarginLeft && (cx.hasMarginLeft)}>
-        <TagsList skills={skills} />
+        <JobSkills skills={skills} />
       </div>
       {renderSummary()}
       {renderMessage()}

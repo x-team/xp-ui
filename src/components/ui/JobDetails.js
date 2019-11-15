@@ -3,7 +3,7 @@
 import React from 'react'
 import { compiler as markdownCompiler } from 'markdown-to-jsx'
 
-import TagsList from './TagsList'
+import JobSkills from './JobSkills'
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -200,7 +200,7 @@ const JobDetails = ({ name = '', description = '', skills = '' }: Props) => {
     <div className={cx.wrapper}>
       <h1 className={cx.name}>{name}</h1>
       {skills && (
-        <TagsList skills={skills} />
+        <JobSkills skills={skills} />
       )}
       {htmlContent()}
     </div>

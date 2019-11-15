@@ -39,14 +39,14 @@ type Props = {
   skills?: string,
 }
 
-const renderTags = (skills: string) => skills.split(',').filter(Boolean).map((skill, i) => (
-  <div key={`jobskill-${i}`} className={cx.skill}>{skill}</div>
+const renderSkills = (skills: string) => skills.split(',').filter(Boolean).map(skill => (
+  <div key={`jobskill-${skill}`} className={cx.skill}>{skill}</div>
 ))
 
-const TagsList = ({ skills = '' }: Props) => skills ? (
+const JobSkills = ({ skills = '' }: Props) => skills && (
   <div className={cx.skills}>
-    {renderTags(skills)}
+    {renderSkills(skills)}
   </div>
-) : null
+)
 
-export default TagsList
+export default JobSkills
