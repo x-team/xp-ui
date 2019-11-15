@@ -42,8 +42,7 @@ const cx = {
 type Link = {
   label: string,
   href?: string,
-  to?: string,
-  target?: string
+  to?: string
 }
 
 type Props = {
