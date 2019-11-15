@@ -20,6 +20,7 @@ import JobDetails from './components/ui/JobDetails'
 import JobsGrid from './components/ui/JobsGrid'
 import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
 import JobsPageLayout from './components/ui/JobsPageLayout'
+import ProTipCard from './components/ui/ProTipCard'
 import Loader from './components/ui/Loader'
 import MetaGroup from './components/ui/MetaGroup'
 import MilestonesScreen from './components/ui/MilestonesScreen'
@@ -54,6 +55,7 @@ export {
   JobsGrid,
   JobsPageBreadcrumbs,
   JobsPageLayout,
+  ProTipCard,
   Loader,
   MetaGroup,
   MilestonesScreen,
