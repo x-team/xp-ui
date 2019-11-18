@@ -40,7 +40,7 @@ const cx = {
     margin: 0 0 24px
   `),
 
-  title: cmz(`
+  name: cmz(`
     color: ${theme.typoHeading}
     font-style: italic
     font-weight: 400
@@ -50,7 +50,7 @@ const cx = {
     margin: 0
   `),
 
-  description: cmz(`
+  info: cmz(`
     margin: 0
   `),
 
@@ -62,8 +62,8 @@ const cx = {
 }
 
 type JobApplication = {
-  title?: string,
-  description?: string,
+  name?: string,
+  info?: string,
 }
 
 type Props = {
@@ -75,13 +75,13 @@ const ClosedJobApplications = ({ applications = [], message }: Props) => (
   <div className={cx.wrapper}>
     <h2 className={cx.heading}>Closed</h2>
     <ul className={cx.list}>
-      {applications.map(application => application.title && (
-        <li key={application.title} className={cx.item}>
-          <h3 className={cx.title}>
-            {application.title}
+      {applications.map(application => application.name && (
+        <li key={application.name} className={cx.item}>
+          <h3 className={cx.name}>
+            {application.name}
           </h3>
-          <p className={cx.description}>
-            {application.description}
+          <p className={cx.info}>
+            {application.info}
           </p>
         </li>
       ))}
