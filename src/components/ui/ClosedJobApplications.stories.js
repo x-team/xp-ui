@@ -58,7 +58,7 @@ storiesOf('UI Components|ClosedJobApplications/Debug', module)
   .add('without applications', () => (
     <ClosedJobApplications message={closedJobApplicationsMessageSample} />
   ))
-  .add(`an application with missing title isn't rendered`, () => (
+  .add(`an application with missing name isn't rendered`, () => (
     <ClosedJobApplications applications={[
       { info: 'this is valid' },
       { name: 'Angular Black Ninja', info: 'Closed on March 1st, 2019, applied on March 28th, 2019' }
