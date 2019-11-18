@@ -8,6 +8,7 @@ import faker from 'faker'
 import JobSkills from './JobSkills'
 
 const jobSkills = faker.random.words(faker.random.number(10) + 1).split(' ').join(',')
+const jobSkillsWithSpaces = faker.random.words(faker.random.number(10) + 1).split(' ').join(', ')
 
 storiesOf('UI Components|JobSkills', module)
   .add('basic usage', () => (
@@ -17,6 +18,11 @@ storiesOf('UI Components|JobSkills', module)
   ))
 
 storiesOf('UI Components|JobSkills/Debug', module)
+  .add('with spaces', () => (
+    <JobSkills
+      skills={text('Skills', jobSkillsWithSpaces)}
+    />
+  ))
   .add('missing props', () => (
     <JobSkills />
   ))
