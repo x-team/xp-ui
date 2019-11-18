@@ -7,7 +7,7 @@ import faker from 'faker'
 
 import JobSkills from './JobSkills'
 
-const jobSkills = faker.random.words(faker.random.number(10)).split(' ').join(',')
+const jobSkills = faker.random.words(faker.random.number(10) + 1).split(' ').join(',')
 
 storiesOf('UI Components|JobSkills', module)
   .add('basic usage', () => (

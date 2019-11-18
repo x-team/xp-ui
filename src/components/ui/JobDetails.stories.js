@@ -8,7 +8,7 @@ import faker from 'faker'
 import JobDetails from './JobDetails'
 
 export const jobDetailsName = faker.name.jobTitle()
-export const jobDetailsSkills = faker.random.words(faker.random.number(10)).split(' ').join(',')
+export const jobDetailsSkills = faker.random.words(faker.random.number(10) + 1).split(' ').join(',')
 export const jobDetailsDescription = `${faker.lorem.paragraph()}
 
 # Heading 1 (converted to h2)
