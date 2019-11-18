@@ -43,6 +43,7 @@ import JobDetails from './components/ui/JobDetails'
 import JobsGrid from './components/ui/JobsGrid'
 import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
 import JobsPageLayout from './components/ui/JobsPageLayout'
+import JobSkills from './components/ui/JobSkills'
 import ProTipCard from './components/ui/ProTipCard'
 import ListExclusionFormPopup from './components/ui/ListExclusionFormPopup'
 import ListsEditor from './components/ui/ListsEditor'
@@ -71,7 +72,6 @@ import Tab from './components/ui/Tabs/Tab'
 import Tabs from './components/ui/Tabs/Tabs'
 import Text from './components/ui/Text'
 import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
-import JobSkills from './components/ui/JobSkills'
 import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
 import VideoPlayer from './components/ui/VideoPlayer'
@@ -121,6 +121,7 @@ export {
   JobsGrid,
   JobsPageBreadcrumbs,
   JobsPageLayout,
+  JobSkills,
   ProTipCard,
   ListExclusionFormPopup,
   ListsEditor,
@@ -149,7 +150,6 @@ export {
   Tabs,
   Text,
   TextareaEditor,
-  JobSkills,
   TruncatedList,
   TwoColumnsLayout,
   VideoPlayer,

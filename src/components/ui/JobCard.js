@@ -18,7 +18,7 @@ const cx = {
       flex-direction: column
       background: ${theme.baseBrighter}
       border: 1px solid ${theme.lineSilver5}
-      box-shadow: 4px 4px 0px ${theme.baseBrightSilver}
+      box-shadow: 4px 4px 0 ${theme.baseBrightSilver}
     `
   ),
 

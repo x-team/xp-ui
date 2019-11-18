@@ -18,12 +18,12 @@ import JobDetails from './components/ui/JobDetails'
 import JobsGrid from './components/ui/JobsGrid'
 import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
 import JobsPageLayout from './components/ui/JobsPageLayout'
+import JobSkills from './components/ui/JobSkills'
 import ProTipCard from './components/ui/ProTipCard'
 import Loader from './components/ui/Loader'
 import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
 import Text from './components/ui/Text'
-import JobSkills from './components/ui/JobSkills'
 import TruncatedList from './components/ui/TruncatedList'
 
 export {
@@ -47,11 +47,11 @@ export {
   JobsGrid,
   JobsPageBreadcrumbs,
   JobsPageLayout,
+  JobSkills,
   ProTipCard,
   Loader,
   Modal,
   RoadmapHero,
   Text,
-  JobSkills,
   TruncatedList
 }
