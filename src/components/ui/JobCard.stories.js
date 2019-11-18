@@ -75,6 +75,6 @@ storiesOf('UI Components|JobCard/Debug', module)
       name={text('Name', nameSample)}
     />
   ))
-  .add('missing props (does component explode?)', () => (
+  .add('missing props', () => (
     <JobCard />
   ))
