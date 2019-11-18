@@ -16,7 +16,7 @@ storiesOf('Core Components|JobSkills', module)
     />
   ))
 
-  storiesOf('Core Components|JobSkills/Debug', module)
+storiesOf('Core Components|JobSkills/Debug', module)
   .add('missing props', () => (
     <JobSkills />
   ))
