@@ -24,7 +24,7 @@ type Props = {
 }
 
 type State = {
-  displayOverlay: boolean
+  hideOverlay: boolean
 }
 
 const iframeStyles = cmz(`
@@ -74,7 +74,7 @@ class VideoPlayer extends PureComponent<Props, State> {
   }
 
   state = {
-    displayOverlay: !!this.props.overlay
+    hideOverlay: false
   }
 
   getEmbeddedVideoSrc = () => {
@@ -89,8 +89,10 @@ class VideoPlayer extends PureComponent<Props, State> {
       overlay
     } = this.props
 
+    const shouldAutoplay = autoPlay || overlay
+
     return Object.entries({
-      autoplay: autoPlay || overlay,
+      autoplay: shouldAutoplay,
       controls: showControls,
       loop,
       muted,
@@ -107,24 +109,19 @@ class VideoPlayer extends PureComponent<Props, State> {
 
   hideOverlay = () => {
     this.setState({
-      displayOverlay: false
+      hideOverlay: true
     })
   }
 
   renderEmbeddedVideo = () => {
-    const { src, width, height } = this.props
-    const { displayOverlay } = this.state
+    const { src, width, height, overlay } = this.props
+    const { hideOverlay } = this.state
 
-    const regExp = /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/ ]{11})/i
-    const match = src.match(regExp)
+    const youtubeUrlRegExp = /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/ ]{11})/i
+    const matchYoutubeUrl = src.match(youtubeUrlRegExp) || []
+    const videoID = matchYoutubeUrl[1]
 
-    if (!match) {
-      return null
-    }
-
-    const videoID = match[1]
-
-    return displayOverlay ? (
+    return overlay && !hideOverlay && videoID ? (
       <div
         className={cx.cover}
         style={{
