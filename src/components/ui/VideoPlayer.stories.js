@@ -101,4 +101,3 @@ storiesOf('Core Components|VideoPlayer/Debug', module)
     <VideoPlayer src={VIDEO_SOURCE} embedded overlay width={640} height={360} />
   ))
   .add('missing props', () => <VideoPlayer />)
-
