@@ -42,7 +42,7 @@ storiesOf('UI Components|WelcomeHero/Debug', module)
   .add('invalid video URL', () => (
     <WelcomeHero
       heading={faker.lorem.words(2)}
-      videoUrl='invalid video URL'
+      videoUrl='http://this.is.not.a.valid.video.url'
       onDismiss={action('Handle dismiss')}
     >
       {faker.lorem.sentences()}

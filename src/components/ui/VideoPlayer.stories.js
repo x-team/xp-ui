@@ -14,10 +14,10 @@ storiesOf('Core Components|VideoPlayer', module)
 
 storiesOf('Core Components|VideoPlayer/Use Cases', module)
   .add('embedded video', () => (
-    <VideoPlayer src={'https://www.youtube.com/embed/R6NUFRNEai4'} embedded width={640} height={360} />
+    <VideoPlayer src='https://www.youtube.com/embed/R6NUFRNEai4' embedded width={640} height={360} />
   ))
-  .add('embedded video with clickable overlay', () => (
-    <VideoPlayer src={'https://www.youtube.com/embed/R6NUFRNEai4'} embedded overlay width={640} height={360} />
+  .add('embedded with overlay video', () => (
+    <VideoPlayer src='https://www.youtube.com/embed/R6NUFRNEai4' embedded overlay width={640} height={360} />
   ))
 
 storiesOf('Core Components|VideoPlayer/States', module)
@@ -47,7 +47,6 @@ storiesOf('Core Components|VideoPlayer/States', module)
   ))
 
 storiesOf('Core Components|VideoPlayer/Debug', module)
-  .add('missing props (does component explodes?)', () => <VideoPlayer />)
   .add('custom height and width', () => (
     <VideoPlayer
       src={VIDEO_SOURCE}
@@ -60,7 +59,7 @@ storiesOf('Core Components|VideoPlayer/Debug', module)
       src={VIDEO_SOURCE}
       width={640}
       height={360}
-      poster={'http://www.hdfbcover.com/randomcovers/covers/never-stop-dreaming-quote-fb-cover.jpg'}
+      poster='http://www.hdfbcover.com/randomcovers/covers/never-stop-dreaming-quote-fb-cover.jpg'
     />
   ))
   .add('no preload, custom width and custom height set', () => (
@@ -68,7 +67,7 @@ storiesOf('Core Components|VideoPlayer/Debug', module)
       src={VIDEO_SOURCE}
       width={640}
       height={360}
-      preload={'none'}
+      preload='none'
     />
   ))
   .add('no controls, custom width and custom height set', () => (
@@ -92,3 +91,14 @@ storiesOf('Core Components|VideoPlayer/Debug', module)
   .add('visible controls, custom height set / auto width', () => (
     <VideoPlayer src={VIDEO_SOURCE} height={360} />
   ))
+  .add('embedded with overlay, invalid video URL', () => (
+    <VideoPlayer src='http://this.is.not.a.valid.video.url' embedded overlay width={640} height={360} />
+  ))
+  .add('embedded with overlay, invalid video ID', () => (
+    <VideoPlayer src='https://www.youtube.com/embed/INVALIDVIDID' embedded overlay width={640} height={360} />
+  ))
+  .add('embedded with overlay, not YouTube source', () => (
+    <VideoPlayer src={VIDEO_SOURCE} embedded overlay width={640} height={360} />
+  ))
+  .add('missing props', () => <VideoPlayer />)
+
