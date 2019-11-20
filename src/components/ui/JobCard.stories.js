@@ -9,7 +9,7 @@ import faker from 'faker'
 
 import JobCard from './JobCard'
 
-export const JobCardLink = ({ children, ...props }: { children: React$Node }) => (
+export const AppLink = ({ children, ...props }: { children: React$Node }) => (
   <a onClick={action('This should be react-router/gasby Link')} {...props}>
     {children}
   </a>
@@ -27,7 +27,7 @@ storiesOf('UI Components|JobCard', module)
       skills={skillsSample}
       summary={text('Summary', summarySample)}
       message={text('Message', messageSample)}
-      link={JobCardLink}
+      link={AppLink}
     />
   ))
 
@@ -37,14 +37,14 @@ storiesOf('UI Components|JobCard/Debug', module)
       name={text('Name', nameSample)}
       skills={skillsSample}
       summary={text('Summary', summarySample)}
-      link={JobCardLink}
+      link={AppLink}
     />
   ))
   .add('without summary', () => (
     <JobCard
       name={text('Name', nameSample)}
       skills={skillsSample}
-      link={JobCardLink}
+      link={AppLink}
       message={text('Message', messageSample)}
     />
   ))

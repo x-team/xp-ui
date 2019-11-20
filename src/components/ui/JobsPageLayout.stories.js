@@ -8,7 +8,7 @@ import ApplicantScreen from './ApplicantScreen'
 import JobsGrid from './JobsGrid'
 import { jobCards } from './JobsGrid.stories'
 import JobsPageBreadcrumbs from './JobsPageBreadcrumbs'
-import { JobsPageBreadcrumbsLink } from './JobsPageBreadcrumbs.stories'
+import { AppLink } from './JobsPageBreadcrumbs.stories'
 import JobApplicationCard from './JobApplicationCard'
 import JobDetails from './JobDetails'
 import { jobDetailsName, jobDetailsSkills, jobDetailsDescription } from './JobDetails.stories'
@@ -81,7 +81,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
           heading={
             <JobsPageBreadcrumbs
               label='Browse all jobs'
-              link={JobsPageBreadcrumbsLink}
+              link={AppLink}
             />
           }
           content={
