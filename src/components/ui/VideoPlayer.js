@@ -24,7 +24,7 @@ type Props = {
 }
 
 type State = {
-  hideOverlay: boolean
+  isOverlayHidden: boolean
 }
 
 const iframeStyles = cmz(`
@@ -74,7 +74,7 @@ class VideoPlayer extends PureComponent<Props, State> {
   }
 
   state = {
-    hideOverlay: false
+    isOverlayHidden: false
   }
 
   getEmbeddedVideoSrc = () => {
@@ -107,21 +107,21 @@ class VideoPlayer extends PureComponent<Props, State> {
     }, `${src}?showinfo=0`)
   }
 
-  hideOverlay = () => {
+  handleHideOverlay = () => {
     this.setState({
-      hideOverlay: true
+      isOverlayHidden: true
     })
   }
 
   renderEmbeddedVideo = () => {
     const { src, width, height, overlay } = this.props
-    const { hideOverlay } = this.state
+    const { isOverlayHidden } = this.state
 
     const youtubeUrlRegExp = /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/ ]{11})/i
     const matchYoutubeUrl = src.match(youtubeUrlRegExp) || []
     const videoID = matchYoutubeUrl[1]
 
-    return overlay && !hideOverlay && videoID ? (
+    return overlay && !isOverlayHidden && videoID ? (
       <div
         className={cx.cover}
         style={{
@@ -130,7 +130,7 @@ class VideoPlayer extends PureComponent<Props, State> {
         }}
       >
         <div className={cx.overlay}>
-          <Button className={cx.play} onClick={this.hideOverlay}>
+          <Button className={cx.play} onClick={this.handleHideOverlay}>
             <SvgIcon icon='play' color='inverted' />
           </Button>
         </div>
