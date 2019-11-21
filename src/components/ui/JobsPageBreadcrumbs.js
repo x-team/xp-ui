@@ -39,11 +39,11 @@ type Props = {
   link?: React$StatelessFunctionalComponent<*>
 }
 
-const JobsPageBreadcrumbs = ({ label = 'Browse all jobs', link: Link }: Props) => Link ? (
-  <Link className={cx.breadcrumb}>
+const JobsPageBreadcrumbs = ({ label = 'Browse all jobs', link: AppLink }: Props) => AppLink ? (
+  <AppLink className={cx.breadcrumb}>
     <SvgIcon icon='arrowleft' />
     <span className={cx.label}>{label}</span>
-  </Link>
+  </AppLink>
 ) : null
 
 export default JobsPageBreadcrumbs
