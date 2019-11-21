@@ -27,6 +27,6 @@ storiesOf('UI Components|JobsPageBreadcrumbs/Debug', module)
       link={AppLink}
     />
   ))
-  .add('missing props (does component explode?)', () => (
+  .add('missing props', () => (
     <JobsPageBreadcrumbs />
   ))

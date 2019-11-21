@@ -35,6 +35,6 @@ storiesOf('UI Components|JobsGrid', module)
   ))
 
 storiesOf('UI Components|JobsGrid/Debug', module)
-  .add('missing props (does component explode?)', () => (
+  .add('missing props', () => (
     <JobsGrid />
   ))

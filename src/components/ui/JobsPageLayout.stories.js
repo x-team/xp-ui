@@ -188,6 +188,6 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
       />
     </Body>
   ))
-  .add('missing props (does component explode?)', () => (
+  .add('missing props', () => (
     <JobsPageLayout />
   ))
