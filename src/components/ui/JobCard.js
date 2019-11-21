@@ -88,12 +88,12 @@ type Props = {
   skills?: string
 }
 
-const JobCard = ({ name, summary, message, link: JobLink, skills }: Props) => {
-  const renderTitle = () => JobLink
+const JobCard = ({ name, summary, message, link: AppLink, skills }: Props) => {
+  const renderTitle = () => AppLink
     ? (
-      <JobLink className={cx.nameLink}>
+      <AppLink className={cx.nameLink}>
         <h3 className={cx.name}>{name}</h3>
-      </JobLink>
+      </AppLink>
     ) : (
       <h3 className={cx.nameLink}>{name}</h3>
     )
@@ -106,7 +106,9 @@ const JobCard = ({ name, summary, message, link: JobLink, skills }: Props) => {
 
   const renderSummary = () => summary && (
     <div className={cx.summary}>
-      {summary} {JobLink && <JobLink className={cx.link}>Learn more »</JobLink>}
+      {summary} {AppLink && (
+        <AppLink className={cx.link}>Learn more »</AppLink>
+      )}
     </div>
   )
 

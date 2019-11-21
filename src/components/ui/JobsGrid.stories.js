@@ -7,7 +7,7 @@ import faker from 'faker'
 
 import JobsGrid from './JobsGrid'
 import JobCard from './JobCard'
-import { JobCardLink } from './JobCard.stories'
+import { AppLink } from './JobCard.stories'
 
 export const jobCards = (amount: number = 15) => Array(amount)
   .fill('')
@@ -20,7 +20,7 @@ export const jobCards = (amount: number = 15) => Array(amount)
         name={faker.random.words()}
         summary={faker.lorem.words(30)}
         message={applied ? faker.random.words() : ''}
-        link={JobCardLink}
+        link={AppLink}
         onApply={action('onApply')}
         onWithdraw={action('onWithdraw')}
       />
@@ -35,6 +35,6 @@ storiesOf('UI Components|JobsGrid', module)
   ))
 
 storiesOf('UI Components|JobsGrid/Debug', module)
-  .add('missing props (does component explode?)', () => (
+  .add('missing props', () => (
     <JobsGrid />
   ))
