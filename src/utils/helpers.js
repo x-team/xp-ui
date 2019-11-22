@@ -85,3 +85,37 @@ export function timeSince (date: Date | string | number | void | null, addSpaceA
 
   return 'just now'
 }
+
+export function parseVideoUrl (url) {
+  // - Supported YouTube URL formats:
+  //   - http://www.youtube.com/watch?v=R6NUFRNEai4
+  //   - http://youtu.be/R6NUFRNEai4
+  //   - https://youtube.googleapis.com/v/R6NUFRNEai4
+  //   - https://www.youtube.com/embed/R6NUFRNEai4
+  // - Supported Vimeo URL formats:
+  //   - http://vimeo.com/25451551
+  //   - http://player.vimeo.com/video/25451551
+  // - Also supports relative URLs:
+  //   - //player.vimeo.com/video/25451551
+
+  url.match(/(http:|https:|)\/\/(player.|www.)?(vimeo\.com|youtu(be\.com|\.be|be\.googleapis\.com))\/(video\/|embed\/|watch\?v=|v\/)?([A-Za-z0-9._%-]*)(&\S+)?/)
+
+  const videoId = RegExp.$6
+
+  let service
+  let poster
+
+  if (RegExp.$3.indexOf('youtu') > -1) {
+    service = 'youtube'
+    poster = `//img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+  } else if (RegExp.$3.indexOf('vimeo') > -1) {
+    service = 'vimeo'
+    // To do: get poster from Vimeo -> https://developer.vimeo.com/api/upload/thumbnails
+  }
+
+  return {
+    videoId,
+    service,
+    poster
+  }
+}

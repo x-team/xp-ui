@@ -7,6 +7,8 @@ import Button from './Button'
 
 import theme from '../../styles/theme'
 
+import { parseVideoUrl } from '../../utils/helpers'
+
 const cmz = require('cmz')
 
 type Props = {
@@ -14,7 +16,7 @@ type Props = {
   embedded?: boolean,
   width?: number,
   height?: number,
-  autoPlay?: boolean,
+  autoplay?: boolean,
   showControls?: boolean,
   loop?: boolean,
   muted?: boolean,
@@ -64,7 +66,7 @@ class VideoPlayer extends PureComponent<Props, State> {
   static defaultProps = {
     src: '',
     embedded: false,
-    autoPlay: false,
+    autoplay: false,
     showControls: true,
     loop: false,
     muted: false,
@@ -80,7 +82,7 @@ class VideoPlayer extends PureComponent<Props, State> {
   getEmbeddedVideoSrc = () => {
     const {
       src,
-      autoPlay,
+      autoplay,
       showControls,
       loop,
       muted,
@@ -89,10 +91,10 @@ class VideoPlayer extends PureComponent<Props, State> {
       overlay
     } = this.props
 
-    const shouldAutoplay = autoPlay || overlay
+    const shouldPlayed = autoplay || overlay
 
     return Object.entries({
-      autoplay: shouldAutoplay,
+      autoplay: shouldPlayed,
       controls: showControls,
       loop,
       muted,
@@ -113,15 +115,9 @@ class VideoPlayer extends PureComponent<Props, State> {
     })
   }
 
-  renderEmbeddedVideo = () => {
-    const { src, width, height, overlay } = this.props
-    const { isOverlayHidden } = this.state
-
-    const youtubeUrlRegExp = /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/ ]{11})/i
-    const matchYoutubeUrl = src.match(youtubeUrlRegExp) || []
-    const videoID = matchYoutubeUrl[1]
-
-    return overlay && !isOverlayHidden && videoID ? (
+  renderOverlay = (handlePlay: () => void, poster: string) => {
+    const { width, height } = this.props
+    return (
       <div
         className={cx.cover}
         style={{
@@ -130,17 +126,22 @@ class VideoPlayer extends PureComponent<Props, State> {
         }}
       >
         <div className={cx.overlay}>
-          <Button className={cx.play} onClick={this.handleHideOverlay}>
+          <Button className={cx.play} onClick={handlePlay}>
             <SvgIcon icon='play' color='inverted' />
           </Button>
         </div>
         <img
-          src={`https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`}
+          src={poster}
           width={width}
           height={height}
         />
       </div>
-    ) : (
+    )
+  }
+
+  renderEmbeddedVideo = () => {
+    const { width, height } = this.props
+    return (
       <iframe
         className={iframeStyles}
         src={this.getEmbeddedVideoSrc()}
@@ -156,32 +157,40 @@ class VideoPlayer extends PureComponent<Props, State> {
       embedded,
       width,
       height,
-      autoPlay,
+      autoplay,
       showControls,
       loop,
       muted,
       poster,
-      preload
+      preload,
+      overlay
     } = this.props
+    const { isOverlayHidden } = this.state
 
-    return embedded
-      ? this.renderEmbeddedVideo()
-      : (
-        <video
-          className={videoStyles}
-          width={width}
-          height={height}
-          autoPlay={autoPlay}
-          controls={showControls}
-          loop={loop}
-          muted={muted}
-          poster={poster}
-          preload={preload}
-          src={src}
-        >
-          Video cannot be played in this browser.
-        </video>
-      )
+    if (embedded) {
+      const parsedVideoSrc = parseVideoUrl(src)
+      const shouldRenderEmbeddedOverlay = overlay && !isOverlayHidden && parsedVideoSrc.poster
+      return shouldRenderEmbeddedOverlay
+        ? this.renderOverlay(this.handleHideOverlay, parsedVideoSrc.poster)
+        : this.renderEmbeddedVideo()
+    }
+
+    return (
+      <video
+        className={videoStyles}
+        width={width}
+        height={height}
+        autoplay={autoplay}
+        controls={showControls}
+        loop={loop}
+        muted={muted}
+        poster={poster}
+        preload={preload}
+        src={src}
+      >
+        Video cannot be played in this browser.
+      </video>
+    )
   }
 }
 
