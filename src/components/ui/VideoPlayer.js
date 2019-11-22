@@ -2,6 +2,13 @@
 
 import React, { PureComponent } from 'react'
 
+import SvgIcon from './SvgIcon'
+import Button from './Button'
+
+import theme from '../../styles/theme'
+
+import { parseVideoUrl } from '../../utils/helpers'
+
 const cmz = require('cmz')
 
 type Props = {
@@ -9,12 +16,17 @@ type Props = {
   embedded?: boolean,
   width?: number,
   height?: number,
-  autoPlay?: boolean,
+  autoplay?: boolean,
   showControls?: boolean,
   loop?: boolean,
   muted?: boolean,
   poster?: string,
-  preload?: 'auto' | 'metadata' | 'none'
+  preload?: 'auto' | 'metadata' | 'none',
+  overlay?: boolean
+}
+
+type State = {
+  isOverlayHidden: boolean
 }
 
 const iframeStyles = cmz(`
@@ -26,31 +38,63 @@ const videoStyles = cmz(`
   margin: 0 auto 20px;
 `)
 
-class VideoPlayer extends PureComponent<Props> {
+const cx = {
+  cover: cmz(`
+    position: relative
+  `),
+
+  overlay: cmz(`
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+  `),
+
+  play: cmz(`
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 122px
+    height: 72px
+    background: ${theme.baseRed.fade(0.05)}
+  `)
+}
+
+class VideoPlayer extends PureComponent<Props, State> {
   static defaultProps = {
     src: '',
     embedded: false,
-    autoPlay: false,
+    autoplay: false,
     showControls: true,
     loop: false,
     muted: false,
     poster: '',
-    preload: 'auto'
+    preload: 'auto',
+    overlay: false
+  }
+
+  state = {
+    isOverlayHidden: false
   }
 
   getEmbeddedVideoSrc = () => {
     const {
       src,
-      autoPlay,
+      autoplay,
       showControls,
       loop,
       muted,
       poster,
-      preload
+      preload,
+      overlay
     } = this.props
 
+    const shouldBePlayed = autoplay || overlay
+
     return Object.entries({
-      autoplay: autoPlay,
+      autoplay: shouldBePlayed,
       controls: showControls,
       loop,
       muted,
@@ -65,45 +109,88 @@ class VideoPlayer extends PureComponent<Props> {
     }, `${src}?showinfo=0`)
   }
 
+  handleHideOverlay = () => {
+    this.setState({
+      isOverlayHidden: true
+    })
+  }
+
+  renderOverlay = (handlePlay: () => void, poster: string) => {
+    const { width, height } = this.props
+    return (
+      <div
+        className={cx.cover}
+        style={{
+          width: width ? `${width}px` : 'auto',
+          height: height ? `${height}px` : 'auto'
+        }}
+      >
+        <div className={cx.overlay}>
+          <Button className={cx.play} onClick={handlePlay}>
+            <SvgIcon icon='play' color='inverted' />
+          </Button>
+        </div>
+        <img
+          src={poster}
+          width={width}
+          height={height}
+        />
+      </div>
+    )
+  }
+
+  renderEmbeddedVideo = () => {
+    const { width, height } = this.props
+    return (
+      <iframe
+        className={iframeStyles}
+        src={this.getEmbeddedVideoSrc()}
+        width={width}
+        height={height}
+      />
+    )
+  }
+
   render () {
     const {
       src,
       embedded,
       width,
       height,
-      autoPlay,
+      autoplay,
       showControls,
       loop,
       muted,
       poster,
-      preload
+      preload,
+      overlay
     } = this.props
+    const { isOverlayHidden } = this.state
 
-    return embedded
-      ? (
-        <iframe
-          className={iframeStyles}
-          src={this.getEmbeddedVideoSrc()}
-          width={width}
-          height={height}
-        />
-      )
-      : (
-        <video
-          className={videoStyles}
-          width={width}
-          height={height}
-          autoPlay={autoPlay}
-          controls={showControls}
-          loop={loop}
-          muted={muted}
-          poster={poster}
-          preload={preload}
-          src={src}
-        >
-          Video cannot be played in this browser.
-        </video>
-      )
+    if (embedded) {
+      const parsedVideoSrc = parseVideoUrl(src)
+      const shouldRenderEmbeddedOverlay = overlay && !isOverlayHidden && parsedVideoSrc.poster
+      return shouldRenderEmbeddedOverlay
+        ? this.renderOverlay(this.handleHideOverlay, parsedVideoSrc.poster)
+        : this.renderEmbeddedVideo()
+    }
+
+    return (
+      <video
+        className={videoStyles}
+        width={width}
+        height={height}
+        autoplay={autoplay}
+        controls={showControls}
+        loop={loop}
+        muted={muted}
+        poster={poster}
+        preload={preload}
+        src={src}
+      >
+        Video cannot be played in this browser.
+      </video>
+    )
   }
 }
 
