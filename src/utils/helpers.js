@@ -86,7 +86,11 @@ export function timeSince (date: Date | string | number | void | null, addSpaceA
   return 'just now'
 }
 
-export function parseVideoUrl (url) {
+export function parseVideoUrl (url: string): {
+  videoId: number,
+  service: string,
+  poster: ?string
+} {
   // - Supported YouTube URL formats:
   //   - http://www.youtube.com/watch?v=R6NUFRNEai4
   //   - http://youtu.be/R6NUFRNEai4

@@ -12,7 +12,7 @@ const validVideoUrl = 'https://www.youtube.com/embed/R6NUFRNEai4'
 storiesOf('UI Components|WelcomeHero', module)
   .add('basic usage', () => (
     <WelcomeHero
-      heading='WELCOME!'
+      heading='Welcome!'
       videoUrl={validVideoUrl}
       onDismiss={action('Handle dismiss')}
     >

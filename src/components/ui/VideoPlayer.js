@@ -91,10 +91,10 @@ class VideoPlayer extends PureComponent<Props, State> {
       overlay
     } = this.props
 
-    const shouldPlayed = autoplay || overlay
+    const shouldBePlayed = autoplay || overlay
 
     return Object.entries({
-      autoplay: shouldPlayed,
+      autoplay: shouldBePlayed,
       controls: showControls,
       loop,
       muted,
