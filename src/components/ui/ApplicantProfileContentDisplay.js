@@ -23,23 +23,6 @@ const cx = {
     width: 100%
   `),
 
-  labelValueRow: cmz(`
-    margin-bottom: 1em
-  `),
-
-  inlineLabel: cmz(`
-    float: left
-    width: 192px
-    font-weight: normal
-    font-size: 1em
-    text-transform: none
-    color: #9a9a9a
-  `),
-
-  inlineValue: cmz(`
-    overflow: hidden
-  `),
-
   shortDetailsContainer: cmz(`
     & > div:not(.overflow-visible) {
       padding-bottom: .6em
@@ -138,8 +121,7 @@ type Props = {
   fetching: Element<*>,
   error: Element<*>,
   invalid: Element<*>,
-  sections: { [key: string]: { label?: Element<*>, value: Element<*> } },
-  ads: { label?: Element<*>, value: Array<{ label: string, value: string }> }
+  sections: { [key: string]: { label?: Element<*>, value: Element<*> } }
 }
 
 class ApplicantProfileContentDisplay extends PureComponent<Props, void> {
@@ -152,10 +134,7 @@ class ApplicantProfileContentDisplay extends PureComponent<Props, void> {
     fetching: null,
     error: null,
     invalid: null,
-    sections: {},
-    ads: {
-      value: []
-    }
+    sections: {}
   }
 
   renderInfo () {
@@ -183,7 +162,7 @@ class ApplicantProfileContentDisplay extends PureComponent<Props, void> {
   }
 
   render () {
-    const { fetching, error, invalid, sections, ads } = this.props
+    const { fetching, error, invalid, sections } = this.props
 
     if (fetching) {
       return fetching
@@ -215,20 +194,6 @@ class ApplicantProfileContentDisplay extends PureComponent<Props, void> {
             {sections[section].value}
           </section>
         ))}
-
-        <section id='ads' className={cx.section}>
-          {ads.label}
-          {ads.value.map((param, i) => (
-            <div key={`profile-ads-${i}`} className={cx.labelValueRow}>
-              <label className={cx.inlineLabel}>
-                {param.label}
-              </label>
-              <div className={cx.inlineValue}>
-                {param.value || '—'}
-              </div>
-            </div>
-          ))}
-        </section>
       </div>
     )
   }
