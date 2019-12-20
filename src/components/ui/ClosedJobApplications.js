@@ -75,16 +75,18 @@ const ClosedJobApplications = ({ applications = [], message }: Props) => (
   <div className={cx.wrapper}>
     <h2 className={cx.heading}>Closed</h2>
     <ul className={cx.list}>
-      {applications.map(application => application.name && (
-        <li key={application.name} className={cx.item}>
-          <h3 className={cx.name}>
-            {application.name}
-          </h3>
-          <p className={cx.info}>
-            {application.info}
-          </p>
-        </li>
-      ))}
+      {applications.length > 0
+        ? applications.map(application => application.name && (
+          <li key={application.name} className={cx.item}>
+            <h3 className={cx.name}>
+              {application.name}
+            </h3>
+            <p className={cx.info}>
+              {application.info}
+            </p>
+          </li>
+        )) : 'You have no recent applications to show here.'
+      }
     </ul>
     {message && (
       <p className={cx.message}>{message}</p>
