@@ -12,7 +12,7 @@ storiesOf('UI Components|EmptyState', module)
           href='https://www.linkedin.com/in/'
           target='_blank'
           rel='noopener noreferrer'
-        >profile is up-to-date.</a>
+        >profile is up-to-date</a>.
       </span>
     </EmptyState>
   ))
