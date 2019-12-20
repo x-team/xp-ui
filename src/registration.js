@@ -3,6 +3,7 @@ import AttachFiles from './components/ui/AttachFiles'
 import Button from './components/ui/Button'
 import ClosedJobApplications from './components/ui/ClosedJobApplications'
 import ConfirmationBox from './components/ui/ConfirmationBox'
+import EmptyState from './components/ui/EmptyState'
 import ErrorBox from './components/ui/ErrorBox'
 import Footer from './components/ui/Footer/Footer'
 import FooterBrands from './components/ui/Footer/FooterBrands'
@@ -30,6 +31,7 @@ export {
   Button,
   ClosedJobApplications,
   ConfirmationBox,
+  EmptyState,
   ErrorBox,
   Footer,
   FooterBrands,
