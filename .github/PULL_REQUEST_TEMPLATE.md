@@ -7,13 +7,15 @@ The imperative tells someone what merging the PR **will do**, rather than **what
 An example: "Refactor code for readability".
 -->
 
-**Release Type:** *RELEASE_TYPE* <!-- Refer to the wiki https://github.com/x-team/xp/wiki/Release-Process#types-of-releases -->
+**Release Type:** *RELEASE_TYPE* <!-- Refer to the wiki for more details https://github.com/x-team/xp/wiki/Release-Process#types-of-releases -->
 <!--
 Basic types are:
   - Bug Fix (non-breaking change which fixes an issue)
-  - Dev Improvements (these changes make life easier for devs but have no noticeable impact on end-users)
+  - Dev Improvement (these changes make life easier for devs but have no noticeable impact on end-users)
+  - UI Improvement (visual UI changes that don't assume radical changes or extra new functionality)
+  - Documentation (updating and/or enhancing existing documentation)
   - Non-Breaking Feature (adding a new feature without affecting any existing features)
-  - Breaking Changes (fix or feature that would cause existing functionality to not work as expected)
+  - Breaking Change (fix or feature that would cause existing functionality to not work as expected)
 -->
 
 Fixes https://x-team-internal.atlassian.net/browse/XP-__ISSUE_NUMBER__
