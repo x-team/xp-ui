@@ -79,6 +79,7 @@ type Props = {
   characterLimit: number,
   hideModeSwitch: boolean,
   hideToolbar: boolean,
+  placeholder?: string,
   toolbarItems: Array<string>,
   mode: 'markdown' | 'wysiwyg' | 'viewer',
   forceRerender: boolean,
@@ -123,7 +124,7 @@ class RichTextEditor extends Component<Props, State> {
   }
 
   componentDidMount () {
-    const { initialValue, hideModeSwitch, disabled, mode, toolbarItems } = this.props
+    const { initialValue, hideModeSwitch, disabled, mode, toolbarItems, placeholder } = this.props
 
     if (this.editSection.current) {
       this.editor = Editor.factory({
@@ -138,7 +139,8 @@ class RichTextEditor extends Component<Props, State> {
           change: this.onChange
         },
         toolbarItems,
-        viewer: mode === 'viewer'
+        viewer: mode === 'viewer',
+        placeholder
       })
 
       this.editorContentsNode = this.editSection.current.querySelector(
