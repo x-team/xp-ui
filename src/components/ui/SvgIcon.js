@@ -6,7 +6,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin' | 'filters' | 'arrowleft' | 'copy'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin' | 'filters' | 'arrowleft' | 'copy' | 'menu'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow' | 'frenchGrayDarker' | 'green'
 
 type Props = {
@@ -725,6 +725,12 @@ export const getIcons = ({ color, hover, ...rest }: { [x: string]: any } = {}) =
       <svg width='16' height='16' viewBox='0 0 16 16' fill='none' {...rest}>
         <path className={fillClassName} d='M14.3576 0H5.63049C5.19495 0 4.77724 0.173018 4.46927 0.48099C4.1613 0.788963 3.98828 1.20666 3.98828 1.6422V10.3693C3.98828 10.8049 4.1613 11.2226 4.46927 11.5306C4.77724 11.8385 5.19495 12.0115 5.63049 12.0115H14.3576C14.7932 12.0115 15.2109 11.8385 15.5188 11.5306C15.8268 11.2226 15.9998 10.8049 15.9998 10.3693V1.6422C15.9998 1.20666 15.8268 0.788963 15.5188 0.48099C15.2109 0.173018 14.7932 0 14.3576 0ZM14.5922 10.3693C14.5922 10.4316 14.5675 10.4912 14.5235 10.5352C14.4795 10.5792 14.4198 10.6039 14.3576 10.6039H5.63049C5.56827 10.6039 5.50859 10.5792 5.4646 10.5352C5.4206 10.4912 5.39588 10.4316 5.39588 10.3693V1.6422C5.39588 1.57998 5.4206 1.52031 5.4646 1.47632C5.50859 1.43232 5.56827 1.4076 5.63049 1.4076H14.3576C14.4198 1.4076 14.4795 1.43232 14.5235 1.47632C14.5675 1.52031 14.5922 1.57998 14.5922 1.6422V10.3693Z' />
         <path className={fillClassName} d='M1.6422 5.39588H2.15833C2.34499 5.39588 2.524 5.32173 2.65599 5.18975C2.78798 5.05776 2.86213 4.87874 2.86213 4.69208C2.86213 4.50542 2.78798 4.32641 2.65599 4.19442C2.524 4.06243 2.34499 3.98828 2.15833 3.98828H1.6422C1.20666 3.98828 0.788963 4.1613 0.48099 4.46927C0.173018 4.77724 0 5.19495 0 5.63049V14.3576C0 14.7932 0.173018 15.2109 0.48099 15.5188C0.788963 15.8268 1.20666 15.9998 1.6422 15.9998H10.3693C10.8049 15.9998 11.2226 15.8268 11.5306 15.5188C11.8385 15.2109 12.0115 14.7932 12.0115 14.3576V13.7946C12.0115 13.6079 11.9374 13.4289 11.8054 13.2969C11.6734 13.1649 11.4944 13.0908 11.3077 13.0908C11.1211 13.0908 10.9421 13.1649 10.8101 13.2969C10.6781 13.4289 10.6039 13.6079 10.6039 13.7946V14.3576C10.6039 14.4198 10.5792 14.4795 10.5352 14.5235C10.4912 14.5675 10.4316 14.5922 10.3693 14.5922H1.6422C1.57998 14.5922 1.52031 14.5675 1.47632 14.5235C1.43232 14.4795 1.4076 14.4198 1.4076 14.3576V5.63049C1.4076 5.56827 1.43232 5.50859 1.47632 5.4646C1.52031 5.4206 1.57998 5.39588 1.6422 5.39588Z' />
+      </svg>
+    ),
+
+    menu: (
+      <svg width='18' height='12' viewBox='0 0 18 12' fill='none'>
+        <path className={fillClassName} d='M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z' />
       </svg>
     )
   }
