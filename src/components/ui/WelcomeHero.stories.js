@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions'
 
 import WelcomeHero from './WelcomeHero'
 
-const validVideoUrl = 'https://www.youtube.com/embed/R6NUFRNEai4'
+export const validVideoUrl = 'https://www.youtube.com/embed/R6NUFRNEai4'
 
 storiesOf('UI Components|WelcomeHero', module)
   .add('basic usage', () => (

@@ -13,13 +13,24 @@ import typo from '../../styles/typo'
 const cmz = require('cmz')
 
 const GAP = '32px'
+const MOBILE_GAP = '12px'
 const WRAPPER_WIDTH = '1100px'
 
 const cx = {
   wrapper: cmz(`
-    max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
-    padding: 0 ${GAP}
-    margin: 0 auto 100px
+    & {
+      max-width: calc(${WRAPPER_WIDTH} - 2 * ${MOBILE_GAP})
+      padding: 0 ${MOBILE_GAP}
+      margin: 0 auto 150px
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
+        padding: 0 ${GAP}
+        margin: 0 auto 100px
+      }
+    }
   `),
 
   heading: cmz(
@@ -37,7 +48,7 @@ const cx = {
       flex-direction: column
     }
 
-    @media screen and (min-width: ${breakpoints.md}) {
+    @media screen and (min-width: ${breakpoints.sm}) {
       & {
         flex-direction: row
       }
@@ -47,30 +58,58 @@ const cx = {
   content: cmz(`
     & {
       width: 100%
-      order: 2
+      order: 1
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      &:not(:only-child) {
+        margin-right: ${GAP}
+        max-width: calc(100% - 308px)
+      }
     }
 
     @media screen and (min-width: ${breakpoints.md}) {
       &:not(:only-child) {
         margin-right: ${GAP}
-        max-width: 760px
-        order: 1
       }
     }
   `),
 
   sidebar: cmz(`
     & {
-      width: 100%
-      order: 1
-      margin-bottom: ${GAP}
+      width: calc(100% + ${MOBILE_GAP} * 2)
+      order: 2
+      margin: ${GAP} 0 ${MOBILE_GAP} -${MOBILE_GAP}
     }
 
-    @media screen and (min-width: ${breakpoints.md}) {
+    @media screen and (min-width: ${breakpoints.sm}) {
       & {
+        width: 100%
         max-width: 308px
-        order: 2
-        margin-bottom: 0
+        margin: 0
+      }
+    }
+  `),
+
+  static: cmz(`
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        margin-bottom: ${GAP}
+      }
+    }
+  `),
+
+  sticky: cmz(`
+    & {
+      position: fixed
+      bottom: 0
+      left: 0
+      width: 100%
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        position: relative
       }
     }
   `),
@@ -85,12 +124,13 @@ type Props = {
   heading?: React$Node,
   content?: React$Node,
   sidebar?: React$Node,
+  sticky?: React$Node,
   isLoading?: boolean,
   error?: string
 }
 
 const JobsPageLayout = (props: Props) => {
-  const { hero, heading, content, sidebar, isLoading, error } = props
+  const { hero, heading, content, sidebar, sticky, isLoading, error } = props
   const headingClassName = typeof heading === 'string' ? cx.heading : ''
 
   const renderContent = () => {
@@ -123,8 +163,15 @@ const JobsPageLayout = (props: Props) => {
           <div className={headingClassName}>{heading}</div>
         )}
         <div className={cx.container}>
-          {sidebar && (
-            <div className={cx.sidebar}>{sidebar}</div>
+          {(sidebar || sticky) && (
+            <div className={cx.sidebar}>
+              {sidebar && (
+                <div className={cx.static}>{sidebar}</div>
+              )}
+              {sticky && (
+                <div className={cx.sticky}>{sticky}</div>
+              )}
+            </div>
           )}
           {renderContent()}
         </div>
@@ -138,6 +185,7 @@ JobsPageLayout.propTypes = {
   heading: PropTypes.node,
   content: PropTypes.node,
   sidebar: PropTypes.node,
+  sticky: PropTypes.node,
   isLoading: PropTypes.bool
 }
 

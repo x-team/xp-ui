@@ -17,13 +17,13 @@ const Body = ({ children }) => (
   </div>
 )
 
-const HeaderLink = ({ children, ...props }: { children: React$Node }) => (
+export const HeaderLink = ({ children, ...props }: { children: React$Node }) => (
   <a onClick={action('This should be react-router/gasby Link')} {...props}>
     {children}
   </a>
 )
 
-const links = [
+export const headerBarLinks = [
   {
     label: 'Browse Jobs',
     to: '/jobs'
@@ -53,7 +53,7 @@ storiesOf('UI Components|HeaderBar/Use Cases', module)
   .add('with links', () => (
     <Body>
       <HeaderBar
-        links={object('Link', links)}
+        links={object('Link', headerBarLinks)}
         appLink={HeaderLink}
       />
     </Body>
