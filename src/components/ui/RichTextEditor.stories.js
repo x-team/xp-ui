@@ -18,13 +18,16 @@ storiesOf('Core Components|Form Components/RichTextEditor/States', module)
   ))
 
 storiesOf('Core Components|Form Components/RichTextEditor/Debug', module)
-  .add('missing props (does component explode?)', () => (
-    <RichTextEditor />
-  ))
   .add('with initial value', () => (
     <RichTextEditor
       initialValue={`*Hello* <strong>world</strong>! <a href="https://www.google.com">HTML Link</a> and [Markdown Link](https://google.com)`}
       characterLimit={100}
+    />
+  ))
+  .add('with placeholder specified', () => (
+    <RichTextEditor
+      characterLimit={100}
+      placeholder='Placeholder value'
     />
   ))
   .add('with initial value longer than character limit', () => (
@@ -45,6 +48,7 @@ storiesOf('Core Components|Form Components/RichTextEditor/Debug', module)
     <RichTextEditor
       disabled={boolean('disabled', false)}
       initialValue={text('initialValue', undefined)}
+      placeholder={text('placeholder', 'default placeholder')}
       characterLimit={number('characterLimit', 140)}
       hideModeSwitch={boolean('hideModeSwitch', true)}
       handleChange={action('handleChange')}
@@ -101,4 +105,7 @@ This is **bold** text
 - Wednesday
       `}
     />
+  ))
+  .add('missing props', () => (
+    <RichTextEditor />
   ))
