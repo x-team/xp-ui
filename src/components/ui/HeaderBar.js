@@ -100,6 +100,7 @@ const cx = {
       left: 16px
       top: 19px
       cursor: pointer
+      user-select: none
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
@@ -275,7 +276,7 @@ class HeaderBar extends PureComponent<Props, State> {
               {expanded ? (
                 <SvgIcon icon='x' color='grayscale' />
               ) : (
-                <SvgIcon icon='menu' color='monochrome' />
+                <SvgIcon icon='hamburger' color='monochrome' />
               )}
             </div>
             <div className={cx.logo}>

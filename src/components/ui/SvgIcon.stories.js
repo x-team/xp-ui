@@ -50,7 +50,6 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='filters' />
       <SvgIcon icon='arrowleft' />
       <SvgIcon icon='copy' />
-      <SvgIcon icon='menu' />
     </div>
   ))
   .add('inverted color', () => (
@@ -96,7 +95,6 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='filters' color='inverted' />
       <SvgIcon icon='arrowleft' color='inverted' />
       <SvgIcon icon='copy' color='inverted' />
-      <SvgIcon icon='menu' color='inverted' />
     </div>
   ))
 
@@ -143,7 +141,6 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='filters' color='monochrome' />
       <SvgIcon icon='arrowleft' color='monochrome' />
       <SvgIcon icon='copy' color='monochrome' />
-      <SvgIcon icon='menu' color='monochrome' />
     </div>
   ))
   .add('grayscale color', () => (
@@ -189,7 +186,6 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='filters' color='grayscale' />
       <SvgIcon icon='arrowleft' color='grayscale' />
       <SvgIcon icon='copy' color='grayscale' />
-      <SvgIcon icon='menu' color='grayscale' />
     </div>
   ))
   .add('grayscarpaflow color', () => (
@@ -235,7 +231,6 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='filters' color='grayscarpaflow' />
       <SvgIcon icon='arrowleft' color='grayscarpaflow' />
       <SvgIcon icon='copy' color='grayscarpaflow' />
-      <SvgIcon icon='menu' color='grayscarpaflow' />
     </div>
   ))
   .add('text gray color', () => (
@@ -281,7 +276,6 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='filters' color='text' />
       <SvgIcon icon='arrowleft' color='text' />
       <SvgIcon icon='copy' color='text' />
-      <SvgIcon icon='menu' color='text' />
     </div>
   ))
   .add('muted gray color', () => (
@@ -327,7 +321,6 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='filters' color='mutedgray' />
       <SvgIcon icon='arrowleft' color='mutedgray' />
       <SvgIcon icon='copy' color='mutedgray' />
-      <SvgIcon icon='menu' color='mutedgray' />
     </div>
   ))
   .add('green color', () => (
@@ -373,7 +366,6 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='filters' color='green' />
       <SvgIcon icon='arrowleft' color='green' />
       <SvgIcon icon='copy' color='green' />
-      <SvgIcon icon='menu' color='green' />
     </div>
   ))
   .add('hover color', () => (
@@ -419,7 +411,6 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='filters' color='text' hover='default' />
       <SvgIcon icon='arrowleft' color='text' hover='default' />
       <SvgIcon icon='copy' color='text' hover='default' />
-      <SvgIcon icon='menu' color='text' hover='default' />
     </div>
   ))
   .add('rest of props', () => (
@@ -465,7 +456,6 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='filters' style={{ marginRight: '30px' }} />
       <SvgIcon icon='arrowleft' style={{ marginRight: '30px' }} />
       <SvgIcon icon='copy' style={{ marginRight: '30px' }} />
-      <SvgIcon icon='menu' style={{ marginRight: '30px' }} />
     </div>
   ))
 
