@@ -45,8 +45,8 @@ const SampleSidebar = () => (
   <div style={{ border: '2px dashed green' }}>Sample Sidebar component</div>
 )
 
-const SampleSticky = () => (
-  <div style={{ border: '2px dashed red' }}>Sample Sticky component</div>
+const SampleActionsBar = () => (
+  <div style={{ border: '2px dashed red' }}>Sample ActionsBar component</div>
 )
 
 const JobsPageProTipCard = () => (
@@ -110,7 +110,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
           sidebar={
             <JobsPageProTipCard />
           }
-          sticky={
+          actionsBar={
             <JobApplicationCard />
           }
         />
@@ -158,7 +158,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
           sidebar={
             <JobsPageProTipCard />
           }
-          sticky={
+          actionsBar={
             <JobApplicationCard
               isApplied
               message={<span>You've already applied for this position on March 27th. <b> Check your email for next steps.</b></span>}
@@ -176,7 +176,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         heading='Jobs'
         isLoading
         sidebar={<SampleSidebar />}
-        sticky={<SampleSticky />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -187,7 +187,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         heading='Jobs'
         error='An error has occurred.'
         sidebar={<SampleSidebar />}
-        sticky={<SampleSticky />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -198,7 +198,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         heading={<SampleHeading />}
         content={<SampleContent />}
         sidebar={<SampleSidebar />}
-        sticky={<SampleSticky />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -208,7 +208,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         heading={<SampleHeading />}
         content={<SampleContent />}
         sidebar={<SampleSidebar />}
-        sticky={<SampleSticky />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -218,7 +218,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         hero={<SampleHero />}
         content={<SampleContent />}
         sidebar={<SampleSidebar />}
-        sticky={<SampleSticky />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -228,7 +228,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         hero={<SampleHero />}
         heading={<SampleHeading />}
         sidebar={<SampleSidebar />}
-        sticky={<SampleSticky />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -238,7 +238,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         hero={<SampleHero />}
         heading={<SampleHeading />}
         content={<SampleContent />}
-        sticky={<SampleSticky />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))

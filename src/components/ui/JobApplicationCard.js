@@ -15,7 +15,7 @@ const cx = {
     & {
       width: 100%
       box-sizing: border-box
-      padding: 20px 20px 0
+      padding: 12px 12px 0
       display: inline-block
       background: ${theme.baseBrighter}
       box-shadow: 0 -2px 3px rgba(0, 0, 0, .1)
@@ -23,7 +23,7 @@ const cx = {
 
     &:after {
       content: ''
-      background: silver
+      background: ${theme.baseSilver}
       height: 5px
       width: 36%
       border-radius: 8px

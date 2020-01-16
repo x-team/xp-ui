@@ -124,13 +124,13 @@ type Props = {
   heading?: React$Node,
   content?: React$Node,
   sidebar?: React$Node,
-  sticky?: React$Node,
+  actionsBar?: React$Node,
   isLoading?: boolean,
   error?: string
 }
 
 const JobsPageLayout = (props: Props) => {
-  const { hero, heading, content, sidebar, sticky, isLoading, error } = props
+  const { hero, heading, content, sidebar, actionsBar, isLoading, error } = props
   const headingClassName = typeof heading === 'string' ? cx.heading : ''
 
   const renderContent = () => {
@@ -163,13 +163,13 @@ const JobsPageLayout = (props: Props) => {
           <div className={headingClassName}>{heading}</div>
         )}
         <div className={cx.container}>
-          {(sidebar || sticky) && (
+          {(sidebar || actionsBar) && (
             <div className={cx.sidebar}>
               {sidebar && (
                 <div className={cx.static}>{sidebar}</div>
               )}
-              {sticky && (
-                <div className={cx.sticky}>{sticky}</div>
+              {actionsBar && (
+                <div className={cx.sticky}>{actionsBar}</div>
               )}
             </div>
           )}
