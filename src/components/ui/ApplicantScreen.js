@@ -8,12 +8,23 @@ import PropTypes from 'prop-types'
 import HeaderBar from './HeaderBar'
 import ApplicantScreenNotification from './ApplicantScreenNotification'
 
+import { breakpoints } from '../../styles/theme'
+
 const cmz = require('cmz')
 
 const cx = {
   header: cmz(`
-    z-index: 2
-    position: relative
+    & {
+      z-index: 2
+      position: relative
+      height: 50px
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        height: auto
+      }
+    }
   `),
 
   notification: cmz(`
