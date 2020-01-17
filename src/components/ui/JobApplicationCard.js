@@ -47,9 +47,17 @@ const cx = {
   paragraph: cmz(
     typo.baseText,
     `
-      line-height: 22px
-      font-size: 16px
-      margin: 18px 0 0 0
+      & {
+        line-height: 22px
+        font-size: 14px
+        margin: 18px 0 0 0
+      }
+
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          font-size: 16px
+        }
+      }
     `
   ),
 

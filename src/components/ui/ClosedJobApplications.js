@@ -3,7 +3,7 @@
 import React from 'react'
 
 import typo from '../../styles/typo'
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 
 const cmz = require('cmz')
 
@@ -11,10 +11,18 @@ const cx = {
   wrapper: cmz(
     typo.baseText,
     `
-      color: ${theme.typoParagraph}
-      font-weight: 300
-      font-size: 16px
-      line-height: 1.4
+      & {
+        color: ${theme.typoParagraph}
+        font-weight: 300
+        font-size: 14px
+        line-height: 1.4
+      }
+
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          font-size: 16px
+        }
+      }
     `
   ),
 
@@ -27,12 +35,20 @@ const cx = {
   heading: cmz(
     typo.sectionHeading,
     `
-      color: ${theme.typoHeading.fade(0.15)}
-      font-weight: 700
-      font-size: 24px
-      letter-spacing: 0.48px
-      text-transform: uppercase
-      margin: 0 0 24px
+      & {
+        color: ${theme.typoHeading.fade(0.15)}
+        font-weight: 700
+        font-size: 18px
+        letter-spacing: 0.48px
+        text-transform: uppercase
+        margin: 0 0 24px
+      }
+
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          font-size: 24px
+        }
+      }
     `
   ),
 
@@ -41,13 +57,21 @@ const cx = {
   `),
 
   name: cmz(`
-    color: ${theme.typoHeading}
-    font-style: italic
-    font-weight: 400
-    font-size: 18px
-    line-height: 1.4
-    text-transform: none
-    margin: 0
+    & {
+      color: ${theme.typoHeading}
+      font-style: italic
+      font-weight: 400
+      font-size: 16px
+      line-height: 1.4
+      text-transform: none
+      margin: 0
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        font-size: 18px
+      }
+    }
   `),
 
   info: cmz(`

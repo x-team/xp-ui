@@ -47,17 +47,34 @@ const cx = {
   heading: cmz(
     typo.heading,
     `
-      margin: 0 0 -16px
-      font-size: 42px
-      line-height: 57px
-      letter-spacing: -0.02em
+      & {
+        margin: 0 0 -16px
+        font-size: 28px
+        line-height: 1.4
+        letter-spacing: -0.02em
+      }
+
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          font-size: 42px
+          line-height: 57px
+        }
+      }
     `
   ),
 
   text: cmz(`
-    font-size: 24px
-    line-height: 1.4
-    margin: -11px 0 0
+    & {
+      font-size: 20px
+      line-height: 1.4
+      margin: -11px 0 0
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        font-size: 24px
+      }
+    }
   `),
 
   player: cmz(`
@@ -106,7 +123,7 @@ const cx = {
     & {
       text-decoration: none
       color: ${theme.typoAnchor}
-      font-size: 20px
+      font-size: 16px
       font-weight: 600
       white-space: nowrap
       flex-wrap: wrap
@@ -116,13 +133,19 @@ const cx = {
     &:hover {
       color: ${theme.typoAnchorHover}
     }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        font-size: 20px
+      }
+    }
   `),
 
   dismiss: cmz(`
     & {
       color: ${theme.typoParagraph.fade(0.5)}
       background: none
-      font-size: 20px
+      font-size: 16px
       text-transform: none
       border: none
       font-weight: 500
@@ -131,6 +154,12 @@ const cx = {
 
     &:hover {
       background: none
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        font-size: 20px
+      }
     }
   `)
 }
