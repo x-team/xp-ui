@@ -185,7 +185,7 @@ JobsPageLayout.propTypes = {
   heading: PropTypes.node,
   content: PropTypes.node,
   sidebar: PropTypes.node,
-  sticky: PropTypes.node,
+  actionsBar: PropTypes.node,
   isLoading: PropTypes.bool
 }
 
