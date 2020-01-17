@@ -57,7 +57,7 @@ const cx = {
   text: cmz(`
     font-size: 24px
     line-height: 1.4
-    margin: -11px 0 0 
+    margin: -11px 0 0
   `),
 
   player: cmz(`
@@ -67,10 +67,19 @@ const cx = {
       box-shadow: -10px 10px 0 ${theme.baseTuna.fade(0.95)}
       background: ${theme.baseTuna.fade(0.85)}
       margin: ${GAP} auto 10px
+      width: 100%
+      max-width: 534px
     }
 
     & > iframe {
       display: block
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        width: 534px
+        flex-shrink: 0
+      }
     }
 
     @media screen and (min-width: ${breakpoints.md}) {
@@ -83,6 +92,7 @@ const cx = {
   actions: cmz(`
     & {
       display: flex
+      flex-wrap: wrap
       align-items: center
       margin: 24px 0 0
     }
