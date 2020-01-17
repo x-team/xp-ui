@@ -1,6 +1,7 @@
 // @flow
+/* global React$Node */
 
-import React, { PureComponent } from 'react'
+import React, { Fragment, PureComponent } from 'react'
 
 import SvgIcon from './SvgIcon'
 import Button from './Button'
@@ -39,8 +40,24 @@ const videoStyles = cmz(`
 `)
 
 const cx = {
-  cover: cmz(`
-    position: relative
+  responsive: cmz(`
+    & {
+      position: relative
+      padding-bottom: 56.25%
+      height: 0
+      overflow: hidden
+      max-width: 100%
+    }
+
+    & img,
+    & video,
+    & iframe {
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+    }
   `),
 
   overlay: cmz(`
@@ -50,6 +67,7 @@ const cx = {
     justify-content: center
     width: 100%
     height: 100%
+    z-index: 1
   `),
 
   play: cmz(`
@@ -115,16 +133,26 @@ class VideoPlayer extends PureComponent<Props, State> {
     })
   }
 
-  renderOverlay = (handlePlay: () => void, poster: string) => {
+  renderResponsive = (children: React$Node) => {
     const { width, height } = this.props
     return (
       <div
-        className={cx.cover}
         style={{
-          width: width ? `${width}px` : 'auto',
-          height: height ? `${height}px` : 'auto'
+          maxWidth: width ? `${width}px` : 'auto',
+          maxHeight: height ? `${height}px` : 'auto'
         }}
       >
+        <div className={cx.responsive}>
+          {children}
+        </div>
+      </div>
+    )
+  }
+
+  renderOverlay = (handlePlay: () => void, poster: string) => {
+    const { width, height } = this.props
+    return this.renderResponsive(
+      <Fragment>
         <div className={cx.overlay}>
           <Button className={cx.play} onClick={handlePlay}>
             <SvgIcon icon='play' color='inverted' />
@@ -135,13 +163,13 @@ class VideoPlayer extends PureComponent<Props, State> {
           width={width}
           height={height}
         />
-      </div>
+      </Fragment>
     )
   }
 
   renderEmbeddedVideo = () => {
     const { width, height } = this.props
-    return (
+    return this.renderResponsive(
       <iframe
         className={iframeStyles}
         src={this.getEmbeddedVideoSrc()}
@@ -175,7 +203,7 @@ class VideoPlayer extends PureComponent<Props, State> {
         : this.renderEmbeddedVideo()
     }
 
-    return (
+    return this.renderResponsive(
       <video
         className={videoStyles}
         width={width}
