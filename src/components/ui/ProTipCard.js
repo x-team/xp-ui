@@ -3,7 +3,7 @@
 
 import React from 'react'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 const cmz = require('cmz')
@@ -14,7 +14,8 @@ const cx = {
     `
       & {
         background: ${theme.baseYellow}
-        border: 1px solid ${theme.lineYellow}
+        border-top: 1px solid ${theme.lineYellow}
+        border-bottom: 1px solid ${theme.lineYellow}
         box-shadow: 4px 4px 0 ${theme.baseYellowDark.fade(0.85)}
         padding: 24px
         line-height: 1.4
@@ -31,6 +32,12 @@ const cx = {
 
       &:not(:only-child) {
         margin: 0 0 38px
+      }
+
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          border: 1px solid ${theme.lineYellow}
+        }
       }
     `
   ),

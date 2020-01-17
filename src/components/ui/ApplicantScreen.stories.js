@@ -1,13 +1,12 @@
 // @flow
-/* global React$Node */
 
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import faker from 'faker'
 import { object } from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions'
 
 import ApplicantScreen from './ApplicantScreen'
+import { HeaderLink, headerBarLinks } from './HeaderBar.stories'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -17,31 +16,6 @@ const Body = ({ children }) => (
     {children}
   </div>
 )
-
-const HeaderLink = ({ children, ...props }: { children: React$Node }) => (
-  <a onClick={action('This should be react-router/gasby Link')} {...props}>
-    {children}
-  </a>
-)
-
-const links = [
-  {
-    label: 'Browse Jobs',
-    to: '/jobs'
-  },
-  {
-    label: 'My Applications',
-    to: '/jobs/my-applications'
-  },
-  {
-    label: 'Blog',
-    href: 'https://x-team.com/blog/'
-  },
-  {
-    label: 'Unleash+',
-    href: 'https://x-team.com/unleash/'
-  }
-]
 
 storiesOf('Screens and Layouts|ApplicantScreen', module)
   .add('basic usage', () => (
@@ -66,7 +40,7 @@ storiesOf('Screens and Layouts|ApplicantScreen/States', module)
   ))
   .add('with menu links', () => (
     <Body>
-      <ApplicantScreen menuLinks={object('Link', links)} appLink={HeaderLink}>
+      <ApplicantScreen menuLinks={object('Link', headerBarLinks)} appLink={HeaderLink}>
         {faker.lorem.paragraphs(50)}
       </ApplicantScreen>
     </Body>
@@ -74,7 +48,7 @@ storiesOf('Screens and Layouts|ApplicantScreen/States', module)
   .add('with menu links and notification', () => (
     <Body>
       <ApplicantScreen
-        menuLinks={object('Link', links)}
+        menuLinks={object('Link', headerBarLinks)}
         appLink={HeaderLink}
         notification={
           <span>You've successfully applied for this position. <b>Check your email for next steps</b></span>
