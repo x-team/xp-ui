@@ -78,6 +78,7 @@ const cx = {
     @media screen and (min-width: ${breakpoints.sm}) {
       & {
         width: 534px
+        flex-shrink: 0
       }
     }
 
