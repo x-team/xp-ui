@@ -2,9 +2,11 @@
 
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 
 import JobsPageLayout from './JobsPageLayout'
 import ApplicantScreen from './ApplicantScreen'
+import { HeaderLink, headerBarLinks } from './HeaderBar.stories'
 import JobsGrid from './JobsGrid'
 import { jobCards } from './JobsGrid.stories'
 import JobsPageBreadcrumbs from './JobsPageBreadcrumbs'
@@ -15,6 +17,8 @@ import { jobDetailsName, jobDetailsSkills, jobDetailsDescription } from './JobDe
 import ClosedJobApplications from './ClosedJobApplications'
 import { closedJobApplicationsJobsSample, closedJobApplicationsMessageSample } from './ClosedJobApplications.stories'
 import ProTipCard from './ProTipCard'
+import WelcomeHero from './WelcomeHero'
+import { validVideoUrl } from './WelcomeHero.stories'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -41,6 +45,10 @@ const SampleSidebar = () => (
   <div style={{ border: '2px dashed green' }}>Sample Sidebar component</div>
 )
 
+const SampleActionsBar = () => (
+  <div style={{ border: '2px dashed red' }}>Sample ActionsBar component</div>
+)
+
 const JobsPageProTipCard = () => (
   <ProTipCard heading='How to Stand Out'>
     <span>
@@ -62,9 +70,17 @@ const JobsPageProTipCard = () => (
 storiesOf('Screens and Layouts|JobsPageLayout', module)
   .add('basic usage', () => (
     <Body>
-      <ApplicantScreen noWrapper>
+      <ApplicantScreen noWrapper menuLinks={headerBarLinks} appLink={HeaderLink}>
         <JobsPageLayout
-          hero={<SampleHero />}
+          hero={
+            <WelcomeHero
+              heading='Welcome!'
+              videoUrl={validVideoUrl}
+              onDismiss={action('Handle dismiss')}
+            >
+              Watch X-Team's CEO explain how X-Team makes working from anywhere the most energizing and rewarding experience imaginable.
+            </WelcomeHero>
+          }
           heading='Jobs'
           content={<JobsGrid jobCards={jobCards(5)} />}
           sidebar={<JobsPageProTipCard />}
@@ -76,7 +92,7 @@ storiesOf('Screens and Layouts|JobsPageLayout', module)
 storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
   .add('job details page', () => (
     <Body>
-      <ApplicantScreen noWrapper>
+      <ApplicantScreen noWrapper menuLinks={headerBarLinks} appLink={HeaderLink}>
         <JobsPageLayout
           heading={
             <JobsPageBreadcrumbs
@@ -92,10 +108,10 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
             />
           }
           sidebar={
-            <div>
-              <JobsPageProTipCard />
-              <JobApplicationCard />
-            </div>
+            <JobsPageProTipCard />
+          }
+          actionsBar={
+            <JobApplicationCard />
           }
         />
       </ApplicantScreen>
@@ -103,7 +119,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
   ))
   .add('my applications page', () => (
     <Body>
-      <ApplicantScreen noWrapper>
+      <ApplicantScreen noWrapper menuLinks={headerBarLinks} appLink={HeaderLink}>
         <JobsPageLayout
           heading='Pending applications'
           content={
@@ -122,6 +138,37 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
   ))
 
 storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
+  .add('job details page (applied)', () => (
+    <Body>
+      <ApplicantScreen noWrapper menuLinks={headerBarLinks} appLink={HeaderLink}>
+        <JobsPageLayout
+          heading={
+            <JobsPageBreadcrumbs
+              label='Browse all jobs'
+              link={AppLink}
+            />
+          }
+          content={
+            <JobDetails
+              name={jobDetailsName}
+              skills={jobDetailsSkills}
+              description={jobDetailsDescription}
+            />
+          }
+          sidebar={
+            <JobsPageProTipCard />
+          }
+          actionsBar={
+            <JobApplicationCard
+              isApplied
+              message={<span>You've already applied for this position on March 27th. <b> Check your email for next steps.</b></span>}
+              onWithdraw={action('Withdrawing from job...')}
+            />
+          }
+        />
+      </ApplicantScreen>
+    </Body>
+  ))
   .add('loading content', () => (
     <Body>
       <JobsPageLayout
@@ -129,6 +176,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         heading='Jobs'
         isLoading
         sidebar={<SampleSidebar />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -139,6 +187,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         heading='Jobs'
         error='An error has occurred.'
         sidebar={<SampleSidebar />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -149,6 +198,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         heading={<SampleHeading />}
         content={<SampleContent />}
         sidebar={<SampleSidebar />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -158,6 +208,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         heading={<SampleHeading />}
         content={<SampleContent />}
         sidebar={<SampleSidebar />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -167,6 +218,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         hero={<SampleHero />}
         content={<SampleContent />}
         sidebar={<SampleSidebar />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -176,6 +228,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         hero={<SampleHero />}
         heading={<SampleHeading />}
         sidebar={<SampleSidebar />}
+        actionsBar={<SampleActionsBar />}
       />
     </Body>
   ))
@@ -185,6 +238,17 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         hero={<SampleHero />}
         heading={<SampleHeading />}
         content={<SampleContent />}
+        actionsBar={<SampleActionsBar />}
+      />
+    </Body>
+  ))
+  .add('using debug components (without sticky)', () => (
+    <Body>
+      <JobsPageLayout
+        hero={<SampleHero />}
+        heading={<SampleHeading />}
+        content={<SampleContent />}
+        sidebar={<SampleSidebar />}
       />
     </Body>
   ))

@@ -19,6 +19,12 @@ const cx = {
     `
   ),
 
+  content: cmz(`
+    & :last-child {
+      margin-bottom: 0
+    }
+  `),
+
   name: cmz(`
     color: ${theme.typoHeading}
     font-size: 1.75em
@@ -202,7 +208,9 @@ const JobDetails = ({ name = '', description = '', skills = '' }: Props) => {
       {skills && (
         <JobSkills skills={skills} />
       )}
-      {htmlContent()}
+      <div className={cx.content}>
+        {htmlContent()}
+      </div>
     </div>
   ) : null
 }
