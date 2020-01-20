@@ -36,8 +36,16 @@ const cx = {
   heading: cmz(
     typo.heading,
     `
-      font-size: ${GAP}
-      margin: ${GAP} 0
+      & {
+        font-size: 24px
+        margin: ${GAP} 0
+      }
+
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          font-size: 32px
+        }
+      }
     `
   ),
 

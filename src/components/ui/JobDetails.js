@@ -5,7 +5,7 @@ import { compiler as markdownCompiler } from 'markdown-to-jsx'
 
 import JobSkills from './JobSkills'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 const cmz = require('cmz')
@@ -14,8 +14,16 @@ const cx = {
   wrapper: cmz(
     typo.baseText,
     `
-      font-size: 24px
-      font-weight: normal
+      & {
+        font-size: 16px
+        font-weight: normal
+      }
+
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          font-size: 24px
+        }
+      }
     `
   ),
 
@@ -26,23 +34,50 @@ const cx = {
   `),
 
   name: cmz(`
-    color: ${theme.typoHeading}
-    font-size: 1.75em
-    line-height: 1.55
-    letter-spacing: -.05em
-    margin: 0 0 .57144em
+    & {
+      color: ${theme.typoHeading}
+      font-size: 24px
+      line-height: 1.55
+      letter-spacing: -.05em
+      margin: 0 0 16px
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        font-size: 42px
+        margin: 0 0 24px
+      }
+    }
   `),
 
   h2: cmz(`
-    margin: 1.33333em 0 1em
-    font-size: 1em
-    letter-spacing: -.02em
+    & {
+      margin: 24px 0 16px
+      font-size: 18px
+      letter-spacing: -.02em
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        margin: 32px 0 24px
+        font-size: 24px
+      }
+    }
   `),
 
   h3: cmz(`
-    margin: 1.2em 0 1em
-    font-size: .833333em
-    letter-spacing: -.02em
+    & {
+      margin: 20px 0 14px
+      font-size: 16px
+      letter-spacing: -.02em
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        margin: 24px 0 20px
+        font-size: 20px
+      }
+    }
   `),
 
   a: cmz(`
@@ -56,35 +91,59 @@ const cx = {
   `),
 
   p: cmz(`
-    margin: 1em 0
-    line-height: 1.4
+    & {
+      margin: 16px 0
+      line-height: 1.4
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        margin: 24px 0
+      }
+    }
   `),
 
   blockquote: cmz(``),
 
   ul: cmz(`
-    margin: 1em 0 1em .5em
-    padding: 0
-    list-style: none
+    & {
+      margin: 16px 0 16px 6px
+      padding: 0
+      list-style: none
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        margin: 24px 0 24px 12px
+      }
+    }
   `),
 
   ol: cmz(`
-    margin: 1em 0 1em .5em
-    padding: 0
-    list-style: none
-    counter-reset: job-details
+    & {
+      margin: 16px 0 16px 6px
+      padding: 0
+      list-style: none
+      counter-reset: job-details
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        margin: 24px 0 24px 12px
+      }
+    }
   `),
 
   li: cmz(`
     & {
-      font-size: .833333em
+      font-size: 16px
       line-height: 1.25
       counter-increment: job-details
     }
 
     &::before {
       color: ${theme.typoSubheading}
-      margin: 0 .6em 0 0
+      margin: 0 6px 0 0
     }
 
     ul &::before {
@@ -94,27 +153,54 @@ const cx = {
     ol &::before {
       content: counter(job-details) '.'
     }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        font-size: 20px
+      }
+
+      &::before {
+        margin: 0 12px 0 0
+      }
+    }
   `),
 
   code: cmz(`
-    background: ${theme.baseBright}
-    padding: 4px .5em
-    border-radius: 4px
-    margin: 1em 0
+    & {
+      background: ${theme.baseBright}
+      padding: 6px 8px
+      border-radius: 4px
+      margin: 24px 0
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        padding: 4px 12px
+        margin: 24px 0
+      }
+    }
   `),
 
   pre: cmz(`
     & {
       background: ${theme.baseBright}
-      padding: .3em .6em
-      font-size: .833333em
+      padding: 6px 8px
+      font-size: 14px
       border-radius: 4px
       overflow-x: auto
+      line-height: 1.4
     }
 
     & > code {
       font-size: inherit
       padding: 0
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        padding: 6px 12px
+        font-size: 20px
+      }
     }
   `)
 }

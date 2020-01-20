@@ -3,7 +3,7 @@
 
 import React from 'react'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo, { typeface } from '../../styles/typo'
 
 const cmz = require('cmz')
@@ -46,7 +46,7 @@ const cx = {
     typeface.semiHeading,
     `
       & {
-        font-size: 24px
+        font-size: 20px
         font-weight: 400
         line-height: 1.3
         margin: 0
@@ -56,15 +56,27 @@ const cx = {
       &:not(:only-child) {
         margin: 0 0 12px
       }
+
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          font-size: 24px
+        }
+      }
     `
   ),
 
   content: cmz(`
     & {
-      font-size: 18px
+      font-size: 16px
       line-height: 1.2
       margin: 0
       max-width: 400px
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        font-size: 18px
+      }
     }
   `)
 }
