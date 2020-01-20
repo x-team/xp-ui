@@ -47,14 +47,31 @@ const cx = {
   paragraph: cmz(
     typo.baseText,
     `
-      line-height: 22px
-      font-size: 16px
-      margin: 18px 0 0 0
+      & {
+        line-height: 22px
+        font-size: 14px
+        margin: 18px 0 0 0
+      }
+
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          font-size: 16px
+        }
+      }
     `
   ),
 
   button: cmz(`
-    white-space: normal
+    & {
+      white-space: normal
+      font-size: 11px
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        font-size: 12px
+      }
+    }
   `)
 }
 
@@ -74,12 +91,16 @@ const JobApplicationCard = ({
   onWithdraw
 }: Props) => {
   const renderApplyCard = () => (
-    <Button wide disabled={isSaving} onClick={onApply} className={cx.button}>Apply For This Position</Button>
+    <Button wide disabled={isSaving} onClick={onApply}>
+      <span className={cx.button}>Apply For This Position</span>
+    </Button>
   )
 
   const renderWithdrawCard = () => (
     <Fragment>
-      <Button wide color='monochrome' disabled={isSaving} onClick={onWithdraw} className={cx.button}>Withdraw Application</Button>
+      <Button wide color='monochrome' disabled={isSaving} onClick={onWithdraw}>
+        <span className={cx.button}>Withdraw Application</span>
+      </Button>
       {message && (
         <p className={cx.paragraph}>
           {message}

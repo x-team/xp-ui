@@ -5,7 +5,7 @@ import React from 'react'
 
 import SvgIcon from './SvgIcon'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 const cmz = require('cmz')
@@ -17,15 +17,23 @@ const cx = {
   content: cmz(
     typo.baseText,
     `
-      display: flex
-      align-items: center
-      color: ${theme.baseBrighter}
-      font-weight: 400
-      font-size: 1rem
-      line-height: 1
-      max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
-      padding: 15px ${GAP}
-      margin: 0 auto
+      & {
+        display: flex
+        align-items: center
+        color: ${theme.baseBrighter}
+        font-weight: 400
+        font-size: 14px
+        line-height: 1
+        max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
+        padding: 15px ${GAP}
+        margin: 0 auto
+      }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        font-size: 16px
+      }
+    }
     `
   ),
 

@@ -308,7 +308,11 @@ class HeaderBar extends PureComponent<Props, State> {
               </GenericTooltip>
             </nav>
           </div>
-        ) : xTeamLogo(78, 32, theme.typoHeading)}
+        ) : (
+          <div className={cx.logo}>
+            {xTeamLogo(78, 32, theme.typoHeading)}
+          </div>
+        )}
       </div>
     )
   }
