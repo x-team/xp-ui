@@ -33,11 +33,6 @@ const cx = {
       & a:hover {
         color: ${theme.typoAnchorHover}
       }
-
-      @media screen and (min-width: ${breakpoints.sm}) {
-        & {
-        }
-      }
     `
   ),
 

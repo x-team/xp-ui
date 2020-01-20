@@ -62,7 +62,7 @@ const cx = {
       font-weight: normal
       font-size: 16px
       line-height: 1.4
-      margin: 20px 0
+      margin: 14px 0
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {

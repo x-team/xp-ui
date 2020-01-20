@@ -36,7 +36,7 @@ const cx = {
     `
       & {
         margin: 0
-        font-size: 18px
+        font-size: 20px
       }
 
       @media screen and (min-width: ${breakpoints.sm}) {
@@ -72,13 +72,15 @@ const cx = {
     typo.baseText,
     `
       & {
-        margin: -6px 12px 12px
+        margin: -12px 12px 12px
         height: 100%
+        font-size: 16px
       }
 
       @media screen and (min-width: ${breakpoints.sm}) {
         & {
           margin: -12px 24px 24px
+          font-size: 20px
         }
       }
     `
@@ -119,7 +121,7 @@ const cx = {
 
   skills: cmz(`
     & {
-      margin: -6px 12px 0
+      margin: 0 12px
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {

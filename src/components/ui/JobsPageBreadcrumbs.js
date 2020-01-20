@@ -22,7 +22,7 @@ const cx = {
         text-decoration: none
         display: flex
         align-items: center
-        font-size: 12px
+        font-size: 14px
       }
 
       &:hover {
