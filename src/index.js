@@ -24,9 +24,7 @@ import EmailFeed from './components/ui/EmailFeed'
 import EmptyState from './components/ui/EmptyState'
 import ErrorBox from './components/ui/ErrorBox'
 import Filters from './components/ui/Filters'
-import Footer from './components/ui/Footer/Footer'
-import FooterBrands from './components/ui/Footer/FooterBrands'
-import FooterList from './components/ui/Footer/FooterList'
+import Footer from './components/ui/Footer'
 import GenericCollapsible from './components/ui/GenericCollapsible'
 import GenericCopyToClipboard from './components/ui/GenericCopyToClipboard'
 import GenericTabs from './components/ui/GenericTabs'
@@ -105,8 +103,6 @@ export {
   ErrorBox,
   Filters,
   Footer,
-  FooterBrands,
-  FooterList,
   GenericCollapsible,
   GenericCopyToClipboard,
   GenericTabs,

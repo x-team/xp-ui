@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 
 import Loader from './Loader'
 import ErrorBox from './ErrorBox'
+import Footer from './Footer'
 
 import { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -21,14 +22,26 @@ const cx = {
     & {
       max-width: calc(${WRAPPER_WIDTH} - 2 * ${MOBILE_GAP})
       padding: 0 ${MOBILE_GAP}
-      margin: 0 auto 150px
+      margin: 0 auto
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
       & {
         max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
         padding: 0 ${GAP}
-        margin: 0 auto 100px
+        margin: 0 auto
+      }
+    }
+  `),
+
+  extraSpace: cmz(`
+    & {
+      margin: 0 auto 190px
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        margin: 0 auto
       }
     }
   `),
@@ -166,7 +179,7 @@ const JobsPageLayout = (props: Props) => {
   return (
     <div>
       {hero}
-      <div className={cx.wrapper}>
+      <div className={[cx.wrapper, actionsBar ? cx.extraSpace : ''].join(' ')}>
         {heading && (
           <div className={headingClassName}>{heading}</div>
         )}
@@ -183,6 +196,9 @@ const JobsPageLayout = (props: Props) => {
           )}
           {renderContent()}
         </div>
+        <Footer
+          copyright={`${new Date().getFullYear()} © All rights reserved. X-Company Pty Ltd.`}
+        />
       </div>
     </div>
   )

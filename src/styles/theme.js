@@ -52,7 +52,8 @@ export const palette = {
   jumbo: '#858489',
   islandSpice: '#FFFAEE',
   sapling: '#E1CFA1',
-  butteredRum: '#997009'
+  butteredRum: '#997009',
+  ghost: '#CDCDD6'
 }
 
 export const baseColors = {
@@ -128,7 +129,7 @@ export const iconColors = {
 export const miscColors = {
   sliderToggle: palette.bombay,
 
-  logoGray: palette.nobel,
+  logoGray: palette.ghost,
 
   silver: palette.silver
 }
