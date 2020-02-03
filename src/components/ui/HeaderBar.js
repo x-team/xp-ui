@@ -9,7 +9,7 @@ import SvgIcon from './SvgIcon'
 import { size } from '../../utils/helpers'
 import theme, { breakpoints } from '../../styles/theme'
 import { typeface } from '../../styles/typo'
-import { xTeamLogo } from '../../styles/logo'
+import { xTeamBrand } from '../../styles/logo'
 
 const cmz = require('cmz')
 
@@ -280,7 +280,7 @@ class HeaderBar extends PureComponent<Props, State> {
               )}
             </div>
             <div className={cx.logo}>
-              {xTeamLogo(78, 32, theme.typoHeading)}
+              {xTeamBrand(78, 32, theme.typoHeading)}
             </div>
             <nav className={[cx.nav, expanded ? cx.expandedNav : ''].join(' ')}>
               <ul className={cx.menu}>
@@ -310,7 +310,7 @@ class HeaderBar extends PureComponent<Props, State> {
           </div>
         ) : (
           <div className={cx.logo}>
-            {xTeamLogo(78, 32, theme.typoHeading)}
+            {xTeamBrand(78, 32, theme.typoHeading)}
           </div>
         )}
       </div>

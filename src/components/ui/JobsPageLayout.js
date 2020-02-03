@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 
 import Loader from './Loader'
 import ErrorBox from './ErrorBox'
+import Footer from './Footer'
 
 import { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -17,18 +18,40 @@ const MOBILE_GAP = '12px'
 const WRAPPER_WIDTH = '1100px'
 
 const cx = {
+  layout: cmz(`
+    flex: 1
+    display: flex
+    flex-direction: column
+  `),
+
   wrapper: cmz(`
     & {
+      width: calc(100% - 2 * ${MOBILE_GAP})
       max-width: calc(${WRAPPER_WIDTH} - 2 * ${MOBILE_GAP})
       padding: 0 ${MOBILE_GAP}
-      margin: 0 auto 150px
+      margin: 0 auto
+      flex: 1
+      display: flex
+      flex-direction: column
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
       & {
-        max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
-        padding: 0 ${GAP}
-        margin: 0 auto 100px
+        width: calc(100% - 2 * ${GAP})
+      max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
+      padding: 0 ${GAP}
+      }
+    }
+  `),
+
+  extraSpace: cmz(`
+    & {
+      margin: 0 auto 190px
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        margin: 0 auto
       }
     }
   `),
@@ -54,6 +77,7 @@ const cx = {
       display: flex
       flex-wrap: nowrap
       flex-direction: column
+      flex: 1
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
@@ -164,9 +188,9 @@ const JobsPageLayout = (props: Props) => {
   }
 
   return (
-    <div>
+    <div className={cx.layout}>
       {hero}
-      <div className={cx.wrapper}>
+      <div className={[cx.wrapper, actionsBar ? cx.extraSpace : ''].join(' ')}>
         {heading && (
           <div className={headingClassName}>{heading}</div>
         )}
@@ -183,6 +207,9 @@ const JobsPageLayout = (props: Props) => {
           )}
           {renderContent()}
         </div>
+        <Footer
+          copyright={`${new Date().getFullYear()} © All rights reserved. X-Company Pty Ltd.`}
+        />
       </div>
     </div>
   )

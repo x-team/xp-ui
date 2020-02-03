@@ -169,6 +169,25 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
       </ApplicantScreen>
     </Body>
   ))
+  .add('short content to see footer at the applicant screen\'s bottom', () => (
+    <Body>
+      <ApplicantScreen noWrapper menuLinks={headerBarLinks} appLink={HeaderLink}>
+        <JobsPageLayout
+          heading={
+            <JobsPageBreadcrumbs
+              label='Browse all jobs'
+              link={AppLink}
+            />
+          }
+          content={
+            <JobDetails
+              name={jobDetailsName}
+            />
+          }
+        />
+      </ApplicantScreen>
+    </Body>
+  ))
   .add('loading content', () => (
     <Body>
       <JobsPageLayout

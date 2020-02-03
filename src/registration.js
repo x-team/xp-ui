@@ -5,9 +5,9 @@ import ClosedJobApplications from './components/ui/ClosedJobApplications'
 import ConfirmationBox from './components/ui/ConfirmationBox'
 import EmptyState from './components/ui/EmptyState'
 import ErrorBox from './components/ui/ErrorBox'
-import Footer from './components/ui/Footer/Footer'
-import FooterBrands from './components/ui/Footer/FooterBrands'
-import FooterList from './components/ui/Footer/FooterList'
+import Footer from './components/ui/Footer'
+import GenericTooltip from './components/ui/GenericTooltip'
+import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
@@ -34,8 +34,8 @@ export {
   EmptyState,
   ErrorBox,
   Footer,
-  FooterBrands,
-  FooterList,
+  GenericTooltip,
+  HeaderBar,
   HorizontalRuler,
   InputField,
   InputGroup,
