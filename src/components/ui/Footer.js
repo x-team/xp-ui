@@ -15,6 +15,7 @@ type Props = {
 const cx = {
   footer: cmz(`
     & {
+      width: 100%
       margin: 45px auto 32px
       padding: 32px 0 0
       border-top: 1px solid ${theme.lineSilver4}

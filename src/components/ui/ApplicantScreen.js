@@ -13,11 +13,19 @@ import { breakpoints } from '../../styles/theme'
 const cmz = require('cmz')
 
 const cx = {
+  layout: cmz(`
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+  `),
+
   header: cmz(`
     & {
       z-index: 2
       position: relative
       height: 50px
+      display: flex
+      flex-direction: column
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
@@ -75,7 +83,7 @@ const ApplicantScreen = ({
 }: Props) => {
   const getWrapperClass = () => (wrapper && cx[wrapper]) || cx.content
   return (
-    <div>
+    <div className={cx.layout}>
       <div className={cx.header}>
         <HeaderBar
           links={menuLinks}

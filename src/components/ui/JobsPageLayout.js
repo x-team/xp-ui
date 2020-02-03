@@ -18,18 +18,28 @@ const MOBILE_GAP = '12px'
 const WRAPPER_WIDTH = '1100px'
 
 const cx = {
+  layout: cmz(`
+    flex: 1
+    display: flex
+    flex-direction: column
+  `),
+
   wrapper: cmz(`
     & {
+      width: calc(100% - 2 * ${MOBILE_GAP})
       max-width: calc(${WRAPPER_WIDTH} - 2 * ${MOBILE_GAP})
       padding: 0 ${MOBILE_GAP}
       margin: 0 auto
+      flex: 1
+      display: flex
+      flex-direction: column
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
       & {
-        max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
-        padding: 0 ${GAP}
-        margin: 0 auto
+        width: calc(100% - 2 * ${GAP})
+      max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
+      padding: 0 ${GAP}
       }
     }
   `),
@@ -67,6 +77,7 @@ const cx = {
       display: flex
       flex-wrap: nowrap
       flex-direction: column
+      flex: 1
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
@@ -177,7 +188,7 @@ const JobsPageLayout = (props: Props) => {
   }
 
   return (
-    <div>
+    <div className={cx.layout}>
       {hero}
       <div className={[cx.wrapper, actionsBar ? cx.extraSpace : ''].join(' ')}>
         {heading && (
