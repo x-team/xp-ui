@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const xTeamLogo = (width, height, color) => {
+export const xTeamBrand = (width, height, color) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -27,3 +27,11 @@ export const xTeamLogo = (width, height, color) => {
     </svg>
   )
 }
+
+export const xTeamLogo = (width, height, color) => (
+  <svg width={width} height={height} viewBox='0 0 33 32' fill='none'>
+    <path fill={color} d='M24.4051 14.9378L8.98903 0L1.74545 7.07328L9.8589 14.9958L0 25.2334L7.03915 32L24.4051 14.9378Z' />
+    <path fill={color} d='M18.1456 23.0874L25.2156 29.9914L32.4591 22.9183L25.3889 16.0144L18.1456 23.0874Z' />
+    <path fill={color} d='M18.2046 6.84604L25.4484 13.9193L32.4591 7.07328L25.2155 0L18.2046 6.84604Z' />
+  </svg>
+)
