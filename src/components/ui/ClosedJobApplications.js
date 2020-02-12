@@ -97,7 +97,7 @@ type Props = {
 
 const ClosedJobApplications = ({ applications = [], message }: Props) => (
   <div className={cx.wrapper}>
-    <h2 className={cx.heading}>Closed</h2>
+    <h2 className={cx.heading}>Previous Applications</h2>
     <ul className={cx.list}>
       {applications.length > 0
         ? applications.map(application => application.name && (
