@@ -2,6 +2,7 @@
 /* global React$StatelessFunctionalComponent */
 
 import React, { PureComponent } from 'react'
+import ClickOutside from 'react-click-outside'
 
 import GenericTooltip from './GenericTooltip'
 import SvgIcon from './SvgIcon'
@@ -262,13 +263,17 @@ class HeaderBar extends PureComponent<Props, State> {
     this.setState({ expanded: !this.state.expanded })
   }
 
+  handleCloseMenu = () => {
+    this.setState({ expanded: false })
+  }
+
   render () {
     const { links } = this.props
     const { expanded } = this.state
     return (
       <div className={[cx.wrapper, expanded ? cx.expandedWrapper : ''].join(' ')}>
         {size(links) ? (
-          <div className={cx.innerWrapper}>
+          <ClickOutside className={cx.innerWrapper} onClickOutside={this.handleCloseMenu}>
             <div
               className={[cx.hamburger, expanded ? cx.expandedHamburger : ''].join(' ')}
               onClick={this.handleHamburger}
@@ -307,7 +312,7 @@ class HeaderBar extends PureComponent<Props, State> {
                 </a>
               </GenericTooltip>
             </nav>
-          </div>
+          </ClickOutside>
         ) : (
           <div className={cx.logo}>
             {xTeamBrand(78, 32, theme.typoHeading)}
