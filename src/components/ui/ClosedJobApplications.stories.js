@@ -26,7 +26,7 @@ export const closedJobApplicationsJobsSample = [
   }
 ]
 
-export const closedJobApplicationsMessageSample = 'Applications older than 3 months are archived'
+export const closedJobApplicationsMessageSample = 'Previous applications older than 3 months are archived'
 
 const randomJobs = (amount = 4) => Array(amount)
   .fill('')
