@@ -5,9 +5,9 @@ import { storiesOf } from '@storybook/react'
 import { object, text } from '@storybook/addon-knobs'
 import faker from 'faker'
 
-import ClosedJobApplications from './ClosedJobApplications'
+import PreviousJobApplications from './PreviousJobApplications'
 
-export const closedJobApplicationsJobsSample = [
+export const PreviousJobApplicationsJobsSample = [
   {
     name: 'Web Developer with Ruby on Rails experience',
     info: 'Closed on April 17th, 2019, applied on March 28th, 2019'
@@ -26,7 +26,7 @@ export const closedJobApplicationsJobsSample = [
   }
 ]
 
-export const closedJobApplicationsMessageSample = 'Previous applications older than 3 months are archived'
+export const PreviousJobApplicationsMessageSample = 'Previous applications older than 3 months are archived'
 
 const randomJobs = (amount = 4) => Array(amount)
   .fill('')
@@ -37,39 +37,39 @@ const randomJobs = (amount = 4) => Array(amount)
 
 const randomMessage = faker.lorem.sentence()
 
-storiesOf('UI Components|ClosedJobApplications', module)
+storiesOf('UI Components|PreviousJobApplications', module)
   .add('basic usage', () => (
-    <ClosedJobApplications
-      applications={closedJobApplicationsJobsSample}
-      message={closedJobApplicationsMessageSample}
+    <PreviousJobApplications
+      applications={PreviousJobApplicationsJobsSample}
+      message={PreviousJobApplicationsMessageSample}
     />
   ))
 
-storiesOf('UI Components|ClosedJobApplications/Debug', module)
+storiesOf('UI Components|PreviousJobApplications/Debug', module)
   .add('with random data', () => (
-    <ClosedJobApplications
+    <PreviousJobApplications
       applications={object('Jobs', randomJobs())}
       message={text('Message', randomMessage)}
     />
   ))
   .add('without message', () => (
-    <ClosedJobApplications applications={randomJobs(5)} />
+    <PreviousJobApplications applications={randomJobs(5)} />
   ))
   .add('without applications', () => (
-    <ClosedJobApplications message={closedJobApplicationsMessageSample} />
+    <PreviousJobApplications message={PreviousJobApplicationsMessageSample} />
   ))
   .add(`an application with missing name isn't rendered`, () => (
-    <ClosedJobApplications applications={[
+    <PreviousJobApplications applications={[
       { info: 'this is valid' },
       { name: 'Angular Black Ninja', info: 'Closed on March 1st, 2019, applied on March 28th, 2019' }
     ]} />
   ))
   .add('broken data', () => (
-    <ClosedJobApplications applications={[{
+    <PreviousJobApplications applications={[{
       invalidDataStructure: 'for testing purposes',
       info: 'this is valid'
     }]} />
   ))
   .add('missing props', () => (
-    <ClosedJobApplications />
+    <PreviousJobApplications />
   ))

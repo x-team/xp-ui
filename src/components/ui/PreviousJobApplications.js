@@ -95,7 +95,7 @@ type Props = {
   message?: string
 }
 
-const ClosedJobApplications = ({ applications = [], message }: Props) => (
+const PreviousJobApplications = ({ applications = [], message }: Props) => (
   <div className={cx.wrapper}>
     <h2 className={cx.heading}>Previous Applications</h2>
     <ul className={cx.list}>
@@ -118,4 +118,4 @@ const ClosedJobApplications = ({ applications = [], message }: Props) => (
   </div>
 )
 
-export default ClosedJobApplications
+export default PreviousJobApplications
