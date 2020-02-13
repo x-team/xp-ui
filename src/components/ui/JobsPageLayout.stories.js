@@ -14,8 +14,8 @@ import { AppLink } from './JobsPageBreadcrumbs.stories'
 import JobApplicationCard from './JobApplicationCard'
 import JobDetails from './JobDetails'
 import { jobDetailsName, jobDetailsSkills, jobDetailsDescription } from './JobDetails.stories'
-import PreviousJobApplications from './PreviousJobApplications'
-import { previousJobApplicationsJobsSample, previousJobApplicationsMessageSample } from './PreviousJobApplications.stories'
+import ClosedJobApplications from './ClosedJobApplications'
+import { closedJobApplicationsJobsSample, closedJobApplicationsMessageSample } from './ClosedJobApplications.stories'
 import ProTipCard from './ProTipCard'
 import WelcomeHero from './WelcomeHero'
 import { validVideoUrl } from './WelcomeHero.stories'
@@ -125,9 +125,9 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
           content={
             <div>
               <JobsGrid jobCards={jobCards(3)} />
-              <PreviousJobApplications
-                applications={previousJobApplicationsJobsSample}
-                message={previousJobApplicationsMessageSample}
+              <ClosedJobApplications
+                applications={closedJobApplicationsJobsSample}
+                message={closedJobApplicationsMessageSample}
               />
             </div>
           }

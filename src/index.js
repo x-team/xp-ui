@@ -13,7 +13,7 @@ import ApplicantTopProfileDisplay from './components/ui/ApplicantTopProfileDispl
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
-import PreviousJobApplications from './components/ui/PreviousJobApplications'
+import ClosedJobApplications from './components/ui/ClosedJobApplications'
 import ColumnsCustomizer from './components/ui/ColumnsCustomizer'
 import ConfirmationBox from './components/ui/ConfirmationBox'
 import CopyToClipboardButton from './components/ui/CopyToClipboardButton'
@@ -91,7 +91,7 @@ export {
   AttachFiles,
   Avatar,
   Button,
-  PreviousJobApplications,
+  ClosedJobApplications,
   ColumnsCustomizer,
   ConfirmationBox,
   CopyToClipboardButton,

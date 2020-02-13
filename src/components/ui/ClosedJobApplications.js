@@ -95,9 +95,9 @@ type Props = {
   message?: string
 }
 
-const PreviousJobApplications = ({ applications = [], message }: Props) => (
+const ClosedJobApplications = ({ applications = [], message }: Props) => (
   <div className={cx.wrapper}>
-    <h2 className={cx.heading}>Previous Applications</h2>
+    <h2 className={cx.heading}>Closed</h2>
     <ul className={cx.list}>
       {applications.length > 0
         ? applications.map(application => application.name && (
@@ -118,4 +118,4 @@ const PreviousJobApplications = ({ applications = [], message }: Props) => (
   </div>
 )
 
-export default PreviousJobApplications
+export default ClosedJobApplications
