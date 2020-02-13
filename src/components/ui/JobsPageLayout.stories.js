@@ -15,7 +15,7 @@ import JobApplicationCard from './JobApplicationCard'
 import JobDetails from './JobDetails'
 import { jobDetailsName, jobDetailsSkills, jobDetailsDescription } from './JobDetails.stories'
 import PreviousJobApplications from './PreviousJobApplications'
-import { PreviousJobApplicationsJobsSample, PreviousJobApplicationsMessageSample } from './PreviousJobApplications.stories'
+import { previousJobApplicationsJobsSample, previousJobApplicationsMessageSample } from './PreviousJobApplications.stories'
 import ProTipCard from './ProTipCard'
 import WelcomeHero from './WelcomeHero'
 import { validVideoUrl } from './WelcomeHero.stories'
@@ -126,8 +126,8 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
             <div>
               <JobsGrid jobCards={jobCards(3)} />
               <PreviousJobApplications
-                applications={PreviousJobApplicationsJobsSample}
-                message={PreviousJobApplicationsMessageSample}
+                applications={previousJobApplicationsJobsSample}
+                message={previousJobApplicationsMessageSample}
               />
             </div>
           }

@@ -7,7 +7,7 @@ import faker from 'faker'
 
 import PreviousJobApplications from './PreviousJobApplications'
 
-export const PreviousJobApplicationsJobsSample = [
+export const previousJobApplicationsJobsSample = [
   {
     name: 'Web Developer with Ruby on Rails experience',
     info: 'Closed on April 17th, 2019, applied on March 28th, 2019'
@@ -26,7 +26,7 @@ export const PreviousJobApplicationsJobsSample = [
   }
 ]
 
-export const PreviousJobApplicationsMessageSample = 'Previous applications older than 3 months are archived'
+export const previousJobApplicationsMessageSample = 'Previous applications older than 3 months are archived'
 
 const randomJobs = (amount = 4) => Array(amount)
   .fill('')
@@ -40,8 +40,8 @@ const randomMessage = faker.lorem.sentence()
 storiesOf('UI Components|PreviousJobApplications', module)
   .add('basic usage', () => (
     <PreviousJobApplications
-      applications={PreviousJobApplicationsJobsSample}
-      message={PreviousJobApplicationsMessageSample}
+      applications={previousJobApplicationsJobsSample}
+      message={previousJobApplicationsMessageSample}
     />
   ))
 
@@ -56,7 +56,7 @@ storiesOf('UI Components|PreviousJobApplications/Debug', module)
     <PreviousJobApplications applications={randomJobs(5)} />
   ))
   .add('without applications', () => (
-    <PreviousJobApplications message={PreviousJobApplicationsMessageSample} />
+    <PreviousJobApplications message={previousJobApplicationsMessageSample} />
   ))
   .add(`an application with missing name isn't rendered`, () => (
     <PreviousJobApplications applications={[
