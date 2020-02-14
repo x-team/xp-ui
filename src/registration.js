@@ -1,7 +1,7 @@
 import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
 import Button from './components/ui/Button'
-import ClosedJobApplications from './components/ui/ClosedJobApplications'
+import PreviousJobApplications from './components/ui/PreviousJobApplications'
 import ConfirmationBox from './components/ui/ConfirmationBox'
 import EmptyState from './components/ui/EmptyState'
 import ErrorBox from './components/ui/ErrorBox'
@@ -30,7 +30,7 @@ export {
   ApplicantScreen,
   AttachFiles,
   Button,
-  ClosedJobApplications,
+  PreviousJobApplications,
   ConfirmationBox,
   EmptyState,
   ErrorBox,
