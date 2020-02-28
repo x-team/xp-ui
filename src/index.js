@@ -49,7 +49,6 @@ import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
 import LoginButton from './components/ui/LoginButton'
 import MetaGroup from './components/ui/MetaGroup'
-import MilestonesScreen from './components/ui/MilestonesScreen'
 import Modal from './components/ui/Modal'
 import Note from './components/ui/Note'
 import NotesFeed from './components/ui/NotesFeed'
@@ -127,7 +126,6 @@ export {
   Loader,
   LoginButton,
   MetaGroup,
-  MilestonesScreen,
   Modal,
   Note,
   NotesFeed,
