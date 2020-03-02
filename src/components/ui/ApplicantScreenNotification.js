@@ -1,7 +1,8 @@
 // @flow
 /* global React$Node */
 
-import React from 'react'
+import React, { PureComponent } from 'react'
+import { CSSTransition } from 'react-transition-group'
 
 import SvgIcon from './SvgIcon'
 
@@ -10,10 +11,20 @@ import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 
+const ENTER_TIMEOUT = 1000
+const EXIT_TIMEOUT = 300
+const HIDE_TIMEOUT = 5000
 const GAP = '32px'
+const MOBILE_GAP = '12px'
 const WRAPPER_WIDTH = '1100px'
 
 const cx = {
+  container: cmz(`
+    position: absolute
+    display: block
+    width: 100%
+  `),
+
   content: cmz(
     typo.baseText,
     `
@@ -25,15 +36,23 @@ const cx = {
         font-size: 14px
         line-height: 1
         max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
-        padding: 15px ${GAP}
+        padding: 15px ${MOBILE_GAP}
         margin: 0 auto
       }
 
-    @media screen and (min-width: ${breakpoints.sm}) {
-      & {
-        font-size: 16px
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          padding: 15px ${GAP}
+          font-size: 16px
+        }
       }
-    }
+
+      @media screen and (min-width: ${breakpoints.lg}) {
+        & {
+          max-width: ${WRAPPER_WIDTH}
+          padding: 15px 0
+        }
+      }
     `
   ),
 
@@ -51,6 +70,20 @@ const cx = {
     }
   `),
 
+  text: cmz(`
+    width: 100%
+    word-break: break-word
+  `),
+
+  close: cmz(`
+    cursor: pointer
+    display: block
+    flex-shrink: 0
+    margin-left: 15px
+    width: 14px
+    height: 16px
+  `),
+
   color: {
     success: cmz(`
       background-color: ${theme.baseGreen}
@@ -63,39 +96,115 @@ const cx = {
     error: cmz(`
       background-color: ${theme.baseRed}
     `)
+  },
+
+  animation: {
+    enter: cmz(`
+      top: -100px
+    `),
+
+    enterActive: cmz(`
+      top: 0
+      transition: top ${ENTER_TIMEOUT}ms ease
+    `),
+
+    exit: cmz(`
+      top: 0
+    `),
+
+    exitActive: cmz(`
+      top: -100px
+      transition: top ${EXIT_TIMEOUT}ms ease
+    `)
   }
 }
 
 type NotificationType = 'success' | 'error' | 'warning'
 
 type Props = {
-  type?: NotificationType,
+  type: NotificationType,
   children?: React$Node
 }
 
-const ApplicantScreenNotification = ({ type = 'success', children }: Props) => {
-  const renderIcon = () => {
+type State = {
+  open: boolean
+}
+
+class ApplicantScreenNotification extends PureComponent<Props, State> {
+  timeOut: number
+
+  state = {
+    open: true
+  }
+
+  static defaultProps = {
+    type: 'success'
+  }
+
+  componentDidMount () {
+    this.timeOut = setTimeout(() => {
+      this.showNotification(false)
+    }, HIDE_TIMEOUT)
+  }
+
+  componentWillUnmount () {
+    if (this.timeOut) {
+      window.clearTimeout(this.timeOut)
+    }
+  }
+
+  showNotification = (value: boolean) => {
+    this.setState({ open: value })
+  }
+
+  renderIcon = () => {
     const icons = {
       success: <SvgIcon icon='check' color='inverted' />,
-      error: <SvgIcon icon='x' color='inverted' />,
+      error: null,
       warning: null
     }
 
-    return icons[type] && (
+    return icons[this.props.type] && (
       <div className={cx.icon}>
-        {icons[type]}
+        {icons[this.props.type]}
       </div>
     )
   }
 
-  return children ? (
-    <div className={cx.color[type]}>
-      <div className={cx.content}>
-        {renderIcon()}
-        {children}
-      </div>
-    </div>
-  ) : null
+  render () {
+    return this.props.children ? (
+      <CSSTransition
+        in={this.state.open}
+        appear
+        unmountOnExit
+        classNames={{
+          appear: cx.animation.enter,
+          appearActive: cx.animation.enterActive,
+          enter: cx.animation.enter,
+          enterActive: cx.animation.enterActive,
+          exit: cx.animation.exit,
+          exitActive: cx.animation.exitActive
+        }}
+        timeout={{
+          appear: ENTER_TIMEOUT,
+          enter: ENTER_TIMEOUT,
+          exit: EXIT_TIMEOUT
+        }}
+      >
+        <div key='ApplicantScreenNotification' className={[cx.container, cx.color[this.props.type]].join(' ')}>
+          <div className={cx.content}>
+            {this.renderIcon()}
+            <div className={cx.text}>
+              {this.props.children}
+            </div>
+            <div className={cx.close} onClick={() => this.showNotification(false)}>
+              <SvgIcon icon='x' color='inverted' />
+            </div>
+          </div>
+        </div>
+      </CSSTransition>
+    ) : null
+  }
 }
 
 export default ApplicantScreenNotification

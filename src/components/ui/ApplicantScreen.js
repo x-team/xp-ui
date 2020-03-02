@@ -30,13 +30,24 @@ const cx = {
 
     @media screen and (min-width: ${breakpoints.sm}) {
       & {
-        height: auto
+        height: 80px
       }
     }
   `),
 
   notification: cmz(`
-    z-index: 1
+    & {
+      z-index: 1
+      position: fixed
+      top: 50px
+      width: 100%
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        top: 80px
+      }
+    }
   `),
 
   content: cmz(`
