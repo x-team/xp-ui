@@ -133,11 +133,11 @@ type State = {
 class ApplicantScreenNotification extends PureComponent<Props, State> {
   timeOut: number
 
-  state = {
+  state: State = {
     open: true
   }
 
-  static defaultProps = {
+  static defaultProps: Props = {
     type: 'success'
   }
 
