@@ -27,7 +27,7 @@ const cx = {
   wrapper: cmz(`
     & {
       width: calc(100% - 2 * ${MOBILE_GAP})
-      max-width: calc(${WRAPPER_WIDTH} - 2 * ${MOBILE_GAP})
+      max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
       padding: 0 ${MOBILE_GAP}
       margin: 0 auto
       flex: 1
@@ -38,8 +38,15 @@ const cx = {
     @media screen and (min-width: ${breakpoints.sm}) {
       & {
         width: calc(100% - 2 * ${GAP})
-      max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
-      padding: 0 ${GAP}
+        padding: 0 ${GAP}
+      }
+    }
+
+    @media screen and (min-width: ${breakpoints.lg}) {
+      & {
+        width: 100%
+        max-width: ${WRAPPER_WIDTH}
+        padding: 0
       }
     }
   `),

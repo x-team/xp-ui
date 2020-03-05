@@ -140,7 +140,14 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
 storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
   .add('job details page (applied)', () => (
     <Body>
-      <ApplicantScreen noWrapper menuLinks={headerBarLinks} appLink={HeaderLink}>
+      <ApplicantScreen
+        noWrapper
+        menuLinks={headerBarLinks}
+        appLink={HeaderLink}
+        notification={
+          <span>You've successfully applied for this position. <b>Check your email for next steps</b></span>
+        }
+      >
         <JobsPageLayout
           heading={
             <JobsPageBreadcrumbs
