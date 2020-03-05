@@ -142,9 +142,7 @@ class ApplicantScreenNotification extends PureComponent<Props, State> {
   }
 
   componentDidMount () {
-    this.timeOut = setTimeout(() => {
-      this.showNotification(false)
-    }, HIDE_TIMEOUT)
+    this.timeOut = setTimeout(this.closeNotification, HIDE_TIMEOUT)
   }
 
   componentWillUnmount () {
@@ -153,8 +151,8 @@ class ApplicantScreenNotification extends PureComponent<Props, State> {
     }
   }
 
-  showNotification = (value: boolean) => {
-    this.setState({ open: value })
+  closeNotification = () => {
+    this.setState({ open: false })
   }
 
   renderIcon = () => {
@@ -191,13 +189,13 @@ class ApplicantScreenNotification extends PureComponent<Props, State> {
           exit: EXIT_TIMEOUT
         }}
       >
-        <div key='ApplicantScreenNotification' className={[cx.container, cx.color[this.props.type]].join(' ')}>
+        <div className={[cx.container, cx.color[this.props.type]].join(' ')}>
           <div className={cx.content}>
             {this.renderIcon()}
             <div className={cx.text}>
               {this.props.children}
             </div>
-            <div className={cx.close} onClick={() => this.showNotification(false)}>
+            <div className={cx.close} onClick={this.closeNotification}>
               <SvgIcon icon='x' color='inverted' />
             </div>
           </div>
