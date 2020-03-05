@@ -13,6 +13,7 @@ import typo from '../../styles/typo'
 const cmz = require('cmz')
 
 const GAP = '32px'
+const MOBILE_GAP = '12px'
 const WRAPPER_WIDTH = '1100px'
 
 const cx = {
@@ -29,13 +30,26 @@ const cx = {
       flex-direction: column
       align-items: center
       max-width: calc(${WRAPPER_WIDTH} - 2 * ${GAP})
-      padding: ${GAP}
+      padding: ${MOBILE_GAP}
       margin: 0 auto
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        padding: ${GAP}
+      }
     }
 
     @media screen and (min-width: ${breakpoints.md}) {
       & {
         flex-direction: row
+      }
+    }
+
+    @media screen and (min-width: ${breakpoints.lg}) {
+      & {
+        max-width: ${WRAPPER_WIDTH}
+        padding: ${GAP} 0
       }
     }
   `),

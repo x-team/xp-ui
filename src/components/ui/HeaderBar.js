@@ -54,7 +54,6 @@ const cx = {
         & {
           height: 80px
           font-size: 13px
-          position: relative
         }
       }
     `
