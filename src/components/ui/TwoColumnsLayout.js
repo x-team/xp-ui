@@ -247,7 +247,7 @@ class TwoColumnsLayout extends PureComponent<Props, State> {
     const { sidebarWidth } = this.props
     const { initial, expanded } = this.state
     const { innerWidth } = window
-    const mobileBreakpoint = Number(breakpoints.md.replace('px', ''))
+    const mobileBreakpoint = Number.parseInt(breakpoints.sm, 10)
     const maxSidebarWidth = innerWidth < sidebarWidth ? innerWidth - 25 : sidebarWidth
     if (innerWidth <= mobileBreakpoint) {
       this.setState({
