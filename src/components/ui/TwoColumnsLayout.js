@@ -1,4 +1,5 @@
 // @flow
+/* globals Event */
 
 import React, { PureComponent, Fragment } from 'react'
 import isEqual from 'lodash.isequal'
@@ -143,20 +144,19 @@ const cx = {
 
     &:after {
       position: absolute
-      top: 32px
-      left: calc(-100% - 7px)
+      top: 41px
+      left: calc(-100% - 12px)
       border-radius: 100%
       background: ${theme.baseBrighter}
       z-index: 9999
-      width: 21px
-      height: 21px
+      width: 31px
+      height: 31px
       text-align: center
-      line-height: 20px
+      line-height: 30px
       border: 1px solid ${theme.lineSilver1}
       font-family: serif
       color: ${theme.typoGrayed}
-      font-weight: bold
-      font-size: 12px
+      font-size: 16px
     }
 
     &.expanded:hover:after,
@@ -166,7 +166,7 @@ const cx = {
 
     &.collapsed:after {
       content: '>'
-      width: 19px
+      width: 30px
       padding-left: 2px
     }
 
@@ -176,8 +176,8 @@ const cx = {
       background: ${theme.baseBright}
       position: absolute
       z-index: 1
-      width: 10px
-      left: -12px
+      width: 20px
+      left: -22px
     }
 
     &.collapsed:hover:before {
@@ -225,9 +225,9 @@ class TwoColumnsLayout extends PureComponent<Props, State> {
   }
 
   componentDidUpdate (prevProps: Props, prevState: State) {
-    if (!isEqual(prevState, this.state.expanded)) {
+    if (!isEqual(prevState, this.state)) {
       // This is required for recalculation of react-data-grid width
-      window.dispatchEvent(new Event('resize')) // eslint-disable-line
+      window.dispatchEvent(new Event('resize'))
     }
   }
 
@@ -247,8 +247,8 @@ class TwoColumnsLayout extends PureComponent<Props, State> {
     const { sidebarWidth } = this.props
     const { initial, expanded } = this.state
     const { innerWidth } = window
-    const mobileBreakpoint = Number(breakpoints.sm.replace('px', ''))
-    const maxSidebarWidth = innerWidth < sidebarWidth ? innerWidth - 20 : sidebarWidth
+    const mobileBreakpoint = Number(breakpoints.md.replace('px', ''))
+    const maxSidebarWidth = innerWidth < sidebarWidth ? innerWidth - 25 : sidebarWidth
     if (innerWidth <= mobileBreakpoint) {
       this.setState({
         mobile: true,
@@ -294,7 +294,7 @@ class TwoColumnsLayout extends PureComponent<Props, State> {
     return (
       <div
         className={cx.sidebar}
-        style={{ width: `${expanded ? sidebarWidth : 10}px` }}
+        style={{ width: `${expanded ? sidebarWidth : 20}px` }}
       >
         <div style={{ width: `${sidebarWidth}px` }}>
           {sidebarHeading && (typeof sidebarHeading === 'string' ? renderHeadingTextComponent() : (
@@ -337,7 +337,7 @@ class TwoColumnsLayout extends PureComponent<Props, State> {
     )
   }
 
-  handleLayout = () => {
+  toggleExpanded = () => {
     this.setState({
       initial: false,
       expanded: !this.state.expanded
@@ -355,7 +355,7 @@ class TwoColumnsLayout extends PureComponent<Props, State> {
             expanded ? 'expanded' : 'collapsed',
             mobile ? 'mobile' : 'desktop'
           ].join(' ')}
-          onClick={this.handleLayout}
+          onClick={this.toggleExpanded}
         />
         {this.renderContent()}
       </div>
