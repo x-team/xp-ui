@@ -1,10 +1,11 @@
 // @flow
 
 import React, { PureComponent, Fragment } from 'react'
+import isEqual from 'lodash.isequal'
 
 import SvgIcon from './SvgIcon'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import { typeface } from '../../styles/typo'
 
 import type { Element } from 'react'
@@ -23,7 +24,6 @@ const cx = {
     box-sizing: border-box
     height: 100%
     background-color: ${theme.baseBright}
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15)
     z-index: 1
     position: relative
     display: flex
@@ -122,6 +122,67 @@ const cx = {
     overflow: auto
     box-sizing: border-box
     flex: 1 0 0
+  `),
+
+  splitter: cmz(`
+    & {
+      border-right: 2px solid ${theme.lineSilver2}
+      border-left: 2px solid ${theme.lineSilver2}
+      background: ${theme.baseBright}
+      width: 3px
+      height: 100%
+      cursor: pointer
+      position: relative
+    }
+
+    &:hover {
+      border-right-color: ${theme.lineSilver1}
+      border-left-color: ${theme.lineSilver1}
+      background: ${theme.baseHighlight}
+    }
+
+    &:after {
+      position: absolute
+      top: 32px
+      left: calc(-100% - 7px)
+      border-radius: 100%
+      background: ${theme.baseBrighter}
+      z-index: 9999
+      width: 21px
+      height: 21px
+      text-align: center
+      line-height: 20px
+      border: 1px solid ${theme.lineSilver1}
+      font-family: serif
+      color: ${theme.typoGrayed}
+      font-weight: bold
+      font-size: 12px
+    }
+
+    &.expanded:hover:after,
+    &.expanded.mobile:after {
+      content: '<'
+    }
+
+    &.collapsed:after {
+      content: '>'
+      width: 19px
+      padding-left: 2px
+    }
+
+    &.collapsed:before {
+      content: ''
+      height: 100%
+      background: ${theme.baseBright}
+      position: absolute
+      z-index: 1
+      width: 10px
+      left: -12px
+    }
+
+    &.collapsed:hover:before {
+      background: ${theme.baseHighlight}
+    }
   `)
 }
 
@@ -137,7 +198,14 @@ type Props = {
   contentId: string
 }
 
-class TwoColumnsLayout extends PureComponent<Props, void> {
+type State = {
+  initial: boolean,
+  mobile: boolean,
+  expanded: boolean,
+  sidebarWidth: number
+}
+
+class TwoColumnsLayout extends PureComponent<Props, State> {
   static defaultProps = {
     sidebar: null,
     sidebarHeading: '',
@@ -149,8 +217,56 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
     contentId: ''
   }
 
+  state: State = {
+    initial: true,
+    mobile: false,
+    expanded: true,
+    sidebarWidth: this.props.sidebarWidth
+  }
+
+  componentDidUpdate (prevProps: Props, prevState: State) {
+    if (!isEqual(prevState, this.state.expanded)) {
+      // This is required for recalculation of react-data-grid width
+      window.dispatchEvent(new Event('resize')) // eslint-disable-line
+    }
+  }
+
+  componentWillMount () {
+    this.updateDimensions()
+  }
+
+  componentDidMount () {
+    window.addEventListener('resize', this.updateDimensions)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.updateDimensions)
+  }
+
+  updateDimensions = () => {
+    const { sidebarWidth } = this.props
+    const { initial, expanded } = this.state
+    const { innerWidth } = window
+    const mobileBreakpoint = Number(breakpoints.sm.replace('px', ''))
+    const maxSidebarWidth = innerWidth < sidebarWidth ? innerWidth - 20 : sidebarWidth
+    if (innerWidth <= mobileBreakpoint) {
+      this.setState({
+        mobile: true,
+        expanded: initial ? false : expanded,
+        sidebarWidth: maxSidebarWidth
+      })
+    } else {
+      this.setState({
+        mobile: false,
+        expanded: initial ? true : expanded,
+        sidebarWidth: maxSidebarWidth
+      })
+    }
+  }
+
   renderSidebar = () => {
-    const { sidebar, sidebarHeading, sidebarHeadingAction, sidebarWidth, sidebarIcon, scrollableSidebar } = this.props
+    const { sidebar, sidebarHeading, sidebarHeadingAction, sidebarIcon, scrollableSidebar } = this.props
+    const { expanded, sidebarWidth } = this.state
 
     const renderHeadingText = () => (
       <Fragment>
@@ -176,13 +292,21 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
     )
 
     return (
-      <div className={cx.sidebar} style={{ width: `${sidebarWidth}px` }}>
-        {sidebarHeading && (typeof sidebarHeading === 'string' ? renderHeadingTextComponent() : (
-          <div className={cx.sidebarHeading}>
-            {sidebarHeading}
-          </div>
-        )) }
-        <div className={[cx.sidebarBody, scrollableSidebar ? cx.scrollableSidebar : cx.nonScrollableSidebar].join(' ')}>
+      <div
+        className={cx.sidebar}
+        style={{ width: `${expanded ? sidebarWidth : 10}px` }}
+      >
+        <div style={{ width: `${sidebarWidth}px` }}>
+          {sidebarHeading && (typeof sidebarHeading === 'string' ? renderHeadingTextComponent() : (
+            <div className={cx.sidebarHeading}>
+              {sidebarHeading}
+            </div>
+          ))}
+        </div>
+        <div
+          className={[cx.sidebarBody, scrollableSidebar ? cx.scrollableSidebar : cx.nonScrollableSidebar].join(' ')}
+          style={{ width: `${sidebarWidth}px` }}
+        >
           {sidebar}
         </div>
       </div>
@@ -213,10 +337,26 @@ class TwoColumnsLayout extends PureComponent<Props, void> {
     )
   }
 
+  handleLayout = () => {
+    this.setState({
+      initial: false,
+      expanded: !this.state.expanded
+    })
+  }
+
   render () {
+    const { expanded, mobile } = this.state
     return (
       <div className={cx.layout}>
         {this.renderSidebar()}
+        <div
+          className={[
+            cx.splitter,
+            expanded ? 'expanded' : 'collapsed',
+            mobile ? 'mobile' : 'desktop'
+          ].join(' ')}
+          onClick={this.handleLayout}
+        />
         {this.renderContent()}
       </div>
     )
