@@ -130,7 +130,7 @@ const cx = {
       border-right: 2px solid ${theme.lineSilver2}
       border-left: 2px solid ${theme.lineSilver2}
       background: ${theme.baseBright}
-      width: 3px
+      width: 1px
       height: 100%
       cursor: pointer
       position: relative
@@ -145,7 +145,7 @@ const cx = {
     &:after {
       position: absolute
       top: 41px
-      left: calc(-100% - 12px)
+      left: calc(-100% - 15px)
       border-radius: 100%
       background: ${theme.baseBrighter}
       z-index: 9999
