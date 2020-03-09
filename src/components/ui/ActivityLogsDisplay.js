@@ -23,6 +23,7 @@ const cx = {
   item: cmz(`
     display: flex
     margin-bottom: 0.6rem
+    flex-wrap: wrap
   `),
 
   date: cmz(`
