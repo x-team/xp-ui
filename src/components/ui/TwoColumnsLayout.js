@@ -199,7 +199,6 @@ type Props = {
 }
 
 type State = {
-  initial: boolean,
   mobile: boolean,
   expanded: boolean,
   sidebarWidth: number
@@ -218,7 +217,6 @@ class TwoColumnsLayout extends PureComponent<Props, State> {
   }
 
   state: State = {
-    initial: true,
     mobile: false,
     expanded: true,
     sidebarWidth: this.props.sidebarWidth
@@ -232,25 +230,24 @@ class TwoColumnsLayout extends PureComponent<Props, State> {
   }
 
   componentDidMount () {
-    this.updateDimensions()
+    this.updateInitialDimensions()
   }
 
-  updateDimensions = () => {
+  updateInitialDimensions = () => {
     const { sidebarWidth } = this.props
-    const { initial, expanded } = this.state
     const { innerWidth } = window
     const mobileBreakpoint = Number.parseInt(breakpoints.md, 10)
     const maxSidebarWidth = innerWidth < sidebarWidth ? innerWidth - 25 : sidebarWidth
     if (innerWidth <= mobileBreakpoint) {
       this.setState({
         mobile: true,
-        expanded: initial ? false : expanded,
+        expanded: false,
         sidebarWidth: maxSidebarWidth
       })
     } else {
       this.setState({
         mobile: false,
-        expanded: initial ? true : expanded,
+        expanded: true,
         sidebarWidth: maxSidebarWidth
       })
     }
@@ -331,7 +328,6 @@ class TwoColumnsLayout extends PureComponent<Props, State> {
 
   toggleExpanded = () => {
     this.setState({
-      initial: false,
       expanded: !this.state.expanded
     })
   }
