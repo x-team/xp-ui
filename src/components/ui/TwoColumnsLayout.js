@@ -231,16 +231,8 @@ class TwoColumnsLayout extends PureComponent<Props, State> {
     }
   }
 
-  componentWillMount () {
-    this.updateDimensions()
-  }
-
   componentDidMount () {
-    window.addEventListener('resize', this.updateDimensions)
-  }
-
-  componentWillUnmount () {
-    window.removeEventListener('resize', this.updateDimensions)
+    this.updateDimensions()
   }
 
   updateDimensions = () => {
