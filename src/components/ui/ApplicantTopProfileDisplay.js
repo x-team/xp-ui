@@ -83,22 +83,12 @@ const cx = {
 
     & > div:first-child {
       margin: 0 10px
+      width: 100%
     }
 
-    @media screen and (min-width: ${breakpoints.sm}) {
+    @media screen and (min-width: ${breakpoints.xl}) {
       & {
         flex-wrap: nowrap
-      }
-    }
-
-    @media screen and (min-width: ${breakpoints.md}) {
-      & {
-        flex-wrap: nowrap
-        margin: 0 10px 0 20px
-      }
-
-      & > div:first-child {
-        margin: 0
       }
     }
   `),
@@ -137,6 +127,7 @@ const cx = {
   label: cmz(`
     color: ${theme.typoLabel}
     min-width: 200px
+    margin-bottom: 0.4rem
   `),
 
   value: cmz(`

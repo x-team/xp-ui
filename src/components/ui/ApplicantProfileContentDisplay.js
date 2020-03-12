@@ -118,6 +118,7 @@ const cx = {
     color: ${theme.typoLabel}
     font-size: 1.0625rem
     min-width: 200px
+    margin-bottom: 0.4rem
   `),
 
   portfolioValue: cmz(`

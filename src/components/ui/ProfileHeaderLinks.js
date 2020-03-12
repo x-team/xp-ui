@@ -16,7 +16,6 @@ const cx = {
     flex-wrap: wrap
     width: 100%
     margin: 0
-    z-index: 3
   `),
 
   normal: cmz(`
