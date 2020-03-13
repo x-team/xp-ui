@@ -78,18 +78,11 @@ const cx = {
     & {
       display: flex
       align-items: center
-      flex-wrap: wrap
     }
 
     & > div:first-child {
       margin: 0 10px
       width: 100%
-    }
-
-    @media screen and (min-width: ${breakpoints.xl}) {
-      & {
-        flex-wrap: nowrap
-      }
     }
   `),
 
