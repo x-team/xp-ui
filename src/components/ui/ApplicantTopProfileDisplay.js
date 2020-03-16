@@ -5,14 +5,12 @@ import React, { PureComponent } from 'react'
 
 import StatusMarker from './StatusMarker'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { ApplicantStatusType } from './StatusMarker'
 
 const cmz = require('cmz')
-
-const MEDIA_QUERY_BREAKPOINT = 1400
 
 const cx = {
   container: cmz(
@@ -27,7 +25,7 @@ const cx = {
         border-bottom: 1px solid ${theme.lineSilver2}
       }
 
-      @media screen and (max-width: ${MEDIA_QUERY_BREAKPOINT}px) {
+      @media screen and (max-width: ${breakpoints.xl}) {
         & {
           grid-template-columns: 100%
           grid-template-areas: "name" "video" "fields"
@@ -43,31 +41,25 @@ const cx = {
 
   video: cmz(`
     & {
-      grid-area: video
-      margin-right: 55px
-      align-items: left
+      margin: 0 auto
+      padding: 0 10px 20px
+      width: 100%
+      align-items: flex-start
+      display: flex
+      flex-direction: column
+      box-sizing: border-box
     }
 
-    @media screen and (max-width: ${MEDIA_QUERY_BREAKPOINT}px) {
+    @media screen and (min-width: ${breakpoints.md}) {
       & {
-        margin: 0 auto
-        padding-bottom: 20px
-        width: 100%
         align-items: center
-        display: flex
-        flex-direction: column
+        padding: 0 0 20px
       }
     }
-  `),
 
-  addToList: cmz(`
-    & {
-      display: flex
-    }
-
-    @media screen and (max-width: ${MEDIA_QUERY_BREAKPOINT}px) {
+    @media screen and (min-width: ${breakpoints.xl}) {
       & {
-        justify-content: center
+        grid-area: video
       }
     }
   `),
@@ -89,7 +81,8 @@ const cx = {
     }
 
     & > div:first-child {
-      margin-left: 20px
+      margin: 0 10px
+      width: 100%
     }
   `),
 
@@ -98,19 +91,40 @@ const cx = {
   `),
 
   activityHeader: cmz(`
-    margin-left: 20px
-    margin-bottom: 12px
+    & {
+      margin: 0 10px 12px
+    }
+
+    @media screen and (min-width: ${breakpoints.md}) {
+      & {
+        margin: 0 20px 12px
+      }
+    }
   `),
 
   row: cmz(`
-    display: flex
-    margin-left: 20px
-    padding-bottom: 1rem
+    & {
+      display: flex
+      flex-wrap: wrap
+      margin-left: 10px
+      padding-bottom: 1rem
+    }
+
+    @media screen and (min-width: ${breakpoints.md}) {
+      & {
+        margin-left: 20px
+      }
+    }
   `),
 
   label: cmz(`
     color: ${theme.typoLabel}
     min-width: 200px
+    margin-bottom: 0.4rem
+  `),
+
+  value: cmz(`
+    min-width: 300px
   `)
 }
 
@@ -154,7 +168,7 @@ class ApplicantTopProfileDisplay extends PureComponent<Props, void> {
         <section className={cx.video} data-testid='xpui-applicantTopProfile-videoPreview'>
           {videoPreview}
 
-          <div className={cx.addToList} data-testid='xpui-applicantTopProfile-addToList'>
+          <div data-testid='xpui-applicantTopProfile-addToList'>
             {addToList}
           </div>
         </section>
@@ -182,7 +196,7 @@ class ApplicantTopProfileDisplay extends PureComponent<Props, void> {
               title={sections[section].title}
             >
               <div className={cx.label}>{sections[section].label}:</div>
-              {sections[section].value}
+              <div className={cx.value}>{sections[section].value}</div>
             </div>
           ))}
         </section>

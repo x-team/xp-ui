@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { Element } from 'react'
@@ -13,14 +13,29 @@ const cx = {
   root: cmz(
     typo.regularText,
     `
-      padding: 50px 60px 20px 60px
-      display: flex
-      flex-wrap: wrap
+      & {
+        padding: 10px
+        display: flex
+        flex-wrap: wrap
+      }
+
+      @media screen and (min-width: ${breakpoints.sm}) {
+        & {
+          padding: 20px
+        }
+      }
+
+      @media screen and (min-width: ${breakpoints.md}) {
+        & {
+          padding: 50px 60px 20px 60px
+        }
+      }
     `
   ),
 
   rootForm: cmz(`
     width: 100%
+    margin: 0
   `),
 
   shortDetailsContainer: cmz(`
@@ -89,6 +104,7 @@ const cx = {
     & {
       display: flex
       margin-bottom: 20px
+      flex-wrap: wrap
     }
 
     &:last-of-type {
@@ -96,11 +112,18 @@ const cx = {
     }
   `),
 
-  labelInput: cmz(`
+  portfolioLabel: cmz(`
     text-transform: capitalize
     margin-right: 15px
     color: ${theme.typoLabel}
     font-size: 1.0625rem
+    min-width: 200px
+    margin-bottom: 0.4rem
+  `),
+
+  portfolioValue: cmz(`
+    flex: 1
+    min-width: 300px
   `),
 
   sectionHeaderPortfolio: cmz(`
@@ -150,8 +173,8 @@ class ApplicantProfileContentDisplay extends PureComponent<Props, void> {
             </div>
             {Object.keys(portfolio).map(item => (
               <div key={`profile-top-portfolio-${item}`} className={cx.rowInput}>
-                <span className={cx.labelInput}>{portfolio[item].label}:</span>
-                {portfolio[item].value}
+                <span className={cx.portfolioLabel}>{portfolio[item].label}:</span>
+                <span className={cx.portfolioValue}>{portfolio[item].value}</span>
               </div>
             ))}
           </div>

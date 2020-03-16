@@ -116,6 +116,7 @@ const cx = {
     width: 100%
     height: auto
     background-color: ${theme.baseBright}
+    min-width: 300px
   `),
 
   contentBody: cmz(`
@@ -123,6 +124,7 @@ const cx = {
     overflow: auto
     box-sizing: border-box
     flex: 1 0 0
+    min-width: 300px
   `),
 
   splitter: cmz(`
