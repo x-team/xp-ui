@@ -1,5 +1,6 @@
 import './styles/fonts.js'
 
+import AccountConfirmation from './components/ui/AccountConfirmation'
 import ActivityBar from './components/ui/ActivityBar'
 import ActivityLog from './components/ui/ActivityLog'
 import ActivityLogsDisplay from './components/ui/ActivityLogsDisplay'
@@ -77,6 +78,7 @@ import WelcomeHero from './components/ui/WelcomeHero'
 import XIcon from './components/ui/XIcon'
 
 export {
+  AccountConfirmation,
   ActivityBar,
   ActivityLog,
   ActivityLogsDisplay,

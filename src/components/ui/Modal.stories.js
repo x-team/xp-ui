@@ -27,8 +27,12 @@ const sampleModalContentLong = [
   ...Array(5).fill('AnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbodyAnythinggoesinthemodalcontentbody').map((each, i) => <div key={`content-${i}`}>{each}</div>)
 ]
 
+const sampleBackgroundContent = Array(40)
+  .fill('Background content')
+  .map((each, i) => <div key={`content-${i}`}>{each}</div>)
+
 const Body = ({ children }) => (
-  <div style={{ minHeight: '100vh', overflow: 'hidden' }}>
+  <div style={{ height: '100vh', overflow: 'auto' }}>
     <style dangerouslySetInnerHTML={{ __html: `
       body { margin: 0; }
     ` }} />
@@ -56,6 +60,24 @@ storiesOf('Core Components|Modal', module)
     </Body>
   ))
 
+storiesOf('Core Components|Modal/States', module)
+  .add('default theme', () => (
+    <Body>
+      <StoryModal theme='default'>
+        {sampleModalContent}
+      </StoryModal>
+      {sampleBackgroundContent}
+    </Body>
+  ))
+  .add('white theme', () => (
+    <Body>
+      <StoryModal theme='white'>
+        {sampleModalContent}
+      </StoryModal>
+      {sampleBackgroundContent}
+    </Body>
+  ))
+
 storiesOf('Core Components|Modal/Use Cases', module)
   .add('with ListEditor', () => (
     <Body>
@@ -74,8 +96,12 @@ storiesOf('Core Components|Modal/Use Cases', module)
   ))
 
 storiesOf('Core Components|Modal/Debug', module)
-  .add('missing props (does component explode?)', () => (
-    <Modal />
+  .add('missing onClose prop', () => (
+    <Body>
+      <Modal>
+        {sampleModalContent}
+      </Modal>
+    </Body>
   ))
   .add('modal with content taller than viewport', () => (
     <Body>
@@ -95,4 +121,7 @@ storiesOf('Core Components|Modal/Debug', module)
     <Body>
       <StoryModal />
     </Body>
+  ))
+  .add('missing props', () => (
+    <Modal />
   ))

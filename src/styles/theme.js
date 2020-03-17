@@ -53,7 +53,8 @@ export const palette = {
   islandSpice: '#FFFAEE',
   sapling: '#E1CFA1',
   butteredRum: '#997009',
-  ghost: '#CDCDD6'
+  ghost: '#CDCDD6',
+  mineShaft: '#333'
 }
 
 export const baseColors = {
@@ -87,6 +88,7 @@ export const typoColors = {
   typoHeaderAnchor: palette.jumbo,
   typoParagraph: palette.tuna,
   typoParagraphOnDarkBackground: palette.frenchGrayDarker,
+  typoGrayedParagraph: palette.mineShaft,
   typoHighlight: palette.haiti,
   typoHighlightOnDarkBackground: palette.scarpaFlow,
   typoLabel: palette.bombay,
