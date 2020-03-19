@@ -1,37 +1,86 @@
+// @flow
+
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import faker from 'faker'
+import { object } from '@storybook/addon-knobs'
 
-import Text from './Text'
 import ApplicantScreen from './ApplicantScreen'
-import MilestonesScreen from './MilestonesScreen'
-import Button from './Button'
+import { HeaderLink, headerBarLinks } from './HeaderBar.stories'
+
+const Body = ({ children }) => (
+  <div style={{ height: '100vh' }}>
+    <style dangerouslySetInnerHTML={{ __html: `
+      html, body { margin: 0; height: 100%; }
+    ` }} />
+    {children}
+  </div>
+)
 
 storiesOf('Screens and Layouts|ApplicantScreen', module)
-  .add('standard use', () => (
-    <ApplicantScreen>
-      <Text
-        content={`We’d love to start to get to know more about you. Please fill out these quick questions so we can introduce you to an Ambassador who will work with you 1-on-1 to get qualified to become an X-Teamer.`}
-        isPureContent
-      />
-    </ApplicantScreen>
+  .add('basic usage', () => (
+    <Body>
+      <ApplicantScreen>
+        {faker.lorem.paragraphs(50)}
+      </ApplicantScreen>
+    </Body>
   ))
 
-storiesOf('Screens and Layouts|ApplicantScreen/Use Cases', module)
-  .add('with milestones', () => (
-    <ApplicantScreen>
-      <MilestonesScreen
-        level={1}
-        cta={<Button>Click here to go to next step</Button>}
+storiesOf('Screens and Layouts|ApplicantScreen/States', module)
+  .add('with notification', () => (
+    <Body>
+      <ApplicantScreen
+        notification={
+          <span>You've successfully applied for this position. <b>Check your email for next steps</b></span>
+        }
       >
-        <Text
-          heading='So it begins.'
-          content='Let’s kick things off with a warmup. To proceed, click the button below to download a short programming challenge. You can bookmark this page for later access.'
-        />
-      </MilestonesScreen>
-    </ApplicantScreen>
+        {faker.lorem.paragraphs(50)}
+      </ApplicantScreen>
+    </Body>
+  ))
+  .add('with menu links', () => (
+    <Body>
+      <ApplicantScreen menuLinks={object('Link', headerBarLinks)} appLink={HeaderLink}>
+        {faker.lorem.paragraphs(50)}
+      </ApplicantScreen>
+    </Body>
+  ))
+  .add('with menu links and notification', () => (
+    <Body>
+      <ApplicantScreen
+        menuLinks={object('Link', headerBarLinks)}
+        appLink={HeaderLink}
+        notification={
+          <span>You've successfully applied for this position. <b>Check your email for next steps</b></span>
+        }
+      >
+        {faker.lorem.paragraphs(50)}
+      </ApplicantScreen>
+    </Body>
   ))
 
 storiesOf('Screens and Layouts|ApplicantScreen/Debug', module)
-  .add('missing props (does component explode?)', () => (
+  .add('with narrower wrapper', () => (
+    <Body>
+      <ApplicantScreen wrapper='narrower'>
+        {faker.lorem.paragraphs(50)}
+      </ApplicantScreen>
+    </Body>
+  ))
+  .add('with wider wrapper', () => (
+    <Body>
+      <ApplicantScreen wrapper='wider'>
+        {faker.lorem.paragraphs(50)}
+      </ApplicantScreen>
+    </Body>
+  ))
+  .add('without wrapper', () => (
+    <Body>
+      <ApplicantScreen noWrapper>
+        {faker.lorem.paragraphs(50)}
+      </ApplicantScreen>
+    </Body>
+  ))
+  .add('missing props', () => (
     <ApplicantScreen />
   ))

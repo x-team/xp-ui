@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 
 import elem from '../../utils/elem'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { Element } from 'react'
@@ -25,10 +25,17 @@ const Root = elem.div(cmz(
     border-radius: .175em
     background: ${theme.baseRed.lighten(0.65)}
     margin: 10px 0
+    font-size: 18px
   }
 
   & a {
     color: ${theme.baseRed.darken(0.3)}
+  }
+
+  @media screen and (min-width: ${breakpoints.sm}) {
+    & {
+      font-size: 20px
+    }
   }
 `))
 

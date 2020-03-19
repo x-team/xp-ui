@@ -307,7 +307,7 @@ const slidingCheckboxInputStyles = {
       width: 46px
       height: 12px
       border-radius: 12px
-      background-color: ${theme.sliderBackground}
+      background-color: ${theme.baseBrightSilver}
       transform: translateY(-50%)
       transition: background-color 200ms ease-in-out
     }

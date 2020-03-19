@@ -482,14 +482,8 @@ export const getIcons = ({ color, hover, ...rest }: { [x: string]: any } = {}) =
     ),
 
     hamburger: (
-      <svg width='16px' height='12px' viewBox='0 0 16 12' {...rest}>
-        <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd' strokeLinecap='square'>
-          <g className={strokeClassName} transform='translate(1.000000, 0.000000)'>
-            <path d='M0.184210526,1 L13.8157895,1' />
-            <path d='M0.184210526,6 L13.8157895,6' />
-            <path d='M0.184210526,11 L13.8157895,11' />
-          </g>
-        </g>
+      <svg width='18' height='12' viewBox='0 0 18 12' fill='none' {...rest}>
+        <path className={fillClassName} d='M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z' />
       </svg>
     ),
 
