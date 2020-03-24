@@ -48,7 +48,6 @@ const cx = {
         background: ${theme.baseBrighter}
         position: fixed
         top: 0
-        z-index: 1000
       }
 
       @media screen and (min-width: ${breakpoints.sm}) {
