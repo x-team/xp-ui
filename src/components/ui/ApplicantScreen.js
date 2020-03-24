@@ -21,7 +21,6 @@ const cx = {
 
   header: cmz(`
     & {
-      z-index: 2
       position: relative
       height: 50px
       display: flex
