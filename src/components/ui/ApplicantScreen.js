@@ -21,11 +21,11 @@ const cx = {
 
   header: cmz(`
     & {
-      z-index: 2
       position: relative
       height: 50px
       display: flex
       flex-direction: column
+      z-index: 1000
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
