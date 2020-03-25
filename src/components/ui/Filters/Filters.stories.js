@@ -284,7 +284,6 @@ storiesOf('UI Components|Filters/Debug', module)
     notes: {
       markdown: `
 In this sotry the \`<Filter>\` component is wrapped with a \`<Sandbox>\` component with maximum width and dashed border in order to expose it's area.
-
 Check **KNOBS** to debug with different props.
       `
     }

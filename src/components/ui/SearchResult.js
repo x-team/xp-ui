@@ -9,18 +9,34 @@ import ColumnsCustomizer from './ColumnsCustomizer'
 
 import { size } from '../../utils/helpers'
 
+import { breakpoints } from '../../styles/theme'
+
 import type { Applicant, Filters } from '../../utils/types'
 
 const cmz = require('cmz')
 
 const cx = {
   searchResultContent: cmz(`
-    box-sizing: border-box
-    padding: 20px 60px
-    display: flex
-    flex-direction: column
-    width: 100%
-    height: 100%
+    & {
+      box-sizing: border-box
+      padding: 20px
+      display: flex
+      flex-direction: column
+      width: 100%
+      height: 100%
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        padding: 20px 40px
+      }
+    }
+
+    @media screen and (min-width: ${breakpoints.md}) {
+      & {
+        padding: 20px 60px
+      }
+    }
   `)
 }
 

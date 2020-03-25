@@ -206,7 +206,6 @@ class RichTextEditor extends Component<Props, State> {
 
     return (
       <div className={richTextClassNames}>
-
         {disabled && <div
           className={cx.disabledOverlay}
           style={{

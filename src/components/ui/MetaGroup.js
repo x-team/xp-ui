@@ -10,12 +10,12 @@ const cx = {
   layout: cmz(`
     position: relative
     display: flex
+    flex-wrap: wrap
   `),
 
   mainBodyColumn: cmz(`
     box-sizing: border-box
     flex: 1
-    min-width: 60%
   `),
 
   secondaryColumns: cmz(`

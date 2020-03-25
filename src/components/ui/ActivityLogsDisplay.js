@@ -23,6 +23,7 @@ const cx = {
   item: cmz(`
     display: flex
     margin-bottom: 0.6rem
+    flex-wrap: wrap
   `),
 
   date: cmz(`
@@ -37,6 +38,7 @@ const cx = {
     flex: 1
     word-break: break-word
     margin-right: 2rem
+    min-width: 300px
   `),
 
   user: cmz(`
