@@ -93,7 +93,8 @@ export const typoColors = {
   typoHighlightOnDarkBackground: palette.scarpaFlow,
   typoLabel: palette.bombay,
   typoCounter: palette.dodgerBlue,
-  typoGrayed: palette.jumbo
+  typoGrayed: palette.jumbo,
+  typoWhite: palette.white
 }
 
 export const formColors = {
