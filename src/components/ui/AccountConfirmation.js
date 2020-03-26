@@ -65,13 +65,14 @@ const cx = {
     margin: 0 0 32px
     width: 256px
     max-width: 100%
+    font-size: 13px !important
   `),
 
   notYou: cmz(
     typeface.text,
     `
       margin: 0 0 4px
-      font-size: 13px
+      font-size: 16px
     `
   ),
 
@@ -80,7 +81,7 @@ const cx = {
     `
       margin: 0
       font-weight: normal
-      font-size: 18px
+      font-size: 16px
       cursor: pointer
     `
   )
@@ -95,12 +96,6 @@ type Props = {
 }
 
 class AccountConfirmation extends PureComponent<Props, void> {
-  static defaultProps = {
-    avatar: '',
-    fullName: '',
-    email: ''
-  }
-
   handleContinue = () => {
     const { onContinue } = this.props
     onContinue && onContinue()
@@ -112,14 +107,14 @@ class AccountConfirmation extends PureComponent<Props, void> {
   }
 
   render () {
-    const { avatar, fullName, email } = this.props
+    const { avatar = '', fullName = '', email = '' } = this.props
     return (
       <div className={cx.wrapper}>
-        <h1 className={cx.title}>Ready to continue<br />your sign up?</h1>
-        {avatar && (
+        <h1 className={cx.title}>Welcome!</h1>
+        {(avatar || fullName) && (
           <span className={cx.avatar}>
             <Avatar
-              src={avatar}
+              src={avatar || fullName}
               alt={fullName}
               size={80}
             />
@@ -129,7 +124,7 @@ class AccountConfirmation extends PureComponent<Props, void> {
           <h2 className={cx.fullName}>{fullName}</h2>
         )}
         {email && (
-          <a className={cx.email} href='mailto:'>{email}</a>
+          <a className={cx.email} href={`mailto:${email}`}>{email}</a>
         )}
         <Button className={cx.continue} onClick={this.handleContinue}>Continue »</Button>
         <p className={cx.notYou}>It's not you?</p>

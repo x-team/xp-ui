@@ -93,8 +93,6 @@ class Modal extends PureComponent<Props, void> {
     }
   }
 
-  isWhiteTheme = (theme: string) => theme === 'white'
-
   render () {
     const { children, onClose, theme = 'default' } = this.props
     return children ? (
