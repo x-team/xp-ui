@@ -31,7 +31,7 @@ storiesOf('Screens and Layouts|ApplicantScreen/States', module)
     <Body>
       <ApplicantScreen
         notification={
-          <span>You've successfully applied for this position. <b>Check your email for next steps</b></span>
+          <span>You've successfully applied for this position. <b>We will reach out soon via email to talk about next steps.</b></span>
         }
       >
         {faker.lorem.paragraphs(50)}
@@ -51,7 +51,7 @@ storiesOf('Screens and Layouts|ApplicantScreen/States', module)
         menuLinks={object('Link', headerBarLinks)}
         appLink={HeaderLink}
         notification={
-          <span>You've successfully applied for this position. <b>Check your email for next steps</b></span>
+          <span>You've successfully applied for this position. <b>We will reach out soon via email to talk about next steps.</b></span>
         }
       >
         {faker.lorem.paragraphs(50)}

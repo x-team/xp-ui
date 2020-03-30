@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions'
 import JobApplicationCard from './JobApplicationCard'
 
 const messageSample = (
-  <span>You've already applied for this position on March 27th. <b> Check your email for next steps.</b></span>
+  <span>You applied for this position on March 27th. <b>We will reach out soon via email to talk about next steps.</b></span>
 )
 
 storiesOf('UI Components|JobApplicationCard', module)
