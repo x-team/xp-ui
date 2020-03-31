@@ -210,7 +210,7 @@ const WelcomeHero = ({ heading, videoUrl, onDismiss, children }: Props) => headi
           >
             <a
               className={cx.profile}
-              href='https://www.linkedin.com/in/'
+              href='https://www.linkedin.com/'
               target='_blank'
               rel='noopener noreferrer'
             >

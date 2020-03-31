@@ -9,7 +9,7 @@ storiesOf('UI Components|EmptyState', module)
     <EmptyState heading='No jobs at the moment...'>
       <span>
         Please check the Jobs Board later. In the meantime make sure your <a
-          href='https://www.linkedin.com/in/'
+          href='https://www.linkedin.com/'
           target='_blank'
           rel='noopener noreferrer'
         >profile is up-to-date</a>.
