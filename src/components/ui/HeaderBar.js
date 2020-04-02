@@ -303,7 +303,7 @@ class HeaderBar extends PureComponent<Props, State> {
               >
                 <a
                   className={cx.profile}
-                  href='https://www.linkedin.com/in/'
+                  href='https://www.linkedin.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >

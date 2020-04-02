@@ -12,7 +12,7 @@ storiesOf('UI Components|ProTipCard', module)
       <span>
         To be selected for an interview among thousands of applicants,{' '}
         <a
-          href='https://www.linkedin.com/in/'
+          href='https://www.linkedin.com/'
           target='_blank'
           rel='noopener noreferrer'
         >
