@@ -22,6 +22,7 @@ import ProTipCard from './components/ui/ProTipCard'
 import Loader from './components/ui/Loader'
 import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
+import SkillsSelector from './components/ui/SkillsSelector'
 import Text from './components/ui/Text'
 import TruncatedList from './components/ui/TruncatedList'
 import WelcomeHero from './components/ui/WelcomeHero'
@@ -51,6 +52,7 @@ export {
   Loader,
   Modal,
   RoadmapHero,
+  SkillsSelector,
   Text,
   TruncatedList,
   WelcomeHero
