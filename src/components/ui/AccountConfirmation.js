@@ -66,6 +66,7 @@ const cx = {
     width: 256px
     max-width: 100%
     font-size: 13px !important
+    font-weight: bold
   `),
 
   notYou: cmz(
@@ -126,7 +127,7 @@ class AccountConfirmation extends PureComponent<Props, void> {
         {email && (
           <a className={cx.email} href={`mailto:${email}`}>{email}</a>
         )}
-        <Button className={cx.continue} onClick={this.handleContinue}>Continue »</Button>
+        <Button className={cx.continue} size='large' onClick={this.handleContinue}>Continue »</Button>
         <p className={cx.notYou}>It's not you?</p>
         <a className={cx.signOut} onClick={this.handleSignOut}>Sign out</a>
       </div>
