@@ -11,13 +11,13 @@ import type { Element } from 'react'
 const cmz = require('cmz')
 
 type Props = {
-  onClose: Function,
-  children?: Element<*>|string
+  onClose?: Function,
+  children?: Element<*>|string,
+  theme?: 'default' | 'white'
 }
 
 const cx = {
   modal: cmz(`
-    background: rgba(0, 0, 0, .3)
     height: 100%
     width: 100%
     position: absolute
@@ -31,7 +31,6 @@ const cx = {
 
   frame: cmz(`
     position: relative
-    background: ${theme.baseBright}
     margin: auto
     max-width: 100%
     min-width: 38px
@@ -48,7 +47,30 @@ const cx = {
     top: 12px
     cursor: pointer
     z-index: 1
-  `)
+  `),
+
+  theme: {
+    default: {
+      modal: cmz(`
+        background: ${theme.baseDark.fade(0.7)}
+      `),
+
+      frame: cmz(`
+        background: ${theme.baseBright}
+      `)
+    },
+
+    white: {
+      modal: cmz(`
+        background: ${theme.baseBrighter.fade(0.1)}
+      `),
+
+      frame: cmz(`
+        background: ${theme.baseBrighter}
+        box-shadow: 0 24px 80px ${theme.baseDark.fade(0.88)}
+      `)
+    }
+  }
 }
 
 class Modal extends PureComponent<Props, void> {
@@ -72,18 +94,23 @@ class Modal extends PureComponent<Props, void> {
   }
 
   render () {
-    const { children } = this.props
+    const { children, onClose, theme = 'default' } = this.props
     return children ? (
       <div
-        className={cx.modal}
+        className={[cx.modal, cx.theme[theme].modal].join(' ')}
         onClick={this.handleClose}
         onKeyDown={this.handleKeyPress}
         tabIndex={0}
       >
-        <section className={cx.frame} onClick={this.noClick}>
-          <a className={cx.close} onClick={this.handleClose}>
-            <SvgIcon icon='x' color='grayscale' />
-          </a>
+        <section
+          className={[cx.frame, cx.theme[theme].frame].join(' ')}
+          onClick={this.noClick}
+        >
+          {onClose && (
+            <a className={cx.close} onClick={this.handleClose}>
+              <SvgIcon icon='x' color='grayscale' />
+            </a>
+          )}
           <div className={cx.content}>
             {children}
           </div>
