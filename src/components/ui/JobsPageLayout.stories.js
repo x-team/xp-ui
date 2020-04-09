@@ -54,7 +54,7 @@ const JobsPageProTipCard = () => (
     <span>
       To be selected for an interview among thousands of applicants,{' '}
       <a
-        href='https://www.linkedin.com/in/'
+        href='https://www.linkedin.com/'
         target='_blank'
         rel='noopener noreferrer'
       >
@@ -145,7 +145,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         menuLinks={headerBarLinks}
         appLink={HeaderLink}
         notification={
-          <span>You've successfully applied for this position. <b>Check your email for next steps</b></span>
+          <span>You've successfully applied for this position. <b>We will reach out soon via email to talk about next steps.</b></span>
         }
       >
         <JobsPageLayout
@@ -168,7 +168,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
           actionsBar={
             <JobApplicationCard
               isApplied
-              message={<span>You've already applied for this position on March 27th. <b> Check your email for next steps.</b></span>}
+              message={<span>You applied for this position on March 27th. <b>We will reach out soon via email to talk about next steps.</b></span>}
               onWithdraw={action('Withdrawing from job...')}
             />
           }
