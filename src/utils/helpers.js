@@ -123,3 +123,8 @@ export function parseVideoUrl (url: string): {
     poster
   }
 }
+
+export function isOlderBrowserError (error: string): boolean {
+  const errors = [`TypeError: invalid 'instanceof' operand y.Request`, `TypeError: y.Request is not a function. (evaluating 't instanceof y.Request')`, `TypeError: Expecting a function in instanceof check, but got undefined`, `ReferenceError: URLSearchParams is not defined`]
+  return errors.includes(error.trim())
+}
