@@ -2,10 +2,9 @@
 
 import React, { Component } from 'react'
 import differenceBy from 'lodash.differenceby'
+import Select from 'react-select'
 
 import '../../assets/react-select.css'
-
-import Select from 'react-select'
 
 import SvgIcon from './SvgIcon'
 
