@@ -65,7 +65,7 @@ class ErrorBox extends PureComponent<Props> {
     if (!keys.length) { return <div /> }
 
     if (errors && errors.name && isOlderBrowserError(errors.name)) {
-      this.props.errors.name = "Please update your browser to the latest version."
+      this.props.errors.name = 'Please update your browser to the latest version.'
     }
 
     return Root(
