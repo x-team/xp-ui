@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 
 import elem from '../../utils/elem'
-import { isOlderBrowserError } from '../../utils/helpers'
+import { getOlderBrowserErrorKey } from '../../utils/helpers'
 
 import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -64,8 +64,9 @@ class ErrorBox extends PureComponent<Props> {
     const keys = Object.keys(errors)
     if (!keys.length) { return <div /> }
 
-    if (errors && errors.name && isOlderBrowserError(errors.name)) {
-      this.props.errors.name = 'Please update your browser to the latest version.'
+    const olderBrowserErrorKey = getOlderBrowserErrorKey(errors)
+    if (olderBrowserErrorKey) {
+      this.props.errors[olderBrowserErrorKey] = 'Please update your browser to the latest version.'
     }
 
     return Root(
