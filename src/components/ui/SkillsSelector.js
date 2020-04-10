@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 import differenceBy from 'lodash.differenceby'
-import some from 'lodash.some'
 
 import '../../assets/react-select.css'
 
@@ -141,7 +140,6 @@ const cx = {
       border-radius: 4px
       padding: 15px 12px
       margin: 0 12px 12px 0
-      cursor: pointer
       white-space: nowrap
     }
 
@@ -154,6 +152,7 @@ const cx = {
 
   removeTag: cmz(`
     margin: 0 0 0 8px
+    cursor: pointer
   `)
 }
 
@@ -227,13 +226,9 @@ class SkillsSelector extends Component<Props, State> {
       component.onFocus(component.option, event)
     }
 
-    const classNames = some(this.state.values, component.option)
-      ? [cx.option, cx.selectedOption].join(' ')
-      : cx.option
-
     return (
       <div
-        className={classNames}
+        className={cx.option}
         onMouseDown={handleMouseDown}
         onMouseEnter={handleMouseEnter}
         onMouseMove={handleMouseMove}
@@ -247,13 +242,15 @@ class SkillsSelector extends Component<Props, State> {
 
   renderTag = (skill: Option) => {
     return (
-      <div
-        key={skill.value}
-        className={cx.tag}
-        onClick={() => this.handleRemove([skill])}
-      >
+      <div key={skill.value} className={cx.tag}>
         {skill.label}
-        <SvgIcon icon='x' color='grayscale' hover='default' className={cx.removeTag} />
+        <SvgIcon
+          icon='x'
+          color='grayscale'
+          hover='default'
+          className={cx.removeTag}
+          onClick={() => this.handleRemove([skill])}
+        />
       </div>
     )
   }
@@ -265,13 +262,15 @@ class SkillsSelector extends Component<Props, State> {
       ? 'Add more...'
       : 'HTML, React, JavaScript, Postgres, SQL, ...'
 
+    const availableOptions = differenceBy(options, values, 'value')
+
     return (
       <div>
         <Select
           name='skillsSelector'
           placeholder={placeholder}
           className={cx.select.toString()}
-          options={options}
+          options={availableOptions}
           multi
           removeSelected
           clearable={false}

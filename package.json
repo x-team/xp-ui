@@ -84,7 +84,6 @@
     "lodash.get": "^4.4.2",
     "lodash.isequal": "^4.5.0",
     "lodash.isnumber": "^3.0.3",
-    "lodash.some": "^4.6.0",
     "lodash.throttle": "^4.1.1",
     "markdown-to-jsx": "^6.9.4",
     "medium-editor": "^5.23.3",
