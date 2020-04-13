@@ -39,7 +39,7 @@ storiesOf('Core Components|Form Components/SkillsSelector', module)
     <Body>
       <SkillsSelector
         options={skills}
-        values={selectedSkills}
+        selectedSkills={selectedSkills}
       />
     </Body>
   ))

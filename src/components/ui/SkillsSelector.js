@@ -1,10 +1,12 @@
 // @flow
+/* global SyntheticEvent */
 
 import React, { Component } from 'react'
 import differenceBy from 'lodash.differenceby'
-import Select from 'react-select'
 
 import '../../assets/react-select.css'
+
+import Select from 'react-select'
 
 import SvgIcon from './SvgIcon'
 
@@ -162,65 +164,54 @@ type Option = {
 
 type Props = {
   options?: Array<Option>,
-  values?: Array<Option>,
-  onChange?: (values: Array<Option>) => void
+  selectedSkills?: Array<Option>,
+  onChange?: (selectedSkills: Array<Option>) => void
 }
 
 type State = {
-  values: Array<Option>
+  selectedSkills: Array<Option>
 }
 
 class SkillsSelector extends Component<Props, State> {
-  static defaultProps = {
-    options: [],
-    values: []
-  }
-
   state: State = {
-    values: this.props.values || []
+    selectedSkills: this.props.selectedSkills || []
   }
 
-  componentDidUpdate (prevProps: Props) {
-    const { values } = this.props
-    const { values: prevValues } = prevProps
-    if (values !== prevValues) {
-      this.setState(() => ({ values }))
+  componentDidUpdate ({ selectedSkills: prevValues = [] }: Props) {
+    const { selectedSkills = [] } = this.props
+    if (selectedSkills !== prevValues) {
+      this.setState(() => ({ selectedSkills }))
     }
   }
 
-  handleChange = (values: Array<Option>) => {
-    const diff = differenceBy(values, this.state.values, 'value')
-    if (diff.length > 0) {
-      const newValues = [ ...this.state.values, ...diff ]
-      this.setState(() => ({ values: newValues }), () => {
-        const { onChange } = this.props
-        onChange && onChange(newValues)
-      })
-    } else {
-      this.handleRemove(values)
-    }
-  }
-
-  handleRemove = (values: Array<Option>) => {
-    const diff = differenceBy(this.state.values, values, 'value')
-    this.setState(() => ({ values: diff }), () => {
+  handleSkillSelection = (selectedSkills: Array<Option>) => {
+    const updatedSelectedSkills = [ ...this.state.selectedSkills, ...selectedSkills ]
+    this.setState(() => ({ selectedSkills: updatedSelectedSkills }), () => {
       const { onChange } = this.props
-      onChange && onChange(diff)
+      onChange && onChange(updatedSelectedSkills)
+    })
+  }
+
+  handleSkillRemove = (removedSkills: Array<Option>) => {
+    const selectedSkills = differenceBy(this.state.selectedSkills, removedSkills, 'value')
+    this.setState(() => ({ selectedSkills }), () => {
+      const { onChange } = this.props
+      onChange && onChange(selectedSkills)
     })
   }
 
   optionComponent = (component: Object) => {
-    const handleMouseDown = (event) => {
+    const handleMouseDown = (event: SyntheticEvent<>) => {
       event.preventDefault()
       event.stopPropagation()
       component.onSelect(component.option, event)
     }
 
-    const handleMouseEnter = (event) => {
+    const handleMouseEnter = (event: SyntheticEvent<>) => {
       component.onFocus(component.option, event)
     }
 
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: SyntheticEvent<>) => {
       if (component.isFocused) return
       component.onFocus(component.option, event)
     }
@@ -248,21 +239,19 @@ class SkillsSelector extends Component<Props, State> {
           color='grayscale'
           hover='default'
           className={cx.removeTag}
-          onClick={() => this.handleRemove([skill])}
+          onClick={() => this.handleSkillRemove([skill])}
         />
       </div>
     )
   }
 
   render () {
-    const { options } = this.props
-    const { values } = this.state
-    const placeholder = values.length > 0
+    const { options = [] } = this.props
+    const { selectedSkills = [] } = this.state
+    const placeholder = selectedSkills.length > 0
       ? 'Add more...'
       : 'HTML, React, JavaScript, Postgres, SQL, ...'
-
-    const availableOptions = differenceBy(options, values, 'value')
-
+    const availableOptions = differenceBy(options, selectedSkills, 'value')
     return (
       <div>
         <Select
@@ -274,11 +263,11 @@ class SkillsSelector extends Component<Props, State> {
           removeSelected
           clearable={false}
           arrowRenderer={null}
-          onChange={this.handleChange}
+          onChange={this.handleSkillSelection}
           optionComponent={this.optionComponent}
         />
         <div className={cx.tags}>
-          {values.map(this.renderTag)}
+          {selectedSkills.map(this.renderTag)}
         </div>
       </div>
     )
