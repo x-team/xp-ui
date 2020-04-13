@@ -18,7 +18,7 @@ const skills = [
   { label: 'QA', value: 10 }
 ]
 
-const selectedSkills = [
+const applicantSkills = [
   { label: 'Ruby', value: 3 },
   { label: 'Java', value: 4 },
   { label: 'Data / DBA', value: 9 },
@@ -39,7 +39,7 @@ storiesOf('Core Components|Form Components/SkillsSelector', module)
     <Body>
       <SkillsSelector
         options={skills}
-        selectedSkills={selectedSkills}
+        applicantSkills={applicantSkills}
       />
     </Body>
   ))

@@ -164,7 +164,7 @@ type Option = {
 
 type Props = {
   options?: Array<Option>,
-  selectedSkills?: Array<Option>,
+  applicantSkills?: Array<Option>,
   onChange?: (selectedSkills: Array<Option>) => void
 }
 
@@ -174,7 +174,7 @@ type State = {
 
 class SkillsSelector extends Component<Props, State> {
   state: State = {
-    selectedSkills: this.props.selectedSkills || []
+    selectedSkills: this.props.applicantSkills || []
   }
 
   handleSkillSelection = (selectedSkills: Array<Option>) => {
