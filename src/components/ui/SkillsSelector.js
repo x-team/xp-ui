@@ -3,15 +3,14 @@
 
 import React, { Component } from 'react'
 import differenceBy from 'lodash.differenceby'
-
-import '../../assets/react-select.css'
-
 import Select from 'react-select'
 
 import SvgIcon from './SvgIcon'
 
-import typo, { typeface } from '../../styles/typo'
+import '../../assets/react-select.css'
 import theme from '../../styles/theme'
+
+import typo, { typeface } from '../../styles/typo'
 
 const cmz = require('cmz')
 
