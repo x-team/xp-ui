@@ -1,5 +1,5 @@
 // @flow
-/* global SyntheticEvent */
+/* global SyntheticMouseEvent, HTMLOptionElement */
 
 import React, { Component } from 'react'
 import differenceBy from 'lodash.differenceby'
@@ -184,8 +184,8 @@ class SkillsSelector extends Component<Props, State> {
     })
   }
 
-  handleSkillRemove = (removedSkills: Array<Option>) => {
-    const selectedSkills = differenceBy(this.state.selectedSkills, removedSkills, 'value')
+  handleSkillRemove = (removedSkill: Option) => {
+    const selectedSkills = this.state.selectedSkills.filter(skill => skill.value !== removedSkill.value)
     this.setState(() => ({ selectedSkills }), () => {
       const { onChange } = this.props
       onChange && onChange(selectedSkills)
@@ -193,17 +193,17 @@ class SkillsSelector extends Component<Props, State> {
   }
 
   optionComponent = (component: Object) => {
-    const handleMouseDown = (event: SyntheticEvent<>) => {
+    const handleMouseDown = (event: SyntheticMouseEvent<HTMLOptionElement>) => {
       event.preventDefault()
       event.stopPropagation()
       component.onSelect(component.option, event)
     }
 
-    const handleMouseEnter = (event: SyntheticEvent<>) => {
+    const handleMouseEnter = (event: SyntheticMouseEvent<HTMLOptionElement>) => {
       component.onFocus(component.option, event)
     }
 
-    const handleMouseMove = (event: SyntheticEvent<>) => {
+    const handleMouseMove = (event: SyntheticMouseEvent<HTMLOptionElement>) => {
       if (component.isFocused) return
       component.onFocus(component.option, event)
     }
@@ -231,7 +231,7 @@ class SkillsSelector extends Component<Props, State> {
           color='grayscale'
           hover='default'
           className={cx.removeTag}
-          onClick={() => this.handleSkillRemove([skill])}
+          onClick={() => this.handleSkillRemove(skill)}
         />
       </div>
     )
