@@ -177,13 +177,6 @@ class SkillsSelector extends Component<Props, State> {
     selectedSkills: this.props.selectedSkills || []
   }
 
-  componentDidUpdate ({ selectedSkills: prevValues = [] }: Props) {
-    const { selectedSkills = [] } = this.props
-    if (selectedSkills !== prevValues) {
-      this.setState(() => ({ selectedSkills }))
-    }
-  }
-
   handleSkillSelection = (selectedSkills: Array<Option>) => {
     const updatedSelectedSkills = [ ...this.state.selectedSkills, ...selectedSkills ]
     this.setState(() => ({ selectedSkills: updatedSelectedSkills }), () => {
