@@ -1,15 +1,15 @@
 // @flow
-/* global SyntheticMouseEvent, HTMLOptionElement */
 
 import React, { Component } from 'react'
 import differenceBy from 'lodash.differenceby'
 import Select from 'react-select'
 
 import SvgIcon from './SvgIcon'
+import SkillsSelectorOption from './SkillsSelectorOption'
 
 import '../../assets/react-select.css'
-import theme from '../../styles/theme'
 
+import theme from '../../styles/theme'
 import typo, { typeface } from '../../styles/typo'
 
 const cmz = require('cmz')
@@ -66,6 +66,7 @@ const cx = {
         margin: 0 !important
         display: flex !important
         align-items: center
+        padding: 0
       }
 
       & .Select-input > input {
@@ -90,33 +91,12 @@ const cx = {
       & .Select-menu {
         max-height: 270px
       }
+
+      & .Select-option {
+        padding: 0
+      }
     `
   ),
-
-  option: cmz(`
-    & {
-      padding: 0 20px
-      cursor: pointer
-      font-size: 20px
-    }
-
-    &:hover {
-      background: ${theme.baseBright}
-    }
-
-    &:last-of-type > div {
-      border: none
-    }
-  `),
-
-  selectedOption: cmz(`
-    font-weight: 400
-  `),
-
-  optionLabel: cmz(`
-    padding: 16px 0
-    border-bottom: 1px solid ${theme.lineSilver2}
-  `),
 
   tags: cmz(
     typeface.extra,
@@ -192,36 +172,6 @@ class SkillsSelector extends Component<Props, State> {
     })
   }
 
-  optionComponent = (component: Object) => {
-    const handleMouseDown = (event: SyntheticMouseEvent<HTMLOptionElement>) => {
-      event.preventDefault()
-      event.stopPropagation()
-      component.onSelect(component.option, event)
-    }
-
-    const handleMouseEnter = (event: SyntheticMouseEvent<HTMLOptionElement>) => {
-      component.onFocus(component.option, event)
-    }
-
-    const handleMouseMove = (event: SyntheticMouseEvent<HTMLOptionElement>) => {
-      if (component.isFocused) return
-      component.onFocus(component.option, event)
-    }
-
-    return (
-      <div
-        className={cx.option}
-        onMouseDown={handleMouseDown}
-        onMouseEnter={handleMouseEnter}
-        onMouseMove={handleMouseMove}
-      >
-        <div className={cx.optionLabel}>
-          {component.children}
-        </div>
-      </div>
-    )
-  }
-
   renderTag = (skill: Option) => {
     return (
       <div key={skill.value} className={cx.tag}>
@@ -255,7 +205,7 @@ class SkillsSelector extends Component<Props, State> {
           clearable={false}
           arrowRenderer={null}
           onChange={this.handleSkillSelection}
-          optionComponent={this.optionComponent}
+          optionRenderer={SkillsSelectorOption}
         />
         <div className={cx.tags}>
           {selectedSkills.map(this.renderTag)}
