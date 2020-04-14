@@ -51,6 +51,13 @@ storiesOf('Core Components|ErrorBox/Debug/Custom error message for legacy device
       }}
     />
   ))
+  .add('error \'TypeError: undefined is not a valid argument for \'instanceof\' (evaluating \'t instanceof y.Request\')\'', () => (
+    <ErrorBox
+      errors={{
+        asdf1234: `TypeError: undefined is not a valid argument for 'instanceof' (evaluating 't instanceof y.Request')`
+      }}
+    />
+  ))
   .add('error \'ReferenceError: URLSearchParams is not defined\'', () => (
     <ErrorBox
       errors={{

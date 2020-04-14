@@ -132,7 +132,8 @@ export function getOlderBrowserErrorKey (errors: {[key: string|number]: string |
     `TypeError: invalid 'instanceof' operand y.Request`,
     `TypeError: y.Request is not a function. (evaluating 't instanceof y.Request')`,
     `TypeError: Expecting a function in instanceof check, but got undefined`,
-    `ReferenceError: URLSearchParams is not defined`
+    `ReferenceError: URLSearchParams is not defined`,
+    `TypeError: undefined is not a valid argument for 'instanceof' (evaluating 't instanceof y.Request')`
   ]
 
   let matchingKey = null
