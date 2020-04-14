@@ -176,8 +176,8 @@ class SkillsSelector extends Component<Props, State> {
     selectedSkills: this.props.applicantSkills || []
   }
 
-  handleSkillSelection = (selectedSkills: Array<Option>) => {
-    const updatedSelectedSkills = [ ...this.state.selectedSkills, ...selectedSkills ]
+  handleSkillSelection = (selectedSkill: Option) => {
+    const updatedSelectedSkills = [ ...this.state.selectedSkills, selectedSkill ]
     this.setState(() => ({ selectedSkills: updatedSelectedSkills }), () => {
       const { onChange } = this.props
       onChange && onChange(updatedSelectedSkills)
@@ -251,7 +251,6 @@ class SkillsSelector extends Component<Props, State> {
           placeholder={placeholder}
           className={cx.select.toString()}
           options={availableOptions}
-          multi
           removeSelected
           clearable={false}
           arrowRenderer={null}
