@@ -1,8 +1,11 @@
+// @flow
+
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import LocateYourProfile from './LocateYourProfile'
+import ApplicantScreen from './ApplicantScreen'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -20,6 +23,18 @@ storiesOf('UI Components|LocateYourProfile', module)
         headline='Locate your profile.'
         recover={action('Recover my secret profile Link')}
       />
+    </Body>
+  ))
+
+storiesOf('UI Components|LocateYourProfile/Use Cases', module)
+  .add('wrapped with ApplicantScreen', () => (
+    <Body>
+      <ApplicantScreen noWrapper>
+        <LocateYourProfile
+          headline='Locate your profile.'
+          recover={action('Recover my secret profile Link')}
+        />
+      </ApplicantScreen>
     </Body>
   ))
 
