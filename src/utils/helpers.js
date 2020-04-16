@@ -7,6 +7,7 @@ import differenceInDays from 'date-fns/difference_in_days'
 
 import type { Element } from 'react'
 
+// Seems not to be used in the application
 export function throttle (callback, timeout) {
   let now = Date.now()
   return function () {
@@ -17,6 +18,7 @@ export function throttle (callback, timeout) {
   }
 }
 
+// Seems not to be used in the application
 export function isScrolledIntoView (element) {
   if (!element) return false
   // Element's position relative to the viewport
@@ -30,6 +32,11 @@ export function isScrolledIntoView (element) {
   const elemBottom = scrollPosition + bottom
 
   return elemBottom <= docViewBottom
+}
+
+// Seems not to be used in the application
+export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
+  event && event.stopPropagation()
 }
 
 export function getComponentDisplayName (Component) {
@@ -50,10 +57,6 @@ export function size (collection: ?string | ?Object | ?Array<*>): number {
   if (Array.isArray(collection) || typeof collection === 'string') return collection.length
 
   return Object.keys(collection).length
-}
-
-export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
-  event && event.stopPropagation()
 }
 
 export const replaceBlankLinesForNewLines = (text: ?string): string => text ? text.replace(/(?:\r\n|\r|\n)/g, '<br>\n') : ''
@@ -88,11 +91,13 @@ export function timeSince (date: Date | string | number | void | null, addSpaceA
   return 'just now'
 }
 
-export function parseVideoUrl (url: string): {
+export type ParsedVideoUrlType = {
   videoId: number,
   service: string,
   poster: ?string
-} {
+}
+
+export function parseVideoUrl (url: string): ParsedVideoUrlType {
   // - Supported YouTube URL formats:
   //   - http://www.youtube.com/watch?v=R6NUFRNEai4
   //   - http://youtu.be/R6NUFRNEai4
@@ -127,14 +132,19 @@ export function parseVideoUrl (url: string): {
 }
 
 // Legacy devices browser identified errors caused by RequestAPI and URLSearchParams
-export function getOlderBrowserErrorKey (errors: {[key: string|number]: string | Array<Element<*>>}): string|number {
-  const olderBrowserErrors = [
-    `TypeError: invalid 'instanceof' operand y.Request`,
-    `TypeError: y.Request is not a function. (evaluating 't instanceof y.Request')`,
-    `TypeError: Expecting a function in instanceof check, but got undefined`,
-    `ReferenceError: URLSearchParams is not defined`,
-    `TypeError: undefined is not a valid argument for 'instanceof' (evaluating 't instanceof y.Request')`
-  ]
+export const olderBrowserErrors: Array<string> = [
+  `TypeError: invalid 'instanceof' operand y.Request`,
+  `TypeError: y.Request is not a function. (evaluating 't instanceof y.Request')`,
+  `TypeError: Expecting a function in instanceof check, but got undefined`,
+  `ReferenceError: URLSearchParams is not defined`,
+  `TypeError: undefined is not a valid argument for 'instanceof' (evaluating 't instanceof y.Request')`
+]
+export type ErrorType = {[key: string|number]: string | Array<Element<*>>}
+
+export function getOlderBrowserErrorKey (errors: ErrorType = {}): string|number|null {
+  if (!errors) {
+    return null
+  }
 
   let matchingKey = null
   Object.keys(errors).forEach((key) => {
@@ -142,6 +152,5 @@ export function getOlderBrowserErrorKey (errors: {[key: string|number]: string |
       matchingKey = key
     }
   })
-
   return matchingKey
 }
