@@ -21,6 +21,7 @@ import JobsPageLayout from './components/ui/JobsPageLayout'
 import JobSkills from './components/ui/JobSkills'
 import ProTipCard from './components/ui/ProTipCard'
 import Loader from './components/ui/Loader'
+import LocateYourProfile from './components/ui/LocateYourProfile'
 import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
 import Text from './components/ui/Text'
@@ -51,6 +52,7 @@ export {
   JobSkills,
   ProTipCard,
   Loader,
+  LocateYourProfile,
   Modal,
   RoadmapHero,
   Text,

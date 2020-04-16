@@ -5,7 +5,8 @@ WebFont.load({
     families: [
       'Open Sans:400,600,700,800',
       'Source Sans Pro:300,700',
-      'Montserrat:400'
+      'Montserrat:400',
+      'Lato:400,700,800'
     ]
   }
 })

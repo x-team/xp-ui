@@ -48,6 +48,7 @@ import ProTipCard from './components/ui/ProTipCard'
 import ListExclusionFormPopup from './components/ui/ListExclusionFormPopup'
 import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
+import LocateYourProfile from './components/ui/LocateYourProfile'
 import LoginButton from './components/ui/LoginButton'
 import MetaGroup from './components/ui/MetaGroup'
 import Modal from './components/ui/Modal'
@@ -126,6 +127,7 @@ export {
   ListExclusionFormPopup,
   ListsEditor,
   Loader,
+  LocateYourProfile,
   LoginButton,
   MetaGroup,
   Modal,
