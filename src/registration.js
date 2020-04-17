@@ -1,3 +1,4 @@
+import AccountConfirmation from './components/ui/AccountConfirmation'
 import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
 import Button from './components/ui/Button'
@@ -20,6 +21,7 @@ import JobsPageLayout from './components/ui/JobsPageLayout'
 import JobSkills from './components/ui/JobSkills'
 import ProTipCard from './components/ui/ProTipCard'
 import Loader from './components/ui/Loader'
+import LocateYourProfile from './components/ui/LocateYourProfile'
 import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
 import Text from './components/ui/Text'
@@ -27,6 +29,7 @@ import TruncatedList from './components/ui/TruncatedList'
 import WelcomeHero from './components/ui/WelcomeHero'
 
 export {
+  AccountConfirmation,
   ApplicantScreen,
   AttachFiles,
   Button,
@@ -49,6 +52,7 @@ export {
   JobSkills,
   ProTipCard,
   Loader,
+  LocateYourProfile,
   Modal,
   RoadmapHero,
   Text,
