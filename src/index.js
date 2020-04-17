@@ -1,5 +1,6 @@
 import './styles/fonts.js'
 
+import AccountConfirmation from './components/ui/AccountConfirmation'
 import ActivityBar from './components/ui/ActivityBar'
 import ActivityLog from './components/ui/ActivityLog'
 import ActivityLogsDisplay from './components/ui/ActivityLogsDisplay'
@@ -47,6 +48,7 @@ import ProTipCard from './components/ui/ProTipCard'
 import ListExclusionFormPopup from './components/ui/ListExclusionFormPopup'
 import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
+import LocateYourProfile from './components/ui/LocateYourProfile'
 import LoginButton from './components/ui/LoginButton'
 import MetaGroup from './components/ui/MetaGroup'
 import Modal from './components/ui/Modal'
@@ -77,6 +79,7 @@ import WelcomeHero from './components/ui/WelcomeHero'
 import XIcon from './components/ui/XIcon'
 
 export {
+  AccountConfirmation,
   ActivityBar,
   ActivityLog,
   ActivityLogsDisplay,
@@ -124,6 +127,7 @@ export {
   ListExclusionFormPopup,
   ListsEditor,
   Loader,
+  LocateYourProfile,
   LoginButton,
   MetaGroup,
   Modal,
