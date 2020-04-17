@@ -1,6 +1,8 @@
-/* global test, describe, expect */
+/* global test, describe, expect, beforeEach, afterEach */
 import React, { Component } from 'react'
 import renderer from 'react-test-renderer'
+import moment from 'moment'
+import MockDate from 'mockdate'
 
 import {
   getComponentDisplayName,
@@ -14,7 +16,7 @@ import {
   getOlderBrowserErrorKey
 } from './../../utils/helpers'
 
-describe('getComponentDisplayName()', () => {
+describe('#getComponentDisplayName()', () => {
   const mockComponent = () => {
     class MockComponent {
       render () {
@@ -31,7 +33,7 @@ describe('getComponentDisplayName()', () => {
     expect(getComponentDisplayName).toBeInstanceOf(Function)
   })
 
-  describe('"displayName" propierty value', () => {
+  describe('- "displayName" propierty value', () => {
     test('Should return the "displayName" prop value if does exists', () => {
       const props = {
         displayName: displayNameMock
@@ -56,7 +58,7 @@ describe('getComponentDisplayName()', () => {
     })
   })
 
-  describe('"name" propierty value', () => {
+  describe('- "name" propierty value', () => {
     test('Should return the "name" prop value if does exists and "displayName" prop does not exists', () => {
       const props = {
         name: nameMock
@@ -79,7 +81,7 @@ describe('getComponentDisplayName()', () => {
     })
   })
 
-  describe('"displayName" and "name" props do not exists', () => {
+  describe('- "displayName" and "name" props do not exists', () => {
     test('Should return the word "Component" if not props exists', () => {
       const component = renderer.create(<mockComponent />)
       const result = getComponentDisplayName(component.toJSON().props)
@@ -99,14 +101,14 @@ describe('getComponentDisplayName()', () => {
   })
 })
 
-describe('pluralize()', () => {
+describe('#pluralize()', () => {
   const nounMock = 'list'
 
   test('Should be an instance of Function', () => {
     expect(pluralize).toBeInstanceOf(Function)
   })
 
-  describe('Counter is different than 1', () => {
+  describe('- Counter is different than 1', () => {
     const countMock = 2
 
     describe('Default call', () => {
@@ -140,7 +142,7 @@ describe('pluralize()', () => {
     })
   })
 
-  describe('Counter is equal to 1', () => {
+  describe('- Counter is equal to 1', () => {
     const countMock = 1
 
     describe('Default call', () => {
@@ -160,12 +162,12 @@ describe('pluralize()', () => {
   })
 })
 
-describe('size()', () => {
+describe('#size()', () => {
   test('Should be an instance of Function', () => {
     expect(size).toBeInstanceOf(Function)
   })
 
-  describe('"collection" param', () => {
+  describe('- "collection" param', () => {
     test('Should return "0" if "collection" param is not passed', () => {
       const result = size()
       expect(result).toBe(0)
@@ -203,32 +205,294 @@ describe('size()', () => {
   })
 })
 
-describe('timeSince()', () => {
+describe('#timeSince()', () => {
+  let epochNowMilisecondsMock
+  let timeDataMock
+  const timeSpectrum = {
+    little: 15,
+    bigger: 80
+  }
+  const resultMock = {
+    days: {
+      date: '27 Jan 20',
+      difference: '3 days ago'
+    },
+    hours: {
+      withSpace: {
+        little: '1 h ago',
+        bigger: '15 h ago'
+      },
+      withoutSpace: {
+        little: '1h ago',
+        bigger: '15h ago'
+      }
+    },
+    minutes: {
+      withSpace: {
+        little: '1 m ago',
+        bigger: '15 m ago'
+      },
+      withoutSpace: {
+        little: '1m ago',
+        bigger: '15m ago'
+      }
+    },
+    justNow: 'just now'
+  }
+
+  beforeEach(() => {
+    MockDate.set('2020-01-31T00:00:00.000Z')
+
+    epochNowMilisecondsMock = moment().valueOf()
+    timeDataMock = {
+      hours: {
+        little: moment(epochNowMilisecondsMock).subtract(timeSpectrum.little, 'h'),
+        bigger: moment(epochNowMilisecondsMock).subtract(timeSpectrum.bigger, 'h')
+      },
+      minutes: {
+        little: moment(epochNowMilisecondsMock).subtract(timeSpectrum.little, 'm'),
+        bigger: moment(epochNowMilisecondsMock).subtract(timeSpectrum.bigger, 'm')
+      },
+      seconds: {
+        little: moment(epochNowMilisecondsMock).subtract(timeSpectrum.little, 's'),
+        bigger: moment(epochNowMilisecondsMock).subtract(timeSpectrum.bigger, 's')
+      }
+    }
+  })
+
+  afterEach(() => {
+    MockDate.reset()
+  })
+
   test('Should be an instance of Function', () => {
     expect(timeSince).toBeInstanceOf(Function)
   })
 
-  describe('Called as "void" function', () => {
+  describe('- Called as "void" function', () => {
     test('Should return "just now" if is being called as a "void" function without params', () => {
       const result = timeSince()
-      expect(result).toBe('just now')
+      expect(result).toBe(resultMock.justNow)
     })
   })
 
-  describe('Called with "null" as param', () => {
+  describe('- Called with "null" as param', () => {
     test('Should return "just now" if is being called without params', () => {
       const result = timeSince(null)
-      expect(result).toBe('just now')
+      expect(result).toBe(resultMock.justNow)
+    })
+  })
+
+  describe('- "date" param', () => {
+    describe('> as "number" using a unix timestamp in miliseconds', () => {
+      test('Should return an string with the format "DD MMM YY" for times that are ">= 24 hours ago"', () => {
+        const ms = timeDataMock.hours.bigger.valueOf()
+        const result = timeSince(ms)
+        expect(result).toBe(resultMock.days.date)
+      })
+
+      test('Should return an string with the format "{hours} h ago" for times that are "< 24 hours && >= 60 minutes ago"', () => {
+        const ms1 = timeDataMock.hours.little.valueOf()
+        const result1 = timeSince(ms1)
+        expect(result1).toBe(resultMock.hours.withSpace.bigger)
+
+        const ms2 = timeDataMock.minutes.bigger.valueOf()
+        const result2 = timeSince(ms2)
+        expect(result2).toBe(resultMock.hours.withSpace.little)
+      })
+
+      test('Should return an string with the format "{minutes} m ago" for times that are "< 24 hours && < 60 minutes && >= 60 seconds ago"', () => {
+        const ms1 = timeDataMock.minutes.little.valueOf()
+        const result1 = timeSince(ms1)
+        expect(result1).toBe(resultMock.minutes.withSpace.bigger)
+
+        const ms2 = timeDataMock.seconds.bigger.valueOf()
+        const result2 = timeSince(ms2)
+        expect(result2).toBe(resultMock.minutes.withSpace.little)
+      })
+
+      test('Should return "just now" for times that are "< 60 seconds ago"', () => {
+        const ms = timeDataMock.seconds.little.valueOf()
+        const result = timeSince(ms)
+        expect(result).toBe(resultMock.justNow)
+      })
+    })
+
+    describe('> as "string" using the format "MMMM D, YYYY HH:mm:ss"', () => {
+      const formatString = 'MMMM D, YYYY HH:mm:ss'
+
+      test('Should return an string with the format "DD MMM YY" for times that are ">= 24 hours ago"', () => {
+        const string = timeDataMock.hours.bigger.format(formatString)
+        const result = timeSince(string)
+        expect(result).toBe(resultMock.days.date)
+      })
+
+      test('Should return an string with the format "{hours} h ago" for times that are "< 24 hours && >= 60 minutes ago"', () => {
+        const string1 = timeDataMock.hours.little.format(formatString)
+        const result1 = timeSince(string1)
+        expect(result1).toBe(resultMock.hours.withSpace.bigger)
+
+        const string2 = timeDataMock.minutes.bigger.format(formatString)
+        const result2 = timeSince(string2)
+        expect(result2).toBe(resultMock.hours.withSpace.little)
+      })
+
+      test('Should return an string with the format "{minutes} m ago" for times that are "< 24 hours && < 60 minutes && >= 60 seconds ago"', () => {
+        const string1 = timeDataMock.minutes.little.format(formatString)
+        const result1 = timeSince(string1)
+        expect(result1).toBe(resultMock.minutes.withSpace.bigger)
+
+        const string2 = timeDataMock.seconds.bigger.format(formatString)
+        const result2 = timeSince(string2)
+        expect(result2).toBe(resultMock.minutes.withSpace.little)
+      })
+
+      test('Should return "just now" for times that are "< 60 seconds ago"', () => {
+        const string = timeDataMock.seconds.little.format(formatString)
+        const result = timeSince(string)
+        expect(result).toBe(resultMock.justNow)
+      })
+    })
+
+    describe('> as "string" using the format "YYYY-MM-DDTHH:mm:ss-Z"', () => {
+      test('Should return an string with the format "DD MMM YY" for times that are ">= 24 hours ago"', () => {
+        const string = timeDataMock.hours.bigger.format()
+        const result = timeSince(string)
+        expect(result).toBe(resultMock.days.date)
+      })
+
+      test('Should return an string with the format "{hours} h ago" for times that are "< 24 hours && >= 60 minutes ago"', () => {
+        const string1 = timeDataMock.hours.little.format()
+        const result1 = timeSince(string1)
+        expect(result1).toBe(resultMock.hours.withSpace.bigger)
+
+        const string2 = timeDataMock.minutes.bigger.format()
+        const result2 = timeSince(string2)
+        expect(result2).toBe(resultMock.hours.withSpace.little)
+      })
+
+      test('Should return an string with the format "{minutes} m ago" for times that are "< 24 hours && < 60 minutes && >= 60 seconds ago"', () => {
+        const string1 = timeDataMock.minutes.little.format()
+        const result1 = timeSince(string1)
+        expect(result1).toBe(resultMock.minutes.withSpace.bigger)
+
+        const string2 = timeDataMock.seconds.bigger.format()
+        const result2 = timeSince(string2)
+        expect(result2).toBe(resultMock.minutes.withSpace.little)
+      })
+
+      test('Should return "just now" for times that are "< 60 seconds ago"', () => {
+        const string = timeDataMock.seconds.little.format()
+        const result = timeSince(string)
+        expect(result).toBe(resultMock.justNow)
+      })
+    })
+
+    describe('> as "Date" object', () => {
+      test('Should return an string with the format "DD MMM YY" for times that are ">= 24 hours ago"', () => {
+        const date = new Date(timeDataMock.hours.bigger.valueOf())
+        const result = timeSince(date)
+        expect(result).toBe(resultMock.days.date)
+      })
+
+      test('Should return an string with the format "{hours} h ago" for times that are "< 24 hours && >= 60 minutes ago"', () => {
+        const date1 = new Date(timeDataMock.hours.little.valueOf())
+        const result1 = timeSince(date1)
+        expect(result1).toBe(resultMock.hours.withSpace.bigger)
+
+        const date2 = new Date(timeDataMock.minutes.bigger.valueOf())
+        const result2 = timeSince(date2)
+        expect(result2).toBe(resultMock.hours.withSpace.little)
+      })
+
+      test('Should return an string with the format "{minutes} m ago" for times that are "< 24 hours && < 60 minutes && >= 60 seconds ago"', () => {
+        const date1 = new Date(timeDataMock.minutes.little.valueOf())
+        const result1 = timeSince(date1)
+        expect(result1).toBe(resultMock.minutes.withSpace.bigger)
+
+        const date2 = new Date(timeDataMock.seconds.bigger.valueOf())
+        const result2 = timeSince(date2)
+        expect(result2).toBe(resultMock.minutes.withSpace.little)
+      })
+
+      test('Should return "just now" for times that are "< 60 seconds ago"', () => {
+        const date = new Date(timeDataMock.seconds.little.valueOf())
+        const result = timeSince(date)
+        expect(result).toBe(resultMock.justNow)
+      })
+    })
+  })
+
+  describe('- "addSpaceAfterNumber" param', () => {
+    describe('> "true" as value', () => {
+      test('Should return an string with the format "{hours} h ago" for times that are "< 24 hours && >= 60 minutes ago"', () => {
+        const ms1 = timeDataMock.hours.little.valueOf()
+        const result1 = timeSince(ms1, true)
+        expect(result1).toBe(resultMock.hours.withSpace.bigger)
+
+        const ms2 = timeDataMock.minutes.bigger.valueOf()
+        const result2 = timeSince(ms2, true)
+        expect(result2).toBe(resultMock.hours.withSpace.little)
+      })
+
+      test('Should return an string with the format "{minutes} m ago" for times that are "< 24 hours && < 60 minutes && >= 60 seconds ago"', () => {
+        const ms1 = timeDataMock.minutes.little.valueOf()
+        const result1 = timeSince(ms1, true)
+        expect(result1).toBe(resultMock.minutes.withSpace.bigger)
+
+        const ms2 = timeDataMock.seconds.bigger.valueOf()
+        const result2 = timeSince(ms2, true)
+        expect(result2).toBe(resultMock.minutes.withSpace.little)
+      })
+    })
+
+    describe('> "false" as value', () => {
+      test('Should return an string with the format "{hours}h ago" for times that are "< 24 hours && >= 60 minutes ago"', () => {
+        const ms1 = timeDataMock.hours.little.valueOf()
+        const result1 = timeSince(ms1, false)
+        expect(result1).toBe(resultMock.hours.withoutSpace.bigger)
+
+        const ms2 = timeDataMock.minutes.bigger.valueOf()
+        const result2 = timeSince(ms2, false)
+        expect(result2).toBe(resultMock.hours.withoutSpace.little)
+      })
+
+      test('Should return an string with the format "{minutes}m ago" for times that are "< 24 hours && < 60 minutes && >= 60 seconds ago"', () => {
+        const ms1 = timeDataMock.minutes.little.valueOf()
+        const result1 = timeSince(ms1, false)
+        expect(result1).toBe(resultMock.minutes.withoutSpace.bigger)
+
+        const ms2 = timeDataMock.seconds.bigger.valueOf()
+        const result2 = timeSince(ms2, false)
+        expect(result2).toBe(resultMock.minutes.withoutSpace.little)
+      })
+    })
+  })
+
+  describe('- "addDifferenceInDays" param', () => {
+    describe('> "true" as value', () => {
+      test('Should return an string with the format "DD days ago" for times that are ">= 24 hours ago"', () => {
+        const ms = timeDataMock.hours.bigger.valueOf()
+        const result = timeSince(ms, true, true)
+        expect(result).toBe(resultMock.days.difference)
+      })
+    })
+
+    describe('> "false" as value', () => {
+      test('Should return an string with the format "DD MMM YY" for times that are ">= 24 hours ago"', () => {
+        const ms = timeDataMock.hours.bigger.valueOf()
+        const result = timeSince(ms, true, false)
+        expect(result).toBe(resultMock.days.date)
+      })
     })
   })
 })
 
-describe('parseVideoUrl()', () => {
+describe('#parseVideoUrl()', () => {
   test('Should be an instance of Function', () => {
     expect(parseVideoUrl).toBeInstanceOf(Function)
   })
 
-  describe('Support for YOUTUBE videos format', () => {
+  describe('- Support for YOUTUBE videos format', () => {
     const videoIdMock: string = 'R6NUFRNEai4'
     const resultMock: ParsedVideoUrlType = {
       videoId: 'R6NUFRNEai4',
@@ -257,7 +521,7 @@ describe('parseVideoUrl()', () => {
     })
   })
 
-  describe('Support for VIMEO videos format', () => {
+  describe('- Support for VIMEO videos format', () => {
     const videoIdMock: string = '25451551'
     const resultMock: ParsedVideoUrlType = {
       videoId: '25451551',
@@ -282,7 +546,7 @@ describe('parseVideoUrl()', () => {
   })
 })
 
-describe('getOlderBrowserErrorKey()', () => {
+describe('#getOlderBrowserErrorKey()', () => {
   test('Should be an instance of Function', () => {
     expect(getOlderBrowserErrorKey).toBeInstanceOf(Function)
   })
