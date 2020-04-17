@@ -1,14 +1,11 @@
-/* global test, describe, expect, spyOn */
-// import React from 'react'
-// import renderer from 'react-test-renderer'
+/* global test, describe, expect */
+import React, { Component } from 'react'
+import renderer from 'react-test-renderer'
 
 import {
-  throttle,
-  isScrolledIntoView,
   getComponentDisplayName,
   pluralize,
   size,
-  stopPropagation,
   timeSince,
   ParsedVideoUrlType,
   parseVideoUrl,
@@ -17,43 +14,88 @@ import {
   getOlderBrowserErrorKey
 } from './../../utils/helpers'
 
-// Seems not to be used in the application
-describe('throttle()', () => {
-  test('Should be an instance of Function', () => {
-    expect(throttle).toBeInstanceOf(Function)
-  })
-})
-
-// Seems not to be used in the application
-describe('isScrolledIntoView()', () => {
-  test('Should be an instance of Function', () => {
-    expect(isScrolledIntoView).toBeInstanceOf(Function)
-  })
-})
-
-// Seems not to be used in the application
-describe('stopPropagation()', () => {
-  let eventMock = {
-    stopPropagation () {}
-  }
-
-  test('Should be an instance of Function', () => {
-    expect(stopPropagation).toBeInstanceOf(Function)
-  })
-
-  test('Should call the event.stopPropagation internally', () => {
-    spyOn(eventMock, 'stopPropagation')
-    stopPropagation(eventMock)
-
-    expect(eventMock).not.toBeNull()
-    expect(eventMock).not.toBeUndefined()
-    expect(eventMock.stopPropagation).toHaveBeenCalled()
-  })
-})
-
 describe('getComponentDisplayName()', () => {
+  const mockComponent = () => {
+    class MockComponent {
+      render () {
+        const { ...rest } = this.props
+        return <Component {...rest} />
+      }
+    }
+    return MockComponent
+  }
+  const displayNameMock = 'displayName'
+  const nameMock = 'name'
+
   test('Should be an instance of Function', () => {
     expect(getComponentDisplayName).toBeInstanceOf(Function)
+  })
+
+  describe('"displayName" propierty value', () => {
+    test('Should return the "displayName" prop value if does exists', () => {
+      const props = {
+        displayName: displayNameMock
+      }
+      const component = renderer.create(<mockComponent {...props} />)
+      const result = getComponentDisplayName(component.toJSON().props)
+
+      expect(result).toBe(displayNameMock)
+    })
+
+    test('Should return the "displayName" prop value if does exists by priority of another value', () => {
+      const props = {
+        anotherMore: 'randomValueMore',
+        name: nameMock,
+        another: 'randomValue',
+        anotherOne: 'randomValueOne',
+        displayName: displayNameMock
+      }
+      const component = renderer.create(<mockComponent {...props} />)
+      const result = getComponentDisplayName(component.toJSON().props)
+      expect(result).toBe(displayNameMock)
+    })
+  })
+
+  describe('"name" propierty value', () => {
+    test('Should return the "name" prop value if does exists and "displayName" prop does not exists', () => {
+      const props = {
+        name: nameMock
+      }
+      const component = renderer.create(<mockComponent {...props} />)
+      const result = getComponentDisplayName(component.toJSON().props)
+      expect(result).toBe(nameMock)
+    })
+
+    test('Should return the "name" prop value if does exists and "displayName" prop does not exists by priority of another value', () => {
+      const props = {
+        another: 'randomValue',
+        anotherMore: 'randomValueMore',
+        name: nameMock,
+        anotherOne: 'randomValueOne'
+      }
+      const component = renderer.create(<mockComponent {...props} />)
+      const result = getComponentDisplayName(component.toJSON().props)
+      expect(result).toBe(nameMock)
+    })
+  })
+
+  describe('"displayName" and "name" props do not exists', () => {
+    test('Should return the word "Component" if not props exists', () => {
+      const component = renderer.create(<mockComponent />)
+      const result = getComponentDisplayName(component.toJSON().props)
+      expect(result).toBe('Component')
+    })
+
+    test('Should return the word "Component" if the "displayName" and "name" props do not exists but there are another props defined', () => {
+      const props = {
+        another: 'randomValue',
+        anotherMore: 'randomValueMore',
+        anotherOne: 'randomValueOne'
+      }
+      const component = renderer.create(<mockComponent {...props} />)
+      const result = getComponentDisplayName(component.toJSON().props)
+      expect(result).toBe('Component')
+    })
   })
 })
 
@@ -67,7 +109,7 @@ describe('pluralize()', () => {
   describe('Counter is different than 1', () => {
     const countMock = 2
 
-    describe('Default', () => {
+    describe('Default call', () => {
       test('Should return a counter with the pluralized noun', () => {
         const result = pluralize(countMock, nounMock)
         expect(result).toBe(`${countMock} ${nounMock}s`)
@@ -101,7 +143,7 @@ describe('pluralize()', () => {
   describe('Counter is equal to 1', () => {
     const countMock = 1
 
-    describe('Default', () => {
+    describe('Default call', () => {
       test('Should return a counter with the plain noun', () => {
         const result = pluralize(countMock, nounMock)
         expect(result).toBe(`${countMock} ${nounMock}`)
@@ -122,11 +164,62 @@ describe('size()', () => {
   test('Should be an instance of Function', () => {
     expect(size).toBeInstanceOf(Function)
   })
+
+  describe('"collection" param', () => {
+    test('Should return "0" if "collection" param is not passed', () => {
+      const result = size()
+      expect(result).toBe(0)
+    })
+
+    test('Should return "0" if "collection" param is not passed', () => {
+      const result = size()
+      expect(result).toBe(0)
+    })
+
+    test('Should return the length for a "collection" param of "String" type', () => {
+      const collection = 'randomCollectionStringWord'
+      const result = size(collection)
+      expect(result).toBe(collection.length)
+    })
+
+    test('Should return the length for a "collection" param of "Array" type', () => {
+      const collection = ['a', 'b', 'c', 'd', 'e', 1, 2, 3, 4, 5]
+      const result = size(collection)
+      expect(result).toBe(collection.length)
+    })
+
+    test('Should return the length for a "collection" param of "Object" type', () => {
+      const collection = {
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4,
+        e: 5,
+        f: 6
+      }
+      const result = size(collection)
+      expect(result).toBe(Object.keys(collection).length)
+    })
+  })
 })
 
 describe('timeSince()', () => {
   test('Should be an instance of Function', () => {
     expect(timeSince).toBeInstanceOf(Function)
+  })
+
+  describe('Called as "void" function', () => {
+    test('Should return "just now" if is being called as a "void" function without params', () => {
+      const result = timeSince()
+      expect(result).toBe('just now')
+    })
+  })
+
+  describe('Called with "null" as param', () => {
+    test('Should return "just now" if is being called without params', () => {
+      const result = timeSince(null)
+      expect(result).toBe('just now')
+    })
   })
 })
 

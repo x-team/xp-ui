@@ -1,4 +1,3 @@
-/* globals SyntheticEvent, HTMLElement */
 import formatDate from 'date-fns/format'
 import differenceInSeconds from 'date-fns/difference_in_seconds'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
@@ -6,38 +5,6 @@ import differenceInHours from 'date-fns/difference_in_hours'
 import differenceInDays from 'date-fns/difference_in_days'
 
 import type { Element } from 'react'
-
-// Seems not to be used in the application
-export function throttle (callback, timeout) {
-  let now = Date.now()
-  return function () {
-    if ((now + timeout - Date.now()) < 0) {
-      callback()
-      now = Date.now()
-    }
-  }
-}
-
-// Seems not to be used in the application
-export function isScrolledIntoView (element) {
-  if (!element) return false
-  // Element's position relative to the viewport
-  const { bottom } = element.getBoundingClientRect()
-
-  // Viewport offset
-  const scrollPosition = window.scrollY
-  const docViewBottom = scrollPosition + window.innerHeight
-
-  // Element's position relative to the document
-  const elemBottom = scrollPosition + bottom
-
-  return elemBottom <= docViewBottom
-}
-
-// Seems not to be used in the application
-export function stopPropagation (event: ?SyntheticEvent<HTMLElement>) {
-  event && event.stopPropagation()
-}
 
 export function getComponentDisplayName (Component) {
   return Component.displayName || Component.name || 'Component'
@@ -62,14 +29,14 @@ export function size (collection: ?string | ?Object | ?Array<*>): number {
 export const replaceBlankLinesForNewLines = (text: ?string): string => text ? text.replace(/(?:\r\n|\r|\n)/g, '<br>\n') : ''
 
 export function timeSince (date: Date | string | number | void | null, addSpaceAfterNumber: boolean = true, addDifferenceInDays: boolean = false) {
-  if (!(date instanceof Date)) {
+  if (date && !(date instanceof Date)) {
     date = new Date(date)
   }
 
   const now = new Date()
   const hoursDelta = differenceInHours(now, date)
 
-  if (hoursDelta >= 24) {
+  if (date && hoursDelta >= 24) {
     if (addDifferenceInDays) {
       const days = differenceInDays(now, date)
       return `${days} day${days > 1 ? 's' : ''} ago`
@@ -80,11 +47,11 @@ export function timeSince (date: Date | string | number | void | null, addSpaceA
 
   const minutesDelta = differenceInMinutes(now, date)
 
-  if (minutesDelta >= 60) {
+  if (date && minutesDelta >= 60) {
     return addSpaceAfterNumber ? `${hoursDelta} h ago` : `${hoursDelta}h ago`
   }
 
-  if (differenceInSeconds(now, date) >= 60) {
+  if (date && differenceInSeconds(now, date) >= 60) {
     return addSpaceAfterNumber ? `${minutesDelta} m ago` : `${minutesDelta}m ago`
   }
 
