@@ -5,6 +5,8 @@ import differenceInMinutes from 'date-fns/difference_in_minutes'
 import differenceInHours from 'date-fns/difference_in_hours'
 import differenceInDays from 'date-fns/difference_in_days'
 
+import type { Element } from 'react'
+
 export function throttle (callback, timeout) {
   let now = Date.now()
   return function () {
@@ -122,4 +124,24 @@ export function parseVideoUrl (url: string): {
     service,
     poster
   }
+}
+
+// Legacy devices browser identified errors caused by RequestAPI and URLSearchParams
+export function getOlderBrowserErrorKey (errors: {[key: string|number]: string | Array<Element<*>>}): string|number {
+  const olderBrowserErrors = [
+    `TypeError: invalid 'instanceof' operand y.Request`,
+    `TypeError: y.Request is not a function. (evaluating 't instanceof y.Request')`,
+    `TypeError: Expecting a function in instanceof check, but got undefined`,
+    `ReferenceError: URLSearchParams is not defined`,
+    `TypeError: undefined is not a valid argument for 'instanceof' (evaluating 't instanceof y.Request')`
+  ]
+
+  let matchingKey = null
+  Object.keys(errors).forEach((key) => {
+    if (olderBrowserErrors.includes(errors[key])) {
+      matchingKey = key
+    }
+  })
+
+  return matchingKey
 }
