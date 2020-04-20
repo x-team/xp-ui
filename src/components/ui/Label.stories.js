@@ -17,7 +17,7 @@ storiesOf('Core Components|Form Components/Label/Debug', module)
       hasError
     />
   ))
-  .add('without descriptions', () => (
+  .add('without description', () => (
     <Label
       headline='Lorem ipsum'
     />
