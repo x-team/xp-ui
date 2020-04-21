@@ -12,6 +12,7 @@ storiesOf('Core Components|Form Components/Label', module)
       description='Lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
     />
   ))
+
 storiesOf('Core Components|Form Components/Label/Debug', module)
   .add('with error', () => (
     <Label

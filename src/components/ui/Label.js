@@ -24,11 +24,13 @@ const cx = {
     `
   )
 }
+
 type Props = {
     headline?: string,
     description?: string,
     hasError?: boolean
 }
+
 const Label = ({ headline, description, hasError }: Props) => {
   const headlineClassname = hasError ? [cx.headline, cx.error].join(' ') : cx.headline
   return (
@@ -38,4 +40,5 @@ const Label = ({ headline, description, hasError }: Props) => {
     </div>
   )
 }
+
 export default Label
