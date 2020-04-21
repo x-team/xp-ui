@@ -18,7 +18,7 @@ const cx = {
   error: cmz(`
     color: ${theme.typoSubheading}
   `),
-  
+
   description: cmz(
     typo.baseText,
     `
@@ -37,8 +37,12 @@ const Label = ({ headline, description, isInvalid }: Props) => {
   const headlineClassname = isInvalid ? [cx.headline, cx.error].join(' ') : cx.headline
   return (
     <div>
-      <div className={headlineClassname}>{headline}</div>
-      <div className={cx.description}>{description}</div>
+      {headline && (
+        <div className={headlineClassname}>{headline}</div>
+      )}
+      {description && (
+        <div className={cx.description}>{description}</div>
+      )}
     </div>
   )
 }
