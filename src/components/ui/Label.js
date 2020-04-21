@@ -28,11 +28,11 @@ const cx = {
 type Props = {
     headline?: string,
     description?: string,
-    hasError?: boolean
+    isInvalid?: boolean
 }
 
-const Label = ({ headline, description, hasError }: Props) => {
-  const headlineClassname = hasError ? [cx.headline, cx.error].join(' ') : cx.headline
+const Label = ({ headline, description, isInvalid }: Props) => {
+  const headlineClassname = isInvalid ? [cx.headline, cx.error].join(' ') : cx.headline
   return (
     <div>
       <div className={headlineClassname}>{headline}</div>

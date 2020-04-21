@@ -1,8 +1,8 @@
 // @flow
 
 import React from 'react'
-
 import { storiesOf } from '@storybook/react'
+
 import Label from './Label'
 
 storiesOf('Core Components|Form Components/Label', module)
@@ -18,7 +18,7 @@ storiesOf('Core Components|Form Components/Label/Debug', module)
     <Label
       headline='Lorem ipsum'
       description='Lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
-      hasError
+      isInvalid
     />
   ))
   .add('without description', () => (
