@@ -1,7 +1,10 @@
 // @flow
+
 import React from 'react'
+
 import { storiesOf } from '@storybook/react'
 import Label from './Label'
+
 storiesOf('Core Components|Form Components/Label', module)
   .add('basic usage', () => (
     <Label

@@ -1,8 +1,12 @@
 // @flow
+
 import React from 'react'
+
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
+
 const cmz = require('cmz')
+
 const cx = {
   headline: cmz(
     typo.baseText,
