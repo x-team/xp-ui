@@ -21,9 +21,9 @@ const cx = {
   )
 }
 type Props = {
-    headline?: String,
-    description?: String,
-    hasError?: Boolean
+    headline?: string,
+    description?: string,
+    hasError?: boolean
 }
 const Label = ({ headline, description, hasError }: Props) => {
   const headlineClassname = hasError ? [cx.headline, cx.error].join(' ') : cx.headline
