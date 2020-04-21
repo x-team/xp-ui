@@ -14,9 +14,11 @@ const cx = {
       font-size: 24px
     `
   ),
+
   error: cmz(`
     color: ${theme.typoSubheading}
   `),
+  
   description: cmz(
     typo.baseText,
     `
@@ -26,9 +28,9 @@ const cx = {
 }
 
 type Props = {
-    headline?: string,
-    description?: string,
-    isInvalid?: boolean
+  headline?: string,
+  description?: string,
+  isInvalid?: boolean
 }
 
 const Label = ({ headline, description, isInvalid }: Props) => {
