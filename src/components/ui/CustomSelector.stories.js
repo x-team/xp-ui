@@ -1,4 +1,5 @@
 // @flow
+/* globals alert */
 
 import React from 'react'
 import { storiesOf } from '@storybook/react'
@@ -19,6 +20,10 @@ const months = [
   { label: 'November', value: 11 },
   { label: 'December', value: 12 }
 ]
+
+const customOnChange = (selectedOption) => {
+  alert(`Custom onChange() > Selected option label: ${selectedOption.label}`)
+}
 
 storiesOf('Core Components|Form Components/CustomSelector', module)
   .add('basic usage', () => (
@@ -68,4 +73,61 @@ storiesOf('Core Components|Form Components/CustomSelector/States', module)
 storiesOf('Core Components|Form Components/CustomSelector/Debug', module)
   .add('missing props', () => (
     <CustomSelector />
+  ))
+  .add('without the required "placeholder"', () => (
+    <CustomSelector
+      options={months}
+    />
+  ))
+  .add('without the required "options"', () => (
+    <CustomSelector
+      placeholder={'Month'}
+    />
+  ))
+  .add('custom "onChange" function', () => (
+    <CustomSelector
+      placeholder={'Month'}
+      options={months}
+      onChange={customOnChange}
+    />
+  ))
+  .add('custom "value"', () => (
+    <CustomSelector
+      placeholder={'Month'}
+      options={months}
+      value={{ label: 'Custom Label', value: 'custom value' }}
+    />
+  ))
+  .add('stacked selectors', () => (
+    <div>
+      <CustomSelector
+        placeholder={'Month'}
+        options={months}
+      />
+
+      <CustomSelector
+        placeholder={'Month'}
+        options={months}
+      />
+
+      <CustomSelector
+        placeholder={'Month'}
+        options={months}
+      />
+
+      <CustomSelector
+        placeholder={'Month'}
+        options={months}
+      />
+
+      <CustomSelector
+        placeholder={'Month'}
+        options={months}
+      />
+
+      <CustomSelector
+        placeholder={'Month'}
+        options={months}
+      />
+    </div>
   ))

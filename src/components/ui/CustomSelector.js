@@ -146,7 +146,7 @@ class CustomSelector extends PureComponent<Props, State> {
           name={'customSelector'}
           className={cx.select.toString()}
           optionRenderer={SelectorOption}
-          placeholder={placeholder}
+          placeholder={placeholder || 'Select...'}
           options={options}
           disabled={disabled}
           clearable={clearable}
