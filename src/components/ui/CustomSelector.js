@@ -109,8 +109,7 @@ type Props = {
   clearable?: boolean,
   searchable?: boolean,
   value?: any,
-  onChange?: any,
-  testClassName?: string
+  onChange?: any
 }
 
 type State = {
@@ -125,8 +124,7 @@ class CustomSelector extends PureComponent<Props, State> {
     clearable: false,
     searchable: false,
     value: null,
-    onChange: null,
-    testClassName: ''
+    onChange: null
   }
 
   state: State = {
@@ -138,14 +136,13 @@ class CustomSelector extends PureComponent<Props, State> {
   }
 
   render () {
-    const { placeholder, options, disabled, clearable, searchable, value, onChange, testClassName } = this.props
+    const { placeholder, options, disabled, clearable, searchable, value, onChange } = this.props
     const { selectedOption } = this.state
-
-    console.log(clearable, searchable, value, onChange, testClassName)
 
     return (
       <div>
         <Select
+          {...this.props}
           name={'customSelector'}
           className={cx.select.toString()}
           optionRenderer={SelectorOption}
@@ -156,7 +153,6 @@ class CustomSelector extends PureComponent<Props, State> {
           searchable={searchable}
           value={value || selectedOption}
           onChange={onChange || this.handleSelection}
-          testClassName={testClassName}
         />
       </div>
     )
