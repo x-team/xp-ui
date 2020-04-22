@@ -52,11 +52,6 @@ const cx = {
         height: 18px
       }
 
-      & .Select-placeholder::after,
-      & .Select-control .Select-value {
-        content: '' !important
-      }
-
       & .Select-placeholder,
       & .Select-control .Select-value {
         padding: 21px 18px !important
@@ -64,6 +59,16 @@ const cx = {
         white-space: nowrap !important
         overflow: hidden !important
         text-overflow: ellipsis !important
+      }
+
+      & .Select-input {
+        padding: 0 3px !important
+        position: absolute !important
+        top: 11px !important
+      }
+
+      & .Select-input:focus {
+        background: transparent !important
       }
 
       & .Select-control > *:last-child {
@@ -100,7 +105,12 @@ type Option = {
 type Props = {
   placeholder?: string,
   options?: Array<Option> | null,
-  disabled?: boolean
+  disabled?: boolean,
+  clearable?: boolean,
+  searchable?: boolean,
+  value?: any,
+  onChange?: any,
+  testClassName?: string
 }
 
 type State = {
@@ -111,7 +121,12 @@ class CustomSelector extends PureComponent<Props, State> {
   static defaultProps = {
     placeholder: '',
     options: null,
-    disabled: false
+    disabled: false,
+    clearable: false,
+    searchable: false,
+    value: null,
+    onChange: null,
+    testClassName: ''
   }
 
   state: State = {
@@ -123,22 +138,25 @@ class CustomSelector extends PureComponent<Props, State> {
   }
 
   render () {
-    const { placeholder, options, disabled } = this.props
+    const { placeholder, options, disabled, clearable, searchable, value, onChange, testClassName } = this.props
     const { selectedOption } = this.state
+
+    console.log(clearable, searchable, value, onChange, testClassName)
 
     return (
       <div>
         <Select
-          name='customSelector'
-          placeholder={placeholder}
+          name={'customSelector'}
           className={cx.select.toString()}
-          options={options}
-          searchable={false}
-          clearable={false}
-          disabled={disabled}
-          onChange={this.handleSelection}
           optionRenderer={SelectorOption}
-          value={selectedOption}
+          placeholder={placeholder}
+          options={options}
+          disabled={disabled}
+          clearable={clearable}
+          searchable={searchable}
+          value={value || selectedOption}
+          onChange={onChange || this.handleSelection}
+          testClassName={testClassName}
         />
       </div>
     )

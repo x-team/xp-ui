@@ -29,6 +29,28 @@ storiesOf('Core Components|Form Components/CustomSelector', module)
   ))
 
 storiesOf('Core Components|Form Components/CustomSelector/States', module)
+  .add('clearable', () => (
+    <CustomSelector
+      placeholder={'Month'}
+      options={months}
+      clearable
+    />
+  ))
+  .add('searchable', () => (
+    <CustomSelector
+      placeholder={'Month'}
+      options={months}
+      searchable
+    />
+  ))
+  .add('clearable + searchable', () => (
+    <CustomSelector
+      placeholder={'Month'}
+      options={months}
+      clearable
+      searchable
+    />
+  ))
   .add('enabled', () => (
     <CustomSelector
       placeholder={'Month'}
