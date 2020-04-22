@@ -79,9 +79,10 @@ class Modal extends PureComponent<Props, void> {
         onClick={this.handleClose}
         onKeyDown={this.handleKeyPress}
         tabIndex={0}
+        data-testid="xpui-modal"
       >
         <section className={cx.frame} onClick={this.noClick}>
-          <a className={cx.close} onClick={this.handleClose}>
+          <a data-testid="xpui-modal-close" className={cx.close} onClick={this.handleClose}>
             <SvgIcon icon='x' color='grayscale' />
           </a>
           <div className={cx.content}>
