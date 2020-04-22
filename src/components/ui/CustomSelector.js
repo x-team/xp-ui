@@ -1,6 +1,5 @@
 // @flow
-
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import Select from 'react-select'
 
 import SelectorOption from './SelectorOption'
@@ -99,16 +98,22 @@ type Option = {
 }
 
 type Props = {
-  placeholder: String,
-  options: Array<Option>,
+  placeholder?: string,
+  options?: Array<Option> | null,
   disabled?: boolean
 }
 
 type State = {
-  selectedOption: Option
+  selectedOption: Option | null
 }
 
-class CustomSelector extends Component<Props, State> {
+class CustomSelector extends PureComponent<Props, State> {
+  static defaultProps = {
+    placeholder: '',
+    options: null,
+    disabled: false
+  }
+
   state: State = {
     selectedOption: null
   }
@@ -118,7 +123,7 @@ class CustomSelector extends Component<Props, State> {
   }
 
   render () {
-    const { placeholder, options, disabled = false } = this.props
+    const { placeholder, options, disabled } = this.props
     const { selectedOption } = this.state
 
     return (
