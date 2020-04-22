@@ -23,7 +23,7 @@ const months = [
 storiesOf('Core Components|Form Components/CustomSelector', module)
   .add('basic usage', () => (
     <CustomSelector
-      placeholder="Month"
+      placeholder='Month'
       options={months}
     />
   ))
@@ -31,15 +31,15 @@ storiesOf('Core Components|Form Components/CustomSelector', module)
 storiesOf('Core Components|Form Components/CustomSelector/States', module)
   .add('enabled', () => (
     <CustomSelector
-      placeholder="Month"
+      placeholder='Month'
       options={months}
     />
   ))
   .add('disabled', () => (
     <CustomSelector
-      placeholder="Month"
+      placeholder='Month'
       options={months}
-      disabled={true}
+      disabled
     />
   ))
 

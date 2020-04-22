@@ -1,7 +1,6 @@
 // @flow
 
 import React, { Component } from 'react'
-import differenceBy from 'lodash.differenceby'
 import Select from 'react-select'
 
 import SelectorOption from './SelectorOption'
@@ -9,7 +8,7 @@ import SelectorOption from './SelectorOption'
 import '../../assets/react-select.css'
 
 import theme from '../../styles/theme'
-import typo, { typeface } from '../../styles/typo'
+import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 
