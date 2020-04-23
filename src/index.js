@@ -45,6 +45,7 @@ import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
 import JobsPageLayout from './components/ui/JobsPageLayout'
 import JobSkills from './components/ui/JobSkills'
 import ProTipCard from './components/ui/ProTipCard'
+import Label from './components/ui/label'
 import ListExclusionFormPopup from './components/ui/ListExclusionFormPopup'
 import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
@@ -125,6 +126,7 @@ export {
   JobsPageLayout,
   JobSkills,
   ProTipCard,
+  Label,
   ListExclusionFormPopup,
   ListsEditor,
   Loader,
