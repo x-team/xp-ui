@@ -5,7 +5,7 @@ import differenceBy from 'lodash.differenceby'
 import Select from 'react-select'
 
 import SvgIcon from './SvgIcon'
-import SkillsSelectorOption from './SkillsSelectorOption'
+import SelectorOption from './SelectorOption'
 
 import '../../assets/react-select.css'
 
@@ -205,7 +205,7 @@ class SkillsSelector extends Component<Props, State> {
           clearable={false}
           arrowRenderer={null}
           onChange={this.handleSkillSelection}
-          optionRenderer={SkillsSelectorOption}
+          optionRenderer={SelectorOption}
         />
         <div className={cx.tags}>
           {selectedSkills.map(this.renderTag)}
