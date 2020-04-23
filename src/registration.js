@@ -20,6 +20,7 @@ import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
 import JobsPageLayout from './components/ui/JobsPageLayout'
 import JobSkills from './components/ui/JobSkills'
 import ProTipCard from './components/ui/ProTipCard'
+import Label from './components/ui/label'
 import Loader from './components/ui/Loader'
 import LocateYourProfile from './components/ui/LocateYourProfile'
 import Modal from './components/ui/Modal'
@@ -52,6 +53,7 @@ export {
   JobsPageLayout,
   JobSkills,
   ProTipCard,
+  Label,
   Loader,
   LocateYourProfile,
   Modal,
