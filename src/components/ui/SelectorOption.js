@@ -37,7 +37,7 @@ type Props = {
   label?: string
 }
 
-const SkillsSelectorOption = ({ label }: Props) => label ? (
+const SelectorOption = ({ label }: Props) => label ? (
   <div className={cx.option}>
     <div className={cx.optionLabel}>
       {label}
@@ -45,4 +45,4 @@ const SkillsSelectorOption = ({ label }: Props) => label ? (
   </div>
 ) : null
 
-export default SkillsSelectorOption
+export default SelectorOption
