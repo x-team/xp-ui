@@ -16,6 +16,7 @@ import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
 import PreviousJobApplications from './components/ui/PreviousJobApplications'
 import ColumnsCustomizer from './components/ui/ColumnsCustomizer'
+import CustomSelector from './components/ui/CustomSelector'
 import ConfirmationBox from './components/ui/ConfirmationBox'
 import CopyToClipboardButton from './components/ui/CopyToClipboardButton'
 import DataGrid from './components/ui/DataGrid'
@@ -100,6 +101,7 @@ export {
   ColumnsCustomizer,
   ConfirmationBox,
   CopyToClipboardButton,
+  CustomSelector,
   DataGrid,
   Dropdown,
   Email,
