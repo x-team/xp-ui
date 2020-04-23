@@ -66,6 +66,7 @@ import SelectBox from './components/ui/SelectBox'
 import SettingsImportScreen from './components/ui/SettingsImportScreen'
 import SettingsScreen from './components/ui/SettingsScreen'
 import Shortcuts from './components/ui/Shortcuts'
+import SignupScreen from './components/ui/SignupScreen'
 import SkillsSelector from './components/ui/SkillsSelector'
 import StatusFilter from './components/ui/StatusFilter'
 import StatusMarker from './components/ui/StatusMarker'
@@ -147,6 +148,7 @@ export {
   SettingsImportScreen,
   SettingsScreen,
   Shortcuts,
+  SignupScreen,
   SkillsSelector,
   StatusFilter,
   StatusMarker,
