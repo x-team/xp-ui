@@ -4,6 +4,7 @@ import AttachFiles from './components/ui/AttachFiles'
 import Button from './components/ui/Button'
 import PreviousJobApplications from './components/ui/PreviousJobApplications'
 import ConfirmationBox from './components/ui/ConfirmationBox'
+import CustomSelector from './components/ui/CustomSelector'
 import EmptyState from './components/ui/EmptyState'
 import ErrorBox from './components/ui/ErrorBox'
 import Footer from './components/ui/Footer'
@@ -38,6 +39,7 @@ export {
   Button,
   PreviousJobApplications,
   ConfirmationBox,
+  CustomSelector,
   EmptyState,
   ErrorBox,
   Footer,
