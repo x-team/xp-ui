@@ -6,6 +6,7 @@ import { storiesOf } from '@storybook/react'
 import SignupScreen from './SignupScreen'
 import InputField from '../forms/InputField'
 import Button from './Button'
+import Label from './Label'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -16,11 +17,11 @@ const Body = ({ children }) => (
   </div>
 )
 
-const TempLabel = () => (
-  <div>
-    <div><strong>Lorem Ipsum</strong></div>
-    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed elit elementum, ultrices justo eget, condimentum ante.</div>
-  </div>
+const SampleLabel = () => (
+  <Label
+    headline='Lorem ipsum dolor sit amet'
+    description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
+  />
 )
 
 storiesOf('Screens and Layouts|SignupScreen', module)
@@ -31,23 +32,23 @@ storiesOf('Screens and Layouts|SignupScreen', module)
         subheading='Tell us a bit about your recent work experience.'
       >
         <SignupScreen.InputGroup>
-          <TempLabel />
+          <SampleLabel />
           <InputField placeholder='Input field' />
         </SignupScreen.InputGroup>
         <SignupScreen.InputGroup>
-          <TempLabel />
+          <SampleLabel />
           <InputField placeholder='Input field' />
         </SignupScreen.InputGroup>
         <SignupScreen.InputGroup>
-          <TempLabel />
+          <SampleLabel />
           <InputField placeholder='Input field' />
         </SignupScreen.InputGroup>
         <SignupScreen.InputGroup>
-          <TempLabel />
+          <SampleLabel />
           <InputField placeholder='Input field' />
         </SignupScreen.InputGroup>
         <SignupScreen.InputGroup>
-          <TempLabel />
+          <SampleLabel />
           <InputField placeholder='Input field' />
         </SignupScreen.InputGroup>
         <Button block wide size='large'>Continue »</Button>
@@ -60,7 +61,7 @@ storiesOf('Screens and Layouts|SignupScreen/Debug', module)
     <Body>
       <SignupScreen.Layout>
         <SignupScreen.InputGroup>
-          <TempLabel />
+          <SampleLabel />
           <InputField placeholder='Input field' />
         </SignupScreen.InputGroup>
       </SignupScreen.Layout>

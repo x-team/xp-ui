@@ -16,7 +16,11 @@ const FixedWidth = ({ children }) => (
 
 storiesOf('Core Components|Form Components/Timeframe', module)
   .add('basic usage', () => (
-    <Timeframe startDate='2000-05-23' endDate='2010-12-01' />
+    <Timeframe
+      startDate={new Date('2000-05-23')}
+      endDate={new Date('2010-12-01')}
+      onChange={output => console.log(output)}
+    />
   ))
 
 storiesOf('Core Components|Form Components/Timeframe/Debug', module)
@@ -26,16 +30,28 @@ storiesOf('Core Components|Form Components/Timeframe/Debug', module)
     </FixedWidth>
   ))
   .add('with end date but set "Still working there"', () => (
-    <Timeframe startDate='2000-05-23' endDate='2010-12-01' noEndDate />
+    <Timeframe
+      startDate={new Date('2000-05-23')}
+      endDate={new Date('2010-12-01')}
+      noEndDate
+    />
   ))
   .add('without end date defined', () => (
-    <Timeframe startDate='2000-05-23' />
+    <Timeframe
+      startDate={new Date('2000-05-23')}
+    />
   ))
   .add('with end year date smaller than start year date', () => (
-    <Timeframe startDate='2000-05-23' endDate='1990-05-23' />
+    <Timeframe
+      startDate={new Date('2000-05-23')}
+      endDate={new Date('1990-05-23')}
+    />
   ))
   .add('with end month date smaller than start month date', () => (
-    <Timeframe startDate='2000-10-23' endDate='2000-01-23' />
+    <Timeframe
+      startDate={new Date('2000-10-23')}
+      endDate={new Date('2000-01-23')}
+    />
   ))
   .add('missing props', () => (
     <Timeframe />
