@@ -76,6 +76,7 @@ import Tab from './components/ui/Tabs/Tab'
 import Tabs from './components/ui/Tabs/Tabs'
 import Text from './components/ui/Text'
 import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
+import Timeframe from './components/ui/Timeframe'
 import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
 import VideoPlayer from './components/ui/VideoPlayer'
@@ -159,6 +160,7 @@ export {
   Tabs,
   Text,
   TextareaEditor,
+  Timeframe,
   TruncatedList,
   TwoColumnsLayout,
   VideoPlayer,
