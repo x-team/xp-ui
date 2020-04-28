@@ -290,7 +290,7 @@ const JobDetails = ({ name = '', description = '', skills = '' }: Props) => {
 
   return name ? (
     <div className={cx.wrapper}>
-      <h1 data-testid="xpui-jobDetails-heading" className={cx.name}>{name}</h1>
+      <h1 data-testid='xpui-jobDetails-heading' className={cx.name}>{name}</h1>
       {skills && (
         <JobSkills skills={skills} />
       )}
