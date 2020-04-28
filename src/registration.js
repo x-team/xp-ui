@@ -29,6 +29,7 @@ import RoadmapHero from './components/ui/RoadmapHero'
 import SignupScreen from './components/ui/SignupScreen'
 import SkillsSelector from './components/ui/SkillsSelector'
 import Text from './components/ui/Text'
+import Timeframe from './components/ui/Timeframe'
 import TruncatedList from './components/ui/TruncatedList'
 import WelcomeHero from './components/ui/WelcomeHero'
 
@@ -64,6 +65,7 @@ export {
   SignupScreen,
   SkillsSelector,
   Text,
+  Timeframe,
   TruncatedList,
   WelcomeHero
 }
