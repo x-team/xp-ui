@@ -144,7 +144,7 @@ const JobCard = ({ name, summary, message, link: AppLink, skills }: Props) => {
   const renderTitle = () => AppLink
     ? (
       <AppLink className={cx.nameLink}>
-        <h3 data-testid="xpui-jobCard-title" className={cx.name}>{name}</h3>
+        <h3 data-testid='xpui-jobCard-title' className={cx.name}>{name}</h3>
       </AppLink>
     ) : (
       <h3 className={cx.nameLink}>{name}</h3>
@@ -157,7 +157,7 @@ const JobCard = ({ name, summary, message, link: AppLink, skills }: Props) => {
   )
 
   const renderSummary = () => summary && (
-    <div data-testid="xpui-jobCard-summary" className={cx.summary}>
+    <div data-testid='xpui-jobCard-summary' className={cx.summary}>
       {summary} {AppLink && (
         <AppLink className={cx.link}>Learn more »</AppLink>
       )}
@@ -169,7 +169,7 @@ const JobCard = ({ name, summary, message, link: AppLink, skills }: Props) => {
   )
 
   return name ? (
-    <div data-testid="xpui-jobCard" className={cx.card}>
+    <div data-testid='xpui-jobCard' className={cx.card}>
       {renderTitle()}
       {renderSkills()}
       {renderSummary()}
