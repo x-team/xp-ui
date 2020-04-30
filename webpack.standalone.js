@@ -5,9 +5,9 @@ const base = require('./webpack.config')
 module.exports = {
   entry: {
     all: './src/index.js',
-    editor: './src/components/ui/TextareaEditor/TextareaEditor',
     fonts: './src/styles/fonts.js',
     registration: './src/registration.js',
+    'registration-ssr': './src/registration-ssr.js',
   },
   devtool: 'source-maps',
   mode: 'production',
