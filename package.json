@@ -3,13 +3,19 @@
   "version": "2.0.0",
   "description": "UI component library for the XP platform.",
   "main": "lib/all.js",
+  "files": [
+    "lib"
+  ],
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "prepare": "npm run build",
     "jest": "jest --roots=src",
     "start": "start-storybook -p 9001 -c .storybook -s public",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
+    "build:registration": "cross-env NODE_ENV=production webpack --config webpack.registration.js && babel src/components --out-dir lib/registration",
+    "build:common": "cross-env NODE_ENV=production webpack --config webpack.common.js",
+    "build": "npm run build:common && npm run build:registration",
     "watch": "npm run build -- --watch",
     "flow": "flow check src",
     "lint": "standard \"src/**/*.js\" \".jest/**/*.js\" \"jest.config.js\" \"__mocks__/**/*.js\" | snazzy",
