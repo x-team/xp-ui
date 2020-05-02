@@ -31,6 +31,7 @@ import SkillsSelector from './components/ui/SkillsSelector'
 import Text from './components/ui/Text'
 import Timeframe from './components/ui/Timeframe'
 import TruncatedList from './components/ui/TruncatedList'
+import WorkExperienceCard from './components/ui/WorkExperienceCard'
 import WelcomeHero from './components/ui/WelcomeHero'
 
 export {
@@ -67,5 +68,6 @@ export {
   Text,
   Timeframe,
   TruncatedList,
-  WelcomeHero
+  WelcomeHero,
+  WorkExperienceCard
 }
