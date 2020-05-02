@@ -67,7 +67,7 @@ storiesOf('Core Components|WorkExperienceCard Component/Debug', module)
       <h3>Anoother title that is not going to be rendered</h3>
     </WorkExperienceCard>
   ))
-  .add('with props.children using render props', () => (
+  .add('with props.children is rendering using render props', () => (
     <WorkExperienceCard
       role={'Senior Frontend Developer'}
       company={'Google Inc.'}
