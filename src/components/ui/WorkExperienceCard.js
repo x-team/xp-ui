@@ -71,7 +71,7 @@ const cx = {
 
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
-type Props = {
+export type WorkExperienceCardProps = {
   role?: string,
   company?: string,
   startDate?: Date | null,
@@ -82,7 +82,7 @@ type State = {
   edited: boolean
 }
 
-class WorkExperienceCard extends PureComponent<Props, State> {
+class WorkExperienceCard extends PureComponent<WorkExperienceCardProps, State> {
   static defaultProps = {
     role: '',
     company: '',
