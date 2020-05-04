@@ -13,7 +13,7 @@
     "prepare": "npm run build",
     "jest": "jest --roots=src",
     "start": "start-storybook -p 9001 -c .storybook -s public",
-    "build:registration": "cross-env NODE_ENV=production webpack --config webpack.registration.js && babel src/components --out-dir lib/registration && cpy \"**/*.js\" ../../lib/styles --parents --cwd=src/styles && cpy \"**/*.js\" ../../lib/utils --parents --cwd=src/utils",
+    "build:registration": "cross-env NODE_ENV=production webpack --config webpack.registration.js && babel src/ --ignore '__tests__' --out-dir ./lib/registration --copy-files",
     "build:common": "cross-env NODE_ENV=production webpack --config webpack.common.js",
     "build": "npm run build:common && npm run build:registration",
     "watch": "npm run build -- --watch",
@@ -25,8 +25,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run build"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

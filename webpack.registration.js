@@ -8,10 +8,8 @@ module.exports = {
   entry: './src/registration.js',
   output: {
     path: path.resolve('./lib/registration'),
-    filename: 'index.js',
-    library: 'xp-ui',
-    libraryTarget: 'commonjs2',
-    umdNamedDefine: true
+    filename: 'registration.js',
+    libraryTarget: 'commonjs2'
   },
   externals: {
     react: {

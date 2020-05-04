@@ -13,9 +13,7 @@ module.exports = {
   output: {
     path: path.resolve('./lib'),
     filename: '[name].js',
-    library: 'xp-ui',
-    libraryTarget: 'commonjs2',
-    umdNamedDefine: true
+    libraryTarget: 'commonjs2'
   },
   externals: {
     react: {
