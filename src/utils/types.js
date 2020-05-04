@@ -46,7 +46,6 @@ export type Filters = {
 }
 
 export type Experience = {
-  id: number,
   role: string,
   company: string,
   start_date: Date,
