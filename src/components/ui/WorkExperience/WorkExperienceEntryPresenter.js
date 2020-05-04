@@ -63,6 +63,10 @@ function renderDates (startDate, endDate) {
 }
 
 export default function WorkExperienceEntryPresenter (props: Props) {
+  if (!props.experience) {
+    return null
+  }
+
   const {
     experience: {
       role,
@@ -81,7 +85,7 @@ export default function WorkExperienceEntryPresenter (props: Props) {
     <div className={cx.date}>
       {renderDates(startDate, endDate)}
     </div>
-    <JobSkills className={cx.skills} skills={(skills || []).join(',')} />
+    <JobSkills skills={(skills || []).join(',')} />
     <Markdown children={highlights || ''} className={cx.highlights} />
   </div>
 }
