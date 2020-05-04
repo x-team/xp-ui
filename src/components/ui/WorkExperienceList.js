@@ -1,10 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react'
-import WorkExperienceCard, { WorkExperienceCardProps } from './WorkExperienceCard'
-import SvgIcon from '../ui/SvgIcon'
-
-import theme from '../../styles/theme'
-import { typeface } from '../../styles/typo'
+import WorkExperienceCard from './WorkExperienceCard'
 
 const cmz = require('cmz')
 
@@ -19,33 +15,12 @@ const cx = {
         margin: 0
       }
     `
-  ),
-
-  button: cmz(
-    typeface.text,
-    `
-      & {
-        display: flex
-        align-items: center
-        cursor: pointer
-        margin: 49px 0
-      }
-
-      & span {
-        margin: 0 0 0 16px
-        font-size: 20px
-        color: ${theme.baseTuna}
-      }
-
-      &:hover span {
-        text-decoration: underline
-      }
-    `
   )
 }
 
 type Props = {
-  list?: Array<WorkExperienceCardProps>
+  list?: Array<{}>,
+  onEditCard: (Props) => void
 }
 
 class WorkExperienceList extends PureComponent<Props> {
@@ -54,29 +29,20 @@ class WorkExperienceList extends PureComponent<Props> {
   }
 
   render () {
-    const { list } = this.props
-
-    console.log(list)
+    const { list, onEditCard } = this.props
 
     return (
-      <div className={cx.wrapper}>
-        <div className={cx.list}>
-          {
-            list.map((experience, i) => {
-              return (
-                <div className={cx.item} key={i}>
-                  <WorkExperienceCard {...experience} />
-                </div>
-              )
-            })
-          }
-        </div>
-
-        <div className={cx.button}>
-          <SvgIcon icon='circleplus' color='monochrome' />
-          <span>Add another work experience...</span>
-        </div>
-
+      list &&
+      <div>
+        {
+          list.map((experience, index) => {
+            return (
+              <div className={cx.item} key={index}>
+                <WorkExperienceCard {...experience} onEditCard={onEditCard} />
+              </div>
+            )
+          })
+        }
       </div>
     )
   }

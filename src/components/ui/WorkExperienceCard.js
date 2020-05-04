@@ -71,58 +71,42 @@ const cx = {
 
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
-export type WorkExperienceCardProps = {
-  role?: string,
-  company?: string,
+export type Props = {
+  role?: string | null,
+  company?: string | null,
   startDate?: Date | null,
-  endDate?: Date | null
+  endDate?: Date | null,
+  onEditCard: (Props) => void
 }
 
-type State = {
-  edited: boolean
-}
-
-class WorkExperienceCard extends PureComponent<WorkExperienceCardProps, State> {
+class WorkExperienceCard extends PureComponent<Props> {
   static defaultProps = {
-    role: '',
-    company: '',
+    role: null,
+    company: null,
     startDate: null,
     endDate: null
-  }
-
-  state: State = {
-    edited: false
   }
 
   formatDate = (date: Date): string => {
     return date && `${monthNames[date.getMonth()]} ${date.getFullYear()}`
   }
 
-  toggleEditCardStatus = () => {
-    this.setState((state, props) => ({
-      edited: !state.edited
-    }))
+  handleOnEdit = () => {
+    this.props.onEditCard(this.props)
   }
 
   render () {
-    const { role, company, startDate, endDate } = this.props
-    const { edited } = this.state
+    const { role, company, startDate, endDate, onEditCard } = this.props
 
     return (
-      <div>
-        {
-          !edited ? (
-            <div className={cx.wrapper}>
-              <div className={cx.label}>
-                { role && <span className={cx.role}>{role}</span>}
-                { (role && company) && <span className={cx.at}>at</span>}
-                { company && <span className={cx.company}>{company}</span>}
-              </div>
-              {startDate && <div className={cx.dates}>{this.formatDate(startDate)} - {endDate ? this.formatDate(endDate) : 'Current'}</div>}
-              <div className={cx.button} onClick={this.toggleEditCardStatus}>EDIT ENTRY</div>
-            </div>
-          ) : (this.props.children && typeof this.props.children === 'function') ? this.props.children(this.toggleEditCardStatus) : <button onClick={this.toggleEditCardStatus}>Back to the card</button>
-        }
+      <div className={cx.wrapper}>
+        <div className={cx.label}>
+          { role && <span className={cx.role}>{role}</span>}
+          { (role && company) && <span className={cx.at}>at</span>}
+          { company && <span className={cx.company}>{company}</span>}
+        </div>
+        {startDate && <div className={cx.dates}>{this.formatDate(startDate)} - {endDate ? this.formatDate(endDate) : 'Current'}</div>}
+        {onEditCard && <div className={cx.button} onClick={this.handleOnEdit}>EDIT ENTRY</div>}
       </div>
     )
   }
