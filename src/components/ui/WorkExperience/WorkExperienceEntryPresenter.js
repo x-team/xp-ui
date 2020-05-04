@@ -4,7 +4,7 @@ import React from 'react'
 import Markdown from 'markdown-to-jsx'
 
 import JobSkills from '../JobSkills'
-import type { Experience } from '.'
+import type { Experience } from '../../../utils/types'
 
 type Props = { experience: Experience }
 

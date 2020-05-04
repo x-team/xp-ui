@@ -4,18 +4,9 @@ import React from 'react'
 
 import InlineEditor from '../InlineEditor'
 import type { EditorProps, PresenterProps } from '../InlineEditor'
+import type { Experience } from '../../../utils/types'
 
 import WorkExperienceEntryPresenter from './WorkExperienceEntryPresenter'
-
-export type Experience = {
-      id: number,
-      role: string,
-      company: string,
-      start_date: Date,
-      end_date: ?Date,
-      highlights: string,
-      skills?: Array<string>
-}
 
 export type Props = {
   experiences: ?Array<Experience>,
