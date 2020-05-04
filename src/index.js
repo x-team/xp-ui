@@ -76,6 +76,7 @@ import TruncatedList from './components/ui/TruncatedList'
 import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
 import VideoPlayer from './components/ui/VideoPlayer'
 import WelcomeHero from './components/ui/WelcomeHero'
+import WorkExperience from './components/ui/WorkExperience'
 import XIcon from './components/ui/XIcon'
 
 export {
@@ -155,5 +156,6 @@ export {
   TwoColumnsLayout,
   VideoPlayer,
   WelcomeHero,
+  WorkExperience,
   XIcon
 }
