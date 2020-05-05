@@ -14,11 +14,13 @@ module.exports = {
   externals: {
     react: {
       root: 'React',
-      commonjs2: 'react'
+      commonjs2: 'react',
+      commonjs: 'react'
     },
     'react-dom': {
       root: 'ReactDOM',
-      commonjs2: 'react-dom'
+      commonjs2: 'react-dom',
+      commonjs: 'react-dom'
     },
   },
   module: base.module
