@@ -144,6 +144,7 @@ type Option = {
 type Props = {
   options?: Array<Option>,
   applicantSkills?: Array<Option>,
+  disabled?: boolean,
   onChange?: (selectedSkills: Array<Option>) => void
 }
 
@@ -173,22 +174,25 @@ class SkillsSelector extends Component<Props, State> {
   }
 
   renderTag = (skill: Option) => {
+    const { disabled = false } = this.props
     return (
       <div key={skill.value} className={cx.tag}>
         {skill.label}
-        <SvgIcon
-          icon='x'
-          color='grayscale'
-          hover='default'
-          className={cx.removeTag}
-          onClick={() => this.handleSkillRemove(skill)}
-        />
+        {!disabled && (
+          <SvgIcon
+            icon='x'
+            color='grayscale'
+            hover='default'
+            className={cx.removeTag}
+            onClick={() => this.handleSkillRemove(skill)}
+          />
+        )}
       </div>
     )
   }
 
   render () {
-    const { options = [] } = this.props
+    const { options = [], disabled = false } = this.props
     const { selectedSkills = [] } = this.state
     const placeholder = selectedSkills.length > 0
       ? 'Add more...'
@@ -206,6 +210,7 @@ class SkillsSelector extends Component<Props, State> {
           arrowRenderer={null}
           onChange={this.handleSkillSelection}
           optionRenderer={SelectorOption}
+          disabled={disabled}
         />
         <div className={cx.tags}>
           {selectedSkills.map(this.renderTag)}

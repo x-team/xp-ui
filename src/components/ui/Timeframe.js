@@ -94,6 +94,7 @@ type Props = {
   startDate?: Date,
   endDate?: Date,
   noEndDate?: boolean,
+  disabled?: boolean,
   onChange?: ({ startDate: Date, endDate: ?Date }) => void
 }
 
@@ -228,6 +229,7 @@ class Timeframe extends PureComponent<Props, State> {
   }
 
   render () {
+    const { disabled = false } = this.props
     const { startMonth, startYear, endMonth, endYear, noEndDate } = this.state
     return (
       <div>
@@ -241,6 +243,7 @@ class Timeframe extends PureComponent<Props, State> {
                   options={MONTHS}
                   value={startMonth}
                   onChange={this.updateFieldValue('startMonth', MONTHS)}
+                  disabled={disabled}
                 />
               </div>
               <div className={cx.year}>
@@ -249,6 +252,7 @@ class Timeframe extends PureComponent<Props, State> {
                   options={YEARS}
                   value={startYear}
                   onChange={this.updateFieldValue('startYear', YEARS)}
+                  disabled={disabled}
                 />
               </div>
             </div>
@@ -265,6 +269,7 @@ class Timeframe extends PureComponent<Props, State> {
                     options={this.getValidEndMonthsList()}
                     value={endMonth}
                     onChange={this.updateFieldValue('endMonth', this.getValidEndMonthsList())}
+                    disabled={disabled}
                   />
                 </div>
                 <div className={cx.year}>
@@ -273,6 +278,7 @@ class Timeframe extends PureComponent<Props, State> {
                     options={this.getValidEndYearsList()}
                     value={endYear}
                     onChange={this.updateFieldValue('endYear', this.getValidEndYearsList())}
+                    disabled={disabled}
                   />
                 </div>
               </div>
@@ -285,6 +291,7 @@ class Timeframe extends PureComponent<Props, State> {
             label='Still working there'
             checked={noEndDate}
             onChange={this.toggleNoEndDate}
+            disabled={disabled}
           />
         </div>
       </div>
