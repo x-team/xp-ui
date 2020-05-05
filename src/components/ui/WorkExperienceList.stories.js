@@ -6,16 +6,11 @@ import { storiesOf } from '@storybook/react'
 
 import WorkExperienceList from './WorkExperienceList'
 
-const parentFunction = (cardProps) => {
-  alert(`
-    Parent function required to retrieve the clicked card's data.
-
-    - Card's data:
-    ${JSON.stringify(cardProps)}
-  `)
+const getEditingCardParentFunction = (cardData) => {
+  alert(`Editing Card: ${JSON.stringify(cardData)}`)
 }
 
-const listFromApiMocked = [
+const experiencesFromApiMocked = [
   {
     id: 1,
     role: 'Senior Frontend Developer',
@@ -55,20 +50,20 @@ const listFromApiMocked = [
 storiesOf('Core Components|WorkExperienceList Component', module)
   .add('basic usage', () => (
     <WorkExperienceList
-      list={listFromApiMocked}
-      onEditCard={parentFunction}
+      list={experiencesFromApiMocked}
+      returnEditingCard={getEditingCardParentFunction}
     />
   ))
 
 storiesOf('Core Components|WorkExperienceList Component/Debug', module)
   .add('without list', () => (
     <WorkExperienceList
-      onEditCard={parentFunction}
+      returnEditingCard={getEditingCardParentFunction}
     />
   ))
   .add('without onEditCard function', () => (
     <WorkExperienceList
-      list={listFromApiMocked}
+      list={experiencesFromApiMocked}
     />
   ))
   .add('missing props', () => (

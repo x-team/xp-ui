@@ -1,5 +1,7 @@
 // @flow
+
 import React, { PureComponent } from 'react'
+
 import WorkExperienceCard from './WorkExperienceCard'
 
 const cmz = require('cmz')
@@ -19,31 +21,52 @@ const cx = {
 }
 
 type Props = {
-  list?: Array<{}>,
-  onEditCard: (Props) => void
+  list: Array<any>,
+  returnEditingCard?: (any) => void
 }
 
-class WorkExperienceList extends PureComponent<Props> {
+type State = {
+  editingCard: any
+}
+
+class WorkExperienceList extends PureComponent<Props, State> {
   static defaultProps = {
     list: []
   }
 
+  state: State = {
+    editingCard: {}
+  }
+
+  componentDidUpdate (prevProps: any, prevState: any) {
+    if (this.props.returnEditingCard) {
+      this.props.returnEditingCard(this.state)
+    }
+  }
+
+  getEditingCardId = (editingCardId: number) => {
+    this.setState({
+      editingCard: this.props.list.filter((workExperienceCard) => workExperienceCard.id === editingCardId)
+    })
+  }
+
   render () {
-    const { list, onEditCard } = this.props
+    const { list, returnEditingCard } = this.props
 
     return (
-      list &&
-      <div>
-        {
-          list.map((experience, index) => {
-            return (
-              <div className={cx.item} key={index}>
-                <WorkExperienceCard {...experience} onEditCard={onEditCard} />
-              </div>
-            )
-          })
-        }
-      </div>
+      (list && returnEditingCard)
+        ? <div>
+          {
+            list.map((workExperienceCard) => {
+              return (
+                <div className={cx.item} key={workExperienceCard.id}>
+                  <WorkExperienceCard {...workExperienceCard} returnEditingCardId={this.getEditingCardId} />
+                </div>
+              )
+            })
+          }
+        </div>
+        : null
     )
   }
 }

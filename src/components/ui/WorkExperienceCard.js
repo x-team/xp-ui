@@ -1,5 +1,6 @@
 // @flow
-import React, { PureComponent } from 'react'
+
+import React from 'react'
 
 import theme from '../../styles/theme'
 import typo, { typeface } from '../../styles/typo'
@@ -71,45 +72,39 @@ const cx = {
 
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
-export type Props = {
+type Props = {
+  id?: number,
   role?: string | null,
   company?: string | null,
   startDate?: Date | null,
   endDate?: Date | null,
-  onEditCard: (Props) => void
+  returnEditingCardId?: (number) => void
 }
 
-class WorkExperienceCard extends PureComponent<Props> {
-  static defaultProps = {
-    role: null,
-    company: null,
-    startDate: null,
-    endDate: null
-  }
+const WorkExperienceCard = (props: Props) => {
+  const { role, company, startDate, endDate } = props
 
-  formatDate = (date: Date): string => {
+  const formatDate = (date: Date): string => {
     return date && `${monthNames[date.getMonth()]} ${date.getFullYear()}`
   }
 
-  handleOnEdit = () => {
-    this.props.onEditCard(this.props)
+  const returnEditingCardId = (): void => {
+    if (props.id && props.returnEditingCardId) {
+      props.returnEditingCardId(props.id)
+    }
   }
 
-  render () {
-    const { role, company, startDate, endDate, onEditCard } = this.props
-
-    return (
-      <div className={cx.wrapper}>
-        <div className={cx.label}>
-          { role && <span className={cx.role}>{role}</span>}
-          { (role && company) && <span className={cx.at}>at</span>}
-          { company && <span className={cx.company}>{company}</span>}
-        </div>
-        {startDate && <div className={cx.dates}>{this.formatDate(startDate)} - {endDate ? this.formatDate(endDate) : 'Current'}</div>}
-        {onEditCard && <div className={cx.button} onClick={this.handleOnEdit}>EDIT ENTRY</div>}
+  return (
+    <div className={cx.wrapper}>
+      <div className={cx.label}>
+        {role && <span className={cx.role}>{role}</span>}
+        {(role && company) && <span className={cx.at}>at</span>}
+        {company && <span className={cx.company}>{company}</span>}
       </div>
-    )
-  }
+      {startDate && <div className={cx.dates}>{formatDate(startDate)} - {endDate ? formatDate(endDate) : 'Current'}</div>}
+      <div className={cx.button} onClick={returnEditingCardId}>EDIT ENTRY</div>
+    </div>
+  )
 }
 
 export default WorkExperienceCard
