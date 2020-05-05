@@ -71,8 +71,8 @@ export default function WorkExperienceEntryPresenter (props: Props) {
     experience: {
       role,
       company,
-      start_date: startDate,
-      end_date: endDate,
+      startDate,
+      endDate,
       highlights,
       skills
     }

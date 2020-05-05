@@ -48,8 +48,8 @@ export type Filters = {
 export type Experience = {
   role: string,
   company: string,
-  start_date: Date,
-  end_date: ?Date,
+  startDate: Date,
+  endDate: ?Date,
   highlights: string,
   skills?: Array<string>
 }

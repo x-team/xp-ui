@@ -6,8 +6,8 @@ import WorkExperiencePresenter from './WorkExperienceEntryPresenter'
 const basicExperience = {
   role: 'Senior Developer',
   company: 'X-Team',
-  start_date: new Date('1999-05-16'),
-  end_date: new Date('2019-04-13'),
+  startDate: new Date('1999-05-16'),
+  endDate: new Date('2019-04-13'),
   highlights: `Worked at the company before it was founded. Did so using *italics*, **bold**, and other markdown tricks.
 
 * Launched new products
@@ -19,31 +19,31 @@ const basicExperience = {
 const noSkills = {
   role: 'Senior Developer',
   company: 'X-Team',
-  start_date: new Date('1999-05-16'),
-  end_date: new Date('2019-04-13'),
+  startDate: new Date('1999-05-16'),
+  endDate: new Date('2019-04-13'),
   highlights: `Used no skills. Increased revenue by pure force of will.`
 }
 
 const noEndDate = {
   role: 'Senior Developer',
   company: 'X-Team',
-  start_date: new Date('1999-05-16'),
+  startDate: new Date('1999-05-16'),
   highlights: `Still here. Will be here for all eternity.`,
   skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
 }
 
 const noRole = {
   company: 'X-Team',
-  start_date: new Date('1999-05-16'),
-  end_date: new Date('2019-04-13'),
+  startDate: new Date('1999-05-16'),
+  endDate: new Date('2019-04-13'),
   highlights: `Role is missing in experience prop; default is shown above.`,
   skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
 }
 
 const noCompany = {
   role: 'Senior Developer',
-  start_date: new Date('1999-05-16'),
-  end_date: new Date('2019-04-13'),
+  startDate: new Date('1999-05-16'),
+  endDate: new Date('2019-04-13'),
   highlights: `Company is missing in experience prop; default is shown above.`,
   skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
 }
@@ -51,7 +51,7 @@ const noCompany = {
 const noStartDate = {
   role: 'Senior Developer',
   company: 'X-Team',
-  end_date: new Date('2019-04-13'),
+  endDate: new Date('2019-04-13'),
   highlights: `Start date is missing in experience prop.`,
   skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
 }
@@ -59,8 +59,8 @@ const noStartDate = {
 const noHighlights = {
   role: 'Senior Developer',
   company: 'X-Team',
-  start_date: new Date('1999-05-16'),
-  end_date: new Date('2019-04-13'),
+  startDate: new Date('1999-05-16'),
+  endDate: new Date('2019-04-13'),
   skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
 }
 
