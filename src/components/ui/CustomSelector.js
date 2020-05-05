@@ -26,15 +26,15 @@ const cx = {
       & .Select-control {
         display: flex
         border: 1px solid ${theme.lineSilver2}
-        height: auto
+        height: 60px
         padding: 14px 16px
         border-radius: 0
         cursor: pointer
       }
 
       &.is-focused .Select-control {
-        border: 1px solid ${theme.lineRed} !important
-        box-shadow: 0 0 3px ${theme.lineRed} !important
+        border: 1px solid ${theme.lineSilver6} !important
+        box-shadow: 0 0 3px ${theme.lineSilver6} !important
       }
 
       &.is-disabled:hover {
