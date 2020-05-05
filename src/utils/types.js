@@ -53,3 +53,8 @@ export type Experience = {
   highlights: string,
   skills?: Array<string>
 }
+
+export type SkillOption = {
+  value: string | number,
+  label: string
+}

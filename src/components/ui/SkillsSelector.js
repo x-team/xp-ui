@@ -9,6 +9,7 @@ import SelectorOption from './SelectorOption'
 
 import '../../assets/react-select.css'
 
+import type { SkillOption } from '../../utils/types'
 import theme from '../../styles/theme'
 import typo, { typeface } from '../../styles/typo'
 
@@ -136,19 +137,14 @@ const cx = {
   `)
 }
 
-type Option = {
-  value: string | number,
-  label: string
-}
-
 type Props = {
-  options?: Array<Option>,
-  applicantSkills?: Array<Option>,
-  onChange?: (selectedSkills: Array<Option>) => void
+  options?: Array<SkillOption>,
+  applicantSkills?: Array<SkillOption>,
+  onChange?: (selectedSkills: Array<SkillOption>) => void
 }
 
 type State = {
-  selectedSkills: Array<Option>
+  selectedSkills: Array<SkillOption>
 }
 
 class SkillsSelector extends Component<Props, State> {
@@ -156,7 +152,7 @@ class SkillsSelector extends Component<Props, State> {
     selectedSkills: this.props.applicantSkills || []
   }
 
-  handleSkillSelection = (selectedSkill: Option) => {
+  handleSkillSelection = (selectedSkill: SkillOption) => {
     const updatedSelectedSkills = [ ...this.state.selectedSkills, selectedSkill ]
     this.setState(() => ({ selectedSkills: updatedSelectedSkills }), () => {
       const { onChange } = this.props
@@ -164,7 +160,7 @@ class SkillsSelector extends Component<Props, State> {
     })
   }
 
-  handleSkillRemove = (removedSkill: Option) => {
+  handleSkillRemove = (removedSkill: SkillOption) => {
     const selectedSkills = this.state.selectedSkills.filter(skill => skill.value !== removedSkill.value)
     this.setState(() => ({ selectedSkills }), () => {
       const { onChange } = this.props
@@ -172,7 +168,7 @@ class SkillsSelector extends Component<Props, State> {
     })
   }
 
-  renderTag = (skill: Option) => {
+  renderTag = (skill: SkillOption) => {
     return (
       <div key={skill.value} className={cx.tag}>
         {skill.label}
