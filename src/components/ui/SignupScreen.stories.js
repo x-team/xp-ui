@@ -67,6 +67,24 @@ storiesOf('Screens and Layouts|SignupScreen/Debug', module)
       </SignupScreen.Layout>
     </Body>
   ))
+  .add('with error message', () => (
+    <Body>
+      <SignupScreen.Layout>
+        <SignupScreen.InputGroup
+          errorMessage='This has an error'
+        >
+          <SampleLabel />
+          <InputField placeholder='Input field' />
+        </SignupScreen.InputGroup>
+        <SignupScreen.InputGroup
+          errorMessage='This has an error'
+        >
+          <SampleLabel />
+          <InputField placeholder='Input field' />
+        </SignupScreen.InputGroup>
+      </SignupScreen.Layout>
+    </Body>
+  ))
   .add('missing props for Layout', () => (
     <SignupScreen.Layout />
   ))
