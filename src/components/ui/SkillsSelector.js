@@ -130,10 +130,6 @@ class SkillsSelector extends Component<Props, State> {
           onChange={this.handleSkillSelection}
           disabled={disabled}
         />
-        {/* <Select
-          className={cx.select.toString()}
-          optionRenderer={SelectorOption}
-        /> */}
         <div className={cx.tags}>
           {selectedSkills.map(this.renderTag)}
         </div>

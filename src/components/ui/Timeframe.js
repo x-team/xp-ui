@@ -239,7 +239,8 @@ class Timeframe extends PureComponent<Props, State> {
             <div className={cx.startDateFields}>
               <div className={cx.month}>
                 <CustomSelector
-                  placeholder={'Month'}
+                  name='startMonth'
+                  placeholder='Month'
                   options={MONTHS}
                   value={startMonth}
                   onChange={this.updateFieldValue('startMonth', MONTHS)}
@@ -248,7 +249,8 @@ class Timeframe extends PureComponent<Props, State> {
               </div>
               <div className={cx.year}>
                 <CustomSelector
-                  placeholder={'Year'}
+                  name='startYear'
+                  placeholder='Year'
                   options={YEARS}
                   value={startYear}
                   onChange={this.updateFieldValue('startYear', YEARS)}
@@ -265,7 +267,8 @@ class Timeframe extends PureComponent<Props, State> {
               <div className={cx.endDateFields}>
                 <div className={cx.month}>
                   <CustomSelector
-                    placeholder={'Month'}
+                    name='endMonth'
+                    placeholder='Month'
                     options={this.getValidEndMonthsList()}
                     value={endMonth}
                     onChange={this.updateFieldValue('endMonth', this.getValidEndMonthsList())}
@@ -274,7 +277,8 @@ class Timeframe extends PureComponent<Props, State> {
                 </div>
                 <div className={cx.year}>
                   <CustomSelector
-                    placeholder={'Year'}
+                    name='endYear'
+                    placeholder='Year'
                     options={this.getValidEndYearsList()}
                     value={endYear}
                     onChange={this.updateFieldValue('endYear', this.getValidEndYearsList())}
