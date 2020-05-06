@@ -6,7 +6,7 @@ import cmz from 'cmz'
 import Button from '../Button'
 import InputField from '../../forms/InputField'
 import SkillsSelector from '../SkillsSelector'
-import TextareaEditor from '../TextareaEditor/TextareaEditor'
+import RichTextEditor from '../RichTextEditor'
 import Timeframe from '../Timeframe'
 
 import theme from '../../../styles/theme'
@@ -21,14 +21,7 @@ type Props = {
 }
 
 const cx = {
-  root: cmz(
-    typo.regularText,
-    `
-      & {
-        max-width: 840px
-      }
-    `
-  ),
+  root: cmz(typo.regularText),
 
   header: cmz(`
     & div {
@@ -44,8 +37,6 @@ const cx = {
       margin: auto 0.8em
     }
   `),
-
-  skills: cmz(typo.regularText),
 
   highlights: cmz(`
     & {
@@ -96,15 +87,15 @@ export default class WorkExperienceEntryEditor extends Component<Props, State> {
           onChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
         />
       </div>
-      <div className={cx.skills}>
+      <div>
         <p>Skills</p>
         <SkillsSelector skills={this.props.skills} applicantSkills={optionsFromSkills(skills)}
           onChange={selectedSkills => this.setState({ skills: skillsFromOptions(selectedSkills) })} />
       </div>
       <div className={cx.highlights}>
         <p>Highlights</p>
-        <TextareaEditor text={highlights || ''} placeholder='Highlights' charLimit={1000}
-          onChange={highlights => this.setState({ highlights })} />
+        <RichTextEditor initialValue={highlights || ''} placeholder='Highlights' characterLimit={1000}
+          handleChange={({ markdown }) => this.setState({ highlights: markdown })} />
       </div>
       <Button onClick={() => this.props.onSave(this.state)}>Save</Button>
     </div>
