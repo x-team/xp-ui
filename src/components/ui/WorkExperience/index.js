@@ -6,7 +6,6 @@ import cmz from 'cmz'
 import Button from '../Button'
 import InlineEditor from '../InlineEditor'
 import PencilButton from '../PencilButton'
-import SvgIcon from '../SvgIcon'
 
 import type { EditorProps, PresenterProps } from '../InlineEditor'
 import type { Experience, SkillOption } from '../../../utils/types'
@@ -128,7 +127,7 @@ export default class WorkExperience extends Component<Props, State> {
         : null
       }
 
-      <Button color='silver' onClick={this.showNewExperience}><SvgIcon icon='plus' color={theme.baseDark} /> Add New Experience</Button>
+      <Button color='silver' onClick={this.showNewExperience}>Add New Experience</Button>
     </div>
   }
 }

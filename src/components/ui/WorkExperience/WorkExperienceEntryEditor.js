@@ -4,8 +4,8 @@ import React from 'react'
 import cmz from 'cmz'
 
 import InputField from '../../forms/InputField'
-import SkillsSelector from '../SkillsSelector'
 import RichTextEditor from '../RichTextEditor'
+import SkillsSelector from '../SkillsSelector'
 import Timeframe from '../Timeframe'
 
 import theme from '../../../styles/theme'
