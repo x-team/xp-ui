@@ -14,7 +14,7 @@ export type Props = {
 
 export default function WorkExperience (props: Props) {
   const renderEditor = ({ value: { experience }, onValueChange, activateEditingMode, isHover }: EditorProps): any => (
-    <p>TODO</p>
+    <p>TODO: XP-3736 Create new WorkExperienceEntryEditor component</p>
   )
 
   const renderPresenter = ({ value: { experience }, activateEditingMode, isHover }: PresenterProps) => (
@@ -22,7 +22,7 @@ export default function WorkExperience (props: Props) {
   )
 
   const handleSave = (experience?: Experience) => {
-    // TODO
+    // TODO: XP-3737 Add Work Experience to the XP Admin Interface
   }
 
   const { experiences } = props

@@ -1,10 +1,10 @@
 // @flow
 
 import React from 'react'
-import Markdown from 'markdown-to-jsx'
 import cmz from 'cmz'
 
 import JobSkills from '../JobSkills'
+import RichTextEditor from '../RichTextEditor'
 import theme from '../../../styles/theme'
 import typo from '../../../styles/typo'
 
@@ -43,7 +43,16 @@ const cx = {
     `
   ),
 
-  highlights: cmz(typo.regularText)
+  highlights: cmz(
+    typo.regularText,
+    `
+      & .tui-editor-contents {
+        font-size: 16px
+        color: ${theme.typoParagraph}
+        line-height: normal
+      }
+    `
+  )
 }
 
 function formatDateMonthYear (date) {
@@ -86,6 +95,6 @@ export default function WorkExperienceEntryPresenter (props: Props) {
       {renderDates(startDate, endDate)}
     </div>
     <JobSkills skills={(skills || []).join(',')} />
-    <Markdown children={highlights || ''} className={cx.highlights} />
+    <RichTextEditor mode='viewer' initialValue={highlights} className={cx.highlights} />
   </div>
 }
