@@ -116,10 +116,11 @@ export default class WorkExperience extends Component<Props, State> {
           <div className={cx.experienceWrapper}>
             <InlineEditor
               value={{ experience: experienceStub, skills }}
+              initialMode='edit'
               shouldSaveOnEnter={false}
               onSave={this.handleSaveNew}
               onCancel={() => this.setState({ showNewExperience: false })}
-              presenter={({ activateEditingMode }) => window.setTimeout(activateEditingMode)}
+              presenter={renderPresenter}
               editor={renderEditor}
             />
           </div>
