@@ -13,7 +13,7 @@ export type Props = {
   experiences: ?Array<Experience>,
 }
 
-export default function WorkExperience (props: Props) {
+function WorkExperience (props: Props) {
   const renderEditor = ({ value: { experience }, onValueChange, activateEditingMode, isHover }: EditorProps): any => (
     <p>TODO: XP-3736 Create new WorkExperienceEntryEditor component</p>
   )
@@ -41,3 +41,5 @@ export default function WorkExperience (props: Props) {
     </div>
   )
 }
+
+export default WorkExperience
