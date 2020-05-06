@@ -5,10 +5,12 @@ import cmz from 'cmz'
 
 import JobSkills from '../JobSkills'
 import RichTextEditor from '../RichTextEditor'
+
 import theme from '../../../styles/theme'
 import typo from '../../../styles/typo'
 
 import type { Experience } from '../../../utils/types'
+
 type Props = { experience: Experience }
 
 const cx = {
@@ -71,7 +73,7 @@ function renderDates (startDate, endDate) {
   }
 }
 
-export default function WorkExperienceEntryPresenter (props: Props) {
+function WorkExperienceEntryPresenter (props: Props) {
   if (!props.experience) {
     return null
   }
@@ -87,14 +89,18 @@ export default function WorkExperienceEntryPresenter (props: Props) {
     }
   } = props
 
-  return <div>
-    <div className={cx.header}>
-      <strong>{role || '[No role given]'}</strong> <em className={cx.at}>at</em> <strong>{company || '[No company given]'}</strong>
+  return (
+    <div>
+      <div className={cx.header}>
+        <strong>{role || '[No role given]'}</strong> <em className={cx.at}>at</em> <strong>{company || '[No company given]'}</strong>
+      </div>
+      <div className={cx.date}>
+        {renderDates(startDate, endDate)}
+      </div>
+      <JobSkills skills={(skills || []).join(',')} />
+      <RichTextEditor mode='viewer' initialValue={highlights} className={cx.highlights} />
     </div>
-    <div className={cx.date}>
-      {renderDates(startDate, endDate)}
-    </div>
-    <JobSkills skills={(skills || []).join(',')} />
-    <RichTextEditor mode='viewer' initialValue={highlights} className={cx.highlights} />
-  </div>
+  )
 }
+
+export default WorkExperienceEntryPresenter

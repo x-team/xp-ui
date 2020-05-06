@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
@@ -16,20 +18,21 @@ const basicExperience = {
   skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
 }
 
+const noEndDate = {
+  role: 'Senior Developer',
+  company: 'X-Team',
+  start_date: new Date('1999-05-16'),
+  end_date: null,
+  highlights: `Still here. Will be here for all eternity.`,
+  skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
+}
+
 const noSkills = {
   role: 'Senior Developer',
   company: 'X-Team',
   start_date: new Date('1999-05-16'),
   end_date: new Date('2019-04-13'),
   highlights: `Used no skills. Increased revenue by pure force of will.`
-}
-
-const noEndDate = {
-  role: 'Senior Developer',
-  company: 'X-Team',
-  start_date: new Date('1999-05-16'),
-  highlights: `Still here. Will be here for all eternity.`,
-  skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
 }
 
 const noRole = {
@@ -66,12 +69,18 @@ const noHighlights = {
 
 storiesOf('UI Components|WorkExperience/Presenter', module)
   .add('basic usage', () => <WorkExperiencePresenter experience={basicExperience} />)
-  .add('current job', () => <WorkExperiencePresenter experience={noEndDate} />)
-  .add('no skills provided', () => <WorkExperiencePresenter experience={noSkills} />)
+  .add('basic usage, current job', () => <WorkExperiencePresenter experience={noEndDate} />)
 
 storiesOf('UI Components|WorkExperience/Presenter/Debug', module)
+  // $FlowFixMe
+  .add('missing skills', () => <WorkExperiencePresenter experience={noSkills} />)
+  // $FlowFixMe
   .add('missing experience', () => <WorkExperiencePresenter />)
+  // $FlowFixMe
   .add('missing role', () => <WorkExperiencePresenter experience={noRole} />)
+  // $FlowFixMe
   .add('missing company', () => <WorkExperiencePresenter experience={noCompany} />)
+  // $FlowFixMe
   .add('missing start date', () => <WorkExperiencePresenter experience={noStartDate} />)
+  // $FlowFixMe
   .add('missing highlights', () => <WorkExperiencePresenter experience={noHighlights} />)
