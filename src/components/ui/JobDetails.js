@@ -21,7 +21,7 @@ const cx = {
 
       @media screen and (min-width: ${breakpoints.sm}) {
         & {
-          font-size: 24px
+          font-size: 20px
         }
       }
     `
@@ -136,8 +136,8 @@ const cx = {
 
   li: cmz(`
     & {
-      font-size: 16px
-      line-height: 1.25
+      font-size: 16px !important
+      line-height: 1.8
       counter-increment: job-details
     }
 
