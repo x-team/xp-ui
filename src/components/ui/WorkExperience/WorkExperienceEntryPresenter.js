@@ -12,15 +12,11 @@ import type { Experience } from '../../../utils/types'
 type Props = { experience: Experience }
 
 const cx = {
-  header: cmz(
-    typo.subheading,
-    `
-      & {
-        font-weight: normal
-        color: ${theme.baseDark}
-      }
-    `
-  ),
+  header: cmz(`
+    font-weight: normal
+    font-size: 18px
+    color: ${theme.baseDark}
+  `),
 
   at: cmz(
     typo.regularText,

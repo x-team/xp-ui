@@ -43,14 +43,14 @@ const isKeyOfType = (keyCode: number, type: number) => keyCode === type
 
 export type EditorProps = {
   value: any,
-  onValueChange(data: any): void
+  onValueChange(data: any): any
 }
 
 export type PresenterProps = {
   value: any,
   isEditable: boolean,
   isHover: boolean,
-  activateEditingMode(): void
+  activateEditingMode(): any
 }
 
 type Props = {
@@ -67,7 +67,7 @@ type Props = {
   /** Presentation mode render function */
   presenter(props: PresenterProps): any,
   /** On save changes callback */
-  onSave(data: any): void,
+  onSave(data: any): any,
   /** On cancel changes callback */
   onCancel?: () => void,
 }

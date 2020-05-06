@@ -5,6 +5,7 @@ import WorkExperienceEditor from './WorkExperienceEntryEditor'
 
 function logExperience (experience) {
   console.log('onSave', experience)
+  return Promise.resolve()
 }
 
 const basicExperience = {
@@ -69,13 +70,14 @@ const noHighlights = {
 }
 
 storiesOf('UI Components|WorkExperience/Editor', module)
-  .add('basic usage', () => <WorkExperienceEditor experience={basicExperience} onSave={logExperience} />)
-  .add('current job', () => <WorkExperienceEditor experience={noEndDate} onSave={logExperience} />)
-  .add('no skills provided', () => <WorkExperienceEditor experience={noSkills} onSave={logExperience} />)
+  .add('basic usage', () => <WorkExperienceEditor experience={basicExperience} isSaving={false} onSave={logExperience} />)
+  .add('current job', () => <WorkExperienceEditor experience={noEndDate} isSaving={false} onSave={logExperience} />)
+  .add('no skills provided', () => <WorkExperienceEditor experience={noSkills} isSaving={false} onSave={logExperience} />)
+  .add('during save', () => <WorkExperienceEditor experience={noSkills} isSaving onSave={logExperience} />)
 
 storiesOf('UI Components|WorkExperience/Editor/Debug', module)
   .add('missing experience', () => <WorkExperienceEditor />)
-  .add('missing role', () => <WorkExperienceEditor experience={noRole} onSave={logExperience} />)
-  .add('missing company', () => <WorkExperienceEditor experience={noCompany} onSave={logExperience} />)
-  .add('missing start date', () => <WorkExperienceEditor experience={noStartDate} onSave={logExperience} />)
-  .add('missing highlights', () => <WorkExperienceEditor experience={noHighlights} onSave={logExperience} />)
+  .add('missing role', () => <WorkExperienceEditor experience={noRole} isSaving={false} onSave={logExperience} />)
+  .add('missing company', () => <WorkExperienceEditor experience={noCompany} isSaving={false} onSave={logExperience} />)
+  .add('missing start date', () => <WorkExperienceEditor experience={noStartDate} isSaving={false} onSave={logExperience} />)
+  .add('missing highlights', () => <WorkExperienceEditor experience={noHighlights} isSaving={false} onSave={logExperience} />)
