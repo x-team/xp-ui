@@ -27,6 +27,7 @@ import RoadmapHero from './components/ui/RoadmapHero'
 import Text from './components/ui/Text'
 import TruncatedList from './components/ui/TruncatedList'
 import WelcomeHero from './components/ui/WelcomeHero'
+import TextareaEditor from './components/ui/TextareaEditor/TextareaEditor'
 
 export {
   AccountConfirmation,
@@ -57,5 +58,6 @@ export {
   RoadmapHero,
   Text,
   TruncatedList,
-  WelcomeHero
+  WelcomeHero,
+  TextareaEditor
 }

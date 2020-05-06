@@ -3,13 +3,20 @@
   "version": "2.0.0",
   "description": "UI component library for the XP platform.",
   "main": "lib/all.js",
+  "files": [
+    "lib"
+  ],
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "prepare": "npm run build",
     "jest": "jest --roots=src",
     "start": "start-storybook -p 9001 -c .storybook -s public",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
+    "build:registration": "cross-env NODE_ENV=production webpack --config webpack.registration.js && babel src/ --ignore '__tests__' --out-dir ./lib/registration --copy-files",
+    "build:common": "cross-env NODE_ENV=production webpack --config webpack.common.js",
+    "build1": "npm run build:common && npm run build:registration",
+    "build": "node scripts/compile.js",
     "watch": "npm run build -- --watch",
     "flow": "flow check src",
     "lint": "standard \"src/**/*.js\" \".jest/**/*.js\" \"jest.config.js\" \"__mocks__/**/*.js\" | snazzy",
@@ -19,8 +26,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run build"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
@@ -69,23 +75,25 @@
     "babel-loader": "^8.0.0-beta.6",
     "babel-plugin-cmz-names": "^1.5.0",
     "babel-plugin-require-context-hook": "^1.0.0",
+    "chalk": "^4.0.0",
+    "cherry-pick": "^0.5.0",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "eslint-plugin-flowtype": "^3.2.0",
     "eslint-plugin-react": "^7.11.1",
+    "execa": "^2.0.0",
     "faker": "^4.1.0",
     "file-loader": "^2.0.0",
     "flow-bin": "^0.61.0",
+    "fs-extra": "^2.1.0",
     "husky": "^3.1.0",
     "jest": "^23.6.0",
     "jsdom": "^13.0.0",
     "lint-staged": "^9.5.0",
     "mockdate": "^2.0.2",
-    "prop-types": "^15.7.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-dom-factories": "^1.0.2",
-    "react-select": "1.2.1",
     "react-test-renderer": "^16.6.3",
     "snazzy": "^8.0.0",
     "source-map-loader": "^0.2.4",
@@ -94,6 +102,10 @@
     "url-loader": "^1.1.2",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.6.3",
+    "react-dom": ">=16.6.3"
   },
   "dependencies": {
     "cmz": "^3.13.0",
@@ -106,11 +118,13 @@
     "lodash.throttle": "^4.1.1",
     "markdown-to-jsx": "^6.9.4",
     "medium-editor": "^5.23.3",
+    "prop-types": "^15.7.2",
     "react-avatar": "^3.5.0",
     "react-click-outside": "github:tj/react-click-outside",
     "react-copy-to-clipboard": "^5.0.1",
     "react-data-grid": "^6.1.0",
     "react-data-grid-addons": "^6.1.0",
+    "react-select": "^1.2.1",
     "react-tooltip": "^3.11.1",
     "react-transition-group": "^4.3.0",
     "react-visibility-sensor": "^5.1.0",
