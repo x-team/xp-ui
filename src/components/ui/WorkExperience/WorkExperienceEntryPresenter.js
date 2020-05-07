@@ -58,7 +58,7 @@ function renderDates (startDate, endDate) {
   }
 }
 
-export default function WorkExperienceEntryPresenter (props: Props) {
+function WorkExperienceEntryPresenter (props: Props) {
   if (!props.experience) {
     return null
   }
@@ -85,3 +85,5 @@ export default function WorkExperienceEntryPresenter (props: Props) {
     <Markdown children={highlights || ''} className={cx.highlights} />
   </div>
 }
+
+export default WorkExperienceEntryPresenter

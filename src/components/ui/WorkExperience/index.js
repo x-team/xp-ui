@@ -74,7 +74,7 @@ const renderPresenter = ({ value: { experience }, activateEditingMode, isHover }
   </div>
 )
 
-export default class WorkExperience extends Component<Props, State> {
+class WorkExperience extends Component<Props, State> {
   state = {
     showNewExperience: false
   }
@@ -131,3 +131,5 @@ export default class WorkExperience extends Component<Props, State> {
     </div>
   }
 }
+
+export default WorkExperience

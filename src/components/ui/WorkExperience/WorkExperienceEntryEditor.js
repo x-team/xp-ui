@@ -53,7 +53,7 @@ function skillsFromOptions (options) {
   return options.map(option => option.value.toString())
 }
 
-export default function WorkExperienceEntryEditor (props: Props) {
+function WorkExperienceEntryEditor (props: Props) {
   const { experience, onValueChanged } = props
   if (!experience) {
     return null
@@ -92,3 +92,5 @@ export default function WorkExperienceEntryEditor (props: Props) {
     </div>
   </div>
 }
+
+export default WorkExperienceEntryEditor
