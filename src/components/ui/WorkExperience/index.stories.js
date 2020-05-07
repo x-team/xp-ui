@@ -3,6 +3,13 @@ import { storiesOf } from '@storybook/react'
 
 import WorkExperience from '.'
 
+const skills = [
+  { value: 'GOBOL', label: 'GOBOL' },
+  { value: 'D++', label: 'D++' },
+  { value: 'Nobe', label: 'Nobe' },
+  { value: 'Reaqt', label: 'Reaqt' }
+]
+
 const experiences = [
   {
     id: 0,
@@ -40,5 +47,5 @@ function updateExperiences ({ experience, isNew }) {
 }
 
 storiesOf('UI Components|WorkExperience', module)
-  .add('inline editing', () => <WorkExperience experiences={experiences} skills={[]} onSave={updateExperiences} />)
-  .add('no experiences', () => <WorkExperience experiences={[]} skills={[]} onSave={updateExperiences} />)
+  .add('inline editing', () => <WorkExperience experiences={experiences} skills={skills} onSave={updateExperiences} />)
+  .add('no experiences', () => <WorkExperience experiences={[]} skills={skills} onSave={updateExperiences} />)

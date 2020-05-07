@@ -1,12 +1,22 @@
+// @flow
+
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import WorkExperienceEditor from './WorkExperienceEntryEditor'
 
 function logExperience (experience) {
-  console.log('onSave', experience)
+  console.log('onValueChanged', experience)
   return Promise.resolve()
 }
+
+const skills = [
+  { value: 'COBOL', label: 'COBOL' },
+  { value: 'C++', label: 'C++' },
+  { value: 'Node', label: 'Node' },
+  { value: 'React', label: 'React' },
+  { value: 'Pascal', label: 'Pascal' }
+]
 
 const basicExperience = {
   role: 'Senior Developer',
@@ -18,6 +28,15 @@ const basicExperience = {
 * Launched new products
 * Unlaunched old products
 * [Synergized essential portfolio items](https://www.youtube.com/watch?v=dQw4w9WgXcQ)`,
+  skills: ['Pascal', 'COBOL']
+}
+
+const noEndDate = {
+  role: 'Senior Developer',
+  company: 'X-Team',
+  startDate: new Date('1999-05-16'),
+  endDate: null,
+  highlights: `Still here. Will be here for all eternity.`,
   skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
 }
 
@@ -27,14 +46,6 @@ const noSkills = {
   startDate: new Date('1999-05-16'),
   endDate: new Date('2019-04-13'),
   highlights: `Used no skills. Increased revenue by pure force of will.`
-}
-
-const noEndDate = {
-  role: 'Senior Developer',
-  company: 'X-Team',
-  startDate: new Date('1999-05-16'),
-  highlights: `Still here. Will be here for all eternity.`,
-  skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
 }
 
 const noRole = {
@@ -70,14 +81,19 @@ const noHighlights = {
 }
 
 storiesOf('UI Components|WorkExperience/Editor', module)
-  .add('basic usage', () => <WorkExperienceEditor experience={basicExperience} isSaving={false} onSave={logExperience} />)
-  .add('current job', () => <WorkExperienceEditor experience={noEndDate} isSaving={false} onSave={logExperience} />)
-  .add('no skills provided', () => <WorkExperienceEditor experience={noSkills} isSaving={false} onSave={logExperience} />)
-  .add('during save', () => <WorkExperienceEditor experience={noSkills} isSaving onSave={logExperience} />)
+  .add('basic usage', () => <WorkExperienceEditor experience={basicExperience} skills={skills} onValueChanged={logExperience} />)
+  .add('current job', () => <WorkExperienceEditor experience={noEndDate} skills={skills} onValueChanged={logExperience} />)
 
 storiesOf('UI Components|WorkExperience/Editor/Debug', module)
+  // $FlowFixMe
+  .add('missing skills', () => <WorkExperienceEditor experience={noSkills} skills={skills} onValueChanged={logExperience} />)
+  // $FlowFixMe
   .add('missing experience', () => <WorkExperienceEditor />)
-  .add('missing role', () => <WorkExperienceEditor experience={noRole} isSaving={false} onSave={logExperience} />)
-  .add('missing company', () => <WorkExperienceEditor experience={noCompany} isSaving={false} onSave={logExperience} />)
-  .add('missing start date', () => <WorkExperienceEditor experience={noStartDate} isSaving={false} onSave={logExperience} />)
-  .add('missing highlights', () => <WorkExperienceEditor experience={noHighlights} isSaving={false} onSave={logExperience} />)
+  // $FlowFixMe
+  .add('missing role', () => <WorkExperienceEditor experience={noRole} skills={skills} onValueChanged={logExperience} />)
+  // $FlowFixMe
+  .add('missing company', () => <WorkExperienceEditor experience={noCompany} skills={skills} onValueChanged={logExperience} />)
+  // $FlowFixMe
+  .add('missing start date', () => <WorkExperienceEditor experience={noStartDate} skills={skills} onValueChanged={logExperience} />)
+  // $FlowFixMe
+  .add('missing highlights', () => <WorkExperienceEditor experience={noHighlights} skills={skills} onValueChanged={logExperience} />)

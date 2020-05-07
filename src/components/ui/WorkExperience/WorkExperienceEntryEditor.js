@@ -82,7 +82,7 @@ export default function WorkExperienceEntryEditor (props: Props) {
     </div>
     <div>
       <p>Skills</p>
-      <SkillsSelector skills={props.skills} applicantSkills={optionsFromSkills(skills)}
+      <SkillsSelector options={props.skills} applicantSkills={optionsFromSkills(skills)}
         onChange={selectedSkills => valueChanged({ skills: skillsFromOptions(selectedSkills) })} />
     </div>
     <div className={cx.highlights}>

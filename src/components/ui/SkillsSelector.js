@@ -138,9 +138,9 @@ const cx = {
 }
 
 type Props = {
-  options?: Array<SkillOption>,
-  applicantSkills?: Array<SkillOption>,
-  onChange?: (selectedSkills: Array<SkillOption>) => void
+  options: Array<SkillOption>,
+  applicantSkills: Array<SkillOption>,
+  onChange: (selectedSkills: Array<SkillOption>) => void
 }
 
 type State = {
