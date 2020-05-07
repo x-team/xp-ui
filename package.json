@@ -17,6 +17,24 @@
     "test": "npm run lint && npm run flow",
     "storybook:build": "build-storybook -c .storybook -o .storybook-static -s public"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run build"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "npm run lint-fix",
+      "npm run lint",
+      "git add"
+    ],
+    ".jest/**/*.js": [
+      "npm run lint-fix",
+      "npm run lint",
+      "git add"
+    ]
+  },
   "keywords": [],
   "author": "joshwnj",
   "license": "MIT",
@@ -58,8 +76,10 @@
     "faker": "^4.1.0",
     "file-loader": "^2.0.0",
     "flow-bin": "^0.61.0",
+    "husky": "^3.1.0",
     "jest": "^23.6.0",
     "jsdom": "^13.0.0",
+    "lint-staged": "^9.5.0",
     "mockdate": "^2.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.6.3",
