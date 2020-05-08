@@ -32,6 +32,15 @@ storiesOf('UI Components|AccountConfirmation', module)
   ))
 
 storiesOf('UI Components|AccountConfirmation/Debug', module)
+  .add('avatar src is not passed in', () => (
+    <AccountConfirmation
+      fullName='Monica Blacksmith'
+      email='monica.blacksmith@example.com'
+      onContinue={action('onContinue')}
+      onSignOut={action('onSignOut')}
+    />
+  ))
+
   .add('missing props', () => (
     <AccountConfirmation />
   ))

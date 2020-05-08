@@ -38,13 +38,13 @@ storiesOf('Core Components|Avatar/Use Cases', module)
   ))
 
 storiesOf('Core Components|Avatar/Debug', module)
-  .add('missing props (does component explode?)', () => (
-    <Avatar />
-  ))
   .add('with not reachable image source', () => (
     <Avatar
       src='https://x-team.com/some-path-that-doesn-exists.png'
       alt='X P'
       size={32}
     />
+  ))
+  .add('missing props', () => (
+    <Avatar />
   ))

@@ -115,7 +115,7 @@ class AccountConfirmation extends PureComponent<Props, void> {
         {(avatar || fullName) && (
           <span className={cx.avatar}>
             <Avatar
-              src={avatar || fullName}
+              src={avatar}
               alt={fullName}
               size={80}
             />
