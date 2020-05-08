@@ -40,11 +40,13 @@ storiesOf('Core Components|Form Components/SkillsSelector', module)
       <SkillsSelector
         options={skills}
         applicantSkills={applicantSkills}
+        onChange={selected => console.log('SkillsSelector.onChange', selected)}
       />
     </Body>
   ))
 
 storiesOf('Core Components|Form Components/SkillsSelector/Debug', module)
   .add('missing props', () => (
+    // $FlowFixMe
     <SkillsSelector />
   ))

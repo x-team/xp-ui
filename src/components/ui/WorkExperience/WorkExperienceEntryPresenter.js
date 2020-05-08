@@ -1,28 +1,22 @@
 // @flow
 
 import React from 'react'
+import Markdown from 'markdown-to-jsx'
 import cmz from 'cmz'
 
 import JobSkills from '../JobSkills'
-import RichTextEditor from '../RichTextEditor'
-
 import theme from '../../../styles/theme'
 import typo from '../../../styles/typo'
 
 import type { Experience } from '../../../utils/types'
-
 type Props = { experience: Experience }
 
 const cx = {
-  header: cmz(
-    typo.subheading,
-    `
-      & {
-        font-weight: normal
-        color: ${theme.baseDark}
-      }
-    `
-  ),
+  header: cmz(`
+    font-weight: normal
+    font-size: 18px
+    color: ${theme.baseDark}
+  `),
 
   at: cmz(
     typo.regularText,
@@ -45,16 +39,7 @@ const cx = {
     `
   ),
 
-  highlights: cmz(
-    typo.regularText,
-    `
-      & .tui-editor-contents {
-        font-size: 16px
-        color: ${theme.typoParagraph}
-        line-height: normal
-      }
-    `
-  )
+  highlights: cmz(typo.regularText)
 }
 
 function formatDateMonthYear (date) {
@@ -82,25 +67,23 @@ function WorkExperienceEntryPresenter (props: Props) {
     experience: {
       role,
       company,
-      start_date: startDate,
-      end_date: endDate,
+      startDate,
+      endDate,
       highlights,
       skills
     }
   } = props
 
-  return (
-    <div>
-      <div className={cx.header}>
-        <strong>{role || '[No role given]'}</strong> <em className={cx.at}>at</em> <strong>{company || '[No company given]'}</strong>
-      </div>
-      <div className={cx.date}>
-        {renderDates(startDate, endDate)}
-      </div>
-      <JobSkills skills={(skills || []).join(',')} />
-      <RichTextEditor mode='viewer' initialValue={highlights} className={cx.highlights} />
+  return <div>
+    <div className={cx.header}>
+      <strong>{role || '[No role given]'}</strong> <em className={cx.at}>at</em> <strong>{company || '[No company given]'}</strong>
     </div>
-  )
+    <div className={cx.date}>
+      {renderDates(startDate, endDate)}
+    </div>
+    <JobSkills skills={(skills || []).join(',')} />
+    <Markdown children={highlights || ''} className={cx.highlights} />
+  </div>
 }
 
 export default WorkExperienceEntryPresenter
