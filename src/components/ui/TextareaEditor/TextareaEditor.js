@@ -22,10 +22,6 @@ const textCountStyles = cmz(`
   }
 `)
 
-const utilStyles = {
-  maxWidth: cmz('max-width: 840px')
-}
-
 const editorContainerStyles = cmz(`
   & {
     display: block
@@ -53,7 +49,6 @@ const editorContainerStyles = cmz(`
 `)
 
 const Root = elem.div([
-  utilStyles.maxWidth,
   typeface.text,
   cmz(`
     font-weight: 300

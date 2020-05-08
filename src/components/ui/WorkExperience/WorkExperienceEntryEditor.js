@@ -4,7 +4,7 @@ import React from 'react'
 import cmz from 'cmz'
 
 import InputField from '../../forms/InputField'
-import RichTextEditor from '../RichTextEditor'
+import TextareaEditor from '../TextareaEditor/TextareaEditor'
 import SkillsSelector from '../SkillsSelector'
 import Timeframe from '../Timeframe'
 
@@ -22,9 +22,16 @@ const cx = {
   root: cmz(typo.regularText),
 
   header: cmz(`
+    & {
+      display: flex
+      flex-direction: row
+    }
     & div {
-      display: inline-block
       margin-bottom: 0.4em
+      flex-grow: 2
+    }
+    & em {
+      text-align: center
     }
   `),
 
@@ -71,9 +78,9 @@ function WorkExperienceEntryEditor (props: Props) {
 
   return <div className={cx.root}>
     <div className={cx.header}>
-      <InputField value={role} name='role' placeholder='Role' required onChange={event => valueChanged({ role: event.target.value })} />
+      <div><InputField value={role} name='role' placeholder='Role' required onChange={event => valueChanged({ role: event.target.value })} /></div>
       <em className={cx.at}> at </em>
-      <InputField value={company} name='company' placeholder='Company' required onChange={event => valueChanged({ company: event.target.value })} />
+      <div><InputField value={company} name='company' placeholder='Company' required onChange={event => valueChanged({ company: event.target.value })} /></div>
     </div>
     <div>
       <Timeframe startDate={startDate} endDate={endDate} noEndDate={!endDate}
@@ -87,8 +94,8 @@ function WorkExperienceEntryEditor (props: Props) {
     </div>
     <div className={cx.highlights}>
       <p>Highlights</p>
-      <RichTextEditor initialValue={highlights || ''} placeholder='Highlights' characterLimit={1000}
-        handleChange={({ markdown }) => valueChanged({ highlights: markdown })} />
+      <TextareaEditor text={highlights || ''} placeholder='Highlights' charLimit={1000}
+        onChange={text => valueChanged({ highlights: text })} />
     </div>
   </div>
 }
