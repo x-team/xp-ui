@@ -111,6 +111,7 @@ export const lineColors = {
   lineSilver3: palette.athensGray,
   lineSilver4: palette.athensGrayAlt,
   lineSilver5: palette.iron,
+  lineSilver6: palette.ghost,
   lineYellow: palette.sapling
 }
 
