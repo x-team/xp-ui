@@ -81,9 +81,7 @@ const cx = {
   `)
 }
 
-const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-
-type WorkExperienceCard = {
+type WorkExperienceCardData = {
   id: number,
   role?: string,
   company?: string,
@@ -92,18 +90,18 @@ type WorkExperienceCard = {
 }
 
 type Props = {
-  list: Array<WorkExperienceCard>,
+  list: Array<WorkExperienceCardData>,
   editEntry?: (number) => void,
   deleteEntry?: (number) => void
 }
 
-class WorkExperienceList extends PureComponent<Props> {
+class WorkExperienceCard extends PureComponent<Props> {
   static defaultProps = {
     list: []
   }
 
   formatDate = (date: Date): string => {
-    return date && `${monthNames[date.getMonth()]} ${date.getFullYear()}`
+    return date && date.toLocaleString('en-us', { year: 'numeric', month: 'long' })
   }
 
   handleEditEntry = (id: number) => (): void => {
@@ -121,8 +119,8 @@ class WorkExperienceList extends PureComponent<Props> {
 
     return (
       list
-        ? list.map((workExperienceCard) => {
-          const { id, role, company, startDate, endDate } = workExperienceCard
+        ? list.map((experience) => {
+          const { id, role, company, startDate, endDate } = experience
 
           return (
             <div className={cx.wrapper} key={id}>
@@ -147,4 +145,4 @@ class WorkExperienceList extends PureComponent<Props> {
   }
 }
 
-export default WorkExperienceList
+export default WorkExperienceCard

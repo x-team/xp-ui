@@ -3,7 +3,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import WorkExperienceList from './WorkExperienceList'
+import WorkExperienceCard from './WorkExperienceCard'
 
 const handleEditExperience = cardId => {
   // do stuff experience item with this `cardid`
@@ -52,9 +52,9 @@ const experiencesFromApiMocked = [
   }
 ]
 
-storiesOf('UI Components|WorkExperienceList', module)
+storiesOf('UI Components|WorkExperienceCard', module)
   .add('basic usage', () => (
-    <WorkExperienceList
+    <WorkExperienceCard
       list={experiencesFromApiMocked}
       editEntry={handleEditExperience}
       deleteEntry={handleDeleteExperience}
@@ -70,7 +70,7 @@ storiesOf('UI Components|WorkExperienceList', module)
     }]
 
     return (
-      <WorkExperienceList
+      <WorkExperienceCard
         list={list}
         editEntry={handleEditExperience}
         deleteEntry={handleDeleteExperience}
@@ -78,30 +78,30 @@ storiesOf('UI Components|WorkExperienceList', module)
     )
   })
 
-storiesOf('UI Components|WorkExperienceList/Debug', module)
+storiesOf('UI Components|WorkExperienceCard/Debug', module)
   .add('missing props', () => (
-    <WorkExperienceList />
+    <WorkExperienceCard />
   ))
   .add('without list prop', () => (
-    <WorkExperienceList
+    <WorkExperienceCard
       editEntry={handleEditExperience}
       deleteEntry={handleDeleteExperience}
     />
   ))
   .add('without editEntry prop', () => (
-    <WorkExperienceList
+    <WorkExperienceCard
       list={experiencesFromApiMocked}
       deleteEntry={handleDeleteExperience}
     />
   ))
   .add('without deleteEntry prop', () => (
-    <WorkExperienceList
+    <WorkExperienceCard
       list={experiencesFromApiMocked}
       editEntry={handleEditExperience}
     />
   ))
   .add('without editEntry and deleteEntry props', () => (
-    <WorkExperienceList
+    <WorkExperienceCard
       list={experiencesFromApiMocked}
     />
   ))
@@ -114,7 +114,7 @@ storiesOf('UI Components|WorkExperienceList/Debug', module)
     }]
 
     return (
-      <WorkExperienceList
+      <WorkExperienceCard
         list={list}
         editEntry={handleEditExperience}
         deleteEntry={handleDeleteExperience}
@@ -130,7 +130,7 @@ storiesOf('UI Components|WorkExperienceList/Debug', module)
     }]
 
     return (
-      <WorkExperienceList
+      <WorkExperienceCard
         list={list}
         editEntry={handleEditExperience}
         deleteEntry={handleDeleteExperience}
@@ -145,7 +145,7 @@ storiesOf('UI Components|WorkExperienceList/Debug', module)
     }]
 
     return (
-      <WorkExperienceList
+      <WorkExperienceCard
         list={list}
         editEntry={handleEditExperience}
         deleteEntry={handleDeleteExperience}
@@ -161,7 +161,7 @@ storiesOf('UI Components|WorkExperienceList/Debug', module)
     }]
 
     return (
-      <WorkExperienceList
+      <WorkExperienceCard
         list={list}
         editEntry={handleEditExperience}
         deleteEntry={handleDeleteExperience}
@@ -178,7 +178,7 @@ storiesOf('UI Components|WorkExperienceList/Debug', module)
     }]
 
     return (
-      <WorkExperienceList
+      <WorkExperienceCard
         list={list}
         editEntry={handleEditExperience}
         deleteEntry={handleDeleteExperience}
@@ -195,7 +195,7 @@ storiesOf('UI Components|WorkExperienceList/Debug', module)
     }]
 
     return (
-      <WorkExperienceList
+      <WorkExperienceCard
         list={list}
         editEntry={handleEditExperience}
         deleteEntry={handleDeleteExperience}
@@ -212,7 +212,7 @@ storiesOf('UI Components|WorkExperienceList/Debug', module)
     }]
 
     return (
-      <WorkExperienceList
+      <WorkExperienceCard
         list={list}
         editEntry={handleEditExperience}
         deleteEntry={handleDeleteExperience}
@@ -229,7 +229,7 @@ storiesOf('UI Components|WorkExperienceList/Debug', module)
     }]
 
     return (
-      <WorkExperienceList
+      <WorkExperienceCard
         list={list}
         editEntry={handleEditExperience}
         deleteEntry={handleDeleteExperience}
