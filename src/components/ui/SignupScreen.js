@@ -6,7 +6,8 @@ import React from 'react'
 import Footer from './Footer'
 import Text from './Text'
 
-import { breakpoints } from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
+import typo from '../../styles/typo'
 
 const cmz = require('cmz')
 
@@ -68,11 +69,21 @@ const cx = {
 
   element: cmz(`
     margin: 0 0 16px
-  `)
+  `),
+
+  errorMessage: cmz(
+    typo.baseText,
+    `
+      color: ${theme.typoSubheading}
+      font-size: 16px
+      margin: -16px 0 0
+    `
+  )
 }
 
 type InputGroupProps = {
-  children?: React$Node
+  children?: React$Node,
+  errorMessage?: string
 }
 
 type LayoutProps = {
@@ -104,11 +115,14 @@ const Layout = ({ heading, subheading, children }: LayoutProps) => (
   </div>
 )
 
-const InputGroup = ({ children }: InputGroupProps) => children ? (
+const InputGroup = ({ children, errorMessage }: InputGroupProps) => children ? (
   <div className={cx.group}>
     {React.Children.map(children, (child) => (
       <div className={cx.element}>{child}</div>
     ))}
+    {errorMessage && (
+      <div className={cx.errorMessage}>{errorMessage}</div>
+    )}
   </div>
 ) : null
 
