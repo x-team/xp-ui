@@ -4,7 +4,6 @@ import AttachFiles from './components/ui/AttachFiles'
 import Button from './components/ui/Button'
 import PreviousJobApplications from './components/ui/PreviousJobApplications'
 import ConfirmationBox from './components/ui/ConfirmationBox'
-import CustomSelector from './components/ui/CustomSelector'
 import EmptyState from './components/ui/EmptyState'
 import ErrorBox from './components/ui/ErrorBox'
 import Footer from './components/ui/Footer'
@@ -28,7 +27,6 @@ import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
 import SignupScreen from './components/ui/SignupScreen'
 import Text from './components/ui/Text'
-import Timeframe from './components/ui/Timeframe'
 import TruncatedList from './components/ui/TruncatedList'
 import WelcomeHero from './components/ui/WelcomeHero'
 import WorkExperienceCard from './components/ui/WorkExperienceCard'
@@ -40,7 +38,6 @@ export {
   Button,
   PreviousJobApplications,
   ConfirmationBox,
-  CustomSelector,
   EmptyState,
   ErrorBox,
   Footer,
@@ -64,7 +61,6 @@ export {
   RoadmapHero,
   SignupScreen,
   Text,
-  Timeframe,
   TruncatedList,
   WelcomeHero,
   WorkExperienceCard
