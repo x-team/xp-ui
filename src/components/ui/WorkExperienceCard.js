@@ -1,8 +1,8 @@
 // @flow
 
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo, { typeface } from '../../styles/typo'
 
 const cmz = require('cmz')
@@ -12,13 +12,20 @@ const cx = {
     & {
       background: ${theme.white}
       border: 1px solid ${theme.lineSilver5}
-      box-shadow: 4px 4px 0px ${theme.baseTuna.fade(0.95)}
+      box-shadow: 4px 4px 0 ${theme.baseTuna.fade(0.95)}
       padding: 24px
       margin: 0 0 24px 0
+      cursor: pointer
     }
 
     &:last-child {
       margin: 0
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      &:hover div div + div {
+        opacity: 1
+      }
     }
   `),
 
@@ -35,7 +42,7 @@ const cx = {
 
   at: cmz(`
     font-style: italic
-    margin: 0px 6px
+    margin: 0 6px
   `),
 
   company: cmz(`
@@ -62,11 +69,14 @@ const cx = {
         text-transform: uppercase
         line-height: 18px
         font-size: 13px
-        cursor: pointer
       }
 
       & div:hover {
         text-decoration: underline
+      }
+
+      & div + div {
+        margin: 0 0 0 15px
       }
     `
   ),
@@ -76,33 +86,31 @@ const cx = {
   `),
 
   buttonDelete: cmz(`
-    color: ${theme.typoHeaderAnchor}
-    margin: 0 0 0 15px
+    & {
+      color: ${theme.typoHeaderAnchor}
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        opacity: 0
+        transition: opacity 0.15s ease-in-out
+      }
+    }
   `)
 }
 
-type WorkExperienceCardData = {
-  id: number,
+type Props = {
+  id?: number,
   role?: string,
   company?: string,
   startDate?: Date,
-  endDate?: Date
-}
-
-type Props = {
-  list: Array<WorkExperienceCardData>,
+  endDate?: Date,
   editEntry?: (number) => void,
   deleteEntry?: (number) => void
 }
 
-class WorkExperienceCard extends PureComponent<Props> {
-  static defaultProps = {
-    list: []
-  }
-
-  formatDate = (date: Date): string => {
-    return date && date.toLocaleString('en-us', { year: 'numeric', month: 'long' })
-  }
+class WorkExperienceCard extends Component<Props> {
+  formatDate = (date: Date): string => date.toLocaleString('en-us', { year: 'numeric', month: 'long' })
 
   handleEditEntry = (id: number) => (): void => {
     const { editEntry } = this.props
@@ -115,31 +123,32 @@ class WorkExperienceCard extends PureComponent<Props> {
   }
 
   render () {
-    const { list, editEntry, deleteEntry } = this.props
+    const { id, role, company, startDate, endDate, editEntry, deleteEntry } = this.props
 
     return (
-      list
-        ? list.map((experience) => {
-          const { id, role, company, startDate, endDate } = experience
-
-          return (
-            <div className={cx.wrapper} key={id}>
-              <div className={cx.label}>
+      (id && (role || company || startDate))
+        ? <div className={cx.wrapper}>
+          {
+            (role || company)
+              ? <div className={cx.label}>
                 {role && <span className={cx.role}>{role}</span>}
                 {(role && company) && <span className={cx.at}>at</span>}
                 {company && <span className={cx.company}>{company}</span>}
               </div>
-              {startDate && <div className={cx.dates}>{this.formatDate(startDate)} - {endDate ? this.formatDate(endDate) : 'Current'}</div>}
-              {
-                (editEntry && deleteEntry) &&
-                <div className={cx.buttons}>
-                  <div className={cx.buttonEdit} onClick={this.handleEditEntry(id)}>Edit Entry</div>
-                  <div className={cx.buttonDelete} onClick={this.handleDeleteEntry(id)}>Delete</div>
-                </div>
-              }
-            </div>
-          )
-        })
+              : null
+          }
+
+          {startDate && <div className={cx.dates}>{this.formatDate(startDate)} - {endDate ? this.formatDate(endDate) : 'Current'}</div>}
+
+          {
+            (editEntry && deleteEntry)
+              ? <div className={cx.buttons}>
+                <div className={cx.buttonEdit} onClick={this.handleEditEntry(id)}>Edit Entry</div>
+                <div className={cx.buttonDelete} onClick={this.handleDeleteEntry(id)}>Delete</div>
+              </div>
+              : null
+          }
+        </div>
         : null
     )
   }
