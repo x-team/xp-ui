@@ -17,7 +17,7 @@ const handleDeleteExperience = cardId => {
 
 const experience = {
   id: 5,
-  role: 'Senior Cheff',
+  role: 'Senior Chef',
   company: 'Pizza Hut',
   startDate: new Date('2013-09-06'),
   endDate: new Date('2014-02-15')
@@ -46,7 +46,7 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
   ))
   .add('without id', () => {
     const experience = {
-      role: 'Senior Cheff',
+      role: 'Senior Chef',
       company: 'Pizza Hut',
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
@@ -79,7 +79,7 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
   .add('without company', () => {
     const experience = {
       id: 5,
-      role: 'Senior Cheff',
+      role: 'Senior Chef',
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
     }
@@ -110,7 +110,7 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
   .add('without startDate', () => {
     const experience = {
       id: 5,
-      role: 'Senior Cheff',
+      role: 'Senior Chef',
       company: 'Pizza Hut'
     }
 
@@ -125,7 +125,7 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
   .add('without endDate', () => {
     const experience = {
       id: 5,
-      role: 'Senior Cheff',
+      role: 'Senior Chef',
       company: 'Pizza Hut',
       startDate: new Date('2013-09-06')
     }
@@ -141,7 +141,7 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
   .add('without startDate and endDate', () => {
     const experience = {
       id: 5,
-      role: 'Senior Cheff',
+      role: 'Senior Chef',
       company: 'Pizza Hut'
     }
 
@@ -173,7 +173,7 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
   .add('with endDate', () => {
     const experience = {
       id: 5,
-      role: 'Senior Cheff',
+      role: 'Senior Chef',
       company: 'Pizza Hut',
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
@@ -190,7 +190,7 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
   .add('with long role name', () => {
     const experience = {
       id: 5,
-      role: 'Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff',
+      role: 'Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef',
       company: 'Pizza Hut',
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
@@ -207,7 +207,7 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
   .add('with long company name', () => {
     const experience = {
       id: 5,
-      role: 'Senior Cheff',
+      role: 'Senior Chef',
       company: 'Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut',
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
@@ -224,7 +224,7 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
   .add('with long role and company name', () => {
     const experience = {
       id: 5,
-      role: 'Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff Senior Cheff',
+      role: 'Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef Senior Chef',
       company: 'Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut Pizza Hut',
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
