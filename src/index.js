@@ -171,10 +171,7 @@ export {
   TwoColumnsLayout,
   VideoPlayer,
   WelcomeHero,
-<<<<<<< HEAD
   WorkExperienceCard,
-=======
   WorkExperience,
->>>>>>> c025651... Create work experience presenter component (#531)
   XIcon
 }
