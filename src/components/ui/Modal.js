@@ -11,6 +11,7 @@ import type { Element } from 'react'
 const cmz = require('cmz')
 
 type Props = {
+  id?: string,
   onClose?: Function,
   children?: Element<*>|string,
   theme?: 'default' | 'white'
@@ -94,9 +95,10 @@ class Modal extends PureComponent<Props, void> {
   }
 
   render () {
-    const { children, onClose, theme = 'default' } = this.props
+    const { id, children, onClose, theme = 'default' } = this.props
     return children ? (
       <div
+        id={id}
         className={[cx.modal, cx.theme[theme].modal].join(' ')}
         onClick={this.handleClose}
         onKeyDown={this.handleKeyPress}

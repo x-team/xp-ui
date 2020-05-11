@@ -89,10 +89,14 @@ const cx = {
   `)
 }
 
-const ConfirmationBox = ({ title = 'Are you sure?', content, action, actionLabel, dismissAction }: Props) => (
+const ConfirmationBox = ({ title, content, action, actionLabel, dismissAction }: Props) => (
   <div className={cx.wrapper}>
-    <h2 className={cx.title}>{title}</h2>
-    <p className={cx.content}>{content}</p>
+    {title && (
+      <h2 className={cx.title}>{title}</h2>
+    )}
+    {content && (
+      <p className={cx.content}>{content}</p>
+    )}
     {action && (
       <Button
         onClick={action}

@@ -103,6 +103,19 @@ storiesOf('Core Components|Modal/Debug', module)
       </Modal>
     </Body>
   ))
+  .add('multiple modals', () => (
+    <Body>
+      <StoryModal>
+        {sampleModalContent}
+      </StoryModal>
+      <StoryModal>
+        {sampleModalContent}
+      </StoryModal>
+      <StoryModal>
+        {sampleModalContent}
+      </StoryModal>
+    </Body>
+  ))
   .add('modal with content taller than viewport', () => (
     <Body>
       <StoryModal>
