@@ -29,6 +29,7 @@ import SignupScreen from './components/ui/SignupScreen'
 import Text from './components/ui/Text'
 import TruncatedList from './components/ui/TruncatedList'
 import WelcomeHero from './components/ui/WelcomeHero'
+import WorkExperienceCard from './components/ui/WorkExperienceCard'
 
 export {
   AccountConfirmation,
@@ -61,5 +62,6 @@ export {
   SignupScreen,
   Text,
   TruncatedList,
-  WelcomeHero
+  WelcomeHero,
+  WorkExperienceCard
 }
