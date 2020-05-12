@@ -25,6 +25,7 @@ import Loader from './components/ui/Loader'
 import LocateYourProfile from './components/ui/LocateYourProfile'
 import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
+import SignupForm from './components/ui/SignupForm'
 import SignupScreen from './components/ui/SignupScreen'
 import Text from './components/ui/Text'
 import TruncatedList from './components/ui/TruncatedList'
@@ -59,6 +60,7 @@ export {
   LocateYourProfile,
   Modal,
   RoadmapHero,
+  SignupForm,
   SignupScreen,
   Text,
   TruncatedList,

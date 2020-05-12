@@ -4,9 +4,6 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import SignupScreen from './SignupScreen'
-import InputField from '../forms/InputField'
-import Button from './Button'
-import Label from './Label'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -17,77 +14,29 @@ const Body = ({ children }) => (
   </div>
 )
 
-const SampleLabel = () => (
-  <Label
-    headline='Lorem ipsum dolor sit amet'
-    description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
-  />
-)
-
 storiesOf('Screens and Layouts|SignupScreen', module)
   .add('basic usage', () => (
     <Body>
-      <SignupScreen.Layout
+      <SignupScreen
         heading='What have you done recently?'
         subheading='Tell us a bit about your recent work experience.'
       >
-        <SignupScreen.InputGroup>
-          <SampleLabel />
-          <InputField placeholder='Input field' />
-        </SignupScreen.InputGroup>
-        <SignupScreen.InputGroup>
-          <SampleLabel />
-          <InputField placeholder='Input field' />
-        </SignupScreen.InputGroup>
-        <SignupScreen.InputGroup>
-          <SampleLabel />
-          <InputField placeholder='Input field' />
-        </SignupScreen.InputGroup>
-        <SignupScreen.InputGroup>
-          <SampleLabel />
-          <InputField placeholder='Input field' />
-        </SignupScreen.InputGroup>
-        <SignupScreen.InputGroup>
-          <SampleLabel />
-          <InputField placeholder='Input field' />
-        </SignupScreen.InputGroup>
-        <Button block wide size='large'>Continue »</Button>
-      </SignupScreen.Layout>
+        lorem ipsum
+      </SignupScreen>
     </Body>
   ))
 
 storiesOf('Screens and Layouts|SignupScreen/Debug', module)
-  .add('without headings', () => (
-    <Body>
-      <SignupScreen.Layout>
-        <SignupScreen.InputGroup>
-          <SampleLabel />
-          <InputField placeholder='Input field' />
-        </SignupScreen.InputGroup>
-      </SignupScreen.Layout>
-    </Body>
-  ))
-  .add('with error message', () => (
-    <Body>
-      <SignupScreen.Layout>
-        <SignupScreen.InputGroup
-          errorMessage='This has an error'
-        >
-          <SampleLabel />
-          <InputField placeholder='Input field' />
-        </SignupScreen.InputGroup>
-        <SignupScreen.InputGroup
-          errorMessage='This has an error'
-        >
-          <SampleLabel />
-          <InputField placeholder='Input field' />
-        </SignupScreen.InputGroup>
-      </SignupScreen.Layout>
-    </Body>
-  ))
-  .add('missing props for Layout', () => (
-    <SignupScreen.Layout />
-  ))
-  .add('missing props InputGroup', () => (
-    <SignupScreen.InputGroup />
+  // .add('without headings', () => (
+  //   <Body>
+  //     <SignupScreen.Layout>
+  //       <SignupScreen.InputGroup>
+  //         <SampleLabel />
+  //         <InputField placeholder='Input field' />
+  //       </SignupScreen.InputGroup>
+  //     </SignupScreen.Layout>
+  //   </Body>
+  // ))
+  .add('missing props', () => (
+    <SignupScreen />
   ))

@@ -15,7 +15,6 @@ const cx = {
       box-shadow: 4px 4px 0 ${theme.baseTuna.fade(0.95)}
       padding: 24px
       margin: 0 0 24px 0
-      cursor: pointer
     }
 
     &:last-child {
@@ -138,7 +137,7 @@ class WorkExperienceCard extends Component<Props> {
               : null
           }
 
-          {startDate && <div className={cx.dates}>{this.formatDate(startDate)} - {endDate ? this.formatDate(endDate) : 'Current'}</div>}
+          {startDate && <div className={cx.dates}>{this.formatDate(startDate)} - {endDate ? this.formatDate(endDate) : 'Present'}</div>}
 
           {
             (editEntry && deleteEntry)
