@@ -1,5 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import cmz from 'cmz'
+
+import typo from '../../../styles/typo'
 
 import WorkExperiencePresenter from './WorkExperienceEntryPresenter'
 
@@ -64,14 +67,22 @@ const noHighlights = {
   skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
 }
 
+const cx = { wrap: cmz(typo.regularText) }
+
+function withWrapper (component) {
+  return <div className={cx.wrap}>
+    {component}
+  </div>
+}
+
 storiesOf('UI Components|WorkExperience/Presenter', module)
-  .add('basic usage', () => <WorkExperiencePresenter experience={basicExperience} />)
-  .add('current job', () => <WorkExperiencePresenter experience={noEndDate} />)
-  .add('no skills provided', () => <WorkExperiencePresenter experience={noSkills} />)
+  .add('basic usage', () => withWrapper(<WorkExperiencePresenter experience={basicExperience} />))
+  .add('current job', () => withWrapper(<WorkExperiencePresenter experience={noEndDate} />))
+  .add('no skills provided', () => withWrapper(<WorkExperiencePresenter experience={noSkills} />))
 
 storiesOf('UI Components|WorkExperience/Presenter/Debug', module)
-  .add('missing experience', () => <WorkExperiencePresenter />)
-  .add('missing role', () => <WorkExperiencePresenter experience={noRole} />)
-  .add('missing company', () => <WorkExperiencePresenter experience={noCompany} />)
-  .add('missing start date', () => <WorkExperiencePresenter experience={noStartDate} />)
-  .add('missing highlights', () => <WorkExperiencePresenter experience={noHighlights} />)
+  .add('missing experience', () => withWrapper(<WorkExperiencePresenter />))
+  .add('missing role', () => withWrapper(<WorkExperiencePresenter experience={noRole} />))
+  .add('missing company', () => withWrapper(<WorkExperiencePresenter experience={noCompany} />))
+  .add('missing start date', () => withWrapper(<WorkExperiencePresenter experience={noStartDate} />))
+  .add('missing highlights', () => withWrapper(<WorkExperiencePresenter experience={noHighlights} />))
