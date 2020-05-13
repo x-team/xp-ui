@@ -6,40 +6,35 @@ import cmz from 'cmz'
 
 import JobSkills from '../JobSkills'
 import theme from '../../../styles/theme'
-import typo from '../../../styles/typo'
 
 import type { Experience } from '../../../utils/types'
-type Props = { experience: Experience }
+type Props = {
+  experience: Experience,
+  headerDecoration: any
+}
 
 const cx = {
   header: cmz(`
-    font-weight: normal
-    font-size: 18px
-    color: ${theme.baseDark}
+    & {
+      font-weight: normal
+      color: ${theme.baseDark}
+    }
+
+    & * {
+      margin: 0 0.1em
+    }
   `),
 
-  at: cmz(
-    typo.regularText,
-    `
-      & {
-        font-weight: normal
-        color: ${theme.baseGray}
-      }
-    `
-  ),
+  at: cmz(`
+    font-weight: normal
+    color: ${theme.baseGray}
+  `),
 
-  date: cmz(
-    typo.regularText,
-    `
-      & {
-        color: ${theme.baseGray}
-        margin-top: 0.4em
-        margin-bottom: 0.6em
-      }
-    `
-  ),
-
-  highlights: cmz(typo.regularText)
+  date: cmz(`
+    color: ${theme.baseGray}
+    margin-top: 0.4em
+    margin-bottom: 0.6em
+  `)
 }
 
 function formatDateMonthYear (date) {
@@ -71,18 +66,20 @@ function WorkExperienceEntryPresenter (props: Props) {
       endDate,
       highlights,
       skills
-    }
+    },
+    headerDecoration
   } = props
 
   return <div>
     <div className={cx.header}>
       <strong>{role || '[No role given]'}</strong> <em className={cx.at}>at</em> <strong>{company || '[No company given]'}</strong>
+      {headerDecoration}
     </div>
     <div className={cx.date}>
       {renderDates(startDate, endDate)}
     </div>
     <JobSkills skills={(skills || []).join(',')} />
-    <Markdown children={highlights || ''} className={cx.highlights} />
+    <Markdown children={highlights || ''} />
   </div>
 }
 

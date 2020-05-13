@@ -13,7 +13,6 @@ import type { Experience, SkillOption } from '../../../utils/types'
 import WorkExperienceEntryPresenter from './WorkExperienceEntryPresenter'
 import WorkExperienceEntryEditor from './WorkExperienceEntryEditor'
 
-import theme from '../../../styles/theme'
 import typo from '../../../styles/typo'
 
 export type Props = {
@@ -41,21 +40,9 @@ const cx = {
   root: cmz(typo.regularText),
 
   experienceWrapper: cmz(`
-    margin-bottom: 0.8em
+    margin-bottom: 1em
     padding-top: 0.4em
     padding-bottom: 0.6em
-    border-bottom: 1px solid ${theme.baseSilver}
-  `),
-
-  presenterWrapper: cmz(`
-    display: flex
-    flex-direction: row
-  `),
-
-  editGutter: cmz(`
-    padding-top: 0.2em
-    width: 2em
-    overflow: hide
   `)
 }
 
@@ -66,12 +53,8 @@ const renderEditor = ({ value: { experience, skills }, onValueChange }: EditorPr
 )
 
 const renderPresenter = ({ value: { experience }, activateEditingMode, isHover }: PresenterProps) => (
-  <div className={cx.presenterWrapper}>
-    <div className={cx.editGutter}>
-      {isHover && <PencilButton color='monochrome' onClick={activateEditingMode} />}
-    </div>
-    <WorkExperienceEntryPresenter experience={experience} />
-  </div>
+  <WorkExperienceEntryPresenter experience={experience}
+    headerDecoration={isHover && <PencilButton color='monochrome' onClick={activateEditingMode} />} />
 )
 
 class WorkExperience extends Component<Props, State> {
