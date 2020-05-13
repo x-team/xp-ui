@@ -5,6 +5,7 @@ import React from 'react'
 
 import Footer from './Footer'
 import Text from './Text'
+import Loader from './Loader'
 
 import { breakpoints } from '../../styles/theme'
 
@@ -51,17 +52,30 @@ const cx = {
   `),
 
   heading: cmz(`
-    margin: 32px 0 0
+    margin: 32px 0
+  `),
+
+  loading: cmz(`
+    margin: 64px 0 0
+    display: flex
+    justify-content: center
+    flex: 1
+    align-items: center
+  `),
+
+  content: cmz(`
+    flex: 1
   `)
 }
 
 type Props = {
   heading?: string,
   subheading?: string,
+  isLoading?: boolean,
   children?: React$Node
 }
 
-const SignupScreen = ({ heading, subheading, children }: Props) => (
+const SignupScreen = ({ heading, subheading, isLoading, children }: Props) => (
   <div className={cx.layout}>
     <div className={cx.wrapper}>
       {(heading || subheading) && (
@@ -74,7 +88,15 @@ const SignupScreen = ({ heading, subheading, children }: Props) => (
           />
         </div>
       )}
-      {children}
+      {isLoading ? (
+        <div className={cx.loading}>
+          <Loader />
+        </div>
+      ) : (
+        <div className={cx.content}>
+          {children}
+        </div>
+      )}
       <Footer
         copyright={`${new Date().getFullYear()} © All rights reserved. X-Company Pty Ltd.`}
       />

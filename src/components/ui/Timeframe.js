@@ -153,29 +153,29 @@ class Timeframe extends PureComponent<Props, State> {
     const endMonth = endDate ? endDate.getUTCMonth() : undefined
     const endYear = endDate ? endDate.getUTCFullYear() : undefined
 
-    this.setState({
+    this.setState(() => ({
       startMonth: this.getOptionValue(MONTHS, startMonth),
       startYear: this.getOptionValue(YEARS, startYear),
       endMonth: this.getOptionValue(MONTHS, endMonth),
       endYear: this.getOptionValue(YEARS, endYear),
       noEndDate
-    }, this.validateValues)
+    }), this.validateValues)
   }
 
   updateFieldValue = (field: string, options: Array<Option> = []) => ({ value }: { value: string }) => {
-    this.setState({
+    this.setState(() => ({
       [field]: this.getOptionValue(options, value)
-    }, this.validateValues)
+    }), this.validateValues)
   }
 
   validateValues = () => {
     const { startMonth, startYear, endMonth, endYear } = this.state
-    this.setState({
+    this.setState(() => ({
       startMonth: this.getOptionValue(MONTHS, startMonth && startMonth.value),
       startYear: this.getOptionValue(YEARS, startYear && startYear.value),
       endMonth: this.getOptionValue(this.getValidEndMonthsList(), endMonth && endMonth.value),
       endYear: this.getOptionValue(this.getValidEndYearsList(), endYear && endYear.value)
-    }, this.handleOnChange)
+    }), this.handleOnChange)
   }
 
   getYearMonthString = (date: ?Date) =>
@@ -220,11 +220,11 @@ class Timeframe extends PureComponent<Props, State> {
 
   toggleNoEndDate = () => {
     const { endMonth, endYear, noEndDate } = this.state
-    this.setState({
+    this.setState(() => ({
       endMonth: !noEndDate ? undefined : endMonth,
       endYear: !noEndDate ? undefined : endYear,
       noEndDate: !noEndDate
-    }, this.validateValues)
+    }), this.validateValues)
   }
 
   getValidEndMonthsList = () => {

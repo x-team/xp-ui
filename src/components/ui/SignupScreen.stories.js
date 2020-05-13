@@ -4,6 +4,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import SignupScreen from './SignupScreen'
+import { SampleSignupForm } from './SignupForm.stories'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -21,22 +22,30 @@ storiesOf('Screens and Layouts|SignupScreen', module)
         heading='What have you done recently?'
         subheading='Tell us a bit about your recent work experience.'
       >
-        lorem ipsum
+        <SampleSignupForm />
       </SignupScreen>
     </Body>
   ))
 
 storiesOf('Screens and Layouts|SignupScreen/Debug', module)
-  // .add('without headings', () => (
-  //   <Body>
-  //     <SignupScreen.Layout>
-  //       <SignupScreen.InputGroup>
-  //         <SampleLabel />
-  //         <InputField placeholder='Input field' />
-  //       </SignupScreen.InputGroup>
-  //     </SignupScreen.Layout>
-  //   </Body>
-  // ))
+  .add('loading state', () => (
+    <Body>
+      <SignupScreen
+        isLoading
+        heading='What have you done recently?'
+        subheading='Tell us a bit about your recent work experience.'
+      >
+        <SampleSignupForm />
+      </SignupScreen>
+    </Body>
+  ))
+  .add('without headings', () => (
+    <Body>
+      <SignupScreen>
+        <SampleSignupForm />
+      </SignupScreen>
+    </Body>
+  ))
   .add('missing props', () => (
     <SignupScreen />
   ))

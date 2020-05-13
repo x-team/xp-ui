@@ -35,11 +35,11 @@ const cx = {
   ),
 
   layoutErrorMessage: cmz(`
-    margin: 48px 0
+    margin: 0 0 48px
   `),
 
   content: cmz(`
-    margin: 48px 0 0
+    margin: 0
   `),
 
   group: cmz(`

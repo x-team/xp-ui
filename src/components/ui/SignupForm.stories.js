@@ -27,7 +27,7 @@ const SampleLabel = () => (
   />
 )
 
-const SampleSignupForm = (props) => (
+export const SampleSignupForm = (props: any) => (
   <SignupForm.Layout {...props}>
     <SignupForm.InputGroup>
       <SampleLabel />
@@ -79,7 +79,11 @@ storiesOf('UI Components|SignupForm/Use Cases', module)
             theme='white'
             onClose={() => setState({ isOpen: false })}
           >
-            <SignupForm.Layout title='Work Experience' hasPadding>
+            <SignupForm.Layout
+              title='Work Experience'
+              hasPadding
+              errorMessage='Something went wrong.'
+            >
               <SignupForm.InputGroup>
                 <SampleLabel />
                 <InputField placeholder='Input field' />
@@ -115,38 +119,12 @@ storiesOf('UI Components|SignupForm/Debug', module)
         heading='What have you done recently?'
         subheading='Tell us a bit about your recent work experience.'
       >
-        <SampleSignupForm errorMessage='Something went wrong.' />
+        <SampleSignupForm
+          errorMessage='Something went wrong.'
+        />
       </SignupScreen>
     </Body>
   ))
-  // .add('without headings', () => (
-  //   <Body>
-  //     <SignupScreen>
-  //       <SignupForm.InputGroup>
-  //         <SampleLabel />
-  //         <InputField placeholder='Input field' />
-  //       </SignupForm.InputGroup>
-  //     </SignupScreen>
-  //   </Body>
-  // ))
-  // .add('with error message', () => (
-  //   <Body>
-  //     <SignupScreen>
-  //       <SignupForm.InputGroup
-  //         errorMessage='This has an error'
-  //       >
-  //         <SampleLabel />
-  //         <InputField placeholder='Input field' />
-  //       </SignupForm.InputGroup>
-  //       <SignupForm.InputGroup
-  //         errorMessage='This has an error'
-  //       >
-  //         <SampleLabel />
-  //         <InputField placeholder='Input field' />
-  //       </SignupForm.InputGroup>
-  //     </SignupScreen>
-  //   </Body>
-  // ))
   .add('missing props on Layout', () => (
     <SignupForm.Layout />
   ))
