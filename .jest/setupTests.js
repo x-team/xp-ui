@@ -1,7 +1,6 @@
 // @flow
 
 import { JSDOM } from 'jsdom'
-import MockDate from 'mockdate'
 
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>')
 const { window } = jsdom
@@ -12,9 +11,6 @@ function copyProps (src: Object, target: Object) {
     ...Object.getOwnPropertyDescriptors(target)
   })
 }
-
-// Mock date for tests
-MockDate.set('2019-02-02T00:00:00.000Z')
 
 window.matchMedia = () => ({})
 global.navigator = {
@@ -55,5 +51,3 @@ jest.mock('faker', () => (
 ))
 
 jest.mock('uuid/v4', () => jest.fn(() => '00000000-0000-0000-0000-000000000000'))
-
-jest.mock('date-fns/format', () => jest.fn(() => '11-11-2019'))
