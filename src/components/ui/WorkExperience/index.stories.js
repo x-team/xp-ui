@@ -31,6 +31,24 @@ const experiences = [
     startDate: new Date('2010-04-13'),
     highlights: `Still here. Will be here for all eternity.`,
     skills: ['Node', 'React', 'C++', 'Pascal', 'COBOL']
+  },
+  {
+    id: 2,
+    role: 'Additional Role',
+    company: 'X-Team',
+    startDate: new Date('2010-04-11'),
+    endDate: new Date('2010-09-13'),
+    highlights: `This is the last default-visible item.`,
+    skills: ['Node', 'COBOL']
+  },
+  {
+    id: 3,
+    role: 'Role #4',
+    company: 'X-Team',
+    startDate: new Date('2006-04-11'),
+    endDate: new Date('2009-09-13'),
+    highlights: `This entry should be hidden by default.`,
+    skills: ['Node', 'COBOL']
   }
 ]
 
