@@ -186,9 +186,9 @@ type Props = {
 }
 
 const WelcomeHero = ({ heading, videoUrl, onDismiss, children }: Props) => heading || children ? (
-  <div className={cx.wrapper}>
+  <div className={cx.wrapper} data-testid='xpui-welcome-hero-wrapper'>
     <div className={cx.container}>
-      <div className={cx.content}>
+      <div className={cx.content} data-testid='xpui-welcome-hero-content'>
         <Text
           heading={heading}
           headingClass={cx.heading}
