@@ -14,7 +14,6 @@ const cx = {
       border: 1px solid ${theme.lineSilver5}
       box-shadow: 4px 4px 0 ${theme.baseTuna.fade(0.95)}
       padding: 24px
-      margin: 0 0 24px 0
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {

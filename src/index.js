@@ -4,6 +4,7 @@ import AccountConfirmation from './components/ui/AccountConfirmation'
 import ActivityBar from './components/ui/ActivityBar'
 import ActivityLog from './components/ui/ActivityLog'
 import ActivityLogsDisplay from './components/ui/ActivityLogsDisplay'
+import AddMoreButton from './components/ui/AddMoreButton'
 import AdminScreen from './components/ui/AdminScreen'
 import ApplicantBadge from './components/ui/ApplicantBadge'
 import ApplicantGrid from './components/ui/ApplicantGrid'
@@ -90,6 +91,7 @@ export {
   ActivityBar,
   ActivityLog,
   ActivityLogsDisplay,
+  AddMoreButton,
   AdminScreen,
   ApplicantBadge,
   ApplicantGrid,

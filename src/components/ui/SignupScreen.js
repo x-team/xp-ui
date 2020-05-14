@@ -56,7 +56,7 @@ const cx = {
   `),
 
   loading: cmz(`
-    margin: 64px 0 0
+    margin: 32px 0 0
     display: flex
     justify-content: center
     flex: 1
@@ -64,7 +64,24 @@ const cx = {
   `),
 
   content: cmz(`
-    flex: 1
+    & {
+      width: 500px
+      max-width: 100%
+      margin: 0 auto
+      flex: 1
+    }
+
+    & > * {
+      margin: 24px 0
+    }
+
+    & > :first-child {
+      margin: 0 0 24px 0
+    }
+
+    & > :last-child {
+      margin: 24px 0 0 0
+    }
   `)
 }
 

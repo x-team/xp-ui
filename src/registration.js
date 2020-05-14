@@ -1,4 +1,5 @@
 import AccountConfirmation from './components/ui/AccountConfirmation'
+import AddMoreButton from './components/ui/AddMoreButton'
 import ApplicantScreen from './components/ui/ApplicantScreen'
 import AttachFiles from './components/ui/AttachFiles'
 import Button from './components/ui/Button'
@@ -34,6 +35,7 @@ import WorkExperienceCard from './components/ui/WorkExperienceCard'
 
 export {
   AccountConfirmation,
+  AddMoreButton,
   ApplicantScreen,
   AttachFiles,
   Button,
