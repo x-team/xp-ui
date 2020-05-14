@@ -91,14 +91,14 @@ const JobApplicationCard = ({
   onWithdraw
 }: Props) => {
   const renderApplyCard = () => (
-    <Button wide disabled={isSaving} onClick={onApply}>
+    <Button wide disabled={isSaving} onClick={onApply} data-testid='xpui-jobApplicationCard-apply'>
       <span className={cx.button}>Apply For This Position</span>
     </Button>
   )
 
   const renderWithdrawCard = () => (
     <Fragment>
-      <Button wide color='monochrome' disabled={isSaving} onClick={onWithdraw}>
+      <Button wide color='monochrome' disabled={isSaving} onClick={onWithdraw} data-testid='xpui-jobApplicationCard-withdraw'>
         <span className={cx.button}>Withdraw Application</span>
       </Button>
       {message && (
