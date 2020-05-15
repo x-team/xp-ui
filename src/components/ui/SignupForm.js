@@ -5,7 +5,7 @@ import React from 'react'
 
 import ErrorBox from './ErrorBox'
 
-import theme from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 const cmz = require('cmz')
@@ -19,7 +19,18 @@ const cx = {
   `),
 
   padded: cmz(`
-    padding: 48px 122px
+    & {
+      width: 524px
+      padding: 48px 12px
+      box-sizing: border-box
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        width: 744px
+        padding: 48px 122px
+      }
+    }
   `),
 
   title: cmz(
@@ -35,7 +46,15 @@ const cx = {
   ),
 
   layoutErrorMessage: cmz(`
-    margin: 0 0 48px
+    & {
+      margin: 0 0 24px
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        margin: 0 0 48px
+      }
+    }
   `),
 
   content: cmz(`
