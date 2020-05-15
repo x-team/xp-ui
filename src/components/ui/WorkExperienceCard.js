@@ -138,7 +138,7 @@ class WorkExperienceCard extends Component<Props> {
               : null
           }
 
-          {startDate && <div className={cx.dates}>{this.formatDate(startDate)} - {endDate ? this.formatDate(endDate) : 'Current'}</div>}
+          {startDate && <div className={cx.dates}>{this.formatDate(startDate)} - {endDate ? this.formatDate(endDate) : 'Present'}</div>}
 
           {
             (editEntry && deleteEntry)
