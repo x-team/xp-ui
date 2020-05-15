@@ -28,6 +28,10 @@ const cx = {
       max-width: calc(500px - ${WRAPPER_PADDING_MOBILE} * 2)
     }
 
+    & > :first-child {
+      margin-top: 0
+    }
+
     @media screen and (min-width: ${breakpoints.sm}) {
       & {
         padding: ${WRAPPER_PADDING}
@@ -104,7 +108,6 @@ const ConfirmationBox = ({ title, content, action, actionLabel, dismissAction }:
         {actionLabel}
       </Button>
     )}
-
     {dismissAction && (
       <Button
         pseudolink
