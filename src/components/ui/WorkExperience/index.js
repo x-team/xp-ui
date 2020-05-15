@@ -123,7 +123,7 @@ class WorkExperience extends Component<Props, State> {
         </div>
       }
 
-      <div class={cx.buttons}>
+      <div className={cx.buttons}>
         {experiences && experiences.length > visibleExperiences.length &&
           <Button wide outlined color='silver' onClick={this.showAllExperience}>View More...</Button>
         }
