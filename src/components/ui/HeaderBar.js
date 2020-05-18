@@ -286,7 +286,7 @@ class HeaderBar extends PureComponent<Props, State> {
             <div className={cx.logo}>
               {xTeamBrand(78, 32, theme.typoHeading)}
             </div>
-            <nav className={[cx.nav, expanded ? cx.expandedNav : ''].join(' ')} data-testid='xpui-headerbar-nav'>
+            <nav className={[cx.nav, expanded ? cx.expandedNav : ''].join(' ')} data-testid='xpui-headerBar-nav'>
               <ul className={cx.menu}>
                 {this.renderLinks()}
               </ul>
