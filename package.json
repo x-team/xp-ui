@@ -10,7 +10,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
     "jest": "jest --roots=src",
     "start": "start-storybook -p 9001 -c .storybook -s public",
     "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
@@ -18,7 +18,6 @@
     "flow": "flow check src",
     "lint": "standard \"src/**/*.js\" \".jest/**/*.js\" \"jest.config.js\" \"__mocks__/**/*.js\" | snazzy",
     "lint-fix": "standard \"src/**/*.js\" \".jest/**/*.js\" \"jest.config.js\" \"__mocks__/**/*.js\" --fix | snazzy",
-    "prepublishOnly": "npm run build",
     "test": "npm run lint && npm run flow",
     "storybook:build": "build-storybook -c .storybook -o .storybook-static -s public"
   },
