@@ -29,6 +29,8 @@ npm publish --access public
 Additionally, we should ensure deploying recent `develop` changes tagged slightly different. For that, once we rebased that onto `master` (it's part of the [Production release process](https://x-team-internal.atlassian.net/wiki/spaces/XD/pages/340426777/To+Production)), update the `version` field of `package.json` to read `[MASTER_VERSION]-dev` and then run the following commands:
 
 ```sh
+git add .
+git commit -m "Dev version deploy"
 git push && git push --tags
 npm publish --access public
 ```
