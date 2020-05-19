@@ -1,6 +1,6 @@
 {
   "name": "@x-team/xp-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "UI component library for the XP platform.",
   "main": "lib/all.js",
   "files": [
