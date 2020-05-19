@@ -2,13 +2,12 @@
 /* global React$Node */
 
 import React from 'react'
+import cmz from 'cmz'
 
 import ErrorBox from './ErrorBox'
 
 import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
-
-const cmz = require('cmz')
 
 const cx = {
   form: cmz(`

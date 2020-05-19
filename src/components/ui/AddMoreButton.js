@@ -1,12 +1,11 @@
 // @flow
 
 import React from 'react'
+import cmz from 'cmz'
 
 import SvgIcon from './SvgIcon'
 
 import typo from '../../styles/typo'
-
-const cmz = require('cmz')
 
 const cx = {
   wrapper: cmz(`

@@ -1,13 +1,12 @@
 // @flow
 
 import React from 'react'
+import cmz from 'cmz'
 
 import Button from './Button'
 
 import theme, { breakpoints } from '../../styles/theme'
 import { typeface } from '../../styles/typo'
-
-const cmz = require('cmz')
 
 type Props = {
   title?: string,
@@ -101,7 +100,7 @@ const ConfirmationBox = ({ title, content, action, actionLabel, dismissAction }:
     {content && (
       <p className={cx.content}>{content}</p>
     )}
-    {action && (
+    {action && actionLabel && (
       <Button
         onClick={action}
       >

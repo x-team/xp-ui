@@ -2,14 +2,13 @@
 /* global React$Node */
 
 import React from 'react'
+import cmz from 'cmz'
 
 import Footer from './Footer'
 import Text from './Text'
 import Loader from './Loader'
 
 import { breakpoints } from '../../styles/theme'
-
-const cmz = require('cmz')
 
 const GAP = '32px'
 const MOBILE_GAP = '12px'
