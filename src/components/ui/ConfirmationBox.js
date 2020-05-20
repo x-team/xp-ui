@@ -76,15 +76,18 @@ const cx = {
     }
   `),
 
-  dismissButton: cmz(`
-    & {
-      color: ${theme.typoLabel}
-      margin-left: 10px
+  buttons: cmz(`
+    & > * {
+      margin: 0 0 0 10px
     }
 
-    &:only-child {
+    & > :first-child {
       margin: 0
     }
+  `),
+
+  dismissButton: cmz(`
+    color: ${theme.typoLabel}
   `),
 
   dismissButtonLabel: cmz(`
@@ -100,24 +103,26 @@ const ConfirmationBox = ({ title, content, action, actionLabel, dismissAction }:
     {content && (
       <p className={cx.content}>{content}</p>
     )}
-    {action && actionLabel && (
-      <Button
-        onClick={action}
-      >
-        {actionLabel}
-      </Button>
-    )}
-    {dismissAction && (
-      <Button
-        pseudolink
-        className={cx.dismissButton}
-        onClick={dismissAction}
-      >
-        <span className={cx.dismissButtonLabel}>
-          Dismiss
-        </span>
-      </Button>
-    )}
+    <div className={cx.buttons}>
+      {action && actionLabel && (
+        <Button
+          onClick={action}
+        >
+          {actionLabel}
+        </Button>
+      )}
+      {dismissAction && (
+        <Button
+          pseudolink
+          className={cx.dismissButton}
+          onClick={dismissAction}
+        >
+          <span className={cx.dismissButtonLabel}>
+            Dismiss
+          </span>
+        </Button>
+      )}
+    </div>
   </div>
 )
 

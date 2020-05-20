@@ -92,7 +92,7 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
       title={text('Title', faker.lorem.sentence())}
       content={text('Content', faker.lorem.paragraph())}
       action={action('CTA Action: Withdraw application')}
-      actionLabel={text('Action', faker.lorem.sentence())}
+      actionLabel={text('Action', faker.lorem.words())}
       dismissAction={action('Dismiss action')}
     />
   ))
@@ -101,7 +101,7 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
       title={text('Title', faker.lorem.sentence())}
       content={text('Content', faker.lorem.paragraph())}
       action={action('CTA Action: Withdraw application')}
-      actionLabel={text('Action', faker.lorem.sentence())}
+      actionLabel={text('Action', faker.lorem.words())}
     />
   ))
   .add('random data and dismiss button only', () => (
