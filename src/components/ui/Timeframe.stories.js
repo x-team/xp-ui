@@ -61,6 +61,12 @@ storiesOf('Core Components|Form Components/Timeframe/Debug', module)
       disabled
     />
   ))
+  .add('invalid dates', () => (
+    <Timeframe
+      startDate={new Date('invalid')}
+      endDate={new Date('invalid')}
+    />
+  ))
   .add('missing props', () => (
     <Timeframe />
   ))

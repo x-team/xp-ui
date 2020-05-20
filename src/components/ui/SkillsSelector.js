@@ -12,12 +12,6 @@ import { typeface } from '../../styles/typo'
 const cmz = require('cmz')
 
 const cx = {
-  select: cmz(
-    `
-
-    `
-  ),
-
   tags: cmz(
     typeface.extra,
     `
@@ -129,6 +123,7 @@ class SkillsSelector extends Component<Props, State> {
           arrowRenderer={null}
           onChange={this.handleSkillSelection}
           disabled={disabled}
+          searchable
         />
         <div className={cx.tags}>
           {selectedSkills.map(this.renderTag)}
