@@ -5,14 +5,14 @@ import { storiesOf } from '@storybook/react'
 
 import WorkExperienceCard from './WorkExperienceCard'
 
-const handleEditExperience = cardId => {
+const handleEditExperience = cardId => () => {
   // do stuff with this `cardid`
-  console.log(`Edit Card ID: ${cardId}`)
+  console.log(`Edit Card ID: ${cardId || 'undefined'}`)
 }
 
-const handleDeleteExperience = cardId => {
+const handleDeleteExperience = cardId => () => {
   // do stuff with this `cardid`
-  console.log(`Delete Card ID: ${cardId}`)
+  console.log(`Delete Card ID: ${cardId || 'undefined'}`)
 }
 
 const experience = {
@@ -24,24 +24,19 @@ const experience = {
 }
 
 storiesOf('UI Components|WorkExperienceCard', module)
-  .add('basic usage', () => {
-    return (
-      <WorkExperienceCard
-        {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
-      />
-    )
-  })
+  .add('basic usage', () => (
+    <WorkExperienceCard
+      {...experience}
+      editEntry={handleEditExperience(experience.id)}
+      deleteEntry={handleDeleteExperience(experience.id)}
+    />
+  ))
 
 storiesOf('UI Components|WorkExperienceCard/Debug', module)
-  .add('missing props', () => (
-    <WorkExperienceCard />
-  ))
-  .add('without id, role, company, startDate and endDate', () => (
+  .add('without role, company, startDate and endDate', () => (
     <WorkExperienceCard
-      editEntry={handleEditExperience}
-      deleteEntry={handleDeleteExperience}
+      editEntry={handleEditExperience(experience.id)}
+      deleteEntry={handleDeleteExperience(experience.id)}
     />
   ))
   .add('without id', () => {
@@ -51,12 +46,11 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
     }
-
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience()}
+        deleteEntry={handleDeleteExperience()}
       />
     )
   })
@@ -67,12 +61,11 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
     }
-
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience(experience.id)}
+        deleteEntry={handleDeleteExperience(experience.id)}
       />
     )
   })
@@ -83,12 +76,11 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
     }
-
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience(experience.id)}
+        deleteEntry={handleDeleteExperience(experience.id)}
       />
     )
   })
@@ -98,12 +90,11 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
     }
-
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience(experience.id)}
+        deleteEntry={handleDeleteExperience(experience.id)}
       />
     )
   })
@@ -113,12 +104,11 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
       role: 'Senior Chef',
       company: 'Pizza Hut'
     }
-
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience(experience.id)}
+        deleteEntry={handleDeleteExperience(experience.id)}
       />
     )
   })
@@ -133,8 +123,8 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience(experience.id)}
+        deleteEntry={handleDeleteExperience(experience.id)}
       />
     )
   })
@@ -144,25 +134,24 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
       role: 'Senior Chef',
       company: 'Pizza Hut'
     }
-
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience(experience.id)}
+        deleteEntry={handleDeleteExperience(experience.id)}
       />
     )
   })
   .add('without editEntry', () => (
     <WorkExperienceCard
       {...experience}
-      deleteEntry={handleDeleteExperience}
+      deleteEntry={handleDeleteExperience(experience.id)}
     />
   ))
   .add('without deleteEntry', () => (
     <WorkExperienceCard
       {...experience}
-      editEntry={handleEditExperience}
+      editEntry={handleEditExperience(experience.id)}
     />
   ))
   .add('without editEntry and deleteEntry', () => (
@@ -178,12 +167,11 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
     }
-
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience(experience.id)}
+        deleteEntry={handleDeleteExperience(experience.id)}
       />
     )
   })
@@ -195,12 +183,11 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
     }
-
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience(experience.id)}
+        deleteEntry={handleDeleteExperience(experience.id)}
       />
     )
   })
@@ -212,12 +199,11 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
     }
-
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience(experience.id)}
+        deleteEntry={handleDeleteExperience(experience.id)}
       />
     )
   })
@@ -229,12 +215,14 @@ storiesOf('UI Components|WorkExperienceCard/Debug', module)
       startDate: new Date('2013-09-06'),
       endDate: new Date('2014-02-15')
     }
-
     return (
       <WorkExperienceCard
         {...experience}
-        editEntry={handleEditExperience}
-        deleteEntry={handleDeleteExperience}
+        editEntry={handleEditExperience(experience.id)}
+        deleteEntry={handleDeleteExperience(experience.id)}
       />
     )
   })
+  .add('missing props', () => (
+    <WorkExperienceCard />
+  ))

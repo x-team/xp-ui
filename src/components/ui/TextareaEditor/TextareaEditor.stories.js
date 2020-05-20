@@ -25,10 +25,21 @@ storiesOf('Core Components|Form Components/TextareaEditor/States', module)
   ))
 
 storiesOf('Core Components|Form Components/TextareaEditor/Debug', module)
-  .add('missing props (does component explode?)', () => <TextareaEditor />)
   .add('basic usage, lines limit set', () => (
     <TextareaEditor
       charLimit={200}
+      linesLimit={5}
+      placeholder='A magical placeholder.'
+      text='Magical text #1.\nMagical text #2.\nMagical text #3.\nMagical text #4.\nMagical text #5.\nMagical text #6.\nMagical text #7.\nMagical text #8.\nMagical text #9.\nMagical text #10.'
+      html='<p>Magical text #1.</p><p>Magical text #2.</p><p>Magical text #3.</p><p>Magical text #4.</p><p>Magical text #5.</p><p>Magical text #6.</p><p>Magical text #7.</p><p>Magical text #8.</p><p>Magical text #9.</p><p>Magical text #10.</p>'
+      onChange={action('Fired when textarea value changes')}
+      onFocus={action('Fired when textarea is focused')}
+      onBlur={action('Fired when textarea is blured')}
+    />
+  ))
+  .add('initial value bigger than character limit', () => (
+    <TextareaEditor
+      charLimit={20}
       linesLimit={5}
       placeholder='A magical placeholder.'
       text='Magical text #1.\nMagical text #2.\nMagical text #3.\nMagical text #4.\nMagical text #5.\nMagical text #6.\nMagical text #7.\nMagical text #8.\nMagical text #9.\nMagical text #10.'
@@ -59,4 +70,7 @@ storiesOf('Core Components|Form Components/TextareaEditor/Debug', module)
         onBlur={action('Fired when textarea 2 is blured')}
       />
     </div>
+  ))
+  .add('missing props', () => (
+    <TextareaEditor />
   ))

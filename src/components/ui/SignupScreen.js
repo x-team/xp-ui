@@ -2,19 +2,17 @@
 /* global React$Node */
 
 import React from 'react'
+import cmz from 'cmz'
 
 import Footer from './Footer'
 import Text from './Text'
+import Loader from './Loader'
 
-import theme, { breakpoints } from '../../styles/theme'
-import typo from '../../styles/typo'
-
-const cmz = require('cmz')
+import { breakpoints } from '../../styles/theme'
 
 const GAP = '32px'
 const MOBILE_GAP = '12px'
 const WRAPPER_WIDTH = '1100px'
-const FORM_WIDTH = '500px'
 
 const cx = {
   layout: cmz(`
@@ -53,46 +51,47 @@ const cx = {
   `),
 
   heading: cmz(`
+    margin: 32px 0
+  `),
+
+  loading: cmz(`
     margin: 32px 0 0
-  `),
-
-  form: cmz(`
-    width: 100%
-    max-width: ${FORM_WIDTH}
-    margin: 64px auto 0
+    display: flex
+    justify-content: center
     flex: 1
+    align-items: center
   `),
 
-  group: cmz(`
-    margin: 0 0 24px
-  `),
+  content: cmz(`
+    & {
+      width: 500px
+      max-width: 100%
+      margin: 0 auto
+      flex: 1
+    }
 
-  element: cmz(`
-    margin: 0 0 16px
-  `),
+    & > * {
+      margin: 24px 0
+    }
 
-  errorMessage: cmz(
-    typo.baseText,
-    `
-      color: ${theme.typoSubheading}
-      font-size: 16px
-      margin: -16px 0 0
-    `
-  )
+    & > :first-child {
+      margin: 0 0 24px 0
+    }
+
+    & > :last-child {
+      margin: 24px 0 0 0
+    }
+  `)
 }
 
-type InputGroupProps = {
-  children?: React$Node,
-  errorMessage?: string
-}
-
-type LayoutProps = {
+type Props = {
   heading?: string,
   subheading?: string,
+  isLoading?: boolean,
   children?: React$Node
 }
 
-const Layout = ({ heading, subheading, children }: LayoutProps) => (
+const SignupScreen = ({ heading, subheading, isLoading, children }: Props) => (
   <div className={cx.layout}>
     <div className={cx.wrapper}>
       {(heading || subheading) && (
@@ -105,9 +104,15 @@ const Layout = ({ heading, subheading, children }: LayoutProps) => (
           />
         </div>
       )}
-      <div className={cx.form}>
-        {children}
-      </div>
+      {isLoading ? (
+        <div className={cx.loading}>
+          <Loader />
+        </div>
+      ) : (
+        <div className={cx.content}>
+          {children}
+        </div>
+      )}
       <Footer
         copyright={`${new Date().getFullYear()} © All rights reserved. X-Company Pty Ltd.`}
       />
@@ -115,18 +120,4 @@ const Layout = ({ heading, subheading, children }: LayoutProps) => (
   </div>
 )
 
-const InputGroup = ({ children, errorMessage }: InputGroupProps) => children ? (
-  <div className={cx.group}>
-    {React.Children.map(children, (child) => (
-      <div className={cx.element}>{child}</div>
-    ))}
-    {errorMessage && (
-      <div className={cx.errorMessage}>{errorMessage}</div>
-    )}
-  </div>
-) : null
-
-export default {
-  Layout,
-  InputGroup
-}
+export default SignupScreen
