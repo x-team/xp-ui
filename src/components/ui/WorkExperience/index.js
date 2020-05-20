@@ -61,7 +61,7 @@ const renderEditor = ({ value: { experience, skills }, onValueChange }: EditorPr
 )
 
 const renderPresenter = ({ value: { experience }, activateEditingMode, isHover }: PresenterProps) => (
- <WorkExperienceEntryPresenter
+  <WorkExperienceEntryPresenter
     experience={experience}
     headerDecoration={isHover && (
       <PencilButton color='monochrome' onClick={activateEditingMode} />
