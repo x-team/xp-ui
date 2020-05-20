@@ -61,8 +61,12 @@ const renderEditor = ({ value: { experience, skills }, onValueChange }: EditorPr
 )
 
 const renderPresenter = ({ value: { experience }, activateEditingMode, isHover }: PresenterProps) => (
-  <WorkExperienceEntryPresenter experience={experience}
-    headerDecoration={isHover && <PencilButton color='monochrome' onClick={activateEditingMode} />} />
+ <WorkExperienceEntryPresenter
+    experience={experience}
+    headerDecoration={isHover && (
+      <PencilButton color='monochrome' onClick={activateEditingMode} />
+    )}
+  />
 )
 
 class WorkExperience extends Component<Props, State> {
