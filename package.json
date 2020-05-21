@@ -10,7 +10,6 @@
     "doc": "docs"
   },
   "scripts": {
-    "prepare": "npm run build",
     "jest": "jest --roots=src",
     "start": "start-storybook -p 9001 -c .storybook -s public",
     "build": "cross-env NODE_ENV=production webpack --config webpack.standalone.js",
@@ -23,7 +22,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run build"
     }
   },
   "lint-staged": {
