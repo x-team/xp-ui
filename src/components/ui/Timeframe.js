@@ -92,7 +92,7 @@ type Option = {
 
 type Props = {
   startDate?: Date,
-  endDate?: Date,
+  endDate?: ?Date,
   noEndDate?: boolean,
   disabled?: boolean,
   onChange?: ({ startDate: Date, endDate: ?Date }) => void

@@ -49,7 +49,7 @@ const cx = {
         overflow-y: hidden
         display: flex
         align-items: center
-        height: 18px
+        height: 100%
       }
 
       & .Select-placeholder,
@@ -59,12 +59,19 @@ const cx = {
         white-space: nowrap !important
         overflow: hidden !important
         text-overflow: ellipsis !important
+        height: 100%
       }
 
       & .Select-input {
-        padding: 0 3px !important
-        position: absolute !important
-        top: 11px !important
+        padding: 0 !important
+        display: flex !important
+        align-items: center
+        height: 100%
+      }
+
+      & .Select-input > input {
+        height: 100%
+        padding: 0px !important
       }
 
       & .Select-input:focus {
