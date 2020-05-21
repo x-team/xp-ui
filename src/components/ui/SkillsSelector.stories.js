@@ -46,7 +46,15 @@ storiesOf('Core Components|Form Components/SkillsSelector', module)
   ))
 
 storiesOf('Core Components|Form Components/SkillsSelector/Debug', module)
+  .add('disabled state', () => (
+    <Body>
+      <SkillsSelector
+        options={skills}
+        applicantSkills={applicantSkills}
+        disabled
+      />
+    </Body>
+  ))
   .add('missing props', () => (
-    // $FlowFixMe
     <SkillsSelector />
   ))

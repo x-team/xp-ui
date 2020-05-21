@@ -26,15 +26,15 @@ const cx = {
       & .Select-control {
         display: flex
         border: 1px solid ${theme.lineSilver2}
-        height: auto
+        height: 60px
         padding: 14px 16px
         border-radius: 0
         cursor: pointer
       }
 
       &.is-focused .Select-control {
-        border: 1px solid ${theme.lineRed} !important
-        box-shadow: 0 0 3px ${theme.lineRed} !important
+        border: 1px solid ${theme.lineSilver6} !important
+        box-shadow: 0 0 3px ${theme.lineSilver6} !important
       }
 
       &.is-disabled:hover {
@@ -102,31 +102,13 @@ type Option = {
   label: string
 }
 
-type Props = {
-  placeholder?: string,
-  options?: Array<Option> | null,
-  disabled?: boolean,
-  clearable?: boolean,
-  searchable?: boolean,
-  value?: any,
-  onChange?: any
-}
+type Props = {}
 
 type State = {
   selectedOption: Option | null
 }
 
 class CustomSelector extends PureComponent<Props, State> {
-  static defaultProps = {
-    placeholder: '',
-    options: null,
-    disabled: false,
-    clearable: false,
-    searchable: false,
-    value: null,
-    onChange: null
-  }
-
   state: State = {
     selectedOption: null
   }
@@ -136,25 +118,21 @@ class CustomSelector extends PureComponent<Props, State> {
   }
 
   render () {
-    const { placeholder, options, disabled, clearable, searchable, value, onChange } = this.props
     const { selectedOption } = this.state
 
     return (
-      <div>
-        <Select
-          {...this.props}
-          name={'customSelector'}
-          className={cx.select.toString()}
-          optionRenderer={SelectorOption}
-          placeholder={placeholder || 'Select...'}
-          options={options}
-          disabled={disabled}
-          clearable={clearable}
-          searchable={searchable}
-          value={value || selectedOption}
-          onChange={onChange || this.handleSelection}
-        />
-      </div>
+      <Select
+        name='CustomSelector'
+        placeholder='Select...'
+        optionRenderer={SelectorOption}
+        onChange={this.handleSelection}
+        value={selectedOption}
+        disabled={false}
+        clearable={false}
+        searchable={false}
+        {...this.props}
+        className={cx.select.toString()}
+      />
     )
   }
 }

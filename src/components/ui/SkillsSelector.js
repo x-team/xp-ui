@@ -2,103 +2,16 @@
 
 import React, { Component } from 'react'
 import differenceBy from 'lodash.differenceby'
-import Select from 'react-select'
 
 import SvgIcon from './SvgIcon'
-import SelectorOption from './SelectorOption'
+import CustomSelector from './CustomSelector'
 
-import '../../assets/react-select.css'
-
-import type { SkillOption } from '../../utils/types'
 import theme from '../../styles/theme'
-import typo, { typeface } from '../../styles/typo'
+import { typeface } from '../../styles/typo'
 
 const cmz = require('cmz')
 
 const cx = {
-  select: cmz(
-    typo.baseText,
-    `
-      & {
-        font-size: 18px
-        text-rendering: optimizeLegibility
-        -webkit-font-smoothing: antialiased
-        color: ${theme.typoParagraph}
-        border: 1px solid transparent
-      }
-
-      & .Select-control {
-        display: flex
-        border: 1px solid ${theme.lineSilver2}
-        height: auto
-        padding: 21px 16px
-      }
-
-      &:hover,
-      &.is-focused .Select-control,
-      &.is-focused:not(.is-open) > .Select-control {
-        border: 1px solid ${theme.lineRed}
-        box-shadow: 0 0 4px ${theme.lineRed}
-      }
-
-      & .Select-multi-value-wrapper {
-        white-space: nowrap
-        flex: 1
-        overflow-x: auto
-        overflow-y: hidden
-        display: flex
-        align-items: center
-        height: 18px
-      }
-
-      & .Select-placeholder::after {
-        content: '' !important
-      }
-
-      & .Select-placeholder {
-        padding: 21px 16px
-        line-height: 1
-        white-space: nowrap
-        overflow: hidden
-        text-overflow: ellipsis
-      }
-
-      & .Select-input {
-        margin: 0 !important
-        display: flex !important
-        align-items: center
-        padding: 0
-      }
-
-      & .Select-input > input {
-        border: none
-        margin: 0
-        font-weight: 300
-      }
-
-      & .Select-control > *:last-child {
-        padding: 0
-      }
-
-      & .Select-menu-outer {
-        top: calc(100% + 5px)
-        max-height: 270px
-        background: ${theme.baseBrighter}
-        border: 1px solid rgba(0, 0, 0, 0.15)
-        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15)
-        border-radius: 0
-      }
-
-      & .Select-menu {
-        max-height: 270px
-      }
-
-      & .Select-option {
-        padding: 0
-      }
-    `
-  ),
-
   tags: cmz(
     typeface.extra,
     `
@@ -137,14 +50,20 @@ const cx = {
   `)
 }
 
+type Option = {
+  value: string | number,
+  label: string
+}
+
 type Props = {
-  options: Array<SkillOption>,
-  applicantSkills: Array<SkillOption>,
-  onChange: (selectedSkills: Array<SkillOption>) => void
+  options?: Array<Option>,
+  applicantSkills?: Array<Option>,
+  disabled?: boolean,
+  onChange?: (selectedSkills: Array<Option>) => void
 }
 
 type State = {
-  selectedSkills: Array<SkillOption>
+  selectedSkills: Array<Option>
 }
 
 class SkillsSelector extends Component<Props, State> {
@@ -152,7 +71,7 @@ class SkillsSelector extends Component<Props, State> {
     selectedSkills: this.props.applicantSkills || []
   }
 
-  handleSkillSelection = (selectedSkill: SkillOption) => {
+  handleSkillSelection = (selectedSkill: Option) => {
     const updatedSelectedSkills = [ ...this.state.selectedSkills, selectedSkill ]
     this.setState(() => ({ selectedSkills: updatedSelectedSkills }), () => {
       const { onChange } = this.props
@@ -160,7 +79,7 @@ class SkillsSelector extends Component<Props, State> {
     })
   }
 
-  handleSkillRemove = (removedSkill: SkillOption) => {
+  handleSkillRemove = (removedSkill: Option) => {
     const selectedSkills = this.state.selectedSkills.filter(skill => skill.value !== removedSkill.value)
     this.setState(() => ({ selectedSkills }), () => {
       const { onChange } = this.props
@@ -168,23 +87,26 @@ class SkillsSelector extends Component<Props, State> {
     })
   }
 
-  renderTag = (skill: SkillOption) => {
+  renderTag = (skill: Option) => {
+    const { disabled = false } = this.props
     return (
       <div key={skill.value} className={cx.tag}>
         {skill.label}
-        <SvgIcon
-          icon='x'
-          color='grayscale'
-          hover='default'
-          className={cx.removeTag}
-          onClick={() => this.handleSkillRemove(skill)}
-        />
+        {!disabled && (
+          <SvgIcon
+            icon='x'
+            color='grayscale'
+            hover='default'
+            className={cx.removeTag}
+            onClick={() => this.handleSkillRemove(skill)}
+          />
+        )}
       </div>
     )
   }
 
   render () {
-    const { options = [] } = this.props
+    const { options = [], disabled = false } = this.props
     const { selectedSkills = [] } = this.state
     const placeholder = selectedSkills.length > 0
       ? 'Add more...'
@@ -192,16 +114,16 @@ class SkillsSelector extends Component<Props, State> {
     const availableOptions = differenceBy(options, selectedSkills, 'value')
     return (
       <div>
-        <Select
+        <CustomSelector
           name='skillsSelector'
           placeholder={placeholder}
-          className={cx.select.toString()}
           options={availableOptions}
           removeSelected
           clearable={false}
           arrowRenderer={null}
           onChange={this.handleSkillSelection}
-          optionRenderer={SelectorOption}
+          disabled={disabled}
+          searchable
         />
         <div className={cx.tags}>
           {selectedSkills.map(this.renderTag)}

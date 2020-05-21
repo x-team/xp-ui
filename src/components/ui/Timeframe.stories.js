@@ -53,6 +53,20 @@ storiesOf('Core Components|Form Components/Timeframe/Debug', module)
       endDate={new Date('2000-01-23')}
     />
   ))
+  .add('disabled state', () => (
+    <Timeframe
+      startDate={new Date('2000-05-23')}
+      endDate={new Date('2010-12-01')}
+      noEndDate
+      disabled
+    />
+  ))
+  .add('invalid dates', () => (
+    <Timeframe
+      startDate={new Date('invalid')}
+      endDate={new Date('invalid')}
+    />
+  ))
   .add('missing props', () => (
     <Timeframe />
   ))

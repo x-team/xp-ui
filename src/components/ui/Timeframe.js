@@ -91,9 +91,10 @@ type Option = {
 }
 
 type Props = {
-  startDate?: ?Date,
-  endDate?: ?Date,
+  startDate?: Date,
+  endDate?: Date,
   noEndDate?: boolean,
+  disabled?: boolean,
   onChange?: ({ startDate: Date, endDate: ?Date }) => void
 }
 
@@ -145,70 +146,85 @@ class Timeframe extends PureComponent<Props, State> {
   getOptionValue = (options: Array<Option> = [], value: ?string | ?number) => options.find(option => option.value === value)
 
   updateDateValues = () => {
-    const { startDate = '', endDate = '', noEndDate = false } = this.props
+    const { startDate, endDate, noEndDate = false } = this.props
 
-    const startMonth = startDate ? startDate.getMonth() : undefined
-    const startYear = startDate ? startDate.getFullYear() : undefined
-    const endMonth = endDate ? endDate.getMonth() : undefined
-    const endYear = endDate ? endDate.getFullYear() : undefined
+    const startMonth = startDate ? startDate.getUTCMonth() : undefined
+    const startYear = startDate ? startDate.getUTCFullYear() : undefined
+    const endMonth = endDate ? endDate.getUTCMonth() : undefined
+    const endYear = endDate ? endDate.getUTCFullYear() : undefined
 
-    this.setState({
+    this.setState(() => ({
       startMonth: this.getOptionValue(MONTHS, startMonth),
       startYear: this.getOptionValue(YEARS, startYear),
       endMonth: this.getOptionValue(MONTHS, endMonth),
       endYear: this.getOptionValue(YEARS, endYear),
       noEndDate
-    }, this.validateValues)
+    }), this.validateValues)
   }
 
   updateFieldValue = (field: string, options: Array<Option> = []) => ({ value }: { value: string }) => {
-    this.setState({
+    this.setState(() => ({
       [field]: this.getOptionValue(options, value)
-    }, this.validateValues)
+    }), this.validateValues)
   }
 
   validateValues = () => {
     const { startMonth, startYear, endMonth, endYear } = this.state
-    this.setState({
+    this.setState(() => ({
       startMonth: this.getOptionValue(MONTHS, startMonth && startMonth.value),
       startYear: this.getOptionValue(YEARS, startYear && startYear.value),
       endMonth: this.getOptionValue(this.getValidEndMonthsList(), endMonth && endMonth.value),
       endYear: this.getOptionValue(this.getValidEndYearsList(), endYear && endYear.value)
-    }, this.handleOnChange)
+    }), this.handleOnChange)
   }
 
+  getYearMonthString = (date: ?Date) =>
+    date instanceof Date && !isNaN(date)
+      ? date.toISOString().substr(0, 7)
+      : ''
+
   handleOnChange = () => {
-    const { onChange } = this.props
-    const { startMonth, startYear, endMonth, endYear, noEndDate } = this.state
+    const { onChange, startDate, endDate, noEndDate = false } = this.props
+    const { startMonth, startYear, endMonth, endYear, noEndDate: newNoEndDate } = this.state
 
-    const startDate = startMonth && startYear ? new Date() : undefined
-    if (startMonth && startYear && startDate) {
-      startDate.setFullYear(Number(startYear.value))
-      startDate.setMonth(Number(startMonth.value))
+    const newStartDate = startMonth && startYear ? new Date() : undefined
+    if (startMonth && startYear && newStartDate) {
+      newStartDate.setUTCFullYear(Number(startYear.value))
+      newStartDate.setUTCMonth(Number(startMonth.value))
     }
 
-    const endDate = endMonth && endYear ? new Date() : undefined
-    if (endMonth && endYear && endDate) {
-      endDate.setFullYear(Number(endYear.value))
-      endDate.setMonth(Number(endMonth.value))
+    const newEndDate = endMonth && endYear ? new Date() : undefined
+    if (endMonth && endYear && newEndDate) {
+      newEndDate.setUTCFullYear(Number(endYear.value))
+      newEndDate.setUTCMonth(Number(endMonth.value))
     }
 
-    if (startDate) {
+    const doesHaveChanges = () => {
+      const newStartDateString = this.getYearMonthString(newStartDate)
+      const startDateString = this.getYearMonthString(startDate)
+      const newEndDateString = this.getYearMonthString(newEndDate)
+      const endDateString = this.getYearMonthString(endDate)
+      return newStartDateString !== startDateString ||
+        newEndDateString !== endDateString ||
+        newNoEndDate !== noEndDate
+    }
+
+    if (newStartDate && doesHaveChanges()) {
       onChange && onChange({
-        startDate,
-        endDate: noEndDate ? undefined : endDate,
-        noEndDate
+        startDate: newStartDate,
+        endDate: newNoEndDate ? undefined : newEndDate,
+        noEndDate: newNoEndDate
       })
     }
   }
 
   toggleNoEndDate = () => {
     const { endMonth, endYear, noEndDate } = this.state
-    this.setState({
+    this.setState(() => ({
       endMonth: !noEndDate ? undefined : endMonth,
       endYear: !noEndDate ? undefined : endYear,
       noEndDate: !noEndDate
-    }, this.validateValues)
+    }), this.validateValues)
   }
 
   getValidEndMonthsList = () => {
@@ -228,6 +244,7 @@ class Timeframe extends PureComponent<Props, State> {
   }
 
   render () {
+    const { disabled = false } = this.props
     const { startMonth, startYear, endMonth, endYear, noEndDate } = this.state
     return (
       <div>
@@ -237,18 +254,22 @@ class Timeframe extends PureComponent<Props, State> {
             <div className={cx.startDateFields}>
               <div className={cx.month}>
                 <CustomSelector
-                  placeholder={'Month'}
+                  name='startMonth'
+                  placeholder='Month'
                   options={MONTHS}
                   value={startMonth}
                   onChange={this.updateFieldValue('startMonth', MONTHS)}
+                  disabled={disabled}
                 />
               </div>
               <div className={cx.year}>
                 <CustomSelector
-                  placeholder={'Year'}
+                  name='startYear'
+                  placeholder='Year'
                   options={YEARS}
                   value={startYear}
                   onChange={this.updateFieldValue('startYear', YEARS)}
+                  disabled={disabled}
                 />
               </div>
             </div>
@@ -261,18 +282,22 @@ class Timeframe extends PureComponent<Props, State> {
               <div className={cx.endDateFields}>
                 <div className={cx.month}>
                   <CustomSelector
-                    placeholder={'Month'}
+                    name='endMonth'
+                    placeholder='Month'
                     options={this.getValidEndMonthsList()}
                     value={endMonth}
                     onChange={this.updateFieldValue('endMonth', this.getValidEndMonthsList())}
+                    disabled={disabled}
                   />
                 </div>
                 <div className={cx.year}>
                   <CustomSelector
-                    placeholder={'Year'}
+                    name='endYear'
+                    placeholder='Year'
                     options={this.getValidEndYearsList()}
                     value={endYear}
                     onChange={this.updateFieldValue('endYear', this.getValidEndYearsList())}
+                    disabled={disabled}
                   />
                 </div>
               </div>
@@ -285,6 +310,7 @@ class Timeframe extends PureComponent<Props, State> {
             label='Still working there'
             checked={noEndDate}
             onChange={this.toggleNoEndDate}
+            disabled={disabled}
           />
         </div>
       </div>
