@@ -20,8 +20,6 @@ import ConfirmationBox from './components/ui/ConfirmationBox'
 import CopyToClipboardButton from './components/ui/CopyToClipboardButton'
 import DataGrid from './components/ui/DataGrid'
 import Dropdown from './components/ui/Dropdown'
-import Email from './components/ui/Email'
-import EmailFeed from './components/ui/EmailFeed'
 import EmptyState from './components/ui/EmptyState'
 import ErrorBox from './components/ui/ErrorBox'
 import Filters from './components/ui/Filters'
@@ -99,8 +97,6 @@ export {
   CopyToClipboardButton,
   DataGrid,
   Dropdown,
-  Email,
-  EmailFeed,
   EmptyState,
   ErrorBox,
   Filters,
