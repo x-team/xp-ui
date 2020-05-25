@@ -101,6 +101,7 @@ class Modal extends PureComponent<Props, void> {
         onClick={this.handleClose}
         onKeyDown={this.handleKeyPress}
         tabIndex={0}
+        data-testid='xpui-modal'
       >
         <section
           className={[cx.frame, cx.theme[theme].frame].join(' ')}
