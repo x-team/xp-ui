@@ -34,8 +34,11 @@ import HeaderBar from './components/ui/HeaderBar'
 import HeadingWithQuickSearch from './components/ui/HeadingWithQuickSearch'
 import HorizontalRuler from './components/ui/HorizontalRuler'
 import InlineEditor from './components/ui/InlineEditor'
+import InputError from './components/forms/InputError'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
+import InputLabel from './components/forms/InputLabel'
+import InputSet from './components/forms/InputSet'
 import IssueCollectorButton from './components/ui/IssueCollectorButton'
 import JobApplicationCard from './components/ui/JobApplicationCard'
 import JobCard from './components/ui/JobCard'
@@ -45,7 +48,6 @@ import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
 import JobsPageLayout from './components/ui/JobsPageLayout'
 import JobSkills from './components/ui/JobSkills'
 import ProTipCard from './components/ui/ProTipCard'
-import Label from './components/ui/Label'
 import ListExclusionFormPopup from './components/ui/ListExclusionFormPopup'
 import ListsEditor from './components/ui/ListsEditor'
 import Loader from './components/ui/Loader'
@@ -119,8 +121,11 @@ export {
   HeadingWithQuickSearch,
   HorizontalRuler,
   InlineEditor,
+  InputError,
   InputField,
   InputGroup,
+  InputLabel,
+  InputSet,
   IssueCollectorButton,
   JobApplicationCard,
   JobCard,
@@ -130,7 +135,6 @@ export {
   JobsPageLayout,
   JobSkills,
   ProTipCard,
-  Label,
   ListExclusionFormPopup,
   ListsEditor,
   Loader,

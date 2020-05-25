@@ -11,8 +11,11 @@ import Footer from './components/ui/Footer'
 import GenericTooltip from './components/ui/GenericTooltip'
 import HeaderBar from './components/ui/HeaderBar'
 import HorizontalRuler from './components/ui/HorizontalRuler'
+import InputError from './components/forms/InputError'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
+import InputLabel from './components/forms/InputLabel'
+import InputSet from './components/forms/InputSet'
 import JobApplicationCard from './components/ui/JobApplicationCard'
 import JobCard from './components/ui/JobCard'
 import JobDetails from './components/ui/JobDetails'
@@ -21,7 +24,6 @@ import JobsPageBreadcrumbs from './components/ui/JobsPageBreadcrumbs'
 import JobsPageLayout from './components/ui/JobsPageLayout'
 import JobSkills from './components/ui/JobSkills'
 import ProTipCard from './components/ui/ProTipCard'
-import Label from './components/ui/Label'
 import Loader from './components/ui/Loader'
 import LocateYourProfile from './components/ui/LocateYourProfile'
 import Modal from './components/ui/Modal'
@@ -47,8 +49,11 @@ export {
   GenericTooltip,
   HeaderBar,
   HorizontalRuler,
+  InputError,
   InputField,
   InputGroup,
+  InputLabel,
+  InputSet,
   JobApplicationCard,
   JobCard,
   JobDetails,
@@ -57,7 +62,6 @@ export {
   JobsPageLayout,
   JobSkills,
   ProTipCard,
-  Label,
   Loader,
   LocateYourProfile,
   Modal,

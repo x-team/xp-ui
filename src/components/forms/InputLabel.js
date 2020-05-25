@@ -1,11 +1,10 @@
 // @flow
 
 import React from 'react'
+import cmz from 'cmz'
 
 import theme from '../../styles/theme'
 import typo from '../../styles/typo'
-
-const cmz = require('cmz')
 
 const cx = {
   label: cmz(
@@ -15,8 +14,9 @@ const cx = {
     `
   ),
 
-  invalid: cmz(`
-    color: ${theme.typoSubheading}
+  required: cmz(`
+    color: ${theme.formErrorText}
+    margin-left: 4px
   `),
 
   description: cmz(`
@@ -27,13 +27,19 @@ const cx = {
 type Props = {
   headline?: string,
   description?: string,
-  isInvalid?: boolean
+  isInvalid?: boolean,
+  isRequired?: boolean
 }
 
-const Label = ({ headline, description, isInvalid }: Props) => headline || description ? (
+const InputLabel = ({ headline, description, isRequired }: Props) => headline || description ? (
   <div className={cx.label}>
     {headline && (
-      <div className={isInvalid ? cx.invalid : ''}>{headline}</div>
+      <div>
+        {headline}
+        {isRequired && (
+          <span className={cx.required}>*</span>
+        )}
+      </div>
     )}
     {description && (
       <div className={cx.description}>{description}</div>
@@ -41,4 +47,4 @@ const Label = ({ headline, description, isInvalid }: Props) => headline || descr
   </div>
 ) : null
 
-export default Label
+export default InputLabel

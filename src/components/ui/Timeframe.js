@@ -2,9 +2,9 @@
 
 import React, { PureComponent } from 'react'
 
-import Label from './Label'
 import CustomSelector from './CustomSelector'
 import InputField from '../forms/InputField'
+import InputLabel from '../forms/InputLabel'
 
 import { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -250,7 +250,7 @@ class Timeframe extends PureComponent<Props, State> {
       <div>
         <div className={cx.wrapper}>
           <div className={cx.startDate}>
-            <Label description='Start Date' />
+            <InputLabel description='Start Date' />
             <div className={cx.startDateFields}>
               <div className={cx.month}>
                 <CustomSelector
@@ -275,7 +275,7 @@ class Timeframe extends PureComponent<Props, State> {
             </div>
           </div>
           <div className={cx.endDate}>
-            <Label description='End Date' />
+            <InputLabel description='End Date' />
             {noEndDate ? (
               <div className={cx.present}>Present</div>
             ) : (
