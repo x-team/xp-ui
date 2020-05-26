@@ -19,7 +19,7 @@ export type Props = {
   experiences: ?Array<Experience>,
   initialVisibleExperiences: number,
   skills: Array<SkillOption>,
-  onSave: ({ experience: Experience, isNew: boolean }) => Promise<any>
+  onSave: ({ experience: Experience, isNew: boolean }) => void
 }
 
 type State = {

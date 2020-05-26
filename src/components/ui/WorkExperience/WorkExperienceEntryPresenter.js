@@ -10,7 +10,7 @@ import theme from '../../../styles/theme'
 import type { Experience } from '../../../utils/types'
 type Props = {
   experience: Experience,
-  headerDecoration: any
+  headerDecoration: *
 }
 
 const cx = {

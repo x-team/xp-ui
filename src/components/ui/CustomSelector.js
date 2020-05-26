@@ -71,7 +71,7 @@ const cx = {
 
       & .Select-input > input {
         height: 100%
-        padding: 0px !important
+        padding: 0 !important
       }
 
       & .Select-input:focus {
