@@ -5,6 +5,9 @@ import { storiesOf } from '@storybook/react'
 
 import InputSection from './InputSection'
 import InputField from './InputField'
+import Timeframe from '../ui/Timeframe'
+import SkillsSelector from '../ui/SkillsSelector'
+import RichTextEditor from '../ui/RichTextEditor'
 
 export const SampleInputSection = (props: any) => (
   <InputSection
@@ -23,6 +26,32 @@ storiesOf('Core Components|Form Components/InputSection', module)
       description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
     >
       <InputField placeholder='Input field' />
+    </InputSection>
+  ))
+
+storiesOf('Core Components|Form Components/InputSection/Use Cases', module)
+  .add('with Timeframe', () => (
+    <InputSection
+      headline='Lorem ipsum dolor sit amet'
+      description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
+    >
+      <Timeframe />
+    </InputSection>
+  ))
+  .add('with SkillsSelector', () => (
+    <InputSection
+      headline='Lorem ipsum dolor sit amet'
+      description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
+    >
+      <SkillsSelector />
+    </InputSection>
+  ))
+  .add('with RichTextEditor', () => (
+    <InputSection
+      headline='Lorem ipsum dolor sit amet'
+      description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
+    >
+      <RichTextEditor />
     </InputSection>
   ))
 
