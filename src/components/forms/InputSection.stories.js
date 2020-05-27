@@ -3,41 +3,41 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import InputSet from './InputSet'
+import InputSection from './InputSection'
 import InputField from './InputField'
 
-export const SampleInputSet = (props: any) => (
-  <InputSet
+export const SampleInputSection = (props: any) => (
+  <InputSection
     headline='Lorem ipsum dolor sit amet'
     description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
     {...props}
   >
     <InputField placeholder='Input field' />
-  </InputSet>
+  </InputSection>
 )
 
-storiesOf('Core Components|Form Components/InputSet', module)
+storiesOf('Core Components|Form Components/InputSection', module)
   .add('basic usage', () => (
-    <InputSet
+    <InputSection
       headline='Lorem ipsum dolor sit amet'
       description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
     >
       <InputField placeholder='Input field' />
-    </InputSet>
+    </InputSection>
   ))
 
-storiesOf('Core Components|Form Components/InputSet/States', module)
+storiesOf('Core Components|Form Components/InputSection/States', module)
   .add('invalid field with error message', () => (
-    <InputSet
+    <InputSection
       headline='Lorem ipsum dolor sit amet'
       description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
       errorMessage='Something went wrong.'
     >
       <InputField placeholder='Input field' isInvalid />
-    </InputSet>
+    </InputSection>
   ))
 
-storiesOf('Core Components|Form Components/InputSet/Debug', module)
+storiesOf('Core Components|Form Components/InputSection/Debug', module)
   .add('missing props', () => (
-    <InputSet />
+    <InputSection />
   ))

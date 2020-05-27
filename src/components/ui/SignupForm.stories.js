@@ -6,8 +6,8 @@ import State from '../../utils/State'
 
 import SignupScreen from './SignupScreen'
 import SignupForm from './SignupForm'
-import InputSet from '../forms/InputSet'
-import { SampleInputSet } from '../forms/InputSet.stories'
+import InputSection from '../forms/InputSection'
+import { SampleInputSection } from '../forms/InputSection.stories'
 import InputField from '../forms/InputField'
 import Button from './Button'
 import Modal from './Modal'
@@ -24,11 +24,11 @@ const Body = ({ children }) => (
 
 export const SampleSignupForm = (props: any) => (
   <SignupForm {...props}>
-    <SampleInputSet />
-    <SampleInputSet />
-    <SampleInputSet />
-    <SampleInputSet />
-    <SampleInputSet />
+    <SampleInputSection />
+    <SampleInputSection />
+    <SampleInputSection />
+    <SampleInputSection />
+    <SampleInputSection />
     <Button block wide size='large'>Continue »</Button>
   </SignupForm>
 )
@@ -64,11 +64,11 @@ storiesOf('UI Components|SignupForm/Use Cases', module)
               hasPadding
               errorMessage='Something went wrong.'
             >
-              <SampleInputSet />
-              <SampleInputSet />
-              <SampleInputSet />
-              <SampleInputSet />
-              <SampleInputSet />
+              <SampleInputSection />
+              <SampleInputSection />
+              <SampleInputSection />
+              <SampleInputSection />
+              <SampleInputSection />
               <Button block wide size='large'>Continue »</Button>
             </SignupForm>
           </Modal>
@@ -85,22 +85,22 @@ storiesOf('UI Components|SignupForm/Debug', module)
         hasPadding
         errorMessage='Something went wrong.'
       >
-        <InputSet
+        <InputSection
           headline='Lorem ipsum dolor sit amet'
           description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
           isInvalid
           errorMessage='Something went wrong.'
         >
           <InputField placeholder='Input field' isInvalid />
-        </InputSet>
-        <InputSet
+        </InputSection>
+        <InputSection
           headline='Lorem ipsum dolor sit amet'
           description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
           isInvalid
           errorMessage='Something went wrong.'
         >
           <InputField type='textarea' placeholder='Textarea field' isInvalid />
-        </InputSet>
+        </InputSection>
         <ErrorBox
           errors={{
             name: 'Something went wrong.'

@@ -38,7 +38,7 @@ import InputError from './components/forms/InputError'
 import InputField from './components/forms/InputField'
 import InputGroup from './components/forms/InputGroup'
 import InputLabel from './components/forms/InputLabel'
-import InputSet from './components/forms/InputSet'
+import InputSection from './components/forms/InputSection'
 import IssueCollectorButton from './components/ui/IssueCollectorButton'
 import JobApplicationCard from './components/ui/JobApplicationCard'
 import JobCard from './components/ui/JobCard'
@@ -125,7 +125,7 @@ export {
   InputField,
   InputGroup,
   InputLabel,
-  InputSet,
+  InputSection,
   IssueCollectorButton,
   JobApplicationCard,
   JobCard,

@@ -33,7 +33,7 @@ type Props = {
   errorMessage?: string
 }
 
-const InputSet = ({
+const InputSection = ({
   children,
   headline,
   description,
@@ -59,4 +59,4 @@ const InputSet = ({
   </div>
 ) : null
 
-export default InputSet
+export default InputSection
