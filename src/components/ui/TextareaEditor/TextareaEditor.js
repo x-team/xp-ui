@@ -1,9 +1,8 @@
 // @flow
-/* global HTMLTextAreaElement */
 
 import React, { PureComponent } from 'react'
 
-import MediumEditorWrapper from './MediumEditorWrapper'
+import InputField from '../../forms/InputField'
 import elem from '../../../utils/elem'
 import theme from '../../../styles/theme'
 import { typeface } from '../../../styles/typo'
@@ -14,7 +13,8 @@ const textCountStyles = cmz(`
   & {
     text-align: right
     color: ${theme.lineRed}
-    height: 40px
+    font-weight: bold
+    font-size: 14px
   }
 
   & > .hidden {
@@ -25,32 +25,6 @@ const textCountStyles = cmz(`
 const utilStyles = {
   maxWidth: cmz('max-width: 840px')
 }
-
-const editorContainerStyles = cmz(`
-  & {
-    display: block
-    width: 100%
-    padding: 8px 18px
-    margin-bottom: 20px
-    border: 1px solid ${theme.lineSilver3}
-    overflow: scroll
-    box-sizing: border-box
-    line-height: 30px
-  }
-
-  & .editable {
-    height: 100%
-    outline: none
-  }
-
-  & :first-child {
-    margin-top: 0
-  }
-
-  & :last-child {
-    margin-bottom: 0
-  }
-`)
 
 const Root = elem.div([
   utilStyles.maxWidth,
@@ -68,35 +42,18 @@ const Root = elem.div([
   `)
 ])
 
-const editableClass = cmz(`
-  resize: vertical
-`)
-
 type Props = {
-  placeholder?: string,
-  text: string,
-  html?: string,
   id?: string,
+  name?: string,
+  value?: string,
+  placeholder?: string,
   charLimit: number,
-  linesLimit?: number,
-  disableEditing?: boolean,
-  onChange?: (text: string, html: string) => void,
-  onFocus?: (target: Object, text: string, html: string) => void,
-  onBlur?: (target: Object, text: string, html: string) => void
+  linesLimit: number,
+  onChange?: (value: string) => void
 }
 
 type State = {
-  id: string,
-  text: string,
-  html: string,
-  shouldShowTextLength: boolean,
-  options: {
-    placeholder: {
-      text: string
-    },
-    disableEditing: boolean,
-    toolbar: boolean
-  }
+  value: string
 }
 
 class TextareaEditor extends PureComponent<Props, State> {
@@ -106,77 +63,33 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   state = {
-    id: this.props.id || 'default',
-    text: this.props.text || '',
-    html: this.props.html || '',
-    shouldShowTextLength: false,
-    options: {
-      placeholder: {
-        text: this.props.placeholder || ''
-      },
-      disableEditing: this.props.disableEditing || false,
-      toolbar: !this.props.disableEditing
-    }
+    value: this.props.value || ''
   }
 
-  changeShouldShowTextLength = (val: boolean) => {
-    this.setState(() => ({ shouldShowTextLength: val }))
-  }
-
-  handleChange = (text: string, html: string) => {
-    this.setState(() => ({ text, html }))
-    const { onChange } = this.props
-    if (typeof onChange === 'function') {
-      onChange(text, html)
-    }
-  }
-
-  handleFocus = (target: HTMLTextAreaElement) => {
-    const { text, html } = this.state
-    const { onFocus } = this.props
-
-    this.changeShouldShowTextLength(true)
-
-    if (typeof onFocus === 'function') {
-      onFocus(target, text, html)
-    }
-  }
-
-  handleBlur = (target: HTMLTextAreaElement) => {
-    const { text, html } = this.state
-    const { onBlur } = this.props
-
-    this.changeShouldShowTextLength(false)
-
-    if (typeof onBlur === 'function') {
-      onBlur(target, text, html)
+  handleChangeValue = (input: Object): void => {
+    const inputValue = input.target.value
+    if (inputValue.length <= this.props.charLimit) {
+      this.setState({ value: inputValue })
     }
   }
 
   render () {
-    const { charLimit, linesLimit } = this.props
-    const { id, text, html, shouldShowTextLength, options } = this.state
-
-    const counterVisibilityClassName = shouldShowTextLength ? '' : 'hidden'
-    const editableClassName = options.disableEditing ? '' : editableClass
+    const { id, name, placeholder, charLimit, linesLimit } = this.props
+    const { value } = this.state
 
     return Root(
       <div>
-        <div className={`${editorContainerStyles} ${editableClassName}`}>
-          <MediumEditorWrapper
-            text={text}
-            html={html}
-            id={id}
-            charLimit={charLimit}
-            linesLimit={linesLimit}
-            options={options}
-            onChange={this.handleChange}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-          />
-        </div>
+        <InputField
+          id={id}
+          name={name}
+          type='textarea'
+          placeholder={placeholder}
+          value={value}
+          linesLimit={linesLimit}
+          onChange={this.handleChangeValue}
+        />
         <div className={textCountStyles}>
-          <p className={counterVisibilityClassName}>{text.length}/{charLimit}</p>
+          <span>{value.length}/{charLimit}</span>
         </div>
       </div>
     )

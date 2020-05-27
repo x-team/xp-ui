@@ -109,7 +109,6 @@
     "lodash.isnumber": "^3.0.3",
     "lodash.throttle": "^4.1.1",
     "markdown-to-jsx": "^6.9.4",
-    "medium-editor": "^5.23.3",
     "react-avatar": "^3.5.0",
     "react-click-outside": "github:tj/react-click-outside",
     "react-copy-to-clipboard": "^5.0.1",
