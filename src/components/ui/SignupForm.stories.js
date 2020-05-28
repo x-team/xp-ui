@@ -6,10 +6,12 @@ import State from '../../utils/State'
 
 import SignupScreen from './SignupScreen'
 import SignupForm from './SignupForm'
+import InputSection from '../forms/InputSection'
+import { SampleInputSection } from '../forms/InputSection.stories'
 import InputField from '../forms/InputField'
 import Button from './Button'
-import Label from './Label'
 import Modal from './Modal'
+import ErrorBox from './ErrorBox'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -20,37 +22,15 @@ const Body = ({ children }) => (
   </div>
 )
 
-const SampleLabel = () => (
-  <Label
-    headline='Lorem ipsum dolor sit amet'
-    description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
-  />
-)
-
 export const SampleSignupForm = (props: any) => (
-  <SignupForm.Layout {...props}>
-    <SignupForm.InputGroup>
-      <SampleLabel />
-      <InputField placeholder='Input field' />
-    </SignupForm.InputGroup>
-    <SignupForm.InputGroup>
-      <SampleLabel />
-      <InputField placeholder='Input field' />
-    </SignupForm.InputGroup>
-    <SignupForm.InputGroup>
-      <SampleLabel />
-      <InputField placeholder='Input field' />
-    </SignupForm.InputGroup>
-    <SignupForm.InputGroup>
-      <SampleLabel />
-      <InputField placeholder='Input field' />
-    </SignupForm.InputGroup>
-    <SignupForm.InputGroup>
-      <SampleLabel />
-      <InputField placeholder='Input field' />
-    </SignupForm.InputGroup>
+  <SignupForm {...props}>
+    <SampleInputSection />
+    <SampleInputSection />
+    <SampleInputSection />
+    <SampleInputSection />
+    <SampleInputSection />
     <Button block wide size='large'>Continue »</Button>
-  </SignupForm.Layout>
+  </SignupForm>
 )
 
 storiesOf('UI Components|SignupForm', module)
@@ -79,33 +59,18 @@ storiesOf('UI Components|SignupForm/Use Cases', module)
             theme='white'
             onClose={() => setState({ isOpen: false })}
           >
-            <SignupForm.Layout
+            <SignupForm
               title='Work Experience'
               hasPadding
               errorMessage='Something went wrong.'
             >
-              <SignupForm.InputGroup>
-                <SampleLabel />
-                <InputField placeholder='Input field' />
-              </SignupForm.InputGroup>
-              <SignupForm.InputGroup>
-                <SampleLabel />
-                <InputField placeholder='Input field' />
-              </SignupForm.InputGroup>
-              <SignupForm.InputGroup>
-                <SampleLabel />
-                <InputField placeholder='Input field' />
-              </SignupForm.InputGroup>
-              <SignupForm.InputGroup>
-                <SampleLabel />
-                <InputField placeholder='Input field' />
-              </SignupForm.InputGroup>
-              <SignupForm.InputGroup>
-                <SampleLabel />
-                <InputField placeholder='Input field' />
-              </SignupForm.InputGroup>
+              <SampleInputSection />
+              <SampleInputSection />
+              <SampleInputSection />
+              <SampleInputSection />
+              <SampleInputSection />
               <Button block wide size='large'>Continue »</Button>
-            </SignupForm.Layout>
+            </SignupForm>
           </Modal>
         )}
       </State>
@@ -113,21 +78,38 @@ storiesOf('UI Components|SignupForm/Use Cases', module)
   ))
 
 storiesOf('UI Components|SignupForm/Debug', module)
-  .add('with error message', () => (
+  .add('with error messages', () => (
     <Body>
-      <SignupScreen
-        heading='What have you done recently?'
-        subheading='Tell us a bit about your recent work experience.'
+      <SignupForm
+        title='Work Experience'
+        hasPadding
+        errorMessage='Something went wrong.'
       >
-        <SampleSignupForm
+        <InputSection
+          headline='Lorem ipsum dolor sit amet'
+          description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
+          isInvalid
           errorMessage='Something went wrong.'
+        >
+          <InputField placeholder='Input field' isInvalid />
+        </InputSection>
+        <InputSection
+          headline='Lorem ipsum dolor sit amet'
+          description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
+          isInvalid
+          errorMessage='Something went wrong.'
+        >
+          <InputField type='textarea' placeholder='Textarea field' isInvalid />
+        </InputSection>
+        <ErrorBox
+          errors={{
+            name: 'Something went wrong.'
+          }}
         />
-      </SignupScreen>
+        <Button block wide size='large'>Continue »</Button>
+      </SignupForm>
     </Body>
   ))
-  .add('missing props on Layout', () => (
-    <SignupForm.Layout />
-  ))
-  .add('missing props on InputGroup', () => (
-    <SignupForm.InputGroup />
+  .add('missing props', () => (
+    <SignupForm />
   ))
