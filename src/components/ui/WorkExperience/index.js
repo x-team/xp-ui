@@ -13,17 +13,18 @@ import type { Experience, SkillOption } from '../../../utils/types'
 import WorkExperienceEntryPresenter from './WorkExperienceEntryPresenter'
 import WorkExperienceEntryEditor from './WorkExperienceEntryEditor'
 
-import theme from '../../../styles/theme'
 import typo from '../../../styles/typo'
 
 export type Props = {
   experiences: ?Array<Experience>,
+  initialVisibleExperiences: number,
   skills: Array<SkillOption>,
-  onSave: ({ experience: Experience, isNew: boolean }) => Promise<any>
+  onSave: ({ experience: Experience, isNew: boolean }) => void
 }
 
 type State = {
-  showNewExperience: boolean
+  showNewExperience: boolean,
+  visibleExperiences: number
 }
 
 // This stub experience is used as a property when creating new experience
@@ -41,21 +42,15 @@ const cx = {
   root: cmz(typo.regularText),
 
   experienceWrapper: cmz(`
-    margin-bottom: 0.8em
+    margin-bottom: 1em
     padding-top: 0.4em
     padding-bottom: 0.6em
-    border-bottom: 1px solid ${theme.baseSilver}
   `),
 
-  presenterWrapper: cmz(`
-    display: flex
-    flex-direction: row
-  `),
-
-  editGutter: cmz(`
-    padding-top: 0.2em
-    width: 2em
-    overflow: hide
+  buttons: cmz(`
+    & * {
+      margin-top: 0.4em
+    }
   `)
 }
 
@@ -66,17 +61,22 @@ const renderEditor = ({ value: { experience, skills }, onValueChange }: EditorPr
 )
 
 const renderPresenter = ({ value: { experience }, activateEditingMode, isHover }: PresenterProps) => (
-  <div className={cx.presenterWrapper}>
-    <div className={cx.editGutter}>
-      {isHover && <PencilButton color='monochrome' onClick={activateEditingMode} />}
-    </div>
-    <WorkExperienceEntryPresenter experience={experience} />
-  </div>
+  <WorkExperienceEntryPresenter
+    experience={experience}
+    headerDecoration={isHover && (
+      <PencilButton color='monochrome' onClick={activateEditingMode} />
+    )}
+  />
 )
 
 class WorkExperience extends Component<Props, State> {
+  static defaultProps = {
+    initialVisibleExperiences: 3
+  }
+
   state = {
-    showNewExperience: false
+    showNewExperience: false,
+    visibleExperiences: this.props.initialVisibleExperiences
   }
 
   handleUpdate = ({ experience }: { experience: Experience }) => this.props.onSave({ experience, isNew: false })
@@ -90,13 +90,16 @@ class WorkExperience extends Component<Props, State> {
   }
 
   showNewExperience = () => this.setState({ showNewExperience: true })
+  showAllExperience = () => this.setState({ visibleExperiences: Infinity })
 
   render () {
     const { experiences, skills } = this.props
+    const visibleExperiences = (experiences || []).slice(0, this.state.visibleExperiences)
+
     return <div className={cx.root}>
 
-      {experiences && experiences.length
-        ? experiences.map((experience, index) =>
+      {visibleExperiences.length
+        ? visibleExperiences.map((experience, index) =>
           <div className={cx.experienceWrapper} key={index}>
             <InlineEditor
               value={{ experience, skills }}
@@ -110,24 +113,29 @@ class WorkExperience extends Component<Props, State> {
         : <em style={{ display: 'block' }}>No work experience provided</em>
       }
 
-      {this.state.showNewExperience
-        ? (
-          <div className={cx.experienceWrapper}>
-            <InlineEditor
-              value={{ experience: experienceStub, skills }}
-              initialMode='edit'
-              shouldSaveOnEnter={false}
-              onSave={this.handleSaveNew}
-              onCancel={() => this.setState({ showNewExperience: false })}
-              presenter={renderPresenter}
-              editor={renderEditor}
-            />
-          </div>
-        )
-        : null
+      {this.state.showNewExperience &&
+        <div className={cx.experienceWrapper}>
+          <InlineEditor
+            value={{ experience: experienceStub, skills }}
+            initialMode='edit'
+            shouldSaveOnEnter={false}
+            onSave={this.handleSaveNew}
+            onCancel={() => this.setState({ showNewExperience: false })}
+            presenter={renderPresenter}
+            editor={renderEditor}
+          />
+        </div>
       }
 
-      <Button color='silver' onClick={this.showNewExperience}>Add New Experience</Button>
+      <div className={cx.buttons}>
+        {experiences && experiences.length > visibleExperiences.length &&
+          <Button wide outlined color='silver' onClick={this.showAllExperience}>View More...</Button>
+        }
+
+        {!this.state.showNewExperience &&
+          <Button wide outlined color='silver' onClick={this.showNewExperience}>Add New Experience</Button>
+        }
+      </div>
     </div>
   }
 }
