@@ -125,9 +125,11 @@ class SkillsSelector extends Component<Props, State> {
           disabled={disabled}
           searchable
         />
-        <div className={cx.tags}>
-          {selectedSkills.map(this.renderTag)}
-        </div>
+        {selectedSkills.length > 0 && (
+          <div className={cx.tags}>
+            {selectedSkills.map(this.renderTag)}
+          </div>
+        )}
       </div>
     )
   }

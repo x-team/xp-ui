@@ -6,7 +6,7 @@ import theme from '../../styles/theme'
 
 const cmz = require('cmz')
 
-export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin' | 'filters' | 'arrowleft' | 'copy' | 'circleplus'
+export type Icon = 'cog' | 'head' | 'webcam' | 'message' | 'terminal' | 'diamond' | 'talking' | 'trophy' | 'plus' | 'minus' | 'calendar' | 'trashcan' | 'trashcanAlt' | 'x' | 'add' | 'triangleup' | 'triangledown' | 'hamburger' | 'magnifier' | 'edit' | 'check' | 'paperplane' | 'archive' | 'list' | 'grid' | 'dock' | 'github' | 'linkedin' | 'stackoverflow' | 'filter' | 'show' | 'play' | 'pause' | 'redirect' | 'link' | 'basecrm' | 'plusquare' | 'time' | 'spin' | 'filters' | 'arrowleft' | 'copy' | 'circleplus' | 'exclamation'
 export type Color = 'default' | 'inverted' | 'monochrome' | 'grayscale' | 'text' | 'mutedgray' | 'grayscarpaflow' | 'frenchGrayDarker' | 'green'
 
 type Props = {
@@ -726,6 +726,12 @@ export const getIcons = ({ color, hover, ...rest }: { [x: string]: any } = {}) =
       <svg width='32' height='32' viewBox='0 0 32 32' fill='none' {...rest}>
         <rect width='32' height='32' rx='16' className={fillClassName} />
         <path d='M17 8H15V15H8V17H15V24H17V17H24V15H17V8Z' fill='white' />
+      </svg>
+    ),
+
+    exclamation: (
+      <svg width='18' height='18' viewBox='0 0 18 18' fill='none' {...rest}>
+        <path className={fillClassName} d='M9.00008 0.666672C4.40008 0.666672 0.666748 4.40001 0.666748 9.00001C0.666748 13.6 4.40008 17.3333 9.00008 17.3333C13.6001 17.3333 17.3334 13.6 17.3334 9.00001C17.3334 4.40001 13.6001 0.666672 9.00008 0.666672ZM9.00008 9.83334C8.54175 9.83334 8.16675 9.45834 8.16675 9.00001V5.66667C8.16675 5.20834 8.54175 4.83334 9.00008 4.83334C9.45842 4.83334 9.83342 5.20834 9.83342 5.66667V9.00001C9.83342 9.45834 9.45842 9.83334 9.00008 9.83334ZM9.83342 13.1667H8.16675V11.5H9.83342V13.1667Z' />
       </svg>
     )
   }

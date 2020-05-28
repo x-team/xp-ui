@@ -4,9 +4,7 @@
 import React from 'react'
 import cmz from 'cmz'
 
-import ErrorBox from './ErrorBox'
-
-import theme, { breakpoints } from '../../styles/theme'
+import { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 const cx = {
@@ -44,65 +42,21 @@ const cx = {
     `
   ),
 
-  layoutErrorMessage: cmz(`
-    & {
-      margin: 0 0 24px
-    }
-
-    @media screen and (min-width: ${breakpoints.sm}) {
-      & {
-        margin: 0 0 48px
-      }
-    }
-  `),
-
   content: cmz(`
     margin: 0
-  `),
-
-  group: cmz(`
-    margin: 0 0 24px
-  `),
-
-  element: cmz(`
-    margin: 0 0 16px
-  `),
-
-  inputGroupErrorMessage: cmz(
-    typo.baseText,
-    `
-      color: ${theme.typoSubheading}
-      font-size: 16px
-      margin: -16px 0 0
-    `
-  )
+  `)
 }
 
-type InputGroupProps = {
-  children?: React$Node,
-  errorMessage?: string
-}
-
-type LayoutProps = {
-  errorMessage?: string,
+type Props = {
   title?: string,
   hasPadding?: boolean,
   children?: React$Node
 }
 
-const Layout = ({ errorMessage = '', title = '', hasPadding = false, children }: LayoutProps) => (
+const SignupForm = ({ title, hasPadding, children }: Props) => (
   <div className={[cx.form, hasPadding ? cx.padded : ''].join(' ')}>
     {title && (
       <h1 className={cx.title}>{title}</h1>
-    )}
-    {errorMessage && (
-      <div className={cx.layoutErrorMessage}>
-        <ErrorBox
-          errors={{
-            name: errorMessage
-          }}
-        />
-      </div>
     )}
     <div className={cx.content}>
       {children}
@@ -110,18 +64,4 @@ const Layout = ({ errorMessage = '', title = '', hasPadding = false, children }:
   </div>
 )
 
-const InputGroup = ({ children, errorMessage }: InputGroupProps) => children ? (
-  <div className={cx.group}>
-    {React.Children.map(children, (child) => (
-      <div className={cx.element}>{child}</div>
-    ))}
-    {errorMessage && (
-      <div className={cx.inputGroupErrorMessage}>{errorMessage}</div>
-    )}
-  </div>
-) : null
-
-export default {
-  Layout,
-  InputGroup
-}
+export default SignupForm
