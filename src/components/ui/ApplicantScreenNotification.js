@@ -189,7 +189,7 @@ class ApplicantScreenNotification extends PureComponent<Props, State> {
           exit: EXIT_TIMEOUT
         }}
       >
-        <div className={[cx.container, cx.color[this.props.type]].join(' ')}>
+        <div className={[cx.container, cx.color[this.props.type]].join(' ')} data-testid='xpui-applicantScreenNotification'>
           <div className={cx.content}>
             {this.renderIcon()}
             <div className={cx.text}>
