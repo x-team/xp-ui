@@ -31,6 +31,17 @@ storiesOf('Core Components|ConfirmationBox', module)
     />
   ))
 
+storiesOf('Core Components|ConfirmationBox/States', module)
+  .add('disabled', () => (
+    <ConfirmationBox
+      title={text('Title', 'Are you sure?')}
+      content={'This will cancel your application and you will no longer be considered for this role.'}
+      action={action('CTA Action')}
+      actionLabel={'Confirming action...'}
+      disabled
+    />
+  ))
+
 storiesOf('Core Components|ConfirmationBox/Use Cases', module)
   .add('with Modal', () => (
     <Body>

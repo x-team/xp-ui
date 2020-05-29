@@ -13,7 +13,8 @@ type Props = {
   content?: string,
   action?: () => void,
   actionLabel?: string,
-  dismissAction?: () => void
+  dismissAction?: () => void,
+  disabled?: boolean
 }
 
 const WRAPPER_PADDING_MOBILE = '12px'
@@ -95,7 +96,7 @@ const cx = {
   `)
 }
 
-const ConfirmationBox = ({ title, content, action, actionLabel, dismissAction }: Props) => (
+const ConfirmationBox = ({ title, content, action, actionLabel, dismissAction, disabled }: Props) => (
   <div className={cx.wrapper}>
     {title && (
       <h2 className={cx.title}>{title}</h2>
@@ -103,26 +104,30 @@ const ConfirmationBox = ({ title, content, action, actionLabel, dismissAction }:
     {content && (
       <p className={cx.content}>{content}</p>
     )}
-    <div className={cx.buttons}>
-      {action && actionLabel && (
-        <Button
-          onClick={action}
-        >
-          {actionLabel}
-        </Button>
-      )}
-      {dismissAction && (
-        <Button
-          pseudolink
-          className={cx.dismissButton}
-          onClick={dismissAction}
-        >
-          <span className={cx.dismissButtonLabel}>
-            Dismiss
-          </span>
-        </Button>
-      )}
-    </div>
+    {((action && actionLabel) || dismissAction) && (
+      <div className={cx.buttons}>
+        {action && actionLabel && (
+          <Button
+            onClick={action}
+            disabled={disabled}
+          >
+            {actionLabel}
+          </Button>
+        )}
+        {dismissAction && (
+          <Button
+            pseudolink
+            className={cx.dismissButton}
+            onClick={dismissAction}
+            disabled={disabled}
+          >
+            <span className={cx.dismissButtonLabel}>
+              Dismiss
+            </span>
+          </Button>
+        )}
+      </div>
+    )}
   </div>
 )
 
