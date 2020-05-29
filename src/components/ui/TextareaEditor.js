@@ -92,7 +92,7 @@ class TextareaEditor extends PureComponent<Props, State> {
           onChange={this.handleChangeValue}
         />
         <div className={cx.textCountStyles}>
-          <span className={`${value.length >= charLimit ? cx.textLimitExceeded : ''}`}>
+          <span className={value.length >= charLimit ? cx.textLimitExceeded : ''}>
             {value.length}/{charLimit}
           </span>
         </div>
