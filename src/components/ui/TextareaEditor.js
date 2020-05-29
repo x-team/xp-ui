@@ -24,16 +24,12 @@ const cx = {
     `
   ),
   textCountStyles: cmz(`
-    & {
-      text-align: right
-      color: ${theme.lineRed}
-      font-weight: bold
-      font-size: 14px
-    }
-
-    & > .hidden {
-      visibility: hidden
-    }
+    text-align: right
+    font-weight: bold
+    font-size: 14px
+  `),
+  textLimitExceeded: cmz(`
+    color: ${theme.lineRed}
   `)
 }
 
@@ -50,7 +46,8 @@ type Props = {
 }
 
 type State = {
-  value: string
+  value: string,
+  initialValueLength: number
 }
 
 class TextareaEditor extends PureComponent<Props, State> {
@@ -60,16 +57,25 @@ class TextareaEditor extends PureComponent<Props, State> {
   }
 
   state = {
-    value: this.props.value || ''
+    value: this.props.value || '',
+    initialValueLength: this.props.value ? this.props.value.length : 0
   }
 
   handleChangeValue = (input: Object): void => {
     const inputValue = input.target.value
-    if (inputValue.length <= this.props.charLimit) {
+    const charLimit = this.props.charLimit
+    const isValueLimitExceeded = this.state.initialValueLength >= inputValue.length
+    const isValueValidLenght = inputValue.length <= charLimit
+
+    if (isValueValidLenght || isValueLimitExceeded) {
       this.setState({ value: inputValue }, () => {
         const { onChange } = this.props
         onChange && onChange(inputValue)
       })
+
+      if (isValueLimitExceeded && inputValue.length === charLimit) {
+        this.setState({ initialValueLength: charLimit })
+      }
     }
   }
 
@@ -86,7 +92,9 @@ class TextareaEditor extends PureComponent<Props, State> {
           onChange={this.handleChangeValue}
         />
         <div className={cx.textCountStyles}>
-          <span>{value.length}/{charLimit}</span>
+          <span className={`${value.length >= charLimit ? cx.textLimitExceeded : ''}`}>
+            {value.length}/{charLimit}
+          </span>
         </div>
       </div>
     )
