@@ -65,16 +65,16 @@ class TextareaEditor extends PureComponent<Props, State> {
   handleChangeValue = (event: SyntheticKeyboardEvent<HTMLInputElement>): void => {
     const inputValue = event.currentTarget.value
     const charLimit = this.props.charLimit
-    const isValueShorter = this.state.initialValueLength >= inputValue.length
-    const isValueValidLength = inputValue.length <= charLimit
+    const hasAllowedInitialValueLength = this.state.initialValueLength >= inputValue.length
+    const hasAllowedValueLength = inputValue.length <= charLimit
 
-    if (isValueValidLength || isValueShorter) {
+    if (hasAllowedValueLength || hasAllowedInitialValueLength) {
       this.setState({ value: inputValue }, () => {
         const { onChange } = this.props
         onChange && onChange(inputValue)
       })
 
-      if (isValueShorter && inputValue.length === charLimit) {
+      if (hasAllowedInitialValueLength && inputValue.length === charLimit) {
         this.setState({ initialValueLength: charLimit })
       }
     }
