@@ -9,7 +9,6 @@ module.exports = {
     registration: './src/registration.js',
     CustomSelector: './src/components/ui/CustomSelector',
     SkillsSelector: './src/components/ui/SkillsSelector',
-    TextareaEditor: './src/components/ui/TextareaEditor',
     Timeframe: './src/components/ui/Timeframe'
   },
   devtool: 'source-maps',

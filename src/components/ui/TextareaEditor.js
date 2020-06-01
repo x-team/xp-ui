@@ -24,13 +24,15 @@ const cx = {
       margin: 0 auto
     `
   ),
+
   textCountStyles: cmz(`
     text-align: right
-    font-weight: bold
     font-size: 14px
   `),
+
   textLimitExceeded: cmz(`
     color: ${theme.lineRed}
+    font-weight: bold
   `)
 }
 
@@ -77,6 +79,12 @@ class TextareaEditor extends PureComponent<Props, State> {
       if (hasAllowedInitialValueLength && inputValue.length === charLimit) {
         this.setState({ initialValueLength: charLimit })
       }
+    }
+  }
+
+  componentWillReceiveProps ({ value: nextValue }: Props) {
+    if (nextValue !== this.props.value) {
+      this.setState({ value: nextValue })
     }
   }
 
