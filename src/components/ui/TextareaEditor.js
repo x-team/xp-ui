@@ -1,4 +1,5 @@
 // @flow
+/* global SyntheticKeyboardEvent, HTMLInputElement */
 
 import React, { PureComponent } from 'react'
 import cmz from 'cmz'
@@ -61,8 +62,8 @@ class TextareaEditor extends PureComponent<Props, State> {
     initialValueLength: this.props.value ? this.props.value.length : 0
   }
 
-  handleChangeValue = (event: Object): void => {
-    const inputValue = event.target.value
+  handleChangeValue = (event: SyntheticKeyboardEvent<HTMLInputElement>): void => {
+    const inputValue = event.currentTarget.value
     const charLimit = this.props.charLimit
     const isValueShorter = this.state.initialValueLength >= inputValue.length
     const isValueValidLength = inputValue.length <= charLimit
