@@ -55,7 +55,7 @@ type Props = {
   options: Array<SkillOption>,
   applicantSkills: Array<SkillOption>,
   disabled?: boolean,
-  onChange: (selectedSkills: Array<SkillOption>) => void
+  onChange?: (selectedSkills: Array<SkillOption>) => void
 }
 
 type State = {

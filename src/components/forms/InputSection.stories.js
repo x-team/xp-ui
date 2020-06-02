@@ -43,7 +43,7 @@ storiesOf('Core Components|Form Components/InputSection/Use Cases', module)
       headline='Lorem ipsum dolor sit amet'
       description='Sed dui metus, pretium vel justo at, malesuada viverra sapien.'
     >
-      <SkillsSelector />
+      <SkillsSelector applicantSkills={[]} options={[]} />
     </InputSection>
   ))
   .add('with RichTextEditor', () => (
