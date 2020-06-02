@@ -4,7 +4,7 @@ import React from 'react'
 import cmz from 'cmz'
 
 import InputField from '../../forms/InputField'
-import TextareaEditor from '../TextareaEditor/TextareaEditor'
+import TextareaEditor from '../TextareaEditor'
 import SkillsSelector from '../SkillsSelector'
 import Timeframe from '../Timeframe'
 
@@ -94,7 +94,7 @@ function WorkExperienceEntryEditor (props: Props) {
     </div>
     <div className={cx.highlights}>
       <p>Highlights</p>
-      <TextareaEditor text={highlights || ''} placeholder='Highlights' charLimit={1000}
+      <TextareaEditor value={highlights || ''} placeholder='Highlights' charLimit={1000}
         onChange={text => valueChanged({ highlights: text })} />
     </div>
   </div>
