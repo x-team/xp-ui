@@ -44,3 +44,17 @@ export type Filters = {
   sort?: string,
   order?: 'ASC' | 'DESC' | 'NONE' | ''
 }
+
+export type Experience = {
+  role: string,
+  company: string,
+  startDate: Date,
+  endDate: ?Date,
+  highlights: string,
+  skills?: Array<string>
+}
+
+export type SkillOption = {
+  value: string | number,
+  label: string
+}

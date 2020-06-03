@@ -43,14 +43,14 @@ const isKeyOfType = (keyCode: number, type: number) => keyCode === type
 
 export type EditorProps = {
   value: any,
-  onValueChange(data: any): void
+  onValueChange(data: any): any
 }
 
 export type PresenterProps = {
   value: any,
   isEditable: boolean,
   isHover: boolean,
-  activateEditingMode(): void
+  activateEditingMode(): any
 }
 
 type Props = {
@@ -58,6 +58,8 @@ type Props = {
   value: any,
   /** To control whether the component can be editable or not */
   isEditable: boolean,
+  /** To control whether the component begins in presenter mode or edit mode */
+  initialMode: 'present' | 'edit',
   /** To control whether the component can be saved or not */
   isValid: boolean,
   /** To control whether the component will save changes on Enter or not, the Shift+Enter combination works always */
@@ -67,7 +69,7 @@ type Props = {
   /** Presentation mode render function */
   presenter(props: PresenterProps): any,
   /** On save changes callback */
-  onSave(data: any): void,
+  onSave(data: any): any,
   /** On cancel changes callback */
   onCancel?: () => void,
 }
@@ -84,12 +86,13 @@ type State = {
 class InlineEditor extends PureComponent<Props, State> {
   static defaultProps = {
     isEditable: true,
+    initialMode: 'present',
     isValid: true,
     shouldSaveOnEnter: true
   }
 
   state = {
-    isInEditMode: false,
+    isInEditMode: this.props.initialMode === 'edit',
     isHover: false,
     editValue: this.props.value
   }
