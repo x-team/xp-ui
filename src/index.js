@@ -84,6 +84,7 @@ import TwoColumnsLayout from './components/ui/TwoColumnsLayout'
 import VideoPlayer from './components/ui/VideoPlayer'
 import WelcomeHero from './components/ui/WelcomeHero'
 import WorkExperienceCard from './components/ui/WorkExperienceCard'
+import WorkExperience from './components/ui/WorkExperience'
 import XIcon from './components/ui/XIcon'
 
 export {
@@ -171,5 +172,6 @@ export {
   VideoPlayer,
   WelcomeHero,
   WorkExperienceCard,
+  WorkExperience,
   XIcon
 }
