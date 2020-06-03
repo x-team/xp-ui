@@ -84,7 +84,7 @@ class TextareaEditor extends PureComponent<Props, State> {
 
   componentWillReceiveProps ({ value: nextValue }: Props) {
     if (nextValue !== this.props.value) {
-      this.setState({ value: nextValue })
+      this.setState({ value: nextValue || '' })
     }
   }
 
