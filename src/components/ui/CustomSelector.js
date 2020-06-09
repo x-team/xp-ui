@@ -101,7 +101,18 @@ const cx = {
         border-bottom: 1px solid ${theme.lineSilver2}
       }
     `
-  )
+  ),
+
+  invalid: cmz(`
+    & .Select-control {
+      border: 1px solid ${theme.lineRed}
+    }
+
+    &.is-focused .Select-control {
+      border: 1px solid ${theme.lineRed} !important
+      box-shadow: 0 0 3px ${theme.lineRed} !important
+    }
+  `)
 }
 
 type Option = {
@@ -109,7 +120,9 @@ type Option = {
   label: string
 }
 
-type Props = {}
+type Props = {
+  isInvalid?: boolean
+}
 
 type State = {
   selectedOption: Option | null
@@ -125,7 +138,13 @@ class CustomSelector extends PureComponent<Props, State> {
   }
 
   render () {
+    const { isInvalid } = this.props
     const { selectedOption } = this.state
+
+    const classNames = [
+      cx.select.toString(),
+      isInvalid ? cx.invalid.toString() : ''
+    ].join(' ')
 
     return (
       <Select
@@ -138,7 +157,7 @@ class CustomSelector extends PureComponent<Props, State> {
         clearable={false}
         searchable={false}
         {...this.props}
-        className={cx.select.toString()}
+        className={classNames}
       />
     )
   }

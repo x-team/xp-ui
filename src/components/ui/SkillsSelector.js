@@ -55,6 +55,7 @@ type Props = {
   options: Array<SkillOption>,
   applicantSkills: Array<SkillOption>,
   disabled?: boolean,
+  isInvalid?: boolean,
   onChange?: (selectedSkills: Array<SkillOption>) => void
 }
 
@@ -102,7 +103,7 @@ class SkillsSelector extends Component<Props, State> {
   }
 
   render () {
-    const { options = [], disabled = false } = this.props
+    const { options = [], disabled = false, isInvalid = false } = this.props
     const { selectedSkills = [] } = this.state
     const placeholder = selectedSkills.length > 0
       ? 'Add more...'
@@ -119,6 +120,7 @@ class SkillsSelector extends Component<Props, State> {
           arrowRenderer={null}
           onChange={this.handleSkillSelection}
           disabled={disabled}
+          isInvalid={isInvalid}
           searchable
         />
         {selectedSkills.length > 0 && (

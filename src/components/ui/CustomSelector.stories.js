@@ -69,6 +69,13 @@ storiesOf('Core Components|Form Components/CustomSelector/States', module)
       disabled
     />
   ))
+  .add('invalid', () => (
+    <CustomSelector
+      placeholder={'Month'}
+      options={months}
+      isInvalid
+    />
+  ))
 
 storiesOf('Core Components|Form Components/CustomSelector/Debug', module)
   .add('missing props', () => (

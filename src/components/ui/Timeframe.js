@@ -95,6 +95,7 @@ type Props = {
   endDate?: ?Date,
   noEndDate?: boolean,
   disabled?: boolean,
+  isInvalid?: boolean,
   onChange?: ({ startDate: Date, endDate: ?Date }) => void
 }
 
@@ -244,7 +245,7 @@ class Timeframe extends PureComponent<Props, State> {
   }
 
   render () {
-    const { disabled = false } = this.props
+    const { disabled = false, isInvalid = false } = this.props
     const { startMonth, startYear, endMonth, endYear, noEndDate } = this.state
     return (
       <div>
@@ -260,6 +261,7 @@ class Timeframe extends PureComponent<Props, State> {
                   value={startMonth}
                   onChange={this.updateFieldValue('startMonth', MONTHS)}
                   disabled={disabled}
+                  isInvalid={isInvalid}
                 />
               </div>
               <div className={cx.year}>
@@ -270,6 +272,7 @@ class Timeframe extends PureComponent<Props, State> {
                   value={startYear}
                   onChange={this.updateFieldValue('startYear', YEARS)}
                   disabled={disabled}
+                  isInvalid={isInvalid}
                 />
               </div>
             </div>
@@ -288,6 +291,7 @@ class Timeframe extends PureComponent<Props, State> {
                     value={endMonth}
                     onChange={this.updateFieldValue('endMonth', this.getValidEndMonthsList())}
                     disabled={disabled}
+                    isInvalid={isInvalid}
                   />
                 </div>
                 <div className={cx.year}>
@@ -298,6 +302,7 @@ class Timeframe extends PureComponent<Props, State> {
                     value={endYear}
                     onChange={this.updateFieldValue('endYear', this.getValidEndYearsList())}
                     disabled={disabled}
+                    isInvalid={isInvalid}
                   />
                 </div>
               </div>
