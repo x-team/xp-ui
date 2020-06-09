@@ -5,7 +5,4 @@ npm-debug.log
 .cache
 .vscode
 .cache
-
-# production
-/lib
 .storybook-static
