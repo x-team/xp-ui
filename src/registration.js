@@ -31,6 +31,7 @@ import RoadmapHero from './components/ui/RoadmapHero'
 import SignupForm from './components/ui/SignupForm'
 import SignupScreen from './components/ui/SignupScreen'
 import Text from './components/ui/Text'
+import TextareaEditor from './components/ui/TextareaEditor'
 import TruncatedList from './components/ui/TruncatedList'
 import WelcomeHero from './components/ui/WelcomeHero'
 import WorkExperienceCard from './components/ui/WorkExperienceCard'
@@ -69,6 +70,7 @@ export {
   SignupForm,
   SignupScreen,
   Text,
+  TextareaEditor,
   TruncatedList,
   WelcomeHero,
   WorkExperienceCard

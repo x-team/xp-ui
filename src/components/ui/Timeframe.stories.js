@@ -23,6 +23,24 @@ storiesOf('Core Components|Form Components/Timeframe', module)
     />
   ))
 
+storiesOf('Core Components|Form Components/Timeframe/States', module)
+  .add('disabled', () => (
+    <Timeframe
+      startDate={new Date('2000-05-23')}
+      endDate={new Date('2010-12-01')}
+      onChange={output => console.log(output)}
+      disabled
+    />
+  ))
+  .add('invalid', () => (
+    <Timeframe
+      startDate={new Date('2000-05-23')}
+      endDate={new Date('2010-12-01')}
+      onChange={output => console.log(output)}
+      isInvalid
+    />
+  ))
+
 storiesOf('Core Components|Form Components/Timeframe/Debug', module)
   .add('fixed width wrapper', () => (
     <FixedWidth>
