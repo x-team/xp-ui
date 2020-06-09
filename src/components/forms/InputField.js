@@ -196,7 +196,7 @@ const dateInput = cmz(`
     width: 15px
     right: 10px
     top: 50%
-    z-index: 100
+    z-index: 2
   }
 `)
 
