@@ -31,6 +31,17 @@ storiesOf('Core Components|ConfirmationBox', module)
     />
   ))
 
+storiesOf('Core Components|ConfirmationBox/States', module)
+  .add('disabled', () => (
+    <ConfirmationBox
+      title={text('Title', 'Are you sure?')}
+      content={'This will cancel your application and you will no longer be considered for this role.'}
+      action={action('CTA Action')}
+      actionLabel={'Confirming action...'}
+      disabled
+    />
+  ))
+
 storiesOf('Core Components|ConfirmationBox/Use Cases', module)
   .add('with Modal', () => (
     <Body>
@@ -64,6 +75,7 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
           return state.isOpen ? (
             <Modal
               onClose={closeModal}
+              theme='white'
             >
               <ConfirmationBox
                 title={text('Title', faker.lorem.sentence())}
@@ -78,12 +90,20 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
       </State>
     </Body>
   ))
+  .add('without title', () => (
+    <ConfirmationBox
+      content={text('Content', faker.lorem.paragraph())}
+      action={action('CTA Action: Withdraw application')}
+      actionLabel={text('Action', faker.lorem.words())}
+      dismissAction={action('Dismiss action')}
+    />
+  ))
   .add('random data', () => (
     <ConfirmationBox
       title={text('Title', faker.lorem.sentence())}
       content={text('Content', faker.lorem.paragraph())}
       action={action('CTA Action: Withdraw application')}
-      actionLabel={text('Action', faker.lorem.sentence())}
+      actionLabel={text('Action', faker.lorem.words())}
       dismissAction={action('Dismiss action')}
     />
   ))
@@ -92,7 +112,7 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
       title={text('Title', faker.lorem.sentence())}
       content={text('Content', faker.lorem.paragraph())}
       action={action('CTA Action: Withdraw application')}
-      actionLabel={text('Action', faker.lorem.sentence())}
+      actionLabel={text('Action', faker.lorem.words())}
     />
   ))
   .add('random data and dismiss button only', () => (

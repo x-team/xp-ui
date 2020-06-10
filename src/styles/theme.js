@@ -54,7 +54,9 @@ export const palette = {
   sapling: '#E1CFA1',
   butteredRum: '#997009',
   ghost: '#CDCDD6',
-  mineShaft: '#333'
+  mineShaft: '#333',
+  silverChalice: '#AAA',
+  alabaster: '#F9F9F9'
 }
 
 export const baseColors = {
@@ -100,8 +102,13 @@ export const formColors = {
   formPlaceholder: palette.manatee,
   formText: palette.tuna,
   formBorder: palette.athensGrayAlt,
-  formError: palette.brickRed,
-  formErrorShadow: palette.wePeep
+  formErrorText: palette.radicalRed,
+  formErrorBorder: palette.radicalRed,
+  formErrorBackground: palette.radicalRed,
+  formDisabledText: palette.mineShaft,
+  formDisabledPlaceholder: palette.silverChalice,
+  formDisabledBorder: palette.porcelain,
+  formDisabledBackground: palette.alabaster
 }
 
 export const lineColors = {
@@ -111,6 +118,7 @@ export const lineColors = {
   lineSilver3: palette.athensGray,
   lineSilver4: palette.athensGrayAlt,
   lineSilver5: palette.iron,
+  lineSilver6: palette.ghost,
   lineYellow: palette.sapling
 }
 
