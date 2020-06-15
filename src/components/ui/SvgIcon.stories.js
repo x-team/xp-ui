@@ -51,6 +51,9 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='arrowleft' />
       <SvgIcon icon='copy' />
       <SvgIcon icon='exclamation' />
+      <SvgIcon icon='padlock' />
+      <SvgIcon icon='notebook' />
+      <SvgIcon icon='profile' />
     </div>
   ))
   .add('inverted color', () => (
@@ -97,6 +100,9 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='arrowleft' color='inverted' />
       <SvgIcon icon='copy' color='inverted' />
       <SvgIcon icon='exclamation' color='inverted' />
+      <SvgIcon icon='padlock' color='inverted' />
+      <SvgIcon icon='notebook' color='inverted' />
+      <SvgIcon icon='profile' color='inverted' />
     </div>
   ))
 
@@ -144,6 +150,9 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='arrowleft' color='monochrome' />
       <SvgIcon icon='copy' color='monochrome' />
       <SvgIcon icon='exclamation' color='monochrome' />
+      <SvgIcon icon='padlock' color='monochrome' />
+      <SvgIcon icon='notebook' color='monochrome' />
+      <SvgIcon icon='profile' color='monochrome' />
     </div>
   ))
   .add('grayscale color', () => (
@@ -190,6 +199,9 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='arrowleft' color='grayscale' />
       <SvgIcon icon='copy' color='grayscale' />
       <SvgIcon icon='exclamation' color='grayscale' />
+      <SvgIcon icon='padlock' color='grayscale' />
+      <SvgIcon icon='notebook' color='grayscale' />
+      <SvgIcon icon='profile' color='grayscale' />
     </div>
   ))
   .add('grayscarpaflow color', () => (
@@ -236,6 +248,9 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='arrowleft' color='grayscarpaflow' />
       <SvgIcon icon='copy' color='grayscarpaflow' />
       <SvgIcon icon='exclamation' color='grayscarpaflow' />
+      <SvgIcon icon='padlock' color='grayscarpaflow' />
+      <SvgIcon icon='notebook' color='grayscarpaflow' />
+      <SvgIcon icon='profile' color='grayscarpaflow' />
     </div>
   ))
   .add('text gray color', () => (
@@ -282,6 +297,9 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='arrowleft' color='text' />
       <SvgIcon icon='copy' color='text' />
       <SvgIcon icon='exclamation' color='text' />
+      <SvgIcon icon='padlock' color='text' />
+      <SvgIcon icon='notebook' color='text' />
+      <SvgIcon icon='profile' color='text' />
     </div>
   ))
   .add('muted gray color', () => (
@@ -328,6 +346,9 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='arrowleft' color='mutedgray' />
       <SvgIcon icon='copy' color='mutedgray' />
       <SvgIcon icon='exclamation' color='mutedgray' />
+      <SvgIcon icon='padlock' color='mutedgray' />
+      <SvgIcon icon='notebook' color='mutedgray' />
+      <SvgIcon icon='profile' color='mutedgray' />
     </div>
   ))
   .add('green color', () => (
@@ -374,6 +395,9 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='arrowleft' color='green' />
       <SvgIcon icon='copy' color='green' />
       <SvgIcon icon='exclamation' color='green' />
+      <SvgIcon icon='padlock' color='green' />
+      <SvgIcon icon='notebook' color='green' />
+      <SvgIcon icon='profile' color='green' />
     </div>
   ))
   .add('hover color', () => (
@@ -420,6 +444,9 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='arrowleft' color='text' hover='default' />
       <SvgIcon icon='copy' color='text' hover='default' />
       <SvgIcon icon='exclamation' color='text' hover='default' />
+      <SvgIcon icon='padlock' color='text' hover='default' />
+      <SvgIcon icon='notebook' color='text' hover='default' />
+      <SvgIcon icon='profile' color='text' hover='default' />
     </div>
   ))
   .add('rest of props', () => (
@@ -466,6 +493,9 @@ storiesOf('Core Components|SvgIcon', module)
       <SvgIcon icon='arrowleft' style={{ marginRight: '30px' }} />
       <SvgIcon icon='copy' style={{ marginRight: '30px' }} />
       <SvgIcon icon='exclamation' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='padlock' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='notebook' style={{ marginRight: '30px' }} />
+      <SvgIcon icon='profile' style={{ marginRight: '30px' }} />
     </div>
   ))
 

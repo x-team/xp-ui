@@ -54,6 +54,7 @@ import Loader from './components/ui/Loader'
 import LocateYourProfile from './components/ui/LocateYourProfile'
 import LoginButton from './components/ui/LoginButton'
 import MetaGroup from './components/ui/MetaGroup'
+import Milestones from './components/ui/Milestones'
 import Modal from './components/ui/Modal'
 import Note from './components/ui/Note'
 import NotesFeed from './components/ui/NotesFeed'
@@ -142,6 +143,7 @@ export {
   LocateYourProfile,
   LoginButton,
   MetaGroup,
+  Milestones,
   Modal,
   Note,
   NotesFeed,
