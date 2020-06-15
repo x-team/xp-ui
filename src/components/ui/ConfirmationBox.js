@@ -14,6 +14,7 @@ type Props = {
   action?: () => void,
   actionLabel?: string,
   dismissAction?: () => void,
+  dismissLabel?: string,
   disabled?: boolean
 }
 
@@ -96,7 +97,15 @@ const cx = {
   `)
 }
 
-const ConfirmationBox = ({ title, content, action, actionLabel, dismissAction, disabled }: Props) => (
+const ConfirmationBox = ({
+  title,
+  content,
+  action,
+  actionLabel,
+  dismissAction,
+  dismissLabel = 'Dismiss',
+  disabled
+}: Props) => (
   <div className={cx.wrapper}>
     {title && (
       <h2 className={cx.title}>{title}</h2>
@@ -122,7 +131,7 @@ const ConfirmationBox = ({ title, content, action, actionLabel, dismissAction, d
             disabled={disabled}
           >
             <span className={cx.dismissButtonLabel}>
-              Dismiss
+              {dismissLabel}
             </span>
           </Button>
         )}

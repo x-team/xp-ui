@@ -96,6 +96,7 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
       action={action('CTA Action: Withdraw application')}
       actionLabel={text('Action', faker.lorem.words())}
       dismissAction={action('Dismiss action')}
+      dismissLabel={text('Dismiss', faker.lorem.words())}
     />
   ))
   .add('random data', () => (
@@ -105,6 +106,7 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
       action={action('CTA Action: Withdraw application')}
       actionLabel={text('Action', faker.lorem.words())}
       dismissAction={action('Dismiss action')}
+      dismissLabel={text('Dismiss', faker.lorem.words())}
     />
   ))
   .add('random data and action button only', () => (
@@ -113,6 +115,7 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
       content={text('Content', faker.lorem.paragraph())}
       action={action('CTA Action: Withdraw application')}
       actionLabel={text('Action', faker.lorem.words())}
+      dismissLabel={text('Dismiss', faker.lorem.words())}
     />
   ))
   .add('random data and dismiss button only', () => (
@@ -120,6 +123,7 @@ storiesOf('Core Components|ConfirmationBox/Debug', module)
       title={text('Title', faker.lorem.sentence())}
       content={text('Content', faker.lorem.paragraph())}
       dismissAction={action('Dismiss action')}
+      dismissLabel={text('Dismiss', faker.lorem.words())}
     />
   ))
   .add('missing props', () => (

@@ -19,6 +19,10 @@ const cx = {
     margin-left: 4px
   `),
 
+  headline: cmz(`
+    font-weight: 400
+  `),
+
   description: cmz(`
     font-size: 16px
   `)
@@ -34,7 +38,7 @@ type Props = {
 const InputLabel = ({ headline, description, isRequired }: Props) => headline || description ? (
   <div className={cx.label}>
     {headline && (
-      <div>
+      <div className={cx.headline}>
         {headline}
         {isRequired && (
           <span className={cx.required}>*</span>
