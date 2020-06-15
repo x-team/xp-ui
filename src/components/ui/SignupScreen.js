@@ -7,6 +7,7 @@ import cmz from 'cmz'
 import Footer from './Footer'
 import Text from './Text'
 import Loader from './Loader'
+import Milestones from './Milestones'
 
 import { breakpoints } from '../../styles/theme'
 
@@ -50,6 +51,12 @@ const cx = {
     }
   `),
 
+  milestones: cmz(`
+    width: 500px
+    padding: 32px 0 24px
+    margin: 0 auto
+  `),
+
   heading: cmz(`
     margin: 32px 0
   `),
@@ -88,12 +95,22 @@ type Props = {
   heading?: string,
   subheading?: string,
   isLoading?: boolean,
-  children?: React$Node
+  children?: React$Node,
+  milestones?: Array<*>,
+  milestone?: number
 }
 
-const SignupScreen = ({ heading, subheading, isLoading, children }: Props) => (
+const SignupScreen = ({ heading, subheading, isLoading, children, milestone, milestones }: Props) => (
   <div className={cx.layout}>
     <div className={cx.wrapper}>
+      {milestone && milestones && (
+        <div className={cx.milestones}>
+          <Milestones
+            level={milestone}
+            levels={milestones}
+          />
+        </div>
+      )}
       {(heading || subheading) && (
         <div className={cx.heading}>
           <Text
