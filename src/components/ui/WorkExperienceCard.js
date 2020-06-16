@@ -1,4 +1,5 @@
 // @flow
+/* globals SyntheticEvent */
 
 import React, { Component } from 'react'
 
@@ -14,6 +15,11 @@ const cx = {
       border: 1px solid ${theme.lineSilver5}
       box-shadow: 4px 4px 0 ${theme.baseTuna.fade(0.95)}
       padding: 24px
+    }
+
+    &:hover {
+      cursor: pointer
+      box-shadow: 4px 4px 0 ${theme.baseTuna.fade(0.92)}
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
@@ -110,12 +116,14 @@ type Props = {
 class WorkExperienceCard extends Component<Props> {
   formatDate = (date: Date): string => date.toLocaleString('en-us', { year: 'numeric', month: 'long' })
 
-  handleEditEntry = () => {
+  handleEditEntry = (event: SyntheticEvent<>) => {
+    event && event.stopPropagation()
     const { editEntry } = this.props
     editEntry && editEntry()
   }
 
-  handleDeleteEntry = () => {
+  handleDeleteEntry = (event: SyntheticEvent<>) => {
+    event && event.stopPropagation()
     const { deleteEntry } = this.props
     deleteEntry && deleteEntry()
   }
@@ -124,7 +132,7 @@ class WorkExperienceCard extends Component<Props> {
     const { role, company, startDate, endDate, editEntry, deleteEntry } = this.props
 
     return role || company || startDate ? (
-      <div className={cx.wrapper}>
+      <div className={cx.wrapper} onClick={this.handleEditEntry}>
         {(role || company) && (
           <div className={cx.label}>
             {role && (

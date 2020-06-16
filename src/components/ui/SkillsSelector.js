@@ -106,7 +106,7 @@ class SkillsSelector extends Component<Props, State> {
     const { options = [], disabled = false, isInvalid = false } = this.props
     const { selectedSkills = [] } = this.state
     const placeholder = selectedSkills.length > 0
-      ? 'Add more...'
+      ? 'Select more skills...'
       : 'HTML, React, JavaScript, Postgres, SQL, ...'
     const availableOptions = differenceBy(options, selectedSkills, 'value')
     return (

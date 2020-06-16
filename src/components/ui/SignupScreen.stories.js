@@ -2,12 +2,31 @@
 
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 
 import SignupScreen from './SignupScreen'
 import { SampleSignupForm } from './SignupForm.stories'
 import WorkExperienceCard from './WorkExperienceCard'
 import AddMoreButton from './AddMoreButton'
 import Button from './Button'
+
+export const signupScreenLevels = [
+  {
+    label: 'Signup',
+    icon: 'padlock',
+    handleClick: action('signup clicked')
+  },
+  {
+    label: 'Work Experience',
+    icon: 'notebook',
+    handleClick: action('workExperience clicked')
+  },
+  {
+    label: 'Profile',
+    icon: 'profile',
+    handleClick: action('profile clicked')
+  }
+]
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -36,6 +55,8 @@ storiesOf('Screens and Layouts|SignupScreen', module)
       <SignupScreen
         heading='What have you done recently?'
         subheading='Tell us a bit about your recent work experience.'
+        milestones={signupScreenLevels}
+        milestone={1}
       >
         <SampleSignupForm />
       </SignupScreen>
@@ -48,6 +69,8 @@ storiesOf('Screens and Layouts|SignupScreen/Use Cases', module)
       <SignupScreen
         heading='What have you done recently?'
         subheading='Tell us a bit about your recent work experience.'
+        milestones={signupScreenLevels}
+        milestone={1}
       >
         <SampleSignupForm />
       </SignupScreen>
@@ -58,6 +81,8 @@ storiesOf('Screens and Layouts|SignupScreen/Use Cases', module)
       <SignupScreen
         heading='What have you done recently?'
         subheading='Tell us a bit about your recent work experience.'
+        milestones={signupScreenLevels}
+        milestone={2}
       >
         <WorkExperienceCardSample />
         <WorkExperienceCardSample />

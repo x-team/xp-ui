@@ -26,6 +26,7 @@ import JobSkills from './components/ui/JobSkills'
 import ProTipCard from './components/ui/ProTipCard'
 import Loader from './components/ui/Loader'
 import LocateYourProfile from './components/ui/LocateYourProfile'
+import Milestones from './components/ui/Milestones'
 import Modal from './components/ui/Modal'
 import RoadmapHero from './components/ui/RoadmapHero'
 import SignupForm from './components/ui/SignupForm'
@@ -65,6 +66,7 @@ export {
   ProTipCard,
   Loader,
   LocateYourProfile,
+  Milestones,
   Modal,
   RoadmapHero,
   SignupForm,
