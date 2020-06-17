@@ -2,6 +2,7 @@
 /* global HTMLInputElement */
 
 import React, { PureComponent } from 'react'
+import cmz from 'cmz'
 
 import withAutosize from '../hocs/withAutosize'
 
@@ -14,8 +15,6 @@ import theme from '../../styles/theme'
 import typo from '../../styles/typo'
 
 import type { InputType } from '../../utils/types'
-
-const cmz = require('cmz')
 
 type Props = {
   label?: string,
@@ -145,9 +144,20 @@ const inputWithPostText = cmz(`
 `)
 
 const errorInput = cmz(`
-  background: ${theme.formErrorShadow}
-  border-color: ${theme.formError}
-  color: ${theme.formError}
+  border-color: ${theme.formErrorBorder}
+  color: ${theme.formErrorText}
+`)
+
+const disabledInput = cmz(`
+  & {
+    border-color: ${theme.formDisabledBorder}
+    color: ${theme.formDisabledText}
+    background: ${theme.formDisabledBackground}
+  }
+
+  &::placeholder {
+    color: ${theme.formDisabledPlaceholder}
+  }
 `)
 
 const dateInput = cmz(`
@@ -157,7 +167,6 @@ const dateInput = cmz(`
 
   & input {
     height: 50px
-    background-color: ${theme.baseBrighter} !important
   }
 
   & input::-webkit-clear-button {
@@ -187,7 +196,7 @@ const dateInput = cmz(`
     width: 15px
     right: 10px
     top: 50%
-    z-index: 100
+    z-index: 2
   }
 `)
 
@@ -394,6 +403,7 @@ class InputField extends PureComponent<Props> {
       postText,
       linesLimit,
       size,
+      disabled,
       ...rest
     } = this.props
 
@@ -401,6 +411,7 @@ class InputField extends PureComponent<Props> {
     const inputId = id || name
     const labelId = inputId ? `label-${inputId}` : ''
     const errorClassName = isInvalid ? errorInput : ''
+    const disabledClassName = disabled ? disabledInput : ''
     const spacingClassName = postText ? inputWithPostText : ''
     const finalType = getFinalType(type)
     const baseProps = {
@@ -408,6 +419,7 @@ class InputField extends PureComponent<Props> {
       id: inputId,
       value,
       onChange,
+      disabled,
       'aria-labelledby': labelId
     }
 
@@ -433,7 +445,7 @@ class InputField extends PureComponent<Props> {
     if (type === 'textarea') {
       const props = {
         ...baseProps,
-        className: `${size === defaultSize ? inputStyles.join(' ') : inputStylesSmall.join(' ')} ${textareaStyles} ${errorClassName} ${spacingClassName}`,
+        className: `${size === defaultSize ? inputStyles.join(' ') : inputStylesSmall.join(' ')} ${textareaStyles} ${errorClassName} ${disabledClassName} ${spacingClassName}`,
         type,
         linesLimit,
         ...rest
@@ -446,7 +458,7 @@ class InputField extends PureComponent<Props> {
         <div className={size === defaultSize ? dateInput : dateInputSmall}>
           {Tag({
             ...baseProps,
-            className: `${errorClassName} ${spacingClassName}`,
+            className: `${errorClassName} ${disabledClassName} ${spacingClassName}`,
             type,
             ...rest
           })}
@@ -457,7 +469,7 @@ class InputField extends PureComponent<Props> {
 
     return Tag({
       ...baseProps,
-      className: `${errorClassName} ${spacingClassName}`,
+      className: `${errorClassName} ${disabledClassName} ${spacingClassName}`,
       type,
       ...rest,
       ref: this.inputElement
