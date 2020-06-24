@@ -58,6 +58,7 @@ import Milestones from './components/ui/Milestones'
 import Modal from './components/ui/Modal'
 import Note from './components/ui/Note'
 import NotesFeed from './components/ui/NotesFeed'
+import NotFoundScreen from './components/ui/NotFoundScreen'
 import PencilButton from './components/ui/PencilButton'
 import ProfileHeaderLinks from './components/ui/ProfileHeaderLinks'
 import QuickSearchCloseButton from './components/ui/QuickSearchCloseButton'
@@ -147,6 +148,7 @@ export {
   Modal,
   Note,
   NotesFeed,
+  NotFoundScreen,
   PencilButton,
   ProfileHeaderLinks,
   QuickSearchCloseButton,
