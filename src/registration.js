@@ -28,6 +28,7 @@ import Loader from './components/ui/Loader'
 import LocateYourProfile from './components/ui/LocateYourProfile'
 import Milestones from './components/ui/Milestones'
 import Modal from './components/ui/Modal'
+import NotFoundScreen from './components/ui/NotFoundScreen'
 import RoadmapHero from './components/ui/RoadmapHero'
 import SignupForm from './components/ui/SignupForm'
 import SignupScreen from './components/ui/SignupScreen'
@@ -68,6 +69,7 @@ export {
   LocateYourProfile,
   Milestones,
   Modal,
+  NotFoundScreen,
   RoadmapHero,
   SignupForm,
   SignupScreen,

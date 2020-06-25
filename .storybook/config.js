@@ -1,3 +1,5 @@
+import '../src/styles/fonts.js'
+
 import { configure, addDecorator, addParameters } from '@storybook/react'
 import { create } from '@storybook/theming'
 import { withInfo } from '@storybook/addon-info'
