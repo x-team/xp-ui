@@ -4,16 +4,36 @@
 import React from 'react'
 import cmz from 'cmz'
 
-import { breakpoints } from '../../styles/theme'
+import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
 
 const cx = {
-  form: cmz(`
-    width: 500px
-    max-width: 100%
-    margin: 0 auto
-    flex: 1
-  `),
+  form: cmz(
+    typo.baseText,
+    `
+      & {
+        width: 500px
+        max-width: 100%
+        margin: 0 auto
+        flex: 1
+        font-size: 16px
+        line-height: 1.4
+        color: ${theme.typoGrayed}
+      }
+
+      & p {
+        margin: 12px 0
+      }
+
+      & a {
+        color: ${theme.typoGrayed}
+      }
+
+      & a:hover {
+        text-decoration: none
+      }
+    `
+  ),
 
   padded: cmz(`
     & {

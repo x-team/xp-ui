@@ -107,6 +107,8 @@ storiesOf('UI Components|SignupForm/Debug', module)
           }}
         />
         <Button block wide size='large'>Continue »</Button>
+        <p>Thi is an example of how a regular P tag looks like.</p>
+        <p><a href='https://x-team.com/blog/privacy-policy/' target='_blank' rel='nofollow'>And this is how an A tag looks like.</a></p>
       </SignupForm>
     </Body>
   ))
