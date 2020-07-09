@@ -52,7 +52,8 @@ const cx = {
   `),
 
   milestones: cmz(`
-    width: 500px
+    width: 100%
+    max-width: 500px
     padding: 32px 0 24px
     margin: 0 auto
   `),
