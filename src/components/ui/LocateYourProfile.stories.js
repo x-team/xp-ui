@@ -16,12 +16,17 @@ const Body = ({ children }) => (
   </div>
 )
 
+const joinClick = () => (
+  console.log('join x-team clicked')
+)
+
 storiesOf('UI Components|LocateYourProfile', module)
   .add('basic usage', () => (
     <Body>
       <LocateYourProfile
         headline='Locate your profile.'
         recover={action('Recover my secret profile Link')}
+        joinClick={joinClick}
       />
     </Body>
   ))
@@ -33,6 +38,7 @@ storiesOf('UI Components|LocateYourProfile/Use Cases', module)
         <LocateYourProfile
           headline='Locate your profile.'
           recover={action('Recover my secret profile Link')}
+          joinClick={joinClick}
         />
       </ApplicantScreen>
     </Body>
@@ -41,11 +47,14 @@ storiesOf('UI Components|LocateYourProfile/Use Cases', module)
 storiesOf('UI Components|LocateYourProfile/Debug', module)
   .add('loading state', () => (
     <Body>
-      <LocateYourProfile
-        isLoading
-        headline='Locate your profile.'
-        recover={action('Recover my secret profile Link')}
-      />
+      <ApplicantScreen noWrapper>
+        <LocateYourProfile
+          isLoading
+          headline='Locate your profile.'
+          recover={action('Recover my secret profile Link')}
+          joinClick={joinClick}
+        />
+      </ApplicantScreen>
     </Body>
   ))
   .add('missing props', () => (
