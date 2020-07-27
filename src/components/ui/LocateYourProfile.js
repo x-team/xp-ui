@@ -86,6 +86,7 @@ const cx = {
     & {
       color: ${theme.typoAnchor}
       text-decoration: none
+      cursor: pointer
     }
 
     &:hover {
@@ -119,10 +120,11 @@ const cx = {
 type Props = {
   headline?: string,
   isLoading?: boolean,
-  recover?: () => void
+  recover?: () => void,
+  joinClick?: () => void
 }
 
-const LocateYourProfile = ({ headline, isLoading, recover }: Props) => (
+const LocateYourProfile = ({ headline, isLoading, recover, joinClick }: Props) => (
   <div className={cx.wrapper}>
     <div className={cx.content}>
       {isLoading ? (
@@ -144,7 +146,7 @@ const LocateYourProfile = ({ headline, isLoading, recover }: Props) => (
           {headline && (
             <p className={cx.headline}>{headline}</p>
           )}
-          <p className={cx.text}><a className={cx.join} href='https://x-team.com/join-application'>Join X-Team</a> if you don’t have an account yet.</p>
+          <p className={cx.text}><a className={cx.join} onClick={joinClick}>Join X-Team</a> if you don’t have an account yet.</p>
           <p className={cx.title}>Already have an account?</p>
           <p className={cx.alttext}>Please ensure that you have local storage enabled in your browser.</p>
           {recover && (
