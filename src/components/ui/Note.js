@@ -1,4 +1,5 @@
 // @flow
+/* globals SyntheticInputEvent, HTMLInputElement */
 
 import React, { PureComponent } from 'react'
 import differenceInHours from 'date-fns/difference_in_hours'
@@ -8,6 +9,7 @@ import FileLinks from './FileLinks'
 import PencilButton from './PencilButton'
 import InlineEditor from './InlineEditor'
 import RichTextEditor from './RichTextEditor'
+import InputField from '../forms/InputField'
 
 import typo from '../../styles/typo'
 import theme from '../../styles/theme'
@@ -174,7 +176,8 @@ class Note extends PureComponent<Props, State> {
     )
   }
 
-  handleEditorValueChange = (onValueChange: (value: any) => mixed) => ({ markdown: value }: { markdown: string }) => {
+  handleEditorValueChange = (onValueChange: (value: any) => mixed) => (event: SyntheticInputEvent<HTMLInputElement>) => {
+    const { value } = event.currentTarget
     this.setState({
       newValueIsValid: !!value.trim(),
       newValue: value
@@ -187,10 +190,10 @@ class Note extends PureComponent<Props, State> {
     const { newValue = '' } = this.state
 
     return (
-      <RichTextEditor
-        initialValue={newValue}
-        handleChange={this.handleEditorValueChange(onValueChange)}
-        characterLimit={5000}
+      <InputField
+        value={newValue}
+        onChange={this.handleEditorValueChange(onValueChange)}
+        type='textarea'
       />
     )
   }
