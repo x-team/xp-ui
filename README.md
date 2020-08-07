@@ -16,6 +16,16 @@ You need to install:
 - `npm install`
 - `npm start`
 
+## Deploy
+
+It's important to follow these steps with every update to `xp-ui` that we want to deploy. After release branch is merged into master branch of xp-ui (once the Production release was confirmed), check out `master` branch and run a sequence of commands:
+
+```bash
+npm version [patch|minor|major]
+git push && git push --tags
+npm publish --access public
+```
+
 ## Live preview
 
 - The latest Storybook spec page built out of `master` branch is available for preview [here](https://x-team.github.io/xp-ui/)
