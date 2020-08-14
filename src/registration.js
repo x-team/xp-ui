@@ -32,6 +32,7 @@ import NotFoundScreen from './components/ui/NotFoundScreen'
 import RoadmapHero from './components/ui/RoadmapHero'
 import SignupForm from './components/ui/SignupForm'
 import SignupScreen from './components/ui/SignupScreen'
+import SvgIcon from './components/ui/SvgIcon'
 import Text from './components/ui/Text'
 import TextareaEditor from './components/ui/TextareaEditor'
 import TruncatedList from './components/ui/TruncatedList'
@@ -73,6 +74,7 @@ export {
   RoadmapHero,
   SignupForm,
   SignupScreen,
+  SvgIcon,
   Text,
   TextareaEditor,
   TruncatedList,
