@@ -81,7 +81,9 @@ type Props = {
   notification?: React$Node,
   menuLinks?: Array<Link>,
   appLink?: React$StatelessFunctionalComponent<*>,
-  profileLink?: React$StatelessFunctionalComponent<*>
+  profileLink?: React$StatelessFunctionalComponent<*>,
+  logout?: () => void,
+  avatarUrl?: string
 }
 
 const ApplicantScreen = ({
@@ -91,7 +93,9 @@ const ApplicantScreen = ({
   notification,
   menuLinks,
   appLink,
-  profileLink
+  profileLink,
+  logout,
+  avatarUrl
 }: Props) => {
   const getWrapperClass = () => (wrapper && cx[wrapper]) || cx.content
   return (
@@ -101,6 +105,8 @@ const ApplicantScreen = ({
           links={menuLinks}
           appLink={appLink}
           profileLink={profileLink}
+          logout={logout}
+          avatarUrl={avatarUrl}
         />
       </div>
       {notification && (
