@@ -6,7 +6,7 @@ import faker from 'faker'
 import { object } from '@storybook/addon-knobs'
 
 import ApplicantScreen from './ApplicantScreen'
-import { HeaderLink, headerBarLinks } from './HeaderBar.stories'
+import { HeaderLink, headerBarLinks, ProfileLink } from './HeaderBar.stories'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -40,7 +40,11 @@ storiesOf('Screens and Layouts|ApplicantScreen/States', module)
   ))
   .add('with menu links', () => (
     <Body>
-      <ApplicantScreen menuLinks={object('Link', headerBarLinks)} appLink={HeaderLink}>
+      <ApplicantScreen
+        menuLinks={object('Link', headerBarLinks)}
+        appLink={HeaderLink}
+        profileLink={ProfileLink}
+      >
         {faker.lorem.paragraphs(50)}
       </ApplicantScreen>
     </Body>
@@ -50,6 +54,7 @@ storiesOf('Screens and Layouts|ApplicantScreen/States', module)
       <ApplicantScreen
         menuLinks={object('Link', headerBarLinks)}
         appLink={HeaderLink}
+        profileLink={ProfileLink}
         notification={
           <span>You've successfully applied for this position. <b>We will reach out soon via email to talk about next steps.</b></span>
         }
