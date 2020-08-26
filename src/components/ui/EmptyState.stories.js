@@ -8,11 +8,7 @@ storiesOf('UI Components|EmptyState', module)
   .add('basic usage', () => (
     <EmptyState heading='No jobs at the moment...'>
       <span>
-        Please check the Jobs Board later. In the meantime make sure your <a
-          href='https://www.linkedin.com/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >profile is up-to-date</a>.
+        Please check the Jobs Board later. In the meantime make sure your <a href='/experience'>profile is up-to-date</a>.
       </span>
     </EmptyState>
   ))
