@@ -114,6 +114,11 @@ const cx = {
     }
   `),
 
+  wideContent: cmz(`
+    width: 100%
+    margin: 80px 0 0
+  `),
+
   sidebar: cmz(`
     & {
       width: calc(100% + ${MOBILE_GAP} * 2)
@@ -162,6 +167,7 @@ type Props = {
   hero?: React$Node,
   heading?: React$Node,
   content?: React$Node,
+  wideContent?: React$Node,
   sidebar?: React$Node,
   actionsBar?: React$Node,
   isLoading?: boolean,
@@ -169,7 +175,7 @@ type Props = {
 }
 
 const JobsPageLayout = (props: Props) => {
-  const { hero, heading, content, sidebar, actionsBar, isLoading, error } = props
+  const { hero, heading, content, wideContent, sidebar, actionsBar, isLoading, error } = props
   const headingClassName = typeof heading === 'string' ? cx.heading : ''
 
   const renderContent = () => {
@@ -214,6 +220,9 @@ const JobsPageLayout = (props: Props) => {
           )}
           {renderContent()}
         </div>
+        {wideContent && (
+          <div className={cx.wideContent}>{wideContent}</div>
+        )}
         <Footer
           copyright={`${new Date().getFullYear()} © All rights reserved. X-Company Pty Ltd.`}
         />
