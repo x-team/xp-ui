@@ -62,6 +62,7 @@ storiesOf('UI Components|HeaderBar/Use Cases', module)
         links={object('Link', headerBarLinks)}
         appLink={HeaderLink}
         profileLink={ProfileLink}
+        logout={() => console.log('logout')}
       />
     </Body>
   ))
