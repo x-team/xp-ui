@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions'
 
 import JobsPageLayout from './JobsPageLayout'
 import ApplicantScreen from './ApplicantScreen'
-import { HeaderLink, headerBarLinks } from './HeaderBar.stories'
+import { HeaderLink, headerBarLinks, ProfileLink } from './HeaderBar.stories'
 import JobsGrid from './JobsGrid'
 import { jobCards } from './JobsGrid.stories'
 import JobsPageBreadcrumbs from './JobsPageBreadcrumbs'
@@ -66,7 +66,13 @@ const JobsPageProTipCard = () => (
 storiesOf('Screens and Layouts|JobsPageLayout', module)
   .add('basic usage', () => (
     <Body>
-      <ApplicantScreen noWrapper menuLinks={headerBarLinks} appLink={HeaderLink}>
+      <ApplicantScreen
+        noWrapper
+        menuLinks={headerBarLinks}
+        appLink={HeaderLink}
+        profileLink={ProfileLink}
+        logout={() => console.log('logout')}
+      >
         <JobsPageLayout
           hero={
             <WelcomeHero
@@ -88,7 +94,13 @@ storiesOf('Screens and Layouts|JobsPageLayout', module)
 storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
   .add('job details page', () => (
     <Body>
-      <ApplicantScreen noWrapper menuLinks={headerBarLinks} appLink={HeaderLink}>
+      <ApplicantScreen
+        noWrapper
+        menuLinks={headerBarLinks}
+        appLink={HeaderLink}
+        profileLink={ProfileLink}
+        logout={() => console.log('logout')}
+      >
         <JobsPageLayout
           heading={
             <JobsPageBreadcrumbs
@@ -115,7 +127,13 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
   ))
   .add('my applications page', () => (
     <Body>
-      <ApplicantScreen noWrapper menuLinks={headerBarLinks} appLink={HeaderLink}>
+      <ApplicantScreen
+        noWrapper
+        menuLinks={headerBarLinks}
+        appLink={HeaderLink}
+        profileLink={ProfileLink}
+        logout={() => console.log('logout')}
+      >
         <JobsPageLayout
           heading='Pending applications'
           content={
@@ -140,6 +158,8 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
         noWrapper
         menuLinks={headerBarLinks}
         appLink={HeaderLink}
+        profileLink={ProfileLink}
+        logout={() => console.log('logout')}
         notification={
           <span>You've successfully applied for this position. <b>We will reach out soon via email to talk about next steps.</b></span>
         }
@@ -174,7 +194,13 @@ storiesOf('Screens and Layouts|JobsPageLayout/Debug', module)
   ))
   .add('short content to see footer at the applicant screen\'s bottom', () => (
     <Body>
-      <ApplicantScreen noWrapper menuLinks={headerBarLinks} appLink={HeaderLink}>
+      <ApplicantScreen
+        noWrapper
+        menuLinks={headerBarLinks}
+        appLink={HeaderLink}
+        profileLink={ProfileLink}
+        logout={() => console.log('logout')}
+      >
         <JobsPageLayout
           heading={
             <JobsPageBreadcrumbs

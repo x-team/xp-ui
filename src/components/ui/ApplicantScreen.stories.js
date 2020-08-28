@@ -44,6 +44,7 @@ storiesOf('Screens and Layouts|ApplicantScreen/States', module)
         menuLinks={object('Link', headerBarLinks)}
         appLink={HeaderLink}
         profileLink={ProfileLink}
+        logout={() => console.log('logout')}
       >
         {faker.lorem.paragraphs(50)}
       </ApplicantScreen>
@@ -55,6 +56,7 @@ storiesOf('Screens and Layouts|ApplicantScreen/States', module)
         menuLinks={object('Link', headerBarLinks)}
         appLink={HeaderLink}
         profileLink={ProfileLink}
+        logout={() => console.log('logout')}
         notification={
           <span>You've successfully applied for this position. <b>We will reach out soon via email to talk about next steps.</b></span>
         }
