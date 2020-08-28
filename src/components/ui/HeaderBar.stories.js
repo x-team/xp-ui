@@ -23,6 +23,12 @@ export const HeaderLink = ({ children, ...props }: { children: React$Node }) => 
   </a>
 )
 
+export const ProfileLink = ({ children, ...props }: { children: React$Node }) => (
+  <a onClick={action('This should be react-router/gasby Link')} {...props}>
+    {children}
+  </a>
+)
+
 export const headerBarLinks = [
   {
     label: 'Browse Jobs',
@@ -55,6 +61,7 @@ storiesOf('UI Components|HeaderBar/Use Cases', module)
       <HeaderBar
         links={object('Link', headerBarLinks)}
         appLink={HeaderLink}
+        profileLink={ProfileLink}
       />
     </Body>
   ))
