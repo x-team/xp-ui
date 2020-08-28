@@ -1,6 +1,5 @@
 // @flow
-/* global React$Node */
-/* global React$StatelessFunctionalComponent */
+/* global React$Node React$StatelessFunctionalComponent */
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -81,7 +80,8 @@ type Props = {
   wrapper?: 'narrower' | 'wider',
   notification?: React$Node,
   menuLinks?: Array<Link>,
-  appLink?: React$StatelessFunctionalComponent<*>
+  appLink?: React$StatelessFunctionalComponent<*>,
+  profileLink?: React$StatelessFunctionalComponent<*>
 }
 
 const ApplicantScreen = ({
@@ -90,7 +90,8 @@ const ApplicantScreen = ({
   noWrapper = false,
   notification,
   menuLinks,
-  appLink
+  appLink,
+  profileLink
 }: Props) => {
   const getWrapperClass = () => (wrapper && cx[wrapper]) || cx.content
   return (
@@ -99,6 +100,7 @@ const ApplicantScreen = ({
         <HeaderBar
           links={menuLinks}
           appLink={appLink}
+          profileLink={profileLink}
         />
       </div>
       {notification && (

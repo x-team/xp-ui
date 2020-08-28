@@ -1,11 +1,10 @@
 // @flow
-/* global React$Element */
+/* global React$Element React$StatelessFunctionalComponent */
 
 import React from 'react'
 
 import Text from './Text'
 import VideoPlayer from './VideoPlayer'
-import GenericTooltip from './GenericTooltip'
 
 import theme, { breakpoints } from '../../styles/theme'
 import typo from '../../styles/typo'
@@ -182,10 +181,11 @@ type Props = {
   heading?: string,
   videoUrl?: string,
   onDismiss?: () => void,
+  profileLink?: React$StatelessFunctionalComponent<*>,
   children?: React$Element<*>|string
 }
 
-const WelcomeHero = ({ heading, videoUrl, onDismiss, children }: Props) => heading || children ? (
+const WelcomeHero = ({ heading, videoUrl, onDismiss, profileLink: ProfileLink, children }: Props) => heading || children ? (
   <div className={cx.wrapper} data-testid='xpui-welcomeHero-wrapper'>
     <div className={cx.container}>
       <div className={cx.content} data-testid='xpui-welcomeHero-content'>
@@ -197,26 +197,9 @@ const WelcomeHero = ({ heading, videoUrl, onDismiss, children }: Props) => headi
           hasDivider={!!heading}
         />
         <div className={cx.actions}>
-          <GenericTooltip
-            message={
-              <span>
-                We currently heavily rely on LinkedIn
-                <br />
-                Profiles to match candidates with
-                <br />
-                potential roles.
-              </span>
-            }
-          >
-            <a
-              className={cx.profile}
-              href='https://www.linkedin.com/'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Update your LinkedIn profile »
-            </a>
-          </GenericTooltip>
+          {ProfileLink && (
+            <ProfileLink className={cx.profile}>Update your profile »</ProfileLink>
+          )}
           {onDismiss && (
             <div className={cx.dismiss} onClick={onDismiss}>Dismiss</div>
           )}

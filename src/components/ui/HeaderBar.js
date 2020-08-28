@@ -4,7 +4,6 @@
 import React, { PureComponent } from 'react'
 import ClickOutside from 'react-click-outside'
 
-import GenericTooltip from './GenericTooltip'
 import SvgIcon from './SvgIcon'
 
 import { size } from '../../utils/helpers'
@@ -25,7 +24,8 @@ type Link = {
 
 type Props = {
   links?: Array<Link>,
-  appLink?: React$StatelessFunctionalComponent<*>
+  appLink?: React$StatelessFunctionalComponent<*>,
+  profileLink?: React$StatelessFunctionalComponent<*>
 }
 
 type State = {
@@ -267,7 +267,7 @@ class HeaderBar extends PureComponent<Props, State> {
   }
 
   render () {
-    const { links } = this.props
+    const { links, profileLink: ProfileLink } = this.props
     const { expanded } = this.state
     return (
       <div className={[cx.wrapper, expanded ? cx.expandedWrapper : ''].join(' ')}>
@@ -290,26 +290,9 @@ class HeaderBar extends PureComponent<Props, State> {
               <ul className={cx.menu}>
                 {this.renderLinks()}
               </ul>
-              <GenericTooltip
-                message={
-                  <span>
-                    We currently heavily rely on LinkedIn
-                    <br />
-                    Profiles to match candidates with
-                    <br />
-                    potential roles.
-                  </span>
-                }
-              >
-                <a
-                  className={cx.profile}
-                  href='https://www.linkedin.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Update your profile
-                </a>
-              </GenericTooltip>
+              {ProfileLink && (
+                <ProfileLink className={cx.profile}>Update your profile</ProfileLink>
+              )}
             </nav>
           </ClickOutside>
         ) : (
