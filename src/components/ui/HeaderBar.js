@@ -1,11 +1,12 @@
 // @flow
 /* global React$StatelessFunctionalComponent */
 
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import ClickOutside from 'react-click-outside'
 
-import GenericTooltip from './GenericTooltip'
 import SvgIcon from './SvgIcon'
+import Dropdown from './Dropdown'
+import ProfileAvatar from './ProfileAvatar'
 
 import { size } from '../../utils/helpers'
 import theme, { breakpoints } from '../../styles/theme'
@@ -25,7 +26,10 @@ type Link = {
 
 type Props = {
   links?: Array<Link>,
-  appLink?: React$StatelessFunctionalComponent<*>
+  appLink?: React$StatelessFunctionalComponent<*>,
+  profileLink?: React$StatelessFunctionalComponent<*>,
+  logout?: () => void,
+  avatarUrl?: string
 }
 
 type State = {
@@ -182,24 +186,15 @@ const cx = {
     }
   `),
 
-  profile: cmz(`
-    & {
-      white-space: nowrap
-      text-decoration: none
-      text-transform: uppercase
-      cursor: pointer
-      color: ${theme.typoAnchor}
-    }
-
-    &:hover {
-      color: ${theme.typoAnchorHover}
-    }
-  `),
-
   link: cmz(`
     & {
       list-style: none
       margin: 0 0 32px
+      line-height: 1
+    }
+
+    &:last-of-type {
+      margin-bottom: 0
     }
 
     @media screen and (min-width: ${breakpoints.sm}) {
@@ -225,6 +220,47 @@ const cx = {
 
   active: cmz(`
     text-decoration: underline
+  `),
+
+  profile: cmz(`
+    & {
+      display: none
+    }
+
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        display: block
+      }
+    }
+  `),
+
+  profileMenu: cmz(`
+    & {
+      font-size: 13px
+      font-weight: 600
+      padding: 24px 0
+      margin: 0
+      background: #FFFFFF
+      border: 1px solid rgba(0, 0, 0, 0.15)
+      box-sizing: border-box
+      box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15)
+    }
+
+    & * {
+      margin-bottom: 32px
+    }
+
+    & *:last-child {
+      margin-bottom: 0
+    }
+  `),
+
+  profileLink: cmz(`
+    @media screen and (min-width: ${breakpoints.sm}) {
+      & {
+        display: none
+      }
+    }
   `)
 }
 
@@ -266,8 +302,32 @@ class HeaderBar extends PureComponent<Props, State> {
     this.setState({ expanded: false })
   }
 
+  renderProfileMenuItems = (hideOnDesktop?: boolean) => {
+    const { logout, profileLink: ProfileLink } = this.props
+    const linkClassName = [cx.link, hideOnDesktop ? cx.profileLink : ''].join(' ')
+    return (
+      <Fragment>
+        {ProfileLink && (
+          <li className={linkClassName}>
+            <ProfileLink className={cx.anchor}>Update your profile</ProfileLink>
+          </li>
+        )}
+        {logout && (
+          <li className={linkClassName}>
+            <span
+              onClick={logout}
+              className={cx.anchor}
+            >
+              Logout
+            </span>
+          </li>
+        )}
+      </Fragment>
+    )
+  }
+
   render () {
-    const { links } = this.props
+    const { links, avatarUrl } = this.props
     const { expanded } = this.state
     return (
       <div className={[cx.wrapper, expanded ? cx.expandedWrapper : ''].join(' ')}>
@@ -289,27 +349,20 @@ class HeaderBar extends PureComponent<Props, State> {
             <nav className={[cx.nav, expanded ? cx.expandedNav : ''].join(' ')} data-testid='xpui-headerBar-nav'>
               <ul className={cx.menu}>
                 {this.renderLinks()}
+                {this.renderProfileMenuItems(true)}
               </ul>
-              <GenericTooltip
-                message={
-                  <span>
-                    We currently heavily rely on LinkedIn
-                    <br />
-                    Profiles to match candidates with
-                    <br />
-                    potential roles.
-                  </span>
-                }
-              >
-                <a
-                  className={cx.profile}
-                  href='https://www.linkedin.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
+
+              <div className={cx.profile}>
+                <Dropdown
+                  label={<ProfileAvatar src={avatarUrl} />}
+                  targetXOrigin='right'
+                  padded
                 >
-                  Update your profile
-                </a>
-              </GenericTooltip>
+                  <ul className={cx.profileMenu}>
+                    {this.renderProfileMenuItems()}
+                  </ul>
+                </Dropdown>
+              </div>
             </nav>
           </ClickOutside>
         ) : (
