@@ -3,6 +3,7 @@ import React from 'react'
 import cmz from 'cmz'
 
 import SvgIcon from './SvgIcon'
+import Avatar from './Avatar'
 
 import theme from '../../styles/theme'
 
@@ -48,10 +49,11 @@ const cx = {
 }
 
 type Props = {
-  src?: string
+  src?: string,
+  name?: string
 }
 
-const ProfileAvatar = ({ src }: Props) => (
+const ProfileAvatar = ({ src, name }: Props) => (
   <div className={cx.avatar}>
     <div className={cx.arrows}>
       <SvgIcon icon='triangleup' color='grayscale' />
@@ -61,7 +63,7 @@ const ProfileAvatar = ({ src }: Props) => (
       {src ? (
         <div className={cx.image} style={{ backgroundImage: `url(${src})` }} />
       ) : (
-        <SvgIcon icon='profile' color='grayscarpaflow' hover='text' />
+        <Avatar alt={name} size={65} src={src} />
       )}
     </div>
   </div>
