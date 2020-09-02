@@ -53,7 +53,7 @@ type Props = {
   name?: string
 }
 
-const ProfileAvatar = ({ src, name }: Props) => (
+const ProfileAvatar = ({ src = '', name }: Props) => (
   <div className={cx.avatar}>
     <div className={cx.arrows}>
       <SvgIcon icon='triangleup' color='grayscale' />
