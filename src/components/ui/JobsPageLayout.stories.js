@@ -19,6 +19,7 @@ import { previousJobApplicationsJobsSample, previousJobApplicationsMessageSample
 import ProTipCard from './ProTipCard'
 import WelcomeHero from './WelcomeHero'
 import { validVideoUrl } from './WelcomeHero.stories'
+import { ArticleCardSectionSample } from './ArticleCardSection.stories'
 
 const Body = ({ children }) => (
   <div style={{ height: '100vh' }}>
@@ -85,6 +86,7 @@ storiesOf('Screens and Layouts|JobsPageLayout', module)
           }
           heading='Jobs'
           content={<JobsGrid jobCards={jobCards(5)} />}
+          wideContent={<ArticleCardSectionSample />}
           sidebar={<JobsPageProTipCard />}
         />
       </ApplicantScreen>
@@ -145,6 +147,7 @@ storiesOf('Screens and Layouts|JobsPageLayout/Use Cases', module)
               />
             </div>
           }
+          wideContent={<ArticleCardSectionSample />}
           sidebar={<JobsPageProTipCard />}
         />
       </ApplicantScreen>

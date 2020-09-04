@@ -12,6 +12,8 @@ import ApplicantProfileContentDisplay from './components/ui/ApplicantProfileCont
 import ApplicantScreen from './components/ui/ApplicantScreen'
 import ApplicantScreenNotification from './components/ui/ApplicantScreenNotification'
 import ApplicantTopProfileDisplay from './components/ui/ApplicantTopProfileDisplay'
+import ArticleCard from './components/ui/ArticleCard'
+import ArticleCardSection from './components/ui/ArticleCardSection'
 import AttachFiles from './components/ui/AttachFiles'
 import Avatar from './components/ui/Avatar'
 import Button from './components/ui/Button'
@@ -102,6 +104,8 @@ export {
   ApplicantScreen,
   ApplicantScreenNotification,
   ApplicantTopProfileDisplay,
+  ArticleCard,
+  ArticleCardSection,
   AttachFiles,
   Avatar,
   Button,
