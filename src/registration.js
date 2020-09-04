@@ -1,6 +1,8 @@
 import AccountConfirmation from './components/ui/AccountConfirmation'
 import AddMoreButton from './components/ui/AddMoreButton'
 import ApplicantScreen from './components/ui/ApplicantScreen'
+import ArticleCard from './components/ui/ArticleCard'
+import ArticleCardSection from './components/ui/ArticleCardSection'
 import AttachFiles from './components/ui/AttachFiles'
 import Button from './components/ui/Button'
 import PreviousJobApplications from './components/ui/PreviousJobApplications'
@@ -42,6 +44,8 @@ export {
   AccountConfirmation,
   AddMoreButton,
   ApplicantScreen,
+  ArticleCard,
+  ArticleCardSection,
   AttachFiles,
   Button,
   PreviousJobApplications,
