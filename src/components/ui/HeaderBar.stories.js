@@ -66,6 +66,25 @@ storiesOf('UI Components|HeaderBar/Use Cases', module)
       />
     </Body>
   ))
+  .add('with name', () => (
+    <Body>
+      <HeaderBar
+        links={object('Link', headerBarLinks)}
+        avatarName='Test Candidate'
+        logout={() => console.log('logout')}
+      />
+    </Body>
+  ))
+  .add('with name and image', () => (
+    <Body>
+      <HeaderBar
+        links={object('Link', headerBarLinks)}
+        avatarName='Test Candidate'
+        avatarUrl='https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ad/adec76ed86e8ffa892d847c8e619262d30e74e32_full.jpg'
+        logout={() => console.log('logout')}
+      />
+    </Body>
+  ))
 
 storiesOf('UI Components|HeaderBar/Debug', module)
   .add('missing props', () => (
