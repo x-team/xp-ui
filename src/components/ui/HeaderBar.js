@@ -29,7 +29,8 @@ type Props = {
   appLink?: React$StatelessFunctionalComponent<*>,
   profileLink?: React$StatelessFunctionalComponent<*>,
   logout?: () => void,
-  avatarUrl?: string
+  avatarUrl?: string,
+  avatarName?: string,
 }
 
 type State = {
@@ -248,6 +249,8 @@ const cx = {
 
     & * {
       margin-bottom: 32px
+      text-align: left
+      width: 100%
     }
 
     & *:last-child {
@@ -327,7 +330,7 @@ class HeaderBar extends PureComponent<Props, State> {
   }
 
   render () {
-    const { links, avatarUrl } = this.props
+    const { links, avatarUrl, avatarName } = this.props
     const { expanded } = this.state
     return (
       <div className={[cx.wrapper, expanded ? cx.expandedWrapper : ''].join(' ')}>
@@ -354,7 +357,7 @@ class HeaderBar extends PureComponent<Props, State> {
 
               <div className={cx.profile}>
                 <Dropdown
-                  label={<ProfileAvatar src={avatarUrl} />}
+                  label={<ProfileAvatar src={avatarUrl} name={avatarName} />}
                   targetXOrigin='right'
                   padded
                 >
