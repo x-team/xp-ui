@@ -7,6 +7,7 @@ module.exports = {
     all: './src/index.js',
     fonts: './src/styles/fonts.js',
     registration: './src/registration.js',
+    site: './src/site.js',
     CustomSelector: './src/components/ui/CustomSelector',
     SkillsSelector: './src/components/ui/SkillsSelector',
     Timeframe: './src/components/ui/Timeframe'

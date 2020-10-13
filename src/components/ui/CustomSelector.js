@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react'
-import Select from 'react-select'
+import Select, { Creatable } from 'react-select'
 
 import SelectorOption from './SelectorOption'
 
@@ -138,7 +138,7 @@ class CustomSelector extends PureComponent<Props, State> {
   }
 
   render () {
-    const { isInvalid } = this.props
+    const { isInvalid, creatable = false } = this.props
     const { selectedOption } = this.state
 
     const classNames = [
@@ -146,8 +146,12 @@ class CustomSelector extends PureComponent<Props, State> {
       isInvalid ? cx.invalid.toString() : ''
     ].join(' ')
 
+    const SelectComponent = creatable
+      ? Creatable
+      : Select
+
     return (
-      <Select
+      <SelectComponent
         name='CustomSelector'
         placeholder='Select...'
         optionRenderer={SelectorOption}
