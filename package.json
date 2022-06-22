@@ -81,7 +81,7 @@
     "flow-bin": "^0.61.0",
     "husky": "^3.1.0",
     "jest": "^23.6.0",
-    "jsdom": "^13.0.0",
+    "jsdom": "^16.5.0",
     "lint-staged": "^9.5.0",
     "mockdate": "^2.0.2",
     "prop-types": "^15.7.2",
